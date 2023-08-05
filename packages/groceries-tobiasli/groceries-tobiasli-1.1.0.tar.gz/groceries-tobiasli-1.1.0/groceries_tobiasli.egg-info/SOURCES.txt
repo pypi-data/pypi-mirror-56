@@ -1,0 +1,11 @@
+README.md
+setup.py
+groceries/__init__.py
+groceries/groceries.py
+groceries/recipes.py
+groceries/units.py
+groceries_tobiasli.egg-info/PKG-INFO
+groceries_tobiasli.egg-info/SOURCES.txt
+groceries_tobiasli.egg-info/dependency_links.txt
+groceries_tobiasli.egg-info/requires.txt
+groceries_tobiasli.egg-info/top_level.txt
