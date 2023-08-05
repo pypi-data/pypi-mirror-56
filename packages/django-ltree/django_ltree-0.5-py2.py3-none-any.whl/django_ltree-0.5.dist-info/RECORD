@@ -1,0 +1,16 @@
+django_ltree/__init__.py,sha256=LY7_yR6ppTUl1AJ3hEiGweqtIi3tLeHhED0RJ8AB5tU,59
+django_ltree/apps.py,sha256=z-viFidVmZbJFCyHBCs01RiKYY1_Tg1pVCai26XnQRQ,403
+django_ltree/checks.py,sha256=ekBpmNXlE8I9eoM-zHzpPuXoIdXHi26IaswbvsG4I1k,581
+django_ltree/fields.py,sha256=XR87aZBF8LznRelc0LO6ftCd1PnklGig6AubnvbNDYk,2783
+django_ltree/functions.py,sha256=Gir3F2hHxaDUy5YM-0SAuV2pRVzON1ZO-zx19mNtVvk,355
+django_ltree/lookups.py,sha256=WkbfbAW_RyM-4DlmU8xEZoFNfFkmEUaO07Tnuofhy3Q,1281
+django_ltree/managers.py,sha256=Z5_hT80cGgwexUtlWNEwuNpYkrY5B9n1YAc5EWnEUdU,1020
+django_ltree/models.py,sha256=Cy13sfFjgL7t7Mqrg5uZlMPeHj8XerBNiU-j8kaLnWA,1302
+django_ltree/paths.py,sha256=clfoUzfRhZLP7yOAFcZs0J4Iw3J79GajDQp6FEv31U4,840
+django_ltree/migrations/0001_create_extension.py,sha256=tS50eY3j3juMBEDZdeDBa-xFrGlBLjNlCjnkqt-B_Sc,273
+django_ltree/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_ltree-0.5.dist-info/LICENSE,sha256=ZRGqHhWBvjCRFfDGtObWJYVyy8Xk_c2IA0nSj-szBTY,1103
+django_ltree-0.5.dist-info/METADATA,sha256=PKm6baYukWSf-ayZTk03EKxTvI1Th3REGxoeXvGO1TU,3050
+django_ltree-0.5.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+django_ltree-0.5.dist-info/top_level.txt,sha256=wahoePZiIQuajCPWS4pDwnW5lVB6XEZX74FIgg-MLA4,13
+django_ltree-0.5.dist-info/RECORD,,
