@@ -1,0 +1,16 @@
+ecalic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ecalic/cmsStyle.py,sha256=UlecuYxzArijxUbDUw_kMe31ITLsX9-oyF0EIWvtPW4,1132
+ecalic/ic.py,sha256=jKyLMuVtSMTdzQsKPcYLF0lukn4El23j8BPtoDKvDaw,18440
+ecalic/iov.py,sha256=Len3PdCTBtuOetZb4nK6NOW6IkaBj4-unf6tEi9TSc8,3485
+ecalic/data/ecalMapping.txt,sha256=olI5qc9e5oaxGhnlveVRnmK9M5hwg7tJ7P0_lAMC0ag,6000598
+ecalic/data/fStyle.mplstyle,sha256=KfZsqqbBq_tN2f7JxVcQhVljalnqaA1bdvqEGFOe_Y0,33416
+ecalic/test/pedestals_hlt_run315840.xml,sha256=zRSwEHV0Rm5nvwvQ4OvMCFEQQ_ODDaVARmWEzmwiQgY,19190178
+ecalic/test/pedestals_hlt_run324773.xml,sha256=tnjo8su16LQiJNfn1ngTm9cg1VuqZM-xxHhkAex4UsA,19190178
+ecalic/test/status_run324773.xml,sha256=nvMGxGjc-Y-mfsax_gmasUMDvmxCrvuVxT37AjH4f30,3490605
+ecalic/test/testIC.py,sha256=Xy8sheqZ7ALmvjr_kWRs57E5xpoAj78tX2ZRTHn_LMg,972
+ecalic/test/testNoise.py,sha256=zKEs0K2YV_nMb9EM_x9OX2dBg8chCrfT1noGReo0I7M,2385
+ecalic-0.0.4.dist-info/LICENSE,sha256=VXapH-nuSz68DG5ScURElxHkl1lKk4MOK9cgZCSRDXs,34502
+ecalic-0.0.4.dist-info/METADATA,sha256=QHJoQAd6GPM205H6u60Gh3k8llqiIG8GJF5GMQ2NP9o,4591
+ecalic-0.0.4.dist-info/WHEEL,sha256=g3LQva5oS9Ma-DPFwX8R7Ke-NO25KWW489RoZdNxJXc,92
+ecalic-0.0.4.dist-info/top_level.txt,sha256=j7Yd42XJc9Qze02NBJ71qKvil04ng5CLkTtR4eQJtws,7
+ecalic-0.0.4.dist-info/RECORD,,
