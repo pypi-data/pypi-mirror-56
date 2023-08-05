@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: vdu-nlp-services
+Version: 0.0.5
+Summary: Python wrapper for VDU NLP online services
+Home-page: https://github.com/aleksas/vdu-nlp-services
+Author: Aleksas Pielikis
+Author-email: ant.kampo@gmail.com
+License: UNKNOWN
+Description: [![Build Status](https://travis-ci.org/aleksas/vdu-nlp-services.svg?branch=master)](https://travis-ci.org/aleksas/vdu-nlp-services)
+        
+        # vdu-nlp-services
+        
+        ## About
+        
+        ## Install
+        ```bash
+        pip install git+https://github.com/aleksas/vdu-nlp-services
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
