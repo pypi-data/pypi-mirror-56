@@ -1,0 +1,134 @@
+#!/usr/bin/python3
+import argparse
+import sys
+from pathlib import Path
+from typing import List, Type
+from unittest import TestLoader
+
+from docker import DockerClient
+from docker.models.containers import Container
+
+from bunt.hop import BuntContainer
+from bunt.environment import Environment
+
+
+def bunt_list(test_code_folder: Path) -> List[str]:
+    test_loader = TestLoader()
+    test_suite = test_loader.discover(
+        start_dir='.',
+        pattern='test*.py',
+        top_level_dir=str(test_code_folder)
+    )
+
+    def __flatten_listings(item):
+        if hasattr(item, '__iter__'):
+            for x in item:
+                yield from __flatten_listings(x)
+        else:
+            yield item.id()
+
+    return list(__flatten_listings(test_suite))
+
+
+def command_list(args: argparse.Namespace) -> int:
+    directory: Path = args.directory
+
+    for test_case_id in sorted(bunt_list(directory)):
+        print(test_case_id)
+
+    return 0
+
+
+def command_run(args: argparse.Namespace) -> int:
+    directory: Path = args.directory
+    test_case: str = args.test_case
+    network: str = args.network
+    network_cleanup: bool = args.network_cleanup
+
+    # Template
+    class_name = 'BuntTest' + ''.join([word.capitalize() for word in test_case.split('.')])
+    environment_variable = repr({
+        # 'DOCKER_HOST': 'unix:///var/run/docker.sock',
+        'BUNT_NETWORK': network,
+        'BUNT_CLEANUP_CREATED_RESOURCES': 'false'
+    })
+    volumes = repr({
+        '/var/run/docker.sock': '/var/run/docker.sock',
+        str(directory.absolute()) + '/': '/code/',  # Mount the code into the container CWD
+    })
+    command = repr([
+        # '--failfast',
+        # '--buffer',
+        '--verbose',
+        test_case,
+    ])
+    class_code = f'class {class_name}(BuntContainer):\n' \
+                 f'\tname = {repr(class_name)}\n' \
+                 f'\thost_name = {repr(class_name)}\n' \
+                 f'\tenvironment_variables = {environment_variable}\n' \
+                 f'\tvolume_mounts = {volumes}\n' \
+                 f'\tentry_point = ["python3", "-m", "unittest"]\n' \
+                 f'\tcommand = {command}\n'
+
+    # Compile
+    data = {'BuntContainer': BuntContainer}
+    exec(class_code, data)
+
+    configuration: Type[BuntContainer] = data[class_name]
+
+    docker_client = DockerClient.from_env()
+    try:
+        docker_network = docker_client.networks.get(network)
+    except:
+        docker_network = docker_client.networks.create(name=network)
+
+    with Environment(docker_client, docker_network, frozenset([configuration]), cleanup_network=network_cleanup) as e:
+        container: Container = e.containers[configuration]
+
+        print('Watching logs...')
+        for line in container.logs(stream=True):
+            print(line.decode('utf8'), end='')
+
+        status_code = container.wait()
+
+        docker_client.close()
+        return status_code['StatusCode']
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    sub_commands = parser.add_subparsers(dest='command')
+
+    # Base directory of tests.
+    parser.add_argument(
+        '-d', '--directory',
+        type=lambda p: Path(p).absolute(),
+        default=Path.cwd(),
+        help="Path to tests",
+    )
+
+    # List Command
+    listing = sub_commands.add_parser('list')
+
+    # Run Command
+    running = sub_commands.add_parser('run')
+    running.add_argument('test_case', help='The test case to run. This is a string as printed by the `list` command')
+    running.add_argument('--network', default='bunt-network', help='Docker network you run within.')
+    running.add_argument('--network_cleanup', default=False, help='Cleanup network after tests.', action='store_true')
+
+    args: argparse.Namespace = parser.parse_args()
+
+    commands = {
+        'run': command_run,
+        'list': command_list,
+    }
+
+    status = commands[args.command](args)
+
+    # Docker logs strip the blank newline at the end of the buffer. This adds it back to avoid "%" in the terminal.
+    print('')
+    return status
+
+
+if __name__ == '__main__':
+    sys.exit(main())
