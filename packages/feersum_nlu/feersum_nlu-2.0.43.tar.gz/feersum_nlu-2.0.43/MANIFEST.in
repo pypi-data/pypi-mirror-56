@@ -1,0 +1,14 @@
+# Manifest for binary distribution
+
+# Include the license file
+include LICENSE.txt
+
+include README.rst
+include requirements.txt
+
+# Include the data files
+include feersum_nlu/nlp_engine_data/*.text_clsfr_pickle
+include feersum_nlu/nlp_engine_data/*.txt
+include feersum_nlu/nlp_engine_data/*.vec
+include feersum_nlu/nlp_engine_data/*.tsv
+include feersum_nlu/nlp_engine_data/*.csv

@@ -1,0 +1,269 @@
+Metadata-Version: 1.1
+Name: feersum-nlu
+Version: 2.0.43
+Summary: Feersum Natural Language Processing SDK
+Home-page: https://github.com/praekelt/feersum_nlu_sdk
+Author: bernardt@feersum.io
+Author-email: bernardt@feersum.io
+License: ???
+Description: Feersum NLU SDK
+        ***************
+        
+        .. image:: https://travis-ci.com/praekelt/feersum-nlu-sdk.svg?token=BpxabsEzYVt3GFxE3MQH&branch=develop
+            :target: https://travis-ci.com/praekelt/feersum-nlu-sdk 
+        .. image:: https://coveralls.io/repos/github/praekelt/feersum-nlu-sdk/badge.svg?branch=develop&amp;t=YyTDu3
+            :target: https://coveralls.io/github/praekelt/feersum-nlu-sdk?branch=develop
+        
+        
+        .. Some more badge types
+            [![PyPI version](https://badge.fury.io/py/rasa_nlu.svg)](https://badge.fury.io/py/rasa_nlu)
+            [![Documentation Status](https://readthedocs.org/projects/rasa-nlu/badge/)](https://rasa-nlu.readthedocs.io/en/stable/)
+        
+        
+        Quickstart
+        ----------
+        Lets get the code
+        
+        .. code-block:: sh
+        
+            $ git clone https://github.com/praekelt/feersum-nlu-sdk.git
+            $ cd feersum-nlu-sdk
+        
+        
+        Let's install some dependencies
+        
+        .. code-block:: sh
+        
+            $ virtualenv -p `which python3.7` .pyenv
+            $ source .pyenv/bin/activate
+            $ pip install -r requirements_ref.txt
+            $ python -m nltk.downloader all
+        
+        Notes: Swap out the python3.7 above for python3.6 if needed. The requirements_ref.txt may contain module versions
+        later than available on your platform. If you find that this is the case then you can manually lower the version number
+        in the requirements_ref.txt file and try again or follow the more detailed documentation mentioned below to generate a
+        requirements.txt of your own. To get the versions of a module available on your system run, for example:
+        
+        .. code-block:: sh
+        
+            $ pip install scikit-learn==
+        
+        
+        Create the local model DB
+        +++++++++++++++++++++++++
+        
+        Now we need to setup a Postgres DB for the NLU models.
+        
+        The flask application points to a database based on the environment variable called `FEERSUM_NLU_DATABASE_URL`. For local
+        testing configure it like so:
+        
+        .. code-block:: sh
+        
+            $ export FEERSUM_NLU_DATABASE_URL="postgresql://127.0.0.1:5432/feersumnlu?user=feersumnlu&password=feersumnlu"
+        
+        
+        To create your DB user you might have to do:
+        
+        .. code-block:: sh
+        
+            $ sudo -u postgres createuser -s $(whoami); createdb $(whoami)
+        
+        
+        Then create the feersumnlu role:
+        
+        .. code-block:: sh
+        
+            $ psql
+            $ CREATE ROLE feersumnlu WITH LOGIN PASSWORD 'feersumnlu';
+            $ ALTER ROLE feersumnlu WITH SUPERUSER CREATEROLE CREATEDB;
+        
+        
+        Now your user should be created, check to see the users and their permissions and then exit postgres.
+        
+        .. code-block:: sh
+        
+            $ \du
+            $ \q
+        
+        
+        Once out of postgres and back in your Linux shell, create yourself a DB with the same name as configured in
+        FEERSUM_NLU_DATABASE_URL above as well as a 'test' DB for the unit tests:
+        
+        .. code-block:: sh
+        
+            $ createdb --encoding=UTF8 feersumnlu --owner=feersumnlu --username=feersumnlu
+            $ createdb --encoding=UTF8 test_feersumnlu --owner=feersumnlu --username=feersumnlu
+        
+        If you get a message such as `Peer authentication failed for user "feersumnlu"` then you can edit the local auth settings in your
+        `pg_hba.conf` file (usually found in a place like `/etc/postgresql/9.x/main/pg_hba.conf`). Change the line
+        
+        .. code-block:: sh
+        
+            local   all             all                                     peer
+        
+        to
+        
+        .. code-block:: sh
+        
+            local   all             all                                     trust
+        
+        Now your databases should be created locally. If you ever need to wipe and recreate the model database just drop and
+        recreate it:
+        
+        .. code-block:: sh
+        
+            $ dropdb feersumnlu
+            $ createdb --encoding=UTF8 feersumnlu --owner=feersumnlu --username=feersumnlu
+        
+        
+        Once we have setup the DB locally we need to implement migrations so run the following commands.
+        
+        .. code-block:: sh
+        
+            $ cd feersum_nlu
+            $ python manage_db.py db upgrade --directory db_migrations
+        
+        
+        The migrations on the repo should now be applied to your DB.
+        If you change/add or remove any models you must run the following for it to reflect.
+        
+        .. code-block:: sh
+        
+            $ python manage_db.py db migrate --directory db_migrations
+            $ python manage_db.py db upgrade --directory db_migrations
+        
+        Training can happen asynchronously. Please start Redis and Celery to be able to do background training. Celery should be
+        installed already from the pip requirements file above. Redis is a message broker server that one can install using
+        your OS' package manager. On OSX, for example, one can use homebrew i.e. 'brew install redis'.
+        
+        Celery and Redis are not required for the typical intent and other NLU models. It does however become a necessity for very
+        large NLU models and vision models.
+        
+        To start a local Redis message broker do from a fresh terminal:
+        
+        .. code-block:: sh
+        
+            $ brew services start redis
+        
+        Start a Celery worker from a fresh terminal 'source'-ed to the .pyenv as done above:
+        
+        .. code-block:: sh
+        
+            $ cd feersum-nlu-sdk
+            $ source .pyenv/bin/activate
+            $ export CELERY_BROKER_URL=redis://localhost:6379/0
+            $ .pyenv/bin/celery -A project worker --pool=solo --concurrency=1 --loglevel=info
+        
+        Note!! that --pool=solo is required so that the tasks are executed in the MasterProcess and not in forked worker
+        processes. Some of the C/C++ libs like used by PyTorch is not fork safe!
+        
+        Now let's start the NLU service, still from the feersum_nlu directory.
+        
+        To start without background training do:
+        
+        .. code-block:: sh
+        
+            $ python rest_flask_app.py 8100 False
+        
+        
+        To start with background training do:
+        
+        .. code-block:: sh
+        
+            $ export CELERY_BROKER_URL=redis://localhost:6379/0
+            $ python rest_flask_app.py 8100 True
+        
+        
+        You may now navigate to http://localhost:8100/nlu/v2/ui/ to browse the API.
+        
+        
+        Test the API
+        ++++++++++++
+        To test the model dashboard of the service run:
+        
+        .. code-block:: sh
+        
+            $  curl -XGET 'http://localhost:8100/nlu/v2/dashboard' \
+                  -H 'Content-Type: application/json' \
+                  -H 'Accept: application/json' \
+                  -H 'AUTH_TOKEN: '"email-nlu@feersum.io-for-a-token-for-now"
+        
+        
+        There is a bash script 'faq_matcher_single_language.sh' script in feersum_nlu/rest_api/rest_examples that one can use to
+        train an example FAQ matcher model called 'test_faq_mtchr'. The service details and auth token is configured in the script.
+        To run the script do:
+        
+        .. code-block:: sh
+        
+            $ cd feersum_nlu/rest_api/rest_examples
+            $ sh faq_matcher_single_language.sh
+        
+        
+        There is also a 'stress_test_single_language.py' Python script in the same rest_examples folder. This script
+        may be used to do an inference stress test on the server. The service details and auth token is configured in the
+        script. To execute it you may have to first do:
+        
+        .. code-block:: sh
+        
+            $ pip install requests
+        
+        
+        Run the 'stress_test_single_language.py' Python script from a fresh terminal 'source'-ed to the
+        .pyenv as done above:
+        
+        .. code-block:: sh
+        
+            $ cd feersum-nlu-sdk
+            $ source .pyenv/bin/activate
+            $ python stress_test_single_language.py
+        
+        
+        You should get in the order of 100 requests / sec processed by the local server.
+        
+        Using Docker
+        ------------
+        
+        The Feersum NLU service consists of many components and we use Docker Compose
+        to orchestrate such an environment. `Docker <https://docs.docker.com/install/>`_
+        and `Docker Compose <https://docs.docker.com/compose/install/>`_ need to be
+        installed on your system. Note that the current Docker setup only works on
+        Linux hosts.
+        
+        The vector files represent a challenge to us because of their size - we can't
+        include all of them in the repository because it would lead to bloat, and we
+        can't build them into the app image because the set of vector files change
+        infrequently, whereas the app does, thus leading to space wastage. The
+        solution is do place the relevant vector files in `vectors/`. The files are
+        then built into a separate image and the other containers fetch the vector
+        files upon startup.
+        
+        To build the images and run the NLU service do:
+        
+        .. code-block:: sh
+        
+            ./docker-compose.sh
+        
+        Depending on your Docker installation you may need superuser privileges, in
+        which case sudo is required:
+        
+        .. code-block:: sh
+        
+            sudo ./docker-compose.sh
+        
+        You may now navigate to http://:192.168.17.20:8100/nlu/v2/ui/#/ to browse the
+        API.
+        
+        More Detailed Documentation
+        ---------------------------
+        
+        There are more detailed docs (part of Sphinx docs) hosted here: https://github.com/praekelt/feersum-nlu-sdk/blob/develop/docs/gettingstarted.rst
+        
+        
+Keywords: Natural language processing understanding
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
