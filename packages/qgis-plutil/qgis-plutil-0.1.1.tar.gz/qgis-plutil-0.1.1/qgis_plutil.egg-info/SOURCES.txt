@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+qgis_plutil/__init__.py
+qgis_plutil/__version__.py
+qgis_plutil/constants.py
+qgis_plutil/plugin.py
+qgis_plutil.egg-info/PKG-INFO
+qgis_plutil.egg-info/SOURCES.txt
+qgis_plutil.egg-info/dependency_links.txt
+qgis_plutil.egg-info/requires.txt
+qgis_plutil.egg-info/top_level.txt
