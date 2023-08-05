@@ -1,0 +1,13 @@
+README.rst
+setup.py
+PennyLane_qsharp.egg-info/PKG-INFO
+PennyLane_qsharp.egg-info/SOURCES.txt
+PennyLane_qsharp.egg-info/dependency_links.txt
+PennyLane_qsharp.egg-info/entry_points.txt
+PennyLane_qsharp.egg-info/requires.txt
+PennyLane_qsharp.egg-info/top_level.txt
+pennylane_qsharp/__init__.py
+pennylane_qsharp/_version.py
+pennylane_qsharp/device.py
+pennylane_qsharp/ops.py
+pennylane_qsharp/quantum_simulator.py

@@ -1,0 +1,3 @@
+[pennylane.plugins]
+microsoft.QuantumSimulator = pennylane_qsharp:QuantumSimulatorDevice
+
