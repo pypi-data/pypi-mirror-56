@@ -1,0 +1,11 @@
+gym_racer/__init__.py,sha256=w4z-l1i6Lf4EN8-R9QY8QgdYMNN3jvELqprEh4aaMuo,164
+gym_racer/envs/__init__.py,sha256=rwW37sF2nT215ptE6cPYFOsURElPqx1xkoAFWsBWX5k,46
+gym_racer/envs/racer_car.py,sha256=vnBlJwU-O7QHvrs4pGcIQh3hCQaekb5Un46EDnN_k70,13900
+gym_racer/envs/racer_env.py,sha256=mCXm8FgRuY49mYRqf3PO_3syhV7xaw_ie5VCqWb5zjE,19678
+gym_racer/envs/racer_map.py,sha256=45wZyXMJyf1seJ9B4Z-cX2MtOTKlLJwXwI-hcEwjCWo,4689
+gym_racer/envs/utils.py,sha256=S3N40YzGiO9b-8XyuRUkCs0MZQplJTulDT-lw7sQgMo,648
+gym_racer-0.0.2.dist-info/LICENSE.txt,sha256=HS1fPLKtc81YdnHtnpUUUoBgjDfTnOcGvByiTivpXWc,1053
+gym_racer-0.0.2.dist-info/METADATA,sha256=5PWXisRWWs_q9J-XuCL9f1U_HnS6cHJWPmpK6CfwiWg,2702
+gym_racer-0.0.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+gym_racer-0.0.2.dist-info/top_level.txt,sha256=IUcCtKg5bQ_cSI3IuN-cgcX_MfsQadTvS3GSZhS441M,10
+gym_racer-0.0.2.dist-info/RECORD,,
