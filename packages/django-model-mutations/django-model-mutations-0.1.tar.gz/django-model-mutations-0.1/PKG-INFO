@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: django-model-mutations
+Version: 0.1
+Summary: Graphene Django model mutations
+Home-page: https://github.com/topletal/django-model-mutations
+Author: Tomáš Opletal
+Author-email: t.opletal@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: GRAPHENE,GRAPHENE-DJANGO,GRAPHQL,DJANGO,MODELS,API
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
