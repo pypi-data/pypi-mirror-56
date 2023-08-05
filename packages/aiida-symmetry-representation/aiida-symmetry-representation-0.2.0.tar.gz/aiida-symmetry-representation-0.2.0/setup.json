@@ -1,0 +1,56 @@
+{
+  "name": "aiida-symmetry-representation",
+  "version": "0.2.0",
+  "description": "AiiDA Plugin for symmetry representations.",
+  "author": "Dominik Gresch",
+  "author_email": "greschd@gmx.ch",
+  "url": "https://aiida-symmetry-representation.readthedocs.io",
+  "license": "Apache 2.0",
+  "classifiers": [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Framework :: AiiDA"
+  ],
+  "keywords": "symmetry representation aiida workflow",
+  "include_package_data": true,
+  "setup_requires": [
+    "reentry"
+  ],
+  "reentry_register": true,
+  "install_requires": [
+    "aiida-core>=1.0.0",
+    "aiida-tools>=0.2.0",
+    "pymatgen",
+    "fsc.export"
+  ],
+  "extras_require": {
+    "testing": [
+      "pytest",
+      "aiida-pytest>=0.1.0a6"
+    ],
+    "docs": [
+      "sphinx",
+      "sphinx-rtd-theme",
+      "sphinxcontrib-details-directive==0.1.0"
+    ],
+    "dev_precommit": [
+      "yapf==0.28",
+      "pre-commit",
+      "prospector==1.1.7"
+    ]
+  },
+  "entry_points": {
+    "aiida.calculations": [
+      "symmetry_representation.filter_symmetries = aiida_symmetry_representation.calculations.filter_symmetries:FilterSymmetriesCalculation"
+    ],
+    "aiida.parsers": [
+      "symmetry_representation.symmetry = aiida_symmetry_representation.parsers.symmetries:SymmetriesParser"
+    ]
+  }
+}

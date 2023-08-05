@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: aiida-symmetry-representation
+Version: 0.2.0
+Summary: AiiDA Plugin for symmetry representations.
+Home-page: https://aiida-symmetry-representation.readthedocs.io
+Author: Dominik Gresch
+Author-email: greschd@gmx.ch
+License: Apache 2.0
+Description: ## aiida-symmetry-representation
+        
+        A plugin for [AiiDA](www.aiida.net) to run calculations with the [symmetry-representation](http://z2pack.ethz.ch/symmetry-representation/) code. It defines a calculation to filter symmetries by whether they exist in a given structure.
+        
+        Documentation: https://aiida-symmetry-representation.readthedocs.io
+        
+Keywords: symmetry representation aiida workflow
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Framework :: AiiDA
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+Provides-Extra: docs
+Provides-Extra: dev_precommit
+Provides-Extra: dev

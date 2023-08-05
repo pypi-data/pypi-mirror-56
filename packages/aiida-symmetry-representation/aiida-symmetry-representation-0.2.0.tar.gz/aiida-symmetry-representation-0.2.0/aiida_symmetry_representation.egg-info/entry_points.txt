@@ -1,0 +1,6 @@
+[aiida.calculations]
+symmetry_representation.filter_symmetries = aiida_symmetry_representation.calculations.filter_symmetries:FilterSymmetriesCalculation
+
+[aiida.parsers]
+symmetry_representation.symmetry = aiida_symmetry_representation.parsers.symmetries:SymmetriesParser
+
