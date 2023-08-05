@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: addok-getbyid
+Version: 0.0.5
+Summary: UNKNOWN
+Home-page: https://github.com/osmontrouge/addok-getbyid
+Author: François de Metz
+Author-email: francois@2metz.fr
+License: MIT
+Keywords: addok
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# Addok-getbyid
+
+## Installation
+
+    pip install addok-getbyid
+
+## Configuration
+
+## License
+
+MIT
+
+
