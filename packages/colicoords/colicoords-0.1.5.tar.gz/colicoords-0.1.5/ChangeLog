@@ -1,0 +1,109 @@
+CHANGES
+=======
+
+0.1.5
+-----
+
+* Update test\_iplot.py
+* added tests for iplot module
+* removed figure method
+* removed print
+* added plot phi dist to itercellplot
+* fixed itercellplot simulated binary  plotting bug
+* fixed histogram redrawing bug
+* hyphen
+* return barcontainer and update docstring return type
+* docstring outline
+* minor
+* iplot docstrings
+* Update test\_plot.py
+* removed test\_temp that was still swarfing around
+* added dilate/erode and label tests
+* added test for postprocessing
+* more CellListPlot tests
+* updated CellListPlot plot\_l\_class return value
+* Update README.rst
+* asserts almost equal
+* added tests for CellListPlot
+* fixed bug, clp phi\_dist now returns lines instead of lists
+* chaged y label of celllistplot longitinudial distance
+* changed y label of celllistplot radial distance
+* Create codecov.yml
+* asserts changed to almost equal
+* fixed closing figures, calling binary image, integrated sum of hist\_phi\_storm
+* added tests for CellPlot
+* removed print from plot\_phi\_dist and now returning line objects instead of lists as intended
+* fixed bug in plot\_l\_dist if no dist kwargs are given
+* started adding tests for plotting module
+* convert to float
+* switched order in assertalmostequal
+* rounding on asserts
+* docstring update and error is now actually raised
+* 3d testcase l\_dist and l\_classify tests
+* added tests for phi\_dist
+* changed rmax checking to not none
+* fixed copy/paste error in docstring
+* suggestion in comment
+* Update storm\_data.rst
+* Fix date
+* Replace assertion with a warning
+* Add a function for loading 3D-DAOSTORM SMLM analysis HDF5 files. Add documentation
+* fixed tests for symfit > 0.5.0
+* updated imports, towards #101
+* add try/except to ArrayFitResults (for symfit 0.4.6)
+* Update README.rst
+
+0.1.4
+-----
+
+* Delete temp\_issue\_38.py
+* fixed bug in getting names and dclasses
+* fixed #93
+* checked rounding, sometimes sum of training/validation parts doesnt add up but not a bug
+* removed deprecated class
+* pep8
+* still fixed #38 but now with the actual fix
+* fixed #38
+* fixes #71
+* fixed #76
+* fixed #82
+* fixed #83
+* moved definition of x, y higher in the loop, fixes #97
+* added data names and dclasses to CellListData object
+* added CellListData object to return the cells shape in a CellList object
+* default of \`storm\_weight\` in IterCellPlot plot\_storm to False
+* removed gauss old method from plot\_storm
+* removed old gaussian plotting code
+* storm\_weight default set to False
+* fixed #78
+* added limit l kwarg to hist\_r\_storm
+* added continue on empty storm element, fixes #98
+* Update README.rst
+* Add files via upload
+* Add files via upload
+* Update README.rst
+* space
+* Update readme.md
+* Create readme.md
+* Update README.rst
+* fixed #95
+* added l\_dist tests
+* removed bins from docstring
+* fixed bools var overriding other bools var
+* assert almost equal for windows (appeveyor)
+* added tests for r\_dist
+* check for limit l not none to allow 0
+* added error message to limit l out of bounds
+* removed misleading #todo, fixes #96
+* updated docs
+* Update README.rst
+* updated pipeline figure
+* unsaved changes
+* updated CNN examples
+* removed temporary and other files from example dir
+* done button now closes the windows
+* fixed unstable GUI for drawing on images by updating the image in the main thread, should fix #55
+* added docstrings to phi\_dist
+* added storm data example and moved data to seperate directories
+* initial implementation of phi (angular) distribution
+* update config rst and config angular distirbution config values
