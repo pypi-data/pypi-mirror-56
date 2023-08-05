@@ -1,0 +1,14 @@
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+src/flake8_no_types.py
+src/flake8_no_types.egg-info/PKG-INFO
+src/flake8_no_types.egg-info/SOURCES.txt
+src/flake8_no_types.egg-info/dependency_links.txt
+src/flake8_no_types.egg-info/entry_points.txt
+src/flake8_no_types.egg-info/not-zip-safe
+src/flake8_no_types.egg-info/requires.txt
+src/flake8_no_types.egg-info/top_level.txt
