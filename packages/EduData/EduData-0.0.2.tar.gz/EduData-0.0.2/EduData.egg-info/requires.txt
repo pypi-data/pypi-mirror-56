@@ -1,0 +1,14 @@
+tqdm
+networkx
+longling>=1.3.1
+requests
+bs4
+rarfile
+pandas
+fire
+lxml
+
+[test]
+pytest>=4
+pytest-cov>=2.6.0
+pytest-pep8>=1
