@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: django-book
+Version: 0.1.1
+Summary: Django app for storing books and pages
+Home-page: https://gitlab.com/reedrichards/book
+Author: Robert Wendt
+Author-email: rwendt1337@gmail.com
+License: UNKNOWN
+Keywords: book
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Requires-Dist: django
+Requires-Dist: pillow
+
+====
+Book
+====
+
+
+
+
+
+Django app for storing books and pages
+
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2019-11-18)
+------------------
+
+* First release on PyPI.
+
+
