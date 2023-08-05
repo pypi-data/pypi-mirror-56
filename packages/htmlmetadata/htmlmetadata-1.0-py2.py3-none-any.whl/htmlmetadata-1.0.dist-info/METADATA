@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: htmlmetadata
+Version: 1.0
+Summary: Extract metadata from html pages using Open Graph metadata, HTML metadata, and a series of fallbacks
+Home-page: https://github.com/mariocesar/htmlmetadata
+Author: "M. César Señoranis"
+Author-email: "mariocesar@humanzilla.com"
+License: MIT License
+Project-URL: Tracker, https://github.com/mariocesar/htmlmetadata/issues
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown; charset=UTF-8
+Requires-Dist: beautifulsoup4 (>=4.8.1)
+Requires-Dist: html5 (>=0.0.9)
+Provides-Extra: develop
+Requires-Dist: wheel ; extra == 'develop'
+Requires-Dist: twine ; extra == 'develop'
+
+# HTMLmetadata
+Extract metadata from html pages using Open Graph metadata, HTML metadata, and a series of fallbacks
+
+> Inspired in https://metascraper.js.org
+
+# Install
+
+```bash
+pip install htmlmetadata
+```
+
+# Use
+
+You can use it by calling the module directly.
+
+```
+python -m htmlmetadata http://schema.org/docs/about.html                                                                            
+{
+  "request": {
+    "url": "http://schema.org/docs/about.html"
+  },
+  "summary": {
+    "description": "Schema.org is a set of extensible schemas that enables webmasters to embed\n    structured data on their web pages for use by search engines and other applications.",
+    "title": "about page - schema.org",
+    "language": "en"
+  }
+}
+```
+
+Or use it directly in your code.
+
+```python
+from htmlmetadata import extract_metadata
+
+data = extract_metadata("http://schema.org/docs/about.html")
+```
+
+
