@@ -1,0 +1,14 @@
+flake8_requests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flake8_requests/constants.py,sha256=1ahCUaXgzjR8ae41RVZIZkWPQ-CcMImWBeqvTAVC3mM,592
+flake8_requests/dont_handle_redirects.py,sha256=EuRC9beUTBkiU9SMfLMnkJV7FxdB1f5kR8VxMVKI2pg,2769
+flake8_requests/dumb_scope_visitor.py,sha256=hPbKwPN44bv1M0kUUF758wGtyl7aEJCWmTL7_HnA-0k,3422
+flake8_requests/import_aliasing.py,sha256=QTAff6Cj4aViTZYcrXzVUldvcU4Tla0P1_7Ja5kEWRo,2040
+flake8_requests/no_auth_over_http.py,sha256=0x-8m36IRY9DFuUGP73_97ljNk5NQfFs2LmATLSeUno,3138
+flake8_requests/requests_base_visitor.py,sha256=QfW6wcJXf_kecoIurDMx3eZ_PhI63w5HnI_vokgJzjY,3110
+flake8_requests/use_scheme.py,sha256=GNabd-efm71t4QFw7VcW8bB-vey_pHiemwSEHtHV910,3169
+flake8_requests/use_timeout.py,sha256=rq_1jJEWDjL0Wd2dTzd1ys5W6zjvx7-CTSicukwsrdc,2220
+flake8_requests-0.1.0.dist-info/METADATA,sha256=7JvzafdtB-KTR04GGmA_zaOs6ZD_FvcyI7XdWY6hcB8,203
+flake8_requests-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+flake8_requests-0.1.0.dist-info/entry_points.txt,sha256=vfO4PIxbc5YPbQxfk_UzWGHOQ9Iu-AAL5kb7luEM3b0,172
+flake8_requests-0.1.0.dist-info/top_level.txt,sha256=TrOFoaPKnZaxlOr9cUJuW7y4hjAIdlKp_dOnGvgvYF8,16
+flake8_requests-0.1.0.dist-info/RECORD,,
