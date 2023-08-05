@@ -1,0 +1,14 @@
+vcert/__init__.py,sha256=iC77gwq5yUfz3A4hCWp1r9j8KI7rs5Ep1nvcHKzPSZk,1820
+vcert/common.py,sha256=y6cKjX_NSleBJWFiwJXKusecuMqag8sCQdHwWzvhu_o,18506
+vcert/connection_cloud.py,sha256=qoW_Yc4n-_VobSV0cheFrV0adEuIK-O4BQ8nZnw5FWA,12736
+vcert/connection_fake.py,sha256=5qo16lGH2GcQOOVOrn2NepVggk2zm3qIULrsVlMjVXE,8734
+vcert/connection_tpp.py,sha256=QwsT0moiPeqlNkyTa-hk1tvsOZac9yYCk-bKh9n0s1U,13546
+vcert/errors.py,sha256=10ZpB2NcpsEPM09CNTr4-x4oH4vrHg1-VJOxMh6AC6g,985
+vcert/http.py,sha256=X-7yPofLwWeHWqtx9PLzQdd5svo3AZly7nJnLgM2R0I,6523
+vcert/pem.py,sha256=zsFo4oqp2xihAkvahQ09AT-ftkk6SiLrgzYdIkrJA9o,1784
+vcert-0.7.0.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+vcert-0.7.0.dist-info/METADATA,sha256=VioFqvvHZmlzFrHU-lf7prbjrfJbWdHhPf7UTpAKt9I,903
+vcert-0.7.0.dist-info/RECORD,,
+vcert-0.7.0.dist-info/WHEEL,sha256=rNo05PbNqwnXiIHFsYm0m22u4Zm6YJtugFG2THx4w3g,92
+vcert-0.7.0.dist-info/metadata.json,sha256=Q4uB_RL1evIOXZhGBbWRHJ5_kosWYuO9j9B_aVr27qk,1058
+vcert-0.7.0.dist-info/top_level.txt,sha256=5KwyudjZ9SQMGbOmEKo4ajFSTevVWftaBLKgr6yBZKI,6
