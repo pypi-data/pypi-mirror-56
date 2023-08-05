@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ckb
+Version: 0.2.0
+Summary: Nervos CKB SDK
+Home-page: https://github.com/doitian/ckb-sdk-python
+Author: ian
+Author-email: ian@nervos.org
+License: MIT
+Description: # CKB SDK Python
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Description-Content-Type: text/markdown
