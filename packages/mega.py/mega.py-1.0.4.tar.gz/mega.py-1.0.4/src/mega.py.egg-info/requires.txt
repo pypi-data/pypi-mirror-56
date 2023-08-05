@@ -1,0 +1,4 @@
+requests>=0.10
+pycrypto
+pathlib==1.0.1
+tenacity<6.0.0,>=5.1.5
