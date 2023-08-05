@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+        <permission name="collective.siteimprove: Use Siteimprove"
+                    acquire="True">
+            <role name="Site Administrator"/>
+            <role name="Manager"/>
+            <role name="Editor"/>
+            <role name="Reviewer" />
+        </permission>
+  </permissions>
+</rolemap>
