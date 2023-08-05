@@ -1,0 +1,3 @@
+[console_scripts]
+okta-awscli = oktaauth.okta_awscli:main
+

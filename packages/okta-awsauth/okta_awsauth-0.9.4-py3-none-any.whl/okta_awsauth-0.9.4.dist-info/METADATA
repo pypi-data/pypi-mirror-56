@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: okta-awsauth
+Version: 0.9.4
+Summary: Provides a wrapper for Okta authentication to awscli
+Home-page: https://github.com/OwnZones/okta-awscli
+Author: Franco Papalardo
+Author-email: franco.papalardo@ownzones.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: click
+Requires-Dist: bs4
+Requires-Dist: boto3
+Requires-Dist: ConfigParser
+Requires-Dist: keyring
+Requires-Dist: tzlocal
+Provides-Extra: u2f
+Requires-Dist: python-u2flib-host ; extra == 'u2f'
+
+UNKNOWN
+
+
