@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: cmake-language-server
+Version: 0.1.0
+Summary: CMake LSP Implementation
+Home-page: https://github.com/regen100/cmake-language-server
+License: MIT
+Keywords: cmake,completion,vim,lsp
+Author: regen
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Text Editors :: Integrated Development Environments (IDE)
+Classifier: Topic :: Utilities
+Requires-Dist: pygls (>=0.8.1,<0.9.0)
+Requires-Dist: pyparsing (>=2.4,<3.0)
+Project-URL: Repository, https://github.com/regen100/cmake-language-server
+Description-Content-Type: text/markdown
+
+# cmake-language-server
+[![GitHub Actions (Tests)](https://github.com/regen100/cmake-language-server/workflows/Tests/badge.svg)](https://github.com/regen100/cmake-language-server/actions)
+
+CMake LSP Implementation.
+
+Alpha Stage, work in progress.
+
+## Features
+- [x] Builtin command completion
+- [x] Documentation for commands and variables on hover
+- [x] Formatting
+
+## Commands
+
+- cmake-language-server: LSP server
+- cmake-format: CLI frontend for formatting
+
+## Installation
+
+### Clients
+
+- Neovim ([neoclide/coc.nvim][coc.nvim])
+
+#### Neovim
+
+```jsonc
+  "languageserver": {
+    "cmake": {
+      "command": "cmake-language-server",
+      "filetypes": ["cmake"],
+      "rootPatterns": [
+        "build/"
+      ],
+      "initializationOptions": {
+        "buildDirectory": "build"
+      }
+    }
+  }
+```
+
+
+[coc.nvim]: https://github.com/neoclide/coc.nvim
+
