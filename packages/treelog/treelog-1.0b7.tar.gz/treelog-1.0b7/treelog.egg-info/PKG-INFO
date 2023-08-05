@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: treelog
+Version: 1.0b7
+Summary: Logging framework that organizes messages in a tree structure
+Home-page: https://github.com/evalf/treelog
+Author: Evalf
+Author-email: info@evalf.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Provides-Extra: docs
