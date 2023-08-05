@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: dcggraph
+Version: 0.0.1
+Summary: Directed Cyclic Graph Utilities for Python
+Home-page: https://github.com/ssteffl/python-dcggraph
+Author: Sam Steffl
+Author-email: sam@ssteffl.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/ssteffl/python-dcggraph
+Project-URL: Source, https://github.com/ssteffl/python-dcggraph
+Keywords: directed cyclic graph traversal
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: typing
+
+Directed Cyclic Graph Utilities for Python
+==========================================
+
+This package currently used for doing predicated searches from a given 
+node in a directed graph that is allowed to be cyclic. Some points to clear
+up confusion:
+- __directed__: means an edge between 2 nodes can only be travelled in one 
+  direction
+- __predicated__: means that even if a node is reachable, it still has to
+  pass a prediate test (i.e. `predicate(node) == True`) in order to be 
+  returned.
+    - this means there are really 2 search filters in the graph:
+        1) the node has to be reachable without any filtering
+        2) the node has to pass the predicate test
+- __cyclic__: means that if you start from a node, and follow a bunch of 
+  paths, you can end up at the same node. This makes things a lot harder
+  than if you were working with DAGs.
+
+API
+---
+TODO. but for now, just look at the tests to see how to run searches
+
+installing
+----------
+TODO. but eventually put on pypi
+
+
+
