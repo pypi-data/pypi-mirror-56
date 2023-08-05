@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: sparkypandas
+Version: 0.1.1
+Summary: A spark like interface to pandas data frames
+Home-page: https://github.com/priamai/sparkypanda
+Author: Priam AI
+Author-email: paolo@priam.ai
+License: Apache Software License 2.0
+Keywords: sparkypanda
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.0, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*
+
+===========
+sparkypanda
+===========
+
+
+.. image:: https://img.shields.io/pypi/v/sparkypandas.svg
+        :target: https://pypi.python.org/pypi/sparkypandas
+
+.. image:: https://travis-ci.org/priamai/sparky-panda.svg?branch=master
+    :target: https://travis-ci.org/priamai/sparky-panda
+
+.. image:: https://readthedocs.org/projects/sparkypanda/badge/?version=latest
+        :target: https://sparkypanda.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://pyup.io/repos/github/priamai/sparky-panda/shield.svg
+     :target: https://pyup.io/account/repos/github/priamai/sparky-panda
+     :alt: Updates
+
+
+A spark like interface to pandas data frames
+
+
+* Free software: Apache Software License 2.0
+* Documentation: https://sparkypanda.readthedocs.io.
+
+
+Features
+--------
+
+* Implemented select expression
+
+Example
+------------------
+
+First install:
+pip install sparkypandas
+
+
+.. code-block:: python
+
+    import sparypanda
+    data = {'col_1': [3, 2, 1, 0], 'col_2': ['a', 'b', 'c', 'd']}
+
+    df = sparkypanda.DataFrame(data)
+
+    df_all_col = df.select('*')
+
+    df_col_1 = df.select('col_1')
+
+    df_all = df.select('col_2','col_1')
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2019-11-18)
+------------------
+
+* First release on PyPI.
+
+
