@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: pytonik
+Version: 1.9.5
+Summary: pytonik is Model View Controller in Python
+Home-page: https://github.com/pytonik/pytonik
+Author: Betacodings
+Author-email: info@pytonik.com
+Maintainer: Emmanuel Essien
+Maintainer-email: emmamartinscm@gmail.com
+License: Apache 2.0
+Description: # pytonik
+        
+        [![Build Status](https://img.shields.io/pypi/v/pytonik)](https://pypi.python.org/pypi/pytonik)
+        [![Downloads](https://img.shields.io/pypi/dm/pytonik)](https://pypi.python.org/pypi/pytonik/)
+        [![Wheel](https://img.shields.io/pypi/wheel/pytonik.svg)](https://pypi.python.org/pypi/pytonik)
+        [![Python Version](https://img.shields.io/pypi/pyversions/pytonik)](https://pypi.python.org/pypi/pytonik)
+        [![License](https://img.shields.io/pypi/l/pytonik)](https://pypi.python.org/pypi/pytonik)
+        
+        Model View Controller in Python
+        
+        It is easy to use, design using oop(Object Oriented Programming) Pattern.
+        It runs on multiple servers such as WINDOWS, MAC OS, LINUX.
+        
+        [![Made with python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://pypi.python.org/pypi/pytonik)
+        
+        ## How to setup
+        if you are running a local machine you will need to install either, wamp, xampp, lamp or mamp. 
+        Enable CGI on your httpd.conf file as follows:
+        
+        
+        ## How to install
+        
+        We recommend you to install this MVC package using Command Line
+        ```
+        $ pip install pytonik
+        ```
+        
+        For more information on how to use, kindly visit: [pytonik](https://github.com/pytonik)
+        
+        
+        
+        
+Keywords: mvc,oop,module
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Office/Business
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Requires-Python: >=2.7, >=3
+Description-Content-Type: text/markdown
