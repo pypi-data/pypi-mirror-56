@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: clidec
+Version: 0.0.1
+Summary: Build command line tools with sub-commands using decorators.
+Home-page: https://github.com/urso/clidec
+Author: Steffen Siering
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# CLIdec
+
+Package clidec provides support for building command line tools with multiple
+sub-commands via decorators. CLIdec is based on argparse.
+
+
