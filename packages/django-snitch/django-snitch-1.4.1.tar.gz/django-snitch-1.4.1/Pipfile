@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "<3.0"
+django-model-utils = "*"
+django-push-notifications = "*"
+pytest = "*"
+pytest-cov = "*"
+sphinx = "*"
+pytest-django = "*"
+factory-boy = "*"
+bleach = "*"
+celery = "*"
+tox = "*"
+flit = "*"
+
+[dev-packages]
+mypy = "*"
+black = "==19.3b0"
+cron-descriptor = "*"
+django-celery-beat = "*"
+
+[requires]
+python_version = "3.7"
