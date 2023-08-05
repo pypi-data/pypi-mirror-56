@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: onnds
+Version: 0.0.7
+Summary: Convenience module for interacting with Trend Micro Deep Security
+Home-page: http://oznetnerd.com
+Author: Will Robinson
+Author-email: will@oznetnerd.com
+License: UNKNOWN
+Description: # OzNetNerd Deep Security
+        
+        Convenience Python module for interacting with Trend Micro Deep Security
+        
+        ## Installation
+        
+        ```
+        pip3 install onnds
+        ```
+        
+        # Contact
+        
+        * Blog: oznetnerd.com
+        * Email: will@oznetnerd.com
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
