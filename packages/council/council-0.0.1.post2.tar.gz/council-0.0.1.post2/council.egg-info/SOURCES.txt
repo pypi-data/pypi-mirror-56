@@ -1,0 +1,16 @@
+CHANGELOG.md
+README.md
+setup.py
+council/__init__.py
+council/abstract_council.py
+council/council_member.py
+council/dict_council.py
+council/list_council.py
+council/member_wrapper.py
+council/return_value.py
+council/util.py
+council.egg-info/PKG-INFO
+council.egg-info/SOURCES.txt
+council.egg-info/dependency_links.txt
+council.egg-info/top_level.txt
+council_data/__init__.py
