@@ -1,0 +1,10 @@
+2019-11-05 14:21:54,991 INFO HttpClient Msg: Init http client, session num: 16.
+2019-11-05 14:21:54,999 DEBUG HttpClient Msg: Sending request, get https://api-annotations.nutonomy.com/v1/tasks/0a755df34936478c9b60bd42439a0b89, id: 0.
+2019-11-05 14:21:55,932 DEBUG HttpClient Msg: Response 200, get https://api-annotations.nutonomy.com/v1/tasks/0a755df34936478c9b60bd42439a0b89, id: 0.
+2019-11-05 14:21:55,933 DEBUG HttpClient Msg: Sending request, delete https://api-annotations.nutonomy.com/v1/tasks/0a755df34936478c9b60bd42439a0b89, id: 1.
+2019-11-05 14:21:56,842 DEBUG HttpClient Msg: Response 204, delete https://api-annotations.nutonomy.com/v1/tasks/0a755df34936478c9b60bd42439a0b89, id: 1.
+2019-11-05 14:22:06,673 INFO HttpClient Msg: Init http client, session num: 16.
+2019-11-05 14:22:06,676 DEBUG HttpClient Msg: Sending request, get https://api-annotations.nutonomy.com/v1/sample-groups/833cba1bd80044d3becca0966a96d81c, id: 0.
+2019-11-05 14:22:07,618 DEBUG HttpClient Msg: Response 200, get https://api-annotations.nutonomy.com/v1/sample-groups/833cba1bd80044d3becca0966a96d81c, id: 0.
+2019-11-05 14:22:07,619 DEBUG HttpClient Msg: Sending request, delete https://api-annotations.nutonomy.com/v1/sample-groups/833cba1bd80044d3becca0966a96d81c, id: 1.
+2019-11-05 14:22:08,523 DEBUG HttpClient Msg: Response 204, delete https://api-annotations.nutonomy.com/v1/sample-groups/833cba1bd80044d3becca0966a96d81c, id: 1.
