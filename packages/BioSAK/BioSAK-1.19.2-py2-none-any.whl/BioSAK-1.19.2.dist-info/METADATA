@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: BioSAK
+Version: 1.19.2
+Summary: BioSAK
+Home-page: https://github.com/songweizhi/BioSAK
+Author: Weizhi Song
+Author-email: songwz03@gmail.com
+License: GPL3+
+Keywords: Bioinformatics Metagenomics
+Platform: UNKNOWN
+Requires-Dist: biopython
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: itolapi
+
+BioSAK v1.19.2 
+
+
