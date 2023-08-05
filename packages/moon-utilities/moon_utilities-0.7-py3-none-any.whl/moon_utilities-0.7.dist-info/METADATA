@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: moon-utilities
+Version: 0.7
+Summary: Some utilities for all the Moon components
+Home-page: UNKNOWN
+Author: Thomas Duval
+Author-email: thomas.duval@orange.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+Requires-Dist: hug
+Requires-Dist: tinydb
+
+# moon_utilities
+
+Python library that implements miscellaneous functions for the Moon project
+

@@ -1,0 +1,3 @@
+[console_scripts]
+generate_opst_policy = moon_utilities.generate_opst_policy:main
+
