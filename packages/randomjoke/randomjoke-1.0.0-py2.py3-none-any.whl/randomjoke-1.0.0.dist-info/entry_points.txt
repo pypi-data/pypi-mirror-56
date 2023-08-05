@@ -1,0 +1,3 @@
+[console_scripts]
+makeajoke = randomjoke.cli:main
+
