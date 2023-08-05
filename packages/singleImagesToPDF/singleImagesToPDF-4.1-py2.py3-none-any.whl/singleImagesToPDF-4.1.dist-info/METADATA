@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: singleImagesToPDF
+Version: 4.1
+Summary: It helps you convert all the images in the current working directory (os.getcwd()) to a single pdf file
+Home-page: https://gitlab.com/antoreep_jana/singleimagestopdf/tree/master
+Author: Antoreep Jana
+Author-email: antoreepjana@gmail.com
+License: MIT
+Download-URL: https://gitlab.com/antoreep_jana/singleimagestopdf/-/archive/v4.1/singleimagestopdf-v4.1.tar.gz
+Keywords: Image to PDF,Merge Images,pdf,PDF,PDF maker from images,jpeg to pdf
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# singleImagesToPDF
+
+This helps you to convert all the image files in your current working directory (os.getcwd()) to pdf files and merge them (if you want) to be combined in a PDF file format.
+
+
+Specifications:
+======
+Supported File Formats :- JPEG/JPG/PNG<br/>
+Supported Operating Systems :- Linux/Windows<br/>
+Programming Language :- Python3<br/>
+
+Using this you can convert all your images gathered (either notes or documents) to a single pdf file. 
+
+How to Use?
+======
+All you need to do is open your command promt in the required directory(folder) and run:<br/>
+    1) **pip install singleImagesToPDF**<br/>
+    2) make a python script and add the following lines of code<br/>
+       &nbsp;&nbsp;&nbsp;&nbsp;a) Do the necessary **import**:-<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **from singleImagesToPDF.pdfFromMultiImages import pdfFromMultiImgs**<br/>
+       &nbsp;&nbsp;&nbsp;&nbsp; b) Make an instance and call the merge function<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**a = pdfFromMultiImgs()**<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**a.merge()**
+
+Follow along the instructions and your images (usually notes/documents) will be merged into a single pdf or keep the single pdfs corresponding to the images as required.
+
+Image Format supported :- JPG/JPEG/PNG
+
+Platform Supported :- Linux/Windows
+
+Use Cases :- <br/>
+======
+   &nbsp;&nbsp;&nbsp;&nbsp; a) Can be used for merging the images obtained through whatsapp in your computer<br/>
+   &nbsp;&nbsp;&nbsp;&nbsp; b) Can be used to merge the images obtained from mail,<br/>
+    or any other place where you can utilize it for
+
+
+
+
