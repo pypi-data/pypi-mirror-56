@@ -1,0 +1,3 @@
+[console_scripts]
+swarm-ctl=swarm_controller.core:swarm_ctl
+
