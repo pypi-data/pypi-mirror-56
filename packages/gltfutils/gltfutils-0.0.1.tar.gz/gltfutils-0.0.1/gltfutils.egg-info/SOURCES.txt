@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+gltfutils/__init__.py
+gltfutils.egg-info/PKG-INFO
+gltfutils.egg-info/SOURCES.txt
+gltfutils.egg-info/dependency_links.txt
+gltfutils.egg-info/requires.txt
+gltfutils.egg-info/top_level.txt
+gltfutils/tests/__init__.py
+gltfutils/tests/test_gltfutils.py

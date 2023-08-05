@@ -1,0 +1,74 @@
+# gltfutils
+This package allows you to load, save and manipulate GLTF 2.0 files in Python 3.x.
+
+## Installation
+
+gltfutils is available on pypi, allowing it to be installed by running `pip install gltfutils`.
+
+### Installing from source
+
+Clone the repository, and from the repository's root directory run `python setup.py install`
+
+### Running the tests
+
+Clone the repository, and from the repository's root directory run `python setup.py test`
+
+## Examples
+
+### Loading a gltf file
+
+```python
+from gltfutils import GLTF2
+
+with open(GLTF_FILENAME, 'r') as f:
+	gltf = gltfutils.GLTF2.load(f)
+```
+
+### Loading a GLB file
+
+```python
+from gltfutils import GLB
+
+with open(GLB_FILENAME, 'r') as f:
+	gltf = gltfutils.GLB.load(f)
+```
+
+### Accessing the Contents of a GLTF 2.0 File
+
+Access is done through dotted notation. Assuming an existing gltf file is loaded with the name `gltf`:
+
+```python
+print(gltf.asset
+
+for node in gltf.nodes:
+	print(node.mesh)
+```
+
+NOTE: Optional attributes are always present and in most cases default to None (in the case of indices, for example), or
+an empty list, when the variable is a list (i.e. a node's children).
+
+### Saving gltf JSON
+
+Assuming an existing gltf file is loaded with the name `gltf`:
+
+```python
+import json
+
+with f as open(OUTPUT_FILENAME, 'w'):
+	json.dump(f, gltfutils.to_json(gltf))
+```
+
+## TODO
+
+For 1.0:
+
+- [ ] Test coverage measurement + badge
+- [ ] CI badge
+- [ ] Buffer Loaing and Accessor implementation
+- [ ] Sparse accessors
+- [ ] Editor module
+
+For the future:
+- [ ] Draco compression
+- [ ] Lighting extension
+- [ ] LOD Extension
