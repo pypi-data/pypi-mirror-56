@@ -1,0 +1,3 @@
+[console_scripts]
+pearun = pearun.__main__:main
+
