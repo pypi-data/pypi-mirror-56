@@ -1,0 +1,15 @@
+README.rst
+setup.py
+semanticGP/__init__.py
+semanticGP/base.py
+semanticGP/breeding.py
+semanticGP/history.py
+semanticGP/multiobjective.py
+semanticGP/operators.py
+semanticGP/primitives.py
+semanticGP/selection.py
+semanticGP/util.py
+semanticGP.egg-info/PKG-INFO
+semanticGP.egg-info/SOURCES.txt
+semanticGP.egg-info/dependency_links.txt
+semanticGP.egg-info/top_level.txt
