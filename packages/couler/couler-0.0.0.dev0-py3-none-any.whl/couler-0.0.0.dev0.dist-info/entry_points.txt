@@ -1,0 +1,3 @@
+[console_scripts]
+couler = couler.__main__:main
+
