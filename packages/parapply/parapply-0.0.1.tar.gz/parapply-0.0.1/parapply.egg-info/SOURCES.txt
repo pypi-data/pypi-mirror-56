@@ -1,0 +1,11 @@
+README.md
+setup.py
+parapply/__init__.py
+parapply.egg-info/PKG-INFO
+parapply.egg-info/SOURCES.txt
+parapply.egg-info/dependency_links.txt
+parapply.egg-info/top_level.txt
+tests/__init__.py
+tests/test_df.py
+tests/test_split.py
+tests/test_srs.py
