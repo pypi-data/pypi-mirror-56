@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: sphinx-paw
+Version: 0.4.1
+Summary: Reduce Sphinx configuration steps
+Home-page: https://github.com/amarin/sphinx-paw
+Author: Aleksey Marin
+Author-email: asmadews@gmail.com
+License: MIT
+Description: Sphinx Paw
+        ========================================================================================================================
+        
+        Make project Sphinx documentation easy without long configuration steps.
+        
+        
+Platform: POSIX
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Environment :: Plugins
+Classifier: Framework :: Sphinx :: Extension
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Documentation

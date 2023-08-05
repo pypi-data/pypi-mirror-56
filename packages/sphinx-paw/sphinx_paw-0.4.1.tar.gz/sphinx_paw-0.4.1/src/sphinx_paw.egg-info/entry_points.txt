@@ -1,0 +1,7 @@
+[console_scripts]
+configure_docs = sphinx_paw.cmdline.init:init_docs
+make_sphinx_docs = sphinx_paw.sphinx_wrapper:main
+
+[distutils.commands]
+make_sphinx_docs = sphinx_paw.setup_command:Build
+

@@ -1,0 +1,50 @@
+# Translations template for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-10-03 01:54+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: src/sphinx_paw/main_params.py:65
+#, python-format
+msgid "Fig. %s"
+msgstr "Рис. %s"
+
+#: src/sphinx_paw/main_params.py:66
+#, python-format
+msgid "Table %s"
+msgstr "Таблица %s"
+
+#: src/sphinx_paw/main_params.py:67
+#, python-format
+msgid "Listing %s"
+msgstr "Пример %s"
+
+#: src/sphinx_paw/main_params.py:68
+msgid "Section"
+msgstr "Секция"
+
+#: src/sphinx_paw/builders/latexpdf.py:43
+msgid "List of images"
+msgstr "Список изображений"
+
+#: src/sphinx_paw/builders/latexpdf.py:44
+msgid "List of tables"
+msgstr "Список таблиц"
+
+#: src/sphinx_paw/builders/latexpdf.py:45
+msgid "List of listings"
+msgstr "Список примеров"
+
