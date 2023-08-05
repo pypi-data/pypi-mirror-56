@@ -1,0 +1,13 @@
+src/flake8_requests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/flake8_requests/constants.py,sha256=1ahCUaXgzjR8ae41RVZIZkWPQ-CcMImWBeqvTAVC3mM,592
+src/flake8_requests/dont_handle_redirects.py,sha256=EuRC9beUTBkiU9SMfLMnkJV7FxdB1f5kR8VxMVKI2pg,2769
+src/flake8_requests/dumb_scope_visitor.py,sha256=hPbKwPN44bv1M0kUUF758wGtyl7aEJCWmTL7_HnA-0k,3422
+src/flake8_requests/import_aliasing.py,sha256=QTAff6Cj4aViTZYcrXzVUldvcU4Tla0P1_7Ja5kEWRo,2040
+src/flake8_requests/no_auth_over_http.py,sha256=0x-8m36IRY9DFuUGP73_97ljNk5NQfFs2LmATLSeUno,3138
+src/flake8_requests/requests_base_visitor.py,sha256=QfW6wcJXf_kecoIurDMx3eZ_PhI63w5HnI_vokgJzjY,3110
+src/flake8_requests/use_scheme.py,sha256=GNabd-efm71t4QFw7VcW8bB-vey_pHiemwSEHtHV910,3169
+src/flake8_requests/use_timeout.py,sha256=rq_1jJEWDjL0Wd2dTzd1ys5W6zjvx7-CTSicukwsrdc,2220
+flake8_requests-0.1.1.dist-info/entry_points.txt,sha256=3jCiswB0bZdGcVoXqZS_3xaZ1yii-Z1vUIS96uamEwA,166
+flake8_requests-0.1.1.dist-info/WHEEL,sha256=KNDdkjSeigjRXptGlrG4jH7jZgp5SlNmTTETrR633wE,85
+flake8_requests-0.1.1.dist-info/METADATA,sha256=yYVvqcsHs4X37RZWZCk7cDzOl9bPsc_LrsElsOluxpw,1185
+flake8_requests-0.1.1.dist-info/RECORD,,
