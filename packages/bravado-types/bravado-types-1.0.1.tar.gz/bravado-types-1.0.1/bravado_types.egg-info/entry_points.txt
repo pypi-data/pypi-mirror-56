@@ -1,0 +1,3 @@
+[console_scripts]
+bravado-types = bravado_types.__main__:main
+
