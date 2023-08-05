@@ -1,0 +1,5 @@
+[console_scripts]
+ghenerate = quantarhei.scripts.ghenerate:main
+qrhei = quantarhei.scripts.qrhei:main
+qtask = quantarhei.scripts.qtask:main
+
