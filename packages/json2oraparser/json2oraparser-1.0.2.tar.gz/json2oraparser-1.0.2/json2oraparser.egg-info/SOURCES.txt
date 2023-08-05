@@ -1,0 +1,24 @@
+README.md
+setup.py
+json2oraparser/__init__.py
+json2oraparser.egg-info/PKG-INFO
+json2oraparser.egg-info/SOURCES.txt
+json2oraparser.egg-info/dependency_links.txt
+json2oraparser.egg-info/requires.txt
+json2oraparser.egg-info/top_level.txt
+json2oraparser/Config/Config.yml
+json2oraparser/ConfigController/Configuration.py
+json2oraparser/ConfigController/__init__.py
+json2oraparser/DBConnectionController/DBConnection.py
+json2oraparser/DBConnectionController/__init__.py
+json2oraparser/DataGenerationController/DataGeneration.py
+json2oraparser/DataGenerationController/__init__.py
+json2oraparser/METADATA/Metadata_Blank_Template.csv
+json2oraparser/METADATA/Metadata_CSV_Preparation_Guide.txt
+json2oraparser/METADATA/Sample_Json_File.json
+json2oraparser/METADATA/Sample_Metadata_with remarks.csv
+json2oraparser/MetadataController/MetadataList.py
+json2oraparser/MetadataController/__init__.py
+json2oraparser/PublishToDBController/PublishDB.py
+json2oraparser/PublishToDBController/__init__.py
+json2oraparser/Resources/SQL/Sample_Insert.sql
