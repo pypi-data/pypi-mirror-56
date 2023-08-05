@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_dynamo_table_viewer/__init__.py
+src/cdk_dynamo_table_viewer/py.typed
+src/cdk_dynamo_table_viewer.egg-info/PKG-INFO
+src/cdk_dynamo_table_viewer.egg-info/SOURCES.txt
+src/cdk_dynamo_table_viewer.egg-info/dependency_links.txt
+src/cdk_dynamo_table_viewer.egg-info/requires.txt
+src/cdk_dynamo_table_viewer.egg-info/top_level.txt
+src/cdk_dynamo_table_viewer/_jsii/__init__.py
+src/cdk_dynamo_table_viewer/_jsii/cdk-dynamo-table-viewer@3.0.6.jsii.tgz
