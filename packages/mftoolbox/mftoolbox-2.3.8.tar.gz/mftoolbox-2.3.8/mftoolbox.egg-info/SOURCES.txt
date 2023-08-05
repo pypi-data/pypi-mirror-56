@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+mftoolbox/__init.py
+mftoolbox/__version__.py
+mftoolbox/build.py
+mftoolbox/cotacaodolar.py
+mftoolbox/encoding.py
+mftoolbox/proventos.py
+mftoolbox/timestamp.py
+mftoolbox.egg-info/PKG-INFO
+mftoolbox.egg-info/SOURCES.txt
+mftoolbox.egg-info/dependency_links.txt
+mftoolbox.egg-info/requires.txt
+mftoolbox.egg-info/top_level.txt
