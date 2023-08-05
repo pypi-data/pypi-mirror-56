@@ -1,0 +1,12 @@
+gym[atari,box2d,classic_control]
+tensorflow-gpu
+
+[lint]
+prospector[with_everything]
+mypy==0.720
+
+[mujoco]
+gym[mujoco,robotics]
+
+[test]
+tox
