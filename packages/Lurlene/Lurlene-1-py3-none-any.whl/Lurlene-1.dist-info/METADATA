@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: Lurlene
+Version: 1
+Summary: Python-based live-coding language optimised for a small number of channels
+Home-page: https://github.com/combatopera/Lurlene
+Author: Andrzej Cichocki
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: diapyr
+Requires-Dist: splut
+Requires-Dist: timelyOSC
+
+# Lurlene
+Python-based live-coding language optimised for a small number of channels.
+
+
