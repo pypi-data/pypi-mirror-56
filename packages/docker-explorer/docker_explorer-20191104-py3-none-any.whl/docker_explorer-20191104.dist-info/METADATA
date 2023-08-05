@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: docker-explorer
+Version: 20191104
+Summary: Docker forensic analysis tool.
+Home-page: https://github.com/google/docker-explorer
+Author: Docker-Explorer devs
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Dist: requests
+
+docker-explorer is a tool to help forensic analysis of offline Docker installations
+
+
