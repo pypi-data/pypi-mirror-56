@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: automatix
+Version: 0.0.5
+Summary: Automation wrapper for bash and python commands
+Home-page: https://github.com/seibert-media/automatix
+Author: Johannes Paul, //SEIBERT/MEDIA GmbH
+Author-email: jpaul@seibert-media.net
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml (>=5.1)
+
+# automatix
+Automation wrapper for bash and python commands
+
+**Automatix is still in development and not ready for productive use!**
+
+Especially documentation is missing and will be added in near future.
+
+## Warning:
+
+Automatix evaluates YAML files and executes defined commands as shell or python commands.
+There is no check for harmful commands. Be aware that this can cause critical damage to your system.
+
+Please use the interactive mode and doublecheck commands before executing.
+Usage of automatix is at your own risk (see also [terms of license](./LICENSE)).
+
+
+## Installation
+
+Automatix requires Python &ge; 3.6.
+
+```
+pip install automatix
+```
+
