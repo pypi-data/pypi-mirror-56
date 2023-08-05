@@ -1,0 +1,15 @@
+niswitch/VERSION,sha256=LJZqrffquL56HzOJnv2f8RoYdwdVPlLXUkcoA9V9O-c,9
+niswitch/__init__.py,sha256=ffNL7ntd5JNgAFprwjKDFVpEUWaHazkSvaAv3X_TzgA,3077
+niswitch/_attributes.py,sha256=sjtdnqR3-FCAs0MLbul2BfKTSKAIwTWlzNLTdFOd2kQ,4346
+niswitch/_converters.py,sha256=vss2O0pg0OGHFpUa4aFHejzXkmiXMMCEj5uS-8XfXIE,25240
+niswitch/_library.py,sha256=eV2L1T0-5bdI9g8M6pG4jmIs65cH5PaX3DoUKkgerP8,24255
+niswitch/_library_singleton.py,sha256=RMzPAS9U6wlaM9wyQ4TgpAlEuNF8takm9_A4GwkTgQQ,1682
+niswitch/_visatype.py,sha256=2a8wW3KlP3fQEGp0vI3bhIbcTJc7vd4b80qyx_gza_4,688
+niswitch/enums.py,sha256=9pRZcPg3aMHgK6Xy7wHPvfqG-oVzN4Vy9fbCcM6xgx4,14114
+niswitch/errors.py,sha256=00BGOsqoKWjLn38iUZlBZDJ3E04AZn2ONQtrGpe_83s,3291
+niswitch/session.py,sha256=1CXYiJDDWRj3F9abJEohp9kIiWnkw0l5bS2WUw8jvLY,143623
+niswitch-1.1.4.dist-info/METADATA,sha256=CF9pYL9tRCu4pPzEfvnBRYCQRgr1RQvft2e-QYht--A,8930
+niswitch-1.1.4.dist-info/RECORD,,
+niswitch-1.1.4.dist-info/WHEEL,sha256=CG516Me1TEyQqkQMqQpnDadrWi7ujPk88poSAu3OliQ,116
+niswitch-1.1.4.dist-info/top_level.txt,sha256=eurSmFz6g7GUpGQj42Sj6Ektwbm6gTMxGRXcqqeKhcU,9
+niswitch-1.1.4.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
