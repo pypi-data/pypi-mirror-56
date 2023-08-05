@@ -1,0 +1,8 @@
+.DS_Store
+.ipynb_checkpoints
+build
+p2j.egg-info
+dist
+.pyc
+.vscode
+__pycache__
