@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: gpudeets
+Version: 2018.2.24.1606
+Summary: acquire and display GPU details
+Home-page: https://github.com/wdbm/spin
+Author: Will Breaden Madden
+Author-email: wbm@protonmail.ch
+License: GPLv3
+Description: gpudeets
+        ========
+        
+        .. code:: bash
+        
+            pip install gpudeets
+            displaygpudeets --help
+        
+Platform: UNKNOWN

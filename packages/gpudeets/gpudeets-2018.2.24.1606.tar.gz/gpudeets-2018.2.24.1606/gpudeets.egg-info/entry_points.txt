@@ -1,0 +1,3 @@
+[console_scripts]
+displaygpudeets=gpudeets.__init__:main
+
