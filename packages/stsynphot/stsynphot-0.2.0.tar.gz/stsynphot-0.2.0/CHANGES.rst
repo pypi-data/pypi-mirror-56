@@ -1,0 +1,24 @@
+0.2.0 (2019-11-19)
+==================
+
+- Removed Python 2 support. This version is only compatible with Python 3.5
+  or later. [#67]
+- Compatibility with ``astropy`` 4.0 models. [#81]
+- Invalid ``pixscale`` in ``thermback`` calculation now raises
+  ``PixscaleNotFoundError`` instead of ``SynphotError``. [#88]
+- Invalid filename lookup by component in ``tables`` now raises
+  ``GraphtabError`` instead of ``SynphotError``. [#89]
+
+0.1.1 (2018-07-18)
+==================
+
+- Raise error when catalog gap (e.g., Phoenix) is used in interpolation. [#48]
+- ``astropy-helpers`` updated to v2.0.6. [#51]
+- Wavelength catalog updated for HST/COS. [#53]
+- Added support for JWST/NIRISS path shortcut. [#55]
+- Removed deprecation warning from ``np.issubdtype``. [#56]
+
+0.1.0 (2018-01-19)
+==================
+
+First release.
