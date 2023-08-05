@@ -1,0 +1,4 @@
+[console_scripts]
+regtester = regtester.RegExTester:main
+regtester-test = regtester.RegExTester:test
+

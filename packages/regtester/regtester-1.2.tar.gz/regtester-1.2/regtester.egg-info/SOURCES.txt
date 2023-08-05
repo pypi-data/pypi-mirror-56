@@ -1,0 +1,17 @@
+README.md
+setup.py
+regtester/RegExTest.py
+regtester/RegExTestItem.py
+regtester/RegExTester.py
+regtester/TestItemResult.py
+regtester/TestResponse.py
+regtester/__init__.py
+regtester.egg-info/PKG-INFO
+regtester.egg-info/SOURCES.txt
+regtester.egg-info/dependency_links.txt
+regtester.egg-info/entry_points.txt
+regtester.egg-info/requires.txt
+regtester.egg-info/top_level.txt
+regtester/test_samples/ArtNumberTest.py
+regtester/test_samples/LawTypeTest.py
+regtester/test_samples/__init__.py
