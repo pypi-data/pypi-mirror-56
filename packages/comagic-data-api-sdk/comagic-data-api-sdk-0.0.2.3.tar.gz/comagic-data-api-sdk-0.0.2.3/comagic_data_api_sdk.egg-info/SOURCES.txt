@@ -1,0 +1,12 @@
+README.md
+setup.py
+comagic/__init__.py
+comagic/client.py
+comagic/errors.py
+comagic/models.py
+comagic/utils.py
+comagic_data_api_sdk.egg-info/PKG-INFO
+comagic_data_api_sdk.egg-info/SOURCES.txt
+comagic_data_api_sdk.egg-info/dependency_links.txt
+comagic_data_api_sdk.egg-info/requires.txt
+comagic_data_api_sdk.egg-info/top_level.txt
