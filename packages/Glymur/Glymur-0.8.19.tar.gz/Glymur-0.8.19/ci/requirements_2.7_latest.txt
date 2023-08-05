@@ -1,0 +1,10 @@
+contextlib2
+gdal<3.0.0
+importlib_resources
+libgdal
+lxml
+mock
+numpy
+openjpeg
+pathlib2
+scikit-image

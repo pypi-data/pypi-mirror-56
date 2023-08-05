@@ -1,0 +1,6 @@
+importlib_resources
+gdal<3.0.0
+lxml
+numpy
+openjpeg
+scikit-image
