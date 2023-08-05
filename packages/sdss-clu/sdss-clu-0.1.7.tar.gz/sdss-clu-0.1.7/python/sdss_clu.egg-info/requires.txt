@@ -1,0 +1,24 @@
+numpy>=1.15.1
+ruamel.yaml>=0.15.61
+pygments>=2.2.0
+click>=7.0
+aio_pika>=5.5.3
+jsonschema>=3.0.1
+prompt-toolkit>=2.0.9
+
+[dev]
+asynctest>=0.13.0
+flake8
+ipython
+pytest
+pytest-asyncio
+pytest-cov
+pytest-sugar
+invoke
+bump2version
+wheel
+
+[docs]
+Sphinx>=1.8.0
+releases@ https://github.com/albireox/releases/tarball/master
+sphinxcontrib-trio>=1.0.1
