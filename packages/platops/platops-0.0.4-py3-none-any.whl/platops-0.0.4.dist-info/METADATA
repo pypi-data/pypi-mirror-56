@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: platops
+Version: 0.0.4
+Summary: PlatOps CLI
+Home-page: https://platops.com
+Author: Skrypnyk Kostiantyn
+Author-email: skrypnyk.kostiantyn@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+
+How to install pre-requirements before build : 
+```
+sudo python -m pip install --upgrade pip setuptools wheel
+sudo python -m pip install tqdm
+sudo python -m pip install --user --upgrade twine
+```
+
+How to build :
+```
+mkdir /tmp/build
+cp platops /tmp/build/
+cp setup.py /tmp/build/  
+```
+Change version in setup.py and platops file
+Build package :
+```
+python setup.py bdist_wheel
+```
+Install on local machine
+```
+python3 -m pip install dist/platops-0.0.3-py3-none-any.whl
+```
+Create profile version file :
+```
+vim ~/.pypirc 
+
+[distutils] 
+index-servers=pypi
+[pypi] 
+repository = https://upload.pypi.org/legacy/ 
+username=kskrypnyk
+```
+Upload : 
+```
+python -m twine upload dist/*
+```
+
+
