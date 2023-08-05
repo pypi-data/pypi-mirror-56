@@ -1,0 +1,9 @@
+MANIFEST.in
+cluster.py
+data-1.csv
+setup.py
+HelloWorldTG.egg-info/PKG-INFO
+HelloWorldTG.egg-info/SOURCES.txt
+HelloWorldTG.egg-info/dependency_links.txt
+HelloWorldTG.egg-info/requires.txt
+HelloWorldTG.egg-info/top_level.txt
