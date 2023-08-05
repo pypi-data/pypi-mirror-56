@@ -1,0 +1,14 @@
+boto3-stubs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3-stubs/__init__.pyi,sha256=zw3RNkAm4YCwdDSCD3dG_SolM5wEigGbLacHCVACQKo,110199
+boto3-stubs/exceptions.pyi,sha256=bIYNiSU-LTuAXEmF3kaz3D2uVos8iBFM7NQFyunRYwc,1320
+boto3-stubs/py.typed,sha256=mDShSrm8qg9qjacQc2F-rI8ATllqP6EdgHuEYxuCXZ0,7
+boto3-stubs/session.pyi,sha256=wEhRlqG_8fCnUJ05sCHNXQKAe7q_dDPN_4kIB2LsE58,125236
+boto3-stubs/utils.pyi,sha256=vc9U7cCBB38K0aGaiA9sQm_NAiMqvpsDSWry0zNJ0HA,845
+boto3-stubs/version.py,sha256=1NIOtJtZmmn92sL26J0GZoOW7g7EtL5BOmu2rR0Wx6E,53
+boto3-stubs/ec2/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3-stubs/ec2/create_tags.pyi,sha256=ZxTOO2QvlWATHLgKmfpqeYw_dy4whFwsg8X2bTZP2gk,391
+boto3-stubs/ec2/delete_tags.pyi,sha256=Bh_So0FiYBpgyQpB06v-53e7hZmToSx1EtlSlPXURO8,280
+boto3_stubs-0.2.5.dist-info/METADATA,sha256=8TTnwj2ZHb4-vi84UlsU-UUwzk1vBs04617ZzQkZPzA,44507
+boto3_stubs-0.2.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+boto3_stubs-0.2.5.dist-info/top_level.txt,sha256=uB_lQ39lkJ_VYZ_88DxH_zFptJtIwQ_SzeMpW8tRmT4,12
+boto3_stubs-0.2.5.dist-info/RECORD,,
