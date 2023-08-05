@@ -1,0 +1,15 @@
+pydatavec/__init__.py,sha256=szn-blk7k2kbS9QxlfyLxAV05CLMLJkuoDsjxZo5b2g,890
+pydatavec/conditions.py,sha256=BCrQyDpNeFJ7p8m0n7diUbeicqpB1rqSMrbO8h-VssA,1846
+pydatavec/java_classes.py,sha256=Q5K_dANq4prNIBX4LmcrZPYENYYeGKS01e71G74n-s8,4774
+pydatavec/schema.py,sha256=HHa4FvIh6CMwKlobcftXIJxS1eRUobJ2_0-rlogVa-I,3622
+pydatavec/transform_process.py,sha256=tttsqttvc77Rn323HfNAkFln0HAiqotFPWXJtzhZj-w,19757
+pydatavec/utils.py,sha256=Gy_a1qpfwNKUJr6kyvZHIyoOzZYMAecW_taqfoBtHXQ,6623
+pydatavec/executors/__init__.py,sha256=IBGVZ8fnyNo3CJ3_wCACMZ-ZRyX9M7YUOFjn3f9Mg_s,817
+pydatavec/executors/local.py,sha256=rMdFU7eKihmJlDqCbRYWQhudxJNJ6piwAzIkXyqbDaU,2512
+pydatavec/executors/spark.py,sha256=lVl_kzVOidM6f3mV8HZ31z5q-Af23vKkcNrl-dKjGIg,3365
+pydatavec-0.1.2.dist-info/DESCRIPTION.rst,sha256=KVK0gqXKDlAevelszYAPfRfliQ0EJH4zhyDea5A4CfM,31
+pydatavec-0.1.2.dist-info/METADATA,sha256=vxMjV3H3JeRxJfOaJU1u7LQe3CFCLWXDuxka8-md3Zw,970
+pydatavec-0.1.2.dist-info/RECORD,,
+pydatavec-0.1.2.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pydatavec-0.1.2.dist-info/metadata.json,sha256=IlV3CqRb60WK2NhyYaOOp_mUSnq4h_GXk6dTpuCv1-w,939
+pydatavec-0.1.2.dist-info/top_level.txt,sha256=mxMzF0qnhMsRUT0B-qxnp76cLu9JtipMu7y8aVaVVy4,10
