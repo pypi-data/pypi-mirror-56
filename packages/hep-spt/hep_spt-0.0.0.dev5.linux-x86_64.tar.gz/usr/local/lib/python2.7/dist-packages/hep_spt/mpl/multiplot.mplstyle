@@ -1,0 +1,11 @@
+#
+# Configuration of the matplotlib style. For more information
+# please visit:
+# https://github.com/matplotlib/matplotlib/blob/master/matplotlibrc.template
+#
+
+# Figure
+figure.figsize : 14, 14
+
+# Font
+font.size : 15
