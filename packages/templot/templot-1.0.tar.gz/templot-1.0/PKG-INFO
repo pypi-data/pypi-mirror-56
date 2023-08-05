@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: templot
+Version: 1.0
+Summary: Python package for visualizing time evolution.
+Home-page: https://github.com/khllkcm/templot
+Author: Khalil Kacem
+Author-email: khail@kacem.xyz
+License: UNKNOWN
+Description: This package offers various functions for visually exploring data variation in time
+Platform: UNKNOWN
+Requires: matplotlib
+Requires: geopip
+Requires: folium
+Requires: numpy
+Requires: pandas
+Requires: pyproj
+Requires: plotly

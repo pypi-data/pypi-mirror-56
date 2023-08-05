@@ -1,0 +1,12 @@
+include *.in
+include *.txt
+recursive-include doc *.py
+recursive-include doc *.rst
+recursive-include doc *.svg
+recursive-include examples *.html
+recursive-include examples *.py
+recursive-include examples *.txt
+recursive-include templot *.py
+recursive-include tests *.py
+recursive-include templot/data *.csv
+recursive-include templot/data *.geojson
