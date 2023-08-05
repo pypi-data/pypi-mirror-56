@@ -1,0 +1,13 @@
+requests
+six
+PyJWT
+
+[dev]
+watchdog
+
+[test]
+flake8==3.5.0
+mock
+pytest
+pytest-cov
+pytest-flake8<1.0.1
