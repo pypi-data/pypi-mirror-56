@@ -1,0 +1,23 @@
+digicubes/__init__.py,sha256=q3JNmHn0CMPtEqkMR40lkjKQzuWUtT39xIFUYJ-MKIE,56
+digicubes/web/__init__.py,sha256=wsXNTAYwE_5i716wqh2q8x--usjOVHVYUsH1QlDMT8M,823
+digicubes/web/account.py,sha256=tJK5FuMFYZurOVFqr7B1BAYU3lC7CquY2rBxnR0QWvM,14189
+digicubes/web/commandline.py,sha256=4OGkwxgz0qiLS2CTELzjvxecfT3QNiDg0IQ6eRItVeI,2673
+digicubes/web/forms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/modules/__init__ copy.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/modules/account/__init__.py,sha256=vtIn0XwJvZv7NQcoG8c21VkyMAMNJ9WIBWbT4pjy0_k,97
+digicubes/web/modules/account/blueprint.py,sha256=gImlec2iWzo6ONvfS85Bt9tIBwTL3TGlxmLewCbF4Gc,4519
+digicubes/web/modules/account/config.py,sha256=5IhUFbGK3D1ZXk_HH_j0UYJ7AkxCwqJv0Jx8MhY7MBE,454
+digicubes/web/modules/account/forms.py,sha256=gH5ZWj06C8_n75BrcW22sGzrEf55Xd61FItOP7Rq_0I,3305
+digicubes/web/static/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/static/css/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/static/image/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/static/js/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/templates/root/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes/web/templates/root/panel/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+digicubes_flask-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+digicubes_flask-0.0.1.dist-info/METADATA,sha256=LyXill467c_880lvoQFiQOcrLhoB7SCwBDNkuXOfSFo,1417
+digicubes_flask-0.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+digicubes_flask-0.0.1.dist-info/top_level.txt,sha256=kZOX_KzguihH7I-k9JX6vNMgDre4Bh5N9DonX29w-70,10
+digicubes_flask-0.0.1.dist-info/RECORD,,

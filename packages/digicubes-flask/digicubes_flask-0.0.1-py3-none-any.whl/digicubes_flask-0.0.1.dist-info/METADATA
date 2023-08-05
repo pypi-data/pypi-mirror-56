@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: digicubes-flask
+Version: 0.0.1
+Summary: A digicubes flask addon
+Home-page: UNKNOWN
+Author: Klaas Nebuhr, Marion Nebuhr
+Author-email: klaas.nebuhr@gmail.com
+License: Apache License Version 2.0
+Keywords: flask digicubes api learning platform
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: AsyncIO
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: cattrs (==0.9.0)
+Requires-Dist: certifi (==2019.9.11)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==7.0)
+Requires-Dist: digicubes-common (==0.0.12)
+Requires-Dist: digicubes-pyclient (==0.0.6)
+Requires-Dist: flask-wtf (==0.14.2)
+Requires-Dist: flask (==1.1.1)
+Requires-Dist: idna (==2.8)
+Requires-Dist: itsdangerous (==1.1.0)
+Requires-Dist: jinja2 (==2.10.3)
+Requires-Dist: markupsafe (==1.1.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: urllib3 (==1.25.7)
+Requires-Dist: werkzeug (==0.16.0)
+Requires-Dist: wtforms (==2.2.1)
+
+WELCOME
+=======
+
+This is th digicubes flask addon
+
+
