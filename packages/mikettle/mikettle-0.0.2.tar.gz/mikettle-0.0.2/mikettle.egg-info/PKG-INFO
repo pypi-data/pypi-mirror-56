@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mikettle
+Version: 0.0.2
+Summary: This library properly authenticates with Xiaomi Mi Kettle and allows to read status and control the kettle via Bluetooth.
+Home-page: https://github.com/drndos/mikettle
+Author: drndos
+Author-email: drndos@drndos.sk
+License: MIT
+Description: UNKNOWN
+Keywords: temperature kettle smart home sensor bluetooth low-energy ble
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Provides-Extra: testing
