@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: Flask-Sekazi
+Version: 0.0.1
+Summary: Flask Template blocks with extra functionality
+Home-page: https://github.com/fastfists/Flask-Sekazi
+Author: Denzell Ford
+Author-email: fdenzell@gmail.com
+License: MIT
+Download-URL: https://github.com/fastfists/Flask-Sekazi/archive/v0.0.1.tar.gz
+Description: UNKNOWN
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
