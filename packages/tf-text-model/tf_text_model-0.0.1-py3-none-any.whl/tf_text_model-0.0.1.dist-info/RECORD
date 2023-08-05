@@ -1,0 +1,11 @@
+tf_text_model/__init__.py,sha256=GfJ9PHDvZ1tstePDK8OK-HeZ5_HrEVJiPWKLV_K4zRI,169
+tf_text_model/bert_embedding.py,sha256=kIy42zMz9hP2WFLdTDCEjicxEZa-WMaaCqZ9sZqCIHQ,1698
+tf_text_model/bert_tokenizer.py,sha256=htWRHFISFqB61kcyEfuo1ktkRhpaSzTZEPIqldYNSh0,1798
+tf_text_model/model_wrapper.py,sha256=kD_9psUxmM7IJrG0xujtZzPJrTPYDbB96x5ADOibT6A,1632
+tf_text_model/text_transformer.py,sha256=rFxL3k-ncdjn3MEQZ-zy5HfRy5hE_947DFrT6GpnhT0,4896
+tf_text_model/version.txt,sha256=axN4nkPlSFY0Uz3hamXYup00xMl1hYi2ZYBUNfgOsRU,5
+tf_text_model-0.0.1.dist-info/LICENSE,sha256=1DqcY861_z5cYAnGfwBvaWakL-IZztRtOyYruZUsRT4,1050
+tf_text_model-0.0.1.dist-info/METADATA,sha256=Jtu9CH0rxW5L33W4hbFhjsKuM48OSKeC16tsRnjz-HI,343
+tf_text_model-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+tf_text_model-0.0.1.dist-info/top_level.txt,sha256=VHVH18wFsSue-0Hnm-yA8UuWsPc-Ciz1ZSUMq0VVLA4,14
+tf_text_model-0.0.1.dist-info/RECORD,,
