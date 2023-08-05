@@ -1,0 +1,15 @@
+wulffpack/__init__.py,sha256=f2YtP0IG1_oLXdB7iPQE4GVzuSv2ZfDrGhZZkLJnK8U,525
+wulffpack/decahedron.py,sha256=W298F5rtXhrKnC4Ilmt1stJbqPBZko3AGQ1BK5j0_vU,9331
+wulffpack/icosahedron.py,sha256=mxk07dQVyCTfW384fEgw-NrV4yrQ4r5675O3nlAzuvQ,12172
+wulffpack/single_crystal.py,sha256=o1XvwDG--nhzjOtSwYcnQwKV0camQqL0QwDBVDBxjQo,2381
+wulffpack/winterbottom.py,sha256=mw9A8TQQ9LXwwF8fXcSKOYgKMtUw1O_JE6ptSp3y1tc,3946
+wulffpack/core/__init__.py,sha256=xuRZ5FN9kMNMf4qveoaVdkdHEhsvXBX2wKDg0eiliQU,155
+wulffpack/core/base_particle.py,sha256=vXLdLvfHW9H6qq0Z9DNrjpsg4XgmV6GobIA6TIx2_xY,23888
+wulffpack/core/facet.py,sha256=77teeDlg8q2VzAhmdg-2FuRxbBNhScykSX4fQefLfXI,8485
+wulffpack/core/form.py,sha256=ylNT1YS1WTd6J8LhrqyX6pbCXzftlsnFRVDPxarh74I,8466
+wulffpack/core/geometry.py,sha256=Zy4wB9Iy3bTz83Cm9HyBeVA1nJHqPl30-5juxp2zfGE,5237
+wulffpack-0.3.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+wulffpack-0.3.dist-info/METADATA,sha256=X1OhaPy6Pln6fnHqCEJWxOZ2F6cuwIXj0DncpO4ylyY,798
+wulffpack-0.3.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+wulffpack-0.3.dist-info/top_level.txt,sha256=T3myfwhe5YAE0LG3uJ-0GGoYPQFNddm7u0VNyHfLjS4,10
+wulffpack-0.3.dist-info/RECORD,,
