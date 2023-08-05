@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyprocreate
+Version: 0.1.dev0
+Summary: A package to parse and interact with Apple's Procreate (.pro) file format.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: biplist
+Requires-Dist: pillow
+Requires-Dist: python-lzo
+
+UNKNOWN
+
+
