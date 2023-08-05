@@ -1,0 +1,3 @@
+[console_scripts]
+start_JukeBox = keras_jukebox.JukeBox_UI_2:main
+
