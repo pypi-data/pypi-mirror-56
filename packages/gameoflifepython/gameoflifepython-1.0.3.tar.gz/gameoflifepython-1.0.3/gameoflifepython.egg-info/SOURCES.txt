@@ -1,0 +1,12 @@
+README.rst
+setup.py
+bin/gameoflifepython
+bin/gameoflifepython.bat
+gameoflifepython/LifeGame.py
+gameoflifepython/__main__.py
+gameoflifepython.egg-info/PKG-INFO
+gameoflifepython.egg-info/SOURCES.txt
+gameoflifepython.egg-info/dependency_links.txt
+gameoflifepython.egg-info/not-zip-safe
+gameoflifepython.egg-info/requires.txt
+gameoflifepython.egg-info/top_level.txt
