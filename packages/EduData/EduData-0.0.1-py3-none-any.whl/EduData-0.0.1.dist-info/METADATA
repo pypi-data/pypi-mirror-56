@@ -1,0 +1,25 @@
+Metadata-Version: 2.0
+Name: EduData
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: tqdm
+Requires-Dist: networkx
+Requires-Dist: longling (>=1.1.0)
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: rarfile
+Requires-Dist: pandas
+Requires-Dist: fire
+Provides-Extra: test
+Requires-Dist: pytest (>=4); extra == 'test'
+Requires-Dist: pytest-cov (>=2.6.0); extra == 'test'
+Requires-Dist: pytest-pep8 (>=1); extra == 'test'
+
+UNKNOWN
+
+
