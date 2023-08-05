@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: fn-api-wrapper
+Version: 3.0.1
+Summary: API wrapper for https://fortnite-api.com
+Home-page: https://github.com/LupusLeaks/fortnite-api-wrapper
+Author: LupusLeaks
+Author-email: LupusLeaks@gmail.com
+License: UNKNOWN
+Description: # Fortnite API
+        
+        ## Installing:
+        Windows: ``py -3 -m pip install fn-api-wrapper``<br>
+        Linux/macOS: ``python3 -m pip install fn-api-wrapper``
+        
+        ## Example:
+        ```
+        import fn_api_wrapper
+        
+        fnapi = fn_api_wrapper.FortniteAPI()
+        Skin = fnapi.GetSkin(name="Ghoul Tr",matchMethod="starts",searchLanguage="en")
+        print(f'Skin ID : {Skin.id}')
+        ```
+        
+        Output:<br>
+        ```Skin ID : cid_029_athena_commando_f_halloween```
+        
+        # Get BattleRoyale Shop
+        
+        Returns:
+        
+        status <br />
+        hash<br />
+        date<br />
+        votes<br />
+        voteWinners<br />
+        featured<br />
+        daily<br />
+        
+        # Get News (GetSaveTheWorldNews,GetCreativeNews,GetBattleRoyaleNews)
+        
+        Returns:
+        
+        status<br />
+        lastModified<br />
+        messages<br />
+        images<br />
+        
+        
+        Parameters:
+        
+        language (en / ar / de / es-419 / es / fr / it / ja / ko / pl / pt-BR / ru / tr / zh-CN / zh-Hant)
+        
+        # Get Cosmetics
+        -GetSkin<br />
+        -GetBackpack<br />
+        -GetPickaxe<br />
+        -GetEmote<br />
+        -GetGlider<br />
+        -GetEmoji<br />
+        -GetLoadingScreen<br />
+        -GetContrail<br />
+        -GetWrap<br />
+        -GetMusic<br />
+        -GetPet<br />
+        -GetSpray<br />
+        -GetToy<br />
+        -GetBanner<br />
+        
+        Returns:
+        
+        id<br />
+        type<br />
+        backendType<br />
+        rarity<br />
+        backendRarity<br />
+        name<br />
+        shortDescription<br />
+        description<br />
+        set<br />
+        series<br />
+        backendSeries<br />
+        images<br />
+        variants<br />
+        gameplayTags<br />
+        displayAssetPath<br />
+        definition<br />
+        builtInEmoteId<br />
+        requiredItemId<br />
+        path<br />
+        lastUpdate<br />
+        added<br />
+        
+        Parameters:
+        
+        id<br />
+        language (default = en) 	en / ar / de / es-419 / es / fr / it / ja / ko / pl / pt-BR / ru / tr / zh-CN / zh-Hant<br />
+        searchLanguage (default = en) 	en / ar / de / es-419 / es / fr / it / ja / ko / pl / pt-BR / ru / tr / zh-CN / zh-Hant<br />
+        matchMethod (default = full) 	full / contains / starts / ends<br />
+        type 	string (case insensitive)<br />
+        backendType 	string (case insensitive)<br />
+        rarity 	string (case insensitive)<br />
+        backendRarity 	string (case insensitive)<br />
+        name 	string (case insensitive, searchLanguage & matchMethod based)<br />
+        shortDescription 	string (case insensitive, searchLanguage & matchMethod based)<br />
+        description 	string (case insensitive, searchLanguage & matchMethod based)<br />
+        set 	string (case insensitive, searchLanguage & matchMethod based)<br />
+        series 	string (case insensitive, searchLanguage & matchMethod based)<br />
+        backendSeries 	string (case insensitive)<br />
+        hasSmallIcon 	true / false<br />
+        hasIcon 	true / false<br />
+        hasFeaturedImage 	true / false<br />
+        hasBackgroundImage 	true / false<br />
+        hasCoverArt 	true / false<br />
+        hasDecal 	true / false<br />
+        hasVariants 	true / false<br />
+        hasGameplayTags 	true / false<br />
+        gameplayTag 	string (case insensitive)<br />
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
