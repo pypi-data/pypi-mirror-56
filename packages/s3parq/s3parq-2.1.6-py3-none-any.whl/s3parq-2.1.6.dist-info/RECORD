@@ -1,0 +1,13 @@
+s3parq/__init__.py,sha256=N1BcxsXqH43hl7zQmVuBzfIlgqqXQGSjXW_4bhOH9Ac,291
+s3parq/fetch_parq.py,sha256=iyw6ApSlaPo4qF0Zq1gEV2TtEWKVBEegoChyv8nWFD0,21863
+s3parq/publish_parq.py,sha256=k6iLD4vnadCCUG6z3OuLKhlZ6HVhJlGP2uvI4OxFNwI,22077
+s3parq/publish_redshift.py,sha256=FtAdXcGnqRMbji7BhRm8VjMl9qDdgCR6pr0AGP5M0tc,11853
+s3parq/s3_naming_helper.py,sha256=0FoTZ0Vnc22Y3AszFZXEGxI3_xHXUq7M0WySyLWjTkg,4603
+s3parq/s3parq.py,sha256=RlC7BfUf6kx-ePJBXcknx7uo07HFIUDawb1xxS-cgRM,1662
+s3parq/session_helper.py,sha256=7oTzdAIhUSALHW0UF2pRGVE91wcwDK54rDCMmLPQDPs,7509
+s3parq/testing_helper.py,sha256=W5lvitToqNWwArNAGDFeVGWaYNwo0jhxRmO5YPqIcNA,7872
+s3parq-2.1.6.dist-info/LICENSE,sha256=hnPGr6leln18u39ZC5unPbdO1001leFMZ0J0V5cAzm0,1070
+s3parq-2.1.6.dist-info/METADATA,sha256=s83NElpyht4j1ep8UEd7CFSYGQdoKpK8_yTlHCSneK4,6878
+s3parq-2.1.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+s3parq-2.1.6.dist-info/top_level.txt,sha256=BEMOHfbm8G9EI-2wlnGymmFHB9c8MwB9qzv0OmAr5GE,7
+s3parq-2.1.6.dist-info/RECORD,,
