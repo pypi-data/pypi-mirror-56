@@ -1,0 +1,9 @@
+aiologger==0.4.*
+
+[dev]
+uvloop==0.14.*
+
+[test]
+uvloop==0.14.*
+pytest==5.*
+tox==3.*
