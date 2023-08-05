@@ -1,0 +1,17 @@
+CHANGES.txt
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+bionotes/__init__.py
+bionotes/bibtex.py
+bionotes/icon.png
+bionotes/protocols.conf
+bionotes/protocols.py
+bionotes/uploader.py
+scipion_em_bionotes.egg-info/PKG-INFO
+scipion_em_bionotes.egg-info/SOURCES.txt
+scipion_em_bionotes.egg-info/dependency_links.txt
+scipion_em_bionotes.egg-info/requires.txt
+scipion_em_bionotes.egg-info/top_level.txt

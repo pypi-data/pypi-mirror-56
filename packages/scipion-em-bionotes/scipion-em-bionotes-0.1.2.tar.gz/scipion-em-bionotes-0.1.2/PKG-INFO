@@ -1,0 +1,29 @@
+Metadata-Version: 1.0
+Name: scipion-em-bionotes
+Version: 0.1.2
+Summary: Scipion 3DBionotes plugin.
+Home-page: https://github.com/3dbionotes-community/scipion-bionotes
+Author: jrmacias
+Author-email: jr.macias@cnb.csic.es
+License: UNKNOWN
+Description: =========================
+        Scipion 3DBionotes plugin
+        =========================
+        
+        This is a **3DBionotes** plugin for **scipion**
+        
+        =====
+        Setup
+        =====
+        
+        - **Install this plugin in devel mode:**
+        
+        Using the command line:
+        
+        .. code-block::
+        
+            scipion installp -p local/path/to/scipion-bionotes --devel
+        
+        
+Keywords: scipion cryoem imageprocessing scipion-2.0 3DBionotes annotations viewer
+Platform: UNKNOWN
