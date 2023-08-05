@@ -1,0 +1,10 @@
+Current {{ "\u001b[38;5;11;1m" }}context {{ "\u001b[0m" }}: {{ "\u001b[7m" }}{{ "\u001b[30;1m" }}{{ "\u001b[38;5;195m" }} {{ context['config'] }} {{ "\u001b[38;5;46m" }} {{ context['project'] }} {{ "\u001b[38;5;45m" }} {{ context['chart'] }} {{ "\u001b[0m" }}
+
+    Current context : {{ "\u001b[34;1m" }}{{ current_context }}{{ "\u001b[0m" }}
+
+    Contexts in config {{ "\u001b[38;5;195m" }}{{ config_name }}{{ "\u001b[0m" }}:
+    {% for context in contexts %}
+    - Name {{ "\u001b[37;1m" }}{% if context['name'] == current_context %}{{ "\u001b[34;1m" }}{% endif %}{{ context['name'] }}{{ "\u001b[0m" }}
+      Cluster {{ "\u001b[37;1m" }}{{ context['context']['cluster'] }}{{ "\u001b[0m" }}
+      User {{ "\u001b[37;1m" }}{{ context['context']['user'] }}{{ "\u001b[0m" }}
+    {% endfor %}
