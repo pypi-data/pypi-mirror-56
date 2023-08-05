@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+okta_awsauth.egg-info/PKG-INFO
+okta_awsauth.egg-info/SOURCES.txt
+okta_awsauth.egg-info/dependency_links.txt
+okta_awsauth.egg-info/entry_points.txt
+okta_awsauth.egg-info/requires.txt
+okta_awsauth.egg-info/top_level.txt
+oktaauth/__init__.py
+oktaauth/aws_auth.py
+oktaauth/okta_auth.py
+oktaauth/okta_auth_config.py
+oktaauth/okta_awscli.py
+oktaauth/version.py

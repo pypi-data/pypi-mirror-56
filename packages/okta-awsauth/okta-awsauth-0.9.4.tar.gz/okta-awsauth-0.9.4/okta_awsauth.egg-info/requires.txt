@@ -1,0 +1,10 @@
+requests
+click
+bs4
+boto3
+ConfigParser
+keyring
+tzlocal
+
+[U2F]
+python-u2flib-host
