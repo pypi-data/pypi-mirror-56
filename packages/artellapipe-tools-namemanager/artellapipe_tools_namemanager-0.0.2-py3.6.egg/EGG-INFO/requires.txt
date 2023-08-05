@@ -1,0 +1,9 @@
+lucidity
+artellapipe
+tpNameIt
+
+[dev]
+wheel
+
+[test]
+pytest
