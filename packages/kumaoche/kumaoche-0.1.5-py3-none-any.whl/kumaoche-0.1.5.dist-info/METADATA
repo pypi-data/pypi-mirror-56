@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: kumaoche
+Version: 0.1.5
+Summary: Pythonic Dev Repository & Dev Environment Management tool.
+Home-page: https://github.com/kumak1/kumaoche
+Author: kumak1
+Author-email: kumaki0@gmail.com
+License: Type license() to see the full license text
+Platform: UNKNOWN
+Requires-Dist: invoke
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+
