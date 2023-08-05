@@ -1,0 +1,14 @@
+recipemd/__init__.py,sha256=hxLIuCFcXZaIhccyldwOX1ysEq9AbrvqQLEF6RIgUvA,17
+recipemd/data.py,sha256=VwpgUY8HQK_2hupjqmY-0uusj8Xc9Zs7GUcOyckHRpc,17556
+recipemd/filter.py,sha256=CLPbXX1WUXe46fvDUPPAqfu7rqPnnEEpdauxzk3Q1hg,16606
+recipemd/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+recipemd/cli/find.py,sha256=Z3A8XzZ_Vn5kb52D6EkcjN0sNpFcA3tPftqkSAwnox8,8189
+recipemd/cli/main.py,sha256=P83ApuBj-Rglli5W517eRalcdNcnYScoaexZwPjI6xE,10854
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_data.py,sha256=cKlfuQs8z1KjuFksFDoK3J_jIkQkA61_-TP_QIvS2Bw,6253
+tests/test_filter.py,sha256=AkGyZxs1GIpynFS5-uQvEaO02E12PG8g57xI5y8vyUQ,4957
+recipemd-3.0.0.dist-info/METADATA,sha256=YVJiq__mqbTbRpF6C8SUqLmOof_xVHmqs5AhA9EVCUs,1106
+recipemd-3.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+recipemd-3.0.0.dist-info/entry_points.txt,sha256=c6tt4nEjfVKHS010YcN1sd7duS3sLgFItOPt9qBxdBU,92
+recipemd-3.0.0.dist-info/top_level.txt,sha256=_nd7OoH12BYYEzWFwMi-50eyjchIY8Goen6MK8CoBmo,15
+recipemd-3.0.0.dist-info/RECORD,,
