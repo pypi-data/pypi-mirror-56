@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pydoctor
+Version: 19.11.0
+Summary: API doc generator.
+Home-page: http://github.com/twisted/pydoctor
+Author: Michael Hudson-Doyle
+Author-email: micahel@gmail.com
+License: MIT/X11
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 2 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Requires-Dist: incremental
+Requires-Dist: appdirs
+Requires-Dist: CacheControl[filecache]
+Requires-Dist: Twisted
+Requires-Dist: requests
+Requires-Dist: six
+
+UNKNOWN
+
+
