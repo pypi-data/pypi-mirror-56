@@ -1,0 +1,41 @@
+*.csv
+*.json
+*.dill
+*.h5
+*.npy
+*.parq
+*.parquet
+*.pkl
+*.pyc
+*.txt
+*.tfevents
+*.tsv
+.DS_Store
+.coverage*
+.eggs/*
+27-wheel/*
+LightGBM/
+*.egg-info/*
+build/*
+dev_script*.py
+dist/*
+docs/build/*
+numerai*/*
+old_data/*
+t2.py
+venv/*
+xgboost/*
+*/catboost_info/*
+
+# For PyCharm
+.idea/
+
+# Ignore any kind of backup files
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+# For my own test file
+testfile.py
