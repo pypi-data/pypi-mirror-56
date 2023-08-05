@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: robustsp
+Version: 0.1
+Summary: library for robust signal processing
+Home-page: https://github.com/Mufabo/robustsp
+Author: M. Fatih Bostanci
+Author-email: fatih.bostanci@hotmail.de
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: setuptools
+Requires-Dist: statsmodels
+
+UNKNOWN
+
+
