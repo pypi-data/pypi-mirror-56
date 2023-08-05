@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: paramspace
+Version: 2.2.3
+Summary: Provides tools to define a dict-based multidimensional parameter space and iterate over it
+Home-page: https://ts-gitlab.iup.uni-heidelberg.de/yunus/paramspace
+Author: Yunus Sevinchan
+Author-email: Yunus.Sevinchan@iup.uni-heidelberg.de
+License: MIT
+Description: The parameter space is the cartesian product of those parameters one desires to iterate over, each parameter opening a new dimension of parameter space. Parameter dimensions can be defined for each entry in a dictionary, even when nested within further dictionaries. When iterating over the space, each returned value is a dictionary with one combination of parameters. This allows retaining a hierarchical configuration structure while at the same time being able to conveniently perform sweeps over parameters, e.g. to spawn simulations with. Furthermore, the paramspace package integrates tightly with YAML, making it very simple to define multidimensional parameter spaces.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Provides-Extra: minimal_deps
+Provides-Extra: test_deps
