@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: django-flantastic
+Version: 0.1.1
+Summary: GeoDjango app flantastic wich helps to find the best puddings.
+Home-page: https://github.com/Simarra/flantastic
+License: BSD-3-Clause
+Keywords: geo,pudding,flan,french,martel
+Author: Loic MARTEL
+Requires-Python: >=3.6,<4.0
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Django (>=2.2,<3.0)
+Requires-Dist: pandas (>=0.25.1,<0.26.0)
+Requires-Dist: psycopg2 (>=2.8,<3.0)
+Requires-Dist: requests (>=2.22,<3.0)
+Requires-Dist: tqdm (>=4.36.1,<5.0.0)
+Project-URL: Documentation, https://github.com/Simarra/flantastic
+Project-URL: Repository, https://github.com/Simarra/flantastic
+Description-Content-Type: text/markdown
+
+# flantastic
+
+[![Build Status](https://travis-ci.org/Simarra/django-flantastic.svg?branch=develop)](https://travis-ci.org/Simarra/django-flantastic)
+
+An app to found the best blank of France!
+
