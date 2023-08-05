@@ -1,0 +1,3 @@
+[console_scripts]
+automaton-engine = automaton_engine.runner:runner
+
