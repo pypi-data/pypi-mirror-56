@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: once_upon_a_time
+Version: 0.0.1.dev2
+Summary: A sample project.
+Home-page: https://bitbucket.org/tncy/my-project2/
+Author: Xavier ROY
+Author-email: xavier.roy@telecomnnancy.net
+License: Apache License, Version 2.0
+Description: WWW Legends
+        ===========
+        
+        The legends of the Wide Wild West.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 1 - Planning
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Education

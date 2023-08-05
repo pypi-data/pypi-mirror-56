@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+once_upon_a_time.egg-info/PKG-INFO
+once_upon_a_time.egg-info/SOURCES.txt
+once_upon_a_time.egg-info/dependency_links.txt
+once_upon_a_time.egg-info/requires.txt
+once_upon_a_time.egg-info/top_level.txt
+wide_wild_west/__init__.py
+wide_wild_west/data.py
+wide_wild_west/main.py
