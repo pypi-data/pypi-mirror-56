@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: iskra-cli
+Version: 0.0.1
+Summary: Let's you interact with Iskra from the terminal
+Home-page: https://iskra.ml
+Author: Eddy Ernesto del Valle Pino
+Author-email: eddy@edelvalle.me
+License: Freeware
+Description: # Iskra ML CLI tool
+        
+        Allows you to train models in the cloud with zero conf.
+        
+        The tool will come up soon.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: Freeware
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
