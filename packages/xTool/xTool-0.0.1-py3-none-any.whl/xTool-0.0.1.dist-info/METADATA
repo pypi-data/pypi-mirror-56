@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: xTool
+Version: 0.0.1
+Summary: A python script tools
+Home-page: UNKNOWN
+Author: jinyinqiao
+Author-email: jinyinqiao@gmail.com
+License: Apache License 2.0
+Keywords: xTool
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: numpy
+Requires-Dist: psutil
+Requires-Dist: future
+Requires-Dist: jinja2
+Requires-Dist: pendulum
+Requires-Dist: croniter
+Requires-Dist: tabulate
+
+code from
+
+1. airflow-master
+2. miscutils
+3. DBUtils-1.2
+
+
+
+
