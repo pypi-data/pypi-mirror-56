@@ -1,0 +1,3 @@
+[console_scripts]
+lnproxy=lnproxy.proxy:main
+
