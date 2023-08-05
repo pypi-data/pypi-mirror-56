@@ -1,0 +1,15 @@
+dstools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dstools/classifier/BestGuessClassifier.py,sha256=GQ-jc3ZS4TxkWK-MuqgaqCii3XhpkE1aDIFHYehVF4k,3293
+dstools/classifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dstools/preprocessing/Bucketizer.py,sha256=A3mSRjDGMKmh-4LQN9r4D515Q45272TmjEjcncUxFu8,7126
+dstools/preprocessing/FeatureConverter.py,sha256=cuoqPhivHrARo0h8BTSbxa0PTIcKoO_LlcTbRnfmZxI,6492
+dstools/preprocessing/Imputer.py,sha256=G6qCOB-UCHTUH6LA-6IgMlEk5sZgxVA4BqrY8g_d63Q,4985
+dstools/preprocessing/NumScaler.py,sha256=_Urw_bNnENYlcHx_gRzDLkJdZrKtkqrtM_5CYjlS_Zs,3486
+dstools/preprocessing/OneHotEncoder.py,sha256=wIgkuKxAUXBlVAPmlwat5MkDmdaweumL_tPYlbo3Zo8,7543
+dstools/preprocessing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dstools/regressor/BestGuessRegressor.py,sha256=fe1Ta1dOlEP1UBIf3lGfRtDg8tYAF3aoskAIp2-K3zQ,4658
+DataScienceTools-0.1.1.dev0.dist-info/LICENSE,sha256=r2TTCTDKhwGW62kC_SpHx5LIKr4jOwfNBQwBr0m2ar0,1072
+DataScienceTools-0.1.1.dev0.dist-info/METADATA,sha256=QKet-ZK9IGCDkAq-WxJodFp6LIevztbyCuWDC3lRSHs,3789
+DataScienceTools-0.1.1.dev0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+DataScienceTools-0.1.1.dev0.dist-info/top_level.txt,sha256=DbzBEvdFSMDWmzYqAQ5ZfVRQ4hc5TurM0iuvi_JFHfM,8
+DataScienceTools-0.1.1.dev0.dist-info/RECORD,,
