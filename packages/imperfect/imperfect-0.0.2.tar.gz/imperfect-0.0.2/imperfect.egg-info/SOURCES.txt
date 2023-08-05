@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+imperfect/__init__.py
+imperfect/__version__.py
+imperfect/types.py
+imperfect/verify.py
+imperfect.egg-info/PKG-INFO
+imperfect.egg-info/SOURCES.txt
+imperfect.egg-info/dependency_links.txt
+imperfect.egg-info/requires.txt
+imperfect.egg-info/top_level.txt
