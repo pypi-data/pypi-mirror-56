@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: multipleinputs
+Version: 0.0.3
+Summary: A Python package to get multiple inputs from console as array in required datatype
+Home-page: UNKNOWN
+Author: Himank Jain
+Author-email: himank369123@gmail.com
+License: MIT
+Description: # Multiple Inputs
+        A Python package to get Multiple Inputs from console in desired data type format.
+        
+        ## Usage
+        
+        
+        
+        ```
+        mul_inp()
+        
+        Or
+        
+        mul_inp(sep=' ',datatype='int')
+        ```
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
