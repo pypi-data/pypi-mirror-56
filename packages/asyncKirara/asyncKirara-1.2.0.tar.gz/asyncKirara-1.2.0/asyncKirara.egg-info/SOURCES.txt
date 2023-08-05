@@ -1,0 +1,13 @@
+setup.py
+asyncKirara/__init__.py
+asyncKirara/card.py
+asyncKirara/client.py
+asyncKirara/enums.py
+asyncKirara/idol.py
+asyncKirara/infos.py
+asyncKirara/skills.py
+asyncKirara.egg-info/PKG-INFO
+asyncKirara.egg-info/SOURCES.txt
+asyncKirara.egg-info/dependency_links.txt
+asyncKirara.egg-info/requires.txt
+asyncKirara.egg-info/top_level.txt
