@@ -1,0 +1,14 @@
+pip>=8.1.2
+setuptools>=27.3
+cython>=0.22
+bcolz>=1.2.1
+numpy<=1.16.4
+
+[optional]
+numexpr>=1.4.1
+
+[test]
+pytest
+nose
+unittest2
+mock
