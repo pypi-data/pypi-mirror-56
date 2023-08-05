@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+docker-compose-just-quieter
+setup.cfg
+setup.py
+docker_compose_just_quieter.egg-info/PKG-INFO
+docker_compose_just_quieter.egg-info/SOURCES.txt
+docker_compose_just_quieter.egg-info/dependency_links.txt
+docker_compose_just_quieter.egg-info/requires.txt
+docker_compose_just_quieter.egg-info/top_level.txt
+docker_compose_just_quieter.egg-info/zip-safe
