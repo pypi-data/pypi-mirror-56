@@ -1,0 +1,15 @@
+keycloak_httpd_client/__init__.py,sha256=M-Uavq3N1DjU9lZyyccGHurjlGTwv-oFfX7dxs6sHCY,108
+keycloak_httpd_client/keycloak_rest.py,sha256=tBWpzBgpSLl0X7R2h8QPZqSl5bpApSC3lp141pO9GiU,24060
+keycloak_httpd_client/utils.py,sha256=yIH878UrdwKFBV6smH_50TVdOLqVA_DMZqNnKuJK33k,34221
+keycloak_httpd_client_install-1.2.data/scripts/keycloak-httpd-client-install,sha256=aMP_x5YqnfsUnObqWSgcsrXUkW3W4Y6LZ3etQD8rgRU,43542
+keycloak_httpd_client_install-1.2.data/scripts/keycloak-rest,sha256=MLj9tXmgqYEZ3W7NOAaeu9w37PTxu2Xp8sclAgCns5c,14266
+usr/share/keycloak-httpd-client-install/templates/mellon_httpd.conf,sha256=Mc_oSnNxqC3X5ogeQuKDfn5qXL-AFs69tL3Q49r17bQ,944
+usr/share/keycloak-httpd-client-install/templates/oidc-client-registration.tpl,sha256=Z7nmYkUsLphz1vSkKJBzgKFcSFgiU9G_H4_2EB0h9lI,235
+usr/share/keycloak-httpd-client-install/templates/oidc-client-representation.tpl,sha256=jPttcCYC0OdxfZpYErJ_nZ3yod40EqrDK5NHotWzzmk,381
+usr/share/keycloak-httpd-client-install/templates/oidc_httpd.conf,sha256=ihNFhF4OMr5GtDW2sScPdZChhVNZbyv9a6hX6e5RrEg,488
+usr/share/keycloak-httpd-client-install/templates/sp_metadata.tpl,sha256=A4gnERheifrkicMOlWO1ogZMvnbyIap1A_8XfuZuycw,2431
+keycloak_httpd_client_install-1.2.dist-info/LICENSE.txt,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+keycloak_httpd_client_install-1.2.dist-info/METADATA,sha256=Pesk8Lkv-XCvvKNg2_jENwRDwSdeSeMypGGtVVQjcKg,633
+keycloak_httpd_client_install-1.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+keycloak_httpd_client_install-1.2.dist-info/top_level.txt,sha256=SSuT6Nx_rLXXhqqzrcqtte9vZCcY-aHELhXPOZLTDTo,22
+keycloak_httpd_client_install-1.2.dist-info/RECORD,,
