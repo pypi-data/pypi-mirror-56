@@ -1,0 +1,12 @@
+mypy_boto3_inspector/__init__.py,sha256=9hEQj02UInx4HGZALjDg92Nwf-dgarW_IrYvKOC3jIs,180
+mypy_boto3_inspector/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_inspector/client.py,sha256=YrVFplLEUas2oatZ4m9y53MdA3eI9b2CTVvT3Ny0yms,128868
+mypy_boto3_inspector/helpers.py,sha256=6fIzoGo3kbxQQc_6UfyxPtXX10zbmbN5ii83kVJAcJA,4883
+mypy_boto3_inspector/paginator.py,sha256=1mHvbW6jhI4zIl6FPAKBAEJLMBnKuaDKnjSLkMNvu7Y,41670
+mypy_boto3_inspector/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_inspector/type_defs.py,sha256=rTjt5PeSHVmXWtTZuW4mdW5VLfiwFtPo1Gp_MHPJt3Q,172681
+mypy_boto3_inspector/version.py,sha256=1NIOtJtZmmn92sL26J0GZoOW7g7EtL5BOmu2rR0Wx6E,53
+mypy_boto3_inspector-0.2.5.dist-info/METADATA,sha256=lrQPNXO9MbCtJUQkKIQxF7xFMbmAGfDTVQZIZrkwTCg,1071
+mypy_boto3_inspector-0.2.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mypy_boto3_inspector-0.2.5.dist-info/top_level.txt,sha256=ZvKBY-W2ljj6xfneV1QOB1HxhlJVbMQLMW3rrZ-8TYk,21
+mypy_boto3_inspector-0.2.5.dist-info/RECORD,,
