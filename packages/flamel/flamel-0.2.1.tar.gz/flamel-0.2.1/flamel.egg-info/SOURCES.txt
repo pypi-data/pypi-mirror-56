@@ -1,0 +1,17 @@
+AUTHORS
+ChangeLog
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+flamel/__init__.py
+flamel.egg-info/PKG-INFO
+flamel.egg-info/SOURCES.txt
+flamel.egg-info/dependency_links.txt
+flamel.egg-info/entry_points.txt
+flamel.egg-info/not-zip-safe
+flamel.egg-info/pbr.json
+flamel.egg-info/requires.txt
+flamel.egg-info/top_level.txt
