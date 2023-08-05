@@ -1,0 +1,6 @@
+tf-agents-nightly==0.2.0.dev20191102
+tensorflow==2.0.0
+gym==0.15.3
+imageio==2.6.1
+imageio-ffmpeg==0.3.0
+matplotlib==3.1.1
