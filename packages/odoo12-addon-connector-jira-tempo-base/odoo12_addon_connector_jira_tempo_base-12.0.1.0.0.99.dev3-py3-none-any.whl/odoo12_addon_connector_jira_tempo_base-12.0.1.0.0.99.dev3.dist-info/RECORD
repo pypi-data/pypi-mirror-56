@@ -1,0 +1,17 @@
+odoo/addons/connector_jira_tempo_base/README.rst,sha256=RixVeI5Kn494FdmWJq5CUUQ8R5EbCiHdtYMsl6xVUpg,2787
+odoo/addons/connector_jira_tempo_base/__init__.py,sha256=QXl_U5mKDJfzIWJDZpUzH9Rf4Zda8Ko8Q1Df6Lc0MF8,92
+odoo/addons/connector_jira_tempo_base/__manifest__.py,sha256=w18N1mx3JC5TQLz2u7-tQQKlH2ULpdk6Mfiq9eVlOEA,660
+odoo/addons/connector_jira_tempo_base/i18n/connector_jira_tempo_base.pot,sha256=VYQ7r5aP77UwA52XfoqtOYUcMD1Tf_06e7XHRaK94Pc,550
+odoo/addons/connector_jira_tempo_base/models/__init__.py,sha256=rHkEcDe37RedQ-jLM8A84kszsqZfm3OiZU2dPViqJ4o,107
+odoo/addons/connector_jira_tempo_base/models/account_analytic_line/__init__.py,sha256=_yFCoZSP1XH63C1uujZwhRJRCE9q-NAI1VJriYaQlYw,92
+odoo/addons/connector_jira_tempo_base/models/account_analytic_line/common.py,sha256=Qm-X759nHmWl9IG2fm44gvchhNWv4mM6SasJb8k3v2A,1136
+odoo/addons/connector_jira_tempo_base/readme/CONTRIBUTORS.rst,sha256=rDIO5V87orzLxZX7eJtJZRtvSe034pHWXxoNChQAyes,93
+odoo/addons/connector_jira_tempo_base/readme/DESCRIPTION.rst,sha256=P8n0WPtDjoqcEJVD-DsJLCSZNRaRQpr_tcYHeXLlcBw,57
+odoo/addons/connector_jira_tempo_base/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/connector_jira_tempo_base/static/description/index.html,sha256=lSqs6AMjn9bH9CUW0xLWx9ybbdTWsREOe4tL7pfNuPA,12009
+odoo/addons/connector_jira_tempo_base/tests/__init__.py,sha256=kyuy_Im3rPI8x1tVtIPAZdkIQQEiH6Ln5r0WzNxLRrE,116
+odoo/addons/connector_jira_tempo_base/views/jira_backend.xml,sha256=NZcjIqZbCykCSAyR9wHVU3EOi1ZLxKXO-rGCA-jsw1E,866
+odoo12_addon_connector_jira_tempo_base-12.0.1.0.0.99.dev3.dist-info/METADATA,sha256=rJ3ll28jB0wb2HJ00ExSRx4Z8rFdSpeVQguqzdm4hpk,3371
+odoo12_addon_connector_jira_tempo_base-12.0.1.0.0.99.dev3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+odoo12_addon_connector_jira_tempo_base-12.0.1.0.0.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_connector_jira_tempo_base-12.0.1.0.0.99.dev3.dist-info/RECORD,,
