@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: lt-pylib
+Version: 0.0.1
+Summary: Common Python helper functions
+Home-page: https://github.com/lancethomps/lt-pylib
+Author: Lance Thompson
+License: MIT
+Project-URL: Bug Reports, https://github.com/lancethomps/lt-pylib/issues
+Project-URL: Source, https://github.com/lancethomps/lt-pylib
+Keywords: utils
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: argcomplete
+Requires-Dist: bs4
+Requires-Dist: configparser
+Requires-Dist: psutil
+Requires-Dist: urllib3
+Requires-Dist: xmltodict
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+# LT pylib
+
+A Python library that exposes some commonly used helper functions.
+
+
