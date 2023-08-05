@@ -1,0 +1,13 @@
+setuptools
+zc.buildout
+zc.recipe.deployment
+zc.zodbrecipes
+ZConfig
+
+[test]
+PyHamcrest
+collective.recipe.template
+z3c.recipe.mkdir
+zope.testing
+zope.testrunner
+zdaemon
