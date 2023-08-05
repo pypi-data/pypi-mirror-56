@@ -1,0 +1,64 @@
+import os
+import json
+import unittest
+import jc.parsers.df
+
+THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+class MyTests(unittest.TestCase):
+
+    def setUp(self):
+        # input
+        with open(os.path.join(THIS_DIR, os.pardir, 'tests/fixtures/centos-7.7/df.out'), 'r') as f:
+            self.centos_7_7_df = f.read()
+
+        with open(os.path.join(THIS_DIR, os.pardir, 'tests/fixtures/ubuntu-18.04/df.out'), 'r') as f:
+            self.ubuntu_18_4_df = f.read()
+
+        with open(os.path.join(THIS_DIR, os.pardir, 'tests/fixtures/centos-7.7/df-h.out'), 'r') as f:
+            self.centos_7_7_df_h = f.read()
+
+        with open(os.path.join(THIS_DIR, os.pardir, 'tests/fixtures/ubuntu-18.04/df-h.out'), 'r') as f:
+            self.ubuntu_18_4_df_h = f.read()
+
+        # output
+        with open(os.path.join(THIS_DIR, os.pardir, 'tests/fixtures/centos-7.7/df.json'), 'r') as f:
+            self.centos_7_7_df_json = json.loads(f.read())
+
+        with open(os.path.join(THIS_DIR, os.pardir, 'tests/fixtures/ubuntu-18.04/df.json'), 'r') as f:
+            self.ubuntu_18_4_df_json = json.loads(f.read())
+
+        with open(os.path.join(THIS_DIR, os.pardir, 'tests/fixtures/centos-7.7/df-h.json'), 'r') as f:
+            self.centos_7_7_df_h_json = json.loads(f.read())
+
+        with open(os.path.join(THIS_DIR, os.pardir, 'tests/fixtures/ubuntu-18.04/df-h.json'), 'r') as f:
+            self.ubuntu_18_4_df_h_json = json.loads(f.read())
+
+    def test_df_centos_7_7(self):
+        """
+        Test plain 'df' on Centos 7.7
+        """
+        self.assertEqual(jc.parsers.df.parse(self.centos_7_7_df, quiet=True), self.centos_7_7_df_json)
+
+    def test_df_ubuntu_18_4(self):
+        """
+        Test plain 'df' on Ubuntu 18.4
+        """
+        self.assertEqual(jc.parsers.df.parse(self.ubuntu_18_4_df, quiet=True), self.ubuntu_18_4_df_json)
+
+    def test_df_h_centos_7_7(self):
+        """
+        Test plain 'df -h' on Centos 7.7
+        """
+        self.assertEqual(jc.parsers.df.parse(self.centos_7_7_df_h, quiet=True), self.centos_7_7_df_h_json)
+
+    def test_df_h_ubuntu_18_4(self):
+        """
+        Test plain 'df -h' on Ubuntu 18.4
+        """
+        self.assertEqual(jc.parsers.df.parse(self.ubuntu_18_4_df_h, quiet=True), self.ubuntu_18_4_df_h_json)
+
+
+if __name__ == '__main__':
+    unittest.main()
