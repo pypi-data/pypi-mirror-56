@@ -1,0 +1,85 @@
+#
+# INSTALL_TEST_CMAKE, cmake test script for install non-reg suite
+# Copyright (C) 2017 Xavier Delaruelle
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+##########################################################################
+
+cmake_policy(SET CMP0007 NEW)
+
+if(NOT EXISTS ${initfile})
+   message(FATAL_ERROR "Cannot read ${initfile}")
+endif()
+
+# source module init file
+include(${initfile})
+
+# execute command list
+set(code 0)
+string(REPLACE ":" ";" cmdsplit "${cmdlist}")
+# empty command list, means one empty command
+list (LENGTH cmdlist cmdcnt)
+if(${cmdcnt} EQUAL 0)
+   module("")
+else()
+   foreach(cmd ${cmdsplit})
+      # if command equals to NOARG string, means call with no arg passed
+      if("${cmd}" STREQUAL "NOARG")
+         module()
+      else()
+         string(REPLACE "," ";" cmdelt "${cmd}")
+         list (LENGTH cmdelt eltcnt)
+         if(${eltcnt} GREATER 4)
+            list(GET cmdelt 0 elt0)
+            list(GET cmdelt 1 elt1)
+            list(GET cmdelt 2 elt2)
+            list(GET cmdelt 3 elt3)
+            list(GET cmdelt 4 elt4)
+            module("${elt0}" "${elt1}" "${elt2}" "${elt3}" "${elt4}")
+         elseif(${eltcnt} GREATER 3)
+            list(GET cmdelt 0 elt0)
+            list(GET cmdelt 1 elt1)
+            list(GET cmdelt 2 elt2)
+            list(GET cmdelt 3 elt3)
+            module("${elt0}" "${elt1}" "${elt2}" "${elt3}")
+         elseif(${eltcnt} GREATER 2)
+            list(GET cmdelt 0 elt0)
+            list(GET cmdelt 1 elt1)
+            list(GET cmdelt 2 elt2)
+            module("${elt0}" "${elt1}" "${elt2}")
+         elseif(${eltcnt} GREATER 1)
+            list(GET cmdelt 0 elt0)
+            list(GET cmdelt 1 elt1)
+            module("${elt0}" "${elt1}")
+         elseif(${eltcnt} GREATER 0)
+            list(GET cmdelt 0 elt0)
+            module("${elt0}")
+         else()
+            # empty arg list, means one empty arg
+            module("")
+         endif()
+      endif()
+      if(NOT module_result AND NOT ${module_result} STREQUAL "")
+         set(code 1)
+      elseif(NOT ${module_result} STREQUAL "TRUE")
+         message(STATUS ${module_result})
+      endif()
+   endforeach()
+endif()
+
+if(${code})
+   message(FATAL_ERROR "")
+endif()
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

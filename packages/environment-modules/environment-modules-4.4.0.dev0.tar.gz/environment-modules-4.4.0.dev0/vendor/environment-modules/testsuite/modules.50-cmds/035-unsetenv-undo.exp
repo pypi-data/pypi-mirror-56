@@ -1,0 +1,94 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		unload
+#   Modulefiles:	unsetenv/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the reverse 'unsetenv' module subcommand for all
+#			allowed shell types.
+#		}C%
+#
+#   Trouble:	%T{
+#			Removal of a 'unsetenv' command *SHOULD* result in
+#			the once removed variable being restored.
+#			
+#			To be discussed:
+#			
+#			    - We cannot determine, if the variable really 
+#			      *HAS BEEN* removed or if it has never been 
+#			      set up before.
+#
+#			    - We cannot determine, what the former value of 
+#			      he varibale was.
+#
+#			    Should there be a 'default value' in the module
+#			    file? This would let us do the following:
+#
+#				if { [info exists env(tmpvar) ] } {
+#				    set saveme $env(tmpvar)
+#				} else {
+#				    set saveme ""
+#				}
+#				setenv env(tmpvar) $env(SHELLVARIABLE)
+#				unsetenv SHELLVARIABLE $saveme
+#		}T%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module unload command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "unsetenv/1.0"
+set modulefile "$modpath/$module"
+
+#
+#  Set up the environment for reversal ...
+#
+
+if { [info exists env(testsuite)] } {
+    unset env(testsuite)
+}
+setenv_loaded_module $module $modulefile
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list unset testsuite]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+#
+#  The tests
+#
+
+test_cmd "ALL" "unload $module" $ans
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefile
+unset module
+
+#
+#  Clean up the environment, too
+#
+
+unsetenv_loaded_module

@@ -1,0 +1,501 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.00-init/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#   			This module defines all patterns used further in the
+#			testsuite
+#		}C%
+#
+##############################################################################
+
+if { $verbose > 0 } {
+    send_user "\tInitializing the testsuite ...\n"
+}
+
+#
+#  Regular expressions matching error and warning outputs
+#
+
+set messages "(\[^(\]+)\[(\]\[0-9\]+\[)\]"
+set error_msgs "ERROR"
+set warn_msgs "WARNING"
+set prob_msgs "$messages:PROB:\[0-9\]+"
+set verb_msgs "$messages:VERB:\[0-9\]+"
+set moderr_msgs "Module $error_msgs"
+set info_msgs "INFO"
+
+# Used as a line seperator inside modules
+set modlin      "\[-\]+"
+
+# List of supported shells
+set sh_shells [list sh bash ksh zsh]
+set csh_shells [list csh tcsh]
+set real_shells [concat $sh_shells $csh_shells [list fish]]
+set other_shells [list tcl cmd perl python ruby lisp cmake r]
+set supported_shells [concat $real_shells $other_shells]
+
+# Common error responses
+set err_path "$error_msgs: Unable to locate a modulefile for "
+set err_file "$error_msgs: No such file or directory on "
+set err_illdir "$error_msgs: Illegal operation on a directory on "
+set err_nomodpath "$error_msgs: No module path defined"
+set err_magicns "$moderr_msgs: Magic cookie '#%Module' missing\nIn "
+set err_magic "$moderr_msgs: Magic cookie '#%Module' missing\n  In "
+set err_contactns "Please contact <root@localhost>"
+set err_contact "  $err_contactns"
+set err_typehelp "Try 'module --help' for more information."
+set err_loinconsist "$error_msgs: Loaded environment state is inconsistent"
+set err_emptymodname "$error_msgs: Invalid empty module name"
+set err_emptycollname "$error_msgs: Invalid empty collection name"
+set err_emptydirname "$error_msgs: Directory name empty"
+set err_emptyfilename "$error_msgs: File name empty"
+set err_unsatreload "$error_msgs: Cannot reload modules, some of their constraints are not satistied"
+set err_nodefault "$error_msgs: No default version defined for "
+set err_evalabort "$error_msgs: Module evaluation aborted"
+set err_specmodname "$error_msgs: No module name defined in argument "
+set err_specvers "$error_msgs: Invalid version specifier "
+set err_rangevers "$error_msgs: Invalid version range "
+set moderr_emptycollname "$moderr_msgs: Invalid empty collection name\nIn "
+set moderr_emptydirname "$moderr_msgs: Directory name empty\n  In "
+set moderr_emptyfilename "$moderr_msgs: File name empty\nIn "
+
+proc err_conflict {mod args} {
+    return "$::error_msgs: $mod cannot be loaded due to a conflict.
+HINT: Might try \"module unload $args\" first."
+}
+
+proc err_conloi {args} {
+    set is [expr {[llength $args] > 1 ? {are} : {is}}]
+    return "$::error_msgs: Conflicting [join $args { and }] $is loading"
+}
+
+proc err_conloif {args} {
+    set is [expr {[llength $args] > 1 ? {are} : {is}}]
+    return "$::warn_msgs: Conflicting [join $args { and }] $is loading"
+}
+
+proc err_conlo {args} {
+    set is [expr {[llength $args] > 1 ? {are} : {is}}]
+    return "$::error_msgs: Conflicting [join $args { and }] $is loaded"
+}
+
+proc err_conlof {args} {
+    set is [expr {[llength $args] > 1 ? {are} : {is}}]
+    return "$::warn_msgs: Conflicting [join $args { and }] $is loaded"
+}
+
+proc err_conun {args} {
+    return "$::error_msgs: Unload of conflicting [join $args { and }] failed"
+}
+
+proc err_conunf {args} {
+    return "$::warn_msgs: Unload of conflicting [join $args { and }] failed"
+}
+
+proc err_prereq {mod args} {
+    return "$::error_msgs: $mod cannot be loaded due to missing prereq.
+HINT: the following module must be loaded first: $args"
+}
+
+proc err_prereqor {mod args} {
+    return "$::error_msgs: $mod cannot be loaded due to missing prereq.
+HINT: at least one of the following modules must be loaded first: $args"
+}
+
+proc err_prerequn {mod args} {
+    return "$::error_msgs: $mod cannot be unloaded due to a prereq.
+HINT: Might try \"module unload $args\" first."
+}
+
+proc err_deplo {args} {
+    set is [expr {[llength $args] > 1 ? {are} : {is}}]
+    return "$::error_msgs: Dependent [join $args { and }] $is loaded"
+}
+
+proc err_deplof {args} {
+    set is [expr {[llength $args] > 1 ? {are} : {is}}]
+    return "$::warn_msgs: Dependent [join $args { and }] $is loaded"
+}
+
+proc err_reqlo {args} {
+    return "$::error_msgs: Load of requirement [join $args { or }] failed"
+}
+
+proc err_reqlof {args} {
+    return "$::warn_msgs: Load of requirement [join $args { or }] failed"
+}
+
+proc err_reqmis {args} {
+    return "$::error_msgs: Requirement [join $args { or }] is not loaded"
+}
+
+proc err_reqmisf {args} {
+    return "$::warn_msgs: Requirement [join $args { or }] is not loaded"
+}
+
+proc err_depun {mod} {
+    return "$::error_msgs: Unload of dependent $mod failed"
+}
+
+proc err_depunf {mod} {
+    return "$::warn_msgs: Unload of dependent $mod failed"
+}
+
+proc err_urequn {mod} {
+    return "$::warn_msgs: Unload of useless requirement $mod failed"
+}
+
+proc err_depre {mod} {
+    return "$::error_msgs: Reload of dependent $mod failed"
+}
+
+proc err_depref {mod} {
+    return "$::warn_msgs: Reload of dependent $mod failed"
+}
+
+proc err_depreun {mod} {
+    return [err_depun $mod]
+}
+
+proc err_depreunf {mod} {
+    return [err_depunf $mod]
+}
+
+proc err_swoff {mod} {
+    return "$::error_msgs: Unload of switched-off $mod failed"
+}
+
+proc err_swon {mod} {
+    return "$::warn_msgs: Load of switched-on $mod failed"
+}
+
+proc err_conflocked {option} {
+    return "$::error_msgs: Configuration option '$option' is locked"
+}
+
+proc moderr_minverreq {modfile minver} {
+    return "$::moderr_msgs: Modulefile requires at least Modules version $minver\n  In '$modfile'\n$::err_contact"
+}
+
+proc if_implicitdefault {then {else {}}} {
+    return [expr {$::install_implicitdefault eq {y} ? $then : $else}]
+}
+
+proc if_configlocked {option then {else {}}} {
+    return [expr {[is_config_locked $option] ? $then : $else}]
+}
+
+proc is_config_locked {option} {
+    return [expr {[lsearch -exact $::install_lockedconfigs $option] != -1}]
+}
+
+proc is_real_shell {shell} {
+    return [expr {[lsearch -exact $::real_shells $shell] != -1}]
+}
+
+# helper procedures to format block message output
+proc msg_block_content {args} {
+    set msg {}
+    foreach arg $args {
+        set first 1
+        set padding {  }
+
+        set max_idx [expr {$::msg_disp_cols - [string length $padding]}]
+        set linelist [list]
+        foreach line [split $arg \n] {
+            set lineadd {}
+            while {$lineadd ne $line} {
+                # no split if no whitespace found to slice
+                if {[string length $line] > $max_idx && [set cut_idx [string\
+                    last { } $line $max_idx]] != -1} {
+                    set lineadd [string range $line 0 [expr {$cut_idx-1}]]
+                    set line [string range $line [expr {$cut_idx+1}] end]
+                } else {
+                    set lineadd $line
+                }
+                lappend linelist $lineadd
+                if {$first} {
+                    set first 0
+                    incr max_idx -[string length $padding]
+                }
+            }
+        }
+
+        # display each line
+        set first 1
+        foreach line $linelist {
+            append msg \n
+            if {$first} {
+                set first 0
+            } else {
+                append msg $padding
+            }
+            append msg "$padding$line"
+        }
+    }
+    return $msg
+}
+
+proc msg_load {mod args} {
+    set msg "Loading $mod"
+    append msg [eval msg_block_content $args]
+    return $msg
+}
+
+proc msg_unload {mod args} {
+    set msg "Unloading $mod"
+    append msg [eval msg_block_content $args]
+    return $msg
+}
+
+proc msg_switch {old new args} {
+    set msg "Switching from $old to $new"
+    append msg [eval msg_block_content $args]
+    return $msg
+}
+
+proc msg_top_load {mod unlist reqlolist deprelist args} {
+    lassign [mix_depre_depun_list $deprelist {}] deprelist depunlist
+
+    if {[llength $depunlist] > 0} {
+        lappend args "Unloading dependent: [join $depunlist]"
+    }
+    if {[llength $unlist] > 0} {
+        lappend args "Unloading conflict: [join $unlist]"
+    }
+    if {[llength $reqlolist] > 0} {
+        lappend args "Loading requirement: [join $reqlolist]"
+    }
+    if {[llength $deprelist] > 0} {
+        lappend args "Reloading dependent: [join $deprelist]"
+    }
+    return [eval msg_load $mod $args]
+}
+
+proc msg_top_unload {mod depunlist urequnlist deprelist args} {
+    lassign [mix_depre_depun_list $deprelist $depunlist] deprelist depunlist
+    if {[llength $depunlist] > 0} {
+        lappend args "Unloading dependent: [join $depunlist]"
+    }
+    if {[llength $urequnlist] > 0} {
+        lappend args "Unloading useless requirement: [join $urequnlist]"
+    }
+    if {[llength $deprelist] > 0} {
+        lappend args "Reloading dependent: [join $deprelist]"
+    }
+    return [eval msg_unload $mod $args]
+}
+
+proc msg_top_switch {old new depunlist urequnlist unlist reqlolist deprelist args} {
+    lassign [mix_depre_depun_list $deprelist $depunlist] deprelist depunlist
+
+    if {[llength $depunlist] > 0} {
+        lappend args "Unloading dependent: [join $depunlist]"
+    }
+    if {[llength $urequnlist] > 0} {
+        lappend args "Unloading useless requirement: [join $urequnlist]"
+    }
+    if {[llength $unlist] > 0} {
+        lappend args "Unloading conflict: [join $unlist]"
+    }
+    if {[llength $reqlolist] > 0} {
+        lappend args "Loading requirement: [join $reqlolist]"
+    }
+    if {[llength $deprelist] > 0} {
+        lappend args "Reloading dependent: [join $deprelist]"
+    }
+    return [eval msg_switch $old $new $args]
+}
+
+proc mix_depre_depun_list {deprelist depunlist} {
+    # dependent reload unload phase appears with dependent unload (in actual unload order)
+    # if some dependent fail to unload, 1 unload list and 1 reload list could be passed
+    if {[llength $deprelist] == 2 && [llength [set depreun [lindex $deprelist 0]]] !=\
+        [llength [set deprelo [lindex $deprelist 1]]]} {
+        set depunlist [concat $depreun $depunlist]
+        set deprelist $deprelo
+    } else {
+        set depunlist [concat [lreverse $deprelist] $depunlist]
+    }
+    return [list $deprelist $depunlist]
+}
+
+# provide a lassign proc for Tcl8.4 and earlier
+if {[info commands lassign] eq ""} {
+   proc lassign {values args} {
+      uplevel 1 [list foreach $args [linsert $values end {}] break]
+      lrange $values [llength $args] end
+   }
+}
+
+# provide a lreverse proc for Tcl8.4 and earlier
+if {[info commands lreverse] eq ""} {
+   proc lreverse {l} {
+      set r [list]
+      for {set i [expr {[llength $l] - 1}]} {$i >= 0} {incr i -1} {
+         lappend r [lindex $l $i]
+      }
+      return $r
+   }
+}
+
+# get current terminal width
+proc getTtyCols {} {
+    set nbcols {}
+
+    switch -- $::tcl_platform(os) {
+        {SunOS} {
+            catch {regexp {columns = (\d+);} [exec stty] match nbcols} errMsg
+        }
+        default {
+            catch {set nbcols [lindex [exec stty size] 1]} errMsg
+        }
+    }
+    return $nbcols
+}
+set nbcols [getTtyCols]
+if {$nbcols ne {} && $nbcols ne {0}} {
+    set term_cols $nbcols
+    set msg_disp_cols $nbcols
+    if { $verbose > 0 } {
+        send_user "\tTerminal has $msg_disp_cols columns\n"
+    }
+} else {
+    set msg_disp_cols 80
+    if { $verbose > 0 } {
+        send_user "\tFail to detect terminal column number. Fallback to $msg_disp_cols columns\n"
+    }
+}
+unset nbcols
+
+# check SIP is enabled or not on OS X
+if {$tcl_platform(os) eq "Darwin"} {
+    catch {
+        regexp {System Integrity Protection status: enabled.} [exec csrutil status] csrutil_enabled
+    } errMsg
+}
+if {[info exists csrutil_enabled]} {
+    set sip_enabled 1
+    unset csrutil_enabled
+} else {
+    set sip_enabled 0
+}
+
+# locate siteconfig file
+set siteconfig_file "$install_etcdir/siteconfig.tcl"
+set siteconfig_filere [regsub -all "\(\[.+?\]\)" $siteconfig_file {\\\1}]
+
+# determine if siteconfig forces stderr terminal attachement state
+proc siteconfig_isStderrTty {} {
+    interp create _siteconfig
+    interp eval _siteconfig set ::siteconfig_file $::siteconfig_file
+    set is_stderr_tty [interp eval _siteconfig {
+        set is_stderr_tty 0
+        if {[file readable $::siteconfig_file]} {
+            # evaluate siteconfig file to check isStderrTty procedure
+            catch {
+                source $::siteconfig_file
+                if {[info procs isStderrTty] eq "isStderrTty"} {
+                    set is_stderr_tty [isStderrTty]
+                }
+            } errorMsg
+        }
+        return $is_stderr_tty
+    }]
+    interp delete _siteconfig
+    return $is_stderr_tty
+}
+
+# locate Modules Tcl extension library used during testsuite
+if {$install_libtclenvmodules eq {y}} {
+    catch {set tclextlib_file [glob lib/libtclenvmodules*]}
+    catch {set closedirlib_file [glob lib/libtestutil-closedir*]}
+}
+
+# check file permission capabilities
+set test_perms_dir "$env(TESTSUITEDIR)/etc"
+set test_perms_file "$test_perms_dir/modulerc"
+set orig_perms [file attributes $test_perms_dir -permissions]
+file attributes $test_perms_dir -permissions "ugo-rx"
+set new_perms [file attributes $test_perms_dir -permissions]
+if {$new_perms eq $orig_perms} {
+    set is_file_perms_editable 0
+} else {
+    set is_file_perms_editable 1
+
+    # check if file is readable in a locked directory
+    if {[catch {
+        set fid [open $test_perms_file r]
+        close $fid
+    }]} {
+        set is_locked_dir_file_readable 0
+    } else {
+        set is_locked_dir_file_readable 1
+    }
+    file attributes $test_perms_dir -permissions $orig_perms
+
+    # check if file is still readable if locked
+    set orig_perms [file attributes $test_perms_file -permissions]
+    file attributes $test_perms_file -permissions "ugo-rx"
+    if {[catch {
+        set fid [open $test_perms_file r]
+        close $fid
+    }]} {
+        set is_locked_file_readable 0
+    } else {
+        set is_locked_file_readable 1
+    }
+    file attributes $test_perms_file -permissions $orig_perms
+}
+unset test_perms_dir
+unset test_perms_file
+unset orig_perms
+unset new_perms
+
+# check if symbolic link registered in git repository have been effectively
+# created as symbolic link to determine if they are supported on filesystem
+set is_symlink_supported [file isdirectory $env(TESTSUITEDIR)/modulefiles/symlink]
+
+# check if underlying filesystem is case-insensitive
+set is_filesystem_icase [file exists $env(TESTSUITEDIR)/modulefiles.2/ICASE/prereq]
+
+# check x11 capabilities
+set x11_warn_prefix "$error_msgs: X11 resources cannot be edited, issue spotted"
+set xrdb_warn "$x11_warn_prefix\n$error_msgs: Command 'xrdb' cannot be found"
+#  check where to find the 'xrdb' binary on this system
+set xrdb [auto_execok xrdb]
+if {$xrdb eq ""} {
+    set x11_warn $xrdb_warn
+} elseif {[catch {exec $xrdb -query} errMsg]} {
+    set x11_warn "$x11_warn_prefix\n$error_msgs: $errMsg"
+}
+
+# check if domainname binary is available on this system
+set domainname [auto_execok domainname]
+set domainname_warn "$error_msgs: Command 'domainname' cannot be found"
+
+#
+#  Set up the config-file variable if possible
+#
+
+proc default-configfile {} {
+    global MODULECMD
+    global config_file
+
+    default_modulecmd
+    set config_file "[file dirname $MODULECMD]/config.h"
+}
+
+default-configfile

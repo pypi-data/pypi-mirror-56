@@ -1,0 +1,157 @@
+##############################################################################
+#   Modules Release Tcl
+#   Providing a flexible user environment
+#
+#   File:		modules.61-coll/%M%
+#   Revision:		%I%
+#   First Edition:	2016/08/16
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Test the module 'saveshow' command
+#		}C%
+#
+##############################################################################
+
+set cbadnerrmsg "$error_msgs: Collection $collbadn cannot be found"
+set cbadfperrmsg "$error_msgs: Collection $collbadfp cannot be found"
+set cbadterrmsg "$error_msgs: Collection $colld (for target \"$colltarget\") cannot be found"
+set badcontfp "$homewithcoll/.Xresources"
+set badcontfperrmsg "$error_msgs: $badcontfp is not a valid collection"
+
+
+# set HOME to location containing collections
+set ORIG_HOME $env(HOME)
+if { $verbose > 0 } {
+    send_user "\tSetup HOME = $homewithcoll\n"
+}
+set env(HOME) "$homewithcoll"
+
+
+#
+# test showing nonexistent collection
+#
+
+testouterr_cmd "ALL" "saveshow $collbadn" "ERR" "$cbadnerrmsg"
+
+
+#
+# test showing nonexistent collection specified as a filepath
+#
+
+testouterr_cmd "ALL" "saveshow $collbadfp" "ERR" "$cbadfperrmsg"
+
+
+#
+# test showing existent file which is not a collection
+#
+
+testouterr_cmd "ALL" "saveshow $badcontfp" "ERR" "$badcontfperrmsg"
+
+
+#
+# test showing default collection
+#
+
+# test only sh shell as this test does not produce shell output
+testouterr_cmd_re "sh" "saveshow" "OK" "$modlin\n$homewithcolldotmodre/$colld:\n\n$cdcontrepin\n$modlin$"
+
+
+#
+# test showing named collection
+# using old fashioned way to define paths (no --append property)
+#
+
+# test only sh shell as this test does not produce shell output
+testouterr_cmd_re "sh" "saveshow $coll1" "OK" "$modlin\n$homewithcolldotmodre/$coll1:\n\n$presavedc1cont1re\n$modlin$"
+
+
+#
+# test showing collection specified as a filepath when
+# MODULES_COLLECTION_TARGET is set. target should be ignored
+#
+
+# setup environment state
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_COLLECTION_TARGET = $colltarget\n"
+}
+set env(MODULES_COLLECTION_TARGET) "$colltarget"
+
+# test only sh shell as this test does not produce shell output
+testouterr_cmd_re "sh" "saveshow $homewithcolldotmod/$coll1" "OK" "$modlin\n$homewithcolldotmodre/$coll1:\n\n$presavedc1cont1re\n$modlin$"
+
+
+#
+# test showing collection not mentionning module to load
+# when MODULES_COLLECTION_TARGET is set
+#
+
+# test only sh shell as this test does not produce shell output
+testouterr_cmd_re "sh" "saveshow $coll4" "OK" "$modlin\n$homewithcolldotmodre/$coll4f:\n\n$c4contre\n$modlin$"
+
+
+#
+# test displaying same collection than before but with a modulepath
+# prepended rather appended
+#
+
+testouterr_cmd_re "sh" "saveshow $coll5fp" "OK" "$modlin\n$coll5fpre:\n\n$c4contre\n$modlin$"
+
+
+#
+# test displaying collection with no modulepath and modulefiles loaded as fullpath
+#
+
+testouterr_cmd_re "sh" "saveshow $coll7fp" "OK" "$modlin\n$coll7fpre:\n\n$c7contre\n$modlin$"
+
+
+#
+# test showing nonexistent default collection when
+# MODULES_COLLECTION_TARGET is set
+#
+
+testouterr_cmd "ALL" "saveshow" "ERR" "$cbadterrmsg"
+
+
+#
+# test unsetting HOME
+#
+
+if { $verbose > 0 } {
+    send_user "\tUnset HOME \n"
+}
+unset env(HOME)
+
+testouterr_cmd "sh" "saveshow" "ERR" $nohomeerrmsg
+
+
+#
+# Cleanup
+#
+
+# restore default testsuite home
+if { $verbose > 0 } {
+    send_user "\tRestore HOME = $ORIG_HOME\n"
+}
+set env(HOME) $ORIG_HOME
+unset ORIG_HOME
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tRestore MODULES_COLLECTION_TARGET = ''\n"
+}
+unset env(MODULES_COLLECTION_TARGET)
+
+unset cbadnerrmsg
+unset cbadfperrmsg
+unset cbadterrmsg
+unset badcontfp
+unset badcontfperrmsg
+

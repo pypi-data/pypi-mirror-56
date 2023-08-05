@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+#
+# MT, run specific part of the test suite
+# Copyright (C) 2018-2019 Xavier Delaruelle
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+##########################################################################
+
+set -u
+
+# print message on stderr then exit
+echo_error() {
+   echo -e "ERROR: $1" >&2
+   exit 1
+}
+
+if [ ! -e modulecmd.tcl.in ]; then
+   echo_error "Not in correct directory"
+fi
+
+# make bin, should use GNU make
+command -v gmake >/dev/null
+if [ $? -eq 0 ]; then
+   make=gmake
+else
+   make=make
+fi
+
+# make target
+target=test
+testserie=modules
+setuptestfiles=(00/005 00/006 00/010 00/050 00/080)
+if [ $# -gt 0 ]; then
+   if [ "$1" = "cov" ]; then
+      export COVERAGE=y
+      shift
+   elif [ "$1" = "install" ]; then
+      target=testinstall
+      testserie=install
+      setuptestfiles=(00/005 00/006 00/010)
+      shift
+   fi
+fi
+
+if [ $# -gt 0 ]; then
+   # build list of test files to run test on
+   declare -a testfiles
+   for i in ${setuptestfiles[@]} ${@}; do
+      j=${i##*/}
+      i=${i%/*}
+
+      # add all test files if passed a full section number or a test file
+      # from collection section (this section must be run entirely)
+      if [ "$j" == "$i" ] || [ "$i" == "61" ]; then
+         testfiles+=(testsuite/$testserie.${i}*/*.exp)
+      else
+         testfiles+=(testsuite/$testserie.${i}*/{010,999,$j}*.exp)
+      fi
+   done
+
+   # get file name of selected test files (runtest requires .exp file name)
+   declare -a testfnames=()
+   for i in "${testfiles[@]}"; do
+      if [ -e $i ]; then
+         fname=${i##*/}
+         # build list of unique file names
+         if [ ${#testfnames[@]} -eq 0 ]\
+            || [[ ! " ${testfnames[*]} " =~ " $fname " ]]; then
+            testfnames+=($fname)
+         fi
+      fi
+   done
+
+   # pass list to make target
+   export RUNTESTFILES="${testfnames[*]}"
+fi
+
+$make contrib/mtreview
+$make icdiff
+export RUNTESTFLAGS='-v -v >/dev/null 2>&1'
+$make $target
+ret=$?
+
+# highlight failed tests
+retreview=0
+for log in compat/$testserie.log $testserie.log; do
+   if [ -e $log ]; then
+      contrib/mtreview $log
+      retreview+=$?
+   fi
+done
+
+# testsuite failed but no failure found by mtreview
+if [ $ret -ne 0 ] && [ $retreview -eq 0 ]; then
+   for log in compat/$testserie.log $testserie.log; do
+      # output full log content as review did not found the issue
+      if [ -e $log ]; then
+         echo "### $log ####################################"
+         cat $log
+         echo "##############################################################"
+      fi
+   done
+fi
+
+exit $ret
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

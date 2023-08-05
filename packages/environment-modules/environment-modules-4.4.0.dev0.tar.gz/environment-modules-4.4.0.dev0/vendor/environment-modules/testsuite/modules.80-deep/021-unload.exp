@@ -1,0 +1,300 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.80-deep/%M%
+#   Revision:		%I%
+#   First Edition:	2017/08/24
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        unload
+#   Modulefiles:	moddef, plain
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test unload action on deep modulefiles
+#		}C%
+#
+##############################################################################
+
+set module_1 "moddef/dir2/2.0"
+set modulefile_1 "$modpath/$module_1"
+set module_2 "plain/dir2/2.0"
+set modulefile_2 "$modpath/$module_2"
+set module_3 "plain/dir2/1.0"
+set modulefile_3 "$modpath/$module_3"
+set module_4 "plain/dir1/2.0"
+set modulefile_4 "$modpath/$module_4"
+set module_5 "modvirt/dir1/1.0"
+set modulefile_5 "$modpath/modvirt/.common"
+set module_6 "modvirt/dir2/2.0"
+set modulefile_6 "$modulefile_5"
+set module_7 "modvirt/3.0"
+set modulefile_7 "$modulefile_5"
+set module_8 "modvirt/dir0/sub1/4.0"
+set modulefile_8 "$modulefile_5"
+set module_9 "moddalias/dir1/1"
+set modulefile_9 "$modpath/$module_9"
+set module_10 "badmodvers/dir1/2.0"
+set modulefile_10 "$modpath/$module_10"
+
+
+#
+#  The tests
+#
+
+# set up the environment
+setenv_loaded_module $module_1 $modulefile_1
+
+testouterr_cmd "sh" "unload $module_2" "OK" ""
+
+
+# set up the environment
+setenv_loaded_module [list $module_3 $module_4] [list $modulefile_3 $modulefile_4]
+
+# unload using partial name
+# no modulefile existence check, just look if loaded, no error if not
+testouterr_cmd "sh" "unload pl" OK {}
+testouterr_cmd "sh" "unload plain/di" OK {}
+
+# unload a different module that shares same root name
+testouterr_cmd "sh" "unload $module_2" "OK" ""
+
+
+set anslast [list]
+lappend anslast [list unset TEST]
+lappend anslast [list setpath LOADEDMODULES $module_3]
+lappend anslast [list setpath _LMFILES_ $modulefile_3]
+set ansfirst [list]
+lappend ansfirst [list unset TEST]
+lappend ansfirst [list setpath LOADEDMODULES $module_4]
+lappend ansfirst [list setpath _LMFILES_ $modulefile_4]
+
+# unload root name, last or first matching loaded will be unloaded depending on
+# unload_match_order chosen behavior
+testouterr_cmd sh {unload plain} [expr {$install_unloadmatchorder eq {returnlast} ? $anslast : $ansfirst}] {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnfirst
+testouterr_cmd sh {unload plain} $ansfirst {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnlast
+testouterr_cmd sh {unload plain} $anslast {}
+unsetenv_var MODULES_UNLOAD_MATCH_ORDER
+
+
+set ans [list]
+lappend ans [list unset TEST]
+lappend ans [list setpath LOADEDMODULES "$module_4"]
+lappend ans [list setpath _LMFILES_ "$modulefile_4"]
+
+# unload using full name
+testouterr_cmd "sh" "unload $module_3" $ans ""
+
+# unload using module name
+testouterr_cmd "sh" "unload plain/dir2" $ans ""
+
+
+# set up the environment
+setenv_loaded_module [list $module_2 $module_3] [list $modulefile_2 $modulefile_3]
+
+set anslast [list]
+lappend anslast [list unset TEST]
+lappend anslast [list setpath LOADEDMODULES $module_2]
+lappend anslast [list setpath _LMFILES_ $modulefile_2]
+set ansfirst [list]
+lappend ansfirst [list unset TEST]
+lappend ansfirst [list setpath LOADEDMODULES $module_3]
+lappend ansfirst [list setpath _LMFILES_ $modulefile_3]
+
+# unload root name, last or first matching loaded will be unloaded depending on
+# unload_match_order chosen behavior
+testouterr_cmd sh {unload plain} [expr {$install_unloadmatchorder eq {returnlast} ? $anslast : $ansfirst}] {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnfirst
+testouterr_cmd sh {unload plain} $ansfirst {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnlast
+testouterr_cmd sh {unload plain} $anslast {}
+unsetenv_var MODULES_UNLOAD_MATCH_ORDER
+
+
+# unset MODULEPATH and retake the above tests, should get same result
+unsetenv_path_var MODULEPATH
+
+# set up the environment
+setenv_loaded_module [list $module_3 $module_4] [list $modulefile_3 $modulefile_4]
+
+# unload a different module that shares same root name
+# no modulefile existence check, just look if loaded, no error if not
+testouterr_cmd "sh" "unload $module_2" OK {}
+
+
+set anslast [list]
+lappend anslast [list unset TEST]
+lappend anslast [list setpath LOADEDMODULES $module_3]
+lappend anslast [list setpath _LMFILES_ $modulefile_3]
+set ansfirst [list]
+lappend ansfirst [list unset TEST]
+lappend ansfirst [list setpath LOADEDMODULES $module_4]
+lappend ansfirst [list setpath _LMFILES_ $modulefile_4]
+
+# unload root name, last or first matching loaded will be unloaded depending on
+# unload_match_order chosen behavior
+testouterr_cmd sh {unload plain} [expr {$install_unloadmatchorder eq {returnlast} ? $anslast : $ansfirst}] {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnfirst
+testouterr_cmd sh {unload plain} $ansfirst {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnlast
+testouterr_cmd sh {unload plain} $anslast {}
+unsetenv_var MODULES_UNLOAD_MATCH_ORDER
+
+
+set ans [list]
+lappend ans [list unset TEST]
+lappend ans [list setpath LOADEDMODULES "$module_4"]
+lappend ans [list setpath _LMFILES_ "$modulefile_4"]
+
+# unload using full name
+testouterr_cmd "sh" "unload $module_3" $ans ""
+
+# unload using module name
+testouterr_cmd "sh" "unload plain/dir2" $ans ""
+
+
+# set up the environment
+setenv_loaded_module [list $module_2 $module_3] [list $modulefile_2 $modulefile_3]
+
+set anslast [list]
+lappend anslast [list unset TEST]
+lappend anslast [list setpath LOADEDMODULES $module_2]
+lappend anslast [list setpath _LMFILES_ $modulefile_2]
+set ansfirst [list]
+lappend ansfirst [list unset TEST]
+lappend ansfirst [list setpath LOADEDMODULES $module_3]
+lappend ansfirst [list setpath _LMFILES_ $modulefile_3]
+
+# unload root name, last or first matching loaded will be unloaded depending on
+# unload_match_order chosen behavior
+testouterr_cmd sh {unload plain} [expr {$install_unloadmatchorder eq {returnlast} ? $anslast : $ansfirst}] {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnfirst
+testouterr_cmd sh {unload plain} $ansfirst {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnlast
+testouterr_cmd sh {unload plain} $anslast {}
+unsetenv_var MODULES_UNLOAD_MATCH_ORDER
+
+
+# set up the environment
+setenv_loaded_module $module_5 $modulefile_5
+setenv_path_var MODULEPATH $modpath
+setenv_path_var MODULES_LMALTNAME $ovirt1alt
+
+set ans [list]
+lappend ans [list unset TEST]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+lappend ans [list unsetpath MODULES_LMALTNAME]
+
+testouterr_cmd "sh" "unload $module_5" $ans ""
+testouterr_cmd "sh" "unload modvirt/1.0" $ans ""
+testouterr_cmd "sh" "unload modvirt" $ans ""
+testouterr_cmd "sh" "unload modvirt/dir1" $ans ""
+
+
+# set up the environment
+setenv_loaded_module $module_6 $modulefile_6
+setenv_path_var MODULES_LMALTNAME $ovirt4alt
+
+set ans [list]
+lappend ans [list unset TEST]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+lappend ans [list unsetpath MODULES_LMALTNAME]
+
+testouterr_cmd "sh" "unload $module_6" $ans ""
+testouterr_cmd "sh" "unload modvirt/dir1/2.0" $ans ""
+testouterr_cmd "sh" "unload modvirt" $ans ""
+testouterr_cmd "sh" "unload modvirt/dir2" $ans ""
+
+
+# set up the environment
+setenv_loaded_module $module_7 $modulefile_7
+setenv_path_var MODULES_LMALTNAME $ovirt5alt
+
+set ans [list]
+lappend ans [list unset TEST]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+lappend ans [list unsetpath MODULES_LMALTNAME]
+
+testouterr_cmd "sh" "unload $module_7" $ans ""
+testouterr_cmd "sh" "unload modvirt/dir2/3.0" $ans ""
+testouterr_cmd "sh" "unload modvirt" $ans ""
+testouterr_cmd "sh" "unload modvirt/dir2" $ans ""
+
+
+# set up the environment
+setenv_loaded_module $module_8 $modulefile_8
+
+set ans [list]
+lappend ans [list unset TEST]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+testouterr_cmd "sh" "unload $module_8" $ans ""
+testouterr_cmd "sh" "unload modvirt/dir0/sub1" $ans ""
+testouterr_cmd "sh" "unload modvirt/dir0" $ans ""
+testouterr_cmd "sh" "unload modvirt" $ans ""
+
+
+# set up the environment
+setenv_loaded_module $module_9 $modulefile_9
+
+set ans [list]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+testouterr_cmd "sh" "unload $module_9" $ans ""
+testouterr_cmd "sh" "unload moddalias/dir1" $ans ""
+testouterr_cmd "sh" "unload moddalias" $ans ""
+
+
+# set up the environment
+setenv_loaded_module $module_10 $modulefile_10
+
+set ans [list]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+testouterr_cmd "sh" "unload $module_10" $ans ""
+testouterr_cmd "sh" "unload badmodvers/dir1" $ans ""
+testouterr_cmd "sh" "unload badmodvers" $ans ""
+
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+
+unset ans
+unset ansfirst
+unset anslast
+
+unset module_1
+unset modulefile_1
+unset module_2
+unset modulefile_2
+unset module_3
+unset modulefile_3
+unset module_4
+unset modulefile_4
+unset module_5
+unset modulefile_5
+unset module_6
+unset modulefile_6
+unset module_7
+unset modulefile_7
+unset module_8
+unset modulefile_8
+unset module_9
+unset modulefile_9
+unset module_10
+unset modulefile_10

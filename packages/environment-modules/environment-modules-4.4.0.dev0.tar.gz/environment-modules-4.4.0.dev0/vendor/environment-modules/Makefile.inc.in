@@ -1,0 +1,114 @@
+# Definitions shared across the Makefiles of this project
+# run ./configure to generate Makefile.inc
+
+# set default installation paths
+baseprefix := @baseprefix@
+prefix := @prefix@
+bindir := @bindir@
+libdir := @libdir@
+libexecdir := @libexecdir@
+etcdir := @etcdir@
+initdir := @initdir@
+modulefilesdir := @modulefilesdir@
+datarootdir := @datarootdir@
+mandir := @mandir@
+docdir := @docdir@
+vimdatadir := @vimdatadir@
+moduleshome := @moduleshome@
+
+# versioning mode installation
+versioning := @versioning@
+
+# Modules version
+VERSION := @VERSION@
+
+# modulepaths and modulefiles to enable in default config
+modulepath := @modulepath@
+loadedmodules := @loadedmodules@
+
+# silent shell debug support
+silentshdbgsupport := @silentshdbgsupport@
+# define or not shell startup file to initialize module
+setshellstartup := @setshellstartup@
+# runtime quarantine mechanism
+quarantinesupport := @quarantinesupport@
+quarantinevars := @quarantinevars@
+
+# also install compatibility C version
+compatversion := @compatversion@
+EXEEXT := @EXEEXT@
+
+# install Modules Tcl extension library
+libtclenvmodules := @libtclenvmodules@
+SHLIB_SUFFIX := @SHLIB_SUFFIX@
+
+# enable or not some specific definition
+setmanpath := @setmanpath@
+appendmanpath := @appendmanpath@
+setbinpath := @setbinpath@
+appendbinpath := @appendbinpath@
+setdotmodulespath := @setdotmodulespath@
+docinstall := @docinstall@
+vimaddons  := @vimaddons@
+examplemodulefiles := @examplemodulefiles@
+
+# where to install init config files
+initconfin := @initconfin@
+
+# able to build documentation?
+builddoc := @builddoc@
+# able to handle compat as git worktree?
+gitworktree := @gitworktree@
+# able to use manpath cmd to get currently set manpath
+usemanpath := @usemanpath@
+
+# pager setup
+pager := @pager@
+pageropts := @pageropts@
+
+# defaut verbosity
+verbosity := @verbosity@
+
+# color setup
+color := @color@
+darkbgcolors := @darkbgcolors@
+lightbgcolors := @lightbgcolors@
+termbg := @termbg@
+
+# automated modules handling
+autohandling := @autohandling@
+
+# in depth avail search
+availindepth := @availindepth@
+
+# ignore superseding value for locked configuration options
+lockedconfigs := @lockedconfigs@
+
+# unload lastly or firstly loaded module matching
+unloadmatchorder := @unloadmatchorder@
+
+# implicitly set a default version for modules with none defined
+implicitdefault := @implicitdefault@
+
+# allow partial module version specification
+extendeddefault := @extendeddefault@
+
+# advanced version specification
+advversspec := @advversspec@
+
+# module name search matching style
+searchmatch := @searchmatch@
+
+# workaround for Tcsh history issue (#277)
+wa277 := @wa277@
+
+# case sensitiveness match
+icase := @icase@
+
+# command location
+TCLSH := @TCLSH@
+SPHINXBUILD := @SPHINXBUILD@
+PS := @PS@
+BASENAME := @BASENAME@
+RMDIR_IGN_NON_EMPTY := @RMDIR_IGN_NON_EMPTY@
+

@@ -1,0 +1,63 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	log/badfac
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'log-facility' module command. This
+#			testcase concerns bad log facilities being configured
+#			using the 'log-facility' command.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module1 "log/badfac"
+set modulefile1 "$modpath/$module1"
+set bad_fac "$warn_msgs: Invalid log facility 'xyz.info'"
+set err_log "$warn_msgs: 'module-log' command not implemented"
+
+#
+#  Check only for the csh
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile1:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module1:1"]
+lappend ans [list set _LMFILES_ $modulefile1]
+lappend ans [list set LOADEDMODULES $module1]
+
+#
+#  The tests
+#
+
+# different behavior than C-version: on Tcl-version 'module-log' command is
+# not handled and will always return a warning message to inform the user.
+testouterr_cmd "csh" "load $module1" $ans [msg_load $module1 $err_log]
+
+#
+#  Cleanup
+#
+
+unset err_log
+unset bad_fac
+
+unset ans
+
+unset modulefile1
+unset module1

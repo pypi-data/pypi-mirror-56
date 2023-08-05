@@ -1,0 +1,121 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2006/02/13
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, <rk@owen.sj.ca.us>
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	exit/1.0,
+#   			exit/2.0,
+#   			exit/3.0, exit/4.0, loc_def/truedef
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tries the Tcl "exit" to skip loading a module,
+#			but not affecting the other loaded modules.
+#		}C%
+#
+##############################################################################
+
+set mod1 "exit/1.0"
+set mod2 "exit/2.0"
+set mod3 "exit/3.0"
+set mod4 "exit/4.0"
+
+set mod1p "$modpath/$mod1"
+set mod2pre "$modpathre/$mod2"
+set mod3pre "$modpathre/$mod3"
+set mod4pre "$modpathre/$mod4"
+
+set introhelp "Module Specific Help for"
+set warnnohelp "$warn_msgs: Unable to find ModulesHelp in"
+set introtest "Module Specific Test for"
+set warnnotest "$warn_msgs: Unable to find ModulesTest in"
+set modpathheader "$modlin $modpathre $modlin"
+set modnext "loc_def/truedef"
+set modnextpre "$modpathre/$modnext"
+set modnextwhatis "module named default test"
+
+#
+# set up an empty environment
+#
+set module ""
+set modulefile ""
+setenv_loaded_module $module $modulefile
+
+#
+#  load
+#  For the different shells ...
+#
+set module "$mod1"
+set modulefile "$mod1p"
+
+lappend ans [list set testsuite1 yes]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+lappend ans [list ERR]
+
+#
+#  The tests
+#
+
+# different behavior than C-version: on Tcl-version exit code of the 'exit'
+# command is not thrown as the modulecmd command exit value
+test_cmd_re "ALL" "load $mod1 $mod2 $mod3" $ans
+
+test_cmd_re "ALL" "load $mod1 $mod3 $mod2" $ans
+
+# tests that 'exit' does not inhibit next modulefile interpretations on non-load mode
+testouterr_cmd_re "sh" "display $mod3 $modnext" "ERR" "$modlin\n$mod3pre:\n\nsetenv\t\ttestsuite3 no\n$modlin\n$modnextpre:\n\nmodule-whatis\t{$modnextwhatis}\n$modlin"
+testouterr_cmd_re "sh" "whatis $mod3 $modnext" "ERR" "$modpathheader\n\\s+$modnext: $modnextwhatis"
+# exit leads to no rendering of ModulesHelp or ModulesTest procs
+testouterr_cmd_re "sh" "help $mod3 $modnext" "ERR" "$modlin\n$introhelp $mod3pre:\n\n$modlin\n$introhelp $modnextpre:\n\n$warnnohelp $modnextpre.\n$modlin"
+testouterr_cmd_re "sh" "test $mod3 $modnext" "ERR" "$modlin\n$introtest $mod3pre:\n\n$modlin\n$introtest $modnextpre:\n\n$warnnotest $modnextpre.\n$modlin"
+
+#
+#  Same tests with exit called from proc
+#
+
+test_cmd_re "ALL" "load $mod1 $mod4 $mod3" $ans
+
+# tests that 'exit' does not inhibit next modulefile interpretations on non-load mode
+testouterr_cmd_re "sh" "display $mod4 $modnext" "ERR" "$modlin\n$mod4pre:\n\nsetenv\t\ttestsuite4 no\n$modlin\n$modnextpre:\n\nmodule-whatis\t{$modnextwhatis}\n$modlin"
+testouterr_cmd_re "sh" "whatis $mod4 $modnext" "ERR" "$modpathheader\n\\s+$modnext: $modnextwhatis"
+# exit leads to no rendering of ModulesHelp or ModulesTest procs
+testouterr_cmd_re "sh" "help $mod4 $modnext" "ERR" "$modlin\n$introhelp $mod4pre:\n\n$modlin\n$introhelp $modnextpre:\n\n$warnnohelp $modnextpre.\n$modlin"
+testouterr_cmd_re "sh" "test $mod4 $modnext" "ERR" "$modlin\n$introtest $mod4pre:\n\n$modlin\n$introtest $modnextpre:\n\n$warnnotest $modnextpre.\n$modlin"
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+
+unset ans
+
+unset modulefile
+unset module
+
+unset mod1
+unset mod2
+unset mod3
+unset mod4
+unset mod1p
+unset mod2pre
+unset mod3pre
+unset mod4pre
+
+unset introhelp
+unset warnnohelp
+unset introtest
+unset warnnotest
+unset modpathheader
+unset modnextwhatis
+unset modnext
+unset modnextpre

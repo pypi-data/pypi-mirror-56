@@ -1,0 +1,29 @@
+#%Module1.0
+
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		loc_rcv2/%M%
+#   Revision:		%I%
+#   First Edition:	2018/01/10
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite modulefile
+#   Command:
+#   Sub-Command:
+#
+#   Invocation:
+#   Result:	%R{
+#		}R%
+#   Comment:	%C{
+#           Test the correct display of virtual modules.
+#		}C%
+#
+##############################################################################
+
+module-virtual /1.5 ../../virttargets/loc_rcv
+module-virtual /2.0 .common
+module-virtual /1.2 .common

@@ -1,0 +1,108 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	whatis/lines, whatis/multiple, whatis/none
+#   Modulefiles:	whatis/single, whatis/string
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the loading of modulefiles with only a
+#			'module-whatis' command in 'em
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module_1 "whatis/none"
+set modulefile_1 "$modpath/$module_1"
+
+set module_2 "whatis/lines"
+set modulefile_2 "$modpath/$module_2"
+
+set module_3 "whatis/multiple"
+set modulefile_3 "$modpath/$module_3"
+
+set module_4 "whatis/single"
+set modulefile_4 "$modpath/$module_4"
+
+set module_5 "whatis/string"
+set modulefile_5 "$modpath/$module_5"
+
+#
+#  Test only for the csh
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile_1:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module_1:1"]
+lappend ans [list set _LMFILES_ $modulefile_1]
+lappend ans [list set LOADEDMODULES $module_1]
+lappend ans [list set testsuite yes]
+test_cmd "csh" "--terse load $module_1" $ans
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile_2:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module_2:1"]
+lappend ans [list set _LMFILES_ $modulefile_2]
+lappend ans [list set LOADEDMODULES $module_2]
+lappend ans [list set testsuite yes]
+test_cmd "csh" "--terse load $module_2" $ans
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile_3:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module_3:1"]
+lappend ans [list set _LMFILES_ $modulefile_3]
+lappend ans [list set LOADEDMODULES $module_3]
+lappend ans [list set testsuite yes]
+test_cmd "csh" "--terse load $module_3" $ans
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile_4:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module_4:1"]
+lappend ans [list set _LMFILES_ $modulefile_4]
+lappend ans [list set LOADEDMODULES $module_4]
+lappend ans [list set testsuite yes]
+test_cmd "csh" "--terse load $module_4" $ans
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile_5:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module_5:1"]
+lappend ans [list set _LMFILES_ $modulefile_5]
+lappend ans [list set LOADEDMODULES $module_5]
+lappend ans [list set testsuite yes]
+test_cmd "csh" "--terse load $module_5" $ans
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefile_1
+unset module_1
+
+unset modulefile_2
+unset module_2
+
+unset modulefile_3
+unset module_3
+
+unset modulefile_4
+unset module_4
+
+unset modulefile_5
+unset module_5

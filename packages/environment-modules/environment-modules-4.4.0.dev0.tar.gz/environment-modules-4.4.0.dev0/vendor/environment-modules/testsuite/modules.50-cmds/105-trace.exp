@@ -1,0 +1,58 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2017/05/22
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	trace/all_on
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'module-trace' deprecated module command. 
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module1 "trace/all_on"
+set modulefile1 "$modpath/$module1"
+
+#
+#  Check only for the csh
+#
+
+set err_log "$warn_msgs: 'module-trace' command not implemented"
+
+lappend ans [list set _LMFILES__modshare "$modulefile1:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module1:1"]
+lappend ans [list set _LMFILES_ $modulefile1]
+lappend ans [list set LOADEDMODULES $module1]
+
+#
+#  The tests
+#
+
+testouterr_cmd "csh" "load $module1" $ans [msg_load $module1 $err_log]
+
+#
+#  Cleanup
+#
+
+unset err_log
+
+unset ans
+
+unset modulefile1
+unset module1

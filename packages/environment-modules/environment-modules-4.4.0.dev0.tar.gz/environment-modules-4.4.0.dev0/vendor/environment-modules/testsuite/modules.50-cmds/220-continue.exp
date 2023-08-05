@@ -1,0 +1,100 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2006/02/21
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, <rk@owen.sj.ca.us>
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	continue/1.0,
+#   			continue/2.0,
+#   			continue/3.0, continue/5.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tries the Tcl "continue" to skip further
+#			processing of a module,
+#			but not affecting the other loaded modules.
+#		}C%
+#
+##############################################################################
+
+set mod1 "continue/1.0"
+set mod2 "continue/2.0"
+set mod3 "continue/3.0"
+set mod5 "continue/5.0"
+
+set mod1p "$modpath/$mod1"
+set mod2p "$modpath/$mod2"
+set mod3p "$modpath/$mod3"
+set mod5p "$modpath/$mod5"
+
+#
+# set up an empty environment
+#
+set module ""
+set modulefile ""
+setenv_loaded_module $module $modulefile
+
+#
+#  load
+#  For the different shells ...
+#
+set module "$mod1:$mod2:$mod3"
+set modulefile "$mod1p:$mod2p:$mod3p"
+
+lappend ans [list set testsuite1 yes]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+lappend ans [list set testsuite2 yes]
+lappend ans [list set testsuite3 yes]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $mod1 $mod2 $mod3" $ans
+
+#
+#  Same test with continue called from a proc
+#  For the different shells ...
+#
+set module "$mod1:$mod5:$mod3"
+set modulefile "$mod1p:$mod5p:$mod3p"
+
+set ans [list]
+lappend ans [list set testsuite1 yes]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+lappend ans [list set testsuite5 yes]
+lappend ans [list set testsuite3 yes]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $mod1 $mod5 $mod3" $ans
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+
+unset ans
+
+unset modulefile
+unset module
+
+unset mod1
+unset mod2
+unset mod3
+unset mod5
+unset mod1p
+unset mod2p
+unset mod3p
+unset mod5p
+

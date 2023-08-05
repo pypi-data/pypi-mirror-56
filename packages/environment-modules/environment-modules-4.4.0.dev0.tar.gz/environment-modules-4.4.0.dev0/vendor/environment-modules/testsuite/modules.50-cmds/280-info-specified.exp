@@ -1,0 +1,97 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2017/01/22
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		load, display, help, switch, unload, test
+#   Modulefiles:	info/specified
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'module-info specified' module subcommand
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "info/specified"
+set module2 "info/foo"
+set modulefile "$modpath/$module"
+set modulefilere "$modpathre/$module"
+
+#
+#  For sh shell only (no need to check every shells)
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module:1"]
+lappend ans [list set MODULES_LMALTNAME_modshare "$module&$module2:1"]
+lappend ans [list set _LMFILES_ $modulefile]
+lappend ans [list set LOADEDMODULES $module]
+lappend ans [list set MODULES_LMALTNAME "$module&$module2"]
+
+#
+#  The tests
+#
+
+# test loading
+testouterr_cmd "sh" "load $module" $ans "$module"
+testouterr_cmd "sh" "load $module2" $ans "$module2"
+
+# test displaying
+testouterr_cmd_re "sh" "display $module" "OK" "$modlin\n$modulefilere:\n\n$module\n$modlin"
+testouterr_cmd_re "sh" "display $module2" "OK" "$modlin\n$modulefilere:\n\n$module2\n$modlin"
+
+# test help
+testouterr_cmd_re "sh" "help $module" "OK" "$modlin\nModule Specific Help for $modulefilere:\n\n$module\n$modlin"
+testouterr_cmd_re "sh" "help $module2" "OK" "$modlin\nModule Specific Help for $modulefilere:\n\n$module2\n$modlin"
+
+# test test
+testouterr_cmd_re "sh" "test $module" "OK" "$modlin\nModule Specific Test for $modulefilere:\n\n$module\nTest result: PASS\n$modlin"
+testouterr_cmd_re "sh" "test $module2" "OK" "$modlin\nModule Specific Test for $modulefilere:\n\n$module2\nTest result: PASS\n$modlin"
+
+# Set up the environment for test that require the module to be loaded
+setenv_loaded_module $module $modulefile
+setenv_path_var MODULES_LMALTNAME "$module&$module2"
+
+# test switching
+testouterr_cmd "sh" "switch $module $module" $ans "$module\n$module"
+testouterr_cmd "sh" "switch $module $module2" $ans "$module\n$module2"
+testouterr_cmd "sh" "switch $module2 $module" $ans "$module2\n$module"
+
+# test unloading
+set ans [list]
+lappend ans [list unsetpath MODULES_LMALTNAME]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+testouterr_cmd "sh" "unload $module" $ans "$module"
+testouterr_cmd "sh" "unload $module2" $ans "$module2"
+
+
+#
+#  Cleanup
+#
+
+# Clean up the environment
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMALTNAME
+
+unset ans
+
+unset modulefile
+unset modulefilere
+unset module
+unset module2

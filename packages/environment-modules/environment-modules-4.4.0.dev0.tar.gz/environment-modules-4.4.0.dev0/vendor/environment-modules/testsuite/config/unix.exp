@@ -1,0 +1,331 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		config/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite initialization
+#   Command:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Initialization of the testsuite. Definition of
+#			globally used start procedures for the test
+#			target.
+#		}C%
+#
+##############################################################################
+
+#
+# default shell is the bourne shell
+#
+
+proc default_shell {} {
+    global shell
+
+    if ![info exists shell] then {
+	set shell "sh"
+    }
+}
+
+#
+# the default for the modulecmd binary is the one in the upper directory
+# if it doesn't exist, look up the search path in order to locate one.
+#
+
+proc default_modulecmd {} {
+    global MODULECMD
+    global verbose
+    global env
+
+    if ![info exists MODULECMD] then {
+    if [info exists env(MODULECMD)] {
+        set MODULECMD $env(MODULECMD)
+	} elseif [file exists ../modulecmd] then {
+	    set MODULECMD "../modulecmd"
+	} elseif [file exists ./modulecmd] then {
+	    set MODULECMD "./modulecmd"
+	# use test-specific modulecmd.tcl script if it exists
+	} elseif [file exists "./modulecmd-test.tcl"] then {
+	  set MODULECMD "./modulecmd-test.tcl"
+	# check for modulecmd.tcl before guessing from path
+	# to give this flavor a chance to be found when modulecmd
+	# binary is also installed in system default paths
+	} elseif [file exists "../modulecmd.tcl"] then {
+	  set MODULECMD "../modulecmd.tcl"
+	} elseif [file exists "./modulecmd.tcl"] then {
+	  set MODULECMD "./modulecmd.tcl"
+	} else {
+	    set MODULECMD [which modulecmd]
+	    if ![file exists $MODULECMD] then {
+		fail "No 'modulecmd' found"
+		exit -1
+	    } elseif { $verbose > 1 } {
+		send_user "using 'modulecmd' from search path"
+	    }
+	}
+    }
+
+}
+
+proc default_tclsh {} {
+   global TCLSH
+   global verbose
+   global env
+
+   if ![info exists TCLSH] then {
+      if [info exists env(TCLSH)] {
+         set TCLSH $env(TCLSH)
+      } else {
+	     set TCLSH [which modulecmd]
+	     if ![file exists $TCLSH] then {
+		    fail "No 'tclsh' found"
+		    exit -1
+	     } elseif { $verbose > 1 } {
+		    send_user "using 'tclsh' from search path"
+	     }
+      }
+   }
+}
+
+
+#
+# modulecmd_exit -- cleanup
+#
+
+proc modulecmd_exit {} {
+#not applicable
+}
+
+#
+# modulecmd_start -- start modulecmd running
+# Since modulecmd writes to both streams, stdout and stderr, a catcher
+# has to be installed in order to scan both 
+#
+
+proc modulecmd_xxx_ {command {input noinput}} {
+	global MODULECMD
+	global TCLSH
+	global verbose
+	global shell
+	global comp_output
+	global comp_error
+	global comp_exit
+	global errorCode
+	global no_verbose
+
+	if ![info exists command] then {
+	  unresolved "internal testsuite error: no module command specified"
+	}
+
+	default_shell
+	default_modulecmd
+	default_tclsh
+
+    set cmdlist [list exec $TCLSH $MODULECMD $shell]
+    # check if asked not to split passed command line
+    if {[string first "NOCMDSPLIT" $command] == 0} {
+        lappend cmdlist [string range $command 10 end]
+    } else {
+        eval lappend cmdlist [split $command { }]
+    }
+    lappend cmdlist 2> test321.err > test321.out
+    if {$input ne {noinput}} {
+        lappend cmdlist << $input
+    }
+
+	if { ! $no_verbose && $verbose > 1 } {
+        send_user "starting [lrange $cmdlist 1 end]\n"
+	}
+
+	if [catch {
+        set comp_output [eval $cmdlist]
+	} ] {
+		set comp_exit [lindex $errorCode 2]
+	} else {
+		set comp_exit 0
+	}
+                                                                                
+	catch {
+		set errfile [ open test321.err ]
+		read -nonewline $errfile
+	} comp_error
+	catch { close $errfile }
+	catch { file delete test321.err }
+
+	catch {
+		set outfile [ open test321.out ]
+		read -nonewline $outfile
+	} comp_output
+	catch { close $outfile }
+	catch { file delete test321.out }
+}
+
+proc modulecmd_start {command {input noinput}} {
+	global no_verbose
+
+	set no_verbose 0
+	modulecmd_xxx_ "$command" $input
+	unset no_verbose
+}
+
+#
+# modulecmd__ -- start modulecmd running
+#   (same as above but no verbose output)
+
+proc modulecmd__ {command} {
+	global shell
+	global no_verbose
+
+	set shell "sh"
+	set no_verbose 1
+	modulecmd_xxx_ "$command"
+	unset no_verbose
+}
+
+#
+# modulecmd_version -- extract and print the version number of modulecmd
+#
+
+proc modulecmd_version {} {
+    global MODULECMD
+    global shell
+    global comp_output
+    global comp_error
+
+    set shell "sh"
+    default_modulecmd
+
+    modulecmd_start help
+    regexp {Modules Release (Tcl [0-9a-zA-Z\.]+)(.*)} \
+	$comp_error version rest
+
+    set comp_output "$version"
+}
+
+#
+# modulecmd_load -- loads the program
+#
+
+proc modulecmd_load { arg } {
+#   not applicable
+}
+
+
+#
+# Test procedure to check a module installation
+#
+
+proc install_test_xxx_ {command} {
+   global verbose
+   global autoinit_script
+   global shell
+   global autoinit_mode
+   global shell_list
+   global shell_test
+   global shell_path
+   global shell_opts
+   global shell_init
+   global shell_level
+   global subshell
+
+   global comp_output
+   global comp_error
+   global comp_exit
+   global errorCode
+
+   if {![info exists command]} {
+      unresolved "internal testsuite error: no command specified"
+   }
+   if {![info exists shell_path($shell)]} {
+      unresolved "internal testsuite error: no shell path found for '$shell' shell"
+   }
+   if {![info exists shell_test($shell)]} {
+      unresolved "internal testsuite error: no install test script set for '$shell' shell"
+   }
+   if {![info exists shell_init($shell)]} {
+      unresolved "internal testsuite error: no init script set for '$shell' shell"
+   }
+   if {![info exists autoinit_script]} {
+      unresolved "internal testsuite error: no autoinit script set"
+   }
+   if {![info exists shell_level]} {
+      set level "top"
+   } else {
+      set level $shell_level
+   }
+   if {![info exists subshell]} {
+      set sub "$shell"
+   } else {
+      set sub $subshell
+   }
+
+   set cmd_to_exec [list $shell_path($shell)]
+   if {[info exists shell_opts($shell)]} {
+      lappend cmd_to_exec $shell_opts($shell)
+   }
+
+   if {$shell eq "cmake"} {
+      lappend cmd_to_exec "-Dinitfile=$shell_init($shell)"
+      lappend cmd_to_exec "-Dcmdlist='$command'"
+      lappend cmd_to_exec "-P"
+      lappend cmd_to_exec $shell_test($shell)
+      if { $verbose > 0 } {
+         send_user "   ...  Testing '$cmd_to_exec'\n"
+      }
+   } else {
+      lappend cmd_to_exec $shell_test($shell)
+      if {$autoinit_mode} {
+         set autoinit_verb "autoinit "
+         lappend cmd_to_exec $autoinit_script
+      } else {
+         set autoinit_verb ""
+         lappend cmd_to_exec $shell_init($shell)
+      }
+
+      if {[lsearch -exact $shell_list $shell] != -1} {
+         lappend cmd_to_exec $level $shell_path($sub) $command
+         if { $verbose > 0 } {
+            send_user "   ...  Testing '$shell [file tail $shell_test($shell)]\
+               $autoinit_verb$level $sub $command'\n"
+         }
+      } else {
+         lappend cmd_to_exec $command
+         if { $verbose > 0 } {
+            send_user "   ...  Testing '$shell [file tail $shell_test($shell)]\
+               $autoinit_verb$command'\n"
+         }
+      }
+   }
+   if { $verbose > 1 } {
+      send_user "starting $cmd_to_exec\n"
+   }
+
+   # now need to capture the exit return code.
+   if [catch {
+      set comp_output [eval exec $cmd_to_exec 2> test321.err > test321.out ]
+   } ] {
+      set comp_exit [lindex $errorCode 2]
+   } else {
+      set comp_exit 0
+   }
+
+   catch {
+      set errfile [ open test321.err ]
+      read -nonewline $errfile
+   } comp_error
+   catch { close $errfile }
+   catch { file delete test321.err }
+
+   catch {
+      set outfile [ open test321.out ]
+      read -nonewline $outfile
+   } comp_output
+   catch { close $outfile }
+   catch { file delete test321.out }
+}

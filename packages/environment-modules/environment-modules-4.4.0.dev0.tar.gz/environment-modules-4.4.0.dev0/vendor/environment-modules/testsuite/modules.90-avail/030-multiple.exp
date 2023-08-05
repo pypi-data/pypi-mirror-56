@@ -1,0 +1,196 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.90-avail/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		avail
+#   Modulefiles:	loc_rc1/1.0, loc_rc1/2.0, loc_rc3/1.0, loc_rc3/2.0,
+#                   loc_rc3/3.0, loc_rc6, averssort, sym_foo, bad
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the module 'avail' command for a category
+#			module name in terse output mode.
+#		}C%
+#
+##############################################################################
+
+# ensure avail tests are made using in depth mode
+setenv_var MODULES_AVAIL_INDEPTH 1
+
+# ensure regular avail search match is set for these tests
+setenv_var MODULES_SEARCH_MATCH starts_with
+
+set module1 "loc_rc1"
+set mod1vers1 "1.0"
+set mod1vers2 "2.0"
+set mod1sym "foo"
+set module2 "loc_rc3"
+set mod2vers1 "1.0"
+set mod2vers2 "2.0"
+set mod2vers3 "3.0"
+set mod2sym1 "default"
+set mod2sym2 "cur:stable"
+set mod2sym3 "chk:exp:new:test"
+set module3 "averssort"
+set mod3vers1 "1"
+set mod3vers2 "1.2.4"
+set mod3vers3 "1.10"
+set module4 "sym_foo"
+set module5 "bad"
+set mod5vers1 "after"
+set mod5vers2 "before"
+set mod5vers3 "body"
+set mod5vers4 "proc"
+set mod5sym1 "good"
+set module6 "loc_rc6"
+set mod6vers1 "0.9"
+set mod6vers2 "1.2"
+set mod6sym1 "default"
+set mod6sym2 "new"
+set mod6alias1 "1"
+set mod6alias2 "bar"
+set module7 "modalias/1.0"
+set header "$modlin $modpathre $modlin\n"
+set header2 "$modlin global/user modulerc $modlin\n"
+
+# save the former rc file setup
+if {[info exists env(MODULERCFILE)]} {
+    set save_rc $env(MODULERCFILE)
+}
+
+
+#
+#  tests on a module with single symbol
+#
+
+# Check this only fo the /bin/csh
+set ts_csh "$header$module1/$mod1vers1\\($mod1sym\\)\\s+$module1/$mod1vers2\\s+"
+
+testouterr_cmd_re "csh" "avail $module1" "OK" "$ts_csh"
+testouterr_cmd_re "csh" "avail $module1 $module1" "OK" "$ts_csh\n$ts_csh"
+
+
+#
+#  tests on a module with multiple symbols
+#
+
+set ts_csh "$header$module2/$mod2vers1\\($mod2sym1\\)\\s+$module2/$mod2vers2\\($mod2sym2\\)\\s+$module2/$mod2vers3\\($mod2sym3\\)\\s+"
+
+testouterr_cmd_re "csh" "avail $module2" "OK" "$ts_csh"
+testouterr_cmd_re "csh" "avail $module2 $module2" "OK" "$ts_csh\n$ts_csh"
+
+
+#
+#  tests on a module alias
+#
+
+set ts_csh "$header$module3/$mod3vers1\\(@\\)\\s+$module3/$mod3vers2\\(@\\)\\s+$module3/$mod3vers3\\(@\\)\\s+"
+
+testouterr_cmd_re "csh" "avail $module3" "OK" "$ts_csh"
+testouterr_cmd_re "csh" "avail $module3 $module3" "OK" "$ts_csh\n$ts_csh"
+
+
+#
+#  tests on a module alias set from a global modulerc
+#
+
+set env(MODULERCFILE) "$env(TESTSUITEDIR)/etc/modulerc"
+set ts_csh "$header2$module4\\(special:@\\)\\s+"
+
+testouterr_cmd_re "csh" "avail $module4" "OK" "$ts_csh"
+testouterr_cmd_re "csh" "avail $module4 $module4" "OK" "$ts_csh\n$ts_csh"
+
+
+#
+#  tests on a erroneous module with symbols
+#  no error should be displayed
+#
+
+set ts_csh "$header$module5/$mod5vers1\\($mod5sym1\\)\\s+$module5/$mod5vers2\\s+${module5}2/$mod5vers3\\s+${module5}2/$mod5vers4\\s+"
+
+testouterr_cmd_re "csh" "avail $module5" "OK" "$ts_csh"
+testouterr_cmd_re "csh" "avail $module5 $module5" "OK" "$ts_csh\n$ts_csh"
+
+
+#
+#  tests on a module mixing aliases, symbols and regular modulefile
+#
+
+set ts_csh "$header$module6/$mod6vers1\\s+$module6/$mod6alias1\\(@\\)\\s+$module6/$mod6vers2\\($mod6sym1:$mod6sym2\\)\\s+$module6/$mod6alias2\\(@\\)\\s+"
+
+testouterr_cmd_re "csh" "avail $module6" "OK" "$ts_csh"
+testouterr_cmd_re "csh" "avail $module6 $module6" "OK" "$ts_csh\n$ts_csh"
+
+
+#
+#  tess on a module alias when multiple paths set
+#
+
+# save the former modulepath setup
+setenv_path_var MODULEPATH "$modpath.deep" $modpath
+set header "$modlin $modpathre.deep $modlin\n"
+set ts_csh "$header$module7\\(@\\)\\s+"
+
+testouterr_cmd_re "csh" "avail $module7" "OK" "$ts_csh"
+testouterr_cmd_re "csh" "avail $module7 $module7" "OK" "$ts_csh\n$ts_csh"
+
+
+#
+#  Cleanup
+#
+
+# restore the former rc file setup
+if {[info exists save_rc]} {
+    set env(MODULERCFILE) $save_rc
+    unset save_rc
+} else {
+    unset env(MODULERCFILE)
+}
+
+# restore former modulepath setup
+setenv_path_var MODULEPATH $modpath
+unsetenv_var MODULES_AVAIL_INDEPTH
+unsetenv_var MODULES_SEARCH_MATCH
+
+unset ts_csh
+
+unset module7
+unset mod6alias2
+unset mod6alias1
+unset mod6sym2
+unset mod6sym1
+unset mod6vers1
+unset mod6vers2
+unset module6
+unset mod5sym1
+unset mod5vers1
+unset mod5vers2
+unset mod5vers3
+unset mod5vers4
+unset module5
+unset module4
+unset mod3vers1
+unset mod3vers2
+unset mod3vers3
+unset module3
+unset mod2sym1
+unset mod2sym2
+unset mod2sym3
+unset mod2vers1
+unset mod2vers2
+unset mod2vers3
+unset module2
+unset mod1vers1
+unset mod1vers2
+unset mod1sym
+unset header
+unset header2
+unset module1

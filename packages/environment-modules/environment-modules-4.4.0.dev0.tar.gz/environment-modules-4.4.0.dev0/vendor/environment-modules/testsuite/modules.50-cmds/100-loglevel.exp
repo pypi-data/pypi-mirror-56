@@ -1,0 +1,99 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	log/err_both_1, log/err_both_2, log/err_syslog,
+#   Modulefiles:	log/err_file
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'log-facility' module command. 
+#			At the moment this only checks the execution of the
+#			log-facility command. This is not a check wheter the
+#			log output really goes to the configured target.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module1 "log/err_both_1"
+set modulefile1 "$modpath/$module1"
+
+set module2 "log/err_both_2"
+set modulefile2 "$modpath/$module2"
+
+set module3 "log/err_syslog"
+set modulefile3 "$modpath/$module3"
+
+set module4 "log/err_file"
+set modulefile4 "$modpath/$module4"
+
+#
+#  Check only for the csh
+#
+
+set err_log "$warn_msgs: 'module-log' command not implemented"
+
+#
+#  The tests
+#
+
+# different behavior than C-version: on Tcl-version 'module-log' command is
+# not handled and will always return a warning message to inform the user.
+lappend ans [list set _LMFILES__modshare "$modulefile1:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module1:1"]
+lappend ans [list set _LMFILES_ $modulefile1]
+lappend ans [list set LOADEDMODULES $module1]
+testouterr_cmd "csh" "load $module1" $ans [msg_load $module1 $err_log]
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile2:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module2:1"]
+lappend ans [list set _LMFILES_ $modulefile2]
+lappend ans [list set LOADEDMODULES $module2]
+testouterr_cmd "csh" "load $module2" $ans [msg_load $module2 $err_log]
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile3:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module3:1"]
+lappend ans [list set _LMFILES_ $modulefile3]
+lappend ans [list set LOADEDMODULES $module3]
+testouterr_cmd "csh" "load $module3" $ans [msg_load $module3 $err_log]
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile4:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module4:1"]
+lappend ans [list set _LMFILES_ $modulefile4]
+lappend ans [list set LOADEDMODULES $module4]
+testouterr_cmd "csh" "load $module4" $ans [msg_load $module4 $err_log]
+
+#
+#  Cleanup
+#
+
+unset err_log
+
+unset ans
+
+unset modulefile1
+unset module1
+unset modulefile2
+unset module2
+unset modulefile3
+unset module3
+unset modulefile4
+unset module4

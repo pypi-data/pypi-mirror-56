@@ -1,0 +1,164 @@
+Contributing
+************
+
+Thank you for considering contributing to Modules!
+
+
+Support questions
+=================
+
+Please use the modules-interest mailing list for questions. Do not use
+the issue tracker for this.
+
+
+Asking for new features
+=======================
+
+Please submit your new feature wishes first to the modules-interest
+mailing list. Discussion will help to clarify your needs and sometimes
+the wanted feature may already be available.
+
+
+Reporting issues
+================
+
+* Describe what you expected to happen.
+
+* If possible, include a minimal, complete, and verifiable example
+  to help us identify the issue.
+
+* Describe what actually happened. Run the "module" command in "--
+  debug" mode and include all the debug output obtained in your
+  report.
+
+* Provide the current configuration and state of your Modules
+  installation by running the "module config --dump-state" command.
+
+* Provide the name and content of the modulefiles you try to
+  manipulate.
+
+
+Submitting patches
+==================
+
+* Whether your patch is supposed to solve a bug or add a new
+  feature, please include tests. In case of a bug, explain clearly
+  under which circumstances it happens and make sure the test fails
+  without your patch.
+
+* If you are not yet familiar with the "git" command and GitHub,
+  please read the don't be afraid to commit tutorial.
+
+
+Start coding
+------------
+
+* Create a branch to identify the issue or feature you would like to
+  work on
+
+* Using your favorite editor, make your changes, committing as you
+  go.
+
+* Comply to the coding conventions of this project.
+
+* Include tests that cover any code changes you make. Make sure the
+  test fails without your patch.
+
+* Run the tests and verify coverage.
+
+* Push your commits to GitHub and create a pull request.
+
+
+Running the tests
+-----------------
+
+Run the basic test suite with:
+
+   make test
+
+This only runs the tests for the current environment. Travis-CI and
+AppVeyor will run the full suite when you submit your pull request.
+
+
+Running test coverage
+---------------------
+
+Generating a report of lines that do not have test coverage can
+indicate where to start contributing or what your tests should cover
+for the code changes you submit.
+
+Run "make test COVERAGE=y" which will automatically setup the Nagelfar
+Tcl code coverage tool in your "modules" development directory. Then
+the full testsuite will be run in coverage mode and a "modulecmd-
+test.tcl_m" annotated script will be produced:
+
+   make test COVERAGE=y
+   # then open modulecmd-test.tcl_m and look for ';# Not covered' lines
+
+
+Building the docs
+-----------------
+
+Build the docs in the "doc" directory using Sphinx:
+
+   cd doc
+   make html
+
+Open "_build/html/index.html" in your browser to view the docs.
+
+Read more about Sphinx.
+
+
+Coding conventions
+------------------
+
+* Maximum line length is 78 characters
+
+* Use 3 spaces to indent code (do not use tab character)
+
+* Adopt Tcl minimal escaping style
+
+* Procedure names: "lowerCameCase"
+
+* Variable names: "nocaseatall"
+
+* Curly brace and square bracket placement:
+
+     if {![info exists ::g_already_report]} {
+        set ::g_already_report 1
+     }
+
+
+Emacs settings for coding conventions
+-------------------------------------
+
+This is an example emacs configuration that adheres to the first two
+coding conventions.  You may wish to add this to your ".emacs" or
+".emacs.d/" to modify your tcl-mode:
+
+   (add-hook 'tcl-mode-hook
+      (lambda ()
+        (setq indent-tabs-mode nil)
+        (setq tcl-indent-level 3)
+        (setq tcl-continued-indent-level 3)
+        (font-lock-add-keywords nil '(("^[^\n]\\{79\\}\\(.*\\)$" 1
+                                       font-lock-warning-face prepend)))))
+
+
+Submitting installation recipes
+===============================
+
+* If you want to share your installation tips and tricks, efficient
+  ways you have to write or organize your modulefiles or some
+  extension you made to the "module" command please add a recipe to
+  the cookbook section of the documentation.
+
+* Create a directory under "doc/example" and put there the extension
+  code or example modulefiles your recipe is about.
+
+* Describe this recipe through a reStructuredText document in
+  "doc/source/cookbook". It is suggested to have an *Implementation*,
+  an *Installation* and an *Usage example* sections in that document
+  to get as much as possible the same document layout across recipes.
+
+* Submit a patch with all the above content.

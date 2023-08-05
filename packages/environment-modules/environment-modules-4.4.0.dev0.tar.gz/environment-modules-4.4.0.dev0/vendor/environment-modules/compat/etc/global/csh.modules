@@ -1,0 +1,9 @@
+#----------------------------------------------------------------------#
+# system-wide csh.modules                                              #
+# Initialize modules for all csh-derivative shells                     #
+#----------------------------------------------------------------------#
+if ($?tcsh) then
+	source /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/Modules/init/tcsh
+else
+	source /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/Modules/init/csh
+endif

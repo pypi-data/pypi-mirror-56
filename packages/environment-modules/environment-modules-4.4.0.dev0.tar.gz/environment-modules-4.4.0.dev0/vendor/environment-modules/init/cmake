@@ -1,0 +1,50 @@
+# define modules runtine quarantine configuration
+#set(ENV{MODULES_RUN_QUARANTINE} "ENVVARNAME")
+
+# setup quarantine if defined
+set(_mlre "")
+if(DEFINED ENV{MODULES_RUN_QUARANTINE})
+   string(REPLACE " " ";" _mlv_list "$ENV{MODULES_RUN_QUARANTINE}")
+   foreach(_mlv ${_mlv_list})
+      if(${_mlv} MATCHES "^[A-Za-z_][A-Za-z0-9_]*$")
+         if(DEFINED ENV{${_mlv}})
+            set(_mlre "${_mlre}${_mlv}_modquar=$ENV{${_mlv}};")
+         endif()
+         set(_mlrv "MODULES_RUNENV_${_mlv}")
+         set(_mlre "${_mlre}${_mlv}=$ENV{${_mlrv}};")
+     endif()
+   endforeach()
+   if (NOT "${_mlre}" STREQUAL "")
+      set(_mlre "env;${_mlre}")
+   endif()
+endif()
+
+# define module command and surrounding initial environment (default value
+# for MODULESHOME, MODULEPATH, LOADEDMODULES and parse of init config files)
+execute_process(COMMAND mktemp -t moduleinit.cmake.XXXXXXXXXXXX
+  OUTPUT_VARIABLE tempfile_name
+  OUTPUT_STRIP_TRAILING_WHITESPACE)
+execute_process(COMMAND ${_mlre} /usr/bin/tclsh /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd.tcl cmake autoinit
+  OUTPUT_FILE ${tempfile_name})
+if(EXISTS ${tempfile_name})
+  include(${tempfile_name})
+  file(REMOVE ${tempfile_name})
+endif()
+
+# redefine module command if compat version has been activated
+if("$ENV{MODULES_USE_COMPAT_VERSION}" STREQUAL "1")
+   set(ENV{MODULES_CMD} "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd-compat")
+   function(module)
+      execute_process(COMMAND mktemp -t moduleinit.cmake.XXXXXXXXXXXX
+         OUTPUT_VARIABLE tempfile_name
+         OUTPUT_STRIP_TRAILING_WHITESPACE)
+      execute_process(COMMAND /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd-compat cmake ${ARGV}
+         OUTPUT_FILE ${tempfile_name})
+      if(EXISTS ${tempfile_name})
+         include(${tempfile_name})
+         file(REMOVE ${tempfile_name})
+      endif()
+      # return value as done on new main version
+      set(module_result TRUE PARENT_SCOPE)
+   endfunction(module)
+endif()

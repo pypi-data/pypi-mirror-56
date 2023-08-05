@@ -1,0 +1,139 @@
+#!/bin/csh -f
+#
+# INSTALL_TEST_CSH, csh-kind test launcher for install non-reg suite
+# Copyright (C) 2017 Xavier Delaruelle
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+##########################################################################
+
+set progpath=$0
+set progdir=`dirname $progpath`
+if ( "$progdir" == '' ) then
+   set progdir='.'
+endif
+set ret=0
+
+if ( $#argv < 4 ) then
+   # print usage message
+   echo "Usage: $progpath initfile mode shell command"
+   exit 1
+endif
+
+set initfile=$1
+shift
+set mode=$1
+shift
+set sh=$1
+shift
+set cmdlist="$*"
+
+# get shell kind and options for sublaunch
+set shname=`basename $sh`
+switch ($shname)
+   case bash:
+   case ksh:
+   case ksh93:
+   case zsh:
+      set shkind='sh'
+      breaksw
+   case tcsh:
+      set shkind='csh'
+      breaksw
+   default:
+      set shkind=$shname
+endsw
+switch ($shkind)
+   # ignore global csh system init file to avoid side effect
+   case csh:
+      set shopts='-f'
+      breaksw
+   default:
+      set shopts=''
+endsw
+
+# init module via autoinit cmd if modulecmd.tcl is initfile
+if ( "`basename $initfile`" == 'modulecmd.tcl' ) then
+   set autoinit=0
+else
+   set autoinit=1
+endif
+
+if ( $autoinit == 0 && ! -x $initfile ) then
+   echo "ERROR: Cannot execute $initfile"
+   exit 1
+else if ( $autoinit != 0 && ! -r $initfile ) then
+   echo "ERROR: Cannot read $initfile"
+   exit 1
+endif
+
+# source module init file if first step of given mode
+if ( "$mode" == 'top' || "$mode" == 'sub' ||  "$mode" == 'subsub' ) then
+   if ( $autoinit == 0 ) then
+      eval "`$initfile $shname autoinit`"
+   else
+      source $initfile
+   endif
+endif
+
+# execute command list or perform recursive call
+switch ($mode)
+   case top:
+   case launch:
+      # hardcode single quote test from 080-args to correctly pass the single
+      # quotes to the module command
+      set hardcodetest=1
+      if ( "$cmdlist" == "module load ''" ) then
+         module load ''
+         set ret=($ret + $status)
+         set hardcodetest=0
+      endif
+      if ( "$cmdlist" == "module load \'\'" ) then
+         module load \'\'
+         set ret=($ret + $status)
+         set hardcodetest=0
+      endif
+      if ( "$cmdlist" == "module append-path -d ' ' FOO /path/to/dir2;module source $TESTSUITEDIR/modulefiles.2/putsvar" ) then
+         module append-path -d ' ' FOO /path/to/dir2
+         set ret=($ret + $status)
+         module source $TESTSUITEDIR/modulefiles.2/putsvar
+         set ret=($ret + $status)
+         set hardcodetest=0
+      endif
+
+      if ( $hardcodetest != 0 ) then
+         foreach cmd ("`echo '${cmdlist}' | tr ';' '\n'`")
+            eval $cmd
+            set ret=($ret + $status)
+         end
+      endif
+      breaksw
+   case sub:
+   case sublaunch:
+      $sh $shopts $progdir/install_test_${shkind} $initfile launch $sh "$cmdlist"
+      set ret=$status
+      breaksw
+   case subsub:
+      $sh $shopts $progdir/install_test_${shkind} $initfile sublaunch $sh "$cmdlist"
+      set ret=$status
+      breaksw
+   default:
+      echo "ERROR: Unrecognized mode option. Valid mode are 'top', 'sub', 'subsub'"
+      exit 1
+endsw
+
+# throw command exit code
+exit $ret
+
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

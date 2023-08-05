@@ -1,0 +1,161 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.10-use/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		use -append
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check appending a new path to the current lists of
+#			module paths.
+#		}C%
+#
+##############################################################################
+
+#
+# Variables for this test
+#
+
+set path "$modpath.2"
+set extravapath "/../.$path/./"
+set tsdirname [file tail $env(TESTSUITEDIR)]
+regsub "^.*/$tsdirname" $path "$tsdirname" relpath
+set badpath "$modpath.bad"
+set mod_path "$path:$modpath"
+set mod_path2 "${path}::$modpath"
+set bad_use "$error_msgs: Directory '$badpath' not found"
+set loaded_path "$modpath"
+regsub "^.*/$tsdirname" $loaded_path "$tsdirname" loaded_relpath
+regsub "$tsdirname" $loaded_relpath "$tsdirname/../$tsdirname/./" loaded_relpath_wdot
+set path_list_header "Search path for module files (in search order):"
+set no_path_list "$warn_msgs: No directories on module search path"
+
+set use	"use"
+
+#
+# The tests ...
+#
+
+lappend ans [list setpath MODULEPATH $mod_path]
+test_cmd_re "ALL" "$use $path" $ans
+
+#
+# test if use relative-path directory
+# should end with same absolute-path result as above
+#
+
+test_cmd_re "ALL" "$use $relpath" $ans
+
+#
+# test path with extravagant '.' or '..' in it
+#
+
+test_cmd_re "sh" "$use $extravapath" $ans
+
+#
+# test if use non-existent modulefile directory
+#
+
+testouterr_cmd "ALL" "$use $badpath" "ERR" "$bad_use"
+
+#
+# test with uninitialized MODULEPATH
+#
+
+unsetenv_path_var MODULEPATH
+
+set ans [list]
+lappend ans [list setpath MODULEPATH $path]
+test_cmd_re "ALL" "$use $path" $ans
+
+# list currently enabled paths
+testouterr_cmd "ALL" "$use" "OK" "$no_path_list"
+
+setenv_path_var MODULEPATH $modpath
+
+#
+# test with already loaded path
+# re-export and increase reference count (C version does no modification)
+#
+set ans [list]
+lappend ans [list set MODULEPATH_modshare "$loaded_path:2"]
+lappend ans [list set MODULEPATH $loaded_path]
+test_cmd "ALL" "$use $loaded_path" $ans
+
+#
+# test with already loaded path, but specified as relative-path
+# should end with same absolute-path result as above
+#
+test_cmd_re "ALL" "$use $loaded_relpath" $ans
+
+#
+# test with already loaded path, but specified as relative-path with useless "." and ".." components
+# should end with same absolute-path result as above
+#
+test_cmd_re "ALL" "$use $loaded_relpath_wdot" $ans
+
+#
+# List enabled paths with 2 paths set and 1 empty element which should be ignored
+#
+
+setenv_path_var MODULEPATH $mod_path2
+
+# list currently enabled paths
+testouterr_cmd "ALL" "$use" "OK" "$path_list_header\n  $path\n  $modpath"
+
+#
+# Test variable resolution
+#
+
+# setup value with multiple occurencies of same variable
+set var_path "/apps/\$MODULES_OS/\$MODULES_MACHINE/\$MODULES_OS"
+set os $tcl_platform(os)
+set machine $tcl_platform(machine)
+setenv_path_var MODULEPATH $var_path
+
+# tests when variable are defined or not
+# Currenlty if variable is not defined, directory level is omitted. Should
+# preferably skip path element if one variable referred is undefined (to be
+# fixed in next major release v5.0)
+testouterr_cmd "sh" "$use" "OK" "$path_list_header\n  /apps"
+set ::env(MODULES_OS) $os
+testouterr_cmd "sh" "$use" "OK" "$path_list_header\n  /apps/$os/$os"
+set ::env(MODULES_MACHINE) $machine
+testouterr_cmd "sh" "$use" "OK" "$path_list_header\n  /apps/$os/$machine/$os"
+
+
+setenv_path_var MODULEPATH $modpath
+
+#
+#
+# Cleanup
+#
+
+unset os
+unset machine
+unset env(MODULES_OS)
+unset env(MODULES_MACHINE)
+
+unset path
+unset extravapath
+unset tsdirname
+unset relpath
+unset mod_path
+unset mod_path2
+unset use
+unset badpath
+unset bad_use
+unset loaded_path
+unset loaded_relpath
+unset loaded_relpath_wdot
+unset ans
+unset path_list_header
+unset no_path_list

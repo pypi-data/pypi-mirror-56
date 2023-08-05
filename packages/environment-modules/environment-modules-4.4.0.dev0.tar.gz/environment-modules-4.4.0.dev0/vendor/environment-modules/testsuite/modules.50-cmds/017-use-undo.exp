@@ -1,0 +1,207 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2001/07/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	use/1.0,use/2.0,use/2.1,use/2.2
+#                   use/3.0,use/3.1,use/3.2,use/4.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'use' module subcommand for all allowed
+#			shell types.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "MODULEPATH", "LOADEDMODULES" to
+#    be set up
+#
+
+set path1 $modpath
+set path2 "$env(TESTSUITEDIR)/modulefiles.2"
+set module1 "use/1.0"
+set module2 "use/2.0"
+set module3 "use/2.1"
+set module4 "use/2.2"
+set module5 "use/3.0"
+set module6 "use/3.1"
+set module7 "use/3.2"
+set module8 "use/4.0"
+set module9 "use/4.1"
+set modulefile1 "$path1/$module1"
+set modulefile2 "$path1/$module2"
+set modulefile3 "$path1/$module3"
+set modulefile4 "$path1/$module4"
+set modulefile5 "$path1/$module5"
+set modulefile6 "$path1/$module6"
+set modulefile7 "$path1/$module7"
+set modulefile8 "$path1/$module8"
+set modulefile9 "$path1/$module9"
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module1 $modulefile1
+
+setenv_path_var MODULEPATH $path1 $path2
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list setpath MODULEPATH $path1]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+
+#
+#  The tests (use - unload)
+#
+
+test_cmd "ALL" "unload $module1" $ans
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module2 $modulefile2
+
+#
+#  The tests (use --append)
+#
+
+test_cmd "ALL" "unload $module2" $ans
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module3 $modulefile3
+
+#
+#  The tests (use -a)
+#
+
+test_cmd "ALL" "unload $module3" $ans
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module4 $modulefile4
+
+#
+#  The tests (use -append)
+#	for backward compatibility
+#
+
+test_cmd "ALL" "unload $module4" $ans
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module5 $modulefile5
+
+#
+#  The tests (use --prepend)
+#
+
+test_cmd "ALL" "unload $module5" $ans
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module6 $modulefile6
+
+#
+#  The tests (use -p)
+#
+
+test_cmd "ALL" "unload $module6" $ans
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module7 $modulefile7
+
+#
+#  The tests (use -prepend)
+#	for backward compatibility
+#
+
+test_cmd "ALL" "unload $module7" $ans
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module9 $modulefile9
+
+#
+#  The tests (use relative paths)
+#
+
+test_cmd "sh" "unload $module9" $ans
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module8 $modulefile8
+
+set ans [list]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+lappend ans [list ERR]
+
+#
+#  The tests (use -prepend)
+#	for backward compatibility
+#
+
+testouterr_cmd "ALL" "unload $module8" $ans [msg_unload $module8 $err_emptydirname]
+
+#
+#  Cleanup
+#
+
+setenv_path_var MODULEPATH $modpath
+unsetenv_loaded_module
+
+unset ans
+
+unset modulefile9
+unset modulefile8
+unset modulefile7
+unset modulefile6
+unset modulefile5
+unset modulefile4
+unset modulefile3
+unset modulefile2
+unset modulefile1
+unset module9
+unset module8
+unset module7
+unset module6
+unset module5
+unset module4
+unset module3
+unset module2
+unset module1
+unset path1
+unset path2

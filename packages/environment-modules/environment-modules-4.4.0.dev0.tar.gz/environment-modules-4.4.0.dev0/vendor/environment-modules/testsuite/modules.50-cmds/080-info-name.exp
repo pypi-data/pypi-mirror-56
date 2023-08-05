@@ -1,0 +1,56 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	info/name
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'module-info name' module subcommand for all
+#			allowed shell types.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "info/name"
+set modulefile "$modpath/$module"
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module:1"]
+lappend ans [list set _LMFILES_ $modulefile]
+lappend ans [list set LOADEDMODULES $module]
+lappend ans [list set testsuite $module]
+
+#
+#  The tests
+#
+
+test_cmd "ALL" "load $module" $ans
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefile
+unset module

@@ -1,0 +1,131 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2006/02/21
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, <rk@owen.sj.ca.us>
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	break/4.0, break/6.0
+#   			continue/4.0, continue/6.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tries the Tcl "break" and "continue" used in
+#			a valid loop
+#		}C%
+#
+##############################################################################
+
+set break4 "break/4.0"
+set cont4 "continue/4.0"
+set break6 "break/6.0"
+set cont6 "continue/6.0"
+
+set break4p "$modpath/$break4"
+set cont4p "$modpath/$cont4"
+set break6p "$modpath/$break6"
+set cont6p "$modpath/$cont6"
+
+#
+# set up an empty environment
+#
+set module ""
+set modulefile ""
+setenv_loaded_module $module $modulefile
+
+#
+#  load (break)
+#  For the different shells ...
+#
+set module "$break4"
+set modulefile "$break4p"
+
+lappend ans [list set testsuite4 9]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd "ALL" "load $break4" $ans
+
+#
+#  load (continue)
+#  For the different shells ...
+#
+set module "$cont4"
+set modulefile "$cont4p"
+
+set ans [list]
+lappend ans [list set testsuite4 9]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd "ALL" "load $cont4" $ans
+
+
+#
+#  load (break called from loop within proc)
+#  For the different shells ...
+#
+set module "$break6"
+set modulefile "$break6p"
+
+set ans [list]
+lappend ans [list set testsuite6 9]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd "ALL" "load $break6" $ans
+
+
+#
+#  load (continue called from loop within proc)
+#  For the different shells ...
+#
+set module "$cont6"
+set modulefile "$cont6p"
+
+set ans [list]
+lappend ans [list set testsuite6 9]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd "ALL" "load $cont6" $ans
+
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+
+unset ans
+
+unset modulefile
+unset module
+
+unset break4
+unset cont4
+unset break4p
+unset cont4p
+unset break6
+unset cont6
+unset break6p
+unset cont6p
+

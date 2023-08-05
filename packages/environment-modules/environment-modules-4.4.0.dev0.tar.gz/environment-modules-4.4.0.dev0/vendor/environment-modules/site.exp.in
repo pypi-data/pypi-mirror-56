@@ -1,0 +1,72 @@
+set install_baseprefix "@baseprefix@"
+set install_prefix "@prefix@"
+set install_bindir "@bindir@"
+set install_mandir "@mandir@"
+set install_etcdir "@etcdir@"
+set install_initdir "@initdir@"
+set install_libdir "@libdir@"
+set install_libexecdir "@libexecdir@"
+set install_modulefilesdir "@modulefilesdir@"
+set install_moduleshome "@moduleshome@"
+
+set install_versioning "@versioning@"
+
+set install_version "@VERSION@"
+
+set install_modulepath {@modulepath@}
+set install_loadedmodules "@loadedmodules@"
+
+set install_silentshdbgsupport "@silentshdbgsupport@"
+set install_setshellstartup "@setshellstartup@"
+set install_quarantinesupport "@quarantinesupport@"
+set install_quarantinevars "@quarantinevars@"
+
+set install_compatversion "@compatversion@"
+
+set install_libtclenvmodules "@libtclenvmodules@"
+set install_shlib_suffix "@SHLIB_SUFFIX@"
+
+set install_setmanpath "@setmanpath@"
+set install_setbinpath "@setbinpath@"
+set install_examplemodulefiles "@examplemodulefiles@"
+
+set install_initconfin "@initconfin@"
+
+set install_builddoc "@builddoc@"
+
+set install_pager "@pager@"
+set install_pageropts "@pageropts@"
+set install_pagercmd $install_pager
+if {$install_pageropts ne {}} {
+    append install_pagercmd " $install_pageropts"
+}
+
+set install_verbosity "@verbosity@"
+
+set install_color "@color@"
+set install_darkbgcolors "@darkbgcolors@"
+set install_lightbgcolors "@lightbgcolors@"
+set install_termbg "@termbg@"
+
+set install_autohandling "@autohandling@"
+
+set install_availindepth "@availindepth@"
+
+set install_lockedconfigs "@lockedconfigs@"
+
+set install_unloadmatchorder "@unloadmatchorder@"
+
+set install_implicitdefault "@implicitdefault@"
+
+set install_extendeddefault "@extendeddefault@"
+
+set install_advversspec "@advversspec@"
+
+set install_searchmatch "@searchmatch@"
+
+set install_wa277 "@wa277@"
+
+set install_icase "@icase@"
+
+# command location
+set install_tclsh "@TCLSH@"

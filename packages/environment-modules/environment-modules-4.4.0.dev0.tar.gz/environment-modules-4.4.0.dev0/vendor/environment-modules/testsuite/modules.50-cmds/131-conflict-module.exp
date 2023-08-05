@@ -1,0 +1,85 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	conflict/module, trace/all_on, trace/all_off
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'conflict' command using a category
+#			module name. This tests the reactions of modulecmd
+#			if the conflicting module is not load or if
+#			some module of the conflicting category is load.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "conflict/module"
+set modulefile "$modpath/$module"
+
+set module_tron "trace/all_on"
+set modulefile_tron "$modpath/$module_tron"
+
+set module_troff "trace/all_off"
+set modulefile_troff "$modpath/$module_troff"
+
+#
+#  Error messages
+#
+
+set err_tron [msg_load $module_tron "$warn_msgs: 'module-trace' command not implemented"]
+append err_tron \n\n[msg_load $module [err_conlo trace]]
+set err_troff [msg_load $module [err_conlo trace]]
+
+#
+#  The tests
+#
+
+lappend ans [list setpath _LMFILES_ $modulefile_tron]
+lappend ans [list setpath LOADEDMODULES $module_tron]
+lappend ans [list ERR]
+testouterr_cmd "ALL" "load $module_tron $module" $ans "$err_tron"
+
+set ans [list]
+lappend ans [list setpath _LMFILES_ $modulefile_troff]
+lappend ans [list setpath LOADEDMODULES $module_troff]
+lappend ans [list ERR]
+testouterr_cmd "ALL" "load $module_troff $module" $ans "$err_troff"
+
+set ans [list]
+lappend ans [list set testsuite yes]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+lappend ans [list setpath MODULES_LMCONFLICT "$module&trace"]
+test_cmd "ALL" "load $module" $ans
+
+#
+#  Cleanup
+#
+
+unset err_troff
+unset err_tron
+
+unset ans
+
+unset modulefile
+unset module
+unset modulefile_tron
+unset module_tron
+unset modulefile_troff
+unset module_troff

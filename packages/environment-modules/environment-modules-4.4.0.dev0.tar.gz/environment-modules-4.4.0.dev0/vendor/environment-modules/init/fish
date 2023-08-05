@@ -1,0 +1,54 @@
+# define modules runtine quarantine configuration
+#set -xg MODULES_RUN_QUARANTINE 'ENVVARNAME'
+
+# setup quarantine if defined
+set _mlre '';
+for _mlv in (string split ' ' $MODULES_RUN_QUARANTINE)
+  if string match -r '^[A-Za-z_][A-Za-z0-9_]*$' $_mlv >/dev/null
+     if set -q $_mlv
+        set _mlre $_mlre$_mlv"_modquar='$$_mlv' "
+     end
+     set _mlrv "MODULES_RUNENV_$_mlv"
+     set _mlre "$_mlre$_mlv='$$_mlrv' "
+  end
+end
+if [ -n "$_mlre" ]
+  set _mlre "env $_mlre"
+end
+
+# define module command and surrounding initial environment (default value
+# for MODULESHOME, MODULEPATH, LOADEDMODULES and parse of init config files)
+eval $_mlre /usr/bin/tclsh /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd.tcl fish autoinit | source -
+
+# no environment alteration if the above autoinit command failed
+if [ $status -eq 0 ]
+   if status -i
+      if [ -r /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/init/fish_completion ]
+         source /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/init/fish_completion
+      end
+   end
+
+   # no switchml definition since there is no Fish support in C version
+
+   if not contains /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/bin $PATH
+      set -xg PATH /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/bin $PATH
+   end
+
+   # initialize MANPATH if not set with a value that preserves manpath system
+   # configuration even after addition of paths to this variable by modulefiles
+   if not set -q MANPATH
+      set -xg MANPATH :
+   end
+   if not string match -q '*:/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/share/man:*' :(manpath ^/dev/null):
+      if [ -z "$MANPATH" -o "$MANPATH" = ':' ]
+         set _mlpathsep ''
+      else
+         set _mlpathsep :
+      end
+      set -xg MANPATH /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/share/man$_mlpathsep$MANPATH
+      set -e _mlpathsep
+   end
+end
+
+# clean temp variables used to setup quarantine
+set -e _mlre; set -e _mlv; set -e _mlrv;

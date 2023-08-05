@@ -1,0 +1,115 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load, display, unload, switch, help, test
+#   Modulefiles:	info/mode5, info/mode6
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'module-info flags' module subcommand.
+#			This command does not change behaviour depending on
+#			the user shell. Tests are made for the bourne shell
+#			here.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "info/mode5"
+set modulefile "$modpath/$module"
+set modulefilere "$modpathre/$module"
+
+set module2 "info/mode6"
+set modulefile2 "$modpath/$module2"
+set modulefilere2 "$modpathre/$module2"
+
+#
+#  The _LMFILES_ and the LOADEDMODULES will be affected
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module:1"]
+lappend ans [list set _LMFILES_ $modulefile]
+lappend ans [list set LOADEDMODULES $module]
+lappend ans [list 0]
+
+lappend ansrm [list unset _LMFILES__modshare]
+lappend ansrm [list unset LOADEDMODULES_modshare]
+lappend ansrm [list unset _LMFILES_]
+lappend ansrm [list unset LOADEDMODULES]
+lappend ansrm [list 0]
+
+lappend anssw [list set _LMFILES__modshare "$modulefile2:1"]
+lappend anssw [list set LOADEDMODULES_modshare "$module2:1"]
+lappend anssw [list set _LMFILES_ $modulefile2]
+lappend anssw [list set LOADEDMODULES $module2]
+lappend anssw [list 0]
+lappend anssw [list 0]
+
+set lin_help "Module Specific Help for $modulefilere:"
+set lin_test "Module Specific Test for $modulefilere:"
+
+#
+#  The tests
+#
+
+# different behavior than C-version: on Tcl-version flags is not handled and
+# [module-info flags] will always return "0".
+
+# test loading
+test_cmd "sh" "load $module" $ans
+
+# test displaying
+set ansout [list "0" [shell_ok sh 1]]
+testouterr_cmd_re "sh" "display $module" [join $ansout "\n"] "$modlin\n$modulefilere:\n\n$modlin"
+
+# Set up the environment for test that require the moduel to be loaded
+setenv_loaded_module $module $modulefile
+
+# test unloading
+test_cmd "sh" "unload $module" $ansrm
+
+# test switching
+test_cmd "sh" "switch $module $module2" $anssw
+
+# Clean up the just changed environment
+unsetenv_loaded_module
+
+# test help
+testouterr_cmd_re "sh" "help $module" [join $ansout "\n"] "$modlin\n$lin_help\n\n0\n$modlin"
+
+# test test
+testouterr_cmd_re "sh" "test $module" [join $ansout "\n"] "$modlin\n$lin_test\n\n0\nTest result: PASS\n$modlin"
+
+#
+#  Cleanup
+#
+
+unset lin_help
+unset lin_test
+
+unset ans
+unset ansrm
+unset anssw
+
+unset modulefile2
+unset modulefilere2
+unset module2
+
+unset modulefile
+unset modulefilere
+unset module

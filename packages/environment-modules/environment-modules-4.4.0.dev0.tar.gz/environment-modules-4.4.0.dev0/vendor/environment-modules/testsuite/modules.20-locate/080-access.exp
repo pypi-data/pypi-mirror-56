@@ -1,0 +1,676 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	2017/04/18
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		load, display, whatis, avail
+#   Modulefiles:	
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Localization of the modulefile when access rights to get to it
+#           does not allow it
+#		}C%
+#
+##############################################################################
+
+# cannot test access if cannot change file permission
+if {!$is_file_perms_editable} {
+    send_user "\tskipping access tests as file permissions cannot be changed\n"
+# cannot test access if superuser privileges are in use
+} elseif {$tcl_platform(user) eq "root"} {
+    send_user "\tskipping access tests as tests are run by superuser\n"
+# cannot test access if restricted file permissions have no effect
+} elseif {$is_locked_dir_file_readable && $is_locked_file_readable} {
+    send_user "\tskipping access tests as locked files or directories are still readable\n"
+} else {
+
+#
+# Variables for this test
+#
+
+# ensure avail tests are made using in depth mode
+setenv_var MODULES_AVAIL_INDEPTH 1
+
+set m1 "loc_rc6/1.2"
+set lm1 "$m1"
+set lmf1 "$modpath/$lm1"
+set m2 "loc_rc6/bar"
+set lm2 "$lm1"
+set lmf2 "$modpath/$lm2"
+set m3 "loc_rc6/new"
+set lm3 "$lm1"
+set lmf3 "$modpath/$lm3"
+set m4 "loc_rc3"
+set lm4 "$m4/1.0"
+set lmf4 "$modpath/$lm4"
+set m5 "loc_rc1"
+set lm5 "$m5/2.0"
+set lmf5 "$modpath/$lm5"
+set rlm5 "$m5/1.0"
+set rlmf5 "$modpath/$rlm5"
+set rlmf5re "$modpathre/$rlm5"
+set m6 "loc_rc1"
+set lm6 "$m6/1.0"
+set lmf6 "$modpath/$lm6"
+set m7 "loc_rc7"
+set lm7 "$m7/0.9"
+set lmf7 "$modpath/$lm7"
+set m8 "$m2"
+set lmrc8 "$modpath/loc_rc6/.modulerc"
+set m9 "$m3"
+set lmrc9 "$modpath/loc_rc6/.modulerc"
+set m10 "$m4"
+set lmrc10 "$modpath/$m4/.modulerc"
+set rlm10 "$m10/3.0"
+set rlmf10 "$modpath/$rlm10"
+set rlmf10re "$modpathre/$rlm10"
+set m11 "$modpath.deep/plain/dir2/1.0"
+set m12 "$m1"
+set lmd12 [file dirname $lmf1]
+set m13 "$m2"
+set lmd13 [file dirname $lmf2]
+set m14 "$m3"
+set lmd14 [file dirname $lmf3]
+set m15 "$m4"
+set lmd15 [file dirname $lmf4]
+set m16 "$m5"
+set lmd16 [file dirname $lmf5]
+
+set m17 "symlink/1.2"
+set lm17 "$m17"
+set lmf17 "$modpath/$lm17"
+set m18 "symlink/bar"
+set lm18 "$lm17"
+set lmf18 "$modpath/$lm18"
+set m19 "symlink/new"
+set lm19 "$lm17"
+set lmf19 "$modpath/$lm19"
+set m20 "$m17"
+set lmd20 [file dirname $lmf17]
+set m21 "$m18"
+set lmd21 [file dirname $lmf18]
+set m22 "$m19"
+set lmd22 [file dirname $lmf19]
+
+# work on virtual modules
+set m23 "loc_rcv1/1.2"
+set lmrc23 "$modpath/loc_rcv1/.modulerc"
+set m24 "$m23"
+set lmf24 "$modpath/loc_rcv1/.common"
+set m25 "loc_rcv1"
+set lmf25 "$lmf24"
+set m26 "loc_rcv2"
+set lm26 "$m26/2.0"
+set lmf26 "$modpath/$m26/.common"
+set rlm26 "$m26/1.5"
+set rlmf26 "$env(TESTSUITEDIR)/virttargets/loc_rcv"
+set rlmf26re [regsub -all "\(\[.+?\]\)" $rlmf26 {\\\1}]
+set m27 "loc_rcv2"
+set lmf27 "$env(TESTSUITEDIR)/virttargets/loc_rcv"
+set m28 "$m24"
+set lmd28 [file dirname $lmf24]
+set m29 "$rlm26"
+set lmf29 "$env(TESTSUITEDIR)/virttargets/loc_rcv"
+set lmf29re [regsub -all "\(\[.+?\]\)" $lmf29 {\\\1}]
+set lmd29 [file dirname $lmf29]
+
+
+set pheader "$modlin $modpathre $modlin"
+set theader "$modpathre:"
+set access_msg "$error_msgs: Permission denied on"
+set hide_perms "ugo-rx"
+
+#
+# Test access to modulefile when access not granted on this modulefile
+#
+
+change_file_perms $lmf1 $hide_perms
+
+testouterr_cmd "sh" "load $m1" "ERR" "$access_msg '$lmf1'"
+testouterr_cmd "sh" "display $m1" "ERR" "$access_msg '$lmf1'"
+testouterr_cmd "sh" "whatis $m1" "ERR" "$access_msg '$lmf1'"
+testouterr_cmd "sh" "avail -t $m1" "OK" ""
+
+restore_file_perms $lmf1
+
+#
+# Test access to alias when access not granted on target modulefile
+#
+
+change_file_perms $lmf2 $hide_perms
+
+testouterr_cmd "sh" "load $m2" "ERR" "$access_msg '$lmf2'"
+testouterr_cmd "sh" "display $m2" "ERR" "$access_msg '$lmf2'"
+testouterr_cmd "sh" "whatis $m2" "ERR" "$access_msg '$lmf2'"
+# alias defined so it appears even if access to target modulefile is denied
+testouterr_cmd_re "sh" "avail -t $m2" "OK" "$theader\n$m2\\(@\\)"
+
+restore_file_perms $lmf2
+
+#
+# Test access to symbol when access not granted on target modulefile
+#
+
+change_file_perms $lmf3 $hide_perms
+
+testouterr_cmd "sh" "load $m3" "ERR" "$access_msg '$lmf3'"
+testouterr_cmd "sh" "display $m3" "ERR" "$access_msg '$lmf3'"
+testouterr_cmd "sh" "whatis $m3" "ERR" "$access_msg '$lmf3'"
+# symbol is attached to the modulefile so it does not appear if the access
+# to the target modulefile is denied
+testouterr_cmd "sh" "avail -t $m3" "OK" ""
+
+restore_file_perms $lmf3
+
+#
+# Test access to default symbol when access not granted on target modulefile
+#
+
+change_file_perms $lmf4 $hide_perms
+
+# shout error as if we were trying to access the symbol directly
+testouterr_cmd "sh" "load $m4" "ERR" "$access_msg '$lmf4'"
+testouterr_cmd "sh" "display $m4" "ERR" "$access_msg '$lmf4'"
+# no error on whatis/avail, other versions are listed
+testouterr_cmd_re "sh" "whatis $m4" "OK" "$pheader\n\\s+$m4/2.0: $m4/2.0\n\\s+$m4/3.0: $m4/3.0"
+testouterr_cmd_re "sh" "avail -t $m4" "OK" "$theader\n$m4/2.0\\(\[a-z:\]+\\)\n$m4/3.0\\(\[a-z:\]+\\)"
+
+restore_file_perms $lmf4
+
+#
+# Test access to implicit default modulefile when access not granted on target
+# modulefile
+#
+
+change_file_perms $lmf5 $hide_perms
+
+lappend ans [list set _LMFILES__modshare "$rlmf5:1"]
+lappend ans [list set LOADEDMODULES_modshare "$rlm5:1"]
+lappend ans [list set MODULES_LMALTNAME_modshare $rlm5&loc_rc1/foo:1]
+lappend ans [list set _LMFILES_ $rlmf5]
+lappend ans [list set LOADEDMODULES $rlm5]
+lappend ans [list set testsuite yes]
+lappend ans [list set MODULES_LMALTNAME $rlm5&loc_rc1/foo]
+
+# another implicit default is chosen
+testouterr_cmd "sh" "load $m5" [if_implicitdefault $ans ERR] [if_implicitdefault {} "$err_nodefault'$m5'"]
+testouterr_cmd_re "sh" "display $m5" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$rlmf5re:\n\nmodule-whatis\t$rlm5\nsetenv\t\ttestsuite yes\n$modlin" "$err_nodefault'$m6'"]
+testouterr_cmd_re "sh" "whatis $m5" "OK" "$pheader\n\\s+$rlm5: $rlm5"
+testouterr_cmd_re "sh" "avail -t $m5" "OK" "$theader\n$rlm5\\(\[a-z:\]+\\)"
+
+# keep file permissions as it is for next test
+
+#
+# Test access to implicit default modulefile when access not granted on target
+# modulefile and there is no other implicit default available
+#
+
+change_file_perms $lmf6 $hide_perms
+
+# nothing found
+testouterr_cmd "sh" "load $m6" "ERR" "$err_path'$m6'"
+testouterr_cmd "sh" "display $m6" "ERR" "$err_path'$m6'"
+testouterr_cmd "sh" "whatis $m6" "ERR" "$err_path'$m6'"
+testouterr_cmd "sh" "avail -t $m6" "OK" ""
+
+restore_file_perms $lmf6
+restore_file_perms $lmf5
+
+#
+# Test access to implicit default alias when access not granted on target modulefile
+#
+
+change_file_perms $lmf7 $hide_perms
+
+# shout error as if we were trying to access the alias directly
+testouterr_cmd "sh" "load $m7" "ERR" [if_implicitdefault "$access_msg '$lmf7'" "$err_nodefault'$m7'"]
+testouterr_cmd "sh" "display $m7" "ERR" [if_implicitdefault "$access_msg '$lmf7'" "$err_nodefault'$m7'"]
+# no error on whatis/avail, other versions are listed
+testouterr_cmd_re "sh" "whatis $m7" "OK" "$pheader\n\\s+$m7/1.2: $m7/1.2"
+# alias defined so it appears even if access to target modulefile is denied
+testouterr_cmd_re "sh" "avail -t $m7" "OK" "$theader\n$m7/1\\(@\\)\n$m7/1.2\n$m7/bar\\(@\\)"
+
+restore_file_perms $lmf7
+
+#
+# Test access to alias when access not granted on modulerc defining it
+#
+
+change_file_perms $lmrc8 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m8" "ERR" "$err_path'$m8'"
+testouterr_cmd "sh" "display $m8" "ERR" "$err_path'$m8'"
+testouterr_cmd "sh" "whatis $m8" "ERR" "$err_path'$m8'"
+testouterr_cmd "sh" "avail -t $m8" "OK" ""
+
+restore_file_perms $lmrc8
+
+#
+# Test access to symbol when access not granted on modulerc defining it
+#
+
+change_file_perms $lmrc9 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m9" "ERR" "$err_path'$m9'"
+testouterr_cmd "sh" "display $m9" "ERR" "$err_path'$m9'"
+testouterr_cmd "sh" "whatis $m9" "ERR" "$err_path'$m9'"
+testouterr_cmd "sh" "avail -t $m9" "OK" ""
+
+restore_file_perms $lmrc9
+
+#
+# Test access to default symbol when access not granted on modulerc defining it
+#
+
+change_file_perms $lmrc10 $hide_perms
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$rlmf10:1"]
+lappend ans [list set LOADEDMODULES_modshare "$rlm10:1"]
+lappend ans [list set _LMFILES_ $rlmf10]
+lappend ans [list set LOADEDMODULES $rlm10]
+lappend ans [list set testsuite yes]
+
+# another implicit default is chosen
+testouterr_cmd "sh" "load $m10" [if_implicitdefault $ans ERR] [if_implicitdefault {} "$err_nodefault'$m10'"]
+testouterr_cmd_re "sh" "display $m10" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$rlmf10re:\n\nmodule-whatis\t$rlm10\nsetenv\t\ttestsuite yes\n$modlin" "$err_nodefault'$m10'"]
+testouterr_cmd_re "sh" "whatis $m10" "OK" "$pheader\n\\s+$m10/1.0: $m10/1.0\n\\s+$m10/2.0: $m10/2.0\n\\s+$m10/3.0: $m10/3.0"
+testouterr_cmd_re "sh" "avail -t $m10" "OK" "$theader\n$m10/1.0\n$m10/2.0\n$m10/3.0"
+
+restore_file_perms $lmrc10
+
+#
+# Test access to full path modulefile when access not granted on this modulefile
+#
+
+change_file_perms $m11 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m11" "ERR" "$access_msg '$m11'"
+testouterr_cmd "sh" "display $m11" "ERR" "$access_msg '$m11'"
+# no whatis/avail test as it relies only on MODULEPATH search
+
+restore_file_perms $m11
+
+#
+# Test access to modulefile when access not granted on its upper directory
+#
+
+change_file_perms $lmd12 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m12" "ERR" "$err_path'$m12'"
+testouterr_cmd "sh" "display $m12" "ERR" "$err_path'$m12'"
+testouterr_cmd "sh" "whatis $m12" "ERR" "$err_path'$m12'"
+testouterr_cmd "sh" "avail -t $m12" "OK" ""
+
+restore_file_perms $lmd12
+
+#
+# Test access to alias when access not granted on its upper directory
+#
+
+change_file_perms $lmd13 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m13" "ERR" "$err_path'$m13'"
+testouterr_cmd "sh" "display $m13" "ERR" "$err_path'$m13'"
+testouterr_cmd "sh" "whatis $m13" "ERR" "$err_path'$m13'"
+testouterr_cmd "sh" "avail -t $m13" "OK" ""
+
+restore_file_perms $lmd13
+
+#
+# Test access to symbol when access not granted on its upper directory
+#
+
+change_file_perms $lmd14 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m14" "ERR" "$err_path'$m14'"
+testouterr_cmd "sh" "display $m14" "ERR" "$err_path'$m14'"
+testouterr_cmd "sh" "whatis $m14" "ERR" "$err_path'$m14'"
+testouterr_cmd "sh" "avail -t $m14" "OK" ""
+
+restore_file_perms $lmd14
+
+#
+# Test access to default symbol when access not granted on its upper directory
+#
+
+change_file_perms $lmd15 $hide_perms
+
+# permission denied on directory
+testouterr_cmd "sh" "load $m15" "ERR" "$access_msg '$lmd15'"
+testouterr_cmd "sh" "display $m15" "ERR" "$access_msg '$lmd15'"
+testouterr_cmd "sh" "whatis $m15" "ERR" "$access_msg '$lmd15'"
+testouterr_cmd "sh" "avail -t $m15" "OK" ""
+
+restore_file_perms $lmd15
+
+#
+# Test access to implicit default modulefile when access not granted on its
+# upper directory
+#
+
+change_file_perms $lmd16 $hide_perms
+
+# permission denied on directory
+testouterr_cmd "sh" "load $m16" "ERR" "$access_msg '$lmd16'"
+testouterr_cmd "sh" "display $m16" "ERR" "$access_msg '$lmd16'"
+testouterr_cmd "sh" "whatis $m16" "ERR" "$access_msg '$lmd16'"
+testouterr_cmd "sh" "avail -t $m16" "OK" ""
+
+restore_file_perms $lmd16
+
+#
+# Test access to symlink modulefile when access not granted on this modulefile
+#
+
+change_file_perms $lmf17 $hide_perms
+
+testouterr_cmd "sh" "load $m17" "ERR" "$access_msg '$lmf17'"
+testouterr_cmd "sh" "display $m17" "ERR" "$access_msg '$lmf17'"
+testouterr_cmd "sh" "whatis $m17" "ERR" "$access_msg '$lmf17'"
+testouterr_cmd "sh" "avail -t $m17" "OK" ""
+
+restore_file_perms $lmf17
+
+#
+# Test access to alias when access not granted on target symlink modulefile
+#
+
+change_file_perms $lmf18 $hide_perms
+
+testouterr_cmd "sh" "load $m18" "ERR" "$access_msg '$lmf18'"
+testouterr_cmd "sh" "display $m18" "ERR" "$access_msg '$lmf18'"
+testouterr_cmd "sh" "whatis $m18" "ERR" "$access_msg '$lmf18'"
+# alias defined so it appears even if access to target modulefile is denied
+testouterr_cmd_re "sh" "avail -t $m18" "OK" "$theader\n$m18\\(@\\)"
+
+restore_file_perms $lmf18
+
+#
+# Test access to symbol when access not granted on target symlink modulefile
+#
+
+change_file_perms $lmf19 $hide_perms
+
+testouterr_cmd "sh" "load $m19" "ERR" "$access_msg '$lmf19'"
+testouterr_cmd "sh" "display $m19" "ERR" "$access_msg '$lmf19'"
+testouterr_cmd "sh" "whatis $m19" "ERR" "$access_msg '$lmf19'"
+# symbol is attached to the modulefile so it does not appear if the access
+# to the target modulefile is denied
+testouterr_cmd "sh" "avail -t $m19" "OK" ""
+
+restore_file_perms $lmf19
+
+#
+# Test access to modulefile when access not granted on symlink target directory
+#
+
+change_file_perms $lmd20 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m20" "ERR" "$err_path'$m20'"
+testouterr_cmd "sh" "display $m20" "ERR" "$err_path'$m20'"
+testouterr_cmd "sh" "whatis $m20" "ERR" "$err_path'$m20'"
+testouterr_cmd "sh" "avail -t $m20" "OK" ""
+
+restore_file_perms $lmd20
+
+#
+# Test access to alias when access not granted on symlink target directory
+#
+
+change_file_perms $lmd21 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m21" "ERR" "$err_path'$m21'"
+testouterr_cmd "sh" "display $m21" "ERR" "$err_path'$m21'"
+testouterr_cmd "sh" "whatis $m21" "ERR" "$err_path'$m21'"
+testouterr_cmd "sh" "avail -t $m21" "OK" ""
+
+restore_file_perms $lmd21
+
+#
+# Test access to symbol when access not granted on symlink target directory
+#
+
+change_file_perms $lmd22 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m22" "ERR" "$err_path'$m22'"
+testouterr_cmd "sh" "display $m22" "ERR" "$err_path'$m22'"
+testouterr_cmd "sh" "whatis $m22" "ERR" "$err_path'$m22'"
+testouterr_cmd "sh" "avail -t $m22" "OK" ""
+
+restore_file_perms $lmd22
+
+#
+# Test access to virtual module when access not granted on modulerc defining it
+#
+
+change_file_perms $lmrc23 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m23" "ERR" "$err_path'$m23'"
+testouterr_cmd "sh" "display $m23" "ERR" "$err_path'$m23'"
+testouterr_cmd "sh" "whatis $m23" "ERR" "$err_path'$m23'"
+testouterr_cmd "sh" "avail -t $m23" "OK" ""
+
+restore_file_perms $lmrc23
+
+#
+# Test access to virtual module when access not granted on its target file
+#
+
+change_file_perms $lmf24 $hide_perms
+
+testouterr_cmd "sh" "load $m24" "ERR" "$access_msg '$lmf24'"
+testouterr_cmd "sh" "display $m24" "ERR" "$access_msg '$lmf24'"
+testouterr_cmd "sh" "whatis $m24" "ERR" "$access_msg '$lmf24'"
+testouterr_cmd "sh" "avail -t $m24" "OK" ""
+
+restore_file_perms $lmf24
+
+#
+# Test access to default symbol when access not granted on virtual target file
+#
+
+change_file_perms $lmf25 $hide_perms
+
+# shout error as if we were trying to access the symbol directly
+testouterr_cmd "sh" "load $m25" "ERR" "$access_msg '$lmf25'"
+testouterr_cmd "sh" "display $m25" "ERR" "$access_msg '$lmf25'"
+# no error on whatis/avail, other versions are listed
+testouterr_cmd_re "sh" "whatis $m25" "OK" "$pheader\n\\s+$m25/1.1: $m25/1.1"
+testouterr_cmd_re "sh" "avail -t $m25" "OK" "$theader\n$m25/1\\(@\\)\n$m25/1.1\n$m25/bar\\(@\\)"
+
+restore_file_perms $lmf25
+
+#
+# Test access to implicit default (a virtual module) when access not granted on
+# its target file
+#
+
+change_file_perms $lmf26 $hide_perms
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$rlmf26:1"]
+lappend ans [list set LOADEDMODULES_modshare "$rlm26:1"]
+lappend ans [list set _LMFILES_ $rlmf26]
+lappend ans [list set LOADEDMODULES $rlm26]
+lappend ans [list set testsuite yes]
+
+# another implicit default is chosen
+testouterr_cmd "sh" "load $m26" [if_implicitdefault $ans ERR] [if_implicitdefault {} "$err_nodefault'$m26'"]
+testouterr_cmd_re "sh" "display $m26" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$rlmf26re:\n\nmodule-whatis\t$rlm26\nsetenv\t\ttestsuite yes\n$modlin" "$err_nodefault'$m26'"]
+testouterr_cmd_re "sh" "whatis $m26" "OK" "$pheader\n\\s+$rlm26: $rlm26"
+testouterr_cmd_re "sh" "avail -t $m26" "OK" "$theader\n$rlm26"
+
+# keep file permissions as it is for next test
+
+#
+# Test access to implicit default (a virtual module) when access not granted on
+# its target file and there is no other implicit default available
+#
+
+change_file_perms $lmf27 $hide_perms
+
+# nothing found
+testouterr_cmd "sh" "load $m27" "ERR" "$err_path'$m27'"
+testouterr_cmd "sh" "display $m27" "ERR" "$err_path'$m27'"
+testouterr_cmd "sh" "whatis $m27" "ERR" "$err_path'$m27'"
+testouterr_cmd "sh" "avail -t $m27" "OK" ""
+
+restore_file_perms $lmf27
+restore_file_perms $lmf26
+
+#
+# Test access to virtual module when access not granted on its upper directory
+#
+
+change_file_perms $lmd28 $hide_perms
+
+# cannot locate module
+testouterr_cmd "sh" "load $m28" "ERR" "$err_path'$m28'"
+testouterr_cmd "sh" "display $m28" "ERR" "$err_path'$m28'"
+testouterr_cmd "sh" "whatis $m28" "ERR" "$err_path'$m28'"
+testouterr_cmd "sh" "avail -t $m28" "OK" ""
+
+restore_file_perms $lmd28
+
+#
+# Test access to virtual module when access not granted on upper directory of
+# its target file, located in a different directory
+#
+
+change_file_perms $lmd29 $hide_perms
+
+# different result if a file in a locked directory still readable on this system
+if {$is_locked_dir_file_readable} {
+    set ans [list]
+    lappend ans [list set _LMFILES__modshare "$lmf29:1"]
+    lappend ans [list set LOADEDMODULES_modshare "$m29:1"]
+    lappend ans [list set _LMFILES_ $lmf29]
+    lappend ans [list set LOADEDMODULES $m29]
+    lappend ans [list set testsuite yes]
+
+    testouterr_cmd "sh" "load $m29" $ans ""
+    testouterr_cmd_re "sh" "display $m29" "OK" "$modlin\n$lmf29re:\n\nmodule-whatis\t$m29\nsetenv\t\ttestsuite yes\n$modlin"
+    testouterr_cmd_re "sh" "whatis $m29" "OK" "$pheader\n\\s+$m29: $m29"
+    testouterr_cmd_re "sh" "avail -t $m29" "OK" "$theader\n$m29"
+} else {
+    # cannot locate module
+    testouterr_cmd "sh" "load $m29" "ERR" "$access_msg '$lmf29'"
+    testouterr_cmd "sh" "display $m29" "ERR" "$access_msg '$lmf29'"
+    testouterr_cmd "sh" "whatis $m29" "ERR" "$access_msg '$lmf29'"
+    testouterr_cmd "sh" "avail -t $m29" "OK" ""
+}
+
+restore_file_perms $lmd29
+
+#
+# Cleanup
+#
+
+unsetenv_var MODULES_AVAIL_INDEPTH
+
+unset ans
+
+unset pheader
+unset theader
+unset hide_perms
+
+unset m1
+unset lm1
+unset lmf1
+unset m2
+unset lm2
+unset lmf2
+unset m3
+unset lm3
+unset lmf3
+unset m4
+unset lm4
+unset lmf4
+unset m5
+unset lm5
+unset lmf5
+unset rlm5
+unset rlmf5
+unset rlmf5re
+unset m6
+unset lm6
+unset lmf6
+unset m7
+unset lm7
+unset lmf7
+unset m8
+unset lmrc8
+unset m9
+unset lmrc9
+unset m10
+unset lmrc10
+unset rlm10
+unset rlmf10
+unset rlmf10re
+unset m11
+unset m12
+unset lmd12
+unset m13
+unset lmd13
+unset m14
+unset lmd14
+unset m15
+unset lmd15
+unset m16
+unset lmd16
+unset m17
+unset lm17
+unset lmf17
+unset m18
+unset lm18
+unset lmf18
+unset m19
+unset lm19
+unset lmf19
+unset m20
+unset lmd20
+unset m21
+unset lmd21
+unset m22
+unset lmd22
+unset m23
+unset lmrc23
+unset m24
+unset lmf24
+unset m25
+unset lmf25
+unset m26
+unset lm26
+unset lmf26
+unset rlm26
+unset rlmf26
+unset rlmf26re
+unset m27
+unset lmf27
+unset m28
+unset lmd28
+unset m29
+unset lmf29
+unset lmf29re
+unset lmd29
+
+}

@@ -1,0 +1,89 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		purge
+#   Modulefiles:	setenv/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module command 'purge'
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "setenv/1.0"
+set modulefile "$modpath/$module"
+
+#
+#  Check this only fo the /bin/csh
+#
+
+lappend ans [list unset testsuite]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+#
+#  Set up the environment pointing to the single module file being load
+#
+
+setenv_loaded_module $module $modulefile
+
+#
+#  The tests
+#
+
+test_cmd "csh" "purge" $ans
+
+# command nickname tests
+test_cmd "csh" "pu" $ans
+
+
+# setup LOADEDMODULES/_LMFILES_ with an empty element
+setenv_loaded_module [list {} $module] [list {} $modulefile]
+
+set ans [list]
+lappend ans [list unset testsuite]
+# empty elements are ignored but stick to the variable, they should be removed
+lappend ans [list setpath LOADEDMODULES ""]
+lappend ans [list setpath _LMFILES_ ""]
+
+test_cmd "sh" "purge" $ans
+
+# restore LOADEDMODULES/_LMFILES_
+setenv_loaded_module $module $modulefile
+
+
+#
+# purge when loaded environment is inconsistent
+#
+
+setenv_loaded_module [list foo bar] "/path/to/foo"
+
+testouterr_cmd_re "sh" "purge" "ERR" "$err_loinconsist\n  LOADEDMODULES=foo bar\n  _LMFILES_=/path/to/foo"
+
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+
+unset ans
+
+unset modulefile
+unset module

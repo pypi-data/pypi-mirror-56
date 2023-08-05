@@ -1,0 +1,47 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.60-initx/%M%
+#   Revision:		%I%
+#   First Edition:	2005/12/22
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		initadd, initrm
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the initlist sub-commands
+#		}C%
+#
+##############################################################################
+
+set initlist " initialization file \$HOME/.modules loads modules:\n\tnull\n\tdot module-cvs module-info modules use.own"
+
+testouterr_cmd sh "initlist" "OK" "sh$initlist"
+testouterr_cmd ksh "initlis" "OK" "ksh$initlist"
+testouterr_cmd zsh "initli" "OK" "zsh$initlist"
+testouterr_cmd csh "initl" "OK" "csh$initlist"
+testouterr_cmd tcsh "initlist" "OK" "tcsh$initlist"
+
+_test_modules sh "initlist" "$modload null\n$line2"
+
+# test on fully empty init file
+file copy -force "$env(HOME)/.modules.savenull"  "$env(HOME)/.modules"
+
+testouterr_cmd sh "initlist" "OK" ""
+testouterr_cmd bash "initlist" "OK" ""
+testouterr_cmd ksh "initlist" "OK" ""
+testouterr_cmd zsh "initlist" "OK" ""
+testouterr_cmd csh "initlist" "OK" ""
+testouterr_cmd tcsh "initlist" "OK" ""
+testouterr_cmd fish "initlist" "OK" ""
+
+# restore the .modules file
+file copy -force "$env(HOME)/.modules.save"  "$env(HOME)/.modules"
+
+unset initlist

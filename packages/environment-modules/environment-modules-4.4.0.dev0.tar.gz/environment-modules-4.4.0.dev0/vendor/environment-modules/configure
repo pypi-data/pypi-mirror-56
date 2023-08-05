@@ -1,0 +1,798 @@
+#!/usr/bin/env bash
+#
+# CONFIGURE, check requirements then set variables and create Makefiles
+# Copyright (C) 2017 CEA/DAM
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+##########################################################################
+
+progpath=$0
+progdir=${progpath%/*}
+prog=${progpath##*/}
+
+# files to translate
+targetlist="${progdir}/Makefile.inc ${progdir}/site.exp"
+
+# argument list
+arglist="TCLSH SPHINXBUILD PS BASENAME RMDIR_IGN_NON_EMPTY VERSION \
+baseprefix prefix bindir libdir libexecdir etcdir initdir datarootdir mandir \
+docdir vimdatadir modulefilesdir setmanpath appendmanpath setbinpath \
+appendbinpath setdotmodulespath docinstall vimaddons examplemodulefiles \
+builddoc gitworktree usemanpath compatversion EXEEXT libtclenvmodules \
+SHLIB_SUFFIX versioning silentshdbgsupport setshellstartup quarantinesupport \
+autohandling availindepth implicitdefault extendeddefault moduleshome \
+initconfin pager pageropts verbosity color darkbgcolors lightbgcolors termbg \
+lockedconfigs icase unloadmatchorder searchmatch modulepath loadedmodules \
+quarantinevars wa277 advversspec"
+compatarglist=
+libarglist=
+
+# flags to know if argument has been specified on command-line
+defdotmodulespath=1
+defcompatversion=1
+defpageropts=1
+
+# flags to know a requirement has already been checked
+checkedautoreconf=1
+
+# set argument default values
+prefix=/usr/local/Modules
+setmanpath=y
+appendmanpath=n
+setbinpath=y
+appendbinpath=n
+setdotmodulespath=n
+docinstall=y
+vimaddons=y
+examplemodulefiles=y
+compatversion=y
+EXEEXT=
+libtclenvmodules=y
+SHLIB_SUFFIX='.so'
+versioning=n
+silentshdbgsupport=y
+setshellstartup=y
+quarantinesupport=y
+autohandling=n
+availindepth=y
+implicitdefault=y
+extendeddefault=n
+advversspec=n
+wa277=n
+loadedmodules=
+quarantinevars=
+binsearchpath=/usr/bin:/bin:/usr/local/bin
+TCLSH=tclsh
+SPHINXBUILD=sphinx-build
+builddoc=y
+gitworktree=y
+usemanpath=y
+PS=ps
+BASENAME=basename
+RMDIR_IGN_NON_EMPTY=rmdir
+VERSION=
+initconfin=initdir
+pager=less
+pageropts='-eFKRX'
+verbosity=normal
+color=n
+darkbgcolors='hi=1:db=2:se=2:er=91:wa=93:me=95:in=94:mp=1;94:di=94:al=96:sy=95:de=4:cm=92'
+lightbgcolors='hi=1:db=2:se=2:er=31:wa=33:me=35:in=34:mp=1;34:di=34:al=36:sy=35:de=4:cm=32'
+termbg=dark
+lockedconfigs=
+unloadmatchorder=returnlast
+searchmatch=starts_with
+icase=never
+# these args are initialized here but as they depend on other argument value
+# they will get their default value later (after command-line parse)
+bindir=
+libdir=
+libexecdir=
+etcdir=
+initdir=
+datarootdir=
+mandir=
+docdir=
+vimdatadir=
+modulefilesdir=
+moduleshome=
+modulepath=
+
+# git branch to use to build compat version
+compatbranch='c-3.2'
+
+
+# print message on stderr then exit
+echo_error() {
+   echo -e "ERROR: $1" >&2
+   exit 1
+}
+
+# print message on stderr then exit
+echo_warning() {
+   echo -e "WARNING: $1"
+}
+
+
+# print usage message
+echo_usage() {
+   echo "Usage: $progpath [OPTION]...
+Check requirements then set variables and create Makefiles.
+
+Defaults for the options are specified in square brackets.
+
+Configuration:
+  -h, --help              display this help and exit
+
+Installation directories:
+  --prefix=PREFIX         install files in PREFIX [$prefix]
+
+By default, \`make install' will install all the files in
+\`$prefix/bin', \`$prefix/libexec', etc. You
+can specify an installation prefix other than \`$prefix'
+using \`--prefix', for instance \`--prefix=\$HOME'.
+
+For better control, use the options below.
+
+Fine tuning of the installation directories:
+  --bindir=DIR            user executables [PREFIX/bin]
+  --libdir=DIR            object code libraries [PREFIX/lib]
+  --libexecdir=DIR        program executables [PREFIX/libexec]
+  --etcdir=DIR            program configurations [PREFIX/etc]
+  --initdir=DIR           environment initialization scripts [PREFIX/init]
+  --datarootdir=DIR       read-only arch.-independent data root [PREFIX/share]
+  --mandir=DIR            man documentation [DATAROOTDIR/man]
+  --docdir=DIR            documentation root [DATAROOTDIR/doc]
+  --vimdatadir=DIR        Vim addons directory [DATAROOTDIR/vim/vimfiles]
+  --modulefilesdir=DIR    system modulefiles [PREFIX/modulefiles]
+
+Optional Features:
+  --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
+  --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+  --enable-set-manpath    set mandir to MANPATH in init scripts [yes]
+  --enable-append-manpath append rather prepend mandir to MANPATH [no]
+  --enable-set-binpath    set bindir to PATH in init scripts [yes]
+  --enable-append-binpath append rather prepend bindir to PATH [no]
+  --enable-dotmodulespath, --enable-modulespath
+                          configure modules path in .modulespath file rather
+                          than modulerc file (or respectively in modulespath
+                          file rather initrc file if \`--with-initconf-in' is
+                          set to 'etcdir') [no]
+  --enable-doc-install    install documentation files in the documentation
+                          directory defined with \'docdir' (no impact on
+                          man pages installation) [yes]
+  --enable-vim-addons     install Vim addon files in the directory defined
+                          with \'vimdatadir' [yes]
+  --enable-example-modulefiles
+                          install in 'modulefilesdir' some modulefiles
+                          provided as examples [yes]
+  --enable-compat-version also build and install Modules compatibility (C)
+                          version and enable switching capabilities between
+                          the two versions [yes]
+  --enable-libtclenvmodules
+                          build and install the Modules Tcl extension library
+                          and enable its load in modulecmd.tcl [yes]
+  --enable-versioning     append modules version to installation prefix and
+                          deploy a \`versions' modulepath, shared between all
+                          versioning enabled Modules installation, containing
+                          modulefiles that enable to switch from one Modules
+                          version to another [no]
+  --enable-silent-shell-debug-support
+                          generate code in module function definition and
+                          initialization scripts to add support for silencing
+                          shell debugging properties [yes]
+  --enable-set-shell-startup
+                          set when module function is defined the shell
+                          startup file to ensure that the module function is
+                          still defined in sub-shells [yes]
+  --enable-quarantine-support
+                          generate code in module function definition and
+                          initialization scripts to add support for the
+                          environment variable quarantine mechanism [yes]
+  --enable-auto-handling  set modulecmd.tcl to automatically apply automated
+                          modulefiles handling actions, like loading the
+                          pre-requisites of a modulefile when loading this
+                          modulefile [no]
+  --enable-avail-indepth  control whether \`avail' search results should
+                          recursively include or not modulefiles from
+                          directories matching search query [yes]
+  --enable-implicit-default
+                          implicitly set a default version for modules with
+                          none defined [yes]
+  --enable-extended-default
+                          allow partial module version specification [no]
+  --enable-advanced-version-spec
+                          activate the advanced module version specificers to
+                          specify finer constraints on module version. [no]
+  --enable-color          control colored output. \`yes' equals to the \`auto'
+                          color mode. \`no' equals to the \`never' color mode
+                          [no]
+  --enable-wa-277         activate workaround for Tcsh history issue [no]
+
+Optional Packages:
+  --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
+  --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
+  --with-bin-search-path=PATHLIST
+                          list of paths to look at when searching the location
+                          of tools required to build and configure Modules
+                          [$binsearchpath]
+  --with-moduleshome      location of the master Modules package file
+                          directory [$prefix]
+  --with-initconf-in=VALUE
+                          location where to install Modules initialization
+                          configuration files. Either \`initdir' or \`etcdir'
+                          [initdir]
+  --with-tclsh=BIN        name or full path of Tcl interpreter shell [tclsh]
+  --with-pager=BIN        name or full path of default pager program to use to
+                          paginate informational message output (can be super-
+                          seeded at run-time by environment variable) [$pager]
+  --with-pager-opts=OPTLIST
+                          settings to apply to default pager program [$pageropts]
+  --with-verbosity=VALUE  specify default message verbosity. accepted values
+                          are \`silent', \`concise', \`normal', \`verbose' and
+                          \`debug' [$verbosity]
+  --with-dark-background-colors=SGRLIST
+                          default color set to apply if terminal background
+                          color is defined to \`dark'. Each element in SGRLIST
+                          is an output item associated to a Select Graphic
+                          Rendition (SGR) code (elements in SGRLIST are
+                          separated by \`:')
+                          [$darkbgcolors]
+  --with-light-background-colors=SGRLIST
+                          default color set to apply if terminal background
+                          color is defined to \`light'. Expect the same syntax
+                          than described for \`--with-dark-background-colors'
+                          [$lightbgcolors]
+  --with-terminal-background=VALUE
+                          terminal background color which determines the color
+                          set to apply by default between the \`dark' background
+                          colors or the \`light' background colors [$termbg]
+  --with-locked-configs=CONFIGLIST
+                          ignore environment variable superseding value for
+                          listed configuration options. accepted option names
+                          in CONFIGLIST are \`extra_siteconfig' and
+                          \`implicit_default' (each option name in CONFIGLIST
+                          should be separated by \` ') []
+  --with-unload-match-order=VALUE
+                          when unloading a module if multiple loaded modules
+                          match the request, unload module loaded first
+                          (\`returnfirst') or module loaded last (\`returnlast')
+                          [$unloadmatchorder]
+  --with-search-match=VALUE
+                          when searching for a module, query string should
+                          match the begining of module name (\`starts_with')
+                          or any part of module name (\`contains')
+                          [$searchmatch]
+  --with-icase=VALUE      apply a case insensitive match to module
+                          specification on search-like sub-commands
+                          (\`search'), on all sub-commands and modulefile Tcl
+                          commands (\`always') or disable case insensitive
+                          match (\`never') [$icase]
+  --with-modulepath=PATHLIST
+                          default modulepaths to set in default configuration
+                          file to be enabled (each path in PATHLIST should
+                          be separated by \`:') [PREFIX/modulefiles or
+                          BASEPREFIX/\$MODULE_VERSION/modulefiles if versioning
+                          installation mode enabled]
+  --with-loadedmodules=MODLIST
+                          default modulefiles to set in default configuration
+                          file to be loaded (each modulefile name in MODLIST
+                          should be separated by \`:') []
+  --with-quarantine-vars='VARNAME[=VALUE] ...'
+                          environment variables to put in quarantine when
+                          running the module command to ensure it a sane
+                          execution environment (each variable should be
+                          separated by \` '). a value can eventually be set to
+                          a quarantine variable instead of emptying it. []
+  --with-tcl              directory containing the Tcl configuration script
+                          tclConfig.sh.
+  --with-tclinclude       directory containing the Tcl header files.
+
+Depending on the above configuration options the files are approximately
+placed in the following directory structure:
+  PREFIX/
+    bin/
+    etc/
+    init/
+    lib/
+    libexec/
+    share/
+      doc/
+      man/
+        man1/
+        man4/
+      vim/
+        vimfiles/
+    modulefiles/"
+}
+
+# check requirement availability
+check_requirement() {
+   typeset req=$1
+   typeset optmesg=$2
+   typeset cmdenv=$3
+
+   if [ $# -gt 3 ]; then
+      shift 3
+   else
+      shift $#
+   fi
+
+   for cmd in $req "${@}"; do
+      if [ -n "$cmd" ]; then
+         echo -n "checking for ${cmd}... "
+         if [ -n "$cmdenv" ]; then
+            cmdsearch="$cmdenv command -v $cmd"
+         else
+            cmdsearch="command -v $cmd"
+         fi
+         reqpath=$(eval $cmdsearch)
+         if [ -n "$reqpath" ]; then
+            echo $reqpath
+            break
+         else
+            echo "not found"
+         fi
+      fi
+   done
+
+   if [ -z "$reqpath" ]; then
+      if [ -z "$optmesg" ]; then
+         echo_error "$req could not be found"
+      else
+         echo_warning "$optmesg"
+      fi
+   fi
+}
+
+# parse optional argument to find if feature is enabled or disabled
+get_feature_value() {
+   typeset val="${1#*=}"
+
+   if [ "${1//--enable/}" != "$1" ]; then
+      if [ "$val" = 'no' ]; then
+        echo 'n'
+      else
+        echo 'y'
+      fi
+   else
+      echo 'n'
+   fi
+}
+
+# parse optional argument to find package is set or disabled
+get_package_value() {
+   typeset val="${1#*=}"
+
+   if [ "${1//--with-/}" != "$1" ]; then
+      if [ "$val" = 'no' ]; then
+        echo ''
+      else
+        echo "$val"
+      fi
+   else
+      echo ''
+   fi
+}
+
+# parse arguments
+for arg in "$@"; do
+   case "$arg" in
+   --prefix=*)
+      prefix="${arg#*=}" ;;
+   --bindir=*)
+      bindir="${arg#*=}" ;;
+   --libdir=*)
+      libdir="${arg#*=}" ;;
+   --libexecdir=*)
+      libexecdir="${arg#*=}" ;;
+   --etcdir=*)
+      etcdir="${arg#*=}" ;;
+   --initdir=*)
+      initdir="${arg#*=}" ;;
+   --datarootdir=*)
+      datarootdir="${arg#*=}" ;;
+   --mandir=*)
+      mandir="${arg#*=}" ;;
+   --docdir=*)
+      docdir="${arg#*=}" ;;
+   --vimdatadir=*)
+      vimdatadir="${arg#*=}" ;;
+   --modulefilesdir=*)
+      modulefilesdir="${arg#*=}" ;;
+   --enable-set-manpath*|--disable-set-manpath)
+      setmanpath=$(get_feature_value "$arg") ;;
+   --enable-append-manpath*|--disable-append-manpath)
+      appendmanpath=$(get_feature_value "$arg") ;;
+   --enable-set-binpath*|--disable-set-binpath)
+      setbinpath=$(get_feature_value "$arg") ;;
+   --enable-append-binpath*|--disable-append-binpath)
+      appendbinpath=$(get_feature_value "$arg") ;;
+   --enable-dotmodulespath*|--disable-dotmodulespath|--enable-modulespath*|--disable-modulespath)
+      setdotmodulespath=$(get_feature_value "$arg")
+      defdotmodulespath=0 ;;
+   --enable-doc-install*|--disable-doc-install)
+      docinstall=$(get_feature_value "$arg")
+      defdocinstall=0 ;;
+   --enable-vim-addons*|--disable-vim-addons)
+      vimaddons=$(get_feature_value "$arg")
+      defvimplugin=0 ;;
+   --enable-example-modulefiles*|--disable-example-modulefiles)
+      examplemodulefiles=$(get_feature_value "$arg")
+      defexamplemodulefiles=0 ;;
+   --enable-compat-version*|--disable-compat-version)
+      compatversion=$(get_feature_value "$arg")
+      defcompatversion=0 ;;
+   --enable-libtclenvmodules*|--disable-libtclenvmodules)
+      libtclenvmodules=$(get_feature_value "$arg") ;;
+   --enable-versioning*|--disable-versioning)
+      versioning=$(get_feature_value "$arg") ;;
+   --enable-silent-shell-debug-support*|--disable-silent-shell-debug-support)
+      silentshdbgsupport=$(get_feature_value "$arg") ;;
+   --enable-set-shell-startup*|--disable-set-shell-startup)
+      setshellstartup=$(get_feature_value "$arg") ;;
+   --enable-quarantine-support*|--disable-quarantine-support)
+      quarantinesupport=$(get_feature_value "$arg") ;;
+   --enable-auto-handling*|--disable-auto-handling)
+      autohandling=$(get_feature_value "$arg") ;;
+   --enable-avail-indepth*|--disable-avail-indepth)
+      availindepth=$(get_feature_value "$arg") ;;
+   --enable-implicit-default*|--disable-implicit-default)
+      implicitdefault=$(get_feature_value "$arg") ;;
+   --enable-extended-default*|--disable-extended-default)
+      extendeddefault=$(get_feature_value "$arg") ;;
+   --enable-advanced-version-spec*|--disable-advanced-version-spec)
+      advversspec=$(get_feature_value "$arg") ;;
+   --enable-wa-277*|--disable-wa-277)
+      wa277=$(get_feature_value "$arg") ;;
+   --with-bin-search-path=*|--without-bin-search-path)
+      binsearchpath=$(get_package_value "$arg") ;;
+   --with-moduleshome=*|--without-moduleshome)
+      moduleshome=$(get_package_value "$arg") ;;
+   --with-initconf-in=*|--without-initconf-in)
+      initconfin=$(get_package_value "$arg") ;
+      allowedval=" initdir etcdir " ;
+      if [ "${allowedval// $initconfin /}" = "$allowedval" ]; then
+         echo_error "Bad value for option \`--with-initconf-in', allowed values are:$allowedval"
+      fi ;;
+   --with-tclsh=*|--without-tclsh)
+      tclshbin=$(get_package_value "$arg") ;;
+   --with-pager=*|--without-pager)
+      pager=$(get_package_value "$arg") ;;
+   --with-pager-opts=*|--without-pager-opts)
+      pageropts=$(get_package_value "$arg")
+      defpageropts=0 ;;
+   --with-verbosity=*|--without-verbosity)
+      verbosity=$(get_package_value "$arg")
+      allowedval=" silent concise normal verbose debug " ;
+      if [ "${allowedval// $verbosity /}" = "$allowedval" ]; then
+         echo_error "Bad value for option \`--with-verbosity', allowed values are:$allowedval"
+      fi ;;
+   --enable-color*|--disable-color)
+      color=$(get_feature_value "$arg") ;;
+   --with-dark-background-colors=*|--without-dark-background-colors)
+      darkbgcolors=$(get_package_value "$arg") ;;
+   --with-light-background-colors=*|--without-light-background-colors)
+      lightbgcolors=$(get_package_value "$arg") ;;
+   --with-terminal-background=*|--without-terminal-background)
+      termbg=$(get_package_value "$arg") ;
+      allowedval=" dark light " ;
+      if [ "${allowedval// $termbg /}" = "$allowedval" ]; then
+         echo_error "Bad value for option \`--with-terminal-background', allowed values are:$allowedval"
+      fi ;;
+   --with-locked-configs*|--disable-locked-configs)
+      lockedconfigs=$(get_package_value "$arg") ;
+      allowedval=" extra_siteconfig implicit_default " ;
+      for val in $lockedconfigs; do
+         if [ "${allowedval// $val /}" = "$allowedval" ]; then
+            echo_error "Bad value for option \`--with-locked-configs', allowed values are:$allowedval"
+         fi ;
+      done ;;
+   --with-unload-match-order*|--without-unload-match-order)
+      unloadmatchorder=$(get_package_value "$arg") ;
+      allowedval=" returnlast returnfirst " ;
+      if [ "${allowedval// $unloadmatchorder /}" = "$allowedval" ]; then
+         echo_error "Bad value for option \`--with-unload-match-order', allowed values are:$allowedval"
+      fi ;;
+   --with-search-match*|--without-search-match)
+      searchmatch=$(get_package_value "$arg") ;
+      allowedval=" starts_with contains " ;
+      if [ "${allowedval// $searchmatch /}" = "$allowedval" ]; then
+         echo_error "Bad value for option \`--with-search-match', allowed values are:$allowedval"
+      fi ;;
+   --with-icase*|--without-icase)
+      icase=$(get_package_value "$arg") ;
+      allowedval=" never search always " ;
+      if [ "${allowedval// $icase /}" = "$allowedval" ]; then
+         echo_error "Bad value for option \`--with-icase', allowed values are:$allowedval"
+      fi ;;
+   --with-modulepath=*|--without-modulepath)
+      modulepath=$(get_package_value "$arg") ;;
+   --with-loadedmodules=*|--without-loadedmodules)
+      loadedmodules=$(get_package_value "$arg") ;;
+   --with-quarantine-vars=*|--without-quarantine-vars)
+      quarantinevars=$(get_package_value "$arg") ;;
+   --with-tcl=*|--without-tcl)
+      compatarglist+="$arg " ;
+      libarglist+="$arg " ;;
+   --with-tclinclude=*|--with-tcl-inc=*)
+      # apply Tcl header specific location to corresponding configuration
+      # option of compat version and libtclenvmodules (not same option name)
+      val="${arg#*=}" ;
+      compatarglist+="--with-tcl-inc=$val " ;
+      libarglist+="--with-tclinclude=$val " ;;
+   --without-tclinclude|--without-tcl-inc)
+      compatarglist+="--without-tcl-inc " ;
+      libarglist+="--without-tclinclude " ;;
+   --with-module-path=*)
+      echo_warning "Option \`--with-module-path' ignored, use \`--modulepath' instead" ;;
+   -h|--help)
+      echo_usage
+      exit 0
+      ;;
+   *)
+      compatarglist+="$arg " ;;
+   esac
+done
+
+# test requirements availability
+check_requirement uname
+kernelname=$(uname -s)
+
+# Makefile for this project are GNU Makefile so we must ensure correct make
+# command is available, on Linux/Darwin systems the 'make' bin refers to GNU
+# Make whereas on other system it is not the default make flavor, so 'gmake'
+# should be checked
+case "$kernelname" in
+   Linux|Darwin|CYGWIN*|MSYS_NT*) make='make' ;;
+   *) make='gmake'
+esac
+check_requirement $make
+check_requirement sed
+check_requirement runtest "Install \`dejagnu' if you want to run the \
+testsuite"
+check_requirement manpath 'Will rely on MANPATH to get enabled man directories'
+[ -z "$reqpath" ] && usemanpath=n
+
+# rmdir option may not be available, use || true in any case
+if [ "$kernelname" = 'Linux' ]; then
+    RMDIR_IGN_NON_EMPTY='rmdir --ignore-fail-on-non-empty'
+else
+    RMDIR_IGN_NON_EMPTY='rmdir'
+fi
+
+# if we install from git repository, must have sphinx to build doc and git to
+# fetch current release number
+if [ -d '.git' ]; then
+   # pass even if sphinx not there but no doc will be built
+   check_requirement sphinx-build "Install \`sphinx-build' if you want to \
+build the documentation" '' 'sphinx-1.0-build'
+   SPHINXBUILD=$reqpath
+   [ -z "$reqpath" ] && builddoc=n
+   check_requirement git
+fi
+
+# get tclsh location from standard PATHs or /usr/local/bin
+# or validate location passed as argument
+if [ -n "$tclshbin" ]; then
+   check_requirement $tclshbin '' "PATH=$binsearchpath"
+else
+   # also check version-specific names in case no generic tclsh binary exists
+   check_requirement $TCLSH '' "PATH=$binsearchpath" 'tclsh8.6' 'tclsh8.5' 'tclsh8.4'
+fi
+TCLSH=$reqpath
+
+# get location of commands used 'fullpath' in init scripts
+check_requirement 'ps' '' "PATH=$binsearchpath"
+PS=$reqpath
+check_requirement 'basename' '' "PATH=$binsearchpath"
+BASENAME=$reqpath
+
+# get pager program location from standard PATHs or /usr/local/bin
+# or validate location passed as argument
+if [ -n "$pager" ]; then
+   check_requirement $pager '' "PATH=$binsearchpath"
+   pager=$reqpath
+fi
+# adapt pager program settings dependings of specified args
+if [ $defpageropts -eq 1 -a "${pager##*/}" != 'less' ]; then
+    pageropts=''
+    echo_warning "As chosen pager is not \`less', default pager options are cleared"
+fi
+
+# fetch modules version from git repository tags
+if [ -d '.git' ]; then
+  gitcurtag=$(git describe --tags --abbrev=0)
+  gitcurdesc=$(git describe --tags)
+  gitcurbranch=$(git rev-parse --abbrev-ref HEAD)
+  release=${gitcurtag#v}
+  if [ "$gitcurtag" = "$gitcurdesc" ]; then
+     build=''
+  elif [ "$gitcurbranch" = 'master' ]; then
+     build="+${gitcurdesc#${gitcurtag}-}"
+  else
+     build="+${gitcurbranch}${gitcurdesc#${gitcurtag}}"
+  fi
+# elsewhere fetch modules version from version.inc file
+elif [ -r ${progdir}/version.inc ]; then
+  release=$(sed -n '/^MODULES_RELEASE/{s/.*= //p;q;}' ${progdir}/version.inc)
+  build=$(sed -n '/^MODULES_BUILD/{s/.*= //p;q;}' ${progdir}/version.inc)
+fi
+VERSION=$release$build
+
+if [ -z "$VERSION" ]; then
+   echo_error "Cannot fetch modules version"
+fi
+
+# refer to binary exes and libs to build with the appropriate extension
+case "$kernelname" in
+   CYGWIN*) EXEEXT='.exe'; SHLIB_SUFFIX='.dll' ;;
+   MSYS_NT*) SHLIB_SUFFIX='.dll' ;;
+   Darwin) SHLIB_SUFFIX='.dylib' ;;
+esac
+
+# adapt prefix if versioning enabled
+baseprefix=$prefix
+if [ "$versioning" = 'y' ]; then
+   # append modules version to installation prefix
+   prefix=$prefix/$VERSION
+fi
+
+# set argument default values for those depending of other argument
+[ -z "$bindir" ] && bindir=$prefix/bin
+[ -z "$libdir" ] && libdir=$prefix/lib
+[ -z "$libexecdir" ] && libexecdir=$prefix/libexec
+[ -z "$etcdir" ] && etcdir=$prefix/etc
+[ -z "$initdir" ] && initdir=$prefix/init
+[ -z "$datarootdir" ] && datarootdir=$prefix/share
+[ -z "$mandir" ] && mandir=$datarootdir/man
+[ -z "$docdir" ] && docdir=$datarootdir/doc
+[ -z "$vimdatadir" ] && vimdatadir=$datarootdir/vim/vimfiles
+[ -z "$modulefilesdir" ] && modulefilesdir=$prefix/modulefiles
+[ -z "$moduleshome" ] && moduleshome=$prefix
+# default modulepath based on MODULE_VERSION if versioning enabled
+[ -z "$modulepath" -a "$versioning" = 'y' ] && modulepath=${modulefilesdir/#$prefix/$baseprefix\/\$MODULE_VERSION}
+[ -z "$modulepath" ] && modulepath=$modulefilesdir
+
+# check feature requirements are met
+if [ "$setdotmodulespath" = 'y' -a -n "$loadedmodules" ]; then
+   featmesg="As \`setdotmodulespath' is enabled beware that \`loadedmodules' may be ignored by init scripts"
+   echo_warning "$featmesg"
+fi
+if [ -n "$loadedmodules" -a -z "$modulepath" ]; then
+   featmesg="A value is set for \`loadedmodules' whereas \`modulepath' is not defined"
+   echo_warning "$featmesg"
+fi
+
+# prepare extension library sources if not yet done whether libtclenvmodules
+# is enabled or not to create consistent dist in any cases.
+if [ ! -e 'lib/configure' ]; then
+   check_requirement autoreconf
+   checkedautoreconf=0
+   echo "--- preparing extension library sources ----------"
+   pushd lib
+   autoreconf || exit 1
+   popd
+   echo "--------------------------------------------------"
+fi
+
+# check compat version sources
+if [ "$compatversion" = 'y' ]; then
+   if [ ! -d 'compat' ]; then
+      # extract sources from a git branch and prepare sources
+      if [ -d '.git' ]; then
+         if [ $checkedautoreconf -eq 1 ]; then
+            check_requirement autoreconf
+         fi
+         # specific location to find autopoint on Darwin
+         if [ "$kernelname" = 'Darwin' ]; then
+            check_requirement autopoint '' "PATH=$binsearchpath:/usr/local/opt/gettext/bin"
+         else
+            check_requirement autopoint
+         fi
+         check_requirement automake
+         check_requirement aclocal
+
+         echo "--- preparing compatibility version sources ------"
+         repofull=1
+         # retrieve compat version branch if not found locally
+         git rev-parse --verify $compatbranch >/dev/null 2>/dev/null
+         if [ $? -ne 0 ]; then
+            curbranch=$(git rev-parse --abbrev-ref HEAD)
+            curremote=$(git remote show | head -n 1)
+            curnbcomm=$(git rev-list $curbranch | wc -l)
+            if [ $curnbcomm -lt 350 ]; then
+               repofull=0
+            else
+               git fetch $curremote $compatbranch || exit 1
+               git branch $compatbranch $curremote/$compatbranch || exit 1
+            fi
+         fi
+
+         # repository is truncated, need to standalone clone compat branch
+         if [ $repofull -eq 0 ]; then
+            curremoteurl=$(git config --get remote.$curremote.url)
+            git clone --branch=$compatbranch $curremoteurl compat || exit 1
+         else
+            # install compat git branch in a directory
+            git worktree list >/dev/null 2>/dev/null
+            if [ $? -eq 0 ]; then
+               git worktree add compat $compatbranch || exit 1
+            else
+               gitworktree=n
+               # clone branch if no worktree command supported
+               git clone --branch=$compatbranch .git compat || exit 1
+            fi
+         fi
+
+         pushd compat
+         autoreconf -f -i || exit 1
+         popd
+         echo "--------------------------------------------------"
+      else
+         echo_error "Cannot build compatibility version, \`compat' directory cannot be found"
+      fi
+   fi
+fi
+
+# display configuration set
+# and build Makefile translation expression
+translation_regexp=()
+for arg in ${arglist}; do
+   echo "$arg = ${!arg}"
+   translation_regexp+=('-e' "s|@${arg}@|${!arg}|g")
+done
+
+# configure extension library sources
+if [ "$libtclenvmodules" = 'y' ]; then
+   echo "--- configuring extension library sources --------"
+   pushd lib
+   ./configure $libarglist || exit 1
+   popd
+   echo "--------------------------------------------------"
+fi
+
+# configure compat version sources
+if [ "$compatversion" = 'y' ]; then
+   echo "--- configuring compatibility version sources ----"
+   pushd compat
+   # unknown arguments for this configure script are passed down to the
+   # compatibility version configure script (which raise error if arg unknown)
+   # also pass arguments relative to installation paths to get compatibility
+   # man pages set with them
+   # keep versioning disabled for compat version to get expected paths defined
+   ./configure --prefix=$prefix --bindir=$bindir --libdir=$libdir \
+      --libexecdir=$libexecdir --datarootdir=$datarootdir --mandir=$mandir \
+      --docdir=$docdir --with-module-path=$modulepath --disable-versioning \
+      $compatarglist || exit 1
+   popd
+   echo "--------------------------------------------------"
+fi
+
+# generate Makefiles
+for target in ${targetlist}; do
+   # escape any '$' in value for Makefile or testsuite interpretation
+   if [ "${target/Makefile}" = "${target}" ]; then
+      extra_regexp=()
+   else
+      extra_regexp=('-e' 's|\$|\$\$|g')
+   fi
+   echo "creating $target"
+   sed "${translation_regexp[@]}" "${extra_regexp[@]}" ${target}.in >$target
+done
+
+exit 0
+
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

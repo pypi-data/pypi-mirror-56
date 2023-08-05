@@ -1,0 +1,413 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:       modules.00-init/%M%
+#   Revision:       %I%
+#   First Edition:  2017/11/03
+#   Last Mod.:      %U%, %G%
+#
+#   Authors:        Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:    Testuite testsequence
+#   Command:
+#   Sub-Command:
+#
+#   Comment:    %C{
+#           Check runtime quarantine mechanism in real operation
+#       }C%
+#
+##############################################################################
+
+if {$install_quarantinesupport eq y} {
+set modfile "$env(TESTSUITEDIR)/modulefiles.2/quar"
+
+# if quarantine configured in init scripts at build time only check
+# that defined configuration is operational
+if {$install_quarantinevars ne ""} {
+
+set ans [list]
+set ansr [list]
+
+set quar [join $install_quarlist " "]
+if { $verbose > 0 } {
+   send_user "\tAlready configured MODULES_RUN_QUARANTINE = '$quar'\n"
+}
+lappend ans "MODULES_RUN_QUARANTINE=$quar"
+lappend ansr "MODULES_RUN_QUARANTINE=$quar"
+
+foreach vname $install_quarlist {
+   if { $verbose > 0 } {
+      send_user "\tSetup $vname = 'foo'\n"
+   }
+   set env($vname) "foo"
+   lappend ans "$vname=foo"
+   if {$vname eq "LD_LIBRARY_PATH"} {
+      lappend ansr "$vname=.*foo"
+   } else {
+      lappend ansr "$vname=foo"
+   }
+}
+foreach vname [lsort $install_quarlist] {
+   if {[info exists install_runenv($vname)]} {
+      if { $verbose > 0 } {
+         send_user "\tAlready configured MODULES_RUNENV_$vname = '$install_runenv($vname)'\n"
+      }
+      lappend ans "MODULES_RUNENV_$vname=$install_runenv($vname)"
+      lappend ansr "MODULES_RUNENV_$vname=$install_runenv($vname)"
+   }
+}
+
+#
+# The tests
+#
+
+foreach shell $shell_list {
+   switch -- $shell {
+      {csh} - {tcsh} {
+         if { $verbose > 0 } {
+            send_user "\tskip test for $shell, no quarantine support\n"
+         }
+      }
+      default {
+         testall_cmd "$shell" "module source $modfile" "" [join $ans "\n"] 0
+      }
+   }
+}
+foreach shell $othlang_list {
+   switch -- $shell {
+      {r} {
+         # specific result for R as LD_LIBRARY_PATH value is altered by R on the way
+         testall_cmd_re "$shell" "source,$modfile" "" [join $ansr "\n"] 0
+      }
+      default {
+         testall_cmd "$shell" "source,$modfile" "" [join $ans "\n"] 0
+      }
+   }
+}
+
+#
+#  Clean up variables used in this test case
+#
+
+if {[info exists vname]} {
+   unset vname
+}
+
+# if quarantine has not been configured at build time, check the
+# whole mechanism in various conditions
+} else {
+
+# Create a fake libtcl so file to trip up tclsh
+if {![catch {exec ldd $install_tclsh} ldd_out]} {
+   regexp {(libtcl\S+so)} $ldd_out libtclname
+   if {[info exists libtclname]} {
+      set testlibfile "$env(TESTSUITEDIR)/$libtclname"
+      if {$verbose > 0} {
+         send_user "\tCreate fake library $testlibfile\n"
+      }
+      set fid [open $testlibfile "a+"]
+      close $fid
+   }
+}
+
+#
+# The tests
+#
+
+# no quarantine setup, nothing should be set
+foreach shell $shell_list {
+   testall_cmd "$shell" "module source $modfile" "" "" 0
+}
+foreach shell $othlang_list {
+   testall_cmd "$shell" "source,$modfile" "" "" 0
+}
+
+
+# empty quarantine setup
+set quar ""
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_RUN_QUARANTINE = '$quar'\n"
+}
+set env(MODULES_RUN_QUARANTINE) $quar
+
+set ans [list]
+lappend ans "MODULES_RUN_QUARANTINE=$quar"
+
+foreach shell $shell_list {
+   testall_cmd "$shell" "module source $modfile" "" [join $ans "\n"] 0
+}
+foreach shell $othlang_list {
+   testall_cmd "$shell" "source,$modfile" "" [join $ans "\n"] 0
+}
+
+
+# one good quarantine variable (with env value & runtime value) among bad variable names
+set quar "BAR F:OO  B\\AD 0BAD"
+set env1 "orig"
+set runenv1 "value"
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_RUN_QUARANTINE = '$quar'\n"
+    send_user "\tSetup BAR = '$env1'\n"
+    send_user "\tSetup MODULES_RUNENV_BAR = '$runenv1'\n"
+}
+set env(MODULES_RUN_QUARANTINE) $quar
+set env(BAR) $env1
+set env(MODULES_RUNENV_BAR) $runenv1
+
+# warnings are doubled (one for the init pass, second for source pass)
+set ans [list]
+lappend ans "$warn_msgs: Bad variable name set in MODULES_RUN_QUARANTINE (F:OO)"
+lappend ans "$warn_msgs: Bad variable name set in MODULES_RUN_QUARANTINE (B\\AD)"
+lappend ans "$warn_msgs: Bad variable name set in MODULES_RUN_QUARANTINE (0BAD)"
+lappend ans "$warn_msgs: Bad variable name set in MODULES_RUN_QUARANTINE (F:OO)"
+lappend ans "$warn_msgs: Bad variable name set in MODULES_RUN_QUARANTINE (B\\AD)"
+lappend ans "$warn_msgs: Bad variable name set in MODULES_RUN_QUARANTINE (0BAD)"
+lappend ans "MODULES_RUN_QUARANTINE=$quar"
+lappend ans "BAR=$env1"
+lappend ans "MODULES_RUNENV_BAR=$runenv1"
+
+# quarantine mechanism is not supported on csh/tcsh shells
+set anscsh [list]
+lappend anscsh "MODULES_RUN_QUARANTINE=$quar"
+lappend anscsh "BAR=$env1"
+lappend anscsh "MODULES_RUNENV_BAR=$runenv1"
+
+foreach shell $shell_list {
+   switch -- $shell {
+      {csh} - {tcsh} {
+         testall_cmd "$shell" "module source $modfile" "" [join $anscsh "\n"] 0
+      }
+      default {
+         testall_cmd "$shell" "module source $modfile" "" [join $ans "\n"] 0
+      }
+   }
+}
+foreach shell $othlang_list {
+   testall_cmd "$shell" "source,$modfile" "" [join $ans "\n"] 0
+}
+
+# two quarantine variables, first with env no runtime, second with env and runtime
+set quar "LD_LIBRARY_PATH FOO"
+set env1 $env(TESTSUITEDIR)
+set env2 "orig2 part2 spe\"ci\"al"
+set runenv2 "value2 valpart2 valspe\"ci\"al"
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_RUN_QUARANTINE = '$quar'\n"
+    send_user "\tSetup LD_LIBRARY_PATH = '$env1'\n"
+    send_user "\tSetup FOO = '$env2'\n"
+    send_user "\tSetup MODULES_RUNENV_FOO = '$runenv2'\n"
+    send_user "\tUnset MODULES_RUNENV_BAR\n"
+}
+set env(MODULES_RUN_QUARANTINE) $quar
+set env(LD_LIBRARY_PATH) $env1
+set env(FOO) $env2
+set env(MODULES_RUNENV_FOO) $runenv2
+unset env(MODULES_RUNENV_BAR)
+
+set ans [list]
+lappend ans "MODULES_RUN_QUARANTINE=$quar"
+lappend ans "LD_LIBRARY_PATH=$env1"
+lappend ans "FOO=$env2"
+lappend ans "MODULES_RUNENV_FOO=$runenv2"
+
+set ansr [list]
+lappend ansr "MODULES_RUN_QUARANTINE=$quar"
+# escape path if regexp-sensitive character in path
+set env1r [regsub -all "\(\[.+?\]\)" $env1 {\\\1}]
+lappend ansr "LD_LIBRARY_PATH=.*$env1r"
+lappend ansr "FOO=$env2"
+lappend ansr "MODULES_RUNENV_FOO=$runenv2"
+
+if {$sip_enabled} {
+   if { $verbose > 0 } {
+      send_user "\tSkip LD_LIBRARY_PATH-related tests as SIP is enabled\n"
+   }
+} else {
+
+foreach shell $shell_list {
+   switch -- $shell {
+      {csh} - {tcsh} {
+         if { $verbose > 0 } {
+            send_user "\tskip test for $shell, no quarantine support\n"
+         }
+      }
+      default {
+         testall_cmd "$shell" "module source $modfile" "" [join $ans "\n"] 0
+      }
+   }
+}
+foreach shell $othlang_list {
+   switch -- $shell {
+      {tcl} {
+         if { $verbose > 0 } {
+            send_user "\tspecific test for $shell\n"
+         }
+      }
+      {r} {
+         # specific result for R as LD_LIBRARY_PATH value is altered by R on the way
+         testall_cmd_re "$shell" "source,$modfile" "" [join $ansr "\n"] 0
+      }
+      default {
+         testall_cmd "$shell" "source,$modfile" "" [join $ans "\n"] 0
+      }
+   }
+}
+
+}
+
+# same test than above with a disturbing IFS value, for real shells only
+set ifs ":"
+if { $verbose > 0 } {
+    send_user "\tSetup IFS = '$ifs'\n"
+}
+set env(IFS) $ifs
+
+if {$sip_enabled} {
+   if { $verbose > 0 } {
+      send_user "\tSkip LD_LIBRARY_PATH-related tests as SIP is enabled\n"
+   }
+} else {
+
+foreach shell $shell_list {
+   switch -- $shell {
+      {csh} - {tcsh} {
+         if { $verbose > 0 } {
+            send_user "\tskip test for $shell, no quarantine support\n"
+         }
+      }
+      {fish} {
+         testall_cmd "$shell" "module source $modfile" "" [join $ans "\n"] 0
+      }
+      default {
+         testall_cmd "$shell" "IFS='$ifs' module source $modfile" "" [join $ans "\n"] 0
+      }
+   }
+}
+
+}
+
+# make a specific test for tcl, as its install_test script is not
+# shielded against bad LD_LIBRARY_PATH
+set quar "BAR FOO"
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_RUN_QUARANTINE = '$quar'\n"
+    send_user "\tSetup BAR = '$env1'\n"
+    send_user "\tUnset LD_LIBRARY_PATH\n"
+    send_user "\tUnset IFS\n"
+}
+set env(MODULES_RUN_QUARANTINE) $quar
+set env(BAR) $env1
+unset env(LD_LIBRARY_PATH)
+unset env(IFS)
+
+set ans [list]
+lappend ans "MODULES_RUN_QUARANTINE=$quar"
+lappend ans "BAR=$env1"
+lappend ans "FOO=$env2"
+lappend ans "MODULES_RUNENV_FOO=$runenv2"
+
+testall_cmd "tcl" "source,$modfile" "" [join $ans "\n"] 0
+
+
+# one quarantine variable, no env with runtime, inject bad runtime value
+set quar "LD_LIBRARY_PATH"
+set env1 ""
+set runenv1 $env(TESTSUITEDIR)
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_RUN_QUARANTINE = '$quar'\n"
+    send_user "\tSetup LD_LIBRARY_PATH = '$env1'\n"
+    send_user "\tSetup MODULES_RUNENV_LD_LIBRARY_PATH = '$runenv1'\n"
+}
+set env(MODULES_RUN_QUARANTINE) $quar
+set env(LD_LIBRARY_PATH) $env1
+set env(MODULES_RUNENV_LD_LIBRARY_PATH) $runenv1
+
+if {[info exists testlibfile] && [file exists $testlibfile]\
+   && ![catch {exec ldd $install_tclsh} ldd_out]\
+   && [string first $testlibfile $ldd_out] != -1} {
+   set ans "$install_tclsh: error while loading shared libraries: $testlibfile: file too short\n.*"
+
+   foreach shell $shell_list {
+      switch -- $shell {
+         {csh} - {tcsh} {
+            if { $verbose > 0 } {
+               send_user "\tskip test for $shell, no quarantine support\n"
+            }
+         }
+         default {
+            if {$shell eq "ksh"} {
+               set ansexit 126
+            } else {
+               set ansexit 127
+            }
+            testall_cmd_re "$shell" "module source $modfile" "" $ans $ansexit
+         }
+      }
+   }
+   foreach shell $othlang_list {
+      testall_cmd_re "$shell" "source,$modfile" "" $ans 1
+   }
+} elseif {$verbose > 0} {
+   send_user "\tSkip test as fake library setup not understood by $install_tclsh\n"
+}
+
+
+#
+#  Clean up variables used in this test case
+#
+
+# remove temp file used for test
+if {[info exists testlibfile] && [file exists $testlibfile]} {
+   if {$verbose > 0} {
+      send_user "\tDelete fake library $testlibfile\n"
+   }
+   file delete $testlibfile
+   unset testlibfile
+}
+
+if {[info exists libtclname]} {
+   unset libtclname
+   unset fid
+}
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tUnset MODULES_RUN_QUARANTINE\n"
+    send_user "\tUnset LD_LIBRARY_PATH\n"
+    send_user "\tUnset BAR\n"
+    send_user "\tUnset FOO\n"
+    send_user "\tUnset MODULES_RUNENV_LD_LIBRARY_PATH\n"
+    send_user "\tUnset MODULES_RUNENV_FOO\n"
+}
+unset env(MODULES_RUN_QUARANTINE)
+unset env(LD_LIBRARY_PATH)
+unset env(BAR)
+unset env(FOO)
+unset env(MODULES_RUNENV_LD_LIBRARY_PATH)
+unset env(MODULES_RUNENV_FOO)
+
+unset quar
+unset env1r
+unset env1
+unset env2
+unset runenv1
+unset runenv2
+unset ifs
+
+unset anscsh
+if {[info exists ansexit]} {
+   unset ansexit
+}
+
+}
+
+unset ans
+unset ansr
+
+unset modfile
+
+} elseif {$verbose > 0} {
+   send_user "\tSkipping quarantine mechanism checks\n"
+}
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

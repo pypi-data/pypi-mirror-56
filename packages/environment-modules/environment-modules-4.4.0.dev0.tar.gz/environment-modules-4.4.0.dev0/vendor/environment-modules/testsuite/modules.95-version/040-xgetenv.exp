@@ -1,0 +1,80 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2001/06/20
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen,  rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		load & unload
+#   Modulefiles:	versions/1.1, versions/1.2, versions/1.3
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module versioning capability.
+#			specifically the $MODULE_VERSION selection
+#		}C%
+#
+##############################################################################
+
+if { $verbose > 0 } {
+	send_user "\tLoading and unloading a module selected by \$MODULE_VERSION...\n"
+}
+
+set env(MODULE_VERSION) "$version3"
+set env(MODULE_VERSION_STACK) "$module_version_stack3"
+setenv_loaded_module [list $module1 $module2 $module3] [list $modulefile1 $modulefile2 $modulefile3]
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list set TESTSUITE "1.3"]
+lappend ans [list setpath LOADEDMODULES "$module1:$module2:$module3:version"]
+lappend ans [list setpath _LMFILES_ "$modulefile1:$modulefile2:$modulefile3:$path3/version"]
+
+#
+#  The tests
+#
+
+testouterr_cmd_re "ALL" "load version" $ans ""
+
+#
+# Remove a module
+#
+#  For the different shells ...
+#
+
+setenv_loaded_module [list $module1 $module2 version $module3] [list $modulefile1 $modulefile2 $path3/version $modulefile3]
+set env(TESTSUITE) "1.3"
+
+set ans [list]
+lappend ans [list unset TESTSUITE]
+lappend ans [list setpath LOADEDMODULES "$module1:$module2:$module3"]
+lappend ans [list setpath _LMFILES_ "$modulefile1:$modulefile2:$modulefile3"]
+
+#
+#  The tests
+#
+
+testouterr_cmd_re "ALL" "unload version" $ans ""
+
+#
+#  Cleanup
+#
+
+unset ans
+
+#
+#  Clean up the environment, too
+#
+
+unset env(MODULE_VERSION)
+unset env(MODULE_VERSION_STACK)
+unset env(_LMFILES_)
+unsetenv_loaded_module
+

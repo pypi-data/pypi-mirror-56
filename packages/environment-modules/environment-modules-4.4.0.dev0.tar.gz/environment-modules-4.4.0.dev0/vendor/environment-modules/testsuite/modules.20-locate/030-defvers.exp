@@ -1,0 +1,91 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		display
+#   Modulefiles:	loc_dv1, loc_dv2, loc_dv3, loc_dv4, loc_dv5, loc_dv6
+#   Modulefiles:	loc_dv7, loc_dv8, loc_dv9, loc_dvv1, loc_dv_xx
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Localization of the modulefile default versions
+#
+#			     dv1	Select version 2.0 by filename
+#					(2.0 < 1.0)
+#			     dv2	Select version 1.0 by using
+#					'.version' file
+#			     dv3	'.version' file pointing to a non
+#					existant modulefile
+#			     dv4	'.version' file pointing to a illegal
+#					modulefile
+#			     dv5	empty directory
+#			     dv6	Select 2.0 by filename. 2.0 is a
+#					directory with 1.0 inside
+#			     dv7	Select 2.0 by .version. 2.0 is a
+#					directory with 1.0 inside
+#			     dv8	Select 2.0 by file because the magic
+#					cookie is missing in .version
+#                dv9    Select version 1.0 by using
+#                   '.version' file using module-version cmd
+#                dvv1    Select version 1.0 by using
+#                   '.version' file using module-version cmd
+#                   working with virtual modules
+#			     dv_xx	non existant directory
+#
+#		}C%
+#
+##############################################################################
+
+#
+# Variables for this test
+#
+
+set module_3 "$modpathre/loc_dv3/3.0"
+set module_4 "$modpathre/loc_dv4/2.0"
+set version_8 "$modpathre/loc_dv8/.version"
+
+set err_mag_3 "$err_magic'$module_3'"
+set err_mag_4 "$err_magic'$module_4'"
+set err_mag_8 "$err_magic'$version_8'"
+
+#
+# The tests ...
+#
+
+testouterr_cmd_re "sh" "display loc_dv1" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$modpathre/loc_dv1/2.0:\n\nmodule-whatis\\s+loc_dv1/2.0\n$modlin" "$err_nodefault'loc_dv1'"]
+testouterr_cmd_re "sh" "display loc_dv2" "OK" "$modlin\n$modpathre/loc_dv2/1.0:\n\nmodule-whatis\\s+loc_dv2/1.0\n$modlin"
+testouterr_cmd_re "sh" "display loc_dv3" "ERR" "$err_path'loc_dv3/3.0'"
+testouterr_cmd_re "sh" "display loc_dv4" "ERR" "$err_mag_4\n$err_contact"
+testouterr_cmd_re "sh" "display loc_dv5" "ERR" "$err_path'loc_dv5'"
+testouterr_cmd_re "sh" "display loc_dv6" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$modpathre/loc_dv6/2.0/1.0:\n\n$modlin" "$err_nodefault'loc_dv6'"]
+testouterr_cmd_re "sh" "display loc_dv7" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$modpathre/loc_dv7/2.0/1.0:\n\nmodule-whatis\\s+loc_dv7/2.0/1.0\n$modlin" "$err_nodefault'loc_dv7/2.0'"]
+testouterr_cmd_re "sh" "display loc_dv8" "ERR" $err_mag_8\n$err_contact\n[if_implicitdefault "$modlin\n$modpathre/loc_dv8/2.0:\n\n$modlin" "$err_nodefault'loc_dv8'"]
+testouterr_cmd_re "sh" "display loc_dv9" "OK" "$modlin\n$modpathre/loc_dv9/1.0:\n\nmodule-whatis\\s+loc_dv9/1.0\n$modlin"
+testouterr_cmd_re "sh" "display loc_dvv1" "OK" "$modlin\n$modpathre/loc_dvv1/.common:\n\nmodule-whatis\\s+loc_dvv1/1.0\n$modlin"
+testouterr_cmd_re "sh" "display loc_dv_xx" "ERR" "$err_path'loc_dv_xx'"
+
+# check extra / does not affect localization result
+testouterr_cmd_re "sh" "display loc_dv1/" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$modpathre/loc_dv1/2.0:\n\nmodule-whatis\\s+loc_dv1/2.0\n$modlin" "$err_nodefault'loc_dv1'"]
+testouterr_cmd_re "sh" "display loc_dv1//" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$modpathre/loc_dv1/2.0:\n\nmodule-whatis\\s+loc_dv1/2.0\n$modlin" "$err_nodefault'loc_dv1'"]
+testouterr_cmd_re "sh" "display loc_dv_xx/" "ERR" "$err_path'loc_dv_xx/'"
+testouterr_cmd_re "sh" "display loc_dv_xx//" "ERR" "$err_path'loc_dv_xx//'"
+
+#
+# Cleanup
+#
+
+unset err_mag_3
+unset err_mag_4
+unset err_mag_8
+
+unset version_8
+unset module_4
+unset module_3

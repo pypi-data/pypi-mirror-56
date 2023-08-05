@@ -1,0 +1,62 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	info/user
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'module-info user' module subcommand with-
+#			out own suggestion.
+#			This command does not change behaviour depending on
+#			the user shell. Tests are made for the bourne shell
+#			here.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "info/user"
+set modulefile "$modpath/$module"
+
+#
+#  The _LMFILES_ and the LOADEDMODULES will be affected
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module:1"]
+lappend ans [list set _LMFILES_ $modulefile]
+lappend ans [list set LOADEDMODULES $module]
+lappend ans [list set testsuite ""]
+
+#
+#  The tests
+#
+
+# different behavior than C-version: on Tcl-version userlvl is not handled and
+# [module-info user] will always return an empty string.
+
+test_cmd "sh" "load $module" $ans
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefile
+unset module

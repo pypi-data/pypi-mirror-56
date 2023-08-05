@@ -1,0 +1,155 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2016/07/21
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle
+#
+#   Description:	Testuite testsequence
+#   Command:		load & unload
+#   Modulefiles:	x-resource/1
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'x-resource' module subcommand
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load then a module unload commands.
+#    It will result in the environment variables "_LMFILES_", "LOADEDMODULES"
+#    to be set up and in xrdb utility calls to be made. When unloading
+#    environment variables will be unset and new calls to xrdb will be made
+#    to clean x-resource properties from their values
+#
+
+set module "x-resource/1"
+set modulefile "$modpath/$module"
+set xresfile [regsub -all "\(\[.+?\]\)" "$env(TESTSUITEDIR)/home/.Xresources" {\\\1}]
+set xresprop1 "my-other-prog\\*complex-ress-value"
+set xresprop2 "my-prog\\*my-ress"
+set xresprop3 "another-prog.one-prop"
+set xresprop4 "another-prog.another-prop"
+set xresprop5 "my-other-prog\\*my-other-ress"
+set xresval1 "-fontname-bold-r-\\*-12-\\*-\\*-\\*-\\*-\\*"
+set xresval2 "true"
+set xresval5 "Fontname:style=Regular:size=10"
+
+
+#
+#  load
+#  For the different shells ...
+#
+
+lappend ans [list xres $xresfile]
+lappend ans [list xres $xresprop2 $xresval2]
+lappend ans [list xres $xresprop5 $xresval5]
+lappend ans [list xres $xresprop1 $xresval1]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The load tests
+#
+
+# if error when testing X11 setup, will get an error not a loaded module
+if {[info exists x11_warn]} {
+    testouterr_cmd "ALL" "load $module" "ERR" [msg_load $module $x11_warn]
+} else {
+    test_cmd_re "ALL" "load $module" $ans
+}
+
+
+# setup an empty path
+set ORIG_PATH $env(PATH)
+if { $verbose > 0 } {
+    send_user "\tSetup PATH = \n"
+}
+set env(PATH) ""
+
+# cannot find xrdb bin
+testouterr_cmd "ALL" "load $module" "ERR" [msg_load $module $xrdb_warn]
+
+# restore default testsuite path
+if { $verbose > 0 } {
+    send_user "\tRestore PATH = $ORIG_PATH\n"
+}
+set env(PATH) $ORIG_PATH
+unset ORIG_PATH
+
+
+#
+# set-up a loaded environment
+#
+setenv_loaded_module $module $modulefile
+
+#
+#  For the different shells ...
+#
+
+set ans [list]
+lappend ans [list unxres $xresprop3 $xresfile]
+lappend ans [list unxres $xresprop4 $xresfile]
+lappend ans [list unxres $xresprop2]
+lappend ans [list unxres $xresprop5]
+lappend ans [list unxres $xresprop1]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+#
+#  The unload tests
+#
+
+# if error when testing X11 setup, will get an error not a loaded module
+if {[info exists x11_warn]} {
+    testouterr_cmd "ALL" "unload $module" "ERR" [msg_unload $module $x11_warn]
+} else {
+    test_cmd_re "ALL" "unload $module" $ans
+}
+
+# setup an empty path
+set ORIG_PATH $env(PATH)
+if { $verbose > 0 } {
+    send_user "\tSetup PATH = \n"
+}
+set env(PATH) ""
+
+# cannot find xrdb bin
+testouterr_cmd "ALL" "unload $module" "ERR" [msg_unload $module $xrdb_warn]
+
+# restore default testsuite path
+if { $verbose > 0 } {
+    send_user "\tRestore PATH = $ORIG_PATH\n"
+}
+set env(PATH) $ORIG_PATH
+unset ORIG_PATH
+
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset xresval1
+unset xresval2
+unset xresval5
+unset xresprop1
+unset xresprop2
+unset xresprop3
+unset xresprop4
+unset xresprop5
+unset xresfile
+unset modulefile
+unset module
+
+#
+#  Clean up the environment, too
+#
+
+unsetenv_loaded_module

@@ -1,0 +1,364 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2017/06/23
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		load, unload, switch, help, display, test
+#   Modulefiles:	spread, spreadrc
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests how modulefile and modulerc interpreter let spread
+#           variable, procedure and commands definitions from one
+#           interpretation to another when these interpretations are
+#           cascaded.
+#		}C%
+#
+##############################################################################
+
+set mod "spread"
+set mod1 "$mod/5.0"
+set mod1c "$mod/6.0"
+set mod2 "$mod/7.0"
+set mod2c "$mod/8.0"
+set modfile1 "$modpath/$mod1"
+set modfilere1 "$modpathre/$mod1"
+set modfile1c "$modpath/$mod1c"
+set modfilere1c "$modpathre/$mod1c"
+set modfile2 "$modpath/$mod2"
+set modfilere2 "$modpathre/$mod2"
+set modfile2c "$modpath/$mod2c"
+set modfilere2c "$modpathre/$mod2c"
+
+# mod1 and mod2 are designed to output any incorrect behavior detected
+# so when nothing is displayed it means test went as expected
+set spreadres ""
+
+# if auto_handling is enabled interpretation are not cascaded on an unload mode
+# instead module is interpreted to be unloaded once main module interpretation
+# is finished. so procedure alteration spread in this case
+if {$install_autohandling eq {y}} {
+    set spreadresun {procedure \S+ has been altered\n\n}
+} else {
+    set spreadresun {}
+}
+
+set mod1disph "$modlin\n$modfilere1:\n"
+set mod2disph "$modlin\n$modfilere2:\n"
+set mod1dispres "setenv\t\ttestspread yes\nmodule\t\tload $mod1c\n$mod"
+set mod2dispres "setenv\t\ttestspreadcmd yes\nmodule\t\tload $mod2c\n$mod"
+
+set mod1helph "$modlin\nModule Specific Help for $modfilere1:\n"
+set mod2helph "$modlin\nModule Specific Help for $modfilere2:\n"
+set mod1helpres "$mod"
+set mod2helpres "$mod"
+
+set mod1testh "$modlin\nModule Specific Test for $modfilere1:\n"
+set mod2testh "$modlin\nModule Specific Test for $modfilere2:\n"
+set mod1testres "$mod\nTest result: PASS"
+set mod2testres "$mod\nTest result: PASS"
+
+
+#
+#  The tests
+#
+
+lappend ans [list set testspread yes]
+lappend ans [list set testspreadsub yes]
+lappend ans [list setpath LOADEDMODULES "$mod1c:$mod1"]
+lappend ans [list setpath _LMFILES_ "$modfile1c:$modfile1"]
+lappend ans [list setpath MODULES_LMPREREQ $mod1&$mod1c]
+lappend ans [list setpath MODULES_LMNOTUASKED $mod1c]
+
+testouterr_cmd_re "sh" "load $mod1" $ans "$spreadres[msg_top_load $mod1 {} $mod1c {}]"
+testouterr_cmd_re "sh" "display $mod1" "OK" "$mod1disph\n$mod1dispres\n$modlin"
+testouterr_cmd_re "sh" "help $mod1" "OK" "$mod1helph\n$mod1helpres\n$modlin"
+testouterr_cmd_re "sh" "test $mod1" "OK" "$mod1testh\n$mod1testres\n$modlin"
+# avail/whatis have already been tested in 300-interp
+
+# tests looping on same modulefile
+testouterr_cmd_re "sh" "display $mod1 $mod1" "OK" "$mod1disph\n$mod1dispres\n$mod1disph\n$spreadres$mod1dispres\n$modlin"
+testouterr_cmd_re "sh" "help $mod1 $mod1" "OK" "$mod1helph\n$mod1helpres\n$mod1helph\n$spreadres$mod1helpres\n$modlin"
+testouterr_cmd_re "sh" "test $mod1 $mod1" "OK" "$mod1testh\n$mod1testres\n$mod1testh\n$spreadres$mod1testres\n$modlin"
+
+# Set up the environment for test that require mod1 to be loaded
+setenv_loaded_module [list $mod1c $mod1] [list $modfile1c $modfile1] [list $mod1c]
+setenv_path_var MODULES_LMPREREQ $mod1&$mod1c
+set env(testspreadsub) "yes"
+set env(testspread) "yes"
+
+# test switching
+set ans [list]
+lappend ans [list unset testspread]
+lappend ans [list unset testspreadsub]
+lappend ans [list setpath LOADEDMODULES "$mod2c:$mod2"]
+lappend ans [list setpath _LMFILES_ "$modfile2c:$modfile2"]
+lappend ans [list setpath MODULES_LMPREREQ $mod2&$mod2c]
+lappend ans [list setpath MODULES_LMNOTUASKED $mod2c]
+lappend ans [list set testspreadcmd yes]
+lappend ans [list set testspreadcmdsub yes]
+testouterr_cmd_re "sh" "switch $mod1 $mod2" $ans $spreadresun[msg_top_switch $mod1 $mod2 {} $mod1c {} $mod2c {}]
+
+testouterr_cmd "sh" "list -t" "OK" "Currently Loaded Modulefiles:\n$mod1c\n$mod1"
+# test unloading
+set ans [list]
+lappend ans [list unset testspread]
+lappend ans [list unset testspreadsub]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+lappend ans [list unsetpath MODULES_LMPREREQ]
+lappend ans [list unsetpath MODULES_LMNOTUASKED]
+testouterr_cmd_re "sh" "unload $mod1" $ans $spreadresun[msg_top_unload $mod1 {} $mod1c {}]
+
+# Clean up the environment
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMPREREQ
+unset env(testspreadsub)
+unset env(testspread)
+
+
+#
+# Test with altered command in modulefile
+#
+
+set ans [list]
+lappend ans [list set testspreadcmd yes]
+lappend ans [list set testspreadcmdsub yes]
+lappend ans [list setpath LOADEDMODULES "$mod2c:$mod2"]
+lappend ans [list setpath _LMFILES_ "$modfile2c:$modfile2"]
+lappend ans [list setpath MODULES_LMPREREQ $mod2&$mod2c]
+lappend ans [list setpath MODULES_LMNOTUASKED $mod2c]
+
+testouterr_cmd_re "sh" "load $mod2" $ans "$spreadres[msg_top_load $mod2 {} $mod2c {}]"
+testouterr_cmd_re "sh" "display $mod2" "OK" "$mod2disph\n$mod2dispres\n$modlin"
+testouterr_cmd_re "sh" "help $mod2" "OK" "$mod2helph\n$mod2helpres\n$modlin"
+testouterr_cmd_re "sh" "test $mod2" "OK" "$mod2testh\n$mod2testres\n$modlin"
+# avail/whatis have already been tested in 300-interp
+
+# tests looping on same modulefile
+testouterr_cmd_re "sh" "display $mod2 $mod2" "OK" "$mod2disph\n$mod2dispres\n$mod2disph\n$spreadres$mod2dispres\n$modlin"
+testouterr_cmd_re "sh" "help $mod2 $mod2" "OK" "$mod2helph\n$mod2helpres\n$mod2helph\n$spreadres$mod2helpres\n$modlin"
+testouterr_cmd_re "sh" "test $mod2 $mod2" "OK" "$mod2testh\n$mod2testres\n$mod2testh\n$spreadres$mod2testres\n$modlin"
+
+# Set up the environment for test that require mod2 to be loaded
+setenv_loaded_module [list $mod2c $mod2] [list $modfile2c $modfile2] [list $mod2c]
+setenv_path_var MODULES_LMPREREQ $mod2&$mod2c
+set env(testspreadcmdsub) "yes"
+set env(testspreadcmd) "yes"
+
+testouterr_cmd "sh" "list -t" "OK" "Currently Loaded Modulefiles:\n$mod2c\n$mod2"
+# test unloading
+set ans [list]
+lappend ans [list unset testspreadcmd]
+lappend ans [list unset testspreadcmdsub]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+lappend ans [list unsetpath MODULES_LMPREREQ]
+lappend ans [list unsetpath MODULES_LMNOTUASKED]
+testouterr_cmd_re "sh" "unload $mod2" $ans "$spreadres[msg_top_unload $mod2 {} $mod2c {}]"
+
+# Clean up the environment
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMPREREQ
+unset env(testspreadcmdsub)
+unset env(testspreadcmd)
+
+
+#
+# Test spreading with modulerc and modulefile
+#
+
+set mod "spreadrc"
+set mod1 "$mod/dir5/1.0"
+set mod1c "$mod/dir6/1.0"
+set mod2 "$mod/dir7/1.0"
+set mod2c "$mod/dir8/1.0"
+set modfile1 "$modpath/$mod1"
+set modfilere1 "$modpathre/$mod1"
+set modfile1c "$modpath/$mod1c"
+set modfilere1c "$modpathre/$mod1c"
+set modfile2 "$modpath/$mod2"
+set modfilere2 "$modpathre/$mod2"
+set modfile2c "$modpath/$mod2c"
+set modfilere2c "$modpathre/$mod2c"
+
+# mod1 and mod2 are designed to output any incorrect behavior detected
+# so when nothing is displayed it means test went as expected
+set spreadres ""
+
+set mod1disph "$modlin\n$modfilere1:\n"
+set mod2disph "$modlin\n$modfilere2:\n"
+set mod1dispres "setenv\t\ttestspreadrc yes\nmodule\t\tload $mod1c\nspreadmod"
+set mod2dispres "setenv\t\ttestspreadrccmd yes\nmodule\t\tload $mod2c\nspreadmod"
+
+set mod1helph "$modlin\nModule Specific Help for $modfilere1:\n"
+set mod2helph "$modlin\nModule Specific Help for $modfilere2:\n"
+set mod1helpres "spreadmod"
+set mod2helpres "spreadmod"
+
+set mod1testh "$modlin\nModule Specific Test for $modfilere1:\n"
+set mod2testh "$modlin\nModule Specific Test for $modfilere2:\n"
+set mod1testres "spreadmod\nTest result: PASS"
+set mod2testres "spreadmod\nTest result: PASS"
+
+
+#
+#  The tests
+#
+
+set ans [list]
+lappend ans [list set testspreadrc yes]
+lappend ans [list set testspreadrcsub yes]
+lappend ans [list setpath LOADEDMODULES "$mod1c:$mod1"]
+lappend ans [list setpath _LMFILES_ "$modfile1c:$modfile1"]
+lappend ans [list setpath MODULES_LMPREREQ $mod1&$mod1c]
+lappend ans [list setpath MODULES_LMNOTUASKED $mod1c]
+
+testouterr_cmd_re "sh" "load $mod1" $ans "$spreadres[msg_top_load $mod1 {} $mod1c {}]"
+testouterr_cmd_re "sh" "display $mod1" "OK" "$mod1disph\n$mod1dispres\n$modlin"
+testouterr_cmd_re "sh" "help $mod1" "OK" "$mod1helph\n$mod1helpres\n$modlin"
+testouterr_cmd_re "sh" "test $mod1" "OK" "$mod1testh\n$mod1testres\n$modlin"
+# avail/whatis have already been tested in 300-interp
+
+# tests looping on same modulefile
+testouterr_cmd_re "sh" "display $mod1 $mod1" "OK" "$mod1disph\n$mod1dispres\n$mod1disph\n$spreadres$mod1dispres\n$modlin"
+testouterr_cmd_re "sh" "help $mod1 $mod1" "OK" "$mod1helph\n$mod1helpres\n$mod1helph\n$spreadres$mod1helpres\n$modlin"
+testouterr_cmd_re "sh" "test $mod1 $mod1" "OK" "$mod1testh\n$mod1testres\n$mod1testh\n$spreadres$mod1testres\n$modlin"
+
+# Set up the environment for test that require mod1 to be loaded
+setenv_loaded_module [list $mod1c $mod1] [list $modfile1c $modfile1] [list $mod1c]
+setenv_path_var MODULES_LMPREREQ $mod1&$mod1c
+set env(testspreadrcsub) "yes"
+set env(testspreadrc) "yes"
+
+# test switching
+set ans [list]
+lappend ans [list unset testspreadrc]
+lappend ans [list unset testspreadrcsub]
+lappend ans [list setpath LOADEDMODULES "$mod2c:$mod2"]
+lappend ans [list setpath _LMFILES_ "$modfile2c:$modfile2"]
+lappend ans [list setpath MODULES_LMPREREQ $mod2&$mod2c]
+lappend ans [list setpath MODULES_LMNOTUASKED $mod2c]
+lappend ans [list set testspreadrccmd yes]
+lappend ans [list set testspreadrccmdsub yes]
+testouterr_cmd_re "sh" "switch $mod1 $mod2" $ans $spreadresun[msg_top_switch $mod1 $mod2 {} $mod1c {} $mod2c {}]
+
+testouterr_cmd "sh" "list -t" "OK" "Currently Loaded Modulefiles:\n$mod1c\n$mod1"
+# test unloading
+set ans [list]
+lappend ans [list unset testspreadrc]
+if {$install_autohandling ne {y}} {
+lappend ans [list unset testspreadrcsub]
+}
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+lappend ans [list unsetpath MODULES_LMPREREQ]
+if {$install_autohandling eq {y}} {
+lappend ans [list unset testspreadrcsub]
+}
+lappend ans [list unsetpath MODULES_LMNOTUASKED]
+testouterr_cmd_re "sh" "unload $mod1" $ans $spreadresun[msg_top_unload $mod1 {} $mod1c {}]
+
+# Clean up the environment
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMPREREQ
+unset env(testspreadrcsub)
+unset env(testspreadrc)
+
+
+#
+# Test modulerc/modulefile with altered command
+#
+
+set ans [list]
+lappend ans [list set testspreadrccmd yes]
+lappend ans [list set testspreadrccmdsub yes]
+lappend ans [list setpath LOADEDMODULES "$mod2c:$mod2"]
+lappend ans [list setpath _LMFILES_ "$modfile2c:$modfile2"]
+lappend ans [list setpath MODULES_LMPREREQ $mod2&$mod2c]
+lappend ans [list setpath MODULES_LMNOTUASKED $mod2c]
+
+testouterr_cmd_re "sh" "load $mod2" $ans "$spreadres[msg_top_load $mod2 {} $mod2c {}]"
+testouterr_cmd_re "sh" "display $mod2" "OK" "$mod2disph\n$mod2dispres\n$modlin"
+testouterr_cmd_re "sh" "help $mod2" "OK" "$mod2helph\n$mod2helpres\n$modlin"
+testouterr_cmd_re "sh" "test $mod2" "OK" "$mod2testh\n$mod2testres\n$modlin"
+# avail/whatis have already been tested in 300-interp
+
+# tests looping on same modulefile
+testouterr_cmd_re "sh" "display $mod2 $mod2" "OK" "$mod2disph\n$mod2dispres\n$mod2disph\n$spreadres$mod2dispres\n$modlin"
+testouterr_cmd_re "sh" "help $mod2 $mod2" "OK" "$mod2helph\n$mod2helpres\n$mod2helph\n$spreadres$mod2helpres\n$modlin"
+testouterr_cmd_re "sh" "test $mod2 $mod2" "OK" "$mod2testh\n$mod2testres\n$mod2testh\n$spreadres$mod2testres\n$modlin"
+
+# Set up the environment for test that require mod2 to be loaded
+setenv_loaded_module [list $mod2c $mod2] [list $modfile2c $modfile2] [list $mod2c]
+setenv_path_var MODULES_LMPREREQ $mod2&$mod2c
+set env(testspreadrccmdsub) "yes"
+set env(testspreadrccmd) "yes"
+
+testouterr_cmd "sh" "list -t" "OK" "Currently Loaded Modulefiles:\n$mod2c\n$mod2"
+# test unloading
+set ans [list]
+lappend ans [list unset testspreadrccmd]
+if {$install_autohandling ne {y}} {
+lappend ans [list unset testspreadrccmdsub]
+}
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+lappend ans [list unsetpath MODULES_LMPREREQ]
+if {$install_autohandling eq {y}} {
+lappend ans [list unset testspreadrccmdsub]
+}
+lappend ans [list unsetpath MODULES_LMNOTUASKED]
+testouterr_cmd_re "sh" "unload $mod2" $ans "$spreadres[msg_top_unload $mod2 {} $mod2c {}]"
+
+# Clean up the environment
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMPREREQ
+unset env(testspreadrccmdsub)
+unset env(testspreadrccmd)
+
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset mod1disph
+unset mod2disph
+unset mod1dispres
+unset mod2dispres
+
+unset mod1helph
+unset mod2helph
+unset mod1helpres
+unset mod2helpres
+
+unset mod1testh
+unset mod2testh
+unset mod1testres
+unset mod2testres
+
+unset spreadres
+unset spreadresun
+
+unset modfile1
+unset modfilere1
+unset modfile1c
+unset modfilere1c
+unset modfile2
+unset modfilere2
+unset modfile2c
+unset modfilere2c
+unset mod
+unset mod1
+unset mod1c
+unset mod2
+unset mod2c

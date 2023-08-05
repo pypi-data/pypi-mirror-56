@@ -1,0 +1,171 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		unload
+#   Modulefiles:	remove/2.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the reverse 'remove-path' module subcommand for
+#			all allowed shell types.
+#		}C%
+#
+#   Trouble:	%T{
+#			Removal of a 'remove-path' command *SHOULD* result in
+#			the once removed path being restored.
+#
+#			To be discussed:
+#
+#			    - We cannot determine, if the path really *HAS
+#			      BEEN* removed or if the part to be removed has
+#			      never been part of the path
+#		}T%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module unload command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "PATH" to
+#    be set up
+#
+
+set module "remove/2.0"
+set modulefile "$modpath/$module"
+
+set old_path $env(PATH)
+set ts_path "/this/is/the/modules/testsuite"
+set new_path "$old_path:$ts_path"
+
+#
+#  Set up the environment for reversal ...
+#
+
+setenv_loaded_module $module $modulefile
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+#
+#  The tests
+#
+
+test_cmd "ALL" "unload $module" $ans
+
+#
+# Try bad argument list: missing variable name
+#
+
+set module "remove/0.3"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+set ts_err "$moderr_msgs: unload-path should get an environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "unload $module" "ERR" [msg_unload $module $ts_err]
+
+#
+# Try bad argument list: missing variable value
+#
+
+set module "remove/0.4"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+set ts_err "$moderr_msgs: unload-path should get a value for environment variable PATH\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "unload $module" "ERR" [msg_unload $module $ts_err]
+
+#
+# Try bad argument list: empty variable name
+#
+
+set module "remove/0.5"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+set ts_err "$moderr_msgs: unload-path should get a valid environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "unload $module" "ERR" [msg_unload $module $ts_err]
+
+#
+# Try command switches passed after variable name
+#
+
+setenv_path_var testsuite --delim=,
+setenv_path_var testsuite2 , foo
+set module "remove/1.8"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+set ans [list]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+testouterr_cmd_re "sh" "unload $module" $ans {}
+unsetenv_path_var testsuite
+unsetenv_path_var testsuite2
+
+
+#
+# Remove multiple paths passed as one string
+#
+
+set module "remove/2.3"
+set modulefile "$modpath/$module"
+
+set env(FOO_modshare) "/path/to/dir1:1"
+set env(FOO) "/path/to/dir1"
+setenv_loaded_module $module $modulefile
+
+set ans [list]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+testouterr_cmd "sh" "unload $module" $ans ""
+
+#
+# Remove multiple paths passed as multiple strings
+#
+
+set module "remove/2.4"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+
+testouterr_cmd "sh" "unload $module" $ans ""
+
+#
+# Try pass invalid option to remove-path
+#
+
+set module remove/8.0
+set modulefile $modpath/$module
+setenv_loaded_module $module $modulefile
+set ts_err "$moderr_msgs: invalid option '-delim=,' for unload-path\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd sh "unload $module" ERR [msg_unload $module $ts_err]
+
+#
+#  Clean up the environment
+#
+
+unset env(FOO_modshare)
+unset env(FOO)
+unsetenv_loaded_module
+
+#
+#  Cleanup
+#
+
+unset new_path
+unset ts_path
+unset old_path
+unset ts_err
+
+unset ans
+
+unset modulefile
+unset module

@@ -1,0 +1,186 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:       modules.00-init/%M%
+#   Revision:       %I%
+#   First Edition:  2017/05/08
+#   Last Mod.:      %U%, %G%
+#
+#   Authors:        Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:    Testuite testsequence
+#   Command:
+#   Sub-Command:
+#
+#   Comment:    %C{
+#           Check module command propagation in sub shell of other kind
+#       }C%
+#
+##############################################################################
+
+
+set bad_cmd "$error_msgs: Invalid command 'foo'"
+
+set bash_nf "module: command not found"
+if {$tcl_platform(os) eq "SunOS"} {
+   set cmd_nf "module: not found \\\[No such file or directory\\\]"
+} elseif {$tcl_platform(os) eq "FreeBSD"} {
+   set cmd_nf "eval: module: not found"
+} elseif {$sh_kind eq "dash"} {
+   set cmd_nf "module: not found"
+} else {
+   set cmd_nf $bash_nf
+}
+# depending on ksh version, error message could change
+set ksh_nf "module: (inaccessible or )?not found( \\\[No such file or directory\\\])?"
+set zsh_nf "command not found: module"
+set tcsh_nf "module: Command not found."
+if {$tcl_platform(os) eq "SunOS"} {
+   set csh_nf "module: Command not found"
+} else {
+   set csh_nf $tcsh_nf
+}
+set fish_nf "fish: Unknown command '?module"
+
+#
+# The tests
+#
+
+if {$verbose > 0} {
+   send_user "\tChecking module command propagation in other kind of sub shell\n"
+}
+
+set idx 0
+foreach subshell $shell_list {
+   # exclude subshell from shell to test, as this combination has already
+   # been checked in 020-module tests
+   set shell_totest [lreplace $shell_list $idx $idx]
+   incr idx
+
+   set shell_level "sub"
+   foreach shell $shell_totest {
+      # No module command propagation available in most cases
+      switch -- $subshell {
+         sh {
+            # propagate only when top shell defines module with export -f
+            switch -- $shell {
+               sh - bash - basheu {
+                  # if sh is dash, exported function will be ignored
+                  if {$subshell eq "sh" && $sh_strict} {
+                     testall_cmd_re "$shell" "module --version" "^\$" "$cmd_nf\$" 127
+                  } else {
+                     testall_cmd_re "$shell" "module --version" "^\$" "^Modules Release \\S+ (\\S+)\$" 0
+                  }
+               }
+               ksh {
+                  # sh is a ksh on Solaris
+                  if {$tcl_platform(os) eq "SunOS"} {
+                     testall_cmd_re "$shell" "module --version" "^\$" "^Modules Release \\S+ (\\S+)\$" 0
+                  } else {
+                     testall_cmd_re "$shell" "module --version" "^\$" "$cmd_nf\$" 127
+                  }
+               }
+               default {
+                  testall_cmd_re "$shell" "module --version" "^\$" "$cmd_nf\$" 127
+               }
+            }
+         }
+         # propagate in any cases as BASH_ENV is set everywhere when set_shell_startup is enabled
+         bash {
+            if {[is_set_shell_startup_enabled] || $shell eq {basheu}} {
+               testall_cmd_re "$shell" "module --version" "^\$" "^Modules Release \\S+ (\\S+)\$" 0
+            } else {
+               testall_cmd_re "$shell" "module --version" "^\$" "$bash_nf\$" 127
+            }
+         }
+         ksh {
+            testall_cmd_re "$shell" "module --version" "^\$" "$ksh_nf\$" 127
+         }
+         zsh {
+            testall_cmd_re "$shell" "module --version" "^\$" "$zsh_nf\$" 127
+         }
+         csh {
+            testall_cmd_re "$shell" "module --version" "^\$" "$csh_nf\$" 1
+         }
+         tcsh {
+            testall_cmd_re "$shell" "module --version" "^\$" "$tcsh_nf\$" 1
+         }
+         fish {
+            testall_cmd_re "$shell" "module --version" "^\$" "$fish_nf.*\$" 127
+         }
+      }
+   }
+
+   set shell_level "subsub"
+   foreach shell $shell_totest {
+      # No module command propagation available in most cases
+      switch -- $subshell {
+         sh {
+            # propagate only when top shell defines module with export -f
+            switch -- $shell {
+               sh - bash - basheu {
+                  # if sh is dash, exported function will be ignored
+                  if {$subshell eq "sh" && $sh_strict} {
+                     testall_cmd_re "$shell" "module --version" "^\$" "$cmd_nf\$" 127
+                  } else {
+                     testall_cmd_re "$shell" "module --version" "^\$" "^Modules Release \\S+ (\\S+)\$" 0
+                  }
+               }
+               ksh {
+                  # sh is a ksh on Solaris
+                  if {$tcl_platform(os) eq "SunOS"} {
+                     testall_cmd_re "$shell" "module --version" "^\$" "^Modules Release \\S+ (\\S+)\$" 0
+                  } else {
+                     testall_cmd_re "$shell" "module --version" "^\$" "$cmd_nf\$" 127
+                  }
+               }
+               default {
+                  testall_cmd_re "$shell" "module --version" "^\$" "$cmd_nf\$" 127
+               }
+            }
+         }
+         # propagate in any cases as BASH_ENV is set everywhere when set_shell_startup is enabled
+         bash {
+            if {[is_set_shell_startup_enabled] || $shell eq {basheu}} {
+               testall_cmd_re "$shell" "module --version" "^\$" "^Modules Release \\S+ (\\S+)\$" 0
+            } else {
+               testall_cmd_re "$shell" "module --version" "^\$" "$bash_nf\$" 127
+            }
+         }
+         ksh {
+            testall_cmd_re "$shell" "module --version" "^\$" "$ksh_nf\$" 127
+         }
+         zsh {
+            testall_cmd_re "$shell" "module --version" "^\$" "$zsh_nf\$" 127
+         }
+         csh {
+            testall_cmd_re "$shell" "module --version" "^\$" "$csh_nf\$" 1
+         }
+         tcsh {
+            testall_cmd_re "$shell" "module --version" "^\$" "$tcsh_nf\$" 1
+         }
+         fish {
+            testall_cmd_re "$shell" "module --version" "^\$" "$fish_nf.*\$" 127
+         }
+      }
+   }
+}
+
+#
+#  Clean up variables used in this test case
+#
+
+unset bad_cmd
+unset bash_nf
+unset cmd_nf
+unset ksh_nf
+unset zsh_nf
+unset csh_nf
+unset tcsh_nf
+unset fish_nf
+unset idx
+unset shell_level
+unset subshell
+
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

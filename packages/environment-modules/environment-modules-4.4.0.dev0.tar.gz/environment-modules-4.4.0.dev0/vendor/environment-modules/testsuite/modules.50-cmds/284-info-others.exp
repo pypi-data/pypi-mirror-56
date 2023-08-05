@@ -1,0 +1,72 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:       modules.50-cmds/%M%
+#   Revision:       %I%
+#   First Edition:  2017/05/22
+#   Last Mod.:      %U%, %G%
+#
+#   Authors:        Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:    Testuite testsequence
+#   Command:		load, display, help, test
+#   Modulefiles:    info/others
+#   Sub-Command:
+#
+#   Comment:    %C{
+#           Tests the 'module-info' module subcommand with bad or
+#           deprecated keywords.
+#       }C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "info/others"
+set modulefile "$modpath/$module"
+set modulefilere "$modpathre/$module"
+
+#
+#  For sh shell only (no need to check every shells)
+#
+
+set trace_msg "trace: "
+set tracepat_msg "tracepat: "
+set bad_msg "$moderr_msgs: module-info bad not supported\nIn '$modulefile'\n$err_contactns"
+set bad_msgre "$moderr_msgs: module-info bad not supported\n  In '$modulefilere'\n$err_contact"
+
+
+#
+#  The tests
+#
+
+# test loading
+testouterr_cmd "sh" "load $module" "ERR" $trace_msg\n$tracepat_msg\n\n[msg_load $module $bad_msg]
+
+# test displaying
+testouterr_cmd_re "sh" "display $module" "ERR" "$modlin\n$modulefilere:\n\n$trace_msg\n$tracepat_msg\n$bad_msgre\n$modlin"
+
+# test help
+testouterr_cmd_re "sh" "help $module" "ERR" "$modlin\nModule Specific Help for $modulefilere:\n\n$trace_msg\n$tracepat_msg\n$bad_msgre\n$modlin"
+
+# test test
+testouterr_cmd_re "sh" "test $module" "ERR" "$modlin\nModule Specific Test for $modulefilere:\n\n$trace_msg\n$tracepat_msg\n$bad_msgre\n$modlin"
+
+
+#
+#  Cleanup
+#
+
+unset modulefile
+unset modulefilere
+unset module
+
+unset trace_msg
+unset tracepat_msg
+unset bad_msg
+unset bad_msgre

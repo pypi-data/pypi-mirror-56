@@ -1,0 +1,56 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load, display
+#   Modulefiles:	loc_rc5/2.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Checks the recognition of the error condition forced
+#			by the missing magic cookie in the .modulerc file.
+#		}C%
+#
+##############################################################################
+
+#
+# Variables for this test
+#
+
+set module_1 "loc_rc5/2.0"
+set modulefile_1 "$modpathre/$module_1"
+
+set version "$modpathre/loc_rc5/.modulerc"
+set err_mag "$err_magic'$version'\n$err_contact"
+
+set disp_csh "setenv\t\ttestsuite yes"
+set whatis_csh "module-whatis\t$module_1"
+set disp_1 [if_implicitdefault "$modlin\n$modulefile_1:\n\n$whatis_csh\n$disp_csh\n$modlin" "$err_nodefault'loc_rc5'"]
+
+#
+#  The tests
+#
+
+testouterr_cmd_re "sh" "display loc_rc5" "ERR" "$err_mag\n$disp_1"
+
+#
+# Cleanup
+#
+
+unset disp_csh
+unset whatis_csh
+unset disp_1
+
+unset err_mag
+unset version
+
+unset modulefile_1
+unset module_1

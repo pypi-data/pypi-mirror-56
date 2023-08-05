@@ -1,0 +1,142 @@
+# enable siteconfig content only if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG)]} {
+
+# force stderr terminal attachement state
+proc isStderrTty {} {
+   return 1
+}
+
+# enable debug mode if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_DEBUG)]} {
+   set asked_verbosity debug
+}
+
+# call a non-existent procedure to raise error if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_BROKEN)]} {
+   unk_foo
+}
+
+# generate error with parseAccessIssue generic msg if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_ACCESSERR)]} {
+   set errorCode "Custom error code"
+   error [parseAccessIssue "foo"]
+}
+
+# try element list display in terse+numbered mode if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_TERSENUM)]} {
+   displayElementList test {} terse 1 1 [list elt1 elt2 elt3]
+}
+
+# try element list display with a tricky list that triggers unusual condition in displayElementList proc
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_TRICKYLISTDISP)]} {
+   # set a specific terminal column number to fall in tricky condition
+   set orig_tty_columns [getTtyColumns]
+   set g_tty_columns 80
+   set max_len 0
+   foreach elt [list abc/def abcdefgh/ijklmnop abc/defg abcd/ef abc/defg-hijkl.mn.op abcdefgh/ijklm.nopqrst abcdefg/hijklmnop-qr.st.uvw abcdefgh/ijklmnopqrst-u-vwxy.zA-BCD-E abcdef/ghijklm-nopq.r_st.uv abcdefgh/ijklmnop-q-rstu.vw-xyz-A abcdefg/hijklmn-op.qr.stu abcdefg/hijkl-mn.op.qrs abcd/efgh-ij.k abcdefg/hijk-lmnop_qr.st.uvw abcdef/ghijklmno-p.q.r abcdefgh/ijklmn-o-pqrs.tu abcdefgh/ijklmnop-q-rstu.vw-xyz abcdefg/hij-klm.nopq abcdefg/hij-kl.mn.opq abcdefgh/ijklmnopq_rstuv-w-xyzA.BC-DEF abcdefgh/ijklmnopqrstuv-w-xyzA.BC abcdefgh/ij-k-lmno.pq abcdefgh/ijk-l-mnop.qr-stu abcdefgh/ijklmnop-qr.st abcdef/ghijklmno-pq.rs abcdef/ghi-jklm_no_pqrstuv abcdefgh/ijk-lm-n-opqr.st abcdefgh/ijklm-n-opqr.st-uvw abcdef/ghijklm-nopq_r abcdefg/hijkl-mn.op.qzs abcdefg/hijklmn-op.qr.stz abcdefgh/ijklmn] {
+      lappend display_list $elt
+      lappend len_list [string length $elt]
+      if {[string length $elt] > $max_len} {
+         set max_len [string length $elt]
+      }
+   }
+   displayElementList test {} terse 0 1 $display_list $len_list $max_len
+   set g_tty_columns $orig_tty_columns
+}
+
+
+# try reading file content without error message on failure if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_READMODNOREPORT)]} {
+   readModuleContent "/path/to/unexistent/file"
+}
+
+# use loaded module accessor on non-loaded module if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_LMACCESSOR)]} {
+   report [getModulefileFromLoadedModule "foo"]
+   report [getModuleFromLoadedModulefile "/path/to/foo"]
+   report [getModuleFromLoadingModulefile "/path/to/foo"]
+   # also check getLoadedConflict in non-serialized mode
+   set ::g_loadedModuleConflict(foo) [list bar1 bar2]
+   report [getLoadedConflict foo]
+   unset ::g_loadedModuleConflict(foo)
+}
+
+# disable flag report on avail if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_NO_FLAG)]} {
+   setConf avail_report_dir_sym 0
+   setConf avail_report_mfile_sym 0
+}
+
+# fake Solaris stty if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_SOLARIS_STTY)]} {
+   set tcl_platform(os) "SunOS"
+   set env(PATH) "$env(TESTSUITEDIR):$env(PATH)"
+}
+
+# fake Windows mode if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_WINDOWS_MODE)]} {
+   set tcl_platform(os) "Windows NT"
+   set env(PATH) "$env(TESTSUITEDIR):$env(PATH)"
+}
+
+# fake Windows platform if following environment variable is set
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_WINDOWS_PLATFORM)]} {
+   set tcl_platform(platform) "windows"
+}
+
+# test getDiffBetweenList procedure with element of second list arg not in first list arg
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_GETDIFFBETWEENLIST)]} {
+   report [getDiffBetweenList [list same foo foo2] [list same bar bar2]]
+}
+
+# test twice calls to getConf term_background and getConf colors procedures
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_TWICEINITCOLORS)]} {
+    getConf term_background
+    getConf term_background
+    getConf colors
+    getConf colors
+}
+
+# test clear sub-command confirmation message without waiting indefinitely
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_EXITONGETSSTDIN)]} {
+    rename ::gets ::__gets
+    proc gets {fid} {
+        if {$fid eq {stdin}} {
+            exit 0
+        } else {
+            return [__gets $fid]
+        }
+    }
+}
+
+# test extra siteconfig disablement
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_NOEXTRASITECONFIG)]} {
+    lappendConf locked_configs extra_siteconfig
+}
+
+# test Tcl ext lib load by a Tcl interpreter < 8.4
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBLOAD83)]} {
+    # call an external Tcl shell to just attempt to load lib in it (as
+    # modulecmd.tcl is not compatible with Tcl<8.4)
+    exec ./tclsh83 << "load [getConf tcl_ext_lib] Envmodules"
+}
+
+# test tcl ext lib procedures against erroneous calls
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBBADCALL)]} {
+    set badcalllist [list readFile {readFile foo bar} getFilesInDirectory\
+        {getFilesInDirectory foo bar 1} {getFilesInDirectory foo 1 bar}]
+    foreach badcall $badcalllist {
+        if {[catch {[eval $badcall]} errMsg]} {
+            reportError $errMsg
+        }
+    }
+}
+
+# test tcl ext lib procedures against a failed closedir call
+if {[info exists env(TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBFAILEDCLOSEDIR)]} {
+    if {[catch {[getFilesInDirectory $env(TESTSUITEDIR)/modulefiles 0 0]} errMsg]} {
+        reportError $errMsg
+    }
+}
+
+}

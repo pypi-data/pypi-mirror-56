@@ -1,0 +1,26 @@
+#%Module1.0#####################################################################
+##
+## modules modulefile
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmodules - loads the modules software & application environment"
+        puts stderr "\n\tThis adds $prefix/* to several of the"
+        puts stderr "\tenvironment variables."
+        puts stderr "\n\tVersion $version\n"
+}
+
+module-whatis	"loads the modules environment"
+
+# for Tcl script use only
+set	version		4.4.0
+set	prefix		/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5
+
+
+setenv          MODULESHOME	$prefix
+prepend-path    PATH   		/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/bin
+prepend-path    MANPATH		/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/share/man
+
+# enable module versioning modulepath
+#module use /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/versions

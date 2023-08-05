@@ -1,0 +1,432 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	2017/08/16
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        load, display, help, test, avail, whatis, paths
+#   Modulefiles:	loc_tr
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test the correct resolution of module aliases and symbolic
+#           versions set in a transitive manner
+#		}C%
+#
+##############################################################################
+
+# ensure regular avail search match is set for these tests
+setenv_var MODULES_SEARCH_MATCH starts_with
+
+set datetime_re "\[0-9\/]{10} \[0-9:]{8}"
+
+# symbol set on symbol
+set modsym_1 "loc_tr/stable"
+set module_1 "loc_tr/1.0"
+set modalt_1 loc_tr/cur&loc_tr/stable
+set modulefile_1 "$modpath/$module_1"
+set modulefilere_1 "$modpathre/$module_1"
+set modavail_1 "$module_1\\s+cur:stable\\s+$datetime_re"
+
+# alias set on symbol (alias set before target symbol definition)
+set modsym_2 "loc_tr/al1"
+set module_2 "loc_tr/2.0"
+set modalt_2 loc_tr/next&loc_tr/al1&loc_tr/unstable
+set modulefile_2 "$modpath/$module_2"
+set modulefilere_2 "$modpathre/$module_2"
+# symbols set from alias with different module root name are not shown here
+# when querying modulefile, as in this case alias module is not interpreted
+set modavail_2 "$modsym_2 -> loc_tr/next\\s+unstable\\s+"
+
+# symbol set on alias of symbol (alias set before target symbol definition)
+set modsym_3 "loc_tr/unstable"
+set module_3 "$module_2"
+set modalt_3 $modalt_2
+set modulefile_3 "$modulefile_2"
+set modulefilere_3 "$modulefilere_2"
+set modavail_3 "$module_3\\s+next:unstable\\s+$datetime_re"
+
+# alias set on symbol (alias set after target symbol definition)
+set modsym_4 "loc_tr/al2"
+set module_4 "loc_tr/3.0"
+set modalt_4 loc_tr/foo&loc_tr/al2&loc_tr/bar&loc_tr/al3&loc_tr/exp&loc_tr/al4&loc_tr/default&loc_tr&loc_tr/reg
+set modulefile_4 "$modpath/$module_4"
+set modulefilere_4 "$modpathre/$module_4"
+# symbol set on alias targeting this alias also appear here
+set modavail_4 "$modsym_4 -> loc_tr/foo\\s+bar:default:exp:reg\\s+"
+
+# symbol set on alias of symbol (alias set after target symbol definition)
+set modsym_5 "loc_tr/bar"
+set module_5 "$module_4"
+set modalt_5 $modalt_4
+set modulefile_5 "$modulefile_4"
+set modulefilere_5 "$modulefilere_4"
+set modavail_5 "$module_5\\s+bar:default:exp:foo:reg\\s*$datetime_re"
+
+# alias set on alias of symbol
+set modsym_6 "loc_tr/al3"
+set module_6 "$module_4"
+set modalt_6 $modalt_4
+set modulefile_6 "$modulefile_4"
+set modulefilere_6 "$modulefilere_4"
+set modavail_6 "$modsym_6 -> loc_tr/al2\\s+default:exp:reg\\s+"
+
+# symbol set on alias of alias of symbol
+set modsym_7 "loc_tr/exp"
+set module_7 "$module_4"
+set modalt_7 $modalt_4
+set modulefile_7 "$modulefile_4"
+set modulefilere_7 "$modulefilere_4"
+set modavail_7 "$modavail_5"
+
+# alias set on symbol set on alias of alias of symbol
+set modsym_8 "loc_tr/al4"
+set module_8 "$module_4"
+set modalt_8 $modalt_4
+set modulefile_8 "$modulefile_4"
+set modulefilere_8 "$modulefilere_4"
+set modavail_8 "$modsym_8 -> loc_tr/exp\\s+default:reg\\s+"
+
+# alias set on distant symbol
+set modsym_9 "tr_loc/al1"
+set module_9 "$module_2"
+# as an alias is set across modulename, alternative names for loaded modules is different than modalt_2
+set modalt_9 loc_tr/next&tr_loc/al1&tr_loc/trunstable&loc_tr/trunstable&loc_tr/al1&loc_tr/unstable
+set modulefile_9 "$modulefile_2"
+set modulefilere_9 "$modulefilere_2"
+set modavail_9 "$modsym_9 -> loc_tr/next\\s+trunstable\\s+"
+set modwarn_9 "$warn_msgs: Symbolic version 'loc_tr/default' already defined"
+
+# symbol set on alias of distant symbol
+set modsym_10 "tr_loc/trunstable"
+set module_10 "$module_2"
+set modalt_10 $modalt_9
+set modulefile_10 "$modulefile_2"
+set modulefilere_10 "$modulefilere_2"
+set modavail_10 "$modavail_9"
+set modwarn_10 "$modwarn_9"
+
+# symbol set on alias of distant symbol (local symbol set before its target definition)
+set modsym_11 "tr_loc/al2"
+set module_11 "$module_4"
+set modalt_11 loc_tr/foo&tr_loc/al2&tr_loc/trbar&loc_tr/trbar&tr_loc/default&tr_loc&loc_tr/default&loc_tr&tr_loc/trreg&loc_tr/trreg&loc_tr/al2&tr_loc/al3&tr_loc/trexp&loc_tr/trexp&tr_loc/al5&loc_tr/bar&loc_tr/al3&loc_tr/exp&tr_loc/al4&loc_tr/al4&loc_tr/reg
+set modulefile_11 "$modulefile_4"
+set modulefilere_11 "$modulefilere_4"
+set modavail_11 "$modsym_11 -> loc_tr/foo\\s+default:trbar:trreg\\s+"
+set modwarn_11 "$modwarn_9"
+
+set modsym_12 "tr_loc/trbar"
+set module_12 "$module_4"
+set modalt_12 $modalt_11
+set modulefile_12 "$modulefile_4"
+set modulefilere_12 "$modulefilere_4"
+set modavail_12 "$modavail_11"
+set modwarn_12 "$modwarn_9"
+
+# symbol set on alias of distant alias
+set modsym_13 "tr_loc/al3"
+set module_13 "$module_4"
+set modalt_13 $modalt_11
+set modulefile_13 "$modulefile_4"
+set modulefilere_13 "$modulefilere_4"
+set modavail_13 "$modsym_13 -> loc_tr/al2\\s+trexp\\s+"
+set modwarn_13 "$modwarn_9"
+
+# symbol set on alias of distant alias
+set modsym_14 "tr_loc/trexp"
+set module_14 "$module_4"
+set modalt_14 $modalt_11
+set modulefile_14 "$modulefile_4"
+set modulefilere_14 "$modulefilere_4"
+set modavail_14 "$modavail_13"
+set modwarn_14 "$modwarn_9"
+
+# alias set on distant symbol set on alias of alias of symbol
+set modsym_15 "tr_loc/al4"
+set module_15 "$module_4"
+set modalt_15 $modalt_11
+set modulefile_15 "$modulefile_4"
+set modulefilere_15 "$modulefilere_4"
+set modavail_15 "$modsym_15 -> loc_tr/exp\\s+"
+set modwarn_15 "$modwarn_9"
+
+# alias set on local symbol set on alias of alias of symbol
+set modsym_16 "tr_loc/al5"
+set module_16 "$module_4"
+set modalt_16 $modalt_11
+set modulefile_16 "$modulefile_4"
+set modulefilere_16 "$modulefilere_4"
+set modavail_16 "$modsym_16 -> tr_loc/trexp\\s+"
+set modwarn_16 "$modwarn_9"
+
+# alias set on distant symbol
+set modsym_17 "tr2_loc/al1"
+set module_17 "$module_2"
+set modalt_17 loc_tr/next&tr_loc/al1&tr_loc/trunstable&tr2_loc/al1&tr2_loc/tr2unstable&tr_loc/tr2unstable&loc_tr/tr2unstable&loc_tr/trunstable&loc_tr/al1&loc_tr/unstable
+set modulefile_17 "$modulefile_2"
+set modulefilere_17 "$modulefilere_2"
+set modavail_17 "$modsym_17 -> tr_loc/trunstable\\s+tr2unstable\\s+"
+set modwarn_17 "$warn_msgs: Symbolic version 'tr_loc/default' already defined\n$warn_msgs: Symbolic version 'tr_loc/trreg' already defined\n$modwarn_9"
+
+# symbol set on alias of distant symbol
+set modsym_18 "tr2_loc/tr2unstable"
+set module_18 "$module_2"
+set modalt_18 $modalt_17
+set modulefile_18 "$modulefile_2"
+set modulefilere_18 "$modulefilere_2"
+set modavail_18 "$modavail_17"
+set modwarn_18 "$modwarn_17"
+
+# symbol set on alias of distant symbol (local symbol set before its target definition)
+set modsym_19 "tr2_loc/al2"
+set module_19 "$module_4"
+set modalt_19 loc_tr/foo&tr_loc/al2&tr2_loc/al3&tr2_loc/tr2exp&tr_loc/tr2exp&tr2_loc/al5&tr2_loc/default&tr2_loc&tr_loc/default&tr_loc&tr2_loc/trreg&tr_loc/trreg&tr_loc/trbar&tr2_loc/al2&tr2_loc/tr2bar&tr_loc/tr2bar&loc_tr/default&loc_tr&loc_tr/tr2bar&loc_tr/tr2exp&loc_tr/trbar&loc_tr/trreg&loc_tr/al2&tr_loc/al3&tr_loc/trexp&tr2_loc/al4&loc_tr/trexp&tr_loc/al5&loc_tr/bar&loc_tr/al3&loc_tr/exp&tr_loc/al4&loc_tr/al4&loc_tr/reg
+set modulefile_19 "$modulefile_4"
+set modulefilere_19 "$modulefilere_4"
+set modavail_19 "$modsym_19 -> tr_loc/trbar\\s+tr2bar\\s+"
+set modwarn_19 "$modwarn_17"
+
+set modsym_20 "tr2_loc/tr2bar"
+set module_20 "$module_4"
+set modalt_20 $modalt_19
+set modulefile_20 "$modulefile_4"
+set modulefilere_20 "$modulefilere_4"
+set modavail_20 "$modavail_19"
+set modwarn_20 "$modwarn_17"
+
+# alias set on distant alias
+set modsym_21 "tr2_loc/al3"
+set module_21 "$module_4"
+set modalt_21 $modalt_19
+set modulefile_21 "$modulefile_4"
+set modulefilere_21 "$modulefilere_4"
+set modavail_21 "$modsym_21 -> tr_loc/al2\\s+default:tr2exp:trreg\\s*"
+set modwarn_21 "$modwarn_17"
+
+# symbol set on alias of distant alias
+set modsym_22 "tr2_loc/tr2exp"
+set module_22 "$module_4"
+set modalt_22 $modalt_19
+set modulefile_22 "$modulefile_4"
+set modulefilere_22 "$modulefilere_4"
+set modavail_22 "$modavail_21"
+set modwarn_22 "$modwarn_17"
+
+# alias set on distant symbol set on alias of alias of symbol
+set modsym_23 "tr2_loc/al4"
+set module_23 "$module_4"
+set modalt_23 $modalt_19
+set modulefile_23 "$modulefile_4"
+set modulefilere_23 "$modulefilere_4"
+set modavail_23 "$modsym_23 -> tr_loc/trexp\\s+"
+set modwarn_23 "$modwarn_17"
+
+# alias set on local symbol set on alias of alias of symbol
+set modsym_24 "tr2_loc/al5"
+set module_24 "$module_4"
+set modalt_24 $modalt_19
+set modulefile_24 "$modulefile_4"
+set modulefilere_24 "$modulefilere_4"
+set modavail_24 "$modsym_24 -> tr2_loc/tr2exp\\s+default:trreg\\s+"
+set modwarn_24 "$modwarn_17"
+
+# default symbol set on alias of symbol set on alias of alias of symbol
+set modsym_25 "loc_tr/default"
+set module_25 "$module_4"
+set modalt_25 $modalt_4
+set modulefile_25 "$modulefile_4"
+set modulefilere_25 "$modulefilere_4"
+set modavail_25 "$module_4\\s+bar:default:exp:foo:reg$datetime_re"
+
+# symbol set on default symbol set on alias of symbol set on alias of alias of symbol
+set modsym_26 "loc_tr/reg"
+set module_26 "$module_4"
+set modalt_26 $modalt_4
+set modulefile_26 "$modulefile_4"
+set modulefilere_26 "$modulefilere_4"
+set modavail_26 "$modavail_25"
+
+# default symbol set on symbol of alias of distant symbol
+set modsym_27 "tr_loc/default"
+set module_27 "$module_4"
+set modalt_27 $modalt_11
+set modulefile_27 "$modulefile_4"
+set modulefilere_27 "$modulefilere_4"
+set modavail_27 "tr_loc/al2 -> loc_tr/foo\\s+default:trbar:trreg\\s+"
+set modwarn_27 "$modwarn_9"
+
+# symbol set on default version set on symbol of alias of distant symbol
+set modsym_28 "tr_loc/trreg"
+set module_28 "$module_4"
+set modalt_28 $modalt_11
+set modulefile_28 "$modulefile_4"
+set modulefilere_28 "$modulefilere_4"
+set modavail_28 "$modavail_27"
+set modwarn_28 "$modwarn_9"
+
+# default symbol set on alias set on local symbol set on alias of alias of symbol (before alias def)
+set modsym_29 "tr2_loc/default"
+set module_29 "$module_4"
+set modalt_29 $modalt_19
+set modulefile_29 "$modulefile_4"
+set modulefilere_29 "$modulefilere_4"
+set modavail_29 "tr2_loc/al3 -> tr_loc/al2\\s+default:tr2exp:trreg"
+set modwarn_29 "$modwarn_17"
+
+# symbol set on default symbol set on alias set on local symbol set on alias of alias of symbol
+set modsym_30 "tr2_loc/trreg"
+set module_30 "$module_4"
+set modalt_30 $modalt_19
+set modulefile_30 "$modulefile_4"
+set modulefilere_30 "$modulefilere_4"
+set modavail_30 "$modavail_29"
+set modwarn_30 "$modwarn_17"
+
+
+set help_pre "$modlin\nModule Specific Help for "
+set help_post ":\n\n$modlin"
+set test_pre "$modlin\nModule Specific Test for "
+set test_post ":\n\nTest result: PASS\n$modlin"
+set disp_pre "$modlin\n"
+set disp_wi "module-whatis\\s+"
+set disp_post "\nsetenv\\s+testsuite\\s+yes\n$modlin"
+set header_long "- Package/Alias $modlin.- Versions $modlin.- Last mod. $modlin"
+set avail_pre "$header_long\n$modpathre:"
+set whatis_pre "$modlin $modpathre $modlin\n\\s+"
+
+
+#
+#  The tests
+#
+
+for {set i 1} {$i <= 30} {incr i} {
+    set modsym [set "modsym_${i}"]
+    set module [set "module_${i}"]
+    if {[info exists "modalt_${i}"]} {
+        set modalt $module&[set "modalt_${i}"]
+    } else {
+        set modalt ""
+    }
+    set modulefile [set "modulefile_${i}"]
+    set modulefilere [set "modulefilere_${i}"]
+    set modavail [set "modavail_${i}"]
+    if {[info exists "modwarn_${i}"]} {
+        set modwarn [set "modwarn_${i}"]
+        set modwarnnl "$modwarn\n"
+    } else {
+        set modwarn ""
+        set modwarnnl ""
+    }
+
+    # setup clean environment
+    unsetenv_loaded_module
+    unsetenv_path_var MODULES_LMALTNAME
+
+    set ans [list]
+    lappend ans [list set testsuite "yes"]
+    lappend ans [list setpath LOADEDMODULES $module]
+    lappend ans [list setpath _LMFILES_ $modulefile]
+    if {$modalt ne ""} {
+        lappend ans [list setpath MODULES_LMALTNAME $modalt]
+    }
+
+    testouterr_cmd "sh" "load $modsym" $ans "$modwarn"
+    testouterr_cmd_re "sh" "display $modsym" "OK" "$modwarnnl$disp_pre$modulefilere:\n\n$disp_wi$module$disp_post"
+    testouterr_cmd_re "sh" "help $modsym" "OK" "$modwarnnl$help_pre$modulefilere$help_post"
+    testouterr_cmd_re "sh" "test $modsym" "OK" "$modwarnnl$test_pre$modulefilere$test_post"
+
+    testouterr_cmd_re "sh" "avail -l $modsym" "OK" "$avail_pre\n$modavail"
+    testouterr_cmd_re "sh" "whatis $modsym" "OK" "$whatis_pre$module: $module"
+
+    set ans [list]
+    lappend ans [list text $modulefile]
+    testouterr_cmd "sh" "paths $modsym" $ans "$modwarn"
+
+    # setup environment for unload action
+    setenv_loaded_module $module $modulefile
+    if {$modalt ne ""} {
+        setenv_path_var MODULES_LMALTNAME $modalt
+    }
+
+    set ans [list]
+    lappend ans [list unset testsuite]
+    lappend ans [list unsetpath LOADEDMODULES]
+    lappend ans [list unsetpath _LMFILES_]
+    if {$modalt ne ""} {
+        lappend ans [list unsetpath MODULES_LMALTNAME]
+        # resolution warning is not triggered if alias/symbol are found through alternative names
+        set modwarn ""
+    }
+
+    testouterr_cmd "sh" "unload $modsym" $ans "$modwarn"
+}
+
+# transitive symbol sets from a distant module (different name) cannot
+# be resolved when queyring target module name
+set modsym "loc_tr/trbar"
+set locate_msg "$err_path'$modsym'"
+testouterr_cmd "sh" "load $modsym" "ERR" "$locate_msg"
+testouterr_cmd "sh" "display $modsym" "ERR" "$locate_msg"
+testouterr_cmd "sh" "help $modsym" "ERR" "$locate_msg"
+testouterr_cmd "sh" "test $modsym" "ERR" "$locate_msg"
+testouterr_cmd_re "sh" "avail -l $modsym" "OK" ""
+testouterr_cmd "sh" "whatis $modsym" "ERR" "$locate_msg"
+set ans [list]
+lappend ans [list text ""]
+testouterr_cmd "sh" "paths $modsym" $ans ""
+
+
+#
+#  Cleanup
+#
+
+# Clean up the environment
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMALTNAME
+unsetenv_var MODULES_SEARCH_MATCH
+
+unset datetime_re
+
+unset help_pre
+unset help_post
+unset test_pre
+unset test_post
+unset disp_pre
+unset disp_wi
+unset disp_post
+unset header_long
+unset avail_pre
+unset whatis_pre
+
+for {set i 1} {$i <= 30} {incr i} {
+    unset "modsym_${i}"
+    unset "module_${i}"
+    if {[info exists "modalt_${i}"]} {
+        unset "modalt_${i}"
+    }
+    unset "modulefile_${i}"
+    unset "modulefilere_${i}"
+    unset "modavail_${i}"
+    if {[info exists "modwarn_${i}"]} {
+        unset "modwarn_${i}"
+    }
+}
+
+unset ans
+unset locate_msg
+
+unset i
+unset modalt
+unset modsym
+unset module
+unset modulefile
+unset modulefilere
+unset modavail
+unset modwarn
+unset modwarnnl

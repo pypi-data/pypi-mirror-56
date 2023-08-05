@@ -1,0 +1,141 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.10-use/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		unuse
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check removing a path for the list of modulefile
+#			paths in $MODULEPATH
+#			Also it's not an error to unload a bad dir.
+#		}C%
+#
+##############################################################################
+
+#
+# Variables for this test
+#
+
+set path "$env(TESTSUITEDIR)/modulefiles.2"
+set tsdirname [file tail $env(TESTSUITEDIR)]
+regsub "^.*/$tsdirname" $path "$tsdirname" relpath
+regsub "$tsdirname" $relpath "$tsdirname/../$tsdirname/./" relpath_wdot
+set badpath "$env(TESTSUITEDIR)/modulefiles.bad"
+set bad_use ""
+set path_list_header "Search path for module files (in search order):"
+set no_path_list "$warn_msgs: No directories on module search path"
+
+set use	"unuse"
+
+#
+# Put a new entry to unuse to the MODULEPATH
+#
+
+setenv_path_var MODULEPATH $path $modpath
+
+
+#
+# test the bad first
+#
+
+testouterr_cmd_re "ALL" "$use $badpath" "OK" "$bad_use"
+
+#
+# The tests ...
+#   do these last so the .modulesbeginenv is left in a good state for 070-Maint
+#
+
+lappend ans [list setpath MODULEPATH $modpath]
+test_cmd_re "ALL" "$use $path" $ans
+
+#
+# Insert an empty dir element in MODULEPATH, should be ignored
+#
+
+setenv_path_var MODULEPATH $path {} $modpath
+
+set ans [list]
+# empty dir elements are ignored but stick to the variable, they should be removed
+lappend ans [list setpath MODULEPATH ":$modpath"]
+test_cmd_re "sh" "$use $path" $ans
+
+setenv_path_var MODULEPATH $path $modpath
+
+#
+# test with relative-path directory
+# should end with same result as above
+#
+
+set ans [list]
+lappend ans [list setpath MODULEPATH $modpath]
+test_cmd_re "ALL" "$use $relpath" $ans
+
+#
+# test with relative-path containing useless "." and ".." components
+# should end with same result as above
+#
+
+test_cmd_re "ALL" "$use $relpath_wdot" $ans
+
+#
+# List enabled paths with 2 paths set
+#
+
+testouterr_cmd "ALL" "$use" "OK" "$path_list_header\n  $path\n  $modpath"
+
+#
+# test removing dir enabled multiple times
+#
+
+setenv_var MODULEPATH_modshare "$path:2:$modpath:1"
+
+# dir not removed if ref counter > 1, should be changed in next major version
+# as commands sends from the command-line should by-pass any ref counter
+set ans [list]
+lappend ans [list set MODULEPATH_modshare "$path:1:$modpath:1"]
+lappend ans [list set MODULEPATH "$path:$modpath"]
+testouterr_cmd "sh" "$use $path" $ans "$warn_msgs: Did not unuse $path"
+
+unsetenv_var MODULEPATH_modshare
+
+
+# list paths with no paths set
+setenv_var MODULEPATH ""
+
+testouterr_cmd "ALL" "$use" "OK" "$no_path_list"
+
+#
+# Set empty MODULEPATH with just empty dir element, that should be ignored
+#
+
+setenv_var MODULEPATH ":"
+
+testouterr_cmd "sh" "$use" "OK" "$no_path_list"
+testouterr_cmd "sh" "$use " "ERR" $err_emptydirname
+
+
+#
+# Cleanup
+#
+
+setenv_path_var MODULEPATH $modpath
+
+unset path
+unset tsdirname
+unset relpath
+unset relpath_wdot
+unset use
+unset badpath
+unset bad_use
+unset ans
+unset path_list_header
+unset no_path_list

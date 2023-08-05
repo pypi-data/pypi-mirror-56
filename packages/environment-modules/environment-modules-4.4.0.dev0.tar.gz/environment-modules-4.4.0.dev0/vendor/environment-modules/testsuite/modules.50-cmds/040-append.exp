@@ -1,0 +1,412 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	append/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'append-path' module subcommand for all
+#			allowed	shell types.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "PATH" to
+#    be set up
+#
+
+set module "append/2.0"
+set modulefile "$modpath/$module"
+
+# complexify PATH value with space an parenthesis
+set ORIG_PATH $env(PATH)
+set env(PATH) "$ORIG_PATH:/path/to/dir (stuff)"
+
+set old_path $env(PATH)
+set ts_path "/this/is/the/modules/testsuite"
+set new_path "$old_path:$ts_path"
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list setpath PATH $new_path]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $module" $ans
+
+#
+# Try one empty string
+#
+
+set module "append/0.1"
+set modulefile "$modpath/$module"
+
+set old_path $env(PATH)
+set ts_path ""
+set new_path "$old_path:$ts_path"
+
+#
+#  For the different shells ...
+#
+
+set ans [list]
+lappend ans [list setpath PATH $new_path]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $module" $ans
+
+#
+# Try the bare colon
+#
+
+set module "append/0.2"
+set modulefile "$modpath/$module"
+
+# different behavior than C-version: on Tcl-version adding a bare colon
+# to a path produces an error since this colon cannot be distinguished
+# from the colon used for path separator
+set ts_err "$moderr_msgs: add-path cannot handle path equals to separator string\nIn '$modulefile'\n$err_contactns"
+
+#
+#  The tests
+#
+
+testouterr_cmd "ALL" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try bad argument list: missing variable name
+#
+
+set module "append/0.3"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get an environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try bad argument list: missing variable value
+#
+
+set module "append/0.4"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get a value for environment variable PATH\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try bad argument list: empty variable name
+#
+
+set module "append/0.5"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get a valid environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try command switches passed after variable name
+#
+
+set module "append/1.8"
+set modulefile "$modpath/$module"
+set ans [list]
+lappend ans [list setpath testsuite --delim=,:http://foobar.com]
+lappend ans [list setpath testsuite2 -d:,:http://foobar.com]
+lappend ans [list setpath testsuite3 -Lfoo:bar]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+testouterr_cmd_re "sh" "load $module" $ans {}
+
+#
+# Append multiple paths passed as one string
+#
+
+set module "append/2.3"
+set modulefile "$modpath/$module"
+set old_path "/path/to/dir1"
+
+set env(FOO_modshare) "$old_path:1"
+set env(FOO) $old_path
+
+set ans [list]
+lappend ans [list set FOO_modshare ":1:/modules/testsuite2.2/2.2:1:$old_path:1:/modules/testsuite2.2:1"]
+lappend ans [list set FOO "$old_path:/modules/testsuite2.2:/modules/testsuite2.2/2.2:"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans ""
+
+#
+# Append multiple paths passed as multiple strings
+#
+
+set module "append/2.4"
+set modulefile "$modpath/$module"
+
+set ans [list]
+lappend ans [list set FOO_modshare ":1:/modules/testsuite2.2/2.2:1:$old_path:1:/modules/testsuite2.2:1"]
+lappend ans [list set FOO "$old_path:/modules/testsuite2.2:/modules/testsuite2.2/2.2:"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans ""
+
+#
+# Append path in duplication mode
+#
+
+set module "append/4.0"
+set modulefile "$modpath/$module"
+
+unset env(FOO_modshare)
+unset env(FOO)
+set env(BAR_modshare) "/path/to/dir1:2:/path/to/dir2:1"
+set env(BAR) "/path/to/dir1:/path/to/dir2:/path/to/dir1"
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir1:2:/path/to/dir2:1"]
+lappend ans [list set FOO "/path/to/dir1:/path/to/dir2:/path/to/dir1"]
+lappend ans [list set BAR_modshare "/path/to/dir1:3:/path/to/dir2:1"]
+lappend ans [list set BAR "/path/to/dir1:/path/to/dir2:/path/to/dir1"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans ""
+
+set env(FOO) "/path/to/dir1"
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir1:3:/path/to/dir2:1"]
+lappend ans [list set FOO "/path/to/dir1:/path/to/dir1:/path/to/dir2:/path/to/dir1"]
+lappend ans [list set BAR_modshare "/path/to/dir1:3:/path/to/dir2:1"]
+lappend ans [list set BAR "/path/to/dir1:/path/to/dir2:/path/to/dir1"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans ""
+
+set env(FOO_modshare) "/path/to/dir1:2"
+set env(FOO) "/path/to/dir1"
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir1:4:/path/to/dir2:1"]
+lappend ans [list set FOO "/path/to/dir1:/path/to/dir1:/path/to/dir2:/path/to/dir1"]
+lappend ans [list set BAR_modshare "/path/to/dir1:3:/path/to/dir2:1"]
+lappend ans [list set BAR "/path/to/dir1:/path/to/dir2:/path/to/dir1"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans ""
+
+set module "append/4.1"
+set modulefile "$modpath/$module"
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir1:4:/path/to/dir2:1"]
+lappend ans [list set FOO "/path/to/dir1:/path/to/dir1:/path/to/dir2:/path/to/dir1"]
+lappend ans [list set BAR_modshare "/path/to/dir1:3:/path/to/dir2:1"]
+lappend ans [list set BAR "/path/to/dir1:/path/to/dir2:/path/to/dir1"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans [msg_load $module "$warn_msgs: --index option has no effect on add-path"]
+
+
+# test setting a large value in variable. For csh shell family, Modules
+# truncates value to avoid going over csh limit (this should be changed in
+# next major release, v5.0, to let shell barfs rather trying to handle it at
+# the Modules level)
+for {set i 0} {$i < 150} {incr i} {
+    lappend bigval "/the/path/to/the/directory/$i"
+}
+set bigval [join $bigval ":"]
+set bigpathval "$env(PATH):$bigval"
+# compute truncated length depending on the number of escaped characters
+set charlist { \\\t\{\}|<>!;#^$&*"'`()}
+set bigpathvalesc [regsub -all "\(\[$charlist\]\)" $bigpathval {\\\1}]
+set bigpathtrunclen [expr {3999 - ([string length $bigpathvalesc] - [string length $bigpathval])}]
+
+set module "append/5.0"
+set modulefile "$modpath/$module"
+
+unset env(FOO_modshare)
+unset env(FOO)
+
+set ans [list]
+lappend ans [list setpath FOO $bigval]
+lappend ans [list setpath PATH $bigpathval]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd_re "sh" "load $module" $ans ""
+
+# limit is defined at 4000 characters, value is truncated, specific treatment
+# is done for PATH
+set ans [list]
+lappend ans [list setpath FOO [string range $bigval 0 3999]]
+lappend ans [list setpath PATH "[string range $bigpathval 0 $bigpathtrunclen]:/usr/bin:/bin"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+set ts_err "$warn_msgs: FOO exceeds 4000 characters, truncating...
+$warn_msgs: PATH exceeds 4000 characters, truncating and appending /usr/bin:/bin ...
+$warn_msgs: FOO_modshare exceeds 4000 characters, truncating...
+$warn_msgs: PATH_modshare exceeds 4000 characters, truncating..."
+
+testouterr_cmd_re "csh" "load $module" $ans $ts_err
+
+
+#
+# Incoherent reference counter variable with referred variable set
+#
+
+set module "append/6.0"
+set modulefile "$modpath/$module"
+
+set env(FOO_modshare) "/path/to/dir2:1:/path/to/dir3:2:/path/to/dir4:1"
+set env(FOO) "/path/to/dir1:/path/to/dir4"
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir4:1:/path/to/dir1:2:/path/to/dir2:1"]
+lappend ans [list set FOO "/path/to/dir1:/path/to/dir4:/path/to/dir2"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+# reference counter is automatically ajusted
+testouterr_cmd "sh" "load $module" $ans {}
+
+# test incoherent state on unload mode
+setenv_loaded_module $module $modulefile
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir4:1"]
+lappend ans [list set FOO "/path/to/dir4"]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+testouterr_cmd "sh" "unload $module" $ans {}
+
+
+#
+# Reference counter variable set with referred variable unset
+#
+
+unsetenv_loaded_module
+set env(FOO_modshare) "/path/to/dir2:1:/path/to/dir3:2:/path/to/dir4:1"
+unset env(FOO)
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir1:1:/path/to/dir2:1"]
+lappend ans [list set FOO "/path/to/dir1:/path/to/dir2"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+# reference counter is automatically ajusted
+testouterr_cmd "sh" "load $module" $ans {}
+
+# test incoherent state on unload mode
+setenv_loaded_module $module $modulefile
+set ans [list]
+lappend ans [list unset FOO_modshare]
+lappend ans [list unset FOO]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+testouterr_cmd "sh" "unload $module" $ans {}
+
+
+#
+# Corrupted reference counter variable with referred variable set
+#
+
+unsetenv_loaded_module
+set env(FOO_modshare) "/path/to/dir1:2:/path/to/dir3"
+set env(FOO) "/path/to/dir1"
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir1:2:/path/to/dir2:1"]
+lappend ans [list set FOO "/path/to/dir1:/path/to/dir2"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+# reference counter ignored
+testouterr_cmd "sh" "load $module" $ans ""
+
+# test incoherent state on unload mode
+setenv_loaded_module $module $modulefile
+set ans [list]
+lappend ans [list unset FOO_modshare]
+lappend ans [list unset FOO]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+testouterr_cmd "sh" "unload $module" $ans {}
+
+
+#
+# Corrupted reference counter variable with referred variable unset
+#
+
+unsetenv_loaded_module
+set env(FOO_modshare) "/path/to/dir1:2:/path/to/dir3"
+unset env(FOO)
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir1:1:/path/to/dir2:1"]
+lappend ans [list set FOO "/path/to/dir1:/path/to/dir2"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+# reference counter is automatically ajusted
+testouterr_cmd "sh" "load $module" $ans {}
+
+# test incoherent state on unload mode
+setenv_loaded_module $module $modulefile
+set ans [list]
+lappend ans [list unset FOO_modshare]
+lappend ans [list unset FOO]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+testouterr_cmd "sh" "unload $module" $ans {}
+
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+set env(PATH) $ORIG_PATH
+unset ORIG_PATH
+
+unset env(FOO_modshare)
+unset env(BAR_modshare)
+unset env(BAR)
+
+unset new_path
+unset ts_path
+unset old_path
+unset ts_err
+unset bigval
+unset bigpathval
+unset charlist
+unset bigpathvalesc
+unset bigpathtrunclen
+
+unset ans
+
+unset modulefile
+unset module

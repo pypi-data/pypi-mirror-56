@@ -1,0 +1,290 @@
+##############################################################################
+#   Modules Release Tcl
+#   Providing a flexible user environment
+#
+#   File:		modules.61-coll/%M%
+#   Revision:		%I%
+#   First Edition:	2016/08/02
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Test the module 'save' command
+#		}C%
+#
+##############################################################################
+
+
+set baddotmod "$env(HOME)/.module"
+set baddotmodfp "$baddotmod/$collbadn"
+set baddotmoderrmsg "$error_msgs: $baddotmod exists but is not a directory"
+set emptyenverrmsg "$error_msgs: Nothing to save in a collection"
+
+#
+# test saving when HOME/.module is not directory
+#
+
+# create HOME/.module as empty file
+if { $verbose > 0 } {
+    send_user "\tCreate $baddotmod as an empty file\n"
+}
+set baddotmodfd [open $baddotmod w]
+close $baddotmodfd
+
+testouterr_cmd "ALL" "save" "ERR" "$baddotmoderrmsg"
+
+
+#
+# test saving to an impossible filepath
+#
+
+testouterr_cmd "ALL" "save $baddotmodfp" "ERR" "$baddotmoderrmsg"
+
+# delete created HOME/.module empty file
+if { $verbose > 0 } {
+    send_user "\tDelete $baddotmod\n"
+}
+file delete $baddotmod
+
+
+#
+# test saving empty collection
+#
+
+# set home to unexistent directory for tests
+# will automatically be created by save command
+set ORIG_HOME $env(HOME)
+if { $verbose > 0 } {
+    send_user "\tSetup HOME = $hometestcoll\n"
+}
+set env(HOME) "$hometestcoll"
+
+# setup an empty environment state
+unsetenv_path_var MODULEPATH
+
+testouterr_cmd "ALL" "save" "ERR" "$emptyenverrmsg"
+
+
+#
+# test saving default collection
+# with module version pinned or not
+#
+
+# setup environment state
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_COLLECTION_PIN_VERSION = 0\n"
+}
+set env(MODULES_COLLECTION_PIN_VERSION) "0"
+eval setenv_path_var MODULEPATH [split $cdmodpath ":"]
+setenv_loaded_module [split $cdlm ":"] [split $cdlmf ":"]
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save" "OK" "$hometestdotmod/default" "$cdcont"
+
+# now test save with module version pinning enabled
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_COLLECTION_PIN_VERSION = 1\n"
+}
+set env(MODULES_COLLECTION_PIN_VERSION) "1"
+testoutfile_cmd "sh" "save" "OK" "$hometestdotmod/default" "$cdcontpin"
+
+
+#
+# test saving named collection
+#
+
+# setup environment state
+if { $verbose > 0 } {
+    send_user "\tUnset MODULES_COLLECTION_PIN_VERSION\n"
+}
+unset env(MODULES_COLLECTION_PIN_VERSION)
+eval setenv_path_var MODULEPATH [split $c1modpath ":"]
+setenv_loaded_module [split $c1lm ":"] [split $c1lmf ":"]
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $coll1" "OK" "$hometestdotmod/$coll1" "$c1cont1"
+
+#
+# test saving to an already existing collection
+#
+
+# setup environment state
+eval setenv_path_var MODULEPATH [split $c2modpath ":"]
+setenv_loaded_module [split $c2lm ":"] [split $c2lmf ":"]
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $coll1" "OK" "$hometestdotmod/$coll1" "$c1cont2"
+
+
+#
+# test saving to a given filepath
+#
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $hometestdotmod/$coll2" "OK" "$hometestdotmod/$coll2" "$c1cont2"
+
+
+#
+# test saving to a given filepath when MODULES_COLLECTION_TARGET
+# is set. target should be ignored
+#
+
+# setup environment state
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_COLLECTION_TARGET = $colltarget\n"
+}
+set env(MODULES_COLLECTION_TARGET) "$colltarget"
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $hometestdotmod/$coll3" "OK" "$hometestdotmod/$coll3" "$c1cont2"
+
+
+#
+# test saving collection with no module loaded (only paths set)
+# and with a MODULES_COLLECTION_TARGET set
+#
+
+# setup environment state
+eval setenv_path_var MODULEPATH [split $c4modpath ":"]
+unsetenv_loaded_module
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $coll4" "OK" "$hometestdotmod/$coll4f" "$c4cont"
+
+
+#
+# test saving collection mixing virtual and deep modules spread through
+# different modulepaths to check correct defaults detection
+#
+
+# setup environment state
+eval setenv_path_var MODULEPATH [split $c6modpath ":"]
+setenv_loaded_module [split $c6lm ":"] [split $c6lmf ":"]
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $coll6" "OK" "$hometestdotmod/$coll6f" "$c6cont"
+
+
+#
+# test saving collection with empty element set in MODULEPATH, LOADEDMODULES, _LMFILES_
+#
+
+# setup environment state
+eval setenv_path_var MODULEPATH [split ":$c6modpath" ":"]
+setenv_loaded_module [split $c6lm ":"] [split $c6lmf ":"]
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $coll6" "OK" "$hometestdotmod/$coll6f" "$c6cont"
+
+
+#
+# test saving collection with no modulepath and modulefiles loaded as fullpath
+#
+
+# setup environment state
+eval setenv_path_var MODULEPATH [split $c7modpath ":"]
+setenv_loaded_module [split $c7lm ":"] [split $c7lmf ":"]
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $coll7" "OK" "$hometestdotmod/$coll7f" "$c7cont"
+
+
+#
+# test saving collection with a modulepath and modulefiles loaded as fullpath
+#
+
+# setup environment state
+eval setenv_path_var MODULEPATH [split $c8modpath ":"]
+setenv_loaded_module [split $c8lm ":"] [split $c8lmf ":"]
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $coll8" "OK" "$hometestdotmod/$coll8f" "$c8cont"
+
+
+#
+# test saving collection with some modulefiles loaded not asked by user
+#
+
+# setup environment state
+eval setenv_path_var MODULEPATH [split $c9modpath ":"]
+setenv_loaded_module [split $c9lm ":"] [split $c9lmf ":"] [split $c9lmnua ":"]
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd "sh" "save $coll9" "OK" "$hometestdotmod/$coll9f" "$c9cont"
+
+
+#
+# test saving collection with some modulefiles loaded not asked by user
+# and loaded by 'module load' commands
+#
+
+# setup environment state
+eval setenv_path_var MODULEPATH [split $c11modpath :]
+setenv_loaded_module [split $c11lm :] [split $c11lmf :] [split $c11lmnua :]
+setenv_path_var MODULES_LMPREREQ $c11mod2&$c11mod1
+
+# test only sh shell as this test does not produce shell output
+testoutfile_cmd sh "save $coll11" OK $hometestdotmod/$coll11f $c11cont
+
+
+#
+# test unsetting HOME
+#
+
+if { $verbose > 0 } {
+    send_user "\tUnset HOME\n"
+}
+unset env(HOME)
+
+testouterr_cmd "sh" "save" "ERR" $nohomeerrmsg
+
+# restore default testsuite home
+if { $verbose > 0 } {
+    send_user "\tRestore HOME = $ORIG_HOME\n"
+}
+set env(HOME) $ORIG_HOME
+unset ORIG_HOME
+
+
+#
+# test when loaded environment is inconsistent
+#
+
+setenv_loaded_module [list foo bar] "/path/to/foo"
+unsetenv_path_var MODULES_LMPREREQ
+
+testouterr_cmd "sh" "save" "ERR" "$err_loinconsist\n  LOADEDMODULES=foo bar\n  _LMFILES_=/path/to/foo"
+
+
+#
+# test when current environment has unsatisfied constraint
+#
+
+setenv_loaded_module [list trace/all_on conflict/full] [list $c9modpath/trace/all_on $c9modpath/conflict/full]
+setenv_path_var MODULES_LMCONFLICT "conflict/full&trace/all_on"
+
+testouterr_cmd "sh" "save" "ERR" "$error_msgs: Cannot save collection, some module constraints are not satistied"
+
+
+#
+# Cleanup
+#
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tUnset MODULES_COLLECTION_TARGET\n"
+}
+unset env(MODULES_COLLECTION_TARGET)
+setenv_path_var MODULEPATH $modpath
+unsetenv_path_var MODULES_LMCONFLICT
+unsetenv_loaded_module
+
+unset baddotmod
+unset baddotmodfp
+unset baddotmodfd

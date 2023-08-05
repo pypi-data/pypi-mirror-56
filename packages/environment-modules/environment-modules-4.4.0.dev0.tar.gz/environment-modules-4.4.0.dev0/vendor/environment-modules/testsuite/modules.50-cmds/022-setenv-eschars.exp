@@ -1,0 +1,71 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2002/05/02
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, Ph.D., rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	eschars/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'setenv' module subcommand for escaping
+#			pathelogical chars.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "pathelogical" to
+#    be set up
+#
+
+set module "eschars/1.0"
+set modulefile "$modpath/$module"
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module:1"]
+lappend ans [list set pathelogical "abc\\ :\\	\\{\\}\\|\\<\\>\\!\\#\\$\\^\\&\\'\\\"\\(\\)@x%y\\\\z:sh\\*" noescval]
+lappend ans [list set _LMFILES_ $modulefile]
+lappend ans [list set LOADEDMODULES $module]
+
+lappend ans2 [list set _LMFILES__modshare "$modulefile:1"]
+lappend ans2 [list set LOADEDMODULES_modshare "$module:1"]
+lappend ans2 [list set pathelogical "abc :	{}|<>!#$^&'\"()@x%y\\z:sh*"]
+lappend ans2 [list set _LMFILES_ $modulefile]
+lappend ans2 [list set LOADEDMODULES $module]
+
+
+#
+#  The tests
+#
+
+foreach sh $supported_shells {
+    if {[lsearch -exact $real_shells $sh] >= 0} {
+        test_cmd "$sh" "load $module" $ans
+    } else {
+        test_cmd "$sh" "load $module" $ans2
+    }
+}
+
+#
+#  Cleanup
+#
+
+unset sh
+unset ans
+unset ans2
+
+unset modulefile
+unset module

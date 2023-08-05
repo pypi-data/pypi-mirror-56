@@ -1,0 +1,268 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	prepend/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'prepend-path' module subcommand for all
+#			allowed shell types.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "PATH" to
+#    be set up
+#
+
+set module "prepend/2.0"
+set modulefile "$modpath/$module"
+
+set old_path $env(PATH)
+set ts_path "/this/is/the/modules/testsuite"
+set new_path "$ts_path:$old_path"
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list setpath PATH $new_path]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+
+test_cmd_re "ALL" "load $module" $ans
+
+#
+# Try prepending an empty string
+#
+
+set module "prepend/0.1"
+set modulefile "$modpath/$module"
+
+set old_path $env(PATH)
+set ts_path ""
+set new_path "$ts_path:$old_path"
+
+#
+#  For the different shells ...
+#
+
+set ans [list]
+lappend ans [list setpath PATH $new_path]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+
+test_cmd_re "ALL" "load $module" $ans
+
+#
+# Try prepending a colon ':'
+
+set module "prepend/0.2"
+set modulefile "$modpath/$module"
+
+# different behavior than C-version: on Tcl-version adding a bare colon
+# to a path produces an error since this colon cannot be distinguished
+# from the colon used for path separator
+set ts_err "$moderr_msgs: add-path cannot handle path equals to separator string\nIn '$modulefile'\n$err_contactns"
+
+#
+#  The tests
+#
+
+testouterr_cmd "ALL" "load $module" "ERR" [msg_load $module $ts_err]
+
+
+#
+# Try loading when colon is set at beginning of set PATH
+#
+
+set module "prepend/2.0"
+set modulefile "$modpath/$module"
+
+set old_path ":$env(PATH)"
+set ts_path "/this/is/the/modules/testsuite"
+set new_path "$ts_path:$old_path"
+
+# set PATH with prefixing colon
+set ORIG_PATH $env(PATH)
+if { $verbose > 0 } {
+    send_user "\tSetup PATH = $old_path\n"
+}
+set env(PATH) "$old_path"
+
+set ans [list]
+lappend ans [list setpath PATH $new_path]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+
+test_cmd_re "ALL" "load $module" $ans
+
+
+#
+# Try bad argument list: missing variable name
+#
+
+set module "prepend/0.3"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get an environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try bad argument list: missing variable value
+#
+
+set module "prepend/0.4"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get a value for environment variable PATH\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try bad argument list: empty variable name
+#
+
+set module "prepend/0.5"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get a valid environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try command switches passed after variable name
+#
+
+set module "prepend/1.10"
+set modulefile "$modpath/$module"
+set ans [list]
+lappend ans [list setpath testsuite --delim=,:http://foobar.com]
+lappend ans [list setpath testsuite2 -d:,:http://foobar.com]
+lappend ans [list setpath testsuite3 -Lfoo:bar]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+testouterr_cmd_re "sh" "load $module" $ans {}
+
+
+#
+# Try prepending empty string and check reference counter
+#
+
+set module "prepend/3.0"
+set modulefile "$modpath/$module"
+
+set ans [list]
+lappend ans [list set FOO_modshare ":1"]
+lappend ans [list set FOO ""]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans ""
+
+# empty var does not always mean empty path entry set, only if a corresponding
+# reference counter array entry can be found
+set env(FOO) ""
+testouterr_cmd "sh" "load $module" $ans ""
+
+unset env(FOO)
+set module2 "prepend/3.1"
+set modulefile2 "$modpath/$module2"
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir:1::2"]
+lappend ans [list set FOO "/path/to/dir:"]
+lappend ans [list setpath LOADEDMODULES "$module:$module2"]
+lappend ans [list setpath _LMFILES_ "$modulefile:$modulefile2"]
+
+testouterr_cmd_re "sh" "load $module $module2" $ans ""
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir:1::2"]
+lappend ans [list set FOO "/path/to/dir:"]
+lappend ans [list setpath LOADEDMODULES "$module2:$module"]
+lappend ans [list setpath _LMFILES_ "$modulefile2:$modulefile"]
+
+testouterr_cmd_re "sh" "load $module2 $module" $ans ""
+
+
+#
+# Prepending multiple paths passed as one string
+#
+
+set module "prepend/2.3"
+set modulefile "$modpath/$module"
+set old_path "/path/to/dir1"
+
+set env(FOO_modshare) "$old_path:1"
+set env(FOO) $old_path
+
+set ans [list]
+lappend ans [list set FOO_modshare ":1:/modules/testsuite2.2/2.2:1:$old_path:1:/modules/testsuite2.2:1"]
+lappend ans [list set FOO ":/modules/testsuite2.2:/modules/testsuite2.2/2.2:$old_path"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans ""
+
+
+#
+# Prepending multiple paths passed as multiple strings
+#
+
+set module "prepend/2.4"
+set modulefile "$modpath/$module"
+
+set ans [list]
+lappend ans [list set FOO_modshare ":1:/modules/testsuite2.2/2.2:1:$old_path:1:/modules/testsuite2.2:1"]
+lappend ans [list set FOO ":/modules/testsuite2.2:/modules/testsuite2.2/2.2:$old_path"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "load $module" $ans ""
+
+
+#
+#  Cleanup
+#
+
+# restore default testsuite PATH
+if { $verbose > 0 } {
+    send_user "\tRestore PATH = $ORIG_PATH\n"
+}
+set env(PATH) $ORIG_PATH
+unset ORIG_PATH
+
+unset env(FOO_modshare)
+unset env(FOO)
+
+unset new_path
+unset ts_path
+unset old_path
+unset ts_err
+
+unset ans
+
+unset modulefile
+unset modulefile2
+unset module
+unset module2

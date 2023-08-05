@@ -1,0 +1,53 @@
+@quarantinesupport@# define modules runtine quarantine configuration
+@quarantinesupport@@setquarvars@set(ENV{MODULES_RUN_QUARANTINE} "@RUN_QUARANTINE@")
+@quarantinesupport@@setquarvars@@set(ENV{RUNENV_VAR} "RUNENV_VAL")@
+@quarantinesupport@@notsetquarvars@#set(ENV{MODULES_RUN_QUARANTINE} "ENVVARNAME")
+@quarantinesupport@@notsetquarvars@
+@quarantinesupport@# setup quarantine if defined
+@quarantinesupport@set(_mlre "")
+@quarantinesupport@if(DEFINED ENV{MODULES_RUN_QUARANTINE})
+@quarantinesupport@   string(REPLACE " " ";" _mlv_list "$ENV{MODULES_RUN_QUARANTINE}")
+@quarantinesupport@   foreach(_mlv ${_mlv_list})
+@quarantinesupport@      if(${_mlv} MATCHES "^[A-Za-z_][A-Za-z0-9_]*$")
+@quarantinesupport@         if(DEFINED ENV{${_mlv}})
+@quarantinesupport@            set(_mlre "${_mlre}${_mlv}_modquar=$ENV{${_mlv}};")
+@quarantinesupport@         endif()
+@quarantinesupport@         set(_mlrv "MODULES_RUNENV_${_mlv}")
+@quarantinesupport@         set(_mlre "${_mlre}${_mlv}=$ENV{${_mlrv}};")
+@quarantinesupport@     endif()
+@quarantinesupport@   endforeach()
+@quarantinesupport@   if (NOT "${_mlre}" STREQUAL "")
+@quarantinesupport@      set(_mlre "env;${_mlre}")
+@quarantinesupport@   endif()
+@quarantinesupport@endif()
+@quarantinesupport@
+# define module command and surrounding initial environment (default value
+# for MODULESHOME, MODULEPATH, LOADEDMODULES and parse of init config files)
+execute_process(COMMAND mktemp -t moduleinit.cmake.XXXXXXXXXXXX
+  OUTPUT_VARIABLE tempfile_name
+  OUTPUT_STRIP_TRAILING_WHITESPACE)
+@quarantinesupport@execute_process(COMMAND ${_mlre} @TCLSH@ @libexecdir@/modulecmd.tcl cmake autoinit
+@notquarantinesupport@execute_process(COMMAND @TCLSH@ @libexecdir@/modulecmd.tcl cmake autoinit
+  OUTPUT_FILE ${tempfile_name})
+if(EXISTS ${tempfile_name})
+  include(${tempfile_name})
+  file(REMOVE ${tempfile_name})
+endif()
+@compatversion@
+@compatversion@# redefine module command if compat version has been activated
+@compatversion@if("$ENV{MODULES_USE_COMPAT_VERSION}" STREQUAL "1")
+@compatversion@   set(ENV{MODULES_CMD} "@libexecdir@/modulecmd-compat")
+@compatversion@   function(module)
+@compatversion@      execute_process(COMMAND mktemp -t moduleinit.cmake.XXXXXXXXXXXX
+@compatversion@         OUTPUT_VARIABLE tempfile_name
+@compatversion@         OUTPUT_STRIP_TRAILING_WHITESPACE)
+@compatversion@      execute_process(COMMAND @libexecdir@/modulecmd-compat cmake ${ARGV}
+@compatversion@         OUTPUT_FILE ${tempfile_name})
+@compatversion@      if(EXISTS ${tempfile_name})
+@compatversion@         include(${tempfile_name})
+@compatversion@         file(REMOVE ${tempfile_name})
+@compatversion@      endif()
+@compatversion@      # return value as done on new main version
+@compatversion@      set(module_result TRUE PARENT_SCOPE)
+@compatversion@   endfunction(module)
+@compatversion@endif()

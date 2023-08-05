@@ -1,0 +1,123 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	2017/11/26
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        is-loaded
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test 'is-loaded' module command
+#		}C%
+#
+##############################################################################
+
+set module "setenv/1.0"
+set modname "setenv"
+set modpart "setenv/1"
+set modulefile "$modpath/$module"
+set modulefile_reld "$reldmodpath/$module"
+set modulefile_reldd "$relddmodpath/$module"
+
+testouterr_cmd "ALL" "is-loaded $module" "ERR" ""
+testouterr_cmd "sh" "is-loaded" "ERR" ""
+testouterr_cmd "sh" "is-loaded $modname foo" "ERR" ""
+testouterr_cmd "sh" "is-loaded foo $modpart" "ERR" ""
+
+# test with full path module name
+testouterr_cmd "sh" "is-loaded $modulefile" "ERR" ""
+testouterr_cmd "sh" "is-loaded $modulefile_reld" "ERR" ""
+testouterr_cmd "sh" "is-loaded $modulefile_reldd" "ERR" ""
+
+
+# setup LOADEDMODULES/_LMFILES_ with an empty element
+setenv_loaded_module [list {} {}] [list {} {}]
+
+testouterr_cmd "sh" "is-loaded $module" "ERR" ""
+testouterr_cmd "sh" "is-loaded" "ERR" ""
+
+
+setenv_loaded_module $module $modulefile
+
+testouterr_cmd "ALL" "is-loaded $module" "OK" ""
+testouterr_cmd "sh" "is-loaded" "OK" ""
+testouterr_cmd "sh" "is-loaded $modname foo" "OK" ""
+testouterr_cmd "sh" "is-loaded foo $modpart" "ERR" ""
+
+# test with full path module name
+testouterr_cmd "sh" "is-loaded $modulefile" "OK" ""
+testouterr_cmd "sh" "is-loaded $modulefile_reld" "OK" ""
+testouterr_cmd "sh" "is-loaded $modulefile_reldd" "OK" ""
+
+
+# setup LOADEDMODULES/_LMFILES_ with an empty element
+setenv_loaded_module [list {} $module] [list {} $modulefile]
+
+testouterr_cmd "sh" "is-loaded" "OK" ""
+testouterr_cmd "sh" "is-loaded $modname foo" "OK" ""
+testouterr_cmd "sh" "is-loaded foo $modpart" "ERR" ""
+
+# restore LOADEDMODULES/_LMFILES_
+setenv_loaded_module $module $modulefile
+
+
+# unset MODULEPATH
+unsetenv_path_var MODULEPATH
+
+testouterr_cmd "sh" "is-loaded $module" "OK" ""
+testouterr_cmd "sh" "is-loaded" "OK" ""
+testouterr_cmd "sh" "is-loaded $modname foo" "OK" ""
+testouterr_cmd "sh" "is-loaded foo $modpart" "ERR" ""
+
+# test with full path module name
+testouterr_cmd "sh" "is-loaded $modulefile" "OK" ""
+testouterr_cmd "sh" "is-loaded $modulefile_reld" "OK" ""
+testouterr_cmd "sh" "is-loaded $modulefile_reldd" "OK" ""
+
+
+# test with short path name whereas full path name loaded
+setenv_path_var MODULEPATH "$modpath.2" $modpath
+setenv_loaded_module $modulefile $modulefile
+
+testouterr_cmd "sh" "is-loaded $module" "OK" ""
+testouterr_cmd "sh" "is-loaded $modname" "OK" ""
+
+# same test without MODULEPATH set anymore
+unsetenv_path_var MODULEPATH
+
+testouterr_cmd "sh" "is-loaded $module" "ERR" ""
+testouterr_cmd "sh" "is-loaded $modname" "ERR" ""
+
+# test when loaded environment is inconsistent
+setenv_path_var MODULEPATH $modpath
+setenv_loaded_module [list foo bar] "/path/to/foo"
+
+# error raised only if correlation between LOADEDMODULES and _LMFILES_ is attempted
+# but correlation is attempted most of the time with alternative names match
+set tserr "$err_loinconsist\n  LOADEDMODULES=foo bar\n  _LMFILES_=/path/to/foo"
+testouterr_cmd "sh" "is-loaded foo" ERR $tserr
+testouterr_cmd "sh" "is-loaded /foo" ERR $tserr
+
+
+#
+#  Cleanup
+#
+
+# Clean up the environment
+unsetenv_loaded_module
+
+unset tserr
+unset module
+unset modname
+unset modpart
+unset modulefile
+unset modulefile_reld
+unset modulefile_reldd

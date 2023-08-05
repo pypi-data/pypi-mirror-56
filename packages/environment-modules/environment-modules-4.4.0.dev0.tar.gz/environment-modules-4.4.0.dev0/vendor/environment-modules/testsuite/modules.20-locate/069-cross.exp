@@ -1,0 +1,631 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	2017/08/25
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        load, unload, switch, display, help, test, whatis,
+#                   path, paths
+#   Modulefiles:	cross, lcross, othcross
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test the correct resolution of modulefiles and module aliases
+#           spread or with target across different modulepaths
+#		}C%
+#
+##############################################################################
+
+set modpath1 "$modpath.path1"
+set modpath1re "$modpathre.path1"
+set modpath2 "$modpath.path2"
+set modpath2re "$modpathre.path2"
+set modpath3 "$modpath.path3"
+set modpath3re "$modpathre.path3"
+
+set modsym_1 "cross/1"
+set module_1 "cross/1.0"
+set modalt_1 $module_1&cross/1
+set modulepath_1 "$modpath2"
+set modulepathre_1 "$modpath2re"
+
+set modsym_2 "cross/2"
+set module_2 "cross/2.0"
+set modalt_2 $module_2&cross/2
+set modulepath_2 "$modpath3"
+set modulepathre_2 "$modpath3re"
+
+set modsym_3 "cross/3"
+set module_3 "cross/3.0"
+set modalt_3 $module_3&cross/3&cross/bef
+set modulepath_3 "$modpath1"
+set modulepathre_3 "$modpath1re"
+
+set modsym_4 "cross/4"
+set module_4 "cross/4.0"
+set modalt_4 $module_4&cross/4
+set modulepath_4 "$modpath1"
+set modulepathre_4 "$modpath1re"
+
+set modsym_5 "cross/5"
+set module_5 "cross/5.0"
+set modalt_5 $module_5&cross/5&cross/aft
+set modulepath_5 "$modpath3"
+set modulepathre_5 "$modpath3re"
+
+set modsym_6 "cross/6"
+set module_6 "cross/6.0"
+set modalt_6 $module_6&cross/6
+set modulepath_6 "$modpath2"
+set modulepathre_6 "$modpath2re"
+
+set modsym_7 "cross/bef"
+set module_7 "cross/3.0"
+set modalt_7 $modalt_3
+set modulepath_7 "$modpath1"
+set modulepathre_7 "$modpath1re"
+
+set modsym_8 "cross/aft"
+set module_8 "cross/5.0"
+set modalt_8 $modalt_5
+set modulepath_8 "$modpath3"
+set modulepathre_8 "$modpath3re"
+
+set modsym_9 "cross/othbef"
+set module_9 "othcross/1.0"
+set modalt_9 $module_9&othcross/bef&cross/othbef
+set modulepath_9 "$modpath1"
+set modulepathre_9 "$modpath1re"
+
+set modsym_10 "cross/othaft"
+set module_10 "othcross/2.0"
+set modalt_10 $module_10&othcross/aft&cross/othaft
+set modulepath_10 "$modpath3"
+set modulepathre_10 "$modpath3re"
+
+# default with no top definition, biggest from first path
+set modsym_11 "cross"
+set module_11 "cross/4.0"
+set modulepath_11 "$modpath1"
+set modulepathre_11 "$modpath1re"
+set nodefault_11 "$err_nodefault'$modsym_11'"
+
+# alias set from top (MODULERCFILE)
+set modsym_12 "cross/top"
+set module_12 "$module_1"
+set modalt_12 $module_1&cross/top&cross/1
+set modulepath_12 "$modulepath_1"
+set modulepathre_12 "$modulepathre_1"
+
+# alias set from top (MODULERCFILE)
+set modsym_13 "cross/othtop"
+set module_13 "$module_9"
+set modalt_13 $module_9&othcross/bef&cross/othbef&cross/othtop&othcross/othtop
+set modulepath_12 "$modulepath_1"
+set modulepath_13 "$modulepath_9"
+set modulepathre_13 "$modulepathre_9"
+
+# default set from top (MODULERCFILE)
+set modsym_14 "cross"
+set module_14 "$module_2"
+set modalt_14 $module_2&cross/default&cross&cross/2
+set modulepath_12 "$modulepath_1"
+set modulepath_14 "$modulepath_2"
+set modulepathre_14 "$modulepathre_2"
+
+# loading tests
+set modsym_15 "lcross/1"
+set modnuasked_15 [list cross/2.0 lcross/2]
+set modprereq_15 [list lcross/2&cross/2.0 lcross/1&lcross/2]
+set module_15 [list cross/2.0 lcross/2 lcross/1]
+set modalt_15 $modalt_2
+set modulefile_15 [list $modpath3/cross/2.0 $modpath2/lcross/2 $modpath1/lcross/1]
+
+set modsym_16 "lcross/3"
+set modnuasked_16 [list cross/4.0 lcross/4]
+set modprereq_16 [list lcross/4&cross/4.0 lcross/3&lcross/4]
+set module_16 [list cross/4.0 lcross/4 lcross/3]
+set modulefile_16 [list $modpath1/cross/4.0 $modpath2/lcross/4 $modpath3/lcross/3]
+
+set modsym_17 "lcross/5"
+set modnuasked_17 [list cross/6.0 lcross/6]
+set modprereq_17 [list lcross/6&cross/6 lcross/5&lcross/6]
+set module_17 [list cross/6.0 lcross/6 lcross/5]
+set modalt_17 $modalt_6
+set modulefile_17 [list $modpath2/cross/6.0 $modpath1/lcross/6 $modpath2/lcross/5]
+
+set modsym_18 "lcross/7"
+set modnuasked_18 [list cross/1.0 lcross/8]
+set modprereq_18 [list lcross/8&cross/1 lcross/7&lcross/8]
+set module_18 [list cross/1.0 lcross/8 lcross/7]
+set modalt_18 $modalt_1
+set modulefile_18 [list $modpath2/cross/1.0 $modpath3/lcross/8 $modpath2/lcross/7]
+
+set modsym_19 "lcross/10"
+set modnuasked_19 "cross/4.0"
+set modprereq_19 [list lcross/10&cross]
+# first directory wins default
+set module_19 "cross/4.0:lcross/10"
+set modulefile_19 "$modpath1/cross/4.0:$modpath1/lcross/10"
+set nodefault_19 [msg_load $modsym_19 "$err_nodefault'$modsym_11'" [err_reqlo $modsym_11]]
+
+set modsym_20 "lcross/11"
+set modnuasked_20 "cross/4.0"
+set modprereq_20 [list lcross/11&cross]
+# first directory wins default
+set module_20 "cross/4.0:lcross/11"
+set modulefile_20 "$modpath1/cross/4.0:$modpath2/lcross/11"
+set nodefault_20 [msg_load $modsym_20 "$err_nodefault'$modsym_11'" [err_reqlo $modsym_11]]
+
+set modsym_21 "lcross/12"
+set modnuasked_21 "cross/4.0"
+set modprereq_21 [list lcross/12&cross]
+# first directory wins default
+set module_21 "cross/4.0:lcross/12"
+set modulefile_21 "$modpath1/cross/4.0:$modpath3/lcross/12"
+set nodefault_21 [msg_load $modsym_21 "$err_nodefault'$modsym_11'" [err_reqlo $modsym_11]]
+
+set modsym_22 "dcross/dir1"
+set module_22 "dcross/dir1/1.0"
+set modulepath_22 "$modpath1"
+set modulepathre_22 "$modpath1re"
+set nodefault_22 "$err_nodefault'$modsym_22'"
+
+set modsym_23 "dcross/d31"
+set module_23 "dcross/dir3/1.0"
+set modalt_23 $module_23&$modsym_23
+set modulepath_23 "$modpath3"
+set modulepathre_23 "$modpath3re"
+
+set modsym_24 "dcross/dir2/craft"
+set module_24 "dcross/dir2/1.0"
+set modalt_24 $module_24&$modsym_24
+set modulepath_24 "$modpath2"
+set modulepathre_24 "$modpath2re"
+
+set modsym_25 "dcross/dir1/bef"
+set module_25 "dcross/dir1/1.0"
+# different than for module_22, as symbol in defined across modulepath, so it is missed
+# when the modulefile search reaches satisfying result before looking at this modulepath
+set modalt_25 $module_25&$modsym_25
+set modulepath_25 "$modpath1"
+set modulepathre_25 "$modpath1re"
+
+set modsym_26 "dcross/dir1/aft"
+set module_26 "dcross/dir1/3.0"
+set modalt_26 $module_26&$modsym_26
+set modulepath_26 "$modpath3"
+set modulepathre_26 "$modpath3re"
+
+set modsym_27 "dcross/dir1/first"
+set module_27 "dcross/4.0"
+set modalt_27 $module_27&$modsym_27
+set modulepath_27 "$modpath1"
+set modulepathre_27 "$modpath1re"
+
+set modsym_28 "dcross/dir1/last"
+set module_28 "dcross/5.0"
+set modalt_28 $module_28&$modsym_28
+set modulepath_28 "$modpath3"
+set modulepathre_28 "$modpath3re"
+
+set modsym_29 "dcross/d11"
+set module_29 "dcross/dir1/1.0"
+set modalt_29 $modalt_25&$modsym_29
+set modulepath_29 "$modpath1"
+set modulepathre_29 "$modpath1re"
+
+set modsym_30 "dcross/dir1/crbef"
+set module_30 "dcross/dir1/2.0"
+set modalt_30 $module_30&$modsym_30
+set modulepath_30 "$modpath2"
+set modulepathre_30 "$modpath2re"
+
+set modsym_31 "fodcross/2.7.13/sub-13"
+set module_31 "fodcross/2.7.13/sub-13"
+set modulepath_31 "$modpath1"
+set modulepathre_31 "$modpath1re"
+
+# working with virtual modules
+set modsym_32 "vcross/1"
+set module_32 "vcross/1.0"
+set modalt_32 $module_32&$modsym_32
+set modulefile_32 "$modpath2/vcross/.base"
+set modulefilere_32 "$modpath2re/vcross/.base"
+set modulepathre_32 "$modpath2re"
+
+set modsym_33 "vcross/2"
+set module_33 "vcross/2.0"
+set modalt_33 $module_33&$modsym_33
+set modulefile_33 "$modpath3/vcross/.base"
+set modulefilere_33 "$modpath3re/vcross/.base"
+set modulepathre_33 "$modpath3re"
+
+set modsym_34 "vcross/3"
+set module_34 "vcross/3.0"
+set modalt_34 $module_34&$modsym_34&vcross/bef
+set modulefile_34 "$modpath1/vcross/.base"
+set modulefilere_34 "$modpath1re/vcross/.base"
+set modulepathre_34 "$modpath1re"
+
+set modsym_35 "vcross/4"
+set module_35 "vcross/4.0"
+set modalt_35 $module_35&$modsym_35
+set modulefile_35 "$modpath1/vcross/.base"
+set modulefilere_35 "$modpath1re/vcross/.base"
+set modulepathre_35 "$modpath1re"
+
+set modsym_36 "vcross/5"
+set module_36 "vcross/5.0"
+set modalt_36 $module_36&$modsym_36&vcross/aft
+set modulefile_36 "$modpath3/vcross/.base"
+set modulefilere_36 "$modpath3re/vcross/.base"
+set modulepathre_36 "$modpath3re"
+
+set modsym_37 "vcross/6"
+set module_37 "vcross/6.0"
+set modalt_37 $module_37&$modsym_37
+set modulefile_37 "$modpath2/vcross/.base"
+set modulefilere_37 "$modpath2re/vcross/.base"
+set modulepathre_37 "$modpath2re"
+
+set modsym_38 "vcross/bef"
+set module_38 "vcross/3.0"
+set modalt_38 $modalt_34
+set modulefile_38 "$modpath1/vcross/.base"
+set modulefilere_38 "$modpath1re/vcross/.base"
+set modulepathre_38 "$modpath1re"
+
+set modsym_39 "vcross/aft"
+set module_39 "vcross/5.0"
+set modalt_39 $modalt_36
+set modulefile_39 "$modpath3/vcross/.base"
+set modulefilere_39 "$modpath3re/vcross/.base"
+set modulepathre_39 "$modpath3re"
+
+# default on virtual modules, biggest from first path
+set modsym_40 "vcross"
+set module_40 "vcross/4.0"
+set modulefile_40 "$modpath1/vcross/.base"
+set modulefilere_40 "$modpath1re/vcross/.base"
+set modulepathre_40 "$modpath1re"
+set nodefault_40 "$err_nodefault'$modsym_40'"
+
+# working with deep virtual modules
+set modsym_41 "dvcross/dir1"
+set module_41 "dvcross/dir1/1.0"
+set modulefile_41 "$modpath1/dvcross/.base"
+set modulefilere_41 "$modpath1re/dvcross/.base"
+set modulepathre_41 "$modpath1re"
+set nodefault_41 "$err_nodefault'$modsym_41'"
+
+set modsym_42 "dvcross/d31"
+set module_42 "dvcross/dir3/1.0"
+set modalt_42 $module_42&$modsym_42
+set modulefile_42 "$modpath3/dvcross/.base"
+set modulefilere_42 "$modpath3re/dvcross/.base"
+set modulepathre_42 "$modpath3re"
+
+set modsym_43 "dvcross/dir2/craft"
+set module_43 "dvcross/dir2/1.0"
+set modalt_43 $module_43&$modsym_43
+set modulefile_43 "$modpath2/dvcross/.base"
+set modulefilere_43 "$modpath2re/dvcross/.base"
+set modulepathre_43 "$modpath2re"
+
+set modsym_44 "dvcross/dir1/bef"
+set module_44 "dvcross/dir1/1.0"
+set modalt_44 $module_44&$modsym_44
+set modulefile_44 "$modpath1/dvcross/.base"
+set modulefilere_44 "$modpath1re/dvcross/.base"
+set modulepathre_44 "$modpath1re"
+
+set modsym_45 "dvcross/dir1/aft"
+set module_45 "dvcross/dir1/3.0"
+set modalt_45 $module_45&$modsym_45
+set modulefile_45 "$modpath3/dvcross/.base"
+set modulefilere_45 "$modpath3re/dvcross/.base"
+set modulepathre_45 "$modpath3re"
+
+set modsym_46 "dvcross/dir1/first"
+set module_46 "dvcross/4.0"
+set modalt_46 $module_46&$modsym_46
+set modulefile_46 "$modpath1/dvcross/.base"
+set modulefilere_46 "$modpath1re/dvcross/.base"
+set modulepathre_46 "$modpath1re"
+
+set modsym_47 "dvcross/dir1/last"
+set module_47 "dvcross/5.0"
+set modalt_47 $module_47&$modsym_47
+set modulefile_47 "$modpath3/dvcross/.base"
+set modulefilere_47 "$modpath3re/dvcross/.base"
+set modulepathre_47 "$modpath3re"
+
+set modsym_48 "dvcross/d11"
+set module_48 "dvcross/dir1/1.0"
+set modalt_48 $module_48&dvcross/dir1/bef&$modsym_48
+set modulefile_48 "$modpath1/dvcross/.base"
+set modulefilere_48 "$modpath1re/dvcross/.base"
+set modulepathre_48 "$modpath1re"
+
+set modsym_49 "dvcross/dir1/crbef"
+set module_49 "dvcross/dir1/2.0"
+set modalt_49 $module_49&$modsym_49
+set modulefile_49 "$modpath2/dvcross/.base"
+set modulefilere_49 "$modpath2re/dvcross/.base"
+set modulepathre_49 "$modpath2re"
+
+set help_pre "$modlin\nModule Specific Help for "
+set help_post ":\n\n$modlin"
+set test_pre "$modlin\nModule Specific Test for "
+set test_post ":\n\nTest result: PASS\n$modlin"
+set disp_pre "$modlin\n"
+set disp_wi "module-whatis\\s+"
+set disp_post "\nsetenv\\s+testsuite\\s+yes\n$modlin"
+
+
+#
+#  The tests
+#
+
+# setup crossed modulepath for tests
+setenv_path_var MODULEPATH $modpath1 $modpath2 $modpath3
+
+# init proc to define all tests for one module case
+proc cross_test_case {i {test_whatis 1} {test_paths 1} {test_shows 1}} {
+    set modsym [set "::modsym_${i}"]
+    set modulelist [set "::module_${i}"]
+    set module [join $modulelist ":"]
+    if {[info exists "::modalt_${i}"]} {
+        set modalt [set "::modalt_${i}"]
+    } else {
+        set modalt ""
+    }
+    if {[info exists "::modnuasked_${i}"]} {
+        set modnuasked [join [set "::modnuasked_${i}"] ":"]
+        set msgload [msg_top_load $modsym {} [set "::modnuasked_${i}"] {}]
+        set msgunload [msg_top_unload $modsym {} [lreverse [set "::modnuasked_${i}"]] {}]
+    } else {
+        set modnuasked {}
+        set msgload {}
+        set msgunload {}
+    }
+    if {[info exists "::modprereq_${i}"]} {
+        set modprereq [join [set "::modprereq_${i}"] ":"]
+    } else {
+        set modprereq {}
+    }
+    if {[info exists "::modulefile_${i}"]} {
+        set modulefilelist [set "::modulefile_${i}"]
+        set modulefile [join $modulefilelist ":"]
+        if {[info exists "::modulefilere_${i}"]} {
+            set modulefilere [set "::modulefilere_${i}"]
+        }
+        if {[info exists "::modulepathre_${i}"]} {
+            set modulepathre [set "::modulepathre_${i}"]
+        }
+    } else {
+        set modulepath [set "::modulepath_${i}"]
+        set modulepathre [set "::modulepathre_${i}"]
+        set modulefile "$modulepath/$module"
+        set modulefilelist $modulefile
+        set modulefilere "$modulepathre/$module"
+    }
+    if {[info exists "::nodefault_${i}"]} {
+        set nodefault [set "::nodefault_${i}"]
+    } else {
+        set nodefault {}
+    }
+
+    # setup environment with no loaded module
+    unsetenv_loaded_module
+    unsetenv_path_var MODULES_LMPREREQ
+    unsetenv_path_var MODULES_LMALTNAME
+
+    set ans [list]
+    lappend ans [list set testsuite "yes"]
+    lappend ans [list setpath LOADEDMODULES "$module"]
+    lappend ans [list setpath _LMFILES_ "$modulefile"]
+    if {$modnuasked ne ""} {
+        lappend ans [list setpath MODULES_LMNOTUASKED "$modnuasked"]
+    }
+
+    if {$modprereq ne ""} {
+        lappend ans [list setpath MODULES_LMPREREQ "$modprereq"]
+    }
+    if {$modalt ne ""} {
+        lappend ans [list setpath MODULES_LMALTNAME $modalt]
+    }
+    if {$nodefault eq {}} {
+        testouterr_cmd_re "sh" "load $modsym" $ans $msgload
+    } else {
+        testouterr_cmd_re "sh" "load $modsym" [if_implicitdefault $ans ERR] [if_implicitdefault $msgload $nodefault]
+    }
+
+    if {$test_shows} {
+        set displayerr "$::disp_pre$modulefilere:\n\n$::disp_wi$module$::disp_post"
+        set helperr "$::help_pre$modulefilere$::help_post"
+        set testerr "$::test_pre$modulefilere$::test_post"
+
+        if {$nodefault eq {}} {
+            testouterr_cmd_re "sh" "display $modsym" "OK" $displayerr
+            testouterr_cmd_re "sh" "help $modsym" "OK" $helperr
+            testouterr_cmd_re "sh" "test $modsym" "OK" $testerr
+        } else {
+            testouterr_cmd_re "sh" "display $modsym" [if_implicitdefault OK ERR] [if_implicitdefault $displayerr $nodefault]
+            testouterr_cmd_re "sh" "help $modsym" [if_implicitdefault OK ERR] [if_implicitdefault $helperr $nodefault]
+            testouterr_cmd_re "sh" "test $modsym" [if_implicitdefault OK ERR] [if_implicitdefault $testerr $nodefault]
+        }
+    }
+
+    if {$test_whatis} {
+        testouterr_cmd_re "sh" "whatis $modsym" "OK" "$::modlin $modulepathre $::modlin\n\\s*$module: $module"
+    }
+
+    if {$test_paths || $test_shows} {
+        set ans [list]
+        lappend ans [list text $modulefile]
+    }
+    if {$test_shows} {
+        if {$nodefault eq {}} {
+            testouterr_cmd "sh" "path $modsym" $ans ""
+        } else {
+            testouterr_cmd "sh" "path $modsym" [if_implicitdefault $ans [list [list text {}]]] [if_implicitdefault {} $nodefault]
+        }
+    }
+    if {$test_paths} {
+        testouterr_cmd "sh" "paths $modsym" $ans ""
+    }
+
+    # setup environment with targeted module loaded
+    setenv_loaded_module $modulelist $modulefilelist $modnuasked
+    if {$modprereq ne ""} {
+        setenv_path_var MODULES_LMPREREQ $modprereq
+    }
+    if {$modalt ne ""} {
+        setenv_path_var MODULES_LMALTNAME $modalt
+    }
+
+    set ans [list]
+    # unload interpretations are not cascaded if auto_handling enabled so answer order change
+    if {$::install_autohandling eq {n} || $modprereq eq {}} {
+        lappend ans [list unset testsuite]
+    }
+    lappend ans [list unsetpath LOADEDMODULES]
+    lappend ans [list unsetpath _LMFILES_]
+    if {$modprereq ne ""} {
+        lappend ans [list unsetpath MODULES_LMPREREQ]
+    }
+    if {$::install_autohandling eq {y} && $modprereq ne {}} {
+        lappend ans [list unset testsuite]
+    }
+    if {$modnuasked ne ""} {
+        lappend ans [list unsetpath MODULES_LMNOTUASKED]
+    }
+    if {$modalt ne ""} {
+        lappend ans [list unsetpath MODULES_LMALTNAME]
+    }
+    testouterr_cmd_re "sh" "unload $modsym" $ans $msgunload
+}
+
+# initial tests
+for {set i 1} {$i <= 10} {incr i} {
+    cross_test_case $i
+}
+# test default, but not wide commands (whatis, paths)
+cross_test_case 11 0 0
+
+
+# tests with a top MODULERCFILE enabled
+set env(MODULERCFILE) "$env(TESTSUITEDIR)/etc/modulerc.cross"
+if { $verbose > 0 } {
+    send_user "\tSetup MODULERCFILE = '$env(MODULERCFILE)'\n"
+}
+
+for {set i 12} {$i <= 13} {incr i} {
+    cross_test_case $i
+}
+# test default, but not wide commands (whatis, paths)
+cross_test_case 14 0 0
+
+# disable MODULERCFILE
+unset env(MODULERCFILE)
+if { $verbose > 0 } {
+    send_user "\tRestore MODULERCFILE = ''\n"
+}
+
+
+# test loading module within modulefiles
+for {set i 15} {$i <= 21} {incr i} {
+    # just test load and unload commands
+    cross_test_case $i 0 0 0
+}
+
+# tests with deep modulefiles
+# test default, but not wide commands (whatis, paths)
+cross_test_case 22 0 0
+for {set i 23} {$i <= 30} {incr i} {
+    cross_test_case $i
+}
+
+# tests with deep modulefiles represented by dir in one path
+# and file in other path
+cross_test_case 31
+
+# test virtual modules
+for {set i 32} {$i <= 39} {incr i} {
+    cross_test_case $i
+}
+# test default, but not wide commands (whatis, paths)
+cross_test_case 40 0 0
+
+# tests with deep virtual modules
+# test default, but not wide commands (whatis, paths)
+cross_test_case 41 0 0
+for {set i 42} {$i <= 49} {incr i} {
+    cross_test_case $i
+}
+
+#
+#  Cleanup
+#
+
+# Clean up the environment
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMALTNAME
+setenv_path_var MODULEPATH $modpath
+
+unset help_pre
+unset help_post
+unset test_pre
+unset test_post
+unset disp_pre
+unset disp_wi
+unset disp_post
+
+for {set i 1} {$i <= 49} {incr i} {
+    unset "modsym_${i}"
+    unset "module_${i}"
+    if {[info exists "modalt_${i}"]} {
+        unset "modalt_${i}"
+    }
+    if {[info exists "modnuasked_${i}"]} {
+        unset "modnuasked_${i}"
+    }
+    if {[info exists "modprereq_${i}"]} {
+        unset "modprereq_${i}"
+    }
+    if {[info exists "::modulefile_${i}"]} {
+        unset "modulefile_${i}"
+        if {[info exists "::modulefilere_${i}"]} {
+            unset "modulefilere_${i}"
+        }
+        if {[info exists "::modulepathre_${i}"]} {
+            unset "modulepathre_${i}"
+        }
+    } else {
+        unset "modulepath_${i}"
+        unset "modulepathre_${i}"
+    }
+    if {[info exists "nodefault_${i}"]} {
+        unset "nodefault_${i}"
+    }
+}
+
+unset i
+
+unset modpath1
+unset modpath1re
+unset modpath2
+unset modpath2re
+unset modpath3
+unset modpath3re
+
+# remove procs
+rename cross_test_case {}

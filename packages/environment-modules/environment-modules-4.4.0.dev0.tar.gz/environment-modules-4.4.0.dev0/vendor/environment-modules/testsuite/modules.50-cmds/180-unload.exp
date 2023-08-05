@@ -1,0 +1,260 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.80-deep/%M%
+#   Revision:		%I%
+#   First Edition:	2017/08/23
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        unload
+#   Modulefiles:	setenv, loc_rc3
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test unload action
+#		}C%
+#
+##############################################################################
+
+set modulename_1 "setenv"
+set module_1 "$modulename_1/0.8"
+set modulefile_1 "$modpath/$module_1"
+set modulefile_1_reld "$reldmodpath/$module_1"
+set modulefile_1_reldd "$relddmodpath/$module_1"
+set module_2 "$modulename_1/1.0"
+set modulefile_2 "$modpath/$module_2"
+set module_3 "$modpath/loc_rc3/1.0"
+set modulefile_3 $module_3
+set module_3_reld "$reldmodpath/loc_rc3/1.0"
+set module_3_reldd "$relddmodpath/loc_rc3/1.0"
+
+lappend ans [list unsetpath testsuite]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+set module_0 "bad2/body"
+set modulefile_0 "$modpath/$module_0"
+set mod0_err [msg_unload $module_0 "$moderr_msgs: invalid command name \"bad-command\"\nIn '$modulefile_0'\n$err_contactns"]
+
+#
+#  The tests
+#
+
+# unload unkown module
+# no modulefile existence check, just look if loaded, no error if not
+testouterr_cmd "sh" "unload NonExistant" OK {}
+
+# try with full path name forms
+# no modulefile existence check, just look if loaded, no error if not
+testouterr_cmd "sh" "unload $modpath/XYZ" OK {}
+testouterr_cmd "sh" "unload $reldmodpath/XYZ" OK {}
+testouterr_cmd "sh" "unload $relddmodpath/XYZ" OK {}
+
+# set up the environment
+setenv_loaded_module $module_0 $modulefile_0
+
+# unload broken module, error but no unload
+testouterr_cmd "sh" "unload $module_0" "ERR" "$mod0_err"
+
+
+# set up the environment
+setenv_var testsuite "yes"
+setenv_loaded_module $module_1 $modulefile_1
+
+# unload passing partial name
+# no modulefile existence check, just look if loaded, no error if not
+testouterr_cmd "sh" "unload set" OK {}
+
+# unload passing fully qualified module name
+testouterr_cmd "sh" "unload $module_1" $ans ""
+
+
+# unload with just module name
+testouterr_cmd "sh" "unload $modulename_1" $ans ""
+
+# command nickname tests
+testouterr_cmd "sh" "unlo $modulename_1" $ans ""
+testouterr_cmd "sh" "rm $modulename_1" $ans ""
+testouterr_cmd "sh" "del $modulename_1" $ans ""
+testouterr_cmd "sh" "remove $modulename_1" $ans ""
+
+
+# set up the environment
+setenv_loaded_module [list $module_2 $module_1] [list $modulefile_2 $modulefile_1]
+
+set anslast [list]
+lappend anslast [list unsetpath testsuite]
+lappend anslast [list setpath LOADEDMODULES $module_2]
+lappend anslast [list setpath _LMFILES_ $modulefile_2]
+set ansfirst [list]
+lappend ansfirst [list unset testsuite]
+lappend ansfirst [list setpath LOADEDMODULES $module_1]
+lappend ansfirst [list setpath _LMFILES_ $modulefile_1]
+
+# unload with just module name, last or first matching loaded will be unloaded
+# (depends on unload_match_order setting) even if before that the real default is loaded
+testouterr_cmd sh "unload $modulename_1" [expr {$install_unloadmatchorder eq {returnlast} ? $anslast : $ansfirst}] {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnfirst
+testouterr_cmd sh "unload $modulename_1" $ansfirst {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnlast
+testouterr_cmd sh "unload $modulename_1" $anslast {}
+unsetenv_var MODULES_UNLOAD_MATCH_ORDER
+
+# unload with full path module file
+testouterr_cmd "sh" "unload $modulefile_1" $anslast ""
+testouterr_cmd "sh" "unload $modulefile_1_reld" $anslast ""
+testouterr_cmd "sh" "unload $modulefile_1_reldd" $anslast ""
+
+# setup MODULEPATH with a trailing slash and an empty dir element
+setenv_path_var MODULEPATH {} "$modpath/"
+testouterr_cmd "sh" "unload $modulefile_1" $anslast ""
+
+
+# setup LOADEDMODULES/_LMFILES_ with an empty element
+setenv_loaded_module [list {} $module_2 $module_1] [list {} $modulefile_2 $modulefile_1]
+
+set ans [list]
+lappend ans [list unsetpath testsuite]
+# empty elements are ignored but stick to the variable, they should be removed
+lappend ans [list setpath LOADEDMODULES ":$module_2"]
+lappend ans [list setpath _LMFILES_ ":$modulefile_2"]
+
+testouterr_cmd_re "sh" "unload $modulefile_1" $ans ""
+
+
+# unset MODULEPATH
+unsetenv_path_var MODULEPATH
+
+set ans [list]
+lappend ans [list unsetpath testsuite]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+# set up the environment
+setenv_loaded_module $module_1 $modulefile_1
+
+# unload passing partial name, modulepath not set anymore
+# no modulefile existence check, just look if loaded, no error if not
+testouterr_cmd "sh" "unload set" OK {}
+
+# unload passing fully qualified module name, modulepath not set anymore
+testouterr_cmd "sh" "unload $module_1" $ans ""
+
+
+# unload with just module name, modulepath not set anymore
+testouterr_cmd "sh" "unload $modulename_1" $ans ""
+
+
+# set up the environment
+setenv_loaded_module [list $module_2 $module_1] [list $modulefile_2 $modulefile_1]
+
+set anslast [list]
+lappend anslast [list unsetpath testsuite]
+lappend anslast [list setpath LOADEDMODULES $module_2]
+lappend anslast [list setpath _LMFILES_ $modulefile_2]
+set ansfirst [list]
+lappend ansfirst [list unset testsuite]
+lappend ansfirst [list setpath LOADEDMODULES $module_1]
+lappend ansfirst [list setpath _LMFILES_ $modulefile_1]
+
+# unload with just module name, modulepath not set anymore, last or first matching
+# loaded will be unloaded (depends on unload_match_order setting) even if before that the real default is loaded
+testouterr_cmd sh "unload $modulename_1" [expr {$install_unloadmatchorder eq {returnlast} ? $anslast : $ansfirst}] {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnfirst
+testouterr_cmd sh "unload $modulename_1" $ansfirst {}
+setenv_var MODULES_UNLOAD_MATCH_ORDER returnlast
+testouterr_cmd sh "unload $modulename_1" $anslast {}
+unsetenv_var MODULES_UNLOAD_MATCH_ORDER
+
+# unload with full path module file
+testouterr_cmd "sh" "unload $modulefile_1" $anslast ""
+testouterr_cmd "sh" "unload $modulefile_1_reld" $anslast ""
+testouterr_cmd "sh" "unload $modulefile_1_reldd" $anslast ""
+
+
+# set up the environment
+setenv_loaded_module [list $module_2 $module_3] [list $modulefile_2 $modulefile_3]
+
+set ans [list]
+lappend ans [list unset testsuite]
+lappend ans [list setpath LOADEDMODULES $module_2]
+lappend ans [list setpath _LMFILES_ $modulefile_2]
+
+# unload modulefile loaded as full pathname
+testouterr_cmd "sh" "unload $module_3" $ans ""
+
+# try with other full path name forms (./ and ../)
+testouterr_cmd "sh" "unload $module_3_reld" $ans ""
+testouterr_cmd "sh" "unload $module_3_reldd" $ans ""
+
+
+# set up the environment
+setenv_loaded_module $module_2 $modulefile_2
+
+# unload already unloaded full path modulefile
+testouterr_cmd "sh" "unload $module_3" "OK" ""
+testouterr_cmd "sh" "unload $module_3_reld" "OK" ""
+testouterr_cmd "sh" "unload $module_3_reldd" "OK" ""
+
+
+# set up the environment
+setenv_path_var MODULEPATH "$modpath.2" $modpath
+setenv_loaded_module $modulefile_2 $modulefile_2
+
+set ans [list]
+lappend ans [list unset testsuite]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+# unload full path modulefile with short name and modpath used
+testouterr_cmd "sh" "unload $module_2" $ans ""
+testouterr_cmd "sh" "unload $modulename_1" $ans ""
+
+# same test without MODULEPATH set anymore
+unsetenv_path_var MODULEPATH
+# no modulefile existence check, just look if loaded, no error if not
+testouterr_cmd "sh" "unload $module_2" OK {}
+testouterr_cmd "sh" "unload $modulename_1" OK {}
+
+
+#
+# unload when loaded environment is inconsistent
+#
+
+setenv_loaded_module [list foo bar] "/path/to/foo"
+
+testouterr_cmd_re "sh" "unload foo" "ERR" "$err_loinconsist\n  LOADEDMODULES=foo bar\n  _LMFILES_=/path/to/foo"
+
+
+#
+#  Cleanup
+#
+
+# restore environment
+setenv_path_var MODULEPATH $modpath
+unsetenv_var testsuite
+unsetenv_loaded_module
+
+unset ans
+unset ansfirst
+unset anslast
+
+unset module_0
+unset modulefile_0
+unset mod0_err
+
+unset modulename_1
+unset module_1
+unset modulefile_1
+unset modulefile_1_reld
+unset modulefile_1_reldd
+unset module_2
+unset modulefile_2
+unset module_3
+unset modulefile_3
+unset module_3_reld
+unset module_3_reldd

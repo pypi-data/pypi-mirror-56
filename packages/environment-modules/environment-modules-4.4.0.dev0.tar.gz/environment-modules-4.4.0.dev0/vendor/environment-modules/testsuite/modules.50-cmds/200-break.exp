@@ -1,0 +1,83 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2001/11/05
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, <rk@owen.sj.ca.us>
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	break/1.0,
+#   			break/2.0,
+#   			break/3.0, break/5.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tries the Tcl "break" to skip loading a module,
+#			but not affecting the other loaded modules.
+#		}C%
+#
+##############################################################################
+
+set mod1 "break/1.0"
+set mod2 "break/2.0"
+set mod3 "break/3.0"
+set mod5 "break/5.0"
+
+set mod1p "$modpath/$mod1"
+set mod2p "$modpath/$mod2"
+set mod3p "$modpath/$mod3"
+set mod5p "$modpath/$mod5"
+
+#
+# set up an empty environment
+#
+set module ""
+set modulefile ""
+setenv_loaded_module $module $modulefile
+
+#
+#  load
+#  For the different shells ...
+#
+set module "$mod1:$mod3"
+set modulefile "$mod1p:$mod3p"
+
+lappend ans [list setpath _LMFILES_ $modulefile]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list set testsuite1 yes]
+lappend ans [list set testsuite3 yes]
+lappend ans [list ERR]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $mod1 $mod2 $mod3" $ans
+
+# same test with break called from a proc
+test_cmd_re "ALL" "load $mod1 $mod5 $mod3" $ans
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+
+unset ans
+
+unset modulefile
+unset module
+
+unset mod1
+unset mod2
+unset mod3
+unset mod5
+unset mod1p
+unset mod2p
+unset mod3p
+unset mod5p
+

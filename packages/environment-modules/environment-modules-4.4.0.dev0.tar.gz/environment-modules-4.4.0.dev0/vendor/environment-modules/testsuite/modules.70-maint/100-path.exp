@@ -1,0 +1,84 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	2017/05/18
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		path
+#   Modulefiles:	averssort
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module command 'path'
+#		}C%
+#
+##############################################################################
+
+# skip tests if implicit_default option could not be overridden
+if {[is_config_locked implicit_default]} {
+    send_user "\tskipping tests as implicit_default could not be overridden\n"
+} else {
+
+# ensure avail tests have implicit default enabled
+setenv_var MODULES_IMPLICIT_DEFAULT 1
+
+#
+#  Test variables
+#
+
+set module_1 "averssort"
+set modulefile_1 "$modpath/verssort/1.10"
+set module_2 "foo"
+set err_locmod "$err_path'$module_2'"
+
+
+#
+#  test with a modulefile to resolve
+#
+
+lappend ans [list text $modulefile_1]
+testouterr_cmd "ALL" "path $module_1" $ans ""
+
+# setup MODULEPATH with a trailing slash and an empty dir element
+setenv_path_var MODULEPATH {} "$modpath/"
+testouterr_cmd "sh" "path $module_1" $ans ""
+
+# restore MODULEPATH
+setenv_path_var MODULEPATH $modpath
+
+#
+# test with nonexistent modulefile
+#
+
+set ans [list]
+lappend ans [list text ""]
+testouterr_cmd "ALL" "path $module_2" $ans $err_locmod
+
+#
+# check error when implicit default is disabled
+#
+
+setenv_var MODULES_IMPLICIT_DEFAULT 0
+testouterr_cmd sh "path $module_1" $ans "$err_nodefault'$module_1'"
+setenv_var MODULES_IMPLICIT_DEFAULT 1
+
+
+#
+#  Cleanup
+#
+
+unsetenv_var MODULES_IMPLICIT_DEFAULT
+unset ans
+
+unset module_1
+unset modulefile_1
+unset module_2
+unset err_locmod
+
+}

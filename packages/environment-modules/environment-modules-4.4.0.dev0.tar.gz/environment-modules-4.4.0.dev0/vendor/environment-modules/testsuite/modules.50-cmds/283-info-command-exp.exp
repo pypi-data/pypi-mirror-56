@@ -1,0 +1,125 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:       modules.50-cmds/%M%
+#   Revision:       %I%
+#   First Edition:  2017/01/27
+#   Last Mod.:      %U%, %G%
+#
+#   Authors:        Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:    Testuite testsequence
+#   Command:        load, display, whatis, search, source, restore
+#   Command:        unload, switch, purge, reload, help, test
+#   Modulefiles:    info/commandexp
+#   Sub-Command:
+#
+#   Comment:    %C{
+#           Tests the 'module-info command' module subcommand with
+#           own suggestion.
+#           This command does not change behaviour depending on
+#           the user shell. Tests are made for the bourne shell
+#           here.
+#       }C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "info/commandexp"
+set modulefile "$modpath/$module"
+set modulefilere "$modpathre/$module"
+
+set header_help "Module Specific Help for $modulefilere:"
+set header_test "Module Specific Test for $modulefilere:"
+set header "$modlin $modpathre $modlin"
+
+#
+#  The tests
+#
+
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+lappend ansun [list unsetpath LOADEDMODULES]
+lappend ansun [list unsetpath _LMFILES_]
+
+# test loading
+testouterr_cmd "sh" "load $module" $ans "load"
+
+# test displaying
+testouterr_cmd_re "sh" "display $module" "OK" "$modlin\n$modulefilere:\n\ndisplay\n$modlin"
+
+# test whatis
+testouterr_cmd_re "sh" "whatis $module" "OK" "$header\n\\s+$module: whatis"
+
+# test searching
+# error found in interpreted module, so an error code is rendered
+testouterr_cmd_re "sh" "search search" "ERR" "$header\n(\\s+\\S+: search\\n)*\\s+$module: search"
+
+# test sourcing
+testouterr_cmd "sh" "source $modulefile" "OK" "source"
+
+# set HOME to location containing collections
+set ORIG_HOME $env(HOME)
+set homewithcoll "$env(HOME)/home"
+if { $verbose > 0 } {
+    send_user "\tSetup HOME = $homewithcoll\n"
+}
+set env(HOME) "$homewithcoll"
+
+# test restoring
+testouterr_cmd "sh" "restore infocmdexp" $ans "restore\nLoading info/commandexp"
+
+# restore default testsuite home
+if { $verbose > 0 } {
+    send_user "\tRestore HOME = $ORIG_HOME\n"
+}
+set env(HOME) $ORIG_HOME
+
+# Set up the environment for test that require the module to be loaded
+setenv_loaded_module $module $modulefile
+
+# test unloading
+testouterr_cmd "sh" "unload $module" $ansun "unload"
+
+# test switching
+testouterr_cmd "sh" "switch $module $module" $ans "switch\nswitch"
+
+# test purging
+testouterr_cmd "sh" "purge" $ansun "purge"
+
+# test reloading
+testouterr_cmd "sh" "reload" $ans "reload\nreload"
+
+# Clean up the just changed environment
+unsetenv_loaded_module
+
+# test help
+testouterr_cmd_re "sh" "help $module" "OK" "$modlin\n$header_help\n\nhelp\nhelp\n$modlin"
+
+# test test
+testouterr_cmd_re "sh" "test $module" "OK" "$modlin\n$header_test\n\ntest\ntest\nTest result: PASS\n$modlin"
+
+#
+#  Cleanup
+#
+
+unset header_help
+unset header_test
+unset header
+
+unset modulefile
+unset modulefilere
+unset module
+
+unset ans
+unset ansun
+
+unset homewithcoll
+unset ORIG_HOME

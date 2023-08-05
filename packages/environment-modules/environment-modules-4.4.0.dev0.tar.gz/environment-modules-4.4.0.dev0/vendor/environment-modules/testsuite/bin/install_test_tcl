@@ -1,0 +1,69 @@
+#!/usr/bin/env tclsh
+#
+# INSTALL_TEST_TCL, tcl test script for install non-reg suite
+# Copyright (C) 2017 Xavier Delaruelle
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+##########################################################################
+
+if {$argc != 2} {
+   # print usage message
+   puts stderr "Usage: $argv0 initfile command\[:command\]"
+   exit 1
+}
+
+set initfile [lindex $argv 0]
+set cmdlist [split [lindex $argv 1] ":"]
+# empty command list, means one empty command
+if {[llength $cmdlist] == 0} {
+   lappend cmdlist {}
+}
+
+if {![file readable $initfile]} {
+   puts stderr "Cannot read $initfile"
+   exit 1
+}
+
+# source module init file
+source $initfile
+
+# execute command list
+set code 0
+foreach cmd $cmdlist {
+   # if command equals to NOARG string, means call with no arg passed
+   if {$cmd eq "NOARG"} {
+      set arglist ""
+   } else {
+      set arglist [split $cmd ","]
+      # empty arg list, means one empty arg
+      if {[llength $arglist] == 0} {
+         lappend arglist {}
+      }
+   }
+   if {[catch {
+      set ret [eval module $arglist]
+      if {$ret == 0} {
+         set code 1
+      } elseif {![string is integer $ret]} {
+         puts stdout $ret
+      }
+   }]} {
+      set code 1
+   }
+}
+
+exit $code
+
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

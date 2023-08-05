@@ -1,0 +1,205 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2017/12/07
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	prereq/module, prereq/fullpath, trace/all_on, setenv/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'prereq' command using full path modulefile
+#           or reacting to loaded full path modulefile.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module1 "prereq/fullpath"
+set modulefile1 "$modpath/$module1"
+set module2 "prereq/module"
+set modulefile2 "$modpath/$module2"
+set module3 "prereq/relpath"
+set modulefile3 "$modpath/$module3"
+
+set module_tron "trace/all_on"
+set modulefile_tron "$modpath/$module_tron"
+set module_set1 "setenv/1.0"
+set modulefile_set1 "$modpath/$module_set1"
+
+#
+#  Error messages
+#
+
+set err_pre1 [msg_load $module1 [err_prereq $module1 "$modpath/setenv/1.0"]]
+set err_pre2 [msg_load $module2 [err_prereq $module2 "trace"]]
+set err_pre3 [msg_load $module3 [err_prereq $module3 "../setenv/1.0"]]
+set err_pref1 [msg_load $modulefile1 [err_prereq $modulefile1 "$modpath/setenv/1.0"]]
+set err_pref2 [msg_load $modulefile2 [err_prereq $modulefile2 "trace"]]
+set err_pref2re [regsub -all "\(\[.+?\]\)" $err_pref2 {\\\1}]
+set err_pref3 [msg_load $modulefile3 [err_prereq $modulefile3 "../setenv/1.0"]]
+set err_trace "$warn_msgs: 'module-trace' command not implemented"
+
+
+#
+#  The tests
+#
+
+# prereq are loaded automatically when autohandling is enabled
+if {$install_implicitdefault eq {y}} {
+    set ans [list]
+    lappend ans [list set testsuite yes]
+    lappend ans [list setpath LOADEDMODULES "$modulefile_set1:$module1:$module_tron:$module2:$module3"]
+    lappend ans [list setpath _LMFILES_ "$modulefile_set1:$modulefile1:$modulefile_tron:$modulefile2:$modulefile3"]
+    lappend ans [list setpath MODULES_LMPREREQ "$module1&$modulefile_set1:$module2&trace:$module3&../$module_set1"]
+    lappend ans [list setpath MODULES_LMNOTUASKED "$modulefile_set1:$module_tron"]
+    set tserr [regsub -all {([.+?()])} [msg_top_load $module1 {} $modulefile_set1 {}]\n\n[msg_load $module_tron $err_trace]\n\n[msg_top_load $module2 {} $module_tron {}] {\\\1}]
+} else {
+    set ans [list]
+    lappend ans [list setpath MODULES_LMPREREQ "$module1&$modulefile_set1:$module3&../$module_set1"]
+    lappend ans [list setpath _LMFILES_ "$modulefile_set1:$modulefile1:$modulefile3"]
+    lappend ans [list setpath LOADEDMODULES "$modulefile_set1:$module1:$module3"]
+    lappend ans [list setpath MODULES_LMNOTUASKED "$modulefile_set1"]
+    lappend ans [list set testsuite yes]
+    lappend ans [list ERR]
+    set tserr [regsub -all {([.+?()])} [msg_top_load $module1 {} $modulefile_set1 {}]\n\n[msg_load $module2 $err_nodefault'trace' [err_reqlo trace]] {\\\1}]
+}
+testouterr_cmd_re "sh" "load --auto $module1 $module2 $module3" $ans $tserr
+
+if {$install_implicitdefault eq {y}} {
+    set ans [list]
+    lappend ans [list set testsuite yes]
+    lappend ans [list setpath LOADEDMODULES "$modulefile_set1:$modulefile1:$module_tron:$modulefile2:$modulefile3"]
+    lappend ans [list setpath _LMFILES_ "$modulefile_set1:$modulefile1:$modulefile_tron:$modulefile2:$modulefile3"]
+    lappend ans [list setpath MODULES_LMPREREQ "$modulefile1&$modulefile_set1:$modulefile2&trace:$modulefile3&../$module_set1"]
+    lappend ans [list setpath MODULES_LMNOTUASKED "$modulefile_set1:$module_tron"]
+    set tserr [regsub -all {([.+?()])} [msg_top_load $modulefile1 {} $modulefile_set1 {}]\n\n[msg_load $module_tron $err_trace]\n\n[msg_top_load $modulefile2 {} $module_tron {}] {\\\1}]
+} else {
+    set ans [list]
+    lappend ans [list setpath MODULES_LMPREREQ "$modulefile1&$modulefile_set1:$modulefile3&../$module_set1"]
+    lappend ans [list setpath _LMFILES_ "$modulefile_set1:$modulefile1:$modulefile3"]
+    lappend ans [list setpath LOADEDMODULES "$modulefile_set1:$modulefile1:$modulefile3"]
+    lappend ans [list set testsuite yes]
+    lappend ans [list setpath MODULES_LMNOTUASKED "$modulefile_set1"]
+    lappend ans [list ERR]
+    set tserr [regsub -all {([.+?()])} [msg_top_load $modulefile1 {} $modulefile_set1 {}]\n\n[msg_load $modulefile2 $err_nodefault'trace' [err_reqlo trace]] {\\\1}]
+}
+testouterr_cmd_re "sh" "load --auto $modulefile1 $modulefile2 $modulefile3" $ans $tserr
+
+testouterr_cmd "sh" "load --no-auto $module1 $module2 $module3" "ERR" "$err_pre1\n\n$err_pre2\n\n$err_pre3"
+testouterr_cmd "sh" "load --no-auto $modulefile1 $modulefile2 $modulefile3" "ERR" "$err_pref1\n\n$err_pref2\n\n$err_pref3"
+
+
+# test with prereqs loaded as short path
+setenv_loaded_module [list $module_tron $module_set1] [list $modulefile_tron $modulefile_set1]
+
+set ans [list]
+lappend ans [list set testsuite yes]
+lappend ans [list setpath LOADEDMODULES "$module_tron:$module_set1:$module1:$module2:$module3"]
+lappend ans [list setpath _LMFILES_ "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile2:$modulefile3"]
+lappend ans [list setpath MODULES_LMPREREQ "$module1&$modulefile_set1:$module2&trace:$module3&../$module_set1"]
+testouterr_cmd_re "sh" "load $module1 $module2 $module3" $ans ""
+
+set ans [list]
+lappend ans [list set testsuite yes]
+lappend ans [list setpath LOADEDMODULES "$module_tron:$module_set1:$modulefile1:$modulefile2:$modulefile3"]
+lappend ans [list setpath _LMFILES_ "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile2:$modulefile3"]
+lappend ans [list setpath MODULES_LMPREREQ "$modulefile1&$modulefile_set1:$modulefile2&trace:$modulefile3&../$module_set1"]
+testouterr_cmd_re "sh" "load $modulefile1 $modulefile2 $modulefile3" $ans ""
+
+
+# test with prereqs loaded as short path, no more modulepath set
+unsetenv_path_var MODULEPATH
+
+testouterr_cmd_re "sh" "load $modulefile1 $modulefile2 $modulefile3" $ans ""
+
+
+# test with prereqs loaded as full path
+setenv_path_var MODULEPATH $modpath
+setenv_loaded_module [list $modulefile_tron $modulefile_set1] [list $modulefile_tron $modulefile_set1]
+
+set ans [list]
+lappend ans [list set testsuite yes]
+lappend ans [list setpath LOADEDMODULES "$modulefile_tron:$modulefile_set1:$module1:$module2:$module3"]
+lappend ans [list setpath _LMFILES_ "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile2:$modulefile3"]
+lappend ans [list setpath MODULES_LMPREREQ "$module1&$modulefile_set1:$module2&trace:$module3&../$module_set1"]
+testouterr_cmd_re "sh" "load $module1 $module2 $module3" $ans ""
+
+set ans [list]
+lappend ans [list set testsuite yes]
+lappend ans [list setpath LOADEDMODULES "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile2:$modulefile3"]
+lappend ans [list setpath _LMFILES_ "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile2:$modulefile3"]
+lappend ans [list setpath MODULES_LMPREREQ "$modulefile1&$modulefile_set1:$modulefile2&trace:$modulefile3&../$module_set1"]
+testouterr_cmd_re "sh" "load $modulefile1 $modulefile2 $modulefile3" $ans ""
+
+
+# test with prereqs loaded as full path, no more modulepath set
+unsetenv_path_var MODULEPATH
+
+set ans [list]
+lappend ans [list set LOADEDMODULES_modshare "(.*)"]
+lappend ans [list set _LMFILES__modshare "(.*)"]
+lappend ans [list set MODULES_LMPREREQ "$modulefile1&$modulefile_set1:$modulefile3&../$module_set1"]
+lappend ans [list set testsuite yes]
+lappend ans [list set LOADEDMODULES "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile3"]
+lappend ans [list set _LMFILES_ "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile3"]
+lappend ans [list set MODULES_LMPREREQ_modshare "(.*)"]
+lappend ans [list ERR]
+testouterr_cmd_re "sh" "load --no-auto $modulefile1 $modulefile2 $modulefile3" $ans "$err_pref2re"
+
+set ans [list]
+lappend ans [list ERR]
+# cannot find prereq module, raise currently a module error
+set err_pref2re [regsub -all {([.+?()])} [msg_load $modulefile2 "$moderr_msgs: No module path defined\nIn '$modulefile2'\n$err_contactns"] {\\\1}]
+lappend ans [list set LOADEDMODULES_modshare "(.*)"]
+lappend ans [list set _LMFILES__modshare "(.*)"]
+lappend ans [list set MODULES_LMPREREQ "$modulefile1&$modulefile_set1:$modulefile3&../$module_set1"]
+lappend ans [list set testsuite yes]
+lappend ans [list set LOADEDMODULES "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile3"]
+lappend ans [list set _LMFILES_ "$modulefile_tron:$modulefile_set1:$modulefile1:$modulefile3"]
+lappend ans [list set MODULES_LMPREREQ_modshare "(.*)"]
+testouterr_cmd_re "sh" "load --auto $modulefile1 $modulefile2 $modulefile3" $ans "$err_pref2re"
+
+
+#
+#  Cleanup
+#
+
+# restore environment
+setenv_path_var MODULEPATH $modpath
+unsetenv_loaded_module
+
+unset err_pre1
+unset err_pre2
+unset err_pre3
+unset err_pref1
+unset err_pref2
+unset err_pref2re
+unset err_pref3
+unset err_trace
+
+unset ans
+unset tserr
+
+unset modulefile1
+unset module1
+unset modulefile2
+unset module2
+unset modulefile3
+unset module3
+unset modulefile_tron
+unset module_tron
+unset modulefile_set1
+unset module_set1

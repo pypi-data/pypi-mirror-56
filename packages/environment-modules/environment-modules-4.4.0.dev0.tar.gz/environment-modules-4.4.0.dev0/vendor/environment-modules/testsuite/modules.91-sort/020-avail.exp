@@ -1,0 +1,281 @@
+##############################################################################
+#   Modules Release Tcl
+#   Providing a flexible user environment
+#
+#   File:		modules.91-sort/%M%
+#   Revision:		%I%
+#   First Edition:	2016/02/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		avail
+#   Modulefiles:	verssort/1, verssort/1.2.1, verssort/1.2.4,
+#                   verssort/1.8-2015-12-01, verssort/1.8-2016-02-01,
+#                   verssort/1.10, averssort, version/dir2, loc_rc7
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the module 'avail' command in terse output mode
+#           for a module with multiple versions to check these
+#           versions are correctly sorted.
+#		}C%
+#
+##############################################################################
+
+# ensure avail tests are made using in depth mode
+setenv_var MODULES_AVAIL_INDEPTH 1
+
+# ensure regular avail search match is set for these tests
+setenv_var MODULES_SEARCH_MATCH starts_with
+
+set header "$modpathre:\n"
+
+#
+#  tests on regular modulefiles
+#
+
+set ts_sh "$header$module/$version1\n$module/$version2\n$module/$version3\n$module/$version4\n$module/$version5\n$module/$version6"
+set ts_implicit_default_sh [if_implicitdefault "$header$module/$version6"]
+set ts_latest_sh "$header$module/$version6"
+
+testouterr_cmd_re "sh" "avail -t $module" "OK" "$ts_sh"
+# check same result is obtain if query name has a trailing slash
+testouterr_cmd_re "sh" "avail -t $module/" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t -d $module" "OK" "$ts_implicit_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $module/" "OK" "$ts_implicit_default_sh"
+# check wildcard character '*' does not disturb result
+testouterr_cmd_re "sh" "avail -t -d $module/*" "OK" "$ts_implicit_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $module/**" "OK" "$ts_implicit_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $module*/*" "OK" "$ts_implicit_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $module*/" "OK" "$ts_implicit_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $module*" "OK" "$ts_implicit_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $module?" "OK" ""
+testouterr_cmd_re "sh" "avail -t -d $module?/" "OK" ""
+testouterr_cmd_re "sh" "avail -t -d $module?/*" "OK" ""
+testouterr_cmd_re "sh" "avail -t -d $module?/?" "OK" ""
+testouterr_cmd_re "sh" "avail -t -L $module" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $module/" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $module/*" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $module/**" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $module*/*" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $module*/" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $module*" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $module?" "OK" ""
+testouterr_cmd_re "sh" "avail -t -L $module?/" "OK" ""
+testouterr_cmd_re "sh" "avail -t -L $module?/*" "OK" ""
+testouterr_cmd_re "sh" "avail -t -L $module?/?" "OK" ""
+
+#
+#  tests on module aliases
+#
+
+set ts_sh "$header$aliasmod/$version1\\(@\\)\n$aliasmod/$version3\\(@\\)\n$aliasmod/$version6\\(@\\)"
+set ts_implicit_default_sh [if_implicitdefault "$header$aliasmod/$version6\\(@\\)"]
+set ts_latest_sh "$header$aliasmod/$version6\\(@\\)"
+
+testouterr_cmd_re "sh" "avail -t $aliasmod" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t $aliasmod/" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t -d $aliasmod" "OK" "$ts_implicit_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $aliasmod/" "OK" "$ts_implicit_default_sh"
+testouterr_cmd_re "sh" "avail -t -L $aliasmod" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $aliasmod/" "OK" "$ts_latest_sh"
+
+#
+#  tests on modules mixing modulefiles and aliases
+#
+
+set mod2 "loc_rc7"
+set mod2vers1 "0.9"
+set mod2vers2 "1\\(@\\)"
+set mod2vers3 "1.2"
+set mod2vers4 "bar\\(@\\)"
+set ts_sh "$header$mod2/$mod2vers1\n$mod2/$mod2vers2\n$mod2/$mod2vers3\n$mod2/$mod2vers4"
+set ts_default_sh [if_implicitdefault "$header$mod2/$mod2vers4"]
+set ts_latest_sh "$header$mod2/$mod2vers4"
+
+testouterr_cmd_re "sh" "avail -t $mod2" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t $mod2/" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod2" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod2/" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod2" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod2/" "OK" "$ts_latest_sh"
+
+#
+#  tests on modules mixing modulefiles and symbolic versions
+#
+
+set mod3 "loc_rc2"
+set mod3vers1 "1.0\\(bar:blah:foo\\)"
+set mod3vers2 "2.0"
+set ts_sh "$header$mod3/$mod3vers1\n$mod3/$mod3vers2"
+set ts_default_sh [if_implicitdefault "$header$mod3/$mod3vers2"]
+set ts_latest_sh "$header$mod3/$mod3vers2"
+
+# symbols even if they hold greatest value should not be taken
+# into account for default or latest choice
+testouterr_cmd_re "sh" "avail -t $mod3" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod3" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod3" "OK" "$ts_latest_sh"
+
+#
+#  tests on modules mixing directories overriden by alias
+#
+
+set mod4 "dirmodalias"
+set mod4vers1 "1.0"
+set ts_sh "$header$mod4\\(@\\)\n$mod4/$mod4vers1"
+set ts_default_sh "$header$mod4\\(@\\)"
+set ts_latest_sh "$header$mod4\\(@\\)"
+
+# alias that overrides directory name will get priority for default
+# and latest version choice (directory content will be ignored)
+testouterr_cmd_re "sh" "avail -t $mod4" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod4" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod4" "OK" "$ts_latest_sh"
+
+#
+#  tests on modules mixing empty directories
+#
+
+set mod5 "emptydir"
+# empty directories are not displayed
+testouterr_cmd "sh" "avail -t $mod5" "OK" ""
+testouterr_cmd "sh" "avail -t $mod5/" "OK" ""
+testouterr_cmd "sh" "avail -t -d $mod5" "OK" ""
+testouterr_cmd "sh" "avail -t -d $mod5/" "OK" ""
+testouterr_cmd "sh" "avail -t -L $mod5" "OK" ""
+testouterr_cmd "sh" "avail -t -L $mod5/" "OK" ""
+
+#
+#  tests on deep modules, mixing modulefiles and directories
+#
+
+set mod6 "loc_dv6"
+set mod6vers1 "1.0"
+set mod6vers2 "2.0/1.0"
+set ts_sh "$header$mod6/$mod6vers1\n$mod6/$mod6vers2"
+set ts_default_sh [if_implicitdefault "$header$mod6/$mod6vers2"]
+set ts_latest_sh "$header$mod6/$mod6vers2"
+
+testouterr_cmd_re "sh" "avail -t $mod6" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t $mod6/" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod6" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod6/" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod6/*" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod6*/*" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod6" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod6/" "OK" "$ts_latest_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod6*/" "OK" "$ts_latest_sh"
+
+#
+#  tests on modules, mixing modulefiles, directories and badly set default
+#
+
+set mod7 "loc_dv3"
+set mod7vers1 "1.0"
+set mod7vers2 "2.0"
+set ts_sh "$header$mod7/$mod7vers1\n$mod7/$mod7vers2"
+set ts_default_sh ""
+set ts_latest_sh "$header$mod7/$mod7vers2"
+
+testouterr_cmd_re "sh" "avail -t $mod7" "OK" "$ts_sh"
+# badly set default, nothing displayed
+testouterr_cmd_re "sh" "avail -t -d $mod7" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod7" "OK" "$ts_latest_sh"
+
+
+# setup environment state
+setenv_path_var MODULEPATH "$modpath.deep"
+
+set header "$modpathre.deep:\n"
+set mod8 "version/dir2"
+set mod8vers1 "1.0"
+set mod8vers2 "2.0/\\(default\\)"
+set mod8vers3 "2.0/rc1\\(default\\)"
+set mod8vers4 "2.0/rc2"
+set mod8vers5 "3.0"
+set ts_sh "$header$mod8/$mod8vers1\n$mod8/$mod8vers2\n$mod8/$mod8vers3\n$mod8/$mod8vers4\n$mod8/$mod8vers5"
+set ts_default_sh "$header$mod8/$mod8vers3"
+set ts_latest_sh "$header$mod8/$mod8vers4\n$mod8/$mod8vers5"
+
+testouterr_cmd_re "sh" "avail -t $mod8" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod8" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod8" "OK" "$ts_latest_sh"
+
+
+#
+#  tests on deep modules, mixing modulefiles, aliases and directories
+#
+
+set mod9 "modalias"
+set mod9vers1 "1.0\\(@\\)"
+set mod9vers2 "3.0"
+set mod9vers3 "dir1/1.0"
+set mod9vers4 "dir1/2.0\\(@\\)"
+set mod9vers5 "dir2/2.0"
+set mod9vers6 "dir2/3.0\\(@\\)"
+set ts_sh "$header$mod9/$mod9vers1\n$mod9/$mod9vers2\n$mod9/$mod9vers3\n$mod9/$mod9vers4\n$mod9/$mod9vers5\n$mod9/$mod9vers6"
+set ts_default_sh [if_implicitdefault "$header$mod9/$mod9vers4\n$mod9/$mod9vers6"]
+set ts_latest_sh "$header$mod9/$mod9vers4\n$mod9/$mod9vers6"
+
+testouterr_cmd_re "sh" "avail -t $mod9" "OK" "$ts_sh"
+testouterr_cmd_re "sh" "avail -t -d $mod9" "OK" "$ts_default_sh"
+testouterr_cmd_re "sh" "avail -t -L $mod9" "OK" "$ts_latest_sh"
+
+#
+#  tests on deep modules mixing empty directories
+#
+
+set mod10 "emptydeepdir"
+# empty directories are not displayed
+testouterr_cmd "sh" "avail -t $mod10" "OK" ""
+testouterr_cmd "sh" "avail -t -d $mod10" "OK" ""
+testouterr_cmd "sh" "avail -t -L $mod10" "OK" ""
+
+
+#
+#  Cleanup
+#
+
+# restore environment
+setenv_path_var MODULEPATH $modpath
+unsetenv_var MODULES_AVAIL_INDEPTH
+unsetenv_var MODULES_SEARCH_MATCH
+
+unset mod2
+unset mod2vers1
+unset mod2vers2
+unset mod2vers3
+unset mod2vers4
+unset mod3
+unset mod3vers1
+unset mod3vers2
+unset mod4
+unset mod4vers1
+unset mod5
+unset mod6
+unset mod6vers1
+unset mod6vers2
+unset mod7
+unset mod7vers1
+unset mod7vers2
+unset mod8
+unset mod8vers1
+unset mod8vers2
+unset mod8vers3
+unset mod8vers4
+unset mod8vers5
+unset mod9
+unset mod9vers1
+unset mod9vers2
+unset mod9vers3
+unset mod9vers4
+unset mod9vers5
+unset mod9vers6
+unset mod10
+unset ts_sh
+unset ts_implicit_default_sh
+unset ts_latest_sh
+unset header

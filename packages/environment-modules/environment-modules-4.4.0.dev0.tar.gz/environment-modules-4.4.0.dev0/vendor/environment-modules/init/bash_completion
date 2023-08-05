@@ -1,0 +1,171 @@
+#
+# Bash commandline completion (bash 3.0 and above)
+#
+_module_comgen_words_and_files() {
+    local k=0
+    local setnospace=1
+    # do not append space to word completed if it is a directory (ends with /)
+    for val in $(compgen -W "$1" -- "$2"); do
+        if [ !$setnospace -a "${val: -1:1}" = '/' ]; then
+            compopt -o nospace
+            setnospace=0
+        fi
+        COMPREPLY[k++]="$val"
+    done
+}
+
+_module_avail() {
+    local cur="${1:-}"
+    # skip avail call if word currently being completed is an option keyword
+    if [ -z "$cur" -o "${cur:0:1}" != '-' ]; then
+        module avail --color=never -s -t -S --no-indepth $cur 2>&1 | sed '
+            /^-\+/d; /^\s*$/d;
+            /->.*$/d;
+            /:$/d;
+            s#^\(.*\)/\(.\+\)(.*default.*)#\1\n\1\/\2#;
+            s#(.*)$##g;
+            s#\s*$##g;'
+    fi
+}
+
+_module_savelist() {
+    module savelist --color=never -s -t 2>&1 | sed '
+        /No named collection\.$/d;
+        /Named collection list$/d;
+        /:$/d;'
+}
+
+_module_not_yet_loaded() {
+    _module_avail ${1:-} | sort | sed -E "\%^(${LOADEDMODULES//:/|})$%d"
+}
+
+_module_long_arg_list() {
+    local cur="$1" i
+
+    if [[ ${COMP_WORDS[COMP_CWORD-2]} == sw* ]]
+    then
+        _module_comgen_words_and_files "$(_module_not_yet_loaded $cur)" "$cur"
+        return
+    fi
+    for ((i = COMP_CWORD - 1; i > 0; i--))
+        do case ${COMP_WORDS[$i]} in
+        add|load)
+            _module_comgen_words_and_files "$(_module_not_yet_loaded $cur)" "$cur"
+            break;;
+        rm|del|remove|unload|switch|swap)
+            COMPREPLY=( $(IFS=: compgen -W "${LOADEDMODULES}" -- "$cur") )
+            break;;
+        esac
+    done
+}
+
+# define completion relative to active version
+if [ "$MODULES_USE_COMPAT_VERSION" = '1' ]; then
+_module() {
+   local cur="$2" prev="$3" cmds opts
+
+   COMPREPLY=()
+
+   cmds="add apropos avail clear display del help\
+      initadd initclear initlist initprepend initrm initswitch\
+      keyword list load purge refresh remove rm show swap switch\
+      unload unuse update use whatis"
+
+   opts="-c -f -h -i -l -s -t -u -v -H -V\
+      --create --force  --help  --human   --icase\
+      --long   --silent --terse --userlvl --verbose --version"
+
+   case "$prev" in
+   add|load)   COMPREPLY=( $(compgen -W "$(_module_not_yet_loaded)" -- "$cur") );;
+   rm|del|remove|unload|switch|swap)
+      COMPREPLY=( $(IFS=: compgen -W "${LOADEDMODULES}" -- "$cur") );;
+   unuse)      COMPREPLY=( $(IFS=: compgen -W "${MODULEPATH}" -- "$cur") );;
+   use|*-a*)   ;;       # let readline handle the completion
+   -u|--userlvl)  COMPREPLY=( $(compgen -W "novice expert advanced" -- "$cur") );;
+   av*|disp*|help|show|whatis)
+      COMPREPLY=( $(compgen -W "$(_module_avail)" -- "$cur") );;
+   *) if test $COMP_CWORD -gt 2
+      then
+      _module_long_arg_list "$cur"
+      else
+      case "$cur" in
+      # The mappings below are optional abbreviations for convenience
+      ls)   COMPREPLY="list";;   # map ls -> list
+      r*)   COMPREPLY="rm";;  # also covers 'remove'
+      sw*)  COMPREPLY="switch";;
+
+      -*)   COMPREPLY=( $(compgen -W "$opts" -- "$cur") );;
+      *) COMPREPLY=( $(compgen -W "$cmds" -- "$cur") );;
+      esac
+      fi;;
+   esac
+}
+else
+_module() {
+    local cur="$2" prev="$3" cmds opts
+
+    COMPREPLY=()
+
+    cmds="add apropos aliases avail append-path clear config del display help\
+        initadd initclear initlist initprepend initrm is-loaded is-saved\
+        is-used is-avail info-loaded keyword list load path paths purge\
+        prepend-path refresh reload restore rm remove remove-path save\
+        savelist saveshow saverm search show source swap switch test unload\
+        unuse use whatis"
+
+    opts="-D -h -s -v -V --debug --help --silent --verbose --version\
+        --paginate --no-pager --color --color="
+    load_opts="--auto --no-auto --force -f -i --icase"
+    list_opts="-l -t --long --terse"
+    clear_opts="--force -f"
+    path_opts="-d --delim --duplicates"
+    rm_path_opts="-d --delim --index"
+    avail_opts="-C -d -i -L -l -S -t --contains --default --icase --latest\
+        --long --starts-with --terse --indepth --no-indepth"
+    mfile_opts="-i --icase"
+    config_opts="--dump-state --reset advanced_version_spec auto_handling\
+        avail_indepth collection_pin_version collection_target color colors\
+        contact extended_default extra_siteconfig home icase implicit_default\
+        locked_configs pager rcfile run_quarantine search_match\
+        set_shell_startup silent_shell_debug term_background\
+        unload_match_order verbosity wa_277"
+
+    case "$prev" in
+    add|load)       _module_comgen_words_and_files "$load_opts $(_module_not_yet_loaded $cur)" "$cur";;
+    avail)          _module_comgen_words_and_files "$avail_opts $(_module_avail $cur)" "$cur";;
+    list|savelist)  COMPREPLY=( $(compgen -W "$list_opts" -- "$cur") );;
+    clear)  COMPREPLY=( $(compgen -W "$clear_opts" -- "$cur") );;
+    restore|save|saveshow|saverm|is-saved)
+                    COMPREPLY=( $(compgen -W "$(_module_savelist)" -- "$cur") );;
+    rm|del|remove|unload|switch|swap)
+                    COMPREPLY=( $(compgen -W "$load_opts ${LOADEDMODULES//:/ }" -- "$cur") );;
+    unuse|is-used)  COMPREPLY=( $(IFS=: compgen -W "${MODULEPATH}" -- "$cur") );;
+    use|-a|--append)   ;;               # let readline handle the completion
+    display|help|show|test|whatis|path|paths|is-loaded|is-avail|info-loaded)
+                    _module_comgen_words_and_files "$mfile_opts $(_module_avail $cur)" "$cur";;
+    config|--reset) COMPREPLY=( $(compgen -W "$config_opts" -- "$cur") );;
+    -h|--help|-V|--version|aliases|apropos|keyword|purge|refresh|reload|search|source)
+                    ;;
+    append-path|prepend-path)
+                    COMPREPLY=( $(compgen -W "$path_opts" -- "$cur") );;
+    remove-path)
+                    COMPREPLY=( $(compgen -W "$rm_path_opts" -- "$cur") );;
+    initadd|initclear|initlist|initprepend|initrm)
+                    ;;
+    *)  if test $COMP_CWORD -gt 2
+        then
+            _module_long_arg_list "$cur"
+        else
+            case "$cur" in
+            # The mappings below are optional abbreviations for convenience
+            ls)     COMPREPLY="list";;      # map ls -> list
+            sw*)    COMPREPLY="switch";;
+
+            -*)     COMPREPLY=( $(compgen -W "$opts" -- "$cur") );;
+            *)      COMPREPLY=( $(compgen -W "$opts $cmds" -- "$cur") );;
+            esac
+        fi;;
+    esac
+}
+fi
+complete -o default -F _module module

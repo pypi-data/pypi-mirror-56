@@ -1,0 +1,358 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.00-init/%M%
+#   Revision:		%I%
+#   First Edition:	2018/02/22
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check siteconfig superseding mechanism
+#		}C%
+#
+##############################################################################
+
+proc test_getSiteConfig {siteconfig isvalid islocked} {
+    set siteconfigre [regsub -all "\(\[.+?\]\)" $siteconfig {\\\1}]
+    set siteconfigdbg [expr {$isvalid && !$islocked ? "DEBUG sourceSiteConfig: Source site configuration \\($siteconfigre\\)\\n" : {}}]
+    set getextrasiteconfigre [expr {!$islocked ? $siteconfigre : {}}]
+    set mainconfigdbg [expr {[file readable $::siteconfig_file] ? "DEBUG sourceSiteConfig: Source site configuration \\($::siteconfig_filere\\)\\n" : {}}]
+
+    set ans [list]
+    if {$isvalid && !$islocked} {
+        lappend ans "someUserProc"
+    }
+    lappend ans "DEBUG CALLING $::MODULECMD sh --no-pager -D -V"
+    if {$::install_libtclenvmodules ne {n}} {
+        lappend ans "DEBUG setConf: tcl_ext_lib set to '$::tclextlib_file'(\\nDEBUG Load Tcl extension library \\(.+\\))?"
+    }
+    lappend ans "DEBUG setConf: siteconfig set to '$::siteconfig_filere'"
+    lappend ans "${mainconfigdbg}DEBUG setConf: locked_configs set to '$::install_lockedconfigs'"
+    if {[info exists ::env(TESTSUITE_ENABLE_SITECONFIG_NOEXTRASITECONFIG)]} {
+        lappend ans "DEBUG setConf: locked_configs set to 'extra_siteconfig'"
+    } elseif {!$islocked} {
+        lappend ans "DEBUG setConf: extra_siteconfig set to '$getextrasiteconfigre'"
+    }
+    lappend ans "${siteconfigdbg}DEBUG setConf: pager set to '$::install_pagercmd'"
+    lappend ans "DEBUG initPager: no pager start \\(is_tty=$::is_stderr_tty, mod_cmd='', use_pager=0, asked_use_pager=0, cmd='$::install_pagercmd'\\)"
+    lappend ans "DEBUG setConf: verbosity set to 'debug'"
+    lappend ans "DEBUG setConf: term_background set to '$::install_termbg'"
+    lappend ans "(DEBUG initConfColors: Ignore invalid default.*\\n)?DEBUG setConf: colors set to '.*'"
+    lappend ans "DEBUG setConf: color set to '0'"
+    lappend ans "Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+
+    setenv_var MODULES_SITECONFIG $siteconfig
+    testouterr_cmd_re sh {--no-pager -D -V} {} [join $ans \n]
+    unsetenv_var MODULES_SITECONFIG
+}
+
+# check excepted siteconfig file is installed
+set is_stderr_tty [siteconfig_isStderrTty]
+if {$is_stderr_tty} {
+
+# no procedure superseding test, already handled in 100-pager tests
+
+# test variable superseding
+setenv_var TESTSUITE_ENABLE_SITECONFIG_DEBUG 1
+
+set ans [list]
+lappend ans "DEBUG CALLING $MODULECMD sh -V"
+lappend ans "DEBUG setConf: tcl_ext_lib set to '$tclextlib_file'(\\nDEBUG Load Tcl extension library \\(.+\\))?"
+lappend ans "DEBUG setConf: siteconfig set to '$siteconfig_filere'"
+lappend ans "DEBUG sourceSiteConfig: Source site configuration \\($siteconfig_filere\\)"
+lappend ans "DEBUG setConf: locked_configs set to '$install_lockedconfigs'"
+lappend ans "DEBUG setConf: pager set to '$install_pagercmd'"
+lappend ans "DEBUG initPager: start pager \\(asked_use_pager=-, cmd='$install_pagercmd'\\)"
+lappend ans "DEBUG setConf: verbosity set to 'debug'"
+lappend ans "DEBUG setConf: term_background set to '$install_termbg'"
+lappend ans "(DEBUG initConfColors: Ignore invalid default.*\\n)?DEBUG setConf: colors set to '.*'"
+lappend ans "DEBUG setConf: color set to '0'"
+lappend ans "Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+testouterr_cmd_re "sh" "-V" "" [join $ans "\n"]
+
+# test variable superseding of regular siteconfig file by additional siteconfig file if enabled
+if {![is_config_locked extra_siteconfig]} {
+    setenv_var MODULES_SITECONFIG testsuite/example/siteconfig.tcl-2
+    testouterr_cmd_re sh {-V} {} {Modules Release [0-9a-zA-Z\.\+\-]+ \([0-9\-]{10}\)}
+    unsetenv_var MODULES_SITECONFIG
+}
+
+# restore environment
+unsetenv_var TESTSUITE_ENABLE_SITECONFIG_DEBUG
+
+
+# test broken siteconfig file
+if { $verbose > 0 } {
+    send_user "\tSetup TESTSUITE_ENABLE_SITECONFIG_BROKEN = '1'\n"
+}
+set env(TESTSUITE_ENABLE_SITECONFIG_BROKEN) 1
+
+set ans [list]
+lappend ans "$error_msgs: Site configuration source failed"
+lappend ans "invalid command name \"unk_foo\""
+testouterr_cmd "sh" "-V" "ERR" [join $ans "\n"]
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tUnset TESTSUITE_ENABLE_SITECONFIG_BROKEN\n"
+}
+unset env(TESTSUITE_ENABLE_SITECONFIG_BROKEN)
+
+
+# test siteconfig file raising error
+# test parseAccessIssue with custom error code by the way
+if { $verbose > 0 } {
+    send_user "\tSetup TESTSUITE_ENABLE_SITECONFIG_ACCESSERR = '1'\n"
+}
+set env(TESTSUITE_ENABLE_SITECONFIG_ACCESSERR) 1
+
+set ans [list]
+lappend ans "$error_msgs: Site configuration source failed"
+lappend ans "Cannot access 'foo'"
+testouterr_cmd "sh" "-V" "ERR" [join $ans "\n"]
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tUnset TESTSUITE_ENABLE_SITECONFIG_ACCESSERR\n"
+}
+unset env(TESTSUITE_ENABLE_SITECONFIG_ACCESSERR)
+
+
+# test displayElementList procedure in terse+numbered mode
+if { $verbose > 0 } {
+    send_user "\tSetup TESTSUITE_ENABLE_SITECONFIG_TERSENUM = '1'\n"
+}
+set env(TESTSUITE_ENABLE_SITECONFIG_TERSENUM) 1
+
+set ans [list]
+lappend ans "test:"
+lappend ans " 1\\\) elt1 "
+lappend ans " 2\\\) elt2 "
+lappend ans " 3\\\) elt3 "
+lappend ans {}
+lappend ans "Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+testouterr_cmd_re "sh" "-V" "OK" [join $ans "\n"]
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tUnset TESTSUITE_ENABLE_SITECONFIG_TERSENUM\n"
+}
+unset env(TESTSUITE_ENABLE_SITECONFIG_TERSENUM)
+
+# test displayElementList procedure with a tricky list that triggers unusual condition
+setenv_var TESTSUITE_ENABLE_SITECONFIG_TRICKYLISTDISP 1
+set ans "test:
+ 1\\) abc/def                                 22\\) abcdefgh/ij-k-lmno.pq         
+ 2\\) abcdefgh/ijklmnop                       23\\) abcdefgh/ijk-l-mnop.qr-stu    
+ 3\\) abc/defg                                24\\) abcdefgh/ijklmnop-qr.st       
+ 4\\) abcd/ef                                 25\\) abcdef/ghijklmno-pq.rs        
+ 5\\) abc/defg-hijkl.mn.op                    26\\) abcdef/ghi-jklm_no_pqrstuv    
+ 6\\) abcdefgh/ijklm.nopqrst                  27\\) abcdefgh/ijk-lm-n-opqr.st     
+ 7\\) abcdefg/hijklmnop-qr.st.uvw             28\\) abcdefgh/ijklm-n-opqr.st-uvw  
+ 8\\) abcdefgh/ijklmnopqrst-u-vwxy.zA-BCD-E   29\\) abcdef/ghijklm-nopq_r         
+ 9\\) abcdef/ghijklm-nopq.r_st.uv             30\\) abcdefg/hijkl-mn.op.qzs       
+10\\) abcdefgh/ijklmnop-q-rstu.vw-xyz-A       31\\) abcdefg/hijklmn-op.qr.stz     
+11\\) abcdefg/hijklmn-op.qr.stu               32\\) abcdefgh/ijklmn               
+12\\) abcdefg/hijkl-mn.op.qrs                 
+13\\) abcd/efgh-ij.k                          
+14\\) abcdefg/hijk-lmnop_qr.st.uvw            
+15\\) abcdef/ghijklmno-p.q.r                  
+16\\) abcdefgh/ijklmn-o-pqrs.tu               
+17\\) abcdefgh/ijklmnop-q-rstu.vw-xyz         
+18\\) abcdefg/hij-klm.nopq                    
+19\\) abcdefg/hij-kl.mn.opq                   
+20\\) abcdefgh/ijklmnopq_rstuv-w-xyzA.BC-DEF  
+21\\) abcdefgh/ijklmnopqrstuv-w-xyzA.BC       
+
+Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+testouterr_cmd_re "sh" "-V" "OK" $ans
+# restore environment
+unsetenv_var TESTSUITE_ENABLE_SITECONFIG_TRICKYLISTDISP
+
+# test readModuleContent procedure in no error message report if issue
+# could happen when reading .modulerc/.version file if this kind of file gets
+# locked/removed/... between the execution of findModules (that check
+# readability) and getModules (that actually read/execute)
+if { $verbose > 0 } {
+    send_user "\tSetup TESTSUITE_ENABLE_SITECONFIG_READMODNOREPORT = '1'\n"
+}
+set env(TESTSUITE_ENABLE_SITECONFIG_READMODNOREPORT) 1
+
+set ans [list]
+lappend ans "Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+testouterr_cmd_re "sh" "-V" "OK" [join $ans "\n"]
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tUnset TESTSUITE_ENABLE_SITECONFIG_READMODNOREPORT\n"
+}
+unset env(TESTSUITE_ENABLE_SITECONFIG_READMODNOREPORT)
+
+
+# test loaded module accessor procedures on non-loaded module
+# does not happened currently within modulecmd.tcl as there is always a
+# getLoadedModulesList retrieval or a isModuleLoaded call prior use of get
+# accessor
+if { $verbose > 0 } {
+    send_user "\tSetup TESTSUITE_ENABLE_SITECONFIG_LMACCESSOR = '1'\n"
+}
+set env(TESTSUITE_ENABLE_SITECONFIG_LMACCESSOR) 1
+
+set ans [list]
+lappend ans ""
+lappend ans ""
+lappend ans ""
+lappend ans "bar1 bar2"
+lappend ans "Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+testouterr_cmd_re "sh" "-V" "OK" [join $ans "\n"]
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tUnset TESTSUITE_ENABLE_SITECONFIG_LMACCESSOR\n"
+}
+unset env(TESTSUITE_ENABLE_SITECONFIG_LMACCESSOR)
+
+
+# test path variable handling on Windows platform (';' separator is used
+# instead of ':')
+if { $verbose > 0 } {
+    send_user "\tSetup TESTSUITE_ENABLE_SITECONFIG_WINDOWS_PLATFORM = '1'\n"
+}
+set env(TESTSUITE_ENABLE_SITECONFIG_WINDOWS_PLATFORM) 1
+
+set ORIG_PATH $env(PATH)
+set env(PATH) "/path/to/dir1"
+set env(PATH_modshare) "/path/to/dir1;1"
+set module "append/2.0"
+set modulefile "$modpath/$module"
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile;1"]
+lappend ans [list set LOADEDMODULES_modshare "$module;1"]
+lappend ans [list setpath PATH "/path/to/dir1;/this/is/the/modules/testsuite"]
+lappend ans [list setpath _LMFILES_ $modulefile]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list set PATH_modshare "/path/to/dir1;1;/this/is/the/modules/testsuite;1"]
+testouterr_cmd "cmd" "load $module" $ans ""
+
+set env(PATH) $ORIG_PATH
+unset env(PATH_modshare)
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tUnset TESTSUITE_ENABLE_SITECONFIG_WINDOWS_PLATFORM\n"
+}
+unset env(TESTSUITE_ENABLE_SITECONFIG_WINDOWS_PLATFORM)
+
+
+# test getDiffBetweenList procedure with element of second list arg not in first list arg
+setenv_var TESTSUITE_ENABLE_SITECONFIG_GETDIFFBETWEENLIST 1
+
+set ans [list]
+lappend ans "{foo foo2} {bar bar2}"
+lappend ans "Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+testouterr_cmd_re sh -V OK [join $ans \n]
+
+# restore environment
+unsetenv_var TESTSUITE_ENABLE_SITECONFIG_GETDIFFBETWEENLIST
+
+
+# test clear sub-command confirmation message without waiting indefinitely
+setenv_var TESTSUITE_ENABLE_SITECONFIG_EXITONGETSSTDIN 1
+
+testouterr_cmd sh clear {} {Are you sure you want to clear all loaded modules!? [n] }
+
+# restore environment
+unsetenv_var TESTSUITE_ENABLE_SITECONFIG_EXITONGETSSTDIN
+
+
+# test extra siteconfig disablement
+setenv_var TESTSUITE_ENABLE_SITECONFIG_NOEXTRASITECONFIG 1
+
+test_getSiteConfig testsuite/example/siteconfig.tcl-2 0 1
+
+# restore environment
+unsetenv_var TESTSUITE_ENABLE_SITECONFIG_NOEXTRASITECONFIG
+
+
+# test tcl ext lib load on an incompatible interp if available
+if {[info exists tclextlib_file] && [file executable ./tclsh83]} {
+    setenv_var TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBLOAD83 1
+    testouterr_cmd sh -V ERR "$error_msgs: Site configuration source failed\nversion conflict for package \"Tcl\": have 8.3, need 8.4"
+    # restore environment
+    unsetenv_var TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBLOAD83
+} elseif {$verbose > 0} {
+    send_user "\tSkip tcl ext lib load tests with tclsh83 as either ext lib or tclsh83 is not available\n"
+}
+
+# test tcl ext lib procedures against erroneous calls
+if {[info exists tclextlib_file]} {
+    setenv_var TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBBADCALL 1
+    set ans [list]
+    lappend ans "$error_msgs: wrong # args: should be \"readFile filename \\?firstline\\?\""
+    lappend ans "$error_msgs: expected boolean value but got \"bar\""
+    lappend ans "$error_msgs: wrong # args: should be \"getFilesInDirectory dir fetch_hidden fetch_dotversion\""
+    lappend ans "$error_msgs: expected boolean value but got \"bar\""
+    lappend ans "$error_msgs: expected boolean value but got \"bar\""
+    lappend ans "Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+    testouterr_cmd_re sh -V OK [join $ans \n]
+
+    unsetenv_var TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBBADCALL
+} elseif {$verbose > 0} {
+    send_user "\tSkip tcl ext lib erroneous procedure calls as ext lib is not available\n"
+}
+
+# test tcl ext lib procedures against a failed closedir call
+if {[info exists closedirlib_file]} {
+    setenv_var TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBFAILEDCLOSEDIR 1
+    setenv_var LD_PRELOAD $closedirlib_file
+    set ans [list]
+    lappend ans "$error_msgs: couldn't close directory \"$modpathre\": Success"
+    lappend ans "Modules Release \[0-9a-zA-Z\.\+\\-\]+ \\(\[0-9\-\]{10}\\)"
+    testouterr_cmd_re sh -V OK [join $ans \n]
+
+    unsetenv_var TESTSUITE_ENABLE_SITECONFIG_TCLEXTLIBFAILEDCLOSEDIR
+    unsetenv_var LD_PRELOAD
+} elseif {$verbose > 0} {
+    send_user "\tSkip tcl ext lib erroneous procedure calls as ext lib is not available\n"
+}
+
+
+#
+#  Clean up variables used in this test case
+#
+
+unset ans
+
+unset module
+unset modulefile
+unset ORIG_PATH
+
+} elseif {$verbose > 0} {
+    send_user "\tSkip tests relying on an excepted siteconfig file installed\n"
+}
+
+# test siteconfig override using MODULES_SITECONFIG
+# when set to an unexistent file
+test_getSiteConfig /path/to/unexistent/file 0 [is_config_locked extra_siteconfig]
+test_getSiteConfig {} 0 [is_config_locked extra_siteconfig]
+# when set to a valid Tcl script (depends if extra siteconfig is allowed)
+test_getSiteConfig $env(TESTSUITEDIR)/example/siteconfig.tcl-2 1 [is_config_locked extra_siteconfig]
+test_getSiteConfig testsuite/example/siteconfig.tcl-2 1 [is_config_locked extra_siteconfig]
+
+
+#
+#  Clean up variables used in this test case
+#
+
+unset is_stderr_tty
+
+# remove test procedure
+rename test_getSiteConfig {}

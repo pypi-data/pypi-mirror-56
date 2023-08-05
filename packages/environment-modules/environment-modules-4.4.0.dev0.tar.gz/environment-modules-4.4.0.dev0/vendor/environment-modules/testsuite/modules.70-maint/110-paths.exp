@@ -1,0 +1,76 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	2017/05/18
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		paths
+#   Modulefiles:	help averssort
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module command 'paths'
+#		}C%
+#
+##############################################################################
+
+#
+#  Test variables
+#
+
+set module_1 "help"
+set modulefile_1 "$modpath/help/2.0"
+set module_2 "foo"
+set module_3 "averssort"
+set modulefile_3 [list "$modpath/verssort/1" "$modpath/verssort/1.2.4" "$modpath/verssort/1.10"]
+
+#
+#  test with a modulefile
+#
+
+lappend ans [list text $modulefile_1]
+testouterr_cmd "ALL" "paths $module_1" $ans ""
+
+# setup MODULEPATH with a trailing slash and an empty dir element
+setenv_path_var MODULEPATH {} "$modpath/"
+testouterr_cmd "sh" "paths $module_1" $ans ""
+
+# restore MODULEPATH
+setenv_path_var MODULEPATH $modpath
+
+#
+# test with nonexistent modulefile
+#
+
+set ans [list]
+lappend ans [list text ""]
+
+testouterr_cmd "ALL" "paths $module_2" $ans ""
+
+#
+# test with aliases to resolve
+#
+
+set ans [list]
+lappend ans [list text $modulefile_3]
+
+testouterr_cmd "ALL" "paths $module_3" $ans ""
+
+
+#
+#  Cleanup
+#
+
+unset module_1
+unset modulefile_1
+unset module_2
+unset module_3
+unset modulefile_3
+
+unset ans

@@ -1,0 +1,14 @@
+#----------------------------------------------------------------------#
+# system-wide profile.modules                                          #
+# Initialize modules for all sh-derivative shells                      #
+#----------------------------------------------------------------------#
+trap "" 1 2 3
+
+case "$0" in
+    -bash|bash|*/bash) . /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/Modules/init/bash ;; 
+       -ksh|ksh|*/ksh) . /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/Modules/init/ksh ;; 
+       -zsh|zsh|*/zsh) . /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/Modules/init/zsh ;;
+                    *) . /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/Modules/init/sh ;; # sh and default for scripts
+esac
+
+trap 1 2 3

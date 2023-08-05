@@ -1,0 +1,46 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.60-initx/%M%
+#   Revision:		%I%
+#   First Edition:	2005/12/22
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		initadd, initrm
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the initrm sub-command
+#		}C%
+#
+##############################################################################
+
+testouterr_cmd sh "initrm foobar" "OK" ""
+_test_modules sh "initrm" "$modload poo/2.0 foo bar null\n$line2"
+
+testouterr_cmd ksh "initrm foo bar" "OK" ""
+_test_modules ksh "initrm" "$modload poo/2.0 null\n$line2"
+
+testouterr_cmd zsh "initunlo poo/2.0" "OK" ""
+_test_modules zsh "initrm" "$modload null\n$line2"
+
+# not there
+testouterr_cmd csh "initrm foobar" "OK" ""
+_test_modules csh "initrm" "$modload null\n$line2"
+
+# go too far
+# different behavior than C-version: on Tcl-version a 'module load' line is left
+# instead of a 'module load null' line
+testouterr_cmd tcsh "initrm null" "OK" ""
+_test_modules tcsh "initrm" "$modload\n$line2"
+
+# test on fully empty init file
+file copy -force "$env(HOME)/.modules.savenull"  "$env(HOME)/.modules"
+
+testouterr_cmd sh "initrm foobar" "ERR" "$find_msg_sh"
+_test_modules sh "initrm" "#"

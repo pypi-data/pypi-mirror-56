@@ -1,0 +1,91 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.60-initx/%M%
+#   Revision:		%I%
+#   First Edition:	2017/07/01
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		initlist, initadd, initprepend, initswitch
+#                   initrm, initclear
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Handling of init file when access rights to get to it
+#           does not allow it
+#		}C%
+#
+##############################################################################
+
+# cannot test access if cannot change file permission
+if {!$is_file_perms_editable} {
+    send_user "\tskipping access tests as file permissions cannot be changed\n"
+# cannot test access if superuser privileges are in use
+} elseif {$tcl_platform(user) eq "root"} {
+    send_user "\tskipping access tests as tests are run by superuser\n"
+# cannot test access if restricted file permissions have no effect
+} elseif {$is_locked_dir_file_readable && $is_locked_file_readable} {
+    send_user "\tskipping access tests as locked files or directories are still readable\n"
+} else {
+
+# restore regular .modules file for test
+set initf "$env(HOME)/.modules"
+set initfsave "${initf}.save"
+file copy -force $initfsave $initf
+
+set initlist_sh "sh initialization file \$HOME/.modules loads modules:\n\tnull\n\tdot module-cvs module-info modules use.own"
+set write_msg_sh "$error_msgs: Init file $initf cannot be written.\ncouldn't open \"$initf\": permission denied"
+set hide_perms "ugo-rx"
+set write_perms "ugo-w"
+
+
+#
+# Test access to init file when read access not granted on this file
+#
+
+change_file_perms $initf $hide_perms
+
+testouterr_cmd sh "initlist" "OK" ""
+testouterr_cmd sh "initadd foobar" "ERR" "$find_msg_sh"
+testouterr_cmd sh "initswitch foo food" "ERR" "$find_msg_sh"
+testouterr_cmd sh "initprepend foobar" "ERR" "$find_msg_sh"
+testouterr_cmd sh "initrm foobar" "ERR" "$find_msg_sh"
+testouterr_cmd sh "initclear" "ERR" "$find_msg_sh"
+
+restore_file_perms $initf
+
+
+#
+# Test access to init file when write access not granted on this file
+#
+
+change_file_perms $initf $write_perms
+
+testouterr_cmd sh "initlist" "OK" "$initlist_sh"
+testouterr_cmd sh "initadd foobar" "ERR" "$write_msg_sh"
+testouterr_cmd sh "initswitch foo food" "ERR" "$write_msg_sh"
+testouterr_cmd sh "initprepend foobar" "ERR" "$write_msg_sh"
+testouterr_cmd sh "initrm foobar" "ERR" "$write_msg_sh"
+testouterr_cmd sh "initclear" "ERR" "$write_msg_sh"
+
+restore_file_perms $initf
+
+
+#
+# Cleanup
+#
+
+unset initlist_sh
+unset write_msg_sh
+unset hide_perms
+unset write_perms
+
+unset initf
+unset initfsave
+
+}

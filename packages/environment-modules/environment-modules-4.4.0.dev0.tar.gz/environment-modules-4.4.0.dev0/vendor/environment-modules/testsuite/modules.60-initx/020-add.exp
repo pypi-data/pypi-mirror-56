@@ -1,0 +1,52 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.60-initx/%M%
+#   Revision:		%I%
+#   First Edition:	2005/12/22
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		initadd, initrm
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the initadd sub-commands
+#		}C%
+#
+##############################################################################
+
+# test on empty module load list
+file copy -force "$env(HOME)/.modules.saveempty"  "$env(HOME)/.modules"
+
+testouterr_cmd sh "initadd foobar" "OK" ""
+_test_modules sh "initadd" "$modload foobar"
+
+
+# test on fully empty init file
+file copy -force "$env(HOME)/.modules.savenull"  "$env(HOME)/.modules"
+
+testouterr_cmd sh "initadd foobar" "ERR" "$find_msg_sh"
+_test_modules sh "initadd" "#"
+
+
+# restore regular .modules file for test
+file copy -force "$env(HOME)/.modules.save"  "$env(HOME)/.modules"
+
+testouterr_cmd sh "initlo foobar" "OK" ""
+_test_modules sh "initadd" "$modload null foobar\n$line2"
+
+testouterr_cmd ksh "initad foo bar" "OK" ""
+_test_modules ksh "initadd" "$modload null foobar foo bar\n$line2"
+
+testouterr_cmd zsh "inita poo/2.0" "OK" ""
+_test_modules zsh "initadd" "$modload null foobar foo bar poo/2.0\n$line2"
+
+# different behavior than C-version: on Tcl-version no message is printed
+testouterr_cmd csh "initadd foobar" "OK" ""
+_test_modules csh "initadd" "$modload null foo bar poo/2.0 foobar\n$line2"
+

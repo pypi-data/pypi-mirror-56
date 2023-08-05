@@ -1,0 +1,151 @@
+##############################################################################
+#   Modules Release Tcl
+#   Providing a flexible user environment
+#
+#   File:		modules.61-coll/%M%
+#   Revision:		%I%
+#   First Edition:	2016/08/02
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Test the module 'savelist' command
+#		}C%
+#
+##############################################################################
+
+set header_long "- Collection $modlin.- Last mod. $modlin"
+set header_no_coll "No named collection."
+set header_target_no_coll "No named collection (for target \"$collemptytarget\")."
+set header_coll "Named collection list:"
+set header_target_coll "Named collection list (for target \"$colltarget\"):"
+set header_target_coll_re "Named collection list \\(for target \"$colltarget\"\\):"
+set coll_list "$coll1\n$coll2\n$coll3\n$coll4f\n$coll6f\n$colld\ninfocmd\ninfocmdexp"
+set coll_list_idx " 1) $coll1   3) $coll3          5) $coll6f   7) infocmd     \n 2) $coll2   4) $coll4f   6) $colld        8) infocmdexp  "
+set lprops "\\s+\[0-9\/]{10} \[0-9:]{8}"
+set coll_list_long "$coll1$lprops\n$coll2$lprops\n$coll3$lprops\n$coll4f$lprops\n$coll6f$lprops\n$colld$lprops\ninfocmd$lprops\ninfocmdexp$lprops"
+set coll_target_list "$coll4\n$coll6"
+set coll_target_list_idx " 1) $coll4   2) $coll6  "
+set coll_target_list_long "$coll4$lprops\n$coll6$lprops"
+
+
+#
+# test HOME with no collection
+#
+
+# testsuite home does not contain collection
+testouterr_cmd "sh" "savelist -t" "OK" "$header_no_coll"
+testouterr_cmd "sh" "savelist" "OK" "$header_no_coll"
+testouterr_cmd "sh" "savelist -l" "OK" "$header_no_coll"
+
+
+#
+# test HOME containing collections
+#
+
+# set HOME to location containing collections
+set ORIG_HOME $env(HOME)
+if { $verbose > 0 } {
+    send_user "\tSetup HOME = $homewithcoll\n"
+}
+set env(HOME) "$homewithcoll"
+
+# set a specific width for test
+if {![info exists term_cols]} {
+    # skip tests if current terminal witdh is unknown
+    send_user "\tskipping terminal width-specific tests\n"
+} elseif {[catch {exec stty cols 80}] || [getTtyCols] ne 80} {
+    send_user "\tskipping terminal width-specific tests, cannot set width\n"
+} else {
+
+testouterr_cmd "sh" "savelist --terse" "OK" "$header_coll\n$coll_list"
+testouterr_cmd "sh" "savelist -l --terse" "OK" "$header_coll\n$coll_list"
+testouterr_cmd "sh" "savelist" "OK" "$header_coll\n$coll_list_idx"
+testouterr_cmd_re "sh" "savelist --long" "OK" "$header_long\n$header_coll\n$coll_list_long"
+testouterr_cmd_re "sh" "savelist -t --long" "OK" "$header_long\n$header_coll\n$coll_list_long"
+
+# restore terminal width
+exec stty cols $term_cols
+
+}
+
+
+#
+# test MODULES_COLLECTION_TARGET not matching collections
+#
+
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_COLLECTION_TARGET = $collemptytarget\n"
+}
+set env(MODULES_COLLECTION_TARGET) "$collemptytarget"
+
+# target does not contain collection
+testouterr_cmd "sh" "savelist -t" "OK" "$header_target_no_coll"
+testouterr_cmd "sh" "savelist" "OK" "$header_target_no_coll"
+testouterr_cmd "sh" "savelist -l" "OK" "$header_target_no_coll"
+
+
+#
+# test MODULES_COLLECTION_TARGET matching collections
+#
+
+if { $verbose > 0 } {
+    send_user "\tSetup MODULES_COLLECTION_TARGET = $colltarget\n"
+}
+set env(MODULES_COLLECTION_TARGET) "$colltarget"
+
+# target has matching collection
+testouterr_cmd "sh" "savelist -t" "OK" "$header_target_coll\n$coll_target_list"
+testouterr_cmd "sh" "savelist" "OK" "$header_target_coll\n$coll_target_list_idx"
+testouterr_cmd_re "sh" "savelist -l" "OK" "$header_long\n$header_target_coll_re\n$coll_target_list_long"
+
+
+#
+# test unsetting HOME
+#
+
+if { $verbose > 0 } {
+    send_user "\tUnset HOME \n"
+}
+unset env(HOME)
+
+testouterr_cmd "sh" "savelist -t" "ERR" $nohomeerrmsg
+
+
+#
+# Cleanup
+#
+
+# restore default testsuite home
+if { $verbose > 0 } {
+    send_user "\tRestore HOME = $ORIG_HOME\n"
+}
+set env(HOME) $ORIG_HOME
+
+# restore environment
+if { $verbose > 0 } {
+    send_user "\tRestore MODULES_COLLECTION_TARGET = ''\n"
+}
+unset env(MODULES_COLLECTION_TARGET)
+
+unset header_long
+unset header_no_coll
+unset header_target_no_coll
+unset header_coll
+unset header_target_coll
+unset header_target_coll_re
+unset coll_list
+unset coll_list_idx
+unset lprops
+unset coll_list_long
+unset coll_target_list
+unset coll_target_list_idx
+unset coll_target_list_long
+
+unset ORIG_HOME

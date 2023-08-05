@@ -1,0 +1,72 @@
+set install_baseprefix "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5"
+set install_prefix "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5"
+set install_bindir "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/bin"
+set install_mandir "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/share/man"
+set install_etcdir "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/etc"
+set install_initdir "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/init"
+set install_libdir "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/lib"
+set install_libexecdir "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec"
+set install_modulefilesdir "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/modulefiles"
+set install_moduleshome "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5"
+
+set install_versioning "n"
+
+set install_version "4.4.0"
+
+set install_modulepath {/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/modulefiles}
+set install_loadedmodules ""
+
+set install_silentshdbgsupport "y"
+set install_setshellstartup "y"
+set install_quarantinesupport "y"
+set install_quarantinevars ""
+
+set install_compatversion "y"
+
+set install_libtclenvmodules "y"
+set install_shlib_suffix ".so"
+
+set install_setmanpath "y"
+set install_setbinpath "y"
+set install_examplemodulefiles "y"
+
+set install_initconfin "initdir"
+
+set install_builddoc "y"
+
+set install_pager "/usr/bin/less"
+set install_pageropts "-eFKRX"
+set install_pagercmd $install_pager
+if {$install_pageropts ne {}} {
+    append install_pagercmd " $install_pageropts"
+}
+
+set install_verbosity "normal"
+
+set install_color "n"
+set install_darkbgcolors "hi=1:db=2:se=2:er=91:wa=93:me=95:in=94:mp=1;94:di=94:al=96:sy=95:de=4:cm=92"
+set install_lightbgcolors "hi=1:db=2:se=2:er=31:wa=33:me=35:in=34:mp=1;34:di=34:al=36:sy=35:de=4:cm=32"
+set install_termbg "dark"
+
+set install_autohandling "n"
+
+set install_availindepth "y"
+
+set install_lockedconfigs ""
+
+set install_unloadmatchorder "returnlast"
+
+set install_implicitdefault "y"
+
+set install_extendeddefault "n"
+
+set install_advversspec "n"
+
+set install_searchmatch "starts_with"
+
+set install_wa277 "n"
+
+set install_icase "never"
+
+# command location
+set install_tclsh "/usr/bin/tclsh"

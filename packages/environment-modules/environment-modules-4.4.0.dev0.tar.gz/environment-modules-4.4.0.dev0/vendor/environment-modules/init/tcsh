@@ -1,0 +1,75 @@
+# define module command and surrounding initial environment (default value
+# for MODULESHOME, MODULEPATH, LOADEDMODULES and parse of init config files)
+eval "`/usr/bin/tclsh /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd.tcl tcsh autoinit`"
+
+# no environment alteration if the above autoinit command failed
+if ( $status == 0 ) then
+   # clarify compat version is not enabled for below tests
+   if ( ! $?MODULES_USE_COMPAT_VERSION ) then
+      setenv MODULES_USE_COMPAT_VERSION 0
+   endif
+
+   # redefine module command if compat version has been activated
+   if ( "$MODULES_USE_COMPAT_VERSION" == '1' ) then
+      setenv MODULES_CMD /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd-compat ;
+      if ( $?histchars && $?prompt ) alias module 'set _histchars = $histchars; unset histchars; set _prompt=$prompt:q; set prompt=""; eval `/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd-compat tcsh \!*`; set _exit="$status";  set histchars = $_histchars; unset _histchars; set prompt=$_prompt:q; unset _prompt; test 0 = $_exit' ;
+      if ( $?histchars && ! $?prompt ) alias module 'set _histchars = $histchars; unset histchars; eval `/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd-compat tcsh \!*`; set _exit="$status";  set histchars = $_histchars; unset _histchars; test 0 = $_exit' ;
+      if ( ! $?histchars && $?prompt ) alias module 'set _prompt=$prompt:q; set prompt=""; eval `/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd-compat tcsh \!*`; set _exit="$status";  set prompt=$_prompt:q;unset _prompt; test 0 = $_exit' ;
+      if ( ! $?histchars && ! $?prompt ) alias module 'eval `/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd-compat tcsh \!*`' ;
+   endif
+
+   # define function to switch between C and Tcl versions of Modules
+   set switchml_defined="`alias switchml`"
+   if ( "$switchml_defined" == '' ) then
+      alias switchml 'set swfound=1; \\
+         if ( ! $?MODULES_USE_COMPAT_VERSION ) setenv MODULES_USE_COMPAT_VERSION 0; \\
+         if ( "$MODULES_USE_COMPAT_VERSION" == "1" ) set swname="main"; \\
+         if ( "$MODULES_USE_COMPAT_VERSION" == "1" && -e /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd.tcl ) set swfound=0; \\
+         if ( "$MODULES_USE_COMPAT_VERSION" != "1" ) set swname="compatibility"; \\
+         if ( "$MODULES_USE_COMPAT_VERSION" != "1" && -e /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/libexec/modulecmd-compat ) set swfound=0; \\
+         if ( $swfound == 0 && $swname == "main" ) setenv MODULES_USE_COMPAT_VERSION 0; \\
+         if ( $swfound == 0 && $swname == "compatibility" ) setenv MODULES_USE_COMPAT_VERSION 1; \\
+         if ( $swfound == 0 ) echo "Switching to Modules $swname version"; \\
+         if ( $swfound == 0 ) source /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/init/tcsh; \\
+         if ( $swfound != 0 ) echo "Cannot switch to Modules $swname version, command not found"; \\
+         unset swfound swname;'
+   endif
+   unset switchml_defined
+
+   if ( $?tcsh && $?prompt && -r /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/init/tcsh_completion ) then
+   if ( "$MODULES_USE_COMPAT_VERSION" != '1' ) then
+      source /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/init/tcsh_completion
+   else
+      # no completion support on compat version
+      uncomplete module
+   endif
+   endif
+
+   if ( ":${PATH}:" !~ '*:/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/bin:*' ) then
+      if ( "$PATH" == '' ) then
+         setenv PATH /home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/bin
+      else
+         setenv PATH "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/bin:$PATH"
+      endif
+   endif
+
+   if ( $?MANPATH ) then
+      set manpath = $MANPATH
+   else
+      set manpath = `manpath`
+      # initialize MANPATH if not set with a value that preserves manpath
+      # system configuration even after addition of paths to this variable
+      # by modulefiles
+      setenv MANPATH :
+   endif
+   if ( ":${manpath}:" !~ '*:/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/share/man:*' ) then
+      if ( "$MANPATH" == '' || "$MANPATH" == ':' ) then
+         set mlpathsep = ''
+      else
+         set mlpathsep = :
+      endif
+      setenv MANPATH "/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/share/man$mlpathsep$MANPATH"
+      unset mlpathsep
+   endif
+   unset manpath
+endif

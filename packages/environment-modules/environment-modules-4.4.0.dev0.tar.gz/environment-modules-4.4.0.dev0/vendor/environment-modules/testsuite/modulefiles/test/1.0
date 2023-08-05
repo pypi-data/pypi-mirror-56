@@ -1,0 +1,35 @@
+#%Module1.0
+
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		test/%M%
+#   Revision:		%I%
+#   First Edition:	2017/04/30
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite modulefile
+#   Command:
+#   Sub-Command:	test
+#
+#   Invocation:		display @M@, help @M@, test @M@
+#   Result:	%R{
+#		}R%
+#   Comment:	%C{
+#			Test the module 'test' command
+#		}C%
+#
+##############################################################################
+
+# test procedure with no value returned
+proc ModulesTest { } {
+    puts stderr Test_err
+
+}
+
+if { ![module-info mode whatis] } {
+    module-whatis "Some checks for TEST"
+}

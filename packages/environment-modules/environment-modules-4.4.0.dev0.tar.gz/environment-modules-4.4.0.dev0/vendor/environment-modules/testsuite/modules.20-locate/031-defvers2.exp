@@ -1,0 +1,204 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	2017/08/19
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        load, display, help, test, avail, whatis, paths
+#   Modulefiles:	loc_dv2, loc_dv7, loc_dv9, loc_dvv1, loc_dv1, loc_xx
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test correct resolution of module symbolic 'default' version
+#           when this symbol is precised in module name passed on command-line
+#		}C%
+#
+##############################################################################
+
+# ensure avail tests are made using in depth mode
+setenv_var MODULES_AVAIL_INDEPTH 1
+
+set datetime_re "\[0-9\/]{10} \[0-9:]{8}"
+
+# default symbol set by using '.version' file
+set modsym_1 "loc_dv2/default"
+set module_1 "loc_dv2/1.0"
+set modalt_1 loc_dv2/default&loc_dv2
+set modulefile_1 "$modpath/$module_1"
+set modulefilere_1 "$modpathre/$module_1"
+set modavail_1 "$module_1\\s+default\\s+$datetime_re"
+
+# default symbol set by using '.version' file and targets a directory
+set modsym_2 "loc_dv7/default"
+set module_2 "loc_dv7/2.0/1.0"
+# default symbol is set over the parent directory, will be inherited in alternative names
+set modalt_2 "loc_dv7/default&loc_dv7"
+set modulefile_2 "$modpath/$module_2"
+set modulefilere_2 "$modpathre/$module_2"
+# symbol set on directory, so directory appear on avail
+set modavail_2 "loc_dv7/2.0/\\s+default\\s+\nloc_dv7/2.0/1.0\\s+$datetime_re"
+set nodefault_2 "$err_nodefault'loc_dv7/2.0'"
+
+# default symbol set by using '.version' file using module-version cmd
+set modsym_3 "loc_dv9/default"
+set module_3 "loc_dv9/1.0"
+set modalt_3 loc_dv9/default&loc_dv9
+set modulefile_3 "$modpath/$module_3"
+set modulefilere_3 "$modpathre/$module_3"
+set modavail_3 "$module_3\\s+default\\s+$datetime_re"
+
+# default symbol set by using '.version' file on virtual modules
+set modsym_4 "loc_dvv1/default"
+set module_4 "loc_dvv1/1.0"
+set modalt_4 loc_dvv1/default&loc_dvv1
+set modulefile_4 "$modpath/loc_dvv1/.common"
+set modulefilere_4 "$modpathre/loc_dvv1/.common"
+set modavail_4 "$module_4\\s+default\\s+$datetime_re"
+
+# existing module without default symbol set
+set modsym_5 "loc_dv1/default"
+
+# non existant module
+set modsym_6 "loc_xx/default"
+
+
+set help_pre "$modlin\nModule Specific Help for "
+set help_mid ":\n\nWARNING: Unable to find ModulesHelp in "
+set help_post ".\n$modlin"
+set test_pre "$modlin\nModule Specific Test for "
+set test_mid ":\n\nWARNING: Unable to find ModulesTest in "
+set test_post ".\n$modlin"
+set disp_pre "$modlin\n"
+set disp_wi "module-whatis\\s+"
+set disp_post "\n$modlin"
+set header_long "- Package/Alias $modlin.- Versions $modlin.- Last mod. $modlin"
+set avail_pre "$header_long\n$modpathre:"
+set whatis_pre "$modlin $modpathre $modlin\n\\s+"
+
+
+#
+#  The tests
+#
+
+for {set i 1} {$i <= 4} {incr i} {
+    set modsym [set "modsym_${i}"]
+    set module [set "module_${i}"]
+    if {[info exists "modalt_${i}"]} {
+        set modalt $module&[set "modalt_${i}"]
+    } else {
+        set modalt ""
+    }
+    set modulefile [set "modulefile_${i}"]
+    set modulefilere [set "modulefilere_${i}"]
+    set modavail [set "modavail_${i}"]
+    if {[info exists "nodefault_${i}"]} {
+        set nodefault [set "nodefault_${i}"]
+    } else {
+        set nodefault ""
+    }
+
+    set ans [list]
+    lappend ans [list setpath LOADEDMODULES $module]
+    lappend ans [list setpath _LMFILES_ $modulefile]
+    if {$modalt ne ""} {
+        lappend ans [list setpath MODULES_LMALTNAME $modalt]
+    }
+
+    set displayerr "$disp_pre$modulefilere:\n\n$disp_wi$module$disp_post"
+    set helperr "$help_pre$modulefilere$help_mid$modulefilere$help_post"
+    set testerr "$test_pre$modulefilere$test_mid$modulefilere$test_post"
+    set whatiserr "$whatis_pre$module: $module"
+
+    if {$nodefault eq {}} {
+        testouterr_cmd "sh" "load $modsym" $ans ""
+        testouterr_cmd_re "sh" "display $modsym" "OK" $displayerr
+        testouterr_cmd_re "sh" "help $modsym" "OK" $helperr
+        testouterr_cmd_re "sh" "test $modsym" "OK" $testerr
+    } else {
+        testouterr_cmd "sh" "load $modsym" [if_implicitdefault $ans ERR] [if_implicitdefault {} $nodefault]
+        testouterr_cmd_re "sh" "display $modsym" [if_implicitdefault OK ERR] [if_implicitdefault $displayerr $nodefault]
+        testouterr_cmd_re "sh" "help $modsym" [if_implicitdefault OK ERR] [if_implicitdefault $helperr $nodefault]
+        testouterr_cmd_re "sh" "test $modsym" [if_implicitdefault OK ERR] [if_implicitdefault $testerr $nodefault]
+    }
+
+    testouterr_cmd_re "sh" "avail -l $modsym" "OK" "$avail_pre\n$modavail"
+    testouterr_cmd_re "sh" "whatis $modsym" "OK" $whatiserr
+
+    set ans [list]
+    lappend ans [list text $modulefile]
+    testouterr_cmd "sh" "paths $modsym" $ans ""
+}
+
+# test on erroneous modules
+foreach modsym [list $modsym_5 $modsym_6] {
+    set locate_msg "$err_path'$modsym'"
+    testouterr_cmd "sh" "load $modsym" "ERR" "$locate_msg"
+    testouterr_cmd "sh" "display $modsym" "ERR" "$locate_msg"
+    testouterr_cmd "sh" "help $modsym" "ERR" "$locate_msg"
+    testouterr_cmd "sh" "test $modsym" "ERR" "$locate_msg"
+    testouterr_cmd_re "sh" "avail -l $modsym" "OK" ""
+    testouterr_cmd "sh" "whatis $modsym" "ERR" "$locate_msg"
+    set ans [list]
+    lappend ans [list text ""]
+    testouterr_cmd "sh" "paths $modsym" $ans ""
+}
+
+#
+#  Cleanup
+#
+
+unsetenv_var MODULES_AVAIL_INDEPTH
+
+unset datetime_re
+
+unset help_pre
+unset help_mid
+unset help_post
+unset test_pre
+unset test_mid
+unset test_post
+unset disp_pre
+unset disp_wi
+unset disp_post
+unset header_long
+unset avail_pre
+unset whatis_pre
+
+unset displayerr
+unset helperr
+unset testerr
+unset whatiserr
+
+for {set i 1} {$i <= 4} {incr i} {
+    unset "modsym_${i}"
+    unset "module_${i}"
+    if {[info exists "modalt_${i}"]} {
+        unset "modalt_${i}"
+    }
+    unset "modulefile_${i}"
+    unset "modulefilere_${i}"
+    unset "modavail_${i}"
+    if {[info exists "nodefault_${i}"]} {
+        unset "nodefault_${i}"
+    }
+}
+
+unset modsym_5
+unset modsym_6
+
+unset ans
+unset locate_msg
+
+unset i
+unset modalt
+unset modsym
+unset module
+unset modulefile
+unset modulefilere
+unset nodefault

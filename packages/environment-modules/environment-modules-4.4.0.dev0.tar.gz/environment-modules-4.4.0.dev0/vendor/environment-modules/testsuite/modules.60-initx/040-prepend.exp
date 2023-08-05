@@ -1,0 +1,46 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.60-initx/%M%
+#   Revision:		%I%
+#   First Edition:	2005/12/22
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		initadd, initrm
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the initprepend sub-commands
+#		}C%
+#
+##############################################################################
+
+# test on fully empty init file
+file copy -force "$env(HOME)/.modules.savenull"  "$env(HOME)/.modules"
+
+testouterr_cmd sh "initprepend foobar" "ERR" "$find_msg_sh"
+_test_modules sh "initprepend" "#"
+
+#
+# restore the .modules file (again)
+#
+file copy -force "$env(HOME)/.modules.save"  "$env(HOME)/.modules"
+
+testouterr_cmd sh "initprepend foobar" "OK" ""
+_test_modules sh "initprepend" "$modload foobar null\n$line2"
+
+testouterr_cmd ksh "initpre foo bar" "OK" ""
+_test_modules ksh "initprepend" "$modload foo bar foobar null\n$line2"
+
+testouterr_cmd zsh "initpr poo/2.0" "OK" ""
+_test_modules zsh "initprepend" "$modload poo/2.0 foo bar foobar null\n$line2"
+
+# different behavior than C-version: on Tcl-version no message is printed
+testouterr_cmd csh "initp foobar" "OK" ""
+_test_modules csh "initprepend" "$modload foobar poo/2.0 foo bar null\n$line2"
+

@@ -1,0 +1,147 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		list
+#   Modulefiles:	setenv/1.0, loc_rc3/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module command 'list' in terse output
+#			format with a modulefile loaded.
+#		}C%
+#
+##############################################################################
+
+set module "setenv/1.0"
+set modulefile "$modpath/$module"
+set header "Currently Loaded Modulefiles:"
+
+#
+#  Check this only fo the /bin/csh
+#
+
+set ts_csh "$header\n$module"
+set ts_csh_num "$header\n 1) $module  "
+
+#
+#  Set up the environment pointing to the single module file being load
+#
+
+setenv_loaded_module $module $modulefile
+
+#
+#  The tests
+#
+
+testouterr_cmd "csh" "--terse list" "OK" "$ts_csh"
+testouterr_cmd "csh" "-l list -t" "OK" "$ts_csh"
+
+# test regular numbered output
+testouterr_cmd "csh" "list" "OK" "$ts_csh_num"
+
+# command nickname tests
+testouterr_cmd "csh" "li" "OK" "$ts_csh_num"
+
+# setup MODULEPATH with a trailing slash and an empty dir element
+setenv_path_var MODULEPATH {} "$modpath/"
+testouterr_cmd "csh" "--terse list" "OK" "$ts_csh"
+
+# restore MODULEPATH
+setenv_path_var MODULEPATH $modpath
+
+
+# setup LOADEDMODULES/_LMFILES_ with an empty element
+setenv_loaded_module [list {} $module] [list {} $modulefile]
+
+testouterr_cmd "sh" "--terse list" "OK" "$ts_csh"
+
+# restore LOADEDMODULES/_LMFILES_
+setenv_loaded_module $module $modulefile
+
+
+#
+# Test loaded module specified as full path
+#
+
+set module "$modpath/loc_rc3/1.0"
+set modulefile $module
+set ts_csh "$header\n$module"
+
+setenv_loaded_module $module $modulefile
+
+testouterr_cmd "csh" "-t list" "OK" "$ts_csh"
+
+#
+# Test unexistent loaded module
+#
+
+set module "foo"
+set modulefile "/path/to/foo"
+set ts_csh "$header\n$module"
+
+setenv_loaded_module $module $modulefile
+
+testouterr_cmd "csh" "-t list" "OK" "$ts_csh"
+
+#
+# list when loaded environment is inconsistent
+#
+
+setenv_loaded_module [list foo bar] "/path/to/foo"
+
+testouterr_cmd_re "sh" "list" "ERR" "$err_loinconsist\n  LOADEDMODULES=foo bar\n  _LMFILES_=/path/to/foo"
+
+#
+# test specific terminal width when one loaded module name fill whole width
+#
+
+set module loc_dv1/1.0
+setenv_loaded_module $module $modpath/$module
+
+set test_cols 16
+if {![info exists term_cols]} {
+    # skip tests if current terminal witdh is unknown
+    send_user "\tskipping terminal width-specific tests\n"
+# set a specific terminal width
+} elseif {[catch {exec stty cols $test_cols}] || [getTtyCols] ne $test_cols} {
+    send_user "\tskipping terminal width-specific tests, cannot set width\n"
+} else {
+
+testouterr_cmd sh list OK "$header\n 1) $module  "
+
+# test with slightly bigger width
+exec stty cols 17
+testouterr_cmd sh list OK "$header\n 1) $module  "
+
+# test with slightly smaller width
+exec stty cols 15
+testouterr_cmd sh list OK "$header\n 1) $module  "
+
+# restore terminal width
+exec stty cols $term_cols
+
+}
+
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+
+unset test_cols
+
+unset ts_csh
+unset ts_csh_num
+
+unset modulefile
+unset module

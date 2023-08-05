@@ -1,0 +1,81 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2012/10/29
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, <rk@owen.sj.ca.us>
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	prepend/1.0 prepend/1.1
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'prepend-path' module subcommand with
+#			an arbitrary delimiter and a module swap
+#			with a mid-path result
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set ts_1 "http://foobar.org"
+set ts_2 "http://foobar.net"
+set ts_3 "http://foobar.com"
+set ts_4 "http://foobar.us"
+# different behavior than C-version: on Tcl-version loaded path is not
+# prepended or appended only within the space occupied by the unloaded
+# module but through the whole space of the variable. So prepended stuff
+# will go at the beginning of the variable and appended stuff will go
+# at the end.
+set ts_space "$ts_4 $ts_1 $ts_2"
+set env(testsuite)	"$ts_1 $ts_3 $ts_2"
+set module "prepend/1.0"
+set module_new "prepend/1.1"
+set modulefile "$modpath/$module"
+set modulefile_new "$modpath/$module_new"
+
+setenv_loaded_module $module $modulefile
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list setpath testsuite $ts_space]
+lappend ans [list setpath LOADEDMODULES $module_new]
+lappend ans [list setpath _LMFILES_ $modulefile_new]
+
+#
+#  The tests
+#
+
+test_cmd_re "ALL" "swap $module_new" $ans
+
+#
+#  Cleanup
+#
+
+unset env(testsuite)
+unsetenv_loaded_module
+
+unset ts_space
+unset ts_4
+unset ts_3
+unset ts_2
+unset ts_1
+
+unset ans
+
+unset modulefile
+unset module
+unset modulefile_new
+unset module_new

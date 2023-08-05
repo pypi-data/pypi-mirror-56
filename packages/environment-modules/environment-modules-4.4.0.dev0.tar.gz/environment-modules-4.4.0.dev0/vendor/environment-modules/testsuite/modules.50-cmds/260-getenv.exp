@@ -1,0 +1,80 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:       modules.50-cmds/%M%
+#   Revision:       %I%
+#   First Edition:  2017/04/28
+#   Last Mod.:      %U%, %G%
+#
+#   Authors:        Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:    Testuite testsequence
+#   Command:        load, display
+#   Modulefiles:    getenv
+#   Sub-Command:
+#
+#   Comment:    %C{
+#           Test 'getenv' sub-command
+#       }C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "getenv/1.0"
+set modulefile "$modpath/$module"
+set modulefilere "$modpathre/$module"
+
+#
+#  The tests when dependent env var is not set
+#
+
+lappend ans [list set testsuite _UNDEFINED_]
+lappend ans [list set testsuite2 ""]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+# test loading
+testouterr_cmd "sh" "load $module" $ans ""
+
+# test displaying
+testouterr_cmd_re "sh" "display $module" "OK" "$modlin\n$modulefilere:\n\nsetenv\t\ttestsuite \\\$TEST\nsetenv\t\ttestsuite2 \\\$TEST2\n$modlin"
+
+#
+#  The tests when dependent env var is set
+#
+
+set ans [list]
+lappend ans [list set testsuite yes]
+lappend ans [list set testsuite2 yes]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+# Set up the environment for test that require the module to be loaded
+setenv_var TEST "yes"
+setenv_var TEST2 "yes"
+
+# test loading
+testouterr_cmd "sh" "load $module" $ans ""
+
+# test displaying
+testouterr_cmd_re "sh" "display $module" "OK" "$modlin\n$modulefilere:\n\nsetenv\t\ttestsuite \\\$TEST\nsetenv\t\ttestsuite2 \\\$TEST2\n$modlin"
+
+#
+#  Cleanup
+#
+
+# Clean up the environment
+unsetenv_var TEST
+unsetenv_var TEST2
+
+unset ans
+
+unset module
+unset modulefile
+unset modulefilere

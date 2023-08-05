@@ -1,0 +1,141 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2006/06/01
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, <rk@owen.sj.ca.us>
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	append/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'append-path' module subcommand with
+#			an arbitrary delimiter
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set ts_1 "http://foobar.org"
+set ts_2 "http://foobar.net"
+set ts_3 "http://foobar.com"
+set ts_new "$ts_1 $ts_2 $ts_3"
+# test colon char is correctly escaped in _modshare var
+set tsmod_new "http\\://foobar.com:1:http\\://foobar.net:1:http\\://foobar.org:1"
+set env(testsuite)	"$ts_1 $ts_2"
+set env(testsuite_modshare)	"http\\://foobar.org:1:http\\://foobar.net:1"
+set module "append/1.0"
+set modulefile "$modpath/$module"
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list set testsuite_modshare $tsmod_new]
+lappend ans [list set testsuite $ts_new]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+
+test_cmd_re "ALL" "load $module" $ans
+
+#
+# Try bad argument list: missing variable name
+#
+
+set module "append/1.3"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get an environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try bad argument list: missing variable value
+#
+
+set module "append/1.4"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get a value for environment variable PATH\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Try bad argument list: empty variable name
+#
+
+set module "append/1.5"
+set modulefile "$modpath/$module"
+set ts_err "$moderr_msgs: add-path should get a valid environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "load $module" "ERR" [msg_load $module $ts_err]
+
+#
+# Append multiple paths passed as one string
+#
+
+set module "append/1.6"
+set modulefile "$modpath/$module"
+set ts_new "$ts_1 $ts_2 $ts_3 http://foobar.io "
+set tsmod_new ":1:http\\://foobar.com:1:http\\://foobar.net:1:http\\://foobar.io:1:http\\://foobar.org:1"
+
+set ans [list]
+lappend ans [list set testsuite_modshare $tsmod_new]
+lappend ans [list set testsuite $ts_new]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd_re "sh" "load $module" $ans ""
+
+#
+# Append multiple paths passed as multiple strings
+#
+
+set module "append/1.7"
+set modulefile "$modpath/$module"
+
+set ans [list]
+lappend ans [list set testsuite_modshare $tsmod_new]
+lappend ans [list set testsuite $ts_new]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd_re "sh" "load $module" $ans ""
+
+#
+# Try pass invalid option to append-path
+#
+
+set module append/8.0
+set modulefile $modpath/$module
+set ts_err "$moderr_msgs: invalid option '-delim=,' for add-path\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd sh "load $module" ERR [msg_load $module $ts_err]
+
+#
+#  Cleanup
+#
+
+unset env(testsuite)
+unset env(testsuite_modshare)
+
+unset ts_new
+unset tsmod_new
+unset ts_3
+unset ts_2
+unset ts_1
+unset ts_err
+
+unset ans
+
+unset modulefile
+unset module

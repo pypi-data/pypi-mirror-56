@@ -1,0 +1,279 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:       install.00-init/%M%
+#   Revision:       %I%
+#   First Edition:  2017/05/06
+#   Last Mod.:      %U%, %G%
+#
+#   Authors:        Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:    Testuite testsequence
+#   Command:
+#   Sub-Command:
+#
+#   Comment:    %C{
+#           This module defines all patterns used further in the
+#           testsuite
+#       }C%
+#
+##############################################################################
+
+proc find_bin {name} {
+   set path {}
+
+   if {[info exists ::env(PATH)]} {
+      foreach dir [split $::env(PATH) ":"] {
+         if {[file executable "$dir/$name"]} {
+            set path "$dir/$name"
+            break
+         }
+      }
+   }
+
+   return $path
+}
+
+# provide a lassign proc for Tcl8.4 and earlier
+if {[info commands lassign] eq ""} {
+   proc lassign {values args} {
+      uplevel 1 [list foreach $args [linsert $values end {}] break]
+      lrange $values [llength $args] end
+   }
+}
+
+
+if {$verbose > 0} {
+   send_user "\tInitializing the testsuite ...\n"
+}
+
+# test kind of sh-shell we have
+if {[file type "/bin/sh"] eq "link" } {
+   set sh_kind [file readlink "/bin/sh"]
+} else {
+   set sh_kind "sh"
+}
+
+# determine if sh-shell is a strict sh implementation
+if {$sh_kind eq "dash" || ($tcl_platform(os) ne "Linux"\
+   && $tcl_platform(os) ne "Darwin"\
+   && ![string match "CYGWIN*" $tcl_platform(os)]\
+   && ![string match "MSYS_NT*" $tcl_platform(os)])} {
+   set sh_strict 1
+} else {
+   set sh_strict 0
+}
+
+# check SIP is enabled or not on OS X
+if {$tcl_platform(os) eq "Darwin"} {
+    catch {
+        regexp {System Integrity Protection status: enabled.} [exec csrutil status] csrutil_enabled
+    } errMsg
+}
+if {[info exists csrutil_enabled]} {
+    set sip_enabled 1
+    unset csrutil_enabled
+} else {
+    set sip_enabled 0
+}
+
+# Cygwin environment will raise init warning message on compat version
+if {[string match "CYGWIN*" $tcl_platform(os)]} {
+   set compat_warn_setvar "(init.c\\\(\\d+\\\):WARN:\\d+: Cannot set TCL variable '.+'\\n)*"
+} else {
+   set compat_warn_setvar ""
+}
+
+#
+#  Regular expressions matching error and warning outputs
+#
+
+set messages "(\[^(\]+)\[(\]\[0-9\]+\[)\]"
+set error_msgs "ERROR"
+set warn_msgs "WARNING"
+set prob_msgs "$messages:PROB:\[0-9\]+"
+set verb_msgs "$messages:VERB:\[0-9\]+"
+
+# Used as a line seperator inside modules
+set modlin      "\[-\]+"
+
+# properties to test the different available shells
+set shell_list {}
+set shell_sh_family {}
+array set shell_init {}
+array set shell_path {}
+array set shell_opts {}
+array set shell_test {}
+foreach shell [list sh bash basheu ksh zsh csh tcsh fish tcl perl python ruby cmake r] {
+   switch -- $shell {
+      tcl {
+         set shellbin $install_tclsh
+      }
+      r {
+         set shellbin [find_bin Rscript]
+      }
+      basheu {
+         set shellbin [find_bin bash]
+      }
+      ksh {
+         set shellbin [find_bin ksh]
+         if {$shellbin eq ""} {
+            set shellbin [find_bin ksh93]
+         }
+      }
+      default {
+         set shellbin [find_bin $shell]
+      }
+   }
+   if {$shellbin ne ""} {
+      switch -- $shell {
+         tcl - perl - python - ruby - cmake - r {
+            lappend othlang_list $shell
+         }
+         sh - bash - basheu - ksh - zsh {
+            lappend shell_sh_family $shell
+            lappend shell_list $shell
+         }
+         default {
+            lappend shell_list $shell
+         }
+      }
+      switch -- $shell {
+         basheu {
+            set shell_init($shell) "$install_initdir/bash"
+         }
+         perl {
+            set shell_init($shell) "$install_initdir/$shell.pm"
+         }
+         python {
+            set shell_init($shell) "$install_initdir/$shell.py"
+         }
+         ruby {
+            set shell_init($shell) "$install_initdir/$shell.rb"
+         }
+         r {
+            set shell_init($shell) "$install_initdir/$shell.R"
+         }
+         default {
+            set shell_init($shell) "$install_initdir/$shell"
+         }
+      }
+      set shell_path($shell) $shellbin
+      switch -- $shell {
+         basheu {
+            set shell_opts($shell) "-eu"
+         }
+         csh - tcsh {
+            # ignore global csh system init file to avoid side effect
+            set shell_opts($shell) "-f"
+         }
+      }
+      switch -- $shell {
+         bash - basheu - ksh - zsh {
+            set shell_test($shell) "$env(TESTSUITEDIR)/bin/install_test_sh"
+         }
+         tcsh {
+            set shell_test($shell) "$env(TESTSUITEDIR)/bin/install_test_csh"
+         }
+         default {
+            set shell_test($shell) "$env(TESTSUITEDIR)/bin/install_test_${shell}"
+         }
+      }
+   } else {
+      send_user "\t'$shell' shell is not installed, relative tests will be skipped\n"
+   }
+}
+
+# where to find module tcl script to call for autoinit command
+set autoinit_script "$install_libexecdir/modulecmd.tcl"
+
+# where to find modulefiles for test
+set contrib_modpath "$env(TESTSUITEDIR)/../contrib/modulefiles"
+set testsuite_modpath "$env(TESTSUITEDIR)/modulefiles"
+
+# basic messages
+set type_help "Try 'module --help' for more information."
+set cur_loaded "Currently Loaded Modulefiles:"
+set no_loaded "No Modulefiles Currently Loaded."
+
+# path variables for regexp tests
+set install_mandirre [regsub -all "\(\[.+?\]\)" $install_mandir {\\\1}]
+set install_initdirre [regsub -all "\(\[.+?\]\)" $install_initdir {\\\1}]
+set install_libexecdirre [regsub -all "\(\[.+?\]\)" $install_libexecdir {\\\1}]
+set install_modulefilesdirre [regsub -all "\(\[.+?\]\)" $install_modulefilesdir {\\\1}]
+set install_modulepathre [regsub -all "\(\[.+?\]\)" $install_modulepath {\\\1}]
+set install_loadedmodulesre [regsub -all "\(\[.+?\]\)" $install_loadedmodules {\\\1}]
+set install_versionre [regsub -all "\(\[.+?\]\)" $install_version {\\\1}]
+set install_versionfilesdirre [regsub -all "\(\[.+?\]\)" "$install_baseprefix/versions" {\\\1}]
+
+# fetch quarantine configuration defined at build time
+if {$install_quarantinevars ne ""} {
+   set install_quarlist {}
+   array set install_runenv {}
+   foreach vv [split $install_quarantinevars " "] {
+      set vvlist [split $vv "="]
+      if {[llength $vvlist] == 2} {
+         set vname [lindex $vvlist 0]
+         set install_runenv($vname) [lindex $vvlist 1]
+      } else {
+         set vname [lindex $vvlist 0]
+      }
+      lappend install_quarlist $vname
+   }
+   catch {unset vv}
+   catch {unset vvlist}
+   catch {unset vname}
+}
+
+# locate siteconfig file
+set siteconfig_file "$install_etcdir/siteconfig.tcl"
+
+# determine if siteconfig forces stderr terminal attachement state
+proc siteconfig_isStderrTty {} {
+   interp create _siteconfig
+   interp eval _siteconfig set ::siteconfig_file $::siteconfig_file
+   set is_stderr_tty [interp eval _siteconfig {
+      set is_stderr_tty 0
+      if {[file readable $::siteconfig_file]} {
+         # evaluate siteconfig file to check isStderrTty procedure
+         catch {
+            source $::siteconfig_file
+            if {[info procs isStderrTty] eq "isStderrTty"} {
+               set is_stderr_tty [isStderrTty]
+            }
+         } errorMsg
+      }
+      return $is_stderr_tty
+   }]
+   interp delete _siteconfig
+   return $is_stderr_tty
+}
+
+# determine overridden configuration in installed initdir modulerc
+set initmodulerc_file [expr {[file exists $install_etcdir/initrc] ? "$install_etcdir/initrc" : "$install_initdir/modulerc"}]
+set fid [open $initmodulerc_file]
+while {[gets $fid line] >= 0} {
+   if {[string first {module config } $line] == 0} {
+      lassign [lrange [split $line] 2 3] configname configval
+      set initmodulerc_$configname $configval
+   }
+}
+close $fid
+unset fid
+unset line
+
+# check configuration enablement between ./configure option and init modulerc
+proc is_set_shell_startup_enabled {} {
+   if {[info exists ::initmodulerc_set_shell_startup]} {
+      return $::initmodulerc_set_shell_startup
+   } else {
+      return [expr {$::install_setshellstartup eq {y} ? {1} : {0}}]
+   }
+}
+
+proc is_config_locked {option} {
+    return [expr {[lsearch -exact $::install_lockedconfigs $option] != -1}]
+}
+
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

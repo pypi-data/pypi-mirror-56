@@ -1,0 +1,72 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2017/06/27
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	unsetenv/0.8
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'unsetenv' module subcommand for all allowed
+#			shell types when variable is previously associated to
+#           a reference counter array.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "unsetenv/0.8"
+set modulefile "$modpath/$module"
+
+#
+#  Set up the environment for reversal ...
+#
+
+set env(testsuite) "'yes'"
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module:1"]
+lappend ans [list unset testsuite_modshare]
+lappend ans [list set _LMFILES_ $modulefile]
+lappend ans [list set LOADEDMODULES $module]
+lappend ans [list unset testsuite]
+
+
+#
+#  The tests
+#
+
+test_cmd "ALL" "load $module" $ans
+
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefile
+unset module
+
+#
+#  Clean up the environment, too
+#
+
+unset env(testsuite)

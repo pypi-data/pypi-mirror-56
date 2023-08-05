@@ -1,0 +1,124 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2006/05/18
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen <rk@owen.sj.ca.us>
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	alias/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'set-alias' substition of $1 and $* and special chars
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "alias/1.0"
+set modulefile "$modpath/$module"
+set alias {ls $1 $2 | grep $*}
+set alias_csh {ls !!:1 !!:2 | grep !*}
+
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list alias testsuite $alias]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+lappend ans2 [list alias testsuite $alias_csh]
+lappend ans2 [list setpath LOADEDMODULES $module]
+lappend ans2 [list setpath _LMFILES_ $modulefile]
+
+lappend ans3 [list alias testsuite $alias]
+lappend ans3 [list setpath LOADEDMODULES $module]
+lappend ans3 [list setpath _LMFILES_ $modulefile]
+
+
+#
+#  The tests
+#
+
+# different behavior than C-version: on Tcl-version set-alias command always
+# produces a shell alias never a shell function on Bourne shell derivatives
+foreach sh $supported_shells {
+    # only available for csh/sh/fish/cmd derivatives ... no longer warn for others
+    if {$sh eq "cmd"} {
+        test_cmd "$sh" "load $module" $ans3
+    } elseif {[lsearch -exact $csh_shells $sh] >= 0} {
+        test_cmd "$sh" "load $module" $ans2
+    } else {
+        test_cmd "$sh" "load $module" $ans
+    }
+}
+
+
+#
+# Test special characters handling
+#
+
+set module "alias/3.0"
+set modulefile "$modpath/$module"
+
+set ans [list]
+lappend ans [list alias testsuite {echo $(grep "report .Modules " modulecmd.tcl | tr -d \\ | awk '{print $3}')}]
+lappend ans [list alias ts2 {echo "http://an.example.web?&param=one"}]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+set ans2 [list]
+lappend ans2 [list alias testsuite {echo `grep "report .Modules " modulecmd.tcl | tr -d \\ | awk '{print $3}'`}]
+lappend ans2 [list alias ts2 {echo "http://an.example.web?&param=one"}]
+lappend ans2 [list setpath LOADEDMODULES $module]
+lappend ans2 [list setpath _LMFILES_ $modulefile]
+
+set ans3 [list]
+lappend ans3 [list alias testsuite {echo (grep "report .Modules " modulecmd.tcl | tr -d \\ | awk '{print $3}')}]
+lappend ans3 [list alias ts2 {echo "http://an.example.web?&param=one"}]
+lappend ans3 [list setpath LOADEDMODULES $module]
+lappend ans3 [list setpath _LMFILES_ $modulefile]
+
+
+foreach sh $supported_shells {
+    switch -- $sh {
+        {sh} - {bash} - {ksh} - {zsh} {
+            test_cmd $sh "load $module" $ans
+        }
+        {csh} - {tcsh} {
+            test_cmd $sh "load $module" $ans2
+        }
+        {fish} {
+            test_cmd $sh "load $module" $ans3
+        }
+    }
+}
+
+
+#
+#  Cleanup
+#
+
+unset sh
+unset ans
+unset ans2
+unset ans3
+
+unset modulefile
+unset module
+unset alias
+unset alias_csh
+

@@ -1,0 +1,931 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	2017/05/20
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		autoinit
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module command 'autoinit'
+#		}C%
+#
+##############################################################################
+
+#
+#  Test variables
+#
+
+set path_list {}
+foreach elt [file split [file join [pwd] $MODULECMD]] {
+    if {$elt ne "."} {
+        lappend path_list $elt
+    }
+}
+set modulecmd_path [eval file join $path_list]
+set modulecmd_pathre [regsub -all "\(\[.+?\]\)" $modulecmd_path {\\\1}]
+set moduleshome $install_prefix
+
+# compare init config files to determine if we can guess expected setup
+set modspath [expr {[file exists $install_etcdir/modulespath] ? "$install_etcdir/modulespath" : "$install_initdir/.modulespath"}]
+set insmodspath [file readable $modspath]
+set modspath_exinstalled 0
+if {[file readable $env(TESTSUITEDIR)/example/.modulespath]} {
+    set fid [open $env(TESTSUITEDIR)/example/.modulespath r]
+    set exmodspathdata [split [read $fid] "\n"]
+    close $fid
+    if {$insmodspath} {
+        set fid [open $modspath r]
+        set insmodspathdata [split [read $fid] "\n"]
+        close $fid
+    } else {
+        set insmodspathdata ""
+    }
+    if {$exmodspathdata eq $insmodspathdata} {
+        set modspath_exinstalled 1
+    }
+}
+
+set modrc [expr {[file exists $install_etcdir/initrc] ? "$install_etcdir/initrc" : "$install_initdir/modulerc"}]
+set modrcre [regsub -all "\(\[.+?\]\)" $modrc {\\\1}]
+set insmodrc [file readable $modrc]
+if {$insmodrc} {
+    set fid [open $modrc r]
+    set insmodrcdata [split [read $fid] "\n"]
+    close $fid
+}
+if {[file readable $env(TESTSUITEDIR)/example/modulerc]} {
+    set fid [open $env(TESTSUITEDIR)/example/modulerc r]
+    set exmodrcdata [split [read $fid] "\n"]
+    close $fid
+}
+if {[file readable $env(TESTSUITEDIR)/example/modulerc-1]} {
+    set fid [open $env(TESTSUITEDIR)/example/modulerc-1 r]
+    set exmodrc1data [split [read $fid] "\n"]
+    close $fid
+}
+if {[file readable $env(TESTSUITEDIR)/example/initrc]} {
+    set fid [open $env(TESTSUITEDIR)/example/initrc r]
+    set exinitrcdata [split [read $fid] "\n"]
+    close $fid
+}
+set modrc_exinstalled 0
+set modrc1_exinstalled 0
+set initrc_exinstalled 0
+if {[info exists insmodrcdata] && [info exists exmodrcdata] && $exmodrcdata eq $insmodrcdata} {
+    set modrc_exinstalled 1
+} elseif {[info exists insmodrcdata] && [info exists exmodrc1data] && $exmodrc1data eq $insmodrcdata} {
+    set modrc1_exinstalled 1
+} elseif {[info exists insmodrcdata] && [info exists exinitrcdata] && $exinitrcdata eq $insmodrcdata} {
+    set initrc_exinstalled 1
+}
+set tserr_initrc_exinstalled "load m1\nload m2\n\n[msg_top_load m2 {} m1 {}]\n\nunload m2\n[msg_unload m2]\nunload m1\n[msg_unload m1]\n[msg_unload mj]\nload m1\n[msg_load m1]\nload m3\n[msg_load m3]\n$err_path'unk'\n$moderr_msgs: Collection unk cannot be found\n  In '$modrcre'\n$err_contact"
+
+# check if stderr terminal attachement state is forced
+set is_stderr_tty [siteconfig_isStderrTty]
+if { $verbose > 0 } {
+    send_user "\tIs STDERR a TTY? = '$is_stderr_tty'\n"
+}
+
+set err_lisp "$error_msgs: lisp mode autoinit not yet implemented"
+set err_cmd "$error_msgs: No autoinit mode available for 'cmd' shell"
+
+if {$install_quarantinesupport eq y} {
+set end_quar_sh "\\s*if \\\[ \"\\\${_mlv}\" = \"\\\${_mlv##\\\*\\\[\\\!A-Za-z0-9_\\\]}\" -a \"\\\${_mlv}\" = \"\\\${_mlv#\\\[0-9\\\]}\" \\\]; then
+\\s*if \\\[ -n \"`eval 'echo \\\${'\\\$_mlv'\\\+x}'`\" \\\]; then
+\\s*_mlre=\"\\\${_mlre:-}\\\${_mlv}_modquar='`eval 'echo \\\${'\\\$_mlv'}'`' \";
+\\s*fi;
+\\s*_mlrv=\"MODULES_RUNENV_\\\${_mlv}\";
+\\s*_mlre=\"\\\${_mlre:-}\\\${_mlv}='`eval 'echo \\\${'\\\$_mlrv':-}'`' \";
+\\s*fi;
+\\s*done;"
+set func_quar_sh "\\s*unset _mlre _mlIFS;
+\\s*if \\\[ -n \"\\\${IFS\\\+x}\" \\\]; then
+\\s*_mlIFS=\\\$IFS;
+\\s*fi;
+\\s*IFS=' ';
+\\s*for _mlv in \\\${MODULES_RUN_QUARANTINE:-}; do
+$end_quar_sh\n"
+set func_quar_zsh "\\s*unset _mlre _mlIFS;
+\\s*if \\\[ -n \"\\\${IFS\\\+x}\" \\\]; then
+\\s*_mlIFS=\\\$IFS;
+\\s*fi;
+\\s*IFS=' ';
+\\s*for _mlv in \\\${=MODULES_RUN_QUARANTINE:-}; do
+$end_quar_sh\n"
+} else {
+set end_quar_sh ""
+set func_quar_sh ""
+set func_quar_zsh ""
+}
+
+if {$install_silentshdbgsupport eq y} {
+set func_silentdbg "\\s*unset _mlshdbg;
+\\s*if \\\[ \"\\\${MODULES_SILENT_SHELL_DEBUG:-0}\" = '1' \\\]; then
+\\s*case \"\\\$-\" in
+\\s*\\\*v\\\*x\\\*\\\) set \\\+vx; _mlshdbg='vx' ;;
+\\s*\\\*v\\\*\\\) set \\\+v; _mlshdbg='v' ;;
+\\s*\\\*x\\\*\\\) set \\\+x; _mlshdbg='x' ;;
+\\s*\\\*\\\) _mlshdbg='' ;;
+\\s*esac;
+\\s*fi;\n"
+set end_silentdbg "\\s*if \\\[ -n \"\\\${_mlshdbg:-}\" \\\]; then
+\\s*set -\\\$_mlshdbg;
+\\s*fi;
+\\s*unset _mlshdbg;\n"
+} else {
+set func_silentdbg ""
+set end_silentdbg ""
+}
+
+if {$install_quarantinesupport eq y} {
+set func_clean_ifs "\\s*if \\\[ -n \"\\\${_mlIFS\\\+x}\" \\\]; then
+\\s*IFS=\\\$_mlIFS;
+\\s*else
+\\s*unset IFS;
+\\s*fi;
+\\s*unset _mlre _mlv _mlrv _mlIFS;\n"
+} else {
+set func_clean_ifs ""
+}
+set func_end "\\s*_mlstatus=\\\$\\\?;\n$func_clean_ifs$end_silentdbg\\s*return \\\$_mlstatus;"
+
+if {$install_quarantinesupport eq y} {
+set func_modcmd_sh "\\s*if \\\[ -n \"\\\${_mlre:-}\" \\\]; then
+\\s*eval `eval \\\${_mlre}$install_tclsh $modulecmd_pathre sh '\"\\$\\@\"'`;
+\\s*else
+\\s*eval `$install_tclsh $modulecmd_pathre sh \"\\$\\@\"`;
+\\s*fi;"
+set func_modcmd_bash "\\s*if \\\[ -n \"\\\${_mlre:-}\" \\\]; then
+\\s*eval `eval \\\${_mlre}$install_tclsh $modulecmd_pathre bash '\"\\$\\@\"'`;
+\\s*else
+\\s*eval `$install_tclsh $modulecmd_pathre bash \"\\$\\@\"`;
+\\s*fi;"
+set func_modcmd_ksh "\\s*if \\\[ -n \"\\\${_mlre:-}\" \\\]; then
+\\s*eval `eval \\\${_mlre}$install_tclsh $modulecmd_pathre ksh '\"\\$\\@\"'`;
+\\s*else
+\\s*eval `$install_tclsh $modulecmd_pathre ksh \"\\$\\@\"`;
+\\s*fi;"
+set func_modcmd_zsh "\\s*if \\\[ -n \"\\\${_mlre:-}\" \\\]; then
+\\s*eval `eval \\\${=_mlre}$install_tclsh $modulecmd_pathre zsh '\"\\$\\@\"'`;
+\\s*else
+\\s*eval `$install_tclsh $modulecmd_pathre zsh \"\\$\\@\"`;
+\\s*fi;"
+} else {
+set func_modcmd_sh "\\s*eval `$install_tclsh $modulecmd_pathre sh \"\\$\\@\"`;"
+set func_modcmd_bash "\\s*eval `$install_tclsh $modulecmd_pathre bash \"\\$\\@\"`;"
+set func_modcmd_ksh "\\s*eval `$install_tclsh $modulecmd_pathre ksh \"\\$\\@\"`;"
+set func_modcmd_zsh "\\s*eval `$install_tclsh $modulecmd_pathre zsh \"\\$\\@\"`;"
+}
+
+if {$is_stderr_tty} {
+    set func_name "_module_raw"
+    set add_func_sh "\nmodule\\\(\\\) { _module_raw \"\\\$\\\@\" 2>&1; };"
+    set add_func_fish "\nfunction module\n\\s*_module_raw \\\$argv \\\^&1\nend"
+} else {
+    set func_name "module"
+    set add_func_sh ""
+    set add_func_fish ""
+}
+
+set func_sh "$func_name\\\(\\\) {\n$func_silentdbg$func_quar_sh$func_modcmd_sh\n$func_end\n};$add_func_sh"
+set func_bash "$func_name\\\(\\\) {\n$func_silentdbg$func_quar_sh$func_modcmd_bash\n$func_end\n};$add_func_sh"
+set func_ksh "$func_name\\\(\\\) {\n$func_silentdbg$func_quar_sh$func_modcmd_ksh\n$func_end\n};$add_func_sh"
+set func_zsh "$func_name\\\(\\\) {\n$func_silentdbg$func_quar_zsh$func_modcmd_zsh\n$func_end\n};$add_func_sh"
+set eval_cmd_csh [expr {$install_wa277 eq {y} ? "eval `$install_tclsh $modulecmd_pathre csh \\\\!\\*`" : "eval \"`$install_tclsh $modulecmd_pathre csh \\\\!\\*:q`\""}]
+set eval_cmd_tcsh [expr {$install_wa277 eq {y} ? "eval `$install_tclsh $modulecmd_pathre tcsh \\\\!\\*`" : "eval \"`$install_tclsh $modulecmd_pathre tcsh \\\\!\\*:q`\""}]
+set func_csh "if \\\( \\\$\\\?histchars && \\\$\\\?prompt \\\) alias module 'set _histchars = \\\$histchars; unset histchars; set _prompt=\\\$prompt:q; set prompt=\"\"; $eval_cmd_csh; set _exit=\"\\\$status\"; set histchars = \\\$_histchars; unset _histchars; set prompt=\\\$_prompt:q; unset _prompt; test 0 = \\\$_exit' ;
+if \\\( \\\$\\\?histchars && \\\! \\\$\\\?prompt \\\) alias module 'set _histchars = \\\$histchars; unset histchars; $eval_cmd_csh; set _exit=\"\\\$status\"; set histchars = \\\$_histchars; unset _histchars; test 0 = \\\$_exit' ;
+if \\\( \\\! \\\$\\\?histchars && \\\$\\\?prompt \\\) alias module 'set _prompt=\\\$prompt:q; set prompt=\"\"; $eval_cmd_csh; set _exit=\"\\\$status\"; set prompt=\\\$_prompt:q; unset _prompt; test 0 = \\\$_exit' ;
+if \\\( \\\! \\\$\\\?histchars && \\\! \\\$\\\?prompt \\\) alias module '$eval_cmd_csh;' ;"
+set func_tcsh "if \\\( \\\$\\\?histchars && \\\$\\\?prompt \\\) alias module 'set _histchars = \\\$histchars; unset histchars; set _prompt=\\\$prompt:q; set prompt=\"\"; $eval_cmd_tcsh; set _exit=\"\\\$status\"; set histchars = \\\$_histchars; unset _histchars; set prompt=\\\$_prompt:q; unset _prompt; test 0 = \\\$_exit' ;
+if \\\( \\\$\\\?histchars && \\\! \\\$\\\?prompt \\\) alias module 'set _histchars = \\\$histchars; unset histchars; $eval_cmd_tcsh; set _exit=\"\\\$status\"; set histchars = \\\$_histchars; unset _histchars; test 0 = \\\$_exit' ;
+if \\\( \\\! \\\$\\\?histchars && \\\$\\\?prompt \\\) alias module 'set _prompt=\\\$prompt:q; set prompt=\"\"; $eval_cmd_tcsh; set _exit=\"\\\$status\"; set prompt=\\\$_prompt:q; unset _prompt; test 0 = \\\$_exit' ;
+if \\\( \\\! \\\$\\\?histchars && \\\! \\\$\\\?prompt \\\) alias module '$eval_cmd_tcsh;' ;"
+
+if {$install_quarantinesupport eq y} {
+set func_fish "function $func_name
+\\s*set -l _mlre ''; set -l _mlv; set -l _mlrv;
+\\s*for _mlv in \\\(string split ' ' \\\$MODULES_RUN_QUARANTINE\\\)
+\\s*if string match -r '\\\^\\\[A-Za-z_\\\]\\\[A-Za-z0-9_\\\]\\\*\\\$' \\\$_mlv >/dev/null
+\\s*if set -q \\\$_mlv
+\\s*set _mlre \\\$_mlre\\\$_mlv\"_modquar='\\\$\\\$_mlv' \"
+\\s*end
+\\s*set _mlrv \"MODULES_RUNENV_\\\$_mlv\"
+\\s*set _mlre \"\\\$_mlre\\\$_mlv='\\\$\\\$_mlrv' \"
+\\s*end
+\\s*end
+\\s*if \\\[ -n \"\\\$_mlre\" \\\]
+\\s*set _mlre \"env \\\$_mlre\"
+\\s*end
+\\s*eval \\\$_mlre $install_tclsh $modulecmd_pathre fish \\\(string escape -- \\\$argv\\\) \\\| source -
+end$add_func_fish"
+set func_tcl "proc module {args} {
+\\s*set _mlre {};
+\\s*if {\\\[info exists ::env\\\(MODULES_RUN_QUARANTINE\\\)\\\]} {
+\\s*foreach _mlv \\\[split \\\$::env\\\(MODULES_RUN_QUARANTINE\\\) \" \"\\\] {
+\\s*if {\\\[regexp {\\\^\\\[A-Za-z_\\\]\\\[A-Za-z0-9_\\\]\\\*\\\$} \\\$_mlv\\\]} {
+\\s*if {\\\[info exists ::env\\\(\\\$_mlv\\\)\\\]} {
+\\s*lappend _mlre \"\\\${_mlv}_modquar=\\\$::env\\\(\\\$_mlv\\\)\"
+\\s*}
+\\s*set _mlrv \"MODULES_RUNENV_\\\${_mlv}\"
+\\s*lappend _mlre \\\[expr {\\\[info exists ::env\\\(\\\$_mlrv\\\)\\\] \\\? \"\\\${_mlv}=\\\$::env\\\(\\\$_mlrv\\\)\" : \"\\\${_mlv}=\"}\\\]
+\\s*}
+\\s*}
+\\s*if {\\\[llength \\\$_mlre\\\] > 0} {
+\\s*set _mlre \\\[linsert \\\$_mlre 0 \"env\"\\\]
+\\s*}
+\\s*}
+\\s*set _mlstatus 1;
+\\s*catch {eval exec \\\$_mlre \"$install_tclsh\" \"$modulecmd_pathre\" \"tcl\" \\\$args 2>@stderr} script
+\\s*eval \\\$script;
+\\s*return \\\$_mlstatus
+}"
+set func_perl "sub module {
+\\s*my \\\$_mlre = '';
+\\s*if \\\(defined \\\$ENV{'MODULES_RUN_QUARANTINE'}\\\) {
+\\s*foreach my \\\$_mlv \\\(split\\\(' ', \\\$ENV{'MODULES_RUN_QUARANTINE'}\\\)\\\) {
+\\s*if \\\(\\\$_mlv =~ \\\/\\\^\\\[A-Za-z_\\\]\\\[A-Za-z0-9_\\\]\\\*\\\$\\\/\\\) {
+\\s*if \\\(defined \\\$ENV{\\\$_mlv}\\\) {
+\\s*\\\$_mlre .= \"\\\${_mlv}_modquar='\\\$ENV{\\\$_mlv}' \";
+\\s*}
+\\s*my \\\$_mlrv = \"MODULES_RUNENV_\\\$_mlv\";
+\\s*\\\$_mlre .= \"\\\$_mlv='\\\$ENV{\\\$_mlrv}' \";
+\\s*}
+\\s*}
+\\s*if \\\(\\\$_mlre ne \"\"\\\) {
+\\s*\\\$_mlre = \"env \\\$_mlre\";
+\\s*}
+\\s*}
+\\s*my \\\$args = '';
+\\s*if \\\(\\\@_ > 0\\\) {
+\\s*\\\$args = '\"' \\\. join\\\('\" \"', \\\@_\\\) \\\. '\"';
+\\s*}
+\\s*my \\\$_mlstatus = 1;
+\\s*eval `\\\${_mlre}$install_tclsh $modulecmd_pathre perl \\\$args`;
+\\s*return \\\$_mlstatus;
+}"
+set func_python "import re, subprocess
+def module\\\(\\*arguments\\\):
+\\s*_mlre = os.environ.copy\\\(\\\)
+\\s*if 'MODULES_RUN_QUARANTINE' in os.environ:
+\\s*for _mlv in os.environ\\\['MODULES_RUN_QUARANTINE'\\\].split\\\(\\\):
+\\s*if re.match\\\('\\\^\\\[A-Za-z_\\\]\\\[A-Za-z0-9_\\\]\\\*\\\$', _mlv\\\):
+\\s*if _mlv in os.environ:
+\\s*_mlre\\\[_mlv \\\+ '_modquar'\\\] = os.environ\\\[_mlv\\\]
+\\s*_mlrv = 'MODULES_RUNENV_' \\\+ _mlv
+\\s*if _mlrv in os.environ:
+\\s*_mlre\\\[_mlv\\\] = os.environ\\\[_mlrv\\\]
+\\s*else:
+\\s*_mlre\\\[_mlv\\\] = ''
+\\s*ns = {}
+\\s*exec\\\(subprocess\\.Popen\\\(\\\['$install_tclsh', '$modulecmd_pathre', 'python'\\\] \\+ list\\\(arguments\\\), stdout=subprocess\\.PIPE, env=_mlre\\\)\\.communicate\\\(\\\)\\\[0\\\], ns\\\)
+\\s*if '_mlstatus' in ns:
+\\s*_mlstatus = ns\\\['_mlstatus'\\\]
+\\s*else:
+\\s*_mlstatus = True
+\\s*return _mlstatus"
+set func_ruby "class ENVModule
+\\s*def ENVModule.module\\\(\\*args\\\)
+\\s*_mlre = ''
+\\s*if ENV.has_key\\\?\\\('MODULES_RUN_QUARANTINE'\\\) then
+\\s*ENV\\\['MODULES_RUN_QUARANTINE'\\\].split\\\(' '\\\).each do \\\|_mlv\\\|
+\\s*if _mlv =~ \\\/\\\^\\\[A-Za-z_\\\]\\\[A-Za-z0-9_\\\]\\\*\\\$\\\/ then
+\\s*if ENV.has_key\\\?\\\(_mlv\\\) then
+\\s*_mlre << _mlv \\\+ \"_modquar='\" \\\+ ENV\\\[_mlv\\\].to_s \\\+ \"' \"
+\\s*end
+\\s*_mlrv = 'MODULES_RUNENV_' \\\+ _mlv
+\\s*_mlre << _mlv \\\+ \"='\" \\\+ ENV\\\[_mlrv\\\].to_s \\\+ \"' \"
+\\s*end
+\\s*end
+\\s*unless _mlre.empty\\\?
+\\s*_mlre = 'env ' \\\+ _mlre
+\\s*end
+\\s*end
+\\s*if args\\\[0\\\].kind_of\\?\\\(Array\\\) then
+\\s*args = args\\\[0\\\]
+\\s*end
+\\s*if args.length == 0 then
+\\s*args = ''
+\\s*else
+\\s*args = \"\\\\\"#{args.join\\\('\" \"'\\\)}\\\\\"\"
+\\s*end
+\\s*_mlstatus = true
+\\s*eval `#{_mlre}$install_tclsh $modulecmd_pathre ruby #{args}`
+\\s*return _mlstatus
+\\s*end
+end"
+set func_cmake "function\\\(module\\\)
+\\s*cmake_policy\\\(SET CMP0007 NEW\\\)
+\\s*set\\\(_mlre \"\"\\\)
+\\s*if\\\(DEFINED ENV{MODULES_RUN_QUARANTINE}\\\)
+\\s*string\\\(REPLACE \" \" \";\" _mlv_list \"\\\$ENV{MODULES_RUN_QUARANTINE}\"\\\)
+\\s*foreach\\\(_mlv \\\${_mlv_list}\\\)
+\\s*if\\\(\\\${_mlv} MATCHES \"\\\^\\\[A-Za-z_\\\]\\\[A-Za-z0-9_\\\]\\\*\\\$\"\\\)
+\\s*if\\\(DEFINED ENV{\\\${_mlv}}\\\)
+\\s*set\\\(_mlre \"\\\${_mlre}\\\${_mlv}_modquar=\\\$ENV{\\\${_mlv}};\"\\\)
+\\s*endif\\\(\\\)
+\\s*set\\\(_mlrv \"MODULES_RUNENV_\\\${_mlv}\"\\\)
+\\s*set\\\(_mlre \"\\\${_mlre}\\\${_mlv}=\\\$ENV{\\\${_mlrv}};\"\\\)
+\\s*endif\\\(\\\)
+\\s*endforeach\\\(\\\)
+\\s*if \\\(NOT \"\\\${_mlre}\" STREQUAL \"\"\\\)
+\\s*set\\\(_mlre \"env;\\\${_mlre}\"\\\)
+\\s*endif\\\(\\\)
+\\s*endif\\\(\\\)
+\\s*set\\\(_mlstatus TRUE\\\)
+\\s*execute_process\\\(COMMAND mktemp -t moduleinit.cmake.XXXXXXXXXXXX
+\\s*OUTPUT_VARIABLE tempfile_name
+\\s*OUTPUT_STRIP_TRAILING_WHITESPACE\\\)
+\\s*if\\\(\\\${ARGC} EQUAL 1\\\)
+\\s*execute_process\\\(COMMAND \\\${_mlre} $install_tclsh $modulecmd_pathre cmake \"\\\${ARGV0}\"
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*elseif\\\(\\\${ARGC} EQUAL 2\\\)
+\\s*execute_process\\\(COMMAND \\\${_mlre} $install_tclsh $modulecmd_pathre cmake \"\\\${ARGV0}\" \"\\\${ARGV1}\"
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*elseif\\\(\\\${ARGC} EQUAL 3\\\)
+\\s*execute_process\\\(COMMAND \\\${_mlre} $install_tclsh $modulecmd_pathre cmake \"\\\${ARGV0}\" \"\\\${ARGV1}\" \"\\\${ARGV2}\"
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*elseif\\\(\\\${ARGC} EQUAL 4\\\)
+\\s*execute_process\\\(COMMAND \\\${_mlre} $install_tclsh $modulecmd_pathre cmake \"\\\${ARGV0}\" \"\\\${ARGV1}\" \"\\\${ARGV2}\" \"\\\${ARGV3}\"
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*else\\\(\\\)
+\\s*execute_process\\\(COMMAND \\\${_mlre} $install_tclsh $modulecmd_pathre cmake \\\${ARGV}
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*endif\\\(\\\)
+\\s*if\\\(EXISTS \\\${tempfile_name}\\\)
+\\s*include\\\(\\\${tempfile_name}\\\)
+\\s*file\\\(REMOVE \\\${tempfile_name}\\\)
+\\s*endif\\\(\\\)
+\\s*set\\\(module_result \\\${_mlstatus} PARENT_SCOPE\\\)
+endfunction\\\(module\\\)"
+set func_r "module <- function\\\(...\\\){
+\\s*mlre <- ''
+\\s*if \\\(\\\!is.na\\\(Sys.getenv\\\('MODULES_RUN_QUARANTINE', unset=NA\\\)\\\)\\\) {
+\\s*for \\\(mlv in strsplit\\\(Sys.getenv\\\('MODULES_RUN_QUARANTINE'\\\), ' '\\\)\\\[\\\[1\\\]\\\]\\\) {
+\\s*if \\\(grepl\\\('\\\^\\\[A-Za-z_\\\]\\\[A-Za-z0-9_\\\]\\\*\\\$', mlv\\\)\\\) {
+\\s*if \\\(\\\!is.na\\\(Sys.getenv\\\(mlv, unset=NA\\\)\\\)\\\) {
+\\s*mlre <- paste0\\\(mlre, mlv, \"_modquar='\", Sys.getenv\\\(mlv\\\), \"' \"\\\)
+\\s*}
+\\s*mlrv <- paste0\\\('MODULES_RUNENV_', mlv\\\)
+\\s*mlre <- paste0\\\(mlre, mlv, \"='\", Sys.getenv\\\(mlrv\\\), \"' \"\\\)
+\\s*}
+\\s*}
+\\s*if \\\(mlre \\\!= ''\\\) {
+\\s*mlre <- paste0\\\('env ', mlre\\\)
+\\s*}
+\\s*}
+\\s*arglist <- as.list\\\(match.call\\\(\\\)\\\)
+\\s*arglist\\\[1\\\] <- 'r'
+\\s*args <- paste0\\\('\"', paste0\\\(arglist, collapse='\" \"'\\\), '\"'\\\)
+\\s*cmd <- paste\\\(mlre, '$install_tclsh', '$modulecmd_pathre', args, sep=' '\\\)
+\\s*mlstatus <- TRUE
+\\s*hndl <- pipe\\\(cmd\\\)
+\\s*eval\\\(expr = parse\\\(file=hndl\\\)\\\)
+\\s*close\\\(hndl\\\)
+\\s*invisible\\\(mlstatus\\\)
+}"
+} else {
+set func_fish "function $func_name
+\\s*eval $install_tclsh $modulecmd_pathre fish \\\(string escape -- \\\$argv\\\) \\\| source -
+end$add_func_fish"
+set func_tcl "proc module {args} {
+\\s*set _mlstatus 1;
+\\s*catch {eval exec \"$install_tclsh\" \"$modulecmd_pathre\" \"tcl\" \\\$args 2>@stderr} script
+\\s*eval \\\$script;
+\\s*return \\\$_mlstatus
+}"
+set func_perl "sub module {
+\\s*my \\\$args = '';
+\\s*if \\\(\\\@_ > 0\\\) {
+\\s*\\\$args = '\"' \\\. join\\\('\" \"', \\\@_\\\) \\\. '\"';
+\\s*}
+\\s*my \\\$_mlstatus = 1;
+\\s*eval `$install_tclsh $modulecmd_pathre perl \\\$args`;
+\\s*return \\\$_mlstatus;
+}"
+set func_python "import re, subprocess
+def module\\\(\\*arguments\\\):
+\\s*ns = {}
+\\s*exec\\\(subprocess\\.Popen\\\(\\\['$install_tclsh', '$modulecmd_pathre', 'python'\\\] \\+ list\\\(arguments\\\), stdout=subprocess\\.PIPE\\\)\\.communicate\\\(\\\)\\\[0\\\], ns\\\)
+\\s*if '_mlstatus' in ns:
+\\s*_mlstatus = ns\\\['_mlstatus'\\\]
+\\s*else:
+\\s*_mlstatus = True
+\\s*return _mlstatus"
+set func_ruby "class ENVModule
+\\s*def ENVModule.module\\\(\\*args\\\)
+\\s*if args\\\[0\\\].kind_of\\?\\\(Array\\\) then
+\\s*args = args\\\[0\\\]
+\\s*end
+\\s*if args.length == 0 then
+\\s*args = ''
+\\s*else
+\\s*args = \"\\\\\"#{args.join\\\('\" \"'\\\)}\\\\\"\"
+\\s*end
+\\s*_mlstatus = true
+\\s*eval `$install_tclsh $modulecmd_pathre ruby #{args}`
+\\s*return _mlstatus
+\\s*end
+end"
+set func_cmake "function\\\(module\\\)
+\\s*cmake_policy\\\(SET CMP0007 NEW\\\)
+\\s*set\\\(_mlstatus TRUE\\\)
+\\s*execute_process\\\(COMMAND mktemp -t moduleinit.cmake.XXXXXXXXXXXX
+\\s*OUTPUT_VARIABLE tempfile_name
+\\s*OUTPUT_STRIP_TRAILING_WHITESPACE\\\)
+\\s*if\\\(\\\${ARGC} EQUAL 1\\\)
+\\s*execute_process\\\(COMMAND $install_tclsh $modulecmd_pathre cmake \"\\\${ARGV0}\"
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*elseif\\\(\\\${ARGC} EQUAL 2\\\)
+\\s*execute_process\\\(COMMAND $install_tclsh $modulecmd_pathre cmake \"\\\${ARGV0}\" \"\\\${ARGV1}\"
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*elseif\\\(\\\${ARGC} EQUAL 3\\\)
+\\s*execute_process\\\(COMMAND $install_tclsh $modulecmd_pathre cmake \"\\\${ARGV0}\" \"\\\${ARGV1}\" \"\\\${ARGV2}\"
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*elseif\\\(\\\${ARGC} EQUAL 4\\\)
+\\s*execute_process\\\(COMMAND $install_tclsh $modulecmd_pathre cmake \"\\\${ARGV0}\" \"\\\${ARGV1}\" \"\\\${ARGV2}\" \"\\\${ARGV3}\"
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*else\\\(\\\)
+\\s*execute_process\\\(COMMAND $install_tclsh $modulecmd_pathre cmake \\\${ARGV}
+\\s*OUTPUT_FILE \\\${tempfile_name}\\\)
+\\s*endif\\\(\\\)
+\\s*if\\\(EXISTS \\\${tempfile_name}\\\)
+\\s*include\\\(\\\${tempfile_name}\\\)
+\\s*file\\\(REMOVE \\\${tempfile_name}\\\)
+\\s*endif\\\(\\\)
+\\s*set\\\(module_result \\\${_mlstatus} PARENT_SCOPE\\\)
+endfunction\\\(module\\\)"
+set func_r "module <- function\\\(...\\\){
+\\s*arglist <- as.list\\\(match.call\\\(\\\)\\\)
+\\s*arglist\\\[1\\\] <- 'r'
+\\s*args <- paste0\\\('\"', paste0\\\(arglist, collapse='\" \"'\\\), '\"'\\\)
+\\s*cmd <- paste\\\('$install_tclsh', '$modulecmd_pathre', args, sep=' '\\\)
+\\s*mlstatus <- TRUE
+\\s*hndl <- pipe\\\(cmd\\\)
+\\s*eval\\\(expr = parse\\\(file=hndl\\\)\\\)
+\\s*close\\\(hndl\\\)
+\\s*invisible\\\(mlstatus\\\)
+}"
+}
+
+#
+#  test autoinit command for the different shells
+#
+
+# setup environment state
+setenv_loaded_module "foo" [list]
+
+# check various set_shell_startup configs
+foreach set_shell_startup [list {} 0 1] {
+    setenv_var MODULES_SET_SHELL_STARTUP $set_shell_startup
+
+    foreach shell $supported_shells {
+        switch -- $shell {
+            {lisp} {
+                testouterr_cmd "lisp" "autoinit" "ERR" "$err_lisp"
+            }
+            {cmd} {
+                testouterr_cmd "cmd" "autoinit" "ERR" "$err_cmd"
+            }
+            default {
+                set ans [list]
+                lappend ans [list [set "func_$shell"]]
+                if {$install_versioning eq "y"} {
+                    lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+                    lappend ans [list set MODULES_CMD $modulecmd_path]
+                    if {[is_real_shell $shell] && ($env(MODULES_SET_SHELL_STARTUP) eq {1} || ($env(MODULES_SET_SHELL_STARTUP) ne {0} && $install_setshellstartup eq {y}))} {
+                        lappend ans [list set ENV $install_initdir/profile.sh]
+                        lappend ans [list set BASH_ENV $install_initdir/bash]
+                    }
+                    lappend ans [list set MODULESHOME $moduleshome]
+                    lappend ans [list set MODULE_VERSION "(.*)"]
+                } else {
+                    lappend ans [list set MODULES_CMD $modulecmd_path]
+                    if {[is_real_shell $shell] && ($env(MODULES_SET_SHELL_STARTUP) eq {1} || ($env(MODULES_SET_SHELL_STARTUP) ne {0} && $install_setshellstartup eq {y}))} {
+                        lappend ans [list set ENV $install_initdir/profile.sh]
+                        lappend ans [list set BASH_ENV $install_initdir/bash]
+                    }
+                    lappend ans [list set MODULESHOME $moduleshome]
+                }
+
+                test_cmd_re $shell "autoinit" $ans
+            }
+        }
+    }
+
+    unsetenv_var MODULES_SET_SHELL_STARTUP
+}
+
+# test versioning autoinit when MODULE_VERSION is already defined
+if {$install_versioning eq "y"} {
+    # setup environment state
+    setenv_var MODULE_VERSION "vers"
+    setenv_var MODULE_VERSION_STACK "vers"
+
+    set ans [list]
+    lappend ans [list [set "func_sh"]]
+    lappend ans [list set MODULES_CMD $modulecmd_path]
+    if {$install_setshellstartup eq {y}} {
+        lappend ans [list set ENV $install_initdir/profile.sh]
+        lappend ans [list set BASH_ENV $install_initdir/bash]
+    }
+    lappend ans [list set MODULESHOME $moduleshome]
+
+    test_cmd_re "sh" "autoinit" $ans
+
+    # setup environment state
+    unsetenv_var MODULE_VERSION
+    unsetenv_var MODULE_VERSION_STACK
+}
+
+# create a temporary collection used in initrc example
+setenv_path_var MODULEPATH $modpath.deps
+setenv_path_var MODULES_LMPREREQ m3&m1
+setenv_loaded_module [list m1 m3] [list $modpath.deps/m1 $modpath.deps/m3] [list m1]
+testouterr_cmd sh "save $env(TESTSUITEDIR)/coll14" OK {}
+
+# setup environment state
+unsetenv_loaded_module
+unsetenv_path_var MODULEPATH
+unsetenv_path_var MODULES_LMPREREQ
+
+if {(!$insmodspath || $modspath_exinstalled) && (!$insmodrc || $modrc_exinstalled || $modrc1_exinstalled || $initrc_exinstalled)} {
+    foreach shell $supported_shells {
+        switch -- $shell {
+            {lisp} {
+                set tserr [expr {!$insmodspath && $initrc_exinstalled ? "$tserr_initrc_exinstalled\n$err_lisp" : $err_lisp}]
+                set ans ERR
+            }
+            {cmd} {
+                set tserr [expr {!$insmodspath && $initrc_exinstalled ? "$tserr_initrc_exinstalled\n$err_cmd" : $err_cmd}]
+                set ans ERR
+            }
+            default {
+                set tserr .*
+                set ans [list]
+                lappend ans [list [set "func_$shell"]]
+                if {!$insmodspath && !$insmodrc} {
+                    if {$install_versioning eq "y"} {
+                        lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+                    }
+                    lappend ans [list set MODULES_CMD $modulecmd_path]
+                    if {[is_real_shell $shell] && $install_setshellstartup eq {y}} {
+                        lappend ans [list set ENV $install_initdir/profile.sh]
+                        lappend ans [list set BASH_ENV $install_initdir/bash]
+                    }
+                    lappend ans [list set MODULESHOME $moduleshome]
+                    lappend ans [list set LOADEDMODULES ""]
+                    lappend ans [list set MODULEPATH ""]
+                    if {$install_versioning eq "y"} {
+                        lappend ans [list set MODULE_VERSION "(.*)"]
+                    }
+                } elseif {$modspath_exinstalled} {
+                    if {$install_versioning eq "y"} {
+                        lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+                    }
+                    lappend ans [list set MODULES_CMD $modulecmd_path]
+                    if {[is_real_shell $shell] && $install_setshellstartup eq {y}} {
+                        lappend ans [list set ENV $install_initdir/profile.sh]
+                    }
+                    lappend ans [list set MODULEPATH_modshare "(.*)"]
+                    if {[is_real_shell $shell] && $install_setshellstartup eq {y}} {
+                        lappend ans [list set BASH_ENV $install_initdir/bash]
+                    }
+                    lappend ans [list set MODULESHOME $moduleshome]
+                    lappend ans [list set LOADEDMODULES ""]
+                    lappend ans [list set MODULEPATH "$install_modulepath:$install_prefix/test/modulefiles:$install_prefix/test/etc"]
+                    if {$install_versioning eq "y"} {
+                        lappend ans [list set MODULE_VERSION "(.*)"]
+                    }
+                } elseif {!$insmodspath && $modrc_exinstalled} {
+                    lappend ans [list set _LMFILES__modshare "$install_modulefilesdir/null:1"]
+                    lappend ans [list set LOADEDMODULES_modshare "null:1"]
+                    if {$install_versioning eq "y"} {
+                        lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+                    }
+                    lappend ans [list set MODULES_CMD $modulecmd_path]
+                    if {[is_real_shell $shell] && $install_setshellstartup eq {y}} {
+                        lappend ans [list set ENV $install_initdir/profile.sh]
+                    }
+                    lappend ans [list set MODULEPATH_modshare "$install_modulepath:1"]
+                    if {[is_real_shell $shell] && $install_setshellstartup eq {y}} {
+                        lappend ans [list set BASH_ENV $install_initdir/bash]
+                    }
+                    lappend ans [list set _LMFILES_ "$install_modulefilesdir/null"]
+                    lappend ans [list set MODULESHOME $moduleshome]
+                    lappend ans [list set LOADEDMODULES "null"]
+                    lappend ans [list set MODULEPATH "$install_modulepath"]
+                    if {$install_versioning eq "y"} {
+                        lappend ans [list set MODULE_VERSION "(.*)"]
+                    }
+                } elseif {!$insmodspath && $modrc1_exinstalled} {
+                    lappend ans [list set _LMFILES__modshare "$install_modulefilesdir/null:1"]
+                    lappend ans [list set LOADEDMODULES_modshare "null:1"]
+                    if {$install_versioning eq "y"} {
+                        lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+                    }
+                    lappend ans [list set MODULES_CMD $modulecmd_path]
+                    lappend ans [list set MODULEPATH_modshare "$install_modulepath:1"]
+                    lappend ans [list set MODULES_SET_SHELL_STARTUP 0]
+                    lappend ans [list set MODULES_AUTO_HANDLING 0]
+                    lappend ans [list set _LMFILES_ "$install_modulefilesdir/null"]
+                    lappend ans [list set MODULESHOME $moduleshome]
+                    lappend ans [list set LOADEDMODULES "null"]
+                    lappend ans [list set MODULEPATH "$install_modulepath"]
+                    if {$install_versioning eq "y"} {
+                        lappend ans [list set MODULE_VERSION "(.*)"]
+                    }
+                } elseif {!$insmodspath && $initrc_exinstalled} {
+                    if {$shell eq {python}} {
+                        set ans (.*)
+                    } else {
+                        set ans [list]
+                        lappend ans [list ERR]
+                        lappend ans [list [set "func_$shell"]]
+                        lappend ans [list set MODULES_LMPREREQ m3&m1]
+                        lappend ans [list set MODULESHOME $moduleshome]
+                        lappend ans [list set LOADEDMODULES m1:m3]
+                        lappend ans [list set _LMFILES_ $modpath.deps/m1:$modpath.deps/m3]
+                        if {$install_versioning eq "y"} {
+                            lappend ans [list set MODULE_VERSION "(.*)"]
+                        }
+                        lappend ans [list set MODULES_CMD $modulecmd_path]
+                        if {[is_real_shell $shell] && $install_setshellstartup eq {y}} {
+                            lappend ans [list set BASH_ENV $install_initdir/bash]
+                        }
+                        lappend ans [list set MODULES_LMNOTUASKED m1]
+                        if {$install_versioning eq "y"} {
+                            lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+                        }
+                        if {[is_real_shell $shell] && $install_setshellstartup eq {y}} {
+                            lappend ans [list set ENV $install_initdir/profile.sh]
+                        }
+                        lappend ans [list set MODULES_LMNOTUASKED_modshare m1:1]
+                        lappend ans [list set MODULES_LMPREREQ_modshare m3&m1:1]
+                        lappend ans [list set MODULEPATH $modpath.deps]
+                        lappend ans [list set LOADEDMODULES_modshare (.*)]
+                        lappend ans [list set _LMFILES__modshare (.*)]
+                        lappend ans [list set MODULEPATH_modshare $modpath.deps:1]
+                    }
+                    set tserr $tserr_initrc_exinstalled
+                }
+            }
+        }
+        testouterr_cmd_re $shell autoinit $ans $tserr
+    }
+} else {
+    send_user "\tskipping autoinit tests as installed configuration unknown\n"
+}
+
+# test precedence of etc/initrc over init/modulerc if we are purely testing
+# (as tests will modify the installation)
+if {!$insmodspath && $initrc_exinstalled && $modrc eq "$install_etcdir/initrc"} {
+    # create a simple init/modulerc
+    set fid [open $install_initdir/modulerc w]
+    puts $fid "#%Module\nmodule load unk"
+    close $fid
+
+    set ans [list]
+    lappend ans [list ERR]
+    lappend ans [list [set "func_sh"]]
+    lappend ans [list set MODULES_LMPREREQ m3&m1]
+    lappend ans [list set MODULESHOME $moduleshome]
+    lappend ans [list set LOADEDMODULES m1:m3]
+    lappend ans [list set _LMFILES_ $modpath.deps/m1:$modpath.deps/m3]
+    if {$install_versioning eq "y"} {
+        lappend ans [list set MODULE_VERSION "(.*)"]
+    }
+    lappend ans [list set MODULES_CMD $modulecmd_path]
+    if {$install_setshellstartup eq {y}} {
+        lappend ans [list set BASH_ENV $install_initdir/bash]
+    }
+    lappend ans [list set MODULES_LMNOTUASKED m1]
+    if {$install_setshellstartup eq {y}} {
+        lappend ans [list set ENV $install_initdir/profile.sh]
+    }
+    if {$install_versioning eq "y"} {
+        lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+    }
+    lappend ans [list set MODULES_LMNOTUASKED_modshare m1:1]
+    lappend ans [list set MODULES_LMPREREQ_modshare m3&m1:1]
+    lappend ans [list set MODULEPATH $modpath.deps]
+    lappend ans [list set LOADEDMODULES_modshare (.*)]
+    lappend ans [list set _LMFILES__modshare (.*)]
+    lappend ans [list set MODULEPATH_modshare $modpath.deps:1]
+
+    # etc/initrc is prefered over init/modulerc
+    testouterr_cmd_re sh autoinit $ans $tserr_initrc_exinstalled
+
+    # cannot test access if cannot change file permission
+    if {!$is_file_perms_editable} {
+        send_user "\tskipping access tests as file permissions cannot be changed\n"
+    # cannot test access if superuser privileges are in use
+    } elseif {$tcl_platform(user) eq "root"} {
+        send_user "\tskipping access tests as tests are run by superuser\n"
+    # cannot test access if restricted file permissions have no effect
+    } elseif {$is_locked_dir_file_readable && $is_locked_file_readable} {
+        send_user "\tskipping access tests as locked files or directories are still readable\n"
+    } else {
+        # same if init/modulerc cannot be read
+        change_file_perms $install_initdir/modulerc ugo-rx
+        testouterr_cmd_re sh autoinit $ans $tserr_initrc_exinstalled
+        restore_file_perms $install_initdir/modulerc
+
+        # init/modulerc ignored even if etc/initrc locked
+        change_file_perms $modrc ugo-rx
+        set ans [list]
+        lappend ans [list [set "func_sh"]]
+        if {$install_versioning eq "y"} {
+            lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+        }
+        lappend ans [list set MODULES_CMD $modulecmd_path]
+        if {$install_setshellstartup eq {y}} {
+            lappend ans [list set ENV $install_initdir/profile.sh]
+        }
+        if {$install_setshellstartup eq {y}} {
+            lappend ans [list set BASH_ENV $install_initdir/bash]
+        }
+        lappend ans [list set MODULESHOME $moduleshome]
+        lappend ans [list set LOADEDMODULES {}]
+        lappend ans [list set MODULEPATH {}]
+        if {$install_versioning eq "y"} {
+            lappend ans [list set MODULE_VERSION "(.*)"]
+        }
+        lappend ans [list ERR]
+        testouterr_cmd_re sh autoinit $ans "$error_msgs: Permission denied on '$modrcre'"
+        restore_file_perms $modrc
+    }
+
+    # remove temporary init/modulerc
+    file delete $install_initdir/modulerc
+}
+
+
+# test precedence of etc/modulespath over init/.modulespath if we are purely testing
+# (as tests will modify the installation)
+if {$insmodspath && $modspath_exinstalled && $modspath eq "$install_etcdir/modulespath"} {
+    # create a simple init/.modulespath
+    set fid [open $install_initdir/.modulespath w]
+    puts $fid {/unk}
+    close $fid
+
+    set ans [list]
+    lappend ans [list [set "func_sh"]]
+    if {$install_versioning eq "y"} {
+        lappend ans [list set MODULE_VERSION_STACK "(.*)"]
+    }
+    lappend ans [list set MODULES_CMD $modulecmd_path]
+    if {$install_setshellstartup eq {y}} {
+        lappend ans [list set ENV $install_initdir/profile.sh]
+    }
+    lappend ans [list set MODULEPATH_modshare "(.*)"]
+    if {$install_setshellstartup eq {y}} {
+        lappend ans [list set BASH_ENV $install_initdir/bash]
+    }
+    lappend ans [list set MODULESHOME $moduleshome]
+    lappend ans [list set LOADEDMODULES ""]
+    lappend ans [list set MODULEPATH "$install_modulepath:$install_prefix/test/modulefiles:$install_prefix/test/etc"]
+    if {$install_versioning eq "y"} {
+        lappend ans [list set MODULE_VERSION "(.*)"]
+    }
+
+    # etc/modulespath is prefered over init/.modulespath
+    testouterr_cmd_re sh autoinit $ans {}
+
+    # cannot test access if cannot change file permission
+    if {!$is_file_perms_editable} {
+        send_user "\tskipping access tests as file permissions cannot be changed\n"
+    # cannot test access if superuser privileges are in use
+    } elseif {$tcl_platform(user) eq "root"} {
+        send_user "\tskipping access tests as tests are run by superuser\n"
+    # cannot test access if restricted file permissions have no effect
+    } elseif {$is_locked_dir_file_readable && $is_locked_file_readable} {
+        send_user "\tskipping access tests as locked files or directories are still readable\n"
+    } else {
+        # same if init/.modulespath cannot be read
+        change_file_perms $install_initdir/.modulespath ugo-rx
+        testouterr_cmd_re sh autoinit $ans {}
+        restore_file_perms $install_initdir/.modulespath
+
+        # init/.modulespath ignored even if etc/modulespath locked
+        change_file_perms $install_etcdir/modulespath ugo-rx
+        set ans [list]
+        lappend ans [list [set "func_sh"]]
+        lappend ans [list set MODULES_CMD $modulecmd_path]
+        if {$install_setshellstartup eq {y}} {
+            lappend ans [list set ENV $install_initdir/profile.sh]
+        }
+        if {$install_setshellstartup eq {y}} {
+            lappend ans [list set BASH_ENV $install_initdir/bash]
+        }
+        lappend ans [list set MODULESHOME $moduleshome]
+        lappend ans [list set LOADEDMODULES {}]
+        lappend ans [list set MODULEPATH {}]
+        testouterr_cmd_re sh autoinit $ans {}
+        restore_file_perms $install_etcdir/modulespath
+    }
+
+    # remove temporary init/modulerc
+    file delete $install_initdir/.modulespath
+}
+
+
+# restore environment state
+setenv_path_var MODULEPATH $modpath
+
+# remove temporary collection created for test
+file delete $env(TESTSUITEDIR)/coll14
+
+#
+#  Cleanup
+#
+
+unset path_list
+unset modulecmd_pathre
+unset modulecmd_path
+unset moduleshome
+
+if {[info exists fid]} {
+    unset fid
+}
+if {[info exists exmodspathdata]} {
+    unset exmodspathdata
+}
+if {[info exists exmodrcdata]} {
+    unset exmodrcdata
+}
+if {[info exists exmodrc1data]} {
+    unset exmodrc1data
+}
+if {[info exists exinitrcdata]} {
+    unset exinitrcdata
+}
+if {[info exists insmodspathdata]} {
+    unset insmodspathdata
+}
+unset insmodspath
+if {[info exists insmodrcdata]} {
+    unset insmodrcdata
+}
+unset insmodrc
+unset modspath_exinstalled
+unset modrc_exinstalled
+unset modrc1_exinstalled
+unset initrc_exinstalled
+unset tserr_initrc_exinstalled
+unset modrc
+unset modrcre
+unset modspath
+
+unset shell
+unset ans
+if {[info exists tserr]} {
+    unset tserr
+}
+
+unset err_lisp
+unset err_cmd
+
+unset end_quar_sh
+unset func_quar_sh
+unset func_quar_zsh
+unset func_clean_ifs
+unset func_end
+unset func_silentdbg
+
+unset func_modcmd_sh
+unset func_modcmd_bash
+unset func_modcmd_ksh
+unset func_modcmd_zsh
+
+unset is_stderr_tty
+unset func_name
+unset add_func_sh
+unset add_func_fish
+
+unset func_sh
+unset func_bash
+unset func_ksh
+unset func_zsh
+unset func_csh
+unset func_tcsh
+unset eval_cmd_csh
+unset eval_cmd_tcsh
+unset func_fish
+unset func_tcl
+unset func_perl
+unset func_python
+unset func_ruby
+unset func_cmake
+unset func_r
+
+unset set_shell_startup

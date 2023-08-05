@@ -1,0 +1,50 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.10-use/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		use
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check whether the load of use and other modulefile
+#			can be combined on the same line.
+#		}C%
+#
+##############################################################################
+
+#
+# Variables for this test
+#
+
+set oldpath	"$env(TESTSUITEDIR)/modulefiles"
+set newpath	"$env(TESTSUITEDIR)/modulefiles.2"
+
+set use	"load use 1.1/version"
+
+#
+# The tests ...
+#
+
+lappend ans [list setpath MODULEPATH "$newpath:$oldpath"]
+lappend ans [list setpath LOADEDMODULES "use/1.0:1.1/version"]
+lappend ans [list setpath _LMFILES_ "$oldpath/use/1.0:$newpath/1.1/version"]
+lappend ans [list setpath MODULES_LMALTNAME "use/1.0&use/default&use"]
+lappend ans [list set TESTSUITE "1.1"]
+test_cmd_re "ALL" "$use" $ans
+
+#
+# Cleanup
+#
+
+unset oldpath
+unset newpath
+unset use
+unset ans

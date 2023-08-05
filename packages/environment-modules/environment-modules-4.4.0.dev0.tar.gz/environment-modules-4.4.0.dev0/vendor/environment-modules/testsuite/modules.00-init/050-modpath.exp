@@ -1,0 +1,33 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.00-init/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Set up the MODULEPATH for the testsuite
+#		}C%
+#
+##############################################################################
+
+if [info exists env(TESTSUITEDIR)] {
+    set modpath "$env(TESTSUITEDIR)/modulefiles"
+    set modpathre [regsub -all "\(\[.+?\]\)" $modpath {\\\1}]
+    setenv_path_var MODULEPATH $modpath
+
+    set reldmodpath "./[file tail $env(TESTSUITEDIR)]/modulefiles"
+    set relddmodpath "../[file tail [pwd]]/[file tail $env(TESTSUITEDIR)]/modulefiles"
+} else {
+    send_user "\n\n\nFATAL: Please set the TESTSUITEDIR env var first\n\n\n"
+    exit
+}
+

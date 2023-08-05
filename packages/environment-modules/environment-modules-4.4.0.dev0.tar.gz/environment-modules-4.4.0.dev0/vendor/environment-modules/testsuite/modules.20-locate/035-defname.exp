@@ -1,0 +1,118 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	2017/01/10
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		load, display, whatis, avail
+#   Modulefiles:	loc_def
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Localization of the modulefile when a 'default' version-name
+#           exists
+#		}C%
+#
+##############################################################################
+
+#
+# Variables for this test
+#
+
+# ensure avail tests are made using in depth mode
+setenv_var MODULES_AVAIL_INDEPTH 1
+
+set module "loc_def"
+set module_1 "$module/default"
+set module_2 "$module/truedef"
+set modulefile_1 "$modpath/$module_1"
+set modulefilere_1 "$modpathre/$module_1"
+set modulefile_2 "$modpath/$module_2"
+set modulefilere_2 "$modpathre/$module_2"
+set modwhatis "module named default test"
+set modpathheader "$modlin $modpathre $modlin"
+
+#
+# Test load of true default version
+#
+
+lappend ans [list set _LMFILES__modshare "$modulefile_2:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module_2:1"]
+lappend ans [list set _LMFILES_ $modulefile_2]
+lappend ans [list set LOADEDMODULES $module_2]
+
+test_cmd "sh" "load $module" [if_implicitdefault $ans ERR]
+
+#
+# Test load of version-name 'default'
+#
+
+set ans [list]
+lappend ans [list set _LMFILES__modshare "$modulefile_1:1"]
+lappend ans [list set LOADEDMODULES_modshare "$module_1:1"]
+lappend ans [list set _LMFILES_ $modulefile_1]
+lappend ans [list set LOADEDMODULES $module_1]
+
+test_cmd "sh" "load $module_1" $ans
+
+#
+# Test display of true default version
+#
+
+testouterr_cmd_re "sh" "display $module" [if_implicitdefault OK ERR] [if_implicitdefault "$modlin\n$modulefilere_2:\n\nmodule-whatis\t{$modwhatis}\n$modlin" "$err_nodefault'$module'"]
+
+#
+# Test display of version-name 'default'
+#
+
+testouterr_cmd_re "sh" "display $module_1" "OK" "$modlin\n$modulefilere_1:\n\nmodule-whatis\t{$modwhatis}\n$modlin"
+
+#
+# Test whatis of generic module name
+#
+
+testouterr_cmd_re "sh" "whatis $module" "OK" "$modpathheader\n\\s+$module_1: $modwhatis\n\\s+$module_2: $modwhatis"
+
+#
+# Test whatis of version-name 'default'
+#
+
+testouterr_cmd_re "sh" "whatis $module_1" "OK" "$modpathheader\n\\s+$module_1: $modwhatis"
+
+#
+# Test avail of generic module name
+#
+
+testouterr_cmd "sh" "avail -t $module" "OK" "$modpath:\n$module_1\n$module_2"
+
+#
+# Test avail of version-name 'default'
+#
+
+testouterr_cmd "sh" "avail -t $module_1" "OK" "$modpath:\n$module_1"
+
+
+#
+# Cleanup
+#
+
+unsetenv_var MODULES_AVAIL_INDEPTH
+
+unset ans
+
+unset modwhatis
+unset modpathheader
+
+unset modulefile_2
+unset modulefilere_2
+unset module_2
+unset modulefile_1
+unset modulefilere_1
+unset module_1
+unset module

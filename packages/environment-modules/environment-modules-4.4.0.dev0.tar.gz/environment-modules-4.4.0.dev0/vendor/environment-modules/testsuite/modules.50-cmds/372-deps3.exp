@@ -1,0 +1,76 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2018/06/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        load, unload
+#   Modulefiles:
+#   Sub-Command:    prereq, conflict
+#
+#   Comment:	%C{
+#           Test dependency handling consistency whatever the auto-handling
+#           mode enablement state
+#		}C%
+#
+##############################################################################
+
+set mp "$modpath.deps"
+
+# setup specific environment
+setenv_path_var MODULEPATH $mp
+
+# is-loading conflict check
+testouterr_cmd "sh" "load mt" "ERR" [msg_load ms [err_conloi mt]]\n\n[msg_load mt [err_reqlo ms]]
+
+# is-loading conflict check with fully qualified modulefile
+testouterr_cmd "sh" "load mtf" "ERR" [msg_load $mp/msf [err_conloi $mp/mtf]]\n\n[msg_load mtf [err_reqlo $mp/msf]]
+
+# conflict consistency check
+set ans [list]
+lappend ans [list setpath _LMFILES_ "$mp/a"]
+lappend ans [list setpath LOADEDMODULES "a"]
+lappend ans [list setpath MODULES_LMCONFLICT "a&b"]
+lappend ans [list ERR]
+if {$install_autohandling eq {y}} {
+    testouterr_cmd "sh" "load a b" $ans [msg_load b [err_conlo a]]
+} else {
+    # as load is attempted to see if conflict solves, returned error is about missing prereq
+    testouterr_cmd "sh" "load a b" $ans [msg_load b [err_prereq b c]]
+}
+
+# prereq consistency check
+# no test possible with equal results between --auto and --no-auto modes
+# due to DepUn mecahnism
+
+# restore environment
+unsetenv_path_var MODULES_LMCONFLICT
+unsetenv_path_var MODULES_LMPREREQ
+unsetenv_loaded_module
+
+# check warning raised when using --auto/--no-auto from modulefile
+# confusing error messages obtained due to load then unload of same modulefile (which is thus defined as a conflict and a prereq)
+if {$install_autohandling eq {y}} {
+    set tserr [msg_unload ms [err_deplo mu]]\n\n[msg_load mu "$warn_msgs: Unsupported option '--auto'" "$warn_msgs: Unsupported option '--auto'" "$warn_msgs: Unsupported option '--no-auto'" [err_conun ms]]
+} else {
+    set tserr [msg_unload ms [err_deplo mu]]\n\n[msg_load mu "$warn_msgs: Unsupported option '--auto'" "$warn_msgs: Unsupported option '--auto'" [err_swoff ms] "$warn_msgs: Unsupported option '--no-auto'" [err_conlo ms]]
+}
+testouterr_cmd "sh" "load mu" ERR $tserr
+
+#
+#  Cleanup
+#
+
+# restore environment
+setenv_path_var MODULEPATH $modpath
+
+unset mp
+unset ans
+unset tserr
+

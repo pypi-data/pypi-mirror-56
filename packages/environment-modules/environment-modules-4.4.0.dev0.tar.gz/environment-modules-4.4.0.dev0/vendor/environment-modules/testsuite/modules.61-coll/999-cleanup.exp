@@ -1,0 +1,217 @@
+##############################################################################
+#   Modules Release Tcl
+#   Providing a flexible user environment
+#
+#   File:		modules.61-coll/%M%
+#   Revision:		%I%
+#   First Edition:	2016/08/02
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Cleans out some variables used in the test
+#		}C%
+#
+##############################################################################
+
+if { $verbose > 1 } {
+    send_user "\tCleaning up after collection tests ...\n"
+}
+
+# delete collections and associated dirs saved during this test
+set testcoll_list [glob -nocomplain -- "$hometestdotmod/*"]
+foreach testcoll $testcoll_list {
+    if { $verbose > 0 } {
+        send_user "\tDelete $testcoll\n"
+    }
+    file delete $testcoll
+}
+if { $verbose > 0 } {
+    send_user "\tDelete $hometestdotmod\n"
+    send_user "\tDelete $hometestcoll\n"
+}
+file delete $hometestdotmod
+file delete $hometestcoll
+
+catch {unset testcoll}
+catch {unset testcoll_list}
+
+unset mlu
+unset mll
+unset cdcont
+unset cdcontre
+unset cdcontpin
+unset cdcontrepin
+unset c1cont1
+unset c1cont1re
+unset presavedc1cont1re
+unset c1cont2
+unset c4cont
+unset c4contre
+unset c6cont
+unset c7cont
+unset c7contre
+unset c8cont
+unset c9cont
+unset c11cont
+
+unset cdlmf
+unset cdlm
+unset cdlmalt
+unset cdmodpath
+unset cdlmf_part
+unset cdlm_part
+unset cdlmalt_part
+unset c1lmf
+unset c1lm
+unset c1lmfnodefault
+unset c1lmnodefault
+unset c1lmalt
+unset c1modpath
+unset c2lmf
+unset c2lm
+unset c2lmalt
+unset c2modpath
+unset c3modpath
+unset c4modpath
+unset c6lmf
+unset c6lm
+unset c6lmfnodefault
+unset c6lmnodefault
+unset c6lmalt
+unset c6modpath
+unset c7lmf
+unset c7lm
+unset c7modpath
+unset c8lmf
+unset c8lm
+unset c8modpath
+unset c9lmf
+unset c9lm
+unset c9lmnua
+unset c9modpath
+unset c11lmf
+unset c11lm
+unset c11lmnua
+unset c11modpath
+unset c12lmf
+unset c12lm
+unset c12modpath
+unset c13lmf
+unset c13lm
+unset c13lmalt
+unset c13modpath
+
+unset c12mod2
+unset c12mod1
+unset c12modpath1
+unset c11mod2
+unset c11mod1
+unset c11modpath1
+unset c9mod3
+unset c9mod2
+unset c9mod1
+unset c9modpath1
+unset c8mod3
+unset c8mod2
+unset c8mod1
+unset c8modpath1
+unset c7mod3
+unset c7mod3rel
+unset c7mod2
+unset c7mod2rel
+unset c7mod1
+unset c7mod1rel
+unset c6modpath3
+unset c6modpath2
+unset c6modpath1
+unset c6mod3f
+unset c6mod3
+unset c6mod2f
+unset c6mod2
+unset c6mod1f
+unset c6mod1n
+unset c6mod1
+unset c4modpath2
+unset c4modpath1
+unset c3modpath2
+unset c3modpath1
+unset c2mod6
+unset c2mod5
+unset c2mod4
+unset c2modpath2
+unset c2modpath1
+unset c1mod6
+unset c1mod5
+unset c1modpath2
+unset c1modpath1
+unset cdmod5
+unset cdmod5n
+unset cdmod4
+unset cdmod3
+unset cdmod3n
+unset cdmod2
+unset cdmod1
+unset cdmodpath1
+
+unset collemptytarget
+unset colltarget
+unset coll1
+unset coll2
+unset coll3
+unset coll4
+unset coll4f
+unset colld
+unset collbadn
+unset collbadfp
+unset coll1fp
+unset coll1fpre
+unset coll5fp
+unset coll5fpre
+unset coll6
+unset coll6f
+unset coll7
+unset coll7f
+unset coll7fp
+unset coll7fpre
+unset coll8
+unset coll8f
+unset coll8fp
+unset coll8fpre
+unset coll9
+unset coll9f
+unset coll9fp
+unset coll9fpre
+unset coll10
+unset coll10f
+unset coll10fp
+unset coll10fpre
+unset coll11
+unset coll11f
+unset coll11fp
+unset coll11fpre
+unset coll12
+unset coll12f
+unset coll12fp
+unset coll12fpre
+unset coll13
+unset coll13fp
+unset coll13fpre
+unset coll14
+unset coll14fp
+unset coll14fpre
+
+unset nohomeerrmsg
+
+unset homewithcoll
+unset homewithcollre
+unset homewithcolldotmod
+unset homewithcolldotmodre
+unset hometestcoll
+unset hometestdotmod

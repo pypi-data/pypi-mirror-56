@@ -1,0 +1,96 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.90-avail/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		avail
+#   Modulefiles:	help/2.0, loc_rc6/bar, loc_rc1/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the module 'avail' command for a full qualified
+#			module name in terse output mode.
+#		}C%
+#
+##############################################################################
+
+# ensure avail tests are made using in depth mode
+setenv_var MODULES_AVAIL_INDEPTH 1
+
+# ensure regular avail search match is set for these tests
+setenv_var MODULES_SEARCH_MATCH starts_with
+
+set module "help"
+set version "2.0"
+set module2 "loc_rc6"
+set alias2 "bar"
+set module3 "loc_rc1"
+set version3 "1.0"
+set symbol3 "foo"
+
+#
+#  Check this only fo the /bin/csh
+#
+
+set header "$modlin $modpathre $modlin\n"
+set ts_csh "$header$module/$version"
+
+#
+#  The tests
+#
+
+testouterr_cmd_re "csh" "avail $module/$version" "OK" "$ts_csh\\s+"
+testouterr_cmd_re "csh" "avail $module" "OK" "$ts_csh\\s+"
+
+# command nickname tests
+testouterr_cmd_re "csh" "av $module" "OK" "$ts_csh\\s+"
+
+#
+#  Test avail on an alias module
+#
+
+set ts_csh "$header$module2/$alias2\\(@\\)"
+testouterr_cmd_re "csh" "avail $module2/$alias2" "OK" "$ts_csh\\s+"
+
+#
+#  Test avail on a symbolic version
+#
+
+set ts_csh "$header$module3/$version3\\($symbol3\\)"
+testouterr_cmd_re "csh" "avail $module3/$symbol3" "OK" "$ts_csh\\s+"
+
+#
+# test when loaded environment is inconsistent
+#
+
+setenv_loaded_module [list foo bar] "/path/to/foo"
+
+# should not affect result
+testouterr_cmd_re "csh" "avail $module3/$symbol3" "OK" "$ts_csh\\s+"
+
+
+#
+#  Cleanup
+#
+
+# Clean up the environment
+unsetenv_loaded_module
+unsetenv_var MODULES_AVAIL_INDEPTH
+unsetenv_var MODULES_SEARCH_MATCH
+
+unset ts_csh
+unset header
+unset version
+unset module
+unset alias2
+unset module2
+unset symbol3
+unset version3
+unset module3

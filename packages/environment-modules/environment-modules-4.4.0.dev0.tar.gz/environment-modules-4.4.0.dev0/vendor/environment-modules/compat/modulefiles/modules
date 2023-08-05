@@ -1,0 +1,30 @@
+#%Module1.0#####################################################################
+##
+## modules modulefile
+##
+## modulefiles/modules.  Generated from modules.in by configure.
+##
+proc ModulesHelp { } {
+        global version prefix
+
+        puts stderr "\tmodules - loads the modules software & application environment"
+        puts stderr "\n\tThis adds $prefix/* to several of the"
+        puts stderr "\tenvironment variables."
+        puts stderr "\n\tVersion $version\n"
+}
+
+module-whatis	"loads the modules environment"
+
+# for Tcl script use only
+set	version		3.2.12
+set	prefix		/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/Modules
+set	exec_prefix	${prefix}
+set	datarootdir	/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/share
+
+
+setenv		MODULESHOME	$prefix
+prepend-path    PATH   		/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/bin
+prepend-path    MANPATH		/home/bukzor/repo/environment-modules-setuptools/build/temp.linux-x86_64-3.5/share/man
+
+#module		use		
+

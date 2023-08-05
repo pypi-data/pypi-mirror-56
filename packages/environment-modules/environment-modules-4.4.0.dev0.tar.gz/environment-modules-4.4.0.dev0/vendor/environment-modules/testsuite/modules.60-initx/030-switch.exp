@@ -1,0 +1,39 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.60-initx/%M%
+#   Revision:		%I%
+#   First Edition:	2005/12/22
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		initadd, initrm
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the initadd sub-commands
+#		}C%
+#
+##############################################################################
+
+# different behavior than C-version: on Tcl-version no message is printed
+testouterr_cmd sh "initswitch poo/2.0 poo/1.0" "OK" ""
+_test_modules csh "initswitch" "$modload null foo bar poo/1.0 foobar\n$line2"
+
+testouterr_cmd ksh "initswit foo food" "OK" ""
+_test_modules ksh "initswitch" "$modload null food bar poo/1.0 foobar\n$line2"
+
+testouterr_cmd csh "initsw bar bar/2.0" "OK" ""
+_test_modules csh "initswitch" "$modload null food bar/2.0 poo/1.0 foobar\n$line2"
+
+
+# test on fully empty init file
+file copy -force "$env(HOME)/.modules.savenull"  "$env(HOME)/.modules"
+
+testouterr_cmd sh "initswitch foo food" "ERR" "$find_msg_sh"
+_test_modules sh "initswitch" "#"
+

@@ -1,0 +1,337 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		unload
+#   Modulefiles:	prepend/1.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the reverse 'prepend-path' module subcommand for
+#			all allowed shell types.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module unload command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "PATH" to
+#    be set up
+#
+
+set module "prepend/2.0"
+set modulefile "$modpath/$module"
+
+set old_path $env(PATH)
+set ts_path "/this/is/the/modules/testsuite"
+set new_path "$ts_path:$old_path"
+
+#
+#  Set up the environment for reversal ...
+#
+
+set env(PATH) "$new_path"
+setenv_loaded_module $module $modulefile
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list setpath PATH $old_path]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+#
+#  The tests
+#
+
+test_cmd_re "ALL" "unload $module" $ans
+
+#
+# Try the empty string
+#
+
+set module "prepend/0.1"
+set modulefile "$modpath/$module"
+
+set ts_path ""
+set new_path "$ts_path:$old_path"
+
+#
+#  Set up the environment for reversal ...
+#
+
+set env(PATH) "$new_path"
+setenv_loaded_module $module $modulefile
+
+#
+#  For the different shells ...
+#
+
+# same result content as above
+
+#
+#  The tests
+#
+
+test_cmd_re "ALL" "unload $module" $ans
+
+#
+# Try just the colon
+#
+
+set module "prepend/0.2"
+set modulefile "$modpath/$module"
+
+# different behavior than C-version: on Tcl-version removing a bare colon
+# to a path produces an error since this colon cannot be distinguished
+# from the colon used for path separator
+set ts_err "$moderr_msgs: unload-path cannot handle path equals to separator string\nIn '$modulefile'\n$err_contactns"
+
+set ts_path ":"
+set new_path "$ts_path:$old_path"
+
+#
+#  Set up the environment for reversal ...
+#
+
+# as adding bare colon leads to error, this module can never be loaded
+# but anyway here we test that the unloading part of "append-path" also
+# leads to error
+set env(PATH) "$new_path"
+setenv_loaded_module $module $modulefile
+
+#
+#  The tests
+#
+
+testouterr_cmd "ALL" "unload $module" "ERR" [msg_unload $module $ts_err]
+
+
+#
+# Try unloading when colon is initially set at beginning of set PATH
+#
+
+set module "prepend/2.0"
+set modulefile "$modpath/$module"
+
+set ts_path "/this/is/the/modules/testsuite::$old_path"
+set new_path ":$old_path"
+
+if { $verbose > 0 } {
+    send_user "\tSetup PATH = $ts_path\n"
+}
+set env(PATH) "$ts_path"
+setenv_loaded_module $module $modulefile
+
+set ans [list]
+lappend ans [list setpath PATH $new_path]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+#
+#  The tests
+#
+
+test_cmd_re "ALL" "unload $module" $ans
+
+
+#
+# Try bad argument list: missing variable name
+#
+
+set module "prepend/0.3"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+set ts_err "$moderr_msgs: unload-path should get an environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "unload $module" "ERR" [msg_unload $module $ts_err]
+
+#
+# Try bad argument list: missing variable value
+#
+
+set module "prepend/0.4"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+set ts_err "$moderr_msgs: unload-path should get a value for environment variable PATH\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "unload $module" "ERR" [msg_unload $module $ts_err]
+
+#
+# Try bad argument list: empty variable name
+#
+
+set module "prepend/0.5"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+set ts_err "$moderr_msgs: unload-path should get a valid environment variable name\nIn '$modulefile'\n$err_contactns"
+testouterr_cmd "sh" "unload $module" "ERR" [msg_unload $module $ts_err]
+
+#
+# Try command switches passed after variable name
+#
+
+set module "prepend/1.10"
+set modulefile "$modpath/$module"
+setenv_loaded_module $module $modulefile
+setenv_path_var testsuite --delim=,
+setenv_path_var testsuite2 , foo
+set ans [list]
+lappend ans [list unsetpath testsuite]
+lappend ans [list setpath testsuite2 foo]
+lappend ans [list unset testsuite3]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+testouterr_cmd_re "sh" "unload $module" $ans {}
+unsetenv_path_var testsuite
+unsetenv_path_var testsuite2
+
+
+
+#
+# Try prepending empty string and check reference counter
+#
+
+set module "prepend/3.0"
+set modulefile "$modpath/$module"
+set env(FOO_modshare) ":1"
+set env(FOO) ""
+setenv_loaded_module $module $modulefile
+
+set ans [list]
+lappend ans [list unset _LMFILES__modshare]
+lappend ans [list unset LOADEDMODULES_modshare]
+lappend ans [list unset FOO]
+lappend ans [list unset _LMFILES_]
+lappend ans [list unset LOADEDMODULES]
+lappend ans [list unset FOO_modshare]
+
+testouterr_cmd "sh" "unload $module" $ans ""
+
+set module2 "prepend/3.1"
+set modulefile2 "$modpath/$module2"
+
+
+set env(FOO_modshare) "/path/to/dir:1::2"
+set env(FOO) "/path/to/dir:"
+setenv_loaded_module [list $module $module2] [list $modulefile $modulefile2]
+
+set ans [list]
+lappend ans [list unset _LMFILES__modshare]
+lappend ans [list unset LOADEDMODULES_modshare]
+lappend ans [list unset FOO]
+lappend ans [list unset _LMFILES_]
+lappend ans [list unset LOADEDMODULES]
+lappend ans [list unset FOO_modshare]
+
+testouterr_cmd "sh" "unload $module $module2" $ans ""
+
+set ans [list]
+lappend ans [list set FOO_modshare ":1"]
+lappend ans [list set FOO ""]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "unload $module2" $ans ""
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir:1::1"]
+lappend ans [list set FOO "/path/to/dir:"]
+lappend ans [list setpath LOADEDMODULES $module2]
+lappend ans [list setpath _LMFILES_ $modulefile2]
+
+testouterr_cmd "sh" "unload $module" $ans ""
+
+
+set env(FOO_modshare) "/path/to/dir:1::2"
+set env(FOO) "/path/to/dir:"
+setenv_loaded_module [list $module2 $module] [list $modulefile2 $modulefile]
+
+set ans [list]
+lappend ans [list unset _LMFILES__modshare]
+lappend ans [list unset LOADEDMODULES_modshare]
+lappend ans [list unset FOO]
+lappend ans [list unset _LMFILES_]
+lappend ans [list unset LOADEDMODULES]
+lappend ans [list unset FOO_modshare]
+
+testouterr_cmd "sh" "unload $module $module2" $ans ""
+
+set ans [list]
+lappend ans [list set FOO_modshare ":1"]
+lappend ans [list set FOO ""]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+testouterr_cmd "sh" "unload $module2" $ans ""
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir:1::1"]
+lappend ans [list set FOO "/path/to/dir:"]
+lappend ans [list setpath LOADEDMODULES $module2]
+lappend ans [list setpath _LMFILES_ $modulefile2]
+
+testouterr_cmd "sh" "unload $module" $ans ""
+
+
+#
+# Prepend multiple paths passed as one string
+#
+
+set module "prepend/2.3"
+set modulefile "$modpath/$module"
+
+set env(FOO_modshare) ":1:/modules/testsuite2.2/2.2:1:/path/to/dir1:1:/modules/testsuite2.2:1"
+set env(FOO) ":/modules/testsuite2.2:/modules/testsuite2.2/2.2:/path/to/dir1"
+setenv_loaded_module [list $module] [list $modulefile]
+
+set ans [list]
+lappend ans [list set FOO_modshare "/path/to/dir1:1"]
+lappend ans [list set FOO "/path/to/dir1"]
+lappend ans [list unsetpath LOADEDMODULES]
+lappend ans [list unsetpath _LMFILES_]
+
+testouterr_cmd "sh" "unload $module" $ans ""
+
+
+#
+# Prepend multiple paths passed as multiple strings
+#
+
+set module "prepend/2.4"
+set modulefile "$modpath/$module"
+
+setenv_loaded_module $module $modulefile
+
+testouterr_cmd "sh" "unload $module" $ans ""
+
+
+#
+#  Clean up the environment
+#
+
+set env(PATH) "$old_path"
+unset env(FOO)
+unset env(FOO_modshare)
+unsetenv_loaded_module
+
+#
+#  Cleanup
+#
+
+unset new_path
+unset ts_path
+unset old_path
+unset ts_err
+
+unset ans
+
+unset modulefile
+unset module

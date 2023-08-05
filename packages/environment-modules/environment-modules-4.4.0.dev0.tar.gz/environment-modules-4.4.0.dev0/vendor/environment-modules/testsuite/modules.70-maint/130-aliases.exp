@@ -1,0 +1,287 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	2017/05/25
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:		aliases
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module command 'aliases'
+#		}C%
+#
+##############################################################################
+
+#
+#  Test variables
+#
+
+# no symlink modules if symbolic link no supported on filesystem
+if {$is_symlink_supported} {
+    set symlink_alias "
+symlink/1 -> symlink/1.2
+symlink/bar -> symlink/1.2"
+    set symlink_version "
+symlink/default -> symlink/1.2
+symlink/new -> symlink/1.2"
+} else {
+    set symlink_alias ""
+    set symlink_version ""
+}
+
+set alias_header "$modlin Aliases $modlin"
+set alias_list "averssort/1 -> verssort/1
+averssort/1.2.4 -> verssort/1.2.4
+averssort/1.10 -> verssort/1.10
+dirmodalias -> loc_rc6
+inforc/foo -> inforc/1.0
+loc_rc6/1 -> loc_rc6/1.2
+loc_rc6/bar -> loc_rc6/1.2
+loc_rc7/1 -> loc_rc7/1.2
+loc_rc7/bar -> loc_rc7/0.9
+loc_rc8/0.9 -> loc_rc8/.2.0
+loc_rcv1/1 -> loc_rcv1/1.2
+loc_rcv1/bar -> loc_rcv1/1.2
+loc_tr/al1 -> loc_tr/next
+loc_tr/al2 -> loc_tr/foo
+loc_tr/al3 -> loc_tr/al2
+loc_tr/al4 -> loc_tr/exp$symlink_alias
+tr2_loc/al1 -> tr_loc/trunstable
+tr2_loc/al2 -> tr_loc/trbar
+tr2_loc/al3 -> tr_loc/al2
+tr2_loc/al4 -> tr_loc/trexp
+tr2_loc/al5 -> tr2_loc/tr2exp
+tr_loc/al1 -> loc_tr/next
+tr_loc/al2 -> loc_tr/foo
+tr_loc/al3 -> loc_tr/al2
+tr_loc/al4 -> loc_tr/exp
+tr_loc/al5 -> tr_loc/trexp"
+set version_header "$modlin Versions $modlin"
+set version_list "bad/good -> bad/after
+info/foo -> info/specified
+inforc/aliases -> inforc/2.0
+inforc/bar -> inforc/2.0
+inforc/default -> inforc/2.0
+load/default -> load/all
+loc_dv2/default -> loc_dv2/1.0
+loc_dv3/default -> loc_dv3/3.0
+loc_dv4/default -> loc_dv4/2.0
+loc_dv7/default -> loc_dv7/2.0
+loc_dv9/default -> loc_dv9/1.0
+loc_dvv1/default -> loc_dvv1/1.0
+loc_rc1/foo -> loc_rc1/1.0
+loc_rc2/bar -> loc_rc2/1.0
+loc_rc2/blah -> loc_rc2/1.0
+loc_rc2/foo -> loc_rc2/1.0
+loc_rc3/chk -> loc_rc3/3.0
+loc_rc3/cur -> loc_rc3/2.0
+loc_rc3/default -> loc_rc3/1.0
+loc_rc3/exp -> loc_rc3/3.0
+loc_rc3/foo -> loc_rc3/0.0
+loc_rc3/new -> loc_rc3/3.0
+loc_rc3/stable -> loc_rc3/2.0
+loc_rc3/test -> loc_rc3/3.0
+loc_rc4/default -> loc_rc4/2.0
+loc_rc6/default -> loc_rc6/1.2
+loc_rc6/new -> loc_rc6/1.2
+loc_rc8/foo -> loc_rc8/.2.0
+loc_rc010/default -> loc_rc010/.1.0
+loc_rcv1/default -> loc_rcv1/1.2
+loc_rcv1/new -> loc_rcv1/1.2
+loc_tr/bar -> loc_tr/3.0
+loc_tr/cur -> loc_tr/1.0
+loc_tr/default -> loc_tr/3.0
+loc_tr/exp -> loc_tr/3.0
+loc_tr/foo -> loc_tr/3.0
+loc_tr/next -> loc_tr/2.0
+loc_tr/reg -> loc_tr/3.0
+loc_tr/stable -> loc_tr/1.0
+loc_tr/tr2bar -> loc_tr/3.0
+loc_tr/tr2exp -> loc_tr/3.0
+loc_tr/tr2unstable -> loc_tr/2.0
+loc_tr/trbar -> loc_tr/3.0
+loc_tr/trexp -> loc_tr/3.0
+loc_tr/trreg -> loc_tr/3.0
+loc_tr/trunstable -> loc_tr/2.0
+loc_tr/unstable -> loc_tr/2.0$symlink_version
+tr2_loc/default -> tr2_loc/al3
+tr2_loc/tr2bar -> tr2_loc/al2
+tr2_loc/tr2exp -> tr2_loc/al3
+tr2_loc/tr2unstable -> tr2_loc/al1
+tr2_loc/trreg -> tr2_loc/al3
+tr_loc/default -> tr_loc/al2
+tr_loc/tr2bar -> tr_loc/al2
+tr_loc/tr2exp -> tr_loc/al2
+tr_loc/tr2unstable -> tr_loc/al1
+tr_loc/trbar -> tr_loc/al2
+tr_loc/trexp -> tr_loc/al3
+tr_loc/trreg -> tr_loc/al2
+tr_loc/trunstable -> tr_loc/al1
+use/default -> use/1.0"
+
+
+#
+#  test on path were there are aliases
+#
+
+testouterr_cmd_re "sh" "aliases" "OK" "$alias_header\n$alias_list\n\n$version_header\n$version_list"
+
+# command nickname tests
+testouterr_cmd_re "sh" "al" "OK" "$alias_header\n$alias_list\n\n$version_header\n$version_list"
+
+# setup MODULEPATH with a trailing slash and an empty dir element
+setenv_path_var MODULEPATH {} "$modpath/"
+testouterr_cmd_re "sh" "aliases" "OK" "$alias_header\n$alias_list\n\n$version_header\n$version_list"
+
+# restore MODULEPATH
+setenv_path_var MODULEPATH $modpath
+
+
+#
+#  test on path were there are aliases also from global RC
+#
+
+# setup environment state
+set env(MODULERCFILE) "$env(TESTSUITEDIR)/etc/modulerc"
+
+# no symlink modules if symbolic link no supported on filesystem
+if {$is_symlink_supported} {
+    set symlink_alias "
+symlink/1 -> symlink/1.2
+symlink/bar -> symlink/1.2"
+    set symlink_version "
+symlink/default -> symlink/1.2
+symlink/new -> symlink/1.2"
+} else {
+    set symlink_alias ""
+    set symlink_version ""
+}
+
+set alias_list "averssort/1 -> verssort/1
+averssort/1.2.4 -> verssort/1.2.4
+averssort/1.10 -> verssort/1.10
+dirmodalias -> loc_rc6
+inforc/foo -> inforc/1.0
+loc_rc6/1 -> loc_rc6/1.2
+loc_rc6/bar -> loc_rc6/1.2
+loc_rc7/1 -> loc_rc7/1.2
+loc_rc7/bar -> loc_rc7/0.9
+loc_rc8/0.9 -> loc_rc8/.2.0
+loc_rcv1/1 -> loc_rcv1/1.2
+loc_rcv1/bar -> loc_rcv1/1.2
+loc_tr/al1 -> loc_tr/next
+loc_tr/al2 -> loc_tr/foo
+loc_tr/al3 -> loc_tr/al2
+loc_tr/al4 -> loc_tr/exp
+sym_foo -> loc_rc1/foo$symlink_alias
+tr2_loc/al1 -> tr_loc/trunstable
+tr2_loc/al2 -> tr_loc/trbar
+tr2_loc/al3 -> tr_loc/al2
+tr2_loc/al4 -> tr_loc/trexp
+tr2_loc/al5 -> tr2_loc/tr2exp
+tr_loc/al1 -> loc_tr/next
+tr_loc/al2 -> loc_tr/foo
+tr_loc/al3 -> loc_tr/al2
+tr_loc/al4 -> loc_tr/exp
+tr_loc/al5 -> tr_loc/trexp"
+set version_header "$modlin Versions $modlin"
+set version_list "bad/good -> bad/after
+info/foo -> info/specified
+inforc/aliases -> inforc/2.0
+inforc/bar -> inforc/2.0
+inforc/default -> inforc/2.0
+load/default -> load/all
+loc_dv2/default -> loc_dv2/1.0
+loc_dv3/default -> loc_dv3/3.0
+loc_dv4/default -> loc_dv4/2.0
+loc_dv7/default -> loc_dv7/2.0
+loc_dv9/default -> loc_dv9/1.0
+loc_dvv1/default -> loc_dvv1/1.0
+loc_rc1/foo -> loc_rc1/1.0
+loc_rc1/special -> loc_rc1/1.0
+loc_rc2/bar -> loc_rc2/1.0
+loc_rc2/blah -> loc_rc2/1.0
+loc_rc2/foo -> loc_rc2/1.0
+loc_rc3/chk -> loc_rc3/3.0
+loc_rc3/cur -> loc_rc3/2.0
+loc_rc3/default -> loc_rc3/1.0
+loc_rc3/exp -> loc_rc3/3.0
+loc_rc3/foo -> loc_rc3/0.0
+loc_rc3/new -> loc_rc3/3.0
+loc_rc3/stable -> loc_rc3/2.0
+loc_rc3/test -> loc_rc3/3.0
+loc_rc4/default -> loc_rc4/2.0
+loc_rc6/default -> loc_rc6/1.2
+loc_rc6/new -> loc_rc6/1.2
+loc_rc8/foo -> loc_rc8/.2.0
+loc_rc010/default -> loc_rc010/.1.0
+loc_rcv1/default -> loc_rcv1/1.2
+loc_rcv1/new -> loc_rcv1/1.2
+loc_tr/bar -> loc_tr/3.0
+loc_tr/cur -> loc_tr/1.0
+loc_tr/default -> loc_tr/3.0
+loc_tr/exp -> loc_tr/3.0
+loc_tr/foo -> loc_tr/3.0
+loc_tr/next -> loc_tr/2.0
+loc_tr/reg -> loc_tr/3.0
+loc_tr/stable -> loc_tr/1.0
+loc_tr/tr2bar -> loc_tr/3.0
+loc_tr/tr2exp -> loc_tr/3.0
+loc_tr/tr2unstable -> loc_tr/2.0
+loc_tr/trbar -> loc_tr/3.0
+loc_tr/trexp -> loc_tr/3.0
+loc_tr/trreg -> loc_tr/3.0
+loc_tr/trunstable -> loc_tr/2.0
+loc_tr/unstable -> loc_tr/2.0
+sym_foo/special -> sym_foo$symlink_version
+tr2_loc/default -> tr2_loc/al3
+tr2_loc/tr2bar -> tr2_loc/al2
+tr2_loc/tr2exp -> tr2_loc/al3
+tr2_loc/tr2unstable -> tr2_loc/al1
+tr2_loc/trreg -> tr2_loc/al3
+tr_loc/default -> tr_loc/al2
+tr_loc/tr2bar -> tr_loc/al2
+tr_loc/tr2exp -> tr_loc/al2
+tr_loc/tr2unstable -> tr_loc/al1
+tr_loc/trbar -> tr_loc/al2
+tr_loc/trexp -> tr_loc/al3
+tr_loc/trreg -> tr_loc/al2
+tr_loc/trunstable -> tr_loc/al1
+use/default -> use/1.0"
+testouterr_cmd_re "sh" "aliases" "OK" "$alias_header\n$alias_list\n\n$version_header\n$version_list"
+
+# restore environment
+unset env(MODULERCFILE)
+
+
+#
+#  test on path with no aliases
+#
+
+# setup environment state
+set modpath1 "$env(TESTSUITEDIR)/modulefiles.memcache"
+setenv_path_var MODULEPATH $modpath1
+
+testouterr_cmd "sh" "aliases" "OK" ""
+
+
+#
+#  Cleanup
+#
+
+# restore environment
+setenv_path_var MODULEPATH $modpath
+
+unset modpath1
+unset alias_header
+unset alias_list
+unset version_header
+unset version_list

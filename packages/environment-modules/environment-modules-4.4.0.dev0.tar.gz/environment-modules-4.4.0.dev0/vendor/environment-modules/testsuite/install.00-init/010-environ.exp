@@ -1,0 +1,109 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:       install.00-init/%M%
+#   Revision:       %I%
+#   First Edition:  2017/05/06
+#   Last Mod.:      %U%, %G%
+#
+#   Authors:        Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:    initialization of the shell environment
+#   Command:
+#   Sub-Command:
+#
+#   Comment:    %C{
+#           First time initialization: Remove everything from
+#           environment, that depends on the module package.
+#   }C%
+#
+##############################################################################
+
+if {$verbose > 0} {
+   send_user "\tInitializing a clean environment ...\n"
+}
+
+catch {unset env(MODULEPATH)}
+catch {unset env(LOADEDMODULES)}
+catch {unset env(_LMFILES_)}
+
+catch {unset env(MODULES_LMCONFLICT)}
+catch {unset env(MODULES_LMPREREQ)}
+catch {unset env(MODULES_LMNOTUASKED)}
+catch {unset env(MODULES_LMALTNAME)}
+
+catch {unset env(MODULES_RUN_QUARANTINE)}
+
+foreach var [array names env] {
+   if {[string match "*_modshare" $var] \
+      || [string match "*_modquar" $var] \
+      || [string match "MODULES_RUNENV_*" $var]} {
+      catch {unset env($var)}
+   }
+}
+
+if {[info exists install_quarlist]} {
+   foreach var $install_quarlist {
+      catch {unset env($var)}
+   }
+}
+
+# clean any automated handling mode configuration
+catch {unset env(MODULES_AUTO_HANDLING)}
+
+# clean any in depth mode configuration
+catch {unset env(MODULES_AVAIL_INDEPTH)}
+
+# clean any unload match order config
+catch {unset env(MODULES_UNLOAD_MATCH_ORDER)}
+
+# clean any implicit default config
+catch {unset env(MODULES_IMPLICIT_DEFAULT)}
+
+# clean any search match config
+catch {unset env(MODULES_SEARCH_MATCH)}
+
+# clean any set shell startup config
+catch {unset env(MODULES_SET_SHELL_STARTUP)}
+
+# clean any pager configuration
+catch {unset env(LESS)}
+catch {unset env(PAGER)}
+catch {unset env(MODULES_PAGER)}
+
+# ensure tests are run with a regular default verbosity level
+set env(MODULES_VERBOSITY) normal
+
+# ensure tests are run with extended_default disabled by default
+set env(MODULES_EXTENDED_DEFAULT) 0
+
+# clean any advanced version spec config
+catch {unset env(MODULES_ADVANCED_VERSION_SPEC)}
+
+# clean any additional siteconfig set
+catch {unset env(MODULES_SITECONFIG)}
+
+# clean any color configuration
+catch {unset env(MODULES_COLORS)}
+catch {unset env(MODULES_TERM_BACKGROUND)}
+catch {unset env(CLICOLOR)}
+catch {unset env(CLICOLOR_FORCE)}
+# ensure colored output is disabled by default
+set env(MODULES_COLOR) never
+
+# clean any versioning configuration
+catch {unset env(MODULE_VERSION)}
+catch {unset env(MODULE_VERSION_STACK)}
+
+catch {unset env(ENV)}
+catch {unset env(BASH_ENV)}
+catch {unset env(BASH_FUNC_module\(\))}
+catch {unset env(BASH_FUNC_module%%)}
+catch {unset env(BASH_FUNC__module_raw\(\))}
+catch {unset env(BASH_FUNC__module_raw%%)}
+
+# setup basic locale for tests
+set env(LANG) "C"
+
+# vim:set tabstop=3 shiftwidth=3 expandtab autoindent:

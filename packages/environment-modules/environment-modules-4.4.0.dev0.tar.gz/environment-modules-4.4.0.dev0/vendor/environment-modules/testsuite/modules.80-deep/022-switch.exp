@@ -1,0 +1,259 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.80-deep/%M%
+#   Revision:		%I%
+#   First Edition:	2017/08/24
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        switch
+#   Modulefiles:	moddef, plain
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test switch action on deep modulefiles
+#		}C%
+#
+##############################################################################
+
+set module_1 "moddef/dir2/2.0"
+set modulefile_1 "$modpath/$module_1"
+set module_2 "plain/dir2/1.0"
+set modulefile_2 "$modpath/$module_2"
+set module_3 "plain/dir1/2.0"
+set modulefile_3 "$modpath/$module_3"
+set module_4 "plain/dir2/2.0"
+set modulefile_4 "$modpath/$module_4"
+set module_5 "modvirt/dir1/1.0"
+set module_5_alt $ovirt1alt
+set modulefile_5 "$modpath/modvirt/.common"
+set module_6 "modvirt/dir2/2.0"
+set module_6_alt $ovirt2alt
+set modulefile_6 "$modulefile_5"
+set module_7 "modvirt/3.0"
+set module_7_alt $ovirt3alt
+set modulefile_7 "$modulefile_5"
+set module_8 "modvirt/dir0/sub1/4.0"
+set modulefile_8 "$modulefile_5"
+set module_9 "modvirt/dir0/sub1/6.0"
+set modulefile_9 "$modulefile_5"
+
+
+#
+#  The tests
+#
+
+# set up the environment
+setenv_loaded_module $module_1 $modulefile_1
+
+set ans [list]
+lappend ans [list set TEST $module_2]
+lappend ans [list setpath LOADEDMODULES "$module_1:$module_2"]
+lappend ans [list setpath _LMFILES_ "$modulefile_1:$modulefile_2"]
+lappend ans [list setpath MODULES_LMCONFLICT "$module_2&plain/dir2"]
+
+# switch, the one argument form with an already loaded module that does not
+# share same root, but has a middle element equal to the name to switch
+testouterr_cmd_re "sh" "swap $module_2" $ans ""
+
+
+# set up the environment
+setenv_loaded_module [list $module_2 $module_3] [list $modulefile_2 $modulefile_3]
+
+# switch using partial name
+set locate_msg "$err_path'pl'"
+testouterr_cmd "sh" "swap pl" "ERR" [msg_switch pl pl $locate_msg]
+
+
+# if $module_3 were really loaded this should not be possible due to its
+# defined conflict but this test does not aim to that
+set ans [list]
+lappend ans [list set TEST $module_4]
+lappend ans [list setpath LOADEDMODULES "$module_3:$module_4"]
+lappend ans [list setpath _LMFILES_ "$modulefile_3:$modulefile_4"]
+lappend ans [list setpath MODULES_LMCONFLICT "$module_4&plain/dir2"]
+
+# two modules already loaded sharing same root than module to swap, closest
+# should be returned
+testouterr_cmd_re "sh" "swap $module_4" $ans ""
+
+
+# set up the environment
+setenv_loaded_module $module_3 $modulefile_3
+
+set ans [list]
+lappend ans [list set TEST $module_4]
+lappend ans [list setpath LOADEDMODULES "$module_3:$module_4"]
+lappend ans [list setpath _LMFILES_ "$modulefile_3:$modulefile_4"]
+lappend ans [list setpath MODULES_LMCONFLICT "$module_4&plain/dir2"]
+
+# one module already loaded sharing same root than module to swap, a module to
+# unload is specified on command line should unload it and not closest, so here
+# nothing is unloaded
+testouterr_cmd_re "sh" "swap $module_4 $module_4" $ans ""
+
+
+# set up the environment
+setenv_loaded_module [list $module_3 $module_2] [list $modulefile_3 $modulefile_2]
+
+set ans [list]
+lappend ans [list set TEST $module_4]
+lappend ans [list setpath LOADEDMODULES "$module_3:$module_4"]
+lappend ans [list setpath _LMFILES_ "$modulefile_3:$modulefile_4"]
+lappend ans [list setpath MODULES_LMCONFLICT "$module_4&plain/dir2"]
+
+set ansnodefault [list]
+lappend ansnodefault [list unset TEST]
+lappend ansnodefault [list setpath LOADEDMODULES "$module_3"]
+lappend ansnodefault [list setpath _LMFILES_ "$modulefile_3"]
+lappend ansnodefault [list ERR]
+
+# two modules already loaded sharing same root than module to swap and equality
+# in term of distance to this swap name, lastly loaded should be swapped-out
+testouterr_cmd_re "sh" "swap plain" [if_implicitdefault $ans $ansnodefault] [if_implicitdefault {} [msg_switch $module_2 plain "$err_nodefault'plain'"]]
+
+
+# set up the environment
+set env(TEST) $module_5
+setenv_loaded_module [list $module_6 $module_5] [list $modulefile_6 $modulefile_5]
+setenv_path_var MODULES_LMALTNAME $module_6_alt $module_5_alt
+
+set ans [list]
+lappend ans [list set TEST $module_6]
+lappend ans [list setpath LOADEDMODULES "$module_5:$module_6"]
+lappend ans [list setpath _LMFILES_ "$modulefile_5:$modulefile_6"]
+lappend ans [list setpath MODULES_LMALTNAME "$module_5_alt:$module_6_alt"]
+
+testouterr_cmd_re "sh" "swap $module_6" $ans ""
+
+set ans [list]
+lappend ans [list set TEST $module_7]
+lappend ans [list setpath LOADEDMODULES "$module_6:$module_7"]
+lappend ans [list setpath _LMFILES_ "$modulefile_6:$modulefile_7"]
+lappend ans [list setpath MODULES_LMALTNAME "$module_6_alt:$module_7_alt"]
+set ansnodefault [list]
+lappend ansnodefault [list unset TEST]
+lappend ansnodefault [list setpath LOADEDMODULES "$module_6"]
+lappend ansnodefault [list setpath _LMFILES_ "$modulefile_6"]
+lappend ansnodefault [list setpath MODULES_LMALTNAME "$module_6_alt"]
+lappend ansnodefault [list ERR]
+testouterr_cmd_re "sh" "swap modvirt" [if_implicitdefault $ans $ansnodefault] [if_implicitdefault {} [msg_switch $module_5 modvirt "$err_nodefault'modvirt'"]]
+testouterr_cmd_re "sh" "swap $module_7" $ans ""
+
+set ans [list]
+lappend ans [list unset TEST]
+lappend ans [list setpath LOADEDMODULES "$module_6"]
+lappend ans [list setpath _LMFILES_ "$modulefile_6"]
+lappend ans [list setpath MODULES_LMALTNAME $module_6_alt]
+set ansnodefault [list]
+lappend ansnodefault [list unset TEST]
+lappend ansnodefault [list setpath LOADEDMODULES "$module_6"]
+lappend ansnodefault [list setpath _LMFILES_ "$modulefile_6"]
+lappend ansnodefault [list setpath MODULES_LMALTNAME "$module_6_alt"]
+lappend ansnodefault [list ERR]
+testouterr_cmd_re "sh" "swap modvirt/dir1" [if_implicitdefault $ans $ansnodefault] [if_implicitdefault {} [msg_switch $module_5 modvirt/dir1 "$err_nodefault'modvirt/dir1'"]]
+
+set ans [list]
+lappend ans [list set TEST $module_7]
+lappend ans [list setpath LOADEDMODULES "$module_5:$module_7"]
+lappend ans [list setpath _LMFILES_ "$modulefile_5:$modulefile_7"]
+lappend ans [list setpath MODULES_LMALTNAME "$module_5_alt:$module_7_alt"]
+set ansnodefault [list]
+lappend ansnodefault [list unset TEST]
+lappend ansnodefault [list setpath LOADEDMODULES "$module_5"]
+lappend ansnodefault [list setpath _LMFILES_ "$modulefile_5"]
+lappend ansnodefault [list setpath MODULES_LMALTNAME "$module_5_alt"]
+lappend ansnodefault [list ERR]
+testouterr_cmd_re "sh" "swap modvirt/dir2" [if_implicitdefault $ans $ansnodefault] [if_implicitdefault {} [msg_switch $module_6 modvirt/dir2 "$err_nodefault'modvirt/dir2'"]]
+
+
+# set up the environment
+set env(TEST) $module_6
+setenv_loaded_module [list $module_5 $module_6] [list $modulefile_5 $modulefile_6]
+setenv_path_var MODULES_LMALTNAME $module_5_alt $module_6_alt
+
+set ans [list]
+lappend ans [list set TEST $module_6]
+lappend ans [list setpath LOADEDMODULES "$module_5:$module_6"]
+lappend ans [list setpath _LMFILES_ "$modulefile_5:$modulefile_6"]
+lappend ans [list setpath MODULES_LMALTNAME $module_5_alt:$module_6_alt]
+set ansnodefault [list]
+lappend ansnodefault [list unset TEST]
+lappend ansnodefault [list setpath LOADEDMODULES "$module_5"]
+lappend ansnodefault [list setpath _LMFILES_ "$modulefile_5"]
+lappend ansnodefault [list setpath MODULES_LMALTNAME "$module_5_alt"]
+lappend ansnodefault [list ERR]
+testouterr_cmd_re "sh" "swap modvirt/dir1" [if_implicitdefault $ans $ansnodefault] [if_implicitdefault {} [msg_switch $module_6 modvirt/dir1 "$err_nodefault'modvirt/dir1'"]]
+
+set ans [list]
+lappend ans [list set TEST $module_7]
+lappend ans [list setpath LOADEDMODULES "$module_5:$module_7"]
+lappend ans [list setpath _LMFILES_ "$modulefile_5:$modulefile_7"]
+lappend ans [list setpath MODULES_LMALTNAME "$module_5_alt:$module_7_alt"]
+set ansnodefault [list]
+lappend ansnodefault [list unset TEST]
+lappend ansnodefault [list setpath LOADEDMODULES "$module_5"]
+lappend ansnodefault [list setpath _LMFILES_ "$modulefile_5"]
+lappend ansnodefault [list setpath MODULES_LMALTNAME "$module_5_alt"]
+lappend ansnodefault [list ERR]
+testouterr_cmd_re "sh" "swap modvirt/dir2" [if_implicitdefault $ans $ansnodefault] [if_implicitdefault {} [msg_switch $module_6 modvirt/dir2 "$err_nodefault'modvirt/dir2'"]]
+
+
+# set up the environment
+set env(TEST) $module_8
+setenv_loaded_module $module_8 $modulefile_8
+unsetenv_path_var MODULES_LMALTNAME
+
+set ans [list]
+lappend ans [list set TEST $module_9]
+lappend ans [list setpath LOADEDMODULES "$module_9"]
+lappend ans [list setpath _LMFILES_ "$modulefile_9"]
+set ansnodefault [list]
+lappend ansnodefault [list unset TEST]
+lappend ansnodefault [list unsetpath LOADEDMODULES]
+lappend ansnodefault [list unsetpath _LMFILES_]
+lappend ansnodefault [list ERR]
+
+# FIXME
+testouterr_cmd_re "sh" "swap modvirt/dir0" [if_implicitdefault $ans $ansnodefault] [if_implicitdefault {} [msg_switch $module_8 modvirt/dir0 "$err_nodefault'modvirt/dir0'"]]
+
+# FIXME
+testouterr_cmd_re "sh" "swap modvirt/dir0/sub1" [if_implicitdefault $ans $ansnodefault] [if_implicitdefault {} [msg_switch $module_8 modvirt/dir0/sub1 "$err_nodefault'modvirt/dir0/sub1'"]]
+
+
+#
+#  Cleanup
+#
+
+unset env(TEST)
+unsetenv_loaded_module
+
+unset ans
+unset ansnodefault
+unset locate_msg
+
+unset module_1
+unset modulefile_1
+unset module_2
+unset modulefile_2
+unset module_3
+unset modulefile_3
+unset module_4
+unset modulefile_4
+unset module_5
+unset module_5_alt
+unset modulefile_5
+unset module_6
+unset module_6_alt
+unset modulefile_6
+unset module_7
+unset module_7_alt
+unset modulefile_7
+unset module_8
+unset modulefile_8
+unset module_9
+unset modulefile_9

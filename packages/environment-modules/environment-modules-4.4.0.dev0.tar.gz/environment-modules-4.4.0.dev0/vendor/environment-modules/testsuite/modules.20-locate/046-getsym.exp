@@ -1,0 +1,154 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	loc_sym/getvers1, loc_sym/getvers2, loc_sym/getvers3
+#   Modulefiles:	loc_sym/getvers4, loc_sym/getvers5, loc_sym/getvers6
+#   Modulefiles:	loc_sym/getvers7, loc_sym/getvers8, loc_sym/getvers9
+#   Modulefiles:	loc_sym/getvers10
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check retrieving the physical module version from
+#			a given symbolic one
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module_1 "loc_sym/getvers1"
+set modulefile_1 "$modpath/$module_1"
+
+set module_2 "loc_sym/getvers2"
+set modulefile_2 "$modpath/$module_2"
+
+set module_3 "loc_sym/getvers3"
+set modulefile_3 "$modpath/$module_3"
+
+set module_4 "loc_sym/getvers4"
+set modulefile_4 "$modpath/$module_4"
+
+set module_5 "loc_sym/getvers5"
+set modulefile_5 "$modpath/$module_5"
+
+set module_6 "loc_sym/getvers6"
+set modulefile_6 "$modpath/$module_6"
+
+set module_7 "loc_sym/getvers7"
+set modulefile_7 "$modpath/$module_7"
+
+set module_8 "loc_sym/getvers8"
+set modulefile_8 "$modpath/$module_8"
+
+set module_9 "loc_sym/getvers9"
+set modulefile_9 "$modpath/$module_9"
+
+set module_10 "loc_sym/getvers10"
+set modulefile_10 "$modpath/$module_10"
+
+#
+#  Only checked for the csh
+#
+
+lappend ans [list set testsuite "loc_sym/1.0"]
+lappend ans [list setpath LOADEDMODULES $module_1]
+lappend ans [list setpath _LMFILES_ $modulefile_1]
+test_cmd "csh" "load $module_1" $ans
+
+set ans [list]
+lappend ans [list set testsuite "loc_sym/1.0"]
+lappend ans [list setpath LOADEDMODULES $module_2]
+lappend ans [list setpath _LMFILES_ $modulefile_2]
+test_cmd "csh" "load $module_2" $ans
+
+set ans [list]
+lappend ans [list set testsuite "loc_sym/1.0"]
+lappend ans [list setpath LOADEDMODULES $module_3]
+lappend ans [list setpath _LMFILES_ $modulefile_3]
+test_cmd "csh" "load $module_3" $ans
+
+set ans [list]
+lappend ans [list set testsuite "loc_sym/2.0"]
+lappend ans [list setpath LOADEDMODULES $module_4]
+lappend ans [list setpath _LMFILES_ $modulefile_4]
+test_cmd "csh" "load $module_4" $ans
+
+set ans [list]
+lappend ans [list set testsuite "loc_sym/1.0"]
+lappend ans [list setpath LOADEDMODULES $module_5]
+lappend ans [list setpath _LMFILES_ $modulefile_5]
+test_cmd "csh" "load $module_5" $ans
+
+set ans [list]
+lappend ans [list set testsuite "loc_sym/1.0"]
+lappend ans [list setpath LOADEDMODULES $module_6]
+lappend ans [list setpath _LMFILES_ $modulefile_6]
+test_cmd "csh" "load $module_6" $ans
+
+set ans [list]
+lappend ans [list set testsuite "loc_sym/1.0"]
+lappend ans [list setpath LOADEDMODULES $module_7]
+lappend ans [list setpath _LMFILES_ $modulefile_7]
+test_cmd "csh" "load $module_7" $ans
+
+set ans [list]
+lappend ans [list set testsuite "loc_sym/10"]
+lappend ans [list setpath LOADEDMODULES $module_9]
+lappend ans [list setpath _LMFILES_ $modulefile_9]
+test_cmd "csh" "load $module_9" $ans
+
+set ans [list]
+lappend ans [list set testsuite "loc_sym/10"]
+lappend ans [list setpath LOADEDMODULES $module_10]
+lappend ans [list setpath _LMFILES_ $modulefile_10]
+test_cmd "csh" "load $module_10" $ans
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefile_1
+unset module_1
+
+unset modulefile_2
+unset module_2
+
+unset modulefile_3
+unset module_3
+
+unset modulefile_4
+unset module_4
+
+unset modulefile_5
+unset module_5
+
+unset modulefile_6
+unset module_6
+
+unset modulefile_7
+unset module_7
+
+unset modulefile_8
+unset module_8
+
+unset modulefile_9
+unset module_9
+
+unset modulefile_10
+unset module_10

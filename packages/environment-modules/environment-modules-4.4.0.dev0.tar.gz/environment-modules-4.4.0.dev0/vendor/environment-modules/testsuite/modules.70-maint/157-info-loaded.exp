@@ -1,0 +1,100 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	2017/11/30
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        info-loaded
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test 'info-loaded' module command
+#		}C%
+#
+##############################################################################
+
+set module "info"
+set module1 "$module/loaded"
+set modulefile1 "$modpath/$module1"
+set module2 "$module/name"
+set modulefile2 "$modpath/$module2"
+
+
+#
+#  The tests
+#
+
+lappend ans [list text ""]
+
+testouterr_cmd "ALL" "info-loaded $module" $ans ""
+
+
+setenv_loaded_module $module1 [list]
+
+set tserr "$err_loinconsist\n  LOADEDMODULES=$module1\n  _LMFILES_="
+testouterr_cmd "sh" "info-loaded foo" ERR $tserr
+testouterr_cmd "sh" "info-loaded $module/foo" ERR $tserr
+testouterr_cmd "sh" "info-loaded foo/$module" ERR $tserr
+
+set ans [list]
+lappend ans [list text $module1]
+
+testouterr_cmd "sh" "info-loaded $module" ERR $tserr
+testouterr_cmd "sh" "info-loaded $module1" ERR $tserr
+
+
+setenv_loaded_module [list $module1 $module2] [list]
+
+set ans [list]
+lappend ans [list text ""]
+
+set tserr "$err_loinconsist\n  LOADEDMODULES=$module1 $module2\n  _LMFILES_="
+testouterr_cmd "sh" "info-loaded foo" ERR $tserr
+testouterr_cmd "sh" "info-loaded $module/foo" ERR $tserr
+testouterr_cmd "sh" "info-loaded foo/$module" ERR $tserr
+
+set ans [list]
+lappend ans [list text $module1]
+
+testouterr_cmd "sh" "info-loaded $module1" ERR $tserr
+
+set ans [list]
+lappend ans [list text [list $module1 $module2]]
+
+testouterr_cmd "ALL" "info-loaded $module" ERR $tserr
+
+
+# test when loaded environment is inconsistent
+setenv_loaded_module [list foo bar] "/path/to/foo"
+
+set ans [list]
+lappend ans [list text "foo"]
+
+# error raised only if correlation between LOADEDMODULES and _LMFILES_ is attempted
+# but correlation is attempted most of the time with alternative names match
+set tserr "$err_loinconsist\n  LOADEDMODULES=foo bar\n  _LMFILES_=/path/to/foo"
+testouterr_cmd "sh" "info-loaded foo" ERR $tserr
+testouterr_cmd "sh" "info-loaded /foo" ERR $tserr
+
+
+#
+#  Cleanup
+#
+
+# Clean up the environment
+unsetenv_loaded_module
+
+unset tserr
+unset ans
+unset module
+unset module1
+unset modulefile1
+unset module2
+unset modulefile2

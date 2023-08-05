@@ -1,0 +1,62 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2012/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	info/type
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'info type' module subcommand for all
+#			allowed shell types.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set modulex "info/type"
+set modulefilex "$modpath/$modulex"
+
+#
+# Test which version of the modulecmd executable
+#
+
+#
+# set up the environment
+#
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list set testsuite Tcl]
+lappend ans [list setpath LOADEDMODULES $modulex]
+lappend ans [list setpath _LMFILES_ $modulefilex]
+
+#
+#  The tests
+#
+
+test_cmd "ALL" "load $modulex" $ans
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefilex
+unset modulex

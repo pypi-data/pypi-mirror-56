@@ -1,0 +1,40 @@
+#%Module1.0
+
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		tr2mod/%M%
+#   Revision:		%I%
+#   First Edition:	2017/08/16
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite modulefile
+#   Command:        module-version, module-alias
+#   Sub-Command:
+#
+#   Invocation:
+#   Result:	%R{
+#		}R%
+#   Comment:	%C{
+#           Test the correct resolution of module aliases and symbolic
+#           versions set in a transitive manner on different deep modules
+#		}C%
+#
+##############################################################################
+
+# alias set on distant symbol of distant deep alias of distant symbol
+module-alias tr2mod/al1 trmod/trunstable
+
+# symbol set on alias of distant symbol of distant deep alias of distant symbol
+module-version tr2mod/al1 tr2unstable
+
+# see next definitions in dir3/.modulerc
+
+# alias set on distant deep directory composed of distant alias
+module-alias tr2mod/al5 trmod/dir3
+
+# symbol set on alias of distant deep directory composed of distant alias
+module-version /al5 tr2fld

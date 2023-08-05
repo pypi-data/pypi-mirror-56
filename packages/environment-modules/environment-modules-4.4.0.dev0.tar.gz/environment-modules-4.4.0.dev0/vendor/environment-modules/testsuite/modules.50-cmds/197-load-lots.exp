@@ -1,0 +1,131 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2012/12/17
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, <rk@owen.sj.ca.us>
+#
+#   Description:	recursive load/unload test - lots of modulefiles
+#   Command:		load
+#   Modulefiles:	recurs/modA
+#   			recurs/modA
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Recursive load a lot of modulefiles
+#		}C%
+#
+##############################################################################
+set tm00  "load/00"
+set tp00  "$modpath/$tm00"
+set tmall "$tm00"
+set tpall "$tp00"
+set env(mload) "foobar"
+lappend tmpreall "load/all"
+
+for {set t 10} {$t <= 30} {incr t} {
+    set m "load/$t"
+	set p "$modpath/$m"
+
+	append tmall ":$m"
+	append tpall ":$p"
+    lappend tmnuaall $m
+    lappend tmpreall $m
+}
+
+set mall "load/all"
+set pall "$modpath/$mall"
+
+append tmall ":$mall"
+append tpall ":$pall"
+
+#
+# set up a limited environment
+#
+setenv_loaded_module $tm00 $tp00
+
+#
+#  load
+#  For the different shells ...
+#
+set ans [list]
+lappend ans [list unset mload]
+lappend ans [list setpath LOADEDMODULES $tmall]
+lappend ans [list setpath _LMFILES_ $tpall]
+lappend ans [list setpath MODULES_LMNOTUASKED [join $tmnuaall ":"]]
+for {set t 10} {$t <= 30} {incr t} {
+    lappend ans [list set "t$t" "t$t"]
+}
+lappend ans [list setpath MODULES_LMALTNAME "$mall&load/default&load"]
+lappend ans [list setpath MODULES_LMPREREQ [join $tmpreall &]]
+
+#
+#  The load tests
+#
+test_cmd_re "ALL" "load $mall" $ans
+
+#
+# set-up a loaded environment
+#
+setenv_loaded_module [split $tmall ":"] [split $tpall ":"] $tmnuaall
+setenv_path_var MODULES_LMPREREQ [join $tmpreall &]
+setenv_path_var MODULES_LMALTNAME "$mall&load/default&load"
+
+
+# interpretation is done sequentially not cascaded when auto_handling is enabled (change result order)
+# also for this use case modulefiles are not unloaded in same order (based on loaded order for
+# auto_handling), which lead to different result if unloading modules compete over same variable to set
+if {$install_autohandling eq {y}} {
+set ans [list]
+lappend ans [list setpath LOADEDMODULES $tm00]
+lappend ans [list setpath _LMFILES_ $tp00]
+lappend ans [list unsetpath MODULES_LMNOTUASKED]
+lappend ans [list unsetpath MODULES_LMALTNAME]
+lappend ans [list unsetpath MODULES_LMPREREQ]
+lappend ans [list set mload t10]
+for {set t 30} {$t >= 10} {incr t -1} {
+    lappend ans [list unset "t$t"]
+}
+} else {
+set ans [list]
+lappend ans [list set mload t30]
+lappend ans [list setpath LOADEDMODULES $tm00]
+lappend ans [list setpath _LMFILES_ $tp00]
+lappend ans [list unsetpath MODULES_LMNOTUASKED]
+for {set t 10} {$t <= 30} {incr t} {
+    lappend ans [list unset "t$t"]
+}
+lappend ans [list unsetpath MODULES_LMALTNAME]
+lappend ans [list unsetpath MODULES_LMPREREQ]
+}
+
+#
+#  The unload tests
+#
+test_cmd_re "ALL" "unload $mall" $ans
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMALTNAME
+unsetenv_path_var MODULES_LMPREREQ
+
+unset ans
+
+unset tm00
+unset tp00
+unset tmall
+unset tpall
+unset tmnuaall
+unset tmpreall
+unset env(mload)
+
+unset t
+unset m
+unset p

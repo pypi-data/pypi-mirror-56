@@ -1,0 +1,342 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.20-locate/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	loc_sym/version1, loc_sym/version4, loc_sym/version3
+#   Modulefiles:	loc_sym/version4, loc_sym/version5, loc_sym/version6
+#   Modulefiles:	loc_sym/version7, loc_sym/version8, loc_sym/version9
+#   Modulefiles:	loc_sym/version10, loc_sym/version11, loc_sym/version12
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check the "module-version" command
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module_1 "loc_sym/version1"
+set modulefile_1 "$modpath/$module_1"
+
+set module_2 "loc_sym/version2"
+set modulefile_2 "$modpath/$module_2"
+
+set module_3 "loc_sym/version3"
+set modulefile_3 "$modpath/$module_3"
+
+set module_4 "loc_sym/version4"
+set modulefile_4 "$modpath/$module_4"
+
+set module_5 "loc_sym/version5"
+set modulefile_5 "$modpath/$module_5"
+
+set module_6 "loc_sym/version6"
+set modulefile_6 "$modpath/$module_6"
+
+set module_7 "loc_sym/version7"
+set modulefile_7 "$modpath/$module_7"
+
+set module_8 "loc_sym/version8"
+set modulefile_8 "$modpath/$module_8"
+
+set module_9 "loc_sym/version9"
+set modulefile_9 "$modpath/$module_9"
+
+set module_10 "loc_sym/version10"
+set modulefile_10 "$modpath/$module_10"
+
+set module_11 "loc_sym/version11"
+set modulefile_11 "$modpath/$module_11"
+
+set module_12 "loc_sym/version12"
+set modulefile_12 "$modpath/$module_12"
+
+set module_15 "loc_sym/version15"
+set modulefile_15 "$modpath/$module_15"
+
+set module_16 "loc_sym/version16"
+set modulefile_16 "$modpath/$module_16"
+
+set module_17 "loc_sym/version17"
+set modulefile_17 "$modpath/$module_17"
+
+set module_18 "loc_sym/version18"
+set modulefile_18 "$modpath/$module_18"
+
+set module_19 "loc_sym/version19"
+set modulefile_19 "$modpath/$module_19"
+
+set module_20 "loc_sym/version20"
+set modulefile_20 "$modpath/$module_20"
+
+set module_21 "loc_sym/version21"
+set modulefile_21 "$modpath/$module_21"
+
+set module_22 "loc_sym/version22"
+set modulefile_22 "$modpath/$module_22"
+
+set module_23 "loc_sym/version23"
+set modulefile_23 "$modpath/$module_23"
+
+set module_24 "loc_sym/version24"
+set modulefile_24 "$modpath/$module_24"
+
+set module_25 "loc_sym/version25"
+set modulefile_25 "$modpath/$module_25"
+
+set module_26 "loc_sym/version26"
+set modulefile_26 "$modpath/$module_26"
+
+#
+#  Only checked for the csh
+#
+
+lappend ans [list set testsuite "bar:blah:foo"]
+lappend ans [list setpath LOADEDMODULES $module_1]
+lappend ans [list setpath _LMFILES_ $modulefile_1]
+test_cmd "csh" "load $module_1" $ans
+
+set ans [list]
+lappend ans [list set testsuite "bar:blah:foo"]
+lappend ans [list setpath LOADEDMODULES $module_2]
+lappend ans [list setpath _LMFILES_ $modulefile_2]
+test_cmd "csh" "load $module_2" $ans
+
+set ans [list]
+lappend ans [list set testsuite "bar:blah:foo"]
+lappend ans [list setpath LOADEDMODULES $module_3]
+lappend ans [list setpath _LMFILES_ $modulefile_3]
+test_cmd "csh" "load $module_3" $ans
+
+set ans [list]
+lappend ans [list set testsuite "bar:blah:foo"]
+lappend ans [list setpath LOADEDMODULES $module_4]
+lappend ans [list setpath _LMFILES_ $modulefile_4]
+test_cmd "csh" "load $module_4" $ans
+
+set ans [list]
+lappend ans [list set testsuite "bar:blah:foo"]
+lappend ans [list setpath LOADEDMODULES $module_5]
+lappend ans [list setpath _LMFILES_ $modulefile_5]
+test_cmd "csh" "load $module_5" $ans
+
+set ans [list]
+lappend ans [list set testsuite "bar:blah:foo"]
+lappend ans [list setpath LOADEDMODULES $module_6]
+lappend ans [list setpath _LMFILES_ $modulefile_6]
+test_cmd "csh" "load $module_6" $ans
+
+set ans [list]
+lappend ans [list set testsuite "bar:blah:cur:foo:new"]
+lappend ans [list setpath LOADEDMODULES $module_7]
+lappend ans [list setpath _LMFILES_ $modulefile_7]
+test_cmd "csh" "load $module_7" $ans
+
+set ans [list]
+lappend ans [list set testsuite "bar:blah:cur:foo"]
+lappend ans [list setpath LOADEDMODULES $module_8]
+lappend ans [list setpath _LMFILES_ $modulefile_8]
+test_cmd "csh" "load $module_8" $ans
+
+set ans [list]
+lappend ans [list set testsuite "2.0:abc:bar:best:blah:cur:foo:xyz"]
+lappend ans [list setpath LOADEDMODULES $module_9]
+lappend ans [list setpath _LMFILES_ $modulefile_9]
+test_cmd "csh" "load $module_9" $ans
+
+set ans [list]
+lappend ans [list set testsuite "2.0:abc:bar:best:blah:cur:default:foo:xyz"]
+lappend ans [list setpath LOADEDMODULES $module_10]
+lappend ans [list setpath _LMFILES_ $modulefile_10]
+test_cmd "csh" "load $module_10" $ans
+
+set ans [list]
+lappend ans [list set testsuite "bar:blah:foo"]
+lappend ans [list setpath LOADEDMODULES $module_11]
+lappend ans [list setpath _LMFILES_ $modulefile_11]
+test_cmd "csh" "load $module_11" $ans
+
+set ans [list]
+lappend ans [list set testsuite "chk:new"]
+lappend ans [list setpath LOADEDMODULES $module_12]
+lappend ans [list setpath _LMFILES_ $modulefile_12]
+test_cmd "csh" "load $module_12" $ans
+
+set ans [list]
+lappend ans [list set ts1 "bar:foo"]
+lappend ans [list set ts2 "bar:foo"]
+lappend ans [list set ts3 "bar:default:foo"]
+lappend ans [list setpath LOADEDMODULES $module_15]
+lappend ans [list setpath _LMFILES_ $modulefile_15]
+test_cmd "csh" "load $module_15" $ans
+
+set ans [list]
+lappend ans [list set ts1 "bar:foo"]
+lappend ans [list set ts2 "bar:foo"]
+lappend ans [list set ts3 "bar:default:foo"]
+lappend ans [list setpath LOADEDMODULES $module_16]
+lappend ans [list setpath _LMFILES_ $modulefile_16]
+test_cmd "csh" "load $module_16" $ans
+
+set ans [list]
+lappend ans [list set ts1 "abc:bar:foo:xyz"]
+lappend ans [list set ts2 "abc:bar:foo:xyz"]
+lappend ans [list set ts3 "abc:bar:default:foo:xyz"]
+lappend ans [list setpath LOADEDMODULES $module_17]
+lappend ans [list setpath _LMFILES_ $modulefile_17]
+test_cmd "csh" "load $module_17" $ans
+
+set ans [list]
+lappend ans [list set ts1 "abc:bar:foo:xyz"]
+lappend ans [list set ts2 "abc:bar:foo:xyz"]
+lappend ans [list set ts3 "abc:bar:default:foo:xyz"]
+lappend ans [list setpath LOADEDMODULES $module_18]
+lappend ans [list setpath _LMFILES_ $modulefile_18]
+test_cmd "csh" "load $module_18" $ans
+
+set ans [list]
+lappend ans [list set ts1 "abc:bar"]
+lappend ans [list set ts2 "abc"]
+lappend ans [list set ts3 "abc:bar:foo"]
+lappend ans [list setpath LOADEDMODULES $module_19]
+lappend ans [list setpath _LMFILES_ $modulefile_19]
+test_cmd "csh" "load $module_19" $ans
+
+set ans [list]
+lappend ans [list set ts1 "abc:bar"]
+lappend ans [list set ts2 "abc"]
+lappend ans [list set ts3 "abc:bar:foo"]
+lappend ans [list setpath LOADEDMODULES $module_20]
+lappend ans [list setpath _LMFILES_ $modulefile_20]
+test_cmd "csh" "load $module_20" $ans
+
+set ans [list]
+lappend ans [list set ts1 "bar"]
+lappend ans [list setpath LOADEDMODULES $module_21]
+lappend ans [list setpath _LMFILES_ $modulefile_21]
+test_cmd "csh" "load $module_21" $ans
+
+set ans [list]
+lappend ans [list set ts1 "default"]
+lappend ans [list setpath LOADEDMODULES $module_22]
+lappend ans [list setpath _LMFILES_ $modulefile_22]
+test_cmd "csh" "load $module_22" $ans
+
+set ans [list]
+lappend ans [list set ts1 "abc:def"]
+lappend ans [list set ts2 "tuv:xyz"]
+lappend ans [list setpath LOADEDMODULES $module_23]
+lappend ans [list setpath _LMFILES_ $modulefile_23]
+test_cmd "csh" "load $module_23" $ans
+
+# working on virtual modules
+set ans [list]
+lappend ans [list set testsuite "bar:blah:foo"]
+lappend ans [list setpath LOADEDMODULES $module_24]
+lappend ans [list setpath _LMFILES_ $modulefile_24]
+test_cmd "csh" "load $module_24" $ans
+
+set ans [list]
+lappend ans [list set testsuite "2.0:abc:bar:best:blah:cur:default:foo:xyz"]
+lappend ans [list setpath LOADEDMODULES $module_25]
+lappend ans [list setpath _LMFILES_ $modulefile_25]
+test_cmd "csh" "load $module_25" $ans
+
+set ans [list]
+lappend ans [list set ts1 "abc:def"]
+lappend ans [list set ts2 "tuv:xyz"]
+lappend ans [list setpath LOADEDMODULES $module_26]
+lappend ans [list setpath _LMFILES_ $modulefile_26]
+test_cmd "csh" "load $module_26" $ans
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefile_1
+unset module_1
+
+unset modulefile_2
+unset module_2
+
+unset modulefile_3
+unset module_3
+
+unset modulefile_4
+unset module_4
+
+unset modulefile_5
+unset module_5
+
+unset modulefile_6
+unset module_6
+
+unset modulefile_7
+unset module_7
+
+unset modulefile_8
+unset module_8
+
+unset modulefile_9
+unset module_9
+
+unset modulefile_10
+unset module_10
+
+unset modulefile_11
+unset module_11
+
+unset modulefile_12
+unset module_12
+
+unset modulefile_15
+unset module_15
+
+unset modulefile_16
+unset module_16
+
+unset modulefile_17
+unset module_17
+
+unset modulefile_18
+unset module_18
+
+unset modulefile_19
+unset module_19
+
+unset modulefile_20
+unset module_20
+
+unset modulefile_21
+unset module_21
+
+unset modulefile_22
+unset module_22
+
+unset modulefile_23
+unset module_23
+
+unset modulefile_24
+unset module_24
+
+unset modulefile_25
+unset module_25
+
+unset modulefile_26
+unset module_26

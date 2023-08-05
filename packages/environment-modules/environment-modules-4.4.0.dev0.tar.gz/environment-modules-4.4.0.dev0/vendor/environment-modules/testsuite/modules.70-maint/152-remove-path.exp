@@ -1,0 +1,180 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	2017/11/26
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:        remove-path
+#   Modulefiles:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#           Test 'remove-path' module command
+#		}C%
+#
+##############################################################################
+
+if {[info exists env(FOO)]} {
+    set ORIG_FOO $env(FOO)
+    unsetenv_var FOO
+}
+
+set path1 "/path/to/dir1"
+set path2 "/path/other/dir2"
+set path3 "/path/other/dir3"
+
+lappend ans [list unset FOO]
+
+testouterr_cmd_re "sh" "remove-path FOO $path1" $ans ""
+
+
+setenv_path_var FOO $path1
+
+set ans [list]
+lappend ans [list unsetpath FOO]
+testouterr_cmd_re "sh" "remove-path FOO $path1" $ans ""
+
+
+setenv_path_var FOO $path1 $path2
+
+set ans [list]
+lappend ans [list setpath FOO "$path1"]
+testouterr_cmd_re "ALL" "remove-path FOO $path2" $ans ""
+testouterr_cmd_re "sh" "remove-path -d : FOO $path2" $ans ""
+testouterr_cmd_re "sh" "remove-path --delim : FOO $path2" $ans ""
+testouterr_cmd_re "sh" "remove-path --delim=: FOO $path2" $ans ""
+
+set ans [list]
+lappend ans [list set FOO "$path1:$path2"]
+lappend ans [list set FOO_modshare "$path1:1:$path2:1"]
+testouterr_cmd_re "sh" "remove-path FOO $path3" $ans ""
+
+
+unsetenv_var FOO_modshare
+setenv_var FOO "$path1,$path2"
+
+set ans [list]
+lappend ans [list setpath FOO "$path1"]
+testouterr_cmd_re "sh" "remove-path -d , FOO $path2" $ans ""
+testouterr_cmd_re "sh" "remove-path --delim , FOO $path2" $ans ""
+testouterr_cmd_re "sh" "remove-path --delim=, FOO $path2" $ans ""
+
+
+setenv_path_var FOO {} $path1 $path2
+
+set ans [list]
+lappend ans [list setpath FOO "$path1:$path2"]
+testouterr_cmd_re "sh" "remove-path FOO " $ans ""
+
+
+# test bad argument list
+testouterr_cmd_re "sh" "remove-path FOO" "ERR" "$error_msgs: Unexpected number of args for 'remove-path' command\n$err_typehelp"
+testouterr_cmd_re "sh" "remove-path -d : FOO" "ERR" "$error_msgs: unload-path should get a value for environment variable FOO"
+testouterr_cmd_re "sh" "remove-path -d :" "ERR" "$error_msgs: unload-path should get an environment variable name"
+testouterr_cmd_re "sh" "remove-path -d : " "ERR" "$error_msgs: unload-path should get a valid environment variable name"
+testouterr_cmd_re "sh" "remove-path --delim= FOO /path/to" "ERR" "$error_msgs: unload-path should get a non-empty path delimiter"
+
+
+#
+# Remove multiple paths passed as one string
+#
+
+set path1 "/path/to/dir1"
+setenv_path_var FOO $path1 "/modules/testsuite2.2" "/modules/testsuite2.2/2.2" {}
+
+set ans [list]
+lappend ans [list set FOO "$path1"]
+lappend ans [list set FOO_modshare "$path1:1"]
+testouterr_cmd_re "sh" "remove-path FOO /modules/testsuite2.2:/modules/testsuite2.2/2.2:" $ans ""
+testouterr_cmd_re "sh" "remove-path FOO /modules/testsuite2.2 /modules/testsuite2.2/2.2:" $ans ""
+
+# with specific delim
+setenv_var FOO_modshare ":1:http\\://foobar.com:1:http\\://foobar.net:1:http\\://foobar.io:1:http\\://foobar.org:1"
+setenv_var FOO ",http://foobar.com,http://foobar.io,http://foobar.org,http://foobar.net"
+
+set ans [list]
+lappend ans [list set FOO "http://foobar.org,http://foobar.net"]
+lappend ans [list set FOO_modshare "http\\://foobar.net:1:http\\://foobar.org:1"]
+testouterr_cmd_re "sh" "remove-path -d , FOO ,http://foobar.com,http://foobar.io" $ans ""
+testouterr_cmd_re "sh" "remove-path -d , FOO ,http://foobar.com http://foobar.io" $ans ""
+
+
+#
+# Remove path added in duplication mode
+#
+
+setenv_path_var FOO $path1 "/foo" $path1
+
+set ans [list]
+lappend ans [list set FOO "$path1:/foo"]
+lappend ans [list set FOO_modshare "$path1:1:/foo:1"]
+testouterr_cmd_re "sh" "remove-path FOO $path1" $ans ""
+testouterr_cmd_re "sh" "remove-path --duplicates FOO $path1" $ans "$warn_msgs: --duplicates option has no effect on unload-path"
+
+
+#
+# Remove path in index mode
+#
+
+set ans [list]
+lappend ans [list set FOO "$path1:$path1"]
+lappend ans [list set FOO_modshare "$path1:2"]
+testouterr_cmd_re "sh" "remove-path --index FOO $path1" "ERR" "$error_msgs: unload-path should get valid number as index value"
+testouterr_cmd_re "sh" "remove-path --index FOO 1" $ans ""
+
+
+#
+# Remove path on DYLD-specific variables
+#
+
+setenv_var MODULES_MODSHARE_DYLD_FOO "$path1:2"
+setenv_var DYLD_FOO $path1
+
+set ans [list]
+# path-variable handling not effective on OSX with DYLD variables when System
+# Integrity Protection (SIP) is enabled: variables are not exported in
+# subshell context, so they appear undefined to modulecmd.tcl
+if {$sip_enabled} {
+    lappend ans [list unset DYLD_FOO]
+    lappend ans [list unset MODULES_MODSHARE_DYLD_FOO]
+} else {
+    lappend ans [list set DYLD_FOO "$path1"]
+    lappend ans [list set MODULES_MODSHARE_DYLD_FOO "$path1:1"]
+}
+testouterr_cmd_re "sh" "remove-path DYLD_FOO $path1" $ans ""
+
+setenv_var MODULES_MODSHARE_DYLD_FOO "$path1:1"
+
+set ans [list]
+lappend ans [list unset DYLD_FOO]
+lappend ans [list unset MODULES_MODSHARE_DYLD_FOO]
+testouterr_cmd_re "sh" "remove-path DYLD_FOO $path1" $ans ""
+
+
+#
+#  Cleanup
+#
+
+# Clean up the environment
+if {[info exists ORIG_FOO]} {
+    setenv_var FOO $ORIG_FOO
+    unset ORIG_FOO
+} else {
+    unsetenv_var FOO
+}
+unsetenv_var FOO_modshare
+
+unsetenv_var MODULES_MODSHARE_DYLD_FOO
+unsetenv_var DYLD_FOO
+
+unset ans
+
+unset path1
+unset path2
+unset path3

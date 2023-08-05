@@ -1,0 +1,302 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	95/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		display
+#   Modulefiles:	help/2.0, bad
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module command 'display'
+#		}C%
+#
+##############################################################################
+
+# skip tests if implicit_default option could not be overridden
+if {[is_config_locked implicit_default]} {
+    send_user "\tskipping tests as implicit_default could not be overridden\n"
+} else {
+
+# ensure avail tests have implicit default enabled
+setenv_var MODULES_IMPLICIT_DEFAULT 1
+
+#
+#  Test variables
+#
+
+set module_1 "help"
+set modulefile_1 "$modpath/help/2.0"
+set modulefile_1_reld "$reldmodpath/help/2.0"
+set modulefile_1_reldd "$relddmodpath/help/2.0"
+set module_2 "NonExistant"
+set module_3 "bad"
+set module_4 "test"
+set module_5 "bad2"
+set modulefile_5 "$modpath/$module_5/proc"
+set modulefile_5_reld "$reldmodpath/$module_5/proc"
+set modulefile_5_reldd "$relddmodpath/$module_5/proc"
+set module_6 "setenv/1.0"
+set modulefile_6 "$modpath/setenv/1.0"
+
+# different behavior than C-version: on Tcl-version 'module-log', 'module-verbosity'
+# and 'module-user' commandq are not handled and will always return a warning message
+# to inform the user. Moreover 'x-resource' commands are displayed as defined in
+# modulefile and not displayed as a 'xrdb' command like on C-version
+set out_pat "$modlin
+$modpathre/help/2.0:
+
+set-alias\tal-testsuite {ps -auxww | grep modulecmd}
+unset-alias\tal-testsuite
+setenv\t\ttestsuite yes
+append-path\ttestsuite no
+prepend-path\ttestsuite maybe
+remove-path\ttestsuite yes
+unsetenv\ttestsuite
+x-resource\tmy-prog*my-ress\ttrue
+module-user\tadvanced
+module-verbosity\ton
+module-log\ttrace local7.info
+module-trace\ton
+system\t\tls
+module load\tsetenv/1.0
+module-alias\tfoo setenv/1.0
+module-version\tfoo foo bar blah
+module-whatis\t{Some checks for HELP and DISPLAY}
+$modlin"
+set out_debug_pat "(DEBUG .*)+
+$modlin
+$modpathre/help/2.0:
+
+(DEBUG .*)+
+set-alias\tal-testsuite {ps -auxww | grep modulecmd}
+(DEBUG .*)+
+unset-alias\tal-testsuite
+(DEBUG .*)+
+setenv\t\ttestsuite yes
+(DEBUG .*)+
+append-path\ttestsuite no
+(DEBUG .*)+
+prepend-path\ttestsuite maybe
+(DEBUG .*)+
+remove-path\ttestsuite yes
+(DEBUG .*)+
+unsetenv\ttestsuite
+(DEBUG .*)+
+x-resource\tmy-prog*my-ress\ttrue
+(DEBUG .*)+
+module-user\tadvanced
+module-verbosity\ton
+module-log\ttrace local7.info
+module-trace\ton
+(DEBUG .*)+
+system\t\tls
+(DEBUG .*)+
+module load\tsetenv/1.0
+(DEBUG .*)+
+module-alias\tfoo setenv/1.0
+(DEBUG .*)+
+module-version\tfoo foo bar blah
+(DEBUG .*)+
+module-whatis\t{Some checks for HELP and DISPLAY}
+(DEBUG .*)+
+$modlin
+(DEBUG .*)+"
+
+set out_err "$err_path'$module_2'"
+set out_interr "$moderr_msgs: invalid command name \"bad-command\"\n  In '$modpathre/$module_3/.modulerc'\n$err_contact
+$modlin
+$modpathre/$module_3/before:
+
+$moderr_msgs: invalid command name \"bad-command\"\n  In '$modpathre/$module_3/before'\n$err_contact
+$modlin"
+set out_debug_interr "(DEBUG .*)+
+$moderr_msgs: invalid command name \"bad-command\"\n  In '$modpathre/$module_3/.modulerc'\n$err_contact
+(DEBUG .*)+
+$modlin
+$modpathre/$module_3/before:
+
+(DEBUG .*)+
+$moderr_msgs: invalid command name \"bad-command\"\n  In '$modpathre/$module_3/before'\n$err_contact
+(DEBUG .*)+
+$modlin
+(DEBUG .*)+
+DEBUG renderSettings: 2 error\\\(s\\\) detected.
+DEBUG renderFalse: called."
+
+set out_pat_4 "$modlin
+$modpathre/test/2.0:
+
+set-alias\tal-testsuite {ps -auxww | grep modulecmd}
+unset-alias\tal-testsuite
+setenv\t\ttestsuite yes
+append-path\ttestsuite no
+prepend-path\ttestsuite maybe
+remove-path\ttestsuite yes
+unsetenv\ttestsuite
+x-resource\tmy-prog*my-ress\ttrue
+system\t\tls
+module load\tsetenv/1.0
+module-alias\tfoo setenv/1.0
+module-version\tfoo foo bar blah
+module-whatis\t{Some checks for TEST and DISPLAY}
+$modlin"
+
+set out_interr_5 "$modlin
+$modpathre/$module_5/proc:
+
+setenv\t\ttestsuite yes
+module-whatis\t{erroneous module test}
+$moderr_msgs: invalid command name \"bad-command\"\n  In '$modpathre/$module_5/proc'\n$err_contact
+$modlin"
+
+set out_err_6 "------------------------------------------------------------
+$modulefile_6:
+
+setenv\t\ttestsuite yes
+------------------------------------------------------------"
+
+
+
+#
+#  The tests
+#
+
+testouterr_cmd_re "csh" "display $module_1" "OK" "$out_pat"
+
+# command nickname tests
+testouterr_cmd_re "csh" "show $module_1" "OK" "$out_pat"
+testouterr_cmd_re "csh" "di $module_1" "OK" "$out_pat"
+
+
+# test with module passed as full path
+testouterr_cmd_re "csh" "display $modulefile_1" "OK" "$out_pat"
+testouterr_cmd_re "csh" "display $modulefile_1_reld" "OK" "$out_pat"
+testouterr_cmd_re "csh" "display $modulefile_1_reldd" "OK" "$out_pat"
+
+# setup MODULEPATH with a trailing slash and an empty dir element
+setenv_path_var MODULEPATH {} "$modpath/"
+testouterr_cmd_re "csh" "display $module_1" "OK" "$out_pat"
+
+# restore MODULEPATH
+setenv_path_var MODULEPATH $modpath
+
+#
+# test debug mode
+#
+
+testouterr_cmd_re "csh" "--debug display $module_1" "OK" "$out_debug_pat"
+
+#
+# test exit on error  
+#
+testouterr_cmd "csh" "display $module_2" "ERR" "$out_err"
+
+#
+# test with erroneous modulefile
+#
+testouterr_cmd_re "csh" "display $module_3" "ERR" "$out_interr"
+
+#
+# test with erroneous modulefile in debug mode
+#
+testouterr_cmd_re "csh" "--debug display $module_3" "ERR" "$out_debug_interr"
+
+#
+# test on modulefile with ModuleTest proc defined
+#
+testouterr_cmd_re "csh" "display $module_4" "OK" "$out_pat_4"
+
+#
+# test with erroneous ModulesDisplay proc in modulefile
+#
+testouterr_cmd_re "csh" "display $module_5" "ERR" "$out_interr_5"
+
+# test with module passed as full path
+testouterr_cmd_re "csh" "display $modulefile_5" "ERR" "$out_interr_5"
+testouterr_cmd_re "csh" "display $modulefile_5_reld" "ERR" "$out_interr_5"
+testouterr_cmd_re "csh" "display $modulefile_5_reldd" "ERR" "$out_interr_5"
+
+# test small width terminal
+set test_cols 60
+if {![info exists term_cols]} {
+    # skip tests if current terminal witdh is unknown
+    send_user "\tskipping terminal width-specific tests\n"
+# set a specific terminal width
+} elseif {[catch {exec stty cols $test_cols}] || [getTtyCols] ne $test_cols} {
+    send_user "\tskipping terminal width-specific tests, cannot set width\n"
+} else {
+
+testouterr_cmd "sh" "display $module_6" "OK" $out_err_6
+
+# restore terminal width
+exec stty cols $term_cols
+
+}
+
+#
+# test command-line arguments not related to display command
+#
+
+# these command-line arguments are ignored
+testouterr_cmd_re "csh" "display --auto $module_1" "OK" "$out_pat"
+testouterr_cmd_re "csh" "display --no-auto $module_1" "OK" "$out_pat"
+testouterr_cmd_re "csh" "display --force $module_1" "OK" "$out_pat"
+
+#
+# check error when implicit default is disabled
+#
+
+setenv_var MODULES_IMPLICIT_DEFAULT 0
+testouterr_cmd sh "display $module_1" ERR "$err_nodefault'$module_1'"
+setenv_var MODULES_IMPLICIT_DEFAULT 1
+
+#
+# display when loaded environment is inconsistent
+#
+
+setenv_loaded_module [list foo bar] "/path/to/foo"
+
+testouterr_cmd_re "csh" "display $module_4" "OK" "$out_pat_4"
+
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+unsetenv_var MODULES_IMPLICIT_DEFAULT
+
+unset test_cols
+
+unset out_err
+unset out_interr
+unset out_debug_interr
+unset out_pat
+unset out_debug_pat
+unset out_pat_4
+unset out_interr_5
+unset out_err_6
+
+unset module_1
+unset modulefile_1
+unset modulefile_1_reld
+unset modulefile_1_reldd
+unset module_2
+unset module_3
+unset module_4
+unset module_5
+unset modulefile_5
+unset modulefile_5_reld
+unset modulefile_5_reldd
+unset module_6
+unset modulefile_6
+
+}

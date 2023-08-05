@@ -1,0 +1,139 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.70-maint/%M%
+#   Revision:		%I%
+#   First Edition:	1995/12/06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Jens Hamisch, Jens.Hamisch@Strawberry.COM
+#
+#   Description:	Testuite testsequence
+#   Command:		list
+#   Modulefiles:	setenv/1.0, loc_rc3, loc_rc4, loc_rc6
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the module command 'list' in long output
+#			format with a modulefile loaded.
+#		}C%
+#
+##############################################################################
+
+set module "setenv"
+set version "1.0"
+set modulefile "$modpath/$module/$version"
+set module2 "loc_rc6"
+set version2 "1.2"
+set modulefile2 "$modpath/$module2/$version2"
+set taglist2 "default:new"
+# validates default tag is correctly displayed when set via a .version file
+set module3 "loc_rc4"
+set version3 "2.0"
+set modulefile3 "$modpath/$module3/$version3"
+set taglist3 "default"
+
+#
+#  Check this only for the /bin/csh
+#
+
+set header "- Package $modlin.- Versions $modlin.- Last mod. $modlin\nCurrently Loaded Modulefiles:\n"
+set ts_csh "$header$module.$version                                                  \[0-9:\/ ]*"
+
+#
+#  Set up the environment pointing to the single module file being load
+#
+
+setenv_loaded_module $module/$version $modulefile
+
+#
+#  The tests
+#
+
+testouterr_cmd_re "csh" "--long list" "OK" "$ts_csh"
+
+
+#
+#  Set up the environment pointing to module file holding tags
+#
+
+set ts_csh "$header$module2.$version2                             $taglist2         \[0-9:\/ ]*"
+append ts_csh "\n$module3.$version3                             $taglist3             \[0-9:\/ ]*"
+
+setenv_loaded_module [list $module2/$version2 $module3/$version3] [list $modulefile2 $modulefile3]
+
+#
+#  The tests
+#
+
+testouterr_cmd_re "csh" "list -t -l" "OK" "$ts_csh"
+
+
+#
+# Test loaded module specified as full path
+#
+
+set module "$modpath/loc_rc3/1.0"
+set modulere "$modpathre/loc_rc3/1.0"
+set modulefile $module
+set ts_csh "$header$modulere\\s*\[0-9:\/ ]*"
+
+setenv_loaded_module $module $modulefile
+
+testouterr_cmd_re "csh" "-l list" "OK" "$ts_csh"
+
+
+#
+# Test unexistent loaded module
+#
+
+set module "foo"
+set modulefile "/path/to/foo"
+set modulefile $module
+set ts_csh "$header$module\\s+"
+
+setenv_loaded_module $module $modulefile
+
+testouterr_cmd_re "csh" "-l list" "OK" "$ts_csh"
+
+#
+# Test very long module name
+#
+
+set module "veryveryveryveryveryveryveryverylong/name"
+set modulefile $modpath.2/$module
+set ts_csh "$header${module}sym\[0-9:\/ ]*"
+
+setenv_path_var MODULEPATH $modpath.2
+setenv_path_var MODULES_LMALTNAME $module&veryveryveryveryveryveryveryverylong/sym
+setenv_loaded_module $module $modulefile
+
+testouterr_cmd_re csh {-l list} OK $ts_csh
+
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+unsetenv_path_var MODULES_LMALTNAME
+setenv_path_var MODULEPATH $modpath
+
+unset header
+unset ts_csh
+
+unset version
+unset modulefile
+unset module
+unset modulere
+
+unset version2
+unset modulefile2
+unset module2
+unset taglist2
+
+unset version3
+unset modulefile3
+unset module3
+unset taglist3

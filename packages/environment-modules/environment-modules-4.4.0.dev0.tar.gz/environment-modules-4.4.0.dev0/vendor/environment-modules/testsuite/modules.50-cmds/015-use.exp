@@ -1,0 +1,180 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2001/07.06
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	use/1.0,use/2.0,use/2.1,use/2.2
+#                   use/3.0,use/3.1,use/3.2,use/4.0
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'use' module subcommand for all allowed
+#			shell types.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "MODULEPATH", "LOADEDMODULES" to
+#    be set up
+#
+
+set path1 $modpath
+set path2 "$env(TESTSUITEDIR)/modulefiles.2"
+set module1 "use/1.0"
+set module2 "use/2.0"
+set module3 "use/2.1"
+set module4 "use/2.2"
+set module5 "use/3.0"
+set module6 "use/3.1"
+set module7 "use/3.2"
+set module8 "use/4.0"
+set module9 "use/4.1"
+set modulefile1 "$path1/$module1"
+set modulefile2 "$path1/$module2"
+set modulefile3 "$path1/$module3"
+set modulefile4 "$path1/$module4"
+set modulefile5 "$path1/$module5"
+set modulefile6 "$path1/$module6"
+set modulefile7 "$path1/$module7"
+set modulefile8 "$path1/$module8"
+set modulefile9 "$path1/$module9"
+
+#
+#  The tests (use)
+#
+
+lappend ans [list setpath MODULEPATH "$path2:$path1"]
+lappend ans [list setpath LOADEDMODULES $module1]
+lappend ans [list setpath _LMFILES_ $modulefile1]
+lappend ans [list setpath MODULES_LMALTNAME "$module1&use/default&use"]
+
+test_cmd_re "ALL" "load $module1" $ans
+
+#
+#  The tests (use --append)
+#
+
+set ans [list]
+lappend ans [list setpath MODULEPATH "$path1:$path2"]
+lappend ans [list setpath LOADEDMODULES $module2]
+lappend ans [list setpath _LMFILES_ $modulefile2]
+
+test_cmd_re "ALL" "load $module2" $ans
+
+#
+#  The tests (use -a)
+#
+
+set ans [list]
+lappend ans [list setpath MODULEPATH "$path1:$path2"]
+lappend ans [list setpath LOADEDMODULES $module3]
+lappend ans [list setpath _LMFILES_ $modulefile3]
+
+test_cmd_re "ALL" "load $module3" $ans
+
+#
+#  The tests (use -append)
+#	for backward compatibility
+#
+
+set ans [list]
+lappend ans [list setpath MODULEPATH "$path1:$path2"]
+lappend ans [list setpath LOADEDMODULES $module4]
+lappend ans [list setpath _LMFILES_ $modulefile4]
+
+test_cmd_re "ALL" "load $module4" $ans
+
+#
+#  The tests (use --prepend)
+#
+
+set ans [list]
+lappend ans [list setpath MODULEPATH "$path2:$path1"]
+lappend ans [list setpath LOADEDMODULES $module5]
+lappend ans [list setpath _LMFILES_ $modulefile5]
+
+test_cmd_re "ALL" "load $module5" $ans
+
+#
+#  The tests (use -p)
+#
+
+set ans [list]
+lappend ans [list setpath MODULEPATH "$path2:$path1"]
+lappend ans [list setpath LOADEDMODULES $module6]
+lappend ans [list setpath _LMFILES_ $modulefile6]
+
+test_cmd_re "ALL" "load $module6" $ans
+
+#
+#  The tests (use -prepend)
+#	for backward compatibility
+#
+
+set ans [list]
+lappend ans [list setpath MODULEPATH "$path2:$path1"]
+lappend ans [list setpath LOADEDMODULES $module7]
+lappend ans [list setpath _LMFILES_ $modulefile7]
+
+test_cmd_re "ALL" "load $module7" $ans
+
+#
+#  The tests (use {})
+#
+
+set ans [list]
+lappend ans [list setpath LOADEDMODULES $module8]
+lappend ans [list setpath _LMFILES_ $modulefile8]
+lappend ans [list ERR]
+
+set err_msg     "$error_msgs: Directory name empty"
+
+testouterr_cmd_re "ALL" "load $module8" $ans [msg_load $module8 $err_msg]
+
+#
+#  The tests (use relative paths)
+#
+
+set ans [list]
+lappend ans [list setpath MODULEPATH "$path2:$path1"]
+lappend ans [list setpath LOADEDMODULES $module9]
+lappend ans [list setpath _LMFILES_ $modulefile9]
+
+test_cmd_re "sh" "load $module9" $ans
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset err_msg
+
+unset modulefile9
+unset modulefile8
+unset modulefile7
+unset modulefile6
+unset modulefile5
+unset modulefile4
+unset modulefile3
+unset modulefile2
+unset modulefile1
+unset module9
+unset module8
+unset module7
+unset module6
+unset module5
+unset module4
+unset module3
+unset module2
+unset module1

@@ -1,0 +1,342 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2001/11/05
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, <rk@owen.sj.ca.us>
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	loc_dv1/1.0,
+#   			loc_dv2/1.0,
+#   			loc_dv3/1.0, bad
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Load a modulefile giving the full path.
+#		}C%
+#
+##############################################################################
+
+set mod1name "loc_dv1"
+set mod11 "loc_dv1/1.0"
+set mod12 "loc_dv1/2.0"
+set mod21 "loc_dv2/1.0"
+set mod31 "loc_dv3/1.0"
+
+set mod11p "$modpath/$mod11"
+set mod11pd "$reldmodpath/$mod11"
+set mod11pdd "$relddmodpath/$mod11"
+set mod12p "$modpath/$mod12"
+set mod21p "$modpath/$mod21"
+set mod31p "$modpath/$mod31"
+
+set oth11 "version"
+set oth11p "$modpath.2/1.1/version"
+set oth11pd "$reldmodpath.2/1.1/version"
+set oth11pdd "$relddmodpath.2/1.1/version"
+
+#
+# set up an empty environment
+#
+set module ""
+set modulefile ""
+setenv_loaded_module $module $modulefile
+
+#
+#  load
+#  For the different shells ...
+#
+set module "$mod31"
+set modulefile "$mod31p"
+
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $mod31" $ans
+
+# command nickname tests
+test_cmd_re "sh" "lo $mod31" $ans
+test_cmd_re "sh" "add $mod31" $ans
+
+
+#
+# set up a single environment
+#
+set module "$mod11"
+set modulefile "$mod11p"
+setenv_loaded_module $module $modulefile
+
+#
+#  load
+#  For the different shells ...
+#
+set module "$mod11:$mod31"
+set modulefile "$mod11p:$mod31p"
+
+set ans [list]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $mod31" $ans
+
+#
+# set up a double environment
+#
+set module "$mod11:$mod21"
+set modulefile "$mod11p:$mod21p"
+setenv_loaded_module $module $modulefile
+
+#
+#  load
+#  For the different shells ...
+#
+set module "$mod11:$mod21:$mod31"
+set modulefile "$mod11p:$mod21p:$mod31p"
+
+set ans [list]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $mod31" $ans
+
+# setup MODULEPATH with a trailing slash and an empty dir element
+setenv_path_var MODULEPATH {} "$modpath/"
+test_cmd_re "sh" "load $mod31" $ans
+
+# restore MODULEPATH
+setenv_path_var MODULEPATH $modpath
+
+
+# setup LOADEDMODULES/_LMFILES_ with an empty element
+setenv_loaded_module [list {} $mod11 $mod21] [list {} $mod11p $mod21p]
+
+set ans [list]
+# empty elements are ignored but stick to the variable, they should be removed
+lappend ans [list setpath LOADEDMODULES ":$module"]
+lappend ans [list setpath _LMFILES_ ":$modulefile"]
+test_cmd_re "sh" "load $mod31" $ans
+
+# restore LOADEDMODULES/_LMFILES_
+setenv_loaded_module [list $mod11 $mod21] [list $mod11p $mod21p]
+
+
+#
+# load already loaded module
+# no environement modification, exit 0
+#
+
+test_cmd "ALL" "load $mod11" "OK"
+
+# setup MODULEPATH with a trailing slash and an empty dir element
+setenv_path_var MODULEPATH {} "$modpath/"
+test_cmd "sh" "load $mod11" "OK"
+
+# restore MODULEPATH
+setenv_path_var MODULEPATH $modpath
+
+
+# setup LOADEDMODULES/_LMFILES_ with an empty element
+setenv_loaded_module [list {} $mod11 $mod21] [list {} $mod11p $mod21p]
+
+set ans [list]
+test_cmd "sh" "load $mod11" "OK"
+
+# restore LOADEDMODULES/_LMFILES_
+setenv_loaded_module [list $mod11 $mod21] [list $mod11p $mod21p]
+
+
+#
+# reference a module not in the path
+#
+set module "$mod11:$mod21"
+set modulefile "$mod11p:$mod21p"
+setenv_loaded_module $module $modulefile
+
+#
+#  load
+#  For the different shells ...
+#
+# different behavior than C-version: on Tcl-version when a module not in the
+# path is loaded, its module name is equal to its modulefile path since in
+# this case module name and version cannot be distinguished from the path
+set module "$mod11:$mod21:$oth11p"
+set modulefile "$mod11p:$mod21p:$oth11p"
+
+set ans [list]
+lappend ans [list set TESTSUITE "1.1"]
+lappend ans [list setpath LOADEDMODULES $module]
+lappend ans [list setpath _LMFILES_ $modulefile]
+
+#
+#  The tests
+#
+test_cmd_re "ALL" "load $oth11p" $ans
+
+# try with other full path name forms (./ and ../)
+test_cmd_re "sh" "load $oth11pd" $ans
+test_cmd_re "sh" "load $oth11pdd" $ans
+
+#
+# error when loading non existent module
+#
+set unknonw "XYZ"
+
+testouterr_cmd "ALL" "load $unknonw" "ERR" "$err_path\'$unknonw\'"
+
+#
+# error when loading non existent module given as full path
+#
+set unknonw "$env(TESTSUITEDIR)/XYZ"
+
+testouterr_cmd "ALL" "load $unknonw" "ERR" "$err_file'$unknonw'"
+
+# try with other full path name forms (./ and ../)
+set unknonw "$reldmodpath/XYZ"
+set out_interr "$err_file'$modpath/XYZ'"
+testouterr_cmd "sh" "load $unknonw" "ERR" $out_interr
+set unknonw "$relddmodpath/XYZ"
+testouterr_cmd "sh" "load $unknonw" "ERR" $out_interr
+
+#
+# test with erroneous modulefile
+#
+set badmod "bad"
+set out_interr "$moderr_msgs: invalid command name \"bad-command\"\n  In '$modpath/$badmod/.modulerc'\n$err_contact"
+append out_interr \n\n[msg_load $badmod/before "$moderr_msgs: invalid command name \"bad-command\"\nIn '$modpath/$badmod/before'\n$err_contactns"]
+
+# ensure load tests have implicit default enabled
+# skip tests if implicit_default option could not be overridden
+if {![is_config_locked implicit_default] || $install_implicitdefault eq {y}} {
+setenv_var MODULES_IMPLICIT_DEFAULT 1
+testouterr_cmd "ALL" "load $badmod" "ERR2" "$out_interr"
+unsetenv_var MODULES_IMPLICIT_DEFAULT
+}
+
+# try with other full path name forms (./ and ../)
+set badmod "$reldmodpath/bad/before"
+set out_interr [msg_load $modpath/bad/before "$moderr_msgs: invalid command name \"bad-command\"\nIn '$modpath/bad/before'\n$err_contactns"]
+testouterr_cmd "sh" "load $badmod" "ERR" $out_interr
+set badmod "$relddmodpath/bad/before"
+testouterr_cmd "sh" "load $badmod" "ERR" $out_interr
+
+#
+# test with file given as full path which is not a modulefile
+#
+set badmod "$env(TESTSUITEDIR)/modulefiles/README"
+set out_interr "$err_magic'$badmod'\n$err_contact"
+testouterr_cmd "ALL" "load $badmod" "ERR" $out_interr
+
+# try with other full path name forms (./ and ../)
+set badmod "$reldmodpath/README"
+testouterr_cmd "sh" "load $badmod" "ERR" $out_interr
+set badmod "$relddmodpath/README"
+testouterr_cmd "sh" "load $badmod" "ERR" $out_interr
+
+
+#
+# test full path modulefile already loaded
+#
+setenv_loaded_module $module $modulefile
+
+test_cmd_re "ALL" "load $oth11p" "OK"
+test_cmd_re "sh" "load $oth11pd" "OK"
+test_cmd_re "sh" "load $oth11pdd" "OK"
+
+
+#
+# test module already loaded as full path, try to load again with short name
+# and modpath used
+#
+setenv_path_var MODULEPATH "$modpath.2" $modpath
+setenv_loaded_module $mod12p $mod12p
+# ensure load tests have implicit default enabled
+if {![is_config_locked implicit_default] || $install_implicitdefault eq {y}} {
+setenv_var MODULES_IMPLICIT_DEFAULT 1
+test_cmd_re "sh" "load $mod12" "OK"
+test_cmd_re "sh" "load $mod1name" "OK"
+unsetenv_var MODULES_IMPLICIT_DEFAULT
+}
+
+#
+# test to load full path a modulefile already loaded with short name
+#
+setenv_loaded_module $mod11 $mod11p
+
+test_cmd_re "sh" "load $mod11p" "OK"
+test_cmd_re "sh" "load $mod11pd" "OK"
+test_cmd_re "sh" "load $mod11pdd" "OK"
+
+# unset MODULEPATH
+unsetenv_path_var MODULEPATH
+
+test_cmd_re "sh" "load $mod11p" "OK"
+test_cmd_re "sh" "load $mod11pd" "OK"
+test_cmd_re "sh" "load $mod11pdd" "OK"
+
+
+#
+# test module already loaded as full path, try to load again with short name
+# no modpath set
+#
+setenv_loaded_module $mod12p $mod12p
+
+testouterr_cmd_re "sh" "load $mod12" "ERR" $err_nomodpath
+testouterr_cmd_re "sh" "load $mod1name" "ERR" $err_nomodpath
+
+
+#
+# load when loaded environment is inconsistent
+#
+
+setenv_loaded_module [list foo bar] "/path/to/foo"
+setenv_path_var MODULEPATH $modpath
+
+testouterr_cmd_re "sh" "load $mod12" "ERR" "$err_loinconsist\n  LOADEDMODULES=foo bar\n  _LMFILES_=/path/to/foo"
+
+
+#
+#  Cleanup
+#
+
+unsetenv_loaded_module
+
+unset ans
+
+unset unknonw
+
+unset badmod
+unset out_interr
+
+unset modulefile
+unset module
+
+unset mod1name
+unset mod11
+unset mod12
+unset mod21
+unset mod31
+unset mod11p
+unset mod11pd
+unset mod11pdd
+unset mod12p
+unset mod21p
+unset mod31p
+
+unset oth11
+unset oth11p
+unset oth11pd
+unset oth11pdd

@@ -1,0 +1,44 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.00-init/%M%
+#   Revision:		%I%
+#   First Edition:	2016/08/20
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		Xavier Delaruelle, xavier.delaruelle@cea.fr
+#
+#   Description:	Testuite testsequence
+#   Command:
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Check command line commands with a bad command name.
+#		}C%
+#
+##############################################################################
+
+#
+# The following answers are to be expected in this testcase ...
+#
+
+set bad_arg "$error_msgs: Invalid command 'foobar'"
+
+
+#
+# The tests
+#
+
+if { $verbose > 0 } {
+    send_user "\tChecking command line commands ...\n"
+}
+
+# invalid command leads to error code
+testouterr_cmd "ALL" "foobar" "ERR" "$bad_arg\n$err_typehelp"
+
+#
+#  Clean up variables used in this test case
+#
+
+unset bad_arg

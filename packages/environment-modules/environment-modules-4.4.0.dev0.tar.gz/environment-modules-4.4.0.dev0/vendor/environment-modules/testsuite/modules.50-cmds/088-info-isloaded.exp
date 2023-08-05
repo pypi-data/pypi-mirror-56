@@ -1,0 +1,109 @@
+##############################################################################
+#   Modules Revision 3.0
+#   Providing a flexible user environment
+#
+#   File:		modules.50-cmds/%M%
+#   Revision:		%I%
+#   First Edition:	2001/07/25
+#   Last Mod.:		%U%, %G%
+#
+#   Authors:		R.K. Owen, rk@owen.sj.ca.us
+#
+#   Description:	Testuite testsequence
+#   Command:		load
+#   Modulefiles:	info/isloaded
+#   Sub-Command:
+#
+#   Comment:	%C{
+#			Tests the 'is-loaded name' module subcommand for all
+#			allowed shell types.
+#		}C%
+#
+##############################################################################
+
+#
+#  Variables. This test forces a module load command. It will result in the
+#    environment variables "_LMFILES_", "LOADEDMODULES" and "testsuite" to
+#    be set up
+#
+
+set module "info/name"
+set modulefile "$modpath/$module"
+set modulex "info/isloaded"
+set modulefilex "$modpath/$modulex"
+set modules "$module:$modulex"
+set modulefiles "$modulefile:$modulefilex"
+
+#
+# Test the case when the given module is loaded
+#
+
+#
+# set up the environment
+#
+setenv_loaded_module $module $modulefile
+
+#
+#  For the different shells ...
+#
+
+lappend ans [list set testsuite1 1]
+lappend ans [list set testsuite2 0]
+lappend ans [list set testsuite3 1]
+lappend ans [list set testsuite4 1]
+lappend ans [list set testsuite5 0]
+lappend ans [list set testsuite6 0]
+lappend ans [list set testsuite7 1]
+lappend ans [list set testsuite8 1]
+lappend ans [list setpath LOADEDMODULES $modules]
+lappend ans [list setpath _LMFILES_ $modulefiles]
+
+#
+#  The tests
+#
+
+testouterr_cmd_re "ALL" "load $modulex" $ans ""
+
+#
+# Test the case when the given module is not loaded
+#
+
+#
+# set up the environment
+#
+unsetenv_loaded_module
+
+#
+#  For the different shells ...
+#
+
+set ans [list]
+lappend ans [list set testsuite1 0]
+lappend ans [list set testsuite2 0]
+lappend ans [list set testsuite3 0]
+lappend ans [list set testsuite4 0]
+lappend ans [list set testsuite5 0]
+lappend ans [list set testsuite6 0]
+lappend ans [list set testsuite7 0]
+lappend ans [list set testsuite8 0]
+lappend ans [list setpath LOADEDMODULES $modulex]
+lappend ans [list setpath _LMFILES_ $modulefilex]
+
+#
+#  The tests
+#
+
+testouterr_cmd "ALL" "load $modulex" $ans ""
+
+#
+#  Cleanup
+#
+
+unset ans
+
+unset modulefile
+unset module
+unset modulefilex
+unset modulex
+unset modulefiles
+unset modules
