@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pymoldflow
+Version: 0.0.2
+Summary: Automation tools for Autodesk Moldflow
+Home-page: https://github.com/tianyikillua/pymoldflow
+Author: Tianyi Li
+Author-email: tianyikillua@gmail.com
+License: License :: OSI Approved :: MIT License
+Description: # Automation tools for Autodesk Moldflow
+        
+        [![readthedocs](https://readthedocs.org/projects/pymoldflow/badge/?version=latest&style=flat-square)](https://readthedocs.org/projects/pymoldflow/?badge=latest)
+        [![pypi](https://img.shields.io/pypi/v/pymoldflow.svg?style=flat-square)](https://pypi.org/project/pymoldflow)
+        
+        Documentation is available [here](https://pymoldflow.readthedocs.io).
+        
+        ### Installation
+        
+        To install `pymoldflow`, you are invited to use `pip` and its associated options
+        ```
+        pip install -U pymoldflow
+        ```
+        
+        ### License
+        
+        `pymoldflow` is published under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
