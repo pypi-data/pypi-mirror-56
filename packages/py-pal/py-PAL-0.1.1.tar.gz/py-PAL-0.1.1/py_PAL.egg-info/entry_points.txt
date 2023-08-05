@@ -1,0 +1,3 @@
+[console_scripts]
+pyPAL = pyPAL.__main__:main
+
