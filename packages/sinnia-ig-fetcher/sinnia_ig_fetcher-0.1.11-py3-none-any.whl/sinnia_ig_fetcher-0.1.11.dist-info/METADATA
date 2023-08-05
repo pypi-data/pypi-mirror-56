@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: sinnia-ig-fetcher
+Version: 0.1.11
+Summary: Sinnia IG Fetching Tools
+Home-page: https://github.com/sinnia/scripts/tree/develop/instagram
+Author: Sinnia
+Author-email: sonia.segura@sinnia.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: python-instagram
+Requires-Dist: instagram
+Requires-Dist: pymysql
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: sinnia-shared
+
+# Sinnia IG Fetcher
+
+Using Instagram Graph API and Instagram Basic Display API
+
+----
+
+Includes:
+
+For Businesses (Instagram Graph API):
+ - Get Insights
+ - Get Media
+ - Get Media Insights
+ - Get Competitors Media
+ - Get Top Media in Hashtag 
+
+For Basic Users (Instagram Basic Display API):
+ - Get Media
+
+
