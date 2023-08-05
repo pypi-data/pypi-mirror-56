@@ -1,0 +1,56 @@
+CHANGES
+=======
+
+1.0.5
+-----
+
+* travis conf !minor
+
+1.0.4
+-----
+
+* travis conf !minor
+
+1.0.3
+-----
+
+* travis conf !minor
+* [skip travis] !minor
+* [skip travis] !minor
+* [skip travis] !minor
+
+1.0.2
+-----
+
+* travis conf !minor
+
+1.0.1
+-----
+
+* [skip travis] readme badges !minor
+* [skip travis] doc badges !minor
+
+1.0.0
+-----
+
+* [skip travis] Release 1.0.0 !minor
+* [skip travis] docs !minor
+* [skip travis] docs !minor
+* new: doc: Project documentation !minor
+* new: doc: Project documentation !minor
+* new: doc: Project documentation
+* [skip travis] docs
+* [skip travis] docs
+* Fixed tests for Django < 2.1
+* Fixed tests for Django < 2.1
+* \* Fixed migrations
+* \* Group mapping in permission find \* Group mapping in group mirroring
+* \* Delete field ldap\_group dn \* Add test for future functionality
+* Table for groups mapping
+* Pylint fixes
+* restore tests
+
+0.0.1
+-----
+
+* initial commit
