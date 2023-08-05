@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: astar-qa
+Version: 0.0.4a6
+Summary: qa for python
+Home-page: http://astar.ltd:10010/algorithm/astar-quantizationstrategy-python
+Author: A.Star
+Author-email: astar@snowland.ltd
+Maintainer: A.Star
+Maintainer-email: astar@snowland.ltd
+License: Apache v2.0
+Platform: all
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: tushare
+Requires-Dist: easyquotation
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: statsmodels
+Requires-Dist: plotly
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: TA-Lib
+Requires-Dist: statsmodels
+
+UNKNOWN
+
+

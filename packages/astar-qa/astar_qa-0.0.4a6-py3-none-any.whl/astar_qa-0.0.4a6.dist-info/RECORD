@@ -1,0 +1,13 @@
+astar_qa/__init__.py,sha256=pZ7J0rEfsk1OSHTJ66YwG518ze-LPWvns1VBCLaSlng,347
+astar_qa/base.py,sha256=-tSznY_BmJ0vZl9Bk1iNffJQxgBMkujEoxKB1GQlmws,14736
+astar_qa/dataset/__init__.py,sha256=zxQ_q2thbP4QAw9OuozXRA48idm3cUs5GMpfhZmfsiA,233
+astar_qa/dataset/data.py,sha256=sYc697KcLEWxmStpbNPSuNT3VrF9oeh7WaGVAlB3y_E,2959
+astar_qa/deal/__init__.py,sha256=daO92zNP8E6hQd-EU1P5bHR46LbtkzTLMWPnHdYUDcg,310
+astar_qa/deal/deal.py,sha256=mGcFIa5pALE2aLi1XoQZ62LR0MuHybWbZs_VN9tsO0o,1798
+astar_qa/deal/macd_deal.py,sha256=fkzuoHBEL4mQSHnSoUO7-B8YhIEeFMbqf8G0HUZM63I,8660
+astar_qa/strategy/__init__.py,sha256=8rIqLW3ns9g3EPUYSLd9n8JO5bsC1s1X33gmA7H3Fb4,336
+astar_qa/strategy/macd_strategy.py,sha256=NEg3y3mz3uV2SxDZ_itfIOWRGVEf_M0fhSPs8pm1j4s,3109
+astar_qa-0.0.4a6.dist-info/METADATA,sha256=KJxRX9l3TLa5KJ2D4IoVMFgjf4JYBTvh-zXT7HLjVSo,945
+astar_qa-0.0.4a6.dist-info/RECORD,,
+astar_qa-0.0.4a6.dist-info/WHEEL,sha256=cScVKDQXc_cp1jHmxFDq9fIOIg17a2BsmfS6J39H6Eo,97
+astar_qa-0.0.4a6.dist-info/top_level.txt,sha256=K3kMslxEgrG_xTjvfhgQIkDod5EMaSwoBcc8Kb5pzoM,9
