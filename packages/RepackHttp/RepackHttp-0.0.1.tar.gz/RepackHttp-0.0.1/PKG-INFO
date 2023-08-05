@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: RepackHttp
+Version: 0.0.1
+Summary: RepackHttp packet
+Home-page: https://github.com/cchinm/RepackHttp
+Author: Zhang Zhanming
+Author-email: chinming95@foxmail.com
+License: UNKNOWN
+Description: # Description
+        对请求方式进行重包装，便于日后更改模块功能
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.3
+Description-Content-Type: text/markdown
