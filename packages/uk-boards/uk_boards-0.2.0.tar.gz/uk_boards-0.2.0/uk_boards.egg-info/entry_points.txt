@@ -1,0 +1,3 @@
+[console_scripts]
+uk_boards = uk_boards.cli:main
+
