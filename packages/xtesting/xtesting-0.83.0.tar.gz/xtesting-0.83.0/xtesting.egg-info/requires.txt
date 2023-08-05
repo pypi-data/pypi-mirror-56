@@ -1,0 +1,17 @@
+pbr!=2.1.0
+stevedore
+PyYAML
+enum34
+requests!=2.20.0
+robotframework>=3.0
+behave>=1.2.6
+mock
+PrettyTable<0.8
+six
+python-subunit
+os-testr
+junitxml
+boto3
+
+[:(python_version>='3.5')]
+behave-html-formatter>=0.9.4
