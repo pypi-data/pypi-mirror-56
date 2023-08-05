@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: hns-console-logging
+Version: 19.11
+Summary: Just a simple script to create a logger object for logging to console
+Home-page: https://gitlab.com/horsebridge/hns_console_logging.git
+Author: Nitin Sidhu
+Author-email: nitin.sidhu23@gmail.com
+License: MIT
+Description: # hns_console_logging
+        Just a simple script to create a logger object for logging to console. It is intended to be used with services running 
+        as docker container. By using the logging facility in docker container, you don't need to write logs to the file, you 
+        can use the logs written to file by docker daemon.  
+        
+        ## Installation
+        `pip install hns-console-logging`
+        
+        ## Usage
+        ```python
+        import hns_console_logging
+        logger = hns_console_logging.get_logger('test_module')
+        logger.info('Info msg')
+        ```
+        You can change the default log format and log level.  
+        Default log format: `%(asctime)s %(name)s %(funcName)s[PID:%(process)d TID:%(thread)d] %(levelname)s %(message)s`  
+        Default log level: `INFO`  
+        
+        To change log format, please refer: https://docs.python.org/3/library/logging.html#logrecord-attributes  
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: ~=3.6
+Description-Content-Type: text/markdown
