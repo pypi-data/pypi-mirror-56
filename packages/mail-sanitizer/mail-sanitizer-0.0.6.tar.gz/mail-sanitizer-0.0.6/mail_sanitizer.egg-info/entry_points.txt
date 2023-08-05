@@ -1,0 +1,3 @@
+[console_scripts]
+mail-sanitizer = mail_sanitizer.main:main
+

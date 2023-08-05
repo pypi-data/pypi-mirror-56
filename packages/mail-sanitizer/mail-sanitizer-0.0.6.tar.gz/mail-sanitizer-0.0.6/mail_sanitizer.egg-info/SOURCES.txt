@@ -1,0 +1,14 @@
+README.md
+setup.py
+mail_sanitizer/__init__.py
+mail_sanitizer/mail_dump_ops.py
+mail_sanitizer/main.py
+mail_sanitizer/utils.py
+mail_sanitizer.egg-info/PKG-INFO
+mail_sanitizer.egg-info/SOURCES.txt
+mail_sanitizer.egg-info/dependency_links.txt
+mail_sanitizer.egg-info/entry_points.txt
+mail_sanitizer.egg-info/requires.txt
+mail_sanitizer.egg-info/top_level.txt
+mail_sanitizer/clients/__init__.py
+mail_sanitizer/clients/gmail_client.py
