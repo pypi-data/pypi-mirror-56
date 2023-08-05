@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: sticky-marshmallow
+Version: 0.1.0
+Summary: sticky-marshmallow provides RDMS style persistence for marshmallow schemas
+Home-page: http://github.com/bwind/sticky-marshmallow
+Author: Bas Wind
+Author-email: mailtobwind@gmail.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Database
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: marshmallow
+
+UNKNOWN
+
+
