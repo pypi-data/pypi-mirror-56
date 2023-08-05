@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: simiotics
+Version: 0.6.2
+Summary: Simiotics Python Client
+Home-page: UNKNOWN
+Author: Neeraj Kashyap
+Author-email: neeraj@simiotics.com
+License: UNKNOWN
+Description: # Simiotics: Python Client Library
+        
+        ## Getting started
+        
+        Install:
+        ```
+        pip install simiotics
+        ```
+        
+        Check out our documentation: [docs.simiotics.com](https://docs.simiotics.com)
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
