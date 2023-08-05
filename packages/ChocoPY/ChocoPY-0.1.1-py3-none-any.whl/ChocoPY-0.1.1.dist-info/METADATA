@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ChocoPY
+Version: 0.1.1
+Summary: ChocoPY is simple and easy development tool for ChatBot
+Home-page: UNKNOWN
+Author: MallyCrip
+Author-email: pycon@kakao.com
+License: UNKNOWN
+Keywords: api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
+Requires-Dist: requests
+Requires-Dist: flask
+
+# CHOCOPY
+
+
