@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: django-pianoforte
+Version: 0.1.0
+Summary: Pianoforte-style django basic utilities
+Home-page: https://github.com/team-pianoforte/django-piano
+Author: z@kuro
+Author-email: z@kuro.red
+License: MIT
+Description: # Django Pianoforte
+        
+        Pianoforte-style django basic utilities.
+        
+        ## Features
+        
+        - BasicModel
+        - BasicQuerySet
+        - BasicManager
+        - BasicModelAdmin
+        
+Keywords: django utility pianoforte
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
