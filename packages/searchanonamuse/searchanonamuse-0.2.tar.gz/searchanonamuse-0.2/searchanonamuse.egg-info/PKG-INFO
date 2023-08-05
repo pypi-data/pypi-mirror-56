@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: searchanonamuse
+Version: 0.2
+Summary: Receives login, password and path to ChromeDriver.exe as parameters and has a method that do the search in MAM and returns the HTML resulting of the search
+Home-page: https://github.com/samuelsonsev/searchanonamuse
+Author: Sam
+Author-email: none@example.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
