@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: iglsynth
+Version: 0.2.1
+Summary: Infinite Games on graph and Logic-based controller Synthesis
+Home-page: https://github.com/abhibp1993/iglsynth
+Author: Abhishek N. Kulkarni
+Author-email: ankulkarni@wpi.edu
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
