@@ -1,0 +1,6 @@
+google-cloud-datastore>=1.8.0
+google-cloud-pubsub>=0.41.0
+google-cloud-bigquery>=1.21.0
+pydal==20190915.2
+PyMySQL==0.9.3
+pg8000==1.13.2
