@@ -1,0 +1,31 @@
+- hosts: all
+  vars:
+    key: value
+    key2: '{{ ansible_user }}'
+    ansible_bender:
+      base_image: mona_lisa
+      layering: true
+      cache_tasks: false
+      ansible_extra_args: "--some --args"
+      buildah_from_extra_args: "--more --args"
+
+      working_container:
+        volumes:
+          - /c:/d
+
+      target_image:
+        name: funky-mona-lisa
+        volumes:
+          - /a
+        working_dir: /workshop
+        labels:
+          x: y
+        annotations:
+          bohemian: rhapsody
+        environment:
+          z: '{{ key }}'
+        cmd: command -x -y z
+        entrypoint: great-entry-point
+        user: leonardo
+
+  tasks: []

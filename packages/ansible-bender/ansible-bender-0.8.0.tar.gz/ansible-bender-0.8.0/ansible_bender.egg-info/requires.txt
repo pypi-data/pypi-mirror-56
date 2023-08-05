@@ -1,0 +1,8 @@
+PyYAML
+tabulate
+jsonschema
+
+[testing]
+pytest
+flexmock
+pytest-cov
