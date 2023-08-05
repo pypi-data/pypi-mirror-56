@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: snektris
+Version: 0.0.2
+Summary: SNEKTRIS
+Home-page: https://github.com/gab50000/snektris
+License: UNKNOWN
+Author: Gabriel Kabbe
+Author-email: gabriel.kabbe@mail.de
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: pygame == 1.9.6
