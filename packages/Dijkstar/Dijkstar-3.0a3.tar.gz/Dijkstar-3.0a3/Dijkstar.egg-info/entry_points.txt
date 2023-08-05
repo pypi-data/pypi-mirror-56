@@ -1,0 +1,3 @@
+[console_scripts]
+dijkstar = dijkstar.__main__:main.console_script
+
