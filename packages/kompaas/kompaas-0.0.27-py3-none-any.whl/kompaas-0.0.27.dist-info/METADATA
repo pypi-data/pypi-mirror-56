@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: kompaas
+Version: 0.0.27
+Summary: CLI for helm chart customization and deployment
+Home-page: UNKNOWN
+Author: Paolo Sini
+Author-email: paolo@ziosting.fr
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: cement
+Requires-Dist: jinja2
+Requires-Dist: pyyaml
+Requires-Dist: colorlog
+Requires-Dist: nested-lookup
+
+# Kompaas
+
+Kompaas is a python3 CLI that lets you customize and deploy helm charts.
+
+The documentation can be found here: http://docs.kompaas.io .
+
