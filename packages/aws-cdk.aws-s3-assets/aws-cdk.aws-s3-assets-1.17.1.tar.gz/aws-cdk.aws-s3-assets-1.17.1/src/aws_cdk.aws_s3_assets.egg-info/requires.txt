@@ -1,0 +1,7 @@
+jsii~=0.20.7
+publication>=0.0.3
+aws-cdk.assets>=1.17.1,~=1.17
+aws-cdk.aws-iam>=1.17.1,~=1.17
+aws-cdk.aws-s3>=1.17.1,~=1.17
+aws-cdk.core>=1.17.1,~=1.17
+aws-cdk.cx-api>=1.17.1,~=1.17
