@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: EasyCluster
+Version: 0.22.2
+Summary: EasyCluster: a remote execution/clustering module for Python
+Home-page: http://pypi.python.org/pypi/EasyCluster
+Author: Katie Stafford
+Author-email: katie@ktpanda.org
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: System :: Clustering
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
