@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: flockfile
+Version: 0.1.0
+Summary: A simple lock file class.
+Home-page: https://gitlab.com/rveach/flockfile
+Author: Ryan Veach
+Author-email: rveach@gmail.com
+License: MIT
+Description: # flockfile
+        
+        
+Keywords: Lock,Flock
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
