@@ -1,0 +1,9 @@
+cert_session/__init__.py,sha256=MfLjbYtxzDAs65M84QdZstoyXNCujH5mnXOeYUQJkbs,1484
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=_pflwoo2_ntb0Tvi9KQB1Dpz4aFcz0kM5_IFQ_NpRFA,220
+tests/test_cert_session.py,sha256=Losw47R5uIHdF0tRA2kTUVp6h9e67i1i6oRfP3utR_Y,1621
+tests/test_conf.py,sha256=nPmPvjGXQ3xVZbqe_cpX2m9zlAUYOqg2lpI3aCzy59Y,103
+cert_session-0.0.3.dist-info/METADATA,sha256=XcYRK09GnQG9PjhN9DR6p24u2_lXSpHPxpJo8-osQjg,1268
+cert_session-0.0.3.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+cert_session-0.0.3.dist-info/top_level.txt,sha256=WP8pQJht17vufs1yET5UJNRDLh75WicnP92muG6PP8I,19
+cert_session-0.0.3.dist-info/RECORD,,
