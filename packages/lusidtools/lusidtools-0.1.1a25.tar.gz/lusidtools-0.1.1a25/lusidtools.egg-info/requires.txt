@@ -1,0 +1,9 @@
+lusid-sdk-preview>=0.10.840
+msrest
+pandas
+numpy
+pytz
+tqdm>=4.30.0
+requests
+coloredlogs
+detect_delimiter
