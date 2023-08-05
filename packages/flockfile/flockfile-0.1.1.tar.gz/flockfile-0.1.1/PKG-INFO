@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: flockfile
+Version: 0.1.1
+Summary: A simple lock file class based on file locking.
+Home-page: https://gitlab.com/rveach/flockfile
+Author: Ryan Veach
+Author-email: rveach@gmail.com
+License: MIT
+Project-URL: Source, https://gitlab.com/rveach/flockfile
+Project-URL: Tracker, https://gitlab.com/rveach/flockfile/issues
+Description: # flockfile
+        
+        Just a simple python lock file class using file locks.
+        
+        ## Usage
+        
+        ```python
+        from flockfile import FlockFile, FileNotLocked
+        
+        # init the class using a file name
+        # optionally, the directory can be set to something other than /tmp
+        lock = FlockFile("myscriptname", lock_dir="/tmp")
+        
+        
+        # lock the file
+        lock.lock()
+        # if this is unsuccessful, exception FileNotLocked will be raised.
+        
+        # the following class method can be used to check lock status
+        assert lock.check_lock()
+        
+        # unlock and delete file
+        lock.unlock()
+        ```
+        
+        ## Questions or Issues?
+        
+        Please report as a Gitlab issue: https://gitlab.com/rveach/flockfile/issues
+        
+Keywords: Lock,Flock
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
