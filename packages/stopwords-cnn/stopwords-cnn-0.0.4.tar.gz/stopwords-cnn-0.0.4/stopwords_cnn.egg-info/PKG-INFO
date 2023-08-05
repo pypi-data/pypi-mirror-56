@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: stopwords-cnn
+Version: 0.0.4
+Summary: stopwords for chinese
+Home-page: https://github.com/tauriel27/stopwords-cn
+Author: tauriel
+Author-email: taurieli27@outlook.com
+License: MIT
+Description: # stopwords-cn
+        Stopwords for Chinese
+        
+Keywords: nlp
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
