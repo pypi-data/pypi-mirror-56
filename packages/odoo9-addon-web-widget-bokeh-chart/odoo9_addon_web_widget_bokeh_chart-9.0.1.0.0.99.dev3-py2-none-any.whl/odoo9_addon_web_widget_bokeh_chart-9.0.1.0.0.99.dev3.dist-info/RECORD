@@ -1,0 +1,17 @@
+odoo9_addon_web_widget_bokeh_chart-9.0.1.0.0.99.dev3-nspkg.pth,sha256=byZRehCeET5bIG0AMyMXPLGoXAE887IW4f1j_Rh4alU,564
+odoo_addons/web_widget_bokeh_chart/README.rst,sha256=Yy_1wfh-IoXDej2PtFysoT2t4H1bxK4jy5QPb9J3zwk,2969
+odoo_addons/web_widget_bokeh_chart/__init__.py,sha256=iwhKnzeBJLKxpRVjvzwiRE63_zNpIBfaKLITauVph-0,24
+odoo_addons/web_widget_bokeh_chart/__openerp__.py,sha256=NpTQTnJ1iiAH9xeAllCq4tVF76IyQfz4UwQk9lGX6PU,657
+odoo_addons/web_widget_bokeh_chart/static/description/example.png,sha256=GKhtvIKBJMTUI6LIoLRi2QauFxZ88VbquMvexbiyAxo,155417
+odoo_addons/web_widget_bokeh_chart/static/description/icon.png,sha256=j_K2Ollc89SXFud10L1HOhU4BL1E9t40oGAsSSTUJ-k,2474
+odoo_addons/web_widget_bokeh_chart/static/src/js/web_widget_bokeh_chart.js,sha256=diHl680KdvS0jalo_bEUhJ-zJtCX-bDj-Nz0CXT0kqo,591
+odoo_addons/web_widget_bokeh_chart/static/src/lib/bokeh/bokeh-0.12.7.css,sha256=kYjGhsFraOFt4tgioP6Hbg28ejLFaJRSO5w5CvHMGyk,54374
+odoo_addons/web_widget_bokeh_chart/static/src/lib/bokeh/bokeh-0.12.7.js,sha256=NCEddAnuvZIkvNRgUsancgxS-4K2fO9b1hMqSWWLXLM,1617702
+odoo_addons/web_widget_bokeh_chart/static/src/lib/bokeh/bokeh-widgets-0.12.7.css,sha256=h26gKB9iagVOr89EfBtnAQZEF4IRb6IMkHs43c6H3wQ,49636
+odoo_addons/web_widget_bokeh_chart/static/src/lib/bokeh/bokeh-widgets-0.12.7.js,sha256=Icbo91PC1cVMU2SbCqdR1QayGWoe6ipG9tXfH7QWONY,213776
+odoo_addons/web_widget_bokeh_chart/views/web_widget_bokeh_chart.xml,sha256=RBF4XLsyxlnK7F_JEYWRbrPlY7egMy8AYaGeLQmPa0I,817
+odoo9_addon_web_widget_bokeh_chart-9.0.1.0.0.99.dev3.dist-info/METADATA,sha256=qIGVrLzFFJuqnhxWnYBlows8qllyqtmhhg5FhAFIrus,3520
+odoo9_addon_web_widget_bokeh_chart-9.0.1.0.0.99.dev3.dist-info/WHEEL,sha256=Ph_z28wTcU7HnQwSQ6yCQ-zkcGK4h4ehDfP8b6UoHVE,92
+odoo9_addon_web_widget_bokeh_chart-9.0.1.0.0.99.dev3.dist-info/namespace_packages.txt,sha256=zhjxn3lgwTXeAiTvAlKWYlCdmGhlOYAY9CuT2hfLb40,12
+odoo9_addon_web_widget_bokeh_chart-9.0.1.0.0.99.dev3.dist-info/top_level.txt,sha256=zhjxn3lgwTXeAiTvAlKWYlCdmGhlOYAY9CuT2hfLb40,12
+odoo9_addon_web_widget_bokeh_chart-9.0.1.0.0.99.dev3.dist-info/RECORD,,
