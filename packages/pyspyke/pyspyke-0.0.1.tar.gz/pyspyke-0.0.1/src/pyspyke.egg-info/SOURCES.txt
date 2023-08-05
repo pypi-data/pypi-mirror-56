@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/pyspyke/__init__.py
+src/pyspyke/pyspyke.py
+src/pyspyke.egg-info/PKG-INFO
+src/pyspyke.egg-info/SOURCES.txt
+src/pyspyke.egg-info/dependency_links.txt
+src/pyspyke.egg-info/entry_points.txt
+src/pyspyke.egg-info/requires.txt
+src/pyspyke.egg-info/top_level.txt
