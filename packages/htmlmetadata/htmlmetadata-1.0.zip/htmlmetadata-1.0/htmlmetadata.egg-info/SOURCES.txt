@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+htmlmetadata/__init__.py
+htmlmetadata/__main__.py
+htmlmetadata/main.py
+htmlmetadata/rules.py
+htmlmetadata.egg-info/PKG-INFO
+htmlmetadata.egg-info/SOURCES.txt
+htmlmetadata.egg-info/dependency_links.txt
+htmlmetadata.egg-info/entry_points.txt
+htmlmetadata.egg-info/requires.txt
+htmlmetadata.egg-info/top_level.txt

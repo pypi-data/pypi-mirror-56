@@ -1,0 +1,6 @@
+beautifulsoup4>=4.8.1
+html5>=0.0.9
+
+[develop]
+wheel
+twine
