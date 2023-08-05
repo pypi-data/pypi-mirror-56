@@ -1,0 +1,6 @@
+memoir>=0.0.2
+reprit>=0.1.0
+typing_extensions>=3.7.0
+
+[:platform_python_implementation != "PyPy"]
+mypy>=0.740
