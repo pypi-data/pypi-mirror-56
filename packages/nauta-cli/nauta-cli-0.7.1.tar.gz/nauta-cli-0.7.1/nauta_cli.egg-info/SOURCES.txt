@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+nauta_cli.egg-info/PKG-INFO
+nauta_cli.egg-info/SOURCES.txt
+nauta_cli.egg-info/dependency_links.txt
+nauta_cli.egg-info/entry_points.txt
+nauta_cli.egg-info/requires.txt
+nauta_cli.egg-info/top_level.txt
+nautacli/__about__.py
+nautacli/__init__.py
+nautacli/nauta.py
