@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+timethat.py
+test/test_timeme.py
+timethat.egg-info/PKG-INFO
+timethat.egg-info/SOURCES.txt
+timethat.egg-info/dependency_links.txt
+timethat.egg-info/top_level.txt
