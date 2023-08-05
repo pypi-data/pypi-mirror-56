@@ -1,0 +1,185 @@
+<p align="center">
+<a href="https://travis-ci.org/alex-oleshkevich/mailables">
+    <img src="https://api.travis-ci.com/alex-oleshkevich/mailables.svg?branch=master" alt="Build Status">
+</a>
+<a href="https://codecov.io/gh/alex-oleshkevich/mailables">
+    <img src="https://codecov.io/gh/alex-oleshkevich/mailables/branch/master/graph/badge.svg" alt="Coverage">
+</a>
+<a href="https://pypi.org/project/mailables/">
+    <img src="https://badge.fury.io/py/mailables.svg" alt="Package version">
+</a>
+</p>
+
+---
+
+
+# Introduction
+
+`mailables` is a developer-centric utility for sending asynchronous mails.
+
+## Requirements
+
+Python 3.7+
+
+## Installation
+
+```shell
+$ pip install mailables
+```
+
+## Usage
+
+```python
+from mailables import Mailer, EmailMessage
+
+message = EmailMessage(
+    to='User Name <user@example.com>',
+    from_address='sender@example.com',
+    subject='Hey',
+    text_body='This is sent using mailables!',
+    html_body='<b>This is sent using mailables!</b>'
+)
+
+mailer = Mailer('smtp://localhost:25')
+await mailer.send(message)
+```
+
+## Dependencies
+
+Mailables does not have any hard dependencies, but the following are optional:
+
+* [`aiofiles`](https://github.com/Tinche/aiofiles) - required by `FileTransport`.
+* [`aiosmtpdlib`](https://github.com/cole/aiosmtplib) - required by `SMTPTransport`.
+
+You can install all of these with `pip install mailables[full]`.
+
+
+## Configuration
+
+In order to send email you need to configure transport and mailer.
+Mailer is a class with which you would work all time. Think it is a public interface to `mailables`.
+And transport is a concrete adapter which does actual sending. 
+
+```python
+from mailables import Mailer
+
+mailer = Mailer('smtp://localhost:25')
+```
+
+When you need to fine-grained control on the transport configuration 
+you may pass the transport instance instead of URL string:
+
+```python
+from mailables import Mailer, SMTPTransport
+mailer = Mailer(SMTPTransport(host='localhost', port=25))
+``` 
+
+This approach gives you full control on transport construction.
+
+Note, that you are not limited to one mailer only, 
+your application may have multiple mailers with different transports/settings. 
+
+
+## Mail message
+
+The mail message is represented by `EmailMessage` class.
+
+```python
+from mailables import EmailMessage
+
+message = EmailMessage(
+    to=['root@localhost', 'admin@localhost'],
+    from_address='user@localhost',
+    subject='This is a test email',
+    text_body='And this is a body',
+    html_body='And HTML body <b>supported</b> as well',
+)
+```  
+
+### Attaching files
+
+
+```python
+from mailables import EmailMessage, Attachment
+
+message = EmailMessage(
+    attachments=[
+        Attachment(contents='CONTENTS', file_name='file.txt')        
+    ]
+)
+
+# or alternatively using `attach` method:
+message.attach(contents='CONTENTS', file_name='file.txt')
+
+# or you can add attachment instance using `add_attachment` method:
+message.add_attachment(Attachment('contents'))
+```
+
+
+## Transports
+
+Here is the list of included transports
+
+### SMTPTransport
+
+Sends messages using SMTP protocol.
+
+```python
+from mailables import SMTPTransport
+
+transport = SMTPTransport(host='localhost', port=25, use_ssl=True)
+```
+
+### FileTransport
+
+File transport does not send email to anywhere. It dumps messages into mailbox directory in `*.eml` format.
+
+```python
+from mailables import FileTransport
+
+transport = FileTransport(directory='/tmp/mailbox')
+```
+
+### InMemoryTransport
+
+Stores sent emails in a local variable.
+
+```python
+from mailables import InMemoryTransport, EmailMessage
+
+storage = []
+transport = InMemoryTransport(storage=storage)
+
+# example:
+transport.send(EmailMessage(subject='Hey', to='root@localhost'))
+assert len(storage) == 1
+```
+
+### NullTransport
+
+This transport does not send anything at all. Use it when you want to completely silence the mailer.
+
+```python
+from mailables import NullTransport
+
+transport = NullTransport()
+```
+
+
+## Building custom transports
+
+Extend `mailables.transport.BaseTransport` class and 
+implement `async def send(self, message: EmailMessage)` method:
+
+For example, we will create a simple transport class for writing mails to a stdout:
+
+```python
+from mailables import BaseTransport, EmailMessage, Mailer
+
+class ConsoleTransport(BaseTransport):
+    async def send(self, message: EmailMessage):
+        print(str(message))
+
+
+mailer = Mailer(ConsoleTransport())
+```
