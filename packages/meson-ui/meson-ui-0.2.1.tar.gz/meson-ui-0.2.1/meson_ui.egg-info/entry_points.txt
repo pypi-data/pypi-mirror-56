@@ -1,0 +1,3 @@
+[gui_scripts]
+meson-ui = app.__main__:mesonui_main
+
