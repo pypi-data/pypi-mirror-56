@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: PyConfigMaker
+Version: 0.2
+Summary: Generates a config and an argument parser from a yaml file
+Home-page: UNKNOWN
+Author: Claas Voelcker
+Author-email: claas@voelcker.net
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+
