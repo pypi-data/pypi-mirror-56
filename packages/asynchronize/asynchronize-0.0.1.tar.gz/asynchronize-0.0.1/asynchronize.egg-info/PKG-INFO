@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: asynchronize
+Version: 0.0.1
+Summary: Python package for converting callback functions to asynchronous coroutines
+Home-page: https://github.com/TMiguelT/Asynchronize
+Author: Michael Milton
+Author-email: michael.r.milton@gmail.com
+License: GPLv3
+Description: UNKNOWN
+Keywords: asyncio async callback coroutine
+Platform: UNKNOWN
+Classifier: Framework :: AsyncIO
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
