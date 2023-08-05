@@ -1,0 +1,60 @@
+{
+  "classmap": {
+    "Any": "Resource",
+    "Practitioner.role": "PractRole",
+    "boolean": "bool",
+    "integer": "int",
+    "positiveInt": "int",
+    "unsignedInt": "int",
+    "date": "FHIRDate",
+    "dateTime": "FHIRDate",
+    "instant": "FHIRDate",
+    "time": "FHIRDate",
+    "decimal": "float",
+    "string": "str",
+    "markdown": "str",
+    "id": "str",
+    "code": "str",
+    "url": "str",
+    "canonical": "str",
+    "oid": "str",
+    "uuid": "str",
+    "xhtml": "str",
+    "base64Binary": "str"
+  },
+  "replacemap": {
+    "Reference": "FHIRReference"
+  },
+  "natives" : ["bool", "int", "float", "str", "dict"],
+  "jsonmap" : {
+    "str": "str",
+    "int": "int",
+    "bool": "bool",
+    "float": "float",
+    "FHIRDate": "str"
+  },
+  "jsonmap_default" : "dict",
+  "reservedmap" : {
+    "for": "for_fhir",
+    "from": "from_fhir",
+    "class": "class_fhir",
+    "import": "import_fhir",
+    "global": "global_fhir",
+    "assert": "assert_fhir",
+    "except": "except_fhir"
+  },
+
+  "enum_map" : {
+    "=": "eq",
+    "<": "lt",
+    "<=": "lte",
+    ">": "gt",
+    ">=": "gte",
+    "*": "max"
+  },
+  "enum_namemap" : {
+    "http://hl7.org/fhir/contracttermsubtypecodes": "ContractTermSubtypeCodes",
+    "http://hl7.org/fhir/coverage-exception": "CoverageExceptionCodes",
+    "http://hl7.org/fhir/resource-type-link": "ResourceTypeLink"
+  }
+}
