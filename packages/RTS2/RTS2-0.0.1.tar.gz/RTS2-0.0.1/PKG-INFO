@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: RTS2
+Version: 0.0.1
+Summary: RTS2 Python scripts
+Home-page: https://github.com/RTS2/rts2
+Author: Petr Kubánek
+Author-email: petr@rts2.org
+License: UNKNOWN
+Description: # Python scripts for RTS2
+        
+        Those are the Python scripts for RTS2. Those are know to run in Python3, and
+        were trasferred from Python2.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
