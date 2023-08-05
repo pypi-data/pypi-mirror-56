@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: TracSelfDelete
+Version: 2.1
+Summary: Permissions policy that allows users to delete wiki pages and attachments that they created.
+Home-page: https://trac-hacks.org/wiki/SelfDeletePlugin
+Author: Ryan J Ollos
+Author-email: ryan.j.ollos@gmail.com
+License: BSD
+Description: UNKNOWN
+Keywords: trac plugin wiki attachment delete
+Platform: UNKNOWN
+Classifier: Framework :: Trac
