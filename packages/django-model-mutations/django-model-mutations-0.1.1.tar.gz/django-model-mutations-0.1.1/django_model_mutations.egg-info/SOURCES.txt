@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+django_model_mutations/__init__.py
+django_model_mutations/mixins.py
+django_model_mutations/mutations.py
+django_model_mutations/utils.py
+django_model_mutations.egg-info/PKG-INFO
+django_model_mutations.egg-info/SOURCES.txt
+django_model_mutations.egg-info/dependency_links.txt
+django_model_mutations.egg-info/requires.txt
+django_model_mutations.egg-info/top_level.txt
