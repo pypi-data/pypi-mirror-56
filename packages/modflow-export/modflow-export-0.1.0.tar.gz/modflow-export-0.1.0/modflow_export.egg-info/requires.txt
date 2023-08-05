@@ -1,0 +1,10 @@
+pyyaml
+numpy
+pandas
+gdal
+fiona
+rasterio
+shapely
+pyproj
+flopy
+gis-utils
