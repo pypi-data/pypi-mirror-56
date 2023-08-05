@@ -1,0 +1,73 @@
+[![Documentation Status](https://readthedocs.org/projects/fuzzytable/badge/?version=latest)](https://fuzzytable.readthedocs.io/en/latest/?badge=latest)
+
+# Overview
+fuzzytable is a set of tools for extracting tabular data out of messy spreadsheets.
+
+This library was developed to meet the needs of projects relying on spreadsheet data that has been handled by many people. Headers are often missing or mispelled. The data is incorrectly formatted. The table is on the wrong worksheet or you don't know the correct spreadsheet name. Etc...
+
+fuzzytable allows you to quickly extract that data instead of arduously QC'ing the data ahead of time. After extraction, you can query the FuzzyTable attributes to e.g. determine which fields were found and how closely the desired header matches the actual header.
+
+# Installation
+
+```shell
+pip install fuzzytable
+```
+
+# Example Usage
+
+Here's a light-hearted demo. To read this messy file using, say, the csv module, we'd have to first:
+- Delete rows 1 and 2.
+- Delete columns A and B.
+- Rename the headers. 
+
+| A         | B 	| C          	| D      	    | E 	|
+|----------	|-----	|------------	|----------	    |--------	|
+| These    	| are 	| not        	| the      	    | droids 	|
+| you      	| are 	| looking    	| for.     	    | He     	|
+| can      	| go  	| c o l o r     | first name 	| GivenName	|
+| about    	| his 	| Gold   	    | C          	| 3PO      	|
+| business 	| .   	| Blue   	    | R2         	| D2       	|
+
+Let's instead leverage the FuzzyTable class.
+
+```bash
+>>> from fuzzytable import FuzzyTable
+
+>>> droids = FuzzyTable(
+...     path='droids.csv',
+...     fields=['first_name', 'last_name', 'color'],
+...     approximate_match=True,
+...     min_ratio=.3
+... )
+```
+
+Now let's play with the data we've extracted.
+
+```bash
+>>> droids['color']
+['Gold', 'Blue']
+
+>>> for droid in droids.records:
+...     print(f"{droid['first_name']}-{droid['last_name']} is {droid['color']}.")
+C-3PO is Gold.
+R2-D2 is Blue.
+
+>>> droids.fields['first_name'].col_num
+3
+
+>>> droids.sheet.header_row
+2
+```
+
+# Links
+
+- Documentation (tutorials, etc): [fuzzytable.readthedocs.io](https://fuzzytable.readthedocs.io/)
+- PyPI: [pypi.org/project/fuzzytable](https://pypi.org/project/fuzzytable/)
+- github: [github.com/jonathanchukinas/fuzzytable](https://github.com/jonathanchukinas/fuzzytable)
+- Submit issues: [github.com/jonathanchukinas/fuzzytable/issues](https://github.com/jonathanchukinas/fuzzytable/issues)
+
+# Supported Formats
+- Excel (.xlsx, .xlsm, .xltx, .xltm)
+- csv (.csv)
+
+Basically, anything that can be read by the openpyxl or csv modules. 
