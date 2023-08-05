@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: chameleone_status
+Version: 0.2.2
+Summary: chameleone status sender
+Home-page: UNKNOWN
+Author: avinash
+Author-email: avinashn686@gmail.com
+License: UNKNOWN
+Description: This is a cameleon packaget to send mail. You can use
+        call function message_send() to activate
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
