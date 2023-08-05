@@ -1,0 +1,10 @@
+README.md
+setup.py
+datedetect/__init__.py
+datedetect/datedetect.py
+datedetect/exceptions.py
+datedetect/utils.py
+datedetect.egg-info/PKG-INFO
+datedetect.egg-info/SOURCES.txt
+datedetect.egg-info/dependency_links.txt
+datedetect.egg-info/top_level.txt
