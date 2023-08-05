@@ -1,0 +1,50 @@
+- name: MOV
+  operands:
+  - class: register
+    name: gpr
+  - class: memory
+    base: gpr
+    offset: ~
+    index: ~
+    scale: 1
+  latency: 4.0      # 1*p23+1*p2D3D
+  port_pressure: [[1, '23'],[1, [2D, 3D]]]
+  throughput: 0.5
+  uops: 1
+- name: MOVSS
+  operands:
+  - class: register
+    name: xmm
+  - class: memory
+    base: gpr
+    offset: ~
+    index: ~
+    scale: 1
+  latency: 4.0
+  port_pressure: [[1, '23'],[1, [2D, 3D]]]
+  throughput: 0.5
+  uops: 1
+- name: MOVAPS
+  operands:
+  - class: register
+    name: xmm
+  - class: memory
+    base: gpr
+    offset: ~
+    index: ~
+    scale: 1
+  latency: 4.0
+  port_pressure: [[1, '23'],[1, [2D, 3D]]]
+  throughput: 0.5
+  uops: 1
+- name: MOVUPS
+  operands:
+  - class: register
+    name: xmm
+  - class: memory
+    base: gpr
+    offset: ~
+    index: ~
+    scale: 1
+  latency: 4.0
+  port_pressure: [[1, '23'],[1, [2D, 3D]]]
