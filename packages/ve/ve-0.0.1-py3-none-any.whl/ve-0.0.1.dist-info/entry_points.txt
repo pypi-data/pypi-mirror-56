@@ -1,0 +1,3 @@
+[console_scripts]
+ve = ve.cli:main
+
