@@ -1,0 +1,60 @@
+Metadata-Version: 1.1
+Name: anomatools
+Version: 2.0
+Summary: Toolbox for anomaly detection.
+Home-page: https://github.com/Vincent-Vercruyssen/anomatools
+Author: Vincent Vercruyssen
+Author-email: V.Vercruyssen@gmail.com
+License: UNKNOWN
+Description: # anomatools guide
+        
+        This package is a collection of anomaly detection tools:
+        
+        - SSDO: semi-supervised detection of outliers
+        - iNNe: isolation-based nearest neighbor ensembles
+        - kNNo: k-nearest neighbor anomaly detection
+        
+        
+        
+        ## Installation
+        
+        Build the package using setup.py:
+        
+        ```
+        $ python setup.py install
+        ```
+        
+        ...or with pip:
+        
+        ```
+        $ pip install git+https://github.com/Vincent-Vercruyssen/anomatools.git@master
+        ```
+        
+        
+        
+        ## Usage
+        
+        See notebooks/ for examples.
+        
+        
+        
+        ## Dependencies
+        
+        - [Python 3](http://www.python.org)
+        - [Numpy](http://www.numpy.org)
+        - [Scipy](http://www.scipy.org)
+        - [Scikit-learn](https://scikit-learn.org/stable/)
+        - [Seaborn](https://seaborn.pydata.org/) --> optional
+        
+        
+        
+        ## Contact
+        
+        - [vincent.vercruyssen@cs.kuleuven.be](mailto:vincent.vercruyssen@cs.kuleuven.be)
+        
+Keywords: anomaly detection
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3

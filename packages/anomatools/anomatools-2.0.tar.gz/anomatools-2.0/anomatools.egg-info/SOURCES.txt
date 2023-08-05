@@ -1,0 +1,17 @@
+setup.py
+anomatools/__init__.py
+anomatools.egg-info/PKG-INFO
+anomatools.egg-info/SOURCES.txt
+anomatools.egg-info/dependency_links.txt
+anomatools.egg-info/requires.txt
+anomatools.egg-info/top_level.txt
+anomatools/anomaly_detection/BaseDetector.py
+anomatools/anomaly_detection/SSDO.py
+anomatools/anomaly_detection/__init__.py
+anomatools/anomaly_detection/iNNe.py
+anomatools/anomaly_detection/kNNo.py
+anomatools/clustering/COPKMeans.py
+anomatools/clustering/__init__.py
+anomatools/utils/__init__.py
+anomatools/utils/fastfuncs.py
+anomatools/utils/validation.py
