@@ -1,0 +1,8 @@
+flake8_boto3/__init__.py,sha256=8oAxKUG747GUokmxjkrWejyJa5yPNEsoJDlXxoedxTw,21
+flake8_boto3/auth.py,sha256=dEJSS99sq1nbqXykdcWGEHoyTLrRBsSmgwbSIMackV8,1866
+flake8_boto3/boto_import.py,sha256=22seIkMMtGq0rRVhhACaqCHzvdB9RCgg20PecMUAUm8,1173
+flake8_boto3/deprecated.py,sha256=9uuAIjcfkhcWvONrkcKcSiJFyY5rckeBTwxWgHGz6cY,1603
+flake8_boto3-0.1.1.dist-info/entry_points.txt,sha256=vf-5PBc-PLHaMTaPCcP_LjtaEVVbrdLjfiesVWjep9Y,247
+flake8_boto3-0.1.1.dist-info/WHEEL,sha256=KNDdkjSeigjRXptGlrG4jH7jZgp5SlNmTTETrR633wE,85
+flake8_boto3-0.1.1.dist-info/METADATA,sha256=S7ydLaIbY-v3AodpUBfwaXw-_13FL1O4eV7RwaiWcBI,810
+flake8_boto3-0.1.1.dist-info/RECORD,,

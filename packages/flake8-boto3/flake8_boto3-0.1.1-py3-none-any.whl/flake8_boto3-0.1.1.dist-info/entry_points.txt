@@ -1,0 +1,5 @@
+[flake8.extension]
+r2c-avoid-hardcoded-access-token=flake8_boto3.auth:CheckHardcodedAccessTokens
+r2c-boto3-dont-use-deprecated-api=flake8_boto3.deprecated:CheckDeprecatedAPI
+r2c-use-boto3-over-boto=flake8_boto3.boto_import:CheckInvalidBotoImport
+
