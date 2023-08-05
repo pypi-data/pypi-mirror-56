@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: booru-note-copy
+Version: 1.0.0
+Summary: copy translations between booru-style imageboards
+Home-page: https://github.com/torsten-ostgard/booru-note-copy
+Author: Torsten Ostgard
+License: MIT
+Description: # note_copy - copy translations between booru-style imageboards
+        
+        
+        ## Introduction
+        This script copies translation notes from one booru to another. Simply supply two post IDs:
+        
+            $ python note_copy.py --source danbooru.donmai.us1671559 --destination gelbooru.com2244172
+        
+        The script can also read from a file to copy notes between multiple pairs at once. The file should have a pair of post IDs per line, with the IDs separated by whitespace.
+        
+            $ cat ids
+            d1671559 g2244172
+            d1701853 g2283415
+            $ python note_copy.py --file ids
+        
+        The lower-case prefixes are called short codes and - along with the domain name, as demonstrated above - can be used to identify the site on which the post is located.
+        
+        
+        ## Requirements
+        - Python 3.5+
+        
+        
+        ## Usage
+            usage: note_copy.py [-h] [-s SOURCE] [-d DESTINATION] [-f FILE]
+        
+            optional arguments:
+              -h, --help            show this help message and exit
+              -s SOURCE, --source SOURCE
+                                    The post from which notes will be copied
+              -d DESTINATION, --destination DESTINATION
+                                    The post to which notes will be copied
+              -f FILE, --file FILE  File containing post pairs, separated by whitespace,
+                                    one per line
+        
+        You need to provide either a source and a destination post or a file; you cannot use both sets of arguments simultaneously.
+        
+        
+        ## Supported sites
+        | Site Name       | Short Code   | Domain               |
+        |-----------------|--------------|----------------------|
+        | Danbooru        | `d`          | `danbooru.donmai.us` |
+        | Gelbooru        | `g`          | `gelbooru.com`       |
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown

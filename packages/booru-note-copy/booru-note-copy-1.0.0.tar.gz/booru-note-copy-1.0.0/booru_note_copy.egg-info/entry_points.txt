@@ -1,0 +1,3 @@
+[console_scripts]
+note_copy = note_copy.cli:main
+
