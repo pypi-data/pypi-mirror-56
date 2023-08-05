@@ -1,0 +1,15 @@
+d2l/__init__.py,sha256=q9SW1gqTKZhEFbWegM4ILc_O2kIiWzGcp999O6Yiao0,43
+d2l/base.py,sha256=KViKxyynaGlxLtCiQRoHbQMUuD0C2KvAcFlVOnaiBag,414
+d2l/d2l.py,sha256=8QDcvwx3LsegTUTZN0RcNDc94zotNpHwRWuj6ZqGc8k,58578
+d2l/model.py,sha256=vHXKTj8ZApB7pa8tzbmKibuHm-OPskwNwTgsKAeiG0U,4396
+d2l/data/__init__.py,sha256=Za1CYpudoJ6Ekiha8bJFRZwRs6whqY50cs2OWhVh4xE,88
+d2l/data/fashion_mnist.py,sha256=003QEnIx4bRPuw6VRengb3azXMyORpQCnUL5CznKCQ8,1838
+d2l/data/imdb.py,sha256=Nz8odkdBxBLFc15s6jTsm3LwRGopC71A4zoQANmEjsg,1853
+d2l/data/nmt.py,sha256=wZNn5y9tsvv4ePGLcEgWAVkbxm33KKcU0So5HZBD378,2300
+d2l/data/pikachu.py,sha256=H8sFtEDFXt-KU9xAkeaq0eX9teE1mSyQk026sQs0RoQ,1310
+d2l-0.10.2.dist-info/LICENSE,sha256=o1WleTdVJ5Dr11H4qAJrI4ghYKtz8cOPgDBFbfzxozA,20845
+d2l-0.10.2.dist-info/METADATA,sha256=t2OmsPnAGAxKnBOqL-qrJMcmsB6wG1b4yf2uGo5CacQ,329
+d2l-0.10.2.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+d2l-0.10.2.dist-info/top_level.txt,sha256=dvtvwCUdQtPkozYjmFSlAAbBN0SDAKtrG7l5fdQ90aE,4
+d2l-0.10.2.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+d2l-0.10.2.dist-info/RECORD,,
