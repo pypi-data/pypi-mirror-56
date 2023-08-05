@@ -1,0 +1,13 @@
+spark_parser-1.8.9.data/scripts/spark-parser-coverage,sha256=Qm2v4K4s66erk9hCfDRSN4KUpcG5G7R7JO6Mx1c5tqc,2745
+spark_parser-1.8.9.dist-info/METADATA,sha256=8CagfdVfwVJnWLYnDCcHUJnyUZYT22mt3r3aDq-u90k,2817
+spark_parser-1.8.9.dist-info/WHEEL,sha256=54bVun1KfEBTJ68SHUmbxNPj80VxlQ0sHi4gZdGZXEY,92
+spark_parser-1.8.9.dist-info/RECORD,,
+spark_parser-1.8.9.dist-info/top_level.txt,sha256=rj6FJvL_SAJu2_CX_E2tdp22EK6gHvOZvqiqSKE0Iwc,13
+spark_parser-1.8.9.dist-info/DESCRIPTION.rst,sha256=25tA8WecTptMRg1BC6iJbzig_e3yUV4b63i8Bnmd9ZA,1785
+spark_parser-1.8.9.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+spark_parser-1.8.9.dist-info/metadata.json,sha256=UHDtJudjK4njKrDpjcfF4Y70KinBj6g-so6dbrp6ml0,1151
+spark_parser/__init__.py,sha256=e42_tX5EHTQR2bfcbN4bt_6Y7y3heAbJa0kn2EGSPO4,716
+spark_parser/ast.py,sha256=hoU9djq6BTFydxmFOa2A_nSGVQM2cn32hu2bwZYZo9k,5502
+spark_parser/scanner.py,sha256=G9gTxxosoI1CXTs4tr5v2KLA9WvPC9SoEgtSO3R4rOQ,3121
+spark_parser/version.py,sha256=xcCkINS5TosehPVn7q0rjvhfabRA4NQK_zLvbO9wSH8,100
+spark_parser/spark.py,sha256=okoQ7A-39giTck1T5AP0e1n9OCaYXuRfdC99d_m7TZA,37444
