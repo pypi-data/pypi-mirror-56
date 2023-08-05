@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+poseur.py
+setup.cfg
+setup.py
+setup.pypi.py
+poseur_converter.egg-info/PKG-INFO
+poseur_converter.egg-info/SOURCES.txt
+poseur_converter.egg-info/dependency_links.txt
+poseur_converter.egg-info/entry_points.txt
+poseur_converter.egg-info/requires.txt
+poseur_converter.egg-info/top_level.txt
+poseur_converter.egg-info/zip-safe
