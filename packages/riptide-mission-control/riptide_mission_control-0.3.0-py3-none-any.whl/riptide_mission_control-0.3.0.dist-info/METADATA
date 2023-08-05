@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: riptide-mission-control
+Version: 0.3.0
+Summary: Tool to manage development environments for web applications using containers - GraphQL API Server
+Home-page: https://github.com/Parakoopa/riptide-proxy/
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/x-rst
+Requires-Dist: riptide-lib (<0.4,>=0.3)
+Requires-Dist: tornado (>=6.0)
+Requires-Dist: Click (>=7.0)
+Requires-Dist: graphene (<3.0,>=2.0)
+Requires-Dist: docutils (>=0.15)
+Requires-Dist: python-prctl (>=1.7) ; sys_platform == "linux"
+
+(Placeholder package. Will be published soon.)
+
+

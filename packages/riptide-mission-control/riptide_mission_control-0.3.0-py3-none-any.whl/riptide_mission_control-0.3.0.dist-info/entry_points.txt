@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        riptide_mc=riptide_mission_control.main:main
+    
