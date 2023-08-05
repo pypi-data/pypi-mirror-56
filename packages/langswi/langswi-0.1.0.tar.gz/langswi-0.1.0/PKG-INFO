@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: langswi
+Version: 0.1.0
+Summary: Cyrillic-latin and reverse text transformation
+Home-page: https://github.com/sonerayberk/langswi/
+Author: sonerayberk
+Author-email: soner.ayberk@gmail.com
+License: BSD
+Description: # langswi
+        
+        Keyboard layout switcher for cyrillic-latin & reversed symbols.
+        
+        ## First of all
+        
+        Install the package:
+        
+        ```
+        pip install langswi
+        ```
+        
+        When layout will be missed, just copy text into the buffer and type: 
+        
+        ```
+        langswi
+        ```
+        
+        ![Subway Scheme](demo.gif)
+        
+        ## That's it.
+        
+Keywords: language switcher text transformation translation
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
