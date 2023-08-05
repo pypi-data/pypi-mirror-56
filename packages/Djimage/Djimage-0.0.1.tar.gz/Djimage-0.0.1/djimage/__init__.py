@@ -1,0 +1,6 @@
+default_app_config = 'djimage.apps.DjimageConfig'
+__name__ = 'Djimage'
+__author__ = 'Neeraj Kumar'
+__version__ = '0.0.1'
+__author_email__ = 'sainineeraj1234@gmail.com'
+__description__ = 'Custom Django Image Field'

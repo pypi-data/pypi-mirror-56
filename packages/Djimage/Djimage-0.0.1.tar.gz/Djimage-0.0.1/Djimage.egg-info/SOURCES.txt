@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+Djimage.egg-info/PKG-INFO
+Djimage.egg-info/SOURCES.txt
+Djimage.egg-info/dependency_links.txt
+Djimage.egg-info/not-zip-safe
+Djimage.egg-info/requires.txt
+Djimage.egg-info/top_level.txt
+djimage/__init__.py
+djimage/apps.py
+djimage/field.py

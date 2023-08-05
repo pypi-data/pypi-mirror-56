@@ -1,0 +1,3 @@
+recursive-exclude testapp *
+recursive-exclude conf *
+recursive-exclude templates *
