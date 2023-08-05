@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+bits/__init__.py
+bits/mssql/__init__.py
+bits_mssql.egg-info/PKG-INFO
+bits_mssql.egg-info/SOURCES.txt
+bits_mssql.egg-info/dependency_links.txt
+bits_mssql.egg-info/not-zip-safe
+bits_mssql.egg-info/requires.txt
+bits_mssql.egg-info/top_level.txt
