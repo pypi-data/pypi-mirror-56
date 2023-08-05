@@ -1,0 +1,7 @@
+wheel>=0.26
+pip-tools
+pytest>=3
+pytest-cov
+pylint
+tox>=3
+
