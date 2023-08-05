@@ -1,0 +1,3 @@
+[console_scripts]
+pybench = pybench.pybench:PyBenchCmdline
+
