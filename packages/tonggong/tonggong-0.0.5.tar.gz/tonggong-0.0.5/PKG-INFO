@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tonggong
+Version: 0.0.5
+Summary: Universal toolkit
+Home-page: https://github.com/arcticdata/tonggong
+Author: Arctic Data
+Author-email: hello@datarc.cn
+License: MIT License
+Description: # 小雅·彤弓
+        
+        ```
+        彤弓弨兮，受言藏之。我有嘉宾，中心贶之。钟鼓既设，一朝飨之。
+        彤弓弨兮，受言载之。我有嘉宾，中心喜之。钟鼓既设，一朝右之。
+        彤弓弨兮，受言櫜之。我有嘉宾，中心好之。钟鼓既设，一朝酬之。
+        ```
+        
+        ## 介绍
+        
+        通用工具集合
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
