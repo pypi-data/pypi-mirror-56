@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: rss-reader
+Version: 1.2.1
+Summary: A simple CLI rss reader
+Home-page: https://github.com/Kwizchm/PythonHomework
+Author: Alexey Artishevskiy
+Author-email: 1337kwiz@gmail.com
+License: MIT
+Description: ### A simple CLI rss reader
+        
+Keywords: cli rss reader
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
