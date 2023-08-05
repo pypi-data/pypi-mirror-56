@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: viptela
+Version: 0.1.7
+Summary: Cisco DevNet Viptela vManage CLI/SDK
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+Requires-Dist: requests
+Requires-Dist: dictdiffer
+Requires-Dist: PyYAML
+
+UNKNOWN
+
+
