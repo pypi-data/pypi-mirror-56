@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: hirmeos-clients
+Version: 0.0.6
+Summary: Python API clients for the HIRMEOS project.
+Home-page: https://gitlab.com/rowan08/hirmeos-clients
+Author: Rowan Hatheryley
+Author-email: rowan.hatherley@ubiquitypress.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.22.0)
+
+HIRMEOS Clients
+===============
+
+Python clients for interacting with APIs that were developed as part of the
+HIRMEOS project.
+
+Once this has been shown to be working properly, and able to integrate with the
+HIRMEOS drivers it can be moved to a HIRMEOS/OPERAS PyPI Repo.
+
+
+Until CI is ready
+-----------------
+  .. code-block:: bash
+
+    $ python3 setup.py sdist bdist_wheel
+    $ twine upload dist/*.tar.gz
+
+
