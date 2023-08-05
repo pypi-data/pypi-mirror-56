@@ -1,0 +1,15 @@
+SpaCell/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+SpaCell/config.py,sha256=qJgAHK5JY31hS9BSTZKznfLlQ4vmBeA28kSs0YFjtAQ,4396
+SpaCell/count_matrix_normalization.py,sha256=hsCAqcDfVvsY6tGjsJBncwtScPlpxCFimcVnHcyfWlE,2573
+SpaCell/dataset_management.py,sha256=Mh_G9lz0BQ3nHoFw0JWelS1_SvO0pnJ0R7qrEXsC4vE,950
+SpaCell/image_normalization.py,sha256=UfgOP92xVQ5V3xzgh61knJR1nHy5Q2qknC-twulTlt0,1603
+SpaCell/model.py,sha256=PYtZrIU8cLx-6nin_HNz-vsV_ubgI9NT49ysefuLTKA,13610
+SpaCell/spacell_classification.py,sha256=gT4gF6W3Ug5CR996dvTFxPHj7MAT4QFVy6zlvqEpd50,11973
+SpaCell/spacell_clustering.py,sha256=h3A2EaRmKMFBi6vpk1tFml9VuNLh6aAADKmwBbZY7pY,8761
+SpaCell/spacell_validation.py,sha256=TVYvCmRlpjGyYx5uazqduxLvUzxME25YWs9tTuPZo_o,21762
+SpaCell/utils.py,sha256=4YfH8MV03CB6904OTca03B7CV6LKfN0MFJkw6t1ZRi0,23362
+Spacell-1.0.1.dist-info/LICENSE,sha256=TBh4mh7F9f9QCdC7A0R0RXs-BapBFif4y1CKijUbVPg,1074
+Spacell-1.0.1.dist-info/METADATA,sha256=X2fNzAcAvFXtqvcUx2hWckXF5atBRGEpEea6a-jv-hI,8961
+Spacell-1.0.1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+Spacell-1.0.1.dist-info/top_level.txt,sha256=Mact1-AiQD6k2Z7ggE56Db-fwoTpTRLLiwR5tG8OCsI,8
+Spacell-1.0.1.dist-info/RECORD,,
