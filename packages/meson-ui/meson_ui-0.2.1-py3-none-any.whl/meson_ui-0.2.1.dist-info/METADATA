@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: meson-ui
+Version: 0.2.1
+Summary: Command line GUI for the Meson build system.
+Home-page: https://github.com/michaelbadcrumble/meson-ui
+Author: Michael Brockus
+Author-email: michaelbrockus@gmail.com
+License: Apache 2.0
+Keywords: meson-ui,meson,mesonbuild
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.6.0
+Requires-Dist: PyQt5
+Requires-Dist: meson
+Requires-Dist: ninja
+
+Meson-ui is a command line plug-in for Meson build system.  Meson-ui is a Graphical application designed to provide an interactive way to use the Meson build system. We believe it is a nice way to get CMake users comfortable with Meson.
+
+
