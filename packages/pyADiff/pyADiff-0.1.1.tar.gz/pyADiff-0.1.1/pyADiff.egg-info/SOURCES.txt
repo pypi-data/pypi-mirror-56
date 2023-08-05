@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyADiff/__init__.py
+pyADiff/adjoint.py
+pyADiff/differentiation.py
+pyADiff/exceptions.py
+pyADiff/math_functions.py
+pyADiff/tangent.py
+pyADiff/version.py
+pyADiff.egg-info/PKG-INFO
+pyADiff.egg-info/SOURCES.txt
+pyADiff.egg-info/dependency_links.txt
+pyADiff.egg-info/requires.txt
+pyADiff.egg-info/top_level.txt
