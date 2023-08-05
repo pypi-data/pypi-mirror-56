@@ -1,0 +1,21 @@
+<style>
+    .nav {
+        background-color: #4B6788;
+        height: 40px;
+        color: #ffffff;
+        line-height: 40px;
+        padding: 0 10px;
+    }
+
+    .nav a {
+        color: #ffffff;
+    }
+</style>
+<div class="nav">
+    <a href="{% url 'bee_django_message:message_list' %}">消息管理</a> |
+    <a href="{% url 'bee_django_message:custom_user_record_list' 1 %}">我的消息记录</a> |
+    <a href="{% url 'bee_django_message:record_add' %}">发送消息</a> |
+    <a href="{% url 'bee_django_message:record_list' 0 %}">消息列表</a> |
+    <a href="{% url 'bee_django_message:record_list' 2 %}">课程提醒列表</a> |
+
+</div>
