@@ -1,0 +1,14 @@
+simplethoth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplethoth/scenario.py,sha256=ay4kOt2GkIA3YcKJLLhLfQuZNaiJfEqXSeHhYCucMuQ,2889
+simplethoth/app/__init__.py,sha256=5gD08c_4-Z49T1uraAXpkAW9Tw800PvKis0Sd5Ylel0,595
+simplethoth/transcript/__init__.py,sha256=y1GcvrGZFqk4DxYoEsPQkBFZgue4lpCdeEqNlTRm-bs,39
+simplethoth/transcript/__main__.py,sha256=Q4K2D1jI4YeqSCFP8qTG-0JhUtryO6wQvhGx0ylh3zg,495
+simplethoth/transcript/errors.py,sha256=8Mokpa8jPyja90sSHRc4PPjc2SNFeZw8ohukStS1Ee4,149
+simplethoth/transcript/states.py,sha256=jFNk9wb1N2GCF1uiNaltgdkmpwUoh0OXiJPl6ayQpWc,475
+simplethoth/transcript/transcripter.py,sha256=Z4cJCqF_x8PBIHFZ6kIVmQG-EUIgkwTxGgHNTrzY7MA,6334
+simplethoth/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplethoth/utils/dict.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplethoth-0.1.5.dist-info/METADATA,sha256=U4Vw6cQzj7tA32e4bDI2DIKhqm6zJ5nDngJ3UW7wBrs,273
+simplethoth-0.1.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+simplethoth-0.1.5.dist-info/top_level.txt,sha256=Fb7DiC4suT0J2WRiWYivpq6_N9YI0PedmJI2mMk6ymc,12
+simplethoth-0.1.5.dist-info/RECORD,,
