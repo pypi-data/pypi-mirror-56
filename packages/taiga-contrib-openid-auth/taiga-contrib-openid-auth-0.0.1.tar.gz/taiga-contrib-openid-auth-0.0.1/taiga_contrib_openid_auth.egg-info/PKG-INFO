@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: taiga-contrib-openid-auth
+Version: 0.0.1
+Summary: The Taiga plugin for openid authentication
+Home-page: https://github.com/alaksmana/taiga-contrib-openid-auth
+Author: Andre Laksmana
+Author-email: UNKNOWN
+License: AGPL
+Description: UNKNOWN
+Keywords: taiga,openid,auth,plugin
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP
