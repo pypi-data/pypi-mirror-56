@@ -1,0 +1,3 @@
+[console_scripts]
+frazzl = frazzl.__main__:cli
+
