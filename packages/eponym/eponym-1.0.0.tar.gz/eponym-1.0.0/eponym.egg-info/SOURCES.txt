@@ -1,0 +1,11 @@
+README.md
+setup.py
+eponym/__init__.py
+eponym/generator.py
+eponym.egg-info/PKG-INFO
+eponym.egg-info/SOURCES.txt
+eponym.egg-info/dependency_links.txt
+eponym.egg-info/top_level.txt
+eponym/data/__init__.py
+eponym/data/descriptors.py
+eponym/data/things.py
