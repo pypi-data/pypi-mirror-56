@@ -1,0 +1,13 @@
+README.md
+setup.py
+syncopy/__init__.py
+syncopy/__main__.py
+syncopy/settings.py
+syncopy/sync.py
+syncopy/util.py
+syncopy.egg-info/PKG-INFO
+syncopy.egg-info/SOURCES.txt
+syncopy.egg-info/dependency_links.txt
+syncopy.egg-info/entry_points.txt
+syncopy.egg-info/top_level.txt
+syncopy.egg-info/zip-safe
