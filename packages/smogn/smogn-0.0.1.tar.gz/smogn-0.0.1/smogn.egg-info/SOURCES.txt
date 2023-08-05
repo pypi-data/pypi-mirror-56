@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+NEWS
+README.md
+setup.py
+smogn/__init__.py
+smogn/box_plot_stats.py
+smogn/dist_metrics.py
+smogn/phi.py
+smogn/phi_ctrl_pts.py
+smogn/smogn.py
+smogn/synth_gen.py
+smogn.egg-info/PKG-INFO
+smogn.egg-info/SOURCES.txt
+smogn.egg-info/dependency_links.txt
+smogn.egg-info/requires.txt
+smogn.egg-info/top_level.txt
