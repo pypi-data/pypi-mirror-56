@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+WorkshopIL_Nallar.egg-info/PKG-INFO
+WorkshopIL_Nallar.egg-info/SOURCES.txt
+WorkshopIL_Nallar.egg-info/dependency_links.txt
+WorkshopIL_Nallar.egg-info/requires.txt
+WorkshopIL_Nallar.egg-info/top_level.txt
+wide_wild_west/__init__.py
+wide_wild_west/data.py
+wide_wild_west/main.py
