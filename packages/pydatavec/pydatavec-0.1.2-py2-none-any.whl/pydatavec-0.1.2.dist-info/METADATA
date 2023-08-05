@@ -1,0 +1,31 @@
+Metadata-Version: 2.0
+Name: pydatavec
+Version: 0.1.2
+Summary: Python interface for DataVec
+Home-page: https://github.com/deeplearning4j/deeplearning4j.git
+License: Apache
+Keywords: python java datavec etl deeplearning4j
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Provides-Extra: spark
+Provides-Extra: tests
+Requires-Dist: Cython
+Requires-Dist: requests
+Requires-Dist: pydl4j
+Requires-Dist: numpy (<=1.16.4)
+Provides-Extra: spark
+Requires-Dist: pyspark; extra == 'spark'
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: pytest-pep8; extra == 'tests'
+Requires-Dist: mock; extra == 'tests'
+
+Python interface for DataVec
+
+
