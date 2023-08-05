@@ -1,0 +1,4 @@
+h5py>=2.6
+numpy>=1.11
+six>=1.10
+progressbar33>=2.3.1
