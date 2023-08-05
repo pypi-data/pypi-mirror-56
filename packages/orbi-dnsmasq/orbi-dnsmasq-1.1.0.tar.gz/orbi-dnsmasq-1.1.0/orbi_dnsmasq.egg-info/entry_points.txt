@@ -1,0 +1,3 @@
+[console_scripts]
+orbi-dnsmasq = orbi_dnsmasq:command_line_main
+
