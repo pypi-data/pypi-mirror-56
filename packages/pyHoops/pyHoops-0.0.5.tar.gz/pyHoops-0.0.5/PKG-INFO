@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: pyHoops
+Version: 0.0.5
+Summary: A python package to web-parse basketball play-by-play boxscores and compute data analytics
+Home-page: https://github.com/alessandroBombelli/pyHoops
+Author: Alessandro Bombelli
+Author-email: alessandro.bombelli.87@gmail.com
+License: MIT
+Download-URL: https://github.com/alessandroBombelli/pyHoops/archive/0.0.5.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
