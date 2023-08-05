@@ -1,0 +1,3 @@
+[gui_scripts]
+pystanley = pystanley.__main__:main
+
