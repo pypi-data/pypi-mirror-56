@@ -1,0 +1,12 @@
+grpcio>=1.18.0
+grpcio-reflection>=1.18.0
+grpcio-status>=1.18.0
+googleapis-common-protos>=1.5.5
+protobuf
+numpy
+docker
+bmipy
+semver
+
+[R]
+rpy2
