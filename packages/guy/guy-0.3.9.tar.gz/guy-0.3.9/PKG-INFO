@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: guy
+Version: 0.3.9
+Summary: A simple module for making HTML GUI applications with python3
+Home-page: https://github.com/manatlan/guy
+Author: manatlan
+Author-email: manatlan@gmail.com
+Keywords: gui,html,javascript,electron,asyncio,tornado,websocket
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: tornado (>=6.0,<7.0)
+Project-URL: Documentation, https://github.com/manatlan/guy
+Project-URL: Repository, https://github.com/manatlan/guy
