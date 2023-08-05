@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: akshare
+Version: 0.2.39
+Summary: A tool for downloading financial data!
+Home-page: https://github.com/jindaxiang/akshare
+Author: Albert King
+Author-email: jindaxiang@163.com
+License: MIT
+Description: # [点击前往 AkShare 说明文档](https://akshare.readthedocs.io/)
+Keywords: stock option futures finance spider quant quantitative investment trading algotrading
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.3
+Description-Content-Type: text/markdown
