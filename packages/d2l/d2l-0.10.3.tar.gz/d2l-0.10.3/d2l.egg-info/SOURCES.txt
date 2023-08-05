@@ -1,0 +1,17 @@
+README.md
+setup.py
+d2l/__init__.py
+d2l/base.py
+d2l/d2l.py
+d2l/model.py
+d2l.egg-info/PKG-INFO
+d2l.egg-info/SOURCES.txt
+d2l.egg-info/dependency_links.txt
+d2l.egg-info/requires.txt
+d2l.egg-info/top_level.txt
+d2l.egg-info/zip-safe
+d2l/data/__init__.py
+d2l/data/fashion_mnist.py
+d2l/data/imdb.py
+d2l/data/nmt.py
+d2l/data/pikachu.py
