@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: peperoncino
+Version: 0.0.1
+Summary: 
+Author: Junki Ishikawa
+Author-email: 69guitar1015@gmail.com
+Requires-Python: >=3.７,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy (>=1.17,<2.0)
+Requires-Dist: pandas (>=0.25.3,<0.26.0)
