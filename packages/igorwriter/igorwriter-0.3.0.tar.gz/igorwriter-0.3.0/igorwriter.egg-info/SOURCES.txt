@@ -1,0 +1,15 @@
+README.rst
+setup.cfg
+setup.py
+igorwriter/__init__.py
+igorwriter/builtin_names.py
+igorwriter/utils.py
+igorwriter/validator.py
+igorwriter.egg-info/PKG-INFO
+igorwriter.egg-info/SOURCES.txt
+igorwriter.egg-info/dependency_links.txt
+igorwriter.egg-info/requires.txt
+igorwriter.egg-info/top_level.txt
+igorwriter/builtins/functions.txt
+igorwriter/builtins/keywords.txt
+igorwriter/builtins/operations.txt
