@@ -1,0 +1,1344 @@
+#!python
+# -*- coding: utf-8 -*-
+
+"""package fft_dev
+author    Benoit Dubois
+copyright FEMTO ENGINEERING, 2019
+licence   GPL 3.0+
+brief     Basic gui program to make transfert of data trace from HP35670A.
+"""
+
+import os
+import sys
+import signal
+import threading
+import array
+import bisect
+import logging
+import logging.handlers
+from time import strftime, gmtime, sleep
+from PyQt5.QtCore import Qt, pyqtSignal, QObject, QDir, QSettings, QEventLoop
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QApplication, QFileDialog, QDialog, QMessageBox
+import pyqtgraph as pg
+from pyqtgraph.parametertree import Parameter
+from pyqtgraph.parametertree.parameterTypes import GroupParameter
+import numpy as np
+
+import fft_dev.fft35670a.fft35670a_dev_prologix as fft35670a
+import fft_dev.fft35670a.fft35670a_form as form
+from fft_dev.version import __version__
+
+signal.signal(signal.SIGINT, signal.SIG_DFL) # For "Ctrl+C" works
+
+
+DEFAULT_WORK_DIR = str(os.path.expanduser("~"))
+
+DEFAULT_PORT = 1234  # 1234 for prologix
+
+DEFAULT_CCOLOR = QColor(Qt.black)
+
+DEFAULT_SENSITIVITY = 1.0  # Default setup sensitivity (rad/V)
+DEFAULT_GAIN = 0.0  # Default setup gain (dB)
+
+SEPARATOR = '\t'  # Default file separator
+
+FFT35670A_ID = "HEWLETT-PACKARD,35670A"
+
+ORGANIZATION = "FEMTO_Engineering"
+APP_NAME = "fft35670a-gui"
+APP_BRIEF = "GUI for 35670A signal analyzer device"
+AUTHOR_NAME = "Benoit Dubois"
+AUTHOR_MAIL = "benoit.dubois@femto-st.fr"
+COPYRIGHT = "FEMTO ENGINEERING, 2019"
+LICENSE = "GNU GPL v3.0 or upper."
+
+# Defile logging level
+# Note that CONSOLE_LOG_LEVEL must be set to the lowest level
+CONSOLE_LOG_LEVEL = logging.INFO
+FILE_LOG_LEVEL = logging.DEBUG
+
+# Hardware option
+OPTION_1D1 = False
+
+# Use white background and black foreground
+pg.setConfigOption('background', 'w')
+pg.setConfigOption('foreground', DEFAULT_CCOLOR)
+
+
+# =============================================================================
+def MyQSettings():
+    """Returns QSettings instance with appropriate configuration.
+    :returns: QSettings instance (object)
+    """
+    settings = QSettings()
+    settings.setIniCodec("UTF-8")
+    return settings
+
+
+# =============================================================================
+def invert_dict(d):
+    """Revert key/value if in the dictionary are unique and hashable
+    :param d: input dictionary (dict)
+    :returns: inverted dictionary (dict)
+    """
+    return dict([(v, k) for k, v in d.items()])
+
+
+# =============================================================================
+def iterparam(p):
+    """Generator iterating over each node of a ParamTree.
+    """
+    for c in p.children():
+        if isinstance(c, GroupParameter):
+            yield from iterparam(c)
+        else:
+            yield c
+
+
+# =============================================================================
+def params_to_settings(params, settings):
+    """Save the parameters tree to application settings.
+    :returns: None
+    """
+    for p in iterparam(params):
+        if p.type() is 'action':
+            continue
+        key = "param"
+        for c in params.childPath(p):
+            key += '/' +  c
+        settings.setValue(key, p.value())
+
+def settings_to_params(params, settings):
+    """Load application settings to the parameters tree.
+    :returns: None
+    """
+    for p in iterparam(params):
+        if p.type() is 'action':
+            continue
+        cp = params.childPath(p)
+        # Use "switch case" because child() method do no allow use of tupple
+        # as argument, in contrary with the documentation.
+        if len(cp) == 1:
+            child = params.child(cp[0])
+        elif len(cp) == 2:
+            child = params.child(cp[0], cp[1])
+        elif len(cp) == 3:
+            child = params.child(cp[0], cp[1], cp[2])
+
+        else:
+            raise Exception
+        #
+        key = "param"
+        for c in cp:
+            key += '/' +  c
+        # Handle boolean type
+        value = settings.value(key)
+        if 'false' in value:
+            value = False
+        elif 'true' in value:
+            value = True
+        #
+        child.setValue(value)
+
+
+# =============================================================================
+def reset_ini():
+    """Reset the .ini file with default values.
+    :returns: None
+    """
+    params = Parameter.create(name='FFT parameters',
+                              type='group',
+                              children=form.ANALYZER_PARAM)
+    params.setToDefault()
+    settings = MyQSettings()
+    settings.clear()
+    settings.setValue("dev/ip", '')
+    settings.setValue("dev/port", str(DEFAULT_PORT))
+    settings.setValue("dev/gpib_addr", 1)
+    settings.setValue("ui/work_dir", DEFAULT_WORK_DIR)
+    settings.setValue("app/curve_color", DEFAULT_CCOLOR)
+    params_to_settings(params, settings)
+    logging.info("Create ini file with default values.")
+
+def check_ini():
+    """Basic check of .ini file integrity: we try to read essential parameters,
+    if no exception raised, we assume that the file is OK.
+    :returns: True if Ini file OK else False (bool)
+    """
+    settings = MyQSettings()
+    params = Parameter.create(name='FFT parameters',
+                              type='group',
+                              children=form.ANALYZER_PARAM)
+    retval = []
+    try:
+        retval.append(settings.contains("dev/ip"))
+        retval.append(settings.contains("dev/port"))
+        retval.append(settings.contains("dev/gpib_addr"))
+        retval.append(settings.contains("ui/work_dir"))
+        retval.append(settings.contains("app/curve_color"))
+        for p in iterparam(params):
+            if p.type() is 'action':
+                continue
+            key = "param"
+            for c in params.childPath(p):
+                key += '/' +  c
+            retval.append(settings.contains(key))
+    except Exception as ex:
+        logging.error("Broken or missing ini file: %r", ex)
+        return False
+    if False in retval:
+        logging.error("Broken or missing ini file")
+        return False
+    return True
+
+
+# =============================================================================
+class PreferenceDialog(form.PreferenceDialog):
+    """Overide PreferenceDialog class.
+    """
+
+    def _check_interface(self):
+        """Returns True if connection with device is OK.
+        :returns: status of interface with device (boolean)
+        """
+        dev = fft35670a.Fft35670aDevPrologix(self.ip,
+                                             int(self.port),
+                                             int(self.gpib_addr))
+        try:
+            dev.connect()
+            _id = dev.idn
+        except Exception:
+            _id = '' # To avoid error with 'find()' when '_id' is not defined
+        if _id.find(FFT35670A_ID) >= 0:
+            self._check_interface_btn.setStyleSheet(
+                "QPushButton { background-color : green; color : yellow; }")
+            self._check_interface_btn.setText("OK")
+            return True
+        self._check_interface_btn.setStyleSheet(
+            "QPushButton { background-color : red; color : blue; }")
+        self._check_interface_btn.setText("Error")
+        QMessageBox.information(self, "Note",
+                                "Did you check the GPIB address of " \
+                                "the device and check that analyser " \
+                                "is in \"address only\" mode.")
+        return False
+
+
+# =============================================================================
+class Fft35670aGui(QObject):
+    """UI of project
+    """
+
+    _sentinel = object()
+
+    data_updated = pyqtSignal()
+    data_scaled = pyqtSignal()
+    acquisition_done = pyqtSignal()
+    acquisition_canceled = pyqtSignal()
+    ccolor_changed = pyqtSignal(object)  # curve color (QColor)
+    write_done = pyqtSignal(str)  # output file name
+
+    def __init__(self, parent):
+        """Constructor.
+        :param parent: parent of object (object)
+        :returns: None
+        """
+        super().__init__(parent=parent)
+        self._xdata = None
+        self._ydata = [None, None]
+        self._acq_flag = threading.Event()
+        self._state = None
+        self.ui = form.MainWindow()
+        self.logic_handling()
+        self.init_ui()
+        self.reset_dev()
+
+    def logic_handling(self):
+        """Define basic logic of app.
+        :returns: None
+        """
+        #
+        self.ui.action_reset_dev.triggered.connect(
+            lambda: self.ui.acquisition_state('ini'))
+        self.ui.action_cancel.triggered.connect(
+            lambda: self.ui.acquisition_state('ini'))
+        self.ui.action_run.triggered.connect(
+            lambda: self.ui.acquisition_state('running'))
+        self.acquisition_done.connect(
+            lambda: self.ui.acquisition_state('done'))
+        self.acquisition_canceled.connect(
+            lambda: self.ui.acquisition_state('ini'))
+        #
+        self.data_updated.connect(self.scale_data)
+        self.data_scaled.connect(self.plot_data)
+        self.acquisition_canceled.connect(self.stop_acquisition)
+        self.acquisition_done.connect(self.terminate_acquisition)
+        self.write_done.connect(self._data_writed)
+        #
+        self.ccolor_changed.connect(self.set_default_ccolor)
+        #
+        self.ui.action_run.triggered.connect(self.start_acquisition)
+        self.ui.action_cancel.triggered.connect(self.stop_acquisition)
+        self.ui.action_reset_dev.triggered.connect(self.reset_dev)
+        self.ui.action_quit.triggered.connect(self.ui.close)
+        self.ui.action_new.triggered.connect(self.add_tab)
+        self.ui.action_save_as.triggered.connect(self.save_data_as)
+        self.ui.action_pref.triggered.connect(self.preference)
+        self.ui.action_set_default_param.triggered.connect(
+            lambda: params_to_settings(self.ui.current_tab.params,
+                                       MyQSettings()))
+        self.ui.action_about.triggered.connect(self.about)
+        #
+        self.ui.workspace_changed.connect(
+            lambda wdir: MyQSettings().setValue("ui/work_dir", wdir))
+        #
+        self.ui.current_tab.params.param('Scaling data', 'Multiplier'). \
+            sigValueChanged.connect(self.scale_data)
+        self.ui.current_tab.params.param('Scaling data', 'Offset'). \
+            sigValueChanged.connect(self.scale_data)
+        self.ui.current_tab.params.param('Scaling data', 'Reset'). \
+            sigActivated.connect(self.reset_scale)
+        #
+        self.ui.action_get_screen.triggered.connect(self.get_device_screen)
+
+    def init_ui(self):
+        """Initialize UI.
+        :returns: None
+        """
+        self.ui.setVisible(True)
+        self.ui.setWindowTitle(APP_NAME)
+        settings_to_params(self.ui.current_tab.params, MyQSettings())
+
+    def preference(self):
+        """Displays the preference message box.
+        :returns: None
+        """
+        settings = MyQSettings()
+        dialog = PreferenceDialog(settings.value("dev/ip"),
+                                  str(settings.value("dev/port")),
+                                  str(settings.value("dev/gpib_addr")),
+                                  settings.value("app/curve_color"))
+        dialog.setParent(self.ui, Qt.Dialog)
+        retval = dialog.exec_()
+        if retval == QDialog.Accepted:
+            settings.setValue("dev/ip", dialog.ip)
+            settings.setValue("dev/port", dialog.port)
+            settings.setValue("dev/gpib_addr", dialog.gpib_addr)
+            settings.setValue("app/curve_color", dialog.ccolor)
+            self.ccolor_changed.emit(dialog.ccolor)
+
+    def about(self):
+        """Displays an about message box.
+        :returns: None
+        """
+        QMessageBox.about(self.ui, "About " + APP_NAME,
+                          "<b>" + APP_NAME +  " " + __version__ + "</b><br>" +
+                          APP_BRIEF +
+                          ".<br>" +
+                          "Author " + AUTHOR_NAME + ", " + AUTHOR_MAIL +
+                          " .<br>" +
+                          "Copyright " + COPYRIGHT +
+                          ".<br>" +
+                          "Licensed under the " + LICENSE)
+
+    def add_tab(self):
+        """Add a new tab ready to acquiere data.
+        :returns: None
+        """
+        index = self.ui.data_tab.addTab(form.FftWidget(), "New")
+        widget = self.ui.data_tab.widget(index)
+        current_state = self.ui.current_tab.params.saveState()
+        widget.params.restoreState(current_state)
+
+    def set_default_ccolor(self, ccolor):
+        """Set default curve color value.
+        :param ccolor: color of curves (QColor)
+        :returns: None
+        """
+        # Store default value
+        if ccolor.isValid() is False:
+            raise "Bad argument type"
+        settings = MyQSettings()
+        settings.setValue("app/curve_color", ccolor)
+        # Change color of curves
+        for index in range(self.ui.data_tab.count()):
+            # A tab with label "New" has no curve
+            if "New" in self.ui.data_tab.tabText(index):
+                continue
+            self.ui.data_tab.plots[0].psd.setPen(pg.mkPen(ccolor))
+            self.ui.data_tab.plots[1].psd.setPen(pg.mkPen(ccolor))
+        logging.info("Change default curve color: %r", ccolor.value())
+
+    @staticmethod
+    def connect():
+        """Connect to device.
+        :returns: instance of device connected (object)
+        """
+        settings = MyQSettings()
+        ip = settings.value("dev/ip")
+        port = int(settings.value("dev/port"))
+        gaddr = int(settings.value("dev/gpib_addr"))
+        dev = fft35670a.Fft35670aDevPrologix(ip, port, gaddr)
+        try:
+            dev.connect()
+        except Exception as ex:
+            logging.error("Connection problem: %r", ex)
+        logging.info("Connected")
+        return dev
+
+    def reset_dev(self):
+        """Reset device (software reset).
+        :returns: None
+        """
+        dev = self.connect()
+        try:
+            dev.reset()
+            sleep(1.0)
+            dev.clear_hpib_interface()
+        except Exception as ex:
+            logging.error("Connection problem: %r", ex)
+            raise ex
+        logging.info("Device reseted")
+
+    def set_measurement(self, type_):
+        """Set measurement type.
+        :param type: measurement type (str)
+        :returns: None
+        """
+        dev = self.connect()
+        try:
+            dev.set_measurement(type_)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Measurement set to %r", type_)
+
+    def set_freq_resolution(self, resolution):
+        """Set resolution along X axis. Resolution can be automaticaly selected
+        or defined by user. Note that resolution is unitless (lines).
+        :param resolution: resolution value (str)
+        :returns: None
+        """
+        dev = self.connect()
+        try:
+            if 'Auto' in resolution:
+                dev.set_resolution_mode('ON')
+            else:
+                dev.set_freq_resolution(resolution)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Frequency resolution set to %r", resolution)
+
+    def set_averaging(self):
+        """Set averaging. Handle state, mode and number of averaging.
+        :returns: None
+        """
+        aver_state = self.ui.current_tab.params. \
+            param('Acquisition', 'Averaging', 'Enable').value()
+        dev = self.connect()
+        try:
+            dev.set_averaging_state(aver_state)
+            logging.info("Averaging state set to %r", aver_state)
+            if aver_state is True:
+                mode = self.ui.current_tab.params. \
+                    param('Acquisition', 'Averaging', 'Mode').value()
+                count = self.ui.current_tab.params. \
+                    param('Acquisition', 'Averaging', 'Count').value()
+                dev.set_averaging_type(mode)
+                dev.set_averaging_nb(count)
+                logging.info("Averaging mode set to %r", mode)
+                logging.info("Averaging count set to %r", count)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+
+    def set_xunit(self, unit_id):
+        dev = self.connect()
+        try:
+            dev.set_xunit(fft35670a.XAXIS_UNIT_MAP[unit_id])
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("X unit set to %r", unit_id)
+
+    def set_xspace_display(self, log_space):
+        """Set spacing (linear or log) along X axis.
+        :param log_space: True if log spacing else False (bool)
+        :returns: None
+        """
+        dev = self.connect()
+        try:
+            if log_space is True:
+                dev.set_xspace_display("LOG")
+            else:
+                dev.set_xspace_display("LIN")
+            if OPTION_1D1 is True:  # With option 1D3
+                if log_space is True:
+                    dev.set_xspace("LOG")
+                else:
+                    dev.set_xspace("LIN")
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("X log space display set to %r", log_space)
+
+    def set_yformat(self, format_id):
+        dev = self.connect()
+        try:
+            dev.set_yformat(fft35670a.YAXIS_FORMAT_MAP[format_id])
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Y format set to %r", format_id)
+
+    def set_yunit(self, unit_id):
+        dev = self.connect()
+        try:
+            dev.set_yunit(fft35670a.YAXIS_UNIT_MAP[unit_id])
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Y unit set to %r", unit_id)
+
+    def set_yunit_amplitude(self, unit_id):
+        dev = self.connect()
+        try:
+            dev.set_yunitamplitude(fft35670a.YAXIS_UNIT_AMPLITUDE_MAP[unit_id])
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Y unit amplitude set to %r", unit_id)
+
+    def set_yspace_display(self, log_space):
+        """Set spacing (linear or log) along Y axis.
+        :param log_space: True if log spacing else False (bool)
+        :returns: None
+        """
+        dev = self.connect()
+        try:
+            if log_space is True:
+                dev.set_yspace_display("LOG")
+            else:
+                dev.set_yspace_display("LIN")
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Y log space display set to %r", log_space)
+
+    def set_overload_reject_state(self, state):
+        """Set input overload reject state.
+        :param state: source state (bool)
+        :returns: None
+        """
+        dev = self.connect()
+        try:
+            dev.set_overload_reject_state(state)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Source overload reject is %r", state)
+
+    def set_input_state(self, inp, state):
+        """Set input state.
+        :param inp: number of the customized input (int)
+        :param level: input state (bool)
+        :returns: None
+        """
+        dev = self.connect()
+        try:
+            dev.set_input_state(inp, state)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Input %r state set to %r", inp, state)
+
+    def set_input_coupling(self, inp, coupling):
+        """Set input coupling.
+        :param inp: number of the customized input (int)
+        :param coupling: type of coupling 'AC' or 'DC' (str)
+        :returns: None
+        """
+        if inp == 2 and self.ui.current_tab.params. \
+                       param("Inputs", "Channel 2", "Enable").value() is False:
+            QMessageBox.warning(self, "Configuration problem",
+                                "Enable channel 2 before setting coupling")
+            return
+        dev = self.connect()
+        try:
+            dev.set_input_coupling(inp, coupling)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Input %r coupling set to %r", inp, coupling)
+
+    def set_input_impedance(self, inp, imp):
+        """Set input impedance.
+        :param inp: number of the customized input (int)
+        :param imp: type of impedance 'FLOat' or 'GROund' (str)
+        :returns: None
+        """
+        if inp == 2 and self.ui.current_tab.params. \
+                       param("Inputs", "Channel 2", "Enable").value() is False:
+            QMessageBox.warning(self, "Configuration problem",
+                                "Enable channel 2 before setting impedance")
+            return
+        dev = self.connect()
+        try:
+            dev.set_input_impedance(inp, imp)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Input %r impedance set to %r", inp, imp)
+
+    def set_input_autorange_state(self, inp, state):
+        """Set input autorange state.
+        :param inp: number of the customized input (int)
+        :param state: source state (bool)
+        :returns: None
+        """
+        if inp == 2 and self.ui.current_tab.params. \
+           param("Inputs", "Channel 2", "Enable").value() is False:
+            QMessageBox.warning(
+                None, "Configuration problem",
+                "Enable channel 2 before setting its autorange value")
+            return
+        dev = self.connect()
+        try:
+            dev.set_input_autorange_state(inp, state)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Input %r autorange is %r", inp, state)
+
+    def set_source_state(self, state):
+        """Set output source state.
+        :param state: source state (bool)
+        :returns: None
+        """
+        dev = self.connect()
+        try:
+            dev.set_source_state(state)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Source state is %r", state)
+
+    def set_source_shape(self, shape):
+        """Set output source shape (see fft35670a_dev_xx.py file for shape
+        availlables).
+        :param shape: source shape (str)
+        :returns: None
+        """
+        if self.ui.current_tab.params. \
+           param("Source", "Enable").value() is False:
+            QMessageBox.warning(self, "Configuration problem",
+                                "Enable source before setting its shape")
+            return
+        dev = self.connect()
+        try:
+            dev.set_source_shape(shape)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Source shape set to %r", shape)
+
+    def set_source_level(self, level):
+        """Set output source level.
+        :param level: source level (float)
+        :returns: None
+        """
+        if self.ui.current_tab.params. \
+           param("Source", "Enable").value() is False:
+            QMessageBox.warning(self, "Configuration problem",
+                                "Enable source before setting its level")
+            return
+        dev = self.connect()
+        try:
+            dev.set_source_level(level)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Source level set to %r", level)
+
+    def set_source_offset(self, offset):
+        """Set output source offset.
+        :param offset: source offset (float)
+        :returns: None
+        """
+        if self.ui.current_tab.params. \
+           param("Source", "Enable").value() is False:
+            QMessageBox.warning(self, "Configuration problem",
+                                "Enable source before setting its offset")
+            return
+        dev = self.connect()
+        try:
+            dev.set_source_offset(offset)
+        except Exception as ex:
+            logging.error("%r", ex)
+            return
+        logging.info("Source offset set to %r", offset)
+
+    def device_to_param(self):
+        """Set UI parameters from device.
+        :returns: None
+        """
+        dev = self.connect()
+        #
+        meas_id = (invert_dict(form.MEASUREMENT_MAP))[dev.get_measurement()]
+        self.ui.current_tab.params. \
+            param('Acquisition', 'Measurement').setValue(meas_id)
+        #
+        freq_start = dev.get_freq_start()
+        self.ui.current_tab.params. \
+            param('Acquisition', 'Start').setValue(freq_start)
+        #
+        freq_stop = dev.get_freq_stop()
+        self.ui.current_tab.params. \
+            param('Acquisition', 'Stop').setValue(freq_stop)
+        #
+        resolution = dev.get_freq_resolution()
+        self.ui.current_tab.params. \
+            param('Acquisition', 'Resolution').setValue(resolution)
+        #
+        averaging_state = dev.get_averaging_state()
+        self.ui.current_tab.params. \
+            param('Acquisition', 'Averaging', 'Enable'). \
+            setValue(averaging_state)
+        #
+        if averaging_state is True:
+            averaging_type = dev.get_averaging_type()
+            self.ui.current_tab.params. \
+                param('Acquisition', 'Averaging', 'Mode'). \
+                setValue(averaging_type)
+            #
+            averaging_nb = dev.get_averaging_nb()
+            self.ui.current_tab.params. \
+                param('Acquisition', 'Averaging', 'Count'). \
+                setValue(averaging_nb)
+        #
+        xunit_id = dev.get_xunit()
+        self.ui.current_tab.params. \
+            param('Display', 'X axis', 'Unit').setValue(xunit_id)
+        #
+        xspacing = dev.get_xspace_display()
+        if 'LIN' in xspacing:
+            self.ui.current_tab.params. \
+                param('Display', 'X axis', 'Log scale').setValue(False)
+        else:
+            self.ui.current_tab.params. \
+                param('Display', 'X axis', 'Log scale').setValue(True)
+        #
+        yformat = dev.get_yformat()
+        self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Format').setValue(yformat)
+        #
+        yunit = dev.get_yunit()
+        self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Unit').setValue(yunit)
+        #
+        y_unit_amplitude = dev.get_yunitamplitude()
+        self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Unit amplitude'). \
+            setValue(y_unit_amplitude)
+        #
+        yspacing = dev.get_yspace_display()
+        if 'LIN' in yspacing:
+            self.ui.current_tab.params. \
+                param('Display', 'Y axis', 'Log scale').setValue(False)
+        else:
+            self.ui.current_tab.params. \
+                param('Display', 'Y axis', 'Log scale').setValue(True)
+        #
+        input_state = [dev.get_input_state(i)
+                       for i in range(1, len(form.INPUT_PARAM['children'])+1)]
+        for idx, state in enumerate(input_state):
+            input_ = idx + 1
+            if input_ > 1:
+                self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(input_),
+                          "Enable").setValue(state)
+            #
+            if state is True:
+                overload = dev.get_overload_reject_state(input_)
+                self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(input_),
+                          "Reject overload").setValue(overload)
+                #
+                coupling = dev.get_input_coupling(input_)
+                self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(input_),
+                          "Coupling").setValue(coupling)
+                #
+                impedance = dev.get_input_impedance(input_)
+                self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(input_),
+                          "Impedance").setValue(impedance)
+                #
+                autorange = dev.get_input_autorange_state(input_)
+                self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(input_),
+                          "Autorange").setValue(autorange)
+        #
+        source_state = dev.get_source_state()
+        self.ui.current_tab.params. \
+            param("Source", "Enable").setValue(source_state)
+        #
+        if source_state is True:
+            shape = dev.get_source_shape()
+            self.ui.current_tab.params. \
+                param("Source", "Shape").setValue(shape)
+            #
+            level = dev.get_source_level()
+            self.ui.current_tab.params. \
+                param("Source", "Level").setValue(level)
+            #
+            offset = dev.get_source_offset()
+            self.ui.current_tab.params. \
+                param("Source", "Offset").setValue(offset)
+
+    def param_to_device(self):
+        """Configure device with UI parameters.
+        :returns: None
+        """
+        meas_id = self.ui.current_tab.params. \
+            param('Acquisition', 'Measurement').value()
+        self.set_measurement(form.MEASUREMENT_MAP[meas_id])
+        #
+        resolution = self.ui.current_tab.params. \
+            param('Acquisition', 'Resolution').value()
+        self.set_freq_resolution(resolution)
+        #
+        self.set_averaging()
+        #
+        xunit_id = self.ui.current_tab.params. \
+            param('Display', 'X axis', 'Unit').value()
+        self.set_xunit(xunit_id)
+        #
+        yformat_id = self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Format').value()
+        self.set_yformat(yformat_id)
+        #
+        yunit_id = self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Unit').value()
+        self.set_yunit(yunit_id)
+        #
+        y_unitamplitude_id = self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Unit amplitude').value()
+        self.set_yunit_amplitude(y_unitamplitude_id)
+        #
+        yspacing = self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Log scale').value()
+        self.set_yspace_display(yspacing)
+        #
+        overload = self.ui.current_tab.params. \
+                    param("Inputs", "Reject overload").value()
+        self.set_overload_reject_state(overload)
+        #
+        input_state = [self.ui.current_tab.params. \
+                       param("Inputs",
+                             "Channel {:1d}".format(i),
+                             "Enable").value()
+                       for i in range(2, len(form.INPUT_PARAM['children']))]
+        input_state.insert(0, True)  # Channel 1 is always active
+        for idx, state in enumerate(input_state):
+            input_ = idx + 1
+            if input_ > 1:
+                self.set_input_state(input_, state)
+            #
+            if state is True:
+                #
+                coupling = self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(input_),
+                          "Coupling").value()
+                self.set_input_coupling(input_, coupling)
+                #
+                impedance = self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(input_),
+                          "Impedance").value()
+                self.set_input_impedance(input_,
+                                         fft35670a.INPUT_IMPEDANCE[impedance])
+                #
+                autorange = self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(input_),
+                          "Autorange").value()
+                self.set_input_autorange_state(input_, autorange)
+        #
+        source_state = self.ui.current_tab.params. \
+            param("Source", "Enable").value()
+        self.set_source_state(source_state)
+        #
+        if source_state is True:
+            shape = self.ui.current_tab.params. \
+                param("Source", "Shape").value()
+            self.set_source_shape(shape)
+            #
+            level = self.ui.current_tab.params. \
+                param("Source", "Level").value()
+            self.set_source_level(level)
+            #
+            offset = self.ui.current_tab.params. \
+                param("Source", "Offset").value()
+            self.set_source_offset(offset)
+
+    def get_device_screen(self):
+        """Get screen display to UI.
+        Not that method does not handle double display.
+        returns: None
+        """
+        # Get configuration from device
+        self.device_to_param()
+        # Set UI display
+        meas_id = self.ui.current_tab.params.param('Acquisition',
+                                                   'Measurement').value()
+        meas = form.MEASUREMENT_MAP[meas_id]
+        xunit_id = self.ui.current_tab.params.param('Display',
+                                                    'X axis',
+                                                    'Unit').value()
+        xunit = (invert_dict(fft35670a.XAXIS_UNIT_MAP))["\"" + xunit_id + "\""]
+        yformat_id = self.ui.current_tab.params.param('Display',
+                                                      'Y axis',
+                                                      'Format').value()
+        yformat = (invert_dict(fft35670a.YAXIS_FORMAT_MAP))[yformat_id]
+        yunit_id = self.ui.current_tab.params.param('Display',
+                                                    'Y axis',
+                                                    'Unit').value()
+        yunit = (invert_dict(fft35670a.YAXIS_UNIT_MAP))["\"" + yunit_id + "\""]
+        if meas == "":
+            xformat = "Time"
+        else:
+            xformat = "Fourrier frequency"
+        self.ui.current_tab.plots[0].setTitle(meas_id)
+        self.ui.current_tab.plots[0].set_ylabel(yformat, units=yunit)
+        self.ui.current_tab.plots[0].set_xlabel(xformat, units=xunit)
+        # Get data from device
+        dev = self.connect()
+        if dev is None:
+            logging.error("Connection problem")
+            return
+        self._ydata[0] = dev.get_ydata()
+        self._xdata = dev.get_xdata()[:len(self._ydata[0])]
+        # Plot data
+        self.data_updated.emit()
+        # Write data to file
+        # TODO: header???
+        current_date = strftime("%Y%m%d-%H%M%S", gmtime())
+        wdir = MyQSettings().value("ui/work_dir")
+        ofile = wdir + '/' + current_date + "-AG35670A" + ".dat"
+        self.write_data(ofile)
+        self.acquisition_done.emit()
+
+    def terminate_acquisition(self):
+        """Routine when data are acquiered.
+        :returns: None
+        """
+        self.stop_acquisition()
+        self.save_data()
+        # Add a new tab if there is no free plot widget.
+        # To find free plot widget, we check if the text of the tab is "New",
+        # i.e. the default text of a free plot widget.
+        for index in range(self.ui.data_tab.count()):
+            if "New" in self.ui.data_tab.tabText(index):
+                return
+        self.add_tab()
+
+    def stop_acquisition(self):
+        """Stop acquisition process.
+        :returns: None
+        """
+        logging.info("Stop_acquisition")
+        self._acq_flag.clear()
+
+    def start_acquisition(self):
+        """Start acquisition process.
+        :returns: None
+        """
+        logging.info("Start_acquisition")
+        # Check configuration
+        meas_id = self.ui.current_tab.params. \
+            param('Acquisition', 'Measurement').value()
+        input_state = [self.ui.current_tab.params. \
+                       param("Inputs",
+                             "Channel {:1d}".format(i),
+                             "Enable").value()
+                       for i in range(2, len(form.INPUT_PARAM['children']))]
+        if meas_id in ("Frequency response", "Cross spectrum") \
+           and True not in input_state:
+            QMessageBox.information(self.ui, "Configuration error",
+                                    "You request {} measurement but " \
+                                    "there is only one channel activated.\n" \
+                                    "Enable a second channel".format(meas_id))
+            self.acquisition_canceled.emit()
+            return
+        source_state = self.ui.current_tab.params. \
+            param("Source", "Enable").value()
+        # User can use external source generator but in case no,
+        # query confirmation
+        if meas_id in "Frequency response" and source_state is not True:
+            ret = QMessageBox.question(
+                self.ui, "Surprising configuration ",
+                "You request Frequency response measurement but " \
+                "source output is not enabled.\n" \
+                "Do you want to enable source output before acquisition?")
+            if ret == QMessageBox.Yes:
+                self.acquisition_canceled.emit()
+                return
+        # Set configuration to device
+        self.param_to_device()
+        # Acquisition
+        q_acq_loop = QEventLoop()
+        acq_t = threading.Thread(target=self.acquisition)
+        self.acquisition_done.connect(q_acq_loop.quit)
+        self._acq_flag.set()
+        acq_t.start()
+        q_acq_loop.exec()
+
+    def acquisition(self):
+        """Acquire data from FFT analyzer.
+        :returns: None
+        """
+        # Acquisition is done decade by decade
+        f_min = self.ui.current_tab.params.\
+            param('Acquisition', 'Start').value()
+        f_max = self.ui.current_tab.params.param('Acquisition', 'Stop').value()
+        idx_f_min = list(fft35670a.LOG_FREQ_START_MAP.keys()).index(f_min)
+        idx_f_max = list(fft35670a.LOG_FREQ_STOP_MAP.keys()).index(f_max)
+        freq_range_list = [(list(fft35670a.LOG_FREQ_START_MAP.values())[x],
+                            list(fft35670a.LOG_FREQ_STOP_MAP.values())[x])
+                           for x in range(idx_f_max, idx_f_min-1, -1)]
+        meas_id = self.ui.current_tab.params. \
+           param('Acquisition', 'Measurement').value()
+        yformat_id = self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Format').value()
+        if meas_id in ("Frequency response", "Cross spectrum"):
+            yformat2_id = self.ui.current_tab.params. \
+                param('Display', 'Y axis 2', 'Format').value()
+            yunit2_id = self.ui.current_tab.params. \
+                param('Display', 'Y axis 2', 'Unit').value()
+            yunit_id = "dB"
+        else:
+            yunit_id = self.ui.current_tab.params. \
+                param('Display', 'Y axis', 'Unit').value()
+            yunit_amp_id = self.ui.current_tab.params. \
+                param('Display', 'Y axis', 'Unit amplitude').value()
+        #
+        xdata = array.array("d")
+        ydata = [array.array("d"), array.array("d")]
+        new_y = [array.array("d"), array.array("d")]
+        #
+        dev = self.connect()
+        if dev is None:
+            logging.error("Connection problem")
+            self.acquisition_canceled.emit()
+            return
+        # First disable input voltage autorange
+        dev.write("SENSE:VOLT:RANGE:AUTO OFF")
+        #
+        for f_start, f_stop in freq_range_list:
+            try:
+                dev.set_freq_start(f_start)
+                dev.set_freq_stop(f_stop)
+                retval = dev.acquisition(self._acq_flag)
+                if retval is False:
+                    self.acquisition_canceled.emit()
+                    return
+            except Exception as ex:
+                logging.error("Exception: %r", ex)
+                self.acquisition_canceled.emit()
+                return
+            # Get data from device
+            if self._acq_flag.is_set() is not True:
+                self.acquisition_canceled.emit()
+                return
+            if meas_id in ("Frequency response", "Cross spectrum"):
+                try:
+                    dev.set_yformat(fft35670a.YAXIS_FORMAT_MAP[yformat_id])
+                    new_y[0] = dev.get_ydata()
+                    dev.set_yunit(fft35670a.YAXIS_UNIT_MAP[yunit2_id])
+                    dev.set_yformat(fft35670a.YAXIS_FORMAT_MAP[yformat2_id])
+                    new_y[1] = dev.get_ydata()
+                except Exception as ex:
+                    logging.error("Exception: %r", ex)
+                    self.acquisition_canceled.emit()
+                    return
+            else:
+                try:
+                    dev.set_yformat(fft35670a.YAXIS_FORMAT_MAP[yformat_id])
+                    dev.set_yunit(fft35670a.YAXIS_UNIT_MAP[yunit_id])
+                    dev.set_yunitamplitude(fft35670a. \
+                                           YAXIS_UNIT_AMPLITUDE_MAP \
+                                           [yunit_amp_id])
+                    new_y[0] = dev.get_ydata()
+                except Exception as ex:
+                    logging.error("Exception: %r", ex)
+                    self.acquisition_canceled.emit()
+                    return
+            len_y = int(len(new_y[0]))
+            new_x = dev.get_xdata()
+            new_x = new_x[:len_y]
+            if new_x != []: ## and new_y != []:
+                try:
+                    idx = bisect.bisect_left(xdata, new_x[-1])
+                    xdata = new_x + xdata[idx:]
+                    if meas_id in ("Frequency response", "Cross spectrum"):
+                        ydata[0] = np.concatenate((new_y[0], ydata[0][idx:]))
+                        ydata[1] = np.concatenate((new_y[1], ydata[1][idx:]))
+                    else:
+                        ydata[0] = np.concatenate((new_y[0], ydata[0][idx:]))
+                except Exception as ex:
+                    logging.error("Exception: %r", ex)
+                    self.acquisition_canceled.emit()
+                    return
+            self._xdata = xdata
+            self._ydata = ydata
+            self.data_updated.emit()
+        self.acquisition_done.emit()
+        logging.info("End of acquisition")
+
+    def reset_scale(self):
+        """Reset data scaling.
+        :returns: None
+        """
+        self.ui.current_tab. \
+            params.param('Scaling data', 'Multiplier').setValue(1.0)
+        self.ui.current_tab. \
+            params.param('Scaling data', 'Offset').setValue(0.0)
+        self.scale_data()
+
+    def scale_data(self):
+        """Scale data with user multiplier and offset.
+        Note that scaling only apply to first plot.
+        :returns: None
+        """
+        if self._ydata[0] is None:
+            return
+        m_factor = self.ui.current_tab.params.param('Scaling data',
+                                                    'Multiplier').value()
+        o_factor = self.ui.current_tab.params.param('Scaling data',
+                                                    'Offset').value()
+        self._ydata[0] = np.array(self._ydata[0]) * m_factor + o_factor
+        self.data_scaled.emit()
+
+    def plot_data(self):
+        """Plot current data to current figure.
+        :returns: None
+        """
+        ccolor = MyQSettings().value("app/curve_color")
+        self.ui.current_tab.plots[0].set_data(x=self._xdata,
+                                              y=self._ydata[0],
+                                              ccolor=ccolor)
+        meas_id = self.ui.current_tab.params. \
+            param('Acquisition', 'Measurement').value()
+        if meas_id in ("Frequency response", "Cross spectrum"):
+            self.ui.current_tab.plots[1].set_data(x=self._xdata,
+                                                  y=self._ydata[1],
+                                                  ccolor=ccolor)
+
+    def _data_writed(self, fname):
+        """Action after data writing is done.
+        :param fname: name of the file where data are written (str)
+        :returns: None
+        """
+        self.ui.current_tab_text = os.path.basename(fname)
+        self.ui.status_bar.showMessage("Data writed in output file: " + fname)
+
+    def write_data(self, fname):
+        """Write current data to file.
+        :param fname: name of file where to write data (str)
+        :returns: None
+        """
+        # Prepare header
+        meas_id = self.ui.current_tab.params. \
+            param('Acquisition', 'Measurement').value()
+        header = "# Measurement: {}\n".format(meas_id)
+        #
+        f_start = self.ui.current_tab.params. \
+            param('Acquisition', 'Start').value()
+        f_stop = self.ui.current_tab.params. \
+            param('Acquisition', 'Stop').value()
+        header += "# Frequency start: {}; " \
+            "Frequency stop: {}\n".format(f_start, f_stop)
+        #
+        resolution = self.ui.current_tab.params. \
+            param('Acquisition', 'Resolution').value()
+        header += "# Resolution: {}\n".format(resolution)
+        #
+        m_factor = self.ui.current_tab.params. \
+            param('Scaling data', 'Multiplier').value()
+        o_factor = self.ui.current_tab.params. \
+            param('Scaling data', 'Offset').value()
+        header += "# Scale factor: {}; " \
+            "Offset: {}\n".format(m_factor, o_factor)
+        #
+        aver_state = self.ui.current_tab.params. \
+            param('Acquisition', 'Averaging', 'Enable').value()
+        if aver_state is True:
+            averaging_type = self.ui.current_tab.params. \
+                param('Acquisition', 'Averaging', 'Mode').value()
+            averaging_nb = self.ui.current_tab.params. \
+                param('Acquisition', 'Averaging', 'Count').value()
+            header += "# Averaging mode: {}; " \
+                "Averaging count: {}\n".format(averaging_type,
+                                               averaging_nb)
+        #
+        xunit = self.ui.current_tab.params. \
+                param('Display', 'X axis', 'Unit').value()
+        header += "# X unit: {}\n".format(xunit)
+        #
+        yformat = self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Format').value()
+        yunit = self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Unit').value()
+        yunitamplitude = self.ui.current_tab.params. \
+            param('Display', 'Y axis', 'Unit amplitude').value()
+        header += "# Y format: {}; Y unit: {} {}\n".format(yformat,
+                                                           yunit,
+                                                           yunitamplitude)
+        #
+        source_state = self.ui.current_tab.params. \
+            param("Source", "Enable").value()
+        if source_state is True:
+            source_shape = self.ui.current_tab.params. \
+                param("Source", "Shape").value()
+            source_level = self.ui.current_tab.params. \
+                param("Source", "Level").value()
+            source_offset = self.ui.current_tab.params. \
+                param("Source", "Offset").value()
+            header += "# Source shape: {}; " \
+                "Source level: {:5e}; " \
+                "Source offset: {:5e}\n".format(source_shape,
+                                                source_level,
+                                                source_offset)
+        #
+        overload_state = self.ui.current_tab.params. \
+            param("Inputs", "Reject overload").value()
+        header += "# Reject overload : {}\n".format(overload_state)
+        #
+        input_state = [self.ui.current_tab.params. \
+                       param("Inputs",
+                             "Channel {:1d}".format(i),
+                             "Enable").value()
+                       for i in range(2, len(form.INPUT_PARAM['children']))]
+        input_state.insert(0, True)  # Channel 1 is always active
+        for idx, state in enumerate(input_state):
+            if state is False:
+                continue
+            inp = idx + 1
+            coupling = self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(inp),
+                          "Coupling").value()
+            impedance = self.ui.current_tab.params. \
+                    param("Inputs",
+                          "Channel {:1d}".format(inp),
+                          "Impedance").value()
+            header += "# Input {}; " \
+                "Coupling: {}; " \
+                "Input impedance: {}\n".format(inp,
+                                               coupling,
+                                               impedance)
+        #
+        notes = self.ui.current_tab.params.param('Notes').value()
+        notes = notes.replace("\n", "\n#")
+        if notes != "":
+            header += "# Notes: {}\n".format(notes)
+        # Prepare data
+        y = np.array(self._ydata[0]) * m_factor + o_factor
+        x = self._xdata
+        # Write data
+        with open(fname, "w", encoding="utf-8") as fd:
+            fd.write(header)
+            for i, data in enumerate(x):
+                if meas_id == "Frequency response":
+                    line = '{:e}\t{:e}\t{:e}\n'.format(data,
+                                                       y[i],
+                                                       self._ydata[1][i])
+                else:
+                    line = '{:e}\t{:e}\n'.format(data, y[i])
+                fd.write(line)
+        self.write_done.emit(fname)
+
+    def save_data(self):
+        """Save data process. Data are saved in the working directory.
+        :returns: None
+        """
+        current_date = strftime("%Y%m%d-%H%M%S", gmtime())
+        wdir = MyQSettings().value("ui/work_dir")
+        ofile = wdir + '/' + current_date + "-AG35670A" + ".dat"
+        self.write_data(ofile)
+
+    def save_data_as(self):
+        """Save 'data as' process. Call a file dialog box to give a filename
+        for the data file.
+        :returns: None
+        """
+        (ofile, filter_) = QFileDialog(). \
+            getSaveFileName(parent=None,
+                            caption="Save data",
+                            dir=QDir.currentPath(),
+                            filter=";;Data files (*.dat);;Any files (*)")
+        if ofile == "":
+            return  # Abort if no file given
+        self.write_data(ofile)
+
+
+# =============================================================================
+def configure_logging():
+    """Configure logging:
+    - (debug) messages logged to console
+    - messages logged in a file located in the home directory
+    Note that CONSOLE_LOG_LEVEL must be set to the lowest level
+    """
+    log_path = os.path.expanduser("~")
+    log_filename = "." + APP_NAME + ".log"
+    log_abs_filename = os.path.join(log_path, log_filename)
+
+    log_file_format = "%(asctime)s %(levelname) -8s %(filename)s " + \
+        "%(funcName)s (%(lineno)d): %(message)s"
+    file_formatter = logging.Formatter(log_file_format)
+
+    log_console_format = "%(asctime)s [%(threadName)-12.12s]" + \
+        "[%(levelname)-6.6s] %(filename)s %(funcName)s (%(lineno)d): " + \
+        "%(message)s"
+    console_formatter = logging.Formatter(log_console_format)
+
+    root_logger = logging.getLogger()
+    root_logger.setLevel(CONSOLE_LOG_LEVEL)
+
+    file_handler = logging.handlers.RotatingFileHandler(log_abs_filename,
+                                                        maxBytes=(1048576*5),
+                                                        backupCount=7)
+    file_handler.setFormatter(file_formatter)
+    file_handler.setLevel(FILE_LOG_LEVEL)
+
+    console_handler = logging.StreamHandler()
+    console_handler.setFormatter(console_formatter)
+    console_handler.setLevel(CONSOLE_LOG_LEVEL)
+
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(console_handler)
+
+
+#==============================================================================
+APP = QApplication(sys.argv)
+APP.setOrganizationName(ORGANIZATION)
+APP.setApplicationName(APP_NAME)
+
+configure_logging()
+
+if check_ini() is False:
+    reset_ini()
+    QMessageBox.warning(None, "Broken or missing .ini file",
+                        "Create .ini file with default values created")
+
+UI = Fft35670aGui(APP)
+sys.exit(APP.exec_())

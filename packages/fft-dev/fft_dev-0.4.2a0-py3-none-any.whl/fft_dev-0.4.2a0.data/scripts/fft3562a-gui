@@ -1,0 +1,409 @@
+#!python
+# -*- coding: utf-8 -*-
+
+"""package fft_dev
+author    Benoit Dubois
+copyright FEMTO ENGINEERING, 2019
+license   GPL v3.0+
+brief     Basic gui program to make transfert of data trace from HP3562A.
+"""
+
+import sys
+import logging
+import logging.handlers
+import os
+import signal
+from time import strftime
+
+from PyQt5.QtCore import Qt, QObject, pyqtSlot, pyqtSignal, QSettings, QDir
+from PyQt5.QtWidgets import QApplication, QMessageBox, QDialog
+
+import pyqtgraph as pg
+import numpy as np
+
+import fft_dev.fft3562a.fft3562a_form as form
+from fft_dev.fft3562a.fft3562a_dev_prologix import Fft3562aDevPrologix, \
+    FftStream, YAXIS_UNIT_MAPPING, FUNCTION_MAPPING, XAXIS_UNIT_MAPPING, \
+    DOMAIN_TYPE_MAPPING
+from fft_dev.version import __version__
+
+signal.signal(signal.SIGINT, signal.SIG_DFL)  # For "Ctrl+C" works
+
+pg.setConfigOption('background', 'w')  # Graph backgroung color
+pg.setConfigOption('foreground', 'k')  # Graph foreground color
+
+# GPIB address of device
+DEFAULT_GPIB_ADDR = 10
+# IP address of the prologix card
+DEFAULT_IP = '192.168.0.100'
+# Port adapter communicates on (always 1234 for prologix)
+DEFAULT_PORT = 1234
+
+HP3562A_ID = "HP3562A"
+
+DEFAULT_WORK_DIR = str(os.path.expanduser("~"))
+
+# Default setup sensitivity (rad/V)
+DEFAULT_SENSITIVITY = 1.0
+# Default setup gain (dB)
+DEFAULT_GAIN = 0.0
+
+# Default file name (year month day - hour minute second)
+OFILENAME = strftime("%Y%m%d-%H%M%S")
+
+ORGANIZATION = "FEMTO_Engineering"
+APP_NAME = 'fft3562a-gui'
+APP_BRIEF = "GUI for 3562A signal analyzer device"
+AUTHOR_NAME = "Benoit Dubois"
+AUTHOR_MAIL = "benoit.dubois@femto-st.fr"
+COPYRIGHT = "FEMTO ENGINEERING, 2019"
+LICENSE = "GNU GPL v3.0 or upper."
+
+# Defile logging level
+# Note that CONSOLE_LOG_LEVEL must be set to the lowest level
+CONSOLE_LOG_LEVEL = logging.DEBUG
+FILE_LOG_LEVEL = logging.INFO
+
+
+# =============================================================================
+class PreferenceDialog(form.PreferenceDialog):
+    """Overide PreferenceDialog class.
+    """
+
+    def _check_interface(self):
+        """Returns True if interface with device is OK.
+        :returns: status of interface with device (boolean)
+        """
+        dev = Fft3562aDevPrologix(self.ip_led.text(),
+                                  int(self.port_led.text()),
+                                  int(self.gpib_addr_led.text()))
+        try:
+            dev.connect()
+            _id = dev.get_id()
+        except Exception:
+            _id = '' # To avoid error with 'find()' when '_id' is not defined
+        if _id.find(HP3562A_ID) >= 0:
+            self._check_interface_btn.setStyleSheet(
+                "QPushButton { background-color : green; color : yellow; }")
+            self._check_interface_btn.setText("OK")
+            return True
+
+        self._check_interface_btn.setStyleSheet(
+            "QPushButton { background-color : red; color : blue; }")
+        self._check_interface_btn.setText("Error")
+        QMessageBox.information(
+            self, "Note", "Did you set \"Address only\" mode" +
+            " in HP-IB menu<br>and check the GPIB address of HP3562A.")
+        return False
+
+
+# =============================================================================
+class Fft3562aGui(QObject):
+    """Gui for HP 3562A signal analyzer.
+    """
+
+    # Emit data key value
+    acquire_done = pyqtSignal(str)
+    # Emit data key value
+    display_done = pyqtSignal(str)
+    # Emit output file name
+    write_done = pyqtSignal(str)
+
+    def __init__(self, parent):
+        """Constructor.
+        :returns: None
+        """
+        super().__init__(parent=parent)
+        self.data_stream = dict() # Dictionnary container for the data streams
+        self._workspace_dir = DEFAULT_WORK_DIR # TODO: Add param to qsettings
+        self.form = form.Fft3562aMainWindow()
+        #
+        self.form.setVisible(True)
+        self.form.setWindowTitle(APP_NAME)
+        self.form.workspace_lbl.setText(self._workspace_dir)
+        self.form.sensitivity_dsb.setValue(DEFAULT_SENSITIVITY)
+        self.form.gain_dsb.setValue(DEFAULT_GAIN)
+        #
+        self.form.action_acq.triggered.connect(self.acquire_data)
+        self.form.action_pref.triggered.connect(self.preference)
+        self.form.action_about.triggered.connect(self.about)
+        self.form.workspace_changed.connect(self.set_workspace)
+        self.acquire_done.connect(self.display_data)
+        self.acquire_done.connect(self.write_data)
+        self.write_done.connect(self._write_done)
+
+    @pyqtSlot()
+    def about(self):
+        """Displays an about message box.
+        :returns: None
+        """
+        QMessageBox.about(self.form, "About " + APP_NAME,
+                          "<b>" + APP_NAME +  " " + __version__ + "</b><br>" +
+                          APP_BRIEF +
+                          ".<br>" +
+                          "Author " + AUTHOR_NAME + ", " + AUTHOR_MAIL +
+                          " .<br>" +
+                          "Copyright " + COPYRIGHT +
+                          ".<br>" +
+                          "Licensed under the " + LICENSE)
+
+    @pyqtSlot(str)
+    def set_workspace(self, directory):
+        """Set workspace. Used to store data relative to acquisition.
+        """
+        self._workspace_dir = str(directory)
+
+    @pyqtSlot()
+    def preference(self):
+        """Displays the preference message box.
+        :returns: None
+        """
+        settings = QSettings()
+        dialog = PreferenceDialog(settings.value("prologix/ip"),
+                                  settings.value("prologix/port"),
+                                  settings.value("hp3562a/gpib_addr"))
+        dialog.setParent(self.form, Qt.Dialog)
+        retval = dialog.exec_()
+        if retval == QDialog.Accepted:
+            settings.setValue("prologix/ip", dialog.ip)
+            settings.setValue("prologix/port", dialog.port)
+            settings.setValue("hp3562a/gpib_addr", dialog.gpib_addr)
+
+    @pyqtSlot()
+    def acquire_data(self):
+        """Acquire data process.
+        :returns: None
+        """
+        settings = QSettings()
+        try:
+            px_ip = settings.value("prologix/ip")
+            px_port = int(settings.value("prologix/port"))
+            hp_gpib_addr = int(settings.value("hp3562a/gpib_addr"))
+        except Exception as ex:
+            logging.error("Problem with settings: %r", ex)
+            return
+        # Acquisition itself
+        dev = Fft3562aDevPrologix(px_ip, px_port, hp_gpib_addr)
+        try:
+            dev.connect()
+            #dev.clear_hpib_interface()
+            rawdata = dev.dump_data_trace()
+        except Exception as ex:
+            logging.error("Problem during acquisition: %r", ex)
+            return
+        try:
+            stream = FftStream(rawdata)
+        except Exception as ex:
+            logging.error("Problem with stream: %r", ex)
+            return
+        # Local (application) data
+        key = strftime("%Y%m%d-%H%M%S")
+        if key in self.data_stream:
+            raise RuntimeError("Problem with data key timestamping.")
+        self.data_stream[key] = stream
+        #
+        self.acquire_done.emit(key)
+
+    @pyqtSlot(str)
+    def write_data(self, key):
+        """Writes data to file.
+        :param key: index used to identify data (str)
+        :returns: None
+        """
+        # Needed because signals convert str to QString which cause KeyError
+        # with dictionnary
+        key = str(key)
+        #
+        data = self.data_stream[key]
+        # Prepare header
+        header = str(data.param)
+        if self.form.sensitivity_dsb.value() != 1.0:
+            header += "Sensitivity:" + self.form.sensitivity_dsb.text() + \
+            " rad/V\n"
+        if self.form.gain_dsb.value() != 0.0:
+            header += "Gain:" + self.form.gain_dsb.text() + " dB\n"
+        if data.param.function == 1: # if frequency response
+            header += "Xdata\tReal\tImag\tMag\tPhy\n"
+        elif data.param.function == 5: # if cross spectrum
+            header += "Xdata\tReal\tImag\tCrossSpectrum\n"
+        else:
+            header += "Xdata\tYdata\n"
+        #
+        ofile = self._workspace_dir + '/' + key + ".dat"
+        x_data = np.concatenate((data.xdata, data.ydata), axis=1)
+        try:
+            np.savetxt(fname=ofile, X=x_data, delimiter='\t', header=header)
+        except Exception as er:
+            logging.error("Unexpected exception when storing data: %r", er)
+        self.write_done.emit(ofile)
+
+    @pyqtSlot(str)
+    def display_data(self, key):
+        """Handle display of data in graph.
+        :param key: index used to identify data (str)
+        :returns: None
+        """
+        # Needed because signals convert str to QString which cause key error
+        # with dictionnary
+        key = str(key)
+        # Customize plot
+        graph_layout = pg.GraphicsLayout(border=(100, 100, 100))
+        ## TODO: delete border around items
+        ## graph_layout.setBorder(pg.mkPen(None))
+        self.form.mplot.setCentralItem(graph_layout)
+        if self.data_stream[key].param.function in FUNCTION_MAPPING:
+            graph_layout.addLabel( \
+                FUNCTION_MAPPING[self.data_stream[key].param.function], \
+                colspan=3)
+        if self.data_stream[key].param.function == 1: # if frequency response
+            graph_layout.nextRow()
+            graph_layout.addLabel("Magnitude (dB)", angle=-90)
+            pmag = graph_layout.addPlot()
+            pmag.showGrid(x=True, y=True)
+            graph_layout.nextRow()
+            graph_layout.addLabel("Phase (degree)", angle=-90)
+            pphy = graph_layout.addPlot()
+            pphy.showGrid(x=True, y=True)
+            graph_layout.nextRow()
+            graph_layout.addLabel("Frequency (Hz)", col=1)
+            if self.data_stream[key].param.is_log is True:
+                pmag.setLogMode(x=True)
+                pphy.setLogMode(x=True)
+        else:
+            graph_layout.nextRow()
+            labely = DOMAIN_TYPE_MAPPING[self.data_stream[key].param.domain] \
+              + " (" + YAXIS_UNIT_MAPPING[self.data_stream[key].param.unity] \
+              + ")"
+            graph_layout.addLabel(labely, angle=-90)
+            plot = graph_layout.addPlot()
+            plot.showGrid(x=True, y=True)
+            if self.data_stream[key].param.unitx in XAXIS_UNIT_MAPPING:
+                unitx = XAXIS_UNIT_MAPPING[self.data_stream[key].param.unitx]
+            else:
+                unitx = ""
+            graph_layout.nextRow()
+            labelx = DOMAIN_TYPE_MAPPING[self.data_stream[key].param.domain] \
+                + " (" + unitx + ")"
+            graph_layout.addLabel(labelx, col=1)
+            if self.data_stream[key].param.is_log is True:
+                plot.setLogMode(x=True)
+        # Add data to plot
+        if self.data_stream[key].param.function == 1: # if frequency response
+            datax = np.ravel(self.data_stream[key].xdata)
+            mag = self.data_stream[key].ydata[:, 2]
+            phy = self.data_stream[key].ydata[:, 3]
+            pmag.plot(x=datax, y=mag, pen=(255, 0, 0))
+            pphy.plot(x=datax, y=phy, pen=(255, 0, 0))
+        elif self.data_stream[key].param.function == 5: # if cross spectrum
+            sensitivity = 20*np.log10(self.form.sensitivity_dsb.value())
+            gain = self.form.gain_dsb.value()
+            datax = np.ravel(self.data_stream[key].xdata)
+            cspec = self.data_stream[key].ydata[:, 2] + sensitivity + gain
+            plot.plot(x=datax, y=cspec, pen=(255, 0, 0))
+        else:
+            sensitivity = 20*np.log10(self.form.sensitivity_dsb.value())
+            gain = self.form.gain_dsb.value()
+            datax = np.ravel(self.data_stream[key].xdata)
+            datay = np.ravel(self.data_stream[key].ydata) + sensitivity + gain
+            plot.plot(x=datax, y=datay, pen=(255, 0, 0))
+        #
+        self.display_done.emit(key)
+
+    @pyqtSlot(str)
+    def _write_done(self, filename):
+        """UI behavior when data writing is done.
+        :param filename: name of the file where data are written (str)
+        :returns: None
+        """
+        self.form.status_bar.showMessage("Data writed in output file: " +
+                                         filename)
+
+
+#==============================================================================
+def configure_logging():
+    """Configure logging:
+    - (debug) messages logged to console
+    - messages logged in a file located in the home directory
+    """
+    log_path = os.path.expanduser("~")
+    log_filename = "." + APP_NAME + ".log"
+    log_abs_filename = os.path.join(log_path, log_filename)
+
+    log_file_format = "%(asctime)s %(levelname) -8s %(filename)s " + \
+        "%(funcName)s (%(lineno)d): %(message)s"
+    file_formatter = logging.Formatter(log_file_format)
+
+    log_console_format = "%(asctime)s [%(threadName)-12.12s]" + \
+        "[%(levelname)-6.6s] %(filename)s %(funcName)s (%(lineno)d): " + \
+        "%(message)s"
+    console_formatter = logging.Formatter(log_console_format)
+
+    root_logger = logging.getLogger()
+    root_logger.setLevel(CONSOLE_LOG_LEVEL)
+
+    file_handler = logging.handlers.RotatingFileHandler(log_abs_filename,
+                                                        maxBytes=(1048576*5),
+                                                        backupCount=7)
+    file_handler.setFormatter(file_formatter)
+    file_handler.setLevel(FILE_LOG_LEVEL)
+
+    console_handler = logging.StreamHandler()
+    console_handler.setFormatter(console_formatter)
+    console_handler.setLevel(CONSOLE_LOG_LEVEL)
+
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(console_handler)
+
+
+#==============================================================================
+def reset_ini():
+    """Resets the "settings" file with default values.
+    :returns: None
+    """
+    settings = QSettings()
+    settings.clear()
+    settings.setValue("prologix/ip", DEFAULT_IP)
+    settings.setValue("prologix/port", DEFAULT_PORT)
+    settings.setValue("hp3562a/gpib_addr", DEFAULT_GPIB_ADDR)
+
+def check_ini():
+    """Basic check of .ini file integrity: we try to read all ini parameters,
+    if no exception raised, we assume that file is OK.
+    :returns: True if Ini file OK else False (bool)
+    """
+    settings = QSettings()
+    try:
+        ip = settings.value("prologix/ip")
+        port = settings.value("prologix/port")
+        gaddr = settings.value("hp3562a/gpib_addr")
+    except Exception as ex:
+        logging.error("Broken or missing ini file: %r", ex)
+        logging.info("Create ini file with default values.")
+        return False
+    return True
+
+
+#==============================================================================
+def fft3562a():
+    """Main script.
+    """
+    app = QApplication(sys.argv)
+    app.setOrganizationName(ORGANIZATION)
+    app.setApplicationName(APP_NAME)
+
+    if check_ini() is False:
+        reset_ini()
+        QMessageBox.warning(None, "Broken or missing ini file",
+                            "Ini file with default values created")
+
+    gui = Fft3562aGui(app)
+    gui.form.action_quit.triggered.connect(app.quit)
+
+    sys.exit(app.exec_())
+
+
+#==============================================================================
+if __name__ == "__main__":
+    configure_logging()
+
+    fft3562a()
