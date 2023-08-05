@@ -1,0 +1,3 @@
+[console_scripts]
+shrynk = shrynk.__main__:main
+
