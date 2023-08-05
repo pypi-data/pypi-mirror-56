@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: babilim
+Version: 0.1.0
+Summary: A try to unify the deep learning frameworks under one api.
+Home-page: https://github.com/penguinmenac3/babilim
+Author: Michael Fuerst
+Author-email: mail@michaelfuerst.de
+License: BSD
+Download-URL: https://github.com/penguinmenac3/babilim/tarball/0.1.0
+Requires-Dist: numpy
+Requires-Dist: entangle-python
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: tensorboardX
+
+# Babilim
+
+
