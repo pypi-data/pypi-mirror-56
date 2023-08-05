@@ -1,0 +1,4 @@
+[zc.buildout]
+relstorage = nti.recipes.zodb.relstorage:Databases
+zeo = nti.recipes.zodb.zeo:Databases
+
