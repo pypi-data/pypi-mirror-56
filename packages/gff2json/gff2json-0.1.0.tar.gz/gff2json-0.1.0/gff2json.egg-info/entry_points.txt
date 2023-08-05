@@ -1,0 +1,3 @@
+[console_scripts]
+gff2json = gff2json.gff2json:main
+

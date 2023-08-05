@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: gff2json
+Version: 0.1.0
+Summary: convert gff files to json
+Home-page: https://github.com/IsaacLuo/gff2json
+Author: Isaac Luo
+Author-email: yishaluo@gmail.com
+License: MIT License
+Description: UNKNOWN
+Keywords: gff json convert format
+Platform: any
+Requires-Python: >=3.6
