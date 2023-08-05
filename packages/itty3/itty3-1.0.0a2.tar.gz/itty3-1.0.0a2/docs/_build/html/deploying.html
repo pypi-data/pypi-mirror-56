@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Deploying itty3 &#8212; itty3 1.0.0-alpha-2 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="Extending itty3" href="extending.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="deploying-itty3">
+<span id="deploying"></span><h1>Deploying <code class="docutils literal notranslate"><span class="pre">itty3</span></code><a class="headerlink" href="#deploying-itty3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="deployment-checklist">
+<h2>Deployment Checklist<a class="headerlink" href="#deployment-checklist" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Ensure <code class="docutils literal notranslate"><span class="pre">App.debug</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>Use a proper WSGI server</p></li>
+<li><p>Check your 404 &amp; 500 pages to ensure no data is leaking</p></li>
+<li><p>Set up static asset serving</p></li>
+</ul>
+</div>
+<div class="section" id="managing-app-debug">
+<h2>Managing <code class="docutils literal notranslate"><span class="pre">App.debug</span></code><a class="headerlink" href="#managing-app-debug" title="Permalink to this headline">¶</a></h2>
+<p>A solid way to manage the <code class="docutils literal notranslate"><span class="pre">App.debug</span></code> option is to rely on
+environment-based configuration.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">itty3</span>
+
+<span class="c1"># Rely on environment variables to set `debug`.</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">itty3</span><span class="o">.</span><span class="n">App</span><span class="p">(</span>
+    <span class="n">debug</span><span class="o">=</span><span class="nb">bool</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;APP_DEBUG&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>This allows your code to automatically deploy to new environments (such as
+production) with <code class="docutils literal notranslate"><span class="pre">debug=False</span></code>. For local development, you can export
+the environment variable to turn debug back on.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ export APP_DEBUG=1
+$ python app.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="use-a-proper-wsgi-server">
+<h2>Use A Proper WSGI Server<a class="headerlink" href="#use-a-proper-wsgi-server" title="Permalink to this headline">¶</a></h2>
+<p>While the built-in <code class="docutils literal notranslate"><span class="pre">wsgiref</span></code> server is convenient, it’s not particularly
+feature-rich or configurable. Some good production-ready alternatives
+include:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gunicorn.org/">Gunicorn</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jonashaag/bjoern">Bjoern</a></p></li>
+<li><p><a class="reference external" href="https://uwsgi-docs.readthedocs.io/en/latest/">uWSGI</a></p></li>
+<li><p><a class="reference external" href="https://cherrypy.org/">CherryPy</a></p></li>
+<li><p><a class="reference external" href="http://www.gevent.org/">gevent</a></p></li>
+<li><p><a class="reference external" href="https://twistedmatrix.com/trac/">Twisted</a></p></li>
+</ul>
+<p>All are good options, boasting good speed/compliance/configuration across
+the board. You can’t really go wrong, so experiment &amp; find the one you like
+best.</p>
+<p>The author has the most experience with <a class="reference external" href="https://gunicorn.org/">Gunicorn</a>, so example configuration
+to accommodate that follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># gunicorn.conf</span>
+<span class="kn">import</span> <span class="nn">multiprocessing</span>
+
+<span class="n">bind</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1:8000&quot;</span>
+<span class="n">workers</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">cpu_count</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">daemon</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">reload</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">max_requests</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;&lt;a-configured-non-root-user&gt;&quot;</span>
+<span class="c1"># group = &quot;&lt;an-optional-group&gt;&quot;</span>
+</pre></div>
+</div>
+<p>Then running the daemon with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gunicorn -c gunicorn.conf myapp:app
+</pre></div>
+</div>
+<p>It’s important to note that this runs <code class="docutils literal notranslate"><span class="pre">gunicorn</span></code> still only on the
+localhost. It’s generally advised to put a reverse proxy or similar in
+front of your WSGI workers.</p>
+<p>As an example, here’s an <a class="reference external" href="http://nginx.org/">nginx</a> setup for proxying to <a class="reference external" href="https://gunicorn.org/">Gunicorn</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>server {
+    listen 80;
+    server_name example.org;
+    access_log  /var/log/nginx/access.log;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">itty3</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deploying <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#deployment-checklist">Deployment Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-app-debug">Managing <code class="docutils literal notranslate"><span class="pre">App.debug</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-a-proper-wsgi-server">Use A Proper WSGI Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/itty3.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="philosophy.html">Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="extending.html" title="previous chapter">Extending <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+      <li>Next: <a href="troubleshooting.html" title="next chapter">Troubleshooting</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Daniel Lindsley.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/deploying.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

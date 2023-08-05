@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contributing &#8212; itty3 1.0.0-alpha-2 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Philosophy" href="philosophy.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="contributing">
+<span id="id1"></span><h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">itty3</span></code> gladly accepts contributions that:</p>
+<ul class="simple">
+<li><p>are respectful to everyone</p></li>
+<li><p>inclusive by default (we’re all human)</p></li>
+<li><p>report/fix Real World™ problems</p></li>
+</ul>
+<p>If this list offends you or you feel you can’t follow these guidelines,
+you’re welcome to use other frameworks or to not contribute.</p>
+<div class="section" id="ways-to-contribute">
+<h2>Ways To Contribute<a class="headerlink" href="#ways-to-contribute" title="Permalink to this headline">¶</a></h2>
+<p>In easy-to-harder order:</p>
+<ul class="simple">
+<li><p>File an issue/bug report</p></li>
+<li><p>Add/update documentation</p></li>
+<li><p>Add test coverage</p></li>
+<li><p>Add feature code</p></li>
+</ul>
+</div>
+<div class="section" id="file-an-issue-bug-report">
+<h2>File An Issue/Bug Report<a class="headerlink" href="#file-an-issue-bug-report" title="Permalink to this headline">¶</a></h2>
+<p>If you encounter a bug or a shortcoming in <code class="docutils literal notranslate"><span class="pre">itty3</span></code>, one of the easiest
+ways to help is to create a <a class="reference external" href="https://github.com/toastdriven/itty3/issues/new">GitHub Issue</a>.</p>
+<p>Simply click the link and fill out the template.</p>
+<p>The more detail you can provide, the easier it will be to reproduce your
+issue &amp; get it resolved.</p>
+<p>Thanks for the help!</p>
+</div>
+<div class="section" id="add-update-documentation">
+<h2>Add/Update Documentation<a class="headerlink" href="#add-update-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Documentation is crucial in understanding &amp; using software libraries.
+And <code class="docutils literal notranslate"><span class="pre">itty3</span></code>’s documentation is no exception.</p>
+<p>That said, mistakes &amp; omissions happen. Helping fix the documentation is
+an easy way to help everyone!</p>
+<p>To submit a documentation addition/update:</p>
+<ul class="simple">
+<li><p>Fork the repository on GitHub</p></li>
+<li><p>Clone your fork to your local machine (or edit in the GitHub UI)</p></li>
+<li><p>Create a new branch with <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+<li><p>Change the documentation in question (located in the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> folder)</p></li>
+<li><p>Add your changes via <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+<li><p>Commit the changes to your branch</p></li>
+<li><p>Push the branch back to GitHub</p></li>
+<li><p>Open a <a class="reference external" href="https://github.com/toastdriven/itty3/compare">Pull Request</a> for your branch</p></li>
+<li><p>Fill out the template &amp; submit!</p></li>
+</ul>
+<p><em>With apologies to Edgar Allen Poe,…</em>
+Quoth the raven: <code class="docutils literal notranslate"><span class="pre">Documentation</span> <span class="pre">forevermore!</span></code></p>
+</div>
+<div class="section" id="add-test-coverage">
+<h2>Add Test Coverage<a class="headerlink" href="#add-test-coverage" title="Permalink to this headline">¶</a></h2>
+<p>All software has bugs. Tests prove that the code works as intended.</p>
+<p>To submit a test addition/update:</p>
+<ul class="simple">
+<li><p>Fork the repository on GitHub</p></li>
+<li><p>Clone your fork to your local machine (or edit in the GitHub UI)</p></li>
+<li><p>Create a new branch with <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>/<code class="docutils literal notranslate"><span class="pre">pipenv</span></code> for the repository &amp; activate it</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pytest</span></code></p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pytest</span> <span class="pre">tests</span></code> &amp; ensure they’re passing.</p></li>
+<li><p>Make your changes/additions to test files.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pytest</span> <span class="pre">tests</span></code> again &amp; ensure your changes pass.</p></li>
+<li><p>Add your changes via <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+<li><p>Commit the changes to your branch</p></li>
+<li><p>Push the branch back to GitHub</p></li>
+<li><p>Open a <a class="reference external" href="https://github.com/toastdriven/itty3/compare">Pull Request</a> for your branch</p></li>
+<li><p>Fill out the template &amp; submit!</p></li>
+</ul>
+<p>I <code class="docutils literal notranslate"><span class="pre">:heart:</span></code> more tests, always.</p>
+</div>
+<div class="section" id="add-feature-code">
+<h2>Add Feature Code<a class="headerlink" href="#add-feature-code" title="Permalink to this headline">¶</a></h2>
+<p>Most everyone loves new features. As long as new features fall within
+the <a class="reference internal" href="philosophy.html#philosophy"><span class="std std-ref">Philosophy</span></a> of <code class="docutils literal notranslate"><span class="pre">itty3</span></code>, they’re welcomed &amp; appreciated!</p>
+<p>To submit a new feature:</p>
+<ul class="simple">
+<li><p>Fork the repository on GitHub</p></li>
+<li><p>Clone your fork to your local machine (or edit in the GitHub UI)</p></li>
+<li><p>Create a new branch with <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>/<code class="docutils literal notranslate"><span class="pre">pipenv</span></code> for the repository &amp; activate it</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pytest</span></code></p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pytest</span> <span class="pre">tests</span></code> &amp; ensure they’re passing.</p></li>
+<li><p>Add your feature work.</p></li>
+<li><p>Ensure the new feature has a docstring if it’s public API.</p></li>
+<li><p>Ensure the new feature matches existing code style (<code class="docutils literal notranslate"><span class="pre">black</span></code> is nice here).</p></li>
+<li><p>Add documentation to the main guides as appropriate.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pytest</span> <span class="pre">tests</span></code> again &amp; ensure your changes pass.</p></li>
+<li><p>Add your changes via <code class="docutils literal notranslate"><span class="pre">git</span></code></p></li>
+<li><p>Commit the changes to your branch</p></li>
+<li><p>Push the branch back to GitHub</p></li>
+<li><p>Open a <a class="reference external" href="https://github.com/toastdriven/itty3/compare">Pull Request</a> for your branch</p></li>
+<li><p>Fill out the template &amp; submit!</p></li>
+</ul>
+<p>You da bes!</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">itty3</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploying.html">Deploying <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/itty3.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Docs:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="philosophy.html">Philosophy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ways-to-contribute">Ways To Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-an-issue-bug-report">File An Issue/Bug Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-update-documentation">Add/Update Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-test-coverage">Add Test Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-feature-code">Add Feature Code</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="philosophy.html" title="previous chapter">Philosophy</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Daniel Lindsley.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/contributing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
