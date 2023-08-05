@@ -1,0 +1,9 @@
+README.rst
+setup.py
+botweet/__init__.py
+botweet/bot.py
+botweet/event.py
+botweet.egg-info/PKG-INFO
+botweet.egg-info/SOURCES.txt
+botweet.egg-info/dependency_links.txt
+botweet.egg-info/top_level.txt
