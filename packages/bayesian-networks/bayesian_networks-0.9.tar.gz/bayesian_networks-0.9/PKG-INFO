@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: bayesian_networks
+Version: 0.9
+Summary: Implementation for bayesian network with Enumeration, Rejection Sampling and Likelihood Weighting
+Home-page: https://github.com/bkbilly/bayesian_networks
+Author: bkbilly
+Author-email: bkbilly@hotmail.com
+License: UNKNOWN
+Description: # Bayesian Networks
+        [![PyPI Version](https://img.shields.io/pypi/v/bayesian-networks?label=PyPI&logo=pypi)](https://pypi.org/project/bayesian-networks/)
+        
+        Implementation for bayesian network with 
+        
+          - Enumeration
+          - Rejection Sampling
+          - Likelihood Weighting
+        
+        ## Install
+        ```bash
+        sudo pip3 install --upgrade bayesian-networks
+        ```
+        
+        ## How to use
+        ```python
+        import bayesian_networks
+        
+        testcase = {
+            'netid': "burglary",
+            'query': ('B', 'j,m'),
+            'result': {True: 0.28, False: 0.72},
+            'samples': 10000,
+        }
+        
+        enum = bayesian_networks.Enumeration()
+        results = enum.run(testcase)
+        bayesian_networks.print_result(results, showcolors=True)
+        
+        rejection = bayesian_networks.RejectionSampling()
+        results = rejection.run(testcase)
+        bayesian_networks.print_result(results, showcolors=True)
+        
+        weighting = bayesian_networks.LikelihoodWeighting()
+        results = weighting.run(testcase)
+        bayesian_networks.print_result(results, showcolors=True)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
