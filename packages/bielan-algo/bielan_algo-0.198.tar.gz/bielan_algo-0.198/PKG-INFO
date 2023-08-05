@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: bielan_algo
+Version: 0.198
+Summary: Execution-time optimized solutions for various programming problems.
+Home-page: https://github.com/JBielan/bielan_algo
+Author: UNKNOWN
+Author-email: jkbielan@gmail.com
+License: MIT
+Download-URL: https://github.com/JBielan/bielan_algo/archive/v_0.198.tar.gz
+Description: UNKNOWN
+Keywords: SOLUTIONS,ALGORITHMS,TIME-OPTIMIZED,PYTHON3,PYTHON
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
