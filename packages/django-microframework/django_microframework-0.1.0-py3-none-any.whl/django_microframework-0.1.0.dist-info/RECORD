@@ -1,0 +1,15 @@
+microframework/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microframework/handler.py,sha256=HmzlGlF9QGlcPf9fdm9y0_O9v_yiyIcneNVXzb0AYqI,4382
+microframework/models.py,sha256=oB3fXXiNyFxpD23ZREVj7B6nZ1hdEfxDsMSioQcGWw0,428
+microframework/sender.py,sha256=9o3DawFHMZm6dJE1gXSWCPrH2P-cxIJjEVHt1Wnrxlw,2758
+microframework/utils.py,sha256=-3e9D6N7S-BDQNzHrBO-VWgsK6fqoU7AcNTpcZ43oug,165
+microframework/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microframework/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microframework/management/commands/run_listener.py,sha256=Dc_DKfWz961taJhPYwU82YOKcieGj8afEQpDKl4kyGU,1582
+microframework/migrations/0001_initial.py,sha256=k77CZsotN9_JxCVpDmbYD53I-k9NgGnMtWbaynYbm84,795
+microframework/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_microframework-0.1.0.dist-info/LICENSE.md,sha256=Au86MIlLDh4XaRzFqk_xDFa7kuq9zahun4TzRd715fo,1541
+django_microframework-0.1.0.dist-info/METADATA,sha256=iAGfC79jADA8X3Bh53oUAEVBpkc4UWVlUX16BUgfdKc,2658
+django_microframework-0.1.0.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+django_microframework-0.1.0.dist-info/top_level.txt,sha256=xGWZcdSVETSiJeTDQv16YGltW_jt8zj-u7uQBwepvG0,15
+django_microframework-0.1.0.dist-info/RECORD,,
