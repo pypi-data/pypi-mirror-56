@@ -1,0 +1,13 @@
+screenconnect/__init__.py,sha256=hhfzgRi3cc9SvpntEpA3pACGTiYF2GgGyWWaGSLWAuM,329
+screenconnect/api.py,sha256=V3pHPB2xFveU61f7QNwieM9ECOMQABbmkDURMno1QvE,8800
+screenconnect/enumerations.py,sha256=f9v2ckULqfrKm08x2b2xnTnGeGnEsk_Ud7UJ12W_tws,1240
+screenconnect/error.py,sha256=lJqPazNy95I5Ru16Doj10fyD6Y0Ju9sTdA5f3PpVBsM,251
+screenconnect/events.py,sha256=mne1tz_mDH0VqKHSZeR96KoKLqNpEPGIQtVJOGszzwk,634
+screenconnect/session.py,sha256=AWUiFD4ZrQ0NrPh4-draAHtOP9M0Au2MI2YxIXA_jYY,2966
+screenconnect/session_group.py,sha256=q5Rs9-mVE7lX1_ajhkN7Gf0iOhB9lamnzDnX3nxSevQ,1533
+tests/__init__.py,sha256=SCA4XSUfe5o3LMCpvdrloM3rE_MScr7F7eK81Y5ae10,32
+screenconnect-0.1.0.dist-info/LICENSE,sha256=vX08KhwLzMZqPEUjmj9Ax1BU1FgxTvbKpD2Tieffiuc,1079
+screenconnect-0.1.0.dist-info/METADATA,sha256=yWZUFz2bZoVelJQFQC9WOO_D6R3L4FQhxDHJW8jmkVE,1797
+screenconnect-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+screenconnect-0.1.0.dist-info/top_level.txt,sha256=MAYPFZ305AbLDHcrmH7volwflnjw1UVuHJ57kn_37xc,20
+screenconnect-0.1.0.dist-info/RECORD,,
