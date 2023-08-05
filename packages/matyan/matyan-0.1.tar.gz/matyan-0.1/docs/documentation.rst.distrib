@@ -1,0 +1,20 @@
+
+Docs
+====
+
+Contents:
+
+.. toctree::
+   :maxdepth: 20
+
+   index
+   basic_concepts
+   changelog
+   matyan
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
