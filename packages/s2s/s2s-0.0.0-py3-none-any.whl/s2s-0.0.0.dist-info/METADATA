@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: s2s
+Version: 0.0.0
+Summary: Sequence to Sequence Learning with PyTorch
+Home-page: https://github.com/idorce/s2s
+Author: HQ
+Author-email: idorce@outlook.com
+License: UNKNOWN
+Keywords: pytorch machine learning seq2seq
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+
+# s2s
+
+Sequence to Sequence Learning with PyTorch
+
+
