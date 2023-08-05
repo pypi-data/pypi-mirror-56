@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: textbook
+Version: 0.0.2
+Summary: Text classification datasets
+Home-page: https://github.com/ChenghaoMou/textbook
+Author: Chenghao
+Author-email: mouchenghao@gmail.com
+License: UNKNOWN
+Description: # Textbook
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >3.7.0
+Description-Content-Type: text/markdown
