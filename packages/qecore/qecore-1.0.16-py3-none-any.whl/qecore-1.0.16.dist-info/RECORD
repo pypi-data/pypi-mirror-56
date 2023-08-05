@@ -1,0 +1,16 @@
+qecore/__init__.py,sha256=BjlfruFlIaQOF7u5cbhASXiqF_TdElmcvxagoXt7AG4,6944
+qecore/application.py,sha256=CspB72sQqlLTLNqXKi0fj5Y2bUV68vmuZ_0T4jNz0qQ,11495
+qecore/common_steps.py,sha256=uxupAHD3HDblokiJ_bQ_UkVBd6clIzZt0xVmClrkiV4,12698
+qecore/get_node.py,sha256=Yz28O7L8yNu7utGGdpvlmpvzPcNamAcnoDK5aRA5U0w,7519
+qecore/image_matching.py,sha256=jLmxiQHmCTzGCaYMl4u5ORXEPVU7sCRA5lWxpBkoJHg,4544
+qecore/logger.py,sha256=PGQ2bZHvUwd8BtIbi1ZYoUzNAggzh4R35ikoJSUX3VY,986
+qecore/sandbox.py,sha256=mC5hBEMfLfMueFPwLw0Y9Q-DOYCM-rYbPPJii0l3gPQ,23599
+qecore-1.0.16.data/scripts/qecore_get_active_display,sha256=WRjrTGfd2dVY3rkwys7ufO7wj_8dNyn5o0NjPjny_Kk,233
+qecore-1.0.16.data/scripts/qecore_help,sha256=npfgHN9vRKQqzKD1OkzttwK24mA3RPwxmBZANzmKzqQ,61
+qecore-1.0.16.data/scripts/qecore_start_keyring,sha256=GhgJcCt4CO9qYk5AnWRYvUh2U3nyo1k2WIO2zne7hxY,657
+qecore-1.0.16.data/scripts/qecore_start_recording,sha256=dcTlubPpHtB53RQXsH11suG8q3MRVRs2ITmFwMkYx3E,240
+qecore-1.0.16.dist-info/LICENSE,sha256=5tagCVBeNF_pSeExAzT8sHR_KNrihWdZ3hAqtmtyLLQ,18011
+qecore-1.0.16.dist-info/METADATA,sha256=Sc8ATQrvtZpkmy3Dxt_MqUHeGCoPvjB1TabPpxrOEVE,525
+qecore-1.0.16.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+qecore-1.0.16.dist-info/top_level.txt,sha256=6c86YsQYT-gaI0uWSIv0rG39KWyKNRFJLE9brz1D7hY,7
+qecore-1.0.16.dist-info/RECORD,,
