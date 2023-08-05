@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Djimage
+Version: 0.0.1
+Summary: Custom Django Image Field
+Home-page: https://github.com/sainipray/djimage
+Author: Neeraj Kumar
+Author-email: sainineeraj1234@gmail.com
+License: UNKNOWN
+Platform: any
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.1
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Requires-Dist: Pillow
+
+UNKNOWN
+
+
