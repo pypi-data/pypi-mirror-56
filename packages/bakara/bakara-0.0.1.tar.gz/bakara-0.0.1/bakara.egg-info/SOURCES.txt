@@ -1,0 +1,10 @@
+README.md
+setup.py
+bakara/__init__.py
+bakara/__main__.py
+bakara.egg-info/PKG-INFO
+bakara.egg-info/SOURCES.txt
+bakara.egg-info/dependency_links.txt
+bakara.egg-info/not-zip-safe
+bakara.egg-info/top_level.txt
+bakara/bin/bakara
