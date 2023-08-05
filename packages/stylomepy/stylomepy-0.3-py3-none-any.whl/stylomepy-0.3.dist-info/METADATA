@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: stylomepy
+Version: 0.3
+Summary: A Python library for measuring the style.
+Home-page: https://github.com/alvarodepablo/stylomepy
+Author: Alvaro de Pablo
+Author-email: alvarodepablomarsal@gmail.com
+License: UNKNOWN
+Keywords: style,measure,vocabulary,coherence,formality,readability,text
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: nltk
+Requires-Dist: contractions
+Requires-Dist: scipy
+Requires-Dist: gensim
+Requires-Dist: gsitk
+
+Stylomepy is a library that allows you to measure the style of Spanish and English texts.
+
+
