@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: PyConfigMaker
+Version: 0.3
+Summary: Generates a config and an argument parser from a yaml file
+Home-page: https://github.com/cvoelcker/dfnclient
+Author: Claas Voelcker
+Author-email: claas@voelcker.net
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml
+
+# PyConfigMaker
+
+![PyPI](https://img.shields.io/pypi/v/pyconfigmaker?label=PyConfigMaker&link=https://pypi.org/project/PyConfigMaker/)
+
+A tiny package which automatically builds config objects and an argument parser from yaml script
+
+[PyPi](https://pypi.org/project/PyConfigMaker/)
+[Github](https://github.com/cvoelcker/PyConfigMaker)
+
+
+
