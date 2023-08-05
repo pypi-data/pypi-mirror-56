@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: samuranium
+Version: 0.0.2
+Summary: A test automation framework
+Home-page: https://github.com/malazay/samuranium
+Author: Alexis Giovoglanian
+Author-email: alexisgiovoglanian@infovalue.com.ar
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+Requires-Dist: webdriver-manager
+Requires-Dist: behave
+Requires-Dist: jinja2
+Requires-Dist: appium-python-client
+
+[![CircleCI](https://circleci.com/gh/malazay/samuranium.svg?style=shield)](https://circleci.com/gh/malazay/samuranium)
+
+# Samuranium Automation Framework
+
+Samuranium is an automation framework that uses Selenium and Appium for web and mobile testing.
+It handles all the project setup and configuration, Web Driver installation and everything needed for a test automation project.
+
+Here is a link to the Quick Start Guide: 
+[Samuranium Quick Start Guide](https://samuranium.readthedocs.io/en/latest/quick-start.html)
+
+
+##Roadmap:
+* Appium implementation
+* Unittest project setup
+* IE support
+* Safari support
+* Reporting overhaul
+* Data Driven Sources
+* Api Testing Steps
+
+
+
