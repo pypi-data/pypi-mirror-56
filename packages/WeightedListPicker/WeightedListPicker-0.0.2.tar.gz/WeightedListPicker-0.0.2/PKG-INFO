@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: WeightedListPicker
+Version: 0.0.2
+Summary: A Weighted list picker. throw in two lists, One with any type variable and the other with chances in the form of int variables.
+Home-page: https://github.com/SirRolf/WeightedListPicker
+Author: SirRolf
+Author-email: Flomo123456789@gmail.com
+License: UNKNOWN
+Description: A handy library that can pick a variable out of a list, but you can give certain weights to variables out of the list. You can do this by making to lists, one with the variables you want to pick out and one with the chances of each variable.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
