@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+fs_s3fs/__init__.py
+fs_s3fs/_s3fs.py
+fs_s3fs/_s3fs_file.py
+fs_s3fs/_version.py
+fs_s3fs/opener.py
+fs_s3fs_ng.egg-info/PKG-INFO
+fs_s3fs_ng.egg-info/SOURCES.txt
+fs_s3fs_ng.egg-info/dependency_links.txt
+fs_s3fs_ng.egg-info/entry_points.txt
+fs_s3fs_ng.egg-info/requires.txt
+fs_s3fs_ng.egg-info/top_level.txt
