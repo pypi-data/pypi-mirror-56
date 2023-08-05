@@ -1,0 +1,7 @@
+task :default do
+  sh "latexmk -pdf"
+  sh "convert -density 300 feature-mapping-activity.pdf -resize 50% feature-mapping-activity.png"
+  sh "latexmk -pdf -C"
+  sh "convert feature-mapping-activity-0.png -flatten -trim feature-mapping-activity-0.png"
+  sh "convert feature-mapping-activity-1.png -flatten -trim feature-mapping-activity-1.png"
+end
