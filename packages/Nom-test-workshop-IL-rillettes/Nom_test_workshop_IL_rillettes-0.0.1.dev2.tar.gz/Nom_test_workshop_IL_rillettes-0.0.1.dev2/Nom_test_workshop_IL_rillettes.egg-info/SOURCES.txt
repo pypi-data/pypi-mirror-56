@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+Nom_test_workshop_IL_rillettes.egg-info/PKG-INFO
+Nom_test_workshop_IL_rillettes.egg-info/SOURCES.txt
+Nom_test_workshop_IL_rillettes.egg-info/dependency_links.txt
+Nom_test_workshop_IL_rillettes.egg-info/requires.txt
+Nom_test_workshop_IL_rillettes.egg-info/top_level.txt
+wide_wild_west/__init__.py
+wide_wild_west/data.py
+wide_wild_west/main.py
