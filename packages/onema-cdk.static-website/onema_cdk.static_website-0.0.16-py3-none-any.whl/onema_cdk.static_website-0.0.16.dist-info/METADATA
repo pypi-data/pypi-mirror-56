@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: onema-cdk.static-website
+Version: 0.0.16
+Summary: A CDK Python construct to create static S3 websites. This is a port of the AWS static site example https://github.com/aws-samples/aws-cdk-examples/blob/master/typescript/static-site/static-site.ts
+Home-page: https://github.com/onema/cdk-constructs
+Author: Juan Manuel Torres
+Author-email: software@onema.io
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/onema/cdk-constructs/issues
+Project-URL: Documentation, https://github.com/onema/cdk-constructs
+Project-URL: Source Code, https://github.com/onema/cdk-constructs
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aws-cdk.core
+Requires-Dist: aws-cdk.aws-events
+Requires-Dist: aws-cdk.aws-events-targets
+Requires-Dist: aws-cdk.aws-certificatemanager
+Requires-Dist: aws-cdk.aws-cloudfront
+Requires-Dist: aws-cdk.aws-route53
+Requires-Dist: aws-cdk.aws-route53-targets
+Requires-Dist: aws-cdk.aws-s3
+Requires-Dist: aws-cdk.aws-s3-deployment
+
+
+# Simple static site CDK construct 
+
+This constructs creates a static website hosted on S3.
+
+## Requirements
+- Hosted zone in Route53
+
+## Usage
+This constructs creates:
+- S3 bucket
+- DNS Validated certificate
+- CloudFront web distribution
+- Route53 A record 
+
+
+```python
+from aws_cdk.core import Stack, Construct
+from static_website import StaticWebsite
+from aws_cdk.aws_route53 import HostedZone
+
+class WebSiteStack(Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs):
+
+        super().__init__(scope, id, **kwargs)
+
+        # The code that defines your stack goes here
+
+        zone = HostedZone.from_lookup(self, "HostedZone", 
+                                      domain_name="mydomain.com", 
+                                      private_zone=False)
+
+        StaticWebsite(self, "serverlesslink-website",
+                              hosted_zone=zone,
+                              site_domain="blog.mydomain.com",
+                              sources="../public",
+                              website_error="404.html")
+```
+
