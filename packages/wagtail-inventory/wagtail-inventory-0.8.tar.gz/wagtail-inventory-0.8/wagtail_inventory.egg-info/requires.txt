@@ -1,0 +1,8 @@
+Django<2.3,>=1.8
+tqdm==4.15.0
+wagtail<2.7,>=1.8
+
+[testing]
+coverage>=3.7.0
+flake8>=2.2.0
+mock>=1.0.0
