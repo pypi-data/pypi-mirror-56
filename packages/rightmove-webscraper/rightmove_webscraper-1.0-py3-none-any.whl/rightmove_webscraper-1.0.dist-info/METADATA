@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: rightmove-webscraper
+Version: 1.0
+Summary: A class for scraping data from rightmove.co.uk
+Home-page: https://github.com/woblers/rightmove_webscraper.py
+Author: Toby Petty
+Author-email: tobypetty@hotmail.com
+License: MIT
+Keywords: webscraping,rightmove,data
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: certifi (==2019.9.11)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: idna (==2.8)
+Requires-Dist: lxml (==4.4.1)
+Requires-Dist: numpy (==1.17.2)
+Requires-Dist: pandas (==0.25.1)
+Requires-Dist: python-dateutil (==2.8.0)
+Requires-Dist: pytz (==2019.2)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: urllib3 (==1.25.6)
+
+# rightmove-webscraper
+
+
+http://www.rightmove.co.uk/ is one of the UK's largest property listings websites, hosting thousands of listings of properties for sale and to rent.
+
+rightmove_webscraper.py is a simple Python interface to scrape property listings from the website and prepare them in a Pandas dataframe for analysis.
+
+## Installation
+
+Version 1.0 is now available to install via Pip:
+
+`pip install -U rightmove-webscraper`
+
+## How to use
+
+1) Go to "http://www.rightmove.co.uk/" and search for whatever listings you are interested in ...
+
+
+2) Filter the search however you choose ...
+
+3) Run the search and copy the URL of the results page ...
+
+4) Create an instance of the class on the URL ...
+
+`
+from rightmove_webscraper import RightmoveData
+
+url = "https://www.rightmove.co.uk/property-for-sale/find.html?searchType=SALE&locationIdentifier=REGION%5E94346"
+rm = RightmoveData(url)
+`
+
+5) Access the data using the methods and attributes of the object ...
+
+
+Get the average price of all listings returned by the search:
+
+`
+rm.average_price
+`
+
+Show the total number of listings returned by the search:
+
+`
+rm.results_count
+`
+
+Access the full results as a Pandas dataframe at the <code>.get_results</code> attribute.
+
+`
+rm.get_results
+`
+
+Get quick summary statistics of the results, showing the number of listings and average price grouped by the number of bedrooms:
+
+`
+rm.summary()
+`
+
+Alternatively group the results by any other column returned in the <code>.get_results</code> DataFrame, for example Postcode:
+
+`
+rm.summary(by="postcode")
+`
+
+
