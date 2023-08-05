@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dismotif
+Version: 1.1.5
+Summary: disrupted motifs
+Home-page: https://github.com/anthony-aylward/chipseqpeaks.git
+Author: Anthony Aylward, Joshua Chiou
+Author-email: aaylward@eng.ucsd.edu
+License: UNKNOWN
+Description: # dismotif
+        
+        disrupted motifs
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
