@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: conport
+Version: 1.1.2
+Summary: Generate continuous testing report
+Home-page: https://github.com/slxiao/contport
+Author: slxiao
+Author-email: shliangxiao@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
