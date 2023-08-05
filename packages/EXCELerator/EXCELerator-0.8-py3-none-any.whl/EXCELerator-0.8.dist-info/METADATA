@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: EXCELerator
+Version: 0.8
+Summary: Library for reading tabular data from excel in a very forgiving manner.
+Home-page: https://github.com/jonathanchukinas/excelerator
+License: UNKNOWN
+Keywords: xlrd openpyxl Excel xlsx xls excel
+Author: Jonathan Chukinas
+Author-email: chukinas@gmail.com
+Requires-Python: >=3.6.3
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: openpyxl
+Requires-Dist: Deprecated
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: tox; extra == "test"
+Requires-Dist: sphinx; extra == "test"
+Requires-Dist: m2r; extra == "test"
+Provides-Extra: test
+
+# !! EXCELerator is Deprecated !!
+
+Superseded by fuzzytable, which includes an improved data model and csv compatibility. 
+- Docs: [fuzzytable.readthedocs.io](https://fuzzytable.readthedocs.io/)
+- PyPI: [pypi.org/project/fuzzytable](https://pypi.org/project/fuzzytable/)
+- github: [github.com/jonathanchukinas/fuzzytable](https://github.com/jonathanchukinas/fuzzytable)
+
+```
+pip install fuzzytable
+```
