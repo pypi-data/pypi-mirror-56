@@ -1,0 +1,3 @@
+[console_scripts]
+getpalette = getpalette.__main__:main
+
