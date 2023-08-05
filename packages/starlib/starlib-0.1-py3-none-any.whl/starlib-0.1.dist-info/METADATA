@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: starlib
+Version: 0.1
+Summary: A package with some useful utility functions.
+Home-page: http://github.com/jestarling/starlib
+Author: Jennifer E Starling
+Author-email: jstarling@utexas.edu
+License: MIT
+Keywords: statistics
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Dist: markdown
+
+Learning Python package development.
+
+
