@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[microcosm.factories]
+connexion = microcosm_connexion.factories:configure_connexion
+
