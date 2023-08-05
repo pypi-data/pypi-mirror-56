@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: stockkly-repo
+Version: 0.1.9
+Summary: The Stockkly repository
+Home-page: https://github.com/squeakycheese75/stockkly_repo
+Author: Jamie Wooltorton
+Author-email: james_wooltorton@hotmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pymongo
+
+UNKNOWN
+
+
