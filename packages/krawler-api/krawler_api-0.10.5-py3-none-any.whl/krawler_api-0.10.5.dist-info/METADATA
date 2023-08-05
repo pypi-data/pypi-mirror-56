@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: krawler-api
+Version: 0.10.5
+Summary: A general container of apis out of Naver, Kakao
+Home-page: https://github.com/harry81/krawler
+Author: Hyunmin Choi
+Author-email: pointer81@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: bs4
+Requires-Dist: requests
+
+krawler
+
+
