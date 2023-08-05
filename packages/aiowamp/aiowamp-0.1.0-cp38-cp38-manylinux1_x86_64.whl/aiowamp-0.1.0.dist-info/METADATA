@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aiowamp
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/gieseladev/aiowamp
+Author: Giesela Inc.
+Author-email: team@giesela.dev
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: aiobservable
+Requires-Dist: msgpack
+Requires-Dist: websockets
+
+# aiowamp
+WAMP Python client asyncio
+
+
