@@ -1,0 +1,11 @@
+README.md
+setup.py
+ttc/TremTecCLI.py
+ttc/__init__.py
+ttc/main.py
+ttc.egg-info/PKG-INFO
+ttc.egg-info/SOURCES.txt
+ttc.egg-info/dependency_links.txt
+ttc.egg-info/entry_points.txt
+ttc.egg-info/requires.txt
+ttc.egg-info/top_level.txt

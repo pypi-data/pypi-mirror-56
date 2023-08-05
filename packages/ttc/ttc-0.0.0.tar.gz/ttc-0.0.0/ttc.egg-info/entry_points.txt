@@ -1,0 +1,4 @@
+[console_scripts]
+tt = ttc.main:main
+ttc = ttc.main:main
+

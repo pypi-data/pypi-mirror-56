@@ -1,0 +1,14 @@
+click
+click-completion
+PyInquirer
+
+[dev]
+flake8
+black
+pylint
+pydocstyle
+pycodestyle
+rope
+
+[test]
+coverage
