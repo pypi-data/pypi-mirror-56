@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ProBioPred
+Version: 1.0.0
+Summary: Probiotic candidate prediction on the basis of genomic features by using Support Vector machine (SVM).
+Home-page: https://github.com/microDM/ProBioPred
+Maintainer: Dattatray Mongad
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: biopython
+
+ProBioPred can uses Virlent factor (VFDB) and CARD database RGI tool to predict virulent  and antibiotic resistence genes. Then it uses pre-trained SVM models to predict potential probiotic/non-probiotic candidates. ProBioPred is available as webserver at http://210.212.161.142/ProBioPred/ and as standalone at https://github.com/microDM/ProBioPred
+
+
