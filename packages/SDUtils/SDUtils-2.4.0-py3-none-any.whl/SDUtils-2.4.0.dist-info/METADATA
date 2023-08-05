@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: SDUtils
+Version: 2.4.0
+Summary: StratoDem utilities
+Home-page: https://github.com/StratoDem/SDUtils
+Author: StratoDem Analytics
+Author-email: tech@stratodem.com
+License: (c) 2017- StratoDem Analytics. All rights reserved.
+Platform: UNKNOWN
+Requires-Dist: slackclient (==2.3.1)
+Requires-Dist: numpy (==1.17.4)
+Requires-Dist: pandas (==0.25.3)
+Requires-Dist: joblib
+Requires-Dist: dask (==2.8.0)
+Requires-Dist: xarray (>=0.10.0)
+Requires-Dist: geopandas (>=0.3.0)
+Requires-Dist: simpledbf (>=0.2.6)
+Requires-Dist: python-snappy
+Requires-Dist: pyarrow (==0.15.1)
+Requires-Dist: toolz
+Requires-Dist: cloudpickle
+Requires-Dist: fastparquet
+
+General logging and QoL utilities
+
+
