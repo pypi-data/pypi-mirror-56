@@ -1,0 +1,14 @@
+extractor/__init__.py,sha256=bsXUsNNusRc6isFBSMJj_NnmHSEshtac4Jg6dxTDe1Q,1786
+extractor/exceptions.py,sha256=1Nlamj-ShaAv2hoZviqT6je5-ljWZL7xpTlTH2ijToc,38
+extractor/tools.py,sha256=VFdMvWA5t0AvOcQksvZUIzuAIyrnZKYS1UNkoWQC8c0,939
+extractor/formats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+extractor/formats/opentype.py,sha256=bXaM2U4rAXQcse499PF7hRrQm0G3kI5sTmvfduMw7Hw,30818
+extractor/formats/ttx.py,sha256=Ox7iJiTjzirEDEEl8NOiHTUMwzxMLC_ePWxygZnhO6g,969
+extractor/formats/type1.py,sha256=qN9MYPsIKHk0_f94m0MO9l5Z2WcLgPXb_uqNmazCSHE,5607
+extractor/formats/vfb.py,sha256=8IDQBOH5ogyUhOaf6WJoTLk13yVGW-HqkkGt2Doj9YA,1919
+extractor/formats/woff.py,sha256=9CAbizk1frsKme8tS-b6cOKbUJU_PqJ_adsa4nhNOmc,8116
+ufo_extractor-0.3.0.dist-info/License.txt,sha256=j-5uDvO0KaUqSU6PYbxzioaGX2X4spVK3v5puvcStC8,1075
+ufo_extractor-0.3.0.dist-info/METADATA,sha256=QYokOWqSdoLG1AZETNCMjwQmOtFPqNmjnZxlsrmWoGw,2669
+ufo_extractor-0.3.0.dist-info/WHEEL,sha256=HX-v9-noUkyUoxyZ1PMSuS7auUxDAR4VBdoYLqD0xws,110
+ufo_extractor-0.3.0.dist-info/top_level.txt,sha256=tI8oAKDdtsoIFZg22ZuUDACfsyTlKCmsRyNALf5lyPM,10
+ufo_extractor-0.3.0.dist-info/RECORD,,
