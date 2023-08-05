@@ -1,0 +1,12 @@
+googledrivedownloader
+torch
+torchvision
+nibabel
+SimpleITK
+tqdm
+pandas
+scipy
+pydensecrf
+pyradiomics
+scikit-image==0.14
+dicom2nifti
