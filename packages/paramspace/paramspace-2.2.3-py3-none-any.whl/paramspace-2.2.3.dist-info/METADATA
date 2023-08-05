@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: paramspace
+Version: 2.2.3
+Summary: Provides tools to define a dict-based multidimensional parameter space and iterate over it
+Home-page: https://ts-gitlab.iup.uni-heidelberg.de/yunus/paramspace
+Author: Yunus Sevinchan
+Author-email: Yunus.Sevinchan@iup.uni-heidelberg.de
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Dist: numpy (>=1.17.3)
+Requires-Dist: xarray (>=0.10.9)
+Requires-Dist: ruamel.yaml (>=0.16.5)
+Provides-Extra: minimal_deps
+Requires-Dist: numpy (==1.17.3) ; extra == 'minimal_deps'
+Requires-Dist: xarray (==0.10.9) ; extra == 'minimal_deps'
+Requires-Dist: ruamel.yaml (==0.16.5) ; extra == 'minimal_deps'
+Provides-Extra: test_deps
+Requires-Dist: tox (>=3.1) ; extra == 'test_deps'
+Requires-Dist: pytest (>=3.4) ; extra == 'test_deps'
+Requires-Dist: pytest-cov (>=2.6) ; extra == 'test_deps'
+
+The parameter space is the cartesian product of those parameters one desires to iterate over, each parameter opening a new dimension of parameter space. Parameter dimensions can be defined for each entry in a dictionary, even when nested within further dictionaries. When iterating over the space, each returned value is a dictionary with one combination of parameters. This allows retaining a hierarchical configuration structure while at the same time being able to conveniently perform sweeps over parameters, e.g. to spawn simulations with. Furthermore, the paramspace package integrates tightly with YAML, making it very simple to define multidimensional parameter spaces.
+
+
