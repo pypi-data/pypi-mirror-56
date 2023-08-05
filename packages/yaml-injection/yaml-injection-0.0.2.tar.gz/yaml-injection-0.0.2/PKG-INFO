@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: yaml-injection
+Version: 0.0.2
+Summary: pyyaml loader. With this loader you can inject (include) other yaml files either from local file system or from public web or from already constructed sections of the yaml.
+Home-page: https://github.com/oztqa/yaml-injection
+Author: Grigorii Koksharov
+Author-email: grigorii.koksharov@pthystech.edu
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: yaml pyyaml include extend inject
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
