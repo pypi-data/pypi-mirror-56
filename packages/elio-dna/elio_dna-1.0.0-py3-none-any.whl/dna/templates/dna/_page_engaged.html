@@ -1,0 +1,14 @@
+{% for engaged in page_engages %}
+  {% if engaged.title %}
+    <h2>{{ engaged.title }}</h2>
+  {% endif %}
+  {% with object=engaged.engage %}
+  {% include engaged.template|default:'dna/_thing_engaged.html' %}
+  {% endwith %}
+  <p>
+    <a href="{% url 'update.thing' page_name engaged.thing_name engaged.engage.pk %}">
+      <button>Update
+        {{ engaged.thing_name }}</button>
+    </a>
+  </p>
+{% endfor %}

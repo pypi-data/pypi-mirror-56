@@ -1,0 +1,16 @@
+{% for page_key, page_vals in page_menu.page.items %}
+  {% if page_vals.status == "label" %}
+    <{{menu|yesno:"menu,nav"}}>
+      <label>{{ page_key }}</label>
+      {% with page_menu=page_vals %}
+      {% if page_menu.page %}
+        <{{menu|yesno:"nav,menu"}}>
+          {% include 'dna/_menu.html' %}
+        </{{menu|yesno:"nav,menu"}}>
+      {% endif %}
+      {% endwith %}
+    </{{menu|yesno:"menu,nav"}}>
+  {% else %}
+    <a href="{{ page_vals.url }}" class="{{ page_vals.status }}">[{{ page_key|default:app_name }}]</a>
+  {% endif %}
+{% endfor %}

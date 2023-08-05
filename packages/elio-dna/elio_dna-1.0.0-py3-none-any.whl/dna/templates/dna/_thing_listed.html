@@ -1,0 +1,19 @@
+<ul>
+  {% for thing in object_list %}
+    <li>
+      <a href="{% url 'engage.thing' page_name thing_name thing.pk %}">{{ thing.name }} &raquo;</a>
+    </li>
+    {% empty %}
+    <li>No
+      {{ thing_name }}.</li>
+  {% endfor %}
+</ul>
+<p>
+  {% with is_paginated=is_paginated %}
+  {% with paginator=paginator %}
+  {% with page_obj=page_obj %}
+  {% include 'dna/_thing_paginator.html' %}
+  {% endwith %}
+  {% endwith %}
+  {% endwith %}
+</p>
