@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: pytonik-agent
+Version: 1.0.5
+Summary: pytonik agent browser and OS module
+Home-page: https://github.com/pytonik/pytonik_agent
+Author: pytonik
+Author-email: info@pytonik.com
+Maintainer: Emmanuel Essien
+Maintainer-email: emmamartinscm@gmail.com
+License: Apache 2.0
+Keywords: mvc,oop,module,framework,pytonik,agent,os
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Office/Business
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Requires-Python: >=2.7, >=3
+Description-Content-Type: text/markdown
+
+[![Build Status](https://img.shields.io/pypi/v/pytonik_agent)](https://pypi.python.org/pypi/pytonik_agent)
+[![Downloads](https://img.shields.io/pypi/dm/pytonik_agent)](https://pypi.python.org/pypi/pytonik_agent/)
+[![Wheel](https://img.shields.io/pypi/wheel/pytonik_agent.svg)](https://pypi.python.org/pypi/pytonik_agent)
+[![Python Version](https://img.shields.io/pypi/pyversions/pytonik_agent)](https://pypi.python.org/pypi/pytonik_agent)
+[![License](https://img.shields.io/pypi/l/pytonik_agent)](https://pypi.python.org/pypi/pytonik_agent)
+
+# pytonik Agent Module
+[pytonik](https://pypi.python.org/pypi/pytonik) Agent Module, gets **user** or **visitor** web browser and operating system information such as name and version
+
+## Install pytonik_agent
+```
+pip install pytonik_agent
+
+```
+
+## Import Module
+```
+from pytonik_agent.browser import browser
+from pytonik_agent.os import os
+```
+## get browser name
+
+```
+browser().name
+```
+## get browser version
+
+```
+browser().version
+```
+## get operating system name
+
+```
+os().name
+```
+
+## get device
+
+```
+os().device
+```
+
+pytonik is open to questions and contributions, feel free to ask.
+
+## Contact Information:
+
+**Name:**  pytonik MVC
+
+**Email:** pytonikmvc@gmail.com
+
+
