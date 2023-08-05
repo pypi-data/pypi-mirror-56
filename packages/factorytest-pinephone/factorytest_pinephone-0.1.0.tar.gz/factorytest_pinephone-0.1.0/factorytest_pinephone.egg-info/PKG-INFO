@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: factorytest-pinephone
+Version: 0.1.0
+Summary: Factory test tool for the PinePhone
+Home-page: https://gitlab.com/MartijnBraam/factorytest
+Author: Martijn Braam
+Author-email: martijn@brixit.nl
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: POSIX :: Linux

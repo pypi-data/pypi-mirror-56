@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+factorytest/__init__.py
+factorytest/__main__.py
+factorytest/factorytest.glade
+factorytest_pinephone.egg-info/PKG-INFO
+factorytest_pinephone.egg-info/SOURCES.txt
+factorytest_pinephone.egg-info/dependency_links.txt
+factorytest_pinephone.egg-info/entry_points.txt
+factorytest_pinephone.egg-info/top_level.txt
+factorytest_pinephone.egg-info/zip-safe
