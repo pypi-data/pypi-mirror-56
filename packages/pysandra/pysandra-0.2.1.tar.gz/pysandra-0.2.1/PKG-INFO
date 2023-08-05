@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: pysandra
+Version: 0.2.1
+Summary: Python driver for Cassandra focusing on asyncio users.
+Home-page: https://github.com/toppk/pysandra
+Author: Kenneth Topp
+Author-email: toppk@bllue.org
+License: MIT or Apache License, Version 2.0
+Description: ## Goals
+        
+        * cassandra client driver for asyncio based applications
+        * allow doing anything the wire protocol allows
+        
+        ## Implementation
+        
+        Currently targeting python 3.6 and above
+        
+        Aims to be:
+        
+        * correct
+        * fast
+        * efficient
+        * developer friendly
+        
+        ## Todos
+        
+        * Tests
+        * TLS
+        * AUTH
+        * typing
+        
+        ## Developing
+        
+        $ cd pysandra
+        $ python3 -m venv venv
+        $ source venv/bin/activate
+        $ pip install -r test-requirements.txt
+        $ pip install -e .
+        
+        
+        ## License
+        
+        Licensed under either of
+        
+         * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+         * MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+        
+        at your option.
+        
+        ### Contribution
+        
+        Unless you explicitly state otherwise, any contribution intentionally submitted
+        for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any
+        additional terms or conditions.
+        
+        
+        Pysandra 0.1.1 (2019-11-18)
+        ===========================
+        
+        First Public Version
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: AsyncIO
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
