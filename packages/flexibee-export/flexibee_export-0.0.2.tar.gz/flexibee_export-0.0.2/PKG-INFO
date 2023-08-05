@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: flexibee_export
+Version: 0.0.2
+Summary: FlexiBee xml export package
+Home-page: https://github.com/EndevelCZ/flexibee-export.git
+Author: Endevel
+Author-email: info@endevel.cz
+License: UNKNOWN
+Description: #FlexiBee export
+        script for creating xml file of an order to import it into czech invoicing software FlexiBee as an Invoice
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
