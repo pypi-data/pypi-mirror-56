@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: helllohuirong
+Version: 0.1
+Summary: This is an Example Package
+Home-page: UNKNOWN
+Author: Me
+Author-email: zhuhuirong_sh@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+UNKNOWN
+
+
