@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: regex2d
+Version: 0.1.0
+Summary: 2 dimensional regex engine for describing image languages
+Author: Arjoonn Sharma
+Author-email: arjoonn.94@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
