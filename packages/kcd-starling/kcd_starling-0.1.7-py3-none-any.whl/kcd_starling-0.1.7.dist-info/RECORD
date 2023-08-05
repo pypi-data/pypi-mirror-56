@@ -1,0 +1,16 @@
+starling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+starling/app.py,sha256=DmR4FgyMVprooMFgDr-dndzlakoaeQFPDuDVkQbPBy4,1496
+starling/blueprint_action.py,sha256=DkJLf9tsQ02sQIMkBQ2qiwo5Nt0Z4T6ouLTeu0LkjKg,384
+starling/blueprint_scrapper.py,sha256=AJsiggpjG6aWHutov_nH7Aqad71ll3cFq2CYfCjwI9M,646
+starling/config.py,sha256=fFO0M6WPd--G3IjnZqkVtNTLr8JHUVMjCeMYrXcsuPk,159
+starling/exception.py,sha256=ZcR8szNExarW6sjkjSmVsd7OswvDuE4Qz_Es07XzzHs,719
+starling/helper.py,sha256=nkMlPMK-fOsmaxqOVRAhXDAbU4gJCjgktpiWA4bwKkY,1326
+starling/types.py,sha256=2qYmGZWA6L7kICxYSPxyfYxCnpSt2H3GIsD0P8adieM,566
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/starling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/starling/test_app.py,sha256=SIgbZIfEdPOAixrcggeuKzN35JKHE6XAWIGTy5wJveA,2499
+tests/starling/test_custom_error.py,sha256=Z-K2A_DGd_ecCDeVVOfBIQVBS5Igo8B0iFBDJO-9BsQ,2674
+kcd_starling-0.1.7.dist-info/METADATA,sha256=kQfMR9p2bmaSsgBbhFSYo-Qc7rwXGxOfr1dNZLUx6NM,200
+kcd_starling-0.1.7.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+kcd_starling-0.1.7.dist-info/top_level.txt,sha256=KbLKRDML69VX0CnJY23PeIAjQK0WTgYzLPUynWXQdvM,15
+kcd_starling-0.1.7.dist-info/RECORD,,
