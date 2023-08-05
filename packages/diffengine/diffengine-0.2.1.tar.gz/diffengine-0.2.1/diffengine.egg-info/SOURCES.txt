@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+diffengine/__init__.py
+diffengine/diff.html
+diffengine.egg-info/PKG-INFO
+diffengine.egg-info/SOURCES.txt
+diffengine.egg-info/dependency_links.txt
+diffengine.egg-info/entry_points.txt
+diffengine.egg-info/requires.txt
+diffengine.egg-info/top_level.txt
