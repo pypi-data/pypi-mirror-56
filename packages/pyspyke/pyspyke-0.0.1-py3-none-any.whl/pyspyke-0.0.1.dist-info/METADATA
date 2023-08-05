@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyspyke
+Version: 0.0.1
+Summary: Application for consuming memory of linux systems.
+Home-page: UNKNOWN
+Author: Joshua Groeschl
+Author-email: joshua.groeschl@tutanota.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: psutil
+Requires-Dist: numpy
+
+UNKNOWN
+
+
