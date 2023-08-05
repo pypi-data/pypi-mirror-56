@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: domdf-spreadsheet-tools
+Version: 0.1.2
+Summary: Tools for creating and formatting spreadsheets with Python and OpenPyXL
+Home-page: https://github.com/domdfcoding/domdf_spreadsheet_tools
+Author: Dominic Davis-Foster
+Author-email: dominic@davis-foster.co.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Description-Content-Type: text/markdown
+Requires-Dist: openpyxl (>=2.6.0)
+Requires-Dist: domdf-python-tools (>=0.1.5)
+
+************************
+domdf_spreadsheet_tools
+************************
+
+Tools for creating and formatting spreadsheets with Python and OpenPyXL
+
+
