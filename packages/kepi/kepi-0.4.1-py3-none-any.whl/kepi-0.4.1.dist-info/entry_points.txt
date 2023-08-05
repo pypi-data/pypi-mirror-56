@@ -1,0 +1,3 @@
+[console_scripts]
+kepi = kepi.kepi.command_line:main
+
