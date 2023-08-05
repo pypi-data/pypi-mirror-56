@@ -1,0 +1,17 @@
+README.rst
+setup.cfg
+setup.py
+pyspawner/__init__.py
+pyspawner/c.py
+pyspawner/client.py
+pyspawner/clonefds.py
+pyspawner/main.py
+pyspawner/protocol.py
+pyspawner/sandbox-seccomp.bpf
+pyspawner/sandbox.py
+pyspawner.egg-info/PKG-INFO
+pyspawner.egg-info/SOURCES.txt
+pyspawner.egg-info/dependency_links.txt
+pyspawner.egg-info/not-zip-safe
+pyspawner.egg-info/requires.txt
+pyspawner.egg-info/top_level.txt
