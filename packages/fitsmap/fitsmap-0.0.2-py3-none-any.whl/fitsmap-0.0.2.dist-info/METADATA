@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: fitsmap
+Version: 0.0.2
+Summary: Turn fits files/catalogs into a leafletjs map
+Home-page: https://github.com/ryanhausen/fitsmap
+Author: Ryan Hausen
+Author-email: ryan.hausen@gmail.com
+License: MIT
+Keywords: models tools
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: astropy
+Requires-Dist: imageio
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pillow
+Requires-Dist: scikit-image
+Requires-Dist: tqdm
+
+fitsmap
+
+
