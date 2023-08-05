@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+pyErrorProp/CorrelationRegistry.py
+pyErrorProp/ErrorPropagator.py
+pyErrorProp/UncertainQuantity.py
+pyErrorProp/UncertaintyConvention.py
+pyErrorProp/__init__.py
+pyErrorProp/decorator.py
+pyErrorProp/unicode.py
+pyErrorProp/util.py
+pyErrorProp.egg-info/PKG-INFO
+pyErrorProp.egg-info/SOURCES.txt
+pyErrorProp.egg-info/dependency_links.txt
+pyErrorProp.egg-info/requires.txt
+pyErrorProp.egg-info/top_level.txt

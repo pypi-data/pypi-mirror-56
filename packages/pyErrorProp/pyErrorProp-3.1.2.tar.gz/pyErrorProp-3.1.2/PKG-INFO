@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pyErrorProp
+Version: 3.1.2
+Summary: Error propgation calculations with uncertian quantities.
+Home-page: https://github.com/CD3/pyErrorProp
+Author: CD Clark III
+Author-email: clifton.clark@gmail.com
+License: MIT
+Download-URL: https://github.com/CD3/pyErrorProp/archive/3.1.2.tar.gz
+Description: UNKNOWN
+Keywords: physics,uncertainty,units
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
