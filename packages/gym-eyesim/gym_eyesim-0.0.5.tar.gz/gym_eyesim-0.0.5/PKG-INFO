@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: gym_eyesim
+Version: 0.0.5
+Summary: EyeSim Gym Env
+Home-page: https://gitlab.com/felixwege/gym-eyesim
+Author: Felix Wege
+Author-email: felix.wege@tuhh.de
+License: GPLv3
+Description: # gym-eyesim
+        
+        ### Installation
+        
+        Follow the [instructions](http://robotics.ee.uwa.edu.au/eyesim/) to install EyeSim.
+        Make sure `eyesim` and `eye.py` are in your path.
+        
+        `
+        pip install gym-eyesim
+        `
+        
+        
+        ### Usage
+        
+        `
+        env = gym.make("gym_eyesim:eyebot-v0", path_to_sim=path_to_sim)
+        `
+        
+        See [\_\_init\_\_.py](https://gitlab.com/felixwege/gym-eyesim/blob/master/gym_eyesim/__init__.py) for available environments.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
