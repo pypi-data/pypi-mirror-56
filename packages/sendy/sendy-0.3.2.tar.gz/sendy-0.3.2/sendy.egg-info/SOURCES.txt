@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+sendy.egg-info/PKG-INFO
+sendy.egg-info/SOURCES.txt
+sendy.egg-info/dependency_links.txt
+sendy.egg-info/requires.txt
+sendy.egg-info/top_level.txt
+sendyapi/__init__.py
+sendyapi/api.py
+sendyapi/exceptions.py
