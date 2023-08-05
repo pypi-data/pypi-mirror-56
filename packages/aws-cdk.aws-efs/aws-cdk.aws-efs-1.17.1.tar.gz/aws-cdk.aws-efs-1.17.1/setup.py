@@ -1,0 +1,51 @@
+import json
+import setuptools
+
+kwargs = json.loads("""
+{
+    "name": "aws-cdk.aws-efs",
+    "version": "1.17.1",
+    "description": "The CDK Construct Library for AWS::EFS",
+    "license": "Apache-2.0",
+    "url": "https://github.com/aws/aws-cdk",
+    "long_description_content_type": "text/markdown",
+    "author": "Amazon Web Services",
+    "project_urls": {
+        "Source": "https://github.com/aws/aws-cdk.git"
+    },
+    "package_dir": {
+        "": "src"
+    },
+    "packages": [
+        "aws_cdk.aws_efs",
+        "aws_cdk.aws_efs._jsii"
+    ],
+    "package_data": {
+        "aws_cdk.aws_efs._jsii": [
+            "aws-efs@1.17.1.jsii.tgz"
+        ],
+        "aws_cdk.aws_efs": [
+            "py.typed"
+        ]
+    },
+    "python_requires": ">=3.6",
+    "install_requires": [
+        "jsii~=0.20.7",
+        "publication>=0.0.3",
+        "aws-cdk.core~=1.17,>=1.17.1"
+    ],
+    "classifiers": [
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Development Status :: 4 - Beta",
+        "License :: OSI Approved"
+    ]
+}
+""")
+
+with open('README.md') as fp:
+    kwargs['long_description'] = fp.read()
+
+
+setuptools.setup(**kwargs)
