@@ -1,0 +1,7 @@
+include mgv/editorDefinitions
+include mgv/style.css
+include mgv/jokes.txt
+include mgv/mangrove-firebase.sdk
+include mgv/UI/*
+include mgv/fonts/*
+include mgv/icons/*
