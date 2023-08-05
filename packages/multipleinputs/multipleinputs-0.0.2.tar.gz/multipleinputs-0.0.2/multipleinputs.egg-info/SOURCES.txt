@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+multipleinputs/mul_inputs.py
+multipleinputs.egg-info/PKG-INFO
+multipleinputs.egg-info/SOURCES.txt
+multipleinputs.egg-info/dependency_links.txt
+multipleinputs.egg-info/requires.txt
+multipleinputs.egg-info/top_level.txt
