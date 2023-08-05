@@ -1,0 +1,16 @@
+README.md
+setup.py
+templaty/__init__.py
+templaty/ast.py
+templaty/evaluator.py
+templaty/lines.py
+templaty/main.py
+templaty/parser.py
+templaty/scanner.py
+templaty/util.py
+templaty.egg-info/PKG-INFO
+templaty.egg-info/SOURCES.txt
+templaty.egg-info/dependency_links.txt
+templaty.egg-info/entry_points.txt
+templaty.egg-info/requires.txt
+templaty.egg-info/top_level.txt
