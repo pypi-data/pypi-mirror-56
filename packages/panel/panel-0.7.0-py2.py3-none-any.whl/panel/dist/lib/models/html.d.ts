@@ -1,0 +1,18 @@
+import * as p from "@bokehjs/core/properties";
+import { Markup, MarkupView } from "@bokehjs/models/widgets/markup";
+export declare class HTMLView extends MarkupView {
+    model: HTML;
+    render(): void;
+}
+export declare namespace HTML {
+    type Attrs = p.AttrsOf<Props>;
+    type Props = Markup.Props;
+}
+export interface HTML extends HTML.Attrs {
+}
+export declare class HTML extends Markup {
+    properties: HTML.Props;
+    constructor(attrs?: Partial<HTML.Attrs>);
+    static __module__: string;
+    static init_HTML(): void;
+}
