@@ -1,0 +1,42 @@
+Metadata-Version: 1.1
+Name: DUlib
+Version: 0.6
+Summary: tools from the DL@DU Project
+Home-page: https://github.com/sj-simmons/DUlib
+Author: SSimmons
+Author-email: ssimmons@drury.edu
+License: Apache 2.0
+Download-URL: https://github.com/sj-simmons/DUlib/archive/v0.4.tar.gz
+Description: DUlib
+        =====
+        
+        Machine and deep learning tools.
+        
+        Installation
+        ------------
+        
+        .. code-block::
+        
+            pip install DUlib
+        
+        Notes
+        -----
+        
+        * DUlib assumes pre-installation of your desired version (e.g., cpu vs. gpu) of
+          the `torch <https://pypi.org/project/torch/>`_ package.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: Apache Software License
