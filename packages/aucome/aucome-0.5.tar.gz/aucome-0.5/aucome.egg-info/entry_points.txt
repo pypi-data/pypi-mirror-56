@@ -1,0 +1,3 @@
+[console_scripts]
+aucome = aucome.__main__:main
+
