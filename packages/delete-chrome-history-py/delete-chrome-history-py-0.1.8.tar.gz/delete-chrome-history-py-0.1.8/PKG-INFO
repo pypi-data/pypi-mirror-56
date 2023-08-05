@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: delete-chrome-history-py
+Version: 0.1.8
+Summary: Delete specific websites from Google Chrome using Python
+Home-page: https://github.com/bhattbhavesh91/delete-chrome-history
+Author: Bhavesh Bhatt
+Author-email: bhattbhavesh91@gmail.com
+License: UNKNOWN
+Description: A simple package to selectively delete specific websites from Google Chrome History
+Platform: UNKNOWN
