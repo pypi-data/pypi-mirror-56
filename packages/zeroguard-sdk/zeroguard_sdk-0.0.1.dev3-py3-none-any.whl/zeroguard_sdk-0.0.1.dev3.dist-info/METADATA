@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: zeroguard-sdk
+Version: 0.0.1.dev3
+Summary: ZeroGuard Python SDK
+Home-page: https://zeroguard.com
+Author: ZeroGuard
+Author-email: oss@zeroguard.com
+License: AGPL-3.0
+Project-URL: Documentation, https://zeroguard-sdk-python.readthedocs.io
+Project-URL: Source, https://github.com/zeroguard/zeroguard-sdk-python
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+
+ZeroGuard Python SDK
+====================
+[![Travis CI Status](https://travis-ci.org/zeroguard/zeroguard-sdk-python.svg?branch=master)](https://travis-ci.org/zeroguard/zeroguard-sdk-python)
+[![Coverage Status](https://coveralls.io/repos/github/zeroguard/zeroguard-sdk-python/badge.svg?branch=master)](https://coveralls.io/github/zeroguard/zeroguard-sdk-python?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/zeroguard-python-sdk/badge/?version=latest)](https://zeroguard-python-sdk.readthedocs.io/en/latest/?badge=latest)
+![Repository License](https://img.shields.io/github/license/zeroguard/zeroguard-sdk-python)
+![PyPI Python Version](https://img.shields.io/pypi/pyversions/zeroguard-sdk)
+
+Coming soon
+
+
