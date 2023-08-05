@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: sqlite3ct
+Version: 0.0.1
+Summary: An implementation of the sqlite3 module using ctypes.
+Home-page: https://github.com/bhuztez/sqlite3ct
+Author: bhuztez
+Author-email: bhuztez@gmail.com
+License: zlib/libpng license
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3 :: Only
