@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hallmonitor
+Version: 0.4
+Summary: An integration testing library that runs tests from yaml configuration.
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: ~=3.6
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: colorama
+Requires-Dist: apscheduler
+Requires-Dist: schedule
+
+UNKNOWN
+
+
