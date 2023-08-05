@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+src/ofxstatement/__init__.py
+src/ofxstatement/plugins/__init__.py
+src/ofxstatement/plugins/ingnl.py
+src/ofxstatement_nl_ing.egg-info/PKG-INFO
+src/ofxstatement_nl_ing.egg-info/SOURCES.txt
+src/ofxstatement_nl_ing.egg-info/dependency_links.txt
+src/ofxstatement_nl_ing.egg-info/entry_points.txt
+src/ofxstatement_nl_ing.egg-info/namespace_packages.txt
+src/ofxstatement_nl_ing.egg-info/requires.txt
+src/ofxstatement_nl_ing.egg-info/top_level.txt
+src/ofxstatement_nl_ing.egg-info/zip-safe
