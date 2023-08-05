@@ -1,0 +1,10 @@
+.eggs/
+DracoPy.egg-info/
+MANIFEST
+_skbuild/
+*.so
+.vscode/
+dist/
+bunny_test.drc
+*secret.json
+__pycache__/
