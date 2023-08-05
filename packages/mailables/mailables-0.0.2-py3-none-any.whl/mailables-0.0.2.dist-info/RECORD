@@ -1,0 +1,11 @@
+mailables/__init__.py,sha256=wdPu6xsE_NJw7nuTMaMu5kQcqlLwtpt-tGt49V-Cuik,435
+mailables/config.py,sha256=jLr0NsxkDwm6effO_Wx5jqpAQg9R-8Roi3zdWiAZ3RY,3016
+mailables/exceptions.py,sha256=stcZoIoovKQaZu2SVeJpexeX9w9sopCG1TizazCpTcY,304
+mailables/importer.py,sha256=O0HjPn1FZ5kbZiROO7l1e7qW1YDrwy-nRnFLriJHx7Q,769
+mailables/mailer.py,sha256=8pEhVXpqaNKC9FheB5bE8Qd88J55CtGR2dOaj0YUekI,535
+mailables/message.py,sha256=HhfgchXzsJ-ndfjiSmzjBMs7moNA-CL8KkQO0urlkb0,8313
+mailables/transports.py,sha256=vMEjMCpv9hvYCT6K0JTfBdmVh0CopuCew7HuwF5oNCI,4101
+mailables-0.0.2.dist-info/LICENSE,sha256=SNURuI_hmEJRFiC6nkFKcQnUGuA2nsMMB02mCyInOfE,1073
+mailables-0.0.2.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+mailables-0.0.2.dist-info/METADATA,sha256=cusPOdOLtqUMKGJ0CDQVaD0gAsXgoJS-q6DeT9Laf-Y,5197
+mailables-0.0.2.dist-info/RECORD,,
