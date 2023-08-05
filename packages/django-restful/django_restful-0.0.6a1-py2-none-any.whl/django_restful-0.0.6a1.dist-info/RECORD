@@ -1,0 +1,15 @@
+django_restful/__init__.py,sha256=WC3HGXxAhKhenQIL6W2mdc8L_JvxjpCbh6ln_ShJXXI,371
+django_restful/authentication.py,sha256=EbcpTJekOU9nfrDFzEvOZkKkSrx3Q-aknSTYzXyjtJo,206
+django_restful/base.py,sha256=OvtUYRULMMqkrUQ8UV0NfCG-FRMgDG5rIWKX7fwFoB8,2133
+django_restful/decorators.py,sha256=CN9KeN7cc5kmbiiD32wO6YZhcfkHpacWVstuHTOP9lA,1087
+django_restful/error.py,sha256=qSXLBuePkgkcZkrjU-8v2-NQPsNDDU9j6EQxmRLjMkQ,325
+django_restful/response.py,sha256=TfsIW4UqmvcYOT2FmVH2UAGj_dOKaCQazqFnwWlcrkw,1501
+django_restful/utils/__init__.py,sha256=DCeCccB4uKGnt2ZCs0fWEWNRXQ2gdnh0RMKALs5RQkA,167
+django_restful/utils/parse.py,sha256=tIbQ7fUIQllsXca8MZyuALQlBC-WdhiCA6XaRvUr48g,1701
+django_restful/utils/url.py,sha256=xsXStvd77I1cicSO5S5_uiJHlGiXwOTatwus8PJkKPM,1931
+django_restful-0.0.6a1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+django_restful-0.0.6a1.dist-info/METADATA,sha256=x-e6A8URiLMI3yYlo9-a4sLg1r7Yp5PF3qWeMpMPVO8,282
+django_restful-0.0.6a1.dist-info/RECORD,,
+django_restful-0.0.6a1.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+django_restful-0.0.6a1.dist-info/metadata.json,sha256=eLRXaNNMkXTzjXEMNB7wtgc239_0h71Pw3ZhyG9RsDs,460
+django_restful-0.0.6a1.dist-info/top_level.txt,sha256=vinattOehm9bda7pcq_sLzica-XGDOy1xTQMwAaiisE,15
