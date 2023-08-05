@@ -1,0 +1,10 @@
+numpy~=1.17.3
+grpcio~=1.24.3
+xgboost~=0.90
+protobuf~=3.10.0
+
+[dev]
+coverage
+flake8
+flake8-mutable
+mypy
