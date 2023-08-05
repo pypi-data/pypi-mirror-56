@@ -1,0 +1,3 @@
+[console_scripts]
+gitlab = bin.gcasc:main
+
