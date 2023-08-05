@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: django-statictastic
+Version: 4.0.0
+Summary: A fantastic way to sync your files to S3.
+Home-page: UNKNOWN
+Author: Dan Loewenherz
+Author-email: dan@lionheartsw.com
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: requests (>=2.0.0)
+Requires-Dist: cssmin (>=0.2.0)
+Requires-Dist: lxml (>=3.0.0)
+Requires-Dist: boto3 (>=1.9.239)
+Requires-Dist: django-storages (>=1.7.1)
+
+UNKNOWN
+
+
