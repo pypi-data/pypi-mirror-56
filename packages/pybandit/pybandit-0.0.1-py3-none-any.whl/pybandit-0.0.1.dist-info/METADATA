@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pybandit
+Version: 0.0.1
+Summary: Imlementation of Multiarmed Bandit Algorithms
+Author: Tuhin Sharma
+Author-email: tuhinsharma121@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
