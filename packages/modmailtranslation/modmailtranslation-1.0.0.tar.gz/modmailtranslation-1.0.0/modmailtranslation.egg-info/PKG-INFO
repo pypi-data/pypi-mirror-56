@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: modmailtranslation
+Version: 1.0.0
+Summary: A translator utility package for modmail-plugins
+Home-page: https://github.com/officialpiyush/modmailtranslation
+Author: Piyush Bhangale
+Author-email: bhangalepiyush@gmail.com
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/officialpiyush/modmailtranslation
+Project-URL: Issue Tracker, https://github.com/officialpiyush/modmailtranslation/issues
+Description: UNKNOWN
+Keywords: modmail,translator,translations
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Natural Language :: English
+Requires-Python: >=3.5
