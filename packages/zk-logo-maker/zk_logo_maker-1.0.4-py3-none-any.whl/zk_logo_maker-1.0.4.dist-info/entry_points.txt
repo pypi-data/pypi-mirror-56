@@ -1,0 +1,3 @@
+[console_scripts]
+zk-logo-maker = zk_logo_maker.__main__:main
+
