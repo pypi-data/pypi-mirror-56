@@ -1,0 +1,3 @@
+dask>=0.17.5
+multipledispatch>=0.4.9
+typing_inspect>=0.4
