@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: site-map-parser
+Version: 0.2.0
+Summary: Script/Library to read and parse sitemap.xml data
+Home-page: https://github.com/daveoconnor/site-map-parser
+Author: Dave O'Connor
+Author-email: github@dead-pixels.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+
+Site Map Parser
+===============
+
+Script and library which reads urls and converts to objects, allows
+exporting as CSV or JSON.
+
+Handle sitemaps according to: https://www.sitemaps.org/protocol.html
+
+Installation
+------------
+
+::
+
+    pip install site-map-parser
+
+Usage
+-----
+
+Script usage
+~~~~~~~~~~~~
+
+::
+
+    smapper $url > /tmp/data.csv
+
+Logs written to ~/sitemap\_run.log
+
+Arguments
+^^^^^^^^^
+
++--------------+--------------+--------------+--------------+
+| Argument     | Options      | Default      | Information  |
++==============+==============+==============+==============+
+| -h           | N/A          | N/A          | Outputs      |
+|              |              |              | argument     |
+|              |              |              | data         |
++--------------+--------------+--------------+--------------+
+| url          | e.g.         | N/A          | Required -   |
+|              | ``http://www |              | sitemap data |
+|              | .example.com |              | to retrieve  |
+|              | ``           |              |              |
+|              | -            |              |              |
+|              | ``http://www |              |              |
+|              | .example.com |              |              |
+|              | /other_sitem |              |              |
+|              | ap.xml``     |              |              |
++--------------+--------------+--------------+--------------+
+| -l, --log    | ``CRITICAL`` | ``INFO``     | logs to      |
+|              | or ``ERROR`` |              | sitemapper\_ |
+|              | or           |              | run.log      |
+|              | ``WARNING``  |              | in install   |
+|              | or ``INFO``  |              | folder       |
+|              | or ``DEBUG`` |              |              |
++--------------+--------------+--------------+--------------+
+| -e,          | ``csv`` or   | ``csv``      | Export       |
+| --exporter   | ``json``     |              | format of    |
+|              |              |              | the data     |
++--------------+--------------+--------------+--------------+
+
+Library Usage
+~~~~~~~~~~~~~
+
+.. code:: python
+
+    from sitemapparser import SiteMapParser
+
+    sm = SiteMapParser('http://www.example.com')    # reads /sitemap.xml
+    if sm.has_sitemaps():
+        sitemaps = sm.getSitemaps() # returns generator of sitemapper.Sitemap instances
+    else:
+        urls = sm.getUrls()         # returns generator of sitemapper.Url instances
+
+Exporting
+^^^^^^^^^
+
+Two exporters are available: csv and json
+
+CSV Exporter
+''''''''''''
+
+.. code:: python
+
+    from sitemapparser.exporters import CSVExporter
+
+    # sm set as per earlier library usage example
+
+    csv_exporter = CSVExporter(sm)
+    if sm.has_sitemaps():
+        print(csv_exporter.export_sitemaps())
+    elif sm.has_urls():
+        print(csv_exporter.export_urls())
+
+JSON Exporter
+'''''''''''''
+
+.. code:: python
+
+    from sitemapparser.exporters import JSONExporter
+
+    # sm set as per earlier library usage example
+
+    json_exporter = JSONExporter(sm)
+    if sm.has_sitemaps():
+        print(json_exporter.export_sitemaps())
+    elif sm.has_urls():
+        print(json_exporter.export_urls())
+
+
