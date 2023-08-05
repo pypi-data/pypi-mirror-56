@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: damewebutils
+Version: 0.0.4
+Summary: Web utils for Python
+Home-page: http://github.com/davidam/damewebutils
+Author: David Arroyo Menéndez
+Author-email: davidam@gnu.org
+License: GPLv3
+Description: UNKNOWN
+Keywords: web,links
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Text Processing :: Linguistic
