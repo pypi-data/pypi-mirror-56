@@ -1,0 +1,4 @@
+include solstice/config/development/*.json
+include solstice/config/development/*.yml
+include solstice/config/production/*.json
+include solstice/config/production/*.yml
