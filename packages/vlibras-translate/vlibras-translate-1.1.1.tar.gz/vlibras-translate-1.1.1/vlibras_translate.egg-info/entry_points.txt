@@ -1,0 +1,3 @@
+[console_scripts]
+vlibras-translate = vlibras_translate.translation:main
+

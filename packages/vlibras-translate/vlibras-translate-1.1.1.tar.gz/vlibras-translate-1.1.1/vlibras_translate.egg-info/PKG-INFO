@@ -1,0 +1,215 @@
+Metadata-Version: 2.1
+Name: vlibras-translate
+Version: 1.1.1
+Summary: VLibras (LAVID-UFPB) translation module for translating brazilian portuguese to LIBRAS.
+Home-page: http://www.vlibras.gov.br/
+Author: MoraesCaio (LAVID-UFPB)
+Author-email: caiomoraes.cesar@gmail.com
+License: UNKNOWN
+Description: 
+        # VLibras Translate
+        
+        ![Version](https://img.shields.io/badge/version-v1.1.1-blue.svg)
+        ![Platform](https://img.shields.io/badge/platform-Linux-lightgrey.svg)
+        ![License](https://img.shields.io/badge/license-LGPLv3-blue.svg)
+        ![VLibras](https://img.shields.io/badge/vlibras%20suite-2019-green.svg)
+        
+        ---
+        O VLibras é um projeto desenvolvido no Laboratório de Aplicações de Vídeo Digital (LAVID) para a tradução de Português Brasileiro (PT-BR) para Libras. O pacote VLibras Translate é parte da suíte VLibras e disponibiliza um conjunto de ferramentas de pré-processamento de texto para tradução por deep learning e um módulo de tradução PT-BR/Libras.
+        
+        ## Sumário
+         - [Pré-requisitos](#pré-requisitos)
+         - [Instalação](#instalação)
+         - [Utilização](#utilização)
+            - [Tradução PT-BR/Libras](#tradução-ptbr-libras)
+                - [Tradução de Texto](#tradução-de-texto)
+                <!-- - [Tradução de Arquivo](#tradução-de-arquivo) -->
+            - [Pré-Processamento](#pré-processamento)
+                - [Texto de Treino](#texto-de-treino)
+                - [Texto de Teste](#texto-de-teste)
+                <!-- - [Arquivo de Treino](#arquivos-de-treino) -->
+                <!-- - [Arquivo de Teste](#arquivo-de-teste) -->
+         - [Licença](#licença)
+        
+        ## Pré-requisitos
+        - Java 8 (com compilador)
+        - Hunspell (`sudo apt-get install libhunspell-dev`)
+        - Cython (`pip install Cython`)
+        - Python 3
+        
+        ## Instalação
+        - pip3 install vlibras-translate
+        
+        ## Utilização
+        
+        O VLibras Translate possui duas interfaces: o seu módulo python (`vlibras_translate`) e suas linhas de comando (`vlibras-translate` e `vlibras-translate-file`). Para utilizar a interface de linha de comando, o alias 'python' deve ser uma versão de python 3 com o vlibras_translate instalado. Para definir o alias é recomendado um dos seguintes modos:
+        
+        - Adicionar ao final do arquivo `~/.bashrc` a linha `alias python='python3'`. Em seguida, fechar e abrir o terminal ou executar o comando `source ~/.bashrc`.
+        - Utilização de ambiente virtual para python 3 como o [conda](https://docs.conda.io/en/latest/);
+        
+        ## Tradução PTBR-Libras:
+        ### Tradução de Texto
+        #### Módulo Python
+        ```python
+        import vlibras_translate
+        tradutor = vlibras_translate.translation.Translation()
+        glosa = tradutor.rule_translation('Maria comprou por três parcelas de 35,50 reais naquela loja.')
+        print(glosa)
+        ```
+        Saída
+        ```
+        MARIA COMPRAR POR 3 PARCELA 35 VÍRGULA 50 REAL AQUELE LOJA [PONTO]
+        ```
+        #### Linha de comando
+        ```
+        vlibras-translate -r 'Maria comprou por três parcelas de 35,50 reais naquela loja.'
+        ```
+        Saída
+        ```
+        GLOSA (rule):
+        MARIA COMPRAR POR 3 PARCELA 35 VÍRGULA 50 REAL AQUELE LOJA [PONTO]
+        ```
+        <!-- ### Tradução de Arquivo
+        #### Módulo Python
+        ```python
+        import vlibras_translate
+        vlibras_translate.file_translation.FileTranslation()
+        tradutor.rule_translation('minha_pasta/texto_treino_ptbr1', 'minha_pasta/texto_treino_ptbr2', 'minha_pasta/texto_treino_ptbr3')
+        ```
+        #### Linha de comando
+        ```
+        vlibras-translate-file -r minha_pasta/texto_treino_ptbr1 minha_pasta/texto_treino_ptbr2 minha_pasta/texto_treino_ptbr3
+        ``` -->
+        ## Pré-Processamento
+        As ferramentas de pré-processamento de texto do VLibras Translate são destinadas ao desenvolvimento de modelos neurais de tradução (_deep learning_). São disponibilizadas as seguintes funcionalidades:
+        
+        - Análise morfossintática utilizando o [Aelius](http://aelius.sourceforge.net/)
+        - Remoção de símbolos (_e.g._ '-@#') com exceção de hifens entre palavras e pontos decimais (vírgula ou ponto, mas não os separadores de milhares). Por exemplo, o pré-processamento de '#123 @ -34 1.234,56 guarda-roupa' resulta em '123 34 1234 , 56 guarda-roupa'
+        - Reconhecimento de nomes próprios
+        - Reconhecimento de erros ortográficos
+        - Lematização utilizando o [cogroo4py](https://github.com/samueldemoura/cogroo4py)
+        - Obtenção de glosas PT-BR/Libras
+        - Substituição de nomes, números e erros ortográficos pelos símbolos ", ' e # respectivamente. Esta função é apenas para arquivos de treino.
+        
+        Outra funcionalidade oferecida por esse pacote é o pré-processamento de textos em PT-BR para o desenvolvimento de modelos de deep learning para tradução de PT-BR para Libras. Para isso foram implementadas dois pipelines de processamento: um para arquivos de treino e outro para arquivos de teste (que serão traduzidos pelo modelo já treinado). As seções a seguir contêm exemplos para a processamento de textos de treino, textos de teste, arquivos de treino e arquivos de teste respectivamente.
+        
+        ### Texto de treino
+        #### Módulo Python
+        ```python
+        import vlibras_translate
+        tradutor = vlibras_translate.translation.Translation()
+        ptbr_treino, glosa_treino = tradutor.preprocess_train_files('Maria comprou por três parcelas de 35,50 reais naquela loja hje.')
+        print(ptbr_treino)
+        print(glosa_treino)
+        ```
+        Saída
+        ```
+        " comprou por ' parcelas de ' , ' reais naquela loja # .
+        " COMPRAR POR ' PARCELA ' VÍRGULA ' REAL AQUELE LOJA # [PONTO]
+        ```
+        
+        #### Linha de comando
+        ```
+        vlibras-translate -t 'Maria comprou por três parcelas de 35,50 reais naquela loja hje.'
+        ```
+        Saída
+        ```
+        PT-BR (treino):
+        " comprou por ' parcelas de ' , ' reais naquela loja # .
+        
+        GLOSA (treino):
+        " COMPRAR POR ' PARCELA ' VÍRGULA ' REAL AQUELE LOJA # [PONTO]
+        ```
+        
+        ### Texto de teste
+        #### Módulo Python
+        ```python
+        import vlibras_translate
+        tradutor = vlibras_translate.translation.Translation()
+        ptbr_teste = tradutor.preprocess_pt('Maria comprou por três parcelas de 35,50 reais naquela loja hje.')
+        print(ptbr_teste)
+        ```
+        Saída
+        ```
+        maria comprou por 3 parcelas de 35 , 50 reais naquela loja hje .
+        ```
+        #### Linha de comando
+        ```
+        vlibras-translate -p 'Maria comprou por três parcelas de 35,50 reais naquela loja hje.'
+        ```
+        Saída
+        ```
+        PT-BR (teste):
+        maria comprou por 3 parcelas de 35 , 50 reais naquela loja hje .
+        ```
+        
+        <!-- ### Arquivos de treino
+        #### Módulo Python
+        ```python
+        import vlibras_translate
+        tradutor = vlibras_translate.file_translation.FileTranslation()
+        tradutor.preprocess_train_files('minha_pasta/texto_treino_ptbr1', 'minha_pasta/texto_treino_ptbr2', 'minha_pasta/texto_treino_ptbr3')
+        ```
+        #### Linha de comando
+        ```
+        vlibras-translate-file -t minha_pasta/texto_treino_ptbr1 minha_pasta/texto_treino_ptbr2 minha_pasta/texto_treino_ptbr3
+        ```
+        ### Arquivo de teste
+        #### Módulo Python
+        ```python
+        import vlibras_translate
+        tradutor = vlibras_translate.file_translation.FileTranslation()
+        tradutor.preprocess_pt('minha_pasta/texto_teste_ptbr1', 'minha_pasta/texto_teste_ptbr2', 'minha_pasta/texto_teste_ptbr3')
+        ```
+        #### Linha de comando
+        ```
+        vlibras-translate-file -p minha_pasta/texto_teste_ptbr1 minha_pasta/texto_teste_ptbr2 minha_pasta/texto_teste_ptbr3
+        ```
+         -->
+        ## Log
+        
+        #### 1.1.1
+         - Melhora de performance
+        
+        #### 1.1.0
+         - Suporte para Docker Kubernetes
+         - Adaptações para novas sintaxes utilizadas nos corpora (LAVID apenas)
+         - Novos métodos para corpora Glosa-Regra/Glosa-Intérprete
+        
+        #### 1.0.10
+         - Fix para frases contendo apenas caracteres que não são do conjunto latin-1
+        
+        #### 1.0.9
+         - Fix para compatibilidade com Python 3.5
+        
+        #### 1.0.8
+         - Fix para caracteres que não são do conjunto latin-1
+        
+        #### 1.0.7
+         - Fix para uso conjunto de processameto de arquivos de treino e tradução por regra;
+         - Fix para checagem de ortografia de palavras com caracteres fora do padrão latin-1
+        
+        #### 1.0.6
+         - Novos sinônimos
+        
+        ## Licença
+        
+        Este projeto está sob a licença LGPLv3 - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+        
+        # Sobre o VLibras Translate
+        
+        - Autor: Caio Moraes (caiomoraes.cesar@gmail.com)
+        - LAVID ([http://lavid.ufpb.br/](http://lavid.ufpb.br/))
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Natural Language :: Portuguese (Brazilian)
+Description-Content-Type: text/markdown
+Provides-Extra: deeplearning

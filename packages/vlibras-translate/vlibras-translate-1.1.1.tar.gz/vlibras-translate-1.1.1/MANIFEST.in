@@ -1,0 +1,11 @@
+global-exclude *.py[co]
+global-include AeliusHunPos
+global-include hunpos-tag
+global-include *.txt
+global-include portuguese.pickle
+graft vlibras_translate/cogroo4py
+graft vlibras_translate/hunspell
+include vlibras_translate/cfg.syn.nltk
+include vlibras_translate/pygtrie_CharTrie_names_pickle_wout_inter_3
+include vlibras_translate/palavras_compostas_e_sinonimos
+include vlibras_translate/lista_branca
