@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ensae2019tmkw
+Version: 1.0
+Summary: A package for graphics
+Home-page: https://github.com/pypa/sampleproject
+Author: KONDO
+Author-email: afanboj1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+ï»¿# README
+
+
+### PrÃ©sentation du package
+
+
+Le package **ensae2019** est un module graphique de visualisation (*animÃ©e ou non*) utilisant principalement une surcouche du package [matplotlib](https://matplotlib.org/index.html), Ã  savoir [cartopy](http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/enedis_cartes.html).
+Il contient deux fonctions qui visualisent l'Ã©volution temporelle d'une donnÃ©e numÃ©rique gÃ©olocalisÃ©e, de deux faÃ§ons distinctes: 
+
+
+
