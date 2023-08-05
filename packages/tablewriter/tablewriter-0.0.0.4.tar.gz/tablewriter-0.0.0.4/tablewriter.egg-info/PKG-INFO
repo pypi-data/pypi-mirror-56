@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: tablewriter
+Version: 0.0.0.4
+Summary: latex table generator
+Home-page: https://gitlab.com/cottephi/latextablegenerator
+Author: cottephi
+Author-email: cottephi@gmail.com
+License: UNKNOWN
+Description: Package to create tables. See example.py.
+        
+        author : Philippe COTTE, cottephi@gmail.com
+        
+        new : 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: Unix
