@@ -1,0 +1,18 @@
+path.py
+plone.app.testing
+plone.testing
+pytz
+setuptools>=20.8.1
+six
+zope.component
+zope.configuration
+zope.interface
+zope.publisher
+
+[:python_version < "3.3"]
+mock
+
+[tests]
+plone.api
+plone.app.dexterity
+zc.recipe.egg
