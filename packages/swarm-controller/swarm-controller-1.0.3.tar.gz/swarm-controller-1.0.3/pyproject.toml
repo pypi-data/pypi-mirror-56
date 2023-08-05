@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "swarm-controller"
+version = "1.0.3"
+description = "Cluster bootstrapping for Docker Swarm on AWS"
+authors = ["Jared Vacanti <jaredvacanti@gmail.com>"]
+license = "MIT"
+readme = 'README.md'
+
+repository = "https://github.com/jaredvacanti/swarm-controller"
+homepage = "https://github.com/jaredvacanti/swarm-controller"
+
+keywords = ['docker', 'docker-swarm']
+
+[tool.poetry.dependencies]
+python = "^3.6"
+click = "^7.0"
+boto3 = "^1.10.12"
+requests = "^2.22.0"
+docker = "^4.1.0"
+paramiko = "^2.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.1.3"
+pytest-cov = "^2.7.1"
+flake8 = "^3.7.8"
+black = "^19.3b0"
+pylint = "^2.4.1"
+tox = "^3.14"
+
+[tool.poetry.scripts]
+swarm-ctl = 'swarm_controller.core:swarm_ctl'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
