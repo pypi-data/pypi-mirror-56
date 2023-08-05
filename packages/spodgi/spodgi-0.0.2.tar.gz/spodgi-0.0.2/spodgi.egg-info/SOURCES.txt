@@ -1,0 +1,12 @@
+README.md
+setup.py
+spodgi/OdgiStore.py
+spodgi/__init__.py
+spodgi/terms.py
+spodgi.egg-info/PKG-INFO
+spodgi.egg-info/SOURCES.txt
+spodgi.egg-info/dependency_links.txt
+spodgi.egg-info/entry_points.txt
+spodgi.egg-info/requires.txt
+spodgi.egg-info/top_level.txt
+test/test_select.py
