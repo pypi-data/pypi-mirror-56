@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mittens
+Version: 0.2
+Summary: Fast GloVe with optional retrofitting.
+Home-page: https://github.com/roamanalytics/mittens
+Author: Nick Dingwall, Chris Potts
+Author-email: nick/chris@roamanalytics.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+
+A fast implementation of GloVe, with optional retrofitting to pre-existing GloVe vectors. 
+
+
