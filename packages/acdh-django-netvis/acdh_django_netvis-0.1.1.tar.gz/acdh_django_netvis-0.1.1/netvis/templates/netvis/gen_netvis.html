@@ -1,0 +1,30 @@
+{% extends "webpage/base.html" %}
+{% load staticfiles %}
+{% load webpage_extras %}
+{% block title %} Netzwerk: {{ object.model_name}} {% endblock %}
+{% block scriptHeader %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/three@latest/build/three.min.js"></script>
+    <script crossorigin src="https://unpkg.com/@acdh/network-visualization@latest/lib/network-visualization.umd.js"></script>
+    <script src="{% static 'netvis/js/netvis.js' %}"></script>
+{% endblock scriptHeader %}
+{% block content %}
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3>{{ app_name }}: {{ model_name }}</h3>
+            </div>
+            <div class="card-body">
+                <div id="visualization" style="position: relative; height: 800px; background: #fafafa;"></div>
+                <script type="text/javascript">
+                    showGraph("{{ graph_url }}", "visualization")
+                </script>
+            </div>
+            <div class="card-footer">
+                <a href="{{ graph_url }}">data source</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

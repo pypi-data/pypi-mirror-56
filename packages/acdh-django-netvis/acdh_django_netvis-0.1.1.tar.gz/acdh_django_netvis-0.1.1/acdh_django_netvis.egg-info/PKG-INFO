@@ -1,0 +1,113 @@
+Metadata-Version: 1.1
+Name: acdh-django-netvis
+Version: 0.1.1
+Summary: App to visualize model objects as network graph
+Home-page: https://github.com/csae8092/acdh_django_netvis
+Author: Peter Andorfer
+Author-email: peter.andorfer@oeaw.ac.at
+License: MIT
+Description: =============================
+        acdh-django-netvis
+        =============================
+        
+        .. image:: https://badge.fury.io/py/acdh_django_netvis.svg
+            :target: https://badge.fury.io/py/acdh_django_netvis
+        
+        .. image:: https://travis-ci.org/csae8092/acdh_django_netvis.svg?branch=master
+            :target: https://travis-ci.org/csae8092/acdh_django_netvis
+        
+        .. image:: https://codecov.io/gh/csae8092/acdh_django_netvis/branch/master/graph/badge.svg
+            :target: https://codecov.io/gh/csae8092/acdh_django_netvis
+        
+        App to visualize model objects as network graph
+        
+        Documentation
+        -------------
+        
+        The full documentation is at https://acdh_django_netvis.readthedocs.io.
+        
+        Quickstart
+        ----------
+        
+        Install acdh-django-netvis::
+        
+            pip install acdh_django_netvis
+        
+        Add it to your `INSTALLED_APPS`:
+        
+        .. code-block:: python
+        
+            INSTALLED_APPS = (
+                ...
+                'netvis',
+                ...
+            )
+        
+        Add acdh-django-netvis's URL patterns:
+        
+        .. code-block:: python
+        
+        
+            urlpatterns = [
+                ...
+                url(r'^netvis/', include('netvis.urls', namespace="netvis")),
+                ...
+            ]
+        
+        Features
+        --------
+        
+        * TODO
+        
+        Running Tests
+        -------------
+        
+        Does the code actually work?
+        
+        ::
+        
+            source <YOURVIRTUALENV>/bin/activate
+            (myenv) $ pip install tox
+            (myenv) $ tox
+        
+        Credits
+        -------
+        
+        Tools used in rendering this package:
+        
+        *  Cookiecutter_
+        *  `cookiecutter-djangopackage`_
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+        
+        
+        
+        
+        History
+        -------
+        
+        0.1.1 (2019-11-18)
+        ++++++++++++++++++
+        
+        * Included a legend.
+        
+        
+        0.1.0 (2019-11-12)
+        ++++++++++++++++++
+        
+        * First release on PyPI.
+        
+Keywords: acdh_django_netvis
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Django :: 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
