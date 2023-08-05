@@ -1,0 +1,15 @@
+README.rst
+setup.py
+alignparse/__init__.py
+alignparse/ccs.py
+alignparse/consensus.py
+alignparse/constants.py
+alignparse/cs_tag.py
+alignparse/minimap2.py
+alignparse/targets.py
+alignparse/utils.py
+alignparse.egg-info/PKG-INFO
+alignparse.egg-info/SOURCES.txt
+alignparse.egg-info/dependency_links.txt
+alignparse.egg-info/requires.txt
+alignparse.egg-info/top_level.txt
