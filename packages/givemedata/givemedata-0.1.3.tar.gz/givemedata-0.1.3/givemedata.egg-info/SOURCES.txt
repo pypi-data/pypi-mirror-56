@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+givemedata/__init__.py
+givemedata/givemedata.py
+givemedata/version.py
+givemedata.egg-info/PKG-INFO
+givemedata.egg-info/SOURCES.txt
+givemedata.egg-info/dependency_links.txt
+givemedata.egg-info/entry_points.txt
+givemedata.egg-info/not-zip-safe
+givemedata.egg-info/requires.txt
+givemedata.egg-info/top_level.txt
+givemedata/utils/__init__.py
+givemedata/utils/common.py
+givemedata/utils/pandas.py
