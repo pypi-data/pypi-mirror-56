@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: stackedup
+Version: 0.0.2
+Summary: Tooling to help manage CloudFormation stacks
+Home-page: https://github.com/ombu/stacks
+Author: OMBU
+Author-email: martin@ombuweb.com
+License: UNKNOWN
+Description: # Stacks [![Build Status](https://travis-ci.com/ombu/stacks.svg?branch=develop)](https://travis-ci.com/ombu/stacks)
+        
+        Tools to help launch and manage micro-service based applications in AWS using
+        CloudFormation.
+        
+        Running tests:
+        
+            python -m unittest discover 
+        
+        Packaged and distribute
+        
+            python setup.py sdist bdist_wheel
+            python -m twine upload dist/*
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
