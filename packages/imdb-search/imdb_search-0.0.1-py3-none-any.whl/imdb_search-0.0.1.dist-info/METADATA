@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: imdb-search
+Version: 0.0.1
+Summary: CLI to search for movies than an actor/actress has starred in.
+Home-page: https://github.com/richardfontein/imdb-search
+Author: Richard Fontein
+Author-email: richard@fontein.co
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.6
+Description-Content-Type: text/markdown
+Requires-Dist: pick
+Requires-Dist: requests
+
+# IMDB Search
+
+A small CLI to search for movies than an actor/actress has starred in.
+
+## Installation
+```
+pip3 install imdb-search
+```
+
+## Usage
+```
+usage: imdb-search [-h] [-r] [-o filename] name
+
+positional arguments:
+  name                  name of the actor/actress to search for
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -r, --reverse         return movies in reverse order (most recent first)
+  -o filename, --output filename
+                        save results to file in JSON format
+```
+
