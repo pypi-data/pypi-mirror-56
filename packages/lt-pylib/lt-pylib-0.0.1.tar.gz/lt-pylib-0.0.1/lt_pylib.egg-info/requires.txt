@@ -1,0 +1,12 @@
+argcomplete
+bs4
+configparser
+psutil
+urllib3
+xmltodict
+
+[dev]
+check-manifest
+
+[test]
+coverage
