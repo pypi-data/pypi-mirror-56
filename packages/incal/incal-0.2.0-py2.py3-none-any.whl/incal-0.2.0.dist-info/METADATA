@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: incal
+Version: 0.2.0
+Summary: Learning SMT(LRA) formulas
+Home-page: https://github.com/smtlearning/incal
+Author: Samuel Kolb
+Author-email: samuel.kolb@me.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+Requires-Dist: pywmi
+Requires-Dist: numpy
+Requires-Dist: typing
+Requires-Dist: pysmt
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: pickledb
+Requires-Dist: autodora
+Provides-Extra: sdd
+Requires-Dist: pysdd ; extra == 'sdd'
+Provides-Extra: telegram
+Requires-Dist: python-telegram-bot ; extra == 'telegram'
+
+# INCAL
+INCAL is an incremental SMT constraint learner
+
+Documentation coming soon...
+
