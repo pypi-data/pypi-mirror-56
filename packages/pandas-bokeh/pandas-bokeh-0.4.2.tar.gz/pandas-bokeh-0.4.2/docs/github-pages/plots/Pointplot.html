@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"></script>
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-gl-1.3.4.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="df487ebc-76eb-4827-a7c7-c8b1b753ca39" data-root-id="2770"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="2920">
+          {"3573ca4e-4ef9-4240-b609-2b2139f58a07":{"roots":{"references":[{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"2815","type":"BoxAnnotation"},{"attributes":{},"id":"2847","type":"UnionRenderers"},{"attributes":{},"id":"2811","type":"BasicTickFormatter"},{"attributes":{"fill_color":{"value":"#009933"},"line_color":{"value":"#009933"},"line_width":{"value":2},"marker":{"value":"x"},"size":{"units":"screen","value":5},"x":{"field":"__x__values"},"y":{"field":"Parabula"}},"id":"2806","type":"Scatter"},{"attributes":{},"id":"2813","type":"BasicTickFormatter"},{"attributes":{"label":{"value":" Parabula"},"renderers":[{"id":"2808","type":"GlyphRenderer"}]},"id":"2817","type":"LegendItem"},{"attributes":{},"id":"2833","type":"UnionRenderers"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":{"id":"2792","type":"WheelZoomTool"},"active_tap":"auto","tools":[{"id":"2791","type":"PanTool"},{"id":"2792","type":"WheelZoomTool"},{"id":"2793","type":"BoxZoomTool"},{"id":"2794","type":"SaveTool"},{"id":"2795","type":"ResetTool"},{"id":"2796","type":"HelpTool"},{"id":"2818","type":"HoverTool"},{"id":"2835","type":"HoverTool"}]},"id":"2797","type":"Toolbar"},{"attributes":{},"id":"2832","type":"Selection"},{"attributes":{},"id":"2787","type":"BasicTicker"},{"attributes":{"callback":null,"mode":"vline","renderers":[{"id":"2808","type":"GlyphRenderer"}],"tooltips":[["x","@__x__values_original"],["Parabula","@{Parabula}"]]},"id":"2818","type":"HoverTool"},{"attributes":{},"id":"2796","type":"HelpTool"},{"attributes":{"ticks":[-3,-2,-1,0,1,2,3]},"id":"2837","type":"FixedTicker"},{"attributes":{"callback":null,"data":{"Cube":{"__ndarray__":"AAAAAAAAO8DdJAaBlWM4wL/KoUW28zXAACuHFtmuM8D4fmq8dJMxwPv/////Py/A1M73U+OlK8Aq3SQGgVUowKyd76fGSyXADIPAyqGFIsD0//////8fwEoOLbKdbxvAfBbZzvdTF8Do/dR46aYTwPGp8dJNYhDA7P//////CsCuyqFFtvMFwOl+arx0kwHAus73U+Ol+7+Xne+nxkv1v9D//////++/XhbZzvdT57/aqfHSTWLgv4rKoUW289W/hs73U+Oly7+I//////+/v6yp8dJNYrC/Hs73U+Olm79QqfHSTWKAv5io8dJNYlC/AAAAAAAA2zZ5q/HSTWJQP8Gq8dJNYoA/vc/3U+Olmz9kqvHSTWKwP1QAAAAAAMA/Vs/3U+Olyz8Yy6FFtvPVPzaq8dJNYuA/0xbZzvdT5z8wAAAAAADwP+ad76fGS/U/Is/3U+Ol+z8rf2q8dJMBQPTKoUW28wVANgAAAAAAC0AfqvHSTWIQQCH+1HjpphNAthbZzvdTF0CGDi2ynW8bQB4AAAAAACBAN4PAyqGFIkDYne+nxkslQFXdJAaBVShACM/3U+OlK0A4AAAAAEAvQBZ/arx0kzFAHiuHFtmuM0DjyqFFtvM1QAYlBoGVYzhA","dtype":"float64","shape":[60]},"Parabula":{"__ndarray__":"AAAAAAAAIkBSuB6F69EgQFuPwvUoXB9AJ1yPwvUoHUAI16NwPQobQP7//////xhAB9ejcD0KF0AmXI/C9SgVQFmPwvUoXBNAoHA9CtejEUD4//////8PQNl6FK5H4QxA41G4HoXrCUAWhetRuB4HQHIUrkfhegRA9///////AUBKj8L1KFz/P/nWo3A9Cvs/+dajcD0K9z9Lj8L1KFzzP+D//////+8/zVG4HoXr6T9fFK5H4XrkPymPwvUoXN8/3NajcD0K1z+w///////PPzgUrkfhesQ/o9ajcD0Ktz/sE65H4XqkP1ITrkfheoQ/AAAAAAAA4jm4Fa5H4XqEPx8VrkfheqQ/idejcD0Ktz/SFK5H4XrEPzgAAAAAANA/T9ejcD0K1z+vj8L1KFzfP6wUrkfheuQ/JFK4HoXr6T8gAAAAAADwP3yPwvUoXPM/M9ejcD0K9z8816NwPQr7P42PwvUoXP8/GAAAAAAAAkCYFK5H4XoEQEKF61G4HgdADlK4HoXrCUADexSuR+EMQBQAAAAAABBAu3A9CtejEUBzj8L1KFwTQD9cj8L1KBVAJNejcD0KF0AeAAAAAAAZQCfXo3A9ChtARVyPwvUoHUB9j8L1KFwfQGS4HoXr0SBA","dtype":"float64","shape":[60]},"__x__values":{"__ndarray__":"AAAAAAAACMAzMzMzMzMHwGZmZmZmZgbAmZmZmZmZBcDMzMzMzMwEwP///////wPAMjMzMzMzA8BlZmZmZmYCwJiZmZmZmQHAy8zMzMzMAMD8////////v2JmZmZmZv6/yMzMzMzM/L8uMzMzMzP7v5SZmZmZmfm/+v//////979gZmZmZmb2v8bMzMzMzPS/LDMzMzMz87+SmZmZmZnxv/D//////++/vMzMzMzM7L+ImZmZmZnpv1RmZmZmZua/IDMzMzMz47/Y///////fv3CZmZmZmdm/CDMzMzMz079AmZmZmZnJv+CYmZmZmbm/AAAAAAAA6DxgmpmZmZm5PwCamZmZmck/aDMzMzMz0z/QmZmZmZnZPxwAAAAAAOA/UDMzMzMz4z+EZmZmZmbmP7iZmZmZmek/7MzMzMzM7D8QAAAAAADwP6iZmZmZmfE/RDMzMzMz8z/gzMzMzMz0P3hmZmZmZvY/EAAAAAAA+D+smZmZmZn5P0gzMzMzM/s/4MzMzMzM/D94ZmZmZmb+PwoAAAAAAABA2MzMzMzMAECkmZmZmZkBQHBmZmZmZgJAPjMzMzMzA0AMAAAAAAAEQNjMzMzMzARApJmZmZmZBUByZmZmZmYGQEAzMzMzMwdA","dtype":"float64","shape":[60]},"__x__values_original":{"__ndarray__":"AAAAAAAACMAzMzMzMzMHwGZmZmZmZgbAmZmZmZmZBcDMzMzMzMwEwP///////wPAMjMzMzMzA8BlZmZmZmYCwJiZmZmZmQHAy8zMzMzMAMD8////////v2JmZmZmZv6/yMzMzMzM/L8uMzMzMzP7v5SZmZmZmfm/+v//////979gZmZmZmb2v8bMzMzMzPS/LDMzMzMz87+SmZmZmZnxv/D//////++/vMzMzMzM7L+ImZmZmZnpv1RmZmZmZua/IDMzMzMz47/Y///////fv3CZmZmZmdm/CDMzMzMz079AmZmZmZnJv+CYmZmZmbm/AAAAAAAA6DxgmpmZmZm5PwCamZmZmck/aDMzMzMz0z/QmZmZmZnZPxwAAAAAAOA/UDMzMzMz4z+EZmZmZmbmP7iZmZmZmek/7MzMzMzM7D8QAAAAAADwP6iZmZmZmfE/RDMzMzMz8z/gzMzMzMz0P3hmZmZmZvY/EAAAAAAA+D+smZmZmZn5P0gzMzMzM/s/4MzMzMzM/D94ZmZmZmb+PwoAAAAAAABA2MzMzMzMAECkmZmZmZkBQHBmZmZmZgJAPjMzMzMzA0AMAAAAAAAEQNjMzMzMzARApJmZmZmZBUByZmZmZmYGQEAzMzMzMwdA","dtype":"float64","shape":[60]},"x":{"__ndarray__":"AAAAAAAACMAzMzMzMzMHwGZmZmZmZgbAmZmZmZmZBcDMzMzMzMwEwP///////wPAMjMzMzMzA8BlZmZmZmYCwJiZmZmZmQHAy8zMzMzMAMD8////////v2JmZmZmZv6/yMzMzMzM/L8uMzMzMzP7v5SZmZmZmfm/+v//////979gZmZmZmb2v8bMzMzMzPS/LDMzMzMz87+SmZmZmZnxv/D//////++/vMzMzMzM7L+ImZmZmZnpv1RmZmZmZua/IDMzMzMz47/Y///////fv3CZmZmZmdm/CDMzMzMz079AmZmZmZnJv+CYmZmZmbm/AAAAAAAA6DxgmpmZmZm5PwCamZmZmck/aDMzMzMz0z/QmZmZmZnZPxwAAAAAAOA/UDMzMzMz4z+EZmZmZmbmP7iZmZmZmek/7MzMzMzM7D8QAAAAAADwP6iZmZmZmfE/RDMzMzMz8z/gzMzMzMz0P3hmZmZmZvY/EAAAAAAA+D+smZmZmZn5P0gzMzMzM/s/4MzMzMzM/D94ZmZmZmb+PwoAAAAAAABA2MzMzMzMAECkmZmZmZkBQHBmZmZmZgJAPjMzMzMzA0AMAAAAAAAEQNjMzMzMzARApJmZmZmZBUByZmZmZmYGQEAzMzMzMwdA","dtype":"float64","shape":[60]}},"selected":{"id":"2846","type":"Selection"},"selection_policy":{"id":"2847","type":"UnionRenderers"}},"id":"2820","type":"ColumnDataSource"},{"attributes":{},"id":"2795","type":"ResetTool"},{"attributes":{},"id":"2794","type":"SaveTool"},{"attributes":{},"id":"2777","type":"LinearScale"},{"attributes":{"callback":null},"id":"2775","type":"DataRange1d"},{"attributes":{"overlay":{"id":"2815","type":"BoxAnnotation"}},"id":"2793","type":"BoxZoomTool"},{"attributes":{"fill_color":{"value":"#ff3399"},"line_color":{"value":"#ff3399"},"line_width":{"value":2},"marker":{"value":"x"},"size":{"units":"screen","value":5},"x":{"field":"__x__values"},"y":{"field":"Cube"}},"id":"2822","type":"Scatter"},{"attributes":{},"id":"2791","type":"PanTool"},{"attributes":{"data_source":{"id":"2820","type":"ColumnDataSource"},"glyph":{"id":"2822","type":"Scatter"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"2823","type":"Scatter"},"selection_glyph":null,"view":{"id":"2825","type":"CDSView"}},"id":"2824","type":"GlyphRenderer"},{"attributes":{"callback":null,"data":{"Cube":{"__ndarray__":"AAAAAAAAO8DdJAaBlWM4wL/KoUW28zXAACuHFtmuM8D4fmq8dJMxwPv/////Py/A1M73U+OlK8Aq3SQGgVUowKyd76fGSyXADIPAyqGFIsD0//////8fwEoOLbKdbxvAfBbZzvdTF8Do/dR46aYTwPGp8dJNYhDA7P//////CsCuyqFFtvMFwOl+arx0kwHAus73U+Ol+7+Xne+nxkv1v9D//////++/XhbZzvdT57/aqfHSTWLgv4rKoUW289W/hs73U+Oly7+I//////+/v6yp8dJNYrC/Hs73U+Olm79QqfHSTWKAv5io8dJNYlC/AAAAAAAA2zZ5q/HSTWJQP8Gq8dJNYoA/vc/3U+Olmz9kqvHSTWKwP1QAAAAAAMA/Vs/3U+Olyz8Yy6FFtvPVPzaq8dJNYuA/0xbZzvdT5z8wAAAAAADwP+ad76fGS/U/Is/3U+Ol+z8rf2q8dJMBQPTKoUW28wVANgAAAAAAC0AfqvHSTWIQQCH+1HjpphNAthbZzvdTF0CGDi2ynW8bQB4AAAAAACBAN4PAyqGFIkDYne+nxkslQFXdJAaBVShACM/3U+OlK0A4AAAAAEAvQBZ/arx0kzFAHiuHFtmuM0DjyqFFtvM1QAYlBoGVYzhA","dtype":"float64","shape":[60]},"Parabula":{"__ndarray__":"AAAAAAAAIkBSuB6F69EgQFuPwvUoXB9AJ1yPwvUoHUAI16NwPQobQP7//////xhAB9ejcD0KF0AmXI/C9SgVQFmPwvUoXBNAoHA9CtejEUD4//////8PQNl6FK5H4QxA41G4HoXrCUAWhetRuB4HQHIUrkfhegRA9///////AUBKj8L1KFz/P/nWo3A9Cvs/+dajcD0K9z9Lj8L1KFzzP+D//////+8/zVG4HoXr6T9fFK5H4XrkPymPwvUoXN8/3NajcD0K1z+w///////PPzgUrkfhesQ/o9ajcD0Ktz/sE65H4XqkP1ITrkfheoQ/AAAAAAAA4jm4Fa5H4XqEPx8VrkfheqQ/idejcD0Ktz/SFK5H4XrEPzgAAAAAANA/T9ejcD0K1z+vj8L1KFzfP6wUrkfheuQ/JFK4HoXr6T8gAAAAAADwP3yPwvUoXPM/M9ejcD0K9z8816NwPQr7P42PwvUoXP8/GAAAAAAAAkCYFK5H4XoEQEKF61G4HgdADlK4HoXrCUADexSuR+EMQBQAAAAAABBAu3A9CtejEUBzj8L1KFwTQD9cj8L1KBVAJNejcD0KF0AeAAAAAAAZQCfXo3A9ChtARVyPwvUoHUB9j8L1KFwfQGS4HoXr0SBA","dtype":"float64","shape":[60]},"__x__values":{"__ndarray__":"AAAAAAAACMAzMzMzMzMHwGZmZmZmZgbAmZmZmZmZBcDMzMzMzMwEwP///////wPAMjMzMzMzA8BlZmZmZmYCwJiZmZmZmQHAy8zMzMzMAMD8////////v2JmZmZmZv6/yMzMzMzM/L8uMzMzMzP7v5SZmZmZmfm/+v//////979gZmZmZmb2v8bMzMzMzPS/LDMzMzMz87+SmZmZmZnxv/D//////++/vMzMzMzM7L+ImZmZmZnpv1RmZmZmZua/IDMzMzMz47/Y///////fv3CZmZmZmdm/CDMzMzMz079AmZmZmZnJv+CYmZmZmbm/AAAAAAAA6DxgmpmZmZm5PwCamZmZmck/aDMzMzMz0z/QmZmZmZnZPxwAAAAAAOA/UDMzMzMz4z+EZmZmZmbmP7iZmZmZmek/7MzMzMzM7D8QAAAAAADwP6iZmZmZmfE/RDMzMzMz8z/gzMzMzMz0P3hmZmZmZvY/EAAAAAAA+D+smZmZmZn5P0gzMzMzM/s/4MzMzMzM/D94ZmZmZmb+PwoAAAAAAABA2MzMzMzMAECkmZmZmZkBQHBmZmZmZgJAPjMzMzMzA0AMAAAAAAAEQNjMzMzMzARApJmZmZmZBUByZmZmZmYGQEAzMzMzMwdA","dtype":"float64","shape":[60]},"__x__values_original":{"__ndarray__":"AAAAAAAACMAzMzMzMzMHwGZmZmZmZgbAmZmZmZmZBcDMzMzMzMwEwP///////wPAMjMzMzMzA8BlZmZmZmYCwJiZmZmZmQHAy8zMzMzMAMD8////////v2JmZmZmZv6/yMzMzMzM/L8uMzMzMzP7v5SZmZmZmfm/+v//////979gZmZmZmb2v8bMzMzMzPS/LDMzMzMz87+SmZmZmZnxv/D//////++/vMzMzMzM7L+ImZmZmZnpv1RmZmZmZua/IDMzMzMz47/Y///////fv3CZmZmZmdm/CDMzMzMz079AmZmZmZnJv+CYmZmZmbm/AAAAAAAA6DxgmpmZmZm5PwCamZmZmck/aDMzMzMz0z/QmZmZmZnZPxwAAAAAAOA/UDMzMzMz4z+EZmZmZmbmP7iZmZmZmek/7MzMzMzM7D8QAAAAAADwP6iZmZmZmfE/RDMzMzMz8z/gzMzMzMz0P3hmZmZmZvY/EAAAAAAA+D+smZmZmZn5P0gzMzMzM/s/4MzMzMzM/D94ZmZmZmb+PwoAAAAAAABA2MzMzMzMAECkmZmZmZkBQHBmZmZmZgJAPjMzMzMzA0AMAAAAAAAEQNjMzMzMzARApJmZmZmZBUByZmZmZmYGQEAzMzMzMwdA","dtype":"float64","shape":[60]},"x":{"__ndarray__":"AAAAAAAACMAzMzMzMzMHwGZmZmZmZgbAmZmZmZmZBcDMzMzMzMwEwP///////wPAMjMzMzMzA8BlZmZmZmYCwJiZmZmZmQHAy8zMzMzMAMD8////////v2JmZmZmZv6/yMzMzMzM/L8uMzMzMzP7v5SZmZmZmfm/+v//////979gZmZmZmb2v8bMzMzMzPS/LDMzMzMz87+SmZmZmZnxv/D//////++/vMzMzMzM7L+ImZmZmZnpv1RmZmZmZua/IDMzMzMz47/Y///////fv3CZmZmZmdm/CDMzMzMz079AmZmZmZnJv+CYmZmZmbm/AAAAAAAA6DxgmpmZmZm5PwCamZmZmck/aDMzMzMz0z/QmZmZmZnZPxwAAAAAAOA/UDMzMzMz4z+EZmZmZmbmP7iZmZmZmek/7MzMzMzM7D8QAAAAAADwP6iZmZmZmfE/RDMzMzMz8z/gzMzMzMz0P3hmZmZmZvY/EAAAAAAA+D+smZmZmZn5P0gzMzMzM/s/4MzMzMzM/D94ZmZmZmb+PwoAAAAAAABA2MzMzMzMAECkmZmZmZkBQHBmZmZmZgJAPjMzMzMzA0AMAAAAAAAEQNjMzMzMzARApJmZmZmZBUByZmZmZmYGQEAzMzMzMwdA","dtype":"float64","shape":[60]}},"selected":{"id":"2832","type":"Selection"},"selection_policy":{"id":"2833","type":"UnionRenderers"}},"id":"2804","type":"ColumnDataSource"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"line_width":{"value":2},"marker":{"value":"x"},"size":{"units":"screen","value":5},"x":{"field":"__x__values"},"y":{"field":"Cube"}},"id":"2823","type":"Scatter"},{"attributes":{"source":{"id":"2820","type":"ColumnDataSource"}},"id":"2825","type":"CDSView"},{"attributes":{},"id":"2792","type":"WheelZoomTool"},{"attributes":{},"id":"2782","type":"BasicTicker"},{"attributes":{"dimension":1,"ticker":{"id":"2787","type":"BasicTicker"}},"id":"2790","type":"Grid"},{"attributes":{"callback":null},"id":"2773","type":"DataRange1d"},{"attributes":{"callback":null,"mode":"vline","renderers":[{"id":"2824","type":"GlyphRenderer"}],"tooltips":[["x","@__x__values_original"],["Cube","@{Cube}"]]},"id":"2835","type":"HoverTool"},{"attributes":{"text":"Pointplot (Parabula vs. Cube)"},"id":"2771","type":"Title"},{"attributes":{"label":{"value":" Cube"},"renderers":[{"id":"2824","type":"GlyphRenderer"}]},"id":"2834","type":"LegendItem"},{"attributes":{"below":[{"id":"2781","type":"LinearAxis"}],"center":[{"id":"2785","type":"Grid"},{"id":"2790","type":"Grid"},{"id":"2816","type":"Legend"}],"left":[{"id":"2786","type":"LinearAxis"}],"output_backend":"webgl","plot_height":400,"renderers":[{"id":"2808","type":"GlyphRenderer"},{"id":"2824","type":"GlyphRenderer"}],"sizing_mode":"fixed","title":{"id":"2771","type":"Title"},"toolbar":{"id":"2797","type":"Toolbar"},"x_range":{"id":"2773","type":"DataRange1d"},"x_scale":{"id":"2777","type":"LinearScale"},"y_range":{"id":"2775","type":"DataRange1d"},"y_scale":{"id":"2779","type":"LinearScale"}},"id":"2770","subtype":"Figure","type":"Plot"},{"attributes":{"formatter":{"id":"2813","type":"BasicTickFormatter"},"ticker":{"id":"2787","type":"BasicTicker"}},"id":"2786","type":"LinearAxis"},{"attributes":{"ticker":{"id":"2782","type":"BasicTicker"}},"id":"2785","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"line_width":{"value":2},"marker":{"value":"x"},"size":{"units":"screen","value":5},"x":{"field":"__x__values"},"y":{"field":"Parabula"}},"id":"2807","type":"Scatter"},{"attributes":{"source":{"id":"2804","type":"ColumnDataSource"}},"id":"2809","type":"CDSView"},{"attributes":{"data_source":{"id":"2804","type":"ColumnDataSource"},"glyph":{"id":"2806","type":"Scatter"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"2807","type":"Scatter"},"selection_glyph":null,"view":{"id":"2809","type":"CDSView"}},"id":"2808","type":"GlyphRenderer"},{"attributes":{},"id":"2846","type":"Selection"},{"attributes":{},"id":"2779","type":"LinearScale"},{"attributes":{"axis_label":"x","formatter":{"id":"2811","type":"BasicTickFormatter"},"ticker":{"id":"2837","type":"FixedTicker"}},"id":"2781","type":"LinearAxis"},{"attributes":{"click_policy":"hide","items":[{"id":"2817","type":"LegendItem"},{"id":"2834","type":"LegendItem"}]},"id":"2816","type":"Legend"}],"root_ids":["2770"]},"title":"Bokeh Application","version":"1.3.4"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('2920').textContent;
+                  var render_items = [{"docid":"3573ca4e-4ef9-4240-b609-2b2139f58a07","roots":{"2770":"df487ebc-76eb-4827-a7c7-c8b1b753ca39"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
