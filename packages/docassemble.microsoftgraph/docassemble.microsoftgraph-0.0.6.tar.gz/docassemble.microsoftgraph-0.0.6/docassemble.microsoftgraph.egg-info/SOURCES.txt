@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+docassemble/__init__.py
+docassemble.microsoftgraph.egg-info/PKG-INFO
+docassemble.microsoftgraph.egg-info/SOURCES.txt
+docassemble.microsoftgraph.egg-info/dependency_links.txt
+docassemble.microsoftgraph.egg-info/namespace_packages.txt
+docassemble.microsoftgraph.egg-info/not-zip-safe
+docassemble.microsoftgraph.egg-info/top_level.txt
+docassemble/microsoftgraph/__init__.py
+docassemble/microsoftgraph/msgraph.py
+docassemble/microsoftgraph/data/questions/msgraph_example.yml
+docassemble/microsoftgraph/data/sources/README.md
+docassemble/microsoftgraph/data/static/README.md
+docassemble/microsoftgraph/data/templates/README.md

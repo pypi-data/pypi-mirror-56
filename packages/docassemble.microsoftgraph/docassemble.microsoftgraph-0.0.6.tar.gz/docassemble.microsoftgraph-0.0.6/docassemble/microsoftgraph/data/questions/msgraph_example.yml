@@ -1,0 +1,64 @@
+metadata:
+  tags:
+    - everyone
+---
+features:
+  bootstrap theme: mac-bootstrap.css
+---
+comment: |
+  This interview demonstrates using Microsoft Graph API to fill-in user
+  attributes if the user exists in the Office 365 directory,
+  and retrieving a list of contacts.
+---
+imports:
+  - json
+---
+modules:
+  - docassemble.microsoftgraph.msgraph
+  - docassemble.gbls.legal_server
+---
+objects:
+  - advocate: Individual
+---
+objects:
+  - o365: MSGraphConnectionObject
+  - me: Individual
+  - ls_fields: LegalServerFields.using(url_args=url_args,advocate=advocate)  
+#---
+#question: |
+#  User Principal Name (email address)
+#fields:
+#  - Universal Principal Name: upn
+---
+mandatory: True
+code: |
+  ls_fields
+  o365.get_user(advocate.email,advocate)
+  res = o365.get_user(advocate.email)
+  contacts = o365.get_contacts(advocate.email)
+---
+mandatory: True
+question: |
+  Results
+subquestion: |
+  `${json.dumps(res)}`
+  ${res.get('jobTitle')}
+field: test
+---
+mandatory: True
+question: |
+  Results
+subquestion: |
+  ${advocate.jobTitle} : ${advocate}
+  
+  ${advocate.phone}  
+  
+  ${vars(advocate)}
+  
+  % for contact in contacts:
+  * ${contact}
+      * ${contact.phone_number}
+      * ${contact.address.on_one_line()}.
+      * ${contact.email if defined('contact.email') else ''}
+  % endfor      
+      
