@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: graphql-booster
+Version: 0.0.1a5
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: jimtheplant
+Author-email: jimtheplant1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: ariadne (>=0.7)
+Requires-Dist: uvicorn
+Requires-Dist: nodeenv
+
+UNKNOWN
+
+
