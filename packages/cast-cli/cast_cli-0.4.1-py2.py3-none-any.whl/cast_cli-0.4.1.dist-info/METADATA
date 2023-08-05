@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: cast-cli
+Version: 0.4.1
+Summary: UNKNOWN
+Home-page: https://github.com/Julian/cast-cli
+Author: Julian Berman
+Author-email: Julian+cast_cli@GrayVines.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: click
+Requires-Dist: pychromecast
+
+========
+Cast CLI
+========
+
+A simple CLI for pychromecast.
+
+
