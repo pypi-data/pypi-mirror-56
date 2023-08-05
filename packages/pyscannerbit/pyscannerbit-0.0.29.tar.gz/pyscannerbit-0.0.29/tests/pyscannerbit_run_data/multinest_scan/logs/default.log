@@ -1,0 +1,39 @@
+(Thu Nov 14 13:05:48 2019)(-0.123894 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/.local/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_diver_1.0.0.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-gxwjo7uu/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Thu Nov 14 13:05:48 2019)(-0.123867 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/.local/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_diver_1.0.2.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-gxwjo7uu/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Thu Nov 14 13:05:48 2019)(-0.112849 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/.local/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_great.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-gxwjo7uu/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Thu Nov 14 13:05:48 2019)(-0.0993706 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/.local/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_multinest_3.10.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-gxwjo7uu/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Thu Nov 14 13:05:48 2019)(0.0118552 [s])[Default,Utilities]:
+Random number engine mt19937_64 (default) selected with seed -893474561.
+--<>--<>--<>--<>--<>--<>--<>--
+(Thu Nov 14 13:05:48 2019)(0.0124005 [s])[Default,Printers][Info]:
+Running shell command: rm -f pyscannerbit_run_data/multinest_scan/samples//results.hdf5
+--<>--<>--<>--<>--<>--<>--<>--
+(Thu Nov 14 13:05:48 2019)(0.0188982 [s])[Default,Core]:
+Starting scan.
+--<>--<>--<>--<>--<>--<>--<>--
+(Thu Nov 14 13:05:48 2019)(0.0194945 [s])[Default,Scanner][Error][Fatal]:
+ERROR: A problem has been raised by ScannerBit.
+Cannot load /home/farmer/.local/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_multinest_3.11.so:  libnest3.so: cannot open shared object file: No such file or directory
+
+Raised at: line 136 in function const std::map<Gambit::type_index, void*>& Gambit::Scanner::Plugins::Plugin_Interface_Base::initPlugin(const string&, const string&, const plug_args& ...) [with plug_args = {unsigned int, Gambit::Scanner::Factory_Base}; std::__cxx11::string = std::__cxx11::basic_string<char>] of /tmp/pip-req-build-gxwjo7uu/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/include/gambit/ScannerBit/plugin_interface.hpp.
+--<>--<>--<>--<>--<>--<>--<>--

@@ -1,0 +1,66 @@
+(Mon Nov 18 15:41:10 2019)(-0.116914 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_diver_1.0.0.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-vkke4x5u/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(-0.116893 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_diver_1.0.2.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-vkke4x5u/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(-0.106257 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_great.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-vkke4x5u/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(-0.0931937 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/lib/python3.7/site-packages/pyscannerbit/ScannerBit/lib/libscanner_multinest_3.10.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-vkke4x5u/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.00960199 [s])[Default,Utilities]:
+Random number engine mt19937_64 (default) selected with seed -1983218483.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0100935 [s])[Default,Printers][Info]:
+Running shell command: rm -f pyscannerbit_run_data//samples//results.hdf5
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0164147 [s])[Default,Core]:
+Starting scan.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0193038 [s])[Default,Printers][Info]:
+Assigned printer ID '0' to output quantity with label 'LogLike'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0194365 [s])[Default,Printers][Info]:
+Assigned printer ID '1' to output quantity with label 'pointID'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0195035 [s])[Default,Printers][Info]:
+Assigned printer ID '2' to output quantity with label 'MPIrank'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0221168 [s])[Default,Printers][Info]:
+Assigned printer ID '3' to output quantity with label 'mult'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0223032 [s])[Default,Printers][Info]:
+Assigned printer ID '4' to output quantity with label 'chain'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.024262 [s])[Default,Printers][Info]:
+Assigned printer ID '5' to output quantity with label 'model1::y'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0246506 [s])[Default,Printers][Info]:
+Assigned printer ID '6' to output quantity with label 'model1::x'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.025024 [s])[Default,Printers][Info]:
+Assigned printer ID '7' to output quantity with label 'my_param'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:10 2019)(0.0254527 [s])[Default,Printers][Info]:
+Assigned printer ID '8' to output quantity with label 'unitCubeParameters'
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:20 2019)(10.1577 [s])[Default]:
+Synchronised buffers flushed for rank 0 printers. Waiting for all processes to flush their sync data before we try to write the RA data.
+--<>--<>--<>--<>--<>--<>--<>--
+(Mon Nov 18 15:41:20 2019)(10.2187 [s])[Default]:
+GAMBIT has performed a controlled early shutdown due to early termination of the scanner plugin.
+--<>--<>--<>--<>--<>--<>--<>--

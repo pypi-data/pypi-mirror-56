@@ -1,0 +1,74 @@
+(Tue Nov 19 16:04:03 2019)(-0.145223 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/envs/general/lib/python3.6/site-packages/pyscannerbit/ScannerBit/lib/libscanner_diver_1.0.0.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-0ai_8_ii/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:03 2019)(-0.145194 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/envs/general/lib/python3.6/site-packages/pyscannerbit/ScannerBit/lib/libscanner_diver_1.0.2.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-0ai_8_ii/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:03 2019)(-0.132016 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/envs/general/lib/python3.6/site-packages/pyscannerbit/ScannerBit/lib/libscanner_great.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-0ai_8_ii/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--((Tue Nov 19 16:04:03 2019)(-0.116745 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/envs/general/lib/python3.6/site-packages/pyscannerbit/ScannerBit/lib/libscanner_multinest_3.10.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-0ai_8_ii/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0281583 [s])[Default,Utilities]:
+Random number engine mt19937_64 (default) selected with seed -796260090.
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0297228 [s])[Default,Printers][Info]:
+Running shell command: rm -f pyscannerbit_run_data/twalk_scan/samples//results.hdf5
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0477014 [s])[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Plugin name is not defined under the "scanners" tag.  using the tag "badass" as the plugin name.
+
+Raised at: line 625 in function void Gambit::Scanner::Plugins::pluginInfo::iniFile(const Gambit::Options&) of /tmp/pip-req-build-0ai_8_ii/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0480097 [s])[Default,Core]:
+Starting scan.
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0498697 [s])[Default,Printers][Info]:
+Assigned printer ID '0' to output quantity with label 'LogLike'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0499624 [s])[Default,Printers][Info]:
+Assigned printer ID '1' to output quantity with label 'pointID'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0500176 [s])[Default,Printers][Info]:
+Assigned printer ID '2' to output quantity with label 'MPIrank'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0512162 [s])[Default,Printers][Info]:
+Assigned printer ID '3' to output quantity with label 'mult'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0512852 [s])[Default,Printers][Info]:
+Assigned printer ID '4' to output quantity with label 'chain'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0521224 [s])[Default,Printers][Info]:
+Assigned printer ID '5' to output quantity with label 'default::z'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0524073 [s])[Default,Printers][Info]:
+Assigned printer ID '6' to output quantity with label 'default::x'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0525211 [s])[Default,Printers][Info]:
+Assigned printer ID '7' to output quantity with label 'default::y'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:04 2019)(0.0534374 [s])[Default,Printers][Info]:
+Assigned printer ID '8' to output quantity with label 'unitCubeParameters'
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:30 2019)(25.9853 [s])[Default]:
+Synchronised buffers flushed for rank 0 printers. Waiting for all processes to flush their sync data before we try to write the RA data.
+--<>--<>--<>--<>--<>--<>--<>--
+(Tue Nov 19 16:04:30 2019)(26.0684 [s])[Default]:
+GAMBIT run completed successfully.
+--<>--<>--<>--<>--<>--<>--<>--
+ with the 'h5ls' command line tool.
+Raised at: line 147 in function hid_t Gambit::Printers::HDF5::openFile(const string&, bool, bool&, char) of /tmp/pip-req-build-0ai_8_ii/pyscannerbit/scannerbit/untar/ScannerBit/Printers/src/printers/hdf5printer/hdf5tools.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
