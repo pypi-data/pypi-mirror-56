@@ -1,0 +1,16 @@
+README.md
+setup.py
+DataScienceTools.egg-info/PKG-INFO
+DataScienceTools.egg-info/SOURCES.txt
+DataScienceTools.egg-info/dependency_links.txt
+DataScienceTools.egg-info/requires.txt
+DataScienceTools.egg-info/top_level.txt
+dstools/__init__.py
+dstools/classifier/BestGuessClassifier.py
+dstools/classifier/__init__.py
+dstools/preprocessing/Bucketizer.py
+dstools/preprocessing/FeatureConverter.py
+dstools/preprocessing/Imputer.py
+dstools/preprocessing/NumScaler.py
+dstools/preprocessing/OneHotEncoder.py
+dstools/preprocessing/__init__.py
