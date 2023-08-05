@@ -1,0 +1,6 @@
+pycodestyle:
+  max-line-length: 120 # Default is 79 in PEP8
+  exclude:
+    - setup.py
+    - docs/conf.py
+  descending_issues_order: True
