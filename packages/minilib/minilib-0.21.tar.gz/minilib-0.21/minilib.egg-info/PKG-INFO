@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: minilib
+Version: 0.21
+Summary: Package for adafruit powered servo bots
+Home-page: http://github.com/atikul99/minibot
+Author: Abir
+Author-email: atikul10152002@gmail.com
+License: MIT
+Description: Documentation for MiniBot!
+        ===========================
+        
+         .. |docs| image:: https://readthedocs.org/projects/minibot/badge/?version=latest
+         .. |minibot| image:: https://img.shields.io/badge/minibot-OK-brightgreen.svg
+        
+        |docs| |minibot|
+        
+        - Minibot RTD : https://minibot.readthedocs.io
+        
+        Installation
+        =============
+        
+         python3 -m pip install minilib
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
