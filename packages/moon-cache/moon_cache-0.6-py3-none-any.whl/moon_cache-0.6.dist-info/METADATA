@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: moon-cache
+Version: 0.6
+Summary: Some utilities for all the Moon components
+Home-page: UNKNOWN
+Author: Thomas Duval
+Author-email: thomas.duval@orange.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+Requires-Dist: moon-utilities
+
+# moon_cache
+
+Python library that implement the cache system of the Moon engine
+
