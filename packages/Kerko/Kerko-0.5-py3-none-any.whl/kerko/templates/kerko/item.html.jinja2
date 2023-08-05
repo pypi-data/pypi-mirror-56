@@ -1,0 +1,149 @@
+{% extends config.KERKO_TEMPLATE_LAYOUT %}
+{% from "kerko/_badges.html.jinja2" import content_with_badges %}
+{% from "kerko/_facets.html.jinja2" import facet_items %}
+
+{% macro field(label_text, value_text, field_class=None, value_class=None) %}
+    {%- if value_text %}
+        <div class="row mb-3 {{ field_class if field_class }}">
+            <div class="col-md-4 col-lg-3 font-weight-bold break-word text-md-right text-print-left">{{ label_text }}</div>
+            <div class="col-md-8 col-lg-9 break-word {{ value_class if value_class }}">{{ value_text }}</div>
+        </div>
+    {%- endif %}
+{%- endmacro %}
+
+{% macro facet_field(label_text, value_text, key, add_link_title=None) %}
+    {#- Display a field using its facet, if available, otherwise fallback to a regular field display. #}
+    {%- if key in config.KERKO_COMPOSER.facets and key in item.facet_results %}
+        {%- set f = config.KERKO_COMPOSER.facets[key] %}
+        {#- We have a matching facet, display its link. #}
+        {{- field(
+                f.title,
+                facet_items(
+                    f.missing_label,
+                    item.facet_results[f.key],
+                    expand=True,
+                    add_link_icon='',
+                    remove_link_icon='',
+                    list_tag='div',
+                    item_tag='div',
+                    add_link_title=add_link_title
+                )
+            )
+        }}
+    {%- else %}
+        {#- There is matching facet, just display its value. #}
+        {{- field(label_text, value_text) }}
+    {%- endif %}
+{%- endmacro %}
+
+{% macro permalink(url) -%}
+    <a rel="bookmark" title="{{ _('Permanent link to this bibliographic record') }}" href="{{ url }}">{{ url }}</a>
+{%- endmacro -%}
+
+{%- block metas %}
+    {{- super() }}
+    <link rel="canonical" title="{{ title|striptags|escape }}" href="{{ item_url }}">
+{%- endblock metas %}
+
+{%- block content_inner %}
+    <div class="mb-4 item-content">
+        {%- if config.KERKO_PRINT_ITEM_LINK or config.KERKO_COMPOSER.citation_formats %}
+            <div class="row">
+                <div class="col-auto ml-auto text-right">
+                    {%- if config.KERKO_PRINT_ITEM_LINK %}
+                        <div class="d-none d-md-inline-block d-print-none mb-2">
+                            <button id="print-link" class="btn btn-light" type="button">
+                                <span class="fas fa-print" aria-hidden="true"></span> {% trans count=1, count_formatted='1' %}Print this citation{% pluralize %}Print {{ count_formatted }} citations{% endtrans %} {# TODO: Remove pluralization after solving issue where translation is not loaded when the same message is sometimes pluralized, sometimes not. #}
+                            </button>
+                        </div>
+                    {%- endif %}
+                    {%- if config.KERKO_COMPOSER.citation_formats %}
+                        <div class="d-inline-block d-print-none mb-2">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary btn-light dropdown-toggle" type="button" id="download-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fas fa-download" aria-hidden="true"></span> {% trans count=1, count_formatted='1' %}Download this citation{% pluralize %}Download {{ count_formatted }} citations{% endtrans %} {# TODO: Remove pluralization after solving issue where translation is not loaded when the same message is sometimes pluralized, sometimes not. #}
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-width-300" aria-labelledby="download-options">
+                                    {%- for citation_format in config.KERKO_COMPOSER.get_ordered_specs('citation_formats') %}
+                                        <a class="dropdown-item" href="{{ url_for('kerko.item_citation_download', item_id=item.id, citation_format_key=citation_format.key) }}" rel="nofollow" title="{% trans download_option=citation_format.label|escape %}Download in {{ download_option }} format{% endtrans %}">
+                                            {{- citation_format.label -}}
+                                        </a>
+                                        <p class="px-4 text-muted">{{ citation_format.help_text }}</p>
+                                    {%- endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    {%- endif %}
+                </div>
+            </div>
+        {%- endif %}
+
+        {{- facet_field(_("Resource type"), item.item_type, 'facet_item_type', add_link_title=_("Search this resource type")) }}
+        {%- if item.data.creators %}
+            <div class="row">
+                <div class="col-md-4 col-lg-3 font-weight-bold break-word text-md-right text-print-left">{% trans count=item.data.creators|length %}Author/contributor{% pluralize %}Authors/contributors{% endtrans %}</div>
+                <div class="col-md-8 col-lg-9 break-word">
+                    <ul class="list-unstyled">
+                        {%- for creator in item.data.creators %}
+                            <li>
+                                {%- if creator.url %}<a href="{{ creator.url }}" title="{{ _('Search this author/contributor') }}">{% endif %}
+                                {{- creator.display|striptags }}
+                                {%- if creator.url %}</a>{% endif %}
+                                {%- if creator.label %}
+                                    ({{ creator.label }})
+                                {%- endif %}
+                            </li>
+                        {%- endfor %}
+                    </ul>
+                </div>
+            </div>
+        {%- endif %}
+        {#- Display item fields in proper order. #}
+        {%- for f in item.item_fields %}
+            {%- if item.data[f.field] %}
+                {%- if f.field == 'abstractNote' %}
+                    {{- field(f.localized, item.data[f.field]|urlize(target='_blank'), value_class='pre-line') }}
+                {%- else %}
+                    {{- field(f.localized, item.data[f.field]|striptags|urlize(target='_blank')) }}
+                {%- endif %}
+            {%- endif %}
+        {%- endfor %}
+        {{- field(_("Notes"), item.notes|join('')|safe) if item.notes }}
+        {{- field(_("Citation"), ('<div class="card"><div class="card-body">' + item.bib + '</div></div>')|safe) }}
+        {%- if item.facet_results %}
+            {%- for f in config.KERKO_COMPOSER.get_ordered_specs('facets') if f.item_view and f.key in item.facet_results %}
+                {{ f.render(item.facet_results[f.key], 'field') }}
+            {%- endfor %}
+        {%- endif %}
+        {%- if item.attachments %}
+            <div class="row">
+                <div class="col-md-4 col-lg-3 font-weight-bold break-word text-md-right text-print-left">{% trans count=item.attachments|length %}Attachment{% pluralize %}Attachments{% endtrans %}</div>
+                <div class="col-md-8 col-lg-9 break-word">
+                    <ul class="list-unstyled">
+                        {%- for attachment in item.attachments %}
+                            <li><a href="{{ url_for('kerko.item_attachment_download', item_id=item.id, attachment_id=attachment['id']) }}" title="{{ _('Download this attachment') }}"><span class="fas fa-paperclip d-print-none no-decorate mr-1" aria-hidden="true"></span>{{ attachment.filename }}</a></li>
+                        {%- endfor %}
+                    </ul>
+                </div>
+            </div>
+        {%- endif %}
+        {{- field(_("Link to this record"), permalink(item_url)) }}
+    </div>
+    {% if config.DEBUG %}{% trans time="%.2f"|format(time) %}Processing time: {{time}} seconds{% endtrans %}{% endif %}
+    {{- item.coins|safe }}
+{%- endblock content_inner %}
+
+{%- block content_header %}
+    <h1 class="h2 my-2 clearfix">
+        {{- content_with_badges(title, item, mode='item') -}}
+    </h1>
+{%- endblock content_header %}
+
+{%- block body_scripts %}
+    {{- super() }}
+    {%- block kerko_print_js %}
+        {%- if config.KERKO_PRINT_ITEM_LINK %}
+            <script src="{{ url_for('kerko.static', filename='kerko/js/print.js') }}"></script>
+        {%- endif %}
+    {%- endblock kerko_print_js %}
+{%- endblock body_scripts %}
