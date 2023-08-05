@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: moover
+Version: 1.1.1
+Summary: Automagically Move Files
+Home-page: https://github.com/ssiyad/automagic-file-mover
+Author: Sabu Siyad
+Author-email: sabu.siyad.p@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: notify2 (==0.3.1)
+Requires-Dist: watchdog (==0.9.0)
+
+# Moover
+#### Automagic File Mover
+<br/><h3 align="center">Please help this repo with a :star: if you find it useful! :blush:</h3><br/>
+
+
+## What is this?
+Moover is a program designed to automatically move files between directories. The main aim of the project is to organize files in a structured manner. File are categorized based on their extension which will be improved in future to categorize based on type.
+
+
+## Prerequisites
+- git
+- python3
+
+
+## Setup
+```shell
+git clone https://github.com/ssiyad/automagic-file-mover
+cd automagic-file-mover
+python3 -m venv venv
+source venv/bin/activate
+pip install .
+```
+or
+```shell
+pip install moover
+```
+
+## Usage
+```python
+python -m moover
+```
+or
+```python
+moover
+```
+
+
+## Optional arguments
+```shell
+-s, --source         Directory to watch
+-d, --destination    Directory to move files
+-e, --existing       Arrange existing files in source directory
+-h, --help           Shows help message
+```
+
+Default `source` is `Downloads` and default `destination` is `Moover`
+
+---
+## Contribution
+- Report issues
+- Open pull request with improvements
+- Spread the word
+- Contact me directly at [Telegram](http://t.me/ssiyad)
+---
+
