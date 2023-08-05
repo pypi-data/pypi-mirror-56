@@ -1,0 +1,14 @@
+DemoLineclip.py
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pylineclip/__init__.py
+pylineclip.egg-info/PKG-INFO
+pylineclip.egg-info/SOURCES.txt
+pylineclip.egg-info/dependency_links.txt
+pylineclip.egg-info/not-zip-safe
+pylineclip.egg-info/requires.txt
+pylineclip.egg-info/top_level.txt
+tests/test_all.py
