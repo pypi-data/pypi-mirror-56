@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: hydrocomp
+Version: 0.1.4
+Summary: Desenvolvido para estudos hidrológicos
+Home-page: https://github.com/clebsonpy/HydroComp
+Author: Clebson Farias
+Author-email: clebson2007.farias@gmail.com
+License: MIT License
+Keywords: hydrology statistic iha flow
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Education
+Requires-Dist: Pillow (==6.2.1)
+Requires-Dist: PyYAML (==5.1.2)
+Requires-Dist: Pygments (==2.2.0)
+Requires-Dist: certifi (==2018.4.16)
+Requires-Dist: defusedxml (==0.6.0)
+Requires-Dist: geopandas (==0.6.2)
+Requires-Dist: lmoments3 (==1.0.1)
+Requires-Dist: numpy (==1.14.2)
+Requires-Dist: pandas (==0.25.1)
+Requires-Dist: pandocfilters (==1.4.2)
+Requires-Dist: plotly (==4.2.1)
+Requires-Dist: pytz (==2018.4)
+Requires-Dist: pyzmq (==18.0.1)
+Requires-Dist: requests (==2.18.4)
+Requires-Dist: scipy (==1.0.1)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: statsmodels (==0.10.1)
+Requires-Dist: wrapt (==1.11.2)
+Requires-Dist: xlrd (==1.1.0)
+
+# HydroComp1_9
+
+
