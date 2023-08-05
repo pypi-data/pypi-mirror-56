@@ -1,0 +1,12 @@
+{% extends "web/base.html" %}
+{% load humanize %}
+
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    <h2>{{ event.date|naturalday|capfirst }}</h2>
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+  </form>
+{% endblock content %}
