@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Flask-SocketIO-Extended
+Version: 0.0.1
+Summary: Simple and easy SocketIO tool for Flask
+Home-page: UNKNOWN
+Author: MallyCrip
+Author-email: pycon@kakao.com
+License: UNKNOWN
+Keywords: api,socketio
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3
+Requires-Dist: socketio
+Requires-Dist: flask
+
+UNKNOWN
+
+
