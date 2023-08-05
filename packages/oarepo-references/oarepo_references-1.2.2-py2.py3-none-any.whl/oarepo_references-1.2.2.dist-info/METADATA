@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: oarepo-references
+Version: 1.2.2
+Summary: OArepo module for tracking and updating references in Invenio records
+Home-page: https://github.com/oarepo/oarepo-references
+Author: Miroslav Bauer, CESNET
+Author-email: bauer@cesnet.cz
+License: MIT
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Development Status :: 4 - Beta
+Requires-Dist: Flask-BabelEx (>=0.9.3)
+Provides-Extra: all
+Requires-Dist: Sphinx (>=1.5.1) ; extra == 'all'
+Requires-Dist: check-manifest (>=0.25) ; extra == 'all'
+Requires-Dist: coverage (>=4.0) ; extra == 'all'
+Requires-Dist: isort (>=4.3.3) ; extra == 'all'
+Requires-Dist: pydocstyle (>=2.0.0) ; extra == 'all'
+Requires-Dist: pytest-cov (>=2.5.1) ; extra == 'all'
+Requires-Dist: pytest-pep8 (>=1.0.6) ; extra == 'all'
+Requires-Dist: pytest-invenio (>=1.0.5) ; extra == 'all'
+Requires-Dist: invenio[auth,base,elasticsearch6,metadata,postgresql,tests] (==3.1.1) ; extra == 'all'
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=1.5.1) ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: check-manifest (>=0.25) ; extra == 'tests'
+Requires-Dist: coverage (>=4.0) ; extra == 'tests'
+Requires-Dist: isort (>=4.3.3) ; extra == 'tests'
+Requires-Dist: pydocstyle (>=2.0.0) ; extra == 'tests'
+Requires-Dist: pytest-cov (>=2.5.1) ; extra == 'tests'
+Requires-Dist: pytest-pep8 (>=1.0.6) ; extra == 'tests'
+Requires-Dist: pytest-invenio (>=1.0.5) ; extra == 'tests'
+Requires-Dist: invenio[auth,base,elasticsearch6,metadata,postgresql,tests] (==3.1.1) ; extra == 'tests'
+
+..
+    Copyright (C) 2019 Miroslav Bauer, CESNET.
+
+    oarepo-references is free software; you can redistribute it and/or
+    modify it under the terms of the MIT License; see LICENSE file for more
+    details.
+
+===================
+ oarepo-references
+===================
+
+.. image:: https://img.shields.io/travis/oarepo/oarepo-references.svg
+        :target: https://travis-ci.org/oarepo/oarepo-references
+
+.. image:: https://img.shields.io/coveralls/oarepo/oarepo-references.svg
+        :target: https://coveralls.io/r/oarepo/oarepo-references
+
+.. image:: https://img.shields.io/github/tag/oarepo/oarepo-references.svg
+        :target: https://github.com/oarepo/oarepo-references/releases
+
+.. image:: https://img.shields.io/pypi/dm/oarepo-references.svg
+        :target: https://pypi.python.org/pypi/oarepo-references
+
+.. image:: https://img.shields.io/github/license/oarepo/oarepo-references.svg
+        :target: https://github.com/oarepo/oarepo-references/blob/master/LICENSE
+
+OArepo module for tracking and updating references in Invenio records
+
+TODO: Please provide feature overview of module
+
+Further documentation is available on
+https://oarepo-references.readthedocs.io/
+
+
+..
+    Copyright (C) 2019 Miroslav Bauer, CESNET.
+
+    oarepo-references is free software; you can redistribute it and/or
+    modify it under the terms of the MIT License; see LICENSE file for more
+    details.
+
+Changes
+=======
+
+Version 0.1.0 (released TBD)
+
+- Initial public release.
+
+
