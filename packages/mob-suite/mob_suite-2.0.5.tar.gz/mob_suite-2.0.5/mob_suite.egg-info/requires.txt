@@ -1,0 +1,9 @@
+numpy>=1.11.1
+tables>=3.3.0
+pandas>=0.22.0
+biopython>=1.70
+pycurl>=7.43.0
+scipy>=1.1.0
+ete3>=3.0
+six>=1.10
+pyqt5>=5.0
