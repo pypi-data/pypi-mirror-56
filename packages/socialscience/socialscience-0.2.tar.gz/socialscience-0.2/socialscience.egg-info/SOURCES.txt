@@ -1,0 +1,13 @@
+README.md
+setup.py
+socialscience/__init__.py
+socialscience/bivariate.py
+socialscience/crosstab.py
+socialscience/multivariate.py
+socialscience/univariate.py
+socialscience.egg-info/PKG-INFO
+socialscience.egg-info/SOURCES.txt
+socialscience.egg-info/dependency_links.txt
+socialscience.egg-info/not-zip-safe
+socialscience.egg-info/requires.txt
+socialscience.egg-info/top_level.txt
