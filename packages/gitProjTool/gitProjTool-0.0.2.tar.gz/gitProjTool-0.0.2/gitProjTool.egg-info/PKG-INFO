@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: gitProjTool
+Version: 0.0.2
+Summary: a tool that analyse project on git
+Home-page: https://github.com/Onion-Shen/GitProjectTool
+Author: Onion-Shen
+Author-email: 18513385631@163.com
+License: UNKNOWN
+Description: # GitProjectTool
+        a tool of me to analyze git project,the script is MacOS only because my work is around Apple environment and there is no motivation for me to cross platform. 
+        
+        # installation
+        ```
+        pip install gitProjTool
+        ```
+        
+        # usage
+        ```
+        gitProjTool projPath
+        
+        optional flags:
+        -after      :       the day after commit
+        -before     :       the day before commit
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
