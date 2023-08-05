@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: traceanalyzer
+Version: 1.0.0
+Summary: This library  provides analyzing and plotting functions of ns2 trace file in Python.
+Home-page: https://github.com/StanyMwamba/traceanalyzer
+Author: Stany Mwamba Bakajika
+Author-email: mwambastany@gmail.com
+License: http://opensource.org/licenses/MIT
+Download-URL: http://packages.python.org/tracenalyzer
+Description: UNKNOWN
+Keywords: NS2 trace file
+Platform: ALL
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Education
+Requires-Python: >=3.6
