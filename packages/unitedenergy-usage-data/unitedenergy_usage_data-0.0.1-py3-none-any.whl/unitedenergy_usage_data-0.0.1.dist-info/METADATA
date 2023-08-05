@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: unitedenergy-usage-data
+Version: 0.0.1
+Summary: Energy Easy helper class
+Home-page: https://github.com/ettiennegous/united-energy-usage-data
+Author: Ettienne Gous
+Author-email: ettiennegous@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+This helper class is to read electricity usage data from Unit Energy's Energy Easy portal.  United Energy is an electricity distributor for Melbourne Victoria's south eastern suburbs and the Mornington Peninsula.
+
+
