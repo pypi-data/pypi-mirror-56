@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: infer-license
+Version: 0.0.1
+Summary: A script to guess licenses based on text
+Home-page: https://github.com/python-packaging/infer-license
+Author: Tim Hatch
+Author-email: tim@timhatch.com
+License: MIT
+Description: # Infer License
+        
+        Heavily inspired by https://github.com/sol/infer-license/ this will provide an
+        API to guess what license a given file represents.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
