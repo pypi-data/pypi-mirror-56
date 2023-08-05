@@ -1,0 +1,13 @@
+CHANGELOG.rst
+MANIFEST.in
+README.md
+setup.py
+pysqs_extended_client/SQSClientExtended.py
+pysqs_extended_client/__init__.py
+pysqs_extended_client/config.py
+pysqs_extended_client.egg-info/PKG-INFO
+pysqs_extended_client.egg-info/SOURCES.txt
+pysqs_extended_client.egg-info/dependency_links.txt
+pysqs_extended_client.egg-info/requires.txt
+pysqs_extended_client.egg-info/top_level.txt
+pysqs_extended_client.egg-info/zip-safe
