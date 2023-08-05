@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: freecall
+Version: 0.2.1
+Summary: Function memoization
+Home-page: https://github.com/Zenith00/freecall
+Author: Zenith00
+Author-email: Zenith00dev@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: dill
+
+# freecall
+
+Function Recalling
+
