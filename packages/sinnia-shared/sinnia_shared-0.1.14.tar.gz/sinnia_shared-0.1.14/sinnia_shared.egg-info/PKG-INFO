@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: sinnia-shared
+Version: 0.1.14
+Summary: Sinnia Utilities
+Home-page: https://github.com/sinnia/scripts/tree/develop/shared
+Author: Sinnia
+Author-email: sonia.segura@sinnia.com
+License: UNKNOWN
+Description: # Sinnia Utils
+        
+        Python utilities for Sinnia
+        
+        ----
+        
+        Includes:
+        
+         - AMQP Utils
+         - Timezone Utils
+         - Miscellaneous Utils
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
