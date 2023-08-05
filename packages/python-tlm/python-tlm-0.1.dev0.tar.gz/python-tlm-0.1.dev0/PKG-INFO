@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: python-tlm
+Version: 0.1.dev0
+Summary: Python Transaction Level Modeling
+Home-page: https://github.com/wallento/python-tlm
+Author: Stefan Wallentowitz
+Author-email: stefan@wallentowitz.de
+License: UNKNOWN
+Description: Python Transaction Level Modeling
+        =================================
+        
+        Python adapter for SystemC Transaction Level Modeling
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
