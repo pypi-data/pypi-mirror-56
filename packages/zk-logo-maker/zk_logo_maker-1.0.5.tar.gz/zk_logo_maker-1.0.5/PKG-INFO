@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: zk_logo_maker
+Version: 1.0.5
+Summary: Tool to make zhike logos
+Home-page: https://github.com/caojianfeng/zk_logo_maker
+Author: JeffreyCao
+Author-email: jeffreycao1024@gmail.com
+License: MIT Licence
+Description: Tool to make zhike logos
+Keywords: pip,zk_logo_maker
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
