@@ -1,0 +1,3 @@
+well_known_url: <INSERT WELL KNOWN URL HERE>
+client_id: <INSERT CLIENT ID HERE>
+scope: <INSERT SCOPE HERE>

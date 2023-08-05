@@ -1,0 +1,207 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Lambda function which builds the OIDC claim group to role map file and uploads it to S3. Function is triggered hourly
+Metadata:
+  Source: https://github.com/mozilla-iam/mozilla-aws-cli/blob/master/cloudformation/group_role_map_builder/group_role_map_builder.yaml
+  'AWS::CloudFormation::Interface':
+    ParameterGroups:
+    - Label:
+        default: Stack Emission Table
+      Parameters:
+      - StackEmissionDynamoDBTableName
+      - StackEmissionDynamoDBTableRegion
+    - Label:
+        default: S3
+      Parameters:
+      - S3BucketName
+      - GroupRoleMapS3FilePath
+      - AccountAliasesS3FilePath
+    - Label:
+        default: OIDC Configuration
+      Parameters:
+      - ProviderUrls
+      - AmrClaims
+    ParameterLabels:
+      StackEmissionDynamoDBTableName:
+        default: Stack Emission DynamoDB Table Name
+      StackEmissionDynamoDBTableRegion:
+        default: Stack Emission DynamoDB Region
+      S3BucketName:
+        default: S3 Bucket Name
+      GroupRoleMapS3FilePath:
+        default: Group Role Map S3 File Path
+      AccountAliasesS3FilePath:
+        default: AWS Account Alias Map S3 File Path
+Parameters:
+  StackEmissionDynamoDBTableName:
+    Type: String
+    Description: The DynamoDB table name of the CloudFormation Stack Emission table containing the IAM Roles used to gather policies from various AWS accounts
+    Default: cloudformation-stack-emissions
+  StackEmissionDynamoDBTableRegion:
+    Type: String
+    Description: The region containing the DynamoDB CloudFormation Stack Emission table containing the IAM Roles used to gather policies from various AWS accounts
+    Default: us-west-2
+  S3BucketName:
+    Type: String
+    Description: The S3 bucket to store the group role map file in
+  GroupRoleMapS3FilePath:
+    Type: String
+    Description: The path to the group role map file
+    Default: access-group-iam-role-map.json
+  AccountAliasesS3FilePath:
+    Type: String
+    Description: The path to the account aliases map file
+    Default: account-aliases.json
+  ProviderUrls:
+    Type: String
+    Description: A comma delimited list of AWS IAM OIDC Provider URLs
+  AmrClaims:
+    Type: String
+    Description: A comma delimited list of OIDC AMR claim names
+Resources:
+  GroupRoleMapBuilderRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Policies:
+        - PolicyName: AllowLambdaLogging
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: '*'
+        - PolicyName: AllowQueryStackEmissionTable
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:Query
+                Resource: !Join ['', ['arn:aws:dynamodb:', !Ref 'StackEmissionDynamoDBTableRegion', ':', !Ref 'AWS::AccountId', ':table/', !Ref 'StackEmissionDynamoDBTableName', '/*']]
+        - PolicyName: AllowAssumeSecurityAuditRole
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sts:AssumeRole
+                Resource: '*'
+        - PolicyName: AllowManageS3GroupRoleMap
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                Resource:
+                  - !Join ['', ['arn:aws:s3:::', !Ref 'S3BucketName', '/', !Ref 'GroupRoleMapS3FilePath']]
+                  - !Join ['', ['arn:aws:s3:::', !Ref 'S3BucketName', '/', !Ref 'AccountAliasesS3FilePath']]
+              - Effect: Allow
+                Action:
+                  - s3:ListBucket
+                Resource: !Join ['', ['arn:aws:s3:::', !Ref 'S3BucketName']]
+#        - PolicyName: AllowPubishSQSForMozDef
+#          PolicyDocument:
+#            Version: 2012-10-17
+#            Statement:
+#              - Effect: Allow
+#                Action:
+#                  - sqs:GetQueueUrl
+#                  - sqs:SendMessage
+#                Resource: '*'  # TODO : Limit this to only the MozDef queue?
+  GroupRoleMapBuilderFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: Build a map file for OIDC claim groups and IAM roles, storing it in S3
+      Code: build/
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref StackEmissionDynamoDBTableName
+          TABLE_REGION: !Ref StackEmissionDynamoDBTableRegion
+          S3_BUCKET_NAME: !Ref S3BucketName
+          S3_FILE_PATH_GROUP_ROLE_MAP: !Ref GroupRoleMapS3FilePath
+          S3_FILE_PATH_ALIAS_MAP: !Ref AccountAliasesS3FilePath
+          VALID_FEDERATED_PRINCIPAL_URLS: !Ref ProviderUrls
+          VALID_AMRS: !Ref AmrClaims
+      Handler: group_role_map_builder.lambda_handler
+      Runtime: python3.7
+      Role: !GetAtt GroupRoleMapBuilderRole.Arn
+      Tags:
+        - Key: application
+          Value: group-role-map-builder
+        - Key: stack
+          Value: !Ref AWS::StackName
+        - Key: source
+          Value: https://github.com/mozilla-iam/mozilla-aws-cli/tree/master/cloudformation
+      Timeout: 900
+  GroupRoleMapBuilderScheduledRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: "Trigger Group Role Map Builder every hour"
+      ScheduleExpression: "cron(10 * * * ? *)"
+      State: "ENABLED"
+      Targets:
+        - Arn: !GetAtt GroupRoleMapBuilderFunction.Arn
+          Id: "GroupRoleMapBuilder"
+  PermissionForEventsToInvokeLambda:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName:
+        Ref: GroupRoleMapBuilderFunction
+      Action: "lambda:InvokeFunction"
+      Principal: "events.amazonaws.com"
+      SourceArn: !GetAtt GroupRoleMapBuilderScheduledRule.Arn
+  GroupRoleMapBuilderFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      # Let's hope that the Lambda function doesn't execute before this LogGroup
+      # resource is created, creating the LogGroup with no expiration and
+      # preventing this resource from creating
+      LogGroupName: !Join [ '/', ['/aws/lambda', !Ref 'GroupRoleMapBuilderFunction' ] ]
+      RetentionInDays: 14
+  GroupRoleMapConsumerUser:
+    Type: AWS::IAM::User
+    Properties:
+      Policies:
+        - PolicyName: AllowReadS3GroupRoleMap
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource:
+                  - !Join ['', ['arn:aws:s3:::', !Ref 'S3BucketName', '/', !Ref 'GroupRoleMapS3FilePath']]
+                  - !Join ['', ['arn:aws:s3:::', !Ref 'S3BucketName', '/', !Ref 'AccountAliasesS3FilePath']]
+              - Effect: Allow
+                Action:
+                  - s3:ListBucket
+                Resource: !Join ['', ['arn:aws:s3:::', !Ref 'S3BucketName']]
+  GroupRoleMapConsumerAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      Serial: 20190815
+      Status: Active
+      UserName: !Ref GroupRoleMapConsumerUser
+Outputs:
+  GroupRoleMapConsumerUserName:
+    Description: The Username of the GroupRoleMapConsumerUser
+    Value: !Ref GroupRoleMapConsumerUser
+  GroupRoleMapConsumerUserAccessKeyId:
+    Description: The AWS API Access Key ID of the GroupRoleMapConsumerUser
+    Value: !Ref GroupRoleMapConsumerAccessKey
+  GroupRoleMapConsumerUserSecretAccessKey:
+    Description: The AWS API Access Key Secret Key of the GroupRoleMapConsumerUser
+    Value: !GetAtt GroupRoleMapConsumerAccessKey.SecretAccessKey
