@@ -1,0 +1,9 @@
+setup.py
+csi_utils/__init__.py
+csi_utils/csi_sub.py
+csi_utils/serialsocket.py
+csi_utils.egg-info/PKG-INFO
+csi_utils.egg-info/SOURCES.txt
+csi_utils.egg-info/dependency_links.txt
+csi_utils.egg-info/requires.txt
+csi_utils.egg-info/top_level.txt
