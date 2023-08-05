@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: hrpy
+Version: 0.2.2
+Summary: hr but written in python
+License: MIT
+Author: John Naylor
+Author-email: jonaylor89@gmail.com
+Requires-Python: >=3.0,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/x-rst
+
+hrpy
+====
+
+*hr* but in python
+
+--------------
+
+USAGE
+-----
+
+::
+
+       ~$ hr [STRING]...
+
+Every argument passed to the program gets multiplied across the length
+of the terminal window
+
+--------------
+
+Example
+-------
+
+::
+
+       ~$ hr - + -
+       ------------------------------------- ...
+       +++++++++++++++++++++++++++++++++++++ ...
+       ------------------------------------- ...
+
+--------------
+
+The current use I have for this is to make log files less of a mess
+
