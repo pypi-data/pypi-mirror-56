@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: auspost
+Version: 0.0.7
+Summary: Australia Post data grabber
+Home-page: https://github.com/yaleman/auspost
+Author: James Hodgkinson
+Author-email: yaleman+pypi_auspost@ricetek.net
+License: MIT
+Keywords: australia post suburb postcode
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: MechanicalSoup
+Requires-Dist: lxml
+
+A quick module for searching and pulling suburb data from the Australia Post website.
+
+
