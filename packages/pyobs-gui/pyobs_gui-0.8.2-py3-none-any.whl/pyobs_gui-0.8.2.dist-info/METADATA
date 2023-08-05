@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyobs-gui
+Version: 0.8.2
+Summary: GUI for pyobs
+Home-page: UNKNOWN
+Author: Tim-Oliver Husser
+Author-email: thusser@uni-goettingen.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: aplpy
+Requires-Dist: astroplan
+Requires-Dist: astropy
+Requires-Dist: astroquery
+Requires-Dist: colour
+Requires-Dist: matplotlib
+Requires-Dist: pyobs-core
+
+UNKNOWN
+
+
