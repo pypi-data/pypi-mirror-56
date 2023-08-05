@@ -1,0 +1,10 @@
+requests
+six
+py7zr
+pyyaml
+
+[dev]
+pytest
+pytest-pep8
+pytest-cov
+flake8
