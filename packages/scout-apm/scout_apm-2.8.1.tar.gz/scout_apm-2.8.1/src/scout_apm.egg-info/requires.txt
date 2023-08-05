@@ -1,0 +1,6 @@
+psutil<6,>=5
+requests<3,>=2
+wrapt<2.0,>=1.10
+
+[:python_version >= "3.5"]
+asgiref
