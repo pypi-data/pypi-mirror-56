@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+Keras_JukeBox.egg-info/PKG-INFO
+Keras_JukeBox.egg-info/SOURCES.txt
+Keras_JukeBox.egg-info/dependency_links.txt
+Keras_JukeBox.egg-info/entry_points.txt
+Keras_JukeBox.egg-info/requires.txt
+Keras_JukeBox.egg-info/top_level.txt
+keras_jukebox/__init__.py
+keras_jukebox/frontend_simulator.py
+keras_jukebox/jukebox_backend.py
+keras_jukebox/jukebox_ui.py
+keras_jukebox/utils.py
+keras_jukebox/images/pause.png
+keras_jukebox/images/play.png
+keras_jukebox/images/stop.png

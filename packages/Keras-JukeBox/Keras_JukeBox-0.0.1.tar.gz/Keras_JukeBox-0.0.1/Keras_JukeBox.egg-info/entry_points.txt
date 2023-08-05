@@ -1,0 +1,3 @@
+[console_scripts]
+start_jukebox = keras_jukebox.jukebox_ui:main
+
