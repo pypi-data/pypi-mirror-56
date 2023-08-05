@@ -1,0 +1,14 @@
+.coveragerc
+.gitignore
+LICENSE.txt
+README.md
+requirements.txt
+setup.cfg
+setup.py
+src/machinable/__init__.py
+src/machinable.egg-info/PKG-INFO
+src/machinable.egg-info/SOURCES.txt
+src/machinable.egg-info/dependency_links.txt
+src/machinable.egg-info/not-zip-safe
+src/machinable.egg-info/requires.txt
+src/machinable.egg-info/top_level.txt

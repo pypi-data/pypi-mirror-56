@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: machinable
+Version: 0.0.1
+Summary: Configuration spec for machine learning projects
+Home-page: https://github.com/pyscaffold/pyscaffold/
+Author: Frithjof Gressmann
+Author-email: frithjof@noc.io
+License: mit
+Project-URL: Documentation, https://pyscaffold.org/
+Description: # machinable
+        
+        - Powerful configuration
+        - Seamless local and cloud execution
+        - Managed result collection and analysis
+        - Modular sharing and importing
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown; charset=UTF-8
+Provides-Extra: testing
