@@ -1,0 +1,11 @@
+README.md
+setup.py
+pearun/__init__.py
+pearun/__main__.py
+pearun/exceptions.py
+pearun/parser.py
+pearun.egg-info/PKG-INFO
+pearun.egg-info/SOURCES.txt
+pearun.egg-info/dependency_links.txt
+pearun.egg-info/entry_points.txt
+pearun.egg-info/top_level.txt
