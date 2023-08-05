@@ -1,0 +1,8 @@
+Django >= 1.11
+mock >= 2.0.0
+python-ldap >= 3.0
+sphinx
+setuptools
+wheel
+twine
+pbr

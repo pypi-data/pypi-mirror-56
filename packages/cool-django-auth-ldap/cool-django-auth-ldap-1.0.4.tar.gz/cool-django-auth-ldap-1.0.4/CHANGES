@@ -1,0 +1,32 @@
+Changelog
+=========
+
+
+1.0.0 (2019-11-19)
+------------------
+
+New
+~~~
+- Project documentation. [artem.vasin]
+
+Other
+~~~~~
+- [skip travis] docs. [artem.vasin]
+- [skip travis] docs. [artem.vasin]
+- Fixed tests for Django < 2.1. [artem.vasin]
+- Fixed tests for Django < 2.1. [artem.vasin]
+- * Fixed migrations. [artem.vasin]
+- * Group mapping in permission find * Group mapping in group mirroring.
+  [artem.vasin]
+- * Delete field ldap_group dn * Add test for future functionality.
+  [artem.vasin]
+- Table for groups mapping. [artem.vasin]
+- Pylint fixes. [artem.vasin]
+- Restore tests. [artem.vasin]
+
+
+0.0.1 (2019-11-18)
+------------------
+- Initial commit. [artem.vasin]
+
+
