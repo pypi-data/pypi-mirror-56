@@ -1,0 +1,71 @@
+Metadata-Version: 1.1
+Name: sitemap
+Version: 20191121
+Summary: Sitemap library
+Home-page: https://github.com/cxmcc/sitemap-python
+Author: Xiuming Chen
+Author-email: cc@cxm.cc
+License: MIT
+Description: sitemap
+        =======
+        
+        Sitemap library for dynamically generating ``sitemap.xml``
+        
+        .. image:: https://img.shields.io/pypi/v/sitemap.svg
+            :target: https://pypi.python.org/pypi/sitemap
+        
+        Installation
+        ------------
+        
+        .. code:: bash
+        
+            pip install sitemap
+        
+        Usage
+        -----
+        
+        Urlset
+        ^^^^^^
+        
+        .. code:: python
+        
+            from sitemap import Url, Urlset
+            
+            urlset = Urlset()
+            url = Url('https://www.example.com/', changefreq='weekly')
+            
+            urlset.add_url(url)
+        
+            # urlset.to_string()
+            urlset.write_xml('sitemap.xml')
+        
+        Siteindex
+        ^^^^^^^^^
+        
+        .. code:: python
+        
+            from sitemap import Sitemap, Siteindex
+            
+            siteindex = Siteindex()
+            sitemap = Sitemap('https://www.example.com/sitemap.xml')
+            
+            siteindex.add_sitemap(sitemap)
+        
+            # siteindex.to_string()
+            siteindex.write_xml('sitemap.xml')
+        
+        
+Keywords: sitemap
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
