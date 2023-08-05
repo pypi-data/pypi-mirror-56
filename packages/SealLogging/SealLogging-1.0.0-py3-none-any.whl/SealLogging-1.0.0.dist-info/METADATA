@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: SealLogging
+Version: 1.0.0
+Summary: A Logging Library for Seal Softwares
+Home-page: https://bitbucket.wdc.com/projects/HDDRDSDSMML/repos/inspection-false-call-detector
+Author: Darwin Subramaniam
+Author-email: darwin.subramaniam@wdc.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# SealLogging Package
+
+This is SealLogging Package for logging in different ENVIROMENT
+
+
