@@ -1,0 +1,14 @@
+README.md
+setup.py
+firefox_secure_proxy/constants.py
+firefox_secure_proxy/getproxytoken.py
+firefox_secure_proxy/login.py
+firefox_secure_proxy/token.py
+firefox_secure_proxy/utils.py
+firefox_secure_proxy.egg-info/PKG-INFO
+firefox_secure_proxy.egg-info/SOURCES.txt
+firefox_secure_proxy.egg-info/dependency_links.txt
+firefox_secure_proxy.egg-info/entry_points.txt
+firefox_secure_proxy.egg-info/requires.txt
+firefox_secure_proxy.egg-info/top_level.txt
+firefox_secure_proxy.egg-info/zip-safe
