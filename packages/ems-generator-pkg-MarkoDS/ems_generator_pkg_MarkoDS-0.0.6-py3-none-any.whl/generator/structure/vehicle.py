@@ -1,0 +1,32 @@
+def vehicle_fields(claim):
+    """T."""
+    return {
+        'IMPACT_1 C(2)': '',
+        'IMPACT_2 C(30)': '',
+        'DMG_MEMO C(10)': '',
+        'DB_V_CODE C(7)': '',
+        'PLATE_NO C(10)': claim['VEHICLE_PLATE_NUMBER'],
+        'PLATE_ST C(2)': claim['VEHICLE_PLATE_STATE'],
+        'V_VIN C(25)': claim['VEHICLE_VIN'],
+        'V_COND C(2)': '',
+        'V_PROD_DT C(4)': '',
+        'V_MODEL_YR C(2)': str(claim['VEHICLE_YEAR'])[-2:],
+        'V_MAKECODE C(12)': claim['VEHICLE_MAKE'],
+        'V_MAKEDESC C(20)': '',
+        'V_MODEL C(50)': claim['VEHICLE_MODEL'],
+        'V_TYPE C(2)': '',
+        'V_BSTYLE C(20)': '',
+        'V_TRIMCODE C(20)': '',
+        'TRIM_COLOR C(20)': '',
+        'V_MLDGCODE C(20)': '',
+        'V_ENGINE C(20)': '',
+        'V_MILEAGE C(6)': '1',
+        'V_OPTIONS C(10)': '',
+        'V_COLOR C(20)': claim['VEHICLE_COLOR'],
+        'V_TONE N(1,0)': None,
+        'V_STAGE N(1,0)': None,
+        'PAINT_CD1 C(15)': '',
+        'PAINT_CD2 C(15)': '',
+        'PAINT_CD3 C(15)': '',
+        'V_MEMO C(10)': ''
+    }
