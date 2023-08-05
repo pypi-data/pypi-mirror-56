@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pyxa
+Version: 0.0a1
+Summary: pyXA is an open source function serving framework for Charlotte AI.
+Home-page: https://github.com/xames3/
+Author: XA
+Author-email: xames3.charlotte@gmail.com
+License: Apache 2.0
+Download-URL: https://github.com/xames3/pyxa/tags
+Keywords: pyxa charlotte ai artificial intelligence
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/plain
+Requires-Dist: fuzzywuzzy
+Requires-Dist: geocoder
+Requires-Dist: geolocation-python
+Requires-Dist: googlemaps
+Requires-Dist: hurry.filesize
+Requires-Dist: python-Levenshtein
+Requires-Dist: reverse-geocode
+
+pyXA is an open source software library for high-performance complex
+functional programming. Its flexible architecture allows easy deployment
+of its functional usage across a variety of domains.
+
+Originally inspired by TensorFlow & Rasa, it comes with strong support
+for continuous updates, reliable functions and overall ease of use.
+
+
