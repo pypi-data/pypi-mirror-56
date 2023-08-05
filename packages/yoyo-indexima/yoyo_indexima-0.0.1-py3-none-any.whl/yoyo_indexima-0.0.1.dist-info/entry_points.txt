@@ -1,0 +1,3 @@
+[console_scripts]
+yoyo_indexima=yoyo_indexima.cli:main
+
