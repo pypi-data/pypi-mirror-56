@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: policypools
+Version: 0.0.20
+Summary: Provides thread and process pools with policies
+Home-page: https://github.com/alexanderepstein/policypools
+Author: Alexander Epstein
+Author-email: alexanderepstein@tuta.io
+License: MIT
+Keywords: multithreading,policy,thread-pool,thread-policypools,policies
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+
+For information on this package refer to the github: https://github.com/alexanderepstein/policypools
+
+
