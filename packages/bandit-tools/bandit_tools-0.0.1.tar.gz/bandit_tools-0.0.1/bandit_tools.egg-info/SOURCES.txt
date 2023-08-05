@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+bandit_tools/__init__.py
+bandit_tools/baseline_tools.py
+bandit_tools/custom_report.py
+bandit_tools.egg-info/PKG-INFO
+bandit_tools.egg-info/SOURCES.txt
+bandit_tools.egg-info/dependency_links.txt
+bandit_tools.egg-info/entry_points.txt
+bandit_tools.egg-info/requires.txt
+bandit_tools.egg-info/top_level.txt
