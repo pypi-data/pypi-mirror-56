@@ -1,0 +1,3 @@
+[console_scripts]
+imdb-search = imdb_search.main:main
+
