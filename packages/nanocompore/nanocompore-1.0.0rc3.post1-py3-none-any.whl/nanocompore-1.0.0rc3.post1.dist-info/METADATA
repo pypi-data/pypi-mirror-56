@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: nanocompore
+Version: 1.0.0rc3.post1
+Summary: Software package that identifies raw signal changes between two conditions from https://github.com/jts/nanopolish resquiggled dRNA-Seq data.
+Home-page: https://github.com/tleonardi/nanocompore
+License: GPL-3.0
+Author: Tommaso Leonardi
+Author-email: tom@itm6.xyz
+Requires-Python: >=3.6.1
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Dist: bedparse (>=0.2.2,<0.3.0)
+Requires-Dist: matplotlib (>=3.1,<4.0)
+Requires-Dist: numpy (>=1.16,<2.0)
+Requires-Dist: pandas (>=0.24.2,<0.25.0)
+Requires-Dist: pyfaidx (>=0.5.5,<0.6.0)
+Requires-Dist: pyyaml (>=5.1,<6.0)
+Requires-Dist: scikit-learn (>=0.21.2,<0.22.0)
+Requires-Dist: scipy (>=1.2,<1.3)
+Requires-Dist: seaborn (>=0.9.0,<0.10.0)
+Requires-Dist: statsmodels (>=0.9.0,<0.10.0)
+Requires-Dist: tqdm (>=4.32,<5.0)
+Project-URL: Documentation, http://nanocompore.rna.rocks
+Project-URL: Repository, https://github.com/tleonardi/nanocompore
+Description-Content-Type: text/markdown
+
+![Nanocompore](docs/pictures/Nanocompore_logo.png)
+
+---
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![Build Status](https://travis-ci.com/tleonardi/nanocompore.svg?token=2uTrW9fP9RypfMALjksc&branch=master)](https://travis-ci.com/tleonardi/nanocompore)
+
+---
+
+**Nanocompore identifies differences in ONT nanopore sequencing raw signal corresponding to RNA modifications by comparing 2 samples**
+
+Nanocompore compares 2 ONT nanopore direct RNA sequencing datasets from different experimental conditions expected to have a significant impact on RNA modifications. It is recommended to have at least 2 replicates per condition. For example one can use a control condition with a significantly reduced number of modifications such as a cell line for which a modification writing enzyme was knocked-down or knocked-out. Alternatively, on a smaller scale transcripts of interests could be synthesized in-vitro.
+
+Full documentation is available at http://nanocompore.rna.rocks
+
