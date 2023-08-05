@@ -1,0 +1,3 @@
+[console_scripts]
+translate_it = translate_it.translate_it:command_line_runner
+
