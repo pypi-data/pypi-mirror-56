@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: ghubunix
+Version: 1.0.2
+Summary: Browse GitHub like it is Unix
+Home-page: https://github.com/BBloggsbott/ghub
+Author: Vishal R
+Author-email: vishal27.rs@outlook.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7.*
+Description-Content-Type: text/markdown
+Requires-Dist: aspy.yaml (==1.3.0)
+Requires-Dist: atomicwrites (==1.3.0)
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: certifi (==2019.9.11)
+Requires-Dist: cfgv (==2.0.1)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: codecov (==2.0.15)
+Requires-Dist: colorama (==0.4.1)
+Requires-Dist: coverage (==4.5.4)
+Requires-Dist: gitdb2 (==2.0.6)
+Requires-Dist: GitPython (==3.0.4)
+Requires-Dist: identify (==1.4.7)
+Requires-Dist: idna (==2.8)
+Requires-Dist: importlib-metadata (==0.23)
+Requires-Dist: Mako (==1.1.0)
+Requires-Dist: Markdown (==3.1.1)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: more-itertools (==7.2.0)
+Requires-Dist: nodeenv (==1.3.3)
+Requires-Dist: oauthlib (==3.1.0)
+Requires-Dist: packaging (==19.2)
+Requires-Dist: pathlib (==1.0.1)
+Requires-Dist: pdoc3 (==0.7.1)
+Requires-Dist: pluggy (==0.13.0)
+Requires-Dist: py (==1.8.0)
+Requires-Dist: pyparsing (==2.4.2)
+Requires-Dist: PyYAML (==5.1.2)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: requests-oauthlib (==1.2.0)
+Requires-Dist: Send2Trash (==1.5.0)
+Requires-Dist: six (==1.12.0)
+Requires-Dist: smmap2 (==2.0.5)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: toml (==0.10.0)
+Requires-Dist: urllib3 (==1.25.6)
+Requires-Dist: virtualenv (==16.7.7)
+Requires-Dist: wcwidth (==0.1.7)
+Requires-Dist: zipp (==0.6.0)
+
+# ghub
+A Unix like CLI for GitHub. [![Build Status](https://travis-ci.org/BBloggsbott/ghub.svg?branch=master)](https://travis-ci.org/BBloggsbott/ghub)
+
+For more instructions on setup and usage, check the wiki [here](https://github.com/BBloggsbott/ghub/wiki).
+
+Interested in contributing? Read the contributing guidelines [here](CONTRIBUTING.md).
+
+
