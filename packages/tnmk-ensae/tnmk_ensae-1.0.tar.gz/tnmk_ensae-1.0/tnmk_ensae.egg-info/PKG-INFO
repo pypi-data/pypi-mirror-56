@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tnmk-ensae
+Version: 1.0
+Summary: Un module graphique pour la visualisation
+Home-page: UNKNOWN
+Author: TABSOBA_NGARBAYE_MBIA_KONDO
+Author-email: ngarbaye.54@gmail.com
+License: MIT
+Description: ï»¿# README
+        
+        
+        ### Presentation du package
+        
+        Le package tnmk_ensae est un module graphique de visualisation (animee ou non) utilisant principalement une surcouche du package matplotlib, a savoir cartopy. Il contient deux fonctions qui visualisent l evolution temporelle d une donnee numerique geolocalisee, de deux facons distinctes.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
