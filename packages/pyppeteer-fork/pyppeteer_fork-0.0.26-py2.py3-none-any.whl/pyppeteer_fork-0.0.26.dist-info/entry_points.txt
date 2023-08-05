@@ -1,0 +1,3 @@
+[console_scripts]
+pyppeteer_fork-install = pyppeteer_fork.command:install
+
