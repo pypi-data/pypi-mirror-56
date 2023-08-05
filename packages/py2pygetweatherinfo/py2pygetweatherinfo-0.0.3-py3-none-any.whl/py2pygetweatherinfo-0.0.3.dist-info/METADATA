@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: py2pygetweatherinfo
+Version: 0.0.3
+Summary: Finding the Weather Information of a Place
+Home-page: https://github.com/kpajay17/
+Author: Ajay Prajapati
+Author-email: kpajay.17@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+![](https://img.shields.io/badge/Package-py2pygetweatherinfo-success)
+### Weather Application Web Crawling Task 
+
+
+- It gives hourly, daily, 5-days, 10-days and monthly weather forecasts.
+
+- Find the type of forecasts available. 
+
+- It will takes as input 
+	1. Place  
+	2. Date (optional, default = current time) 
+	3. Type of forecast (optional, default = daily) 
+
+
+
+
+![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+
+![](https://img.shields.io/badge/Version-0.0.3-green)
+
