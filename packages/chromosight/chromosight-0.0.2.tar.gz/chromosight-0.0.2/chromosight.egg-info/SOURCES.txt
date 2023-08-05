@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+chromosight/__init__.py
+chromosight/version.py
+chromosight.egg-info/PKG-INFO
+chromosight.egg-info/SOURCES.txt
+chromosight.egg-info/dependency_links.txt
+chromosight.egg-info/entry_points.txt
+chromosight.egg-info/requires.txt
+chromosight.egg-info/top_level.txt

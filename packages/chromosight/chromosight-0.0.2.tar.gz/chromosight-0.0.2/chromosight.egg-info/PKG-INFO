@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: chromosight
+Version: 0.0.2
+Summary: Detect loops (and other patterns) in Hi-C contact maps.
+
+Home-page: UNKNOWN
+Author: axel.cournac@pasteur.fr
+Author-email: UNKNOWN
+License: GPLv3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Artistic License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Operating System :: OS Independent
