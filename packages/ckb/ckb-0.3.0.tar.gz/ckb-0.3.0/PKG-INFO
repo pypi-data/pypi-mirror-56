@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ckb
+Version: 0.3.0
+Summary: Nervos CKB SDK
+Home-page: https://github.com/doitian/ckb-sdk-python
+Author: ian
+Author-email: ian@nervos.org
+License: MIT
+Description: # CKB SDK Python
+        
+        Install
+        
+        ```
+        pip install -U ckb
+        ```
+        
+        Example
+        
+        ```
+        python
+        >>> import ckb.rpc
+        >>> ckb.rpc.get_tip_block_number()
+        '0x442'
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Description-Content-Type: text/markdown
