@@ -1,0 +1,10 @@
+setup.py
+pytodomd/__init__.py
+pytodomd/cli.py
+pytodomd.egg-info/PKG-INFO
+pytodomd.egg-info/SOURCES.txt
+pytodomd.egg-info/dependency_links.txt
+pytodomd.egg-info/entry_points.txt
+pytodomd.egg-info/not-zip-safe
+pytodomd.egg-info/requires.txt
+pytodomd.egg-info/top_level.txt
