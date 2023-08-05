@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: SparseEdges
+Version: 20191118
+Summary: SparseEdges: A bio-inspired sparse representation of edges in natural images.
+Home-page: https://github.com/bicv/SparseEdges
+Author: Laurent Perrinet INT - CNRS
+Author-email: Laurent.Perrinet@univ-amu.fr
+License: GPLv2
+Download-URL: https://github.com/bicv/SparseEdges/tarball/20191118
+Description: UNKNOWN
+Keywords: computational neuroscience,simulation,analysis,visualization,biologically-inspired,computer vision
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: POSIX
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: html
