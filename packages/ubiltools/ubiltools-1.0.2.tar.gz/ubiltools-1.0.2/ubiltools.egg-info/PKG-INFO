@@ -1,0 +1,30 @@
+Metadata-Version: 1.2
+Name: ubiltools
+Version: 1.0.2
+Summary: A collection of tools I use
+Home-page: https://github.com/umanther/ubiltools
+Author: Geoff Hellstrand
+Author-email: ubil@hotmail.com
+License: UNKNOWN
+Description: ==========
+        ubiltools
+        ==========
+        |licence-img|
+        
+        Purpose
+        =======
+        A set of tools that I've built over time that perform useful (mostly) functions that I've used
+        
+        Source
+        ------
+        Github_
+        
+        .. |licence-img| image:: https://img.shields.io/github/license/umanther/ubil-tools?style=plastic
+        .. _Github: https://github.com/umanther/ubil-tools
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
