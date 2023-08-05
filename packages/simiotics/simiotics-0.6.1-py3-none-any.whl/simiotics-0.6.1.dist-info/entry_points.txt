@@ -1,0 +1,3 @@
+[console_scripts]
+simiotics = simiotics.cli:main
+
