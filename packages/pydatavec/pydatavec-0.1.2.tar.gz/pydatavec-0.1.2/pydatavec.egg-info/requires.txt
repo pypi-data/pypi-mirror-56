@@ -1,0 +1,12 @@
+Cython
+requests
+pydl4j
+numpy<=1.16.4
+
+[spark]
+pyspark
+
+[tests]
+pytest
+pytest-pep8
+mock

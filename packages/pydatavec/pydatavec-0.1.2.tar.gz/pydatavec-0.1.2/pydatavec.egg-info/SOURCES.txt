@@ -1,0 +1,16 @@
+README.md
+setup.py
+pydatavec/__init__.py
+pydatavec/conditions.py
+pydatavec/java_classes.py
+pydatavec/schema.py
+pydatavec/transform_process.py
+pydatavec/utils.py
+pydatavec.egg-info/PKG-INFO
+pydatavec.egg-info/SOURCES.txt
+pydatavec.egg-info/dependency_links.txt
+pydatavec.egg-info/requires.txt
+pydatavec.egg-info/top_level.txt
+pydatavec/executors/__init__.py
+pydatavec/executors/local.py
+pydatavec/executors/spark.py
