@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: use-dir
+Version: 0.1.3
+Summary: 
+Author: Mark Rawls
+Author-email: markrawls96@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+```python
+import use_dir from use_dir
+
+with use_dir('./bin'):
+    # Do stuff here in the bin directory
+    pass
+
+# We are now back in our starting directory, even if an exception was thrown
+```
+
