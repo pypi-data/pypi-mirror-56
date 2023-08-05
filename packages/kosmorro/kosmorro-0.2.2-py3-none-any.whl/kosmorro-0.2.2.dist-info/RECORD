@@ -1,0 +1,15 @@
+kosmorro-0.2.2.data/scripts/kosmorro,sha256=LVJ0rfibMWfsyisr6vAZqAGE0MBABRvYc3XfIXYnqVE,4759
+kosmorrolib/__init__.py,sha256=U3x9ofWz4Y2jvlnkVA9UmxmGOrVSXaot367qpslVd3g,823
+kosmorrolib/core.py,sha256=DA3ucbUWiPkq8fukMh_9yYeKBkC5eKhSacpw8-KfacQ,1743
+kosmorrolib/data.py,sha256=a9nkdGGUBw6LwQSxY70twHUYbBfPzAFnBS8FoFpx9Nw,3066
+kosmorrolib/dumper.py,sha256=_CoXUQGl7oC2j5W8Ud9lrEzv0dSihny4KtO3W3IXjlw,3518
+kosmorrolib/ephemerides.py,sha256=paswKJ4Rum8SnEeSYh5J20OY0MgtF34vq9MUdilvNYU,5730
+kosmorrolib/version.py,sha256=mZfQv9VhEf8mxYj6GJpNhOAHy1HrD9lDV72pboqhseU,842
+test/__init__.py,sha256=LRsmhtz9-BRsSF_nKNrlW6wwrL9_6gC2aNm9RyHO6Dc,49
+test/dumper.py,sha256=Dwk-461fsA63NxpXK-chG57xYMMud7bcqLdXAwjcuRE,1144
+test/ephemerides.py,sha256=-nioNMqytjGwFouwoSvVS-d_FcEeFxcHn1n_w6eg-ww,1009
+kosmorro-0.2.2.dist-info/LICENSE.md,sha256=RJ2-swY_vL3Gml_ztYPGMBd7WuPJBnfdWw1Tf_KbOvc,32089
+kosmorro-0.2.2.dist-info/METADATA,sha256=iMb9CVs_y8EQ8yTe_V8kqp0BeVBuIqrFG2ju-f40rXQ,4200
+kosmorro-0.2.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+kosmorro-0.2.2.dist-info/top_level.txt,sha256=bv11zI8eFZSWFPre105iSTHmWKuULy1TjLIIymjV6HM,17
+kosmorro-0.2.2.dist-info/RECORD,,
