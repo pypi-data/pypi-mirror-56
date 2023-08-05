@@ -1,0 +1,10 @@
+README.md
+setup.py
+datapad/__init__.py
+datapad/io.py
+datapad/sequence.py
+datapad/tests.py
+datapad.egg-info/PKG-INFO
+datapad.egg-info/SOURCES.txt
+datapad.egg-info/dependency_links.txt
+datapad.egg-info/top_level.txt
