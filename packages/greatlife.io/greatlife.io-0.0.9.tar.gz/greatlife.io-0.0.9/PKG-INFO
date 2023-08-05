@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: greatlife.io
+Version: 0.0.9
+Summary: Web application for greatlife.io
+Home-page: https://github.com/maxzheng/greatlife.io
+Author: Max Zheng
+Author-email: maxzheng.os@gmail.com
+License: MIT
+Description: # greatlife.io
+        
+        Web application for http://greatlife.io
+        
+Keywords: web appplication for greatlife.io
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
