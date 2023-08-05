@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+driver.py
+requirements.txt
+setup.py
+AD/DualNumber.py
+AD/ElementaryFunctions.py
+AD/__init__.py
+AD/tests.py
+autodiffing.egg-info/PKG-INFO
+autodiffing.egg-info/SOURCES.txt
+autodiffing.egg-info/dependency_links.txt
+autodiffing.egg-info/top_level.txt
