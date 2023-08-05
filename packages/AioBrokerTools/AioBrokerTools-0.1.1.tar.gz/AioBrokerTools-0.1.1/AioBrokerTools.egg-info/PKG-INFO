@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: AioBrokerTools
+Version: 0.1.1
+Summary: Async rabbitmq microservices framework
+Home-page: https://gitlab.com/maksimvrs/aiobroker
+Author: Maksim Vorontsov
+Author-email: social.maksim.vrs@gmail.com
+License: MIT
+Download-URL: https://gitlab.com/maksimvrs/aiobroker/-/archive/master/aiobroker-master.tar.gz
+Description: UNKNOWN
+Keywords: async,broker,rabbitmq,framework,microservice
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
