@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: smot
+Version: 0.1.0
+Summary: simple manipulation of trees
+Home-page: https://github.com/arendsee/smot
+Author: Zebulun Arendsee
+Author-email: zbwrnz@gmail.com
+License: UNKNOWN
+Description: [![Build Status](https://travis-ci.org/arendsee/smot.svg?branch=master)](https://travis-ci.org/arendsee/smot)
+        
+        # smot
+        
+        ## Requirements
+        
+        Python modules:
+         * biopython
+         * parsec
+         * docopt
+        
+        Python v3.6 and later (required for string interpolation)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
