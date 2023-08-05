@@ -1,0 +1,9 @@
+click
+pyfaidx>=0.5.1
+norns>=0.1.5
+xmltodict
+bucketcache
+requests
+biopython>=1.73
+appdirs
+psutil
