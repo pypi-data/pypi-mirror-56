@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: veritorch
+Version: 0.0.3
+Summary: autodifferentiation package, supporting forward mode only right now
+Home-page: https://github.com/veritorch/cs207-FinalProject
+Author: Yixing Guan, Yinan Shen, Shuying Ni, Banruo(Rock) Zhou
+Author-email: yixingguan@fas.harvard.edu, yinanshen@g.harvard.edu, shuying_ni@g.harvard.edu, bzhou@g.harvard.edu
+License: UNKNOWN
+Description: # cs207-FinalProject
+        [![Build Status](https://travis-ci.org/veritorch/cs207-FinalProject.svg?branch=master)](https://travis-ci.org/veritorch/cs207-FinalProject)
+        [![codecov](https://codecov.io/gh/veritorch/cs207-FinalProject/branch/master/graph/badge.svg)](https://codecov.io/gh/veritorch/cs207-FinalProject)
+        
+        Final Project Code
+        
+        Group Number: 9
+        
+        Names:
+        - Yixing Guan
+        - Yinan Shen
+        - Shuying Ni
+        - Banruo (Rock) Zhou
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
