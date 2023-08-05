@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ratarmount
+Version: 0.2.0
+Summary: Random Access Read-Only Tar Mount
+Home-page: https://github.com/mxmlnkn
+Author: Maximilian Knespel
+Author-email: mxmlnkn@github.de
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Archiving
+Requires-Dist: fusepy
+Requires-Dist: lz4
+Requires-Dist: msgpack
+Requires-Dist: simplejson
+Requires-Dist: pyyaml
+Requires-Dist: ujson
+Requires-Dist: cbor
+Requires-Dist: python-rapidjson
+
+UNKNOWN
+
+
