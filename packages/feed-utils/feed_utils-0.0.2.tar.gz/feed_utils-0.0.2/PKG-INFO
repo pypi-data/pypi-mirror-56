@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: feed_utils
+Version: 0.0.2
+Summary: Common code for feed
+Home-page: https://github.com/rorymcstay/feed_utils
+Author: Rory McStay
+Author-email: rory@rorymcstay.com
+License: UNKNOWN
+Description: distributing
+        
+        ##upload package:
+            twine upload dist/*
+        
+        ##build package:
+            python setup.py sdist bdist_wheel
+                
+            
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
