@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: respx
+Version: 0.3.1
+Summary: A utility for mocking out the Python httpx library.
+Home-page: https://github.com/lundberg/responsex
+Author: Jonas Lundberg
+Author-email: jonas@5monkeys.se
+License: MIT
+Keywords: httpx,mock,responsesrequests,async,http,client
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: httpx (==0.7.6)
+Requires-Dist: asynctest
+
+# responsex
+
+![](https://github.com/lundberg/responsex/workflows/test/badge.svg)
+[![codecov](https://codecov.io/gh/lundberg/responsex/branch/master/graph/badge.svg)](https://codecov.io/gh/lundberg/responsex)
+[![PyPi Version](https://img.shields.io/pypi/v/responsex.svg)](https://pypi.org/project/responsex/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/responsex.svg)](https://pypi.org/project/responsex/)
+
+A utility for mocking out the Python [httpx](https://github.com/encode/httpx) library.
+
+```py
+import httpx
+import responsex
+
+with responsex.activate():
+    responsex.add("GET", "https://foo.bar/", content={"foo": "bar"})
+    response = httpx.get("https://foo.bar/")
+    assert response.json() == {"foo": "bar"}
+
+@responsex.activate
+def test_something():
+    responsex.add("POST", "https://foo.bar/baz/", status_code=201)
+    response = httpx.post("https://foo.bar/baz/")
+    assert response.status_code == 201
+```
+
+
