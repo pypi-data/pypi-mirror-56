@@ -1,0 +1,53 @@
+site_name: VortexaSDK
+repo_url: https://github.com/V0RT3X4/python-sdk
+generate:
+  - operations.md:
+      - vortexasdk.operations.Search+
+      - vortexasdk.operations.Reference+
+
+  - endpoints/cargo_movements.md:
+      - vortexasdk.endpoints.cargo_movements++
+      - vortexasdk.endpoints.cargo_movements_result++
+  - endpoints/charterers.md:
+      - vortexasdk.endpoints.charterers++
+  - endpoints/vessels.md:
+      - vortexasdk.endpoints.vessels++
+  - endpoints/geographies.md:
+      - vortexasdk.endpoints.geographies++
+  - endpoints/products.md:
+      - vortexasdk.endpoints.products++
+
+  - entities/product.md:
+      - vortexasdk.api.product++
+  - entities/geography.md:
+      - vortexasdk.api.geography++
+  - entities/corporation.md:
+      - vortexasdk.api.corporation++
+  - entities/vessel.md:
+      - vortexasdk.api.vessel++
+  - entities/cargo_movement.md:
+      - vortexasdk.api.cargo_movement++
+pages:
+  - Home: index.md << README.md
+  - Endpoints:
+      About Endpoints: endpoints/about-endpoints.md << docs/endpoints/about-endpoints.md
+      Cargo Movements: endpoints/cargo_movements.md
+      Charterers: endpoints/charterers.md
+      Geographies: endpoints/geographies.md
+      Products: endpoints/products.md
+      Vessels: endpoints/vessels.md
+  - Entities:
+      About Entities: entities/about-entities.md << docs/entities/about-entities.md
+      Cargo Movement: entities/cargo_movement.md
+      Corporation: entities/corporation.md
+      Geography: entities/geography.md
+      Product: entities/product.md
+      Vessel: entities/vessel.md
+  - Operations: operations.md
+  - Examples:
+      1 China VLCC Discharges: examples/1_china.md
+
+theme:
+  name: readthedocs
+  collapse_navigation: true
+  search_index_only: false
