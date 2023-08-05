@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+tel/__init__.py
+tel/__main__.py
+tel/writer.py
+tel.egg-info/PKG-INFO
+tel.egg-info/SOURCES.txt
+tel.egg-info/dependency_links.txt
+tel.egg-info/entry_points.txt
+tel.egg-info/top_level.txt
