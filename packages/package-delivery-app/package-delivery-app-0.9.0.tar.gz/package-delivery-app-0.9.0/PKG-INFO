@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: package-delivery-app
+Version: 0.9.0
+Summary: A simulation of package delivery with constraints
+Home-page: https://github.com/adamisom/package-delivery-app
+Author: Adam Isom
+Author-email: adam.r.isom@gmail.com
+License: UNKNOWN
+Description: ![](./project_logo.png)
+        
+        You can execute this code in two ways:
+         1. As a package:
+        "import package_delivery_app"
+        "run_program()"
+         2. As a module: 
+        "python -m package_delivery_app"
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.8
+Description-Content-Type: text/markdown
