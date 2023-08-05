@@ -1,0 +1,14 @@
+Django==3.*
+djangorestframework>=3.10
+
+[channels]
+channels
+
+[jwt]
+PyJWT
+
+[random]
+numpy
+
+[sentry]
+sentry-sdk
