@@ -1,0 +1,16 @@
+fonttools[lxml,ufo,unicode]>=4.1.0
+cu2qu>=1.6.6
+glyphsLib>=5.1.0
+ufo2ft>=2.9.2
+fontMath>=0.5.0
+booleanOperations>=0.9.0
+ufoLib2>=0.5.0
+attrs>=19
+
+[lxml]
+
+[mutatormath]
+MutatorMath>=2.1.2
+
+[pathops]
+skia-pathops>=0.2.0
