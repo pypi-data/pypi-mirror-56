@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pruebapy
+Version: 0.0.1
+Summary: Pruebapy has some useful functions like consuming a csv froma S3 bucket.
+Home-page: https://github.com/diesazul96/pruebapy
+Author: Diego Alvarez
+Author-email: diesazul96@hotmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.5
+Requires-Dist: requests
+
+# Test
+
+A testing README.md
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
