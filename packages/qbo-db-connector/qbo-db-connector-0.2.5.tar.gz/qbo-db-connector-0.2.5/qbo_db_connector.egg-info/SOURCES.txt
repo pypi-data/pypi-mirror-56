@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+qbo_db_connector/__init__.py
+qbo_db_connector/extract.py
+qbo_db_connector/extract_ddl.sql
+qbo_db_connector/load.py
+qbo_db_connector/load_ddl.sql
+qbo_db_connector.egg-info/PKG-INFO
+qbo_db_connector.egg-info/SOURCES.txt
+qbo_db_connector.egg-info/dependency_links.txt
+qbo_db_connector.egg-info/requires.txt
+qbo_db_connector.egg-info/top_level.txt
