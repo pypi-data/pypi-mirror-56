@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: hilale
+Version: 0.1.1
+Summary: A simple python utility to keep the mouse moving on the screen
+Home-page: https://github.com/rkshrksh/Hilale
+License: MIT
+Keywords: python,utility,mouse,pyautogui
+Author: rkshrksh
+Author-email: aarkaygautam@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pyautogui (>=0.9.48,<0.10.0)
+Project-URL: Documentation, https://github.com/rkshrksh/Hilale
+Project-URL: Repository, https://github.com/rkshrksh/Hilale
+Description-Content-Type: text/markdown
+
+# Hilale
+
+A python utility to keep the mouse moving and keep the system from getting locked.
+
