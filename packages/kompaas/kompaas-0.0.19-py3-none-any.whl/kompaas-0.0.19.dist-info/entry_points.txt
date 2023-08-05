@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        mpaas = mpaas.main:main
+        kompaas = mpaas.main:main
+    
