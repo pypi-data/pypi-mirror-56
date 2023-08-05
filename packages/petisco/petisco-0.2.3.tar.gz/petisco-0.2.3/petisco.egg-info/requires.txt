@@ -1,0 +1,12 @@
+meiga
+dataclasses>=0.7
+dataclasses-json>=0.3.6
+redis>=3.3.11
+fakeredis>=1.0.5
+backports-datetime-fromisoformat>=1.0.0
+pyjwt>=1.7.1
+cryptography>=2.1.4
+
+[flask]
+connexion==2.2.0
+Flask-Cors==3.0.7
