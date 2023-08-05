@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: SCSA
+Version: 0.0.3
+Summary: A novel algorithm for signal representation and denoising
+Home-page: https://emang.kaust.edu.sa/Pages/Home.aspx
+Author: Taous-Meriem Laleg-Kirati, Julio Mario Orozco Lopez, Evangelos Piliouras, Abderrazak chahid, Peihao Li
+Author-email: taousmeriem.laleg@kaust.edu.sa ,jmorozcol@unal.edu.co, evangelos.piliouras@kaust.edu.sa, abderrazak.chahid@kaust.edu.sa, peihao.li@kaust.edu.sa
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+## SCSA
+This is a package for using a novel algorithm based on the use of the schrodinger operator for signal representation and denoising
+
