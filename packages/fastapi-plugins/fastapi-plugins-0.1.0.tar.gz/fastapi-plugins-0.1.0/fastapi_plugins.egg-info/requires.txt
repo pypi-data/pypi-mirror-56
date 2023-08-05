@@ -1,0 +1,16 @@
+aioredis==1.3.*
+fastapi>=0.41.*
+
+[dev]
+docker-compose
+m2r
+uvicorn
+
+[test]
+docker-compose
+m2r
+uvicorn
+flake8
+pytest
+pytest-cov
+tox
