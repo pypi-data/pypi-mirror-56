@@ -1,0 +1,7 @@
+if(YARAMOD_TESTS)
+	add_subdirectory(googletest)
+endif()
+if(YARAMOD_PYTHON)
+	add_subdirectory(pybind11)
+endif()
+add_subdirectory(pog)
