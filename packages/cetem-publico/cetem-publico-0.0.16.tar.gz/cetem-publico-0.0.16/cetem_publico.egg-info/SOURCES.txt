@@ -1,0 +1,11 @@
+.gitignore
+LICENSE.rst
+README.rst
+setup.py
+CETEMPublico/__init__.py
+CETEMPublico/corpus.py
+cetem_publico.egg-info/PKG-INFO
+cetem_publico.egg-info/SOURCES.txt
+cetem_publico.egg-info/dependency_links.txt
+cetem_publico.egg-info/requires.txt
+cetem_publico.egg-info/top_level.txt
