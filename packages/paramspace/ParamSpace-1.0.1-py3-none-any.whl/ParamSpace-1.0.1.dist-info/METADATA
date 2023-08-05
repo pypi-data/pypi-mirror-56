@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ParamSpace
+Version: 1.0.1
+Summary: Multidimensional parameter space with dictionaries at each point.
+Home-page: https://ts-gitlab.iup.uni-heidelberg.de/yunus/paramspace
+Author: Yunus Sevinchan
+Author-email: Yunus.Sevinchan@iup.uni-heidelberg.de
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Requires-Dist: numpy (>=1.13)
+Requires-Dist: PyYAML (>=3.12)
+Provides-Extra: test_deps
+Requires-Dist: pytest (>=3.4.0) ; extra == 'test_deps'
+Requires-Dist: pytest-cov (>=2.5.1) ; extra == 'test_deps'
+
+Classes that allow easy iteration over a multidimensional parameter space, generating dictionaries at each point in this parameter space.
+
+
