@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+awesome_printer/__init__.py
+awesome_printer/awesome_printer.py
+marcin_awesome_project.egg-info/PKG-INFO
+marcin_awesome_project.egg-info/SOURCES.txt
+marcin_awesome_project.egg-info/dependency_links.txt
+marcin_awesome_project.egg-info/top_level.txt
