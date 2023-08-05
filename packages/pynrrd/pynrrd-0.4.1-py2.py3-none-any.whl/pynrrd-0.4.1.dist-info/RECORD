@@ -1,0 +1,13 @@
+nrrd/__init__.py,sha256=u0NRKN2KiFdqjUNr57jpBlbEG2uWYYiYGWAOqmcA9Pw,548
+nrrd/_version.py,sha256=0JkFCehK5YPudHOk7KiGlUEIyq0-IbHWNOTNiSNWQ-s,23
+nrrd/errors.py,sha256=hYzeWNOuJP27bOJltX6qhQyJTwv7dyfwUCBF4RI7bkk,77
+nrrd/formatters.py,sha256=Blv1iyQh99mn2ABkQdS0BkEMMetB_w73YaNWoQQ3r5w,4775
+nrrd/parsers.py,sha256=9nylRs3d3e5lSJAfpEi2PTI0REzCwoCOvet9LtdjRNQ,9232
+nrrd/reader.py,sha256=JOopagXGbvDXrrNj6PxlzoO_sRMx_PredYIh9tV-3eo,21283
+nrrd/writer.py,sha256=0NR3olfv2RJhFJmsXFDea5elmigYVlatUholUVAXTmA,14903
+pynrrd-0.4.1.dist-info/AUTHORS,sha256=CMyn0uhHruCiYB5A46NpXHqpijkv7auxq3vA20wZ4G8,183
+pynrrd-0.4.1.dist-info/LICENSE,sha256=jjZBhDsLuFFiUF09OtAYp3qggmgOU4rDd4Wy1312mdk,1129
+pynrrd-0.4.1.dist-info/METADATA,sha256=I6amnB898TwmjUHf0fFGHfkvaKc2j5h7fxAMj4TbQLw,3491
+pynrrd-0.4.1.dist-info/WHEEL,sha256=53VSps8MltPLN_x9Ib61FU2ZSaJKzgrWQqu9rS-Dkgk,116
+pynrrd-0.4.1.dist-info/top_level.txt,sha256=Ha1Zo_wlEiK8eV-VPFC4Dv0GqCTnMEwOBppv_5WuiXg,5
+pynrrd-0.4.1.dist-info/RECORD,,
