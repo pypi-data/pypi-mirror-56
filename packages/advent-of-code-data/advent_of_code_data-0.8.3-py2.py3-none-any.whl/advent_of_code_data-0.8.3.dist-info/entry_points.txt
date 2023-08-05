@@ -1,0 +1,7 @@
+[adventofcode.user]
+
+
+[console_scripts]
+aoc = aocd.runner:main
+aocd = aocd.cli:main
+

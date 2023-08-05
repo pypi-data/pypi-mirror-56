@@ -1,0 +1,15 @@
+aocd/__init__.py,sha256=r6rAczda2YFdSh4VLjCtVjkKCkQEVgzux5WP52YCgqU,1536
+aocd/cli.py,sha256=q_vjGWGzOwtrMIF_3w_0DjEBIF-f7MedKZtxJMt3ypE,977
+aocd/exceptions.py,sha256=VIz_OPHey1njqH8cD6UjPQvLpsglliPJ6UWK8zlzFX0,344
+aocd/get.py,sha256=PGKYt74Dopo21_mSH_Q7L_siUx3qcwk0GZOsU5ubN0Y,4289
+aocd/models.py,sha256=xPgPf8i6aZBzSqIXdkk-Ik5hmKWaOY0t2qeHd-7Ikcs,12991
+aocd/post.py,sha256=3ndyHWfArRs3_GTgnAnYYeI2OBtYtqX9snBwcqEk4ME,1374
+aocd/runner.py,sha256=I6vZJEVn1wAVTbSSeHUTQ7m0Jmhk75IIIPxdVzfHHhw,7865
+aocd/utils.py,sha256=slwC0D6nk6N5tz_JI0WJMo5iTZSLijt0LJu7i2xEC04,66
+aocd/version.py,sha256=otnwfmvJLUamPajTPUaIekiO9mA-2HPi-_h_E0N-uOQ,22
+advent_of_code_data-0.8.3.dist-info/LICENSE,sha256=sDdX5cBRRpk3rmZ8hbYEfAUIYRdDqrlXmChOUkqf62o,1066
+advent_of_code_data-0.8.3.dist-info/METADATA,sha256=V7tOYOv8pwOTpt6tw4GVNvVEoNL5fwaUQ8rEfAdp6XY,8701
+advent_of_code_data-0.8.3.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+advent_of_code_data-0.8.3.dist-info/entry_points.txt,sha256=eQV4HM-UsEFwatF86wANMyWTx5zB3uVHb7wcZbKXP9I,85
+advent_of_code_data-0.8.3.dist-info/top_level.txt,sha256=b0LekMCmohqRoroBX-8FUneWDXflOzG2oHWB8EsgOSA,5
+advent_of_code_data-0.8.3.dist-info/RECORD,,
