@@ -1,0 +1,3 @@
+[console_scripts]
+audisto_exporter = audisto_exporter:main
+
