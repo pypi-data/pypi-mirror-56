@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'mainwindow.ui',
+# licensing of 'mainwindow.ui' applies.
+#
+# Created: Sun Nov  3 00:30:05 2019
+#      by: pyside2-uic  running on PySide2 5.13.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PySide2 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(390, 317)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout.setContentsMargins(-1, -1, -1, 9)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
+        self.scrollArea.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.scrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setObjectName("scrollArea")
+        self.scrollAreaContents = QtWidgets.QWidget()
+        self.scrollAreaContents.setGeometry(QtCore.QRect(0, 0, 163, 195))
+        self.scrollAreaContents.setObjectName("scrollAreaContents")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaContents)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.scrollArea.setWidget(self.scrollAreaContents)
+        self.verticalLayout_2.addWidget(self.scrollArea)
+        self.addButton = QtWidgets.QPushButton(self.centralwidget)
+        self.addButton.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.addButton.setObjectName("addButton")
+        self.verticalLayout_2.addWidget(self.addButton)
+        self.logsButton = QtWidgets.QPushButton(self.centralwidget)
+        self.logsButton.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.logsButton.setCheckable(True)
+        self.logsButton.setObjectName("logsButton")
+        self.verticalLayout_2.addWidget(self.logsButton)
+        self.horizontalLayout.addLayout(self.verticalLayout_2)
+        self.logDetailsLayout = QtWidgets.QVBoxLayout()
+        self.logDetailsLayout.setObjectName("logDetailsLayout")
+        self.horizontalLayout.addLayout(self.logDetailsLayout)
+        self.deviceDetailsLayout = QtWidgets.QVBoxLayout()
+        self.deviceDetailsLayout.setObjectName("deviceDetailsLayout")
+        self.horizontalLayout.addLayout(self.deviceDetailsLayout)
+        self.messageDetailsLayout = QtWidgets.QVBoxLayout()
+        self.messageDetailsLayout.setObjectName("messageDetailsLayout")
+        self.horizontalLayout.addLayout(self.messageDetailsLayout)
+        self.signalDetailsLayout = QtWidgets.QVBoxLayout()
+        self.signalDetailsLayout.setObjectName("signalDetailsLayout")
+        self.horizontalLayout.addLayout(self.signalDetailsLayout)
+        spacerItem = QtWidgets.QSpacerItem(0, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 390, 20))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionOpen = QtWidgets.QAction(MainWindow)
+        self.actionOpen.setObjectName("actionOpen")
+        self.actionSave = QtWidgets.QAction(MainWindow)
+        self.actionSave.setObjectName("actionSave")
+        self.actionValidate = QtWidgets.QAction(MainWindow)
+        self.actionValidate.setObjectName("actionValidate")
+        self.actionLogs = QtWidgets.QAction(MainWindow)
+        self.actionLogs.setObjectName("actionLogs")
+        self.menuFile.addAction(self.actionOpen)
+        self.menuFile.addAction(self.actionSave)
+        self.menuFile.addAction(self.actionValidate)
+        self.menubar.addAction(self.menuFile.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "MainWindow", None, -1))
+        self.addButton.setText(QtWidgets.QApplication.translate("MainWindow", "Add", None, -1))
+        self.logsButton.setText(QtWidgets.QApplication.translate("MainWindow", "Logs", None, -1))
+        self.menuFile.setTitle(QtWidgets.QApplication.translate("MainWindow", "File", None, -1))
+        self.actionOpen.setText(QtWidgets.QApplication.translate("MainWindow", "Open", None, -1))
+        self.actionSave.setText(QtWidgets.QApplication.translate("MainWindow", "Save", None, -1))
+        self.actionValidate.setText(QtWidgets.QApplication.translate("MainWindow", "Validate", None, -1))
+        self.actionLogs.setText(QtWidgets.QApplication.translate("MainWindow", "Logs", None, -1))
+
