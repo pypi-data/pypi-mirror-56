@@ -1,0 +1,162 @@
+Metadata-Version: 2.1
+Name: collective.noindexing
+Version: 2.0.0
+Summary: Ignore all indexing operations
+Home-page: https://github.com/collective/collective.noindexing
+Author: Maurits van Rees
+Author-email: m.van.rees@zestsoftware.nl
+License: GPL
+Description: .. contents::
+        
+        
+        Documentation
+        =============
+        
+        
+        Goal and usage
+        --------------
+        
+        Add collective.noindexing to the eggs in your buildout.
+        This makes two browser views available on the Plone Site root:
+        ``@@collective-noindexing-apply`` and ``@@collective-noindexing-unapply``.
+        The first applies some patches and the second undoes the patching.
+        Both can be called multiple times safely.
+        
+        Patching only a single index (reindex, index, unindex) is also possible:
+        
+        - ``@@collective-noindexing-apply?no-reindex=1``
+        - ``@@collective-noindexing-apply?no-index=1``
+        - ``@@collective-noindexing-apply?no-unindex=1``
+        
+        Or combined:
+        ``@@collective-noindexing-apply?no-unindex=1&no-reindex=1``
+        
+        Or all:
+        ``@@collective-noindexing-apply``
+        
+        This patches some catalog methods so no indexing, reindexing or
+        unindexing is done at all.  The idea is that you use this package so
+        you can quickly move a big part of your Plone Site to a different
+        folder without having to worry about indexing.  It really makes moving
+        a lot faster.  You do the indexing later, probably by doing a catalog
+        clear and rebuild; you have a bit more control there about
+        subtransactions, to help avoid a ``MemoryError`` or ``[Errno 24] Too
+        many open files``.  A script to run the catalog clear and rebuild with
+        some intermediate commits can help here for large sites.
+        
+        
+        Alternatives
+        ------------
+        
+        - Go to the ``archetype_tool`` object in the ZMI, and then to the
+          Catalogs tab.  Switching off ``portal_catalog`` in all the types
+          there should have basically the same effect.
+        
+        - Add ``Products.QueueCatalog`` and ``Products.PloneQueueCatalog`` to
+          the eggs of your buildout.  In the ``portal_quickinstaller`` install
+          PloneQueueCatalog.  This renames the ``portal_catalog`` to
+          ``portal_catalog_real`` and creates a ZCatalog Queue with the id
+          ``portal_catalog``.  The standard settings worked fine for me.  You
+          now do that large move.  In the fresh ``portal_catalog`` you go to
+          the Queue tab.  It should say you have lots of items in the queue,
+          in my case around 12,000.  Clicking the 'Process Queue' button will
+          by default process just twenty items of that queue.  You can
+          increase that number.  This is an easy way of avoiding MemoryErrors
+          during indexing, as the total number of objects reindexed in one go
+          will be as low as you want.
+        
+          Note that I tried this but ran into problems as this website had the
+          ``portal_catalog`` in a separate CatalogData.fs, which worked fine
+          until I restarted the zeoclient.  With some tinkering it should
+          work, but I did not want to bother with that.  We can revisit that
+          when indexing becomes a problem all the time instead of just once
+          for a clear and rebuild.
+        
+        
+        Compatibility
+        -------------
+        
+        Tried on Plone 4.3, 5.1 and 5.2, on Python 2.7 and 3.7.
+        
+        For earlier Plone versions, please use version 1.4.
+        
+        
+        Authors
+        -------
+        
+        Maurits van Rees
+        
+        Changelog
+        =========
+        
+        2.0.0 (2019-11-20)
+        ------------------
+        
+        - Setup Travis. [gotcha]
+        
+        
+        2.0.0b1 (2019-11-11)
+        --------------------
+        
+        - Removed support for Python 2.6 or lower and Plone 4.2 and lower.  [maurits]
+        
+        - Added Plone 5 compatibility.  Do not require Archetypes.  [gotcha]
+        
+        
+        1.4 (2013-03-26)
+        ----------------
+        
+        - make patching a single index method (index, reindex, unindex) possible
+          [maartenkling]
+        
+        
+        1.3 (2012-09-24)
+        ----------------
+        
+        - Add more (test) dependencies in setup.py.
+          [maurits]
+        
+        - Moved to https://github.com/collective/collective.noindexing
+          [maurits]
+        
+        
+        1.2 (2012-04-18)
+        ----------------
+        
+        - Fixed the unapply method so a second apply will work correctly.
+          [maurits]
+        
+        - Added tests with plone.app.testing.
+          [maurits]
+        
+        - Added compatibility with Plone 4.1, by loading Products.CMFCore zcml
+          for the permissions.
+          [maurits]
+        
+        
+        1.1 (2011-01-04)
+        ----------------
+        
+        - Moved most logging to debug level as it quickly becomes noise in
+          situations where you most need this package.
+          [maurits]
+        
+        
+        1.0 (2010-04-09)
+        ----------------
+        
+        - Initial release
+        
+Keywords: catalog index plone
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 4.3
+Classifier: Framework :: Plone :: 5.1
+Classifier: Framework :: Plone :: 5.2
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: test
