@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+fitsmap/__init__.py
+fitsmap/convert.py
+fitsmap/mapmaker.py
+fitsmap.egg-info/PKG-INFO
+fitsmap.egg-info/SOURCES.txt
+fitsmap.egg-info/dependency_links.txt
+fitsmap.egg-info/requires.txt
+fitsmap.egg-info/top_level.txt
+fitsmap/support/MarkerCluster.Default.css
+fitsmap/support/MarkerCluster.css
