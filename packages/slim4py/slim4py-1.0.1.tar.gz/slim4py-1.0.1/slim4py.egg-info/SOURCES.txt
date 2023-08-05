@@ -1,0 +1,6 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+slim4py/slim.py
+slim4py/slim_compile.rb
