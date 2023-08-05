@@ -1,0 +1,19 @@
+click
+docker
+defusedxml # Needed due to tox complains on parseString not safe
+jsonschema
+requests
+ruamel.yaml
+setuptools>=36.5.0
+six
+python-jenkins
+tqdm
+xdg
+pygithub
+httplib2
+email_validator
+oauth2client
+pyyaml
+pygerrit2
+bs4
+lxml
