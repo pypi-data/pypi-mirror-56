@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: pgdatadiff
+Version: 0.1.0
+Summary: A small tool to diff the *data* in 2 postgresql databases
+Home-page: https://github.com/dmarkey/pgdatadiff
+Author: dmarkey
+Author-email: david@dmarkey.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >3.6.0

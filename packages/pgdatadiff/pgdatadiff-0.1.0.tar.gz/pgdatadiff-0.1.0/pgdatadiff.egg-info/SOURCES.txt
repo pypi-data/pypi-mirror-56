@@ -1,0 +1,15 @@
+.gitignore
+Dockerfile
+LICENSE
+README.md
+setup.py
+.github/workflows/pythonpublish.yml
+pgdatadiff/__init__.py
+pgdatadiff/main.py
+pgdatadiff/pgdatadiff.py
+pgdatadiff.egg-info/PKG-INFO
+pgdatadiff.egg-info/SOURCES.txt
+pgdatadiff.egg-info/dependency_links.txt
+pgdatadiff.egg-info/entry_points.txt
+pgdatadiff.egg-info/requires.txt
+pgdatadiff.egg-info/top_level.txt

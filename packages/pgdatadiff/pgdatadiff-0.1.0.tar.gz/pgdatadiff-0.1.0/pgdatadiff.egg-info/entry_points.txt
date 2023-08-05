@@ -1,0 +1,3 @@
+[console_scripts]
+pgdatadiff = pgdatadiff.main:main
+
