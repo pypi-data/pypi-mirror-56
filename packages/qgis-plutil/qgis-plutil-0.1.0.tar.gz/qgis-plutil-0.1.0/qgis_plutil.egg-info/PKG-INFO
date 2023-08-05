@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: qgis-plutil
+Version: 0.1.0
+Summary: A library useful for writing QGis plugins.
+Home-page: https://github.com/pyqgis/plutil
+Author: Nicu Tofan
+Author-email: nicu.tofan@gmail.com
+License: MIT
+Download-URL: https://github.com/pyqgis/qgis-plutil/archive/v0.1.0.zip
+Project-URL: Bug Tracker, https://github.com/pyqgis/qgis-plutil/issues
+Project-URL: Documentation, https://readthedocs.org/projects/qgis-plutil/
+Project-URL: Source Code, https://github.com/pyqgis/qgis-plutil
+Description: 
+        # plutil
+        
+        plutil is an [open source](https://github.com/pyqgis/plutil.git),
+        MIT licensed library useful for writing QGis plugins.
+        
+        [![Build Status](https://travis-ci.org/H/plutil.svg?branch=master)](https://travis-ci.org/pyqgis/plutil)
+        [![Documentation Status](https://readthedocs.org/projects/plutil/badge/?version=latest)](https://plutil.readthedocs.io/en/latest/?badge=latest)
+        
+        
+        Install
+        -------
+        
+            pip install qgis-plutil
+        
+        You can also download/clone the source, in which case you have to:
+        
+            git clone https://github.com/pyqgis/plutil.git
+            python setup.py install
+                
+        To contribute a patch clone the repo, create a new branch, install in
+        develop mode:
+                
+            python setup.py develop
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Provides-Extra: tests
+Provides-Extra: dev
