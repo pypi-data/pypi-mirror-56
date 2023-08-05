@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: zeroguard
+Version: 0.0.1.dev2
+Summary: ZeroGuard Python OSS tools
+Home-page: https://zeroguard.com
+Author: ZeroGuard
+Author-email: oss@zeroguard.com
+License: AGPL-3.0
+Project-URL: Documentation, https://github.com/zeroguard/zeroguard/tree/master/python
+Project-URL: Source, https://github.com/zeroguard/zeroguard/tree/master/python
+Description: ZeroGuard Python OSS Tools
+        ==========================
+        Coming soon
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
