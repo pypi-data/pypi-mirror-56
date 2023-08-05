@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: pyspotify
+Version: 2.1.1
+Summary: Python wrapper for libspotify
+Home-page: https://pyspotify.mopidy.com/
+Author: Stein Magnus Jodal
+Author-email: stein.magnus@jodal.no
+License: Apache License, Version 2.0
+Description: *********
+        pyspotify
+        *********
+        
+        pyspotify provides a Python interface to
+        `Spotify's <https://www.spotify.com/>`__ online music streaming service.
+        
+        With pyspotify you can access music metadata, search in Spotify's library of
+        20+ million tracks, manage your Spotify playlists, and play music from
+        Spotify. All from your own Python applications.
+        
+        pyspotify uses `CFFI <https://cffi.readthedocs.org/>`_ to make a pure Python
+        wrapper around the official libspotify library. It works on CPython 2.7 and
+        3.5+, as well as PyPy 2.7 and 3.5+. It is known to work on Linux and
+        macOS. Windows support should be possible, but is awaiting a contributor with
+        the interest and knowledge to maintain it.
+        
+        
+        libspotify's deprecation
+        ========================
+        
+        Note that as of May 2015 libspotify is officially deprecated by Spotify and is
+        no longer actively maintained.
+        
+        Spotify has published newer libraries intended for Android and iOS development,
+        as well as web APIs to access track metadata and manage playlists. Though, for
+        making apps with Spotify playback capabilities, on any other platform than
+        Android and iOS, there is currently no alternative to libspotify.
+        
+        libspotify has been the main way of integrating with Spotify since 2009, and is
+        today a part of numerous open source projects and commercial applications,
+        including many receivers and even cars. There's no guarantees, but one can hope
+        that the large deployment of libspotify means that the library will continue to
+        work with the Spotify service for a long time into the future.
+        
+        
+        Project resources
+        =================
+        
+        - `Documentation <https://pyspotify.mopidy.com/>`_
+        - `Source code <https://github.com/mopidy/pyspotify>`_
+        - `Issue tracker <https://github.com/mopidy/pyspotify/issues>`_
+        
+        .. image:: https://img.shields.io/pypi/v/pyspotify
+            :target: https://pypi.org/project/pyspotify/
+            :alt: Latest PyPI version
+        
+        .. image:: https://img.shields.io/circleci/build/gh/mopidy/pyspotify
+            :target: https://circleci.com/gh/mopidy/pyspotify
+            :alt: CircleCI build status
+        
+        .. image:: https://img.shields.io/codecov/c/gh/mopidy/pyspotify
+           :target: https://codecov.io/gh/mopidy/pyspotify
+           :alt: Test coverage
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries
+Provides-Extra: docs
+Provides-Extra: lint
+Provides-Extra: release
+Provides-Extra: test
+Provides-Extra: dev
