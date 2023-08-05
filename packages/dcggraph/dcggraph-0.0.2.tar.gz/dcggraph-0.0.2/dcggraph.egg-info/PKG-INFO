@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: dcggraph
+Version: 0.0.2
+Summary: Directed Cyclic Graph Utilities for Python
+Home-page: https://github.com/ssteffl/python-dcggraph
+Author: Sam Steffl
+Author-email: sam@ssteffl.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/ssteffl/python-dcggraph
+Project-URL: Source, https://github.com/ssteffl/python-dcggraph
+Description: Directed Cyclic Graph Utilities for Python
+        ==========================================
+        
+        This package currently used for doing predicated searches from a given
+        node in a directed graph that is allowed to be cyclic. Some points to clear
+        up confusion:
+        - __directed__: means an edge between 2 nodes can only be travelled in one
+          direction
+        - __predicated__: means that even if a node is reachable, it still has to
+          pass a prediate test (i.e. `predicate(node) == True`) in order to be
+          returned.
+            - this means there are really 2 search filters in the graph:
+                1) the node has to be reachable without any filtering
+                2) the node has to pass the predicate test
+        - __cyclic__: means that if you start from a node, and follow a bunch of
+          paths, you can end up at the same node. This makes things a lot harder
+          than if you were working with DAGs.
+        
+        installing
+        ----------
+        ```pip install dcggraph```
+        
+        API
+        ---
+        In addition to the snippet below, look at the tests for example usage
+        ```python
+        import re
+        from dcggraph import DCGnode, DCGedge, DCGgraph
+        from dcggraph.search import PredicateResult, DCGsearch
+        
+        g = DCGgraph()
+        n0 = g.create_node("n0")
+        n1 = g.create_node("n1")
+        n2 = g.create_node("n2")
+        n3 = g.create_node("n3")
+        n4 = g.create_node("n4")
+        g.create_edge(n0, n1)
+        g.create_edge(n0, n2)
+        g.create_edge(n1, n3)
+        g.create_edge(n1, n4)
+        
+        def even(node, visited, passed, failed):
+           if f re.match("[a-z][02468]", node.name):
+               return PredicateResult.PASS
+           else:
+               return PredicateResult.FAIL
+        
+        s1 = DCGsearch(g, even)
+        
+        # reuse the search object to cache FAIL/PASS results between searches
+        assertEqual(len(s1.search(n0)), 3)
+        assertEqual(len(s1.search(n1)), 1)
+        assertEqual(len(s1.search(n2)), 1)
+        assertEqual(len(s1.search(n3)), 0)
+        assertEqual(len(s1.search(n4)), 1)
+        
+        ```
+        
+        
+Keywords: directed cyclic graph traversal
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
