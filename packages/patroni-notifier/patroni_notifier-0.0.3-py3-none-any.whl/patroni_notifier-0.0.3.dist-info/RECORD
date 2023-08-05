@@ -1,0 +1,9 @@
+patroni_notifier/__init__.py,sha256=m92OAJiR05ag1qy8ARUwRt5oj6FP9eUgvupbX7gUEQs,126
+patroni_notifier/core.py,sha256=WWcm9SwRfhc22VL5GeAKtgLX9WoDFmEb0uBydOF615A,710
+patroni_notifier/mail.py,sha256=34mHa2_W3zp9spbfcR8tZ3ofoV0HVZC2fbuIdUlSTss,2844
+patroni_notifier/templates/simple.html,sha256=W47NWusiTOlVnZWtoErqfOfzt6SHwwg_BOUO1ctZhuY,13957
+patroni_notifier/templates/simple.txt,sha256=7MkcYkv0jTs4EMZXMA6wI4V2Vl2eidijxVus5Gq1mBw,31
+patroni_notifier-0.0.3.dist-info/entry_points.txt,sha256=dIgMT2CX6jAAN-Dql9xRiX1U4xldIhWQWdvg0m7Sxyc,71
+patroni_notifier-0.0.3.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+patroni_notifier-0.0.3.dist-info/METADATA,sha256=0reOqFtLVNGtenEtpvoWF_rZcXycPOB9ghSoT6J42pU,3503
+patroni_notifier-0.0.3.dist-info/RECORD,,
