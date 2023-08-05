@@ -1,0 +1,6 @@
+attrs
+
+[dev]
+versioneer
+pytest
+hypothesis
