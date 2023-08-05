@@ -1,0 +1,7 @@
+numpy>=1.16
+pyqt5!=5.11.*,!=5.12.*
+matplotlib>=3
+formlayout
+astropy
+bottle
+gitpython
