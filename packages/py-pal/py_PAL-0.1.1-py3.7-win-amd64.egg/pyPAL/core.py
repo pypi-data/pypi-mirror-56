@@ -1,0 +1,29 @@
+from functools import wraps
+from sys import gettrace
+
+from pyPAL.tracer import Tracer
+
+traces = []
+
+
+def profile(function_to_trace=None, **trace_options):
+    def tracing_decorator(func):
+        @wraps(func)
+        def tracing_wrapper(*args, **kwargs):
+            if gettrace():
+                return func(*args, **kwargs)
+
+            t = Tracer(None, **trace_options)
+            t.trace()
+            try:
+                return func(*args, **kwargs)
+            finally:
+                t.stop()
+                traces.append((t.get_opcode_stats()))
+
+        return tracing_wrapper
+
+    if function_to_trace is None:
+        return tracing_decorator
+    else:
+        return tracing_decorator(function_to_trace)

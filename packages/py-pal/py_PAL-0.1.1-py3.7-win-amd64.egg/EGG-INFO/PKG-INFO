@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: py-PAL
+Version: 0.1.1
+Summary: Estimate Asymptotic Runtime Complexity from Bytecode executions
+Home-page: https://github.com/segroup-uni-trier/jung-ma-asymptotic-performance-testing.git
+Author: Lukas Jung
+Author-email: mail@lukasjung.de
+License: MIT
+Description: # pyPAL - Python Performance Analysis Library
+        ## Setup
+        This project requires CPython to run.
+        Install Python >= 3.7, then install pyPAL by running:
+        
+            pip install py-pal
+        
+        ## Usage
+        Calling pyPAL as module:
+        
+            pyPAL file.py   
+        
+        Using the decorator:
+        
+            @profile
+            def test():
+                pass
+        
+        Using the context manager:
+        
+            with Tracer() as t:
+                start_game()
+        
+        Using the API:
+        
+            t = Tracer()
+            t.trace()
+            
+            # Your function
+            run()
+            
+            t.stop()
+            estimator = ComplexityEstimator(tracer)
+            res = estimator.export()
+            
+            # Do something with the resulting DataFrame
+            print(res)
+            
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Development Status :: 4 - Beta
+Description-Content-Type: text/markdown
