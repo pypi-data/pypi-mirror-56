@@ -1,0 +1,11 @@
+global-include *.py
+
+include README.md
+include LICENSE
+
+prune .github
+prune .venv
+prune .vscode
+
+prune scripts
+prune share
