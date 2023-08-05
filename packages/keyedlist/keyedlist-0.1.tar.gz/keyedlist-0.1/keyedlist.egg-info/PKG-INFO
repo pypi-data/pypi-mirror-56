@@ -1,0 +1,48 @@
+Metadata-Version: 1.1
+Name: keyedlist
+Version: 0.1
+Summary: keyedlist implementation for python
+Home-page: https://github.com/vanangamudi/keyedlist
+Author: Pa Mu Selvakumar
+Author-email: selva.developer@gmail.com
+License: MIT
+Description: ===============================
+        keyedlist
+        ===============================
+        
+        .. image:: https://img.shields.io/travis/vanangamudi/keyedlist.svg
+                :target: https://travis-ci.org/vanangamudi/keyedlist
+        
+        .. image:: https://img.shields.io/pypi/v/keyedlist.svg
+                :target: https://pypi.python.org/pypi/keyedlist
+        
+        
+        keyedlist implementation for python
+        
+        * Free software: MIT license
+        * Documentation: (COMING SOON!) https://keyedlist.readthedocs.org.
+        
+        Features
+        --------
+        
+        * TODO
+        
+        
+        
+        
+        History
+        -------
+        
+        Pre-release
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+test_keyedlist
+----------------------------------
+
+Tests for `keyedlist` module.
+"""
+
+import unittest
+
+import keyedlist
+
+
+class TestKeyedlist(unittest.TestCase):
+
+    def setUp(self):
+        pass
+
+    def test_something(self):
+        assert(keyedlist.__version__)
+
+    def tearDown(self):
+        pass
