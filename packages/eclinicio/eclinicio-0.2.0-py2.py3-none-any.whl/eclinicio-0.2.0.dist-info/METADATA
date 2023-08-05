@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: eclinicio
+Version: 0.2.0
+Summary: Asyncronous ssl sockets with pluggable eventloop
+Home-page: https://github.com/abiiranathan/eclinicio
+Author: Dr. Abiira Nathan
+Author-email: nabiira2by2@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tzlocal
+Requires-Dist: pytz
+
+# eclinicio
+
+## eclinicio - Asyncronous SSL Sockets with a pluggable eventloop
+Developed as need to do remote procedure calls and send pickled
+data back to the client.
+
+
+## Main Classes
+-----------------
+1. eclinicio.EventLoop
+2. eclinicio.ServerFactory
+3. eclinicio.ServerSideClient
+4. eclinicio.ClientSideSocket
+
+
