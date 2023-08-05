@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pyobs-core
+Version: 0.8.1
+Summary: robotic telescope software
+Home-page: UNKNOWN
+Author: Tim-Oliver Husser
+Author-email: thusser@uni-goettingen.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Pillow
+Requires-Dist: PyYAML
+Requires-Dist: aplpy
+Requires-Dist: astroplan
+Requires-Dist: astropy
+Requires-Dist: colour
+Requires-Dist: lmfit
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: paramiko
+Requires-Dist: photutils
+Requires-Dist: py-expression-eval
+Requires-Dist: pytz
+Requires-Dist: requests
+Requires-Dist: scipy
+Requires-Dist: sep
+Requires-Dist: sleekxmpp
+Requires-Dist: tornado
+Requires-Dist: pyinotify ; platform_system == "Linux"
+Requires-Dist: python-daemon ; platform_system == "Linux"
+
+UNKNOWN
+
+
