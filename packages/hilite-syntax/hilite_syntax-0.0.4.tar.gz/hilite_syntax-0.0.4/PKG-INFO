@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: hilite_syntax
+Version: 0.0.4
+Summary: Framework for generating editor syntax files
+Home-page: https://github.com/ssteffl/python-hilite-syntax
+Author: Sam Steffl
+Author-email: sam@ssteffl.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/ssteffl/python-hilite-syntax
+Project-URL: Source, https://github.com/ssteffl/python-hilite-syntax
+Description: python-hilite-syntax
+        ===================================
+        This package allows you to generate syntax-highlighting files from input
+        files (like bnf grammar files). The goal is to enable generation of syntax
+        highlighting files for any language specification on the fly, for all editors
+        
+        Supported Frontends
+        -------------------
+        - __lark__: use lark grammar files (for the LALR parser only) to generate
+                    the syntax file for the language the grammar is parsing.
+            - see [lark-parser](https://github.com/lark-parser/lark) 
+              for more info on writing lark grammar files
+            - see [lark-syntax.vim](https://github.com/ssteffl/lark-syntax.vim)
+              for syntax-highlighting of your lark files in vim
+            - see [python-shape-plotter-example](https://github.com/ssteffl/python-shape-plotter-example)
+              for several things:
+                1) writing a simple LALR `lark` grammar file
+                2) using `hilite_syntax` to convert lark grammar files to vim syntax
+                   and viewing your DSL scripts with color in vim
+                3) plotting 2D shapes using matplotlib from the lark DSL file
+        
+        Supported Backends
+        -------------------
+        - __vim__: generate vim syntax highlighting files for the input language.
+            - by default, it will write the syntax and ftdetect files to 
+              `$HOME/.vim`, so you can instantly use the generated files, but
+              you can change the output dir
+            - pointers to related items:
+            - see [lark-syntax.vim](https://github.com/ssteffl/lark-syntax.vim)
+                for highlighting lark grammar files in vim
+            - see [python-shape-plotter-example](https://github.com/ssteffl/python-shape-plotter-example)
+                for the reasons mentioned in `lark` above
+        
+        installing
+        ----------
+        ```
+        pip install hilite_syntax
+        ```
+        
+        command-line usage
+        ------------------
+        - `help`: the subcommand to dump the IR graph of your langauge:
+            ```
+            hilite_syntax help <frontend> [frontend-args]
+            hilite_syntax help <backend> [backend-args]
+            ```
+            You must run the help commands for each frontend or backend to see what
+            their supported arguments are.
+        
+        - `dump`: the subcommand to dump the IR graph of your langauge, after being
+           parsed by the frontend:
+            ```
+            hilite_syntax dump <frontend> [frontend-args]
+            ```
+        
+        - `input/output`: the subcommand to convert the input to an output syntax
+          highlighting file:
+            ```
+            hilite_syntax input <frontend> [frontend-args] output <backend> [backend-args] 
+            ```
+            for example, the following will convert a lark grammar file and install
+            vim syntax files for it at `$HOME/.vim`:
+            ```
+            hilite_syntax input lark ./mydsl.lark --start root_rule \
+                          output vim mydsl --ext mydsl --ext dsl
+            ```
+        
+        __TODO__: put up a docs page for the cmdline usage (and subcmds)
+        
+        library usage
+        --------------
+        Most of the package lives in the `hilite_syntax` library, and can be used
+        directly in your application. 
+        
+        __TODO__: put up a docs page for library usage
+        
+        internal architecture
+        ---------------------
+        
+        __TODO__: describe lark-specific details, vim-specific details, the 
+          intermediate graph representation, and the supported semantic FormatTypes
+        
+        OTHER TODO
+        ----------
+        clean up documenting these potential issues: 
+        
+        1) regex node sementics need to be supported by input AND 
+            output implementation. if only the input supports it, an error will occur
+            - for example: lark -> vim DOES support regex and string terms
+        
+        2) string terminals MIGHT not be supported in output. any backend 
+            implementation should specify the supported strings
+        
+        
+Keywords: hilite hilight syntax editor
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

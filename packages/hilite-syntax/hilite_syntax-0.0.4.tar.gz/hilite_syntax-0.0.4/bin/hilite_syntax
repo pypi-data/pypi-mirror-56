@@ -1,0 +1,115 @@
+#!/usr/bin/env python
+"""convenience wrapper around all the input/output converters"""
+
+import argparse
+import sys
+from textwrap import dedent as dd
+
+# pylint: disable=no-name-in-module
+from hilite_syntax.vim import VimOutputConverterCmdlineFactory
+from hilite_syntax.lark import LarkLALRInputConverterCmdlineFactory
+
+#============================================================================
+# constants
+#============================================================================
+ICONVERTERS = {
+    "lark": LarkLALRInputConverterCmdlineFactory,
+}
+OCONVERTERS = {
+    "vim": VimOutputConverterCmdlineFactory,
+}
+
+#============================================================================
+# input/output converter factory
+#============================================================================
+def iconverter(name):
+    """returns iconverter by name"""
+    if name in ICONVERTERS:
+        return ICONVERTERS[name]
+    raise Exception(f"invalid iconverter {name}")
+
+def oconverter(name):
+    """returns oconverter by name"""
+    if name in OCONVERTERS:
+        return OCONVERTERS[name]
+    raise Exception(f"invalid oconverter {name}")
+
+def anyconverter(name):
+    """returns either i/oconverter by name"""
+    if name in ICONVERTERS:
+        return ICONVERTERS[name]
+    if name in OCONVERTERS:
+        return OCONVERTERS[name]
+    raise Exception(f"invalid converter {name}")
+
+#============================================================================
+# user commands
+#============================================================================
+def cmd_help(converter):
+    """executes help command"""
+    anyconverter(converter)(["-h"])
+    raise Exception("converter help message did not abort")
+
+def cmd_dump(converter, args):
+    """executes dump internal graph command"""
+    graph = iconverter(converter)(args).convert()
+    for node in sorted(graph.nodes, key=lambda n: n.name):
+        print(f"{node}")
+        for edge in sorted(node.edges_out, key=lambda e: e.to_node.name):
+            print(f"  '{edge.to_node.name}'")
+
+def cmd_input(converter, args):
+    """executes conversion"""
+    # separate the input/output converter args
+    if "output" not in args:
+        raise Exception(f"no 'output' following 'input' converter")
+    output_idx = args.index("output")
+    input_args = args[0:output_idx]
+    output_items = args[output_idx+1:]
+    if len(output_items) == 0:
+        raise Exception(f"no converter name after 'output'")
+    output_name = output_items[0]
+    output_args = output_items[1:]
+
+    # create the converters and run
+    oconverter(output_name)(output_args).convert(
+        iconverter(converter)(input_args).convert())
+    print(f"finished converting from {converter} to {output_name}!")
+
+#============================================================================
+# parse args
+#============================================================================
+def run():
+    """runs the script"""
+    aparser = argparse.ArgumentParser(
+        formatter_class=argparse.RawTextHelpFormatter,
+        description=dd("""
+        Convert input files into syntax-highlighting files. Each input/output
+        converter takes options. The full command line syntax is:
+
+            hilite_syntax input <iconverter> [args] output <oconverter> [args]
+            hilite_syntax dump <iconverter>
+            hilite_syntax help <i/oconverter>
+
+        The currently supported input converters are:
+            lark:   generate highlighting from a lark grammar file
+
+        The currently supported output converters are:
+            vim :   generate highlighting for vim editor
+        """))
+    aparser.add_argument("cmd", type=str, help="which command to run")
+    aparser.add_argument("converter", type=str,
+                         help="the converter name for the cmd")
+    parsed = aparser.parse_args(sys.argv[1:3])
+
+    if parsed.cmd == "help":
+        cmd_help(parsed.converter)
+    elif parsed.cmd == "dump":
+        cmd_dump(parsed.converter, sys.argv[3:])
+    elif parsed.cmd == "input":
+        cmd_input(parsed.converter, sys.argv[3:])
+    else:
+        raise Exception(f"invalid command {parsed.cmd}")
+
+if __name__ == "__main__":
+    run()
