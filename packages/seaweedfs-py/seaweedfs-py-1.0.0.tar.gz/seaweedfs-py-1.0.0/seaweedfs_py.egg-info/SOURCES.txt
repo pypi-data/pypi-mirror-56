@@ -1,0 +1,13 @@
+README.md
+setup.py
+example/__init__.py
+seaweedfs/__init__.py
+seaweedfs/client.py
+seaweedfs/exceptions.py
+seaweedfs_py.egg-info/PKG-INFO
+seaweedfs_py.egg-info/SOURCES.txt
+seaweedfs_py.egg-info/dependency_links.txt
+seaweedfs_py.egg-info/requires.txt
+seaweedfs_py.egg-info/top_level.txt
+tests/__init__.py
+tests/test_filer.py
