@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+tap_exchangeratesapi/__init__.py
+tap_exchangeratesapi.egg-info/PKG-INFO
+tap_exchangeratesapi.egg-info/SOURCES.txt
+tap_exchangeratesapi.egg-info/dependency_links.txt
+tap_exchangeratesapi.egg-info/entry_points.txt
+tap_exchangeratesapi.egg-info/requires.txt
+tap_exchangeratesapi.egg-info/top_level.txt
