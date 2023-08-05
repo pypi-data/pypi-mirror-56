@@ -1,0 +1,3 @@
+[gui_scripts]
+halo-weather = halo.__main__:main
+
