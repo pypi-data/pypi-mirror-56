@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+rwalocation/__init__.py
+rwalocation/main.py
+rwalocation.egg-info/PKG-INFO
+rwalocation.egg-info/SOURCES.txt
+rwalocation.egg-info/dependency_links.txt
+rwalocation.egg-info/entry_points.txt
+rwalocation.egg-info/not-zip-safe
+rwalocation.egg-info/top_level.txt
