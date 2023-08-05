@@ -1,0 +1,9 @@
+six
+cairocffi
+
+[testing]
+coverage
+mccabe
+pep8
+pyflakes
+flake8
