@@ -1,0 +1,3 @@
+[console_scripts]
+kooki = kooki.cli.command:run
+
