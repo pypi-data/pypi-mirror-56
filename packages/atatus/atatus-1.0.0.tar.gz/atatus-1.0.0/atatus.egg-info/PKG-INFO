@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: atatus
+Version: 1.0.0
+Summary: Atatus Python Agent
+Home-page: https://www.atatus.com/for/python
+Author: Atatus
+License: BSD
+Description: Atatus APM agent for Python
+        ===========================================
+        
+        This is the official Python module for Atatus Agent.
+        
+        It provides full out-of-the-box support for many of the popular frameworks,
+        including Django, and Flask. Atatus APM is also easy to adapt for most
+        WSGI-compatible web applications via `custom integrations`.
+        
+        Your application doesn't live on the web? No problem! Atatus APM is easy to use in
+        any Python application.
+        
+        License
+        -------
+        
+        BSD-3-Clause
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Provides-Extra: tests
+Provides-Extra: flask
+Provides-Extra: asyncio
+Provides-Extra: opentracing
