@@ -1,0 +1,13 @@
+numpy
+scipy
+scikit-image
+tqdm
+opencv-python-headless
+dataclasses
+efficientnet
+
+[tf_cpu]
+tensorflow>=2.0.0
+
+[tf_gpu]
+tensorflow-gpu>=2.0.0
