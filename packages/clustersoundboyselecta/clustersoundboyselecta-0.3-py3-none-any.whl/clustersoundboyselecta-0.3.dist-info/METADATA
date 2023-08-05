@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: clustersoundboyselecta
+Version: 0.3
+Summary: This is a cluster algorithm for given data set
+Home-page: http://example.com/HelloWorld/
+Author: Vasanth Sadasivan
+Author-email: sndselecta@gmail.com.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://bugs.example.com/HelloWorld/
+Project-URL: Documentation, https://docs.example.com/HelloWorld/
+Project-URL: Source Code, https://code.example.com/HelloWorld/
+Keywords: cluster_soundboyselecta
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+UNKNOWN
+
+
