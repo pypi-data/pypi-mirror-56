@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "timestamp": {
+            "type": "number"
+        }
+    },
+    "type": "array",
+    "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "readings"],
+        "properties": {
+            "readings": {
+                "type": "array",
+                "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "additionalItems": false,
+                    "items": [
+                        {
+                            "$ref": "#/definitions/timestamp"
+                        },
+                        {
+                            "type": "number"
+                        }
+                    ]
+                }
+            },
+            "path": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+pystanley/__init__.py,sha256=g6DnpFnZANXXRjaics8QHci3YVjtBOpRwjnJBSmVhrg,11037
+pystanley/__main__.py,sha256=4xbzNO1GkFpvl_jVZuHWnwKzPPD4o6g25GZ1WqaCxJs,4536
+pystanley/cache.py,sha256=p3suPFejV3OhRKIDBy1B3XDnYxqrW2Yk868DEXT3HZc,3901
+pystanley/select_response_schema.json,sha256=dyip8AQBbZTN77jlABhlDy4vrTlzU3nkL3pWhtYeDWE,941
+pystanley/subscribe_response_schema.json,sha256=dyip8AQBbZTN77jlABhlDy4vrTlzU3nkL3pWhtYeDWE,941
+pystanley/types.py,sha256=WY_blmNu6W1jfoLNfEBoMU-7skofxnk4IHkG-ww-TbU,921
+pystanley/validation.py,sha256=-QLeHAj1qfU-yhbwt0bBKsSuPkRjaN5fD4Xwl3YYsN8,1863
+pystanley/transport/__init__.py,sha256=zXNAdfM2T3xGc3DZNJU6t_KmuhksgnJYRpczdgOQG24,1759
+pystanley/transport/aiohttp.py,sha256=1l9u4_nAFX9eLLEo2HcFwWYRNAfL7trDxU0Onijs86Q,6935
+pystanley-0.1.0.dist-info/METADATA,sha256=iWluHnS_AoO1pc-cpy8u1hsPFGRahog9lY2Sq4hQdvs,10144
+pystanley-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pystanley-0.1.0.dist-info/entry_points.txt,sha256=Ul2Gy_2E3_KKuErSRRb4snqTSExMgeQ7bEZf4Jx45Fc,51
+pystanley-0.1.0.dist-info/top_level.txt,sha256=wCPzxTRYPOnASHFlXKCOzD1ooGrTOZvw_Exz1g2hM9k,10
+pystanley-0.1.0.dist-info/RECORD,,
