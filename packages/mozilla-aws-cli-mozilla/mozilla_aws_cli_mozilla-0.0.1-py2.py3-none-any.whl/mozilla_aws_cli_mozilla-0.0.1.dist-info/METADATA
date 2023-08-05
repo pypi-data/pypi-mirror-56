@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mozilla-aws-cli-mozilla
+Version: 0.0.1
+Summary: Mozilla specific deployment of the mozilla_aws_cli
+Home-page: https://github.com/mozilla-iam/mozilla-aws-cli-mozilla
+Author: Mozilla Enterprise Information Security
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: maws Mozilla AWS CLI config
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: mozilla-aws-cli
+
+UNKNOWN
+
+
