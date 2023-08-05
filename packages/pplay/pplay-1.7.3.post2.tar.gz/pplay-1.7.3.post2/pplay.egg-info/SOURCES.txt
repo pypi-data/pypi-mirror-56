@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+pplay.py
+requirements.txt
+setup.py
+pplay.egg-info/PKG-INFO
+pplay.egg-info/SOURCES.txt
+pplay.egg-info/dependency_links.txt
+pplay.egg-info/top_level.txt
