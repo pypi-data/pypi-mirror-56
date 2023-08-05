@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: botweet
+Version: 0.2.0
+Summary: A package that simplifies the creation of Twitter bots with Python
+Home-page: https://github.com/yyyyyyyyyyan/botweet
+Author: yyyyyyyan
+Author-email: yanorestes@hotmail.com
+License: UNKNOWN
+Download-URL: https://github.com/yyyyyyyyyyan/botweet/archive/0.1.0.zip
+Project-URL: Source code, https://github.com/yyyyyyyyyyan/botweet
+Project-URL: Download, https://github.com/yyyyyyyyyyan/botweet/archive/0.1.0.zip
+Description: botweet
+        =======
+        
+        A package that simplifies the creation of Twitter bots with Python
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Communications
+Classifier: Topic :: Utilities
