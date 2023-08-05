@@ -1,0 +1,16 @@
+numpy
+imageio
+
+[lint]
+flake8
+mypy
+
+[opencv]
+opencv-python
+
+[plot]
+matplotlib
+seaborn
+
+[tests]
+pytest
