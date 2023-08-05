@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "et-micc-tools"
+version = "0.1.2"
+description = "Functionality common to et-micc and et-micc-build"
+authors = ["Engelbert Tijskens <engelbert.tijskens@uantwerpen.be>"]
+license = "MIT"
+
+readme = 'README.rst'
+
+repository = "https://github.com/etijskens/et-micc-tools"
+homepage = "https://github.com/etijskens/et-micc-tools"
+
+keywords = ['packaging', 'poetry']
+
+[tool.poetry.dependencies]
+python = "^3.6"
+tomlkit =  "^0.5.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.4.2"
+
+[tool.poetry.scripts]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
