@@ -1,0 +1,10 @@
+aiohttp>=3.3.0
+Pillow>=6.0.0
+
+[console]
+aioconsole
+
+[docs]
+sphinx
+sphinxcontrib_trio
+sphinxcontrib-websupport
