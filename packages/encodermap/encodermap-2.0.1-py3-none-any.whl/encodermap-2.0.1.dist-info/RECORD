@@ -1,0 +1,15 @@
+encodermap/__init__.py,sha256=Z2kMnGpINpY2nNu3MoK3sA4HaKkPXvoS2_dI9M494nY,455
+encodermap/angle_dihedral_cartesian_encodermap.py,sha256=4wcYaSm-6GYO612PkwNg2qnEHfJP4iUNPW_qd7CTEAs,14587
+encodermap/autoencoder.py,sha256=lBVQ_rZsGtXg9OSohQvpT_LFw93K3Tf39o_qKfUpq8k,14161
+encodermap/backmapping.py,sha256=lahZu4VbVoJ_pfFTjgxZWQn2t8n1-FD3ffufBjUhKRg,10358
+encodermap/dihedral_backmapping.py,sha256=ut2JREG-PVbeBZ-sMEgPzj4faELj6BaYhzV8HkRtG30,2185
+encodermap/encodermap.py,sha256=sIh2lH7kgY8LcLfro1g8ukKyYZ0n7zrc4ynxAJeVK1U,639
+encodermap/misc.py,sha256=XB3Prs5i1dmE-CCV-DfKWTBPtUSmHZBe1aQIzUA_6RE,8727
+encodermap/moldata.py,sha256=f55PYPMf384fTd_ovtIjUjHk2VchWNu1JnH5XrlKiqE,9626
+encodermap/parameters.py,sha256=Er-rJ_MozDZb90LoJf0lwFIByibmiOWyuyvQtScF_t0,8736
+encodermap/plot.py,sha256=eeSur0QU_h-M8ZtoWAUBYWACE8soznDszBAY9IjN4lc,18289
+encodermap-2.0.1.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+encodermap-2.0.1.dist-info/METADATA,sha256=oS27ZI7EJz4mXbaGs0HN6M9vjZe-u7y-7NXN-KAJPuo,639
+encodermap-2.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+encodermap-2.0.1.dist-info/top_level.txt,sha256=sAKSUSOdFSF2mcxOiXR8Cd1QQCq0O6ruAzExIrld50Q,11
+encodermap-2.0.1.dist-info/RECORD,,
