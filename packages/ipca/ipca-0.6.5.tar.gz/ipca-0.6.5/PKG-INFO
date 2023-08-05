@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: ipca
+Version: 0.6.5
+Summary: Implements the IPCA method of Kelly, Pruitt, Su (2017)
+Home-page: https://github.com/bkelly-lab/ipca
+Author: Matthias Buechner, Leland Bybee
+Author-email: mat.buechner@gmail.com, leland.bybee@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: ipca,regression,IV,instrumental variable
+Platform: UNKNOWN
