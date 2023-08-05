@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: songkick
+Version: 0.1.0
+Summary: A Python SDK for the Songkick API.
+Author: Craig Anderson
+Author-email: craiga@craiga.id.au
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: python-dateutil (>=2.8,<3.0)
+Requires-Dist: requests (>=2,<3)
+Description-Content-Type: text/markdown
+
+# Songkick API Python SDK
+
+This is a Python SDK for the [Songkick API](https://www.songkick.com/developer/).
+
