@@ -1,0 +1,5 @@
+include dash_toggle/dash_toggle.min.js
+include dash_toggle/dash_toggle.dev.js
+include dash_toggle/metadata.json
+include dash_toggle/package.json
+include README.md

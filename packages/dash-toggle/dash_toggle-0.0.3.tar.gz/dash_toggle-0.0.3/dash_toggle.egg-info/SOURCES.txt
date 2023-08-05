@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+dash_toggle/Toggle.py
+dash_toggle/__init__.py
+dash_toggle/_imports_.py
+dash_toggle/dash_toggle.dev.js
+dash_toggle/dash_toggle.min.js
+dash_toggle/metadata.json
+dash_toggle/package.json
+dash_toggle.egg-info/PKG-INFO
+dash_toggle.egg-info/SOURCES.txt
+dash_toggle.egg-info/dependency_links.txt
+dash_toggle.egg-info/top_level.txt
