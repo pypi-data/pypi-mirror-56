@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+APIGtool.egg-info/PKG-INFO
+APIGtool.egg-info/SOURCES.txt
+APIGtool.egg-info/dependency_links.txt
+APIGtool.egg-info/entry_points.txt
+APIGtool.egg-info/requires.txt
+APIGtool.egg-info/top_level.txt
+apigtool/__init__.py
+apigtool/command.py
+apigtool/utility.py

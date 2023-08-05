@@ -1,0 +1,4 @@
+boto3>=1.9
+Click>=7.0
+pymongo>=3.6
+tabulate>=0.8
