@@ -1,0 +1,168 @@
+Metadata-Version: 2.1
+Name: kompaas
+Version: 0.0.7
+Summary: CLI for helm chart customization and deployment
+Home-page: UNKNOWN
+Author: Paolo Sini
+Author-email: paolo@ziosting.fr
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: cement
+Requires-Dist: jinja2
+Requires-Dist: pyyaml
+Requires-Dist: colorlog
+Requires-Dist: nested-lookup
+
+## Getting Started
+
+The following is a short tutorial on how to use mpaas:
+
+### Kubeconfig
+
+If you would like to deploy your charts to a kubernetes cluster, you will need a kubeconfig file.
+
+This file can be provided in these different ways:
+
+- By providing the file in the default location '~/.kube/config'
+- By using the KUBECONFIG environment variable.
+   This variable will hold the path to the kubeconfig file.
+- By using the KUBE_CONFIG_DATA environment variable.
+   Setting this variable to hold the contents of your kubeconfig file
+   will allow the application to automatically write it to the default
+   location.
+- By using the application's config objects.
+
+A warning message will always appear if the application fails to retrieve a kubeconfig file
+in any of these 3 ways.
+
+### Creating a project
+
+mpaas has a notion of projects.
+These will be the places where your charts are stored and can work together.
+
+To create a new project, use:
+
+```bash
+ mpaas project create [PROJECT_NAME]
+```
+
+To get a list of all your projects, use:
+
+```bash
+ mpaas project get
+```
+
+To use a project and enter its context, use:
+
+```bash
+ mpaas use [PROJECT_NAME]
+```
+
+or use the '-u' argument when creating a project.
+
+Projects are stored in a default location (~/.mpaas/projects)
+
+### Adding a chart to a project
+
+To do anything with your project, you will need to add a chart to it.
+mpaas refers to base charts as 'templates'
+
+There is a default template folder provided with mpaas ( ~/.mpaas/templates ),
+but you can provide any valid helm chart as a template.
+
+To get a list of available templates in the current directory, use:
+
+```bash
+ mpaas template get -l .
+```
+
+To add a chart from current directory to an existing project and name it, use:
+
+```bash
+ mpaas chart create -l . [TEMPLATE_NAME] [CHART_NAME]
+```
+
+To verify that the chart has been added properly, use:
+
+```bash
+ mpaas chart get
+```
+
+To enter a chart's context, use:
+
+```bash
+ mpaas chart use [CHART_NAME]
+```
+
+### Customizing a chart
+
+To get a list of all settable values in a chart's values.yaml file, use:
+
+```bash
+ mpaas value get
+```
+
+To get a list from any chart, use:
+
+```bash
+ mpaas value get -p [PROJECT_NAME] -c [CHART_NAME]
+```
+
+Then, you can update a value using:
+
+```bash
+ mpaas value update [VALUE_NAME] [NEW_VALUE]
+```
+
+### Deploying
+
+Once you are happy with your customization, you can deploy your application using:
+
+```bash
+ mpaas project deploy
+```
+
+It is possible to specify the target namespace using the '-n' argument
+It is also possible to deploy as a dry run using the '--dryrun' argument
+
+If you only need the yaml representation of you objects, you can use:
+
+```bash
+ mpaas project render
+```
+
+This will print the yaml representation of your objects to stdout.
+
+## Adding templates
+
+To add templates, you have multiple options:
+
+- Simply include the desired helm charts to any local directory
+- Place the desired helm charts in the provided default directory (~/.mpaas/templates)
+  When using ```mpaas template get``` without arguments, it will produce a list
+  of the templates inside that default folder.
+- From a chart museum
+
+### Adding templates from a chart museum
+
+By using the command
+
+```bash
+ mpaas museum get [MUSEUM_URL] --id [MUSEUM_ID] --password [MUSEUM_PASSWORD]
+```
+
+you can list all helm charts from a specified chart museum.
+
+#### Example
+
+```bash
+ mpaas museum download [MUSEUM_URL] --id [MUSEUM_ID] --password [MUSEUM_PASSWORD] [CHARTNAME]
+```
+
+This will fetch one chart from the museum located at the specified url and
+store it in the default templates location.
+
+If you want to download all charts from a museum, use 'all' as the \[CHARTNAME]
+
+
