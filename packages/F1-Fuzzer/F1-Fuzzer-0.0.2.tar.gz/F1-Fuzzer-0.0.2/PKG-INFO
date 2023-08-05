@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: F1-Fuzzer
+Version: 0.0.2
+Summary: A fast grammar fuzzer
+Home-page: https://github.com/vrthra/f1
+Author: Rahul Gopinath
+Author-email: rahul@gopinath.org
+License: UNKNOWN
+Description: # F1 Fuzzer
+        
+        This is the F1 Fuzzer described in the paper [Building Fast Fuzzers]()
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
