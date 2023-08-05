@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: RCK
+Version: 1.1.0
+Summary: A tool for (R)econstruction of (C)ancer (K)aryotypes (both clone- and haplotype-specific)
+Home-page: https://github.com/aganezov/rck
+Author: Sergey Aganezov
+Author-email: aganezov@cs.jhu.edu
+License: MIT
+Keywords: RCK,rck,cancer,cancer genomics,cancer karyotypes,clonality,subclonality,copy number aberrations,breakpoints,structural variations,novel adjacencies
+Platform: UNKNOWN
+Requires-Dist: networkx (>=2)
+Requires-Dist: scipy
+Requires-Dist: pyvcf
+Requires-Dist: pysam
+Requires-Dist: sortedcontainers
+Requires-Dist: pandas
+Requires-Dist: gffutils
+
+UNKNOWN
+
+
