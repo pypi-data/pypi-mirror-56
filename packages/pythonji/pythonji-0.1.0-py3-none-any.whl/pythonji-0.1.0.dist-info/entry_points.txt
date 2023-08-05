@@ -1,0 +1,4 @@
+[console_scripts]
+pythonji=pythonji.__main__:main
+🐍=pythonji.__main__:main
+
