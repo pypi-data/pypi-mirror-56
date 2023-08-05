@@ -1,0 +1,14 @@
+README.md
+setup.py
+booru_note_copy.egg-info/PKG-INFO
+booru_note_copy.egg-info/SOURCES.txt
+booru_note_copy.egg-info/dependency_links.txt
+booru_note_copy.egg-info/entry_points.txt
+booru_note_copy.egg-info/requires.txt
+booru_note_copy.egg-info/top_level.txt
+note_copy/__init__.py
+note_copy/__main__.py
+note_copy/cli.py
+note_copy/exceptions.py
+note_copy/note_copy.py
+note_copy/utils.py
