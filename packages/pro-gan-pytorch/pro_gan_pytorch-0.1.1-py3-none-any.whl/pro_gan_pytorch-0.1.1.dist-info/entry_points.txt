@@ -1,0 +1,3 @@
+[console_scripts]
+train=pro_gan_pytorch.train:main
+
