@@ -1,0 +1,115 @@
+# ua_spoofer
+
+A Python module which collects, lists, and returns up to date and commonly used
+User Agent strings. This can be helpful for avoiding fingerprinting, and
+bypassing anti-bot/scraping measures. It also provides a
+[Requests](https://github.com/psf/requests) session wrapper which automatically
+uses a random user agent on every connection.
+
+## User Agents
+
+A [user agent](https://en.wikipedia.org/wiki/User_agent) string is sent as a
+header in HTTP requests to identify which browser and operating system the
+client is using. It can be used by websites to tailor the content to the device
+and software a visitor is using. It can also be used to block or restrict
+certain programs' access, such as bots, web crawlers and scrapers. Another
+consequence of these strings is they can help build a profile of a user, using
+the unique compination of browser and operating system versions, a technique
+called [fingerprinting](https://ssd.eff.org/en/glossary/browser-fingerprint).
+
+User agent spoofing replaces the user agent string with a random one from a
+list of common strings, disguising the type of client from the server and
+making it harder to track the user between requests. This is one of the ways to
+bypass restrictions and mitigate against fingerprinting.
+
+## Details
+
+A problem with similar modules and programs is they either use a static
+dataset, or scrape user agents from sources which are either badly outdated or
+completely broken. ua_spoofer attempts to solve this by fetching data which is
+up to date, based on the latest browser versions, and also amalgamates data
+from several sources. This provides redundancy and a good mix of current user
+agents, without depending on an API or downloading a static dataset which
+quickly goes out of date. More sources can be added over time without breaking
+compatibility.
+
+## Installing
+
+ua_spoofer requires Python 3, plus [Requests](https://github.com/psf/requests)
+and [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/), commonly
+used modules for scraping purposes.
+
+    pip install ua_spoofer
+
+## Using
+
+### Getting User Agents
+
+    from ua_spoofer import UserAgent
+    
+    ua = UserAgent()
+
+    # Random user agents from a specified browser    
+    ua.chrome
+    ua.firefox
+    ua.ie
+
+    # Any random user agent
+    ua.random
+
+    # Get a list of supported browsers
+    ua.BROWSERS
+
+    # Get the list of all user agent strings
+    ua.all
+
+    # Update the list
+    ua.update()
+
+### Using the Requests Session wrapper
+
+    from ua_spoofer import SpoofSession
+    
+    s = SpoofSession()
+    
+    # Each request will use a different user agent string
+    # A few other headers are randomised too
+    # To demonstrate:
+    s.get("https://icanhazheaders.com/").json()
+    s.get("https://icanhazheaders.com/").json()
+    s.get("https://icanhazheaders.com/").json()
+    
+    # To get the UserAgent instance of the session
+    s.ua
+
+    # Updating the user agent list is done as you would expect
+    s.ua.update()
+
+## Other projects
+
+As mentioned earlier, there are other Python modules which attempt to do
+similar things:
+
+* [fake-useragent](https://github.com/hellysmile/fake-useragent/)
+* [requests-random-user-agent](https://github.com/DavidWittman/requests-random-user-agent)
+* [random_user_agent](https://github.com/Luqman-Ud-Din/random_user_agent)
+
+User agent spoofing isn't the only technique to bypass restrictions, with more
+sites being Javascript based and using more aggressive techniques to protect
+against crawlers, bots and DDoS attacks, sometimes other methods are necessary,
+including headless browser automation.
+
+* [cloudflare-scrape](https://github.com/Anorov/cloudflare-scrape) is a module
+  to bypass Cloudflare's anti-bot system
+* [PhantomJS](https://phantomjs.org/) is a scriptable headless browser
+* [Selenium](https://selenium.dev/) is a full browser automation framework
+* [Scrapy](https://scrapy.org/) is a Python framework for building crawlers
+* [Spynner](https://github.com/kiorky/spynner) is another scriptable Python
+  browser module
+
+In some cases, Tor or a VPN can be used to hide the client's IP address for
+proper anonymity.
+
+## License
+
+ua_spoofer is released under the terms of the Apache 2.0 license.
