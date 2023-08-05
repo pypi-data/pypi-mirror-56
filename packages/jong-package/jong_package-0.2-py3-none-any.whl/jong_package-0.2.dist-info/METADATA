@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: jong-package
+Version: 0.2
+Summary: This is an Example Package.. It might not work...
+Home-page: http://example.com/HelloWorld/
+Author: Jong Kim
+Author-email: jonghyockkim@naver.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://bugs.example.com/HelloWorld/
+Project-URL: Documentation, https://docs.example.com/HelloWorld/
+Project-URL: Source Code, https://code.example.com/HelloWorld/
+Keywords: hw_9 is clustering example
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+
+UNKNOWN
+
+
