@@ -1,0 +1,15 @@
+CHANGES.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+files.txt
+setup.py
+pokereval/__init__.py
+pokereval/card.py
+pokereval/hand_evaluator.py
+pokereval/lookup_tables.py
+pokereval/popcount.py
+pokereval.egg-info/PKG-INFO
+pokereval.egg-info/SOURCES.txt
+pokereval.egg-info/dependency_links.txt
+pokereval.egg-info/top_level.txt
