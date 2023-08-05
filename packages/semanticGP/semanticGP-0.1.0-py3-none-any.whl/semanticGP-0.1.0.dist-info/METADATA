@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: semanticGP
+Version: 0.1.0
+Summary: Implementation of Semantic Genetic Programming
+Home-page: https://github.com/joaofracasso/semanticGP.git
+Author: Joao Victor Calvo Fracasso
+Author-email: fracassojv@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+semanticGP
+==========
+
+.. image:: https://img.shields.io/pypi/v/semanticGP.svg
+    :target: https://pypi.python.org/pypi/semanticGP
+    :alt: Latest PyPI version
+
+.. image:: https://travis-ci.org/borntyping/cookiecutter-pypackage-minimal.png
+   :target: https://travis-ci.org/borntyping/cookiecutter-pypackage-minimal
+   :alt: Latest Travis CI build status
+
+Implementation of Semantic Genetic Programming
+
+Usage
+-----
+
+Installation
+------------
+
+Requirements
+^^^^^^^^^^^^
+
+Compatibility
+-------------
+
+Licence
+-------
+
+Authors
+-------
+
+`semanticGP` was written by `Joao Victor Calvo Fracasso <fracassojv@gmail.com>`_.
+
+
