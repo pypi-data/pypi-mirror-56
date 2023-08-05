@@ -1,0 +1,13 @@
+README.md
+setup.py
+textbook/__init__.py
+textbook/__main__.py
+textbook/config.py
+textbook/dataset.py
+textbook/transforms_video.py
+textbook/utils.py
+textbook.egg-info/PKG-INFO
+textbook.egg-info/SOURCES.txt
+textbook.egg-info/dependency_links.txt
+textbook.egg-info/requires.txt
+textbook.egg-info/top_level.txt
