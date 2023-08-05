@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: httpcodes
+Version: 1.0.0
+Summary: A very minimal http-status-message to http-status-code package.
+Home-page: https://github.com/rickgrammer/httpcodes.git
+Author: rickgrammer
+Author-email: rickgrammer@schwifty.tech
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+httpcodes
+=====
+
+Http codes is a minimal package the literally maps the status-message to a status-code.
+The only use-case of this package is to increase readability in your code.
+
+Installing
+----------
+
+Install and update using `pip`:
+
+    pip install -U httpcodes
+
+A Simple Example
+----------------
+
+    import httpcodes
+
+    print(httpcodes.OK)
+    print(httpcodes.NOT_FOUND)
+    print(httpcodes.IM_A_TEAPOT)
+
+
+
