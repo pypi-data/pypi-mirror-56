@@ -1,0 +1,15 @@
+pirecorder/__init__.py,sha256=yMbrH1GxaiYN1m_MyamnuNZX-rNP3UJjHnHrNIPNoSw,830
+pirecorder/__version__.py,sha256=SAvAHuT2d7T88Pp0zGwMSfGsfA52BKA60RKoomE3ARc,638
+pirecorder/calibrate.py,sha256=PC3ECj0NzhTXGquOno7HjVDEcHP1TsVqgN31SSC9llA,4713
+pirecorder/convert.py,sha256=PVrUK28M6nrx5na0Xhm_AGZrWKGFbLMAnRcpzeFKBNA,7437
+pirecorder/getgains.py,sha256=pxxXxwtIcZH0N6sus0rOt9AztgmuDDf2B9dyGhwO79I,2019
+pirecorder/pirecorder.py,sha256=KJj_rYl699ulsfb8JncjgYJ_JOZFv-rZwXjBNOcoJ-o,20389
+pirecorder/schedule.py,sha256=GZUfQEZNJ7kD5WTvcHzPN7H3tuowxt8VEPiJ61C55Rg,8675
+pirecorder/stream.py,sha256=1d8SWNvInWiUe6RJ-8lapmHOGvzECwN4OQFmZgT95kc,1670
+pirecorder/videoin.py,sha256=BuXc13CnVVZc3rUnBM8gVu9bBApWbEG4n4H4KTMz3Xo,4581
+pirecorder-2.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pirecorder-2.0.0.dist-info/METADATA,sha256=ONwh7hG7TXsQKafPRjyppQdzc5NzAsafqXmeYf47KPs,8962
+pirecorder-2.0.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+pirecorder-2.0.0.dist-info/entry_points.txt,sha256=lWF-fUIcPybhwbVRxYj70nlrKhFSN8qp02FP6_G4OtI,166
+pirecorder-2.0.0.dist-info/top_level.txt,sha256=tgBx5EK2Ce5DpY0mO83F_7FFvSCCKcNPsAhhNs0DcLM,11
+pirecorder-2.0.0.dist-info/RECORD,,
