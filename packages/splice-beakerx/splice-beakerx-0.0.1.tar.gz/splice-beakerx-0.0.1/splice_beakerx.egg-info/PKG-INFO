@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: splice-beakerx
+Version: 0.0.1
+Summary: Splice Modification for TwoSigma Beakerx
+Home-page: UNKNOWN
+Author: Two Sigma
+Author-email: author@example.com
+License: UNKNOWN
+Description: ## This is a Splice Machine Modification for the TwoSigma BeakerX to handle a few Jar changes
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.65
+Description-Content-Type: text/markdown
