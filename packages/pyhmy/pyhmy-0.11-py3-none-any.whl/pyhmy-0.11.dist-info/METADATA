@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyhmy
+Version: 0.11
+Summary: UNKNOWN
+Home-page: http://harmony.one/
+Author: Daniel Van Der Maden
+Author-email: daniel@harmony.one
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pexpect
+
+PyHmy is a wrapper tool to use Harmony's CLI in python.
+
+
