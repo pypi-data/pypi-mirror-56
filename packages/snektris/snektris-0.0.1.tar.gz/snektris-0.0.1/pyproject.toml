@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit"]
+build-backend = "flit.buildapi"
+
+[tool.flit.metadata]
+module = "snektris"
+author = "Gabriel Kabbe"
+author-email = "gabriel.kabbe@mail.de"
+home-page = "https://github.com/gab50000/snektris"
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+requires = [
+    "pygame == 1.9.6"
+]
+
