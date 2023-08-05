@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ask_academic_dates"
+version = "0.2.3"
+description = "Ask Scholars Portal Academic Date finder"
+authors = ["Guinsly Mondesir <guinslym@gmail.com>"]
+keywords = ["Ask", "Scholars Portal", "Ontario"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/guinslym/ask_academic_dates"
+repository = "https://github.com/guinslym/ask_academic_dates"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.dependencies]
+python = "^3.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
