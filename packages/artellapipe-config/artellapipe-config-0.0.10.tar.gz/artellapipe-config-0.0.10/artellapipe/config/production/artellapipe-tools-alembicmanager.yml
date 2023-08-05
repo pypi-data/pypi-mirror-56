@@ -1,0 +1,67 @@
+# Base Configuration file for artellapipe-tools-alembicmanager
+
+# Defines tool name
+name: Alembic Manager
+
+# Unique ID for the tool
+id: artellapipe-tools-alembicmanager
+
+# Defines logo name of the tool
+logo: alembicmanager_logo
+
+# Defines icon of the tool
+icon: alembic
+
+# Description of the tool
+description: Tool used to export/import Alembics
+
+# URL to tool documentation web page
+url: www.google.es
+
+# Tags relatedi with this tool
+tags: ['alembic', 'import', 'export']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://e3795e7ffa23492e918f83ea3c4d658c@sentry.io/1764704
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: WARNING
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# List that defines the import order of the tool modules
+import_order:
+  - widgets
+  - core
+
+# Menu representation of this tool
+menu_ui:
+  label: "Alembic Manager"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: General
+    type: menu
+    children:
+      - id: artellapipe-tools-alembicmanager
+        type: toolset
+
+# Tool Shelf definition
+shelf:
+  name: ${project}
+  children:
+    - id: ${project + ".shelf.alembicmanager"}
+      displayLabel: False
+      children:
+        - id: AlembicManager
+          type: toolset

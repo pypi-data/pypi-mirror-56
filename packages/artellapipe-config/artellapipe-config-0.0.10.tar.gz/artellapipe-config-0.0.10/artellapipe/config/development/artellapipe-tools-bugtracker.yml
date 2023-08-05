@@ -1,0 +1,39 @@
+# Base Configuration file for artellapipe-tools-bugtracker
+
+# Defines tool name
+name: Bug Tracker
+
+# Unique ID for the tool
+id: artellapipe-tools-bugtracker
+
+# Defines logo name of the tool
+logo: bugtracker_logo
+
+# Defines icon of the tool
+icon: bug
+
+# Description of the tool
+description: Tool used to export/import Alembics
+
+# URL to tool documentation web page
+url: www.google.es
+
+# Tags relatedi with this tool
+tags: ['error', 'bug', 'report']
+
+# Menu representation of this tool
+menu_ui:
+  label: "Bug Tracker"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://9d2160bb725a4fbcacb4d72aa9df6eaf@sentry.io/1797903
+
+menu:
+  - label: General
+    type: menu
+    children:
+      - id: artellapipe-tools-bugtracker
+        type: toolset

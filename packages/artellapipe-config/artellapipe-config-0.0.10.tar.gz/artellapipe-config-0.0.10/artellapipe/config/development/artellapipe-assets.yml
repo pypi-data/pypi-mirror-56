@@ -1,0 +1,24 @@
+  # Base Configuration for Artella Assets
+
+data_filename: "data.json"
+types: {}
+files: {}
+must_files: []
+ignored_paths: []
+wip_status: "working"
+publish_status: "published"
+library_supported_files: {}
+thumb_size: [200, 200]
+default_thumb: 'default'
+default_name: 'New Asset'
+reference_extension_functions: {}
+
+# Defines dictionary with default asset data info
+data:
+  id_attribute: 'id'
+  name_attribute: 'name'
+  thumb_attribute: 'thumb'
+  description_attribute: 'description'
+  icon_attribute: 'icon'
+  category_attribute: 'category'
+  path_template_name: 'asset_path'

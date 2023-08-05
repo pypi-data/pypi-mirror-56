@@ -1,0 +1,65 @@
+# Base Configuration file for artellapipe-tools-lightrigsmanager
+
+# Defines tool name
+name: Light Rigs Manager
+
+# Unique ID for the tool
+id: artellapipe-tools-lightrigsmanager
+
+# Defines logo name of the tool
+logo: lightrigsmanager_logo
+
+# Defines icon of the tool
+icon: idea
+
+# Description of the tool
+description: Tool to easily import light rigs into DCC scenes
+
+# URL to tool documentation web page
+url: www.google.es
+
+# Tags relatedi with this tool
+tags: ['light', 'light rig']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://5382260e62d448b881a24ea95f70ef4f@sentry.io/1764569
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: WARNING
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "Light Rigs Manager"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Lighting
+    type: menu
+    children:
+      - id: artellapipe-tools-lightrigsmanager
+        type: toolset
+
+# Tool Shelf definition
+shelf:
+  name: ${project}
+  children:
+    - id: ${project + ".shelf.lightrigsmanager"}
+      displayLabel: False
+      children:
+        - id: LightRigsManager
+          type: toolset
+
+# Defines path where light rigs are located relative to the assets path
+lightrigs_path: 'lightrigs'

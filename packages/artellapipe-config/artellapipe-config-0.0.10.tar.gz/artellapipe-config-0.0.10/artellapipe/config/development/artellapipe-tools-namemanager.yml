@@ -1,0 +1,59 @@
+# Base Configuration file for artellapipe-tools-namemanager
+
+# Defines tool name
+name: Name Manager
+
+# Unique ID for the tool
+id: artellapipe-tools-namemanager
+
+# Defines logo name of the tool
+logo: namemanager_logo
+
+# Defines icon of the tool
+icon: rename
+
+# Description of the tool
+description: Tool to manage the nomenclature of the project
+
+# Tags related with this tool
+tags: ['name', 'manager']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://d50e6953c45b44609a9e88d3bc3064d8@sentry.io/1764141
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: WARNING
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "Name Manager"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: TD
+    type: menu
+    children:
+      - id: artellapipe-tools-namemanager
+        type: toolset
+
+# Tool Shelf definition
+shelf:
+  name: ${project}
+  children:
+    - id: ${project + ".shelf.namemanager"}
+      displayLabel: False
+      children:
+        - id: NameManager
+          type: toolset
