@@ -1,0 +1,5 @@
+pyglet>=1.4.7
+pylsl>=1.13
+
+[tts]
+pyttsx3>=2.7
