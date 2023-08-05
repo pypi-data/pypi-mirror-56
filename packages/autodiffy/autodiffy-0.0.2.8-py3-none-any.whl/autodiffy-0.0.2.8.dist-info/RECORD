@@ -1,0 +1,17 @@
+autodiffy/__init__.py,sha256=ZoG6NJRX8TelfEp8wYzUFHpcpAtYe-XZUtXMp5b20NA,18
+autodiffy/ad_expression.py,sha256=hpIz5l4gPDGrMMjbR_004qXj5zserUor6jhwBjFvfII,4517
+autodiffy/binary_tree.py,sha256=9klJtALZyXEwzFnTframrU1dPj6yQzGJ4Wa5Zz8zE3U,1019
+autodiffy/forward_mode.py,sha256=PsZoMeBtMdFA3NSYChnrOL6OR3CyuB2z96UnkQ_S7vc,4418
+autodiffy/interface.py,sha256=IQiYsEJLx_ZpvaO2uTTNeyHRHBTg01azSYFAHSro-UY,411
+autodiffy/parse_expression.py,sha256=hoXBsFr5GHTSLU00wWV1i5DURxTvs6i0yRg1RRyz5xw,2326
+autodiffy/parse_tree.py,sha256=-axB7P-J0TD5DxtKlqlaue3r2B1-4OrqvtWdIJJMoxw,8484
+autodiffy/reverse_mode.py,sha256=-oSrxLdbNGgA-FMtwMmyUyH3Xtz_hV0rqQK2AdIvJ8Q,801
+autodiffy/terms.py,sha256=iAXoerZ_Bj1wN29ePKUnatZIK_0EpzAzJG2Y_ZS6w8k,754
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_autodiffy.py,sha256=QdyRGFhpeCe78t72gcA0EXc7F2vi7UU3gYRjnunQyo8,2327
+tests/test_root_solver.py,sha256=SHKrnnOqECSHADWZlTtgsH7JQzWcRRCIba0wU9xyBZU,352
+autodiffy-0.0.2.8.dist-info/LICENSE,sha256=ZC-Fh9mvRQ1z2_1uv2IMGwBRTMD6Sqf-Qti9dYcgeSo,1109
+autodiffy-0.0.2.8.dist-info/METADATA,sha256=HJPyy4xrq3zCBo65mDiAA7DBWWHdnYl-nWniUxymreQ,854
+autodiffy-0.0.2.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+autodiffy-0.0.2.8.dist-info/top_level.txt,sha256=HIvx7mU8-xeB6ThUmM92H7e1eNViNjc0fLneQ9XrE14,16
+autodiffy-0.0.2.8.dist-info/RECORD,,
