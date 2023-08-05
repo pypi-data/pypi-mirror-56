@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+testobject/__init__.py
+testobject/client.py
+testobject/devices.py
+testobject/reports.py
+testobject/storage.py
+testobject/suites.py
+testobject/watcher.py
+testobject.egg-info/PKG-INFO
+testobject.egg-info/SOURCES.txt
+testobject.egg-info/dependency_links.txt
+testobject.egg-info/requires.txt
+testobject.egg-info/top_level.txt
