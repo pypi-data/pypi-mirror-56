@@ -1,0 +1,59 @@
+# Base Configuration file for artellapipe-tools-artellamanager
+
+# Defines tool name
+name: Artella Uploader
+
+# Unique ID for the tool
+id: artellapipe-tools-artellauploader
+
+# Defines logo name of the tool
+logo: artellauploader_logo
+
+# Defines icon of the tool
+icon: artella_upload
+
+# Description of the tool
+description: Tool to easily upload files into Artella server
+
+# Tags related with this tool
+tags: ['artella', 'manager', 'files', 'uploader']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://5147c41093e242f59ddc24af9f56c06d@sentry.io/1764690
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: WARNING
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "Artella Uploader"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Artella
+    type: menu
+    children:
+      - id: artellapipe-tools-artellauploader
+        type: toolset
+
+# Tool Shelf definition
+shelf:
+  name: ${project}
+  children:
+    - id: ${project + ".shelf.artellauploader"}
+      displayLabel: False
+      children:
+        - id: ArtellaUploader
+          type: toolset

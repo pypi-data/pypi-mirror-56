@@ -1,0 +1,64 @@
+# Base Configuration file for artellapipe-tools-assetslibrary
+
+# Defines tool name
+name: Assets Library
+
+# Unique ID for the tool
+id: artellapipe-tools-assetslibrary
+
+# Defines logo name of the tool
+logo: assetslibrary_logo
+
+# Defines icon of the tool
+icon: assets_library
+
+# Description of the tool
+description: Tool to easily import and reference assets file into DCC scene
+
+# URL to tool documentation web page
+url: www.google.es
+
+# Tags relatedi with this tool
+tags: ['assets', 'library']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://6ce3277bc9d646029e1062bdf7e56f24@sentry.io/1764122
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: WARNING
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "Assets Library"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Assets
+    type: menu
+    children:
+      - id: artellapipe-tools-assetslibrary
+        type: toolset
+
+# Tool Shelf definition
+shelf:
+  name: ${project}
+  children:
+    - id: ${project + ".shelf.assetslibrary"}
+      displayLabel: False
+      children:
+        - id: AssetsLibrary
+          type: toolset
+
+supported_files: {}

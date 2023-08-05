@@ -1,0 +1,82 @@
+# Base Configuration for Artella Projects
+
+name: ${title}
+env_var: ${project_upper + "_PROJECT"}
+tray_icon_name: ${project_lower + "_tray"}
+id_number: ""
+id: ""
+icon_resources_folder: "logos"
+icon_name: ${project_lower}
+dev_color0: "75, 165, 135, 150"
+dev_color1: "65, 145, 120, 100"
+version_file: "__version__.py"
+naming_file: "naming.json"
+emails: []
+url: ""
+icon: "artella"
+title_background: "title_background"
+documentation_url: ""
+modules_to_register:
+  - bootstrap
+  - externals
+paths_to_register: []
+tag_types: []
+outliner_categories: {}
+departments: []
+
+# Define configuration variables for project shaders
+shaders:
+  extension: ".ashader"
+
+# Define configuration variables for project playblast
+playblast:
+  presets_url: ""
+
+# Define configuration variables for project shots
+shot:
+  regex: "*"
+  file_types: []
+  extension: ".shot"
+
+# Define configuration variables for project progress bar
+progress_bar:
+  color0: "75, 165, 135"
+  color1: "65, 145, 120"
+
+# Defines available libs
+libs:
+  - artella
+  - naming
+
+# Defines available tools
+tools:
+  - welcome
+  - changelog
+  - bugtracker
+
+# Defines settings for project menu
+menu:
+  name: ${title}
+  object_name: ${project_lower + "_mainMenu"}
+
+# Defines settings for project shelf
+shelf:
+  icon_name: ${project_lower + "_shelf"}
+  load_at_startup: True
+
+# Defines tray
+tray:
+  name: ${project_lower + "_tray"}
+  children:
+    - label: ${title + " Documentation"}
+      icon: manual
+      tip: ${"Open " + title + " Tools Documentation webpage"}
+      command: "self._project.open_documentation()"
+    - label: ${title + " Web"}
+      icon: ${project_lower + "_tray"}
+      tip: ${"Open " + title + " Project webpage"}
+      command: "self._project.open_webpage()"
+    - label: ${title + " Artella Project"}
+      icon: artella
+      tip: ${"Open " + title + " Artella Project webpage"}
+      command: "self._project.open_artella_project_url()"

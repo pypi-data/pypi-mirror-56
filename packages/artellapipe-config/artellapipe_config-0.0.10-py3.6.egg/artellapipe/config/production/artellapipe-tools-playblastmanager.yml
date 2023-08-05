@@ -1,0 +1,59 @@
+# Base Configuration file for artellapipe-tools-playblastmanager
+
+# Defines tool name
+name: Playblast Manager
+
+# Unique ID for the tool
+id: artellapipe-tools-playblastmanager
+
+# Defines logo name of the tool
+logo: playblastmanager_logo
+
+# Description of the tool
+description: Tool to generate customized playblasts
+
+# URL to tool documentation web page
+url: www.google.es
+
+# Tags relatedi with this tool
+tags: ['manager', 'playblast']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://d1f243de035d40bf98d492e80469b71b@sentry.io/1764692
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: WARNING
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "Playblast Manager"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: General
+    type: menu
+    children:
+      - id: artellapipe-tools-playblastmanager
+        type: toolset
+
+# Tool Shelf definition
+shelf:
+  name: ${project}
+  children:
+    - id: ${project + ".shelf.playblastmanager"}
+      displayLabel: False
+      children:
+        - id: PlayblastManager
+          type: toolset
