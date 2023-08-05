@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: bscearth.utils3
+Version: 2.0.0
+Summary: Shared code and tools for various BSC-ES department projects for Python3
+Home-page: https://earth.bsc.es/gitlab/ces/bscearth.utils3
+Author: CES Group at BSC-ES department
+Author-email: ces@bsc.es
+License: MIT
+Download-URL: https://earth.bsc.es/gitlab/ces/bscearth.utils3/repository/archive.tar.gz?ref=v2.0.0
+Platform: UNKNOWN
+Requires-Python: >3.7.3
+Requires-Dist: python-dateutil
+Requires-Dist: pyparsing
+
+bscearth.utils is a package with shared code and tools for various BSC-ES department projects.
+
+
