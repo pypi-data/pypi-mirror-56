@@ -1,0 +1,5 @@
+[console_scripts]
+ccs-setuptest.py = Start.ccssetuptest:main
+setuptest = Start.ccssetuptest:main
+setuptest.py = Start.ccssetuptest:main
+
