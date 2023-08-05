@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: bordr
+Version: 0.1.3
+Summary: A  fast and accurate POS and morphological tagging toolkit, lightly adapted to Tibetan language.
+Home-page: https://github.com/Esukhia/RDRPOSTagger
+Author: Dat Quoc Nguyen
+Author-email: dqnguyen@unimelb.edu.au
+License: GNU General Public License
+Project-URL: Source, https://github.com/Esukhia/RDRPOSTagger
+Project-URL: Tracker, https://github.com/Esukhia/RDRPOSTagger/issues
+Description: ## bordr ##
+        
+        A pip installable version of RDRPOSTagger with Tibetan-specific changes.
+        
+         - See the original [RDRPOSTagger](https://github.com/datquocnguyen/RDRPOSTagger) for documentation.
+         - Check the [modifications](https://github.com/Esukhia/bordr/blob/master/CHANGELOG.md) implemented in this repo.
+         - See [rdr-data](https://github.com/Esukhia/rdr-data) for RDR models for Tibetan.
+         - See [usage.py](https://github.com/Esukhia/bordr/blob/master/usage.py) for the programmatic interface available in bordr
+        
+        ### Maintenance
+        
+        Build the source dist:
+        
+        ```bash
+        rm -rf dist/
+        python3 setup.py clean sdist
+        ```
+        
+        and upload on twine (version >= `1.11.0`) with:
+        
+        ```bash
+        twine upload dist/*
+        ```
+Keywords: part-of-speech-tagger java nlp pos-tagging pos-tagger python3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: Tibetan
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
