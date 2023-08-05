@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+deepstack/__init__.py
+deepstack/base.py
+deepstack/ensemble.py
+deepstack.egg-info/PKG-INFO
+deepstack.egg-info/SOURCES.txt
+deepstack.egg-info/dependency_links.txt
+deepstack.egg-info/requires.txt
+deepstack.egg-info/top_level.txt
