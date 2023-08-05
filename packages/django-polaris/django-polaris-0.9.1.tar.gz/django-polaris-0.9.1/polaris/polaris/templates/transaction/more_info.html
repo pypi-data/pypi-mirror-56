@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block "title" %}
+<title>Transaction More Info</title>
+{% endblock %}
+
+{% block "content" %}
+<section class="section receipt">
+    <div class="field">
+        <label>
+            kind
+        </label>
+        <div class="field-value">
+            {{ transaction.kind }}
+        </div>
+    </div>
+    
+    <div class="field">
+        <label>
+            id
+        </label>
+        <div class="field-value">
+            {{ transaction.id }}
+        </div>
+    </div>
+
+    <div class="field">
+        <label>
+            amount
+        </label>
+        <div class="field-value">
+            {{ transaction.amount_in }}
+        </div>
+    </div>
+
+    <div class="field">
+        <label>
+            status
+        </label>
+        <div class="field-value">
+            {{ transaction.status }}
+        </div>
+    </div>
+
+    <div class="field">
+        <label>
+            start
+        </label>
+        <div class="field-value">
+            {{ transaction.started_at }}
+        </div>
+    </div>
+
+    <div class="field">
+        <label>
+            completed
+        </label>
+        <div class="field-value">
+            {{ transaction.completed_at }}
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        var tx_json = JSON.parse('{{ tx_json|safe }}');
+        var transaction = tx_json["transaction"];
+
+        postTransactionCallback();
+
+        // Callback function to post the serialized transaction to the wallet.
+        function postTransactionCallback() {
+            var targetWindow;
+
+            if (window.opener != void 0) {
+                targetWindow = window.opener;
+            } else if (window.parent != void 0) {
+                targetWindow = window.parent;
+            } else {
+                return;
+            }
+
+            // Anchors should send a JSON with the the entire transaction object, serialized by
+            // the server, in a transaction property (i.e., the value for the "transaction" key).
+            // The transaction object should not be hand-constructed at this point.
+            // The reference client expects the following fields in the transaction: id, status,
+            // withdraw_anchor_account, withdraw_memo, withdraw_memo_type, amount_in.
+            //
+            // In other terms, the message should have the following structure:
+            // tx_json = {
+            //     "transaction": {
+            //         "id": "fake-transaction-id",
+            //         "status": "completed"
+            //         etc.
+            //     }
+            // }
+            targetWindow.postMessage(tx_json, "*");
+        }
+
+        // Confirm an uncompleted deposit transaction.
+        function submitExternal() {
+            var transactionId, amount, xhr;
+            transactionId = transaction["id"];
+            amount = transaction["amount_in"];
+            xhr = new XMLHttpRequest();
+            xhrUrl = '/deposit/confirm_transaction?transaction_id=' + transactionId + '&amount=' + amount;
+            xhr.open('get', xhrUrl, true);
+            xhr.onload = function () {
+                if (this.status >= 200 && this.status < 400) {
+                    postTransactionCallback();
+                }
+            }
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+            xhr.send();
+            return false;
+        }
+    </script>
+</section>
+{% endblock %}
+
+{% block "footer" %}
+{% if transaction.status != "completed" %}
+    <div class="at-bottom button-row">
+        {% if transaction.kind == "deposit" %}
+            <button type="button" class="button-main" onclick="return submitExternal()">Admin: Confirm external transaction.</button>
+
+        {% endif %}
+        <div class="spacer"></div>
+        <button type="button" class="button-secondary refresh-icon" onclick="location.reload(true);"></button>
+    </div>
+{% endif %}
+{% endblock %}
