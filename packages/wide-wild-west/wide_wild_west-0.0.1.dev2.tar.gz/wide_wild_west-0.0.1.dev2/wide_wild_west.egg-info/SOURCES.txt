@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+wide_wild_west/__init__.py
+wide_wild_west/data.py
+wide_wild_west/main.py
+wide_wild_west.egg-info/PKG-INFO
+wide_wild_west.egg-info/SOURCES.txt
+wide_wild_west.egg-info/dependency_links.txt
+wide_wild_west.egg-info/requires.txt
+wide_wild_west.egg-info/top_level.txt
