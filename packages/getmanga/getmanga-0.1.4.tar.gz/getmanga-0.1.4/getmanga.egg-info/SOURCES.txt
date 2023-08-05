@@ -1,0 +1,11 @@
+README.md
+setup.py
+getmanga/__init__.py
+getmanga.egg-info/PKG-INFO
+getmanga.egg-info/SOURCES.txt
+getmanga.egg-info/dependency_links.txt
+getmanga.egg-info/requires.txt
+getmanga.egg-info/top_level.txt
+getmanga/parsers/__init__.py
+getmanga/parsers/mangalib.py
+getmanga/parsers/mangarock.py
