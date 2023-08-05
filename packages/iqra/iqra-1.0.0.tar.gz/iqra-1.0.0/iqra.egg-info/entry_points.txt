@@ -1,0 +1,19 @@
+[iqra.commands]
+backup = iqra.commands:backup
+commit = iqra.commands:commit
+delete = iqra.commands:delete
+echo = iqra.commands:echo
+edit = iqra.commands:edit
+file = iqra.commands:file
+list = iqra.commands:list_
+lsbackup = iqra.commands:lsbackup
+new = iqra.commands:new
+restore = iqra.commands:restore
+rollback = iqra.commands:rollback
+thumb = iqra.commands:thumb [cairo]
+
+[iqra.plugins]
+exportdb = iqra.plugins:exportdb
+importdb = iqra.plugins:importdb
+stickers = iqra.plugins:stickers [cairo]
+

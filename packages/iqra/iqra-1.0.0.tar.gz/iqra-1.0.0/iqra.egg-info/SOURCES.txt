@@ -1,0 +1,16 @@
+MANIFEST.in
+README.txt
+setup.py
+iqra/__init__.py
+iqra/__main__.py
+iqra/commands.py
+iqra/db.py
+iqra/iqra_plugins.py
+iqra/plugins.py
+iqra.egg-info/PKG-INFO
+iqra.egg-info/SOURCES.txt
+iqra.egg-info/dependency_links.txt
+iqra.egg-info/entry_points.txt
+iqra.egg-info/requires.txt
+iqra.egg-info/top_level.txt
+iqra/importers/db_0.py
