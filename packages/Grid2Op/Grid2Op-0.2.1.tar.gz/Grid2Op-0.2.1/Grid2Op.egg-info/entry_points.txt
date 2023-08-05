@@ -1,0 +1,3 @@
+[console_scripts]
+Grid2Op = grid2op.command_line:main
+
