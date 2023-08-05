@@ -1,0 +1,14 @@
+pywmi
+numpy
+typing
+pysmt
+matplotlib
+scikit-learn
+pickledb
+autodora
+
+[sdd]
+pysdd
+
+[telegram]
+python-telegram-bot
