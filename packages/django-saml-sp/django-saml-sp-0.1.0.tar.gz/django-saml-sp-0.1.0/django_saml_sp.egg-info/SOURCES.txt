@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+django_saml_sp.egg-info/PKG-INFO
+django_saml_sp.egg-info/SOURCES.txt
+django_saml_sp.egg-info/dependency_links.txt
+django_saml_sp.egg-info/not-zip-safe
+django_saml_sp.egg-info/requires.txt
+django_saml_sp.egg-info/top_level.txt
+sp/__init__.py
+sp/admin.py
+sp/apps.py
+sp/backends.py
+sp/models.py
+sp/urls.py
+sp/utils.py
+sp/views.py
