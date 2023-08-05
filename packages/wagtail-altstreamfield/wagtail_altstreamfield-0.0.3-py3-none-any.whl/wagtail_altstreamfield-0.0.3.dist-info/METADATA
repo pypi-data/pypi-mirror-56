@@ -1,0 +1,119 @@
+Metadata-Version: 2.1
+Name: wagtail-altstreamfield
+Version: 0.0.3
+Summary: An alternative implementation of the Wagtail StreamField.
+Home-page: https://github.com/didorothy/wagtail-altstreamfield
+Author: David Dorothy
+Author-email: didorothy@gmail.com
+License: BSD-2-Clause
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Description-Content-Type: text/markdown
+Requires-Dist: Django (<2.3,>=2.0)
+Requires-Dist: wagtail (<3.0,>=2.7)
+
+# Wagtail AlternateStreamField
+
+
+This project provides an alternate implementation of Wagtail's StreamField.
+This was created to resolve issues with performance for more complicated block structures.
+
+## Basic Installation and Usage
+
+To install use pip:
+
+`pip install wagtail-altstreamfield`
+
+Add "altstreamfield" to your Django Project's `INSTALLED_APPS` list.
+
+Create some custom blocks and a `wagtail.core.models.Page` subclass like the following:
+
+```python
+#filename: [yourapp]/models.py
+from django.db import models
+
+from wagtail.core.models import Page
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
+
+from altstreamfield.edit_handlers import AltStreamFieldPanel
+from altstreamfield.fields import AltStreamField
+
+from altstreamfield.blocks import (
+    StreamBlock,
+    StructBlock,
+
+    BooleanField,
+    CharField,
+    ChoiceField,
+    DocumentChooserField,
+    ImageChooserField,
+    IntegerField,
+    RichTextField,
+    StreamBlockField,
+    TextField,
+)
+
+# Create some custom blocks
+HEADING_TYPE_CHOICES = (
+    ('h1', 'H1'),
+    ('h2', 'H2'),
+    ('h3', 'H3'),
+    ('h4', 'H4'),
+    ('h5', 'H5'),
+    ('h6', 'H6'),
+)
+
+class Heading(StructBlock):
+    heading_type = ChoiceField(choices=HEADING_TYPE_CHOICES, required=True)
+    text = CharField()
+
+    class Meta:
+        icon = 'title'
+
+
+class Paragraph(StructBlock):
+    text = RichTextField()
+
+    class Meta:
+        icon = 'pilcrow'
+
+
+class DocumentLink(StructBlock):
+    title = CharField()
+    document = DocumentChooserField()
+
+    class Meta:
+        icon = 'doc-empty'
+
+
+class SimpleStreamBlock(StreamBlock):
+    heading = Heading()
+    paragraph = Paragraph()
+    document = DocumentLink()
+
+
+# Create your models here.
+class HomePage(Page):
+    body = AltStreamField(SimpleStreamBlock)
+
+    content_panels = Page.content_panels + [
+        AltStreamFieldPanel('body', classname='full'),
+    ]
+```
+
+If you are creating a large number of blocks it is a good idea to separate the blocks into a separate module or modules.
+
+
