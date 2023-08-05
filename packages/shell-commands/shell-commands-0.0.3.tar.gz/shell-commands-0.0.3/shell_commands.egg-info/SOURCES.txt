@@ -1,0 +1,13 @@
+README.md
+setup.py
+shell_commands.egg-info/PKG-INFO
+shell_commands.egg-info/SOURCES.txt
+shell_commands.egg-info/dependency_links.txt
+shell_commands.egg-info/entry_points.txt
+shell_commands.egg-info/requires.txt
+shell_commands.egg-info/top_level.txt
+src/shell_commands/__init__.py
+src/shell_commands/__main__.py
+src/shell_commands/commands.py
+src/shell_commands/packages.py
+src/shell_commands/utils.py
