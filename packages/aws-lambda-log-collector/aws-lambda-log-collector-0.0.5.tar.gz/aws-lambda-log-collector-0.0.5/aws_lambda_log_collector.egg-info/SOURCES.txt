@@ -1,0 +1,13 @@
+README.md
+setup.py
+aws_lambda_log_collector.egg-info/PKG-INFO
+aws_lambda_log_collector.egg-info/SOURCES.txt
+aws_lambda_log_collector.egg-info/dependency_links.txt
+aws_lambda_log_collector.egg-info/entry_points.txt
+aws_lambda_log_collector.egg-info/requires.txt
+aws_lambda_log_collector.egg-info/top_level.txt
+collector/__init__.py
+collector/__main__.py
+collector/cli.py
+collector/lambda_log_collector.py
+collector/utils.py
