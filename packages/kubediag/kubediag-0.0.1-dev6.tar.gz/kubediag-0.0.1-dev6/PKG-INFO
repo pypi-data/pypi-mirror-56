@@ -1,0 +1,54 @@
+Metadata-Version: 1.1
+Name: kubediag
+Version: 0.0.1-dev6
+Summary: Kubernetes Diagnostic Tool built by AWS Premium Support
+Home-page: https://github.com/fortejas/kubediag
+Author: Jason Forte
+Author-email: fortejas@amazon.com
+License: Apache-2.0
+Download-URL: https://github.com/fortejas/kubediag/archive/0.0.1-dev6.tar.gz
+Description: # kubediag - Kubernetes Diagnostic Tool
+        
+        Kubernetes Diagnostic Tool built by AWS Premium Support
+        
+        
+        ## Goals
+        
+        As AWS Premium Support Engineers, we spend a great deal of time helping troubleshoot and understand our customer's most
+        complex Kubernetes issues. To make the process of collecting information as seemless as possible for our customers we
+        created the kubediag utility tool.
+        
+        This tool can perform rudimentary configuration checks on an existing Kubernetes cluster and collect any necessary logs
+        and configurations in a secure way to aid in diagnosing Kubernetes issues.
+        
+        The tool can also be used to visualize the information that's collected to help give insight into common issues we've
+        seen while helping our customers find success with Kubernetes.
+        
+        
+        ## Installation & Usage
+        
+        This tool is published as a PyPI package which can be installed via Pip as follows:
+        
+        ```bash
+        $ pip install -U kubediag
+        $ kubediag --version
+        ```
+        
+        ### Docker
+        
+        If you have Docker installed, you can run this tool via the docker image.
+        
+        ```bash
+        $ docker run -it --rm -v ~/.aws:/root/.aws -v ~/.kube:/root/.kube fortejas/kubediag version
+        ```
+        
+Keywords: k8s,kubernetes,cli,troubleshooting
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
