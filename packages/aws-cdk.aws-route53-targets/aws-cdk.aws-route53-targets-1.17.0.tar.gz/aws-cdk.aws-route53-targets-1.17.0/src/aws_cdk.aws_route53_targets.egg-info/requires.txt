@@ -1,0 +1,11 @@
+jsii~=0.20.7
+publication>=0.0.3
+aws-cdk.aws-apigateway>=1.17.0,~=1.17
+aws-cdk.aws-cloudfront>=1.17.0,~=1.17
+aws-cdk.aws-elasticloadbalancing>=1.17.0,~=1.17
+aws-cdk.aws-elasticloadbalancingv2>=1.17.0,~=1.17
+aws-cdk.aws-iam>=1.17.0,~=1.17
+aws-cdk.aws-route53>=1.17.0,~=1.17
+aws-cdk.aws-s3>=1.17.0,~=1.17
+aws-cdk.core>=1.17.0,~=1.17
+aws-cdk.region-info>=1.17.0,~=1.17
