@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pypow
+Version: 1.0.2
+Summary: PyPow! is the easy way to expose any cli command as a REST API.
+Home-page: https://github.com/cr0hn/pypow
+Author: Maintainer: cr0hn, Authors: Roberto Martinez, Cesar Gallego, Hector Ruesca, Pancho Horrillo
+License: Apache 2.0
+Description: PyPow! is the easy way to expose any cli command as a REST API.
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: performance

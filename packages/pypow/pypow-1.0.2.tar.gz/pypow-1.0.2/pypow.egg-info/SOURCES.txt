@@ -1,0 +1,12 @@
+MANIFEST.in
+requirements.txt
+setup.py
+pypow/__init__.py
+pypow/__main__.py
+pypow.egg-info/PKG-INFO
+pypow.egg-info/SOURCES.txt
+pypow.egg-info/dependency_links.txt
+pypow.egg-info/entry_points.txt
+pypow.egg-info/requires.txt
+pypow.egg-info/top_level.txt
+pypow.egg-info/zip-safe

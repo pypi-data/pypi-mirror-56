@@ -1,0 +1,3 @@
+[console_scripts]
+kapow = pypow.__main__:kapow
+
