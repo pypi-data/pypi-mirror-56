@@ -1,0 +1,11 @@
+[aiida.calculations]
+lsmo.calc_ch4_working_cap = aiida_lsmo.calcfunctions:calc_ch4_working_cap
+lsmo.ff_builder = aiida_lsmo.calcfunctions:ff_builder
+
+[aiida.workflows]
+lsmo.isotherm = aiida_lsmo.workchains:IsothermWorkChain
+lsmo.isotherm_calc_pe = aiida_lsmo.workchains:IsothermCalcPEWorkChain
+lsmo.isotherm_multi_temp = aiida_lsmo.workchains:IsothermMultiTempWorkChain
+lsmo.multistageddec = aiida_lsmo.workchains:MultistageDdecWorkChain
+lsmo.zeoppmultistageddec = aiida_lsmo.workchains:ZeoppMultistageDdecWorkChain
+

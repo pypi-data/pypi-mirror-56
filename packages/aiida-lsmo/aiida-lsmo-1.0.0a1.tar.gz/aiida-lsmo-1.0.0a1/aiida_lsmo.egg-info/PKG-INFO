@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: aiida-lsmo
+Version: 1.0.0a1
+Summary: AiiDA workflows for the LSMO laboratory at EPFL
+Home-page: https://github.com/yakutovicha/aiida-lsmo-workflows
+Author: Aliaksandr Yakutovich, Daniele Ongari, Leopold Talirz
+Author-email: aliaksandr.yakutovich@epfl.ch
+License: MIT License
+Description: [![Build Status](https://travis-ci.org/yakutovicha/aiida-lsmo.svg?branch=develop)](https://travis-ci.org/yakutovicha/aiida-lsmo)
+        [![Docs status](https://readthedocs.org/projects/aiida-lsmo/badge)](http://aiida-lsmo.readthedocs.io/)
+        
+        # aiida-lsmo Workflows
+        
+        AiiDA workflows for the LSMO laboratory at EPFL
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+Provides-Extra: pre-commit
+Provides-Extra: docs
