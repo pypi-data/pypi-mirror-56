@@ -1,0 +1,12 @@
+COPYING
+COPYING.LESSER
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+timelogger/__init__.py
+timelogger/timer.py
+timelogger.egg-info/PKG-INFO
+timelogger.egg-info/SOURCES.txt
+timelogger.egg-info/dependency_links.txt
+timelogger.egg-info/top_level.txt
