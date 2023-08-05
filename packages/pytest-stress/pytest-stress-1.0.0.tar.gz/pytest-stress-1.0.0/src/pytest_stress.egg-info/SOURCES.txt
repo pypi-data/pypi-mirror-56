@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+src/pytest_stress/__init__.py
+src/pytest_stress/pytest_stress.py
+src/pytest_stress.egg-info/PKG-INFO
+src/pytest_stress.egg-info/SOURCES.txt
+src/pytest_stress.egg-info/dependency_links.txt
+src/pytest_stress.egg-info/entry_points.txt
+src/pytest_stress.egg-info/requires.txt
+src/pytest_stress.egg-info/top_level.txt
