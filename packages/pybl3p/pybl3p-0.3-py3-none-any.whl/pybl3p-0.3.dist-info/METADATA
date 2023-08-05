@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pybl3p
+Version: 0.3
+Summary: A python wrapper for the bl3p cryptocurrency exchange
+Home-page: https://github.com/gijzelaerr/pybl3p
+License: MIT
+Author: Gijs Molenaar
+Author-email: gijs@pythonic.nl
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: requests
+Requires-Dist: websockets
+Project-URL: Repository, https://github.com/gijzelaerr/pybl3p
+Description-Content-Type: text/markdown
+
+# pybl3p
+A Python bl3p API
+
+## installation
+
+```shell script
+$ pip install pybl3p
+```
+
+## usage
+
+For the public API
+```python
+from pybl3p.public import orderbook
+orderbook()
+```
+
+For the private API first set your public and private key as environment variables:
+```shell script
+export BL3P_PUB="........-....-....-....-............"
+export BL3P_PRIV="(long string with a-z/A-Z/0-9 and =)"
+```
+
+```python
+from pybl3p.private import depth_full
+depth_full()
+```
+
