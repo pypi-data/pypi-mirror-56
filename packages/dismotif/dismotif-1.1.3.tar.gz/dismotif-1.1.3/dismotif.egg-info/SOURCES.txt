@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+dismotif/__init__.py
+dismotif/check_motifs.py
+dismotif/check_motifs.sh
+dismotif/find_disrupted_motifs.py
+dismotif/var_to_hg19.py
+dismotif.egg-info/PKG-INFO
+dismotif.egg-info/SOURCES.txt
+dismotif.egg-info/dependency_links.txt
+dismotif.egg-info/entry_points.txt
+dismotif.egg-info/requires.txt
+dismotif.egg-info/top_level.txt
