@@ -1,0 +1,53 @@
+Metadata-Version: 2.0
+Name: longling
+Version: 1.3.1
+Summary: This project aims to provide some handy toolkit functions to help construct the architecture.
+Home-page: https://gitlab.com/tswsxk/longling.git
+Author: Sherlock, Shiwei Tong
+Author-email: tongsw@mail.ustc.edu.cn
+License: LICENSE.txt
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pip
+Requires-Dist: tqdm
+Requires-Dist: fire
+Provides-Extra: dev
+Requires-Dist: pytest (>=4); extra == 'dev'
+Requires-Dist: pytest-cov (>=2.6.0); extra == 'dev'
+Requires-Dist: pytest-pep8 (>=1); extra == 'dev'
+Requires-Dist: sphinx; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme; extra == 'dev'
+Requires-Dist: recommonmark; extra == 'dev'
+Requires-Dist: setuptools (>=40); extra == 'dev'
+Requires-Dist: wheel; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme; extra == 'doc'
+Requires-Dist: recommonmark; extra == 'doc'
+Provides-Extra: ml
+Requires-Dist: numpy; extra == 'ml'
+Requires-Dist: scipy; extra == 'ml'
+Requires-Dist: sklearn; extra == 'ml'
+Requires-Dist: matplotlib; extra == 'ml'
+Provides-Extra: ml-full
+Requires-Dist: numpy; extra == 'ml-full'
+Requires-Dist: scipy; extra == 'ml-full'
+Requires-Dist: sklearn; extra == 'ml-full'
+Requires-Dist: matplotlib; extra == 'ml-full'
+Requires-Dist: mxnet; extra == 'ml-full'
+Requires-Dist: gluonnlp; extra == 'ml-full'
+Requires-Dist: torch; extra == 'ml-full'
+Provides-Extra: test
+Requires-Dist: pytest (>=4); extra == 'test'
+Requires-Dist: pytest-cov (>=2.6.0); extra == 'test'
+Requires-Dist: pytest-pep8 (>=1); extra == 'test'
+
+This project aims to provide some handy toolkit functions to help construct the architecture.
+Tutorial and full documentation can be found in https://longling.readthedocs.io/zh/latest/index.html.
+
