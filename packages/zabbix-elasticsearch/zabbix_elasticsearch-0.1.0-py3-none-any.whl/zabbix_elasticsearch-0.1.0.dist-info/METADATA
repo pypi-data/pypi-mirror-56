@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: zabbix-elasticsearch
+Version: 0.1.0
+Summary: Zabbix Monitoring for Elasticsearch
+Home-page: https://github.com/steve-simpson/zabbix_elasticsearch
+Author: Steve Simpson
+Author-email: stephen.simpson1991@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: configparser (>=4.0.2)
+Requires-Dist: elasticsearch (>=7.0.0)
+Requires-Dist: urllib3 (>=1.25.6)
+
+# Zabbix Elasticsearch
+
+Zabbix Monitoring for Elasticsearch
+
