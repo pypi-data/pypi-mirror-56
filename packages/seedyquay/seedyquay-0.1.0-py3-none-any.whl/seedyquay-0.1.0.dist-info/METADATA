@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: seedyquay
+Version: 0.1.0
+Summary: Placeholder
+License: LGPL-3.0
+Author: Gary Donovan
+Author-email: gary.donovan@oovvuu.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+# seedy-quay
+Seedy Quay. Python extensions for working with Amazon Web Services' Cloud Development Kit
+
