@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: patch-requests
+Version: 0.2.0
+Summary: Simple patching of `requests` calls
+Home-page: https://github.com/Raekkeri/patch-requests
+Author: Teemu Husso
+Author-email: teemu.husso@gmail.com
+License: UNKNOWN
+Keywords: requests,tests,mock,patch
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools
+
+# patch-requests
+
+Simple patching of `requests` calls.
+
+Example from tests.py:
+
+```Python
+import unittest
+import requests
+from patch_requests import patch_requests
+
+class TestPatcher(unittest.TestCase):
+    def test_multiple_requests(self):
+        with patch_requests([
+                ('get', (200, {1: 1})),
+                ('post', (201, {2: 2})),
+                ('GET', (404, '<html><p><br/>')),
+                ('patch', (500, b'\\')),
+                ]) as p:
+            response = requests.get('http://example.com')
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.json(), {1: 1})
+
+            s = requests.Session()
+
+            response = s.post('http://www.example.com')
+            self.assertEqual(response.status_code, 201)
+            self.assertEqual(response.json(), {2: 2})
+
+            response = s.get('http://')
+            self.assertEqual(response.status_code, 404)
+            self.assertEqual(response.text, '<html><p><br/>')
+
+            s.close()
+
+            response = requests.patch('')
+            self.assertEqual(response.status_code, 500)
+            self.assertEqual(response.content, b'\\')
+
+        self.assertEqual(
+            p.mocks['get'].call_args_list[0][0], ('http://example.com',))
+        self.assertEqual(
+            p.mocks['post'].call_args_list[0][0], ('http://www.example.com',))
+```
+
+
