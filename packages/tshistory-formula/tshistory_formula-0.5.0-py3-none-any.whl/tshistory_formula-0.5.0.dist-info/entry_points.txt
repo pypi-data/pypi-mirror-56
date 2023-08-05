@@ -1,0 +1,9 @@
+[tshistory.subcommands]
+drop-alias-tables = tshistory_formula.cli:drop_alias_tables
+fix-slice-operator = tshistory_formula.cli:fix_slice
+ingest-formulas = tshistory_formula.cli:ingest_formulas
+shell = tshistory_formula.cli:shell
+test-formula = tshistory_formula.cli:test_formula
+typecheck-formula = tshistory_formula.cli:typecheck_formula
+update-formula-metadata = tshistory_formula.cli:update_metadata
+
