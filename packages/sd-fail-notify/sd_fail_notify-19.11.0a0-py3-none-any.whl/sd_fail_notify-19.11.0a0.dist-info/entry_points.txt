@@ -1,0 +1,3 @@
+[console_scripts]
+sd-fail-notify=sd_fail_notify.main:cli
+
