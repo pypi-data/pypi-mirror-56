@@ -1,0 +1,4 @@
+[console_scripts]
+fxsp-getproxytoken = firefox_secure_proxy.getproxytoken:main
+fxsp-login = firefox_secure_proxy.login:main
+
