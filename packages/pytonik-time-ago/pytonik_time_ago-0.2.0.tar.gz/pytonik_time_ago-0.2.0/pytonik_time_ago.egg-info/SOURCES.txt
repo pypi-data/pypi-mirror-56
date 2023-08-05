@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+pytonik_time_ago/__init__.py
+pytonik_time_ago/timeago.py
+pytonik_time_ago.egg-info/PKG-INFO
+pytonik_time_ago.egg-info/SOURCES.txt
+pytonik_time_ago.egg-info/dependency_links.txt
+pytonik_time_ago.egg-info/top_level.txt
