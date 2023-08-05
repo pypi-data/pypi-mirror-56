@@ -1,0 +1,250 @@
+\documentclass[tikz, multi=tikzpicture, margin=5mm]{standalone}
+
+\usepackage[sfdefault, condensed]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathreplacing}
+
+\usetikzlibrary{arrows,arrows.meta,positioning,shapes,mindmap,trees,backgrounds,
+  fit,calc,intersections}
+
+\tikzstyle{inoutpar} = [rectangle, text centered, fill=white, draw=black, minimum width=2cm, minimum height=2em]
+
+% activity
+\tikzstyle{act} = [rectangle, rounded corners=2mm, text centered, draw=black, fill=DivColorblindSafe2!50, text width=3cm, minimum height=2em, font=\bfseries]
+
+\tikzstyle{start} = [circle, fill=black, scale=1.5]
+
+\tikzstyle{comment} = [rectangle, dotted, minimum width=4cm, minimum height=1cm, text centered, draw=black, fill=gray!30, text width=3.8cm, scale=0.8]
+
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+
+
+\def\myarrow{{Straight Barb[scale=2]}}
+\tikzstyle{arrow} = [-\myarrow]
+\pgfarrowsdeclaredouble{<}{>}{Straight Barb[scale=2]}{}
+\pgfarrowsdeclaredouble{<<}{>>}{Square[open, scale=2]}{Straight Barb[scale=2]}
+
+\pgfarrowsdeclarealias{b}{b}{Square[open, scale=2]}{Square[open, scale=2]}
+\pgfarrowsdeclaredouble{b<}{>b}{Square[open, scale=2]}{Straight Barb[scale=2]}
+
+
+\tikzstyle{hp} = [trapezium, trapezium left angle=70, trapezium right angle=110, fill=DivColorblindSafe1, minimum height=2em, text width=2.8cm, text centered]
+
+\tikzstyle{dot} = [circle, scale=0.3, fill=black]
+
+\tikzstyle{decision} = [diamond, draw, text badly centered, inner sep=3pt]
+
+
+% custom shape, following https://stuff.mit.edu/afs/athena/contrib/tex-contrib/beamer/pgf-1.01/doc/generic/pgf/version-for-tex4ht/en/pgfmanualse25.html
+\makeatletter
+\pgfdeclareshape{frametitle}{
+  \inheritsavedanchors[from=rectangle] % this is nearly a rectangle
+  \inheritanchorborder[from=rectangle]
+  \inheritanchor[from=rectangle]{center}
+  \inheritanchor[from=rectangle]{north}
+  \inheritanchor[from=rectangle]{south}
+  \inheritanchor[from=rectangle]{west}
+  \inheritanchor[from=rectangle]{east}
+  \inheritanchor[from=rectangle]{north west}
+
+  % ... and possibly more
+  \backgroundpath{% this is new
+    % store upper right in xa/ya and lower right in xb/yb
+    \northeast \pgf@xa=\pgf@x \pgf@ya=\pgf@y
+    \southwest \pgf@xb=\pgf@x \pgf@yb=\pgf@y
+    % extend box to the right
+    \pgf@xa=\pgf@xa \advance\pgf@xa by+4pt
+    % compute corner of ``flipped page''
+    \pgf@xc=\pgf@xa \advance\pgf@xc by-6pt % this should be a parameter
+    \pgf@yc=\pgf@yb \advance\pgf@yc by+6pt
+    % construct main path
+    \pgfpathmoveto{\pgfpoint{\pgf@xa}{\pgf@ya}} % upper right
+    \pgfpathlineto{\pgfpoint{\pgf@xa}{\pgf@yc}} % corner start
+    \pgfpathlineto{\pgfpoint{\pgf@xc}{\pgf@yb}} % corner end
+    \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@yb}} % lower left
+    \pgfpathlineto{\pgfpoint{\pgf@xb}{\pgf@ya}} % upper left
+    \pgfpathclose
+  }
+}\makeatother
+
+
+% freely after https://tex.stackexchange.com/a/47281
+\tikzset{stop/.style={draw, circle, anchor=center, scale=1.4, line width=1pt, path picture={%
+      \node [anchor=center, circle, fill=black, scale=1] {};
+}}}
+
+% freely after https://tex.stackexchange.com/a/73166
+\tikzset{
+  outpin/.style={
+    draw, scale=0.82, append after command={
+      (\tikzlastnode.north west) edge (\tikzlastnode.south)
+      (\tikzlastnode.north east) edge (\tikzlastnode.south)
+    }
+  }
+}
+
+\tikzstyle{pinlbl} = [inner sep=6pt, font=\footnotesize]
+\tikzstyle{lbl} = [pinlbl]
+
+\tikzset{
+  mybackground2/.style n args={3}{execute at end picture={
+      \begin{scope}[on background layer]
+        \draw[black, thick] #1 rectangle #2;
+        \node[draw, yshift=0pt, frametitle, anchor=north west, fill=black!20, thick, inner sep=3pt]
+        at #1 {\scriptsize #3};
+      \end{scope}
+    }
+  }
+}
+
+\tikzstyle{mybackground} = [mybackground2={(current bounding box.north west)}{(current bounding box.south east)}{#1}]
+
+% http://colorbrewer2.org/#type=diverging&scheme=PuOr&n=3
+\definecolor{DivPhotocopySafe0}{RGB}{247,247,247}
+\definecolor{DivPhotocopySafe1}{RGB}{241,163,64}
+\definecolor{DivPhotocopySafe2}{RGB}{153,142,195}
+
+% http://colorbrewer2.org/#type=diverging&scheme=BrBG&n=3
+\definecolor{DivColorblindSafe0}{RGB}{245,245,245}
+\definecolor{DivColorblindSafe1}{RGB}{216,179,101}
+\definecolor{DivColorblindSafe2}{RGB}{90,180,172}
+
+
+\begin{document}
+
+\begin{tikzpicture}[
+    node distance = 8mm,
+    mybackground2={
+      ($(current bounding box.north west)+(12mm, -6mm)$)
+    }{
+      ($(current bounding box.south east)+(5mm, 5mm)$)
+    }{
+      \textbf{act} map\_features
+    },
+    % show background grid, show background rectangle,
+    act/.append style/={text width=32mm},
+    inoutpar/.append style/={text width=32mm},
+  ]
+
+  % ANCHOR : INPUT
+  \node [inoutpar, text width=30mm] (in-obs) {
+    Observations with in-features
+  };
+
+  \begin{scope}[below of=in-obs, yshift=-10mm, local bounding box=mapping]
+
+    \newlength\boxwidth\setlength{\boxwidth}{28mm}
+
+    \node [draw, inner sep=0pt, fill=white] (mapping input) {
+      $~~\vert~~\vert~~\vert~~$
+    };
+
+    \node [act, below=of mapping input] (map) {greedily replace with out-features};
+    \draw [->b](mapping input) -- (map.north)
+    node [above right, pinlbl] {in-features};
+    
+    \node [draw, inner sep=0pt, below=of map, fill=white] (mapping output) {
+      $~~\vert~~\vert~~\vert~~$
+    };
+    \draw [b->] (map.south) node [below right, pinlbl] {out-features} -- (mapping output);
+    
+    \begin{pgfonlayer}{background}
+      \draw[dashed, thick] (mapping input.center -| -\boxwidth,0)
+           [rounded corners=5mm] rectangle (mapping output -| \boxwidth, 0);
+    \end{pgfonlayer}
+
+    % text
+    \node [above left, lbl, text width=35mm, align=right] at (mapping input.west) {
+      observations\\\scriptsize[in-features]
+    };
+
+    \node [below left, lbl, text width=35mm, align=right] at (mapping output.west) {
+      observations\\\scriptsize[out-features]
+    };
+
+  \end{scope}
+
+  \draw [->] (in-obs) -- (mapping input);
+
+
+  % INPUT mapping matrix
+  \node [inoutpar, left=18mm of map, text width=25mm] (mm) {
+    sorted \mbox{mapping matrix}
+  };
+  \draw [->b] (mm) -- (map);
+
+  % OUTPUT
+  \node [inoutpar, below=1cm of mapping output] (out-obs) {
+    Observations with out-features
+  };
+  \draw [->] (mapping output) -- (out-obs);
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[
+    node distance = 8mm,
+    mybackground2={($(current bounding box.north west)+(12mm, -5mm)$)}%
+    {($(current bounding box.south east)+(-5mm, 5mm)$)}%
+    {\textbf{act} map\_features\_smin},
+    % show background grid, show background rectangle,
+    act/.append style/={text width=32mm},
+    inoutpar/.append style/={text width=32mm},
+  ]
+
+  % ANCHOR : INPUT: X0
+  \node [inoutpar] (in-obs) {Observations with in-features};
+
+  % in-obs split
+  \node [decision, below=of in-obs] (in-obs split) {};
+  \draw [->] (in-obs) -- (in-obs split);
+
+  % mm-split 2
+  \node [decision, below=of in-obs, xshift=-6mm] (mm split 2) {};
+
+  % (map) assign out-featurs to obs
+  \node [act, below=8mm of in-obs split, xshift=-3mm] (map) {
+    map\_feature
+  };
+  \draw [->b] (in-obs split) -- ($(map.north)+(3mm,0)$)
+  node [above right, pinlbl, text width=25mm] {
+    obs. w/in-features
+  };
+  \draw [->b] (mm split 2) -- ($(map.north)-(3mm,0)$)
+  node [above left, pinlbl, text width=2cm, align=right] {
+    sorted mapping matrix
+  };
+
+  % decide if done
+  \node [decision, below=15mm of map] (decide) {};
+  \draw [b->] (map.south) node [lbl, below left]{obs. w/out-features} -- (decide);
+
+  \node [act, left=of map, text width=50mm] (update) {
+    remove first weakly supported out-feature from mapping matrix
+  };
+  \draw [->b] (decide) node [lbl, above left, text width=40mm, align=right] {
+    [$\exists$ weakly supported out-feature (i.e., with support < s\textsubscript{min})]
+  } -| (update);
+  \node [decision] (mm split) at (update |- in-obs split) {};
+  \draw [b->] (update) -- (mm split);
+  \draw [->] (mm split) -- (mm split 2);
+
+  \node [inoutpar, below=of decide] (out-obs) {Observations with out-features};
+  \draw [->] (decide) node [lbl, below right, text width=15mm] {
+    [otherwise]
+  } -- (out-obs);
+
+  % INPUT mapping matrix
+  \node [inoutpar, left=10mm of mm split, text width=25mm] (mm) {
+    sorted \mbox{mapping matrix}
+  };
+  \draw [->] (mm) -- (mm split);
+
+\end{tikzpicture}
+
+
+\end{document}

@@ -1,0 +1,16 @@
+# based on
+# https://github.com/PyO3/maturin/blob/master/test-crates/cffi-pure/pyproject.toml
+#
+# References
+# ==========
+# https://martin-thoma.com/pyproject-toml/
+#
+# WARNING: dependency managment is handles by maturin via Cargo.toml.
+
+[build-system]
+requires = ["maturin"]
+build-backend = "maturin"
+
+[tool.maturin]
+bindings = "cffi"
+manylinux = "off"
