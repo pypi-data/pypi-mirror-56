@@ -1,0 +1,23 @@
+Pillow
+PyYAML
+aplpy
+astroplan
+astropy
+colour
+lmfit
+matplotlib
+numpy
+pandas
+paramiko
+photutils
+py_expression_eval
+pytz
+requests
+scipy
+sleekxmpp
+tornado
+
+[:platform_system == "Linux"]
+pyinotify
+python-daemon
+sep
