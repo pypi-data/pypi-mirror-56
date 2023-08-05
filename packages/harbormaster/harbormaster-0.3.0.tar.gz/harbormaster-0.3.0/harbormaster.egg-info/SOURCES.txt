@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+bin/harbormaster
+harbormaster/harbormaster.py
+harbormaster.egg-info/PKG-INFO
+harbormaster.egg-info/SOURCES.txt
+harbormaster.egg-info/dependency_links.txt
+harbormaster.egg-info/not-zip-safe
+harbormaster.egg-info/requires.txt
+harbormaster.egg-info/top_level.txt
