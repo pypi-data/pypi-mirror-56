@@ -1,0 +1,19 @@
+dataset,author,name,title,description,default_primary_key,default_measure,status,topics,slug,license
+esv,Datastory,Ekonomistyrningsverket,Ekonomistyrningsverket,,"esv_allocation,esv_expenditure,year",esv_budget,draft,economy,ekonomistyrningsverket,MIT
+hdi,Datastory,Human Development Index,Human Development Index,,"country,year",hdi_human_development_index,draft,global development,human-development-index,MIT
+kolada,Datastory,Kolada,Kolada,,"municipality,year",n01951,draft,sweden,kolada,MIT
+meps,Datastory,Members of the European Parliament,Members of the European Parliament,,,,draft,"politics,eu",members-of-the-european-parliament,MIT
+mynewsflash,Datastory,MyNewsFlash,MyNewsFlash,,"country,day",mynewsflash_swe_media_mentions,draft,"media,sweden",mynewsflash,MIT
+nobel,Datastory,The Nobel Prize,The Nobel Prize,,,,draft,"science,literature,economy",the-nobel-prize,MIT
+oecd,Datastory,OECD,OECD,,,,draft,global development,oecd,MIT
+scb,Datastory,Statistiska Centralbyrån,Statistiska Centralbyrån,,"party,year",votes_tot,draft,sweden,statistiska-centralbyran,MIT
+sipri,Datastory,Sipri,Sipri,,"country,year",sipri_milexp_cap,draft,military,sipri,MIT
+skolverket,Datastory,Skolverket,Skolverket,,"school_unit,year",skolverket_ak1_elever_tcv6,draft,"education,sweden",skolverket,MIT
+unsc,Datastory,United Nations Security Council,United Nations Security Council,,,,draft,,united-nations-security-council,MIT
+valforsk,Datastory,Valforskningsprogrammet,Valforskningsprogrammet,,"pollster,day,party",valforsk_opinion_value,draft,"politics,sweden",valforskningsprogrammet,MIT
+waqi,Datastory,World Air Quality Index,World Air Quality Index,,"waqi_station,datetime",waqi_pm25,draft,environment,world-air-quality-index,MIT
+wikipedia,Datastory,Wikipedia,Wikipedia,,"country_flow.country_from,country_flow.country_to",visa_requirement,draft,,wikipedia,MIT
+worldbank,Datastory,World Bank,World Bank,,"country,year",worldbank_sppoptotl,draft,global development,world-bank,MIT
+tax_justice,Datastory,Tax Justice Network,Tax Justice Network,,"jurisdiction,year",tax_justice_fsi_index,draft,economy,tax-justice-network,MIT
+socialstyrelsen,Datastory,Socialstyrelsen,Socialstyrelsen,,"county,year",deaths,draft,health,socialstyrelsen,MIT
+riksdagen,Datastory,Riksdagen,Riksdagen,,,,draft,"politics,sweden",riksdagen,MIT
