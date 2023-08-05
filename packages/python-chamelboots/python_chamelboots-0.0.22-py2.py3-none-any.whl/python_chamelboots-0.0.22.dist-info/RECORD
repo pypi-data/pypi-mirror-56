@@ -1,0 +1,16 @@
+chamelboots/__init__.py,sha256=SIKqZ7YBDYviajlqlzi6tKtZYU5wlpN5j76slb1ZWxI,3321
+chamelboots/__main__.py,sha256=zB5z0ptXwE-2_IGpAIvsxPre2S6wEko2FkD73lHGQtY,391
+chamelboots/cli.py,sha256=zP1MvkGb-Euntbsy5VsB58QCmV53GfQZNlQF7wetuCY,822
+chamelboots/constants.py,sha256=KtCeVEpWmi5XrK5SwKTegjhQiJ_bSWvfCnKi77XubcE,431
+chamelboots/datautils/__init__.py,sha256=ga4ip7cgze7apGMCONUmdalFWIw6yckO2ZJa-FVHJt0,924
+chamelboots/html/__init__.py,sha256=GyCxWoSwf-d8zW18Ot8rscAgu3hBSKhEAQsPmr7bK1g,1304
+chamelboots/html/utils.py,sha256=gcXUfaFLgKKDO7Y7J7f6DT0hlk1VNKXxv2Rw-jiC4so,196
+chamelboots/html/packages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chamelboots/html/packages/bootstrap/__init__.py,sha256=YxK8eouebHDad95BS5iP3XGxexWdOI-BIG9fBV7GgQM,1378
+python_chamelboots-0.0.22.dist-info/AUTHORS.rst,sha256=xSW3qnlWEq9salKw230mqN17AzAgIqg_gYmez2blSKE,64
+python_chamelboots-0.0.22.dist-info/LICENSE,sha256=sUWprXs4MoygJtd33CmEmEHp9L3ypIvjyYBQDYTrGFw,1322
+python_chamelboots-0.0.22.dist-info/METADATA,sha256=gUrSgbe717l-ohrESuYYSMEptkGQWqYFlhi1TVMKo3A,4034
+python_chamelboots-0.0.22.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+python_chamelboots-0.0.22.dist-info/entry_points.txt,sha256=ozs6jNLTTRZJy4WemdV_9btqqN-CHwcBl0SjOUyJnqQ,54
+python_chamelboots-0.0.22.dist-info/top_level.txt,sha256=aWPqc_nvxcAZRPuDJzNXnfKXtmByCja16fQiNgsIsWY,12
+python_chamelboots-0.0.22.dist-info/RECORD,,
