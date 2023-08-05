@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: huesdk
+Version: 0.2
+Summary: A python SDK for the Philips hue API
+Home-page: https://github.com/AlexisGomes/huesdk
+Author: Gomes Alexis
+Author-email: alexis.gomes19@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+This is a python sdk to manipulate the Philips hue API
+
+#installation
+
+pip install huesdk
+
+
+HUE Documentation : https://developers.meethue.com/develop/get-started-2/
+HUE interface : https://{bridge ip address}/debug/clip.html
+
+#### Get Started
+Step 1: Find your hue bridge IP 
+https://www.meethue.com/api/nupnp
+
+Step 2 : use method `get_user` to create an authorized user
+
+### Create python package
+
+sudo python -m pip install --upgrade pip setuptools wheel
+
+sudo python -m pip install tqdm
+
+sudo python -m pip install --user --upgrade twine
+
+### Build package
+python setup.py bdist_wheel
+
+python -m twine upload dist/*
+
+
