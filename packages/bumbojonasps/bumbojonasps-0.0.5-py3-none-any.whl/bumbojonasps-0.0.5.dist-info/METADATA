@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: bumbojonasps
+Version: 0.0.5
+Summary: Python Web Framework built for learning purposes.
+Home-page: UNKNOWN
+Author: J P S
+Author-email: jonasliu89@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: Jinja2 (==2.10.3)
+Requires-Dist: parse (==1.12.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: requests-wsgi-adapter (==0.4.1)
+Requires-Dist: WebOb (==1.8.5)
+Requires-Dist: whitenoise (==4.1.4)
+
+
+# Bumbo: Python Web Framework built for learning purposes
+
+![purpose](https://img.shields.io/badge/purpose-learning-green.svg)
+![PyPI](https://img.shields.io/pypi/v/bumbo.svg)
+
+Bumbo is a Python web framework built for learning purposes.
+
+It's a WSGI framework and can be used with any WSGI application server such as Gunicorn.
+
+## Installation
+
+```shell
+pip install bumbojonasps
+```
+
