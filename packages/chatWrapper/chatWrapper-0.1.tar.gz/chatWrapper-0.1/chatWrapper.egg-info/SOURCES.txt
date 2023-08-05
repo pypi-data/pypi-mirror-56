@@ -1,0 +1,10 @@
+README.md
+setup.py
+chatWrapper/__init__.py
+chatWrapper/new_chat.py
+chatWrapper/new_chat_auth.py
+chatWrapper.egg-info/PKG-INFO
+chatWrapper.egg-info/SOURCES.txt
+chatWrapper.egg-info/dependency_links.txt
+chatWrapper.egg-info/not-zip-safe
+chatWrapper.egg-info/top_level.txt
