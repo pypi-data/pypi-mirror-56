@@ -1,0 +1,9 @@
+# Notre module
+
+Le package $mickjagger$ a été réalisé par nous Diagana Adja, Afangnibo Kokou Jérôme, Clinton Maradonna, Houri Yasmine et Preda Ioana, étudiants en 2e année à l'ENSAE Paris. Il a été réalisé dans le cadre de notre cours de Python pour le datascientist/l'économiste. Il vise à représenter un graphe ou une carte dans le but de suivre l'évolution temporelle d'une variable donnée. 
+
+Idéalement, tout devrait être fait avec $matplotlib$ mais certains modules comme $cartopy$ , $imageio$ , $networkx$ nous ont été utiles. Et nous proposons une représentation avec $folium$ en vue d'alternatives à matplotlib. Folium propose quant à lui des cartes avec une affichage semblable à celle de Google Map. Nous avons notamment une fonction qui retourne un fichier GIF enregristré dans le répertoire de travail. 
+
+Par ailleurs, une autre fonction, dont nous détaillons le fonctionnement dans le notebook $example$ propose un graphe pour aller plus loint dans la représentation et dans le suivi de la série temporelle.
+
+*Le module porte le nom de $mickjagger$ en référence à une tactique utilisée par Deckard Shaw(Jason Statham) et sa soeur dans le film "Fast and Furious: Hobbs & Shaw" qui a plu à un de nos membres.µ
