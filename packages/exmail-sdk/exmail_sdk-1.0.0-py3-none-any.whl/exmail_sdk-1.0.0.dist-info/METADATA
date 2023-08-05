@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: exmail-sdk
+Version: 1.0.0
+Summary: Tencent Exmail SDK for Python
+Home-page: https://github.com/ni-ning/exmail-sdk
+Author: ni-ning
+Author-email: nining1314@gmail.com
+License: UNKNOWN
+Keywords: tencent,exmail,exmail-sdk,SDK
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: six (>=1.8.0)
+Requires-Dist: requests (>=2.4.3)
+Requires-Dist: hjson (>=3.0.1)
+
+################################
+Tencent Exmail SDK for Python
+################################
+
+
+腾讯企业邮第三方 Python SDK。
+`【阅读文档】 <https://exmail-sdk.readthedocs.io/zh_CN/latest/>`_。
+
+
+********
+功能特性
+********
++ 腾讯企业邮接入api
+
+
+********
+安装
+********
+
+目前 exmail-sdk 支持的 Python 环境有 2.7, 3.4, 3.5, 3.6, 3.7, 3.8。
+
+
+为了简化安装过程，推荐使用 pip 进行安装
+
+.. code-block:: bash
+
+    pip install exmail-sdk
+
+升级 exmail-sdk 到新版本::
+
+    pip install -U exmail-sdk
+
+如果需要安装 GitHub 上最新代码::
+
+    pip install https://github.com/ni-ning/exmail-sdk/archive/master.zip
+
+
+
