@@ -1,0 +1,10 @@
+setup.py
+MCRLLM/__init__.py
+MCRLLM/fct_PCA_NIPALS.py
+MCRLLM/fct_normplot.py
+MCRLLM/fct_regress.py
+MCRLLM/fct_xlsread.py
+MCRLLM.egg-info/PKG-INFO
+MCRLLM.egg-info/SOURCES.txt
+MCRLLM.egg-info/dependency_links.txt
+MCRLLM.egg-info/top_level.txt
