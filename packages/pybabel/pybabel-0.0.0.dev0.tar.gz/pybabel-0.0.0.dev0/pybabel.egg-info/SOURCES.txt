@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+babel.py
+setup.cfg
+setup.py
+pybabel.egg-info/PKG-INFO
+pybabel.egg-info/SOURCES.txt
+pybabel.egg-info/dependency_links.txt
+pybabel.egg-info/top_level.txt
+pybabel.egg-info/zip-safe
