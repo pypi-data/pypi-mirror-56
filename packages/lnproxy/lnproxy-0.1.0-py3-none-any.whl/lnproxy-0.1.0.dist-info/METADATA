@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lnproxy
+Version: 0.1.0
+Summary: 
+Author: willcl-ark
+Author-email: will8clark@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: docopt (>=0.6.2,<0.7.0)
+Requires-Dist: hkdf (>=0.0.3,<0.0.4)
+Requires-Dist: pylightning (>=0.0.7.3,<0.0.8.0)
+Requires-Dist: secp256k1 (>=0.13.2,<0.14.0)
+Requires-Dist: trio (>=0.13.0,<0.14.0)
