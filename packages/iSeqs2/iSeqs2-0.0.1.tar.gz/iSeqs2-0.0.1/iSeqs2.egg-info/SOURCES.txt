@@ -1,0 +1,8 @@
+README.md
+setup.py
+iSeqs2.egg-info/PKG-INFO
+iSeqs2.egg-info/SOURCES.txt
+iSeqs2.egg-info/dependency_links.txt
+iSeqs2.egg-info/top_level.txt
+iseqs2/__init__.py
+scripts/build_leukemia_genes_list.py
