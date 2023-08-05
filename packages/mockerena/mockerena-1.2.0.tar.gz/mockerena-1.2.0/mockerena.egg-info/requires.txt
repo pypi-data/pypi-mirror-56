@@ -1,0 +1,15 @@
+Eve>=0.9.0
+exrex>=0.10.5
+Faker>=2.0.0
+flasgger>=0.9.0
+Flask>=1.1.0
+Jinja2>=2.10
+jsonschema<3.0.0,>=2.6.0
+pandas>=0.25.0
+py-healthcheck>=1.9.0
+
+[release]
+bumpversion>=0.5.0
+gunicorn>=19.9.0
+Sphinx>=2.2.0
+sphinx-rtd-theme>=0.4.0
