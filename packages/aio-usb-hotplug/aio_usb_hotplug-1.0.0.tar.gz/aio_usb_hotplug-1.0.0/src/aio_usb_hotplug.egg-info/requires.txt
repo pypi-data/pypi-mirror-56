@@ -1,0 +1,13 @@
+anyio>=1.2.0
+async-generator>=1.10
+pyusb>=1.0.2
+
+[:platform_system == "Linux"]
+pyudev>=0.21.0
+
+[dev]
+curio>=0.9
+pytest>=5.2.4
+pytest-cov>=2.0.1
+trio>=0.13.0
+twine>=3.0.0
