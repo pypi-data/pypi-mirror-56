@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+/home/macermak/code/jupyter-sequor/static/extension.js
+/home/macermak/code/jupyter-sequor/static/index.js
+jupyter-config/notebook.d/jupyter-sequor.json
+jupyter_sequor.egg-info/PKG-INFO
+jupyter_sequor.egg-info/SOURCES.txt
+jupyter_sequor.egg-info/dependency_links.txt
+jupyter_sequor.egg-info/not-zip-safe
+jupyter_sequor.egg-info/requires.txt
+jupyter_sequor.egg-info/top_level.txt
+static/extension.js
+static/index.js
