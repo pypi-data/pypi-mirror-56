@@ -1,0 +1,16 @@
+examples/__init__.py,sha256=wYgAPifE_iy12OzvJxNLc7mw-Rpij6bbEN6VwWYHwgw,608
+kaggledatasets/__init__.py,sha256=P1mvsaPXHcphRjDolmyOaRHTmDGFIu2Rbqugwvq4-KM,858
+kaggledatasets/version.py,sha256=fe7VGZZ-AI5YBlRWXJ-VPNJ6LULqb0n-0Rlge4BaQFU,79
+kaggledatasets/core/__init__.py,sha256=8KAVcgpnfUFZf0AABoFA-PV-IpIRjdOuTo8XOLLn6vo,893
+kaggledatasets/core/config.py,sha256=AVGs0UM2aQsMzzYAomVKpStHWifUznrvbczNA07WshU,2439
+kaggledatasets/core/dataset.py,sha256=t-tqUBmzeZRLuJBlsb879LpHM1oPuyo27Jtf-ndWSfw,3893
+kaggledatasets/core/downloader.py,sha256=qAXXEendE9EBfxmSm1Y9zT9tsJGcAgG4wPIA20O0qcQ,2698
+kaggledatasets/core/fileops.py,sha256=D1K6Bz5ndMTDDSG45eaAsSmadQs7QP-V0PGHuBa7JBg,1164
+kaggledatasets/core/utils.py,sha256=KvkJZ3tX5mVLp9rkgK1PDsT2mR9333b-4yhG9UmGpkM,1060
+kaggledatasets/structured/__init__.py,sha256=5GBLxCvWCrSJD_Ux9dpRKdZL4H2akKGdBvciz4ppOkI,610
+kaggledatasets-0.0.1.dist-info/LICENSE,sha256=RfpYySZ1dOnRtD9i0EhCN0OcV9B4YGa4herrgChjTx4,11342
+kaggledatasets-0.0.1.dist-info/METADATA,sha256=KodwkKdt1ijsAX78NLqR3eSj0zKZnDB9LN0ML-Pp_jo,4989
+kaggledatasets-0.0.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+kaggledatasets-0.0.1.dist-info/top_level.txt,sha256=u_QFq9Z9B_0O823TKi2-OyDvxvL9ITjKapj60YFF37g,24
+kaggledatasets-0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+kaggledatasets-0.0.1.dist-info/RECORD,,
