@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+rss_reader/__init__.py
+rss_reader/caching.py
+rss_reader/news.py
+rss_reader/rss_reader.py
+rss_reader.egg-info/PKG-INFO
+rss_reader.egg-info/SOURCES.txt
+rss_reader.egg-info/dependency_links.txt
+rss_reader.egg-info/entry_points.txt
+rss_reader.egg-info/top_level.txt
