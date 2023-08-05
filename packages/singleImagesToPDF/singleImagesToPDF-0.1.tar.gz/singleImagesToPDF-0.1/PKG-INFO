@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: singleImagesToPDF
+Version: 0.1
+Summary: It helps you convert all the images in the current working directory (os.getcwd()) to a single pdf file
+Home-page: https://gitlab.com/antoreep_jana/singleimagestopdf
+Author: Antoreep Jana
+Author-email: antoreepjana@gmail.com
+License: MIT
+Download-URL: https://gitlab.com/antoreep_jana/singleimagestopdf/-/archive/v1/singleimagestopdf-v1.tar.gz
+Description: UNKNOWN
+Keywords: Image to PDF,Merge Images,pdf,PDF,PDF maker from images,jpeg to pdf
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
