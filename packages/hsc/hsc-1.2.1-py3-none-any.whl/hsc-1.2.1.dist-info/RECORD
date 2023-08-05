@@ -1,0 +1,13 @@
+hsc/__init__.py,sha256=msvkB9mTpsgyj8JfNMsmwAcpy5kWk_2NrO1Adw2Hkw0,29
+hsc/color.py,sha256=Yj4mc8cSf2sq4sjKha1Dp6HrnV_VGuFwZNl1dAE46z4,818
+hsc/constants.py,sha256=iRnMLf_K11h3Tn4j99YtNMdKH1jUpWQUp7fIE7cu3Bc,837
+hsc/crawler.py,sha256=nQcB8HQWcjVFP82wbyKfDB-OCstAeX99vPaeUnDN80E,9200
+hsc/helper.py,sha256=xKzkL97nKYQrv9Bcy3uz-1ssayKYUCEy5JGDQKsxKaA,913
+hsc/metadata.py,sha256=qKGNOFeAV7oBV2pyTeAz43cs7Po5TRdhaS6ilxnupo0,687
+hsc/progress_bar.py,sha256=fGLTSlkbeu6scdhpIdxBFn3KEoN-nrstaX7SyNImbGI,119
+hsc-1.2.1.dist-info/LICENSE,sha256=znv7XSqa18tOirxm5y9mjgqfxEVX1UQ_8V9HeItFtog,1067
+hsc-1.2.1.dist-info/METADATA,sha256=wGVNlwceRvblvoiyixSDQZennzY_72ShSWOiD98OVik,1909
+hsc-1.2.1.dist-info/WHEEL,sha256=YO0P_oFqt6DWX0LhbH7jsyzb3BUtoq2kERtqGsXDJHs,92
+hsc-1.2.1.dist-info/entry_points.txt,sha256=w2DW7riPCCAi0xnKz64xha1sItSQtl3y5BAgsyVGTNo,42
+hsc-1.2.1.dist-info/top_level.txt,sha256=0oOPZCLwq8meHZsEM0fjIAxEedbxlwyDB32kU4QgP5Q,4
+hsc-1.2.1.dist-info/RECORD,,
