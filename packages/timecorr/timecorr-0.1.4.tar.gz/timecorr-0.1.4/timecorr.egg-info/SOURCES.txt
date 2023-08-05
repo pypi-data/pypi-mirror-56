@@ -1,0 +1,11 @@
+README.md
+setup.py
+timecorr/__init__.py
+timecorr/helpers.py
+timecorr/simulate.py
+timecorr/timecorr.py
+timecorr.egg-info/PKG-INFO
+timecorr.egg-info/SOURCES.txt
+timecorr.egg-info/dependency_links.txt
+timecorr.egg-info/requires.txt
+timecorr.egg-info/top_level.txt
