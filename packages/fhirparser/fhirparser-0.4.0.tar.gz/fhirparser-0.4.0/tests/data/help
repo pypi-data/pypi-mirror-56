@@ -1,0 +1,24 @@
+usage: fhirparser [-h] [-f] [-c] [-lo] [-po] [-u FHIRURL] [-td TEMPLATEDIR]
+                  [-o OUTPUTDIR] [-cd CACHEDIR] [--nosort]
+                  settings
+
+positional arguments:
+  settings              Location of the settings file. Default is settings.py
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f, --force           Force download of the spec
+  -c, --cached          Force use of the cached spec (incompatible with "-f")
+  -lo, --loadonly       Load the spec but do not parse or write resources
+  -po, --parseonly      Load and parse but do not write resources
+  -u FHIRURL, --fhirurl FHIRURL
+                        FHIR Specification URL (overrides
+                        settings.specifications_url)
+  -td TEMPLATEDIR, --templatedir TEMPLATEDIR
+                        Templates base directory (overrides settings.tpl_base)
+  -o OUTPUTDIR, --outputdir OUTPUTDIR
+                        Directory for generated class models. (overrides
+                        settings.tpl_resource_target)
+  -cd CACHEDIR, --cachedir CACHEDIR
+                        Cache directory (default: downloads)
+  --nosort              If set, do not sort resource properties alphabetically

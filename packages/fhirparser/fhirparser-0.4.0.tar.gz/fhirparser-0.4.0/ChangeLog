@@ -1,0 +1,346 @@
+CHANGES
+=======
+
+v0.4.0
+------
+
+* Fix Issue #34
+
+v0.3.9
+------
+
+* Attempt to load files not in the zip file directly from the fhir server
+* Version 0.3.8
+
+v0.3.8
+------
+
+* Undo last renderer change -- issue was a pypi version
+
+v0.3.7
+------
+
+* Fix requirements issue
+* fhirelementfactory.py was built in the wrong spot
+* Add all of the relative file locations to a table
+* Publish version 0.3.6
+
+v0.3.6
+------
+
+* Add nosort option and sort\_resources to settings
+
+v0.3.4
+------
+
+* Fixed logger warning typos
+* Get logger path right
+
+v0.3.2
+------
+
+* Remove generator output
+
+v0.3.0
+------
+
+* Make file name settings file relative
+
+v0.2.5
+------
+
+* Removed dash from python directory name
+
+v0.2.1
+------
+
+* Update link to generate script
+
+v0.2.0
+------
+
+* Refactored to function as an installable package
+* Fixes when creating custom modules. Fix comment line breaking. #26
+* Fixes when creating custom modules. Fix comment line breaking
+* Fix binding element name and handle canonical URI with version
+* Fix error when parsing comment text
+* fix parser for R4
+* Add an option to avoid any download (#20)
+* Changes required for Swift and FHIR 3.3.0 (#19)
+* Fixes for recent fhir changes (#17)
+* Update README
+* pass isSummary and n\_min conflict to FHIRClass
+* Remove starexpandtypes
+* Add \`nonexpanded\_nonoptionals\`
+* Allow to dump resource/class dependencies
+* Allow to specify external classes without needing to copy a file
+* Detect n\_min/isSummary conflict and warn
+* Detect \`isSummary\`
+* Fix unneccessary property omissal
+* Also make \`unittest\_copyfiles\` use os.path.join()
+* REFACTORING: remove language implementations
+* Cleaner copy\_files phase
+* Create models (resource target) directory (#14)
+* [Swift3] Make FHIRAbstractBase CustomDebugStringConvertible
+* [Python] extend mapping of keywords
+* [Swift3] Allow re-use of \`readJSONFile()\` in tests
+* Add -l switch to generate.py
+* [Swift3] Enable \`swift test\`, fix missing copy phase
+* [Swift3] Add FHIRURL convenience
+* [Swift3] Replace buggy named tuples with struct
+* [Swift3] Only inspect resourceType in FHIRAbstractResource
+* [Swift3] Remove Resource.instantiate workaround
+* [Swift3] More convenience
+* [Swift3] Greatly improve JSON serialization
+* [Swift3] Implement numeric primitives
+* [Swift3] Add FHIRBool
+* [Swift3] refactor how resources are populated; +FHIRURL
+* [Swift3] More progress with primitives
+* [Swift3] Check for missing properties when serializing
+* [Swift3] Introducing FHIRString
+* [Swift3] Fix to DateAndTimeParser
+* [Python] Finally change resource\_name to resource\_type
+* [Python] Check for self.id in relativePath()
+* [Python] Check for self.id in relativePath()
+* Add missing mapping setting
+* [Swift3] Linux compatibility
+* [Swift3] Linux compatibility
+* Add enum generation capabilities, implement in Swift3
+* First step towards enum generation
+* [Swift] Nicer init() for [x]-type properties
+* [Swift] Split FHIRError and FHIRValidationError into 2 files
+* [Swift] BREAKING changes to init and validation
+* Update parser for v1.7
+* [Python] fix nonoptional error reporting
+* Add FHIR™
+* Add FHIR™
+* [Python] Add list indexes to validation errors
+* [Python] Fix missing nonoptional reporting
+* [Swift] One more Swift 3 renaming
+* [Swift] More Swift 3 adaptations
+* [Swift] Swift 3 renaming
+* Update readme
+* [Swift] Update for Xcode 8GM
+* [Swift] More Swift 3 adaptations
+* [Swift] Betterer @escaping handling
+* [Python] Don't err on \`\_key\`
+* [Swift] Change FHIRServer initializer for Swift 3
+* [Swift] Fix generator paths
+* Finish feature/swift-3
+* Move Swift files to version-specific folder
+* Improvements to class naming
+* [Swift] Swift updates for Xcode 8 beta 6
+* [Swift] Fix unit test generation
+* Update to parse STU-3 ballot (2016Sep)
+* Improvements to class naming
+* [Swift] Swiftier server response method
+* [Swift] Move Equatable and Comparable into class body
+* [Swift] support Swift 3 with DSTU 2
+* [Swift] updates for Swift 3
+* [Swift] Enum members should be lowercase
+* [Swift] Rename Date ➔ FHIRDate, Time ➔ FHIRTime
+* [Swift] First stab at Swift 3
+* Unit test generation improvements
+* Tiny logging change
+* update readme
+* Update readme
+* Update to support latest CI build (1.4.8522)
+* [Swift] Improvements to DateTime and resource
+* [Swift] Change FHIRServerResponse protocol (!!)
+* [Swift] Extend \`Instant\` with Http Date parser
+* [Swift] More control over request headers
+* [Swift] Resource checks "resourceType" on populate
+* [Swift] Add \`owningBundle()\` method to resources
+* [Swift] Add \`owningBundle()\` method to resources
+* [Python] Resolve references to resources in same bundle
+* [Python] Fix Python 2 string type check
+* [Python] Check "resourceType" on instantiation
+* [Python] fix relative reference resolving
+* [Python] fix relative reference resolving
+* [Python] Fix element factory fallthrough
+* [Python] Fix element factory fallthrough
+* [Swift] improvements to DateAndTime
+* [Swift] make sure properties are not named \`for\`
+* [Python] update resource template
+* [Python] Improve FHIRValidationError
+* Introduce FHIRValidationError
+* [Python] Add validation on (de)serialization (WiP)
+* Correct support for \`contentReference\`
+* Support for \`contentReference\` for May2016 release
+* Update README.md
+* [Swift] Swift 2.2 updates
+* [Python] Restore compatibility with Python 2
+* [Python] Restore compatibility with Python 2
+* Point to stable DSTU-2 URLs on master branch
+* [Python] warn of missing and superfluous elements
+* Point to CI build
+* Update readme
+* [Python] Modernize inheritance graph
+* [Swift] Make didResolveReference public
+* [Swift] Use factory for contained resources
+* [Swift] update FHIRError
+* [Swift] Add PATCH request type
+* Add license
+* Cleanup: remove more hardcoded workarounds
+* Fix BackboneElement detection in data types
+* [Swift] Better unit test base methods
+* Correctly determine BackboneElement classes
+* [Python] update list of reserved keywords
+* [Swift] Nonoptional initializer takes nonoptional args
+* FHIR DSTU 2
+* [Swift] Update unit testing
+* [Swift] Fix documentation keywords
+* Update to DSTU 2 September preview
+* Update some docstrings
+* [Swift] Fix to FHIRServer protocol
+* [Swift] Merge branch 'master' into feature/swift-2.0
+* [Swift] Make FHIRServer protocol more flexible
+* [Swift] Fix debug logging
+* [Swift] Replace NSError and NSMutableSet
+* Make models compile with Swift 2.0
+* Fix to default settings
+* [Swift] Add methods to contain resources
+* [Python] switch to relative imports
+* [Python] Add create, update, delete to FHIRResource
+* [Python] Improvements to "server" and "owner" inheritance
+* [Python] Add "resourceType" to serialized JSON
+* [Python] do not default to False for Bool properties
+* Update settings and readme to fix #7
+* Fix spec url to fix #6
+* Clarify requirements in readme
+* [Python] unit test template improvement
+* [Python] Implement JSON serialization
+* [Python] Add \`perform\_resources\` convenience method
+* [Swift] Add DELETE server method
+* [Swift] Make some FHIRElement methods public
+* [Swift] Update FHIRServer protocol & helpers
+* [Swift] Fix unit test category use
+* [Swift] Fix comment typo
+* [Swift] Should prefix public Foundation extensions
+* [Swift] Better handling between DateTime <-> NSDate
+* [Swift] Fix a bug creating name-referenced properties
+* [Swift] Report JSON errors
+* [Swift] Updates for Swift 1.2
+* [Python] First steps to bring Python into DSTU-2 land
+* [Swift] Support "unsignedInt" and "positiveInt"
+* Rename to SMART Health IT
+* Replace assert with more telling Exception
+* [Swift] Add "perform" for operations to server protocol
+* [Swift] Small type changes
+* [Swift] Defer more implementations to Swift-FHIR
+* [Swift] Rename JSONDictionary. Defer to Swift-FHIR
+* [Swift] Make date and time structs comparable
+* [Swift] Improve response error handling
+* Improve FHIRServer protocol. Fix factory use for "Resource"
+* Update readme
+* Change settings comment
+* [Python] Fix spec URL
+* [Swift] Must override method to return correct type
+* [Swift] Add FHIRServer handlers
+* Move extensions back to the base element
+* Move "id" to base element. Unit test generation improvements
+* Move "id" back to manual base resource. + unit tests
+* Logging update. Truly use Python 3 as specified
+* Update parser to work with latest DSTU-2 spec
+* Create FHIRLoader
+* [Swift] Add sorting and paging to FHIRSearch
+* Remove \`\_localId\`, we now have \`id\` on all resources
+* [Swift] Fix contained resource serialization; use OpOutcome
+* Improvements to unit test generation
+* [Swift] More improvements to support write operations
+* [Swift] Conform to \`Printable\`. Better renaming of reserved keywords
+* [Swift] Improve server protocol to prepare for C(R)UD
+* [Swift] Small change to \`asJSON\` method generation
+* [Swift] Implement JSON serialization
+* Revert "[Swift] Rename class func \`search\` to \`where\`"
+* [Swift] Rename class func \`search\` to \`where\`
+* [Swift] Improved contained resource resolving
+* [Swift] Hold on to timezone string for serialization
+* Improved resource instantiation:
+* [Swift] Return Zulu timezone for UTC and GMT only
+* Pass files-to-ignore to unit test generator. Cleanup
+* [Swift] Use our own Date/Time structs in place of NSDate
+* [Swift] Move ISO 8601 parsing to class, add unit tests
+* [Swift] Add parsing to DateAnd Time
+* [Swift] Begin classes for custom date/time handling
+* [Python] Fix extension instantiation
+* [Swift] Fix class name
+* [Python] First try at rendering DSTU-2 classes
+* Improvements to search
+* Update Swift unit test templates
+* Use "JSONDictionary" type alias. Fix modifier extensions
+* Adapt to new (modifier) extension JSON syntax
+* Fix server request path generation
+* Fix property skipping. Preparations for new search
+* New search handler, supports the same syntax as fhir.js
+* Properly implement resource metadata
+* Improvements and fixes
+* Colored logs
+* Update readme
+* Update readme
+* [Swift] Mitigate most JSON double precision issues
+* Improved unit testing
+* Add ISO date formatter stub, wants expansion
+* Implement name reference resolver
+* More naming and snapshot/differential cleanup
+* Some fixes to not crash
+* Cleanup the confusion about snapshot/differential
+* More robust Resource/Element/Class detection
+* Some work on unit test generation
+* Various improvements
+* Update factory generation
+* Some fixes to make Python generation work. Use io.open again
+* Give FHIRClass its own module
+* Remove need for \`\_settings\` global
+* Improvements and cleanup
+* Improvements in name and reference property handling
+* This is getting out of hand!
+* Changes and Improvements to prepare to jump to 0.3
+* First success dumping Swift classes
+* Progress
+* Start refactoring spec parser
+* [Swift] Add "\_owner" property to FHIRElement
+* Use NSNumber for JSON numbers. Create all test cases
+* Support ISO 8601 dates without timezone
+* Add "owner" property to FHIRElement
+* Python: support extensions, nicer relative import handling
+* Don't forget to instantiate extensions
+* Expand value[x] to all supported types. Fix some JSON instantiations
+* Update README
+* Fix Swift NSURL unit tests for Xcode 6.1
+* Complete Python lowercase filenames. HACK ALERT:
+* Use lowercase filenames for Python. Stay with DSTU
+* Implement resolving of contained resources
+* Let FHIRReference handle (contained) resource id normalization
+* Properly use "///" for property comments
+* Revert "Use "///" for property descriptions"
+* Use "///" for property descriptions
+* Pimp my References
+* Prepare for reference resolver. Better import statements
+* Remove copyright notice with a simple mention of SMART
+* Switch to using the continuous integration build specs
+* Add missing \`len\`
+* Return instances when executing a FHIR search
+* Refactor FHIR search
+* Rename class variable, add stub method for search execution
+* Add a class for NoSQL-like search param generation for evaluation
+* Fix Python super() peculiarities (2.x vs. 3.x)
+* Implement search URL generation in a pythonic way
+* Explicitly use \`io.open\` with UTF-8 encoding everywhere to fix #2
+* Add \`read\` method to FHIRResource. Avoid CamelCase. Property description improvements
+* Path \`sys.path\` to make other resources universally includable
+* Improve Jinja's \`wordwrap\` filter
+* Add Python TODO to README
+* Move word-wrap functionality into the templates. Add requirements.txt
+* Reluctantly adhere to PEP-8 to fix issue #1
+* Update README
+* Unwrap ISO date in unit tests
+* Add Swift base classes (taken from SMART, might need some trimming)
+* Enable date tests
+* Get dates working
+* Include base classes for Python
+* Get rid of \`writepath\_prepend\`
+* Generate Python unit tests
+* Initial version that can write Python classes
+* Make Python 2.x happy
+* Extract and modularize from \`Swift-FHIR\`

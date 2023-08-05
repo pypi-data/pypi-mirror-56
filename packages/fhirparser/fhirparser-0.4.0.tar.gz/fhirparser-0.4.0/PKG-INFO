@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: fhirparser
+Version: 0.4.0
+Summary: FHIR StructureDefinition Parsing tool
+Home-page: https://github.com/smart-on-fhir/fhir-parser/
+Author: Pascal Pfiffner
+Author-email: pp2@me.com
+License: Apache License, Version 2.0
+Description: UNKNOWN
+Keywords: fhir,parser
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
