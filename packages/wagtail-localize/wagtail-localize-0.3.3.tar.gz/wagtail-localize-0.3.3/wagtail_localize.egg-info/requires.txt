@@ -1,0 +1,5 @@
+Django<2.3,>=2.2
+Wagtail<2.8,>=2.6
+
+[testing]
+psycopg2>=2.6
