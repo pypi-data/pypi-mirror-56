@@ -1,0 +1,4 @@
+include README.rst
+include COPYING
+recursive-include docs *
+recursive-include whelk/tests *
