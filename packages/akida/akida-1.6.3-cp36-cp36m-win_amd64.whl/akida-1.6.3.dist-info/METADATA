@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: akida
+Version: 1.6.3
+Summary: Akida Execution Environment
+Home-page: https://www.akidalab.com
+Author: David Corvoysier
+Author-email: dcorvoysier@brainchip.com
+License: Proprietary
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pyyaml
+
+# Akida Execution Engine
+
+The Akida Execution Engine (AEE) is a software emulation of the Brainchip Akida
+Neuromorphic System-on-Chip (NSoC).
+
+
