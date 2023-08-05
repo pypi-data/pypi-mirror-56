@@ -1,0 +1,60 @@
+{% extends "base2.jinja2" %}
+
+{% block body_top %}
+<script>
+  qapi.getMatches().then(function(json) {
+    for (entry of json) {
+      entry['link'] = "/match/" + entry['match_guid']
+    }
+    riot.mount('match-list', {'matches': json, 'datefmt': datefmt})
+  })
+  var fetch_players = qapi.getAllPlayers()
+    .then(function(json) {
+      var data = []
+      context.players = {}
+      for (entry of json) {
+        context.players[entry.id] = entry
+      }
+    })
+
+  fetch_players.then(() => {
+    qapi.getBoardBadges().then((json) => {
+      let badges = json
+      riot.mount('board-badges', {
+        'badges': badges,
+        'players': context.players})
+    })
+  })
+
+  fetch_players.then(() => {
+    qapi.getTotalStats().then((json) => {
+      riot.mount('#total-kills', {
+        'data': json['kills'],
+        'players': context.players,
+        'type': 'kills',
+      })
+      riot.mount('#total-deaths', {
+        'data': json['deaths'],
+        'players': context.players,
+        'type': 'deaths',
+      })
+    })
+  })
+</script>
+{% endblock %}
+
+{% block body %}
+  <div style="grid-column: 1 / 2; grid-row: 2 / 6">
+    <match-list></match-list>
+  </div>
+  <div style="grid-column: 2 / -1; grid-row-start: 2">
+    <board-badges></board-badges>
+  </div>
+  <div style="grid-column: 2 / 4; grid-row-start: 3">
+    <total-chart id='total-kills'></total-chart>
+  </div>
+  <div style="grid-column: 4 / 6; grid-row-start: 3">
+    <total-chart id='total-deaths'></total-chart>
+  </div>
+
+{% endblock %}
