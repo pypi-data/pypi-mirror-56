@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: pytonik-time-ago
+Version: 0.2.0
+Summary: pytonik date and time ago readable format
+Home-page: https://github.com/pytonik/pytonik_time_ago
+Author: pytonik
+Author-email: info@pytonik.com
+Maintainer: Emmanuel Essien
+Maintainer-email: emmamartinscm@gmail.com
+License: Apache 2.0
+Keywords: mvc,oop,module,framework,pytonik,time,date,timeago,readable time
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Office/Business
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Requires-Python: >=2.7, >=3
+Description-Content-Type: text/markdown
+
+[![Build Status](https://img.shields.io/pypi/v/pytonik_time_ago)](https://pypi.python.org/pypi/pytonik_time_ago)
+[![Downloads](https://img.shields.io/pypi/dm/pytonik_time_ago)](https://pypi.python.org/pypi/pytonik_time_ago/)
+[![Wheel](https://img.shields.io/pypi/wheel/pytonik_time_ago.svg)](https://pypi.python.org/pypi/pytonik_time_ago)
+[![Python Version](https://img.shields.io/pypi/pyversions/pytonik_time_ago)](https://pypi.python.org/pypi/pytonik-agent)
+[![License](https://img.shields.io/pypi/l/pytonik_time_ago)](https://pypi.python.org/pypi/pytonik_time_ago)
+
+# pytonik Time Ago Module
+[pytonik](https://pypi.python.org/pypi/pytonik) Time Ago Module, convert date and time to human readable format
+
+## Install pytonik time ago
+```
+pip install pytonik_time_ago
+
+```
+## Import Module
+```
+from pytonik_time_ago.timeago import timeago
+```
+
+### default 
+```
+timeago("2019-11-25 18:07:10").ago
+```
+
+### format 
+
+```
+timeago("19-11-2019 18:07:10", '%d-%m-%Y %H:%M:%S').ago
+```
+
+pytonik is open to questions and contributions, feel free to ask.
+
+## Contact Information:
+
+**Name:**  pytonik MVC
+
+**Email:** pytonikmvc@gmail.com
+
+
