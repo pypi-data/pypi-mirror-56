@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: decuen
+Version: 0.0.1
+Summary: Reinforcement learning framework built in modern Python for experimentation, ease-of-use, modularity, and extensibility.
+Home-page: https://github.com/ziyadedher/decuen
+Author: Ziyad Edher
+Author-email: ziyad.edher@gmail.com
+License: MIT
+Download-URL: https://github.com/ziyadedher/decuen/tags
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Typing :: Typed
+Requires-Python: 
+>= 3.7
+Provides-Extra: lint
+Provides-Extra: mujoco
+Provides-Extra: test
