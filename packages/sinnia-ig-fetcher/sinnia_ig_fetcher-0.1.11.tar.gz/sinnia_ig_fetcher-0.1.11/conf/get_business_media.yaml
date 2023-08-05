@@ -1,0 +1,70 @@
+
+log_file: 'None' 
+log_to_console: true
+log_level: DEBUG
+
+enable_commit: True
+
+graph_api:
+  host: "https://graph.facebook.com"
+  request_media_path:   '/{user_id}/media?fields=id,timestamp,caption,media_type,permalink,media_url,username,comments_count,like_count'
+  request_stories_path: '/{user_id}/stories?fields=id,timestamp,caption,media_type,permalink,media_url,username'
+  historic_suffix:      '&since={date_from}&until={date_to}' 
+
+queries:
+  get_users: |    
+    SELECT instagram_id, access_token
+    FROM UsersAuth ua 
+    WHERE valid_until > CURRENT_TIMESTAMP()
+    AND instagram_id IS NOT NULL AND TRIM(instagram_id) != ''
+    AND access_token NOT LIKE 'IG%'
+    AND ua.active = 1
+    limit 1
+
+  insert_empty_user: |
+    INSERT IGNORE INTO Users (id, username)
+    VALUES ('{id}', '{username}')
+            
+  insert_user: |
+    INSERT INTO Users (id, username, description, url, profile_image, 
+                       media_count, followers_count, follows_count)
+    VALUES ('{id}', '{username}', '{description}', '{url}',
+            '{profile_image}',
+            {media_count}, {followers_count}, {follows_count})
+    ON DUPLICATE KEY UPDATE 
+            username = '{username}', 
+            description = '{description}',
+            url = '{url}', 
+            profile_image = '{profile_image}', 
+            media_count = {media_count}, 
+            followers_count = {followers_count}, 
+            follows_count = {follows_count}
+
+  insert_media: |
+    INSERT INTO Media (id, user_id, created_at, fetched_at, type,
+                       caption, url, likes_count, comments_count,
+                       image, is_story)
+    VALUES ('{id}', {user_id}, '{created_at}', '{fetched_at}', '{type}',
+            '{caption}', '{url}', {likes_count}, {comments_count},
+            '{image}', {is_story})
+    ON DUPLICATE KEY UPDATE 
+            fetched_at = '{fetched_at}',
+            likes_count = {likes_count}, 
+            comments_count = {comments_count},
+            image = '{image}'
+
+  insert_ht: |
+    INSERT IGNORE INTO HashTagsInMedia 
+      (media_id, hashtag, lower_hashtag, created_at)
+    VALUES
+      ('{media_id}', '{hashtag}', '{lower_hashtag}', '{created_at}')
+
+
+db_config:
+  ig:
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8mb4" 
+  
