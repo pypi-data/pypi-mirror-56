@@ -1,0 +1,6 @@
+[console_scripts]
+generate-changelog = matyan.utils:generate_changelog_cli
+json-changelog = matyan.utils:json_changelog_cli
+matyan-generate-changelog = matyan.utils:generate_changelog_cli
+matyan-json-changelog = matyan.utils:json_changelog_cli
+
