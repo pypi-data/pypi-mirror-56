@@ -1,0 +1,12 @@
+mail_sanitizer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mail_sanitizer/mail_dump_ops.py,sha256=67t0lQTA3q_vX6Xv27SvrA17l0i-CcYMEC2j0JStHUU,3704
+mail_sanitizer/main.py,sha256=dz0zyAFhvBTjK-4iklWrK_DHUfolFLJAjsZ5FBkOKR0,1027
+mail_sanitizer/utils.py,sha256=qIfQFszot4MPrsfvj0A6s2rAYHLE7GWuXmeFuHpgrNA,887
+mail_sanitizer/clients/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mail_sanitizer/clients/gmail_client.py,sha256=lNSFlVwF8dmXOiAbFHRszDGPE0zNmplpt40BUWdyUFE,3482
+mail_sanitizer-0.0.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mail_sanitizer-0.0.6.dist-info/METADATA,sha256=w7TS7Lr70fA_omNplNlx2cJlbr5dNPi_4WiWrRGDBgI,510
+mail_sanitizer-0.0.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mail_sanitizer-0.0.6.dist-info/entry_points.txt,sha256=rJKUOR_p0nURWlKVcGGFwCVOsfamKv8xOQoSBJMrcLA,61
+mail_sanitizer-0.0.6.dist-info/top_level.txt,sha256=kkdyY0J67d3nDeVwFMjZw9SNdR0VcioOpjW5a86J7-E,15
+mail_sanitizer-0.0.6.dist-info/RECORD,,

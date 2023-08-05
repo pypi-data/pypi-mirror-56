@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: mail-sanitizer
+Version: 0.0.6
+Summary: A cli tool to clean up your email
+Home-page: https://github.com/BharatKalluri/mail-sanitizer
+Author: Bharat Kalluri
+Author-email: bharatkalluri@protonmail.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Python: >= 3.5
+Requires-Dist: PyYAML
+Requires-Dist: aiohttp
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: google-auth
+Requires-Dist: click
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: halo
+
+UNKNOWN
+
+
