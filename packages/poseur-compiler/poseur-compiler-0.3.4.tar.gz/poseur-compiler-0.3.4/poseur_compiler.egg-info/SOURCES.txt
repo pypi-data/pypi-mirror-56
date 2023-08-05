@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+poseur.py
+setup.cfg
+setup.py
+poseur_compiler.egg-info/PKG-INFO
+poseur_compiler.egg-info/SOURCES.txt
+poseur_compiler.egg-info/dependency_links.txt
+poseur_compiler.egg-info/entry_points.txt
+poseur_compiler.egg-info/requires.txt
+poseur_compiler.egg-info/top_level.txt
+poseur_compiler.egg-info/zip-safe
