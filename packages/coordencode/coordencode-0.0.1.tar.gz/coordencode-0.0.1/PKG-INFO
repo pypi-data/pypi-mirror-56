@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: coordencode
+Version: 0.0.1
+Summary: A library that encodes coordinates so neural networks can use them better.
+Home-page: https://github.com/simleek/coordencode
+License: MIT
+Author: SimLeek
+Author-email: simulator.leek@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: numpy (==1.16.1)
+Project-URL: Repository, https://github.com/simleek/coordencode
+Description-Content-Type: text/x-rst
+
+PCoords
+=======
+Neural Coordinates
+
+Installation
+------------
+Will be pip installable on first release.
