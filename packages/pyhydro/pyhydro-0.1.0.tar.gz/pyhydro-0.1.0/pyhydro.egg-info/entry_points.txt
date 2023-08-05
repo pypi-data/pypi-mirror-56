@@ -1,0 +1,3 @@
+[console_scripts]
+pyhydro = pyhydro.cli:main
+
