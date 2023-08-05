@@ -1,0 +1,17 @@
+README.md
+setup.py
+heedy/__init__.py
+heedy/app.py
+heedy/base.py
+heedy/plugin.py
+heedy/source.py
+heedy/user.py
+heedy.egg-info/PKG-INFO
+heedy.egg-info/SOURCES.txt
+heedy.egg-info/dependency_links.txt
+heedy.egg-info/requires.txt
+heedy.egg-info/top_level.txt
+heedy/sources/__init__.py
+heedy/sources/stream.py
+tests/__init__.py
+tests/test_connection.py
