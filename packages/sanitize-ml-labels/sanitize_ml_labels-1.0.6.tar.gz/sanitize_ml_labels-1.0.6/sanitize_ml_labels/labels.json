@@ -1,0 +1,21 @@
+{
+    "AUROC":[
+        "auroc"
+    ],
+    "AUPRC":[
+        "auprc"
+    ],
+    "Accuracy":[
+        "acc",
+        "accuracy"
+    ],
+    "Learning rate":[
+        "lr"
+    ],
+    "ReLU":[
+        "relu"
+    ],
+    "SeLU":[
+        "SeLU"
+    ]
+}
