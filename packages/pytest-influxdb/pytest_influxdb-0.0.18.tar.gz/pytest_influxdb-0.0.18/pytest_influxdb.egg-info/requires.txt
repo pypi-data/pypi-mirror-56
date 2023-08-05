@@ -1,0 +1,4 @@
+influxdb
+pytest
+pytest-rerunfailures
+pytest-xdist
