@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-18 19:31+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: giqra/res/plugin/importdb.py:10
+msgid "importdb"
+msgstr "استيراد قاعدة بيانات"
+
+#: giqra/res/plugin/glade/importdb.glade:12
+msgid "Import Database"
+msgstr "استورد قاعدة بيانات"
+
+#: giqra/res/plugin/glade/importdb.glade:112
+msgid "Automatically guess version"
+msgstr "توقع الإصدار آليا"
+
+#: giqra/res/plugin/glade/importdb.glade:139
+msgid "Include libraries"
+msgstr "ضمن المكتبات"
+
+#: giqra/res/plugin/glade/importdb.glade:153
+msgid "Include authors"
+msgstr "ضمن المؤلفين"
+
+#: giqra/res/plugin/glade/importdb.glade:167
+msgid "Include publishers"
+msgstr "ضمن الناشرين"
+
+#: giqra/res/plugin/glade/importdb.glade:181
+msgid "Include sections"
+msgstr "ضمن الفروع"
+
+#: giqra/res/plugin/glade/importdb.glade:195
+msgid "Include books"
+msgstr "ضمن الكتب"
+
+#: giqra/res/plugin/glade/importdb.glade:209
+msgid "Include borrows"
+msgstr "ضمن الاستعارات"
+
+#: giqra/res/plugin/glade/importdb.glade:238
+msgid "Open File"
+msgstr "افتح الملف"

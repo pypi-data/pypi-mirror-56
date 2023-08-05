@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-18 19:31+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: giqra/res/plugin/stickers.py:8
+msgid "stickers"
+msgstr "الملصقات"
+
+#: giqra/res/plugin/glade/stickers.glade:80
+msgid "Generate Stickers"
+msgstr "أنشئ الملصقات"
+
+#: giqra/res/plugin/glade/stickers.glade:184
+msgid "library"
+msgstr "مكتبة"
+
+#: giqra/res/plugin/glade/stickers.glade:185
+msgid "book"
+msgstr "كتاب"
+
+#: giqra/res/plugin/glade/stickers.glade:186
+msgid "section"
+msgstr "قسم"
+
+#: giqra/res/plugin/glade/stickers.glade:187
+msgid "blank"
+msgstr "فارغ"
+
+#: giqra/res/plugin/glade/stickers.glade:206
+msgid "Sticker copies:"
+msgstr "نسخ الملصقات:"
+
+#: giqra/res/plugin/glade/stickers.glade:219
+msgid "1"
+msgstr ""
+
+#: giqra/res/plugin/glade/stickers.glade:238
+msgid "Filter"
+msgstr "التصفية"
+
+#: giqra/res/plugin/glade/stickers.glade:258
+msgid "Pattern"
+msgstr "نمط"
+
+#: giqra/res/plugin/glade/stickers.glade:273
+msgid "Range"
+msgstr "مدى"
+
+#: giqra/res/plugin/glade/stickers.glade:310
+msgid "to"
+msgstr "إلى"
+
+#: giqra/res/plugin/glade/stickers.glade:430
+msgid "Items"
+msgstr "البنود"
+
+#: giqra/res/plugin/glade/stickers.glade:465
+msgid "Save File"
+msgstr "احفظ الملف"
+
+#: giqra/res/plugin/glade/stickers.glade:548
+msgid "Stickers"
+msgstr "الملصقات"
+
+#: giqra/res/plugin/glade/stickers.glade:587
+msgid "Page"
+msgstr "الصفحة"
+
+#: giqra/res/plugin/glade/stickers.glade:610
+msgid "Width:"
+msgstr "العرض:"
+
+#: giqra/res/plugin/glade/stickers.glade:622
+msgid "Height:"
+msgstr "الارتفاع:"
+
+#: giqra/res/plugin/glade/stickers.glade:674
+msgid "Top/Bottom Margin:"
+msgstr "الهامش العلوي/السفلي:"
+
+#: giqra/res/plugin/glade/stickers.glade:686
+msgid "Side Margin:"
+msgstr "الهامش الجانبي:"
+
+#: giqra/res/plugin/glade/stickers.glade:724
+msgid "Vertical Offset:"
+msgstr "الإزاحة العمودية:"
+
+#: giqra/res/plugin/glade/stickers.glade:736
+msgid "Horizontal Offset:"
+msgstr "الإزاحة الأفقية:"
+
+#: giqra/res/plugin/glade/stickers.glade:781
+msgid "Rows and Columns"
+msgstr "الصفوف والأعمدة"
+
+#: giqra/res/plugin/glade/stickers.glade:804
+msgid "Rows:"
+msgstr "الصفوف"
+
+#: giqra/res/plugin/glade/stickers.glade:816
+msgid "Columns:"
+msgstr "الأعمدة:"
+
+#: giqra/res/plugin/glade/stickers.glade:828
+msgid "Row Separation:"
+msgstr "المسافة بين الصفوف:"
+
+#: giqra/res/plugin/glade/stickers.glade:840
+msgid "Column Seperation:"
+msgstr "المسافة بين الأعمدة:"
+
+#: giqra/res/plugin/glade/stickers.glade:915
+msgid "Sticker Look"
+msgstr "مظهر الملصق"
+
+#: giqra/res/plugin/glade/stickers.glade:938
+msgid "Border Width:"
+msgstr "عرض الحدود:"
+
+#: giqra/res/plugin/glade/stickers.glade:950
+msgid "Border Color:"
+msgstr "لون الحدود:"
+
+#: giqra/res/plugin/glade/stickers.glade:962
+msgid "Font:"
+msgstr "الخط:"
+
+#: giqra/res/plugin/glade/stickers.glade:988
+msgid "Text Color:"
+msgstr "لون النص:"
+
+#: giqra/res/plugin/glade/stickers.glade:1045
+msgid "Text Templates"
+msgstr "قالب النص"
+
+#: giqra/res/plugin/glade/stickers.glade:1068
+msgid "Book Template:"
+msgstr "قالب الكتاب:"
+
+#: giqra/res/plugin/glade/stickers.glade:1081
+msgid "Section Template:"
+msgstr "قالب القسم:"
+
+#: giqra/res/plugin/glade/stickers.glade:1094
+msgid "Library Template:"
+msgstr "قالب المكتبة"
+
+#: giqra/res/plugin/glade/stickers.glade:1208
+msgid "Sample Stickers Page"
+msgstr "نموذج لصفحة الملصقات"
