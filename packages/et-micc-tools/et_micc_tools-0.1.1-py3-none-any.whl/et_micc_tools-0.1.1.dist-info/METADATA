@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: et-micc-tools
+Version: 0.1.1
+Summary: Functionality common to et-micc and et-micc-build
+Home-page: https://github.com/etijskens/et-micc-tools
+License: MIT
+Keywords: packaging,poetry
+Author: Engelbert Tijskens
+Author-email: engelbert.tijskens@uantwerpen.be
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: tomlkit (>=0.5.5,<0.6.0)
+Project-URL: Repository, https://github.com/etijskens/et-micc-tools
+Description-Content-Type: text/x-rst
+
+=============
+et-micc-tools
+=============
+
+
+
+<Enter a one-sentence description of this project here.>
+
+
+* Free software: MIT license
+* Documentation: https://et-micc-tools.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
