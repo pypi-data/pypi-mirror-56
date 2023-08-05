@@ -1,0 +1,12 @@
+README.md
+setup.py
+pytarallo/AuditEntry.py
+pytarallo/Errors.py
+pytarallo/Item.py
+pytarallo/Tarallo.py
+pytarallo/__init__.py
+pytarallo.egg-info/PKG-INFO
+pytarallo.egg-info/SOURCES.txt
+pytarallo.egg-info/dependency_links.txt
+pytarallo.egg-info/requires.txt
+pytarallo.egg-info/top_level.txt
