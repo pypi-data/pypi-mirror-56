@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: ebonite
+Version: 0.2.1
+Summary: Machine Learning Lifecycle Framework
+Home-page: https://github.com/zyfra/ebonite
+Author: Mikhail Sveshnikov
+Author-email: mike0sv@gmail.com
+License: Apache-2.0
+Project-URL: Changelog, https://github.com/zyfra/ebonite/blob/master/CHANGELOG.rst
+Project-URL: Issue Tracker, https://github.com/zyfra/ebonite/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Requires-Dist: docker (==4.1.0)
+Requires-Dist: pyyaml (==5.1.2)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: dill (==0.3.1.1)
+Requires-Dist: GitPython (==3.0.3)
+Requires-Dist: isort (==4.3.21)
+Requires-Dist: pyjackson (==0.0.15)
+Requires-Dist: everett (==1.0.2)
+Provides-Extra: testing
+Requires-Dist: pandas (==0.25.1) ; extra == 'testing'
+Requires-Dist: numpy (==1.17.3) ; extra == 'testing'
+Requires-Dist: scikit-learn (==0.21.3) ; extra == 'testing'
+Requires-Dist: sqlalchemy (==1.3.10) ; extra == 'testing'
+Requires-Dist: tensorflow (==1.14.0) ; extra == 'testing'
+Requires-Dist: flasgger (==0.9.3) ; extra == 'testing'
+Requires-Dist: boto3 (==1.9.252) ; extra == 'testing'
+Requires-Dist: imageio (==2.6.1) ; extra == 'testing'
+Requires-Dist: responses (==0.10.6) ; extra == 'testing'
+Requires-Dist: psutil (==5.6.3) ; extra == 'testing'
+Requires-Dist: testcontainers (==2.5) ; extra == 'testing'
+Requires-Dist: pytest (==5.2.2) ; extra == 'testing'
+
+.. image:: ebonite.jpg
+
+
+
+Ebonite is a machine learning lifecycle framework.
+It allows you to persist your models and reproduce them (as services or in general).
+
+Installation
+============
+
+::
+
+    pip install ebonite
+
+Quickstart
+=============
+
+First, create a Ebonite client.
+
+.. code-block:: python
+
+  from ebonite import Ebonite
+  ebnt = Ebonite.local()
+
+Second, create a task and push your model object with some sample data.
+
+.. code-block:: python
+
+   task = ebnt.get_or_create_task('my_project', 'my_task')
+   model = task.create_and_push_model(clf, test_x, 'my_sklearn_clf')
+
+You are awesome! Now you can load you model from this repo and do other wonderful stuff with it, for
+example create a docker image.
+
+Check out examples and documentation to learn more.
+
+
+Documentation
+=============
+... is available `here <https://ebonite.readthedocs.io/en/latest/>`_
+
+Supported libraries and repositories
+====================================
+
+* Machine Learning
+
+  * scikit-learn
+
+  * TensorFlow < 2
+
+* Data
+
+  * NumPy
+
+  * pandas
+
+  * images
+
+* Repositories
+
+  * SQLAlchemy
+
+  * Amazon S3
+
+* Serving
+
+  * Flask
+
+
+
+Contributing
+============
+
+Read `this <https://github.com/zyfra/ebonite/blob/master/CONTRIBUTING.rst>`_
+
+Changelog
+=========
+
+0.2.0 (2019-11-14)
+------------------
+
+* First release on PyPI.
+
+
