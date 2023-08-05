@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: aiflow
+Version: 1.0.0
+Summary: AI Flow, an extend operators library for airflow, which helps AI engineer to write less, reuse more, integrate easily.
+Home-page: https://github.com/Marcnuth/aiflow
+Author: Xianxian Huang
+Author-email: hxianxian@gmail.com
+License: Apache License 2.0
+Description: # AI Flow
+        
+        ## Introduction
+        AI Flow, which offers various reusable operators & processing units in AI modeling, helps AI engineer to write less, reuse more, integrate easily.
+        
+        ## Install
+        
+        ```
+        pip install aiflow
+        ```
+        
+        
+        ## Concepts
+        
+        ### Operators VS. Units
+        
+        Ideally, we agree:
+        - An **Operator** would contain lot of units, which will be integrated into `airflow` for building non-realtime processing workflow;
+        - A **Unit** is a small calculation unit, which could be a function, or just a simple modeling logic, and it could be picked as bricks to build an operator. Besides, it could be reused anywhere for realtime calculation.
+        
+        ## Classes
+        
+        ### Operators
+        
+        #### MongoToCSVOperator
+        
+        #### Elastic2CSVOperator
+        
+        #### RegExLabellingOperator
+        
+        ### Units
+        
+        #### Doc2VecUnit
+        
+        #### Doc2MatUnit
+        
+        ## Tests & Examples
+        
+        ### Example: Use Units to Build Your Castle
+        
+        
+        ### Example: Working with Airflow
+        
+        In `tests/docker/` folder, we provide examples on how to use `aiflow` with `airflow`.
+        It is a docker image, you could simply copy and start to use it!
+        
+        In project root directory, run commands first:
+        ```
+        docker-compose up --build aiflow
+        ```
+        
+        Then open `localhost:8080` in your browser, you can see all the examples `aiflow` provided!
+        Note: both the default username & password are `admin`
+        
+        Enjoy!
+        
+        ## Contribution
+Platform: UNKNOWN
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

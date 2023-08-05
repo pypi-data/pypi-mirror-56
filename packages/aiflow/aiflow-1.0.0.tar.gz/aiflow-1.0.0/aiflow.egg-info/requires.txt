@@ -1,0 +1,9 @@
+apache-airflow
+pymongo
+pathlib
+jsonpath
+pandas
+numpy
+gensim
+nltk
+elasticsearch<7.0.0,>=6.0.0
