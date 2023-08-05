@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: hilale
+Version: 0.1.0
+Summary: 
+Author: rkshrksh
+Author-email: aarkaygautam@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pyautogui (>=0.9.48,<0.10.0)
