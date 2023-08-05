@@ -1,0 +1,17 @@
+LICENCE.txt
+MANIFEST.in
+README.rst
+ez_setup.py
+setup.py
+examples/primer_selection.py
+icebreaker/IceClient.py
+icebreaker/__init__.py
+icebreaker/recipes.py
+icebreaker/tools.py
+icebreaker/utils.py
+icebreaker/version.py
+icebreaker.egg-info/PKG-INFO
+icebreaker.egg-info/SOURCES.txt
+icebreaker.egg-info/dependency_links.txt
+icebreaker.egg-info/requires.txt
+icebreaker.egg-info/top_level.txt
