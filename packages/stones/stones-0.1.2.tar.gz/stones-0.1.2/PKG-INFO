@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: stones
+Version: 0.1.2
+Summary: Base library for persistent key-value stores, 100% compatible with Python dict
+Home-page: https://github.com/croqaz/Stones
+Author: Cristi Constantin
+Author-email: cristi.constantin@speedpost.net
+License: MIT
+Description: Persistent key-value containers, compatible with Python dict.
+Keywords: persistent dict
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Database
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test
