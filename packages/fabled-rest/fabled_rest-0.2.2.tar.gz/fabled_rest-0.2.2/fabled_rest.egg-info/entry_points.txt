@@ -1,0 +1,3 @@
+[console_scripts]
+fabled_rest = fabled_rest.cli:main
+
