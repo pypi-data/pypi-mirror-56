@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: pip-ppm
+Version: 0.0.1
+Summary: A pip alternative for managing python packages
+Home-page: https://github.com/ekinertac/ppm
+Author: Ekin Ertaç
+Author-email: ekinertac@gmail.com
+License: UNKNOWN
+Description: A shameless clone of npm for managing python packages.
+        
+        ### Do not take this project seriously
+        it's just a `pip install` command with some features for personal needs.
+        
+        #### Installation
+        
+            pip install ppm
+        
+        #### requirements.json file initialization
+            
+            ppm init
+            
+        `ppm init` command creates a file contains:
+        
+            {
+              "name": "test",
+              "version": "1.0.0",
+              "description": "",
+              "author": "",
+              "license": "ISC",
+            }
+        
+        #### Install a package and save to the requirements.json file
+            
+            ppm install flask --save
+            ppm install flask==1 --save
+            ppm install flask ipython --save
+        
+        
+        When you use `ppm install` command with `--save` flag, 
+        it's saving installed packages to the `requirements.json` file
+            
+            {   
+                ...
+                "requirements": {
+        	        "django": "2",
+                    "djangorestframework": ""
+                }
+            }
+        
+        
+        #### Install packages pre-defined in requirements.json file
+            
+            ppm install
+            ...
+            Successfully installed django-2.0 djangorestframework-3.10.3
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
