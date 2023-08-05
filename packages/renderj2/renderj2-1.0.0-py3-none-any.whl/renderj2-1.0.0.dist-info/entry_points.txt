@@ -1,0 +1,3 @@
+[console_scripts]
+pyrender = renderj2.renderj2:cmd
+
