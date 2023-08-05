@@ -1,0 +1,17 @@
+aiflow/__init__.py,sha256=qw9V_wp1ZEJHFQjE-w7ZYrWMCDfSKmV8mzG4kVfaEYw,874
+aiflow/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiflow/hooks/elastic_hook.py,sha256=ZXCZ5o1XPT9WRkpnJmSzoOIoaJbv_8rKD4smePxwCI8,748
+aiflow/hooks/mongo_hook.py,sha256=C7euqO0pOD596rrkGbuZouObxiA4JUcvbx0nvrd1Cms,6028
+aiflow/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiflow/operators/elastic_operator.py,sha256=YRBHseGrUs4IRQ42apvzuIV0S_35XAXwPK76MaGDmvo,2396
+aiflow/operators/mongo_operator.py,sha256=Rv93PHmDiOE9FUrVigaUTKtPT_K-T1Z2Xh3nRWY73eU,2394
+aiflow/operators/regex_operator.py,sha256=cFhASSOJ264kXJhLzZefm2Xg09wyqpgElH9RAs_Cez4,2054
+aiflow/operators/text_classification_operator.py,sha256=DF0r_uL7L3yA7gEbr03BHId2hStsZNgmskUwkHJObgk,2565
+aiflow/units/__init__.py,sha256=x_LO5GkdY_cQBqDvpEDf8aAxYrzEMW1B-QHx8wicrVw,605
+aiflow/units/doc2mat_unit.py,sha256=6q191-Y_NToLNgflZY7pzH9wJO3ROdSxH9P8fteZzW4,2748
+aiflow/units/doc2vec_unit.py,sha256=qbdoHRH0j9muGN0qQf0dHz3kcrkdV4nuIEAMf54101E,2487
+aiflow-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aiflow-1.0.0.dist-info/METADATA,sha256=pyhKuKWKkbjm_Z65FTELsp5oJSoI-JxoZlWGZfhLM9U,2070
+aiflow-1.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+aiflow-1.0.0.dist-info/top_level.txt,sha256=-iV-FZrA4JD3B7d5x7C1h7lmJ4XKzGEFJ4kBh35lXsM,7
+aiflow-1.0.0.dist-info/RECORD,,
