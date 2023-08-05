@@ -1,0 +1,15 @@
+pandas
+pyarrow==0.12.1
+fastparquet
+sklearn
+preconvert
+preconvert_numpy
+dill
+wrapt_timeout_decorator
+just>=0.7.98
+
+[all]
+fastparquet[brotli,lz4,lzo,snappy,zstandard]
+
+[noc]
+fastparquet[brotli,lz4,snappy]
