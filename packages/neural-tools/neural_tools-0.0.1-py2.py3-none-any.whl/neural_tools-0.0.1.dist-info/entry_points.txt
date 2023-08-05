@@ -1,0 +1,5 @@
+[console_scripts]
+lct = color.linear_color_transfer:main
+linear-color-transfer = color.linear_color_transfer:main
+lum-transfer = color.lum_transfer:main
+
