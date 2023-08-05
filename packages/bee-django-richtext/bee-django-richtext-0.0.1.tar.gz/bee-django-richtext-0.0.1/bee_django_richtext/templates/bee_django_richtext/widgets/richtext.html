@@ -1,0 +1,70 @@
+{% load static %}
+<script type="text/javascript" src="{% static 'bee_django_course/wangEditor/js/wangEditor.js' %}"></script>
+<link rel="stylesheet" href="{% static 'bee_django_course/wangEditor/css/wangEditor.css' %}">
+{% block styles %}
+    <style>
+        textarea {
+            height: 350px;
+        }
+    </style>
+
+{% endblock %}
+<div>
+    <textarea id="id_{{ widget_name }}" name="{{ widget_name }}">{{ value|default:""|safe }}</textarea>
+    {% if img == True %}
+        <div style="color: red;">上传图片：大小不超过{{ image_max_size }}M</div>
+    {% endif %}
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var E = window.wangEditor;
+        var field_id = "{{ widget_id }}";
+        var editor = new E(field_id);
+        var menu_list = [
+            'bold',
+            'underline',
+            'italic',
+            'strikethrough',
+            'eraser',
+            'forecolor',
+            'bgcolor',
+            '|',
+            'quote',
+            'fontfamily',
+            'fontsize',
+            'head',
+            'unorderlist',
+            'orderlist',
+            'alignleft',
+            'aligncenter',
+            'alignright',
+            '|',
+            'link',
+            'unlink',
+            "|"
+        ];
+        if ("{{ emotion }}" == "True") {
+            menu_list.push("emotion");
+        }
+        if ("{{ img }}" == "True") {
+            menu_list.push("img");
+        }
+        if ("{{ undo_redo }}" == "True") {
+            menu_list.push("undo");
+            menu_list.push("redo");
+        }
+
+        editor.config.menus = menu_list;
+        editor.config.uploadImgFileName = 'image';
+        editor.config.uploadImgUrl = "{% url 'bee_django_richtext:upload_image'%}";
+        // 配置自定义参数（举例）
+        editor.config.uploadParams = {
+            app_name: '{{app_name}}',
+            model_name: '{{model_name}}',
+            max_size: '{{ image_max_size }}'
+        };
+        editor.create();
+
+        window.editor = editor;
+    });
+</script>
