@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pulp-container
+Version: 1.0.0rc1
+Summary: Container plugin for the Pulp Project
+Home-page: http://pulpproject.org/
+Author: Pulp Team
+Author-email: pulp-list@redhat.com
+License: GPLv2+
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Requires-Dist: pulpcore (<3.1,>=3.0rc8)
+Requires-Dist: ecdsa (~=0.13.2)
+Requires-Dist: pyjwkest (~=1.4.0)
+Requires-Dist: pyjwt[crypto] (~=1.7.1)
+
+``pulp_container`` Plugin
+=========================
+
+.. image:: https://travis-ci.org/pulp/pulp_container.svg?branch=master
+    :target: https://travis-ci.org/pulp/pulp_container
+
+This is the ``pulp_container`` Plugin for `Pulp Project
+3.0+ <https://pypi.python.org/pypi/pulpcore/>`__. This plugin provides Pulp with support for container
+images, similar to the pulp_docker plugin for Pulp 2.
+
+For more information, please see the `documentation
+<http://pulp-container.readthedocs.io/en/latest/>`_ or the `Pulp project page
+<https://pulpproject.org>`_.
+
+
