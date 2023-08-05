@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+pytonik_agent/__init__.py
+pytonik_agent/browser.py
+pytonik_agent/os.py
+pytonik_agent.egg-info/PKG-INFO
+pytonik_agent.egg-info/SOURCES.txt
+pytonik_agent.egg-info/dependency_links.txt
+pytonik_agent.egg-info/top_level.txt
