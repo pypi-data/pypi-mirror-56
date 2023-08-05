@@ -1,0 +1,5 @@
+django>=2.2
+bleach
+bleach_whitelist
+markdown
+django-taggit
