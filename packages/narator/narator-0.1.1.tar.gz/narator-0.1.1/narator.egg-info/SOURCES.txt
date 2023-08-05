@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.txt
+requirements_devel.txt
+setup.py
+narator/__init__.py
+narator/narator
+narator.egg-info/PKG-INFO
+narator.egg-info/SOURCES.txt
+narator.egg-info/dependency_links.txt
+narator.egg-info/not-zip-safe
+narator.egg-info/requires.txt
+narator.egg-info/top_level.txt
+narator/templates/template.txt
