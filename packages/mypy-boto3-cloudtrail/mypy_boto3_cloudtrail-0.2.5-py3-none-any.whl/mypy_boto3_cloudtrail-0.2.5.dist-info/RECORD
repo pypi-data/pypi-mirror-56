@@ -1,0 +1,12 @@
+mypy_boto3_cloudtrail/__init__.py,sha256=IbQtKPJOXOKIbBvisc8qFVgnlp78w4SpcQ-Aehfyo9g,183
+mypy_boto3_cloudtrail/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_cloudtrail/client.py,sha256=JRAvPX0hz1RgrF3k0ZAatyxZKp6FgoBMBe7uCh8s5_4,101033
+mypy_boto3_cloudtrail/helpers.py,sha256=L2FkKK7e7oIIbBI0GAeUmzj-ZPIlxcX0Vvgj2muPzEY,2923
+mypy_boto3_cloudtrail/paginator.py,sha256=ZUTh70GJr0CXfMZL6W4g8FU5F0lfdJpZK4J-A33ahyg,17055
+mypy_boto3_cloudtrail/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_cloudtrail/type_defs.py,sha256=gGVXaTQweizXZSg2Pf90QGx2LC0Tw9PUeNN66jwT7ME,113942
+mypy_boto3_cloudtrail/version.py,sha256=1NIOtJtZmmn92sL26J0GZoOW7g7EtL5BOmu2rR0Wx6E,53
+mypy_boto3_cloudtrail-0.2.5.dist-info/METADATA,sha256=pb9H_oYkWR9nz92DfI5hXusOX0Z7_wsh7T5yV7cELiI,1073
+mypy_boto3_cloudtrail-0.2.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mypy_boto3_cloudtrail-0.2.5.dist-info/top_level.txt,sha256=R9LZ7MG83l3o8lDK1OzYr6ZXgM6Qs-k4ooblV_qZ120,22
+mypy_boto3_cloudtrail-0.2.5.dist-info/RECORD,,
