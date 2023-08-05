@@ -1,0 +1,3 @@
+[console_scripts]
+conport = conport.conport:conport
+
