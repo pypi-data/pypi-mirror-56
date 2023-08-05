@@ -1,0 +1,12 @@
+README.md
+setup.py
+crudl/__init__.py
+crudl/crudl_db.py
+crudl/mysql_db.py
+crudl/sqlite_db.py
+crudl/test.py
+evonik_crudl.egg-info/PKG-INFO
+evonik_crudl.egg-info/SOURCES.txt
+evonik_crudl.egg-info/dependency_links.txt
+evonik_crudl.egg-info/requires.txt
+evonik_crudl.egg-info/top_level.txt
