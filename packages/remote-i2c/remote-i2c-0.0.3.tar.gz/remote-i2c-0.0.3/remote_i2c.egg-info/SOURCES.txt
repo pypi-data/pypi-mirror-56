@@ -1,0 +1,11 @@
+README.md
+setup.py
+remote_i2c/__init__.py
+remote_i2c/__main__.py
+remote_i2c/client.py
+remote_i2c/commands.py
+remote_i2c/server.py
+remote_i2c.egg-info/PKG-INFO
+remote_i2c.egg-info/SOURCES.txt
+remote_i2c.egg-info/dependency_links.txt
+remote_i2c.egg-info/top_level.txt
