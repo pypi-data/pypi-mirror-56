@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+gmaily/__init__.py
+gmaily/gmaily.py
+gmaily.egg-info/PKG-INFO
+gmaily.egg-info/SOURCES.txt
+gmaily.egg-info/dependency_links.txt
+gmaily.egg-info/top_level.txt

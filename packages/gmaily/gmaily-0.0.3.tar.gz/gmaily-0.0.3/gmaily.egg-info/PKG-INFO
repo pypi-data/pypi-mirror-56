@@ -1,0 +1,113 @@
+Metadata-Version: 2.1
+Name: gmaily
+Version: 0.0.3
+Summary: Unofficial Gmail python client with pythonic API.
+Home-page: https://github.com/hallazzang/gmaily
+Author: Hanjun Kim
+Author-email: hallazzang@gmail.com
+License: MIT
+Description: # gmaily
+        
+        Unofficial Gmail python client with pythonic API.
+        
+        ## Features
+        
+        - [x] Clean API
+        - [x] No other dependencies than standard library
+        - [ ] Lazy loading for content
+        
+        ## Example
+        
+        ```python
+        import sys
+        import getpass
+        import datetime
+        
+        from gmaily import Gmaily
+        
+        g = Gmaily()
+        
+        user_email = input("Email: ")
+        user_pw = getpass.getpass()
+        
+        if not g.login(user_email, user_pw):
+            print("Cannot login")
+            sys.exit(1)
+        
+        msgs = g.inbox().after(datetime.date.today() - datetime.timedelta(weeks=2))
+        for msg in msgs.all():
+            print("\n" + (" Mail UID: %d " % msg.uid).center(80, "=") + "\n")
+            print("Subject:", msg.subject)
+            print("From:", msg.sender)
+            print("Date:", msg.date)
+            print("Attachments:", msg.attachments)
+        
+            print("-" * 10)
+            print(msg.text)
+        
+        g.logout()
+        ```
+        
+        ## Usage
+        
+        ### Searching Mailbox
+        
+        `SearchQuery`, which is returned by some methods like `Gmaily.inbox`
+        supports method chaining and you can easily mix search criterias together:
+        
+        ```python
+        two_weeks_ago = datetime.date.today() - datetime.timedelta(weeks=2)
+        msgs = g.inbox().by("john@example.com").before(two_weeks_ago)
+        ```
+        
+        Alternatively, you can use other mailboxes than `INBOX` in the above example
+        using `Gmaily.mailbox` method:
+        
+        ```python
+        msgs = g.mailbox("URGENT").on(datetime.date.today())
+        ```
+        
+        You can then execute the query and fetch the results using `SearchQuery.all`:
+        
+        ```python
+        print(msgs.all())
+        ```
+        
+        You can find the full list of supported criterias and their description at
+        [here](https://tools.ietf.org/html/rfc3501#section-6.4.4).
+        Note that `ALL` criteria is not present because it's the default criteria
+        and `SearchQuery.all` stands for executing the query.
+        Any other names like `.fetch()`, `.do()` could be taken the place,
+        but I chose the `.all()` because famous ORMs use it too.
+        
+        Some other criterias are omitted too:
+        
+        - `NOT`
+        - `OR`
+        - `UID`
+        
+        ## Installation
+        
+        It requires `Python>=3.5`.
+        
+        ```
+        $ pip3 install -U gmaily
+        ```
+        
+        ## License
+        
+        MIT
+        
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Communications :: Email
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
