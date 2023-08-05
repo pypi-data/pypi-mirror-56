@@ -1,0 +1,3 @@
+[console_scripts]
+citus-rebalancer = citus_rebalancer.command:find_ideal_rebalance
+
