@@ -1,0 +1,4 @@
+[console_scripts]
+haumea = haumea.__main__:main
+haumea-quickstart = haumea.quickstart:main
+
