@@ -1,0 +1,16 @@
+krawler_api-0.10.7.dist-info/DESCRIPTION.rst,sha256=YYLyTSSlH3WuClvpnbXFIJoSK_DnrdIJVuHYtF_3Fmw,10
+krawler_api-0.10.7.dist-info/METADATA,sha256=I28eDW_VKpKcripPCfdpYEcuYVuwSJ_4WZzU2gcSWt8,339
+krawler_api-0.10.7.dist-info/RECORD,,
+krawler_api-0.10.7.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+krawler_api-0.10.7.dist-info/metadata.json,sha256=zGh6W5bR_WgA6kGP3-L8kZQqwzpmuz1s3qodCcEciKA,544
+krawler_api-0.10.7.dist-info/top_level.txt,sha256=jfBeXcqQI7rBZwBorbBcvkbbLAXIlHZzb-_Opgx1TvM,6
+naver_api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+naver_api/naver_search.py,sha256=A4AywTPV3PQmxyD6Eqg08P3hMW2-GxQvCUtBgaTGBl8,2138
+water/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+water/chosun.py,sha256=DNi-VLZE4pUEwdppzYdGjKD6AARA1xK52yUe7xvHz1Q,847
+water/hani.py,sha256=riN8yYOfiY6F0hTZNvFSjRLdEkOTotvVbnnIufOonjo,1061
+water/kofiabond.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+water/krawler.py,sha256=cRFUUSK-IvNyBwi41VCCNPmdlTC7qA1xnUGan_nonls,4945
+water/naver.py,sha256=47Av5MuORs6E0m7E5LDDBq3H9WXipgfe_Z2-bXvQbe0,2410
+water/naver_search.py,sha256=A4AywTPV3PQmxyD6Eqg08P3hMW2-GxQvCUtBgaTGBl8,2138
+water/utils.py,sha256=Drny7P5GRGB92KTwCU8LpIblih0hYHAxtHDSICNhb8A,43
