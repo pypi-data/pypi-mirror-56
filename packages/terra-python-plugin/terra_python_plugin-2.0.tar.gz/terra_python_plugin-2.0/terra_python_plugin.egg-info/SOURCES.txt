@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+terra_python_plugin/__init__.py
+terra_python_plugin/terra_python_plugin.py
+terra_python_plugin.egg-info/PKG-INFO
+terra_python_plugin.egg-info/SOURCES.txt
+terra_python_plugin.egg-info/dependency_links.txt
+terra_python_plugin.egg-info/requires.txt
+terra_python_plugin.egg-info/top_level.txt
