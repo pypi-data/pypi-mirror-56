@@ -1,0 +1,12 @@
+getdents-0.3.dist-info/RECORD,,
+getdents-0.3.dist-info/entry_points.txt,sha256=YUVpsqpey-9_0nGFhRgTcldFN2F1mBH20hebL8Eumbc,55
+getdents-0.3.dist-info/LICENSE,sha256=Gl8uts48P9S2V6WZNVUw0YrMR9u_oxglytWfEayqa7M,1324
+getdents-0.3.dist-info/top_level.txt,sha256=iUTs19vsmhKEsMp1kWFhLB1NsuQF5YhcIzuNQQ-xWe8,9
+getdents-0.3.dist-info/WHEEL,sha256=sw-_s1Pntrp7ScKO9PoP8UTSCaWmPd0wDmAqc4ZC5Bg,108
+getdents-0.3.dist-info/METADATA,sha256=deTGMPwRTtBIDgDFTiS36PPKcPZqHZ8EzUQ0UZm2RPA,4431
+getdents/formatters.py,sha256=m-M6INWTZP0cbKQngLpwFdCgyXV0BHuL_Ag_a6nCBxc,2203
+getdents/__init__.py,sha256=ukjQdBdTRHkuHrTDkIJDy87WMKZl9SipHWVwLgzQe5w,1190
+getdents/_getdents.c,sha256=ve0ed3C4b9Nx54skpKBEt8NO_LAW_SsyZrdQEKC8pIM,5129
+getdents/_getdents.cpython-38-x86_64-linux-gnu.so,sha256=n1VLqBAYqFuPJAWlM6wZ7HEt59Akh-kH55V4KRZTIf4,36944
+getdents/__main__.py,sha256=xg5RQSILz2IsFtduPbIBT-rZK4Im3QB1_QnET_BmWjs,150
+getdents/cli.py,sha256=-WJEOFC0Sr0LKcLA-g16kgbUyzHB5HNVoZldsxq4I3k,1685
