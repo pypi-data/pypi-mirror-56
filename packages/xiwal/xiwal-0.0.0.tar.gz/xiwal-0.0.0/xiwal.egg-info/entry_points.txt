@@ -1,0 +1,3 @@
+[console_scripts]
+xiwal = xiwal.__main__:main
+
