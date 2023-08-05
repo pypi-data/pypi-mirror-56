@@ -1,0 +1,3 @@
+[console_scripts]
+langswi = langswi.main:main
+
