@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: jaeger
+Version: 0.4.0
+Summary: Controllers for the SDSS-V FPS
+Home-page: https://github.com/sdss/jaeger
+License: BSD-3-Clause
+Keywords: astronomy,software
+Author: José Sánchez-Gallego
+Author-email: gallegoj@uw.edu
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: docs
+Requires-Dist: Click (>=7.0,<8.0)
+Requires-Dist: Sphinx (>=1.0,<2.0); extra == "docs"
+Requires-Dist: astropy (>=3.0.4,<4.0.0)
+Requires-Dist: numpy (>=1.15.1,<2.0.0)
+Requires-Dist: peewee (>=3.11.2,<4.0.0)
+Requires-Dist: progressbar2 (>=3.39.3,<4.0.0)
+Requires-Dist: pygments (>=2.2.0,<3.0.0)
+Requires-Dist: pymodbus (>=2.3.0,<3.0.0)
+Requires-Dist: pyserial (>=3.4,<4.0)
+Requires-Dist: python-can (>=3.1.1,<4.0.0)
+Requires-Dist: releases (>=1.6.1,<2.0.0); extra == "docs"
+Requires-Dist: ruamel.yaml (>=0.15.61,<0.16.0)
+Requires-Dist: sdss-clu (>=0.1.5,<0.2.0)
+Requires-Dist: semantic-version (==2.6.0); extra == "docs"
+Requires-Dist: sphinx-click (==2.3.0); extra == "docs"
+Requires-Dist: sphinxcontrib-trio (==1.1.0); extra == "docs"
+Project-URL: Documentation, https://sdss-jaeger.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/sdss/jaeger
+Description-Content-Type: text/markdown
+
+jaeger
+======
+
+![Versions](https://img.shields.io/badge/python-3.7-blue)
+[![Documentation Status](https://readthedocs.org/projects/jaeger/badge/?version=latest)](https://sdss-jaeger.readthedocs.io/en/latest/?badge=latest)
+[![Travis (.org)](https://img.shields.io/travis/sdss/jaeger)](https://travis-ci.org/sdss/jaeger)
+[![Coverage Status](https://coveralls.io/repos/github/sdss/jaeger/badge.svg?branch=master)](https://coveralls.io/github/sdss/jaeger?branch=master)
+
+Python controller for CAN-based SDSS fibre positioners
+
