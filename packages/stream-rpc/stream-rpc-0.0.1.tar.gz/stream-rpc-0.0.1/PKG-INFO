@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: stream-rpc
+Version: 0.0.1
+Summary: Stream RPC protocol with cryptography
+Home-page: https://github.com/AndrewBurdyug/stream-rpc
+Author: Andrew Burdyug
+Author-email: buran83@gmail.com
+License: Copyright (c) 2019 Andrew Burdyug. All rights reserved.
+Description: UNKNOWN
+Keywords: stream rpc crypto
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
