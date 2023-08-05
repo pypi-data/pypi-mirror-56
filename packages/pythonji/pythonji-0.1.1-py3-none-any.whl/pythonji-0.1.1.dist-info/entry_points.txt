@@ -1,0 +1,3 @@
+[console_scripts]
+pythonji=pythonji.__main__:main
+
