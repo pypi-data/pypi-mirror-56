@@ -1,0 +1,9 @@
+attrs>=19.3.0
+cattrs@ git+https://github.com/Tinche/cattrs.git@bb48897a7f389332d6111a239dcf3bf4a11b526f
+pendulum>=2.0.5
+requests>=2.22.0
+
+[testing]
+pytest
+pytest-cov
+testfixtures
