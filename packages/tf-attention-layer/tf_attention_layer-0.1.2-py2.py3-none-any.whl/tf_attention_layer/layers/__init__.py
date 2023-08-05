@@ -1,0 +1,1 @@
+from tf_attention_layer.layers import global_attentioin_layer
