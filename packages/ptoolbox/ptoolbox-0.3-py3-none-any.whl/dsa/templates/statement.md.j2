@@ -1,0 +1,48 @@
+[//]: # ({{problem.src_url}})
+[//]: # (hackerrank_id: )
+
+# {{problem.name}}
+[//]: # ({{problem.code}})
+[//]: # ({{problem.src_name}})
+
+{{problem.statement}}
+
+## Input
+
+{{problem.input_format}}
+
+## Constraints
+
+{{problem.constraints}}
+
+## Output
+
+{{problem.output_format}}
+
+## Tags
+
+{% for tag in problem.tags %}
+- {{tag}}
+{% endfor %}
+
+## Difficulty
+{{problem.difficulty}}
+
+{% for testcase in problem.testcases_sample %}
+## Sample input {{testcase.name}}
+
+```
+{{testcase.input}}
+```
+
+## Sample output {{testcase.name}}
+
+```
+{{testcase.output}}
+```
+{% if testcase.explanation %}
+## Explanation {{testcase.name}}
+
+{{testcase.explanation}}
+{% endif %}
+{% endfor %}
