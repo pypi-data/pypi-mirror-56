@@ -1,0 +1,15 @@
+README.md
+setup.py
+meta_info_tools/__init__.py
+meta_info_tools/meta_check.py
+meta_info_tools/meta_html.py
+meta_info_tools/meta_info.py
+meta_info_tools/meta_info_unittests.py
+meta_info_tools/meta_json_schema.py
+meta_info_tools/meta_schema.py
+meta_info_tools/meta_tool.py
+meta_info_tools.egg-info/PKG-INFO
+meta_info_tools.egg-info/SOURCES.txt
+meta_info_tools.egg-info/dependency_links.txt
+meta_info_tools.egg-info/requires.txt
+meta_info_tools.egg-info/top_level.txt
