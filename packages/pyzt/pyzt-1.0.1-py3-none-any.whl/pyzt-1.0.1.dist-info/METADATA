@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyzt
+Version: 1.0.1
+Summary: pyzt python librariy wrapper for azt lang.
+Home-page: https://azat.ai
+Author: pyzt
+Author-email: info@azat.ai
+License: UNKNOWN
+Keywords: pyzt
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: azt
+Requires-Dist: cython
+Requires-Dist: termcolor
+
+UNKNOWN
+
+
