@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+customOperatorTemplate.py
+setup.py
+gensolution.egg-info/PKG-INFO
+gensolution.egg-info/SOURCES.txt
+gensolution.egg-info/dependency_links.txt
+gensolution.egg-info/entry_points.txt
+gensolution.egg-info/top_level.txt
