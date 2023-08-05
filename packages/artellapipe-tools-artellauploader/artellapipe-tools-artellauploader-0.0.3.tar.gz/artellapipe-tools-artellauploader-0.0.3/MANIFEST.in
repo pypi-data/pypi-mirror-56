@@ -1,0 +1,4 @@
+
+include artellapipe/tools/artellauploader/__logging__.ini
+include artellapipe/tools/artellauploader/resources/images/*.*
+include artellapipe/tools/artellauploader/icons/color/*.*
