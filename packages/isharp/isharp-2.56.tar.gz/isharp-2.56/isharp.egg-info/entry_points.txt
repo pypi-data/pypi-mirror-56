@@ -1,0 +1,4 @@
+[console_scripts]
+datahub = isharp.datahub.broker_service.datahub_main:main
+web = isharp.datahub.broker_service.datahub_webserver_main:main
+
