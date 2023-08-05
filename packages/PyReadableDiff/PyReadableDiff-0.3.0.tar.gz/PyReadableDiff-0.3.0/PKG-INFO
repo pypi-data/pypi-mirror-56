@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: PyReadableDiff
+Version: 0.3.0
+Summary: Intuitive human-readable diff for text
+Home-page: https://github.com/iuliux/PyReadableDiff
+Author: Gevorg Davoian, Iulius Curt, Kevin Decker (the author of the original jsdiff library) and others
+Author-email: UNKNOWN
+License: Apache-2.0
+Description: For more detailed information about the library please visit `the official repository <https://github.com/iuliux/PyReadableDiff>`_.
+Keywords: python,text,diff,pydiff
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
