@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+sticky_marshmallow/__init__.py
+sticky_marshmallow/connection.py
+sticky_marshmallow/cursor.py
+sticky_marshmallow/repository.py
+sticky_marshmallow.egg-info/PKG-INFO
+sticky_marshmallow.egg-info/SOURCES.txt
+sticky_marshmallow.egg-info/dependency_links.txt
+sticky_marshmallow.egg-info/requires.txt
+sticky_marshmallow.egg-info/top_level.txt
+sticky_marshmallow/utils/case.py
