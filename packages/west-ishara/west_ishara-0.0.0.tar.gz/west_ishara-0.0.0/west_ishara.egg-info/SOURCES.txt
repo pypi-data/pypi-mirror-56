@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+west_ishara/__init__.py
+west_ishara.egg-info/PKG-INFO
+west_ishara.egg-info/SOURCES.txt
+west_ishara.egg-info/dependency_links.txt
+west_ishara.egg-info/requires.txt
+west_ishara.egg-info/top_level.txt
