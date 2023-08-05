@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: qrcodeutil
+Version: 1.0.0
+Summary: QR Code Utility Python Library
+Home-page: UNKNOWN
+Author: Daniel CAUNE
+Author-email: daniel.caune@gmail.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+Requires-Dist: exifread
+Requires-Dist: spriteutil
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: twine
+Requires-Dist: numpy
+Requires-Dist: pipfile
+
+# QR Code Decoder Python Library
+
+The **QR Code Decoder Python Library** is a pure Python implementation of QR code decoding.
+
+The few existing Python implementations, such as [`qrtools`](https://github.com/primetang/qrtools), actually depends on other libraries (e.g., [`Zbar`](http://zbar.sourceforge.net/index.html)), which your grandmother won't be able to install the same way on Windows, Mac, and Linux, in just one click, for sure. And you should consider most of the users, and even your pairs, like your grandmother.
+
+This Python library is not intended to be used for real-time QR code decoding. It takes a few seconds per image.
+
+
