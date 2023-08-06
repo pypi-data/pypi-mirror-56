@@ -1,0 +1,5 @@
+recursive-include pyOpenRPA\Resources *
+recursive-include pyOpenRPA\Orchestrator\Web *
+recursive-include pyOpenRPA\Studio\Web *
+include pyOpenRPA\Tools\RobotRDPActive\Template.rdp
+include pyOpenRPA\Tools\RobotScreenActive\ConsoleStart.bat
