@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyWireGuard_proto
+Version: 2019.12.0
+Summary: Controller for WireGuard
+Home-page: https://git.yurzs.dev/yurzs/pywireguard
+Author: Yurzs (Yury)
+Author-email: development+pyWireGuard_proto@yurzs.dev
+License: MIT
+Description: # pyWireGuard
+        Python controller for WireGuard.  
+        Status: Alpha  
+        More info soon
+Keywords: wireguard
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
