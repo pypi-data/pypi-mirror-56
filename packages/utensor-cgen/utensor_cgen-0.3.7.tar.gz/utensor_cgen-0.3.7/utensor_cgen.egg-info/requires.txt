@@ -1,0 +1,12 @@
+Jinja2
+tensorflow==1.13.1
+idx2numpy
+attrs
+click
+torch
+torchvision
+onnx-tf==1.2.1
+graphviz
+
+[dev]
+pytest
