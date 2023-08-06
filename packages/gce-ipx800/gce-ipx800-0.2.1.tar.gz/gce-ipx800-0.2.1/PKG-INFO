@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: gce-ipx800
+Version: 0.2.1
+Summary: Module to control the IPX800 V4 device from GCE Electronics.
+Home-page: https://github.com/marcaurele/py-ipx800
+Author: Marc-Aurèle Brothier
+Author-email: m@brothier.org
