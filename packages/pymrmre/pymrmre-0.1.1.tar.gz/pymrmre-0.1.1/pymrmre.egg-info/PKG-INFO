@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pymrmre
+Version: 0.1.1
+Summary: A Python package for Parallelized Minimum Redundancy, Maximum Relevance (mRMR) Ensemble Feature selections.
+Home-page: https://github.com/bhklab/PymRMRe
+Author: Bo Li, Benjamin Haibe-Kains
+Author-email: benjamin.haibe.kains@utoronto.ca
+License: MIT license
+Description: # PymRMRe
+        
+        Feature selection is one of the main challenges in analyzing high-throughput genomic data. Minimum redundancy maximum relevance (mRMR) is a particularly fast feature selection method for finding a set of both relevant and complementary features. The Pymrmre package, extend the mRMR technique by using an ensemble approach to better explore the feature space and build more robust predictors. To deal with the computational complexity of the ensemble approach, the main functions of the package are implemented and parallelized in C++ using openMP Application Programming Interface. The package also supports making best selections with some fixed-selected features.
+Keywords: pymrmre featureselection genomics computationalbiology
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
