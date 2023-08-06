@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: TracVote
+Version: 0.7.0
+Summary: A plugin for voting on Trac resources.
+Home-page: https://trac-hacks.org/wiki/VotePlugin
+Author: Alec Thomas
+Maintainer: Ryan J Ollos
+Maintainer-email: ryan.j.ollos@gmail.com
+License: 3-Clause BSD
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+
+UNKNOWN
+
+
