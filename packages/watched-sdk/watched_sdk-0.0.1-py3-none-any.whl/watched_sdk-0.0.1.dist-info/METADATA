@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: watched-sdk
+Version: 0.0.1
+Summary: WATCHED.com Python SDK
+Home-page: https://github.com/watchedcom/sdk-python
+Author: WATCHED
+Author-email: dev@watched.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+Requires-Dist: watched-schema
+Requires-Dist: diskcache
+Requires-Dist: flask
+Requires-Dist: requests
+Requires-Dist: markdown
+
+# WATCHED.com Python SDK
+
+
