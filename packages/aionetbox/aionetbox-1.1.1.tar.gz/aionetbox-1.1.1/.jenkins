@@ -1,0 +1,39 @@
+// Include this shared CI repository to load script helpers
+// and libraries.
+library identifier: 'vapor@master', retriever: modernSCM(
+    [$class: 'GitSCMSource',
+    remote: 'https://github.com/vapor-ware/ci-shared.git',
+    credentialsId: 'vio-bot-gh'])
+
+// declared in vapor-ware/ci-shared/vars/toxPipeline.groovy
+toxPipeline{
+  // When building tagged builds,
+  // attempt to release the output object to pypi
+  //
+  // Cool Note: The readinessProbe on netbox will delay CI pipeline execution
+  // until the pod has completed convergence and reports 5/5 containers
+  // ready. Ensuring we dont execute until we're positive we have an http
+  // endpoint to respond to the test suite.
+  releaseToPypi: True
+  podTemplate = """
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    jenkins/job: aionetbox
+spec:
+  containers:
+  - name: python
+    image: vaporio/jenkins-agent-python38:latest
+    command:
+    - cat
+    tty: true
+  nodeSelector:
+    cloud.google.com/gke-nodepool: jenkins
+  tolerations:
+  - key: role
+    operator: Equal
+    value: jenkins
+    effect: NoSchedule
+"""
+}
