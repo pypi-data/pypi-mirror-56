@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: aws-assume-role
+Version: 1.0.0
+Summary: A helper tool to help you assume AWS roles
+Home-page: https://github.com/phanama/aws-assume-role
+Author: Yudi A Phanama
+License: MIT
+Keywords: aws-assume-role,aws,Python,assume-role,
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Requires-Python: >=3.5
+Requires-Dist: boto3 (>=1.10)
+Requires-Dist: click (>=7.0)
+
+UNKNOWN
+
+
