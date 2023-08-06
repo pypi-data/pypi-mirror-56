@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: open-geotechnical
+Version: 0.1.0
+Summary: Open Geotechnical
+Home-page: https://open-geotechnical.gitlab.io/ogt_py/
+Author: Pedro Morgan
+Author-email: ogt@daffodil.uk.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/open-geotechnical/ogt_py/issues
+Project-URL: Documentation, https://open-geotechnical.gitlab.io/ogt_py/
+Project-URL: Source Code, https://gitlab.com/open-geotechnical/ogt_py
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Requires-Dist: flask
+Requires-Dist: geojson
+Requires-Dist: mistune
+Requires-Dist: openpyxl
+Requires-Dist: pyyaml
+
+ogt-py = Open GeoTechnical in python
+=========================================
+
+- Docs at https://open-geotechnical.gitlab.io/ogt-py/
+
+Install
+===========================
+
+- see https://open-geotechnical.gitlab.io/ogt-py/install.html
+
+
+
+
+
