@@ -1,0 +1,3 @@
+[console_scripts]
+trtm_export = trtm.cli:cli
+
