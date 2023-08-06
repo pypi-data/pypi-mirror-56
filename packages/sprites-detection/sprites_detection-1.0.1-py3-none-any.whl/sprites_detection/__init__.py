@@ -1,0 +1,1 @@
+name = "sprites_detection"
