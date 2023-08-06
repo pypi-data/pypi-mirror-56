@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: textaug
+Version: 1.0.2
+Summary: Text Image Augmentor: data generator for text recognition
+Home-page: UNKNOWN
+Author-email: rocketgrowthsj@gmail.com
+License: MIT
+Keywords: text-recognition training-set-generator ocr dataset
+Platform: linux
+Platform: macosx
+Platform: win
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (<1.17)
+Requires-Dist: tqdm (>=4)
+Requires-Dist: imgaug (>=0.2)
+Requires-Dist: opencv-python (>=3.4)
+
+# Text-Image-Augmentor
+
+한글 이미지 인식 데이터셋을 위한 데이터 증강 라이브러리
+
+### 목적
+
+> OCR 텍스트 인식 모델을 개발할 때, 필요한 학습 데이터셋 수를 늘리기 위한 목적으로 개발
+
+
+
+### 개요
+
+증강 데이터는 크게 두 가지 왜곡 방식으로 이루어져 있습니다. 하나는 글자의 형태에 변형을 가하는 형상 왜곡 방식이고, 다른 하나는 글자와 배경의 색에 변형을 가하는 색상 왜곡 방식입니다. 글씨 이미지는 색상보다, 형상에 의해 더 많은 영향을 받습니다. 이에 따라, 해당 라이브러리는 글자의 형태 변환을 위주로 이미지에 적용하도록 구성하였습니다.
+
+**CLI 환경(command line interface)**으로 구성하여 연구자들과 개발자들이 쉽게 쓸 수 있도록 구성하였고, 라이브러리는 데이미지 증강 라이브러리 중 하나인 *imgaug*를 기반으로 작성하였습니다.
+
+
+
+### 설치
+
+1. pypi에서 패키지 설치하기
+
+    ````shell
+    pip install textaug
+    ````
+
+    * **caution : 아직 pypi에 배포하지 않은 상태입니다. Test code 작성 완료 후, 배포하도록 하겠습니다.**
+
+2. Repository로부터 설치하기
+
+    ````shell
+    # 해당 디렉토리로부터 다운받은 후, 아래를 실행시키면 됩니다.
+    python3 setup.py install
+    ````
+
+
+
+### 사용방법
+
+해당 프로그램은 Command Line Interface(Terminal, CMD, shell) 등 환경에서 실행시킬 수 있습니다.
+
+##### example
+
+````shell
+textaug <input_dir> <output_dir> --multiples=3
+````
+
+위 코드를 실행시키면, `input_dir` 내 이미지 파일들을 읽어들여, `output_dir`에 증강 이미지들이 저장됩니다. `input_dir` 내 이미지 파일 (ex 안녕.png) 이 존재한다면, `output_dir`에는 무작위로 증강된 3개의 이미지 (ex 0\_안녕.png, 1\_안녕.png, 2\_안녕.png)가 저장됩니다.
+
+##### Option
+
+아래의 요소들은 증강 이미지의 노이즈 수준을 결정짓는 데 이용됩니다. 필요한 수준의 노이즈를 아래를 통해 정하시길 바랍니다.
+
+
+
+* `--multiples` : 하나의 이미지 당 몇 개의 증강 이미지를 생성할 것인지 결정, 정수형으로 입력되어야 합니다.
+
+* `--blur`  : 이미지의 흐릿한 수준을 결정. 각 값에 대한 흐릿한 정도는 아래와 같습니다.
+
+  | blur=0                                                       | blur=2                                                       | blur=4                                                       | blur = 6                                                     | blur=8                                                       |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ![](./samples/effects/blur_0.png) | ![](./samples/effects/blur_2.png) | ![](./samples/effects/blur_4.png) | ![](./samples/effects/blur_6.png) | ![](./samples/effects/blur_8.png) |
+
+* `--noise` : 이미지 배경에 노이즈 수준을 결정. 각 값에 대한 노이즈 정도는 아래와 같습니다.
+
+  | noise=0                                                      | noise=1                                                      | noise=20                                                     | noise=30                                                     | noise=40                                                     |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ![](./samples/effects/noise_0.png) | ![](./samples/effects/noise_10.png) | ![](./samples/effects/noise_20.png) | ![](./samples/effects/noise_30.png) | ![](./samples/effects/noise_40.png) |
+
+* `--rotate` : 이미지의 회전 변환 수준을 결정. 각 값에 대한 변환 정도는 아래와 같습니다.
+
+  | rotate=0                                                     | rotate=2                                                     | rotate=4                                                     | rotate=6                                                     | rotate=8                                                     |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ![](./samples/effects/rotate_0.png) | ![rotate_2](./samples/effects/rotate_2.png) | ![rotate_4](./samples/effects/rotate_4.png) | ![rotate_6](./samples/effects/rotate_6.png) | ![rotate_8](./samples/effects/rotate_8.png) |
+
+* `--shear` : 이미지의 전단 변환 수준을 결정. 각 값에 대한 변환 정도는 아래와 같습니다.
+
+  | shear=0                                                      | shear=2                                                      | shear=4                                                      | shear=6                                                      | shear=8                                                      |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ![](./samples/effects/shear_0.png) | ![](./samples/effects/shear_2.png) | ![](./samples/effects/shear_4.png) | ![](./samples/effects/shear_6.png) | ![](./samples/effects/shear_8.png) |
+
+* `--elastic` : 이미지의 Elastic 변환 수준을 결정. 각 값에 대한 변환 정도는 아래와 같습니다.
+
+  | elastic=0                                                    | elastic=1                                                    | elastic=2                                                    | elastic=3                                                    | elastic=4                                                    |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | ![elastic_0](./samples/effects/elastic_0.png) | ![elastic_1](./samples/effects/elastic_1.png) | ![elastic_2](./samples/effects/elastic_2.png) | ![elastic_3](./samples/effects/elastic_3.png) | ![](./samples/effects/elastic_4.png) |
+
+----
+Copyright 2019, NIA(한국정보화진흥원), All rights reserved.
+
