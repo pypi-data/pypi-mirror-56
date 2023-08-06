@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+brainfuck.py
+setup.cfg
+setup.py
+test_brainfuck.py
+python_brainfuck.egg-info/PKG-INFO
+python_brainfuck.egg-info/SOURCES.txt
+python_brainfuck.egg-info/dependency_links.txt
+python_brainfuck.egg-info/top_level.txt
