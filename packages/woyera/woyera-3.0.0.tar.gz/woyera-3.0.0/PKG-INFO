@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: woyera
+Version: 3.0.0
+Summary: Library for Data Project Manager API
+Home-page: https://github.com/asharma327/woyera_python.git
+Author: Data Project Manager Team
+Author-email: admin@woyera.com
+License: UNKNOWN
+Description: # Woyera Data Quality API
+        
+        This is a library to interact with the Data Projet Manager API. 
+        
+        Visit [www.dataprojectmanager.com](www.dataprojectmanager.com) to create an account and read the documentation on how to interact with the API.
+        
+        Happy Data Error Detection!
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
