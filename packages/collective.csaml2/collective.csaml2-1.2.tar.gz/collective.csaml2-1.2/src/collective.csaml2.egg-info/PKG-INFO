@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: collective.csaml2
+Version: 1.2
+Summary: SAML2
+Home-page: https://github.com/hai-bui-kkday/collective.saml2
+Author: Hai Bui
+Author-email: hai.bui@kkday.com
+License: gpl
+Description: UNKNOWN
+Keywords: Plone Python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Provides-Extra: test
