@@ -1,0 +1,16 @@
+AUTHORS.md
+CONTRIBUTING.md
+HISTORY.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+core/__init__.py
+core/apps.py
+core/middleware.py
+django_allow_healthchecks.egg-info/PKG-INFO
+django_allow_healthchecks.egg-info/SOURCES.txt
+django_allow_healthchecks.egg-info/dependency_links.txt
+django_allow_healthchecks.egg-info/not-zip-safe
+django_allow_healthchecks.egg-info/top_level.txt
