@@ -1,0 +1,176 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "status": {
+      "type": ["null", "string"]
+    },
+    "version": {
+      "type": ["null", "integer"]
+    },
+    "iteration_length": {
+      "type": ["null", "integer"]
+    },
+    "week_start_day": {
+      "type": ["null", "string"],
+      "enum": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    },
+    "point_scale": {
+      "type": ["null", "string"],
+      "maxLength": 255
+    },
+    "point_scale_is_custom": {
+      "type": ["null", "boolean"]
+    },
+    "bugs_and_chores_are_estimatable": {
+      "type": ["null", "boolean"]
+    },
+    "automatic_planning": {
+      "type": ["null", "boolean"]
+    },
+    "enable_tasks": {
+      "type": ["null", "boolean"]
+    },
+    "start_date": {
+      "type": ["null", "string"],
+      "format": "date"
+    },
+    "time_zone": {
+      "type": ["null", "object"],
+      "properties": {
+        "olson_name": {
+          "type": ["null", "string"]
+        },
+        "offset": {
+          "type": ["null", "string"]
+        },
+        "kind": {
+          "type": ["null", "string"]
+        }
+      }
+    },
+    "velocity_averaged_over": {
+      "type": ["null", "integer"]
+    },
+    "shown_iterations_start_time": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "start_time": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "number_of_done_iterations_to_show": {
+      "type": ["null", "integer"]
+    },
+    "has_google_domain": {
+      "type": ["null", "boolean"]
+    },
+    "description": {
+      "type": ["null", "string"],
+      "maxLength": 140
+    },
+    "profile_content": {
+      "type": ["null", "string"],
+      "maxLength": 65535
+    },
+    "enable_incoming_emails": {
+      "type": ["null", "boolean"]
+    },
+    "initial_velocity": {
+      "type": ["null", "integer"]
+    },
+    "project_type": {
+      "type": ["null", "string"],
+      "enum": ["demo", "private", "public", "shared"]
+    },
+    "public": {
+      "type": ["null", "boolean"]
+    },
+    "current_iteration_number": {
+      "type": ["null", "integer"]
+    },
+    "current_standard_deviation": {
+      "type": ["null", "number"]
+    },
+    "current_velocity": {
+      "type": ["null", "integer"]
+    },
+    "current_volatility": {
+      "type": ["null", "number"]
+    },
+    "account_id": {
+      "type": ["null", "integer"]
+    },
+    "join_as": {
+      "type": ["null", "string"],
+      "enum": ["owner", "member", "viewer"]
+    },
+    "story_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "epic_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "membership_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "label_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "integration_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "review_type_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "story_template_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "iteration_override_numbers": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "kind": {
+      "type": ["null", "string"]
+    }
+  }
+}

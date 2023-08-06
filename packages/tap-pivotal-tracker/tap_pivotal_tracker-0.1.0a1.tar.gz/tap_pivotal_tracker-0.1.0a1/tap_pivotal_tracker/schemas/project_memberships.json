@@ -1,0 +1,66 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "person": {
+      "type": ["null", "object"],
+      "properties": {
+        "id": {
+          "type": ["null", "integer"]
+        },
+        "name": {
+          "type": ["null", "string"]
+        },
+        "email": {
+          "type": ["null", "string"]
+        },
+        "initials": {
+          "type": ["null", "string"]
+        },
+        "username": {
+          "type": ["null", "string"]
+        },
+        "kind": {
+          "type": ["null", "string"]
+        }
+      }
+    },
+    "project_id": {
+      "type": ["null", "integer"]
+    },
+    "role": {
+      "type": ["null", "string"],
+      "enum": ["owner", "member", "viewer", "inactive"]
+    },
+    "project_color": {
+      "type": ["null", "string"]
+    },
+    "favorite": {
+      "type": ["null", "boolean"]
+    },
+    "last_viewed_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "wants_comment_notification_emails": {
+      "type": ["null", "boolean"]
+    },
+    "will_receive_mention_notifications_or_emails": {
+      "type": ["null", "boolean"]
+    },
+    "kind": {
+      "type": ["null", "string"]
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "project_id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "counts": {
+      "type": ["null", "object"],
+      "properties": {
+        "number_of_zero_point_stories_by_state": {
+          "type": ["null", "object"],
+          "properties": {
+            "delivered": {
+              "type": ["null", "integer"]
+            },
+            "unscheduled": {
+              "type": ["null", "integer"]
+            },
+            "rejected": {
+              "type": ["null", "integer"]
+            },
+            "finished": {
+              "type": ["null", "integer"]
+            },
+            "unstarted": {
+              "type": ["null", "integer"]
+            },
+            "planned": {
+              "type": ["null", "integer"]
+            },
+            "accepted": {
+              "type": ["null", "integer"]
+            },
+            "started": {
+              "type": ["null", "integer"]
+            },
+            "kind": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "sum_of_story_estimates_by_state": {
+          "type": ["null", "object"],
+          "properties": {
+            "delivered": {
+              "type": ["null", "integer"]
+            },
+            "unscheduled": {
+              "type": ["null", "integer"]
+            },
+            "rejected": {
+              "type": ["null", "integer"]
+            },
+            "finished": {
+              "type": ["null", "integer"]
+            },
+            "unstarted": {
+              "type": ["null", "integer"]
+            },
+            "planned": {
+              "type": ["null", "integer"]
+            },
+            "accepted": {
+              "type": ["null", "integer"]
+            },
+            "started": {
+              "type": ["null", "integer"]
+            },
+            "kind": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "number_of_stories_by_state": {
+          "type": ["null", "object"],
+          "properties": {
+            "delivered": {
+              "type": ["null", "integer"]
+            },
+            "unscheduled": {
+              "type": ["null", "integer"]
+            },
+            "rejected": {
+              "type": ["null", "integer"]
+            },
+            "finished": {
+              "type": ["null", "integer"]
+            },
+            "unstarted": {
+              "type": ["null", "integer"]
+            },
+            "planned": {
+              "type": ["null", "integer"]
+            },
+            "accepted": {
+              "type": ["null", "integer"]
+            },
+            "started": {
+              "type": ["null", "integer"]
+            },
+            "kind": {
+              "type": ["null", "string"]
+            }
+          }
+        },
+        "kind": {
+          "type": ["null", "string"]
+        }
+      }
+    },
+    "kind": {
+      "type": ["null", "string"]
+    }
+  }
+}
