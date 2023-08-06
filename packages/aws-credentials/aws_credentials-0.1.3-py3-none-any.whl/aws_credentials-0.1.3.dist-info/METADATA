@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: aws-credentials
+Version: 0.1.3
+Summary: AWS credential manager
+Home-page: https://gitlab.com/perobertson/aws-credentials
+License: MIT
+Keywords: aws,credentials,access keys
+Author: Paul Robertson
+Author-email: t.paulrobertson@gmail.com
+Requires-Python: >=3.5,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: boto3 (>=1.9,<2.0)
+Requires-Dist: click (>=7.0,<8.0)
+Project-URL: Repository, https://gitlab.com/perobertson/aws-credentials
+Description-Content-Type: text/markdown
+
+# AWS Credentials
+
+This tool lets you easily manage AWS IAM Credentials for a user.
+
+## Usage
+```
+⇒  aws-credentials --help
+Usage: aws-credentials [OPTIONS] COMMAND [ARGS]...
+
+  CLI utility for managing access keys.
+
+Options:
+  --access_key TEXT  AWS_ACCESS_KEY_ID to use
+  --secret_key TEXT  AWS_SECRET_ACCESS_KEY to use
+  -v, --verbose
+  --help             Show this message and exit.
+
+Commands:
+  activate
+  create
+  deactivate
+  delete
+  list
+  rotate
+```
+
+**activate**
+```
+⇒  AWS_ACCESS_KEY_ID=key AWS_SECRET_ACCESS_KEY=secret aws-credentials activate --help
+Usage: aws-credentials activate [OPTIONS] ACCESS_KEY
+
+Options:
+  --help  Show this message and exit.
+```
+
+**create**
+```
+⇒  AWS_ACCESS_KEY_ID=key AWS_SECRET_ACCESS_KEY=secret aws-credentials create --help
+Usage: aws-credentials create [OPTIONS]
+
+Options:
+  --help  Show this message and exit.
+```
+
+**deactivate**
+```
+⇒  AWS_ACCESS_KEY_ID=key AWS_SECRET_ACCESS_KEY=secret aws-credentials deactivate --help
+Usage: aws-credentials deactivate [OPTIONS] ACCESS_KEY
+
+Options:
+  --help  Show this message and exit.
+```
+
+**delete**
+```
+⇒  AWS_ACCESS_KEY_ID=key AWS_SECRET_ACCESS_KEY=secret aws-credentials delete --help
+Usage: aws-credentials delete [OPTIONS] ACCESS_KEY
+
+Options:
+  --help  Show this message and exit.
+```
+
+**list**
+```
+⇒  AWS_ACCESS_KEY_ID=key AWS_SECRET_ACCESS_KEY=secret aws-credentials list --help
+Usage: aws-credentials list [OPTIONS]
+
+Options:
+  --help  Show this message and exit.
+```
+
+**rotate**
+```
+⇒  AWS_ACCESS_KEY_ID=key AWS_SECRET_ACCESS_KEY=secret aws-credentials rotate --help
+Usage: aws-credentials rotate [OPTIONS]
+
+Options:
+  --help  Show this message and exit.
+```
+
