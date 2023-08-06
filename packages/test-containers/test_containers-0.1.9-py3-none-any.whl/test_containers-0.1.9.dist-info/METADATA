@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: test-containers
+Version: 0.1.9
+Summary: Test containers using yaml files for configuration.
+Requires-Dist: PyYAML
+Requires-Dist: docker
+Requires-Dist: kubernetes
+
+Home-page: https://github.com/AlassaneNdiaye/test-containers
+Author: Alassane Ndiaye
+Author-email: alassane.ndiaye@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
