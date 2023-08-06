@@ -1,0 +1,12 @@
+mypy_boto3_dax/__init__.py,sha256=N-DnqialOj2zjv4n7op_AgyQZn6qgVBAWZaRVC4qL-A,162
+mypy_boto3_dax/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_dax/client.py,sha256=8tnxL4SdpoJc3SWJqEh6EOWaOIbXW__5MsMjpyGx_lo,124507
+mypy_boto3_dax/helpers.py,sha256=c0qg_ZjV6StoI0WOvDYO2MuunIXFDLQM0ijHKzZCPlo,4103
+mypy_boto3_dax/paginator.py,sha256=sGXVouzkOCtdXt1MGDB0c9OXWY9X9zGI6Ghf6RojoCM,35420
+mypy_boto3_dax/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_dax/type_defs.py,sha256=jRKAuB4wSMGnygAeJc2iqNauikzlgWJy-oH3Irv1laA,225380
+mypy_boto3_dax/version.py,sha256=lGsFrThWvjofL01YOK0lhM9aBHjJ2oZC9pJFFIf6ihM,53
+mypy_boto3_dax-0.2.7.dist-info/METADATA,sha256=NFXLZ_sJk4VchfCV0rwR_4j-B-KsYLQABiFodJMEQiQ,1059
+mypy_boto3_dax-0.2.7.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mypy_boto3_dax-0.2.7.dist-info/top_level.txt,sha256=m0Tv8-d0rvy3hXAO1-nVYI5iAepVUIxKbKUUK_46yo0,15
+mypy_boto3_dax-0.2.7.dist-info/RECORD,,
