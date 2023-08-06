@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+global_utils/__init__.py
+global_utils/__main__.py
+global_utils/global_utils.txt
+global_utils/global_utils_functions.py
+global_utils_88.egg-info/PKG-INFO
+global_utils_88.egg-info/SOURCES.txt
+global_utils_88.egg-info/dependency_links.txt
+global_utils_88.egg-info/entry_points.txt
+global_utils_88.egg-info/requires.txt
+global_utils_88.egg-info/top_level.txt
