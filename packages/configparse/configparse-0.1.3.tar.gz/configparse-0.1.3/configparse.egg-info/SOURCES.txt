@@ -1,0 +1,15 @@
+README.md
+setup.py
+configparse/__init__.py
+configparse/core.py
+configparse.egg-info/PKG-INFO
+configparse.egg-info/SOURCES.txt
+configparse.egg-info/dependency_links.txt
+configparse.egg-info/requires.txt
+configparse.egg-info/top_level.txt
+configparse/backends/__init__.py
+configparse/backends/ini.py
+configparse/backends/json.py
+configparse/backends/toml.py
+configparse/backends/yaml.py
+test/test_all.py
