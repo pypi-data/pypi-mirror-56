@@ -1,0 +1,12 @@
+README.rst
+setup.py
+vcfparser/__init__.py
+vcfparser/meta_header_parser.c
+vcfparser/record_parser.c
+vcfparser/vcf_parser.c
+vcfparser/vcf_writer.c
+vcfparser.egg-info/PKG-INFO
+vcfparser.egg-info/SOURCES.txt
+vcfparser.egg-info/dependency_links.txt
+vcfparser.egg-info/not-zip-safe
+vcfparser.egg-info/top_level.txt
