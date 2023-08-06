@@ -1,0 +1,2222 @@
+# Copyright (C) 2014 RhodeCode GmbH, and others.
+# This file is distributed under the same license as the Kallithea project.
+
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: translations@kallithea-scm.org\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+msgid "There are no changesets yet"
+msgstr "Ещё не было изменений"
+
+msgid "None"
+msgstr "Ничего"
+
+msgid "(closed)"
+msgstr "(закрыто)"
+
+msgid "Show whitespace"
+msgstr "Отображать пробелы"
+
+msgid "Ignore whitespace"
+msgstr "Игнорировать пробелы"
+
+msgid "Increase diff context to %(num)s lines"
+msgstr "Увеличить контекст до %(num)s строк"
+
+msgid "Such revision does not exist for this repository"
+msgstr "Нет такой ревизии в этом репозитории"
+
+msgid "Cannot compare repositories without using common ancestor"
+msgstr "Невозможно сравнивать репозитории без общего предка"
+
+msgid "No response"
+msgstr "Нет ответа"
+
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+msgid ""
+"The request could not be understood by the server due to malformed syntax."
+msgstr "Запрос не распознан сервером из-за неправильного синтаксиса."
+
+msgid "Unauthorized access to resource"
+msgstr "Несанкционированный доступ к ресурсу"
+
+msgid "You don't have permission to view this page"
+msgstr "У вас нет прав для просмотра этой страницы"
+
+msgid "The resource could not be found"
+msgstr "Ресурс не найден"
+
+msgid ""
+"The server encountered an unexpected condition which prevented it from "
+"fulfilling the request."
+msgstr ""
+"Сервер не может выполнить запрос из-за неправильного условия в запросе."
+
+msgid "%s committed on %s"
+msgstr "%s выполнил коммит в %s"
+
+msgid "Changeset was too big and was cut off..."
+msgstr "Изменения оказались слишком большими и были вырезаны..."
+
+msgid "%s %s feed"
+msgstr "Лента новостей %s %s"
+
+msgid "Changes on %s repository"
+msgstr "Изменения в репозитории %s"
+
+msgid "Click here to add new file"
+msgstr "Нажмите чтобы добавить новый файл"
+
+msgid "%s at %s"
+msgstr "%s (%s)"
+
+msgid "You can only delete files with revision being a valid branch"
+msgstr ""
+"Вы можете удалять файлы только в ревизии, связанной с существующей веткой "
+
+msgid "Deleted file %s via Kallithea"
+msgstr "Файл %s удалён с помощью Kallithea"
+
+msgid "Successfully deleted file %s"
+msgstr "Файл %s удалён"
+
+msgid "Error occurred during commit"
+msgstr "Во время коммита произошла ошибка"
+
+msgid "You can only edit files with revision being a valid branch"
+msgstr ""
+"Вы можете редактировать файлы только в ревизии, связанной с существующей "
+"веткой "
+
+msgid "Edited file %s via Kallithea"
+msgstr "Файл %s отредактирован с помощью Kallithea"
+
+msgid "No changes"
+msgstr "Без изменений"
+
+msgid "Successfully committed to %s"
+msgstr "Изменения применены в %s"
+
+msgid "Added file via Kallithea"
+msgstr "Файл добавлен с помощью Kallithea"
+
+msgid "No content"
+msgstr "Пусто"
+
+msgid "No filename"
+msgstr "Безымянный"
+
+msgid "Location must be relative path and must not contain .. in path"
+msgstr ""
+"Расположение должно быть относительным путем, и не должно содержать \".."
+"\" в пути"
+
+msgid "Downloads disabled"
+msgstr "Возможность скачивать отключена"
+
+msgid "Unknown revision %s"
+msgstr "Неизвестная ревизия %s"
+
+msgid "Empty repository"
+msgstr "Пустой репозиторий"
+
+msgid "Unknown archive type"
+msgstr "Неизвестный тип архива"
+
+msgid "Changesets"
+msgstr "Набор изменений"
+
+msgid "Branches"
+msgstr "Ветки"
+
+msgid "Tags"
+msgstr "Метки"
+
+msgid "An error occurred during repository forking %s"
+msgstr "Произошла ошибка во время создания форка репозитория %s"
+
+msgid "Groups"
+msgstr "Группы"
+
+msgid "Repositories"
+msgstr "Репозитории"
+
+msgid "Branch"
+msgstr "Ветка"
+
+msgid "Closed Branches"
+msgstr "Закрытые ветки"
+
+msgid "Tag"
+msgstr "Тэги"
+
+msgid "Bookmark"
+msgstr "Закладки"
+
+msgid "Public Journal"
+msgstr "Публичный журнал"
+
+msgid "Journal"
+msgstr "Журнал"
+
+msgid "Bad captcha"
+msgstr "Неверная капча"
+
+msgid "You have successfully registered with %s"
+msgstr "Регистрация в %s прошла успешно"
+
+msgid "A password reset confirmation code has been sent"
+msgstr "Код для сброса пароля отправлена"
+
+msgid "Invalid password reset token"
+msgstr "Неверный код сброса пароля"
+
+msgid "Successfully updated password"
+msgstr "Пароль обновлён"
+
+msgid "%s (closed)"
+msgstr "%s (закрыта)"
+
+msgid "Changeset"
+msgstr "Изменения"
+
+msgid "Special"
+msgstr "Специальный"
+
+msgid "Peer branches"
+msgstr "Ветки участника"
+
+msgid "Bookmarks"
+msgstr "Закладки"
+
+msgid "Error creating pull request: %s"
+msgstr "Ошибка при создании pull-запроса: %s"
+
+msgid "Error occurred while creating pull request"
+msgstr "Произошла ошибка при создании pull-запроса"
+
+msgid "Successfully opened new pull request"
+msgstr "Pull-запрос создан успешно"
+
+msgid "No description"
+msgstr "Нет описания"
+
+msgid "Pull request updated"
+msgstr "Pull-запрос обновлён"
+
+msgid "Successfully deleted pull request"
+msgstr "Pull-запрос успешно удалён"
+
+msgid "This pull request has already been merged to %s."
+msgstr "Этот pull-запрос уже принят на ветку %s."
+
+msgid "This pull request has been closed and can not be updated."
+msgstr "Этот pull-запрос был закрыт и не может быть обновлён."
+
+msgid "Note: Branch %s has another head: %s."
+msgstr "Внимание: Ветка %s имеет ещё одну верхушку: %s."
+
+msgid "Invalid search query. Try quoting it."
+msgstr "Недопустимый поисковый запрос. Попробуйте заключить его в кавычки."
+
+msgid "An error occurred during search operation."
+msgstr "Произошла ошибка при выполнении этого поиска."
+
+msgid "No data ready yet"
+msgstr "Нет данных"
+
+msgid "Statistics are disabled for this repository"
+msgstr "Статистические данные отключены для этого репозитария"
+
+msgid "Auth settings updated successfully"
+msgstr "Настройки авторизации успешно обновлены"
+
+msgid "error occurred during update of auth settings"
+msgstr "произошла ошибка при обновлении настроек авторизации"
+
+msgid "Default settings updated successfully"
+msgstr "Стандартные настройки успешно обновлены"
+
+msgid "Error occurred during update of defaults"
+msgstr "Произошла ошибка при обновлении стандартных настроек"
+
+msgid "5 minutes"
+msgstr "5 минут"
+
+msgid "1 hour"
+msgstr "1 час"
+
+msgid "1 day"
+msgstr "1 день"
+
+msgid "1 month"
+msgstr "1 месяц"
+
+msgid "Lifetime"
+msgstr "Срок"
+
+msgid "Error occurred during gist creation"
+msgstr "Произошла ошибка во время создания gist-записи"
+
+msgid "Deleted gist %s"
+msgstr "Gist-запись %s удалена"
+
+msgid "Unmodified"
+msgstr "Неизменный"
+
+msgid "Successfully updated gist data"
+msgstr "Данные gist-записи обновлены"
+
+msgid "Error occurred during update of gist %s"
+msgstr "Произошла ошибка при обновлении gist-записи %s"
+
+msgid "You can't edit this user since it's crucial for entire application"
+msgstr ""
+"Вы не можете изменить данные этого пользователя, поскольку он важен для "
+"работы всего приложения"
+
+msgid "Your account was updated successfully"
+msgstr "Ваша учетная запись успешно обновлена"
+
+msgid "Error occurred during update of user %s"
+msgstr "Произошла ошибка при обновлении пользователя %s"
+
+msgid "Error occurred during update of user password"
+msgstr "Ошибка при обновлении пароля"
+
+msgid "Added email %s to user"
+msgstr "Пользователю добавлен e-mail %s"
+
+msgid "An error occurred during email saving"
+msgstr "Произошла ошибка при сохранении e-mail"
+
+msgid "Removed email from user"
+msgstr "E-mail пользователя удалён"
+
+msgid "API key successfully created"
+msgstr "API-ключ успешно создан"
+
+msgid "API key successfully reset"
+msgstr "API-ключ успешно сброшен"
+
+msgid "API key successfully deleted"
+msgstr "API-ключ успешно удалён"
+
+msgid "Read"
+msgstr "Чтение"
+
+msgid "Write"
+msgstr "Запись"
+
+msgid "Admin"
+msgstr "Администратор"
+
+msgid "Disabled"
+msgstr "Отключено"
+
+msgid "Allowed with manual account activation"
+msgstr "Разрешена, с ручной активацией учётной записи"
+
+msgid "Allowed with automatic account activation"
+msgstr "Разрешена, с автоматической активацией учётной записи"
+
+msgid "Manual activation of external account"
+msgstr "Ручная активация внешней учетной записи"
+
+msgid "Automatic activation of external account"
+msgstr "Автоматическая активация внешней учетной записи"
+
+msgid "Enabled"
+msgstr "Включено"
+
+msgid "Global permissions updated successfully"
+msgstr "Глобальные привилегии успешно обновлены"
+
+msgid "Error occurred during update of permissions"
+msgstr "Произошла ошибка во время обновления привилегий"
+
+msgid "Error occurred during creation of repository group %s"
+msgstr "Произошла ошибка при создании группы репозиториев %s"
+
+msgid "Created repository group %s"
+msgstr "Создана новая группа репозиториев %s"
+
+msgid "Updated repository group %s"
+msgstr "Группа репозиториев %s обновлена"
+
+msgid "Error occurred during update of repository group %s"
+msgstr "Произошла ошибка при обновлении группы репозиториев %s"
+
+msgid "This group contains %s repositories and cannot be deleted"
+msgstr "Данная группа содержит %s репозитариев и не может быть удалена"
+
+msgid "This group contains %s subgroups and cannot be deleted"
+msgstr "Группа содержит в себе %s подгрупп и не может быть удалён"
+
+msgid "Removed repository group %s"
+msgstr "Группа репозиториев %s удалена"
+
+msgid "Error occurred during deletion of repository group %s"
+msgstr "Произошла ошибка при удалении группы репозиториев %s"
+
+msgid "Cannot revoke permission for yourself as admin"
+msgstr "Администратор не может отозвать свои привелегии"
+
+msgid "Repository group permissions updated"
+msgstr "Привилегии группы репозиториев обновлены"
+
+msgid "An error occurred during revoking of permission"
+msgstr "Произошла ошибка при отзыве привелегии"
+
+msgid "Error creating repository %s"
+msgstr "Произошла ошибка при создании репозитория %s"
+
+msgid "Created repository %s from %s"
+msgstr "Репозиторий %s создан из %s"
+
+msgid "Forked repository %s as %s"
+msgstr "Сделан форк(копия) репозитория %s на %s"
+
+msgid "Created repository %s"
+msgstr "Репозиторий %s создан"
+
+msgid "Repository %s updated successfully"
+msgstr "Репозитарий %s успешно обновлён"
+
+msgid "Error occurred during update of repository %s"
+msgstr "Произошла ошибка во время обновления репозитория %s"
+
+msgid "Detached %s forks"
+msgstr "Форки %s отсоединены"
+
+msgid "Deleted %s forks"
+msgstr "Удалены форки репозитория %s"
+
+msgid "Deleted repository %s"
+msgstr "Репозиторий %s удалён"
+
+msgid "Cannot delete repository %s which still has forks"
+msgstr "Невозможно удалить %s, у него всё ещё есть форки"
+
+msgid "An error occurred during deletion of %s"
+msgstr "Произошла ошибка во время удаления %s"
+
+msgid "Repository permissions updated"
+msgstr "Привилегии репозитория обновлены"
+
+msgid "An error occurred during removal of field"
+msgstr "Произошла ошибка при удалении поля"
+
+msgid "-- Not a fork --"
+msgstr "-- Не форк --"
+
+msgid "Updated repository visibility in public journal"
+msgstr "Видимость репозитория в публичном журнале обновлена"
+
+msgid "An error occurred during setting this repository in public journal"
+msgstr "Произошла ошибка при установке репозитария в общедоступный журнал"
+
+msgid "Nothing"
+msgstr "Ничего"
+
+msgid "Marked repository %s as fork of %s"
+msgstr "Репозиторий %s отмечен как форк %s"
+
+msgid "An error occurred during this operation"
+msgstr "Произошла ошибка при выполнении операции"
+
+msgid "Cache invalidation successful"
+msgstr "Кэш сброшен"
+
+msgid "An error occurred during cache invalidation"
+msgstr "Произошла ошибка при очистке кэша"
+
+msgid "Pulled from remote location"
+msgstr "Внесены изменения из удалённого репозитория"
+
+msgid "An error occurred during pull from remote location"
+msgstr "Произошла ошибка при внесении изменений из удалённого репозитория"
+
+msgid "An error occurred during deletion of repository stats"
+msgstr "Произошла ошибка при удалении статистики репозитория"
+
+msgid "Updated VCS settings"
+msgstr "Обновлены настройки VCS"
+
+msgid ""
+"Unable to activate hgsubversion support. The \"hgsubversion\" library is "
+"missing"
+msgstr ""
+"Невозможно включить поддержку hgsubversion. Библиотека «hgsubversion» "
+"отсутствует"
+
+msgid "Error occurred while updating application settings"
+msgstr "Произошла ошибка при обновлении настроек приложения"
+
+msgid "Repositories successfully rescanned. Added: %s. Removed: %s."
+msgstr "Репозитории успешно пересканированы, добавлено: %s, удалено: %s."
+
+msgid "Updated application settings"
+msgstr "Обновленные параметры настройки приложения"
+
+msgid "Updated visualisation settings"
+msgstr "Настройки визуализации обновлены"
+
+msgid "Error occurred during updating visualisation settings"
+msgstr "Произошла ошибка при обновлении настроек визуализации"
+
+msgid "Please enter email address"
+msgstr "Пожалуйста, введите адрес электронной почты"
+
+msgid "Send email task created"
+msgstr "Задача отправки Email создана"
+
+msgid "Added new hook"
+msgstr "Добавлена новая ловушка"
+
+msgid "Updated hooks"
+msgstr "Обновлённые ловушки"
+
+msgid "Error occurred during hook creation"
+msgstr "произошла ошибка при создании хука"
+
+msgid "Whoosh reindex task scheduled"
+msgstr "Запланирована переиндексация базы Whoosh"
+
+msgid "Created user group %s"
+msgstr "Создана группа пользователей %s"
+
+msgid "Error occurred during creation of user group %s"
+msgstr "Произошла ошибка при создании группы пользователей %s"
+
+msgid "Updated user group %s"
+msgstr "Группа пользователей %s обновлена"
+
+msgid "Error occurred during update of user group %s"
+msgstr "Произошла ошибка при обновлении группы пользователей %s"
+
+msgid "Successfully deleted user group"
+msgstr "Группа пользователей успешно удалена"
+
+msgid "An error occurred during deletion of user group"
+msgstr "Произошла ошибка при удалении группы пользователей"
+
+msgid "Target group cannot be the same"
+msgstr "Целевая группа не может быть такой же"
+
+msgid "User group permissions updated"
+msgstr "Привилегии группы пользователей обновлены"
+
+msgid "Updated permissions"
+msgstr "Обновлены привилегии"
+
+msgid "An error occurred during permissions saving"
+msgstr "Произошла ошибка при сохранении привилегий"
+
+msgid "Created user %s"
+msgstr "Пользователь %s создан"
+
+msgid "Error occurred during creation of user %s"
+msgstr "Произошла ошибка при создании пользователя %s"
+
+msgid "User updated successfully"
+msgstr "Пользователь успешно обновлён"
+
+msgid "Successfully deleted user"
+msgstr "Пользователь успешно удалён"
+
+msgid "An error occurred during deletion of user"
+msgstr "Произошла ошибка при удалении пользователя"
+
+msgid "Added IP address %s to user whitelist"
+msgstr "Добавлен IP %s в белый список пользователя"
+
+msgid "An error occurred while adding IP address"
+msgstr "Произошла ошибка при сохранении IP"
+
+msgid "Removed IP address from user whitelist"
+msgstr "Удален IP %s из белого списка пользователя"
+
+msgid "You need to be a registered user to perform this action"
+msgstr ""
+"Вы должны быть зарегистрированным пользователем, чтобы выполнить это "
+"действие"
+
+msgid "You need to be signed in to view this page"
+msgstr "Страница доступна только авторизованным пользователям"
+
+msgid "Repository not found in the filesystem"
+msgstr "Репозиторий не найден на файловой системе"
+
+msgid "Binary file"
+msgstr "Двоичный файл"
+
+msgid ""
+"Changeset was too big and was cut off, use diff menu to display this diff"
+msgstr ""
+"Набор изменения оказался слишком большими и был урезан, используйте меню "
+"сравнения для показа результата сравнения"
+
+msgid "No changes detected"
+msgstr "Изменений не обнаружено"
+
+msgid "Deleted branch: %s"
+msgstr "Удалена ветка: %s"
+
+msgid "Created tag: %s"
+msgstr "Создан тег: %s"
+
+msgid "Show all combined changesets %s->%s"
+msgstr "Показать отличия вместе %s->%s"
+
+msgid "and"
+msgstr "и"
+
+msgid "%s more"
+msgstr "на %s больше"
+
+msgid "revisions"
+msgstr "версии"
+
+msgid "Pull request %s"
+msgstr "Pull-запрос %s"
+
+msgid "[deleted] repository"
+msgstr "[удален] репозиторий"
+
+msgid "[created] repository"
+msgstr "[создан] репозиторий"
+
+msgid "[created] repository as fork"
+msgstr "[создан] репозиторий как форк"
+
+msgid "[forked] repository"
+msgstr "[форкнут] репозиторий"
+
+msgid "[updated] repository"
+msgstr "[обновлён] репозиторий"
+
+msgid "[downloaded] archive from repository"
+msgstr "[загружен] архив из репозитория"
+
+msgid "[delete] repository"
+msgstr "[удален] репозиторий"
+
+msgid "[created] user"
+msgstr "[создан] пользователь"
+
+msgid "[updated] user"
+msgstr "[обновлён] пользователь"
+
+msgid "[created] user group"
+msgstr "[создана] группа пользователей"
+
+msgid "[updated] user group"
+msgstr "[обновлена] группа пользователей"
+
+msgid "[commented] on revision in repository"
+msgstr "[комментарий] к ревизии в репозитории"
+
+msgid "[commented] on pull request for"
+msgstr "[прокомментировано] в запросе на внесение изменений для"
+
+msgid "[closed] pull request for"
+msgstr "[закрыт] Pull-запрос для"
+
+msgid "[pushed] into"
+msgstr "[отправлено] в"
+
+msgid "[committed via Kallithea] into repository"
+msgstr "[внесены изменения с помощью Kallithea] в репозитории"
+
+msgid "[pulled from remote] into repository"
+msgstr "[внесены изменения из удалённого репозитория] в репозиторий"
+
+msgid "[pulled] from"
+msgstr "[внесены изменения] из"
+
+msgid "[started following] repository"
+msgstr "[добавлен в наблюдения] репозиторий"
+
+msgid "[stopped following] repository"
+msgstr "[удалён из наблюдения] репозиторий"
+
+msgid " and %s more"
+msgstr " и на %s больше"
+
+msgid "No files"
+msgstr "Нет файлов"
+
+msgid "new file"
+msgstr "новый файл"
+
+msgid "mod"
+msgstr "изменён"
+
+msgid "del"
+msgstr "удалён"
+
+msgid "rename"
+msgstr "переименован"
+
+msgid "chmod"
+msgstr "chmod"
+
+msgid ""
+"%s repository is not mapped to db perhaps it was created or renamed from "
+"the filesystem please run the application again in order to rescan "
+"repositories"
+msgstr ""
+"Репозиторий %s отсутствует в базе данных; возможно, он был создан или "
+"переименован из файловой системы. Пожалуйста, перезапустите приложение "
+"для сканирования репозиториев"
+
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d год"
+msgstr[1] "%d лет"
+msgstr[2] "%d года"
+
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d месяц"
+msgstr[1] "%d месяца"
+msgstr[2] "%d месяцев"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d день"
+msgstr[1] "%d дня"
+msgstr[2] "%d дней"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d час"
+msgstr[1] "%d часов"
+msgstr[2] "%d часа"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d минута"
+msgstr[1] "%d минут"
+msgstr[2] "%d минуты"
+
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d секунды"
+msgstr[1] "%d секунды"
+msgstr[2] "%d секунды"
+
+msgid "in %s"
+msgstr "в %s"
+
+msgid "%s ago"
+msgstr "%s назад"
+
+msgid "in %s and %s"
+msgstr "в %s и %s"
+
+msgid "%s and %s ago"
+msgstr "%s и %s назад"
+
+msgid "just now"
+msgstr "прямо сейчас"
+
+msgid "on line %s"
+msgstr "на строке %s"
+
+msgid "[Mention]"
+msgstr "[Упоминание]"
+
+msgid "top level"
+msgstr "верхний уровень"
+
+msgid "Kallithea Administrator"
+msgstr "Администратор Kallithea"
+
+msgid "Default user has read access to new repositories"
+msgstr "Неавторизованные пользователи имеют право чтения новых репозиториев"
+
+msgid "Default user has write access to new repositories"
+msgstr ""
+"Неавторизованные пользователи имеют право записи в новые репозитории"
+
+msgid "Only admins can create repository groups"
+msgstr "Только администраторы могут создавать группы"
+
+msgid "Registration disabled"
+msgstr "Регистрация отключена"
+
+msgid "Approved"
+msgstr "Одобрено"
+
+msgid "Please enter a login"
+msgstr "Пожалуйста, введите логин"
+
+msgid "Enter a value %(min)i characters long or more"
+msgstr "Введите значение длиной не менее %(min)i символов"
+
+msgid "Please enter a password"
+msgstr "Пожалуйста, введите пароль"
+
+msgid "Enter %(min)i characters or more"
+msgstr "Введите не менее %(min)i символов"
+
+msgid "New user %(new_username)s registered"
+msgstr "Новый пользователь \"%(new_username)s\" зарегистрирован"
+
+msgid "Closing"
+msgstr "Закрыт"
+
+msgid "latest tip"
+msgstr "последняя версия"
+
+msgid "New user registration"
+msgstr "Регистрация нового пользователя"
+
+msgid ""
+"User \"%s\" still owns %s repositories and cannot be removed. Switch "
+"owners or remove those repositories: %s"
+msgstr ""
+"Пользователь \"%s\" всё ещё является владельцем %s репозиториев и поэтому "
+"не может быть удалён. Смените владельца или удалите эти репозитории: %s"
+
+msgid ""
+"User \"%s\" still owns %s repository groups and cannot be removed. Switch "
+"owners or remove those repository groups: %s"
+msgstr ""
+"Пользователь \"%s\" всё ещё является владельцем %s групп репозиториев и "
+"поэтому не может быть удалён. Смените владельца или удалите данные "
+"группы: %s"
+
+msgid ""
+"User \"%s\" still owns %s user groups and cannot be removed. Switch "
+"owners or remove those user groups: %s"
+msgstr ""
+"Пользователь \"%s\" всё ещё является владельцем %s групп пользователей и "
+"поэтому не может быть удалён. Смените владельца или удалите данные "
+"группы: %s"
+
+msgid "Password reset link"
+msgstr "Ссылка сброса пароля"
+
+msgid "Value cannot be an empty list"
+msgstr "Значение не может быть пустым списком"
+
+msgid "Username \"%(username)s\" already exists"
+msgstr "Пользователь с именем \"%(username)s\" уже существует"
+
+msgid "Username %(username)s is not valid"
+msgstr "Имя \"%(username)s\" недопустимо"
+
+msgid "Invalid user group name"
+msgstr "Неверное имя группы пользователей"
+
+msgid "User group \"%(usergroup)s\" already exists"
+msgstr "Группа пользователей \"%(usergroup)s\" уже существует"
+
+msgid ""
+"user group name may only contain alphanumeric characters underscores, "
+"periods or dashes and must begin with alphanumeric character"
+msgstr ""
+"имя группы пользователей может содержать только буквы, цифры, символы "
+"подчеркивания, точки и тире; а так же должно начинаться с буквы или цифры"
+
+msgid "Cannot assign this group as parent"
+msgstr "Невозможно использовать эту группу как родителя"
+
+msgid "Group \"%(group_name)s\" already exists"
+msgstr "Группа \"%(group_name)s\" уже существует"
+
+msgid "Repository with name \"%(group_name)s\" already exists"
+msgstr "Репозитарий с  именем \"%(group_name)s\" уже существует"
+
+msgid "Invalid characters (non-ascii) in password"
+msgstr "Недопустимые символы (не ascii) в пароле"
+
+msgid "Invalid old password"
+msgstr "Неверно задан старый пароль"
+
+msgid "Passwords do not match"
+msgstr "Пароли не совпадают"
+
+msgid "Repository named %(repo)s already exists"
+msgstr "Репозитарий %(repo)s уже существует"
+
+msgid "Repository \"%(repo)s\" already exists in group \"%(group)s\""
+msgstr "Репозитарий \"%(repo)s\" уже существует в группе \"%(group)s\""
+
+msgid "Repository group with name \"%(repo)s\" already exists"
+msgstr "Группа репозиториев \"%(repo)s\" уже существует"
+
+msgid "Fork has to be the same type as parent"
+msgstr "Тип форка будет совпадать с родительским"
+
+msgid "You don't have permissions to create repository in this group"
+msgstr "У вас недостаточно прав для создания репозиториев в этой группе"
+
+msgid "no permission to create repository in root location"
+msgstr "недостаточно прав для создания репозитория в корневом каталоге"
+
+msgid "You don't have permissions to create a group in this location"
+msgstr "У Вас недостаточно привилегий для создания группы в этом месте"
+
+msgid "This username or user group name is not valid"
+msgstr "Данное имя пользователя или группы пользователей недопустимо"
+
+msgid "This is not a valid path"
+msgstr "Этот путь ошибочен"
+
+msgid ""
+"The LDAP Login attribute of the CN must be specified - this is the name "
+"of the attribute that is equivalent to \"username\""
+msgstr ""
+"Для входа по LDAP должно быть указано значение аттрибута CN - это "
+"эквивалент имени пользователя"
+
+msgid "Please enter a valid IPv4 or IPv6 address"
+msgstr "Пожалуйста, введите существующий IPv4 или IPv6 адре"
+
+msgid ""
+"The network size (bits) must be within the range of 0-32 (not %(bits)r)"
+msgstr ""
+"Значение маски подсети должно быть в пределах от 0 до 32 (%(bits)r - "
+"неверно)"
+
+msgid "Key name can only consist of letters, underscore, dash or numbers"
+msgstr ""
+"Ключевое имя может только состоять из букв, символа подчеркивания, тире "
+"или чисел"
+
+msgid "Filename cannot be inside a directory"
+msgstr "Файла нет в каталоге"
+
+msgid "About"
+msgstr "О программе"
+
+msgid "Add Repository"
+msgstr "Добавить репозиторий"
+
+msgid "Add Repository Group"
+msgstr "Добавить группу репозиториев"
+
+msgid "You have admin right to this group, and can edit it"
+msgstr ""
+"Вы имеете администраторские права на эту группу и можете редактировать её"
+
+msgid "Edit Repository Group"
+msgstr "Изменить группу репозиториев"
+
+msgid "Repository"
+msgstr "Репозиторий"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Last Change"
+msgstr "Последнее изменение"
+
+msgid "Tip"
+msgstr "Состояние"
+
+msgid "Owner"
+msgstr "Владелец"
+
+msgid "Log In"
+msgstr "Войти"
+
+msgid "Log In to %s"
+msgstr "Войти в %s"
+
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Forgot your password ?"
+msgstr "Забыли пароль?"
+
+msgid "Don't have an account ?"
+msgstr "Нет аккаунта?"
+
+msgid "Sign In"
+msgstr "Войти"
+
+msgid "Password Reset"
+msgstr "Сброс пароля"
+
+msgid "Reset Your Password to %s"
+msgstr "Сброс пароля для %s"
+
+msgid "Reset Your Password"
+msgstr "Сброс пароля"
+
+msgid "Email Address"
+msgstr "Почтовый адрес"
+
+msgid "Captcha"
+msgstr "Капча"
+
+msgid "Send Password Reset Email"
+msgstr "Послать ссылку сброса пароля"
+
+msgid "Sign Up"
+msgstr "Регистрация"
+
+msgid "Sign Up to %s"
+msgstr "Регистра на %s"
+
+msgid "Re-enter password"
+msgstr "Повторите пароль"
+
+msgid "First Name"
+msgstr "Имя"
+
+msgid "Last Name"
+msgstr "Фамилия"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Please wait for an administrator to activate your account."
+msgstr ""
+"Пожалуйста, подождите, пока администратор подтвердит Вашу регистрацию."
+
+msgid "Admin Journal"
+msgstr "Журнал администратора"
+
+msgid "journal filter..."
+msgstr "Фильтр журнала..."
+
+msgid "Filter"
+msgstr "Отфильтровать"
+
+msgid "%s Entry"
+msgid_plural "%s Entries"
+msgstr[0] "%s запись"
+msgstr[1] "%s записей"
+msgstr[2] "%s записи"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "From IP"
+msgstr "С IP"
+
+msgid "No actions yet"
+msgstr "Действия ещё не производились"
+
+msgid "Authentication Settings"
+msgstr "Настройки аутентификации"
+
+msgid "Authentication"
+msgstr "Аутентификация"
+
+msgid "Authentication Plugins"
+msgstr "Плагины аутентификации"
+
+msgid "Enabled Plugins"
+msgstr "Включенные плагины"
+
+msgid "Available built-in plugins"
+msgstr "Доступные встроенные плагины"
+
+msgid "Plugin"
+msgstr "Плагин"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Repository Defaults"
+msgstr "Значения по умолчанию"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Private repository"
+msgstr "Приватный репозиторий"
+
+msgid ""
+"Private repositories are only visible to people explicitly added as "
+"collaborators."
+msgstr "Приватные репозитории видны только их участникам."
+
+msgid "Enable statistics"
+msgstr "Включить статистику"
+
+msgid "Enable statistics window on summary page."
+msgstr "Включить окно статистики на странице «Общие сведения»."
+
+msgid "Enable downloads"
+msgstr "Включить скачивание"
+
+msgid "Enable download menu on summary page."
+msgstr "Включить меню скачивания на странице «Общие сведения»."
+
+msgid "Edit Gist"
+msgstr "Правка gist-записи"
+
+msgid "Gist description ..."
+msgstr "Описание..."
+
+msgid "Expires"
+msgstr "Истекает"
+
+msgid "Update Gist"
+msgstr "Обновить"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Private Gists for User %s"
+msgstr "Приватная gist-запись для пользователя %s"
+
+msgid "Public Gists for User %s"
+msgstr "Публичная gist-запись для пользователя %s"
+
+msgid "Public Gists"
+msgstr "Публичные gist-записи"
+
+msgid "Create New Gist"
+msgstr "Создать новую gist-запись"
+
+msgid "Created"
+msgstr "Создано"
+
+msgid "There are no gists yet"
+msgstr "Gist-записи отсутствуют"
+
+msgid "Reset"
+msgstr "Сброс"
+
+msgid "Gist"
+msgstr "Gist"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Confirm to delete this Gist"
+msgstr "Подтвердите удаление этой gist-записи"
+
+msgid "Edit"
+msgstr "Редактировать"
+
+msgid "Show as Raw"
+msgstr "Показать только текст"
+
+msgid "created"
+msgstr "создана"
+
+msgid "Show as raw"
+msgstr "Показать только текст"
+
+msgid "My Account"
+msgstr "Мой Аккаунт"
+
+msgid "Profile"
+msgstr "Профиль"
+
+msgid "API Keys"
+msgstr "API-ключи"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Primary"
+msgstr "Основной"
+
+msgid "Confirm to delete this email: %s"
+msgstr "Подтвердите удаление E-mail: %s"
+
+msgid "No additional emails specified."
+msgstr "Нет дополнительных адресов e-mail."
+
+msgid "New email address"
+msgstr "Новый E-mail"
+
+msgid "Change Your Account Password"
+msgstr "Смена пароля"
+
+msgid "Current password"
+msgstr "Текущий пароль"
+
+msgid "New password"
+msgstr "Новый пароль"
+
+msgid "Confirm new password"
+msgstr "Подтвердите новый пароль"
+
+msgid "Avatars are disabled"
+msgstr "Аватары отключены"
+
+msgid "Repositories You Own"
+msgstr "Репозитории, где Вы — владелец"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Repositories You are Watching"
+msgstr "Репозитории, за которыми Вы наблюдаете"
+
+msgid "Default Permissions"
+msgstr "Стандартные привилегии"
+
+msgid "IP Whitelist"
+msgstr "Белый список IP"
+
+msgid "Anonymous access"
+msgstr "Анонимный доступ"
+
+msgid ""
+"All default permissions on each repository will be reset to chosen "
+"permission, note that all custom default permission on repositories will "
+"be lost"
+msgstr ""
+"Выбранные привилегии будут установлены по умолчанию для каждого "
+"репозитория. Учтите, что ранее установленные привилегии по умолчанию "
+"будут сброшены"
+
+msgid "Repository group"
+msgstr "Группа репозиториев"
+
+msgid ""
+"All default permissions on each repository group will be reset to chosen "
+"permission, note that all custom default permission on repository groups "
+"will be lost"
+msgstr ""
+"Выбранные привилегии будут установлены по умолчанию для каждой группы "
+"репозиториев. Учтите, что ранее установленные привилегии по умолчанию для "
+"групп репозиториев будут сброшены"
+
+msgid "User group"
+msgstr "Группа пользователей"
+
+msgid "User group creation"
+msgstr "Создание групп пользователей"
+
+msgid "Repository forking"
+msgstr "Создание форка репозитория"
+
+msgid "Registration"
+msgstr "Регистрация"
+
+msgid "External auth account activation"
+msgstr "Активация сторонней учетной записи"
+
+msgid "All IP addresses are allowed."
+msgstr "Все IP-адреса разрешены."
+
+msgid "New IP address"
+msgstr "Новый IP-адрес"
+
+msgid "Repository Groups"
+msgstr "Группы репозиториев"
+
+msgid "Group name"
+msgstr "Имя группы"
+
+msgid "Group parent"
+msgstr "Родительская группа"
+
+msgid "%s Repository Group Settings"
+msgstr "Настройки группы репозиториев %s"
+
+msgid "Add Child Group"
+msgstr "Добавить подгруппу"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Advanced"
+msgstr "Дополнительно"
+
+msgid "Permissions"
+msgstr "Привилегии"
+
+msgid "Repository Group: %s"
+msgstr "Группа репозиториев: %s"
+
+msgid "Created on"
+msgstr "Создано"
+
+msgid "Confirm to delete this group: %s with %s repository"
+msgid_plural "Confirm to delete this group: %s with %s repositories"
+msgstr[0] "Подтвердите удаление группы %s, содержащей %s репозиторий"
+msgstr[1] "Подтвердите удаление группы %s, содержащей %s репозитория"
+msgstr[2] "Подтвердите удаление группы %s, содержащей %s репозиториев"
+
+msgid "Delete this repository group"
+msgstr "Удалить эту группу репозиториев"
+
+msgid "Add new"
+msgstr "Добавить новый"
+
+msgid "Remove this group"
+msgstr "Удалить эту группу"
+
+msgid "Confirm to delete this group"
+msgstr "Подтвердите удаление этой группы пользователей"
+
+msgid "Repository Groups Administration"
+msgstr "Администрирование групп репозиториев"
+
+msgid "Number of Top-level Repositories"
+msgstr "Число репозиториев верхнего уровня"
+
+msgid ""
+"Keep it short and to the point. Use a README file for longer descriptions."
+msgstr ""
+"Короткое и осмысленное. Для развернутого описания используйте файл README."
+
+msgid "Optionally select a group to put this repository into."
+msgstr "Опционально выбрать группу, в которую поместить данный репозиторий."
+
+msgid "Type of repository to create."
+msgstr "Тип создаваемого репозитория."
+
+msgid "Landing revision"
+msgstr "Ревизия для выгрузки"
+
+msgid "%s Creating Repository"
+msgstr "Создание репозитория %s"
+
+msgid "%s Repository Settings"
+msgstr "Настройки репозитория %s"
+
+msgid "Extra Fields"
+msgstr "Дополнительные поля"
+
+msgid "Remote"
+msgstr "Удалённый"
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Parent"
+msgstr "Родительская группа"
+
+msgid "Set"
+msgstr "Набор"
+
+msgid "Manually set this repository as a fork of another from the list."
+msgstr "Вручную сделать этот репозиторий форком выбранного из списка."
+
+msgid "Public Journal Visibility"
+msgstr "Доступ к публичному журналу"
+
+msgid "Remove from public journal"
+msgstr "Удалить из общедоступного журнала"
+
+msgid "Add to Public Journal"
+msgstr "Добавить в публичный журнал"
+
+msgid ""
+"All actions done in this repository will be visible to everyone in the "
+"public journal."
+msgstr ""
+"Все производимые с этим репозиторием действия будут отображаться в "
+"публичном журнале."
+
+msgid "Confirm to delete this repository: %s"
+msgstr "Подтвердите удаление этого репозитория: %s"
+
+msgid "Delete this Repository"
+msgstr "Удалить этот репозиторий"
+
+msgid "This repository has %s fork"
+msgid_plural "This repository has %s forks"
+msgstr[0] "Данный репозиторий имеет %s копию"
+msgstr[1] "Данный репозиторий имеет %s копии"
+msgstr[2] "Данный репозиторий имеет %s копий"
+
+msgid "Detach forks"
+msgstr "Отсоединить fork'и"
+
+msgid "Delete forks"
+msgstr "Удалить fork'и"
+
+msgid "Invalidate Repository Cache"
+msgstr "Сбросить кэш репозитория"
+
+msgid ""
+"Manually invalidate cache for this repository. On first access, the "
+"repository will be cached again."
+msgstr ""
+"Ручной сброс кэша репозитория. При первом доступе кэш восстановится."
+
+msgid "List of Cached Values"
+msgstr "Список кешированных значений"
+
+msgid "Prefix"
+msgstr "Префикс"
+
+msgid "Key"
+msgstr "Ключ"
+
+msgid "Active"
+msgstr "Активный"
+
+msgid "Confirm to delete this field: %s"
+msgstr "Подтвердите удаление этого поля: %s"
+
+msgid "New field key"
+msgstr "Ключ"
+
+msgid "New field label"
+msgstr "Имя поля"
+
+msgid "Enter short label"
+msgstr "Введите краткое имя поля"
+
+msgid "New field description"
+msgstr "Описание поля"
+
+msgid "Enter description of a field"
+msgstr "Введите описание поля"
+
+msgid "Extra fields are disabled."
+msgstr "Дополнительные поля отключены."
+
+msgid "Default revision for files page, downloads, whoosh and readme"
+msgstr ""
+"Ревизия по умолчанию, из которой будет производиться выгрузка файлов при "
+"скачивании"
+
+msgid "Change owner of this repository."
+msgstr "Изменить владельца репозитория."
+
+msgid "Reset Statistics"
+msgstr "Сброс статистики"
+
+msgid "Confirm to remove current statistics."
+msgstr "Подтвердите сброс статистики."
+
+msgid "Repositories Administration"
+msgstr "Администрирование репозиториев"
+
+msgid "Settings Administration"
+msgstr "Администрирование настроек"
+
+msgid "Hooks"
+msgstr "Хуки"
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Site branding"
+msgstr "Брендинг сайта"
+
+msgid "HTTP authentication realm"
+msgstr "Приветствие для HTTP-аутентификации"
+
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+msgid "Custom Hooks"
+msgstr "Пользовательские хуки"
+
+msgid "Failed to remove hook"
+msgstr "Не удалось удалить хук"
+
+msgid "Invalidate cache for all repositories"
+msgstr "Сбросить кэш для всех репозиториев"
+
+msgid "Check this to reload data and clear cache keys for all repositories."
+msgstr "Сбросить кэш для всех репозиториев."
+
+msgid "Index build option"
+msgstr "Опции создания индекса"
+
+msgid "Build from scratch"
+msgstr "Сборка с нуля"
+
+msgid "Reindex"
+msgstr "Перестроить индекс"
+
+msgid "Git version"
+msgstr "Версия Git"
+
+msgid "Show repository size after push"
+msgstr "Показывать размер репозитория после отправки"
+
+msgid "Update repository after push (hg update)"
+msgstr "Обновлять репозиторий после отправки (hg update)"
+
+msgid "Mercurial extensions"
+msgstr "Расширения Mercurial"
+
+msgid "Enable largefiles extension"
+msgstr "Включить поддержку больших файлов"
+
+msgid "Enable hgsubversion extension"
+msgstr "Включить поддержку hgsubversion"
+
+msgid "Location of repositories"
+msgstr "Местонахождение репозиториев"
+
+msgid ""
+"Click to unlock. You must restart Kallithea in order to make this setting "
+"take effect."
+msgstr ""
+"Нажмите для разблокирования. Изменения вступят в силу после перезагрузки "
+"Kallithea."
+
+msgid "General"
+msgstr "Главное"
+
+msgid "Use repository extra fields"
+msgstr "Использовать дополнительные поля в репозиториях"
+
+msgid "Allows storing additional customized fields per repository."
+msgstr "Позволяет хранить дополнительные поля в репозиториях."
+
+msgid "Show Kallithea version"
+msgstr "Отображать версию Kallithea"
+
+msgid "Icons"
+msgstr "Иконки"
+
+msgid "Show public repository icon on repositories"
+msgstr "Показывать иконки публичных репозиториев"
+
+msgid "Show private repository icon on repositories"
+msgstr "Показывать иконки приватных репозиториев"
+
+msgid "Show public/private icons next to repository names."
+msgstr "Показывать иконки публичных репозиториев."
+
+msgid "Add user group"
+msgstr "Добавить группу пользователей"
+
+msgid "Members"
+msgstr "Участники"
+
+msgid "Confirm to delete this user group: %s"
+msgstr "Подтвердите удаление следующей группы пользователей: %s"
+
+msgid "No members yet"
+msgstr "Нет участников"
+
+msgid "Chosen group members"
+msgstr "Выбранные участники группы"
+
+msgid "Available members"
+msgstr "Доступные участники"
+
+msgid "User Groups Administration"
+msgstr "Администрирование групп пользователей"
+
+msgid "Add user"
+msgstr "Добавить пользователя"
+
+msgid "Users"
+msgstr "Пользователи"
+
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+msgid "Confirm to delete this user: %s"
+msgstr "Подтвердите удаление пользователя %s"
+
+msgid "New password confirmation"
+msgstr "Подтвердите новый пароль"
+
+msgid "Users Administration"
+msgstr "Администрирование пользователей"
+
+msgid "Server instance: %s"
+msgstr "Экземпляр сервера: %s"
+
+msgid "Mercurial repository"
+msgstr "Репозиторий Mercurial"
+
+msgid "Git repository"
+msgstr "Git репозиторий"
+
+msgid "Create Fork"
+msgstr "Создать форк"
+
+msgid "Summary"
+msgstr "Общие сведения"
+
+msgid "Changelog"
+msgstr "История изменений"
+
+msgid "Files"
+msgstr "Файлы"
+
+msgid "Show Pull Requests for %s"
+msgstr "Показать pull-запросы для %s"
+
+msgid "Pull Requests"
+msgstr "Pull-запросы"
+
+msgid "Options"
+msgstr "Опции"
+
+msgid "Compare Fork"
+msgstr "Сравнить форк"
+
+msgid "Compare"
+msgstr "Сравнить"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Follow"
+msgstr "Наблюдать"
+
+msgid "Unfollow"
+msgstr "Не наблюдать"
+
+msgid "Fork"
+msgstr "Форк"
+
+msgid "Create Pull Request"
+msgstr "Создать Pull запрос"
+
+msgid "Switch To"
+msgstr "Переключиться на"
+
+msgid "Show recent activity"
+msgstr "Показать последнюю активность"
+
+msgid "Public journal"
+msgstr "Общедоступный журнал"
+
+msgid "Show public gists"
+msgstr "Показать публичные записи"
+
+msgid "Gists"
+msgstr "Gist"
+
+msgid "All Public Gists"
+msgstr "Все публичные Gist-записи"
+
+msgid "My Public Gists"
+msgstr "Мои публичные Gist-записи"
+
+msgid "My Private Gists"
+msgstr "Мои приватные Gist-записи"
+
+msgid "Search in repositories"
+msgstr "Поиск по репозиториям"
+
+msgid "My Pull Requests"
+msgstr "Мои Pull-запросы"
+
+msgid "Not Logged In"
+msgstr "Не авторизован"
+
+msgid "Login to Your Account"
+msgstr "Авторизоваться"
+
+msgid "Log Out"
+msgstr "Выход"
+
+msgid "Create repositories"
+msgstr "Создать репозитории"
+
+msgid "Select this option to allow repository creation for this user"
+msgstr "Опция разрешает пользователю создавать репозитарии"
+
+msgid "Create user groups"
+msgstr "Создавать группы пользователей"
+
+msgid "Select this option to allow user group creation for this user"
+msgstr "Опция разрешает пользователю создавать группы пользователей"
+
+msgid "Fork repositories"
+msgstr "Создавать fork от репозиториев"
+
+msgid "Select this option to allow repository forking for this user"
+msgstr ""
+"Выберите эту опцию чтобы разрешить данному пользователю создавать fork'и "
+"репозиториев"
+
+msgid "Show"
+msgstr "Показать"
+
+msgid "No permissions defined yet"
+msgstr "Привилегии еще не назначены"
+
+msgid "Permission"
+msgstr "Привилегия"
+
+msgid "Edit Permission"
+msgstr "Изменить привилегии"
+
+msgid "Submitting ..."
+msgstr "Применение..."
+
+msgid "Add Another Comment"
+msgstr "Добавить ещё один комментарий"
+
+msgid "Stop following this repository"
+msgstr "Отменить наблюдение за репозиторием"
+
+msgid "Start following this repository"
+msgstr "Наблюдать за репозиторием"
+
+msgid "Group"
+msgstr "Группа"
+
+msgid "Loading ..."
+msgstr "Загрузка..."
+
+msgid "loading ..."
+msgstr "загрузка..."
+
+msgid "Search truncated"
+msgstr "Поиск усечен"
+
+msgid "No matching files"
+msgstr "Нет совпадений"
+
+msgid "Selection Link"
+msgstr "Ссылка выбора"
+
+msgid "Collapse Diff"
+msgstr "Свернуть сравнение"
+
+msgid "Expand Diff"
+msgstr "Раскрыть сравнение"
+
+msgid "Failed to revoke permission"
+msgstr "Не удалось отозвать привилегии"
+
+msgid "Confirm to revoke permission for {0}: {1} ?"
+msgstr "Подтвердите удаление привилегии для {0}: {1} ?"
+
+msgid "Select changeset"
+msgstr "Выбрать набор изменений"
+
+msgid "Specify changeset"
+msgstr "Выбрать набор изменений"
+
+msgid "Click to sort ascending"
+msgstr "По возрастанию"
+
+msgid "Click to sort descending"
+msgstr "По убыванию"
+
+msgid "No records found."
+msgstr "Записи не найдены."
+
+msgid "Data error."
+msgstr "Ошибка данных."
+
+msgid "Loading..."
+msgstr "Загрузка..."
+
+msgid "%s Changelog"
+msgstr "Логи изменений %s"
+
+msgid "showing %d out of %d revision"
+msgid_plural "showing %d out of %d revisions"
+msgstr[0] "Показана %d из %d ревизий"
+msgstr[1] "Показаны %d из %d ревизий"
+msgstr[2] "Показаны %d из %d ревизий"
+
+msgid "Clear selection"
+msgstr "Очистить выбор"
+
+msgid "Go to tip of repository"
+msgstr "Перейти на верхушку репозитория"
+
+msgid "Compare fork with %s"
+msgstr "Сравнить fork с %s"
+
+msgid "Compare fork with parent repository (%s)"
+msgstr "Сравнить форк с родительским репозиторием (%s)"
+
+msgid "Branch filter:"
+msgstr "Отфильтровать ветку:"
+
+msgid "There are no changes yet"
+msgstr "Изменений ещё нет"
+
+msgid "Removed"
+msgstr "Удалено"
+
+msgid "Changed"
+msgstr "Изменено"
+
+msgid "Added"
+msgstr "Добавлено"
+
+msgid "Affected %s files"
+msgstr "Затрагивает %s файлов"
+
+msgid "Bookmark %s"
+msgstr "Закладка %s"
+
+msgid "Tag %s"
+msgstr "Метка %s"
+
+msgid "Branch %s"
+msgstr "Ветка %s"
+
+msgid "%s Changeset"
+msgstr "%s Изменения"
+
+msgid "Changeset status"
+msgstr "Статут изменений"
+
+msgid "Raw diff"
+msgstr "Отобразить в формате diff"
+
+msgid "Patch diff"
+msgstr "Применить разностное исправление (Patch diff)"
+
+msgid "Download diff"
+msgstr "Скачать diff"
+
+msgid "Grafted from:"
+msgstr "Перенесено из:"
+
+msgid "%s file changed"
+msgid_plural "%s files changed"
+msgstr[0] "%s файл изменён"
+msgstr[1] "%s файлов изменено"
+msgstr[2] "%s файла изменено"
+
+msgid "%s file changed with %s insertions and %s deletions"
+msgid_plural "%s files changed with %s insertions and %s deletions"
+msgstr[0] "%s файл изменён: %s добавление, %s удаление"
+msgstr[1] "%s файла изменёно: %s добавления, %s удаления"
+msgstr[2] "%s файлов изменёно: %s добавлений, %s удалений"
+
+msgid "Show full diff anyway"
+msgstr "Показать полный diff"
+
+msgid "No title"
+msgstr "Нет заголовка"
+
+msgid "Delete comment?"
+msgstr "Удалить комментарий?"
+
+msgid "Set changeset status"
+msgstr "Изменить статус ревизии"
+
+msgid "No change"
+msgstr "Без изменений"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Comment"
+msgstr "Комментировать"
+
+msgid "You need to be logged in to comment."
+msgstr "Вам необходимо авторизоваться, чтобы оставлять комментарии."
+
+msgid "Login now"
+msgstr "Авторизоваться сейчас"
+
+msgid "Hide"
+msgstr "Скрыть"
+
+msgid "%d comment"
+msgid_plural "%d comments"
+msgstr[0] "%d комментарий"
+msgstr[1] "%d комментария"
+msgstr[2] "%d комментариев"
+
+msgid "%d inline"
+msgid_plural "%d inline"
+msgstr[0] "%d к строке"
+msgstr[1] "%d к строкам"
+msgstr[2] "%d к строкам"
+
+msgid "%s Changesets"
+msgstr "%s Изменения"
+
+msgid "Changeset status: %s"
+msgstr "Статус набора изменений: %s"
+
+msgid "Files affected"
+msgstr "Затронутые файлы"
+
+msgid "Deleted"
+msgstr "Удалён"
+
+msgid "Renamed"
+msgstr "Переименован"
+
+msgid "Show full diff for this file"
+msgstr "Показать полный diff для этого файла"
+
+msgid "Show full side-by-side diff for this file"
+msgstr "Показать полный diff для этого файла"
+
+msgid "Show inline comments"
+msgstr "Показать комментарии в строках"
+
+msgid "No changesets"
+msgstr "Нет изменений"
+
+msgid "Show merge diff"
+msgstr "Показать merge diff"
+
+msgid "is"
+msgstr "отстаёт на"
+
+msgid "%s changesets"
+msgstr "%s изменений"
+
+msgid "behind"
+msgstr "от"
+
+msgid "%s Compare"
+msgstr "%s Сравнить"
+
+msgid "Showing %s commit"
+msgid_plural "Showing %s commits"
+msgstr[0] "Показать %s commit"
+msgstr[1] "Показать %s commit'а"
+msgstr[2] "Показать %s commit'ов"
+
+msgid "Show full diff"
+msgstr "Показать полный diff"
+
+msgid "Public repository"
+msgstr "Публичный репозиторий"
+
+msgid "No changesets yet"
+msgstr "Изменений ещё не было"
+
+msgid "Subscribe to %s rss feed"
+msgstr "Подписаться на ленту RSS %s"
+
+msgid "Subscribe to %s atom feed"
+msgstr "Подписаться на ленту Atom %s"
+
+msgid "Hello %s"
+msgstr "Здравствуйте, %s"
+
+msgid "File diff"
+msgstr "Сравнение файлов"
+
+msgid "%s File Diff"
+msgstr "Сравнение файла %s"
+
+msgid "%s Files"
+msgstr "%s Файлы"
+
+msgid "%s Files Add"
+msgstr "%s Файлов добавлено"
+
+msgid "Location"
+msgstr "Расположение"
+
+msgid "or"
+msgstr "или"
+
+msgid "Commit Changes"
+msgstr "Применить изменения"
+
+msgid "Loading file list..."
+msgstr "Загружается список файлов..."
+
+msgid "Size"
+msgstr "Размер"
+
+msgid "Last Revision"
+msgstr "Последняя версия"
+
+msgid "Last Modified"
+msgstr "Последнее изменение"
+
+msgid "Last Committer"
+msgstr "Автор последней ревизии"
+
+msgid "Edit file"
+msgstr "Редактировать файл"
+
+msgid "Source"
+msgstr "Исходный код"
+
+msgid "%s author"
+msgid_plural "%s authors"
+msgstr[0] "%s автор"
+msgstr[1] "%s авторов"
+msgstr[2] "%s автора"
+
+msgid "Editing files allowed only when on branch head revision"
+msgstr "Редактирование файлов разрешено только в HEAD-ревизии данной ветки"
+
+msgid "Binary file (%s)"
+msgstr "Бинарный файл (%s)"
+
+msgid "File is too big to display."
+msgstr "Файл слишком большой для отображения."
+
+msgid "Show full annotation anyway."
+msgstr "Показать полный diff."
+
+msgid "Show as raw."
+msgstr "Показать только текст."
+
+msgid "annotation"
+msgstr "аннотация"
+
+msgid "No files at given path"
+msgstr "По заданному пути файлы отсутствуют"
+
+msgid "%s Followers"
+msgstr "%s Наблюдатели"
+
+msgid "Followers"
+msgstr "Наблюдатели"
+
+msgid "Started following -"
+msgstr "Наблюдать за репозиторием"
+
+msgid "Fork name"
+msgstr "Имя форка"
+
+msgid "Default revision for files page, downloads, whoosh, and readme."
+msgstr ""
+"Ревизия по умолчанию, из которой будет производиться выгрузка файлов при "
+"скачивании."
+
+msgid "Private"
+msgstr "Приватный"
+
+msgid "Copy permissions"
+msgstr "Скопировать привилегии"
+
+msgid "Copy permissions from forked repository"
+msgstr "Скопировать привилегии с форкнутого репозитория"
+
+msgid "Update after clone"
+msgstr "Обновлять после клонирования"
+
+msgid "Checkout source after making a clone"
+msgstr "Скачивать исходники после создания клона"
+
+msgid "%s Forks"
+msgstr "Форки %s"
+
+msgid "Forks"
+msgstr "Ответвления"
+
+msgid "Forked"
+msgstr "Форкнуто"
+
+msgid "There are no forks yet"
+msgstr "Форки ещё не созданы"
+
+msgid "ATOM journal feed"
+msgstr "Лента журнала ATOM"
+
+msgid "RSS journal feed"
+msgstr "Лента журнала RSS"
+
+msgid "My Repositories"
+msgstr "Мои репозитории"
+
+msgid "No entries yet"
+msgstr "Записи отсуствуют"
+
+msgid "ATOM public journal feed"
+msgstr "Общая лента журнала ATOM"
+
+msgid "RSS public journal feed"
+msgstr "Общая лента журнала RSS"
+
+msgid "New Pull Request"
+msgstr "Новый pull-запрос"
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid "Write a short description on this pull request"
+msgstr "Написать короткое писание по этому запросу"
+
+msgid "Changeset flow"
+msgstr "Поток изменений"
+
+msgid "Origin repository"
+msgstr "Первоначальный репозиторий"
+
+msgid "Revision"
+msgstr "Ревизия"
+
+msgid "Destination repository"
+msgstr "Репозиторий назначения"
+
+msgid "No entries"
+msgstr "Записи отсуствуют"
+
+msgid "Age"
+msgstr "Возраст"
+
+msgid "Closed"
+msgstr "Закрыто"
+
+msgid "Delete Pull Request"
+msgstr "Удалить pull-запрос"
+
+msgid "Confirm to delete this pull request"
+msgstr "Подтвердите удаление этого pull-request'а"
+
+msgid "Pull request %s from %s#%s"
+msgstr "Pull-запросы %s от %s#%s"
+
+msgid "Pull changes"
+msgstr "Принять изменения"
+
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+msgid "Cancel Changes"
+msgstr "Отменить изменения"
+
+msgid "Remove reviewer"
+msgstr "Удалить рецензента"
+
+msgid "Potential Reviewers"
+msgstr "Потенциальные рецензенты"
+
+msgid "Common ancestor"
+msgstr "Общий предок"
+
+msgid "%s Pull Requests"
+msgstr "%s Запросы на внесение изменений"
+
+msgid "Pull Requests to '%s'"
+msgstr "Pull-запросы для %s"
+
+msgid "Open New Pull Request"
+msgstr "Создать новый pull-запрос"
+
+msgid "Search in All Repositories"
+msgstr "Поиск по всем репозиториям"
+
+msgid "Search term"
+msgstr "Фраза для поиска"
+
+msgid "Search in"
+msgstr "Критерий поиска"
+
+msgid "File contents"
+msgstr "Содержимое файлов"
+
+msgid "Commit messages"
+msgstr "Сообщения коммитов"
+
+msgid "File names"
+msgstr "Имя файла"
+
+msgid "Permission denied"
+msgstr "Недостаточно прав"
+
+msgid "%s ATOM feed"
+msgstr "ATOM лента репозитория %s"
+
+msgid "%s RSS feed"
+msgstr "RSS лента репозитория %s"
+
+msgid "Enable"
+msgstr "Включено"
+
+msgid "Stats gathered: "
+msgstr "Полученная статистика: "
+
+msgid "files"
+msgstr "файлы"
+
+msgid "Show more"
+msgstr "Показать еще"
+
+msgid "commits"
+msgstr "commit'ы"
+
+msgid "files added"
+msgstr "файлы добавлены"
+
+msgid "files changed"
+msgstr "файлы изменены"
+
+msgid "files removed"
+msgstr "файлы удалены"
+
+msgid "commit"
+msgstr "commit"
+
+msgid "file added"
+msgstr "файл удалён"
+
+msgid "file changed"
+msgstr "файл изменён"
+
+msgid "file removed"
+msgstr "файл удалён"
+
+msgid "%s Summary"
+msgstr "%s общие сведения"
+
+msgid "Fork of"
+msgstr "Форк от"
+
+msgid "Clone from"
+msgstr "Клонировать из"
+
+msgid "Clone URL"
+msgstr "Ссылка для клонирования"
+
+msgid "Trending files"
+msgstr "Популярные файлы"
+
+msgid "Download"
+msgstr "Скачать"
+
+msgid "There are no downloads yet"
+msgstr "Скачиваний ещё нет"
+
+msgid "Downloads are disabled for this repository"
+msgstr "Скачивание отключено в этом репозитории"
+
+msgid "Download as zip"
+msgstr "Скачать в zip"
+
+msgid "Check this to download archive with subrepos"
+msgstr "Отметьте для скачивания архива с дочерними репозиториями"
+
+msgid "With subrepos"
+msgstr "С дочерними репозиториями"
+
+msgid "Feed"
+msgstr "Лента новостей"
+
+msgid "Latest Changes"
+msgstr "Последние изменения"
+
+msgid "Quick Start"
+msgstr "Быстрый старт"
+
+msgid "Add or upload files directly via Kallithea"
+msgstr "Добавить или загрузить файлы через Kallithea"
+
+msgid "Existing repository?"
+msgstr "Существующий репозиторий?"
+
+msgid "Download %s as %s"
+msgstr "Скачать %s как %s"
