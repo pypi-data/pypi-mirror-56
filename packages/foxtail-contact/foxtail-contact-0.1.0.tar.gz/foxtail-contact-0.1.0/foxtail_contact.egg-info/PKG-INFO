@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: foxtail-contact
+Version: 0.1.0
+Summary: A blog.
+Home-page: https://github.com/dmptrluke/foxtail-contact
+Author: Luke Rogers
+Author-email: lukeroge@gmail.com
+License: UNKNOWN
+Description: # foxtail-contact
+        A simple, reusable Django contact form application.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

@@ -1,0 +1,4 @@
+django>=2.2
+django-mail-templated-simple
+django-crispy-forms
+django-recaptcha

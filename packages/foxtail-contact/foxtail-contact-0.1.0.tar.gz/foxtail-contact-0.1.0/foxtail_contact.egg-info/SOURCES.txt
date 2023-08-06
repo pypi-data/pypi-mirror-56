@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+foxtail_contact/__init__.py
+foxtail_contact/apps.py
+foxtail_contact/forms.py
+foxtail_contact/urls.py
+foxtail_contact/views.py
+foxtail_contact.egg-info/PKG-INFO
+foxtail_contact.egg-info/SOURCES.txt
+foxtail_contact.egg-info/dependency_links.txt
+foxtail_contact.egg-info/requires.txt
+foxtail_contact.egg-info/top_level.txt
