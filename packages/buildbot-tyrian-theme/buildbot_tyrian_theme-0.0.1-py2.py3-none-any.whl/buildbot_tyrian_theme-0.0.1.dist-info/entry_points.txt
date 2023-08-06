@@ -1,0 +1,4 @@
+
+        [buildbot.www]
+        tyrian_view = buildbot_tyrian_view:ep
+    
