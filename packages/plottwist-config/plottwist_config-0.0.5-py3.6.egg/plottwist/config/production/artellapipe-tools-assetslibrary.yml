@@ -1,0 +1,18 @@
+# Base Configuration file for artellapipe-tools-assetslibrary in Plot Twist
+
+# Defines icon of the tool
+icon: assetslibrary
+
+# URL to tool documentation web page
+url: https://plot-twist-short-film.github.io/plottwist-docs/pipeline/pipeline/tools/assetslibrary/
+
+# Defines whether this needs Kitsu data to work or not
+kitsu_login: True
+
+supported_files:
+  "Rig":
+    ma
+#  "Alembic":
+#    abc
+#  "Standin":
+#    ass
