@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+cefpanda/__init__.py
+cefpanda/version.py
+cefpanda.egg-info/PKG-INFO
+cefpanda.egg-info/SOURCES.txt
+cefpanda.egg-info/dependency_links.txt
+cefpanda.egg-info/requires.txt
+cefpanda.egg-info/top_level.txt

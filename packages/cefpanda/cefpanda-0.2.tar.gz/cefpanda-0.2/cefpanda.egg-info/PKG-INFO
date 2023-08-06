@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cefpanda
+Version: 0.2
+Summary: A Panda3D-friendly wrapper around cefpython
+Home-page: https://github.com/Moguri/cefpanda
+Author: Mitchell Stokes
+License: MIT
+Description: # cefpanda
+        Python module for using CEFPython with Panda3D
+        
+Keywords: panda3d gamedev
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
