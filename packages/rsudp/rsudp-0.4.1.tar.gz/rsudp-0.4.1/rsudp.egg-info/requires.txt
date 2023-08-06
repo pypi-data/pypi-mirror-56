@@ -1,0 +1,5 @@
+obspy
+numpy
+matplotlib==3.1.1
+pydub
+twython
