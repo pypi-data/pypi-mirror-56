@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pwx-rabbitmq-connection
+Version: 0.1.0
+Summary: Connection to RabbitMQ - PWX
+Home-page: UNKNOWN
+Author: Guilherme Rosa Koerich
+Author-email: guilherme@pwx.cloud
+License: UNKNOWN
+Description: ## Rabbit PWX Connection Base
+        Project for PWX connection to RabbitMQ
+Keywords: connection rabbitmq pwx
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >3.4
+Description-Content-Type: text/markdown
