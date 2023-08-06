@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: trudge
+Version: 0.0.0.2
+Summary: Generators that enumerate discrete spaces using various strategies.
+Home-page: https://github.com/reity/trudge
+Author: Andrei Lapets
+Author-email: a@lapets.io
+License: MIT
+Description: ======
+        trudge
+        ======
+        
+        Generators that enumerate discrete spaces using various strategies.
+        
+        .. image:: https://badge.fury.io/py/trudge.svg
+           :target: https://badge.fury.io/py/trudge
+           :alt: PyPI version and link.
+        
+        Package Installation and Usage
+        ------------------------------
+        The package is available on PyPI::
+        
+            python -m pip install trudge
+        
+        The library can be imported in the usual way::
+        
+            import trudge
+        
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
