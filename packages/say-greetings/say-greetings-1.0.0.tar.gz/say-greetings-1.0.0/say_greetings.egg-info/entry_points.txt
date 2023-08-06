@@ -1,0 +1,3 @@
+[console_scripts]
+greetings = say_greetings.greetings:main
+

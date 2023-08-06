@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: say-greetings
+Version: 1.0.0
+Summary: A simple command-line app to greet!
+Home-page: UNKNOWN
+Author: Gurpreet Anand
+Author-email: gurpreetsinghanand@live.com
+License: MIT
+Description: Simple python package to greet a person
+Keywords: greetings say_greetings python package gurpreetsinghanand Gurpreet Anand
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

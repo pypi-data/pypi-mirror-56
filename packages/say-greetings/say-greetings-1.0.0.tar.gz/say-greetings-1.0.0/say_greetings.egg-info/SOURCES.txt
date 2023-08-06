@@ -1,0 +1,10 @@
+README.md
+setup.py
+say_greetings/__init__.py
+say_greetings/greetings.py
+say_greetings.egg-info/PKG-INFO
+say_greetings.egg-info/SOURCES.txt
+say_greetings.egg-info/dependency_links.txt
+say_greetings.egg-info/entry_points.txt
+say_greetings.egg-info/not-zip-safe
+say_greetings.egg-info/top_level.txt
