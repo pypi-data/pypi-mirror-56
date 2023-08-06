@@ -1,0 +1,21 @@
+.git/
+venv
+test/airflow_home/logs
+test/data_store
+build
+dist
+*.egg-info
+*.egg/
+*.pyc
+*.swp
+
+.tox
+.coverage
+html/*
+__pycache__
+__pycache__/
+**/__pycache__
+.pytest_cache
+
+# Compiled Documentation
+docs/_build

@@ -1,0 +1,45 @@
+[build-system]
+requires = [
+    "setuptools >= 40.0.4",
+    "setuptools_scm >= 2.0.0, <4",
+    "wheel >= 0.29.0",
+    "flit_core >=2.0rc2,<3",
+]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "airtunnel"
+author = "Jörg Schneider"
+author-email = "joerg@joerg-schneider.org"
+home-page = "https://github.com/joerg-schneider/airtunnel"
+description-file = "pypi-description.rst"
+
+requires = [
+    "pandas >= 0.23",
+    "schema >= 0.6",
+    "apache-airflow >= 1.10",
+    "pyarrow >= 0.13",
+]
+
+requires-python = ">=3.6"
+
+[tool.flit.metadata.requires-extra]
+pyspark = ["pyspark >= 2.3"]
+testing = [
+    "pytest-cov",
+    "pytest",
+    "xlrd",
+    "flake8",
+    "xlwt",
+]
+docs = [
+    "sphinx >= 2.0.0, < 3",
+    "sphinx_rtd_theme",
+]
+
+[tool.flit.metadata.urls]
+Documentation = "https://joerg-schneider.github.io/airtunnel/"
+Repository = "https://github.com/joerg-schneider/airtunnel"
+
+[tool.black]
+line-length = 88
