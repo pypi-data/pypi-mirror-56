@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="css/description.xslt"?>
+<description xmlns="http://www.ge.fr/schema/1.2/form-manager" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" icon="map-signs" color="#33CCFF" version="1.2" xsi:schemaLocation="http://www.ge.fr/schema/1.2/form-manager http://svn.projet-ge.fr:8080/archiva/repository/xsd/form-manager/form-manager/1.2/form-manager-1.2.xsd">
+    <reference-id>entreprises/start</reference-id>
+    <title>{{description.title}}</title>
+    <description>{{description.description}}</description>
+    <steps>
+        <step id="data" data="display.xml" postprocess="redirect.xml" icon="{{description.icon}}">
+            <saveQuit display="no"/>
+            <nextPage display="no"/>
+            <nextStep display="no"/>
+            <finalize display="yes" label="{{description.finalize}}" />
+            <previous display="no"/>
+        </step>
+    </steps>
+</description>
