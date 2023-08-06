@@ -1,0 +1,3 @@
+[console_scripts]
+repiet = repiet.__main__:main
+
