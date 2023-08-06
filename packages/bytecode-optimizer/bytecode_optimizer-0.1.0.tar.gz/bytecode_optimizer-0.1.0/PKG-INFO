@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: bytecode_optimizer
+Version: 0.1.0
+Summary: A bytecode optimizer for python
+Home-page: https://github.com/Martmists/BytecodeOptimizer
+Author: martmists
+Author-email: mail@martmists.com
+Maintainer: martmists
+Maintainer-email: mail@martmists.com
+License: MIT
+Description: TODO
+Keywords: bytecode,optimizer,speed
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
