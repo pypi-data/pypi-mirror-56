@@ -1,0 +1,3 @@
+[console_scripts]
+tcafe_attending_bot = tcafe_attending_bot.__main__:console_entry
+

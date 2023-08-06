@@ -1,0 +1,12 @@
+README.md
+setup.py
+tcafe_attending_bot/__init__.py
+tcafe_attending_bot/__main__.py
+tcafe_attending_bot.egg-info/PKG-INFO
+tcafe_attending_bot.egg-info/SOURCES.txt
+tcafe_attending_bot.egg-info/dependency_links.txt
+tcafe_attending_bot.egg-info/entry_points.txt
+tcafe_attending_bot.egg-info/requires.txt
+tcafe_attending_bot.egg-info/top_level.txt
+tcafe_attending_bot.egg-info/zip-safe
+test/test_api.py
