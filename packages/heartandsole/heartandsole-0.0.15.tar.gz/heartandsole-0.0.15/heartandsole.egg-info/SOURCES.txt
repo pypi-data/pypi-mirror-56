@@ -1,0 +1,16 @@
+README.md
+setup.py
+heartandsole/__init__.py
+heartandsole/activity.py
+heartandsole/base_filereader.py
+heartandsole/filereader_tcx.py
+heartandsole/filereaders.py
+heartandsole/old_fitactivity.py
+heartandsole/powerutils.py
+heartandsole/stressutils.py
+heartandsole/util.py
+heartandsole.egg-info/PKG-INFO
+heartandsole.egg-info/SOURCES.txt
+heartandsole.egg-info/dependency_links.txt
+heartandsole.egg-info/requires.txt
+heartandsole.egg-info/top_level.txt
