@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+dalymi/__init__.py
+dalymi/pipeline.py
+dalymi/resources.py
+dalymi.egg-info/PKG-INFO
+dalymi.egg-info/SOURCES.txt
+dalymi.egg-info/dependency_links.txt
+dalymi.egg-info/top_level.txt
