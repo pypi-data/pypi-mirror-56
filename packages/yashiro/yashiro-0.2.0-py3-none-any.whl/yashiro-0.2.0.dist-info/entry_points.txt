@@ -1,0 +1,3 @@
+[console_scripts]
+yashiro=yashiro.main:write_output
+
