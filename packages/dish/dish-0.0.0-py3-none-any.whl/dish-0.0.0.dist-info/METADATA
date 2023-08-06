@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: dish
+Version: 0.0.0
+Summary: A new, modern Unix shell implemented in pure Python with Flask-like configuration and extensibility
+Home-page: https://github.com/dullbananas/dish
+Author: Dull Bananas
+Author-email: dull.bananas0@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: ansicolors
+Requires-Dist: prompt-toolkit
+Requires-Dist: Pygments
+Requires-Dist: dulwich
+
+<h1 align="center">
+  <img src="artwork/dish-logo.png" height="128" align="center" />
+</h1>
+
+<h4 align="center">A new Unix shell implemented in Python</h4>
+
+***
+[![Gitter](https://img.shields.io/gitter/room/dullbananas/dish)](https://gitter.im/dish-shell/community)
+![Codacy coverage](https://img.shields.io/codacy/coverage/1faac136e1a5459b9141fa6cc03cf0bd)
+![Codacy grade](https://img.shields.io/codacy/grade/1faac136e1a5459b9141fa6cc03cf0bd)
+![Maintenance](https://img.shields.io/maintenance/yes/2019)
+***
+
+Dish is a new Unix shell implemented in Python with Flask-like configuration and extensibility. It is currently in alpha stage of development. It works by having a Python script called "dish" somewhere in `PATH`. This script looks a bit like a single-file Flask application. Here is an example:
+
+```python3
+#!/usr/bin/env python3
+
+from dish import Dish
+dish = Dish()
+
+# ansicolor color to be used in PS1 prompt
+from dish.ext import ansicolor
+dish.register_extension(ansicolor)
+
+dish.config['PS1'] = '<color fg="pink">$</color> '
+
+if __name__ == '__main__':
+    dish.run()
+```
+
+## Installation
+
+Currently, it's not possible to install with Pip yet. To install the master branch:
+
+```console
+$ git clone https://github.com/dullbananas/dish.git
+$ cd dish
+$ python3 setup.py install --user
+```
+
+## Project Links
+
+* [Documentation](https://dish.readthedocs.io/en/latest/)
+* [GitHub Repository](https://github.com/dullbananas/dish)
+
+
