@@ -1,0 +1,6 @@
+
+{% for transaction in transactions %}
+{{ transaction.date }} * "{{ transaction.label }}"
+    Assets:CCP             {{ transaction.amount }} EURO
+    Expenses:Divers
+{% endfor %}
