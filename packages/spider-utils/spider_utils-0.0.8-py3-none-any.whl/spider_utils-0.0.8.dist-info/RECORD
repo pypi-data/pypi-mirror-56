@@ -1,0 +1,12 @@
+spider_utils/__init__.py,sha256=VD3r9sNkHsWgE5ANsqmNiXV_2uQDPM5b7LXyc6A1fZk,580
+spider_utils/download.py,sha256=3D0-iTA_CzR49qUxZOH-pC2s7IjfWCkqF2XwuDBqIDU,2292
+spider_utils/spider.py,sha256=ge53aIQ3gMGgue4_yZgJhKC_9tIEc1nY6SYfZ5Blw7k,2892
+spider_utils/useragent.py,sha256=iZb3ZNRil0FBXfKpU5ud0nkYteIjVE3ctb1nTsXJIic,600
+spider_utils/utils.py,sha256=3S1g7uD_opWmt208k87H8rQCIeO3jaNljVkaL5aOn7Y,1020
+spider_utils/data/fake_useragent_0.1.11.json,sha256=fgvByElwtpg9QpigM0ss-Rpjnc_Uql4-3y0gJDB7dVI,42686
+spider_utils/data/mobile_user_agents.txt,sha256=GWRDQJ3-fd1avIkD0okbVIH1gQVBURERgadd_rENGtY,130849
+spider_utils-0.0.8.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+spider_utils-0.0.8.dist-info/METADATA,sha256=TlL96zDgYyrxFEZKUc8smx7SoxMSOzntKYMPz2Z5NuE,1122
+spider_utils-0.0.8.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+spider_utils-0.0.8.dist-info/top_level.txt,sha256=GA7LDCr8nQITC1opcs0w1FGNO569E4dR9QOAZUjMCto,13
+spider_utils-0.0.8.dist-info/RECORD,,
