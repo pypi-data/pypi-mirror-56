@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pcommon
+Version: 0.0.3
+Summary: A python tool package
+Home-page: https://github.com/shijianliangs/pcommon
+Author: shijianliangs
+Author-email: shijianliangs@gmail.com
+License: UNKNOWN
+Description: # A python tool package
+        
+        ## Support
+        * file
+        * logger
+        * response
+        * mysql
+        * ......
+        
+        ## 打包指引
+        
+        [https://packaging.python.org/tutorials/packaging-projects/](https://packaging.python.org/tutorials/packaging-projects/)
+        
+        ## 其他
+        
+        ```
+        python3 setup.py sdist
+        python3 -m twine upload dist/*
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
