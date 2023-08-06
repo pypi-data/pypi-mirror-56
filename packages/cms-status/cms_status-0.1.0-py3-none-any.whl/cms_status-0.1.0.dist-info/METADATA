@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: cms-status
+Version: 0.1.0
+Summary: CMS plugin for managing status updates
+Home-page: https://www.rivivo.xyz/projects/cms
+Author: Ashwin Shenoy
+Author-email: aswinshenoy65@gmail.com
+Maintainer: Ashwin Shenoy
+Maintainer-email: aswinshenoy65@gmail.com
+License: GNU-GPL-V3
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+
+CMS Forms
+==================
+|Pypi|
+
+A plugin to manage status updates of members in your CMS project.
+
+This plugin is **only intended to be used with a CMS project**,
+and not directly in any django project. To use in an independent
+django project, you might need to configure your project.
+
+.. |Pypi| image:: https://img.shields.io/pypi/v/cms-forms.svg
+   :target: https://pypi.python.org/pypi/cms-status
+   :alt: Pypi
+
+
+
+
