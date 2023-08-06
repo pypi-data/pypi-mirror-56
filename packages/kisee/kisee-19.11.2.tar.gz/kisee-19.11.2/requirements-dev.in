@@ -1,0 +1,14 @@
+bandit
+black
+flake8
+flit
+hypothesis
+mypy
+pycalver
+pylint
+pytest
+pytest-aiohttp
+pytest-cov
+setuptools
+tox
+wheel
