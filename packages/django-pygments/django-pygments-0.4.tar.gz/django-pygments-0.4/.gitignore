@@ -1,0 +1,11 @@
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.*~
+*.bak
+.DS_Store
+/build
+/dist
+/*.egg-info
+
