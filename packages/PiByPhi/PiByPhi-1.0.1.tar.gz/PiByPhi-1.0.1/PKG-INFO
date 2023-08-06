@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: PiByPhi
+Version: 1.0.1
+Summary: This pipeline enables the user to extract the best fitting classification algorithm and its respective hyperparameters based on highest accuracy achieved. Different combinations of best fitting algorithm and thier confusion matrix can be returned.
+Home-page: http://www.pibyphi.com
+Author: Saurabh Verma
+Author-email: verma.saurabh8010@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/ersaurabhverma/PiByPhi
+Description: UNKNOWN
+Keywords: Machine Learning,Data Science,PiByPhi,Random Forest,Logistic,Naive Bayes,Automated Classifier
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
