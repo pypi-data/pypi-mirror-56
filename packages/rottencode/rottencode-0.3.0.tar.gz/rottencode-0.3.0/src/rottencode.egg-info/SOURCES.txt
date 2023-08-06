@@ -1,0 +1,16 @@
+setup.py
+src/rottencode/__init__.py
+src/rottencode/cli.py
+src/rottencode/code.py
+src/rottencode/events.py
+src/rottencode/logging.py
+src/rottencode/python.py
+src/rottencode/stats.py
+src/rottencode/utils.py
+src/rottencode.egg-info/PKG-INFO
+src/rottencode.egg-info/SOURCES.txt
+src/rottencode.egg-info/dependency_links.txt
+src/rottencode.egg-info/entry_points.txt
+src/rottencode.egg-info/not-zip-safe
+src/rottencode.egg-info/requires.txt
+src/rottencode.egg-info/top_level.txt
