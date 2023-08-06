@@ -1,0 +1,12 @@
+TracWikiAutoComplete-1.4.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+TracWikiAutoComplete-1.4.dist-info/METADATA,sha256=t3YwlocTWXYVZyVhxbJCes0JCRCtWPy32HLnShFtxdw,299
+TracWikiAutoComplete-1.4.dist-info/RECORD,,
+TracWikiAutoComplete-1.4.dist-info/WHEEL,sha256=90z-L1FjHEv_g8pMPaPbaXuhBIvSlvYObRaa122x8ag,97
+TracWikiAutoComplete-1.4.dist-info/entry_points.txt,sha256=V1ms7srK9stPZkD1vdYWVXIUUu4FjOXpHzsupgcPfZg,66
+TracWikiAutoComplete-1.4.dist-info/metadata.json,sha256=H3ctb8OuJR4bYesAqXkwxnO-W9O5q7NSjf2nb06ZGLc,561
+TracWikiAutoComplete-1.4.dist-info/top_level.txt,sha256=bnNUcShm6R-FDN_DLsbmY22C0SKoxJ1y2POt-0qJzeQ,17
+wikiautocomplete/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wikiautocomplete/web_ui.py,sha256=tLIOe0ADKTDRFd0QWyz68aSDKVEaKNaVh-qOABw9REg,16889
+wikiautocomplete/htdocs/css/jquery.textcomplete.css,sha256=Pi6q8_-SBJJacUNeTQPiHnft3fG5U4m3ABAy4GmacTQ,598
+wikiautocomplete/htdocs/js/jquery.textcomplete.min.js,sha256=LVEfx05sOY34HXGS_RbJHlA2K9wH21TTM7OfrCZRR4o,20246
+wikiautocomplete/htdocs/js/wikiautocomplete.js,sha256=xCpbegS4VTkqOHFHdgAajz4A9B72kZswQP6eWAkvpWU,5158
