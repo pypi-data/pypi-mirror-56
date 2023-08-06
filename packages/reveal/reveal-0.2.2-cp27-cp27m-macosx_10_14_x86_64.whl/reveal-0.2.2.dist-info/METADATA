@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: reveal
+Version: 0.2.2
+Summary: Graph based multi genome aligner
+Home-page: https://github.com/jasperlinthorst/reveal
+Author: Jasper Linthorst
+Author-email: jasper.linthorst@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: intervaltree
+Requires-Dist: networkx (==2)
+Requires-Dist: pysam
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
