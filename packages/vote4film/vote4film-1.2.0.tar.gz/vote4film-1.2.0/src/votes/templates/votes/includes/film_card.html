@@ -1,0 +1,197 @@
+{% comment %}
+Takes in:
+  - {{ film }}
+  - {{ film.score }}
+  - {{ film.vote_set.user }}
+{% endcomment %}
+
+{% load films_extras %}
+
+<style>
+  .films-card {
+    margin-bottom: 1em;
+    min-height: 10.37em;
+    display: block;
+    clear: left;
+    box-shadow: -3px 3px 6px 3px rgba(0, 0, 0, 0.25);
+  }
+  .films-card--unavailable {
+    background-color: lightcoral;
+  }
+  .films-card--watched {
+    background-color: silver;
+  }
+  .films-img {
+    max-width: 7em;
+    float: left;
+    margin-right: 0.75em;
+  }
+  .films-content {
+    padding-top: 0.5em;
+    padding-right: 0.25em;
+    padding-bottom: 0;
+  }
+  .films-title {
+    margin: 0em;
+    margin-top: 0.5em;
+    display: inline;
+  }
+  .films-tags {
+    display: inline;
+  }
+  .film-tags-group {
+    display: inline-block;
+  }
+  .films-tag {
+    display: inline-block;
+  }
+  .films-tag__year {
+    font-size: small;
+  }
+  .films-icon {
+    max-height: 1.1875em;
+    vertical-align: text-bottom;
+  }
+  .films-icon__youtube {
+    height: 1.25em;
+    max-height: 1.25em;
+    vertical-align: text-bottom;
+  }
+  .films-tag a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .films-great {
+    background-color: rgb(63, 191, 127, 0.4);
+  }
+  .films-good {
+    background-color: rgb(127, 191, 63, 0.4);
+  }
+  .films-meh {
+    background-color: rgb(191, 127, 63, 0.4);
+  }
+  .films-bad {
+    background-color: rgb(191, 63, 0, 0.4);
+  }
+
+  .votes-upup {
+    background-color: rgb(63, 191, 127, 0.4);
+  }
+  .votes-up {
+    background-color: rgb(127, 191, 63, 0.4);
+  }
+  .votes-down {
+    background-color: rgb(191, 127, 63, 0.4);
+  }
+  .votes-downdown {
+    background-color: rgb(191, 63, 0, 0.4);
+  }
+</style>
+
+<section class="films-card
+  {% if not film.is_available %}
+    films-card--unavailable
+  {% endif %}
+  {% if film.is_watched %}
+    films-card--watched
+  {% endif %}
+">
+  <a href="{{ film.poster_url }}">
+    <img class="films-img" src="{{ film.poster_url }}" />
+  </a>
+  <section class="films-content">
+    <h2 class="films-title">
+      {{ film.title }}
+      {% if film.is_watched %}
+        <span title="Already watched">👀</span>
+      {% endif %}
+    </h2>
+
+    <section class="films-tags">
+      <div class="films-tag films-tag__year">
+        ({{ film.year }})
+      </div>
+
+      <div class="film-tags-group">
+        <div class="films-tag">
+          <a href="{{ film.bbfc_search }}">
+            <img title="IMDB age rating - may not be accurate!" class="films-icon" src="
+              {% if film.age_rating == "U" %}
+                https://bbfc.co.uk/sites/default/files/BBFC%20_U_symbol_0.png
+              {% elif film.age_rating == "PG" %}
+                https://bbfc.co.uk/sites/default/files/BBFC%20_PG_symbol.png
+              {% elif film.age_rating == "12" %}
+                https://bbfc.co.uk/sites/default/files/BBFC%20_12_symbol.png
+              {% elif film.age_rating == "15" %}
+                https://bbfc.co.uk/sites/default/files/BBFC%20_15_symbol.png
+              {% elif film.age_rating == "18" %}
+                https://bbfc.co.uk/sites/default/files/BBFC%20_18_symbol.png
+              {% elif film.age_rating is None %}
+                https://bbfc.co.uk/sites/bbfc/themes/bbfc/images/icons/question.png
+              {% endif %}
+            "/>
+          </a>
+        </div>
+        <div class="films-tag">
+          ·
+          <a title="View film information on IMDB" href="{{ film.imdb }}">
+            <img class="films-icon"
+              src="https://ia.media-imdb.com/images/G/01/imdb/images/favicon-2165806970"
+            />&thinsp;<span class="
+              {% if film.imdb_rating >= 8 %}
+                films-great
+              {% elif film.imdb_rating >= 7.5 %}
+                films-good
+              {% elif film.imdb_rating >= 7 %}
+                films-meh
+              {% else %}
+                films-bad
+              {% endif %}
+            ">{{ film.imdb_rating }}
+            </span>
+          </a>
+        </div>
+        <div class="films-tag">
+          ·
+          <a title="Search YouTube" href="{{ film.youtube_search }}">
+            <img class="films-icon films-icon__youtube" src="https://youtube.com/favicon.ico" />
+          </a>
+        </div>
+      </div>
+
+      <br>
+
+      <div style="display: inline;" class="films-tag">
+        <em>{{ film.genre }}</em>
+      </div>
+      <div class="films-tag">
+        ·
+        <em>{{ film.runtime_mins|duration_format }}</em>
+      </div>
+    </section>
+
+    <p>{{ film.plot }}
+
+    <p>
+    {% if film.has_user_voted %}
+      {% for vote in film.vote_set.all %}
+        <span class="
+          {% if vote.choice == 2 %}
+            votes-upup
+          {% elif vote.choice == 1 %}
+            votes-up
+          {% elif vote.choice == -1 %}
+            votes-down
+          {% elif vote.choice == -2 %}
+            votes-downdown
+          {% endif %}
+        ">
+          {{ vote.user.username|slice:":3" }}
+        </span>
+      {% endfor %}
+    {% else %}
+      <a href="{% url 'votes:vote-create' %}">Vote for <small>(this)</small> film</a>
+    {% endif %}
+  </section>
+</section>

@@ -1,0 +1,12 @@
+{% extends "web/base.html" %}
+
+
+{% block content %}
+  <h1>Films <small>(by vote order)</small></h1>
+  {% for object in object_list %}
+    {% include "votes/includes/film_card.html" with film=object only %}
+  {% empty %}
+    <p>There are no films added :(</p>
+    <p><a href="{% url 'films:film-create' %}">Add a film!</a></p>
+  {% endfor %}
+{% endblock %}
