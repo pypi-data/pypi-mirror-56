@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mapnamindsdk
+Version: 0.1.4
+Summary: Mapna MIND Software Development Kit
+Home-page: https://www.mapnaec.com
+Author: Soheil Mehralian
+Author-email: mehralian.soheil@mapnaec.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+# Mapna MIND SDK
+
+Mapna MIND Software Development Kit. 
+
