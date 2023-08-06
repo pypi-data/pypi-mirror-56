@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: cmasher
+Version: 1.0.3
+Summary: Scientific colormaps for making stunning and 'cmashing' plots
+Home-page: https://www.github.com/1313e/CMasher
+Author: Ellert van der Velden
+Author-email: ellert_vandervelden@outlook.com
+License: BSD-3
+Keywords: cmasher colormaps plots perceptually uniform sequential
+Platform: Windows
+Platform: Linux
+Platform: Unix
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Utilities
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4
+Requires-Dist: colorspacious (>=1.1.0)
+Requires-Dist: matplotlib (>=2.2.4)
+Requires-Dist: numpy (>=1.8)
+
+|PyPI| |Python| |Travis| |AppVeyor| |ReadTheDocs| |Coverage|
+
+Description
+===========
+This package contains a collection of scientific colormaps for making stunning and *cmashing* plots, showcased in the `online documentation`_.
+The colormaps in *CMasher* are all designed to be perceptually uniform sequential, most of them are color vision deficiency (CVD; colorblind) friendly and they cover a wide range of different color combinations to accommodate for most applications.
+If you cannot find your ideal colormap here, then please open an `issue`_, provide the colors and/or style you want, and I will try to create one to your liking!
+Let's get rid of all bad colormaps in the world together!
+
+*If you use CMasher for your work, then please star the repo, such that I can keep track of how many users it has and more easily raise awareness of bad colormaps.*
+
+.. _issue: https://github.com/1313e/CMasher/issues
+.. _online documentation: https://cmasher.readthedocs.io/en/latest
+
+Colormap overview
+-----------------
+Below is an overview of all the colormaps that are currently in *CMasher*.
+For more information, see the `online documentation`_.
+
+.. image:: https://github.com/1313e/CMasher/raw/master/cmasher/colormaps/cmap_overview.png
+    :width: 100%
+    :align: center
+    :target: https://cmasher.readthedocs.io/en/latest
+    :alt: CMasher Colormap Overview
+
+
+How to install
+==============
+*CMasher* can be found in the PyPI system, so ``pip install cmasher`` should suffice.
+
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/CMasher.svg?logo=pypi&logoColor=white&label=PyPI
+   :target: https://pypi.python.org/pypi/CMasher
+   :alt: PyPI - Latest Release
+.. |Python| image:: https://img.shields.io/pypi/pyversions/CMasher.svg?logo=python&logoColor=white&label=Python
+   :target: https://pypi.python.org/pypi/CMasher
+   :alt: PyPI - Python Versions
+.. |Travis| image:: https://img.shields.io/travis/com/1313e/CMasher/master.svg?logo=travis%20ci&logoColor=white&label=Travis%20CI
+   :target: https://travis-ci.com/1313e/CMasher
+   :alt: Travis CI - Build Status
+.. |AppVeyor| image:: https://img.shields.io/appveyor/ci/1313e/CMasher/master.svg?logo=appveyor&logoColor=white&label=AppVeyor
+   :target: https://ci.appveyor.com/project/1313e/CMasher
+   :alt: AppVeyor - Build Status
+.. |ReadTheDocs| image:: https://img.shields.io/readthedocs/cmasher/latest.svg?logo=read%20the%20docs&logoColor=white&label=Docs
+    :target: https://cmasher.readthedocs.io/en/latest
+    :alt: ReadTheDocs - Build Status
+.. |Coverage| image:: https://img.shields.io/codecov/c/github/1313e/CMasher/master.svg?logo=codecov&logoColor=white&label=Coverage
+    :target: https://codecov.io/gh/1313e/CMasher/branches/master
+    :alt: CodeCov - Coverage Status
+
+
