@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gersyll
+Version: 1.3
+Summary: This module counts the number of words of different syllable lenght for all texts in a directory
+Home-page: https://github.com/gakonorde/gersyll
+Author: gakonorde
+Author-email: gabrielko@yandex.ru
+License: UNKNOWN
+Description: # gersyll package
+        
+        Gersyll is a Python module that counts number of words with different number of syllables for a number of texts in German language.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
