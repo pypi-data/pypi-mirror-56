@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: torchio
+Version: 0.1.0
+Summary: Dataset tools for medical images
+Home-page: https://github.com/fepegar/torchio
+Author: Fernando Perez-Garcia
+Author-email: fernando.perezgarcia.17@ucl.ac.uk
+License: MIT license
+Description: # torchio
+Keywords: torchio
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: OS Independent
