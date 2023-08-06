@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "intuitive"
+version = "0.4.0"
+description = ""
+authors = ["John Smith <John.Smith@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
