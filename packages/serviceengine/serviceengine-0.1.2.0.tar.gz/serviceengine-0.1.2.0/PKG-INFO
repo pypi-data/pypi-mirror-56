@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: serviceengine
+Version: 0.1.2.0
+Summary: A Quickbuild Python Service Engine package
+Home-page: https://github.com/YuvalFeldman/PyServEn
+Author: Yuval Feldman
+Author-email: feldmanyuval@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
