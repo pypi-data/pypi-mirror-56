@@ -1,0 +1,13 @@
+matrix_semantic_map/OLS_tools.py,sha256=SgXrXtRXn3s38pftyB6sRQWUciQ_DE5VroclykDvaf4,5445
+matrix_semantic_map/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matrix_semantic_map/matrix_map_tools.py,sha256=iZgQbJiP_ApgB-ss-SLoilCJBJB_T9KlKIOUWtfPMe8,9039
+matrix_semantic_map/schema_test_suite.py,sha256=dKdK30UG1eSgUwDVuEChuOqqb4XBUmhJ_0sQ1oBBj_Q,3105
+matrix_semantic_map/json_schema/expression_matrix_semantic_map.json,sha256=vSiYOpC2eNi2GYQoN1XYMUmc0bBL2BkpUKDrW62NDf0,2703
+matrix_semantic_map/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matrix_semantic_map/test/testMapBuilder.py,sha256=UiG6w5ozY-n2bUtE-5PzNquNZIYGhmvCH11VhmOeWyQ,2826
+matrix_semantic_map/test/test_OLSQueryWrapper.py,sha256=aKXkvzKY41LlNdbMxyOnADLStqyECGpi5Ua__wyRH6I,634
+matrix_semantic_map-0.0.8.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+matrix_semantic_map-0.0.8.dist-info/METADATA,sha256=0PEoXKN17FzsT0W-0k-LvSM9OGFfCTJkHDpjaaPUSDs,8356
+matrix_semantic_map-0.0.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+matrix_semantic_map-0.0.8.dist-info/top_level.txt,sha256=9_63oms8_1BBJmuGAUlrt5ElH5R92OR_w857RQK_7zw,20
+matrix_semantic_map-0.0.8.dist-info/RECORD,,
