@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+selenium_datatable/__init__.py
+selenium_datatable/container.py
+selenium_datatable/rowitem.py
+selenium_datatable.egg-info/PKG-INFO
+selenium_datatable.egg-info/SOURCES.txt
+selenium_datatable.egg-info/dependency_links.txt
+selenium_datatable.egg-info/requires.txt
+selenium_datatable.egg-info/top_level.txt
