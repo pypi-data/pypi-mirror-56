@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: django-tonnikala
+Version: 0.0.3
+Summary: Django backend for Tonnikala templating language
+Home-page: https://github.com/koirikivi/django-tonnikala
+Author: Rainer Koirikivi
+Author-email: rainer@koirikivi.fi
+License: UNKNOWN
+Description: Tonnikala templates - powered by ponies!
+        ========================================
+        
+        Django integration for [the one-ton templating language](https://github.com/tetframework/tonnikala).
+        
+        To use, install (with `python setup.py install`) and configure your settings:
+        
+        ```python
+        TEMPLATES = [
+            {
+                'BACKEND': 'django_tonnikala.backends.Tonnikala',
+                'DIRS': [],
+                'APP_DIRS': True,
+                'OPTIONS': {
+                    # TODO
+                },
+            },
+        ]
+        ```
+        
+        And add your templates to `your_app/tonnikala/`!
+        
+        Running the example project
+        ---------------------------
+        
+        The git repository includes an example project
+        
+        ```bash
+        python3 -m venv venv
+        pip install -r example_project/requirements.txt
+        python example_project/manage.py migrate
+        python example_project/manage.py runserver
+        ```
+        
+        And then visit http://localhost:8000
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
