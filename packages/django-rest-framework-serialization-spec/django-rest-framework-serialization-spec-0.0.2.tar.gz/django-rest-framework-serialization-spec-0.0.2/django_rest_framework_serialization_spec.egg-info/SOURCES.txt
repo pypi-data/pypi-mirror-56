@@ -1,0 +1,17 @@
+setup.cfg
+setup.py
+django_rest_framework_serialization_spec.egg-info/PKG-INFO
+django_rest_framework_serialization_spec.egg-info/SOURCES.txt
+django_rest_framework_serialization_spec.egg-info/dependency_links.txt
+django_rest_framework_serialization_spec.egg-info/requires.txt
+django_rest_framework_serialization_spec.egg-info/top_level.txt
+serialization_spec/__init__.py
+serialization_spec/plugins.py
+serialization_spec/serialization.py
+serialization_spec/utils.py
+serialization_spec/__pycache__/__init__.cpython-35.pyc
+serialization_spec/__pycache__/__init__.cpython-36.pyc
+serialization_spec/__pycache__/plugins.cpython-35.pyc
+serialization_spec/__pycache__/serialization.cpython-35.pyc
+serialization_spec/__pycache__/serialization.cpython-36.pyc
+serialization_spec/__pycache__/utils.cpython-35.pyc
