@@ -1,0 +1,15 @@
+makeprompt/__init__.py,sha256=Ul8pQkBhwrWOwlRVFUkSPi5AAImN5d682LUmwsas-_I,1036
+makeprompt/__main__.py,sha256=A012B2647Idm30BQLq3eqYZQXXqkXGsg0vxJ7oR4UXo,50
+makeprompt/parts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+makeprompt/parts/git.py,sha256=X9W4THUKuj6qUGV9-y09nNsSbUzQV0snJuzTLJV8jdc,1529
+makeprompt/parts/jobs.py,sha256=TgKWjQ5vfP9MavoIL9sgPlp7zuavDpb3vTMGf1NGUoA,201
+makeprompt/parts/virtualenv.py,sha256=GTg1vVSlz8pN0_aXu99rRexKeUTWe0KNykFt_C4jB_Q,750
+makeprompt/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+makeprompt/utils/color.py,sha256=_LGx9guwJ_4h193e8rZMJZK99qDx9oconQpBFUX455s,2636
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_utils_color.py,sha256=gb6HZRy-ol9SuEs6PFbT_yOqYQjg8XiAEujUHY1ikps,396
+makeprompt-0.1.dist-info/METADATA,sha256=_jjvId9wqUezm849DY_1YRMw4RJR5l8ucfonHZUrsDM,1258
+makeprompt-0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+makeprompt-0.1.dist-info/entry_points.txt,sha256=ezrNK9XTSycarB21OGTGMCEed7VJx_oEgAOFIXHX1_o,56
+makeprompt-0.1.dist-info/top_level.txt,sha256=D4Ao_wutrVfOC5uLqtHK7AtU11Bd68Me1WTtv-GjplE,17
+makeprompt-0.1.dist-info/RECORD,,
