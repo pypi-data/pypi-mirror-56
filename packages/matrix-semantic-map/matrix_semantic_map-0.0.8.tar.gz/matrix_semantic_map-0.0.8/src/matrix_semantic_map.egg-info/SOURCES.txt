@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/matrix_semantic_map/OLS_tools.py
+src/matrix_semantic_map/__init__.py
+src/matrix_semantic_map/matrix_map_tools.py
+src/matrix_semantic_map/schema_test_suite.py
+src/matrix_semantic_map.egg-info/PKG-INFO
+src/matrix_semantic_map.egg-info/SOURCES.txt
+src/matrix_semantic_map.egg-info/dependency_links.txt
+src/matrix_semantic_map.egg-info/requires.txt
+src/matrix_semantic_map.egg-info/top_level.txt
+src/matrix_semantic_map/json_schema/expression_matrix_semantic_map.json
+src/matrix_semantic_map/test/__init__.py
+src/matrix_semantic_map/test/testMapBuilder.py
+src/matrix_semantic_map/test/test_OLSQueryWrapper.py
