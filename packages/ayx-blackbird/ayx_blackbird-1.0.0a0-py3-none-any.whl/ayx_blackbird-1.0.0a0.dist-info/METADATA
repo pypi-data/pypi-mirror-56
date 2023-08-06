@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ayx-blackbird
+Version: 1.0.0a0
+Summary: The (Better) Alteryx Python SDK Abstraction Layer
+Home-page: https://github.com/dme722/ayx-blackbird
+Author: Drew Ellison
+Author-email: dme722@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6.0
+Requires-Dist: Click (>=7.0)
+Requires-Dist: numpy (>=1.16.3)
+Requires-Dist: pandas (>=0.23.4)
+Requires-Dist: xmltodict (>=0.11.0)
+
+UNKNOWN
+
+
