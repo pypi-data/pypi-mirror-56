@@ -1,0 +1,16 @@
+sms_toolkit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sms_toolkit/constants/__init__.py,sha256=GpgY2MVutbVhmpJjsrPto46chw-6J0z4k_BNmT3cX1o,128
+sms_toolkit/constants/encoding.py,sha256=JPUmjfupSNQJ3_vjDw4Sjfj1Yq8R6FVdpsF0FTLwoFk,168
+sms_toolkit/constants/unicode_to_gsm_map.py,sha256=em-pfiTTacJYjW2ZwHBgsqkWNpLCEEPSu9Ncy8pUKns,2835
+sms_toolkit/messages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sms_toolkit/messages/profiling.py,sha256=C2Wtid2QSL3Yw4it4Hq0IHYA4jyGEEL3cyX4KFHbi8c,4234
+sms_toolkit/utils/__init__.py,sha256=FEs3umA_9nRfE2ODdh5jpYWhHV2n4DWRLmoXgZVV8uI,246
+sms_toolkit/utils/encoding.py,sha256=lQyLdQa_TVzbQE67e7rPSWtA6XYY5okvYgCj7Tvq7e8,1252
+sms_toolkit/utils/general.py,sha256=i-SKTvUEIM9lC8q5pdmiN46iDo_e32hQQSkOjPaHOYw,106
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=UFTxlhi1urMarO6FcQGjFOhtamY_YKRzHcEqjtTRx2E,954
+tests/test_message_segmenting.py,sha256=YIZjBKQVKkHXdb_Re2Vce5ilmV0Gljo-DPGUtdrOUuk,1161
+sms_toolkit-1.0.0.dist-info/METADATA,sha256=mHekuC4ebTdwbOeYcuqVtS1qNetAGmfNomisqvDRNec,1445
+sms_toolkit-1.0.0.dist-info/WHEEL,sha256=g3LQva5oS9Ma-DPFwX8R7Ke-NO25KWW489RoZdNxJXc,92
+sms_toolkit-1.0.0.dist-info/top_level.txt,sha256=2n3Ysjq56H9lP8PeTZoDnGwg3J7RtKfuKSEZAb8wn9w,18
+sms_toolkit-1.0.0.dist-info/RECORD,,
