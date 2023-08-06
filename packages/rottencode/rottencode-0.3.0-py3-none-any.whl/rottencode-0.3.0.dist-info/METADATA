@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: rottencode
+Version: 0.3.0
+Summary: exhibit rotten code
+Home-page: UNKNOWN
+Author: Oliver Berger
+Author-email: diefans@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: structlog
+Requires-Dist: colorama
+Requires-Dist: typed-astunparse
+Provides-Extra: tests
+Requires-Dist: pytest (<5.0,>=4.6) ; extra == 'tests'
+Requires-Dist: pytest-cov (<3.0,>=^2.7) ; extra == 'tests'
+Requires-Dist: mock (>=3.0<4.0) ; extra == 'tests'
+Requires-Dist: pytest-mock (>=1.10<2.0) ; extra == 'tests'
+Requires-Dist: pytest-watch (>=4.2<5.0) ; extra == 'tests'
+Requires-Dist: pytest-randomly (>=3.1<4.0) ; extra == 'tests'
+Requires-Dist: pdbpp ; extra == 'tests'
+
+exhibit rotten code
+
+
