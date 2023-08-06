@@ -1,0 +1,5 @@
+iso639
+requests
+requests-html
+segments<3,>=2.1.3
+setuptools
