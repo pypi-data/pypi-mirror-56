@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+gersent/__init__.py
+gersent/gersent.py
+gersent/test.py
+gersent.egg-info/PKG-INFO
+gersent.egg-info/SOURCES.txt
+gersent.egg-info/dependency_links.txt
+gersent.egg-info/top_level.txt
+gersent/wordlists/de/negative.json
+gersent/wordlists/de/positive.json
