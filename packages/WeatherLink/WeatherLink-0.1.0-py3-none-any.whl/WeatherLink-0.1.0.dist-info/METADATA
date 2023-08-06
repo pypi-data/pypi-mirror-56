@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: WeatherLink
+Version: 0.1.0
+Summary: WeatherLink handler
+Home-page: https://git.iszf.irk.ru/RAO/weatherlink.git
+Author: Anastasia Bashkirtseva, Mikhail Kuchinsky, Vladimir Bashkirtsev
+Author-email: anastasia@bashkirtseva.com, kat6chinskiy@gmail.com, vladimir@bashkirtsev.com
+License: MIT
+Keywords: Weather,WeatherLink
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: psutil
+
+UNKNOWN
+
+
