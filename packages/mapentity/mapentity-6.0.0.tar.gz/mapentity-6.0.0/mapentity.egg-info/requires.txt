@@ -1,0 +1,22 @@
+BeautifulSoup4
+Django<2
+gpxpy
+django-appypod
+appy@ https://github.com/GeotrekCE/appy/archive/1.0.0.mc1.tar.gz
+django-compressor
+django-crispy-forms
+django-embed-video
+django-filter
+django-geojson
+django-leaflet
+django-modeltranslation
+django-shapes
+django-tinymce
+django-weasyprint
+djangorestframework
+djangorestframework-gis
+easy-thumbnails
+lxml
+paperclip
+requests
+WeasyPrint
