@@ -1,0 +1,3 @@
+include presalytics/lib/plugins/css/*
+include presalytics/lib/templates/html/*
+include presalytics/lib/templates/favicon.ico
