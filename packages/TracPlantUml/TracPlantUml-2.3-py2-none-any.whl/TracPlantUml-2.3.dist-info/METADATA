@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: TracPlantUml
+Version: 2.3
+Summary: A macro to include diagrams from PlantUML
+Home-page: https://trac-hacks.org/wiki/PlantUmlMacro
+Author: Alvaro J. Iradier
+Author-email: alvaro.iradier@polartech.es
+Maintainer: Ryan J Ollos
+Maintainer-email: ryan.j.ollos@gmail.com
+License: 3-Clause BSD
+Keywords: trac macro uml plantuml embed include
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+
+UNKNOWN
+
+
