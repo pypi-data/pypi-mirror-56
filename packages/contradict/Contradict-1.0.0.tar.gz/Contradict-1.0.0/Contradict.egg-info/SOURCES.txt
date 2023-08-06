@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+Contradict.egg-info/PKG-INFO
+Contradict.egg-info/SOURCES.txt
+Contradict.egg-info/dependency_links.txt
+Contradict.egg-info/requires.txt
+Contradict.egg-info/top_level.txt
+coppr/__init__.py
+coppr/error.py
+coppr/hashmap.py
+coppr/sorted_dict.py
+coppr/trie.py
