@@ -1,0 +1,5 @@
+future==0.15.2
+Jinja2==2.10
+lxml==4.2
+networkx==1.11
+opencv-python~=3.2
