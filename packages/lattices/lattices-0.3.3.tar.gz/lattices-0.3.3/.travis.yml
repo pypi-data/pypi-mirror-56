@@ -1,0 +1,24 @@
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "pypy3"
+
+matrix:
+  allow_failures:
+    - python: "pypy3"
+
+# command to install dependencies
+install:
+  - pip install flit
+  - flit install
+
+# command to run tests
+script:
+  - pytest --cov
+
+after_success:
+  - codecov
+
+notifications:
+  email: false
