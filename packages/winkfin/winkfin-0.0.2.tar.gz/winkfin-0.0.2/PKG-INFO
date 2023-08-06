@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: winkfin
+Version: 0.0.2
+Summary: Winkstone Finance Utility Package
+Home-page: https://github.com/winkstone
+Author: winkstone
+Author-email: hslee@winkstone.com
+License: UNKNOWN
+Description: ## Readme
+        
+        
+        ### Install with wheel
+        python -m pip install winkfin-0.0.1-py3-none-any.whl
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
