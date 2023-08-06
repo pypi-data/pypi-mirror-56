@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Amazon-crawler
+Version: 0.0.3
+Summary: A high concurrency crawler framework for Amazon
+Home-page: https://github.com/NocoldBob/Amazon_crawler
+Author: fastbiubiu
+Author-email: fastbiubiu@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+针对亚马逊的爬虫架构，高并发分布式架构
+
+
