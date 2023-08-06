@@ -1,0 +1,37 @@
+name: DIALS output of processing an L-cysteine dataset
+author: Ben Williams, Richard Gildea, Graeme Winter (2019)
+license: CC-BY 4.0
+description: >
+  Typical DIALS output for a small-molecule dataset.
+
+  These were derived from the DIALS small molecule tutorial L-cysteine dataset
+  (https://zenodo.org/record/51405 files l-cyst_0[1-4].tar.gz).
+
+  On a linux terminal, the relevant CBF-format image files can be obtained with
+  $ curl -O https://zenodo.org/record/51405/files/l-cyst_0[1-4].tar.gz
+  $ ls *tar.gz | xargs -i tar xzf {}
+
+  The imported.expt file was then generated using
+  $ dials.import allow_multiple_sweeps=True l-cyst_0*cbf
+
+  and the strong.refl file was generated using
+  $ dials.find_spots imported.expt
+
+  The indexed.expt and indexed.refl were generated using
+  $ dials.index imported.expt strong.refl
+
+data:
+  - url: https://dials.diamond.ac.uk/regression_data/l-cysteine_four_sweeps/datablock.json
+  - url: https://dials.diamond.ac.uk/regression_data/l-cysteine_four_sweeps/strong.pickle
+  - url: https://github.com/dials/data-files/raw/63421a6a8a0ccb844f4f68ff073172f9e4bd4713/l_cysteine_dials_output/imported.expt
+  - url: https://github.com/dials/data-files/raw/63421a6a8a0ccb844f4f68ff073172f9e4bd4713/l_cysteine_dials_output/indexed.expt
+  - url: https://github.com/dials/data-files/raw/63421a6a8a0ccb844f4f68ff073172f9e4bd4713/l_cysteine_dials_output/strong.refl
+  - url: https://github.com/dials/data-files/raw/63421a6a8a0ccb844f4f68ff073172f9e4bd4713/l_cysteine_dials_output/indexed.refl
+  - url: https://github.com/dials/data-files/raw/6c80c466777cb9cf5a14f963485364461e5a6ea5/l_cysteine_integrated/20_integrated.pickle
+  - url: https://github.com/dials/data-files/raw/6c80c466777cb9cf5a14f963485364461e5a6ea5/l_cysteine_integrated/20_integrated_experiments.json
+  - url: https://github.com/dials/data-files/raw/6c80c466777cb9cf5a14f963485364461e5a6ea5/l_cysteine_integrated/25_integrated.pickle
+  - url: https://github.com/dials/data-files/raw/6c80c466777cb9cf5a14f963485364461e5a6ea5/l_cysteine_integrated/25_integrated_experiments.json
+  - url: https://github.com/dials/data-files/raw/6c80c466777cb9cf5a14f963485364461e5a6ea5/l_cysteine_integrated/30_integrated.pickle
+  - url: https://github.com/dials/data-files/raw/6c80c466777cb9cf5a14f963485364461e5a6ea5/l_cysteine_integrated/30_integrated_experiments.json
+  - url: https://github.com/dials/data-files/raw/6c80c466777cb9cf5a14f963485364461e5a6ea5/l_cysteine_integrated/35_integrated.pickle
+  - url: https://github.com/dials/data-files/raw/6c80c466777cb9cf5a14f963485364461e5a6ea5/l_cysteine_integrated/35_integrated_experiments.json
