@@ -1,0 +1,17 @@
+band/__init__.py,sha256=m4zzPpuktnQnCxToj75gT1H_8KDWEU5d1wirtrG7Nvo,183
+band/base.py,sha256=k8RbuaoMabHx6VjboohPvHr4r2-13iI5RTmcgeiAlvQ,5077
+band/config.py,sha256=DjW8ibhMlO1M_N4uQk_WmRIQyb1qnkdl9j8lTHMP-wg,540
+band/covert.py,sha256=PzAVbeRMh8lKQXOur98JS-cZsxft6iSLNdlhr5KRUFc,4377
+band/layers.py,sha256=yfWuWbYhTOKIaOC6yfn0534lDt7KEbFTyDJ0HW0Mub4,13424
+band/progress.py,sha256=9XgWORar3-nRUj6FFNPqQvBkhqaS7gQdf_M8b16ysPw,13298
+band/utils.py,sha256=ur_Z5O23U5ERWLUWXR1eda6OXbN0dxHAXTE2eQFgjHk,1886
+band/version.py,sha256=GU9X_IM_HQnCXiYDoEAx27nQALmVO4mEzf8nzy7xPTw,182
+band/dataset/__init__.py,sha256=-_HM3EpWkpLPU8VNRZola2-BMJM2hgi1iUXspcuA09k,214
+band/dataset/chnsenticorp.py,sha256=5haEZaKb1LVpM5ImCLq9KgoDjsWdTmhAqi3soZ8gPqU,1977
+band/dataset/lcqcm.py,sha256=RX4sPCuy0t2TySt7s5D6eeFCWw1GKQpTGw45365ZzcM,2163
+band/dataset/masa_ner.py,sha256=61SyMQj4AATnzZaXuuGDX7WsHqDNrFdhnuV1TTXUQ80,2041
+band/dataset/toxic.py,sha256=pnqeBulkBNMY-HuNRRHMmX_43tQXlP8RU0Z4fnljAxc,2136
+band-0.2.6.dist-info/METADATA,sha256=EhPVN5DoU_nA2eEGQZkNMcJWOsG8AwzxyLe6-zQ2DQo,2012
+band-0.2.6.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+band-0.2.6.dist-info/top_level.txt,sha256=xO53pjPc38tiWho3YVS5NPhGfFQkcjs1BypzXZmMAs4,5
+band-0.2.6.dist-info/RECORD,,
