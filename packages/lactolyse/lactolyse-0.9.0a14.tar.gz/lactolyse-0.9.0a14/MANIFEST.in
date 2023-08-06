@@ -1,0 +1,11 @@
+# include meta data
+include LICENSE
+include README.rst
+# include tests and files needed by tests
+include tox.ini
+include pyproject.toml
+include .coveragerc
+include tests/.env
+recursive-include tests *.py *.yml
+recursive-include src/lactolyse/tests *.py
+include src/lactolyse/docker_image/Dockerfile

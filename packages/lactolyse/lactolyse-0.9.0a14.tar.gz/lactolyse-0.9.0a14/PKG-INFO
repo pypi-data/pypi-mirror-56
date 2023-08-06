@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: lactolyse
+Version: 0.9.0a14
+Summary: Django package for lactate threshold analyses
+Home-page: https://github.com/dblenkus/lactolyse
+Author: Domen Blenkuš
+Author-email: domen@blenkus.com
+License: Apache License (2.0)
+Description: =========
+        Lactolyse
+        =========
+        
+        |build| |pypi_version| |pypi_pyversions| |pypi_downloads| |code_style|
+        
+        .. |build| image:: https://travis-ci.org/dblenkus/lactolyse.svg?branch=master
+            :target: https://travis-ci.org/dblenkus/lactolyse
+            :alt: Build Status
+        
+        .. |pypi_version| image:: https://img.shields.io/pypi/v/lactolyse.svg
+            :target: https://pypi.org/project/lactolyse
+            :alt: Version on PyPI
+        
+        .. |pypi_pyversions| image:: https://img.shields.io/pypi/pyversions/lactolyse.svg
+            :target: https://pypi.org/project/lactolyse
+            :alt: Supported Python versions
+        
+        .. |pypi_downloads| image:: https://pepy.tech/badge/lactolyse
+            :target: https://pepy.tech/project/lactolyse
+            :alt: Number of downloads from PyPI
+        
+        .. |code_style| image:: https://img.shields.io/badge/code%20style-black-black.svg
+            :target: https://black.readthedocs.io/
+            :alt: Code style: black
+        
+Keywords: ftp lactate threshold
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Other Audience
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6, <3.8
+Description-Content-Type: text/x-rst
+Provides-Extra: package
+Provides-Extra: test

@@ -1,0 +1,21 @@
+.DS_Store
+
+__pycache__/
+
+/.vscode/
+
+# Ignore files created by setup.py.
+build/
+dist/
+MANIFEST
+*.egg-info
+*.egg
+distribute*.tar.gz
+
+# Tox files
+.tox/
+
+# ignore Coverage.py files
+.coverage.*
+htmlcov/
+
