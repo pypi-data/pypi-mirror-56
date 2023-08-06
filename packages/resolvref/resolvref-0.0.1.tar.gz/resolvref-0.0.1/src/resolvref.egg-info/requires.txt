@@ -1,0 +1,11 @@
+
+[development]
+pytest<6,>=5.2.2
+pytest-cov<3.0,>=2.5.1
+pytest-xdist<2.0,>=1.22.5
+
+[development:python_version < "3.6"]
+mock==2.0.0
+
+[yaml]
+pyyaml<6,>=5
