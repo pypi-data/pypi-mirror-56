@@ -1,0 +1,12 @@
+README.rst
+setup.py
+usb.ids
+USBdev/__init__.py
+USBdev/__metadata__.py
+USBdev/main.py
+bin/usbdev
+usbdev.egg-info/PKG-INFO
+usbdev.egg-info/SOURCES.txt
+usbdev.egg-info/dependency_links.txt
+usbdev.egg-info/requires.txt
+usbdev.egg-info/top_level.txt
