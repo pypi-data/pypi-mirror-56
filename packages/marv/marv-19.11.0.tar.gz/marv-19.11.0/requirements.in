@@ -1,0 +1,14 @@
+-r marv-cli.in
+PyJWT
+aiohttp
+aiosqlite
+bcrypt
+configparser
+gunicorn
+jinja2
+pendulum
+pycapnp-for-marv==0.6.3
+pypika
+setproctitle
+tortoise-orm
+uvloop
