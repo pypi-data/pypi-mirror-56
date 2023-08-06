@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: JetKit-Flask
+Version: 1.0.0
+Summary: Rapid web application development.
+Home-page: https://github.com/jetbridge/jetkit-flask
+Author: JetBridge
+Author-email: mischa@jetbridge.com
+License: ABRMS
+Description: [![CircleCI](https://circleci.com/gh/jetbridge/jetkit-flask.svg?style=svg&circle-token=82f320fde8f21fa71931ce9776daaefa580be4f8)](https://circleci.com/gh/jetbridge/jetkit-flask)
+        
+        JetBridge Python Core Library
+        -----------------------------
+        
+        ## What is it?
+        Bits and pieces of useful code, base classes, models, utilities
+        that we have assembled to reuse for our projects.
+        
+Platform: any
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
