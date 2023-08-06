@@ -1,0 +1,6 @@
+requests
+keyring
+diskcache
+
+[:python_version>='3']
+configparse
