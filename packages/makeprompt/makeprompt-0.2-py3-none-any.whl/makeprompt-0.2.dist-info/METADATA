@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: makeprompt
+Version: 0.2
+Summary: Generate customised shell prompts (for ZSH)
+Home-page: https://github.com/rshk/makeprompt
+Author: Samuele Santi
+Author-email: samuele@samuelesanti.com
+License: BSD License
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+
+Makeprompt
+==========
+
+Generate rich shell prompts. Only supports Zsh at the moment.
+
+
+Usage
+-----
+
+Install it::
+
+    pip install --user makeprompt
+
+Put this in your ``~/.zshrc``::
+
+    autoload -Uz promptinit
+    promptinit
+    prompt off
+    setopt PROMPT_SUBST
+
+    PROMPT='$( ~/.local/bin/makeprompt )'
+
+
+Features
+--------
+
+- Display user/hostname/path using truecolor (24-bit) colors
+- 8-bit color fallbacks, for terminals that don't support truecolor
+- git repository status information (branch, dirty)
+- Python enabled virtualenv information
+- Background (stopped) jobs count
+
+
+Customize
+---------
+
+The ``MAKEPROMPT_COLORS`` environment variable can be used to change
+colors of different parts of the prompt.
+
+Format is similar to ``LS_COLORS``, for example::
+
+    export MAKEPROMPT_COLORS='user=38;2;56;142;60:host=38;2;198;255;0'
+
+A utility script is provided to conveniently generate TrueColor
+paletters from HTML hex colors.
+
+For example::
+
+    python -m makeprompt.utils.make_truecolor_palette user='#808' host='#f0f' path='#ff0'
+
+
+you can also use this in your shell configuration::
+
+    eval $( python -m makeprompt.utils.make_truecolor_palette ... )
+    export MAKEPROMPT_COLORS
+
+
