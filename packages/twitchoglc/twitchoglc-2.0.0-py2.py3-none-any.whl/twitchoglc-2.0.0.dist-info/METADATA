@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: twitchoglc
+Version: 2.0.0
+Summary: Quake-style PK3/BSP(3) file loader
+Home-page: https://github.com/mcfletch/twitch
+Author: Mike C. Fletcher
+Author-email: mcfletch@users.sourceforge.net
+License: BSD
+Download-URL: http://pypi.python.org/pypi/OpenGLContext_twitch
+Description-Content-Type: UNKNOWN
+Keywords: PyOpenGL,OpenGL,Context,OpenGLContext,render,3D,TrueType,text,scenegraph
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: X11 Applications
+Classifier: Environment :: Win32 (MS Windows)
+Requires-Dist: OpenGLContext
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: simpleparse
+Requires-Dist: six
+
+UNKNOWN
+
+

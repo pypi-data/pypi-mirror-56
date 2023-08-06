@@ -1,0 +1,5 @@
+[console_scripts]
+twitch-downloader = twitchoglc.downloader:main
+twitch-parse-bsp = twitchoglc.bsp:main
+twitch-viewer = twitchoglc.viewer:main
+
