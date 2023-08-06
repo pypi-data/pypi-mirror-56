@@ -1,0 +1,188 @@
+Metadata-Version: 2.1
+Name: mercuryV1
+Version: 0.1
+Summary: API wrapper library in python for mercury CRM
+Home-page: https://github.com/kierenfunk/mercuryV1/
+Author: Kieren Funk
+Author-email: kierenfunk@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# mercuryV1
+API wrapper library in python for mercury CRM
+for more information please visit the API reference on mercury's website [here](https://support.connective.com.au/hc/en-us/articles/360009453654-Getting-Started-with-Mercury-API).
+
+## Initialisation
+Get YOUR_ACCESS_KEY and YOUR_ACCESS_TOKEN from your mercury account (Admin > Integrations). If you wish to use sandbox mode, you will need to login with the UAT url, there is a different token for sandbox.
+
+```
+from mercuryV1 import Mercury
+
+client = Mercury(token='YOUR_ACCESS_TOKEN',key='YOUR_ACCESS_KEY',sandbox=True)
+```
+
+## Examples
+```
+from mercuryV1 import Mercury
+
+# initialise the client
+client = Mercury(token='YOUR_ACCESS_TOKEN', key='YOUR_ACCESS_KEY', sandbox=True)
+
+# create a new contact with some person data
+person = {"firstName": "Henry", "lastName":"Ford", "email":"henryford@ford.com"}
+client.contacts.create(data=person)
+
+# retrieve the entire list of contacts in mercury
+client.contacts.get()
+
+# retrieve a list of 30 contacts beginning from the 203rd contact
+client.contacts.get(count=30, offset=203)
+
+# search for opportunities that were modified after 13th March 2019 and sort them in last modified date, ascending order
+searchOptions = {"lastUpdated":"2019-03-13"}
+sortOptions = {"key":"lastModifiedDate", "order":"ASC"}
+client.opportunities.get(search=searchOptions, sort=sortOptions)
+
+# create a related party and link it between an opportunity and a contact
+relatedPartyData = {"personID":"CONTACT_ID","relationship":"Father"}
+client.relatedParties.create(data=relatedPartyData, parentId="OPPORTUNITY_ID")
+```
+
+## Contacts
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.contacts.create(data={})` | dict
+`client.contacts.delete(id='')` | Response status code
+`client.contacts.fetch(id='')` | list
+`client.contacts.get(count=100, offset=0, search={}, sort={})` | list
+`client.contacts.update(id='', data={})` | Response status code
+
+#### Contact Search Options
+Option | Type | Description
+--- | --- | --- 
+name | string |         Contact name to search for
+isDeleted | boolean |         Set to true if searching for deleted contacts
+excludeDoNotMail | boolean |         Exclude contacts marked as do not email from the search results.         If not set, will default to false
+excludeEmailBounced | boolean |         Exclude contacts with bounced emails from the search results.          If not passed, will default to false
+lastUpdated | string  |         Returns results after the given lastUpdated date. Date should be in yyyy-mm-dd format
+companyName | string |         Company name of the person
+personType | string |         The relationship type of the person
+categoryId | string |         Search by the category id
+campaignId | string |         Search by the campaign id
+contactNumber | string |         Search by the contact number of the person
+email | string |         Search by the email address of the person
+dateOfBirth | string  |         Search by date of birth of the person. Date should be in yyyy-mm-dd format
+birthday | string  |         Search by birthday anniversary. Date should be in yyyy-mm-dd format
+createdOn | string  |         Search by creation date. Date should be in yyyy-mm-dd format 
+
+## Opportunities
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.opportunities.create(data={})` | dict
+`client.opportunities.delete(id='')` | Response status code
+`client.opportunities.fetch(id='')` | list
+`client.opportunities.get(count=100, offset=0, search={}, sort={})` | list
+`client.opportunities.update(id='', data={})` | Response status code
+
+#### Opportunity Search Options
+Option | Type | Description
+--- | --- | --- 
+name | string |         Opportunity name to search for
+isDeleted | boolean |         Set to true if searching for deleted opportunities
+statuses | list |         List of opportunity statuses
+lastUpdated | string  |         Search by last updated date. Date should be in yyyy-mm-dd format.
+transactionType | string |         The type of transaction
+user | string |         CA number of the agent
+createdOn | string  |         Search by created date. Date should be in yyyy-mm-dd format.
+confirmedSettlementDate | string  |         Search by settlement date. Date should be in yyyy-mm-dd format.
+interestOnlyExpiry | string |         Search by interest only expiry date. Date should be in yyyy-mm-dd format.
+fixedRateExpiry | string |         Search by fixed rate expiry date. Date should be in yyyy-mm-dd format. 
+
+#### Contact and Opportunity Sort Options
+Option | Type | Description
+--- | --- | --- 
+key | string |         creationDate or lastModifiedDate. creationDate is default
+order | string |         ASC or DESC. DESC is default 
+
+
+## Addresses
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.addresses.create(data={}, parentId='')` | dict
+`client.addresses.delete(parentId='', nestedId='')` | Response status code
+`client.addresses.update(data={}, parentId='', nestedId='')` | Response status code
+
+## Contact Methods
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.contactMethods.create(data={}, parentId='')` | dict
+`client.contactMethods.delete(parentId='', nestedId='')` | Response status code
+`client.contactMethods.update(data={}, parentId='', nestedId='')` | Response status code
+
+## Expenses
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.expenses.create(data={}, parentId='')` | dict
+`client.expenses.delete(parentId='', nestedId='')` | Response status code
+`client.expenses.update(data={}, parentId='', nestedId='')` | Response status code
+
+## Incomes
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.incomes.create(data={}, parentId='')` | dict
+`client.incomes.delete(parentId='', nestedId='')` | Response status code
+`client.incomes.update(data={}, parentId='', nestedId='')` | Response status code
+
+## Assets
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.assets.create(data={}, parentId='')` | dict
+`client.assets.delete(parentId='', nestedId='')` | Response status code
+`client.assets.update(data={}, parentId='', nestedId='')` | Response status code
+
+## Liabilities
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.liabilities.create(data={}, parentId='')` | dict
+`client.liabilities.delete(parentId='', nestedId='')` | Response status code
+`client.liabilities.update(data={}, parentId='', nestedId='')` | Response status code
+
+## Related Parties
+---
+
+#### Methods
+Method | Returns
+--- | ---
+`client.relatedParties.create(data={}, parentId='')` | dict
+`client.relatedParties.delete(parentId='', nestedId='')` | Response status code
+`client.relatedParties.update(data={}, parentId='', nestedId='')` | Response status code
+
+
