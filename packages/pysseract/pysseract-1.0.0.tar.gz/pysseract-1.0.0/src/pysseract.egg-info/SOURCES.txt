@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/pymodule.cpp
+src/pysseract/__init__.py
+src/pysseract.egg-info/PKG-INFO
+src/pysseract.egg-info/SOURCES.txt
+src/pysseract.egg-info/dependency_links.txt
+src/pysseract.egg-info/not-zip-safe
+src/pysseract.egg-info/requires.txt
+src/pysseract.egg-info/top_level.txt
