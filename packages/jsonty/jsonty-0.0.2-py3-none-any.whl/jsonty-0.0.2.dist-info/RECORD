@@ -1,0 +1,14 @@
+jsonty/__init__.py,sha256=GtZSJeCABHLd4PMMoW0w8XXM5xNwHiN8tIa06N71TuQ,50
+jsonty/exceptions.py,sha256=Q0gTgAK4jrs-SLhZyv52S8gWY1hxg-t95xpeSXF6q3g,205
+jsonty/models.py,sha256=lMNWnOxzh2Q5nXjAQeH5k6hHa8RcuhxCjK8frH-K8-A,2612
+tests/test_dumps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dumps/test_inheritance.py,sha256=T0bpjtbVsCE8UFH2PEunECexwQyxkd5Su1fOhCenfDo,1341
+tests/test_dumps/test_iteration.py,sha256=Kbosoai51_JJRV_J_zHuLe6f82wNOFSTcgBhcaQ1Qw8,4115
+tests/test_dumps/test_simple_types.py,sha256=BvvP_Fffpf3nr2XL6HQPQJ7c1vaqgO9jyd6Diq4a-qo,1645
+tests/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/util/models.py,sha256=piqqcYx1jRBnSpzw-G0a4i1lX0180wRz2_UHKNJmEig,1798
+jsonty-0.0.2.dist-info/LICENSE,sha256=IG0ck0HvTAvnFK-g3dQVxqgBVPO4meaZG9RaIBcs5fE,1342
+jsonty-0.0.2.dist-info/METADATA,sha256=77QorhmeTw8dN7nUm_gYR2UwWrsgOt1DF75HiR9EBD8,1249
+jsonty-0.0.2.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+jsonty-0.0.2.dist-info/top_level.txt,sha256=Tyoa2UkH4mJJ-eBNHHOa5yLprSzEniQiZmNv8Z_AieA,13
+jsonty-0.0.2.dist-info/RECORD,,
