@@ -1,0 +1,7 @@
+#!/bin/sh
+DOCKER_STACK_NAME=$1
+
+docker_containers=$(docker container ls -q --filter status=exited --filter label=com.docker.stack.namespace=$DOCKER_STACK_NAME)
+if [ -n "$docker_containers" ]; then
+  docker rm $docker_containers
+fi

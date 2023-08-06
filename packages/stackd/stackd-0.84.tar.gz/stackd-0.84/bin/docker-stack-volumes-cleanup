@@ -1,0 +1,31 @@
+#!/bin/sh
+DOCKER_STACK_NAME=$1
+
+# docker_volumes=$(docker volume ls -q --filter label=com.docker.stack.namespace=$DOCKER_STACK_NAME)
+# if [ -n "$docker_volumes" ]; then
+#   docker volume rm -f $docker_volumes
+# fi
+
+docker_volumes=$(docker volume ls -q --filter label=com.docker.stack.namespace="$DOCKER_STACK_NAME")
+if [ -n "$docker_volumes" ]; then
+  while true; do
+    echo "$docker_volumes" | while read -r docker_volume; do
+      if [ ! -n $docker_volume ]; then
+        continue
+      fi
+      echo "waiting while volume '$docker_volume' is in use"
+      while true; do
+        if [ $(docker volume rm -f "$docker_volume" >/dev/null 2>&1 && echo $? || echo $?) -eq 0 ]; then
+          break
+        else
+          sleep 1;
+        fi
+      done
+      echo "volume '$docker_volume' was deleted"
+    done
+    docker_volumes=$(docker volume ls -q --filter label=com.docker.stack.namespace="$DOCKER_STACK_NAME")
+    if [ ! -n "$docker_volumes" ]; then
+      break;
+    fi
+  done
+fi
