@@ -1,0 +1,4 @@
+matplotlib<4.0,>=3.0.3
+seaborn>=0.8
+jupyter<2.0,>=1.0
+numpy<2.0,>=1.14
