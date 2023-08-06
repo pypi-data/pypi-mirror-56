@@ -1,0 +1,9 @@
+numpy
+matplotlib
+pandas
+spacy==2.0.18
+nltk
+gensim
+scikit-learn
+rake-nltk
+wordcloud
