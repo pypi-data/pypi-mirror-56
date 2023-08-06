@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: outline-manager
+Version: 0.0.1
+Summary: Manages access keys for servers with Outline server installed.
+Home-page: https://github.com/youngchingjui/pyoutline
+Author: Ching Jui Young
+Author-email: young.chingjui@youngandai.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Outline Manager
+
+Manages access keys for servers with Outline server installed.
+
+See API docs [here](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/shadowbox/server/api.yml)
+
+
