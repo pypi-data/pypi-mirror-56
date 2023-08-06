@@ -1,0 +1,5 @@
+numpy
+pandas
+tqdm
+matplotlib
+elasticsearch<=6.3.1
