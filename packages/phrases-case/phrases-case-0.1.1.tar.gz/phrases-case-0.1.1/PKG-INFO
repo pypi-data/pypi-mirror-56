@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: phrases-case
+Version: 0.1.1
+Summary: Convert phrases between different cases.
+Home-page: https://github.com/NateScarlet/phrases-case
+License: MIT
+Author: NateScarlet
+Author-email: NateScarlet@Gmail.com
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Project-URL: Repository, https://github.com/NateScarlet/phrases-case
+Description-Content-Type: text/markdown
+
+# phrases case
+
+[![build status](https://github.com/NateScarlet/phrases-case/workflows/Python%20package/badge.svg)](https://github.com/NateScarlet/phrases-case/actions)
+[![version](https://img.shields.io/pypi/v/phrases-case)](https://pypi.org/project/phrases-case/)
+![python version](https://img.shields.io/pypi/pyversions/phrases-case)
+![wheel](https://img.shields.io/pypi/wheel/phrases-case)
+
+Convert phrases between different cases.
+
+Not using `re` module.
+
+```python
+>>> import phrases_case
+>>> phrases_case.snake('camelCase')
+'camel_case'
+>>> phrases_case.snake('camelCase', separator='-')
+'camel-case'
+>>> phrases_case.hyphen('camelCase')
+'camel-case'
+>>> phrases_case.space('camelCase')
+'camel case'
+>>> phrases_case.camel('snake_case')
+'snakeCase'
+>>> phrases_case.pascal('snake_case')
+'SnakeCase'
+```
+
