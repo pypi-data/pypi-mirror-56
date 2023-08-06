@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: pysfmov
+Version: 0.1
+Summary: Module for reading ResearchIR SFMOV image sequences
+Home-page: https://github.com/LolloCappo/pysfmov
+Author: Lorenzo Capponi, Domen Gorjup, Janko Slavič
+Author-email: lorenzocapponi@outlook.it, domen.gorjup@fs.uni-lj.si, janko.slavic@fs.uni-lj.si
+License: UNKNOWN
+Description: pysfmov
+        =======
+        
+        SFMOV File Reader
+        -----------------
+        This module allows to get raw data and meta data from .sfmov image sequences.
+        We developed this module while working on images recorded from FLIR thermal camera.
+        
+Platform: UNKNOWN
