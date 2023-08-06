@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: Flask-Authorization
+Version: 1.3
+Summary: Simple user authorization to use alongside with Flask-Login
+Home-page: https://github.com/mkrd/flask-authorization
+Author: Marcel Kröker
+Author-email: kroeker.marcel@gmail.com
+License: MIT License
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: flask
+Requires-Dist: flask-login
+
+# Flask-Authorization
+Simple user authorization to use alongside with Flask-Login.
+
+## Installation
+```
+pip3 install Flask-Authorization
+```
+
+## Usage
+```python
+from flask_Authorization import Authorize
+authorize = Authorize()
+
+# Initialize Extension
+authorize.init_app(app)
+```
+
+For Flask-Authorization to work properly, your user models needs to implement a function called `get_permissions()` that returns a list of permissions. You can define any permissions you like, but `"ROOT", "ADMIN", "USER"` are recommended.
+Flask-Authorization will check if the current user has the required permissions on routes decorated with the `@flask_authorization.permission_required(permission)` decorator.
+
