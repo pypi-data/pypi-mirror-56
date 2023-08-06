@@ -1,0 +1,3 @@
+[console_scripts]
+neodroidvision-tb = neodroidvision.entry_points.tensorboard_entry_point:main
+
