@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# File              : wheat/template/test_main_functional.py.template
+# Author            : Jimin Huang <huangjimin@whu.edu.cn>
+# Date              : 06.02.2018
+# Last Modified Date: 06.02.2018
+# Last Modified By  : Jimin Huang <huangjimin@whu.edu.cn>
+# -*- coding: utf-8 -*-
+# File: {FILE_NAME}
+# Author: {AUTHOR_NAME}
+import logging
+import mock
+import sys
+
+from mock_logger import MockLoggingHandler
+from nose.tools import assert_equals
+
+from {PROJECT_NAME} import main
+
+
+class TestMain(object):
+    """Functional test class for ``main.main``
+    """
+    def setUp(self):
+        self.handler = MockLoggingHandler(level='DEBUG')
+        logger = logging.getLogger(main.__name__)
+        logger.addHandler(self.handler)
+        self.handler.reset()
+        sys.argv = ['', '--config', 'debug']
+
+    def test_main_normal(self):
+        """Check if ``main.main`` works
+        """
+        main.main()
+        assert_equals(
+            self.handler.messages['info'],
+            ['Initialize logger', 'Start', 'End'])
+
+    @mock.patch.object(main, 'run')
+    def test_main_exception_raised(self, mock_run):
+        """Check if `main.main` works when `main.run` raised exceptions
+
+        Args:
+            mock_run: the mock obj of `main.run`
+        """
+        mock_run.side_effect = KeyError('test')
+
+        main.main()
+
+        assert_equals(
+            self.handler.messages['info'],
+            ['Initialize logger', 'Start', 'End'])
+
+        assert any(
+            ["KeyError" in msg for msg in self.handler.messages['error']])
