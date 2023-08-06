@@ -1,0 +1,58 @@
+
+log_file: "logs/get_media.log"
+
+enable_commit: True
+
+graph_api:
+  host: "https://graph.facebook.com"
+  # double curly braces for literal { and } (not for substitution)
+  request_path:    '/v3.2/{user_id}?fields=business_discovery.username({competitor_name}){{id,username,media_count,followers_count,follows_count,media{{id,timestamp,caption,media_type,permalink,media_url,comments_count,like_count}}}}'
+  historic_suffix: '&since={date_from}&until={date_to}' 
+
+
+queries:
+  get_users: |    
+    SELECT c.instagram_id, c.competitor_name, ua.access_token
+    FROM UsersAuth ua join Competitors c on ua.instagram_id = c.instagram_id 
+    WHERE ua.valid_until > CURRENT_TIMESTAMP()
+    AND ua.instagram_id IS NOT NULL AND TRIM(ua.instagram_id) != ''
+    AND access_token NOT LIKE 'IG%'
+    AND ua.active = 1    AND c.active = 1
+    limit 1        
+  insert_user: |
+    INSERT INTO Users (id, username,
+            media_count, followers_count, follows_count)
+    VALUES ('{id}', '{username}',
+            {media_count}, {followers_count}, {follows_count})
+    ON DUPLICATE KEY UPDATE 
+            username = '{username}', 
+            media_count = {media_count}, 
+            followers_count = {followers_count}, 
+            follows_count = {follows_count}
+
+  insert_media: |
+    INSERT INTO Media (id, user_id, created_at, fetched_at, type,
+                       caption, url, likes_count, comments_count, image)
+    VALUES ('{id}', {user_id}, '{created_at}', '{fetched_at}', '{type}',
+            '{caption}', '{url}', {likes_count}, {comments_count}, '{image}')
+    ON DUPLICATE KEY UPDATE 
+            fetched_at = '{fetched_at}',
+            likes_count = {likes_count}, 
+            comments_count = {comments_count},
+            image = '{image}'
+
+  insert_ht: |
+    INSERT IGNORE INTO HashTagsInMedia 
+      (media_id, hashtag, lower_hashtag, created_at)
+    VALUES
+      ('{media_id}', '{hashtag}', '{lower_hashtag}', '{created_at}')
+
+
+db_config:
+  ig:
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8mb4" 
+  
