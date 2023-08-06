@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyows
+Version: 0.0.1
+Summary: CQL parser for Python
+Home-page: https://github.com/eoxserver/pyows
+Author: Fabian Schindler
+Author-email: fabian.schindler@eox.at
+License: MIT
+Description: # pyows
+        [![Build Status](https://travis-ci.org/EOxServer/pyows.svg?branch=master)](https://travis-ci.org/EOxServer/pyows)
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
