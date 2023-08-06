@@ -1,0 +1,13 @@
+unit_system/__init__.py,sha256=zdE5gVBgFpghZXxuJLR_UYg73as3QS6z8dZ_PV8Idf8,225
+unit_system/constants.py,sha256=gQa0k_CyAmEwSmoe_43tCLJc-H_qqyUlPY7Ui54fEIM,1958
+unit_system/convert.py,sha256=n-TxYxDo5Ki8rLbMtG3xOvJOnYb4vlmsOmU6ebo5mKs,1048
+unit_system/mplib_interface.py,sha256=q9v_hJlYAE8KvTcKALHOZ2EVWqOLr3mWt7GQ7UuSpM8,2846
+unit_system/parse_unit.py,sha256=uHPeiHKbJCkeYJkGlVP2tshgUJnoD9mB3UEXkdQD_Rk,2015
+unit_system/predefined_units.py,sha256=_i_XCvqOgaCdMcOVcqikEEDLdQDGCTFF8F-PCMtYEUs,721
+unit_system/quantity.py,sha256=Fcrp5GMJ6AJCBTYxyjedxwc4dCnptm4q_SK64dOd9d8,11202
+unit_system/version.py,sha256=oi-bc73odjmpI2OWlgz0quxjQQjukEsvven9Z65uzUc,742
+unit_system-1.0.15.dist-info/LICENSE,sha256=fDth0znEF6FIK8xoJxZtTQkFzNIjlL5C30LGmaXd0YQ,1068
+unit_system-1.0.15.dist-info/METADATA,sha256=u0VrT401QgbwAbiHVDdKprtTByHWY_X1iBpm1SNwdOk,1570
+unit_system-1.0.15.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+unit_system-1.0.15.dist-info/top_level.txt,sha256=6TKOivqWIOJo6UhNpQe77D1Mu0b_SWohIgWVV_W7Odc,12
+unit_system-1.0.15.dist-info/RECORD,,
