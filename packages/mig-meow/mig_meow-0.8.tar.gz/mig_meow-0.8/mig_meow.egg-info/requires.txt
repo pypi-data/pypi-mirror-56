@@ -1,0 +1,8 @@
+pillow
+graphviz
+bqplot==0.11.7
+IPython
+requests
+ipywidgets
+PyYAML
+nbformat
