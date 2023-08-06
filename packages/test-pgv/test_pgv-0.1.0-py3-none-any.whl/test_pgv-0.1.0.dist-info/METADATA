@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: test-pgv
+Version: 0.1.0
+Summary: Test-repo for pygitversion
+Home-page: https://github.com/steven-murray/test_pgv
+Author: Radio Astronomy Software Group
+Author-email: steven.g.murray@asu.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
+Requires-Dist: pygitversion
+
+UNKNOWN
+
+
