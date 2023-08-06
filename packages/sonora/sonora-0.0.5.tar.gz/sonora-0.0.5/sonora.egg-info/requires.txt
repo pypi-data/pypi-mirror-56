@@ -1,0 +1,10 @@
+grpcio
+requests
+
+[tests]
+grpcio-tools
+pytest
+pytest-mockservers
+pytest-asyncio
+requests
+daphne
