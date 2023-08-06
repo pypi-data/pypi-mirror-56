@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+bin/quality-viewer
+quality_viewer/__init__.py
+quality_viewer.egg-info/PKG-INFO
+quality_viewer.egg-info/SOURCES.txt
+quality_viewer.egg-info/dependency_links.txt
+quality_viewer.egg-info/not-zip-safe
+quality_viewer.egg-info/requires.txt
+quality_viewer.egg-info/top_level.txt

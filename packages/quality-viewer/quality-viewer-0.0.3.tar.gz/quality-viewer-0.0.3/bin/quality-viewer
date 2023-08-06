@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import argparse
+
+from quality_viewer import render_views
+
+parser = argparse.ArgumentParser(description='Process some integers.')
+parser.add_argument('views_folder', help='Folder where quality view component files are held')
+parser.add_argument('--label', help='Custom graph label')
+
+args = parser.parse_args()
+render_views(
+    args.views_folder,
+    label=args.label
+)
