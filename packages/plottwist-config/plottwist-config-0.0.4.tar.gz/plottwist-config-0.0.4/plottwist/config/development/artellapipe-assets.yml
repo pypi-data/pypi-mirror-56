@@ -1,0 +1,63 @@
+# Base Configuration for Artella Assets for Plot Twist
+
+types:
+  Props:
+    class: plottwist.assets.prop.PlotTwistProp
+    files:
+      - textures
+      - model
+      - shading
+      - rig
+  Characters:
+    class: plottwist.assets.character.PlotTwistCharacter
+    files:
+      - textures
+      - model
+      - shading
+      - rig
+      - groom
+
+files:
+  textures:
+    class: plottwist.files.texture.PlotTwistTextureAssetFile
+    extensions:
+      - tx
+      - png
+      - jpg
+      - jpeg
+  model:
+    class: plottwist.files.model.PlotTwistModelAssetFile
+    extensions:
+      - ma
+  shading:
+    class: plottwist.files.shading.PlotTwistShadingAssetFile
+    extensions:
+      - ma
+  rig:
+    class: plottwist.files.rig.PlotTwistRigAssetFile
+    extensions:
+      - ma
+  groom:
+    class: plottwist.files.groom.PlotTwistGroomAssetFile
+    extensions:
+      - ma
+  alembic:
+    class: plottwist.files.alembic.PlotTwistAlembicAssetFile
+    extensions:
+      - abc
+
+must_files:
+  - textures
+  - model
+  - shading
+  - rig
+
+reference_extension_functions:
+  ma:
+    reference_function: reference_rig_file
+    file_type: rig
+  abc:
+    reference_function: reference_alembic_file
+    file_type: alembic
+    reference_function_extra_params:
+      model_type: model

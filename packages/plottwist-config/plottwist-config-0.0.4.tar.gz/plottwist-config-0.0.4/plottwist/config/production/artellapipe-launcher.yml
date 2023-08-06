@@ -1,0 +1,6 @@
+# Base Configuration file for artellapipe-launcher in Plot Twist
+
+version: 0.0.1
+name: "PlotTwist"
+plugins:
+  - artellapipe.launcher.plugins.dccselector

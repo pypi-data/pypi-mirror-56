@@ -1,0 +1,22 @@
+# Base Configuration file for artellapipe-tools-modelchecker for Plot Twist
+
+# Defines icon of the tool
+icon: modelchecker
+
+# URL to tool documentation web page
+url: https://plot-twist-short-film.github.io/plottwist-docs/pipeline/pipeline/tools/modelchecker/
+
+pyblish_plugins:
+  - CollectGeometry
+  - ValidateHardEdges
+  - ValidateLamina
+  - ValidateNGons
+  - ValidateNonManifoldEdges
+  - ValidateOpenEdges
+  - ValidatePenetratingUVs
+#  - ValidatePoles
+  - ValidateStarLike
+  - ValidateTriangles
+  - ValidateNormals
+  - ValidateZeroAreaFaces
+  - ValidateZeroLengthEdges
