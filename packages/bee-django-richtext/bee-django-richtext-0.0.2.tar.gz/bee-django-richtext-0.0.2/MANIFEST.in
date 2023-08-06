@@ -1,0 +1,7 @@
+include LICENSE
+include README.rst
+recursive-include bee_django_richtext/static *
+recursive-include bee_django_richtext/templates *
+recursive-include bee_django_richtext/templatetags *
+recursive-include bee_django_richtext/migrations *
+recursive-include docs *
