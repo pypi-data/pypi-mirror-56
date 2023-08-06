@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bqtools/__init__.py
+bqtools/templates/bqschema.in
+bqtools/tests/__init__.py
+bqtools/tests/test_bqtools.py
+bqtools_json.egg-info/PKG-INFO
+bqtools_json.egg-info/SOURCES.txt
+bqtools_json.egg-info/dependency_links.txt
+bqtools_json.egg-info/requires.txt
+bqtools_json.egg-info/top_level.txt
