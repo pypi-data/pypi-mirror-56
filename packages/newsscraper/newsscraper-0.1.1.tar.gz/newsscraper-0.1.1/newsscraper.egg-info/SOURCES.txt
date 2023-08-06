@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+newsscraper/__init__.py
+newsscraper/__main__.py
+newsscraper.egg-info/PKG-INFO
+newsscraper.egg-info/SOURCES.txt
+newsscraper.egg-info/dependency_links.txt
+newsscraper.egg-info/requires.txt
+newsscraper.egg-info/top_level.txt
