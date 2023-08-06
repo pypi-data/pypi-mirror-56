@@ -1,0 +1,13 @@
+README.rst
+setup.py
+git_processor.egg-info/PKG-INFO
+git_processor.egg-info/SOURCES.txt
+git_processor.egg-info/dependency_links.txt
+git_processor.egg-info/requires.txt
+git_processor.egg-info/top_level.txt
+processor/__init__.py
+processor/name_linter.py
+processor/parser.py
+tests/__init__.py
+tests/test_name_lint.py
+tests/test_parser.py
