@@ -1,0 +1,76 @@
+Metadata-Version: 1.1
+Name: cubiscan
+Version: 0.0.2
+Summary: Library to talk to cubiscan machines
+Home-page: https://github.com/camptocamp/cubiscan
+Author: Camptocamp
+Author-email: info@camptocamp.com
+License: LGPLv3+
+Description: .. image:: https://travis-ci.com/camptocamp/cubiscan.svg?branch=master
+            :target: https://travis-ci.com/camptocamp/cubiscan
+        
+        CUBISCAN
+        ========
+        
+        Provides an interface to cubiscan devices (https://cubiscan.com/).
+        These devices are used to measure and weigh objects. 
+        
+        Usage
+        -----
+        
+        .. code:: python
+        
+          from cubiscan.cubiscan import CubiScan
+        
+        
+          obj = CubiScan(ip, port, timeout=timeout)
+          obj.measure()
+        
+        Functions
+        ---------
+        
+        Following Functions of a Cubiscan are covered:
+        
+        - Continuous measure
+        - Dimension calibration
+        - Dimension units
+        - Factor Toggle
+        - Location/City id
+        - Measure
+        - Scale calibration
+        - Test
+        - Units
+        - Weight units
+        - Zero
+        
+        
+        .. :changelog:
+        
+        Release History
+        ===============
+        
+        Unreleased
+        ----------
+        
+        
+        0.0.2
+        -----
+        
+        * add TLS support
+        
+        
+        0.0.1
+        -----
+        
+        Inital Release
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
