@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+filetype_validator/__init__.py
+filetype_validator/extension_definition.py
+filetype_validator/main.py
+filetype_validator.egg-info/PKG-INFO
+filetype_validator.egg-info/SOURCES.txt
+filetype_validator.egg-info/dependency_links.txt
+filetype_validator.egg-info/top_level.txt
