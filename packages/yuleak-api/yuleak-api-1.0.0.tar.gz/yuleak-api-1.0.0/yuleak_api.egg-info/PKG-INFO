@@ -1,0 +1,143 @@
+Metadata-Version: 2.1
+Name: yuleak-api
+Version: 1.0.0
+Summary: Python Client for Yuleak API.
+Home-page: https://github.com/wanbytes/yuleak-api
+Author: Wanbytes SAS
+License: Apache 2
+Description: # Yuleak API
+        
+        [![Latest Version on PyPI](https://img.shields.io/pypi/v/yuleak-api.svg)](https://pypi.python.org/pypi/yuleak-api/)
+        [![Documentation Status](https://readthedocs.org/projects/yuleak-api/badge/?version=latest)](https://yuleak-api.readthedocs.io/en/latest/?badge=latest)
+        [![Licence](https://img.shields.io/pypi/l/yuleak-api.svg)](https://pypi.python.org/pypi/yuleak-api)
+        
+        The official Python library for the [Yuleak API](https://app.yuleak.com/apidoc).
+        
+        
+        ## Features
+        
+        - Convenient methods for making calls to the API.
+        - Automatic parsing of API responses into Python objects.
+        
+        ## Installation
+        
+        ``yuleak-api`` is available on [PYPI](https://pypi.python.org/pypi/yuleak-api)
+        
+        ```bash
+        pip install yuleak-api
+        ```
+        
+        ## Documentation
+        
+        You can use the API with default demo key for development purpose but to use it you'll need to [register to Yuleak](https://app.yuleak.com).
+        
+        ### [Authentication](https://app.yuleak.com/apidoc#authentication)
+        
+        ```python
+        from yuleak_api.client import YuleakClient
+        YuleakClient.set_apikey('my_secret_api_key')
+        ```
+        
+        ### [Errors](https://app.yuleak.com/apidoc#errors)
+        
+        In case of error, GET methods will return an empty list and POST/DELETE will return False.
+        
+        The error will be displayed in ``yuleak-api`` logger.
+        
+        Warnings will (such as a deprecated endpoint) will also be displayed in ``yuleak-api`` logger.
+        
+        ### [Pagination](https://app.yuleak.com/apidoc#pagination)
+        
+        Pagination will be handle by the YuleakClient, you do not have to care about.
+        
+        
+        ## Usage
+        
+        This is not intended to provide complete documentation of the API.
+        
+        For more details, [please refer to the official documentation](https://app.yuleak.com/apidoc).
+        
+        For more information on the included models and abstractions, please read the code.
+        
+        ### [Credits](https://app.yuleak.com/apidoc#get-credits)
+        
+        Please check your credits amount before making any search or renew action to avoid errors.
+        
+        ```python
+        print(YuleakClient.credits())
+        ```
+        
+        ### [Dashboards](https://app.yuleak.com/apidoc#get-dashboards)
+        
+        ```python
+        dashboards = YuleakClient.dashboards()
+        for dashboard in dashboards:
+            # Display stats (similar to dashboard view in WebUI)
+            print(dashboard.stats())
+            # Display map (similar to map widget in WebUI)
+            print(dashboard.map())
+            # Display graph (similar to graph view in WebUI)
+            for node in dashboard.graph():
+                if node.type == 'asn':
+                    print('AS: {0}'.format(node.label))
+                    for child in node.neighbors:
+                        if child.type == 'server':
+                            print(child)
+            # Display timeline (similar to timeline widget in WebUI)
+            print(dashboard.timeline())
+            # Display details (similar to details view in WebUI)
+            for server in dashboard.details():
+                print(server.geo.country_name)
+            dashboard.delete()
+        ```
+        
+        ### [Resources](https://app.yuleak.com/apidoc#get-resources)
+        
+        ```python
+        resources = dashboard.resources()
+        for resource in resources:
+            print('{0} :: {1}'.format(resource.value, resource.status))
+            if resource.type == 'server':
+                resource.renew()
+            else:
+                resource.delete()
+        ```
+        
+        ### [Bookmarks](https://app.yuleak.com/apidoc#post-bookmark)
+        
+        ```python
+        server = dashboard.details()[0]
+        assert not server.bookmark
+        server.add_bookmark()
+        assert server.bookmark
+        server.del_bookmark()
+        assert not server.bookmark
+        ```
+        
+        ### [Filters](https://app.yuleak.com/apidoc#get-filters)
+        ```python
+        dashboard.add_filter('domain', 'all')
+        for f in dashboard.filters():
+            print(f)
+            f.delete()
+        ```
+        
+        ### [Search](https://app.yuleak.com/apidoc#search)
+        ```python
+        YuleakClient.search('yuleak.com')
+        dashboard = YuleakClient.dashboards()[-1]
+        dashboard.search('yuleak.io')
+        ```
+        
+Keywords: yuleak api python
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
