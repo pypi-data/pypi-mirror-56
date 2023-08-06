@@ -1,0 +1,8 @@
+artellapipe
+artellapipe-libs-pyblish
+
+[dev]
+wheel
+
+[test]
+pytest
