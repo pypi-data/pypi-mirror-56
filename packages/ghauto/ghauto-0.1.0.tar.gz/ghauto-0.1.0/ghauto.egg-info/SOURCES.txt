@@ -1,0 +1,17 @@
+README.md
+setup.py
+ghauto/__init__.py
+ghauto/client.py
+ghauto/slack_api.py
+ghauto.egg-info/PKG-INFO
+ghauto.egg-info/SOURCES.txt
+ghauto.egg-info/dependency_links.txt
+ghauto.egg-info/requires.txt
+ghauto.egg-info/top_level.txt
+ghauto.egg-info/zip-safe
+ghauto/api/__init__.py
+ghauto/api/channels.py
+ghauto/api/chat.py
+ghauto/api/groups.py
+ghauto/api/signup.py
+ghauto/api/users.py
