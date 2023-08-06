@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: devground
+Version: 0.0.1
+Summary: dev environment management based on docker
+Home-page: https://github.com/williamfzc/devground
+Author: williamfzc
+Author-email: fengzc@vip.qq.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
