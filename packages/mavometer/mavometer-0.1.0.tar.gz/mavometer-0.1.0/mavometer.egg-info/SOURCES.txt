@@ -1,0 +1,11 @@
+README.md
+setup.py
+bin/mavometer
+mavometer/MessageStats.py
+mavometer/MessageTableView.py
+mavometer/__init__.py
+mavometer.egg-info/PKG-INFO
+mavometer.egg-info/SOURCES.txt
+mavometer.egg-info/dependency_links.txt
+mavometer.egg-info/requires.txt
+mavometer.egg-info/top_level.txt
