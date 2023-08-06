@@ -1,0 +1,10 @@
+.eggs
+.mypy_cache
+*.py[co]
+.coverage
+.venv
+.tox
+dist
+build
+*.egg-info
+__pycache__
