@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: sicomor-especificaciones
+Version: 0.1.2
+Summary: Especificaciones para Sistema de Control de Inventario
+Home-page: http://git.ecom.com.ar/ibanezlucas/sicomor-especificaciones
+Author: Ecom Developers
+Author-email: simono@ecom.com.ar
+License: BSD
+Description: # sicomor-especificaciones
+        
+        
+Keywords: sicomor inventario recursos
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Utilities
