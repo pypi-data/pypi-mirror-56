@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Codado
+Version: 0.7.4
+Summary: A collection of system development utilities
+Home-page: https://github.com/corydodt/Codado
+Author: Cory Dodt
+Author-email: corydodt@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: twisted,utility
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Provides-Extra: dev
