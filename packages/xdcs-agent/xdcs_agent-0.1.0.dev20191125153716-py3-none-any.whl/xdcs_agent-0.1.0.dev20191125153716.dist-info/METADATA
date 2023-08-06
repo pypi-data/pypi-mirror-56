@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: xdcs-agent
+Version: 0.1.0.dev20191125153716
+Summary: UNKNOWN
+Home-page: https://github.com/xdcs-team/xdcs
+Author: Kamil Jarosz, Krystian Życiński, Adam Szczerba, Jan Rodzoń
+Author-email: kjarosz@student.agh.edu.pl, zycinski@student.agh.edu.pl, adamszczerba19@gmail.com, rodzonjan@wp.pl
+License: GNU GPLv3 
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Requires-Dist: distro
+Requires-Dist: lazy
+Requires-Dist: packaging
+Requires-Dist: py-cpuinfo
+Requires-Dist: pyopencl
+
+UNKNOWN
+
+

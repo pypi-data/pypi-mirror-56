@@ -1,0 +1,3 @@
+[console_scripts]
+xdcs-agent = xdcs.agent_cli:main
+
