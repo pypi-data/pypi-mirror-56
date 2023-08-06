@@ -1,0 +1,4 @@
+[console_scripts]
+calculate-contrast = exo.calculate_contrast_threshold:cli
+exo = exo.cli:main
+
