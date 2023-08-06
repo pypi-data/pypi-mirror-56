@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: django-mapbox-baselayer
+Version: 0.0.1
+Summary: Django model to store and serve mapbox base layer config
+Home-page: https://github.com/makinacorpus/django-mapbox-baselayer.git
+Author: Makina Corpus
+Author-email: geobi@makina-corpus.com
+License: UNKNOWN
+Description: [![codecov](https://codecov.io/gh/makinacorpus/django-mapbox-baselayer/branch/master/graph/badge.svg)](https://codecov.io/gh/makinacorpus/django-mapbox-baselayer)
+        [![Build Status](https://travis-ci.org/makinacorpus/django-mapbox-baselayer.svg?branch=master)](https://travis-ci.org/makinacorpus/django-mapbox-baselayer)
+        
+        
+        Django model and view to store, generate and serve configuration for MapBox GL JS map base layer
+        
+        
+        =========
+        CHANGELOG
+        =========
+        
+        0.0.1.dev0 (XXXX-XX-XX)
+        -----------------------
+        
+        * First release
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
