@@ -1,0 +1,11 @@
+click
+six
+wcwidth
+pygments
+prompt_toolkit==1.0.14
+PyInquirer
+pyfiglet
+termcolor
+pprint
+docker
+coloredlogs
