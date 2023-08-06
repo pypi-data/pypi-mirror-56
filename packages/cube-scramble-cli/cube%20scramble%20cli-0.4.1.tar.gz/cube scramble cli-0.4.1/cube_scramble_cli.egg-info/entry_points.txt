@@ -1,0 +1,3 @@
+[console_scripts]
+cube-scramble-cli = cube_scramble_cli.scramble_cli:main
+
