@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: chrisbrake
+Version: 0.0.2
+Summary: chrisbrake 
+Home-page: https://github.com/chrisbrake/chrisbrake
+License: UNKNOWN
+Author: Chris Brake
+Author-email: chris.brake@gmail.com
+Description-Content-Type: text/x-rst
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pynput
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Provides-Extra: doc
+Provides-Extra: test
+
+chrisbrake
+=========================
+
+A toolbox I carry around with useful tools I use during development, but that don't end up as part of the project.
