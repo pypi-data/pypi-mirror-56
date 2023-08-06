@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+webvis/VisWorker.py
+webvis/__init__.py
+webvis/http_server.py
+webvis/interface.py
+webvis/main.py
+webvis.egg-info/PKG-INFO
+webvis.egg-info/SOURCES.txt
+webvis.egg-info/dependency_links.txt
+webvis.egg-info/requires.txt
+webvis.egg-info/top_level.txt
+webvis/front_build/index.bundle.js
+webvis/front_build/index.html
