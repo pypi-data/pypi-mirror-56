@@ -1,0 +1,3 @@
+[console_scripts]
+taiji-utils = taiji_utils.command_line:main
+
