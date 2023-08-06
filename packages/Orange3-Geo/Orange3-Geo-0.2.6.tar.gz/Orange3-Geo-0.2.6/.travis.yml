@@ -1,0 +1,41 @@
+language: python
+dist: xenial
+cache:
+  apt: true
+  pip: true
+  ccache: true
+
+matrix:
+  include:
+    - python: '3.6'
+      env: ORANGE="3.20.0"
+
+    - python: '3.6'
+      env: ORANGE="release"
+
+    - python: '3.6'
+      env: ORANGE="master"
+
+addons:
+  apt:
+    packages:
+      - libgeos-dev
+      - libxkbcommon-x11-0  # for PyQt 5.12
+
+before_install:
+  - set -e  # fail on any error
+  # Merge in the GeoJSON files
+  - git fetch --force origin +json:json
+  - git checkout json -- orangecontrib/geo/geojson/\*.json
+
+install:
+  - pip install pyqt5 pyqtwebengine
+  - source $TRAVIS_BUILD_DIR/.travis/install_orange.sh
+  - pip install pandas
+  - pip install .
+
+script:
+  - catchsegv xvfb-run -a -s "-screen 0 1280x1024x24" python setup.py test
+
+after_success:
+  -
