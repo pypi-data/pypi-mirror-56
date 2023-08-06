@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+django_flexible_manifest_staticfiles/__init__.py
+django_flexible_manifest_staticfiles/storages copy.py
+django_flexible_manifest_staticfiles/storages.py
+django_flexible_manifest_staticfiles.egg-info/PKG-INFO
+django_flexible_manifest_staticfiles.egg-info/SOURCES.txt
+django_flexible_manifest_staticfiles.egg-info/dependency_links.txt
+django_flexible_manifest_staticfiles.egg-info/top_level.txt
