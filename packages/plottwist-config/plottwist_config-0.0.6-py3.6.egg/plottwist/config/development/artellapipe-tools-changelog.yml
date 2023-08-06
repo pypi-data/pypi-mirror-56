@@ -1,0 +1,10 @@
+# Base Configuration file for artellapipe-tools-changelog in Plot Twist
+
+# Defines icon of the tool
+icon: changelog
+
+# URL to tool documentation web page
+url: https://plot-twist-short-film.github.io/plottwist-docs/pipeline/pipeline/tools/changelog/
+
+# Defines whether this needs Kitsu data to work or not
+kitsu_login: False

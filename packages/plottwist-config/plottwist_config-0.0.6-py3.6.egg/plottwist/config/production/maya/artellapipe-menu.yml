@@ -1,0 +1,18 @@
+# Base Configuration for add extra menus into ArtellaPipe DCC Menu for Plot Twist
+
+menus:
+    - menu:
+      - label: Shading
+        type: menu
+        children:
+            - id: plottwist-commands-ocio
+              command: "import artellapipe; artellapipe.OCIOMgr().init_ocio()"
+              type: command
+              language: python
+              tags: ['ocio', 'shading']
+              ui:
+                label: "OCIO Setup"
+                icon: 'ociosetup'
+                is_checkable: False
+                is_checked: False
+                load_on_startup: False
