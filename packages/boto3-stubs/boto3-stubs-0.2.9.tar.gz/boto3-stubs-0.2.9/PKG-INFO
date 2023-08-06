@@ -1,0 +1,463 @@
+Metadata-Version: 2.1
+Name: boto3-stubs
+Version: 0.2.9
+Summary: Boto3 1.10.28 stubs powered by `mypy-boto3`.
+Home-page: https://github.com/vemel/mypy_boto3
+Author: Vlad Emelianov
+Author-email: vlad.emelianov.nz@gmail.com
+License: MIT License
+Description: # boto3-stubs
+        
+        Mypy-friendly type annotations for `boto3 1.10.28`.
+        More information can be found [here](https://github.com/vemel/mypy_boto3).
+        
+        - [boto3-stubs](#boto3-stubs)
+          - [How to use](#how-to-use)
+          - [How it works](#how-it-works)
+          - [Submodules](#submodules)
+        
+        ## How to use
+        
+        Make sure you have [mypy](https://github.com/python/mypy) installed ans activated in your IDE.
+        
+        Install `boto3-stubs`, it will add type annotations for `boto3` package, no services included.
+        
+        ```bash
+        # install type annotations just for boto3
+        pip install boto3-stubs
+        
+        # if you want services type annotations, install the ones you use
+        # you can find a full list below
+        pip install boto3-stubs[ec2, s3]
+        ```
+        
+        Use `boto3` as usual in your project and enjoy type checking.
+        
+        ```python
+        import boto3
+        
+        # Invalid service name, should be `dynamodb`. No worries, `mypy` will let you know.
+        client = boto3.client("dynamo")
+        ```
+        
+        ## How it works
+        
+        Fully automated [builder](https://github.com/vemel/mypy_boto3) carefully generates
+        type annotations for each service, patiently waiting for `boto3` updates. It delivers
+        a drop-in type annotations for you and makes sure that:
+        
+        - Latest version of `boto3` is used.
+        - Each public class and method of every `boto3` service gets valid type annotations
+          extracted from latest documentation (blame `botocore` docs if types are incorrect).
+        - Type annotations include up-to-date documentation.
+        - Code is processed by [black](https://github.com/psf/black) for readability.
+        
+        ## Submodules
+        
+        - `all` - Type annotations for all `boto3` services.
+        - `essential` - Type annotations for `cloudformation`, `dynamodb`, `ec2`, `lambda`, `rds`, `s3` and `sqs` services.
+        - `acm` - Type annotations for `acm` service.
+        - `acm-pca` - Type annotations for `acm-pca` service.
+        - `alexaforbusiness` - Type annotations for `alexaforbusiness` service.
+        - `amplify` - Type annotations for `amplify` service.
+        - `apigateway` - Type annotations for `apigateway` service.
+        - `apigatewaymanagementapi` - Type annotations for `apigatewaymanagementapi` service.
+        - `apigatewayv2` - Type annotations for `apigatewayv2` service.
+        - `application-autoscaling` - Type annotations for `application-autoscaling` service.
+        - `application-insights` - Type annotations for `application-insights` service.
+        - `appmesh` - Type annotations for `appmesh` service.
+        - `appstream` - Type annotations for `appstream` service.
+        - `appsync` - Type annotations for `appsync` service.
+        - `athena` - Type annotations for `athena` service.
+        - `autoscaling` - Type annotations for `autoscaling` service.
+        - `autoscaling-plans` - Type annotations for `autoscaling-plans` service.
+        - `backup` - Type annotations for `backup` service.
+        - `batch` - Type annotations for `batch` service.
+        - `budgets` - Type annotations for `budgets` service.
+        - `ce` - Type annotations for `ce` service.
+        - `chime` - Type annotations for `chime` service.
+        - `cloud9` - Type annotations for `cloud9` service.
+        - `clouddirectory` - Type annotations for `clouddirectory` service.
+        - `cloudformation` - Type annotations for `cloudformation` service.
+        - `cloudfront` - Type annotations for `cloudfront` service.
+        - `cloudhsm` - Type annotations for `cloudhsm` service.
+        - `cloudhsmv2` - Type annotations for `cloudhsmv2` service.
+        - `cloudsearch` - Type annotations for `cloudsearch` service.
+        - `cloudsearchdomain` - Type annotations for `cloudsearchdomain` service.
+        - `cloudtrail` - Type annotations for `cloudtrail` service.
+        - `cloudwatch` - Type annotations for `cloudwatch` service.
+        - `codebuild` - Type annotations for `codebuild` service.
+        - `codecommit` - Type annotations for `codecommit` service.
+        - `codedeploy` - Type annotations for `codedeploy` service.
+        - `codepipeline` - Type annotations for `codepipeline` service.
+        - `codestar` - Type annotations for `codestar` service.
+        - `codestar-notifications` - Type annotations for `codestar-notifications` service.
+        - `cognito-identity` - Type annotations for `cognito-identity` service.
+        - `cognito-idp` - Type annotations for `cognito-idp` service.
+        - `cognito-sync` - Type annotations for `cognito-sync` service.
+        - `comprehend` - Type annotations for `comprehend` service.
+        - `comprehendmedical` - Type annotations for `comprehendmedical` service.
+        - `config` - Type annotations for `config` service.
+        - `connect` - Type annotations for `connect` service.
+        - `cur` - Type annotations for `cur` service.
+        - `datapipeline` - Type annotations for `datapipeline` service.
+        - `datasync` - Type annotations for `datasync` service.
+        - `dax` - Type annotations for `dax` service.
+        - `devicefarm` - Type annotations for `devicefarm` service.
+        - `directconnect` - Type annotations for `directconnect` service.
+        - `discovery` - Type annotations for `discovery` service.
+        - `dlm` - Type annotations for `dlm` service.
+        - `dms` - Type annotations for `dms` service.
+        - `docdb` - Type annotations for `docdb` service.
+        - `ds` - Type annotations for `ds` service.
+        - `dynamodb` - Type annotations for `dynamodb` service.
+        - `dynamodbstreams` - Type annotations for `dynamodbstreams` service.
+        - `ec2` - Type annotations for `ec2` service.
+        - `ec2-instance-connect` - Type annotations for `ec2-instance-connect` service.
+        - `ecr` - Type annotations for `ecr` service.
+        - `ecs` - Type annotations for `ecs` service.
+        - `efs` - Type annotations for `efs` service.
+        - `eks` - Type annotations for `eks` service.
+        - `elasticache` - Type annotations for `elasticache` service.
+        - `elasticbeanstalk` - Type annotations for `elasticbeanstalk` service.
+        - `elastictranscoder` - Type annotations for `elastictranscoder` service.
+        - `elb` - Type annotations for `elb` service.
+        - `elbv2` - Type annotations for `elbv2` service.
+        - `emr` - Type annotations for `emr` service.
+        - `es` - Type annotations for `es` service.
+        - `events` - Type annotations for `events` service.
+        - `firehose` - Type annotations for `firehose` service.
+        - `fms` - Type annotations for `fms` service.
+        - `forecast` - Type annotations for `forecast` service.
+        - `forecastquery` - Type annotations for `forecastquery` service.
+        - `fsx` - Type annotations for `fsx` service.
+        - `gamelift` - Type annotations for `gamelift` service.
+        - `glacier` - Type annotations for `glacier` service.
+        - `globalaccelerator` - Type annotations for `globalaccelerator` service.
+        - `glue` - Type annotations for `glue` service.
+        - `greengrass` - Type annotations for `greengrass` service.
+        - `groundstation` - Type annotations for `groundstation` service.
+        - `guardduty` - Type annotations for `guardduty` service.
+        - `health` - Type annotations for `health` service.
+        - `iam` - Type annotations for `iam` service.
+        - `importexport` - Type annotations for `importexport` service.
+        - `inspector` - Type annotations for `inspector` service.
+        - `iot` - Type annotations for `iot` service.
+        - `iot-data` - Type annotations for `iot-data` service.
+        - `iot-jobs-data` - Type annotations for `iot-jobs-data` service.
+        - `iot1click-devices` - Type annotations for `iot1click-devices` service.
+        - `iot1click-projects` - Type annotations for `iot1click-projects` service.
+        - `iotanalytics` - Type annotations for `iotanalytics` service.
+        - `iotevents` - Type annotations for `iotevents` service.
+        - `iotevents-data` - Type annotations for `iotevents-data` service.
+        - `iotthingsgraph` - Type annotations for `iotthingsgraph` service.
+        - `kafka` - Type annotations for `kafka` service.
+        - `kinesis` - Type annotations for `kinesis` service.
+        - `kinesis-video-archived-media` - Type annotations for `kinesis-video-archived-media` service.
+        - `kinesis-video-media` - Type annotations for `kinesis-video-media` service.
+        - `kinesisanalytics` - Type annotations for `kinesisanalytics` service.
+        - `kinesisanalyticsv2` - Type annotations for `kinesisanalyticsv2` service.
+        - `kinesisvideo` - Type annotations for `kinesisvideo` service.
+        - `kms` - Type annotations for `kms` service.
+        - `lakeformation` - Type annotations for `lakeformation` service.
+        - `lambda` - Type annotations for `lambda` service.
+        - `lex-models` - Type annotations for `lex-models` service.
+        - `lex-runtime` - Type annotations for `lex-runtime` service.
+        - `license-manager` - Type annotations for `license-manager` service.
+        - `lightsail` - Type annotations for `lightsail` service.
+        - `logs` - Type annotations for `logs` service.
+        - `machinelearning` - Type annotations for `machinelearning` service.
+        - `macie` - Type annotations for `macie` service.
+        - `managedblockchain` - Type annotations for `managedblockchain` service.
+        - `marketplace-entitlement` - Type annotations for `marketplace-entitlement` service.
+        - `marketplacecommerceanalytics` - Type annotations for `marketplacecommerceanalytics` service.
+        - `mediaconnect` - Type annotations for `mediaconnect` service.
+        - `mediaconvert` - Type annotations for `mediaconvert` service.
+        - `medialive` - Type annotations for `medialive` service.
+        - `mediapackage` - Type annotations for `mediapackage` service.
+        - `mediapackage-vod` - Type annotations for `mediapackage-vod` service.
+        - `mediastore` - Type annotations for `mediastore` service.
+        - `mediastore-data` - Type annotations for `mediastore-data` service.
+        - `mediatailor` - Type annotations for `mediatailor` service.
+        - `meteringmarketplace` - Type annotations for `meteringmarketplace` service.
+        - `mgh` - Type annotations for `mgh` service.
+        - `mobile` - Type annotations for `mobile` service.
+        - `mq` - Type annotations for `mq` service.
+        - `mturk` - Type annotations for `mturk` service.
+        - `neptune` - Type annotations for `neptune` service.
+        - `opsworks` - Type annotations for `opsworks` service.
+        - `opsworkscm` - Type annotations for `opsworkscm` service.
+        - `organizations` - Type annotations for `organizations` service.
+        - `personalize` - Type annotations for `personalize` service.
+        - `personalize-events` - Type annotations for `personalize-events` service.
+        - `personalize-runtime` - Type annotations for `personalize-runtime` service.
+        - `pi` - Type annotations for `pi` service.
+        - `pinpoint` - Type annotations for `pinpoint` service.
+        - `pinpoint-email` - Type annotations for `pinpoint-email` service.
+        - `pinpoint-sms-voice` - Type annotations for `pinpoint-sms-voice` service.
+        - `polly` - Type annotations for `polly` service.
+        - `pricing` - Type annotations for `pricing` service.
+        - `qldb` - Type annotations for `qldb` service.
+        - `qldb-session` - Type annotations for `qldb-session` service.
+        - `quicksight` - Type annotations for `quicksight` service.
+        - `ram` - Type annotations for `ram` service.
+        - `rds` - Type annotations for `rds` service.
+        - `rds-data` - Type annotations for `rds-data` service.
+        - `redshift` - Type annotations for `redshift` service.
+        - `rekognition` - Type annotations for `rekognition` service.
+        - `resource-groups` - Type annotations for `resource-groups` service.
+        - `resourcegroupstaggingapi` - Type annotations for `resourcegroupstaggingapi` service.
+        - `robomaker` - Type annotations for `robomaker` service.
+        - `route53` - Type annotations for `route53` service.
+        - `route53domains` - Type annotations for `route53domains` service.
+        - `route53resolver` - Type annotations for `route53resolver` service.
+        - `s3` - Type annotations for `s3` service.
+        - `s3control` - Type annotations for `s3control` service.
+        - `sagemaker` - Type annotations for `sagemaker` service.
+        - `sagemaker-runtime` - Type annotations for `sagemaker-runtime` service.
+        - `savingsplans` - Type annotations for `savingsplans` service.
+        - `sdb` - Type annotations for `sdb` service.
+        - `secretsmanager` - Type annotations for `secretsmanager` service.
+        - `securityhub` - Type annotations for `securityhub` service.
+        - `serverlessrepo` - Type annotations for `serverlessrepo` service.
+        - `service-quotas` - Type annotations for `service-quotas` service.
+        - `servicecatalog` - Type annotations for `servicecatalog` service.
+        - `servicediscovery` - Type annotations for `servicediscovery` service.
+        - `ses` - Type annotations for `ses` service.
+        - `shield` - Type annotations for `shield` service.
+        - `signer` - Type annotations for `signer` service.
+        - `sms` - Type annotations for `sms` service.
+        - `sms-voice` - Type annotations for `sms-voice` service.
+        - `snowball` - Type annotations for `snowball` service.
+        - `sns` - Type annotations for `sns` service.
+        - `sqs` - Type annotations for `sqs` service.
+        - `ssm` - Type annotations for `ssm` service.
+        - `stepfunctions` - Type annotations for `stepfunctions` service.
+        - `storagegateway` - Type annotations for `storagegateway` service.
+        - `sts` - Type annotations for `sts` service.
+        - `support` - Type annotations for `support` service.
+        - `swf` - Type annotations for `swf` service.
+        - `textract` - Type annotations for `textract` service.
+        - `transcribe` - Type annotations for `transcribe` service.
+        - `transfer` - Type annotations for `transfer` service.
+        - `translate` - Type annotations for `translate` service.
+        - `waf` - Type annotations for `waf` service.
+        - `waf-regional` - Type annotations for `waf-regional` service.
+        - `workdocs` - Type annotations for `workdocs` service.
+        - `worklink` - Type annotations for `worklink` service.
+        - `workmail` - Type annotations for `workmail` service.
+        - `workmailmessageflow` - Type annotations for `workmailmessageflow` service.
+        - `workspaces` - Type annotations for `workspaces` service.
+        - `xray` - Type annotations for `xray` service.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+Provides-Extra: codebuild
+Provides-Extra: application-autoscaling
+Provides-Extra: inspector
+Provides-Extra: rds-data
+Provides-Extra: iot
+Provides-Extra: all
+Provides-Extra: comprehend
+Provides-Extra: cognito-sync
+Provides-Extra: chime
+Provides-Extra: resourcegroupstaggingapi
+Provides-Extra: appstream
+Provides-Extra: iotanalytics
+Provides-Extra: textract
+Provides-Extra: connect
+Provides-Extra: cognito-idp
+Provides-Extra: directconnect
+Provides-Extra: machinelearning
+Provides-Extra: mgh
+Provides-Extra: quicksight
+Provides-Extra: savingsplans
+Provides-Extra: efs
+Provides-Extra: ecs
+Provides-Extra: meteringmarketplace
+Provides-Extra: workspaces
+Provides-Extra: appmesh
+Provides-Extra: autoscaling-plans
+Provides-Extra: kinesis-video-archived-media
+Provides-Extra: iam
+Provides-Extra: translate
+Provides-Extra: iot1click-projects
+Provides-Extra: medialive
+Provides-Extra: cloudsearch
+Provides-Extra: kafka
+Provides-Extra: iotevents-data
+Provides-Extra: kms
+Provides-Extra: events
+Provides-Extra: config
+Provides-Extra: autoscaling
+Provides-Extra: glue
+Provides-Extra: iotevents
+Provides-Extra: waf-regional
+Provides-Extra: emr
+Provides-Extra: alexaforbusiness
+Provides-Extra: fsx
+Provides-Extra: opsworks
+Provides-Extra: pinpoint-email
+Provides-Extra: stepfunctions
+Provides-Extra: swf
+Provides-Extra: transfer
+Provides-Extra: waf
+Provides-Extra: amplify
+Provides-Extra: codestar
+Provides-Extra: glacier
+Provides-Extra: support
+Provides-Extra: pinpoint
+Provides-Extra: snowball
+Provides-Extra: lex-runtime
+Provides-Extra: elbv2
+Provides-Extra: worklink
+Provides-Extra: neptune
+Provides-Extra: forecastquery
+Provides-Extra: license-manager
+Provides-Extra: apigatewaymanagementapi
+Provides-Extra: sdb
+Provides-Extra: datapipeline
+Provides-Extra: mediatailor
+Provides-Extra: shield
+Provides-Extra: marketplace-entitlement
+Provides-Extra: discovery
+Provides-Extra: ds
+Provides-Extra: cur
+Provides-Extra: appsync
+Provides-Extra: dms
+Provides-Extra: lambda
+Provides-Extra: application-insights
+Provides-Extra: mediastore
+Provides-Extra: dax
+Provides-Extra: iot1click-devices
+Provides-Extra: acm
+Provides-Extra: apigateway
+Provides-Extra: cloudformation
+Provides-Extra: macie
+Provides-Extra: ses
+Provides-Extra: athena
+Provides-Extra: globalaccelerator
+Provides-Extra: kinesisvideo
+Provides-Extra: cloudtrail
+Provides-Extra: codedeploy
+Provides-Extra: qldb-session
+Provides-Extra: workmailmessageflow
+Provides-Extra: firehose
+Provides-Extra: cognito-identity
+Provides-Extra: dynamodbstreams
+Provides-Extra: rekognition
+Provides-Extra: mediapackage-vod
+Provides-Extra: essential
+Provides-Extra: cloudwatch
+Provides-Extra: clouddirectory
+Provides-Extra: backup
+Provides-Extra: pi
+Provides-Extra: ssm
+Provides-Extra: elasticbeanstalk
+Provides-Extra: mq
+Provides-Extra: managedblockchain
+Provides-Extra: servicediscovery
+Provides-Extra: pricing
+Provides-Extra: ce
+Provides-Extra: greengrass
+Provides-Extra: codepipeline
+Provides-Extra: eks
+Provides-Extra: lakeformation
+Provides-Extra: guardduty
+Provides-Extra: codecommit
+Provides-Extra: opsworkscm
+Provides-Extra: qldb
+Provides-Extra: mturk
+Provides-Extra: xray
+Provides-Extra: comprehendmedical
+Provides-Extra: cloudhsmv2
+Provides-Extra: es
+Provides-Extra: resource-groups
+Provides-Extra: elastictranscoder
+Provides-Extra: sagemaker
+Provides-Extra: sns
+Provides-Extra: polly
+Provides-Extra: kinesis
+Provides-Extra: kinesisanalytics
+Provides-Extra: securityhub
+Provides-Extra: organizations
+Provides-Extra: robomaker
+Provides-Extra: importexport
+Provides-Extra: kinesisanalyticsv2
+Provides-Extra: ecr
+Provides-Extra: cloudfront
+Provides-Extra: forecast
+Provides-Extra: signer
+Provides-Extra: sms-voice
+Provides-Extra: lightsail
+Provides-Extra: workdocs
+Provides-Extra: dynamodb
+Provides-Extra: workmail
+Provides-Extra: personalize-runtime
+Provides-Extra: elasticache
+Provides-Extra: route53
+Provides-Extra: mobile
+Provides-Extra: personalize
+Provides-Extra: dlm
+Provides-Extra: logs
+Provides-Extra: route53resolver
+Provides-Extra: servicecatalog
+Provides-Extra: sts
+Provides-Extra: devicefarm
+Provides-Extra: mediastore-data
+Provides-Extra: serverlessrepo
+Provides-Extra: acm-pca
+Provides-Extra: elb
+Provides-Extra: batch
+Provides-Extra: budgets
+Provides-Extra: gamelift
+Provides-Extra: mediaconnect
+Provides-Extra: sagemaker-runtime
+Provides-Extra: sqs
+Provides-Extra: route53domains
+Provides-Extra: ec2-instance-connect
+Provides-Extra: lex-models
+Provides-Extra: datasync
+Provides-Extra: personalize-events
+Provides-Extra: pinpoint-sms-voice
+Provides-Extra: codestar-notifications
+Provides-Extra: secretsmanager
+Provides-Extra: fms
+Provides-Extra: transcribe
+Provides-Extra: mediapackage
+Provides-Extra: groundstation
+Provides-Extra: ram
+Provides-Extra: iot-jobs-data
+Provides-Extra: rds
+Provides-Extra: storagegateway
+Provides-Extra: service-quotas
+Provides-Extra: redshift
+Provides-Extra: iot-data
+Provides-Extra: apigatewayv2
+Provides-Extra: mediaconvert
+Provides-Extra: s3control
+Provides-Extra: docdb
+Provides-Extra: health
+Provides-Extra: iotthingsgraph
+Provides-Extra: marketplacecommerceanalytics
+Provides-Extra: sms
+Provides-Extra: s3
+Provides-Extra: cloud9
+Provides-Extra: cloudhsm
+Provides-Extra: ec2
+Provides-Extra: kinesis-video-media
+Provides-Extra: cloudsearchdomain
