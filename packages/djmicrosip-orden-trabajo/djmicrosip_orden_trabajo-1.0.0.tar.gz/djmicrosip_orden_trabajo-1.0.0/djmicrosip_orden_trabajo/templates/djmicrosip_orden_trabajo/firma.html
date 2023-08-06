@@ -1,0 +1,57 @@
+{% extends "base_basic.html" %}
+{% block title %}{% endblock %}
+
+<!-- CSS Code -->
+{% block style_css %}
+<style type="text/css">
+
+</style>
+{% endblock %}
+{% block modulestyle_css %}{% endblock %}
+<!-- JavaScript Code -->
+{% block js_code %}
+<script src='{{STATIC_URL}}djmicrosip_orden_trabajo/js/firma.js?v=1.0.0'></script>
+{% endblock %}
+{% block selected_module %} {% endblock %}
+{% block breadcrumb %}
+{{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+<form method="post" class="form" enctype='multipart/form-data'>
+  {% csrf_token %} 
+  <div class="row"> 
+  <div class="hidden-print col-md-4" style="padding-left: 15px;">
+      <a style="font-size: 3rem;" href="/pedidos/" class="glyphicon glyphicon-home" aria-hidden="true"></a>
+      <button style="float: right; font-size: 3rem;" id="bt-clear" onclick="clearCanvas()" 
+      class="glyphicon glyphicon-erase"></button>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-4">
+    <canvas id="canvas" style="border: 1px solid #000; width: 100%; height: 200px;"></canvas>
+    <div class="col-md-12 text-center">
+    <div class="gui">
+      <button style="font-size: 2.5rem" id="bt-save" onclick="sendToServer()">
+      {%if pedido.firma%}
+      Modificar Firma
+      {%else%}
+      Guardar Firma
+      {%endif%}
+      </button>
+    </div>
+    </div>
+    {{ form.errors }}
+    <div class="row text-center">
+    <img id="firma_image" src="{{MEDIA_URL}}{{pedido.firma}}" width="auto" height="100" alt="No hay firma">
+    <br>
+    <div class="hidden">
+    	{{ form}}
+    </div>
+    </div>
+  </div>
+  </div>
+</form>
+</div>
+{% endblock %}
