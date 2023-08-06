@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mgr-ovh
+Version: 0.0.2
+Summary: an ovh sdk to consume api
+Home-page: https://framagit.org/mathieugravil/myOvh
+Author: 1V14713
+Author-email: mathieu.gravil@gmail.com
+License: UNKNOWN
+Description: ovh sdk python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
