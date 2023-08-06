@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+RobotFrameworkElasticSearchLibrary/__init__.py
+RobotFrameworkElasticSearchLibrary.egg-info/PKG-INFO
+RobotFrameworkElasticSearchLibrary.egg-info/SOURCES.txt
+RobotFrameworkElasticSearchLibrary.egg-info/dependency_links.txt
+RobotFrameworkElasticSearchLibrary.egg-info/requires.txt
+RobotFrameworkElasticSearchLibrary.egg-info/top_level.txt

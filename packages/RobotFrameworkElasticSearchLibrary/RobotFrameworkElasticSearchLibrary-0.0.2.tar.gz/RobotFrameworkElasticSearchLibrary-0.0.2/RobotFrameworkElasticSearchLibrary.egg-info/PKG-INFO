@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: RobotFrameworkElasticSearchLibrary
+Version: 0.0.2
+Summary: Robot Framework ElasticSearch library.
+Home-page: https://github.com/gianpaolocaprara/robotframework-elasticsearch
+Author: Gianpaolo Caprara
+Author-email: gianpaolo.caprara@gmail.com
+License: MIT
+Download-URL: https://github.com/gianpaolocaprara/robotframework-elasticsearch/archive/0.0.2.tar.gz
+Description: UNKNOWN
+Keywords: ROBOTFRAMEWORK,ELASTICSEARCH
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
