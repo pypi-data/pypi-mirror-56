@@ -1,0 +1,16 @@
+clldutils>=3.5clld>=4.2.2
+purl
+
+[dev]
+tox
+flake8
+wheel
+twine
+
+[test]
+cdstarcat
+mock>=2.0
+pytest-clld
+pytest-mock
+coverage>=4.2
+pytest-cov
