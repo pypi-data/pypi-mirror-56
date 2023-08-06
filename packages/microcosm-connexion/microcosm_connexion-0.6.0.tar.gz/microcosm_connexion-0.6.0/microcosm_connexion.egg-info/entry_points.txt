@@ -1,0 +1,9 @@
+[console_scripts]
+
+
+[microcosm.factories]
+configure_connexion_error_handler = microcosm_connexion.factories:configure_connexion_error_handler
+connexion = microcosm_connexion.factories:configure_connexion
+connexion_error_handler = microcosm_connexion.factories:connexion_error_handler
+postgres_session_factory = microcosm_connexion.factories:configure_postgres_session_factory
+
