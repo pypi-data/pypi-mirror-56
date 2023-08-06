@@ -1,0 +1,35 @@
+{% if not no_token %}
+  {% csrf_token %}
+{% endif %}
+{% if form.non_field_errors %}
+  {{ form.non_field_errors }}
+{% endif %}
+<fieldset>
+  {% if legend %}
+    <legend>{{ legend }}</legend>
+  {% endif %}
+
+  {% for field in form.visible_fields %}
+    {% include 'dna/_thing_field.html' %}
+  {% endfor %}
+
+  {% for formset_form in formset %}
+    <legend>
+      {{ formset_legend }}
+      {% if formset_add %}
+        {{ forloop.counter|add:formset_add }}:
+      {% else %}
+        {{ forloop.counter }}:
+      {% endif %}
+    </legend>
+    {% for field in formset_form.visible_fields %}
+      {% include 'dna/_thing_field.html' %}
+    {% endfor %}
+    {% for hidden in formset_form.hidden_fields %}
+      {{ hidden }}
+    {% endfor %}
+  {% endfor %}
+</fieldset>
+{% for hidden in form.hidden_fields %}
+  {{ hidden }}
+{% endfor %}
