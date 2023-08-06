@@ -1,0 +1,6 @@
+include LICENSE requirements.txt
+recursive-include autopost *
+recursive-include system *
+recursive-include usercenter *
+recursive-include qitian_framework *
+global-exclude *.pyc __pycache__ *.egg-info
