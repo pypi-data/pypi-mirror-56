@@ -1,0 +1,85 @@
+# PySubmit
+
+The versatile computation submission tool.
+
+## Purpose
+
+Scientists who use computational methods often face the problem to test
+various parameter values as input for their numerical codes.
+
+Having the power of high performance computer clusters (HPCs) at hand,
+it is easy to test up to multiple thousand input parameter values
+simultaneously. However, HPCs typically use batch systems that schedule
+computation jobs. Special files called *start scripts* are required
+to get your computation running. These start scripts are even useful
+for computations on your local workstations if they are adapted a little.
+
+This tool enables to generate these start scripts with ease and for
+arbitrary interfaces to your numerical code. The parameters are supplied
+using Python and a boilerplate of your start script that needs to be
+filled with values. With that, this tool helps to make your numerical
+research more reproducible.
+
+## Installation
+
+The package is on PyPI so that an installation is as simple as:
+
+```sh
+$ pip install pysubmit
+```
+
+Alternatively, you can install the package in developer mode with from this repository:
+
+```sh
+$ pip install -e .
+```
+
+with the current directory being the top level folder of the PySubmit project.
+
+## Configuration
+
+Call ```pysubmit -h``` to see possible configuration options.
+
+## Creating a template
+
+PySubmit uses regular Python files as templates for the creation of the start scripts.
+Create a Python file with a function ```render()``` in it, which needs to return filenames
+and parameter values for the variables in the actual start script. The start script itself
+is added to this Python file with triple quotes (```"""```) at the very end. The opening triple
+quotes are followed by ```<<<``` and the ending ones are preceded by ```>>>```. Hence, the limiting
+syntax of the start script code inside the Python file that comes with the ```render()```
+function is ```"""<<<``` and ```>>>"""```.
+
+This format keeps the PySubmit template very consise and contained in a single file. A basic example
+is found in ```tests/template_example_new.py```. Try to use the template by executing:
+
+```sh
+$ pysubmit -pf <path>/<to>/<repo>/pysubmit/tests/template_example_new.py -o TEST
+```
+
+to generate the start scripts as defined in the example and save them into the folder ```TEXT/```.
+
+The version 1.0 of PySubmit uses a different format for the templates. To use the file format
+from v0.1 - and thereby be backwards compatible -, the command-line tool ```pysubmit```
+comes with an extra keyword ```--boilerplate-file```. If you would like to use the old format
+with v1.0, use ```--pysubmit-file``` to supply your ```render.py``` file and ```--boilerplate-file```
+to supply the ```boilerplate``` file. An example of the old format can be found under
+```tests/template_example_old.py``` and ```tests/template_example_old.boilerplate```.
+
+## Upload to pypi
+
+These are the steps to upload this project to pypi:
+
+1. Build the package, see https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives.
+2. Upload the package, see https://packaging.python.org/tutorials/packaging-projects/#uploading-the-distribution-archives.
+
+The summary of those two resources is:
+
+1. Build the package: ```python setup.py sdist bdist_wheel```
+2. Upload the package: ```twine upload dist/*```
+
+## Help
+
+If anything is unclear, please contact me under martin.lellep@gmail.com :-). I personally find this tool
+incredibly useful and use it literally everyday to start my simulations on HPCs.
+
