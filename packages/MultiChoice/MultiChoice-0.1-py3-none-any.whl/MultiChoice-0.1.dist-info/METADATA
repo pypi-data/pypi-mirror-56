@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: MultiChoice
+Version: 0.1
+Summary: Framework for generating formatted user input questions.
+Home-page: UNKNOWN
+Author: Robert Sharp
+Author-email: webmaster@sharpdesigndigital.com
+License: Free for non-commercial use
+Keywords: Questionnaire,Multiple Choice,Quiz Framework,Terminal Survey
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# MultiChoice
+MultiChoice is a framework for generating formatted user input questionnaires.
+
+
+## Class: MultiChoice
+`MultiChoice(prompt, options, required=True, strict=True)`
+
+Generates multiple choice questions.
+
+`__call__(self)`
+- Return: String. Returns the user selection.
+
+`__init__(self, prompt, options, required=True, strict=True)`
+- Param prompt: String.
+    Question, query or prompt for the user.
+- Param options: Tuple of Strings.
+    Options presented to the user as a numbered sequence.
+    The user may enter an answer as text or one of the numbers.
+- Param required: Bool. Default=True:
+    True: Repeats question until answered.
+    False: Accepts null input as an empty string.
+- Param strict: Bool. Default=True
+    True: Answer must be in the options tuple. Not case-sensitive.
+    False: Accepts any answer.
+
+
+## Class: FillBlank
+`FillBlank(prompt, required=True)`
+
+FillBlank: generates fill-in-the-blank questions.
+
+`__call__(self)`
+- Return: String. Returns the user selection.
+
+`__init__(self, prompt, required=True)`
+- Param prompt: String.
+    Question, query or prompt for the user.
+- Param required: Bool. Default=True:
+    True: Repeats question until answered.
+    False: Accepts null input as an empty string.
+
+
+## Class: TrueFalse
+`TrueFalse(prompt, required=True, strict=True)`
+
+TrueFalse generates True or False questions.
+
+`__call__(self)`
+- Return: String. Returns the user selection.
+
+`__init__(self, prompt, required=True, strict=True)`
+- Param prompt: String.
+    Question, query or prompt for the user.
+- Param required: Bool. Default=True:
+    True: Repeats question until answered.
+    False: Accepts null input as an empty string.
+- Param strict: Bool. Default=True
+    True: Answer must be in the options tuple. Not case-sensitive.
+    False: Accepts any answer.
+
+
