@@ -1,0 +1,3 @@
+params = {
+    'deployment':'jupyter',
+}
