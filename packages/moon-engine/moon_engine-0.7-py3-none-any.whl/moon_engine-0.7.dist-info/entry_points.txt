@@ -1,0 +1,3 @@
+[console_scripts]
+moon_engine = moon_engine.__main__:run
+
