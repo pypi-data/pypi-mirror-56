@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: de-core
+Version: 0.0.4
+Summary: de_core portion of python development environment namespace package
+Home-page: https://gitlab.com/degroup/de_core
+Author: Andi Ecker
+Author-email: aecker2@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: productivity,environment,configuration,development
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
