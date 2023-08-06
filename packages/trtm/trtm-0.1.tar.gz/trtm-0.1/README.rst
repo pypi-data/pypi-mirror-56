@@ -1,0 +1,66 @@
+Python parser Titan Radiative Transfer model
+============================================
+
+Install
+-------
+
+From the source:
+
+.. code:: bash
+
+    python setup.py develop
+
+
+Usage
+-----
+
+.. code:: python
+
+    >>> from trtm import TRTM
+
+    >>> data = TRTM('1590648776_1', root='tests/data', suffix='test_SPSDISORT')
+
+    >>> data.keys()
+    [
+        'setup',
+        'wvlns',
+        'outputs',
+        'cube',
+        ...
+        'FH',
+        ...
+        'I_F',
+        ...
+        'albedo_corr',
+        ...
+    ]
+
+    >>> data['setup']
+    {
+        'Numéro cube et pixel': 'C1590648776_1',
+        'NKS': 4,
+        ...
+    }
+
+    >>> data['NKS']
+    4
+
+    >>> out['FH'].shape
+    (5, 3)
+
+    >>> out['FH', 3, 5]
+    0.900057
+
+    >>> out['I_F'].shape
+    (256, 5, 3)
+
+    >>> out['I_F', 5.0].shape
+    (5, 3)
+
+    >>> out['I_F', 1, 1].shape
+    (256, )
+
+    >>>out['I_F', 1, 1, 5.12]
+    0.04082437994
+
+See examples in `Jupyter notebook examples <notebooks/Examples.ipynb>`_.
