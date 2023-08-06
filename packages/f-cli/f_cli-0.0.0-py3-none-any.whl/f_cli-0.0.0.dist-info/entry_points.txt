@@ -1,0 +1,3 @@
+[console_scripts]
+f-cli = f_cli.cli:main
+

@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: f-cli
+Version: 0.0.0
+Summary: Cloud Engineer toolkit
+Home-page: https://github.com/ITProKyle/f-cli
+Author: Kyle Finley
+Author-email: kyle@finley.sh
+License: Apache License 2.0
+Keywords: aws,cli
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7
+Requires-Dist: click (~=7.0)
+Provides-Extra: testing
+Requires-Dist: flake8 (~=3.5) ; extra == 'testing'
+Requires-Dist: flake8-docstrings (~=1.3) ; extra == 'testing'
+Requires-Dist: mypy (~=0.610) ; extra == 'testing'
+Requires-Dist: pep8-naming (~=0.7) ; extra == 'testing'
+Requires-Dist: pydocstyle (<4.0.0) ; extra == 'testing'
+Requires-Dist: pylint (~=2.0) ; extra == 'testing'
+Requires-Dist: pytest (~=5.1) ; extra == 'testing'
+
+Cloud Engineer toolkit
+
+
