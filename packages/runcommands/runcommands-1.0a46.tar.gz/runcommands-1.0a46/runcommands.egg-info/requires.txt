@@ -1,0 +1,12 @@
+Jinja2>=2.10
+PyYAML>=5.1
+
+[dev]
+coverage
+flake8
+Sphinx
+twine
+
+[tox]
+flake8
+tox
