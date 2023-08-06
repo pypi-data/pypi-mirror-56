@@ -1,0 +1,3 @@
+[console_scripts]
+ccomplex = ccomplex.cli:main
+
