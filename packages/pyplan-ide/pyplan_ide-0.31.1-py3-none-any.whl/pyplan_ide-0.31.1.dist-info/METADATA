@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: pyplan-ide
+Version: 0.31.1
+Summary: Pyplan is a graphical Integrated Development Environment for creating and sharing Data Analytics Apps.
+Home-page: http://www.pyplan.com/
+Author: Pyplan
+Author-email: info@pyplan.com
+License: Free for non-commercial use
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Operating System :: OS Independent
+Classifier: License :: Free for non-commercial use
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: Django (==2.2.5)
+Requires-Dist: django-configurations (==2.1)
+Requires-Dist: django-model-utils (==3.2.0)
+Requires-Dist: jsonfield (==2.0.2)
+Requires-Dist: djangorestframework (==3.10.2)
+Requires-Dist: django-filter (==2.2.0)
+Requires-Dist: coreapi
+Requires-Dist: django-cors-headers
+Requires-Dist: django-environ (==0.4.5)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: user-agents (>=2.0)
+Requires-Dist: ipython (==7.8.0)
+Requires-Dist: autopep8 (>=1.4.4)
+Requires-Dist: django-nose (==1.4.6)
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: numpydoc (>=0.9.1)
+Requires-Dist: pandas (>=0.25.0)
+Requires-Dist: openpyxl (>=2.6.2)
+Requires-Dist: sqlalchemy (>=1.3.6)
+Requires-Dist: xlrd
+Requires-Dist: jsonpickle (>=1.2)
+Requires-Dist: xarray (>=0.12.3)
+Requires-Dist: plotly (>=4.1.0)
+Requires-Dist: bokeh (>=1.3.4)
+Requires-Dist: matplotlib (>=3.1.1)
+Requires-Dist: whitenoise (==4.1.4)
+
+.. image:: http://pyplan.com/wp-content/uploads/2018/10/logo_pyplan-1.png
+
+**Pyplan** allows consolidating into a single graphical environment all corporate Data Analytics and Decision Support needs. 
+It is meant to simplify Business Analyst introduction to Data Science with Python, and provide at the same time, computer power, robustness, huge quantity of open source tools and corporate governance.
+
+Among its most prominent features you will find:
+
+- Assisted drag and drop graphical programming
+- Visual Influence Diagram to represent logic flow
+- Easy creation of interactive user interfaces
+- Empowered collaboration by one click publishing and sharing
+- Secure and scalable with corporate standards
+- On cloud or on-premise deployment    
+
+http://pyplan.com
+
+
+Requirements
+------------
+- `python 3.7 <https://www.python.org/downloads/release/python-375/>`_
+
+
+Installation
+------------
+
+You can install **Pyplan** using pip:
+
+Linux/Mac::
+
+  python3.7 -m venv pyplan
+  . pyplan/bin/activate
+  pip install pyplan-ide
+
+Windows::
+
+  python3.7 -m venv pyplan
+  pyplan\Scripts\activate.bat
+  pip install pyplan-ide
+
+
+Install **Pyplan** using **conda**::
+
+   conda config --append channels pyplan
+   conda config --append channels conda-forge
+   conda create -n pyplan-ide python=3.7
+   conda activate pyplan-ide
+   conda install pyplan-ide
+
+Or install **Pyplan** using **Anaconda Navigator**::
+
+   create and select new environment "pyplan-ide"
+   add channel pyplan
+   add channel conda-forge
+   go to home
+   find "pyplan-ide" app on Navigator and click Install
+   then click Launch
+
+
+Run Pyplan
+------------
+
+You can run **Pyplan** with these commands:
+
+Linux/Mac::
+
+  . pyplan/bin/activate
+  pyplan
+
+Windows::
+
+  pyplan\Scripts\activate.bat
+  pyplan
+
+conda::
+  Start terminal an type: **pyplan**
+
+Anaconda Navigator::
+  Click launch on **pyplan-ide** app
+
+
+
