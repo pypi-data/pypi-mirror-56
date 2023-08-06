@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: keybasepy
+Version: 0.1.3
+Summary: A bot library for keybase
+License: MIT
+Author: dnorhoj
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pykeybasebot (>=0.1.6,<0.2.0)
+Description-Content-Type: text/markdown
+
+# keybase.py
+
+This is a keybase bot library for Python 3.7+
+Docs will be released soon.
+
+## Install
+
+```sh
+pip install keybasepy
+```
+
+## Todo
+
+* Add documentation.
+* Create a more comprehensive README
+
