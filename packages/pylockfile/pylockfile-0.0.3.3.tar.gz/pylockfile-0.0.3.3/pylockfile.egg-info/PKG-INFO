@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pylockfile
+Version: 0.0.3.3
+Summary: Создание файла блокировки, для предотвращения выполнения нескольких копий скрипта
+Home-page: https://github.com/iiiparadoxxxiii/lockfile
+Author: Kusakin Anton @iiiparadoxxxiii
+Author-email: iiiparadoxxxiii@gmail.com
+License: UNKNOWN
+Description: # lockfile
+        Создание файла блокировки, для предотвращения выполнения нескольких копий скрипта.
+        
+        Использование
+        ```
+        from pylockfile import * #Импорт модуля
+        
+        lf = pylockfile('<PATH_TO_FILE>') #Указание пути до файла блокировки
+        
+        lf.create() #Создание файла блокировки в начале скрипта
+        
+        lf.delete() # Удаление файла блокировки в конце скрипта
+        ```
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

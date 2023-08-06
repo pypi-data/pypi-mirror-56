@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+README.rst
+setup.py
+pylockfile/__init__.py
+pylockfile/pylockfile.py
+pylockfile.egg-info/PKG-INFO
+pylockfile.egg-info/SOURCES.txt
+pylockfile.egg-info/dependency_links.txt
+pylockfile.egg-info/top_level.txt
