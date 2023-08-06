@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: sportident
+Version: 1.2.2
+Summary: Python module to communicate with SportIdent main stations
+Home-page: https://github.com/sportorg/sireader
+Author: Akhtarov Danil
+Author-email: daxartio@gmail.com
+License: GPLv3+
+Description: SportIdent Reader
+        
+Keywords: sportident orienteering sportorg
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
