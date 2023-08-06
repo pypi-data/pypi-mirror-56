@@ -1,0 +1,17 @@
+requests
+pydantic>=0.32.2
+pydantic[email]
+email-validator>=1.0.3
+idna>=2.0.0
+dnspython>=1.15.0
+inflection
+
+[dev]
+black
+twine
+wheel
+
+[test]
+pytest
+coverage
+pytest-cov
