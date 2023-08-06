@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+    {% trans "Login" %}
+{% endblock %}
+
+{% block supplementary_css %}
+    <link rel="stylesheet" href="{% static 'base.css' %}"/>
+    <link rel="stylesheet" href="{% static 'registration/login.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    {% if next %}
+        <div class="sib-login-title">
+            {% if user.is_authenticated %}
+                <h2>
+                    {% blocktrans %}
+                        Your account doesn't have access to this page. To proceed,
+                        please login with an account that has access.
+                    {% endblocktrans %}
+                </h2>
+            {% else %}
+                <h2>{% trans "Please login to see this page." %}</h2>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="sib-login-forms">
+        <div class="flex-column">
+            {% if form.errors %}
+                <p class="error">{% trans "Your username and password didn't match. Please try again." %}</p>
+            {% endif %}
+            <form class="flex-column" method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class="input-line">
+                    <label for="id_username">{%  trans "Username or e-mail:" %}</label>
+                    {{ form.username }}
+                </div>
+                <div class="input-line">
+                    {{ form.password.label_tag }}
+                    {{ form.password }}
+                </div>
+                <input type="submit" value="{% trans 'login' %}"/>
+                <input type="hidden" name="next" value="{{ next }}"/>
+            </form>
+            <a class="sib-link" href="{% url 'password_reset' %}">{% trans "Lost password?" %}</a>
+        </div>
+
+        <div class="flex-column">
+            <p class="other-login-title text-center">{% trans "Login using another authentification provider" %}</p>
+
+            <form class="flex-column" method="post" action="{% url 'oidc_login' %}">
+                {% csrf_token %}
+                <label for="id_subject" title="Your e-mail, web-id or provider url">{% trans "E-mail, web-id or provider url:" %}</label>
+                <input type="text" name="subject" required id="id_subject"/>
+                <input type="submit" value="{% trans 'login' %}"/>
+                <input type="hidden" name="next" value="{{ next }}"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}
