@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+SMSmartPy.egg-info/PKG-INFO
+SMSmartPy.egg-info/SOURCES.txt
+SMSmartPy.egg-info/dependency_links.txt
+SMSmartPy.egg-info/requires.txt
+SMSmartPy.egg-info/top_level.txt
+Smart/giturl.py
+Smart/sel-.py
+Smart/selq.py
+Smart/smart.py
