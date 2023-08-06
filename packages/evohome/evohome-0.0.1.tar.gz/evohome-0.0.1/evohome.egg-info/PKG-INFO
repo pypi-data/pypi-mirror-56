@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: evohome
+Version: 0.0.1
+Summary: A Honeywell evohome RF agent (compliant with RAMSES II).
+Home-page: https://github.com/zxdavb/evohome
+Author: David Bonnes
+Author-email: zxdavb@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/zxdavb/evohome/archive/VERSION.tar.gz
+Description: # evohome
+        WIP: Emulates a Honeywell evohome controller.
+        
+Keywords: evohome,ramses
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Description-Content-Type: text/markdown
