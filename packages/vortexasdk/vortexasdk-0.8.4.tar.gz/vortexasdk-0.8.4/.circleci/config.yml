@@ -1,0 +1,47 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/project
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "76:f3:aa:52:65:1f:70:08:51:fd:d6:e0:7c:8a:33:fb"
+
+      - restore_cache: &restore_cache
+          keys:
+            - v1-{{ .Branch }}-
+
+      - run:
+          name: "Install requirements.txt"
+          command: |
+            python3.7 -m venv .venv;
+            . .venv/bin/activate
+            pip install -U pip
+            pip install -e .[tests]
+
+      - save_cache: &save_cache
+          key: v1-{{ .Branch }}-{{ epoch }}
+          paths:
+            - ~/project/.venv
+            - ~/.cache/pip
+
+      - run:
+          name: "Run tests against mock API"
+          command: |
+            . .venv/bin/activate
+            export SKIP_TAGS=real; pytest -v
+
+      - run:
+          name: "Run all tests, including live API"
+          command: |
+            . .venv/bin/activate
+            pytest -v
+
+      - run:
+          name: "Build docs"
+          command: |
+            . .venv/bin/activate
+            ./docs/build_docs.sh
