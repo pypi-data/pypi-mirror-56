@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ids-lib
+Version: 0.1.3.dev0
+Summary: Common functionality and preprocessing for intrusion detection
+Home-page: UNKNOWN
+Author: dnk0 <Dennis Kreußel>
+Author-email: dnk0@protonmail.com
+License: UNKNOWN
+Description: # IDS-lib
+        
+        This is a simple example package. You can use
+        [Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+        to write your content.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
