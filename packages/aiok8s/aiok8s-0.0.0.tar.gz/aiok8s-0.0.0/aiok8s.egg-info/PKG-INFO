@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: aiok8s
+Version: 0.0.0
+Summary: asyncio client tools for Kubernetes
+Home-page: https://github.com/tbarrella/kubernetes-cache
+Author: Taylor Barrella
+Author-email: tbarrella@gmail.com
+License: UNKNOWN
+Description: Most of this code is directly translated from and attributed to
+        https://github.com/kubernetes/client-go
+        
+        TODO
+        - travis
+        - stop Event -> Task.cancel()?
+        - refactor testing helpers
+        - types
+        - rewrite wait.poll()?
+        - make some APIs private
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
