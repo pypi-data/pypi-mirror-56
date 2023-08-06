@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: deepmind
+Version: 0.0.1
+Summary: A comprehensive python package to interpret numerical and experimental results using machine learning algorithms
+Home-page: https://github.com/amirrouh/deepmind
+Author: Amir Rouhollahi
+Author-email: rouhollahi@outlook.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+deepmind
+========
+
+.. image:: https://img.shields.io/pypi/v/deepmind.svg
+    :target: https://pypi.python.org/pypi/deepmind
+    :alt: Latest PyPI version
+
+.. image:: https://travis-ci.org/borntyping/cookiecutter-pypackage-minimal.png
+   :target: https://travis-ci.org/borntyping/cookiecutter-pypackage-minimal
+   :alt: Latest Travis CI build status
+
+A comprehensive python package to interpret numerical and experimental results using machine learning algorithms
+
+Usage
+-----
+
+Installation
+------------
+
+Requirements
+^^^^^^^^^^^^
+
+Compatibility
+-------------
+
+Licence
+-------
+
+Authors
+-------
+
+`deepmind` was written by `Amir Rouhollahi <rouhollahi@outlook.com>`_.
+
+
