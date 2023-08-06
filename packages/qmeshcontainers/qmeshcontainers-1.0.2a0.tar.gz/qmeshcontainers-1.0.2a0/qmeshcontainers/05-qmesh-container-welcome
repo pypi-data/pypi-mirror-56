@@ -1,0 +1,4 @@
+#!/bin/bash
+date
+echo 'This is a qmesh container based on image' $QMESH_BASE_IMAGE_TAG'. Exit with `exit` or Ctrl+d '
+echo 'For more information visit https://www.qmesh.org'

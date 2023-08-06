@@ -1,0 +1,690 @@
+#!/usr/bin/env python
+#
+#    Copyright (C) 2018 Alexandros Avdis and others.
+#    See the AUTHORS.md file for a full list of copyright holders.
+#
+#    This file is part of qmesh-containers.
+#
+#    qmesh-containers is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    qmesh-containers is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with qmesh-containers.  If not, see <http://www.gnu.org/licenses/>.
+"""Functions for creating qmesh Docker containers
+
+The functions aim to tailor basic qmesh images by adding a user and enabling access of files
+on the host system. Thus the functions in this module enable seamless work on meshing
+projects (users) or work on qmesh code (developers).
+"""
+
+
+def parse_arguments():
+    """Parse the command-line arguments.
+
+    Parameters
+    ----------
+
+    Returns
+    -------
+    arguments : Name-space
+        A python name-space containing all the command-line arguments
+    """
+    import argparse
+    parser = argparse.ArgumentParser(prog="qmeshcontainer",
+                                     description="Run a Linux container for qmesh:" +
+                                     " Create meshes from GIS data")
+    parser.add_argument("-v", "--verbosity",
+                        action="store",
+                        type=str,
+                        default='warning',
+                        choices=['debug', 'info', 'warning', 'error', 'critical'],
+                        help="Level of console verbosity.")
+    parser.add_argument("-c", "--cache-images",
+                        action="store_true",
+                        default=False,
+                        help="Retain docker images built for user-specific container.")
+    # Add a group to handle conflicting specifications of docker images.
+    docker_image_group = parser.add_mutually_exclusive_group()
+    docker_image_group.add_argument("-i", "--image",
+                                    action="store",
+                                    type=str,
+                                    dest='docker_base_image_tag',
+                                    default='qmesh/qmesh-containers:'+
+                                    'qmesh1.0.2_ubuntu16.04_qgisltr_gmsh3.0.4',
+                                    help="Use specified docker image." +
+                                    " Defaults to the qmesh Python API image.")
+    docker_image_group.add_argument("-idev", "--developer-image",
+                                    action="store_const",
+                                    dest='docker_base_image_tag',
+                                    const='qmesh/qmesh-containers:ubuntu18.04_qgis3_gmsh3.0.4',
+                                    help="Use the qmesh developer docker image.")
+    # Add a group to handle conflicting specifications of host-container mount volumes.
+    mount_volumes_group = parser.add_mutually_exclusive_group()
+    mount_volumes_group.add_argument('-m', '--mount-volume',
+                                     action="store",
+                                     dest='mount_volumes',
+                                     default=None,
+                                     help="Mount given host volume at given mount point." +
+                                     " Specified as 'host_path:container_path'." +
+                                     " 'container_path' can be 'home'," +
+                                     " if mounting at the user home dir.")
+    mount_volumes_group.add_argument('-mwd', '--mount-working-dir',
+                                     action="store_const",
+                                     dest='mount_volumes',
+                                     const='wd:home/wd',
+                                     help="Mount working directory, at similarly named" +
+                                     " directory inside the container home directory")
+    mount_volumes_group.add_argument('-mhome', '--mount-home',
+                                     action="store_const",
+                                     dest='mount_volumes',
+                                     const='home:home',
+                                     help="Mount user home directory, at image home directory")
+
+    arguments = parser.parse_args()
+    return arguments
+
+
+def mount_volumes_list(option_string, user_details, log):
+    """Process the list of volumes to mount in the user container.
+    """
+    import os
+    user_name = user_details['user_name']
+    user_home_dir = user_details['home_dir']
+    # If the input argument is of type None, then no mounting  information is given and
+    # the container will mount no host volumes. Return none to signify this condition
+    if option_string is None:
+        return option_string
+    # Separate host and container volume paths
+    volumes = option_string.split(':')
+    # If mounting working or home directory, extract correct path on host
+    if volumes[0] == 'wd':
+        host_volume = os.getcwd()
+    elif volumes[0] == 'home':
+        host_volume = os.path.join(user_home_dir, user_name)
+    else:
+        host_volume = os.path.dirname(os.path.realpath(volumes[0]))
+    # If the mount-point in the container is the home directory, get user
+    # details and construct correct path
+    if volumes[1] == 'home':
+        container_volume = os.path.join('/home', user_name)
+    elif volumes[1] == 'home/wd':
+        container_volume = os.path.join('/home', user_name, os.path.split(os.getcwd())[1])
+    # Check given host volume exists
+    if not os.path.exists(host_volume):
+        raise Exception('Path '+host_volume + ' does not exist on host.')
+    # Output to log the volume mapping
+    log.info('Mounting host volumes as follows:')
+    log.info('Host volume '+host_volume+' to container mount-point '+container_volume)
+    # Return list with volume paths
+    return [host_volume, container_volume]
+
+
+def get_user_host_setup(log):
+    """Extract user and host-system details.
+
+    Probe system for user name, uid (user id), gid (group id), home directory and X11 window system.
+    """
+    import platform
+    import os
+    user_details = {}
+    host_system_details = {}
+    # Obtain user and system details
+    if platform.system() == 'Linux' or platform.system() == 'Darwin':  # Mac
+        import pwd
+        import grp
+        user_details['user_name'] = pwd.getpwuid(os.getuid()).pw_name
+        user_details['uid'] = pwd.getpwuid(os.getuid()).pw_uid
+        user_details['gid'] = pwd.getpwuid(os.getuid()).pw_gid
+        user_details['group_name'] = grp.getgrgid(user_details['gid']).gr_name
+        user_details['home_dir'] = pwd.getpwuid(os.getuid()).pw_dir
+        # A few details for displaying GUIs
+        if platform.system() == 'Linux' and os.path.isdir('/tmp/.X11-unix'):
+            host_system_details['display'] = os.environ.get('DISPLAY')
+            host_system_details['x11_unix_path'] = '/tmp/.X11-unix'
+        else:
+            host_system_details['display'] = None
+            host_system_details['x11_unix_path'] = None
+    if platform.system() == 'Windows':
+        import getpass
+        user_details['user_name'] = getpass.getuser()
+        user_details['uid'] = 2000
+        user_details['gid'] = 2200
+        user_details['group_name'] = getpass.getuser()
+        user_details['home_dir'] = os.path.expanduser('~')
+        host_system_details['display'] = None
+        host_system_details['x11_unix_path'] = None
+    # Output some info to log
+    # Output host type.
+    if platform.system() == 'Linux':
+        log.info('Host is a GNU/Linux distribution')
+    elif platform.system() == 'Darwin':
+        log.info('Host is Apple Darwin')
+    elif platform.system() == 'Windows':
+        log.info('Host is Windows')
+    # Output user info.
+    log.debug('Host user has the following set-up:')
+    log.debug('\tUser name: '+user_details['user_name'])
+    log.debug('\tUser ID: '+str(user_details['uid']))
+    log.debug('\tGroup name: '+user_details['group_name'])
+    log.debug('\tGroup ID: '+str(user_details['gid']))
+    return user_details, host_system_details
+
+
+def pull_docker_image(docker_base_image_tag, log):
+    """Pull Docker Image
+    """
+    import docker
+    docker_client = docker.from_env()
+    log.info('Pulling Docker container '+docker_base_image_tag)
+    docker_image = docker_client.images.pull(docker_base_image_tag)
+    return docker_image
+
+
+def get_image_groups(docker_image):
+    """Get information on the groups in the docker image
+    """
+    import docker
+    import sys
+    import pandas
+    # Extract existing groups and their gid from image
+    docker_client = docker.from_env()
+    docker_container = docker_client.containers.run(docker_image, "cat /etc/group", detach=True)
+    groups_log = docker_container.logs()
+    groups_string = groups_log.decode(sys.stdout.encoding)
+    groups_list = groups_string.split('\n')
+    groups_list.pop()
+    groups_dict = dict((item.split(':')[0], int(item.split(':')[2])) for item in groups_list)
+    # Store group information from image in a pandas frame to facilitate later use
+    container_groups = pandas.DataFrame(groups_dict, index=['gid'])
+    return container_groups
+
+
+def host_image_group_mappings(docker_image, user_details, log):
+    """Find the gid-group name mappings in both host and container.
+
+    Lists the gid-group name mapping for the given user details, and list the groups
+    with the same gid and group name in the container.
+    """
+    import pandas
+    container_groups = get_image_groups(docker_image)
+    host_group_name = user_details['group_name']
+    host_gid = user_details['gid']
+    # Create row in a pandas Data Frame, aimed at outlining the group mapping between
+    # host and container
+    group_mapping = pandas.DataFrame({'gid': [host_gid], 'group_name': [host_group_name]},
+                                     index=['host'], dtype=int)
+    # Check if container has the user's primary group name and gid
+    container_has_group = host_group_name in container_groups.columns
+    container_groups_at_gid = container_groups.loc['gid'] == host_gid
+    container_has_gid = not container_groups.columns[container_groups_at_gid].empty
+    # If the container has both gid and group-name, the gid could be assigned to a group other
+    # than the host group name. In that case list both groups. Otherwise there is a perfect
+    # correspondence between the container and host group.
+    if container_has_gid and container_has_group:
+        container_has_gid_for_group = container_groups.columns[container_groups_at_gid][0]
+        container_group = pandas.DataFrame({'gid': [host_gid],
+                                            'group_name': [container_has_gid_for_group]},
+                                           index=['image'], dtype=int)
+        group_mapping = group_mapping.append(container_group)
+        if container_has_gid_for_group != host_group_name:
+            container_has_group_at_gid = container_groups.loc['gid'][host_group_name]
+            container_group = pandas.DataFrame({'gid': [container_has_group_at_gid],
+                                                'group_name': [host_group_name]},
+                                               index=['image'], dtype=int)
+            group_mapping = group_mapping.append(container_group)
+    # If the image has the host group-name but not the host gid, list the host group-name and the
+    # gid assigned to it in the image
+    elif not container_has_gid and container_has_group:
+        container_has_group_at_gid = container_groups.loc['gid'][host_group_name]
+        container_group = pandas.DataFrame({'gid': [container_has_group_at_gid],
+                                            'group_name': [host_group_name]},
+                                           index=['image'], dtype=int)
+        group_mapping = group_mapping.append(container_group)
+    # If the image has the host gid but not the host group-name, list the host gid and the
+    # group-name associated to it in the image
+    elif container_has_gid and not container_has_group:
+        container_has_gid_for_group = container_groups.columns[container_groups_at_gid][0]
+        container_group = pandas.DataFrame({'gid': [host_gid],
+                                            'group_name': [container_has_gid_for_group]},
+                                           index=['image'], dtype=int)
+        group_mapping = group_mapping.append(container_group)
+    # If neither group name or gid are present in the image, indicate so with a row of 'None'
+    else:
+        container_group = pandas.DataFrame({'gid': [None], 'group_name': [None]},
+                                           index=['image'], dtype=int)
+        group_mapping = group_mapping.append(container_group)
+    # Output the group mapping to log
+    message = 'The group correspondence between host and image ' + \
+              docker_image.attrs['RepoTags'][0] + ' is:\n' + \
+              str(group_mapping)
+    log.debug(message)
+    return group_mapping
+
+
+def consolidate_group_details(docker_image, user_details, log):
+    """Consolidate group details (group name and gid) in qmesh docker container.
+    """
+    # Get repository and tags info from docker image
+    docker_image_repository_tag = docker_image.attrs['RepoTags'][0]
+    # check group mappings
+    group_mappings = host_image_group_mappings(docker_image, user_details, log)
+    host_group_name = user_details['group_name']
+    host_gid = user_details['gid']
+    image_groups = group_mappings.loc['image']
+    # Initialise empty list of commands. Will accumulate the commands required to
+    # consolidate groups between host and image.
+    commands = []
+    # If the image groups frame has more than one entry, the group name and gid are bound to
+    # separate groups in the image
+    if image_groups.shape == (2, 2):
+        host_gid_mask_series = image_groups.gid == host_gid
+        image_group_name = image_groups.loc[host_gid_mask_series]['group_name']['image']
+        message = 'Group details mismatch: Group name and gid are bound to separate groups ' + \
+            'in image ' + docker_image_repository_tag + '\nWill proceed with group ' + \
+            image_group_name
+        log.debug(message)
+        user_details['group_name'] = image_group_name
+    # If the image groups frame has only one entry, there are four possibilities: First the
+    # group-name:gid mapping is identical between host and image. Second, the same group-name is
+    # assigned different gids. Third, different group-names are assigned the same gid.
+    # Fourth, neither group-name or gid exist in the image.
+    else:
+        # If the group-name:gid mapping is identical between host and image, there is no need to
+        # add the group
+        if image_groups.group_name == host_group_name and image_groups.gid == host_gid:
+            message = 'Group ' + host_group_name + ' with gid ' + str(host_gid) + \
+                      ' already present in image ' + docker_image_repository_tag + \
+                      '\nWill not add group.'
+            log.debug(message)
+        # If different group-names are assigned the same gid, keep the group-name:gid mapping that
+        # already  exists in the image.
+        elif image_groups.group_name != host_group_name and image_groups.gid == host_gid:
+            message = 'Group details mismatch: Group ' + image_groups.group_name + \
+                ' is assigned the gid ' + str(image_groups.gid) + ' in image ' + \
+                docker_image_repository_tag + '\nWill proceed with group ' + image_groups.group_name
+            log.debug(message)
+            user_details['group_name'] = image_groups.group_name
+            # Add group to container
+            commands.append('addgroup --gid ' + str(user_details['gid']) + ' ' +
+                            user_details['group_name'])
+        # If the same group-name is assigned different gids, introduce a new group. Use the
+        # user-name as the group-name and the host gid
+        elif image_groups.group_name == host_group_name and image_groups.gid != host_gid:
+            message = 'Group details mismatch: Group ' + image_groups.group_name + \
+                ' is assigned the gid ' + str(image_groups.gid) + ' in image ' + \
+                docker_image_repository_tag + '\nWill proceed with group ' + \
+                user_details['user_name']
+            log.debug(message)
+            user_details['group_name'] = user_details['user_name']
+            # Add group to container
+            commands.append('addgroup --gid ' + str(host_gid) + ' ' + user_details['group_name'])
+        # If neither group-name or gid exist in the image, add the group, using the host
+        # group-name:gid mapping
+        else:
+            commands.append('addgroup --gid ' + str(user_details['gid']) + ' ' +
+                            user_details['group_name'])
+    return commands, user_details
+
+
+def get_image_users(docker_image):
+    """Get information on the users in the given docker image.
+    """
+    import docker
+    import sys
+    import pandas
+    # Extract existing users and their uid from image
+    docker_client = docker.from_env()
+    docker_container = docker_client.containers.run(docker_image, "cat /etc/passwd", detach=True)
+    users_log = docker_container.logs()
+    users_string = users_log.decode(sys.stdout.encoding)
+    users_list = users_string.split('\n')
+    users_list.pop()
+    users_dict = dict((item.split(':')[0], [item.split(':')[1],
+                                            item.split(':')[2],
+                                            item.split(':')[3],
+                                            item.split(':')[4],
+                                            item.split(':')[5],
+                                            item.split(':')[6]]) for item in users_list)
+    container_users = pandas.DataFrame(users_dict,
+                                       index=['password',
+                                              'uid',
+                                              'gid',
+                                              'info',
+                                              'home_directory',
+                                              'command'])
+    return container_users
+
+
+def host_image_user_mappings(docker_image, user_details, log):
+    """Find the uid-user name mappings in both host and container.
+
+    Lists the uid-user name mapping for the given user details, and list the users
+    with the same uid or user name in the container.
+    """
+    import pandas
+    # Get the users in the docker image
+    container_users = get_image_users(docker_image)
+    host_user_name = user_details['user_name']
+    host_uid = user_details['uid']
+    # Initialise a pandas Data Frame, outlining the user mapping between host and container
+    user_mapping = pandas.DataFrame({'uid': [host_uid], 'user_name': [host_user_name]},
+                                    index=['host'], dtype=int)
+    # Check if container has the user-name name and uid
+    container_has_user = host_user_name in container_users.columns
+    container_users_at_uid = container_users.loc['uid'] == user_details['uid']
+    container_has_uid = not container_users.columns[container_users_at_uid].empty
+    # If the container has both uid and user-name, the uid could be assigned to a user other than
+    # the host user name. In that case list both users. Otherwise there is a perfect correspondence
+    # between the container and host user.
+    if container_has_user and container_has_uid:
+        container_has_uid_for_user = container_users.columns[container_users_at_uid][0]
+        container_user = pandas.DataFrame({'uid': [host_uid],
+                                           'user_name': [container_has_uid_for_user]},
+                                          index=['image'], dtype=int)
+        user_mapping = user_mapping.append(container_user)
+        if container_has_uid_for_user != host_user_name:
+            container_has_user_at_uid = container_users['uid'][host_user_name]
+            container_user = pandas.DataFrame({'uid': [container_has_user_at_uid],
+                                               'user_name': [host_user_name]},
+                                              index=['image'], dtype=int)
+            user_mapping = user_mapping.append(container_user)
+    # If the image has the host user-name but not the host uid, list the host user-name and the uid
+    # assigned to it in the image
+    elif not container_has_uid and container_has_user:
+        container_has_user_at_uid = container_users['uid'][host_user_name]
+        container_user = pandas.DataFrame({'uid': [container_has_user_at_uid],
+                                           'user_name': [host_user_name]},
+                                          index=['image'], dtype=int)
+        user_mapping = user_mapping.append(container_user)
+    # If the image has the host uid but not the host user-name, list the host uid and the user-name
+    # associated to it in the image
+    elif container_has_uid and not container_has_user:
+        container_has_uid_for_user = container_users.columns[container_users_at_uid][0]
+        container_user = pandas.DataFrame({'uid': [host_uid],
+                                           'user_name': [container_has_uid_for_user]},
+                                          index=['image'], dtype=int)
+        user_mapping = user_mapping.append(container_user)
+    # If neither user name or uid are present in the image, indicate so with a row of 'None'
+    else:
+        container_user = pandas.DataFrame({'uid': [None], 'user_name': [None]},
+                                          index=['image'], dtype=int)
+        user_mapping = user_mapping.append(container_user)
+    # Output the user mapping to log
+    message = 'The user correspondence between host and image ' + \
+              docker_image.attrs['RepoTags'][0] + ' is:\n' + str(user_mapping)
+    log.debug(message)
+    return user_mapping
+
+
+def consolidate_user_details(docker_image, user_details, log):
+    """Consolidate user details in qmesh docker container.
+    """
+    # Get repository and tags info from docker image
+    docker_image_repository_tag = docker_image.attrs['RepoTags'][0]
+    # Check user mappings
+    user_mappings = host_image_user_mappings(docker_image, user_details, log)
+    host_user_name = user_details['user_name']
+    host_uid = user_details['uid']
+    image_users = user_mappings.loc['image']
+    # Initialise empty list of commands. Will accumulate the commands required to consolidate users
+    # between host and image.
+    commands = []
+    # If the image users frame has more than one entry, the user-name and uid are bound to separate
+    # users in the image
+    if image_users.shape == (2, 2):
+        message = 'User details mismatch: User name and uid are bound to separate users ' + \
+                  'in image ' + docker_image_repository_tag + '\nWill not add user'
+        log.debug(message)
+        user_details['user_name'] = None
+        user_details['uid'] = None
+    # If the image users frame has only one entry, there are four possibilities: First the
+    # user-name:uid mapping is identical between host and image. Second, the same user-name is
+    # assigned different uids. Third, different user-names are assigned the same uid.
+    # Fourth, neither user-name or uid exist in the image.
+    else:
+        # If the user-name:uid mapping is identical between host and image, there is no need to add
+        # the user
+        if image_users.user_name == host_user_name and image_users.uid == host_uid:
+            message = 'User ' + host_user_name + ' with uid ' + str(host_uid) + \
+                      ' already present in image ' + docker_image_repository_tag + \
+                      '\nWill not add user.'
+            log.debug(message)
+        # If different user-names are assigned the same uid, do not add user
+        elif image_users.user_name != host_user_name and image_users.uid == host_uid:
+            message = 'User details mismatch: User ' + image_users.user_name + \
+                ' is assigned the uid ' + str(image_users.uid) + ' in image ' + \
+                docker_image_repository_tag + '\nWill not add user'
+            log.debug(message)
+            user_details['user_name'] = None
+            user_details['uid'] = None
+        # If the same user-name is assigned different uids, do not add user
+        elif image_users.user_name == host_user_name and image_users.uid != host_uid:
+            message = 'User details mismatch: User ' + image_users.user_name + \
+                ' is assigned the uid ' + str(image_users.uid) + ' in image ' + \
+                docker_image_repository_tag + '\nWill not add user'
+            log.debug(message)
+            user_details['user_name'] = None
+            user_details['uid'] = None
+        # If neither user-name or uid exist in the image, add the user, using the host
+        # user-name:uid mapping
+        else:
+            # Add user
+            commands.append('adduser --disabled-password --gecos "" -uid ' +
+                            str(user_details['uid']) + ' -gid ' + str(user_details['gid']) + \
+                            ' ' + user_details['user_name'])
+            # Add user to root group
+            commands.append('usermod -aG root ' + user_details['user_name'])
+            # Let the user do sudo without password
+            commands.append('echo "# User privilege specification" >> etc/sudoers')
+            commands.append('echo "' + user_details['user_name'] + \
+                    '\tALL = (ALL) NOPASSWD: ALL" >> etc/sudoers')
+    return commands, user_details
+
+
+def build_docker_context(log):
+    """Construct context directory for user-tailored Docker image.
+    """
+    import tempfile
+    import os
+    from shutil import copyfile
+    from pkg_resources import resource_filename
+    # Create temporary directory where container context will be collected.
+    try:
+        docker_context_dir = tempfile.TemporaryDirectory()
+        docker_context_dir_path = docker_context_dir.name
+    except AttributeError:
+        docker_context_dir = None
+        docker_context_dir_path = tempfile.mkdtemp()
+    log.debug('Constructing Docker context at ' + docker_context_dir_path)
+    # Copy container bashrc into context directory
+    bashrc_filename = resource_filename('qmeshcontainers', 'container_bashrc')
+    copyfile(bashrc_filename, os.path.join(docker_context_dir_path, 'container_bashrc'))
+    # Copy message-of-the-day script inside context directory
+    motd_filename = resource_filename('qmeshcontainers', '05-qmesh-container-welcome')
+    copyfile(motd_filename, os.path.join(docker_context_dir_path, '05-qmesh-container-welcome'))
+    return [docker_context_dir, docker_context_dir_path]
+
+
+def construct_dockerfile(docker_base_image_tag, docker_context_location, user_details,
+                         log):
+    """Construct dockerfile for user-tailored Docker image.
+    """
+    import os
+    log.info('Constructing Dockerfile')
+    # Extract user details
+    user_name = user_details['user_name']
+    # Pull docker image and obtain container user & group details
+    docker_image = pull_docker_image(docker_base_image_tag, log)
+    # Create dockerfile inside context directory
+    docker_filename = os.path.join(docker_context_location[1], 'Dockerfile')
+    docker_file = open(docker_filename, 'w')
+    # Add instructions to build the user container from the requested qmesh image
+    docker_file.write('FROM ' + docker_base_image_tag + '\n')
+    docker_file.write('ENV QMESH_BASE_IMAGE_TAG ' + docker_base_image_tag + '\n')
+    # Consolidate group details and set-up group in image
+    group_commands, user_details = consolidate_group_details(docker_image, user_details, log)
+    if group_commands:
+        docker_file.write('RUN ' + ' && '.join(group_commands) + '\n')
+    # Consolidate user details and set-up user in image
+    user_commands, user_details = consolidate_user_details(docker_image, user_details, log)
+    docker_file.write('RUN ' + ' && '.join(user_commands) + '\n')
+    # Add motd file
+    docker_file.write('ADD 05-qmesh-container-welcome /etc/update-motd.d/\n')
+    docker_file.write('RUN chmod +x /etc/update-motd.d/05-qmesh-container-welcome\n')
+    if user_details['user_name'] is not None:
+        # Add custom bashrc to user container
+        docker_file.write('ADD container_bashrc /home/'+user_name+'/.bashrc\n')
+        # Sign in as user
+        docker_file.write('USER '+user_name+'\n')
+        docker_file.write('WORKDIR /home/'+user_name+'\n')
+    # Run a bash shell
+    docker_file.write('ENTRYPOINT /bin/bash\n')
+    # Close file and return
+    docker_file.close()
+    log.debug('Constructed Dockerfile ' + docker_filename)
+    return docker_filename
+
+
+def build_docker_image(user_details, docker_base_image_tag, docker_context_location,
+                       docker_filename, log):
+    """Build user-tailored Docker image.
+    """
+    import subprocess
+    import tempfile
+    import logging
+    log.info('Building Docker image ')
+    # Extract user name
+    user_name = user_details['user_name']
+    # Start composing docker build command
+    docker_command = ['docker', 'build', '--rm']
+    docker_stdout = None
+    # Set verbosity of docker build command
+    if log.level > logging.INFO:
+        docker_command.append('-q')
+        docker_stdout = tempfile.TemporaryFile()
+    # Compose the image tag
+    image_tag = user_name + '_' + docker_base_image_tag
+    docker_command.extend(['-t', image_tag])
+    # Add dockerfile flag to command
+    docker_command.extend(['-f', docker_filename])
+    # Add context directory to command
+    docker_command.extend([docker_context_location[1]])
+    log.debug('Building image "' + image_tag + '" with command "' + ' '.join(docker_command)+'"')
+    # Build image and return its tag
+    return_code = subprocess.call(docker_command, stdout=docker_stdout)
+    # Check build command concluded successfully
+    if return_code != 0:
+        message = 'Command "' + ' '.join(docker_command) + '" returned non-zero status. Image ' + \
+            image_tag + ' not built.'
+        log.error(message)
+        raise Exception(message)
+    # Return the image tag
+    return image_tag
+
+
+def run_docker_container(image_tag, mount_volumes, host_system_details, log):
+    """Run user-tailored Docker container.
+    """
+    import subprocess
+    docker_command = ['docker', 'run', '--rm']
+    display = host_system_details['display']
+    host_x11_unix_path = host_system_details['x11_unix_path']
+    if display and host_x11_unix_path:
+        docker_command.extend(['-e', 'DISPLAY='+display,
+                               '-v', host_x11_unix_path+':/tmp/.X11-unix'])
+    if mount_volumes:
+        host_volume = mount_volumes[0]
+        container_volume = mount_volumes[1]
+        docker_command.extend(['-v', host_volume+':'+container_volume])
+    # Finish-off command composition
+    docker_command.extend(['-it', image_tag])
+    log.info('Creating Docker container')
+    log.debug('    with Docker command ' + ' '.join(docker_command))
+    # Run container
+    subprocess.call(docker_command)
+
+
+def clean_up(docker_context_location, image_tag, cache_images, log):
+    """Remove Docker context directory and Docker images.
+    """
+    import os
+    import glob
+    import subprocess
+    import tempfile
+    import logging
+    log.debug('Docker context directory is:' + docker_context_location[1])
+    try:
+        docker_context_location[0].cleanup()
+    except AttributeError:
+        for tmp_file in glob.glob(os.path.join(docker_context_location[1], '*')):
+            os.remove(tmp_file)
+        os.rmdir(docker_context_location[1])
+    log.info('Deleted Docker context directory.')
+    # If user selected to cache images, do not remove them.
+    if not cache_images:
+        # Start composing docker command to remove images
+        docker_command = ['docker', 'rmi', '-f', image_tag]
+        docker_stdout = None
+        # Capture output of docker command
+        if log.level > logging.INFO:
+            docker_stdout = tempfile.TemporaryFile()
+        log.info('Deleting Docker images')
+        subprocess.call(docker_command, stdout=docker_stdout)
+        log.info('Deleted Docker images built for exiting container.')
+
+
+def qmesh_container():
+    """Build and run Docker container based on qmesh images.
+    """
+    import logging
+    # Parse command-line arguments
+    cmdl_arguments = parse_arguments()
+    # Create a logging object, for console message output
+    log = logging.getLogger('qmeshcontainer')
+    # Set console log verbosity from argument (defaults to info)
+    verbosity = cmdl_arguments.verbosity
+    verbosity_numerical_level = getattr(logging, verbosity.upper())
+    log.setLevel(verbosity_numerical_level)
+    # Create log handler for console
+    console_handler = logging.StreamHandler()
+    # Set handler verbosity from argument (defaults to info)
+    console_handler.setLevel(verbosity_numerical_level)
+    # Create log formatter
+    formatter = logging.Formatter('%(name)s:%(levelname)s:%(message)s')
+    console_handler.setFormatter(formatter)
+    log.addHandler(console_handler)
+    # Get user and host set-up.
+    user_details, host_system_details = get_user_host_setup(log)
+    # Process the mount volumes specification
+    cmdl_arguments.mount_volumes = mount_volumes_list(cmdl_arguments.mount_volumes,
+                                                      user_details, log)
+    # Construct Docker context directory
+    docker_context_location = build_docker_context(log)
+    # Construct user-dockerfile, inside context directory
+    docker_filename = construct_dockerfile(cmdl_arguments.docker_base_image_tag,
+                                           docker_context_location,
+                                           user_details, log)
+    # Build docker image from docker context directory
+    docker_user_image_tag = build_docker_image(user_details,
+                                               cmdl_arguments.docker_base_image_tag,
+                                               docker_context_location,
+                                               docker_filename,
+                                               log)
+    # Run container
+    run_docker_container(docker_user_image_tag,
+                         cmdl_arguments.mount_volumes,
+                         host_system_details, log)
+    # Clean-up temporary files
+    clean_up(docker_context_location, docker_user_image_tag,
+             cmdl_arguments.cache_images, log)
+
+
+if __name__ == '__main__':
+    qmesh_container()
