@@ -1,0 +1,12 @@
+README.md
+setup.py
+layaberr/__init__.py
+layaberr/_authorization.py
+layaberr/_default.py
+layaberr/_validation.py
+layaberr/version.py
+layaberr.egg-info/PKG-INFO
+layaberr.egg-info/SOURCES.txt
+layaberr.egg-info/dependency_links.txt
+layaberr.egg-info/requires.txt
+layaberr.egg-info/top_level.txt

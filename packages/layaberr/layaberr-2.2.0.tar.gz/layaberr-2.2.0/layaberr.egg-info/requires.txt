@@ -1,0 +1,5 @@
+flask-restplus==0.13.*
+
+[testing]
+pytest-flask==0.15.*
+pytest-cov==2.*
