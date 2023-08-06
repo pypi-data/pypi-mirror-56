@@ -1,0 +1,14 @@
+COPYING
+setup.cfg
+setup.py
+TracQuiet.egg-info/PKG-INFO
+TracQuiet.egg-info/SOURCES.txt
+TracQuiet.egg-info/dependency_links.txt
+TracQuiet.egg-info/entry_points.txt
+TracQuiet.egg-info/requires.txt
+TracQuiet.egg-info/top_level.txt
+quiet/__init__.py
+quiet/web_ui.py
+quiet/htdocs/quiet.css
+quiet/htdocs/quiet.js
+quiet/htdocs/quiet.png
