@@ -1,0 +1,6 @@
+[console_scripts]
+pycodegen = scripts.py_codegen.py_codegen_v2:main
+
+[pytest11]
+salt = pytest_salt.plugin
+
