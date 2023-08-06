@@ -1,0 +1,4 @@
+PyQt5==5.13.2
+numpy==1.17.3
+skyfield==1.14
+wakeonlan==1.1.6
