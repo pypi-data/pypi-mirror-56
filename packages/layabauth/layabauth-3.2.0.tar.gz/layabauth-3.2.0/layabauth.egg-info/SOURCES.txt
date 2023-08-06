@@ -1,0 +1,11 @@
+README.md
+setup.py
+layabauth/__init__.py
+layabauth/_authentication.py
+layabauth/testing.py
+layabauth/version.py
+layabauth.egg-info/PKG-INFO
+layabauth.egg-info/SOURCES.txt
+layabauth.egg-info/dependency_links.txt
+layabauth.egg-info/requires.txt
+layabauth.egg-info/top_level.txt
