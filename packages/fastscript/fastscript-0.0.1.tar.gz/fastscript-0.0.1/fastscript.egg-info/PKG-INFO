@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: fastscript
+Version: 0.0.1
+Summary: A fast way to turn your python function into a script
+Home-page: https://github.com/fastai/fastscript
+Author: Jeremy Howard
+Author-email: info@fast.ai
+License: Apache Software License 2.0
+Description: # fastscript
+        A fast way to turn your python function into a script
+        
+Keywords: cli python fastai interactive bash tool
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
