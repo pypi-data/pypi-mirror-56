@@ -1,0 +1,41 @@
+comment: |
+  This comment really does belong here!
+  
+  And I am making it even better.
+  
+  It is best now.
+  
+  Friday morning master commit.
+---
+objects:
+  - plaintiff: Individual
+  - defendant: Individual
+---
+code: |
+  plaintiff.opponent = defendant
+  defendant.opponent = plaintiff
+---
+comment: |
+  This comment should merge ok.
+---
+question: |
+  What is the name of the plaintiff?
+fields:
+  - Name: plaintiff.name.first
+---
+question: |
+  What is the name of the defendant?
+fields:
+  - Name: defendant.name.first
+---
+generic object: Individual
+attachment:
+  variable name: x.document
+  name: Document for ${ x.name.first }
+  docx template file: generic.docx
+---
+mandatory: True
+question: |
+  Here are your documents.
+attachment code: |
+  [plaintiff.document, defendant.document]
