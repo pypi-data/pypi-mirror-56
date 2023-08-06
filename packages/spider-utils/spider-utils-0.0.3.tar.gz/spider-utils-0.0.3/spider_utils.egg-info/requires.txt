@@ -1,0 +1,6 @@
+requests
+
+[dev]
+wheel
+twine
+pypandoc
