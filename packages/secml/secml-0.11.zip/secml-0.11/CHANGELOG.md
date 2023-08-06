@@ -1,0 +1,131 @@
+## v0.11 (02/12/2019)
+- #653 Added new `secml.ml.model_zoo` package, which provides a zoo of pre-trained SecML models. The list of available models will be greatly expanded in the future. See https://secml.gitlab.io/secml.ml.model_zoo.html for more details.
+- #629 Greatly improved the performance of the `grad_f_x` method for `CClassifier` and `CPreProcess` classes, especially when nested via `preprocess` attribute.
+- #613 Support for Python 2.7 is dropped. Python version 3.5, 3.6, or 3.7 is now required.
+
+### Requirements (2 changes)
+- #633 The following dependencies are now required: `numpy >= 1.17`, `scipy >= 1.3.1`, `scikit-learn >= 0.21` `matplotlib = 3`.
+- #622 Removed dependency on `six` library.
+
+### Added (5 changes)
+- #539 Added new core interface to get and set the state of an object instance: `set_state`, `get_state`, `save_state`, `load_state`. The state of an object is a simple human-readable Python dictionary object which stores the data necessary to restore an instance to a specific status. Please not that to guarantee the exact match between the original object instance and the restored one, the standard save/load interface should be used.
+- #647 Added new function `core.attr_utils.get_protected` which returns a protected attribute from a class (if exists).
+- #629 `CClassifier` and `CPreProcess` classes now provide a `gradient` method, which computes the gradient by doing a forward and a backward pass on the classifier or preprocessor function chain, accepting an optional pre-multiplier `w`.
+- #539 Added new accessible attributes to multiple classes: `CNormalizerMinMax .m .q`; `CReducerLDA .lda`; `CClassifierKNN .tr`; `CClassifierRidge .tr`; `CClassifierSGD .tr`; `CClassifierPyTorch .trained`.
+- #640 Added `random_state` parameter to `CClassifierDecisionTree`.
+
+### Improved (6 changes)
+- #631 Data objects are now stored using protocol 4 by `pickle_utils.save`. This protocol adds support for very large objects, pickling more kinds of objects, and some data format optimizations.
+- #639 Objective function parameter (`objective_function`) in `CAttackEvasionCleverhans` is now correctly populated for the following attacks: `CarliniWagnerL2`, `FastGradientMethod`, `ProjectedGradientDescent`, `LBFGS`, `MomentumIterativeMethod`, `MadryEtAl`, `BasicIterativeMethod`.
+- #638 The sequence of modifications to the attack point (`x_seq` parameter) is now correctly populated in `CAttackEvasionCleverhans`.
+- #595 A pre-trained classifier can now be passed to `CClassifierRejectThreshold` to avoid running fit twice.
+- #627 Slight improvement of `CKernel.gradient()` method performance by removing unnecessary calls.
+- #630 Sparse data can now be used in `CKernelHistIntersect`.
+
+### Changed (2 changes)
+- #616 Renamed `CModelCleverhans` to `_CModelCleverhans` as this class is not supposed to be explicitly used.
+- #111 Default value of the parameter `tol` changed from `-inf` to `None` in `CClassifierSGD`. This change should not alter the classifier behavior when using the default parameters.
+
+### Fixed (8 changes)
+- #611 Fixed `CDataloaderMNIST` crashing depending on the desired number of samples and digits to load.
+- #652 Number of gradient computations returned by `CAttackEvasionCleverhans.grad_eval` is now accurate.
+- #650 Fixed `CAttackEvasionCleverhans.f_eval` wrongly returns the number of gradient evaluations.
+- #637 Fixed checks on `y_taget` in `CAttackEvasionCleverhans` which compared the 0 label to untargeted case (`y_true = None`).
+- #648 Function `core.attr_utils.is_public` now correctly return False for properties.
+- #649 Fixed wrong use of `core.attr_utils.is_public` in `CCreator` and `CDatasetHeader`.
+- #655 Fixed `CClassifierRejectThreshold.n_classes` not taking into account the rejected class (label -1).
+- #636 Fixed a `TypeError` raised by `CFigure.clabel()` when using matplotlib 3.
+
+### Removed & Deprecated (4 changes)
+- #628 Method `is_linear` of `CClassifier` and `CNormalizer` subclasses is now deprecated.
+- #641 Parameter `random_seed` of `CClassifierLogistic` is now deprecated. Use `random_state` instead.
+- #603 Removed deprecated class `CNormalizerMeanSTD`.
+- #603 Removed deprecated parameter `batch_size` from `CKernel` and subclasses.
+
+### Documentation (4 changes)
+- #625 Reorganized notebooks tutorials into different categories: *Machine Learning*, *Adversarial Machine Learning*, and *Explainable Machine Learning*.
+- #615 Added a tutorial notebook on the use of Cleverhans library wrapper.
+- #607 Settings module `secml.settings` is now correctly displayed in the docs.
+- #626 Added missing reference to `CPlotMetric` class in docs.
+
+
+## v0.10 (29/10/2019)
+- #535 Added new package `secml.explanation`, which provides different methods for explaining machine learning models. See documentation and examples for more information.
+- #584 **[beta]** Added `CAttackEvasionCleverhans` to support adversarial attacks from [CleverHans](https://github.com/tensorflow/cleverhans), a Python library to benchmark vulnerability of machine learning systems to adversarial examples.
+
+### Requirements (1 change)
+- #580 PyTorch version `1.3` is now supported.
+
+### Added (4 changes)
+- #565 Added new abstract interface `CClassifierDNN` from which new classes implementing Deep Neural Networks can inherit.
+- #555 Added `CNormalizerDNN`, which allows using a `CClassifierDNN` as a preprocessor.
+- #593 Added `CDataLoaderTorchDataset`, which allows converting a `torchvision` dataset into a `CDataset`.
+- #598 Added gradient method for `CKernelHistIntersection`.
+
+### Improved (6 changes)
+- #562 Extended support of `CClassifierPyTorch` to nested PyTorch modules.
+- #594 `CClassifierPyTorch.load_model()` is now able to also load models trained with PyTorch (without using our wrapper). New parameter `classes` added to the method to match classes to indexes in the loaded model.
+- #579 Left side single row/column broadcast is now supported for sparse vs sparse `CArray` operations.
+- #582 Improved performance of `CNormalizerMeanStd` when multiple channels are defined.
+- #576 Vastly improved the performance of kernels by removing loops over samples in many classes and refactoring main routines.
+- #562 Improved `grad_f_x` computation at a specific layer in `CClassifierPyTorch`.
+
+### Changed (4 changes)
+- #578 `CClassifierPyTorch` now inherits from `CClassifierDNN`. The following changed accordingly: parameter `torch_model` renamed to `model`; property `layer_shapes` is now defined; method `save_checkpoint` removed.
+- #562 Parameter `layer` of `CClassifierPyTorch.get_layer_output()` is now renamed `layer_names` as a list of layers names is supported (a single layer name is still supported as input). A dictionary is returned if multiple layers are requested. See the documentation for more information.
+- #533 Double initialization in `CAttackEvasionPGDLS` will now be executed regardless of the classifier type (linear or nonlinear) if the `double_init` parameter of `.run()` method is set to `True`.
+- #591 It is now not required to call the `fit` method of `CNormalizerMeanSTD` if fixed mean/std values are used.
+
+### Fixed (4 changes)
+- #561 Fixed `CConstraintBox` not always applied correctly for float data.
+- #577 Fixed `CClassifierPyTorch.decision_function` applying preprocess twice.
+- #581 Fixed gradient computation of `CKernelChebyshevDistance`.
+- #599 Kernels using distances are now based on negative distances (to correctly represent similarity measures). Affected classes are: `CKernelChebyshevDistance`, `CKernelEuclidean`.
+
+### Removed & Deprecated (5 changes)
+- #561 Removed parameter `precision` from `CConstraint.is_violated()`.
+- #575 Parameter `batch_size` of `CKernel` is now deprecated.
+- #597 Removed unused parameter `gamma` from `CKernelChebyshevDistance`.
+- #596 Removed `CKernelHamming`.
+- #602 Renamed `CNormalizerMeanSTD` to `CNormalizerMeanStd`. The old class has been deprecated and will be removed in a future version.
+
+### Documentation (5 changes)
+- #538 Added a notebook tutorial on the use of Explainable ML methods provided by the `secml.explanation` package.
+- #573 Improved visualization of attack results in `07-ImageNet` tutorial.
+- #610 Fixed spacing between parameter and parameter type in the docs.
+- #605 Fixed documentation of classes requiring extra components not being displayed.
+- #608 Added acknowledgments to `README`.
+
+
+## v0.9 (11/10/2019)
+- #536 Added `CClassifierPytorch` to support Neural Networks (NNs) through [PyTorch](https://pytorch.org/) deep learning platform.
+
+### Improved (1 change)
+- #556 `CFigure.imshow` now supports `PIL` images as input.
+
+### Changed (1 change)
+- #532 Method `CPreProcess.revert()` is now renamed `.inverse_transform()`.
+
+### Fixed (1 change)
+- #554 Fixed `CClassifierSkLearn.predict()` not working when using pretrained sklearn models.
+
+### Documentation (2 changes)
+- #559 Deprecated functions and classes are now correctly visualized in the documentation.
+- #560 Updated development roadmap accordingly to `0.10`, `0.11` and `0.12` releases.
+
+### Deprecations (3 changes)
+- #532 Method `CPreProcess.revert()` is deprecated. Use `.inverse_transform()` instead.
+- #552 `CClassifierKDE` is now deprecated. Use `CClassifierSkLearn` with `sklearn.neighbors.KernelDensity` instead.
+- #553 `CClassifierMCSLinear` is now deprecated. Use `CClassifierSkLearn` with `sklearn.ensemble.BaggingClassifier` instead.
+
+
+## v0.8.1 (05/09/2019)
+This version does not contain any significant change.
+
+### Documentation (2 changes)
+- #523 Fixed documentation not compiling under Sphinx v2.2.
+- #529 Updated roadmap accordingly for v0.9 release.
+
+
+## v0.8 (06/08/2019)
+- First public release!
