@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nbtrash
+Version: 0.1.2
+Summary: Add Recycle bin to your jupyter notebook.
+Home-page: https://github.com/wixb50/nbtrash
+Author: wixb50
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: send2trash
+Requires-Dist: notebook
+
+UNKNOWN
+
+
