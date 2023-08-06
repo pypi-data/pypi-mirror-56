@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: RaspberryPiMovementDetector
+Version: 0.14
+Summary: Raspberry Movement Detector
+Home-page: https://github.com/KSanthanam/RaspberryPiMovementDetector
+Author: KK Santhanam
+Author-email: KK.Santhanam@gmail.com
+License: MIT
+Download-URL: https://github.com/KSanthanam/RaspberryPiMovementDetector/archive/v_01.tar.gz
+Keywords: RaspberryPi,RaspberryPi IoT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: wheel
+Description-Content-Type: text/markdown
+
+Project description
+Movement detector for RaspberryPi with Watch to watch objects coming into proximity.
+Pass pins Trigger and Echo. Pass offset to determine boundary for the object to come in
+
+Example
+
+<pre>
+from RPi.GPIO import GPIO
+from MovementDetector.Watch import Watch
+
+TRIG = 23
+ECHO = 24
+
+def func_moved_in(arg):
+  print("process for object entering field")
+
+def func_moved_out(arg):
+  print("process for object exiting field")
+
+OFFSET = 200 # 2m
+
+watch = Watch(GPIO=GPIO, trig=TRIG, echo=ECHO, func_in=func_moved_in, func_out=func_moved_out, offset=OFFSET)
+
+watch.observe()
+
+time.sleep(100) # Sleep 
+
+watch.stop()
+</pre>
+
+Source code and more info athttps://github.com/KSanthanam/RaspberryPiMovementDetector.
+
+
+
