@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: voluxaudio
+Version: 0.7.2
+Summary: volux module for extracting audio data
+Home-page: UNKNOWN
+Author: Denver Pallis
+Author-email: DenverPallisProjects@gmail.com
+License: GPLv3+
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: volux (<1.0.0,>=0.9.16)
+Requires-Dist: colorama (>=0.4.1)
+Requires-Dist: numpy (>=1.17.3)
+Requires-Dist: PyAudio (>=0.2.11)
+
+UNKNOWN
+
+
