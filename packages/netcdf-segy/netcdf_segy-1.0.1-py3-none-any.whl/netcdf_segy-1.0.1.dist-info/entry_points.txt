@@ -1,0 +1,3 @@
+[console_scripts]
+segy2netcdf = netcdf_segy.segy2netcdf:cli
+
