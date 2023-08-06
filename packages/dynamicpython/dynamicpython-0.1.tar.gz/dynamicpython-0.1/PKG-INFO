@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: dynamicpython
+Version: 0.1
+Summary: Test lib for dynamically pulling and running code from pip packages without a restart
+Home-page: https://github.com/james-swash/dynamic-python-test
+Author: James Swash
+Author-email: james.swash@hotmail.co.uk
+License: MIT
+Description: UNKNOWN
+Keywords: TEST,DYNAMIC,PACKAGE
+Platform: UNKNOWN

@@ -1,0 +1,11 @@
+README.md
+setup.py
+dynamicpython/__init__.py
+dynamicpython.egg-info/PKG-INFO
+dynamicpython.egg-info/SOURCES.txt
+dynamicpython.egg-info/dependency_links.txt
+dynamicpython.egg-info/top_level.txt
+dynamicpython/version_1/__init__.py
+dynamicpython/version_1/advanced.py
+dynamicpython/version_1/flow_control.py
+dynamicpython/version_1/variables.py
