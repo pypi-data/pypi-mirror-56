@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: sportident
+Version: 1.2.5
+Summary: Python module to communicate with SportIdent main stations
+Home-page: https://github.com/sportorg/sireader
+Author: Akhtarov Danil
+Author-email: daxartio@gmail.com
+License: GPLv3+
+Description: 
+        SportIdent Reader
+        =================
+        
+        
+        .. image:: https://api.travis-ci.org/sportorg/sireader.svg
+           :target: https://travis-ci.org/sportorg/sireader
+           :alt: Build Status
+        
+        
+        sportIdent.py is a python module to communicate with a SportIdent main station to read out SportIdent cards. 
+        SportIdent is an electronic punching system mainly used for orienteering events.
+        
+        .. code-block:: python
+        
+           from time import sleep
+           from sportident import SIReaderReadout
+        
+           # connect to base station, the station is automatically detected,
+           # if this does not work, give the path to the port as an argument
+           # see the pyserial documentation for further information.
+           si = SIReaderReadout()
+        
+           # wait for a card to be inserted into the reader
+           while not si.poll_sicard():
+               sleep(1)
+        
+           # some properties are now set
+           card_number = si.sicard
+           card_type = si.cardtype
+        
+           # read out card data
+           card_data = si.read_sicard()
+        
+           # beep
+           si.ack_sicard()
+        
+Keywords: sportident orienteering sportorg
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/x-rst
