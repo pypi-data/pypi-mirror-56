@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+src/stdiomask/__init__.py
+src/stdiomask.egg-info/PKG-INFO
+src/stdiomask.egg-info/SOURCES.txt
+src/stdiomask.egg-info/dependency_links.txt
+src/stdiomask.egg-info/top_level.txt
