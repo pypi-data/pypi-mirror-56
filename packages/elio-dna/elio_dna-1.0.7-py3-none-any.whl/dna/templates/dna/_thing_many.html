@@ -1,0 +1,21 @@
+{% load dna_tags %}
+<dl>
+  {% for prop_name, many_things in many.items %}
+    <dt itemprop="{{ prop_name }}">
+      {{ prop_name }}
+      <a
+        href="{% url 'many.things' page_slug thing_name object.pk prop_name %}">
+        [+]
+      </a>
+    </dt>
+    {% for many in many_things %}
+      <dd
+        itemscope="itemscope"
+        itemtype="http://schema.org/{{ many.listed_thing }}">
+        <a
+          href="{% url 'engage.thing' page_slug many.listed_thing many.many_listed.pk %}"
+          itemprop="name">{{ many.many_listed.name }}&raquo;</a>
+      </dd>
+    {% endfor %}
+  {% endfor %}
+</dl>

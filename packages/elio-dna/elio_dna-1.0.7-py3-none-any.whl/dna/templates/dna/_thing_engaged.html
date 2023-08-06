@@ -1,0 +1,64 @@
+{% load dna_tags %}
+
+<main
+  itemscope="itemscope"
+  itemtype="http://schema.org/{{ thing_name }}">
+
+  {% for field_name, url, height, width in object.get_images %}
+    {% if url == "None" %}
+      {# nothing to see here #}
+    {% elif url %}
+      <figure>
+        <image
+          itemprop="{{ field_name }}"
+          src="{{ url }}"
+          height="{{ height }}"
+          width="{{ width }}"/>
+        <figurecaption>{{ object.name }}</figurecaption>
+      </figure>
+    {% endif %}
+  {% endfor %}
+
+  {% if object.name %}
+    <h1 itemprop="name">{{ object.name }}</h1>
+  {% endif %}
+
+  {% if object.alternateName %}
+    <h2 itemprop="name">{{ object.alternateName }}</h2>
+  {% endif %}
+
+  <dl>
+    {% for field_name, field_type, field in object.get_fields %}
+      {% if field|has_no_merit %}
+        {# nothing to see here #}
+      {% elif field_name|is_in:"name,alternateName,polymorphic_ctype,id,elio_key,elio_page,elio_role" %}
+        {# handled differently #}
+      {% elif field_type == "OneToOneField" %}
+        {# nothing to see here #}
+      {% elif field %}
+        <dt>{{ field_name }}</dt>
+        <dd itemprop="{{ field_name }}">
+          {% if field_type == "URLField" %}
+            <a href="{{ field }}">{{ field }}</a>
+          {% elif field_type == "TextField" %}
+            {{ field|safe }}
+          {% elif field_type == "ForeignKey" %}
+            <link itemprop="availability" href="http://schema.org/{{ field.thing_name }}"/>
+            <a href="{{ field.get_absolute_url }}">{{ field }}</a>
+          {% elif field_name == "telephone" %}
+            <a href="tel:{{ field }}">{{ field }}</a>
+          {% elif field_type == "EmailField" %}
+            <a href="mailto:{{ field }}">{{ field }}</a>
+          {% else %}
+            {{ field }}
+          {% endif %}
+        </dd>
+      {% endif %}
+    {% endfor %}
+
+  </dl>
+  {% if many %}
+    {% include "dna/_thing_many.html" %}
+  {% endif %}
+
+</main>

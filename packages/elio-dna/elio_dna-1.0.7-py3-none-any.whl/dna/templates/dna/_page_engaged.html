@@ -1,0 +1,17 @@
+{% for engaged in page_engages %}
+
+  {% with thing_name=engaged.thing_name %}
+  {% with object=engaged.engage %}
+  {% with many=engaged.many %}
+  {% include engaged.template %}
+  {% endwith %}
+  {% endwith %}
+  {% endwith %}
+
+  <p>
+    <a href="{% url 'update.thing' page_slug 'engage' engaged.thing_name engaged.engage.pk %}">
+      <button>Update
+        {{ engaged.thing_name }}</button>
+    </a>
+  </p>
+{% endfor %}

@@ -1,0 +1,45 @@
+{% load dna_tags %}
+{# start an outer tag block #}
+{% with menutag=menu|yesno:"menu,nav" %}
+<{{menutag}}>
+  {# for every item paged at this level #}
+  {% spaceless %}
+  {% for page_key, page_vals in page_menu.page.items %}
+
+    {# check for a submenu and put the next item in a separate menu block #}
+    {% if page_vals.page %}
+      <{{menutag}}>
+      {% endif %}
+
+      {# print the item as a label or a link #}
+      {% if page_vals.status == "label" %}
+        <label>{{ page_key }}</label>
+      {% elif page_vals.status == "spacer" %}
+        <hr/>
+      {% else %}
+        <a
+          href="{{ page_vals.url }}"
+          {% if page_vals.status %}
+          class="{{ page_vals.status }}"
+          {% endif %}>[{{ page_key|default:app_name }}]</a>
+      {% endif %}
+
+      {# check for a submenu and call this template recursively #}
+
+      {% if page_vals.page %}
+        {# make the submenu the outer menu of the next recursion  #}
+        {% with page_menu=page_vals %}
+        {# switching from menu2nav, tag2nav, etc #}
+        {% with menu=menu|flip_boo %}
+        {% include 'dna/_menu.html' %}
+        {% endwith %}
+        {% endwith %}
+
+        {# close the submenu block #}
+      </{{menutag}}>
+    {% endif %}
+
+  {% endfor %}
+  {% endspaceless %}
+</{{menutag}}>
+{% endwith %}
