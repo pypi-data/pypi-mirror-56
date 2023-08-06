@@ -1,0 +1,3 @@
+[console_scripts]
+suxinli_add = suxinli_foo.add:add
+
