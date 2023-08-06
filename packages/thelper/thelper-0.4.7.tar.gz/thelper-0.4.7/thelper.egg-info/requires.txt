@@ -1,0 +1,17 @@
+gitpython
+h5py
+lz4
+matplotlib
+numpy
+opencv-python
+Pillow
+pip
+pyyaml
+scikit-learn
+six
+torch
+torchvision
+tqdm
+
+[rst]
+docutils>=0.11
