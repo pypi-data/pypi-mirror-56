@@ -1,0 +1,33 @@
+colorama
+packaging>=17.0
+setuptools
+six
+doppel>=0.4.0
+
+[:platform_system == "Linux"]
+patchelf-wrapper
+
+[:platform_system == "Windows"]
+pysetenv
+
+[:python_version < "3.4"]
+enum34
+
+[dev]
+coverage
+flake8>=3.0
+lxml
+mike>=0.3.1
+mkdocs-bootswatch
+mock
+pypandoc
+stdeb
+
+[msbuild]
+lxml
+
+[test]
+coverage
+flake8>=3.0
+lxml
+mock
