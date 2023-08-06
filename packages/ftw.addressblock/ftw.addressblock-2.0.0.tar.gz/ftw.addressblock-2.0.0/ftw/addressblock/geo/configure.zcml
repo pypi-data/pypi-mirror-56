@@ -1,0 +1,45 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="ftw.addressblock">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+    <genericsetup:registerProfile
+        name="default"
+        title="ftw.addressblock.geo"
+        directory="profiles/default"
+        description="Optional geo and map support for ftw.addressblock."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="Uninstall ftw.addressblock.geo"
+        directory="profiles/uninstall"
+        description=""
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+        />
+
+    <adapter factory=".adapters.AddressBlockLocationAdapter"/>
+
+    <include package="ftw.upgrade" file="meta.zcml" />
+
+    <upgrade-step:directory
+        profile="ftw.addressblock.geo:default"
+        directory="./upgrades"
+        />
+
+    <include package="plone.behavior" file="meta.zcml" />
+
+    <plone:behavior
+        title="Collective Geo Map Preferences"
+        description="This adds collective geo map preferences"
+        provides=".behaviours.IMapPreferencesSchema"
+        />
+
+</configure>

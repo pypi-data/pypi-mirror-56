@@ -1,0 +1,61 @@
+@include portal-type-font-awesome-icon(ftw-addressblock-addressblock, home);
+
+@mixin addressblock-content {
+  ul {
+    @include ul(plain);
+  }
+
+  h2 {
+    &:before {
+      font-size: 1.3em;
+      min-width: 0 !important;
+    }
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 0.25em;
+
+    span {
+      display: block;
+      line-height: 30px;
+    }
+
+    .phone {
+      font-size: 16px;
+    }
+
+  }
+}
+
+.sl-block {
+  &.ftw-addressblock-addressblock {
+    .sl-block-content {
+       @include addressblock-content
+    }
+  }
+}
+
+#OpenLayers_Control_MinimizeDiv{
+  background: rgba(0,60,136,0.6);
+  width: 18px;
+  height: 18px;
+  border-radius: 4px 0 0 4px;
+
+  #OpenLayers_Control_MinimizeDiv_innerImage {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+    &:before {
+      content: "\2013";
+      font-size: 15px;
+      padding: 10px 0 0 5px;
+      color: white;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

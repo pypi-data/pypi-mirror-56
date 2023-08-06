@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records interface="collective.geo.settings.interfaces.IGeoFeatureStyle">
+    <!-- it is most likely that the previous values was the one below -->
+    <value key="map_viewlet_position">plone.abovecontentbody</value>
+  </records>
+
+</registry>
