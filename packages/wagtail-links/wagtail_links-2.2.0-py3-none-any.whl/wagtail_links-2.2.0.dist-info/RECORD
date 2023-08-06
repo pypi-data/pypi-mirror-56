@@ -1,0 +1,17 @@
+wagtail_links/__init__.py,sha256=tnI7dDKLDMJK5whpl0y0UMxAixjGRKKCNpsjfgz_ADc,61
+wagtail_links/apps.py,sha256=EcTvQW5mV3TE_e5TBzybYeDmNT7vJ6wtPNIjXCyGhsY,233
+wagtail_links/models.py,sha256=NpCjNNp-V-cTl9vfTz6dRm7vitntggtYjJ2QvNTUhHs,4548
+wagtail_links/tests.py,sha256=TOnHAf5JfnrgUTHW9nr-GDZvSD6A_05Dt264Ag9h0l0,3428
+wagtail_links/locale/es/LC_MESSAGES/django.mo,sha256=f7stVEUJYvmRUgbbmCewD2d926R9pk2uWPhu8KLapFk,421
+wagtail_links/locale/es/LC_MESSAGES/django.po,sha256=BFGP3zH9GgC3q63-eFbCsPuiS-G7rGfQVHSaQdASo74,2166
+wagtail_links/migrations/0001_initial.py,sha256=eUVkjSi08_F4Fl1jhDefBirixdvvwzFUNMYHYnxeHd0,1069
+wagtail_links/migrations/0002_auto_20170522_1552.py,sha256=yzfsiP-2eVAA6zhOeUz6Dgp2Yw-uJoO2OIoerEKyt2E,668
+wagtail_links/migrations/0003_auto_20170522_2015.py,sha256=CD8N59sgZmHmy2gHbh58OLfyXW7ObkiZwxFrETP1hKE,617
+wagtail_links/migrations/0004_auto_20190411_2102.py,sha256=RXnEHwHWAkyK09n4BDYlT_W6Fhs7dJGioGBTkW8wQ0g,1733
+wagtail_links/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_links/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_links/templatetags/wagtail_links.py,sha256=O554K_q4QzmkpCWfNCT7rCdagkWq39sIbwIsWzZMn3g,565
+wagtail_links-2.2.0.dist-info/METADATA,sha256=pV8UXE2gy8pWy6HZ7OL03_wobNSUxYjr9O9geE4agEY,2661
+wagtail_links-2.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+wagtail_links-2.2.0.dist-info/top_level.txt,sha256=qatslMSp_VcsFyaT_R5OSa4-6UhyvAL5_nwWdn10R5U,14
+wagtail_links-2.2.0.dist-info/RECORD,,
