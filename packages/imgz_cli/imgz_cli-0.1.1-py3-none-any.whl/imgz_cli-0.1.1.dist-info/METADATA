@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: imgz_cli
+Version: 0.1.1
+Summary: imgz-cli uploads images.
+Home-page: https://gitlab.com/stavros/imgz-cli
+License: UNKNOWN
+Keywords: imgz, image, imgur
+Author: Stavros Korokithakis
+Author-email: hi@stavros.io
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
+Requires-Dist: pyperclip
+
+imgz-cli
+========
+
+imgz-cli is a command-line utility for IMGZ, the no-bullshit image hosting service. Go to https://imgz.org/ to get an
+account, then use this utility to upload images from the safety of your computer.
+
+
+Installation
+------------
+
+```
+pip install imgz-cli
+```
+
+Done.
+
+
+Usage
+-----
+
+```
+imgz /path/to/somefile.jpg
+```
+
+Done.
+
+
+License
+-------
+
+MIT.
+
