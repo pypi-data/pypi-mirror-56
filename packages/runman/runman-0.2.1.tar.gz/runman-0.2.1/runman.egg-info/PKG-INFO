@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: runman
+Version: 0.2.1
+Summary: Mange runs of stochastic simulations
+Home-page: https://github.com/AllenCellModeling/runman
+Author: David Williams
+Author-email: cdavew@alleninstitute.org
+License: Allen Institute Software License
+Description: # Run Manager
+        
+        [![Build Status](https://github.com/AllenCellModeling/runman/workflows/Build%20Master/badge.svg)](https://github.com/AllenCellModeling/runman/actions)
+        [![Documentation](https://github.com/AllenCellModeling/runman/workflows/Documentation/badge.svg)](https://AllenCellModeling.github.io/runman)
+        
+        Mange runs (mostly of stochastic simulations)
+        
+        ---
+        
+        ## Features
+        * Register a world, functions to be called on each timestep, and functions that perform logging
+        
+        ## Quick Start
+        ```python
+        import runman
+        
+        counter = []
+        def step(timestep):
+            counter.append(timestep)
+        def log():
+            print(counter[-1])
+            return counter[-1]
+        
+        run = runman.Run(assets=[counter, ], 
+                         stepfns=[step, ],
+                         logfns=[log, ], 
+                         loginterval=2)
+        run.run(10)
+        ```
+        
+        ## Installation
+        
+        Clone and install or `pip install git+https://github.com/AllenCellModeling/runman.git`
+        
+        ## Documentation
+        For full package documentation please visit [AllenCellModeling.github.io/runman](https://AllenCellModeling.github.io/runman).
+        
+        
+        Available under the Allen Institute Software License
+        
+        
+Keywords: runman
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: setup
+Provides-Extra: all
