@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: moon-manager
+Version: 0.8.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Thomas Duval
+Author-email: thomas.duval@orange.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved
+Classifier: Natural Language :: French
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: hug (!=2.5.0)
+Requires-Dist: pyyaml
+Requires-Dist: moon-utilities
+Requires-Dist: moon-engine
+Requires-Dist: tinydb
+Requires-Dist: gunicorn
+Requires-Dist: requests
+Requires-Dist: sqlalchemy
+Requires-Dist: pymysql
+
+# moon_manager
+
+## Installation
+
+```bash
+python -m pip install moon_manager
+```
+If you want a development version:
+
+```bash
+ARTIFACTORY=https://artifactory-iva.si.francetelecom.fr/artifactory/api/pypi/python-virt-orange-product-devops/simple
+sudo python -m pip install --pre moon_manager -i $ARTIFACTORY
+```
+Use it at your own risk, this is an unstable version.
+
+If you want to be in development mode, and get the code, you can do the following steps:
+
+```bash
+git clone git@gitlab.forge.orange-labs.fr:moon/moon_utilities.git
+cd moon_utilities
+sudo pip install -r requirements.txt
+sudo pip install -e .
+cd ..
+git clone git@gitlab.forge.orange-labs.fr:moon/moon_manager.git
+cd moon_manager
+sudo pip install -e .
+```
+
+## Configuration
+
+A configuration file should be located in `/etc/moon/moon.yaml`, review it and update it to fit your needs.
+You may need to change the following attributes:
+
+* `debug`: true to false
+* `database: url`: either sqlite or mysql
+* `pwd_file`: put this file in a secured directory, this file contains the users and passwords of all the system
+* `openstack: url`: the URL of the Keystone server (if used)
+
+## Initialization
+
+To initialize the database, use: 
+
+```bash
+moon_manager db
+```
+
+You need to add a new user (for example admin): 
+
+```bash
+moon_manager add_user admin [admin_password]
+```
+If the password is not given, you will be prompt for one.
+
+## Web server execution
+
+For a development server, use:
+
+```bash
+hug -m moon_manager.server
+```
+
+For a production server:
+
+If you use Information plugins, you must start the daemon:
+
+```bash
+moon_manager start-daemon 
+```
+Then, start the server:
+
+```bash
+moon_manager start
+# Check if the service is up and running
+moon_manager status --human
+```
+
+## Connect to API
+
+* With a web browser
+    1. go to http://127.0.0.1:8000/auth
+    2. insert login and password (admin/admin for example)
+    3. with "RestClient", "Postman" or an other Web API client add the "x-api-key" in headers with the key given by the previous step.
+* With a console
+    1. execute a basic auth to http://127.0.0.1:8000/auth
+    2. use the received token to connect to API  
+
+Example with httpie:
+
+```bash
+sudo python -m pip install httpie
+http -a admin:admin 127.0.0.1:8000/auth
+# copy the Token in TOKEN
+http 127.0.0.1:8000/subjects "x-api-key:$TOKEN"
+```
+
+## Connect to HTML UI
+
+```bash
+moon_manager start_web
+```
+
+Open your web browser and go to: http://127.0.0.1:8080/
+

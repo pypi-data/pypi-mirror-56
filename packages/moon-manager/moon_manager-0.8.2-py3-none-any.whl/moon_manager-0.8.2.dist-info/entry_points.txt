@@ -1,0 +1,4 @@
+[console_scripts]
+moon_manager = moon_manager.__main__:run
+moon_manager_setup = moon_manager.manager_setup:setup
+
