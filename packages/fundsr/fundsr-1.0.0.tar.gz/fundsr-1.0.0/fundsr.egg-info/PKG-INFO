@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: fundsr
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: https://github.com/YEZIHANGISM/fundsr
+Author: yezihangism
+Author-email: yezihangism@gmail.com
+License: UNKNOWN
+Description: # fundsr
+        返回基金申购和赎回的确认日
+        
+        最近群里迷上了买基金，一直在算最小的赎回日，所以写了这么个小工具。
+        
+        # 使用
+        
+                import fundsr
+        
+                # minrday(year, month, day, hour)
+                fundsr.minrday(2019, 3, 27, 15)
+        
+        ## 关于节假日
+        节假日只能从国务院公告中爬，而且也只是部分的数据，目前手动维护在属性中，后期考虑做成API
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
