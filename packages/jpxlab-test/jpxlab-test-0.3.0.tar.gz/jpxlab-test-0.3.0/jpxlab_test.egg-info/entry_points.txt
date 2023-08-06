@@ -1,0 +1,3 @@
+[console_scripts]
+jpxlab = jpxlab.cli:main
+
