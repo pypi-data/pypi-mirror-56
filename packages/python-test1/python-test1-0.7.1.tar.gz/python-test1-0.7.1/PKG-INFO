@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: python-test1
+Version: 0.7.1
+Summary: Python Test program
+Home-page: https://github.com/sureshkvl/python-test
+Author: suresh
+Author-email: sureshkumarr.s@gmail.com
+License: Apache
+Description: UNKNOWN
+Keywords: python
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: >=2.6, <3
