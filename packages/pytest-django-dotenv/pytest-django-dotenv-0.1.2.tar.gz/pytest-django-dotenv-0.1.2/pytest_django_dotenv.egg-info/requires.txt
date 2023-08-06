@@ -1,0 +1,2 @@
+pytest>=2.6.0
+django-dotenv>=1.4.2
