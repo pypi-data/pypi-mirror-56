@@ -1,0 +1,12 @@
+mypy_boto3_service_quotas/__init__.py,sha256=VWLGT-Bp-gqnwShIXQ99chyi57nLKHCUnOyw6zWB3pg,195
+mypy_boto3_service_quotas/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_service_quotas/client.py,sha256=hhRJLhUkqnCnPS_kb1quyE-FC5QcHjoGC61J3bUjFuY,76424
+mypy_boto3_service_quotas/helpers.py,sha256=yGWUaCh_3XhLAqhYJIlLQBbZavn8M18i13vrFrekT9M,4244
+mypy_boto3_service_quotas/paginator.py,sha256=8tZXy1vyvKDM0mg0NIDS1_F2tX5rqFiXEbgszff8Mao,33366
+mypy_boto3_service_quotas/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_service_quotas/type_defs.py,sha256=62mMu6bJQ4G8vcDbnbhtStE9p0pGf5RKIzSoH5fs66k,126664
+mypy_boto3_service_quotas/version.py,sha256=lGsFrThWvjofL01YOK0lhM9aBHjJ2oZC9pJFFIf6ihM,53
+mypy_boto3_service_quotas-0.2.7.dist-info/METADATA,sha256=HPM0rPrr0kHKlbBmgzUaHJoZ2AyUjXoUs75wgLb5-VU,1081
+mypy_boto3_service_quotas-0.2.7.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mypy_boto3_service_quotas-0.2.7.dist-info/top_level.txt,sha256=qrcaqsHzLffV17lA9QOlsD1II9kNpQH8wMDurKBgo4o,26
+mypy_boto3_service_quotas-0.2.7.dist-info/RECORD,,
