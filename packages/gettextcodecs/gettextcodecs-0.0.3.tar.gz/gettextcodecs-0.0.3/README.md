@@ -1,0 +1,28 @@
+# Get text codecs
+
+Python library for encodings.
+
+A single `get_text_codecs` method is used for returning a python dict
+with all available codec names for encoding or decoding text.
+Dictionary keys are the default codec names
+and each entry contains a single list with all aliases, if any.
+
+## Installation & Usage
+
+### pip install
+```sh
+pip3 install 'gettextcodecs>=0.0.3' --upgrade
+```
+
+### Usage
+After installing the "library" you can import it and use it with:
+```python
+from gettextcodecs.methods import get_text_codecs
+codec_names = get_text_codecs()
+```
+Variable `codec_names` now contains all available codec names
+as dictionary keys and a list of their aliases as their value.
+The list will be empty if no aliases exist.
+
+#### Parameters
+- as_list: Optional. Get a single list with all possible codec names.
