@@ -1,0 +1,3 @@
+[console_scripts]
+pyc = pycman.utils.cli:entry_point
+
