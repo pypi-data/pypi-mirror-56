@@ -1,0 +1,15 @@
+libwampli/__init__.py,sha256=DBwC_4f_MsHnPtc1K0mGRAwhEdF-YVVdpiAxO9InS7U,311
+libwampli/args.py,sha256=cmf2-gqDJlnDbj-FsmcB84ZD2ekX3itzBu4xiU1wpj4,4325
+libwampli/config.py,sha256=ALg-bZdWXVaAS4YmuZB9Z6K2mpD9RpNAK0_y81TMy-8,877
+libwampli/context.py,sha256=akHupNiOmT7F9wj2fim1XsJW1NRXAIHrFAxSKp3DfSs,681
+libwampli/format.py,sha256=ljdB2bBJDdDHFqJI8RJMyAnmjXw4QJ8qQcIRwwMIAfo,4198
+wampli/__init__.py,sha256=bGG48xrzeeN0U6hp37CqK-BCWjyhM1p51Bu-_1xpdbw,174
+wampli/__main__.py,sha256=mOgKiake6TLiBGbuzxx0D2NuF2FyaJETQdEhcDHr4Ug,397
+wampli/cli.py,sha256=ay4GB37vKwprJS04hIl-BtGToBM2XBdIjIuyLH4luO4,5946
+wampli/shell.py,sha256=08p0Z-KaHzTAOqAZKlF4eRnNl7fScmBSwjrhPWirAKI,7661
+wampli-0.3.0.dist-info/LICENSE,sha256=6DpE4Wi-c2w94RYsyiMFtlGrKVOcVFMaKtGtFDWDd14,1069
+wampli-0.3.0.dist-info/METADATA,sha256=qFDPA82nhbI5EXPvIpX-GxjtpOUXRurHJmeaeqskpT8,1428
+wampli-0.3.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+wampli-0.3.0.dist-info/entry_points.txt,sha256=qGIzZH7h-33EqtVUox0R2Q8Vy0bFaTSyI_OP9VF5Qoo,44
+wampli-0.3.0.dist-info/top_level.txt,sha256=5_Zej9LXv7eW9pd30izyVM7IVSl14rRD102221L8fc8,17
+wampli-0.3.0.dist-info/RECORD,,
