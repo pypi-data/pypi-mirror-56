@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+textgrid_utils/__init__.py
+textgrid_utils/textgrid_functions.py
+textgrid_utils.egg-info/PKG-INFO
+textgrid_utils.egg-info/SOURCES.txt
+textgrid_utils.egg-info/dependency_links.txt
+textgrid_utils.egg-info/entry_points.txt
+textgrid_utils.egg-info/requires.txt
+textgrid_utils.egg-info/top_level.txt

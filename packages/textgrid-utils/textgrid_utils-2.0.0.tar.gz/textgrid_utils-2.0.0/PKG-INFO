@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: textgrid_utils
+Version: 2.0.0
+Summary: utilities for working with textgrid files
+Home-page: https://github.com/giphahne/textgrid-utils
+Author: Dan Hahne
+Author-email: contact@danhahne.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: linguistics textgrid praat
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
