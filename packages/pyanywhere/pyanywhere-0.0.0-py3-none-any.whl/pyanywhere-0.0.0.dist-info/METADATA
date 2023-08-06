@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pyanywhere
+Version: 0.0.0
+Summary: Wrapper around the PythonAnywhere API with classes for consoles, webapps, etc.
+Home-page: https://github.com/dullbananas/pyanywhere
+Author: Dull Bananas
+Author-email: dull.bananas0@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# pyanywhere
+This is a wrapper for the PythonAnywhere API that is currently in alpha stage of development. Here is an example showing how it works:
+
+```python3
+from pyanywhere.users import User
+user = User('username', token='XXXXXXXX')
+
+# Print names of all consoles
+for console in user.get_consoles():
+    print(console.name)
+```
+
+## Links
+  * GitHub: https://github.com/dullbananas/pyanywhere
+  * Documentation: https://pyanywhere.readthedocs.io/en/latest/
+
+
