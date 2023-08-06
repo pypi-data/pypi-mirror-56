@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: cs.edit
+Version: 20191201.1
+Summary: Convenience functions for editing things. - Cameron Simpson <cs@cskk.id.au> 02jun2016
+Home-page: https://bitbucket.org/cameron_simpson/css/commits/all
+Author: Cameron Simpson
+Author-email: cs@cskk.id.au
+License: GNU General Public License v3 or later (GPLv3+)
+Description: *Latest release 20191201.1*:
+        Initial PyPI release: assorted functions for invoking editors on strings.
+        
+        Convenience functions for editing things.
+        - Cameron Simpson <cs@cskk.id.au> 02jun2016
+        
+        ## Function `choose_editor(editor=None, environ=None)`
+        
+        Choose an editor.
+        
+        ## Function `edit(lines, editor=None, environ=None)`
+        
+        Write lines to a temporary file, edit the file, return the new lines.
+        
+        ## Function `edit_strings(strs, editor=None, environ=None)`
+        
+        Edit a list of string, return tuples of changed string pairs.
+        Honours $EDITOR envvar, defaults to "vi".
+        
+        
+        
+        # Release Log
+        
+        *Release 20191201.1*:
+        Initial PyPI release: assorted functions for invoking editors on strings.
+Keywords: python2,python3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Description-Content-Type: text/markdown
