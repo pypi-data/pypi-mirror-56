@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: ytsubtitles
+Version: 0.0.2
+Summary: ytsubtitles makes you download subs from youtube.
+Home-page: https://github.com/vvigilante/decoripy.git
+Author: Vincenzo Vigilante, Gioele Crispo
+Author-email: info@vvigilante.com
+License: MIT
+Description: # Youtube subtitles downloader
+        Download closed captions from youtube videos (both manual and automatically generated), and convert them to srt format 
+        
+        python implementation
+        
+        ## Usage example
+        ```bash
+        ytsubtitles --video=ZXD4X6INh7w --lang=it > out.srt
+        ```
+        
+        # Acknowledgements
+        - Original js implementation: https://github.com/syzer/youtube-captions-scraper/blob/master/src/index.js
+        - SRT conversion: http://code.activestate.com/recipes/577459-convert-a-youtube-transcript-in-srt-subtitle/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
