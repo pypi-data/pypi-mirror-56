@@ -1,0 +1,3 @@
+[console_scripts]
+task2dot = task2dot.task2dot:main
+
