@@ -1,0 +1,3 @@
+[console_scripts]
+joke_cli = joke_cli.__main__:main
+

@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+joke_cli/__init__.py
+joke_cli/__main__.py
+joke_cli/joke_apis.py
+joke_cli.egg-info/PKG-INFO
+joke_cli.egg-info/SOURCES.txt
+joke_cli.egg-info/dependency_links.txt
+joke_cli.egg-info/entry_points.txt
+joke_cli.egg-info/top_level.txt
