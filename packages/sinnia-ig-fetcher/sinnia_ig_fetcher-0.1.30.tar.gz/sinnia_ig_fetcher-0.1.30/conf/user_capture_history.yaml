@@ -1,0 +1,46 @@
+
+log_file: "logs/user_capture.log"
+
+access_token: "4892188182.4cfc3e0.9ea02f9175164bd5b4fb6ecf6025cd4e"
+#access_token: "23854057.4cfc3e0.c2e7080c14b744ba8d38904256a17649" 
+
+queries:
+  select_users: |
+    SELECT user_id FROM FollowIds WHERE active = 1 and user_id = 1652583642
+#    SELECT user_id FROM FollowIds WHERE active = 1 and user_id = 23854057 
+
+  insert_users: |
+    INSERT INTO Users (id, username, description, url, profile_image, 
+                       media_count, followers_count, follows_count)
+    VALUES (%(id)s, %(username)s, %(description)s, %(url)s, %(profile_image)s,
+            %(media_count)s, %(followers_count)s, %(follows_count)s)
+    ON DUPLICATE KEY UPDATE 
+            username = %(username)s, 
+            description = %(description)s,
+            url = %(url)s, 
+            profile_image = %(profile_image)s, 
+            media_count = %(media_count)s, 
+            followers_count = %(followers_count)s, 
+            follows_count = %(follows_count)s
+
+  insert_media: |
+    INSERT INTO Media (id, user_id, created_at, fetched_at, type,
+                       caption, url, likes_count, comments_count,
+                       image)
+    VALUES (%(id)s, %(user_id)s, %(created_at)s, %(fetched_at)s, %(type)s,
+            %(caption)s, %(url)s, %(likes_count)s, %(comments_count)s,
+            %(image)s)
+    ON DUPLICATE KEY UPDATE 
+            fetched_at = %(fetched_at)s,
+            likes_count = %(likes_count)s, 
+            comments_count = %(comments_count)s,
+            image = %(image)s
+
+db_config:
+  sinnia_instagram:
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8" 
+
