@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+iglo/__init__.py
+iglo/helpers.py
+iglo/lamp.py
+iglo.egg-info/PKG-INFO
+iglo.egg-info/SOURCES.txt
+iglo.egg-info/dependency_links.txt
+iglo.egg-info/top_level.txt
+iglo.egg-info/zip-safe
