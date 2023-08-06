@@ -1,0 +1,14 @@
+psutil
+
+[:platform_system != "Windows"]
+pexpect>=4.0
+
+[:platform_system == "Windows"]
+wexpect>=2.3
+
+[test]
+pytest
+pytest-cov
+coverage
+setuptools>=38.0
+twine
