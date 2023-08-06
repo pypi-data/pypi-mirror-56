@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+minecraft_launcher_cmd/__init__.py
+minecraft_launcher_cmd/minecraft_launcher_cmd.py
+minecraft_launcher_cmd.egg-info/PKG-INFO
+minecraft_launcher_cmd.egg-info/SOURCES.txt
+minecraft_launcher_cmd.egg-info/dependency_links.txt
+minecraft_launcher_cmd.egg-info/entry_points.txt
+minecraft_launcher_cmd.egg-info/requires.txt
+minecraft_launcher_cmd.egg-info/top_level.txt
