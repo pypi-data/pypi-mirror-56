@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pypgn
+Version: 0.2.1
+Summary: Library for parsing and manipulating PGN format files.
+Home-page: https://github.com/DaniruKun/pypgn
+Author: Daniils Petrovs
+Author-email: thedanpetrov@gmail.com
+License: MPL-2.0
+Download-URL: https://github.com/DaniruKun/pypgn/archive/0.1.tar.gz
+Keywords: pgn,chess,game,notation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Text Processing
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+
+[![Python 3.5](https://img.shields.io/badge/python-3.5-blue.svg)](https://www.python.org/downloads/release/python-360/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/DaniruKun/pypgn.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/DaniruKun/pypgn/context:python)
+# PyPGN
+A Python 3 library to simplify parsing and manipulation of [PGN](http://portablegamenotation.com/FIDE.html) (Portable Game Notation) format files.
+
+
