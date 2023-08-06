@@ -1,0 +1,12 @@
+README.md
+setup.py
+tensorcox/__init__.py
+tensorcox/main.py
+tensorcox.egg-info/PKG-INFO
+tensorcox.egg-info/SOURCES.txt
+tensorcox.egg-info/dependency_links.txt
+tensorcox.egg-info/not-zip-safe
+tensorcox.egg-info/requires.txt
+tensorcox.egg-info/top_level.txt
+tensorcox/test/__init__.py
+tensorcox/test/cox_test.py
