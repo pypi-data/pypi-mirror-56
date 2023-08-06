@@ -1,0 +1,99 @@
+Metadata-Version: 1.2
+Name: serving-utils
+Version: 0.9.1
+Summary: Some utilities for tensorflow serving
+Home-page: https://github.com/Yoctol/serving-utils
+Author: Po-Hsien Chu
+Author-email: cph@yoctol.com
+License: MIT
+Description: serving-utils
+        =============
+        
+        |travis| |pypi| |release|
+        
+        Some python utilities when using tensorflow-serving.
+        
+        Installation
+        ------------
+        
+        Prepare an environment with python version >= 3.6
+        
+        From PYPI: 1. Manually install tensorflow CPU or GPU version. 2.
+        ``pip install serving-utils``
+        
+        From Github repository: 1.
+        ``git clone git@github.com:Yoctol/serving-utils.git`` 2. Manually
+        install tensorflow CPU or GPU version. 3. ``make install``
+        
+        Usage
+        -----
+        
+        1. Saver and Loader \`\`\`python import tensorflow as tf
+        
+        from serving\_utils.saver import Saver from serving\_utils.loader import
+        Loader
+        
+        saver = Saver( session=tf.Session(graph=your\_graph),
+        output\_dir='/path/to/serving', signature\_def\_map={ 'predict':
+        tf.saved\_model.signature\_def\_utils.predict\_signature\_def(
+        inputs={'input': tf.Tensor...}, outputs={'output': tf.Tensor...}, ) },
+        freeze=True, # (default: True) Frozen graph will be saved if True. )
+        saver.save()
+        
+        loader = Loader( path='/path/to/serving', # version=1, # if not
+        specified, use the latest version ) new\_sess = tf.Session()
+        
+        loader.load(new\_sess) # load the saved model into new session \`\`\`
+        
+        2. Client \`\`\`python from serving\_utils import Client, PredictInput
+        
+        client = Client(host="localhost", port=8500, n\_trys=3) client.predict(
+        [PredictInput(name='input', value=np.ones(1, 10))],
+        output\_names=['output'], model\_signature\_name='predict', )
+        
+        or async
+        ========
+        
+        await client.async\_predict(...) \`\`\`
+        
+        3. Freeze graph \`\`\`python from serving\_utils.freeze\_graph import
+           freeze\_graph, create\_session\_from\_graphdef
+        
+        frozen\_graph\_def = freeze\_graph(session, output\_op\_names)
+        new\_session = create\_session\_from\_graphdef(frozen\_graph\_def)
+        
+        ::
+        
+        
+        
+            ## Test
+        
+            Run the following commands:
+        
+        make lint make test
+        
+        ::
+        
+        
+        
+            ## Dev
+        
+        make install-dev
+        
+        ::
+        
+        
+            ### Protos
+        
+        python -m grpc\_tools.protoc -I. --python\_out=. --python\_grpc\_out=.
+        --grpc\_python\_out=. serving\_utils/protos/\*.proto \`\`\`
+        
+        .. |travis| image:: https://travis-ci.org/Yoctol/serving-utils.svg?branch=master
+           :target: https://travis-ci.org/Yoctol/serving-utils
+        .. |pypi| image:: https://img.shields.io/pypi/v/serving-utils.svg?style=flat
+           :target: https://pypi.python.org/pypi/serving-utils
+        .. |release| image:: https://img.shields.io/github/release/Yoctol/serving-utils.svg
+        
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
