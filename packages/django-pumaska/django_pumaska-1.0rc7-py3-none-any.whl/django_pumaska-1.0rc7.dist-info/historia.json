@@ -1,0 +1,50 @@
+[
+  {
+    "tyyppi": "muutos",
+    "tunnus": "ecfff75d519eaf322ab8a184e03bf863a758c819",
+    "versio": "1.0rc7",
+    "kuvaus": "Korjattu yhdistettyyn lomakkeeseen liittyv\u00e4n rivin haku / luonti"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "3b11a2296f31848eddb2fb30dbcda01a4ec25b6e",
+    "versio": "1.0rc6",
+    "kuvaus": "Ei muuteta liitetyn lomakkeen kenttien pakollisuutta POST-pyynn\u00f6ll\u00e4"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "c5479423d8155aa2c1358396fbeb2c3de7084335",
+    "versio": "1.0rc5",
+    "kuvaus": "Lis\u00e4tty `.tarkkailu-estetty`-luokka riviaihioon; poistetaan se kultakin lis\u00e4tylt\u00e4 rivilt\u00e4"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "6fe204a0b0f0c80551b1dea51f7e0fa82452b2c2",
+    "versio": "1.0rc4",
+    "kuvaus": "Korjattu lomakesarjan sisempien tasojen tarkistusvirheiden avainten muodostus"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "869b6ec73ec2af878140280d113a2dbc6d810bde",
+    "versio": "1.0rc3",
+    "kuvaus": "Korjattu A- ja B-lomakkeiden tyyppitarkistukset"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "e9b94784e09daeb17e2e7622cada257d9e87b634",
+    "versio": "1.0rc2",
+    "kuvaus": "Korjattu `avain_{a,b}`-parametrien automaattinen muodostus"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "17f1889ec061decb22b42a5adabe4d5f6e9be78f",
+    "versio": "1.0rc1",
+    "kuvaus": "P\u00e4ivitetty `jquery.formset.js`"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "dc77325b330975c3482408bb69bb3e3ba586b7ef",
+    "versio": "1.0rc0",
+    "kuvaus": "Alustava toteutus"
+  }
+]
