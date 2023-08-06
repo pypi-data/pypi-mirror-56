@@ -1,0 +1,2 @@
+ts_efret = figure(tools='xbox_select,save,xwheel_zoom,xwheel_pan,xpan', plot_width=1075, plot_height=275,
+                          active_drag='xbox_select', x_range=ts.x_range)  #  todo: add tooltips=[('$index')]
