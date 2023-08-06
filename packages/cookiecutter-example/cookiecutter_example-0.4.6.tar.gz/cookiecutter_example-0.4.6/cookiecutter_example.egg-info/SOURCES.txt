@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+cookiecutter-example.json
+setup.cfg
+setup.py
+cookiecutter_example/__init__.py
+cookiecutter_example/_version.py
+cookiecutter_example/widget.py
+cookiecutter_example.egg-info/PKG-INFO
+cookiecutter_example.egg-info/SOURCES.txt
+cookiecutter_example.egg-info/dependency_links.txt
+cookiecutter_example.egg-info/not-zip-safe
+cookiecutter_example.egg-info/requires.txt
+cookiecutter_example.egg-info/top_level.txt
+cookiecutter_example/static/extension.js
+cookiecutter_example/static/index.js
+cookiecutter_example/static/index.js.map
