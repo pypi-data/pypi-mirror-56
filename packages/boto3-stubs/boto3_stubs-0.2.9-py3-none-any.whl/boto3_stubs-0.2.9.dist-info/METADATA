@@ -1,0 +1,859 @@
+Metadata-Version: 2.1
+Name: boto3-stubs
+Version: 0.2.9
+Summary: Boto3 1.10.28 stubs powered by `mypy-boto3`.
+Home-page: https://github.com/vemel/mypy_boto3
+Author: Vlad Emelianov
+Author-email: vlad.emelianov.nz@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+Requires-Dist: mypy-boto3 (==0.2.9)
+Provides-Extra: acm
+Requires-Dist: mypy-boto3-acm (==0.2.9) ; extra == 'acm'
+Provides-Extra: acm-pca
+Requires-Dist: mypy-boto3-acm-pca (==0.2.9) ; extra == 'acm-pca'
+Provides-Extra: alexaforbusiness
+Requires-Dist: mypy-boto3-alexaforbusiness (==0.2.9) ; extra == 'alexaforbusiness'
+Provides-Extra: all
+Requires-Dist: mypy-boto3-acm (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-acm-pca (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-alexaforbusiness (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-amplify (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-apigateway (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-apigatewaymanagementapi (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-apigatewayv2 (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-application-autoscaling (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-application-insights (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-appmesh (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-appstream (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-appsync (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-athena (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-autoscaling (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-autoscaling-plans (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-backup (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-batch (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-budgets (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ce (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-chime (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloud9 (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-clouddirectory (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloudformation (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloudfront (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloudhsm (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloudhsmv2 (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloudsearch (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloudsearchdomain (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloudtrail (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cloudwatch (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-codebuild (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-codecommit (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-codedeploy (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-codepipeline (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-codestar (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-codestar-notifications (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cognito-identity (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cognito-idp (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cognito-sync (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-comprehend (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-comprehendmedical (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-config (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-connect (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-cur (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-datapipeline (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-datasync (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-dax (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-devicefarm (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-directconnect (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-discovery (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-dlm (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-dms (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-docdb (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ds (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-dynamodb (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-dynamodbstreams (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ec2 (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ec2-instance-connect (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ecr (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ecs (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-efs (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-eks (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-elasticache (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-elasticbeanstalk (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-elastictranscoder (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-elb (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-elbv2 (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-emr (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-es (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-events (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-firehose (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-fms (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-forecast (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-forecastquery (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-fsx (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-gamelift (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-glacier (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-globalaccelerator (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-glue (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-greengrass (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-groundstation (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-guardduty (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-health (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iam (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-importexport (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-inspector (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iot (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iot-data (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iot-jobs-data (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iot1click-devices (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iot1click-projects (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iotanalytics (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iotevents (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iotevents-data (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-iotthingsgraph (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-kafka (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-kinesis (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-kinesis-video-archived-media (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-kinesis-video-media (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-kinesisanalytics (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-kinesisanalyticsv2 (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-kinesisvideo (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-kms (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-lakeformation (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-lambda (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-lex-models (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-lex-runtime (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-license-manager (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-lightsail (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-logs (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-machinelearning (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-macie (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-managedblockchain (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-marketplace-entitlement (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-marketplacecommerceanalytics (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mediaconnect (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mediaconvert (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-medialive (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mediapackage (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mediapackage-vod (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mediastore (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mediastore-data (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mediatailor (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-meteringmarketplace (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mgh (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mobile (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mq (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-mturk (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-neptune (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-opsworks (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-opsworkscm (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-organizations (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-personalize (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-personalize-events (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-personalize-runtime (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-pi (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-pinpoint (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-pinpoint-email (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-pinpoint-sms-voice (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-polly (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-pricing (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-qldb (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-qldb-session (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-quicksight (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ram (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-rds (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-rds-data (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-redshift (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-rekognition (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-resource-groups (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-resourcegroupstaggingapi (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-robomaker (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-route53 (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-route53domains (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-route53resolver (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-s3 (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-s3control (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-sagemaker (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-sagemaker-runtime (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-savingsplans (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-sdb (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-secretsmanager (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-securityhub (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-serverlessrepo (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-service-quotas (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-servicecatalog (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-servicediscovery (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ses (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-shield (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-signer (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-sms (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-sms-voice (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-snowball (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-sns (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-sqs (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-ssm (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-stepfunctions (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-storagegateway (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-sts (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-support (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-swf (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-textract (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-transcribe (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-transfer (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-translate (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-waf (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-waf-regional (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-workdocs (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-worklink (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-workmail (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-workmailmessageflow (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-workspaces (==0.2.9) ; extra == 'all'
+Requires-Dist: mypy-boto3-xray (==0.2.9) ; extra == 'all'
+Provides-Extra: amplify
+Requires-Dist: mypy-boto3-amplify (==0.2.9) ; extra == 'amplify'
+Provides-Extra: apigateway
+Requires-Dist: mypy-boto3-apigateway (==0.2.9) ; extra == 'apigateway'
+Provides-Extra: apigatewaymanagementapi
+Requires-Dist: mypy-boto3-apigatewaymanagementapi (==0.2.9) ; extra == 'apigatewaymanagementapi'
+Provides-Extra: apigatewayv2
+Requires-Dist: mypy-boto3-apigatewayv2 (==0.2.9) ; extra == 'apigatewayv2'
+Provides-Extra: application-autoscaling
+Requires-Dist: mypy-boto3-application-autoscaling (==0.2.9) ; extra == 'application-autoscaling'
+Provides-Extra: application-insights
+Requires-Dist: mypy-boto3-application-insights (==0.2.9) ; extra == 'application-insights'
+Provides-Extra: appmesh
+Requires-Dist: mypy-boto3-appmesh (==0.2.9) ; extra == 'appmesh'
+Provides-Extra: appstream
+Requires-Dist: mypy-boto3-appstream (==0.2.9) ; extra == 'appstream'
+Provides-Extra: appsync
+Requires-Dist: mypy-boto3-appsync (==0.2.9) ; extra == 'appsync'
+Provides-Extra: athena
+Requires-Dist: mypy-boto3-athena (==0.2.9) ; extra == 'athena'
+Provides-Extra: autoscaling
+Requires-Dist: mypy-boto3-autoscaling (==0.2.9) ; extra == 'autoscaling'
+Provides-Extra: autoscaling-plans
+Requires-Dist: mypy-boto3-autoscaling-plans (==0.2.9) ; extra == 'autoscaling-plans'
+Provides-Extra: backup
+Requires-Dist: mypy-boto3-backup (==0.2.9) ; extra == 'backup'
+Provides-Extra: batch
+Requires-Dist: mypy-boto3-batch (==0.2.9) ; extra == 'batch'
+Provides-Extra: budgets
+Requires-Dist: mypy-boto3-budgets (==0.2.9) ; extra == 'budgets'
+Provides-Extra: ce
+Requires-Dist: mypy-boto3-ce (==0.2.9) ; extra == 'ce'
+Provides-Extra: chime
+Requires-Dist: mypy-boto3-chime (==0.2.9) ; extra == 'chime'
+Provides-Extra: cloud9
+Requires-Dist: mypy-boto3-cloud9 (==0.2.9) ; extra == 'cloud9'
+Provides-Extra: clouddirectory
+Requires-Dist: mypy-boto3-clouddirectory (==0.2.9) ; extra == 'clouddirectory'
+Provides-Extra: cloudformation
+Requires-Dist: mypy-boto3-cloudformation (==0.2.9) ; extra == 'cloudformation'
+Provides-Extra: cloudfront
+Requires-Dist: mypy-boto3-cloudfront (==0.2.9) ; extra == 'cloudfront'
+Provides-Extra: cloudhsm
+Requires-Dist: mypy-boto3-cloudhsm (==0.2.9) ; extra == 'cloudhsm'
+Provides-Extra: cloudhsmv2
+Requires-Dist: mypy-boto3-cloudhsmv2 (==0.2.9) ; extra == 'cloudhsmv2'
+Provides-Extra: cloudsearch
+Requires-Dist: mypy-boto3-cloudsearch (==0.2.9) ; extra == 'cloudsearch'
+Provides-Extra: cloudsearchdomain
+Requires-Dist: mypy-boto3-cloudsearchdomain (==0.2.9) ; extra == 'cloudsearchdomain'
+Provides-Extra: cloudtrail
+Requires-Dist: mypy-boto3-cloudtrail (==0.2.9) ; extra == 'cloudtrail'
+Provides-Extra: cloudwatch
+Requires-Dist: mypy-boto3-cloudwatch (==0.2.9) ; extra == 'cloudwatch'
+Provides-Extra: codebuild
+Requires-Dist: mypy-boto3-codebuild (==0.2.9) ; extra == 'codebuild'
+Provides-Extra: codecommit
+Requires-Dist: mypy-boto3-codecommit (==0.2.9) ; extra == 'codecommit'
+Provides-Extra: codedeploy
+Requires-Dist: mypy-boto3-codedeploy (==0.2.9) ; extra == 'codedeploy'
+Provides-Extra: codepipeline
+Requires-Dist: mypy-boto3-codepipeline (==0.2.9) ; extra == 'codepipeline'
+Provides-Extra: codestar
+Requires-Dist: mypy-boto3-codestar (==0.2.9) ; extra == 'codestar'
+Provides-Extra: codestar-notifications
+Requires-Dist: mypy-boto3-codestar-notifications (==0.2.9) ; extra == 'codestar-notifications'
+Provides-Extra: cognito-identity
+Requires-Dist: mypy-boto3-cognito-identity (==0.2.9) ; extra == 'cognito-identity'
+Provides-Extra: cognito-idp
+Requires-Dist: mypy-boto3-cognito-idp (==0.2.9) ; extra == 'cognito-idp'
+Provides-Extra: cognito-sync
+Requires-Dist: mypy-boto3-cognito-sync (==0.2.9) ; extra == 'cognito-sync'
+Provides-Extra: comprehend
+Requires-Dist: mypy-boto3-comprehend (==0.2.9) ; extra == 'comprehend'
+Provides-Extra: comprehendmedical
+Requires-Dist: mypy-boto3-comprehendmedical (==0.2.9) ; extra == 'comprehendmedical'
+Provides-Extra: config
+Requires-Dist: mypy-boto3-config (==0.2.9) ; extra == 'config'
+Provides-Extra: connect
+Requires-Dist: mypy-boto3-connect (==0.2.9) ; extra == 'connect'
+Provides-Extra: cur
+Requires-Dist: mypy-boto3-cur (==0.2.9) ; extra == 'cur'
+Provides-Extra: datapipeline
+Requires-Dist: mypy-boto3-datapipeline (==0.2.9) ; extra == 'datapipeline'
+Provides-Extra: datasync
+Requires-Dist: mypy-boto3-datasync (==0.2.9) ; extra == 'datasync'
+Provides-Extra: dax
+Requires-Dist: mypy-boto3-dax (==0.2.9) ; extra == 'dax'
+Provides-Extra: devicefarm
+Requires-Dist: mypy-boto3-devicefarm (==0.2.9) ; extra == 'devicefarm'
+Provides-Extra: directconnect
+Requires-Dist: mypy-boto3-directconnect (==0.2.9) ; extra == 'directconnect'
+Provides-Extra: discovery
+Requires-Dist: mypy-boto3-discovery (==0.2.9) ; extra == 'discovery'
+Provides-Extra: dlm
+Requires-Dist: mypy-boto3-dlm (==0.2.9) ; extra == 'dlm'
+Provides-Extra: dms
+Requires-Dist: mypy-boto3-dms (==0.2.9) ; extra == 'dms'
+Provides-Extra: docdb
+Requires-Dist: mypy-boto3-docdb (==0.2.9) ; extra == 'docdb'
+Provides-Extra: ds
+Requires-Dist: mypy-boto3-ds (==0.2.9) ; extra == 'ds'
+Provides-Extra: dynamodb
+Requires-Dist: mypy-boto3-dynamodb (==0.2.9) ; extra == 'dynamodb'
+Provides-Extra: dynamodbstreams
+Requires-Dist: mypy-boto3-dynamodbstreams (==0.2.9) ; extra == 'dynamodbstreams'
+Provides-Extra: ec2
+Requires-Dist: mypy-boto3-ec2 (==0.2.9) ; extra == 'ec2'
+Provides-Extra: ec2-instance-connect
+Requires-Dist: mypy-boto3-ec2-instance-connect (==0.2.9) ; extra == 'ec2-instance-connect'
+Provides-Extra: ecr
+Requires-Dist: mypy-boto3-ecr (==0.2.9) ; extra == 'ecr'
+Provides-Extra: ecs
+Requires-Dist: mypy-boto3-ecs (==0.2.9) ; extra == 'ecs'
+Provides-Extra: efs
+Requires-Dist: mypy-boto3-efs (==0.2.9) ; extra == 'efs'
+Provides-Extra: eks
+Requires-Dist: mypy-boto3-eks (==0.2.9) ; extra == 'eks'
+Provides-Extra: elasticache
+Requires-Dist: mypy-boto3-elasticache (==0.2.9) ; extra == 'elasticache'
+Provides-Extra: elasticbeanstalk
+Requires-Dist: mypy-boto3-elasticbeanstalk (==0.2.9) ; extra == 'elasticbeanstalk'
+Provides-Extra: elastictranscoder
+Requires-Dist: mypy-boto3-elastictranscoder (==0.2.9) ; extra == 'elastictranscoder'
+Provides-Extra: elb
+Requires-Dist: mypy-boto3-elb (==0.2.9) ; extra == 'elb'
+Provides-Extra: elbv2
+Requires-Dist: mypy-boto3-elbv2 (==0.2.9) ; extra == 'elbv2'
+Provides-Extra: emr
+Requires-Dist: mypy-boto3-emr (==0.2.9) ; extra == 'emr'
+Provides-Extra: es
+Requires-Dist: mypy-boto3-es (==0.2.9) ; extra == 'es'
+Provides-Extra: essential
+Requires-Dist: mypy-boto3-cloudformation (==0.2.9) ; extra == 'essential'
+Requires-Dist: mypy-boto3-dynamodb (==0.2.9) ; extra == 'essential'
+Requires-Dist: mypy-boto3-ec2 (==0.2.9) ; extra == 'essential'
+Requires-Dist: mypy-boto3-lambda (==0.2.9) ; extra == 'essential'
+Requires-Dist: mypy-boto3-rds (==0.2.9) ; extra == 'essential'
+Requires-Dist: mypy-boto3-s3 (==0.2.9) ; extra == 'essential'
+Requires-Dist: mypy-boto3-sqs (==0.2.9) ; extra == 'essential'
+Provides-Extra: events
+Requires-Dist: mypy-boto3-events (==0.2.9) ; extra == 'events'
+Provides-Extra: firehose
+Requires-Dist: mypy-boto3-firehose (==0.2.9) ; extra == 'firehose'
+Provides-Extra: fms
+Requires-Dist: mypy-boto3-fms (==0.2.9) ; extra == 'fms'
+Provides-Extra: forecast
+Requires-Dist: mypy-boto3-forecast (==0.2.9) ; extra == 'forecast'
+Provides-Extra: forecastquery
+Requires-Dist: mypy-boto3-forecastquery (==0.2.9) ; extra == 'forecastquery'
+Provides-Extra: fsx
+Requires-Dist: mypy-boto3-fsx (==0.2.9) ; extra == 'fsx'
+Provides-Extra: gamelift
+Requires-Dist: mypy-boto3-gamelift (==0.2.9) ; extra == 'gamelift'
+Provides-Extra: glacier
+Requires-Dist: mypy-boto3-glacier (==0.2.9) ; extra == 'glacier'
+Provides-Extra: globalaccelerator
+Requires-Dist: mypy-boto3-globalaccelerator (==0.2.9) ; extra == 'globalaccelerator'
+Provides-Extra: glue
+Requires-Dist: mypy-boto3-glue (==0.2.9) ; extra == 'glue'
+Provides-Extra: greengrass
+Requires-Dist: mypy-boto3-greengrass (==0.2.9) ; extra == 'greengrass'
+Provides-Extra: groundstation
+Requires-Dist: mypy-boto3-groundstation (==0.2.9) ; extra == 'groundstation'
+Provides-Extra: guardduty
+Requires-Dist: mypy-boto3-guardduty (==0.2.9) ; extra == 'guardduty'
+Provides-Extra: health
+Requires-Dist: mypy-boto3-health (==0.2.9) ; extra == 'health'
+Provides-Extra: iam
+Requires-Dist: mypy-boto3-iam (==0.2.9) ; extra == 'iam'
+Provides-Extra: importexport
+Requires-Dist: mypy-boto3-importexport (==0.2.9) ; extra == 'importexport'
+Provides-Extra: inspector
+Requires-Dist: mypy-boto3-inspector (==0.2.9) ; extra == 'inspector'
+Provides-Extra: iot
+Requires-Dist: mypy-boto3-iot (==0.2.9) ; extra == 'iot'
+Provides-Extra: iot-data
+Requires-Dist: mypy-boto3-iot-data (==0.2.9) ; extra == 'iot-data'
+Provides-Extra: iot-jobs-data
+Requires-Dist: mypy-boto3-iot-jobs-data (==0.2.9) ; extra == 'iot-jobs-data'
+Provides-Extra: iot1click-devices
+Requires-Dist: mypy-boto3-iot1click-devices (==0.2.9) ; extra == 'iot1click-devices'
+Provides-Extra: iot1click-projects
+Requires-Dist: mypy-boto3-iot1click-projects (==0.2.9) ; extra == 'iot1click-projects'
+Provides-Extra: iotanalytics
+Requires-Dist: mypy-boto3-iotanalytics (==0.2.9) ; extra == 'iotanalytics'
+Provides-Extra: iotevents
+Requires-Dist: mypy-boto3-iotevents (==0.2.9) ; extra == 'iotevents'
+Provides-Extra: iotevents-data
+Requires-Dist: mypy-boto3-iotevents-data (==0.2.9) ; extra == 'iotevents-data'
+Provides-Extra: iotthingsgraph
+Requires-Dist: mypy-boto3-iotthingsgraph (==0.2.9) ; extra == 'iotthingsgraph'
+Provides-Extra: kafka
+Requires-Dist: mypy-boto3-kafka (==0.2.9) ; extra == 'kafka'
+Provides-Extra: kinesis
+Requires-Dist: mypy-boto3-kinesis (==0.2.9) ; extra == 'kinesis'
+Provides-Extra: kinesis-video-archived-media
+Requires-Dist: mypy-boto3-kinesis-video-archived-media (==0.2.9) ; extra == 'kinesis-video-archived-media'
+Provides-Extra: kinesis-video-media
+Requires-Dist: mypy-boto3-kinesis-video-media (==0.2.9) ; extra == 'kinesis-video-media'
+Provides-Extra: kinesisanalytics
+Requires-Dist: mypy-boto3-kinesisanalytics (==0.2.9) ; extra == 'kinesisanalytics'
+Provides-Extra: kinesisanalyticsv2
+Requires-Dist: mypy-boto3-kinesisanalyticsv2 (==0.2.9) ; extra == 'kinesisanalyticsv2'
+Provides-Extra: kinesisvideo
+Requires-Dist: mypy-boto3-kinesisvideo (==0.2.9) ; extra == 'kinesisvideo'
+Provides-Extra: kms
+Requires-Dist: mypy-boto3-kms (==0.2.9) ; extra == 'kms'
+Provides-Extra: lakeformation
+Requires-Dist: mypy-boto3-lakeformation (==0.2.9) ; extra == 'lakeformation'
+Provides-Extra: lambda
+Requires-Dist: mypy-boto3-lambda (==0.2.9) ; extra == 'lambda'
+Provides-Extra: lex-models
+Requires-Dist: mypy-boto3-lex-models (==0.2.9) ; extra == 'lex-models'
+Provides-Extra: lex-runtime
+Requires-Dist: mypy-boto3-lex-runtime (==0.2.9) ; extra == 'lex-runtime'
+Provides-Extra: license-manager
+Requires-Dist: mypy-boto3-license-manager (==0.2.9) ; extra == 'license-manager'
+Provides-Extra: lightsail
+Requires-Dist: mypy-boto3-lightsail (==0.2.9) ; extra == 'lightsail'
+Provides-Extra: logs
+Requires-Dist: mypy-boto3-logs (==0.2.9) ; extra == 'logs'
+Provides-Extra: machinelearning
+Requires-Dist: mypy-boto3-machinelearning (==0.2.9) ; extra == 'machinelearning'
+Provides-Extra: macie
+Requires-Dist: mypy-boto3-macie (==0.2.9) ; extra == 'macie'
+Provides-Extra: managedblockchain
+Requires-Dist: mypy-boto3-managedblockchain (==0.2.9) ; extra == 'managedblockchain'
+Provides-Extra: marketplace-entitlement
+Requires-Dist: mypy-boto3-marketplace-entitlement (==0.2.9) ; extra == 'marketplace-entitlement'
+Provides-Extra: marketplacecommerceanalytics
+Requires-Dist: mypy-boto3-marketplacecommerceanalytics (==0.2.9) ; extra == 'marketplacecommerceanalytics'
+Provides-Extra: mediaconnect
+Requires-Dist: mypy-boto3-mediaconnect (==0.2.9) ; extra == 'mediaconnect'
+Provides-Extra: mediaconvert
+Requires-Dist: mypy-boto3-mediaconvert (==0.2.9) ; extra == 'mediaconvert'
+Provides-Extra: medialive
+Requires-Dist: mypy-boto3-medialive (==0.2.9) ; extra == 'medialive'
+Provides-Extra: mediapackage
+Requires-Dist: mypy-boto3-mediapackage (==0.2.9) ; extra == 'mediapackage'
+Provides-Extra: mediapackage-vod
+Requires-Dist: mypy-boto3-mediapackage-vod (==0.2.9) ; extra == 'mediapackage-vod'
+Provides-Extra: mediastore
+Requires-Dist: mypy-boto3-mediastore (==0.2.9) ; extra == 'mediastore'
+Provides-Extra: mediastore-data
+Requires-Dist: mypy-boto3-mediastore-data (==0.2.9) ; extra == 'mediastore-data'
+Provides-Extra: mediatailor
+Requires-Dist: mypy-boto3-mediatailor (==0.2.9) ; extra == 'mediatailor'
+Provides-Extra: meteringmarketplace
+Requires-Dist: mypy-boto3-meteringmarketplace (==0.2.9) ; extra == 'meteringmarketplace'
+Provides-Extra: mgh
+Requires-Dist: mypy-boto3-mgh (==0.2.9) ; extra == 'mgh'
+Provides-Extra: mobile
+Requires-Dist: mypy-boto3-mobile (==0.2.9) ; extra == 'mobile'
+Provides-Extra: mq
+Requires-Dist: mypy-boto3-mq (==0.2.9) ; extra == 'mq'
+Provides-Extra: mturk
+Requires-Dist: mypy-boto3-mturk (==0.2.9) ; extra == 'mturk'
+Provides-Extra: neptune
+Requires-Dist: mypy-boto3-neptune (==0.2.9) ; extra == 'neptune'
+Provides-Extra: opsworks
+Requires-Dist: mypy-boto3-opsworks (==0.2.9) ; extra == 'opsworks'
+Provides-Extra: opsworkscm
+Requires-Dist: mypy-boto3-opsworkscm (==0.2.9) ; extra == 'opsworkscm'
+Provides-Extra: organizations
+Requires-Dist: mypy-boto3-organizations (==0.2.9) ; extra == 'organizations'
+Provides-Extra: personalize
+Requires-Dist: mypy-boto3-personalize (==0.2.9) ; extra == 'personalize'
+Provides-Extra: personalize-events
+Requires-Dist: mypy-boto3-personalize-events (==0.2.9) ; extra == 'personalize-events'
+Provides-Extra: personalize-runtime
+Requires-Dist: mypy-boto3-personalize-runtime (==0.2.9) ; extra == 'personalize-runtime'
+Provides-Extra: pi
+Requires-Dist: mypy-boto3-pi (==0.2.9) ; extra == 'pi'
+Provides-Extra: pinpoint
+Requires-Dist: mypy-boto3-pinpoint (==0.2.9) ; extra == 'pinpoint'
+Provides-Extra: pinpoint-email
+Requires-Dist: mypy-boto3-pinpoint-email (==0.2.9) ; extra == 'pinpoint-email'
+Provides-Extra: pinpoint-sms-voice
+Requires-Dist: mypy-boto3-pinpoint-sms-voice (==0.2.9) ; extra == 'pinpoint-sms-voice'
+Provides-Extra: polly
+Requires-Dist: mypy-boto3-polly (==0.2.9) ; extra == 'polly'
+Provides-Extra: pricing
+Requires-Dist: mypy-boto3-pricing (==0.2.9) ; extra == 'pricing'
+Provides-Extra: qldb
+Requires-Dist: mypy-boto3-qldb (==0.2.9) ; extra == 'qldb'
+Provides-Extra: qldb-session
+Requires-Dist: mypy-boto3-qldb-session (==0.2.9) ; extra == 'qldb-session'
+Provides-Extra: quicksight
+Requires-Dist: mypy-boto3-quicksight (==0.2.9) ; extra == 'quicksight'
+Provides-Extra: ram
+Requires-Dist: mypy-boto3-ram (==0.2.9) ; extra == 'ram'
+Provides-Extra: rds
+Requires-Dist: mypy-boto3-rds (==0.2.9) ; extra == 'rds'
+Provides-Extra: rds-data
+Requires-Dist: mypy-boto3-rds-data (==0.2.9) ; extra == 'rds-data'
+Provides-Extra: redshift
+Requires-Dist: mypy-boto3-redshift (==0.2.9) ; extra == 'redshift'
+Provides-Extra: rekognition
+Requires-Dist: mypy-boto3-rekognition (==0.2.9) ; extra == 'rekognition'
+Provides-Extra: resource-groups
+Requires-Dist: mypy-boto3-resource-groups (==0.2.9) ; extra == 'resource-groups'
+Provides-Extra: resourcegroupstaggingapi
+Requires-Dist: mypy-boto3-resourcegroupstaggingapi (==0.2.9) ; extra == 'resourcegroupstaggingapi'
+Provides-Extra: robomaker
+Requires-Dist: mypy-boto3-robomaker (==0.2.9) ; extra == 'robomaker'
+Provides-Extra: route53
+Requires-Dist: mypy-boto3-route53 (==0.2.9) ; extra == 'route53'
+Provides-Extra: route53domains
+Requires-Dist: mypy-boto3-route53domains (==0.2.9) ; extra == 'route53domains'
+Provides-Extra: route53resolver
+Requires-Dist: mypy-boto3-route53resolver (==0.2.9) ; extra == 'route53resolver'
+Provides-Extra: s3
+Requires-Dist: mypy-boto3-s3 (==0.2.9) ; extra == 's3'
+Provides-Extra: s3control
+Requires-Dist: mypy-boto3-s3control (==0.2.9) ; extra == 's3control'
+Provides-Extra: sagemaker
+Requires-Dist: mypy-boto3-sagemaker (==0.2.9) ; extra == 'sagemaker'
+Provides-Extra: sagemaker-runtime
+Requires-Dist: mypy-boto3-sagemaker-runtime (==0.2.9) ; extra == 'sagemaker-runtime'
+Provides-Extra: savingsplans
+Requires-Dist: mypy-boto3-savingsplans (==0.2.9) ; extra == 'savingsplans'
+Provides-Extra: sdb
+Requires-Dist: mypy-boto3-sdb (==0.2.9) ; extra == 'sdb'
+Provides-Extra: secretsmanager
+Requires-Dist: mypy-boto3-secretsmanager (==0.2.9) ; extra == 'secretsmanager'
+Provides-Extra: securityhub
+Requires-Dist: mypy-boto3-securityhub (==0.2.9) ; extra == 'securityhub'
+Provides-Extra: serverlessrepo
+Requires-Dist: mypy-boto3-serverlessrepo (==0.2.9) ; extra == 'serverlessrepo'
+Provides-Extra: service-quotas
+Requires-Dist: mypy-boto3-service-quotas (==0.2.9) ; extra == 'service-quotas'
+Provides-Extra: servicecatalog
+Requires-Dist: mypy-boto3-servicecatalog (==0.2.9) ; extra == 'servicecatalog'
+Provides-Extra: servicediscovery
+Requires-Dist: mypy-boto3-servicediscovery (==0.2.9) ; extra == 'servicediscovery'
+Provides-Extra: ses
+Requires-Dist: mypy-boto3-ses (==0.2.9) ; extra == 'ses'
+Provides-Extra: shield
+Requires-Dist: mypy-boto3-shield (==0.2.9) ; extra == 'shield'
+Provides-Extra: signer
+Requires-Dist: mypy-boto3-signer (==0.2.9) ; extra == 'signer'
+Provides-Extra: sms
+Requires-Dist: mypy-boto3-sms (==0.2.9) ; extra == 'sms'
+Provides-Extra: sms-voice
+Requires-Dist: mypy-boto3-sms-voice (==0.2.9) ; extra == 'sms-voice'
+Provides-Extra: snowball
+Requires-Dist: mypy-boto3-snowball (==0.2.9) ; extra == 'snowball'
+Provides-Extra: sns
+Requires-Dist: mypy-boto3-sns (==0.2.9) ; extra == 'sns'
+Provides-Extra: sqs
+Requires-Dist: mypy-boto3-sqs (==0.2.9) ; extra == 'sqs'
+Provides-Extra: ssm
+Requires-Dist: mypy-boto3-ssm (==0.2.9) ; extra == 'ssm'
+Provides-Extra: stepfunctions
+Requires-Dist: mypy-boto3-stepfunctions (==0.2.9) ; extra == 'stepfunctions'
+Provides-Extra: storagegateway
+Requires-Dist: mypy-boto3-storagegateway (==0.2.9) ; extra == 'storagegateway'
+Provides-Extra: sts
+Requires-Dist: mypy-boto3-sts (==0.2.9) ; extra == 'sts'
+Provides-Extra: support
+Requires-Dist: mypy-boto3-support (==0.2.9) ; extra == 'support'
+Provides-Extra: swf
+Requires-Dist: mypy-boto3-swf (==0.2.9) ; extra == 'swf'
+Provides-Extra: textract
+Requires-Dist: mypy-boto3-textract (==0.2.9) ; extra == 'textract'
+Provides-Extra: transcribe
+Requires-Dist: mypy-boto3-transcribe (==0.2.9) ; extra == 'transcribe'
+Provides-Extra: transfer
+Requires-Dist: mypy-boto3-transfer (==0.2.9) ; extra == 'transfer'
+Provides-Extra: translate
+Requires-Dist: mypy-boto3-translate (==0.2.9) ; extra == 'translate'
+Provides-Extra: waf
+Requires-Dist: mypy-boto3-waf (==0.2.9) ; extra == 'waf'
+Provides-Extra: waf-regional
+Requires-Dist: mypy-boto3-waf-regional (==0.2.9) ; extra == 'waf-regional'
+Provides-Extra: workdocs
+Requires-Dist: mypy-boto3-workdocs (==0.2.9) ; extra == 'workdocs'
+Provides-Extra: worklink
+Requires-Dist: mypy-boto3-worklink (==0.2.9) ; extra == 'worklink'
+Provides-Extra: workmail
+Requires-Dist: mypy-boto3-workmail (==0.2.9) ; extra == 'workmail'
+Provides-Extra: workmailmessageflow
+Requires-Dist: mypy-boto3-workmailmessageflow (==0.2.9) ; extra == 'workmailmessageflow'
+Provides-Extra: workspaces
+Requires-Dist: mypy-boto3-workspaces (==0.2.9) ; extra == 'workspaces'
+Provides-Extra: xray
+Requires-Dist: mypy-boto3-xray (==0.2.9) ; extra == 'xray'
+
+# boto3-stubs
+
+Mypy-friendly type annotations for `boto3 1.10.28`.
+More information can be found [here](https://github.com/vemel/mypy_boto3).
+
+- [boto3-stubs](#boto3-stubs)
+  - [How to use](#how-to-use)
+  - [How it works](#how-it-works)
+  - [Submodules](#submodules)
+
+## How to use
+
+Make sure you have [mypy](https://github.com/python/mypy) installed ans activated in your IDE.
+
+Install `boto3-stubs`, it will add type annotations for `boto3` package, no services included.
+
+```bash
+# install type annotations just for boto3
+pip install boto3-stubs
+
+# if you want services type annotations, install the ones you use
+# you can find a full list below
+pip install boto3-stubs[ec2, s3]
+```
+
+Use `boto3` as usual in your project and enjoy type checking.
+
+```python
+import boto3
+
+# Invalid service name, should be `dynamodb`. No worries, `mypy` will let you know.
+client = boto3.client("dynamo")
+```
+
+## How it works
+
+Fully automated [builder](https://github.com/vemel/mypy_boto3) carefully generates
+type annotations for each service, patiently waiting for `boto3` updates. It delivers
+a drop-in type annotations for you and makes sure that:
+
+- Latest version of `boto3` is used.
+- Each public class and method of every `boto3` service gets valid type annotations
+  extracted from latest documentation (blame `botocore` docs if types are incorrect).
+- Type annotations include up-to-date documentation.
+- Code is processed by [black](https://github.com/psf/black) for readability.
+
+## Submodules
+
+- `all` - Type annotations for all `boto3` services.
+- `essential` - Type annotations for `cloudformation`, `dynamodb`, `ec2`, `lambda`, `rds`, `s3` and `sqs` services.
+- `acm` - Type annotations for `acm` service.
+- `acm-pca` - Type annotations for `acm-pca` service.
+- `alexaforbusiness` - Type annotations for `alexaforbusiness` service.
+- `amplify` - Type annotations for `amplify` service.
+- `apigateway` - Type annotations for `apigateway` service.
+- `apigatewaymanagementapi` - Type annotations for `apigatewaymanagementapi` service.
+- `apigatewayv2` - Type annotations for `apigatewayv2` service.
+- `application-autoscaling` - Type annotations for `application-autoscaling` service.
+- `application-insights` - Type annotations for `application-insights` service.
+- `appmesh` - Type annotations for `appmesh` service.
+- `appstream` - Type annotations for `appstream` service.
+- `appsync` - Type annotations for `appsync` service.
+- `athena` - Type annotations for `athena` service.
+- `autoscaling` - Type annotations for `autoscaling` service.
+- `autoscaling-plans` - Type annotations for `autoscaling-plans` service.
+- `backup` - Type annotations for `backup` service.
+- `batch` - Type annotations for `batch` service.
+- `budgets` - Type annotations for `budgets` service.
+- `ce` - Type annotations for `ce` service.
+- `chime` - Type annotations for `chime` service.
+- `cloud9` - Type annotations for `cloud9` service.
+- `clouddirectory` - Type annotations for `clouddirectory` service.
+- `cloudformation` - Type annotations for `cloudformation` service.
+- `cloudfront` - Type annotations for `cloudfront` service.
+- `cloudhsm` - Type annotations for `cloudhsm` service.
+- `cloudhsmv2` - Type annotations for `cloudhsmv2` service.
+- `cloudsearch` - Type annotations for `cloudsearch` service.
+- `cloudsearchdomain` - Type annotations for `cloudsearchdomain` service.
+- `cloudtrail` - Type annotations for `cloudtrail` service.
+- `cloudwatch` - Type annotations for `cloudwatch` service.
+- `codebuild` - Type annotations for `codebuild` service.
+- `codecommit` - Type annotations for `codecommit` service.
+- `codedeploy` - Type annotations for `codedeploy` service.
+- `codepipeline` - Type annotations for `codepipeline` service.
+- `codestar` - Type annotations for `codestar` service.
+- `codestar-notifications` - Type annotations for `codestar-notifications` service.
+- `cognito-identity` - Type annotations for `cognito-identity` service.
+- `cognito-idp` - Type annotations for `cognito-idp` service.
+- `cognito-sync` - Type annotations for `cognito-sync` service.
+- `comprehend` - Type annotations for `comprehend` service.
+- `comprehendmedical` - Type annotations for `comprehendmedical` service.
+- `config` - Type annotations for `config` service.
+- `connect` - Type annotations for `connect` service.
+- `cur` - Type annotations for `cur` service.
+- `datapipeline` - Type annotations for `datapipeline` service.
+- `datasync` - Type annotations for `datasync` service.
+- `dax` - Type annotations for `dax` service.
+- `devicefarm` - Type annotations for `devicefarm` service.
+- `directconnect` - Type annotations for `directconnect` service.
+- `discovery` - Type annotations for `discovery` service.
+- `dlm` - Type annotations for `dlm` service.
+- `dms` - Type annotations for `dms` service.
+- `docdb` - Type annotations for `docdb` service.
+- `ds` - Type annotations for `ds` service.
+- `dynamodb` - Type annotations for `dynamodb` service.
+- `dynamodbstreams` - Type annotations for `dynamodbstreams` service.
+- `ec2` - Type annotations for `ec2` service.
+- `ec2-instance-connect` - Type annotations for `ec2-instance-connect` service.
+- `ecr` - Type annotations for `ecr` service.
+- `ecs` - Type annotations for `ecs` service.
+- `efs` - Type annotations for `efs` service.
+- `eks` - Type annotations for `eks` service.
+- `elasticache` - Type annotations for `elasticache` service.
+- `elasticbeanstalk` - Type annotations for `elasticbeanstalk` service.
+- `elastictranscoder` - Type annotations for `elastictranscoder` service.
+- `elb` - Type annotations for `elb` service.
+- `elbv2` - Type annotations for `elbv2` service.
+- `emr` - Type annotations for `emr` service.
+- `es` - Type annotations for `es` service.
+- `events` - Type annotations for `events` service.
+- `firehose` - Type annotations for `firehose` service.
+- `fms` - Type annotations for `fms` service.
+- `forecast` - Type annotations for `forecast` service.
+- `forecastquery` - Type annotations for `forecastquery` service.
+- `fsx` - Type annotations for `fsx` service.
+- `gamelift` - Type annotations for `gamelift` service.
+- `glacier` - Type annotations for `glacier` service.
+- `globalaccelerator` - Type annotations for `globalaccelerator` service.
+- `glue` - Type annotations for `glue` service.
+- `greengrass` - Type annotations for `greengrass` service.
+- `groundstation` - Type annotations for `groundstation` service.
+- `guardduty` - Type annotations for `guardduty` service.
+- `health` - Type annotations for `health` service.
+- `iam` - Type annotations for `iam` service.
+- `importexport` - Type annotations for `importexport` service.
+- `inspector` - Type annotations for `inspector` service.
+- `iot` - Type annotations for `iot` service.
+- `iot-data` - Type annotations for `iot-data` service.
+- `iot-jobs-data` - Type annotations for `iot-jobs-data` service.
+- `iot1click-devices` - Type annotations for `iot1click-devices` service.
+- `iot1click-projects` - Type annotations for `iot1click-projects` service.
+- `iotanalytics` - Type annotations for `iotanalytics` service.
+- `iotevents` - Type annotations for `iotevents` service.
+- `iotevents-data` - Type annotations for `iotevents-data` service.
+- `iotthingsgraph` - Type annotations for `iotthingsgraph` service.
+- `kafka` - Type annotations for `kafka` service.
+- `kinesis` - Type annotations for `kinesis` service.
+- `kinesis-video-archived-media` - Type annotations for `kinesis-video-archived-media` service.
+- `kinesis-video-media` - Type annotations for `kinesis-video-media` service.
+- `kinesisanalytics` - Type annotations for `kinesisanalytics` service.
+- `kinesisanalyticsv2` - Type annotations for `kinesisanalyticsv2` service.
+- `kinesisvideo` - Type annotations for `kinesisvideo` service.
+- `kms` - Type annotations for `kms` service.
+- `lakeformation` - Type annotations for `lakeformation` service.
+- `lambda` - Type annotations for `lambda` service.
+- `lex-models` - Type annotations for `lex-models` service.
+- `lex-runtime` - Type annotations for `lex-runtime` service.
+- `license-manager` - Type annotations for `license-manager` service.
+- `lightsail` - Type annotations for `lightsail` service.
+- `logs` - Type annotations for `logs` service.
+- `machinelearning` - Type annotations for `machinelearning` service.
+- `macie` - Type annotations for `macie` service.
+- `managedblockchain` - Type annotations for `managedblockchain` service.
+- `marketplace-entitlement` - Type annotations for `marketplace-entitlement` service.
+- `marketplacecommerceanalytics` - Type annotations for `marketplacecommerceanalytics` service.
+- `mediaconnect` - Type annotations for `mediaconnect` service.
+- `mediaconvert` - Type annotations for `mediaconvert` service.
+- `medialive` - Type annotations for `medialive` service.
+- `mediapackage` - Type annotations for `mediapackage` service.
+- `mediapackage-vod` - Type annotations for `mediapackage-vod` service.
+- `mediastore` - Type annotations for `mediastore` service.
+- `mediastore-data` - Type annotations for `mediastore-data` service.
+- `mediatailor` - Type annotations for `mediatailor` service.
+- `meteringmarketplace` - Type annotations for `meteringmarketplace` service.
+- `mgh` - Type annotations for `mgh` service.
+- `mobile` - Type annotations for `mobile` service.
+- `mq` - Type annotations for `mq` service.
+- `mturk` - Type annotations for `mturk` service.
+- `neptune` - Type annotations for `neptune` service.
+- `opsworks` - Type annotations for `opsworks` service.
+- `opsworkscm` - Type annotations for `opsworkscm` service.
+- `organizations` - Type annotations for `organizations` service.
+- `personalize` - Type annotations for `personalize` service.
+- `personalize-events` - Type annotations for `personalize-events` service.
+- `personalize-runtime` - Type annotations for `personalize-runtime` service.
+- `pi` - Type annotations for `pi` service.
+- `pinpoint` - Type annotations for `pinpoint` service.
+- `pinpoint-email` - Type annotations for `pinpoint-email` service.
+- `pinpoint-sms-voice` - Type annotations for `pinpoint-sms-voice` service.
+- `polly` - Type annotations for `polly` service.
+- `pricing` - Type annotations for `pricing` service.
+- `qldb` - Type annotations for `qldb` service.
+- `qldb-session` - Type annotations for `qldb-session` service.
+- `quicksight` - Type annotations for `quicksight` service.
+- `ram` - Type annotations for `ram` service.
+- `rds` - Type annotations for `rds` service.
+- `rds-data` - Type annotations for `rds-data` service.
+- `redshift` - Type annotations for `redshift` service.
+- `rekognition` - Type annotations for `rekognition` service.
+- `resource-groups` - Type annotations for `resource-groups` service.
+- `resourcegroupstaggingapi` - Type annotations for `resourcegroupstaggingapi` service.
+- `robomaker` - Type annotations for `robomaker` service.
+- `route53` - Type annotations for `route53` service.
+- `route53domains` - Type annotations for `route53domains` service.
+- `route53resolver` - Type annotations for `route53resolver` service.
+- `s3` - Type annotations for `s3` service.
+- `s3control` - Type annotations for `s3control` service.
+- `sagemaker` - Type annotations for `sagemaker` service.
+- `sagemaker-runtime` - Type annotations for `sagemaker-runtime` service.
+- `savingsplans` - Type annotations for `savingsplans` service.
+- `sdb` - Type annotations for `sdb` service.
+- `secretsmanager` - Type annotations for `secretsmanager` service.
+- `securityhub` - Type annotations for `securityhub` service.
+- `serverlessrepo` - Type annotations for `serverlessrepo` service.
+- `service-quotas` - Type annotations for `service-quotas` service.
+- `servicecatalog` - Type annotations for `servicecatalog` service.
+- `servicediscovery` - Type annotations for `servicediscovery` service.
+- `ses` - Type annotations for `ses` service.
+- `shield` - Type annotations for `shield` service.
+- `signer` - Type annotations for `signer` service.
+- `sms` - Type annotations for `sms` service.
+- `sms-voice` - Type annotations for `sms-voice` service.
+- `snowball` - Type annotations for `snowball` service.
+- `sns` - Type annotations for `sns` service.
+- `sqs` - Type annotations for `sqs` service.
+- `ssm` - Type annotations for `ssm` service.
+- `stepfunctions` - Type annotations for `stepfunctions` service.
+- `storagegateway` - Type annotations for `storagegateway` service.
+- `sts` - Type annotations for `sts` service.
+- `support` - Type annotations for `support` service.
+- `swf` - Type annotations for `swf` service.
+- `textract` - Type annotations for `textract` service.
+- `transcribe` - Type annotations for `transcribe` service.
+- `transfer` - Type annotations for `transfer` service.
+- `translate` - Type annotations for `translate` service.
+- `waf` - Type annotations for `waf` service.
+- `waf-regional` - Type annotations for `waf-regional` service.
+- `workdocs` - Type annotations for `workdocs` service.
+- `worklink` - Type annotations for `worklink` service.
+- `workmail` - Type annotations for `workmail` service.
+- `workmailmessageflow` - Type annotations for `workmailmessageflow` service.
+- `workspaces` - Type annotations for `workspaces` service.
+- `xray` - Type annotations for `xray` service.
+
+
