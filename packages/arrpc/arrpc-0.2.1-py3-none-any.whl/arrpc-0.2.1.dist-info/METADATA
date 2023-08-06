@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: arrpc
+Version: 0.2.1
+Summary: Simple, speedy and light Python RPC
+Home-page: https://github.com/adrianchifor/arrpc
+Author: Adrian Chifor
+Author-email: me@adrianchifor.com
+License: Apache License 2.0
+Keywords: rpc msgpack gevent
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Distributed Computing
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Requires-Dist: msgpack (>=0.6.2)
+Requires-Dist: gevent (>=1.4.0)
+Requires-Dist: prometheus-client (>=0.7.1)
+
+https://github.com/adrianchifor/arrpc
+
+
