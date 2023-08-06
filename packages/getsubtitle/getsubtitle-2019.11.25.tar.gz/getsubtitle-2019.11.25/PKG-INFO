@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: getsubtitle
+Version: 2019.11.25
+Summary: download subtitles easily
+License: MIT
+Author: Wu Haotian
+Author-email: whtsky@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: archi (>=0.1.1,<0.2.0)
+Requires-Dist: beautifulsoup4 (>=4.4.0)
+Requires-Dist: guessit (==3.1.0)
+Requires-Dist: requests (>=2.0)
