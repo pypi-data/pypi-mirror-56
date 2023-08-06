@@ -1,0 +1,3 @@
+[console_scripts]
+tproj = tproj.cli:main
+
