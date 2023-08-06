@@ -1,0 +1,16 @@
+DbStructSync/__init__.py,sha256=lDvGy-7UVQN2dW47BWjUYcBLcf543BdRCRKv4BFfjV0,88
+DbStructSync/cli.py,sha256=HXj84ftl4kTq_vCDvJFDNg9-Elgr9vaBf-nZ2Y6EqK0,1659
+DbStructSync/db_syns.py,sha256=cEzGmveoekKhFxSilyrCWOCXkFt-PS-1w4ZBqGK4PfU,19146
+DbStructSync/main.py,sha256=FyMNAhg-F9SCcCZGhpnd1UVdt5HguHU4lC8FJZt5CVg,5350
+DbStructSync/save_tofiles.py,sha256=T-KWn-4Ac7Lw_Yzyt_rHj_jVAqC_uIX8ymIFbn_c-9U,1215
+DbStructSync/test.py,sha256=HtVG6_hjkyG4AV4QU3edb2EhoFyhTKm-8PFeizoFMt4,4144
+DbStructSync/common/__init__.py,sha256=0jGf4_HDJIxQwLPHbm-ZKCX6y9QHPbAYJgsCm6Bmr0k,19
+DbStructSync/common/logger.py,sha256=jJphKG_dnSfwvfkEI57drgXYmjMORgjdONZXK1cyYNM,2079
+DbStructSync/common/mysql_conn.py,sha256=78Ujn0DAy1F5KtakieCjX4dgO4RhL7KZ5riAVf3kHtM,1013
+DbStructSync/common/parse.py,sha256=fCcmNrbpCRR7kxwnX5Kqbkh3kR4koiz7GP_i6CyDuyk,2036
+DbStructSync/common/utils.py,sha256=tO7Z5Ilj4lxUKIlSpcdpzoLCc1a43IrqZGOLlU5ONUg,924
+dbstructsync-0.0.2.dist-info/LICENSE,sha256=7psZ88J4Gd3c74IknJc72maXHYN_qzUqrcjv4QY4xbE,1080
+dbstructsync-0.0.2.dist-info/METADATA,sha256=0DGJz3xDJ-9YizxhUu1W2ARJN_tc5fq6xhneRs30eb8,605
+dbstructsync-0.0.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+dbstructsync-0.0.2.dist-info/top_level.txt,sha256=gZBep299i8QWnYLs2AyRhXWdjQEDD5iHjryvvEf6Tng,13
+dbstructsync-0.0.2.dist-info/RECORD,,
