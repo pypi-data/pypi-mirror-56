@@ -1,0 +1,7 @@
+[console_scripts]
+gammasensor = uncoverml.scripts.gammasensor:cli
+gridsearch = uncoverml.scripts.gridsearch:cli
+subsampletargets = uncoverml.scripts.subsampletargets:cli
+tiff2kmz = uncoverml.scripts.tiff2kmz:main
+uncoverml = uncoverml.scripts.uncoverml:cli
+
