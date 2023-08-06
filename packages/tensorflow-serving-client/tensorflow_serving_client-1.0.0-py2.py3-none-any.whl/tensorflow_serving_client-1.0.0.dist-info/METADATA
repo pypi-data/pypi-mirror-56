@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: tensorflow-serving-client
+Version: 1.0.0
+Summary: Python client for tensorflow serving
+Home-page: https://triage.com
+Author: Triage Technologies Inc.
+Author-email: ai@triage.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: grpcio
+Requires-Dist: keras-model-specs (==1.*)
+
+UNKNOWN
+
+
