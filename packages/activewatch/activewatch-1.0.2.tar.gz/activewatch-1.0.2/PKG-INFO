@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: activewatch
+Version: 1.0.2
+Summary: The Alert Logic ActiveWatch SDK for Python.
+Home-page: https://github.com/alertlogic/activewatch
+Author: Alert Logic Inc.
+Author-email: support@alertlogic.com
+License: MIT
+Description: UNKNOWN
+Keywords: activewatch,alertlogic
+Platform: any
+Requires-Python: >=3.7
+Provides-Extra: dev
