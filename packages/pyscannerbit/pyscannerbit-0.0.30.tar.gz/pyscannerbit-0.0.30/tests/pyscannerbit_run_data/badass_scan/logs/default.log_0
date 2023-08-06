@@ -1,0 +1,133 @@
+(Fri Nov 22 11:25:16 2019)(-0.199264 [s])(Rank 0)[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/envs/general/lib/python3.6/site-packages/pyscannerbit/ScannerBit/lib/libscanner_diver_1.0.0.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-tmlviwq0/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(-0.199231 [s])(Rank 0)[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/envs/general/lib/python3.6/site-packages/pyscannerbit/ScannerBit/lib/libscanner_diver_1.0.2.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-tmlviwq0/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(-0.181948 [s])(Rank 0)[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/envs/general/lib/python3.6/site-packages/pyscannerbit/ScannerBit/lib/libscanner_great.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-tmlviwq0/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(-0.164244 [s])(Rank 0)[Default,Scanner][Warning][Non-fatal]:
+WARNING: A problem has been raised by ScannerBit.
+Could not find plugin library "/home/farmer/anaconda3/envs/general/lib/python3.6/site-packages/pyscannerbit/ScannerBit/lib/libscanner_multinest_3.10.so".
+
+Raised at: line 102 in function Gambit::Scanner::Plugins::Plugin_Loader::Plugin_Loader() of /tmp/pip-req-build-tmlviwq0/pyscannerbit/scannerbit/untar/ScannerBit/ScannerBit/src/plugin_loader.cpp.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(0.0548431 [s])(Rank 0)[Default,Utilities]:
+Random number engine mt19937_64 (default) selected with seed 1620857385.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(0.0557117 [s])(Rank 0)[Default,Printers][Info]:
+Running shell command: rm -f pyscannerbit_run_data/badass_scan/samples//results.hdf5
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(0.0667768 [s])(Rank 0)[Default,Core]:
+Starting scan.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(0.0710457 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '0' to output quantity with label 'LogLike'
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(0.0713886 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '1' to output quantity with label 'pointID'
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(0.0715159 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '2' to output quantity with label 'MPIrank'
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:16 2019)(0.0737307 [s])(Rank 0)[Default,Printers][Info]:
+Assigned printer ID '3' to output quantity with label 'weights'
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:17 2019)(1.15346 [s])(Rank 0)[Default,Printers][Info]:
+Gathering sync buffer data from all processes to rank 0 process...
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:17 2019)(1.1536 [s])(Rank 0)[Default,Printers][Info]:
+Gathering data on number of points and buffers to be transmitted
+Number of points to send from this process: 0
+Number of buffers to send from this process: 0
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:17 2019)(1.15369 [s])(Rank 0)[Default,Printers][Info]:
+Gathered data:
+Number of points to recv from each process: [0, 757, 495, 390 ]
+Number of buffers to recv from each process: [0, 9, 9, 9 ]
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:17 2019)(1.15572 [s])(Rank 0)[Default,Printers][Info]:
+Gathering buffer data for processes [0, 1, 2, 3 ]
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:17 2019)(1.15581 [s])(Rank 0)[Default,Printers][Info]:
+Gathering buffer block size data (number of buffer blocks to transmit from this process: 0)
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.22262 [s])(Rank 0)[Default,Printers][Info]:
+Performing Gatherv of buffer data blocks...
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.37652 [s])(Rank 0)[Default,Printers][Info]:
+Resynchronising print buffers:
+   Buffer contains 1642 items (name=LogLike)
+   Buffer contains 1642 items (name=MPIrank)
+   Buffer contains 1642 items (name=default::x)
+   Buffer contains 1642 items (name=default::y)
+   Buffer contains 1642 items (name=default::z)
+   Buffer contains 1642 items (name=pointID)
+   Buffer contains 1642 items (name=unitCubeParameters[0])
+   Buffer contains 1642 items (name=unitCubeParameters[1])
+   Buffer contains 1642 items (name=unitCubeParameters[2])
+
+  Initial N points   : 0
+  Final N points     : 1642
+  Difference N points: 1642
+
+Print buffer now contains 1642 items.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.43993 [s])(Rank 0)[Default,Printers][Info]:
+Final dataset size is 4642
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.44009 [s])(Rank 0)[Default,Printers][Info]:
+Gathering random-access print buffer data from all process to rank 0 process...
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.44016 [s])(Rank 0)[Default,Printers][Info]:
+Gathering data on number of points and buffers to be transmitted
+Number of points to send from this process: 989
+Number of buffers to send from this process: 1
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.44022 [s])(Rank 0)[Default,Printers][Info]:
+Gathered data:
+Number of points to recv from each process: [989, 0, 0, 0 ]
+Number of buffers to recv from each process: [1, 0, 0, 0 ]
+
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.4418 [s])(Rank 0)[Default,Printers][Info]:
+Gathering buffer data for processes [0, 1, 2, 3 ]
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.45544 [s])(Rank 0)[Default,Printers][Info]:
+Gathering buffer block size data (number of buffer blocks to transmit from this process: 99)
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.45615 [s])(Rank 0)[Default,Printers][Info]:
+Performing Gatherv of buffer data blocks...
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.46979 [s])(Rank 0)[Default,Printers][Info]:
+Resynchronising print buffers:
+   Buffer contains 989 items (name=weights)
+
+  Initial N points   : 0
+  Final N points     : 989
+  Difference N points: 989
+
+Print buffer now contains 989 items.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.4987 [s])(Rank 0)[Default,Printers][Info]:
+HDF5Printer2 output finalisation complete.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.49903 [s])(Rank 0)[Default]:
+ScannerBit run completed successfully.
+--<>--<>--<>--<>--<>--<>--<>--
+(Fri Nov 22 11:25:18 2019)(1.49963 [s])(Rank 0)[Default,Core][Info]:
+Doing Iprobe to check for shutdown signals from other processes (with MPI tag 1). These will be discarded (since we are inside the 'discard_excess_shutdown_messages' routine)
+--<>--<>--<>--<>--<>--<>--<>--
