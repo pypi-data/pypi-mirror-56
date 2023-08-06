@@ -1,0 +1,81 @@
+# c3tools
+
+Collections of simple commands.
+
+## Install
+
+    pip install c3tools
+
+## Included packages
+
+### Basic Tools
+- ipython==5.8.0                    # python 2 only
+- ipython                           # python 3 only
+
+### Network Tools
+
+- udp-test
+- tcping
+- serviceping # python 3 only
+
+### System Tools
+- ps2
+- uname2
+
+### Service Tools
+- ipa-utils
+- sftpd
+- python-sendmail
+
+### File Tools
+
+- filesplitor
+- tail
+- copytruncate
+
+### File Converting Tools
+
+- pdf-tools
+- makegif
+- gif-frames
+- imagespack
+
+### Codec Tools
+
+- pwgen
+- python-json2csv
+- python-json2yaml
+- hashtools
+- qrimg
+- rot-codec
+- transencoding
+
+### Office Tools
+
+- xlsx-split
+- xlsx-xargs
+
+### Dependencies
+
+- openpyxl==2.6.4                   # python 2 only
+- openpyxl                          # python 3 only
+- numpy==1.16.5                     # python 2 only
+- numpy                             # python 3 only
+
+
+## Releases
+
+
+### v0.2.2 2019/12/02
+
+* Fix install problem.
+* Add imagespack tool.
+
+### v0.2.0 2019/11/05
+
+* Add python2 and python3 distinguish.
+
+### v0.1.0 2019/08/10
+
+* First release
+
