@@ -1,0 +1,62 @@
+#+TITLE: orthauth user guide
+
+* Workflows
+I have a problem and I want to do X
+** A package I use doesn't set environment variables for a value
+Add the environment variables to your user config and ask the maintainer
+to add some in the next version. In the mean time if you need to test
+using the variables install a user config with only the variables you
+need to add. This allows development to continue as if upstream already
+provided them, and prevents having to make other changes in the future.
+* Example
+** Config files
+#+NAME: auth-config
+#+begin_src yaml :tangle examples/auth-config.yaml
+config-search-paths:
+  - user-config.yaml
+auth-variables:
+  service-api-key:
+    environment-variables: SERVICE_API_KEY
+  service-port:
+    environment-variables: SERVICE_PORT
+    default: 808080
+  service-host:
+    environment-variables: SERVICE_HOST
+    default: localhost
+#+end_src
+#+NAME: user-config
+#+begin_src yaml :tangle examples/user-config.yaml
+auth-stores:
+  secrets:
+    path: secrets.yaml
+auth-variables:
+  service-api-key:
+    path: service specific-user
+  service-host: 0.0.0.0
+  service-port: 80
+#+end_src
+#+begin_src yaml :tangle examples/secrets.yaml :tangle-mode (identity #o0600)
+service:
+  specific-user: oh look an api key!
+#+end_src
+** Python
+Include the following in =config.py=, =utils.py=, or similar.
+#+begin_src python :tangle examples/config.py
+import pathlib
+import orthauth as oa
+auth = oa.configure(pathlib.Path(__file__).parent / 'auth-config.yaml')
+has_api_key = auth.tangential('api_key', 'service-api-key')
+#+end_src
+
+Use 
+#+begin_src python :tangle examples/simple.py
+from config import auth, has_api_key
+
+@has_api_key(atInit=True)
+class MyClassThatMakesApiCalls:
+    def leak_api_key(self):
+        print(f'exfiltrating ... {self.api_key!r}')
+
+instance = MyClassThatMakesApiCalls()
+instance.leak_api_key()
+#+end_src
