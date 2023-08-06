@@ -1,0 +1,16 @@
+nwbwidgets/__init__.py,sha256=q2CdbWNOmulJ1_gsKajq8A0kjrDhPpn9E-nFexXD3Os,118
+nwbwidgets/base.py,sha256=Au9VC3QnxGO-WdOit7PJvJAOTTDMa9WtMnI-ALRtecQ,7661
+nwbwidgets/behavior.py,sha256=kF_sU-0oJOI-080r0KiQsUpYURHqPP8Oy3wnQUbilXI,2942
+nwbwidgets/ecephys.py,sha256=d4-Xqj4T-ANwongZJF-vjO878q8uEgC6jLTyJHA_i94,4298
+nwbwidgets/ephys_viz_interface.py,sha256=q-R0slbCE6oKqBDC8Pp_fIvdEzdDKZbfc54PDO3_WuU,1601
+nwbwidgets/image.py,sha256=0Zoo0KtixlZuzwnrZWeuPfU1Sv7T5v-IWFZSOWx349s,1421
+nwbwidgets/misc.py,sha256=q2avEhf4DzBdfXiH0swR64DsqL-3qGu7NsOWKsYCXiw,7949
+nwbwidgets/ophys.py,sha256=vKCmDnqShwXXFfDEROC3tdIwcackSH_Scb7cjbOkwuc,6552
+nwbwidgets/view.py,sha256=28lhOZ795gi_ZIO1UGZhR3ShkRZ8o4E85DnJYfVtQPY,2014
+nwbwidgets/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nwbwidgets/utils/cmaps.py,sha256=wg6b-fIFfdId1HZg7SZIA-2yFli1sTSsVYfjHLjdkWY,3932
+nwbwidgets-0.1.0.dist-info/LICENSE.txt,sha256=f-XNuBfpNUrBJ3hCfBqYE-GZ1Is9VjaQKEkJGU9SgBs,2423
+nwbwidgets-0.1.0.dist-info/METADATA,sha256=fCkfhNIBAd4EnaCHUwSHyRp8E9D8PM9vGQTvhvzI308,3160
+nwbwidgets-0.1.0.dist-info/WHEEL,sha256=h_aVn5OB2IERUjMbi2pucmR_zzWJtk303YXvhh60NJ8,110
+nwbwidgets-0.1.0.dist-info/top_level.txt,sha256=-KuIce1YbDsSEAg_B28lyPD-uvS-WmkLH_QU2nuKi0A,28
+nwbwidgets-0.1.0.dist-info/RECORD,,
