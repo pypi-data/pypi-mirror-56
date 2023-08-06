@@ -1,0 +1,10 @@
+# Base Configuration file for artellapipe-libs-kitsu for Plot Twist
+
+# Defines the Kitsu Project ID
+project_id: "3b22ba92-c22e-449d-8e94-7a623cd6c164"
+
+# Defines the URL of the Kitsu project
+project_url: "https://edouardsisternas.cg-wire.com/productions/3b22ba92-c22e-449d-8e94-7a623cd6c164/assets"
+
+# Defines Gazu API url of the Kitsu project
+gazu_api: "https://edouardsisternas.cg-wire.com/api"

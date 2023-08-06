@@ -1,0 +1,24 @@
+# Base Configuration for Artella Assets for Plot Twist
+
+types:
+  Props:
+    class: plottwist.assets.prop.PlotTwistProp
+    files:
+      - textures
+      - model
+      - shading
+      - rig
+  Characters:
+    class: plottwist.assets.character.PlotTwistCharacter
+    files:
+      - textures
+      - model
+      - shading
+      - rig
+      - groom
+
+must_files:
+  - textures
+  - model
+  - shading
+  - rig

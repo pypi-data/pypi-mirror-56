@@ -1,0 +1,37 @@
+# Base Configuration for Artella Files for Plot Twist
+
+# Defines dictionary of file types (textures, model, etc) used by the project
+files:
+  textures:
+    class: plottwist.files.texture.PlotTwistTextureAssetFile
+    extensions:
+      - tx
+      - png
+      - jpg
+      - jpeg
+  model:
+    class: plottwist.files.model.PlotTwistModelAssetFile
+    extensions:
+      - ma
+  shading:
+    class: plottwist.files.shading.PlotTwistShadingAssetFile
+    extensions:
+      - ma
+  rig:
+    class: plottwist.files.rig.PlotTwistRigAssetFile
+    extensions:
+      - ma
+  groom:
+    class: plottwist.files.groom.PlotTwistGroomAssetFile
+    extensions:
+      - ma
+  alembic:
+    class: plottwist.files.alembic.PlotTwistAlembicAssetFile
+    extensions:
+      - abc
+  lightrig:
+    class: plottwist.files.lightrig.PlotTwistLightRigFile
+    rule: lightrig
+    template: lightrig
+    extensions:
+      - ma
