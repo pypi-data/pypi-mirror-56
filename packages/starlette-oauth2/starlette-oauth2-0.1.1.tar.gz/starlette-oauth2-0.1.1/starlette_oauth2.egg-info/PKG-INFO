@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: starlette-oauth2
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: # Starlette OAuth2
+        
+        A Startlette middleware for authentication and authorization through oauth2.
+        
+        This middleware is intented to be used when the application relies on an external tenant (e.g. Microsoft AD) for authentication,
+        and the organization's user groups (externally administred) for authorization.
+        
+        It assumes that a user that is not authenticated is not authorized to do anything.
+        
+        Check `example/` for a concrete implementation.
+        
+        ## How to run the example
+        
+        This guide uses Microsoft (Azure AD) as the tenant. Refer to your tenant for details.
+        
+        The values in capital such as `CLIENT_ID` are to be replaced in `example/.venv`.
+        
+        1. Generate a secret and write its value on `SECRET_KEY`
+        
+        2. Go to Azure AD, create an app registration (`app registrations`), give it a name, and add `http://localhost:5001/authorized` as a `Redirect URI`.
+            * replace the value on `CLIENT_ID` by the value on `Application (client) ID`
+            * replace the value on `TENANT_ID` by the value on `Directory (tenant) ID`
+        
+        3. In `Certificates & secrets`, create a new client secret.
+            * replace the value on `CLIENT_SECRET` by the value of the key you just created under `Client secrets`
+        
+        4. Go to Azure AD groups and create a new group.
+            * replace the value on `USER_GROUP_ID` by the `Object ID` of that group.
+        
+        5. Install dependencies and run:
+        
+        ```
+        cd examples
+        python -m venv venv
+        venv/bin/pip install -r requirements.txt
+        python -m app
+        ```
+        
+        When you visit `http://localhost:5001`, you will be redirected to your tenant, to authorize access. Once authorized, you will
+        be redirected back to `http://localhost:5001`, and your email will appear. If you try `http://localhost:5001/private`, you will
+        get a message that you are not authorized to see that.
+        
+        If you add yourself to the group created in step 3, you are now authorized to see `http://localhost:5001/private`.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
