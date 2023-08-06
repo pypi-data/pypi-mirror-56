@@ -1,0 +1,3 @@
+[console_scripts]
+clz=colourize.colourize:main
+
