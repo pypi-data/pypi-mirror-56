@@ -1,0 +1,7 @@
+
+        [ckan.plugins]
+        data_uploader_theme=ckanext.data_uploader_theme.plugin:Data_Uploader_ThemePlugin
+
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
+    

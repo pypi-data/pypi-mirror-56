@@ -1,0 +1,33 @@
+{% ckan_extends %}
+
+{% block package_basic_fields_custom %}
+  {{ form.input('fname', label=_('Name'), id='field-fname', placeholder=_('Name'), value=data.fname, error=errors.fname, classes=['control-medium'], is_required=True) }}
+  {{ form.input('surname', label=_('Surname'), id='field-surname', placeholder=_('Surname'), value=data.surname, error=errors.surname, classes=['control-medium']) }}
+  {{ form.input('user_email', label=_('Email'), id='field-user-email', type='email', placeholder=_('joe@example.com'), value=data.user_email, error=errors.user_email, classes=['control-medium'], is_required=True) }}
+  {{ form.input('institute', label=_('Institute'), id='field-institute', placeholder=_('Institute'), value=data.institute, error=errors.institute, classes=['control-medium']) }}
+  {{ form.input('orcid', label=_('Orcid'), id='field-orcid', placeholder=_('Orcid'), value=data.orcid, error=errors.orcid, classes=['control-medium']) }}
+  {{ form.input('grantnumber', label=_('Grant Number'), id='field-grantnumber', placeholder=_('Grant Number'), value=data.grantnumber, error=errors.grantnumber, classes=['control-medium']) }}
+  <div class="form-group">
+    <label for="field-private" class="control-label">{{ _('Sample Coordinates') }}</label>
+  </div>
+  {{ form.input('latitude', label=_('Latitude'), id='field-latitude', placeholder=_('Latitude'), value=data.latitude, error=errors.latitude, classes=['control-medium'], is_required=True) }}
+  {{ form.input('longitude', label=_('Longitude'), id='field-longitude', placeholder=_('Longitude'), value=data.longitude, error=errors.longitude, classes=['control-medium'], is_required=True) }}
+  <div class="form-group">
+    <label for="field-private" class="control-label">{{ _('Sample Description') }}</label>
+  </div>
+  {{ form.input('rocktype', label=_('Rock Type'), id='field-rocktype', placeholder=_('Rock Type'), value=data.rocktype, error=errors.rocktype, classes=['control-medium']) }}
+  {{ form.input('minofinterest', label=_('Mineral of Interest'), id='field-minofinterest', placeholder=_('Mineral of Interest'), value=data.minofinterest, error=errors.minofinterest, classes=['control-medium']) }}
+  
+{% endblock %}
+
+{% block package_basic_fields_description %}
+{% endblock %}
+
+{% block package_basic_fields_tags %}
+{% endblock %}
+
+{% block package_basic_fields_license %}
+{% endblock %}
+
+{% block package_metadata_fields_visibility %}
+{% endblock %}

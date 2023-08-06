@@ -1,0 +1,64 @@
+{% ckan_extends %}
+
+{% block extras %}
+  {% if pkg_dict.fname %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Name") }}</th>
+      <td class="dataset-details">{{ pkg_dict.fname }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.surname %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Surname") }}</th>
+      <td class="dataset-details">{{ pkg_dict.surname }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.user_email %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Email") }}</th>
+      <td class="dataset-details">{{ pkg_dict.user_email }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.institute %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Institute") }}</th>
+      <td class="dataset-details">{{ pkg_dict.institute }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.orcid %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("OrcId") }}</th>
+      <td class="dataset-details">{{ pkg_dict.orcid }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.grantnumber %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Grant Number") }}</th>
+      <td class="dataset-details">{{ pkg_dict.grantnumber }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.latitude %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Latitude") }}</th>
+      <td class="dataset-details">{{ pkg_dict.latitude }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.longitude %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Longitude") }}</th>
+      <td class="dataset-details">{{ pkg_dict.longitude }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.rocktype %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Rock Type") }}</th>
+      <td class="dataset-details">{{ pkg_dict.rocktype }}</td>
+    </tr>
+  {% endif %}
+  {% if pkg_dict.minofinterest %}
+    <tr>
+      <th scope="row" class="dataset-label">{{ _("Mineral of Interest") }}</th>
+      <td class="dataset-details">{{ pkg_dict.minofinterest }}</td>
+    </tr>
+  {% endif %}
+{% endblock %}

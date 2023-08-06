@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ckanext-data_uploader_theme
+Version: 0.0.1
+Summary: Custom extension for Data Uploader UI
+Home-page: https://gitlab.com/csiro-geoanalytics/avre-engage/jdlc-data-uploader/ckanext-data-uploader-theme
+Author: Venkataramanan Selvaraju
+Author-email: venkataramanan.selvaraju@csiro.au
+License: AGPL
+Description: UNKNOWN
+Keywords: CKAN theme Data Uploader
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 2.7
+Description-Content-Type: text/markdown
