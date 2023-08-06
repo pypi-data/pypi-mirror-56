@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+avclass/__init__.py
+avclass/avclass_common.py
+avclass/evaluate_clustering.py
+avclass.egg-info/PKG-INFO
+avclass.egg-info/SOURCES.txt
+avclass.egg-info/dependency_links.txt
+avclass.egg-info/not-zip-safe
+avclass.egg-info/top_level.txt
+avclass/data/default.aliases
+avclass/data/default.generics
+avclass/data/malheurReference_gt.tsv
+avclass/data/malheurReference_lb.json
