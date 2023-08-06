@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+syn_client/__init__.py
+syn_client.egg-info/PKG-INFO
+syn_client.egg-info/SOURCES.txt
+syn_client.egg-info/dependency_links.txt
+syn_client.egg-info/not-zip-safe
+syn_client.egg-info/requires.txt
+syn_client.egg-info/top_level.txt
+syn_client/core/__init__.py
+syn_client/core/kafka_client_len.py
+syn_client/core/redis_client_len.py
+syn_client/core/utils.py
+test/test-len.py
+test/test_init.py
