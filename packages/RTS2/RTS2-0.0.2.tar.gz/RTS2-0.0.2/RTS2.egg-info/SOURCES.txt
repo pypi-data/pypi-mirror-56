@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+RTS2.egg-info/PKG-INFO
+RTS2.egg-info/SOURCES.txt
+RTS2.egg-info/dependency_links.txt
+RTS2.egg-info/top_level.txt
+rts2/__init__.py
+rts2/scriptcomm.py
