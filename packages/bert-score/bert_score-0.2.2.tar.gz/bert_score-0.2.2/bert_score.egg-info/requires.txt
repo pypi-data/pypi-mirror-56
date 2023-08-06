@@ -1,0 +1,6 @@
+torch>=1.0.0
+numpy
+requests
+tqdm>=4.31.1
+matplotlib
+transformers>=2.2.0
