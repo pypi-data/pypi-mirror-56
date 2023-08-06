@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+tlaplus_jupyter/__init__.py
+tlaplus_jupyter/__main__.py
+tlaplus_jupyter/install.py
+tlaplus_jupyter/kernel.py
+tlaplus_jupyter.egg-info/PKG-INFO
+tlaplus_jupyter.egg-info/SOURCES.txt
+tlaplus_jupyter.egg-info/dependency_links.txt
+tlaplus_jupyter.egg-info/not-zip-safe
+tlaplus_jupyter.egg-info/requires.txt
+tlaplus_jupyter.egg-info/top_level.txt
+tlaplus_jupyter/assets/kernel.js

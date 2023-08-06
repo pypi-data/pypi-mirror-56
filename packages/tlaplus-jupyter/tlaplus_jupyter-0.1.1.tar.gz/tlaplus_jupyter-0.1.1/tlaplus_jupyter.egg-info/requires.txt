@@ -1,0 +1,4 @@
+notebook>=5
+ipykernel>=4.10
+future>=0.16
+psutil>=4
