@@ -1,0 +1,17 @@
+Tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Tests/test_basic.py,sha256=RMtAOTXGRWdAlInDl-MEoWv8hpQLFR1XDU5njUlW8Ng,21700
+konbata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+konbata/konbata.py,sha256=E0iqqwoevMwRCU4EIl16F6Q7sp4yv9aoctp207Ui328,6271
+konbata/Data/Data.py,sha256=AcTpWSJbFBNFHgbXXFCDcssJ6RfB8NDYQP-So4YUUE8,9798
+konbata/Data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+konbata/Formats/Format.py,sha256=LgwGfj14K38EsaxC0ERWa3BnX26xVUowBfTXoOv-V4c,3164
+konbata/Formats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+konbata/Formats/csv_format.py,sha256=i9r_mrAjuBnWgQ0qM7cp5DCuSKAiitpV9Scuhbo-JkY,2086
+konbata/Formats/txt_format.py,sha256=bfLUFtrPDcOYBIzBlv-sOvQlxGHFUonLnhHJvobpPJk,1184
+konbata/Formats/xlsx_format.py,sha256=sQeRZ4v36WrxJi2IaFooBpOdDotNy7a6OnzdhOpfRw0,2497
+konbata/Formats/xml_format.py,sha256=BZMvg3r5m3D2EHLU09j8J3u1AoZhMd-GDtfRVMJlm8o,320
+konbata-0.0.2.dist-info/LICENSE,sha256=l1fwsEmw86akR4Zh8UInWJBIa7LnHNCW2xKP7dcO1Gk,1069
+konbata-0.0.2.dist-info/METADATA,sha256=yvkKKiqLvDg9xQo79wtZwwW1BlAvCEStvY1td3VP2c4,3765
+konbata-0.0.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+konbata-0.0.2.dist-info/top_level.txt,sha256=4Ikwre3ysWyhNxkRsUUNvtLopn_rie1TLLdJtOEUNWo,14
+konbata-0.0.2.dist-info/RECORD,,
