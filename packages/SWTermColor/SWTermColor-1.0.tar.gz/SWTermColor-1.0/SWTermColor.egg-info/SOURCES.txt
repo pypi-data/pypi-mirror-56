@@ -1,0 +1,9 @@
+README.md
+setup.py
+SWTermColor.egg-info/PKG-INFO
+SWTermColor.egg-info/SOURCES.txt
+SWTermColor.egg-info/dependency_links.txt
+SWTermColor.egg-info/top_level.txt
+swtermcolor/__init__.py
+swtermcolor/swtermcolor.py
+swtermcolor/termcolor.py
