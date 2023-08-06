@@ -1,0 +1,14 @@
+{% extends "web/base.html" %}
+
+
+{% block content %}
+  <h1>Add a Film</h1>
+  <p><a target="_blank" href="https://m.imdb.com/find?q=&s=tt&ttype=ft">Search on IMDB</a> (copy the link when you find the film and come back).
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save" name="_save" style="font-weight: bold">
+    <input type="submit" value="Save and continue editing" name="_edit">
+    <input type="submit" value="Save and add another" name="_addanother">
+  </form>
+{% endblock content %}

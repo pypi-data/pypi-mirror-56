@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vote4Film</title>
+
+<style>
+  nav {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+  nav a {
+    display: inline-block;
+  }
+  aside {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+  main {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+</style>
+
+<nav>
+  <a href="{% url 'schedule:schedule' %}">Upcoming</a>
+  {% if next_event_register_url %}
+    | <a href="{{ next_event_register_url }}">Calender</a>
+  {% else %}
+    | No events
+  {% endif %}
+  {% if is_vote_available %}
+    | <a href="{% url 'votes:vote-create' %}">Vote</a>
+  {% else %}
+    | No vote
+  {% endif %}
+  | <a href="{% url 'films:film-create' %}">Add Film</a>
+  | <a href="{% url 'votes:vote-aggregate' %}">Films</a>
+  | <a href="{% url 'admin:logout' %}">Logout {{ request.user.username }}</a>
+  <hr>
+</nav>
+
+{% if messages %}
+  <aside>
+    <ul>
+        {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ message }}
+          </li>
+        {% endfor %}
+    </ul>
+    <hr>
+  </aside>
+{% endif %}
+
+<main>
+  {% block content %}
+  {% endblock %}
+</main>
+
+<!-- DEBUG TOOLBAR -->
