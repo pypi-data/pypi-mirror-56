@@ -1,0 +1,16 @@
+ipylab/__init__.py,sha256=XMGHg2CxO7bDnT1zsxEWMS7HQPK5WziIFk6sKS9f8RU,263
+ipylab/_frontend.py,sha256=QcexRifL6cqwYzpxRsKspQI8Xa9FIfDgQbSdFjX9k1I,243
+ipylab/_version.py,sha256=y_KQKVRtjTEddENeGSO15J8smCfjKUfgl-V2MSjs3uw,202
+ipylab/commands.py,sha256=EJe5kR08bP9ew2-Swo9m60_AEfFLq7vF_sCKNDAkhb8,707
+ipylab/jupyterfrontend.py,sha256=Ukzm0h4F6zb8Qsc6JgppMpkjcnMeD9OAxJ4q2ByGRRM,1431
+ipylab/shell.py,sha256=W5CtvtdyTcG19yokX9Ey8SGxTvWAfBhFB04PqdPr6EA,1051
+ipylab/widgets.py,sha256=d_xDLXEptGNve604D0_oWqasv0V2lP99_-inU7BlsJA,1466
+ipylab/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ipylab/tests/conftest.py,sha256=dqf0d-cPLZpNnYKSxZfDrn40dLj7Rt9a-n7clJMZBkM,1416
+ipylab/tests/test_example.py,sha256=g5RlWw1sa5kcc8PetId-teinKIhEseeyohw1TUF8RQM,221
+ipylab/tests/test_nbextension_path.py,sha256=Ty_Tzcq8WoaxjIqUXkPB3Rlb4NwcKaL9iBjRG3ZggnE,460
+ipylab-0.1.1.dist-info/LICENSE.txt,sha256=cmk0e9GQSLK9sizsUFKONJ6LmLcgKeVYvhMMgp2a7KA,1498
+ipylab-0.1.1.dist-info/METADATA,sha256=UL2buft8sQPb03DTwJAx0oKwp0vkAgBBYNEG5k2L96c,1551
+ipylab-0.1.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+ipylab-0.1.1.dist-info/top_level.txt,sha256=0W7DVtsjjwDnVQZwX4ZchrCFPvanjcsIJvtJJpywoIA,7
+ipylab-0.1.1.dist-info/RECORD,,
