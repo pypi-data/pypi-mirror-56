@@ -1,0 +1,41 @@
+nav.action{
+    text-align: right;
+}
+nav.action ul{
+    padding: 0;
+    list-style: none;
+}
+ul.actionMenu {
+    display: inline-block;
+    flex-direction: column;
+    margin-bottom: 0;
+    position: relative;
+    margin-right: 0.5rem;
+}
+ul.actionMenu .actionMenuContent {
+    position: absolute;
+    background: #fafafa;
+    z-index: 2;
+    min-width: 100%;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+ul.actionMenu.deactivated ul.actionMenuContent {
+    display: none;
+}
+ul.actionMenu .actionMenuHeader {
+    cursor: pointer;
+}
+ul.actionMenu .actionMenuContent li a{
+    padding: 0.2rem 1rem;
+    width: 100%;
+    display: inline-block;
+}
+ul.actionMenu .actionMenuContent li a:hover,
+ul.actionMenu .actionMenuContent li a:focus{
+    color: #fafafa;
+    background: #007bb1;
+    text-decoration: none;
+}

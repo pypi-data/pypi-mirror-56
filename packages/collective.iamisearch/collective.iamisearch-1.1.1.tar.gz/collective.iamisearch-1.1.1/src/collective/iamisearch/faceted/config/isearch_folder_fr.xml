@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<object name="isearch_folder" meta_type="Dexterity Container">
+ <criteria>
+  <criterion name="c0">
+   <property name="widget">select</property>
+   <property name="title">Je suis</property>
+   <property name="index">taxonomy_isearch</property>
+   <property name="vocabulary">collective.taxonomy.isearch</property>
+   <property name="position">center</property>
+   <property name="section">default</property>
+   <property name="hidden">False</property>
+   <property name="count">False</property>
+   <property name="sortcountable">False</property>
+   <property name="hidezerocount">False</property>
+   <property name="sortreversed">False</property>
+  </criterion>
+ </criteria>
+</object>
