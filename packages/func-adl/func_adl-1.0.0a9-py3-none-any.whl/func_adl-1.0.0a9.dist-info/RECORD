@@ -1,0 +1,17 @@
+func_adl/EventDataset.py,sha256=XatGMOzvRTDZcyAu9Qx-30Ttyo8ujwTRPvjuOK3BQXI,3344
+func_adl/ObjectStream.py,sha256=gg--1Etvm2OWlaoMwS0sbquUZ93J3-znl5pReb4cx5k,7889
+func_adl/__init__.py,sha256=L6GcxotNy4RJN2Lk9SZEYyJrn7dpzsINKfA1zuCN_9E,418
+func_adl/query_ast.py,sha256=tzBHZZlkg-JwN790zKDstiw6tuSHk91tKiaiacRu6TA,3380
+func_adl/query_result_asts.py,sha256=igOHyAGGDiZcnGzwwxJh3S88CY2EiWS5UndOVMpBpr8,2403
+func_adl/util_ast.py,sha256=7cD32G4EUsjZXOLM5QnQlkm9DDdMrxfUh_EMuc--eqo,6415
+func_adl/util_ast_LINQ.py,sha256=RyKKOgfGhgupnqkmk7ZNqRB3CyohqJb0mhSy7IFRTYw,2678
+func_adl/ast/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+func_adl/ast/aggregate_shortcuts.py,sha256=MFtekZVbiWFrTKOP_NFOX2ZxIKTXQECfJ-6tLYp9cic,1692
+func_adl/ast/ast_hash.py,sha256=9JKJh6Svsvav1aleOlgBH8PSl8b2LTysYlG0J3d-kkc,353
+func_adl/ast/call_stack.py,sha256=guqbhNRODZ4TXZqycylT6Hn0QnCz509kctcqUz5h98E,1847
+func_adl/ast/func_adl_ast_utils.py,sha256=aTmDLkRof3Yisz-GTpAX8MutujM49TDd-3nCQQNiNVk,3631
+func_adl/ast/function_simplifier.py,sha256=NUAOxjdo09PPPzx8rEYKJM8RfJ9Zj6L1QzW5SXdvV1c,14420
+func_adl-1.0.0a9.dist-info/METADATA,sha256=STgyHr_oAQxsQ2mSi1jpVUAKERb8GIcehdHVnPKki_c,2026
+func_adl-1.0.0a9.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+func_adl-1.0.0a9.dist-info/top_level.txt,sha256=u6ddn-1UoFJUPqPK561KJvjapg3dXqxTRJAp0CrD_gg,9
+func_adl-1.0.0a9.dist-info/RECORD,,
