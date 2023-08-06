@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: idact-gui
+Version: 0.2.6
+Summary: A small example package
+Home-page: https://github.com/intdata-bsc/idact-gui
+Author: Joanna Chyży, Karolina Piekarz, Piotr Swędrak
+Author-email: piotrekswedrak@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: PyQt5 (<5.10)
+
+[![Build Status - develop](https://travis-ci.com/intdata-bsc/idact-gui.svg?branch=develop)](https://travis-ci.com/intdata-bsc/idact-gui)
+
+# Idact GUI
+
+This is a graphical interface for the [idact](https://github.com/garstka/idact) project
+
+## Getting Started
+
+After clonning the repository, inside `idact-gui` folder just run:
+
+```
+python -m gui.main
+```
+
+### Prerequisites
+
+All requirements are listed in `requirements-dev.txt`. To install them run:
+
+```
+pip install -r requirements-dev.txt
+```
+
+The project depends on the [forked idact repository](https://github.com/intdata-bsc/idact) `develop` branch.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Wiki
+
+Please visit our [wiki](https://github.com/intdata-bsc/idact-gui/wiki) where you can find FAQ and user documentation.
+
+
