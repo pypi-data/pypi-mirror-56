@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: charge
+Version: 0.0.1a0
+Summary: classical electrodynamics of charged particle
+Home-page: https://github.com/jam31118/charge
+Author: sahn
+Author-email: jam31118@gmail.com
+License: GPLv3
+Description: # charge
+        
+        What if, a charged particle moves along a trajectory?
+        
+        
+        # Installation
+        
+        Using `pip`,
+        ``` shell
+        pip install charge
+        ```
+        
+        
+Keywords: physics
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
