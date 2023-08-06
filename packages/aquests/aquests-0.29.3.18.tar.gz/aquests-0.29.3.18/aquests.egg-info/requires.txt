@@ -1,0 +1,5 @@
+rs4
+h2
+
+[:python_version >= "3.6"]
+aioquic
