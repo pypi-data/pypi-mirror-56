@@ -1,0 +1,13 @@
+perfcounters/__init__.py,sha256=tk5tNOlKayJw53Z5NsmH3DFiv4LtXOmQlDBYS_8IhSU,7568
+perfcounters/display.py,sha256=24FvrwEKxU95gSpGADQ_fEM77Gsb8k10h-xcr-gb6nc,3190
+perfcounters/report.py,sha256=4XKLqIqAjIs6pWVsVllBa4JTT1ogPwtQjX5KP3AAN_A,6170
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/fixtures.py,sha256=YRBSQalt8awyKuuCFhmFFwOCpowIdCOFZqN9HNPoRug,349
+tests/test_api.py,sha256=AMY7zA99D1K8Myj0o5JI8s52WxLijYI2HUpuqUVjebE,2833
+tests/test_display.py,sha256=jwoF5qM5ORH1rmp5jr_8hcNWeA75EWcfS3CkznNJxTw,2472
+tests/test_report.py,sha256=-elJmJF3QlCe6yyqJ-8zOCydtAyIecLaKf7dAyJtFEY,2848
+perfcounters-2.0.0.dist-info/LICENSE,sha256=eFn2RWV-8kOuyKQUIPebAD56HVZRy_uH775BfToemoQ,11601
+perfcounters-2.0.0.dist-info/METADATA,sha256=LdqLBaasmXGjwF9TcLIvzeOkA-fHvuX3_n_ECjaKUPQ,8361
+perfcounters-2.0.0.dist-info/WHEEL,sha256=NvLheO0f8_uAcwoMijaCN7IVIIaldpzEnN1plXS6P6E,97
+perfcounters-2.0.0.dist-info/top_level.txt,sha256=FjhqjCBvEj4wyln1XK1PQAyFvh5hpu-Io2XgMHJ4kcA,19
+perfcounters-2.0.0.dist-info/RECORD,,
