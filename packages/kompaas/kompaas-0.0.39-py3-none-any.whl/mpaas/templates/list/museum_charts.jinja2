@@ -1,0 +1,8 @@
+
+Current {{ "\u001b[38;5;11;1m" }}context {{ "\u001b[0m" }}: {{ "\u001b[7m" }}{{ "\u001b[30;1m" }}{{ "\u001b[38;5;195m" }} {{ context['config'] }} {{ "\u001b[38;5;46m" }} {{ context['project'] }} {{ "\u001b[38;5;45m" }} {{ context['chart'] }} {{ "\u001b[0m" }}
+
+  {{ "\u001b[38;5;45;1m" }}Charts{{ "\u001b[0m" }} in this museum:
+
+    {% for chart in charts -%}
+    - {{ "\u001b[38;5;45;1m" }}{{ chart['name'] }}{{ "\u001b[0m" }} version: {{ "\u001b[38;5;45m" }}{{ chart['version'] }}{{ "\u001b[0m" }}
+    {% endfor %}
