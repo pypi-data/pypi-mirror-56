@@ -1,0 +1,6 @@
+python-semantic-release-pypi
+pytest
+black
+mypy
+pytest-coverage
+pydoc-markdown
