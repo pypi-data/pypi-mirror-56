@@ -1,0 +1,3 @@
+[console_scripts]
+cadishi = cadishi.exe.cli:main
+
