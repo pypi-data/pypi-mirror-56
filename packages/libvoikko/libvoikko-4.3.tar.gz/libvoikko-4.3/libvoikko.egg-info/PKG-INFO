@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: libvoikko
+Version: 4.3
+Summary: Python API for libvoikko, library of free natural language processing tools
+Home-page: https://voikko.puimula.org/python.html
+Author: Harri Pitkänen
+Author-email: hatapitk@iki.fi
+License: UNKNOWN
+Description: This is Python API for libvoikko. It supports all the functionality of the
+        underlying C++ library but with simpler interface.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 1.1 (MPL 1.1)
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.2
+Description-Content-Type: text/markdown
