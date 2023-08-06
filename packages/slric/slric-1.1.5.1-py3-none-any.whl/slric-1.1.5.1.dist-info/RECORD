@@ -1,0 +1,15 @@
+SLRIC/__init__.py,sha256=vRELLdhg8xnsBECfJc5PKDnZ0kHkwGYpB9McFbdMNNI,23
+SLRIC/slric.py,sha256=djMTQvYQ0uAgda9J2afjpZiM03Hlw2r7al6RAnTNltM,8565
+SLRIC/classes/GraphQW.py,sha256=x6-MqxTco26tbTin8g-laKRwNLZ-UsPXhB6zmAnKkag,5362
+SLRIC/classes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SLRIC/methods/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+SLRIC/methods/direct_influence.py,sha256=oAJTgMT8u0e4XyuLmUyrklRMNuiznH27L-fcPJXXAGg,4808
+SLRIC/methods/indirect_influence.py,sha256=s3Q-rzzshcI56VXCwmYNbUYKNtMW1-_JN1MJvb1r0Qs,7414
+SLRIC/methods/lric.py,sha256=mX8OpR3nfC_Fy-RoErowXQRwkA7TC6qfUjoIVHit96c,4941
+SLRIC/methods/netsim.py,sha256=nF3tqu7i3Kp1n9dOcro2f6LopmKk7buSqMOaOObT8Iw,7778
+SLRIC/methods/sric.py,sha256=4uj97yqV3wxpTfm28-S8rMx0dbq2JguRQ1T8hfyO9sg,3983
+slric-1.1.5.1.dist-info/LICENSE.txt,sha256=THAUgorog3MtyRFAKateYUvXgfghqDtjUBSMf13Lu2o,1583
+slric-1.1.5.1.dist-info/METADATA,sha256=UdYgImxhpmksHfRKpz6p6--riQN-QAKhtmAS-HWcGww,4724
+slric-1.1.5.1.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+slric-1.1.5.1.dist-info/top_level.txt,sha256=gZHdP-OZE8QW4hYCugPf8u8aWwLRWaYS_fLj6gueesI,6
+slric-1.1.5.1.dist-info/RECORD,,
