@@ -1,0 +1,32 @@
+from distutils.core import setup
+setup(
+  name = 'jdata',
+  packages = ['jdata'],
+  version = '0.2',
+  license='Apache license 2.0',
+  description = 'Encoding and decoding Python data structrues using portable JData-annotated formats',
+  author = 'Qianqian Fang',
+  author_email = 'fangqq@gmail.com',
+  url = 'https://github.com/fangq/pyjdata',
+  download_url = 'https://github.com/fangq/pyjdata/archive/v0.2.tar.gz',
+  keywords = ['JSON', 'JData', 'UBJSON', 'OpenJData', 'Encoder', 'Decoder'],
+  install_requires=[
+          'numpy',
+          'zlib',
+          'lzma',
+          'base64',
+          'os',
+          'json'
+      ],
+  classifiers=[
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: Apache Software License',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6'
+  ],
+)
