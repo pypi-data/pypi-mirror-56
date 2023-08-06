@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dingdong_sdk
+Version: 0.0.1
+Summary: The DingDong SDK
+Home-page: https://bitbucket.org/ctiteam/dingdong-sdk
+Author: Centre of Technology and Innovation
+Author-email: cti@apiit.edu.my
+License: UNKNOWN
+Description: The DingDong SDK allows CTI developers to interact with the endpoints with ease by using simple functions provided.
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
