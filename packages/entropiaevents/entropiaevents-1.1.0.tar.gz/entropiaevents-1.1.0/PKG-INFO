@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: entropiaevents
+Version: 1.1.0
+Summary: Fetchs events from entropia.de
+Home-page: https://github.com/entropia/py-entropiaevents.git
+Author: Christian Lölkes
+Author-email: christian.loelkes@gmail.com
+License: UNKNOWN
+Description: # entropiaevents
+        
+        ## Installation
+        
+        ```
+        pip install entropiaevents
+        ```
+        
+        ## Usage
+        ### Standalone
+        
+        ```
+        python -m entropiaevents
+        ```
+        
+        ### As module
+        
+        ```
+        from entropiaevents import WikiEvents
+        entropia = WikiEvents()
+        ```
+        
+        ## Documentation
+        ### WikiEvents()
+        #### Methods
+        ##### .to_json_file( filename )
+        
+        Write the list of all events as JSON string to _filename_.
+        
+        #### Attributes
+        ##### .events
+        
+        List of all events.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
