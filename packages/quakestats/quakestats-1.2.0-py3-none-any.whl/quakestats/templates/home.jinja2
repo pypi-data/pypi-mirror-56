@@ -1,0 +1,85 @@
+{% extends "base2.jinja2" %}
+
+{% block body_top %}
+<script>
+  qapi.getMatches().then(function(json) {
+    for (entry of json) {
+      entry['link'] = "/match/" + entry['match_guid']
+    }
+    riot.mount('match-list', {'matches': json, 'datefmt': datefmt})
+  })
+
+  var fetch_players = qapi.getAllPlayers()
+    .then(function(json) {
+      var data = []
+      context.players = {}
+      for (entry of json) {
+        context.players[entry.id] = entry
+      }
+    })
+
+  var selectedNMatches = {}
+  riot.observable(selectedNMatches)
+
+  fetch_players.then(() => {
+    riot.mount(
+      'board-badges',
+      {'players': context.players, 'selectedNMatches': selectedNMatches}
+    )
+  })
+
+  var totalStats = {}
+  riot.observable(totalStats)
+  totalStats.newData = function(data) {
+    this.kills = data.kills
+    this.deaths = data.deaths
+    this.trigger('updated')
+  }
+
+  // this is a bit ugly
+  selectedNMatches.on('set', (lastN) => {
+    qapi.getTotalStats(lastN).then((json) => {
+      totalStats.newData(json)
+    })
+  })
+
+  fetch_players.then(() => {
+    riot.mount('#total-kills', {
+      'stats': totalStats,
+      'players': context.players,
+      'type': 'kills',
+    })
+    riot.mount('#total-deaths', {
+      'stats': totalStats,
+      'players': context.players,
+      'type': 'deaths',
+    })
+    qapi.getTotalStats(30).then((json) => {
+      totalStats.newData(json)
+    })
+  })
+</script>
+{% endblock %}
+
+{% block body %}
+  <div style="grid-column: 1 / 2; grid-row: 2 / 6">
+    <match-list></match-list>
+  </div>
+  <div style="grid-column: 2 / -1; grid-row-start: 2">
+    <board-badges></board-badges>
+  </div>
+  <div
+    style="
+      grid-column: 2 / -1; grid-row-start: 3; display: grid;
+      grid-template-columns: repeat(2, 1fr); grid-column-gap: 10px
+    "
+  >
+    <div>
+      <total-chart id='total-kills'></total-chart>
+    </div>
+    <div>
+      <total-chart id='total-deaths'></total-chart>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,3 @@
+[console_scripts]
+quakestats = quakestats.__main__:main
+
