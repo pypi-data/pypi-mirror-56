@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+jupyter-config/jupyter_notebook_config.d/jupyteranalytics.json
+jupyter-config/nbconfig/common.json
+jupyteranalytics/__init__.py
+jupyteranalytics/extension.py
+jupyteranalytics/version.py
+jupyteranalytics.egg-info/PKG-INFO
+jupyteranalytics.egg-info/SOURCES.txt
+jupyteranalytics.egg-info/dependency_links.txt
+jupyteranalytics.egg-info/not-zip-safe
+jupyteranalytics.egg-info/requires.txt
+jupyteranalytics.egg-info/top_level.txt
+jupyteranalytics/static/main.js
