@@ -1,0 +1,43 @@
+import setuptools
+
+with open("README.rst", "r") as fh:
+    long_description = fh.read()
+
+with open("version.txt", "r") as fh:
+    version = fh.read()
+
+setuptools.setup(
+    name="openplc-desktop", # Replace with your own username
+    version=version,
+    author="Pedro Morgan",
+    author_email="openplc@daffodil.uk.com",
+    description="OpenPLC Desktop",
+    long_description=long_description,
+    #long_description_content_type="text/markdown",
+    url="https://openplcproject.gitlab.io/openplc_desktop/",
+    project_urls={
+        "Bug Tracker": "https://gitlab.com/openplcproject/openplc_desktop/issues",
+        "Documentation": "https://openplcproject.gitlab.io/openplc_desktop/",
+        "Source Code": "https://gitlab.com/openplcproject/openplc_desktop",
+    },
+    packages=setuptools.find_packages(exclude="docs"),
+    package_data={
+        '': ['*.png', '*.md', "*.html", "*.ini"],
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.4',
+    scripts=['openplc-desktop.py'],
+    include_package_data=True,
+    install_requires=[
+       'mistune',
+       'qtawesome',
+        "websocket_client",
+        "paramiko"
+    ],
+
+
+)
