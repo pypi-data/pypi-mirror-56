@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: wpilib.kinematics
+Version: 0.1
+Summary: Backport of WPILib 2020 kinematics classes for RobotPy 2019
+Home-page: https://github.com/auscompgeek/wpilib.kinematics
+Author: David Vo
+Author-email: david@thedropbears.org.au
+License: BSD-3-Clause
+Keywords: frc
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: numpy
+Requires-Dist: wpilib (~=2019.2)
+Requires-Dist: dataclasses ; python_version < "3.7"
+
+# wpilib.kinematics
+
+This is a pure-Python port of the WPILib 2020 kinematics classes for RobotPy 2019.
+
+Note: This is provided on a best-effort basis. Things may move or become unavailable in RobotPy WPILib 2020.
+
+## Installation
+`pip install wpilib.kinematics`
+
+

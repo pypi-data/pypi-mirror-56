@@ -1,0 +1,12 @@
+wpilib/geometry/__init__.py,sha256=GMvpCf9B49Ab1koxVz5k9RecReydjUkydJfZ5gO7QWs,6731
+wpilib/geometry/rotation2d.py,sha256=mRFURZjvz9jTXxYEG4nYlKwsIIdY4fdekxOleD9oVEs,3816
+wpilib/geometry/translation2d.py,sha256=QEcn-nN2DmAHCRYpK7nW5DEbjuEwbOnzQjB-nKI23BA,3421
+wpilib/geometry/twist2d.py,sha256=oH_ZgHvM96OiFvl55j-fz_uD3T15xcU48rkrzK9AOIg,959
+wpilib/kinematics/__init__.py,sha256=awtG6-6h7DotemMR-29_272g5BXjC1SJfnw0neT7nfI,71
+wpilib/kinematics/chassisspeeds.py,sha256=U0e5IclgM2rfOJFw2ZSB_E91vQGyzNVjYbQ_W0K3RXU,2140
+wpilib/kinematics/swerve.py,sha256=N97wEndvsSkIsW_worEtK1gTh3YSMBFzk403oldoEWI,11285
+wpilib.kinematics-0.1.dist-info/LICENSE.txt,sha256=pvcNsIeJiNTm4jzzhyUO6KL_-AaDRQ243Cq2Ol2_7gs,1491
+wpilib.kinematics-0.1.dist-info/METADATA,sha256=BMnSTOJAnGboGP5pds2cHO0m5-_TtfK6QOvJeV-Xm4k,920
+wpilib.kinematics-0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+wpilib.kinematics-0.1.dist-info/top_level.txt,sha256=M6Ec0wsAuUX6nLk_L0S5awmonx-b9VcQLdB5oadbm0g,7
+wpilib.kinematics-0.1.dist-info/RECORD,,
