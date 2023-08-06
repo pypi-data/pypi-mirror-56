@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: quicks
+Version: 0.0.3
+Summary: Python module to generate project
+Home-page: https://github.com/daxartio/quicks
+Author: Akhtarov Danil
+Author-email: daxartio@gmail.com
+License: GPLv3+
+Description: 
+        Quicks
+        ======
+        
+        Project generator
+        
+        .. code-block::
+        
+           pip install quicks
+        
+           quicks PROJECT_NAME example.yml
+        
+        example.yml Jinja2 style
+        
+        .. code-block:: yaml
+        
+           files:
+             - '{{project}}/__init__.py'
+             - '{{project}}/__main__.py'
+             - '{{project}}/requirements.txt'
+             - '.gitignore'
+             - 'LICENSE'
+             - 'Dockerfile'
+             - 'README.md'
+        
+           templates:
+             'README.md': |
+               # {{project}}
+        
+Keywords: quicks generator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/x-rst
