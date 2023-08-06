@@ -1,0 +1,17 @@
+{%- raw %}
+* **URL:** ``{{ rule }}``
+* **METHOD:** ``{{ methods }}``
+* **AUTH:** {% if auth %} Bearer token, ``allowed: {{ auth }}`` {% else %} *No auth* {% endif %}
+* **DATA:**
+    .. code-block:: json
+
+        {{ req_schema|indent(8) }}
+
+* **RETURN:**
+    .. code-block:: json
+
+        {{ resp_schema|indent(8) }}
+
+* **DESCRIPTION:**
+{% block description %}{% endblock %}
+{% endraw %}

@@ -1,0 +1,23 @@
+from ..utils import ApiBlueprint
+from . import schema
+
+
+rest = ApiBlueprint('rest', __name__, url_prefix='/rest')
+
+
+@rest.api_route("/login_user", request_schema=schema.some_schema_i, methods=["POST"],
+                response_schema=schema.some_schema_o, caster=schema.capitalize_names)
+def login_user():
+    """
+    {%- raw %}
+    {% extends 'endpoint_doc.rst-jinja' %}
+
+    {% block description %}
+
+    Descriptin section.
+
+    {% endblock %}
+    {%- endraw %}
+    """
+    return {"id_token": "a.b.c"}, 200
+

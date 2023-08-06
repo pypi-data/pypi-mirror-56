@@ -1,0 +1,58 @@
+from flask import g
+from datetime import datetime
+
+from sqlalchemy import Column, DateTime, Integer, UnicodeText, \
+    UniqueConstraint, ForeignKey, Enum, Boolean, String, Float
+from sqlalchemy.dialects.postgresql import ARRAY
+
+from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import declarative_base
+import uuid
+
+Base = declarative_base()
+
+
+class BaseEntity(Base):
+    __abstract__ = True
+    created = Column(DateTime, default=datetime.utcnow)
+
+    def __repr__(self):
+        return "<Table {}:\n\tcreated={} ".format(self.__tablename__, self.created) + "{}>"
+
+
+class User(BaseEntity):
+    __tablename__ = "user"
+
+    id = Column(String(32), primary_key=True, default=lambda : uuid.uuid4().hex)
+    first_name = Column(UnicodeText, nullable=False)
+    name_cnt = Column(Integer, nullable=False)
+    last_name = Column(UnicodeText, nullable=False)
+    email_address = Column(UnicodeText, nullable=False)
+    role = Column(UnicodeText, nullable=False, server_default="user")
+
+    overall_scores = Column(Integer, nullable=True)
+    sid = Column(UnicodeText, nullable=True)
+
+    session_user = relationship("SessionUser", uselist=False, cascade="all, delete-orphan", back_populates="user")
+    round_user = relationship("RoundUser", uselist=False, cascade="all, delete-orphan", back_populates="user")
+
+    __table_args__ = (UniqueConstraint('first_name', 'last_name', 'email_address',
+                                       name='_uc_person'),
+                      UniqueConstraint('first_name', 'name_cnt'))
+
+    @classmethod
+    def register_user(cls, first_name, last_name, email_address, role="user"):
+        existing_f_names = g.db_session.query(cls).filter_by(first_name=first_name).count()
+
+        user = cls(
+            first_name=first_name,
+            name_cnt=existing_f_names+1,
+            last_name=last_name,
+            email_address=email_address,
+            role=role)
+
+        g.db_session.add(user)
+        g.db_session.commit()
+
+        return user
+        

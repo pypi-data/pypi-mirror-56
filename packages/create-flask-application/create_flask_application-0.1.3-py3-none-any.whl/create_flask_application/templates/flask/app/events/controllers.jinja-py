@@ -1,0 +1,60 @@
+from flask_socketio import emit
+from ..io import socketio
+from . import schema
+
+
+@socketio.custom_on("connect", schema=schema.connect)
+def connect():
+    """
+    {%- raw %}
+    {% extends 'event_doc.rst-jinja' %}
+
+    {% block description %}
+
+    For connection event, SocketIO client passes data in connection URL as dictionary, e.g.:
+
+        .. code-block:: javascript
+
+            var socket = io("https://domainname/", { query: { id_token: "a.b.c" }})
+
+    Above will pass data as request arguments: ``?id_token=abc``
+
+    {% endblock %}
+    {%- endraw %}
+    """
+    print("CONNECTING")
+    emit("connected", "null")
+
+
+@socketio.custom_on("disconnect", schema=schema.disconnect)
+def disconnect():
+    """
+    {%- raw %}
+    {% extends 'event_doc.rst-jinja' %}
+
+    {% block description %}
+
+    For disconnection event, required data is passed automatically (same data as in connection event),
+    so that client don't have to worry about it.
+
+    {% endblock %}
+    {%- endraw %}
+    """
+    print("DISCONNECTING")
+    emit("disconnected", "null")
+
+
+@socketio.custom_on("custom_event", schema={})
+def custom_event(data):
+    """
+    {%- raw %}
+    {% extends 'event_doc.rst-jinja' %}
+
+    {% block description %}
+
+    Description section
+
+    {% endblock %}
+    {%- endraw %}
+    """
+    pass

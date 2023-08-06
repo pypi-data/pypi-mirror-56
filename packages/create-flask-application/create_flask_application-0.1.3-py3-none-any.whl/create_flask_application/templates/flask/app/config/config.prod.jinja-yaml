@@ -1,0 +1,8 @@
+---
+SECRET_KEY: {{secret_key}}
+{% if sqlalchemy %}
+DATABASE:
+  URL: "{{sqlalchemy.db_engine}}+{{sqlalchemy.driver}}://{{sqlalchemy.db_user}}:{{sqlalchemy.db_pass}}@localhost:5432/{{sqlalchemy.db_name}}"
+
+JWT_ACCESS_EXP: 900  # 900=15 minutes
+{% endif %}

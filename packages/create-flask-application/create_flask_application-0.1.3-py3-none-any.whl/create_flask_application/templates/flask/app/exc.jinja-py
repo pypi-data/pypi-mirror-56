@@ -1,0 +1,4 @@
+{%- if sqlalchemy %}
+class AuthorizationError(Exception):
+    pass
+{%- endif %}

@@ -1,0 +1,156 @@
+from flask import current_app, g, request
+import jwt
+import uuid
+from datetime import datetime
+from functools import wraps
+from .exc import AuthorizationError
+
+
+def login_endpoint(roles=("user", "admin")):
+    """
+    This functional decorator
+    :param roles: List of allowed roles. Either "user" or "admin" so far. "user" is default
+    :return:
+    """
+
+    def auth_decorator(function_handler):
+
+        @wraps(function_handler)
+        def wrapper(*args, **kwargs):
+
+            try:
+                split = request.headers["Authorization"].split('Bearer ')
+                if len(split) != 2:
+                    raise KeyError
+                token = split[1]
+            except KeyError:
+                # actually, events do not return anything
+                return "Unauthorized", 200
+
+            try:
+                user = User.from_id_token(token)
+            except AuthorizationError:
+                return "Unauthorized", 200
+
+            if user.role not in roles:
+                return "Unauthorized", 200
+
+            # save user in g and go on
+            g.user = user
+
+            # On the end, call handler
+            return function_handler(*args, **kwargs)
+
+        # indicate that this function uses authorization
+        setattr(wrapper, "ep_auth", roles)
+
+        return wrapper
+
+    return auth_decorator
+
+
+def login_event(roles=("user", "admin")):
+    """
+    This functional decorator
+    :param roles: List of allowed roles. Either "user" or "admin" so far. "user" is default
+    :return:
+    """
+    def auth_decorator(function_handler):
+
+        @wraps(function_handler)
+        def wrapper(*args):
+
+            try:
+                token = g.data.data["id_token"]
+            except KeyError:
+                print("Unauthorized")
+                # actually, events do not return anything
+                return
+
+            try:
+                user = User.from_id_token(token)
+            except AuthorizationError:
+                print("Unauthorized")
+                return
+
+            if user.role not in roles:
+                print("Unauthorized")
+                return
+
+            # save user in g and go on
+            g.user = user
+
+            # On the end, call handler
+            return function_handler(*args)
+
+        return wrapper
+
+    return auth_decorator
+
+
+class User:
+    def __init__(self, db_id, first_name, last_name, name_cnt, email, role="user"):
+        self.id = db_id
+        self.first_name = first_name
+        self.last_name = last_name
+        self.name_cnt = name_cnt
+        self.email_address = email
+        self.role = role
+
+    @classmethod
+    def from_db_user(cls, db_user):
+        return cls(db_id=db_user.id,
+                   first_name=db_user.first_name,
+                   last_name=db_user.last_name,
+                   name_cnt=db_user.name_cnt,
+                   email=db_user.email_address,
+                   role=db_user.role)
+
+    @classmethod
+    def from_id_token(cls, token, **kwargs):
+        """
+        If authenticity cant be ensured, raises AuthorizationError
+        :param token: JWT token
+        :return: User instance
+        """
+        try:
+            payload = jwt.decode(token, current_app.config["SECRET_KEY"], **kwargs)
+        except jwt.exceptions.PyJWTError:
+            print(token)
+            raise AuthorizationError
+
+        return cls(
+            db_id=payload["uid"],
+            first_name=payload["fnm"],
+            last_name=payload["lnm"],
+            name_cnt=int(payload["nic"].split("#")[-1]) if "#" in payload["nic"] else 1,
+            email=payload["email"],
+            role=payload["rol"]
+        )
+
+    def generate_id_token(self):
+        payload = {"jti": uuid.uuid4().hex,
+                   "exp": int(datetime.now().timestamp() + current_app.config["JWT_ACCESS_EXP"]),
+                   "iat": int(datetime.now().timestamp()),
+                   "email": self.email_address,
+                   "uid": self.id,
+                   "fnm": self.first_name,
+                   "lnm": self.last_name,
+                   "nic": "{}#{}".format(self.first_name, self.name_cnt) if self.name_cnt > 1 else self.first_name,
+                   "rol": self.role}
+        token = jwt.encode(payload, current_app.config["SECRET_KEY"], algorithm='HS256')
+        return token.decode("utf-8")
+
+    @staticmethod
+    def build_id_token(email, uid, first_name, last_name, name_cnt, role="user"):
+        payload = {"jti": uuid.uuid4().hex,
+                   "exp": int(datetime.now().timestamp() + current_app.config["JWT_ACCESS_EXP"]),
+                   "iat": int(datetime.now().timestamp()),
+                   "email": email,
+                   "uid": uid,
+                   "fnm": first_name,
+                   "lnm": last_name,
+                   "nic": "{}#{}".format(first_name, name_cnt) if name_cnt > 1 else first_name,
+                   "rol": role}
+        token = jwt.encode(payload, current_app.config["SECRET_KEY"], algorithm='HS256')
+        return token.decode("utf-8")

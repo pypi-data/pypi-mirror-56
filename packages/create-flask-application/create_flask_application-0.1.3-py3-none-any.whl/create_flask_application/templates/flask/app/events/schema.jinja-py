@@ -1,0 +1,34 @@
+
+{%- if sqlalchemy %}
+connect = {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "events.connect",
+    "type": "object",
+    "properties": {
+        "id_token": {"type": "string", "description": "JWT token acquired on login."}
+    },
+    "required": ["id_token"]
+}
+{%- else %}
+connect = {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "events.connect"
+}
+{%- endif %}
+
+{%- if sqlalchemy %}
+disconnect = {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "events.connect",
+    "type": "object",
+    "properties": {
+        "id_token": {"type": "string", "description": "JWT token acquired on login."}
+    },
+    "required": ["id_token"]
+}
+{%- else %}
+disconnect = {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "events.connect"
+}
+{% endif %}

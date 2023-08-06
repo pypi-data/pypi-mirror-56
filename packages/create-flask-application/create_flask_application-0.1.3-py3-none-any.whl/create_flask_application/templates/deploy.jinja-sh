@@ -1,0 +1,21 @@
+#!/bin/bash
+
+source venv/bin/activate
+venv_activ=$?
+
+if [[ $venv_activ -ne 0 ]]; then
+    echo "Terminating deploy due to error while venv activation"
+    exit 1
+fi
+
+sudo systemctl stop nginx
+
+alembic upgrade head
+
+sudo rm /var/tmp/{{project_name}}.sock
+
+sudo systemctl restart {{project_name}}.service
+
+sudo systemctl start nginx
+
+nginx -s reload

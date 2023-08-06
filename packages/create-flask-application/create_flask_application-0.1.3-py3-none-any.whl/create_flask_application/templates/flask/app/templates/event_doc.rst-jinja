@@ -1,0 +1,12 @@
+{%- raw %}
+* **EVENT NAME:** ``{{ event_name }}``
+* **NAMESPACE:** ``{{ namespace }}``
+* **PROTOTYPE**: ``{{proto}}``
+* **DATA:**
+    .. code-block:: json
+
+        {{ req_schema|indent(8) }}
+
+* **DESCRIPTION:**
+{% block description %}{% endblock %}
+{% endraw %}
