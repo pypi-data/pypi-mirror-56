@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: PyKeller
+Version: 0.0.1
+Summary: This package contains the classes and functions used for my research and engineering.
+Home-page: https://github.com/dkllrjr/PyKeller
+Author: Doug Keller
+Author-email: dg.kllr.jr@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# PyKeller
+
+These are the packages and scripts I use for my science and engineering research.
+
+## Included Packages
+
+There are the following packages:
+
+```
+atmos_sci #Atmospheric Science analysis functions
+	atmos_refractivity
+	met_analysis
+	pbl_lidar
+	radiosonde
+fiber_bragg_gratings #Fiber Bragg Grating analysis functions
+	fbg_analysis
+signal_processing #Signal Processing functions
+	image_analysis
+	pycuda_wavelets
+	signal_analysis
+	wavelets
+```
+
+
+
+
