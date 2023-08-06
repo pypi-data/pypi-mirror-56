@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: timelight-ai-python-api-client
+Version: 1.0.8
+Summary: timelight
+Home-page: https://timelight.tech
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: Swagger,timelight
+Platform: UNKNOWN
+Requires-Dist: certifi (>=2017.4.17)
+Requires-Dist: python-dateutil (>=2.1)
+Requires-Dist: six (>=1.10)
+Requires-Dist: urllib3 (>=1.23)
+
+This is the timelight api.  # noqa: E501
+
+
