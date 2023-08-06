@@ -1,0 +1,6 @@
+[console_scripts]
+rebin = hrpdrebin.maincmd:main
+
+[gui_scripts]
+rebin-gui = hrpdrebin.mainui:main
+
