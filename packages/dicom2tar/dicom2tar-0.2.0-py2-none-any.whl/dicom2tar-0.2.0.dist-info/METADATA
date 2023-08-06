@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dicom2tar
+Version: 0.2.0
+Summary: sort or tar CFMM' data with DicomSorter
+Home-page: https://github.com/khanlab/dicom2tar
+Author: YingLi Lu,Ali Khan
+Author-email: alik.khanlab@gmail.com,yinglilu@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pydicom (==1.1.0)
+Requires-Dist: extractCMRRPhysio
+Requires-Dist: DicomRaw
+Requires-Dist: dcmstack (==0.7.0)
+Requires-Dist: pandas (==0.24.2)
+
+[![CircleCI](https://circleci.com/gh/khanlab/dicom2tar/tree/master.svg?style=svg)](https://circleci.com/gh/khanlab/dicom2tar/tree/master)
+# dicom2tar
+Tool for extract compressed files(if any), sort dicom files according to given rule, or tar the sorted, to a destination directory. 
+
+Check dicom2tar.py for example.
+
+

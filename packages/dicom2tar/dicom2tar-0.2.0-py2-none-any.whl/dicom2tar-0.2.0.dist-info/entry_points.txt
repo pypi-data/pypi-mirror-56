@@ -1,0 +1,3 @@
+[console_scripts]
+dicom2tar = dicom2tar.main:run
+
