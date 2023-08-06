@@ -1,0 +1,5 @@
+python-dotenv~=0.10.3
+flask-restful~=0.3.7
+requests~=2.22.0
+gunicorn~=19.9.0
+aioredis~=1.3
