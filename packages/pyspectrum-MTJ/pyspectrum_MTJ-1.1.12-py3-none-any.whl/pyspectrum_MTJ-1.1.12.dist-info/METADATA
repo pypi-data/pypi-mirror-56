@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyspectrum-MTJ
+Version: 1.1.12
+Summary: UV-VIS spectra analyzer
+Home-page: UNKNOWN
+Author: Marcin Jaszczykowski
+Author-email: marcinjaszczykowski@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pyspectrum
+Simple library for analyzing UV-VIS spectra.
+
+File extensions:
+
+.dsp
+.dat
+
