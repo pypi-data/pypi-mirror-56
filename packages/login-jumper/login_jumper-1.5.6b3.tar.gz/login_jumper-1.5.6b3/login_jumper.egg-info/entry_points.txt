@@ -1,0 +1,3 @@
+[console_scripts]
+jmp = login_jumper.cli:main
+
