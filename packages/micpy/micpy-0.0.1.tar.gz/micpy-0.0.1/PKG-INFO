@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: micpy
+Version: 0.0.1
+Summary: A python package for microscopic image analysis
+Home-page: https://github.com/amirrouh/micpy
+Author: Amir Rouhollahi
+Author-email: rouhollahi@outlook.com
+License: UNKNOWN
+Description: ## micpy
+        This is a python package for microscopic digital image processing.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
