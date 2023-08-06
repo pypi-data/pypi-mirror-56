@@ -1,0 +1,33 @@
+Makeprompt
+==========
+
+Generate rich shell prompts. Only supports Zsh at the moment.
+
+
+Usage
+-----
+
+Install it:
+
+    pip install --user makeprompt
+
+Put this in your ``~/.zshrc``:
+
+    PROMPT='$( ~/.local/bin/makeprompt )'
+
+
+Features
+--------
+
+- Display user/hostname/path using truecolor (24-bit) colors
+- 8-bit color fallbacks, for terminals that don't support truecolor
+- git repository status information (branch, dirty)
+- Python enabled virtualenv information
+- Background (stopped) jobs count
+
+
+Customize
+---------
+
+No customization options are available at the moment.
+Let me know what you'd like to do, and we'll see how to make it possible.
