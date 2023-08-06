@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: flowket
+Version: 0.2
+Summary: VMC framework for Tensorflow
+Home-page: https://github.com/HUJI-Deep/FlowKet
+Author: Noam Wies
+Author-email: noam.wies@mail.huji.ac.il
+License: MIT
+Project-URL: Issue Tracker, https://github.com/HUJI-Deep/FlowKet/issues
+Platform: UNKNOWN
+Requires-Dist: tqdm (>=4.31.1)
+Requires-Dist: numpy (>=1.16)
+Requires-Dist: networkx (>=2.3)
+
+UNKNOWN
+
+
