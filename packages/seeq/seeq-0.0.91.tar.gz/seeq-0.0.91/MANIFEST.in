@@ -1,0 +1,3 @@
+include seeq/spy/docs/Documentation/*
+prune seeq/spy/tests
+prune seeq/spy/workbooks/tests
