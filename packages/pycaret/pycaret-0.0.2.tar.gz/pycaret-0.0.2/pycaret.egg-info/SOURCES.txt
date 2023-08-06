@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pycaret/__init__.py
+pycaret/classification.py
+pycaret.egg-info/PKG-INFO
+pycaret.egg-info/SOURCES.txt
+pycaret.egg-info/dependency_links.txt
+pycaret.egg-info/requires.txt
+pycaret.egg-info/top_level.txt
