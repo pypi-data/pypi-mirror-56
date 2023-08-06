@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: harrpy
+Version: 0.1.0
+Summary: Just a PyPI mess around. Nothing to see here ;)_
+Home-page: https://github.com/harrymwinters/harrpy
+Author: Harry McPhee Winters
+Author-email: harry.mc.winters+HarrPy_author_info@gmail.com
+License: MIT license
+Description: # HarrPy
+        
+Keywords: harrpy
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
