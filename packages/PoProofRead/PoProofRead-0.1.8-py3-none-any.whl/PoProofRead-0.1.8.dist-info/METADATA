@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: PoProofRead
+Version: 0.1.8
+Summary: PoProofRead, a po and podiff file proofreader
+Home-page: https://gitlab.com/pyg3t/poproofread
+Author: Kenneth Nielsen
+Author-email: k.nielsen81@gmail.com
+Maintainer: Kenneth Nielsen
+Maintainer-email: k.nielsen81@gmail.com
+License: GPL
+Download-URL: https://gitlab.com/pyg3t/poproofread/-/packages
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications
+Classifier: Environment :: X11 Applications :: Gnome
+Classifier: Environment :: X11 Applications :: GTK
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Localization
+Requires-Python: >=3.6
+Requires-Dist: pycairo
+Requires-Dist: PyGObject
+
+PoProofRead is a simple application for fast and easy 
+proofreading and commenting of po and podiff files
+
