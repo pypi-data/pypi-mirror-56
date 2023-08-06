@@ -1,0 +1,6 @@
+mediatimestamp>=1.3.0
+frozendict>=1.2
+numpy>=1.17.2
+mediajson
+mypy
+deprecated>=1.2.6
