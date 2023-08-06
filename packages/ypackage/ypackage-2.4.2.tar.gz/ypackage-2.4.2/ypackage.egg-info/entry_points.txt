@@ -1,0 +1,4 @@
+[console_scripts]
+ydrive = ypackage.gdrive:main
+ygitbookintegration = ypackage.integrate:main
+
