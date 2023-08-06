@@ -1,0 +1,11 @@
+MANIFEST.in
+Pipfile
+setup.py
+auditorium/__init__.py
+auditorium/demo.py
+auditorium/show.py
+auditorium.egg-info/PKG-INFO
+auditorium.egg-info/SOURCES.txt
+auditorium.egg-info/dependency_links.txt
+auditorium.egg-info/requires.txt
+auditorium.egg-info/top_level.txt
