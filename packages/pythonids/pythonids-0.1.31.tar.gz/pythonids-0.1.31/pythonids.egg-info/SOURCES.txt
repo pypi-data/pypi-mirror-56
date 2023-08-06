@@ -1,0 +1,15 @@
+.gitignore
+ArtisticLicense20.html
+MANIFEST.in
+README.md
+licenses-amendments.txt
+setup.cfg
+setup.py
+pythonids/__init__.py
+pythonids/pythondist.py
+pythonids.egg-info/PKG-INFO
+pythonids.egg-info/SOURCES.txt
+pythonids.egg-info/dependency_links.txt
+pythonids.egg-info/not-zip-safe
+pythonids.egg-info/requires.txt
+pythonids.egg-info/top_level.txt
