@@ -1,0 +1,8 @@
+Flask
+python-jose
+requests
+
+[tests]
+pytest
+pytest-mock
+pytest-flask
