@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: QualitativeModelFitting
+Version: 0.0.2
+Summary: UNKNOWN
+Home-page: https://github.com/CiaranWelsh/QualitativeModelFitting
+Author: Ciaran Welsh
+Author-email: ciaran.welsh@newcastle.ac.uk
+License: MIT
+Keywords: SBML,antimony,tellurium,qualitative modelling
+Platform: UNKNOWN
+Requires-Dist: tellurium
+Requires-Dist: pycotools3
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+# QualitativeModelFitting
+
+
