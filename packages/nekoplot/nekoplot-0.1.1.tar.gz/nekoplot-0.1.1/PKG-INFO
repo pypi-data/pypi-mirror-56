@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: nekoplot
+Version: 0.1.1
+Summary: Small, WIP graphing package.
+Home-page: http://neko-bot.net/nekoplot
+Author: LazyNeko
+Author-email: lazynekoo@gmail.com
+License: UNKNOWN
+Description: 
+                Small, WIP plotting lib.
+                Similar to Matplotlib, but slightly more options, but only a image. That's okay though aha
+            
+Platform: UNKNOWN
+Requires-Python: >=3.6

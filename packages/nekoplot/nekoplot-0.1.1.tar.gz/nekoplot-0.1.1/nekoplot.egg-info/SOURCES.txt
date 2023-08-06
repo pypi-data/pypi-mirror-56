@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+nekoplot/__init__.py
+nekoplot.egg-info/PKG-INFO
+nekoplot.egg-info/SOURCES.txt
+nekoplot.egg-info/dependency_links.txt
+nekoplot.egg-info/requires.txt
+nekoplot.egg-info/top_level.txt
