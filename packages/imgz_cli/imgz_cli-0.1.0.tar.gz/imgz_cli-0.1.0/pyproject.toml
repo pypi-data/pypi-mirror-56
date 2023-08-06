@@ -1,0 +1,23 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "imgz_cli"
+author = "Stavros Korokithakis"
+author-email = "hi@stavros.io"
+home-page = "https://gitlab.com/stavros/imgz-cli"
+description-file = "README.md"
+keywords = "imgz, image, imgur"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+requires-python=">=3.5"
+requires = [
+    "requests",
+    "pyperclip",
+]
+
+[tool.flit.scripts]
+imgz = "imgz_cli.cli:main"
