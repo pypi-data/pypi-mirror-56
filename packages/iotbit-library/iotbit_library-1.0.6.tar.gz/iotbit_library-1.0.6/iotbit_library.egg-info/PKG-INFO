@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: iotbit-library
+Version: 1.0.6
+Summary: Library to work with the IoTBit Industrial version on the Raspberry Pi
+Home-page: UNKNOWN
+Author: Sam
+Author-email: sam@altitude.pw
+License: UNKNOWN
+Description: Name: IOTBit Library for IoTBit V1.7 i.e industrial variant 
+         Purpose: Library to interface with the IOTBit HAT on the Raspberry Pi, 
+         tested on the latest version of Raspbian using a Raspberry Pi 3b.
+         classes: IotModem 
+         requirements: pyserial module, RPI.GPIO
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Development Status :: 5 - Production/Stable 
