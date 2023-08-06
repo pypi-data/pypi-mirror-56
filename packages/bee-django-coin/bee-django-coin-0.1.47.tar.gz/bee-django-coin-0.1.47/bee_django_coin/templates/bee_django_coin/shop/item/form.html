@@ -1,0 +1,20 @@
+{% extends "bee_django_coin/base.html" %}
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% bootstrap_form form %}
+
+{#        <div id="editor"></div>#}
+{#        <div id="edit_info" style="display:none;">{{ item.info|default:''|safe }}</div>#}
+        {% bootstrap_button '提交' %}
+    </form>
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+    </script>
+{% endblock %}
