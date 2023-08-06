@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+poetries/__init__.py
+poetries/base.py
+poetries/error.py
+poetries/node.py
+poetries/trie.py
+poetries.egg-info/PKG-INFO
+poetries.egg-info/SOURCES.txt
+poetries.egg-info/dependency_links.txt
+poetries.egg-info/requires.txt
+poetries.egg-info/top_level.txt
