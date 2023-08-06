@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: kashmir
+Version: 2019.1.0
+Summary: Snow's DevOps CLI Toolkit
+License: Apache-2.0
+Author: Johnny
+Author-email: johnny.w.santos@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: python-gitlab (>=1.13,<2.0)
