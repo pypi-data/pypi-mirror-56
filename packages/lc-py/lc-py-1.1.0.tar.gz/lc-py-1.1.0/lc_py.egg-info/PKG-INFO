@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: lc-py
+Version: 1.1.0
+Summary: Lowercase values for Python!
+Home-page: https://github.com/RDIL/lcpy
+Author: Reece Dunham
+Author-email: me@rdil.rocks
+License: MIT
+Project-URL: Bug Tracker, https://github.com/RDIL/lcpy/issues
+Project-URL: Source Code, https://github.com/RDIL/lcpy/
+Project-URL: License, https://github.com/RDIL/lcpy/blob/master/LICENSE
+Description: # lcpy
+        
+        Lowercase stuff in Python
+        
+        ## How to Use
+        
+        See the [docs](https://lcpy.readthedocs.io)!
+        
+Keywords: utilities,enhancements,lowercase,booleans,keywords,values
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8
+Classifier: Operating System :: Microsoft :: Windows :: Windows 8.1
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Other OS
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: Topic :: System
+Classifier: Topic :: Terminals
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: IDLE
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
