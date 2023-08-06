@@ -1,0 +1,55 @@
+{% extends 'ticker/ticker.html' %}
+
+{% block title %}{{token}} - {{frequency}}{% endblock %}
+
+{% block body %}
+
+{% with url='ticker.token_frequency', params=dict(token=token) %}
+{% include 'snippets/menu.html' %}
+{% endwith %}
+
+<br/>
+<div class="row">
+    <div class="twelve columns">
+    <table class="u-full-width">
+        <caption><h4>{{token}} - {{frequency}}</h4></caption>
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Pair</th>
+                <th>Exchange</th>
+{% for att in attributes %}
+                <th>{{att | replace(" On",  " On UTC") }}</th>
+{% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+{% for i in symbols_per_exchange %}
+    {% for exchange, d in i.items() %}
+    {% if d['pairs']%}
+        {% for c, r in d['pairs'] %}
+        <tr>
+            <td style="width: 32px; vertical-align: middle;"><img src="/static/imgs/logos/{{c}}.png" alt="{{c}}"/></td>
+            <td style="width: 100px;"><a href="{{url_for('ticker.pair_frequency', frequency=frequency, pair=c+r)}}">{{c}}-{{r}}</a></td>
+            <td style="width: 100px;"><a href="{{url_for('ticker.ticker', frequency=frequency)}}#{{exchange.upper()}}">{{exchange.replace('_', ' ').upper()}}</a>
+            </td>
+        {% for att in attributes %}
+            {% set _id = "{}_{}{}_{}_{}".format(exchange.lower(), c.lower(), r.lower(), att.replace(' ', '_').lower(), frequency) %}
+            {% if 'price_change_chart' != att.replace(' ', '_').lower() %}
+                <td style="text-align: right;">
+                    <span id="{{_id}}" style="padding: 5px;">-</span>
+                </td>
+            {% else %}
+                <td id="{{_id}}" style="width: 140px;"/>
+            {% endif %}
+        {% endfor %}
+        </tr>
+        {% endfor %}
+    {% endif %}
+    {% endfor %}
+{% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
