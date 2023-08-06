@@ -1,0 +1,45 @@
+# Base Configuration for Artella Files for Solstice
+
+# Defines dictionary of file types (textures, model, etc) used by the project
+files:
+  textures:
+    class: solstice.files.texture.SolsticeTextureAssetFile
+    extensions:
+      - tx
+      - png
+      - jpg
+      - jpeg
+  model:
+    class: solstice.files.model.SolsticeModelAssetFile
+    extensions:
+      - ma
+  shading:
+    class: solstice.files.shading.SolsticeShadingAssetFile
+    extensions:
+      - ma
+  rig:
+    class: solstice.files.rig.SolsticeRigAssetFile
+    extensions:
+      - ma
+  groom:
+    class: solstice.files.groom.SolsticeGroomAssetFile
+    extensions:
+      - ma
+  alembic:
+    class: solstice.files.alembic.SolsticeAlembicAssetFile
+    extensions:
+      - abc
+  gpualembic:
+    class: solstice.files.alembic.SolsticeGpuAlembicAssetFile
+    extensions:
+      - abc
+  standin:
+    class: solstice.files.standin.SolsticeStandinAssetFile
+    extensions:
+      - ass
+  lightrig:
+    class: solstice.files.lightrig.SolsticeLightRigFile
+    rule: lightrig
+    template: lightrig
+    extensions:
+      - ma

@@ -1,0 +1,19 @@
+# Base Configuration file for artellapipe-tools-modelchecker for Solstice
+
+# Defines icon of the tool
+#icon: artella
+
+pyblish_plugins:
+  - CollectGeometry
+  - ValidateHardEdges
+  - ValidateLamina
+  - ValidateNGons
+  - ValidateNonManifoldEdges
+  - ValidateOpenEdges
+  - ValidatePenetratingUVs
+#  - ValidatePoles
+  - ValidateStarLike
+  - ValidateTriangles
+  - ValidateNormals
+  - ValidateZeroAreaFaces
+  - ValidateZeroLengthEdges
