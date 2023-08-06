@@ -1,0 +1,3 @@
+include AUTHORS LICENSE requirements.txt
+recursive-include syra *
+recursive-exclude * *.py[co]

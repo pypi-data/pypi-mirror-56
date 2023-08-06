@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: python-syra
+Version: 0.5.1
+Summary: Client for the Syra API.
+Home-page: http://www.touchtechnology.com.au/
+Author: Gary Reynolds
+Author-email: gary@touch.asn.au
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: Public Domain
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Internet :: Name Service (DNS)
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

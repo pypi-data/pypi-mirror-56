@@ -1,0 +1,40 @@
+language: python
+dist: xenial
+cache: pip
+python:
+- '2.7'
+- '3.6'
+- '3.7'
+- '3.8'
+matrix:
+  fast_finish: true
+install:
+- pip install tox-travis
+script:
+- tox
+env:
+  global:
+  - secure: |-
+      cTEIRPmfchu3EGqjXlIqBDxzo03NLU38WdWH6+D9ulFyWd4kys96jx7SJ9O3
+      G9jaU2rkHAfzMSQbswBLcHh3LiduHx9FV8SIFa5X2kcUdoAh46WEzQH5qDLl
+      dLtUqNmfC2uPloJkQaHkl2Sdi4EBO3VYch+ZlVH4UM4mi6P9hfw=
+  - secure: |-
+      edP4jb1H/w17C90SRwJWNv7wQwcwXJZcHMKqVSK9aWbuknb509YwAGdZtdsT
+      aSlw1SgMW34HC0D3hOcTNn9AgICRKYlPy/utZl71B+PSe5uRDKyCO6Jg13ro
+      t8VQNl/eUtQyuQ6b2CASzu5YhmLoWCOb70qevvyGGhIZ0Rbw9jw=
+  - NOSE_WITH_COVERAGE=1
+  - NOSE_COVER_PACKAGE=syra
+  - NOSE_COVER_BRANCHES=1
+  - NOSE_NOLOGCAPTURE=1
+deploy:
+  provider: pypi
+  user: goodtune
+  distributions: sdist bdist_wheel
+  skip_existing: true
+  password:
+    secure:
+      secure: Bn9aVjjeBqKYrjrKLAoHPV3PK+KhMiw6rA/KjSCBNMwbXcStiG/h+mK3tYu00y0v2fnhS8cgtHNdiVkJkdMY0R51r7wkSnvsav2NdGdpNc6hGKa4BKgRwSc1kRc5AYPy4Ka36gzrE89MarlgL11k51Nswlh1RXtaWDuh2cBbzkU=
+  on:
+    tags: true
+    repo: goodtune/python-syra
+    python: 3.7
