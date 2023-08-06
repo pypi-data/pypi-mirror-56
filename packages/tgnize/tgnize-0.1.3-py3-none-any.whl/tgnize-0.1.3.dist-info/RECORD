@@ -1,0 +1,16 @@
+tgnize/__init__.py,sha256=46gMygsNVF6B8U6S9S5UalZEywYMT6MjRR76jrruTAk,85
+tgnize/app.py,sha256=kszVNEXd94fl-eL10DPiiRg4jbSm14WEbww8il1bnzE,5219
+tgnize/util.py,sha256=EL0ASgK3gIjyTQb738tcFFR8dMF0fQ_CHUj0hUv-CAk,4681
+tgnize/model/activity.py,sha256=cRyY8mBQ5eA1Cdn6OOR7VXcunbxuEIrSlMhe0w4RsAU,245
+tgnize/model/chat.py,sha256=ir3HW5Gq922FIAyEPDHbaGWzL_yRPNaAnXMKKIHHwKM,12031
+tgnize/model/event.py,sha256=cRKUa8gn4TWaUg42JfXu69wAQpIvXND5o6EILVKS6Jc,333
+tgnize/model/message.py,sha256=rRQyWVjWfGrRMucbExIMOLt-j1_1-2631QG_cSYM7vo,1387
+tgnize/model/plotDataRange.py,sha256=0P2wHwfkByxLRkG3eK9i1kEtGe1s4YPOPCTH5k9h5Kc,515
+tgnize/model/user.py,sha256=UnJvbvO08XN3mBmFniHHNdTr5lfxPztyq25VAm7qy_E,2015
+tgnize/plotting_scripts/activeParticipantsOverTime.py,sha256=Onlv05irFe78T-50nYdBf6TkNVYCZOSk0ilibgy8KpI,2200
+tgnize/plotting_scripts/minuteBasedAccumulatedTraffic.py,sha256=sAJrJRPZMWQjo6ePizi107Z-PgXqdncNpRnlTiM4-Jw,10774
+tgnize-0.1.3.dist-info/entry_points.txt,sha256=LCGjgdBbAs2b6GZ0kPyI4-etDX9X11jLgehhKjtyfgY,42
+tgnize-0.1.3.dist-info/LICENSE,sha256=wsMmHiUiAuj3PTQWaoYNGf2WZbKYTVg3kQCkQKq6WUo,1066
+tgnize-0.1.3.dist-info/WHEEL,sha256=SLCfUNBbL7PC57twVLj91R0hVFn-3rJvGID7fVEf8QA,81
+tgnize-0.1.3.dist-info/METADATA,sha256=nD9KRLM9KNIsWpYvVZUhKXJOtL9ax59HPKE5d4xnZs8,6925
+tgnize-0.1.3.dist-info/RECORD,,
