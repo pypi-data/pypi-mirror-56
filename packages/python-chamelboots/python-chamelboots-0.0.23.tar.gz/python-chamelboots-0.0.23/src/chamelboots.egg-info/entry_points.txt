@@ -1,0 +1,3 @@
+[console_scripts]
+chamelboots = chamelboots.cli:main
+
