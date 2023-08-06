@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: collective.saml2
+Version: 1.5
+Summary: SAML2
+Home-page: https://github.com/hai-bui-kkday/collective.saml2
+Author: Hai Bui
+Author-email: hai.bui@kkday.com
+License: gpl
+Keywords: Plone Python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Requires-Dist: setuptools
+Requires-Dist: dm.saml2 (>2.0.4)
+Requires-Dist: dm.zope.saml2 (>2.0b7)
+Requires-Dist: PyXB (==1.2.3)
+Requires-Dist: dm.xmlsec.binding (>1.1)
+Requires-Dist: zope.app.component
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+
+UNKNOWN
+
+
