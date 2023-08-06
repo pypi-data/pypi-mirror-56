@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+pickler2/__init__.py
+pickler2/pickler.py
+pickler2.egg-info/PKG-INFO
+pickler2.egg-info/SOURCES.txt
+pickler2.egg-info/dependency_links.txt
+pickler2.egg-info/requires.txt
+pickler2.egg-info/top_level.txt

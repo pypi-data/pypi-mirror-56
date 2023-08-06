@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: pickler2
+Version: 1.0.0
+Summary: Small package allowing to decorate a function so that it automatically pickle its results and load it the next time it is called.
+Home-page: https://github.com/christian-oreilly/pickler2.git
+Author: Christian O'Reilly
+Author-email: christian.oreilly@gmail.com
+License: bsd-3-clause
+Download-URL: https://github.com/christian-oreilly/pickler2/archive/v1.0.0.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
