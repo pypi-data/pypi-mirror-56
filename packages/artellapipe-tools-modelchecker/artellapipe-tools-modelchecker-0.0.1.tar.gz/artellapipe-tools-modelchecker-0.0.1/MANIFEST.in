@@ -1,0 +1,2 @@
+include artellapipe/tools/modelchecker/__logging__.ini
+include artellapipe/tools/modelchecker/resources/images/*.*
