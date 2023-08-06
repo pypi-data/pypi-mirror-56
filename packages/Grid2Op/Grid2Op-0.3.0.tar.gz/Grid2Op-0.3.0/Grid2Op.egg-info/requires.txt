@@ -1,0 +1,12 @@
+numpy
+pandas
+pandapower
+
+[docs]
+numpydoc
+sphinx
+sphinx_rtd_theme
+sphinxcontrib_trio
+
+[with_pygame]
+pygame
