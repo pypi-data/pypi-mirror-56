@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pukhlya
+Version: 0.3.0
+Summary: Pukhlya is AIOHTTP simple and ready-to-go admin for SQLAlchemy models
+Home-page: UNKNOWN
+Author: Mikhail Kashkin
+Author-email: m@xen.ru
+License: UNKNOWN
+Description: 
+        # pukhlya
+        AIOHTTP easy admin for models
+        
+Keywords: admin,aiohttp,sqlalchemy,wtforms
+Platform: POSIX
+Classifier: Framework :: AsyncIO
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: Session
+Description-Content-Type: text/markdown
