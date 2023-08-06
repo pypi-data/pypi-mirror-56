@@ -1,0 +1,11 @@
+src/__init__.py,sha256=muuZVRhLCOf4PsNQbN92i-ZmXANfnHbzNKOp28DuOyI,127
+src/app.py,sha256=xjv3WeVQL8n0rYY7iDQjotdZkq6uvuanE-uB_j9xSks,22
+src/name_linter.py,sha256=wC6zYQvjbRwCNjFYWTGPVQNbotrcMpoIMXvdUJLpUfU,1179
+src/parser.py,sha256=YHbSEJaUGQRBIYEuh133VH-R8sJBSU2BzKtD_2BS8b4,2302
+tests/__init__.py,sha256=ltZgjqz5_VvoE34heMDQDjTp5VLHfaPUK43G8K1l5yg,1759
+tests/test_name_lint.py,sha256=psKd8KmRRyj0M1pqqOtAgbE4VRHpfveC1AVEqTTl0Qw,1071
+tests/test_parser.py,sha256=0jYJrIWV0UsLPmdYBTrMqAYXeURVyxamytgyKyS925c,1224
+Git_Processor-0.1.dist-info/METADATA,sha256=UXRAHgiog61Fip9SoDeWdsjh_8NJYru9jiFh_dgbgrY,761
+Git_Processor-0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+Git_Processor-0.1.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+Git_Processor-0.1.dist-info/RECORD,,
