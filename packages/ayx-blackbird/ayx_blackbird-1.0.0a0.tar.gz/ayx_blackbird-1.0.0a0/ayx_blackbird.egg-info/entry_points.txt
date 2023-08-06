@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        ayx_blackbird=ayx_blackbird.__main__:main
+    
