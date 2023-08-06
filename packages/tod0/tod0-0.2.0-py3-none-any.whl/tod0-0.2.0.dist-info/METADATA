@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tod0
+Version: 0.2.0
+Summary: A CLI for Microsoft To-Do.
+Home-page: https://github.com/kiblee/tod0
+Author: kiblee
+Author-email: kiblee@pm.me
+License: LICENSE
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: Click
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: requests-oauthlib
+
+UNKNOWN
+
+
