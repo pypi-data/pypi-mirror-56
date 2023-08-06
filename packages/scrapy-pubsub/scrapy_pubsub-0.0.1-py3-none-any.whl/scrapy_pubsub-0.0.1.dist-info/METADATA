@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: scrapy-pubsub
+Version: 0.0.1
+Summary: Scrapy extension for Cloud Pub/Sub.
+Home-page: https://github.com/ynouri/scrapy-pubsub/
+Author: Yacine Nouri
+Author-email: yacine@nouri.io
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: scrapy
+Requires-Dist: google-cloud-pubsub
+Provides-Extra: dev
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-clarity ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-clarity ; extra == 'test'
+Requires-Dist: black ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+
+UNKNOWN
+
+
