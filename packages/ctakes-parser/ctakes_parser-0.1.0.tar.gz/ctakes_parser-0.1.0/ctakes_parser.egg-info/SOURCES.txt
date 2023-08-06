@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+ctakes_parser/__init__.py
+ctakes_parser/ctakes_parser.py
+ctakes_parser/helpers.py
+ctakes_parser.egg-info/PKG-INFO
+ctakes_parser.egg-info/SOURCES.txt
+ctakes_parser.egg-info/dependency_links.txt
+ctakes_parser.egg-info/requires.txt
+ctakes_parser.egg-info/top_level.txt
