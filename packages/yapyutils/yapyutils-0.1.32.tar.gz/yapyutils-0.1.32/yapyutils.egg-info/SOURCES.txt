@@ -1,0 +1,12 @@
+.gitignore
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+yapyutils/__init__.py
+yapyutils.egg-info/PKG-INFO
+yapyutils.egg-info/SOURCES.txt
+yapyutils.egg-info/dependency_links.txt
+yapyutils.egg-info/not-zip-safe
+yapyutils.egg-info/requires.txt
+yapyutils.egg-info/top_level.txt
