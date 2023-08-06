@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: senti-news
+Version: 0.0.14
+Summary: News title sentiment analysis
+Home-page: https://github.com/nbroad1881/senti-news
+Author: Nicholas Broad
+Author-email: nicholas@nmbroad.com
+License: UNKNOWN
+Description: # Senti-news
+        
+        A few different tools for sentiment analysis of news titles.
+        
+        ## Models
+        ### Vader
+        Valence ...
+        ### TextBlob
+        ### LSTM trained on IMDB
+        ### More to come
+        
+        ## Scraping
+        ### NYT/CNN/FOX scraper
+        Uses each of their API's to get news titles
+        ### News-API 
+        Wide-spanning search, though only within last 30 days.
+        
+        ## Database
+        For storing files
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
