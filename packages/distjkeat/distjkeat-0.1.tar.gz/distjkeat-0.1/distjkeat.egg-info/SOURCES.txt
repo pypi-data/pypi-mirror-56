@@ -1,0 +1,11 @@
+setup.cfg
+setup.py
+distjkeat/Binomialdistribution.py
+distjkeat/Gaussiandistribution.py
+distjkeat/Generaldistribution.py
+distjkeat/__init__.py
+distjkeat.egg-info/PKG-INFO
+distjkeat.egg-info/SOURCES.txt
+distjkeat.egg-info/dependency_links.txt
+distjkeat.egg-info/not-zip-safe
+distjkeat.egg-info/top_level.txt
