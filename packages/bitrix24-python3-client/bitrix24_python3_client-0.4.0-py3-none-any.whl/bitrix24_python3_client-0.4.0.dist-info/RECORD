@@ -1,0 +1,13 @@
+bitrix24/__init__.py,sha256=s3glfYVSR73pboqVaISc95OH7FoT-ovIeMQCp9e8ddk,57
+bitrix24/bitrix24.py,sha256=YRzb8GvQK9ISh9Sxgj6XzQwpbOh5J_KoNDG4XLS9s8Y,9838
+bitrix24/exceptions.py,sha256=couR72cqMTPvAhRUHpO8FD7Tf6xXhloUsAeOwkTVqcw,757
+bitrix24/utils.py,sha256=OfInVwZSVsdKNHavW6eNwikqaAMIv-reY0NTo7uxLFA,3111
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_calls.py,sha256=GLm_ac1i-MWuufU4q64V2z9d5zFxBjU8PExknO66PgQ,2120
+tests/test_headless.py,sha256=eaa-wMup4LP2-5DPdgJVZEMu2WJncVSZb8I75cpw0hQ,3313
+tests/test_tokens.py,sha256=Rc1k8wYx_msr3QuTuNI3p4eQQxBbfBFrgkk8Z8c4y4k,1530
+bitrix24_python3_client-0.4.0.dist-info/LICENSE.txt,sha256=cd3swYWURcSUE8jzRqNRkIxFiqqCYbB1oxKAmXaX6OY,1092
+bitrix24_python3_client-0.4.0.dist-info/METADATA,sha256=FGaY6JVHUZVNLZIAlCcR7GW7SwFOo1hSM87H6jdRCZk,5259
+bitrix24_python3_client-0.4.0.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+bitrix24_python3_client-0.4.0.dist-info/top_level.txt,sha256=3QIUG_EFlvn40fDadWIQPuXAYz9rg3-td766XDKWnJQ,15
+bitrix24_python3_client-0.4.0.dist-info/RECORD,,
