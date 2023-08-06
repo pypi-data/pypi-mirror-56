@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: riemann-ledger
+Version: 0.1.0
+Summary: Sign Segwit Bitcoin transactions on your Ledger Nano S
+Home-page: https://github.com/summa-tx/riemann-ledger
+Author: ['James Prestwich']
+Author-email: james@summa.one
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Requires-Python: >=3.6
