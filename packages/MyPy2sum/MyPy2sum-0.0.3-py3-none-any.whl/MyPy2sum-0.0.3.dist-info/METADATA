@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: MyPy2sum
+Version: 0.0.3
+Summary: For addition of two numbers
+Home-page: UNKNOWN
+Author: harish r
+Author-email: harish.r@imailt.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Addition of two files 
+=======================
+
+**Description:**
+
+The main motive is to upload our own package on pypi. so for doing testing, I have uploaded it on this platform.
+
+**installation:**
+
+Just run command on terminal -  pip install MyPy2sum.
+
+
+
+
