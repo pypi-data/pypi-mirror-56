@@ -1,0 +1,12 @@
+.gitignore
+LICENSE
+README.md
+setup.cfg
+setup.py
+bot_irc.egg-info/PKG-INFO
+bot_irc.egg-info/SOURCES.txt
+bot_irc.egg-info/dependency_links.txt
+bot_irc.egg-info/entry_points.txt
+bot_irc.egg-info/not-zip-safe
+bot_irc.egg-info/requires.txt
+bot_irc.egg-info/top_level.txt
