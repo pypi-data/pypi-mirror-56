@@ -1,0 +1,3 @@
+[console_scripts]
+resseg = resseg.cli:main
+
