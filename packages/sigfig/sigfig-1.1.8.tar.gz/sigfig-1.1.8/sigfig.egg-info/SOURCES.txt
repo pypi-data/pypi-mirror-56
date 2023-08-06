@@ -1,0 +1,10 @@
+README.rst
+setup.py
+sigfig/__init__.py
+sigfig/sigfig.py
+sigfig.egg-info/PKG-INFO
+sigfig.egg-info/SOURCES.txt
+sigfig.egg-info/dependency_links.txt
+sigfig.egg-info/requires.txt
+sigfig.egg-info/top_level.txt
+test/test.py
