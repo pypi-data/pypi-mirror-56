@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: spider-utils
+Version: 0.0.2
+Summary: 常用模块的集合，为了多平台，多电脑调用方便!
+Home-page: https://github.com/ldsxp/spider-utils
+Author: lds
+Author-email: 85176878@qq.com
+License: GNU GPL 3
+Download-URL: https://pypi.org/project/spider-utils
+Requires-Dist: requests
+Provides-Extra: dev
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: pypandoc ; extra == 'dev'
+
+spider-utils
+
+
