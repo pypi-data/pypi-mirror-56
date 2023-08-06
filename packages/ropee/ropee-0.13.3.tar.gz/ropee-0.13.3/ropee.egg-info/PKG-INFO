@@ -1,0 +1,53 @@
+Metadata-Version: 1.1
+Name: ropee
+Version: 0.13.3
+Summary: a python refactoring library...
+Home-page: https://github.com/hpapaxen/rope/tree/ropee
+Author: Harry Papaxenopoulos
+Author-email: hpapaxen@gmail.com
+License: GNU GPL
+Description: 
+        
+        .. _ropee : https://github.com/hpapaxen/rope/tree/ropee
+        .. _rope : https://github.com/python-rope/rope
+        .. _pypi : https://pypi.org/project/ropee/
+        
+        ================================================
+         ropee, a python refactoring library ...
+        ================================================
+        
+        
+        Overview
+        ========
+        
+        `ropee`_ is a customized branch I maintain that is based off the python
+        refactoring library, `rope`_. All related documentation can be found in its
+        repository.
+        
+        The difference will usually be the more immediate availability of features I'm
+        personally interested in. PRs will most likely also be made upstream.
+        
+        Artifacts are also uploaded to `pypi`_ for those who want bleeding edge.
+        
+        Note that I'm piggy backing off of the latest version that is provided by rope,
+        but they do not correspond to each other in any way.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: X11 Applications
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Software Development
