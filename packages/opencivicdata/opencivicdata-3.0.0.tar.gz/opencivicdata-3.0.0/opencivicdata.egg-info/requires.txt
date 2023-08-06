@@ -1,0 +1,9 @@
+Django>=2.2
+psycopg2-binary
+
+[dev]
+pytest>=3.6
+pytest-cov
+pytest-django
+coveralls
+flake8
