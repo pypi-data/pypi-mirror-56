@@ -1,0 +1,12 @@
+setup.cfg
+setup.py
+TracWikiAutoComplete.egg-info/PKG-INFO
+TracWikiAutoComplete.egg-info/SOURCES.txt
+TracWikiAutoComplete.egg-info/dependency_links.txt
+TracWikiAutoComplete.egg-info/entry_points.txt
+TracWikiAutoComplete.egg-info/top_level.txt
+wikiautocomplete/__init__.py
+wikiautocomplete/web_ui.py
+wikiautocomplete/htdocs/css/jquery.textcomplete.css
+wikiautocomplete/htdocs/js/jquery.textcomplete.min.js
+wikiautocomplete/htdocs/js/wikiautocomplete.js
