@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+swissREFRAME.egg-info/PKG-INFO
+swissREFRAME.egg-info/SOURCES.txt
+swissREFRAME.egg-info/dependency_links.txt
+swissREFRAME.egg-info/requires.txt
+swissREFRAME.egg-info/top_level.txt
+swissreframe/__init__.py
+swissreframe/__meta__.py
+swissreframe/_main.py
+swissreframe/example.py
+swissreframe/jar/reframeLib.jar
