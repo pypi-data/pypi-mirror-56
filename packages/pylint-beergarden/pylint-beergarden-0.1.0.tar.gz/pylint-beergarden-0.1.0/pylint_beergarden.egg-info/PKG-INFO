@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pylint-beergarden
+Version: 0.1.0
+Summary: A pylint plugin for the Beergarden framework.
+Home-page: https://github.com/gershwinlabs/pylint-beergarden
+Author: Bill Allen
+Author-email: photo.allen@gmail.com
+License: MIT
+Description: # pylint-beergarden
+        
+        A pylint plugin for the Beergarden framework.  Use it to help check Beergarden plugins.
+        
+        ## Install
+        
+        ```bash
+        pip install pylint-beergarden
+        ```
+        
+        ## Run
+        
+        ```bash
+        pylint --load-plugins pylint_beergarden client.py
+        ```
+        
+Keywords: pylint,beergarden
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
