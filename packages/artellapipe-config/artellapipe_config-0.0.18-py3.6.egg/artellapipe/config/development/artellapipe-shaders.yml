@@ -1,0 +1,7 @@
+# Base Configuration for Artella Shaders
+
+# Defines list of paths where shaders can be found
+paths: []
+
+# Defines the extension used to store shaders in disk
+extension: ".ashader"
