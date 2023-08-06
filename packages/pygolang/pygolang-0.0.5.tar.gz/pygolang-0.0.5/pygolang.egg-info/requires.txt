@@ -1,0 +1,26 @@
+gevent
+six
+decorator
+
+[:python_version <= "2.7"]
+Importing
+
+[all]
+cython
+numpy
+pytest
+setuptools
+setuptools_dso>=1.2
+wheel
+
+[cmd.pybench]
+pytest
+
+[pyx.build]
+cython
+setuptools
+setuptools_dso>=1.2
+wheel
+
+[x.perf.benchlib]
+numpy
