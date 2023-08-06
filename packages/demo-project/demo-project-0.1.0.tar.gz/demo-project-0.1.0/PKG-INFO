@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: demo-project
+Version: 0.1.0
+Summary: 
+Author: Daniel Eitan
+Author-email: daniel.eitan@whitesourcesoftware.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pendulum (>=2.0,<3.0)
