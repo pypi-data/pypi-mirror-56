@@ -1,0 +1,95 @@
+/* TODO: figure this out */
+
+.alt-stream-field fieldset {
+    max-width: 100%;
+}
+
+.stream-field {
+    padding: 0 .25em;
+}
+
+.stream-field .field.required label:after,
+.stream-field .input .field.required label:after {
+    content: "*";
+    color: #cd3238;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: .5em;
+    line-height: 1em;
+    font-size: 13px;
+}
+
+.stream-field .input .field label:after {
+    content: "";
+    color: transparent;
+    font-weight: auto;
+    display: inline-block;
+    margin-left: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+
+.stream-field .block-container {
+
+}
+
+.stream-field .block-container-block {
+    border: 1px solid #c9f1f1;
+}
+
+.stream-field .block-container .block-controls {
+    background-color: #f2fcfc;
+    display: flex;
+}
+
+.stream-field .block-container .block-controls h3 {
+    flex-grow: 1;
+    display: inline-block;
+    margin: 0.5em 0;
+    padding: 0 0.75em;
+}
+
+.stream-field .block-container .block-content {
+    padding: 0.5em;
+}
+
+.stream-field .field-content .input {
+    margin: 0.5em;
+    border: 1px solid #ddd;
+}
+
+.stream-field .field-content .input input {
+    padding: 1em;
+}
+
+.stream-field .field-content .checkbox {
+    margin: 0.5em;
+    clear: both;
+}
+
+.stream-field .field-content .checkbox input {
+    margin: 1em;
+    padding: 0.5em;
+    background: none;
+}
+
+.stream-field .stream_block_field .input {
+    padding: 0 .5em;
+}
+
+.stream-field .stream_block_field .input .input {
+    padding: 0;
+}
+
+.stream-field .stream-menu ul {
+    background-color: #EEE;
+}
+.stream-field .stream-menu ul li {
+    display: inline-block;
+}
+
+.stream-field .chooser .chosen,
+.stream-field .chooser .unchosen {
+    margin: 0.75em;
+}

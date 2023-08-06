@@ -1,0 +1,8 @@
+{% include "django/forms/widgets/hidden.html" %}
+
+<div id="{{ widget.attrs.id }}_streamfield" class="stream-field"></div>
+
+<script>
+{{ widget.block.render_edit_js|safe }}
+asf.attach_streamblock({{ widget.block.js_type }}, '{{ widget.attrs.id }}', '{{ widget.attrs.id }}_streamfield');
+</script>
