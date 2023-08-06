@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        {{ include_file('css/semantic.min.css', asset_dir) }}
+        {{ include_file('css/dataTables.semanticui.min.css', asset_dir) }}
+    </style>
+    <style type="text/css">
+        td.details-control {
+            background: url(data:image/png;base64,{{ include_file('images/details_open.png', asset_dir, b64=True) }}) no-repeat center center;
+            cursor: pointer;
+            width: 50px;
+        }   
+        tr.shown td.details-control {
+            background: url(data:image/png;base64,{{ include_file('images/details_close.png', asset_dir, b64=True) }}) no-repeat center center;
+        }
+
+        .result_pass {
+            background-color: #27AE60 ;
+            color: #ffffff;
+            font-weight: 700;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .result_warning {
+            background-color: #E67E22;
+            color: #ffffff;
+            font-weight: 700;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .result_failure {
+            background-color: #E74C3C ;
+            color: #ffffff;
+            font-weight: 700;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        tr.odd {
+            background-color: #FBFCFC;
+        }
+        .ui.table thead th {
+            background-color: #D0D3D4;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    </style>
+
+    <style type="text/css">
+        @font-face{
+            font-family:Icons;
+            src:url(data:font/eot;base64,{{ include_file('fonts/icons.eot', asset_dir, b64=True) }});
+            src:url(data:font/eot;base64,{{ include_file('fonts/icons.eot', asset_dir, b64=True) }}) format('embedded-opentype'),
+                url(data:x-font-woff/woff2;base64,{{ include_file('fonts/icons.woff2', asset_dir, b64=True) }}) format('woff2'),
+                url(data:x-font-woff/woff;base64,{{ include_file('fonts/icons.woff', asset_dir, b64=True) }}) format('woff'),
+                url(data:font/ttf;base64,{{ include_file('fonts/icons.ttf', asset_dir, b64=True) }}) format('truetype'),
+                url(data:font/svg;base64,{{ include_file('fonts/icons.svg', asset_dir, b64=True) }}) format('svg');
+            font-style:normal;
+            font-weight:400;
+            font-variant:normal;
+            text-decoration:inherit;
+            text-transform:none;
+        }
+    </style>
+
+
+    <script type="text/javascript">{{ include_file('js/jquery-3.3.1.min.js', asset_dir) }}</script>
+    <script type="text/javascript">{{ include_file('js/jquery.dataTables.min.js', asset_dir) }}</script>
+    <script type="text/javascript">{{ include_file('js/dataTables.semanticui.min.js', asset_dir) }}</script>
+    <script type="text/javascript">{{ include_file('js/semantic.transition.min.js', asset_dir) }}</script>
+    <script type="text/javascript">{{ include_file('js/semantic.dropdown.min.js', asset_dir) }}</script>
+    <script>
+        var data = {{ json_data }};
+        /* function to check if all entries in object are empty */
+        function check_all_pass(checks) {
+            for (var quality_file in checks) {
+                for (metric_name in checks[quality_file])
+                if (checks[quality_file][metric_name].check_result != 'PASS')
+                    return false;
+            }
+            return true;
+        }
+
+        /* function to add extra table to datatable */
+        function add_extra_row_data ( row_data ) {
+            // `row_data` is the original data object for the row
+            var table_string = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'
+            
+            if (! check_all_pass(row_data.checks)){
+                // get contents for rows
+                let checks_rows = []
+                let extra_info_rows = []
+
+                for (quality_file in row_data.checks){
+                    let added_extra_row_data = false;
+                    for (metric_name in row_data.checks[quality_file]) {
+                        if (row_data.checks[quality_file][metric_name].check_result != 'PASS') {
+                            checks_rows.push(
+                                '<tr>'+
+                                    '<td>' + quality_file + '</td>' +
+                                    '<td>' + metric_name + '</td>' +
+                                    '<td>' + row_data.checks[quality_file][metric_name].metric_value + '</td>' +
+                                    '<td>' + row_data.checks[quality_file][metric_name].check + '</td>' +
+                                    '<td>' + row_data.checks[quality_file][metric_name].check_result + '</td>' +
+                                '</tr>'
+                            );
+                            if (row_data.extra_info[quality_file] && ! added_extra_row_data){
+                                extra_info_rows.push(
+                                    '<tr>'+
+                                        '<td>' + quality_file + '</td>' +
+                                        '<td colspan=4>' + row_data.extra_info[quality_file] + '</td>' +
+                                    '</tr>'
+                                );
+                                added_extra_row_data = true;
+                            }
+                        }
+                    }
+                }
+                table_string = table_string + 
+                    '<tr>'+
+                        '<th>File Type</th>' +
+                        '<th>Metric</th>' +
+                        '<th>Value</th>' +
+                        '<th>Check</th>' +
+                        '<th>Check Result</th>' +
+                    '</tr>';
+
+                for (let i = 0; i < checks_rows.length; i++){
+                    table_string = table_string + checks_rows[i];
+                }
+                if (extra_info_rows.length > 0){
+                    table_string = table_string + 
+                        '<tr>'+
+                            '<th>File Type</th>' +
+                            '<th colspan=4>Extra Information</th>' +
+                        '</tr>';
+
+                    for (let i = 0; i < extra_info_rows.length; i++){
+                        table_string = table_string + extra_info_rows[i];
+                    }
+                }
+                
+            }
+            table_string = table_string + '</table>';
+            return(table_string)
+        }
+        $(document).ready( function () {
+            var table = $('#sample_table').DataTable({
+                data: data,
+                columns: [
+                    {
+                        "className":      'details-control',
+                        "orderable":      false,
+                        "data":           null,
+                        "defaultContent": ''
+                    },
+                    {{ column_data }}
+                ],
+                order: [[ {{ sort_column }}, 'asc']],
+                rowCallback: function(row, data, index){
+                    if (data.result == 'PASS'){
+                        $(row).find('td:eq(-1)').addClass('result_pass');
+                    } else if (data.result == 'WARNING'){
+                        $(row).find('td:eq(-1)').addClass('result_warning');
+                    } else if (data.result == 'FAILURE'){
+                        $(row).find('td:eq(-1)').addClass('result_failure');
+                    }
+                }
+            });
+            // Add event listener for opening and closing details
+            $('#sample_table tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = table.row( tr );
+        
+                if ( row.child.isShown() ) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    // Open this row
+                    row.child( add_extra_row_data(row.data()) ).show();
+                    tr.addClass('shown');
+                }
+            } );
+        } );
+    </script>
+</head>
+<body>
+<div class="ui container">
+    <h1>{{ title }}</h1>
+    <h3>Report for {{ sample_numbers }} samples (generated at {{ report_time }})</h3>
+    <h4>{{ subtitle }}</h4>
+    <table>
+        <tr>
+            <td>Samples with pass status<td class="result_pass"> {{ num_of_pass_samples }}</td>
+        </tr
+        <tr>
+            <td>Samples with warning status<td class="result_warning"> {{ num_of_warning_samples }}</td>
+        </tr>
+        <tr>
+            <td>Samples with failure status<td class="result_failure"> {{ num_of_failure_samples }}</td>
+        </tr>
+    </table>
+    <hr>
+    <table id="sample_table" class="ui celled table" style="width:100%">
+    </table>
+</div>
+</body>
+</html>
