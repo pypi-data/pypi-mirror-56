@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: notebookc2
+Version: 0.0.9
+Summary: A package to convert your Jupyter Notebook
+Home-page: https://github.com/pythonpackages/notebookc/
+Author: Jeff Hale
+Author-email: vanaparthysaipraneeth@gmail.com
+License: UNKNOWN
+Description: # notebookc
+        ===========
+        
+        Convert a Jupyter Notebook to a Python script or HTML file in your Python program.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
