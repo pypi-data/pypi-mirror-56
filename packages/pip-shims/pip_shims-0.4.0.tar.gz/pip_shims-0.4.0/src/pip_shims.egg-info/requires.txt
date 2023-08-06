@@ -1,0 +1,38 @@
+pip
+packaging
+setuptools
+six
+vistir
+wheel
+
+[:python_version < "2.7"]
+importlib
+
+[:python_version <= "2.7"]
+contextlib2
+funcsigs
+
+[dev]
+pre-commit
+isort
+flake8
+rope
+invoke
+parver
+towncrier
+wheel
+
+[dev:python_version >= "3.5"]
+mypy
+flake8-bugbear
+
+[dev:python_version >= "3.6"]
+black
+
+[tests]
+pytest-timeout
+pytest
+pytest-xdist
+pytest-cov
+twine
+readme-renderer[md]
