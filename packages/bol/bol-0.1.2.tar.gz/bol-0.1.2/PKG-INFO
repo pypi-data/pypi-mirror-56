@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: bol
+Version: 0.1.2
+Summary: A bol.com api connector
+Home-page: https://gitlab.com/aapjeisbaas/bol
+Author: Stein van Broekhoven
+Author-email: stein@aapjeisbaas.nl
+License: UNKNOWN
+Description: Bol.com api connector in python
+        
+        ## install
+        
+        ```bash
+        pip install bol
+        ```
+        
+        ## include
+        
+        ```python
+        from bol import client as bol
+        ```
+        
+        ## Example
+        
+        ```python
+        Python 3.7.4 (default, Oct  4 2019, 06:57:26) 
+        [GCC 9.2.0] on linux
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> from bol import client as bol
+        >>> BolShop = bol.Client(client_id='d75*****779', client_secret='AK6****quP')
+        logging in
+        >>> BolShop.
+        BolShop.client_id      BolShop.client_secret  BolShop.session        BolShop.token          
+        >>> BolShop._
+        BolShop._get(     BolShop._login(   BolShop._orders(  BolShop._post(    
+        >>> BolShop._orders()
+        {'orders': [{'orderId': '26000000', 'dateTimeOrderPlaced': '2019-11-23T18:59:46+01:00', 'orderItems': [{'orderItemId': '2300004', 'ean': '5000000', 'cancelRequest': False, 'quantity': 1}]}]}
+        >>> 
+        >>>
+        ```
+        
+        ## Disclaimer
+        
+        At this moment, the project is alpha bleeding edge unstable software!
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
