@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: EduSim
+Version: 0.0.1
+Summary: This project aims to provide some offline simulators for training and testing recommender systems of education.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: gym
+Requires-Dist: longling (>=1.3.0)
+Requires-Dist: tqdm
+Requires-Dist: networkx
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: pytest (>=4); extra == 'test'
+Requires-Dist: pytest-cov (>=2.6.0); extra == 'test'
+Requires-Dist: pytest-pep8 (>=1); extra == 'test'
+
+Refer to full documentation https://github.com/bigdata-ustc/EduSim/blob/master/README.md for detailed information.
+
+
