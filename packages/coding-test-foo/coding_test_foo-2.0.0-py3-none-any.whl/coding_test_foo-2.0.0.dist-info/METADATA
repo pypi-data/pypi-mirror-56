@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: coding-test-foo
+Version: 2.0.0
+Summary: coding test package. I am a description.
+Home-page: https://coding.net
+Author: Eric Chan
+Author-email: chenxinyu@coding.net
+Maintainer: Hello Nico, Eric Chan
+Maintainer-email: chenxinzhou@coding.net, support@coding.net
+License: MIT
+Project-URL: Bug Tracker, https://bugs.example.com/HelloWorld/
+Project-URL: Documentation, https://docs.example.com/HelloWorld/
+Project-URL: Source Code, https://code.example.com/HelloWorld/
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Provides: foo
+Provides: foo
+Description-Content-Type: text/x-rst
+Requires-Dist: pip (>=19.1.0)
+Requires-Dist: docutils ; python_version>'2.7'
+Provides-Extra: pdf
+Requires-Dist: ReportLab (>=1.2) ; extra == 'pdf'
+Requires-Dist: RXP ; extra == 'pdf'
+Provides-Extra: rest
+Requires-Dist: docutils (>=0.3) ; extra == 'rest'
+
+.. -*- mode: rst; coding: utf-8 -*-
+
+===========================================================
+coding-test-foo - a test package for coding.net testing
+===========================================================
+
+:Version: 2.0.0
+:Date:    2019-11-28
+:Source:  https://coding.net
+:Author:  Eric Chan <chenxinyu@coding.net>
+
+*coding-test-foo* is a test package for coding.net testing
+
+
