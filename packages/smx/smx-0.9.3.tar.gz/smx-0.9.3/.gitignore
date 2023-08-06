@@ -1,0 +1,7 @@
+*.swp
+.coverage*
+env
+_build
+__pycache__/
+dist/
+*.pyc
