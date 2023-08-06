@@ -1,0 +1,3 @@
+[console_scripts]
+aws-assume-role = aws_assume_role.__main__:main
+
