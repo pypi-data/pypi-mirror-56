@@ -1,0 +1,51 @@
+# Config file for automatic testing at travis-ci.org
+language: minimal
+sudo: required 
+matrix:
+  include:
+  - os: linux
+    dist: xenial
+    env: [PYVER=2.7]
+  - os: linux
+    dist: xenial
+    env: [PYVER=3.5]
+  - os: linux
+    dist: bionic
+    env: [PYVER=3.6]
+  - os: linux
+    dist: bionic
+    env: [PYVER=3.7]
+  - os: linux
+    dist: bionic
+    env: [PYVER=3.8]
+
+install:
+  - sudo apt-get update -y
+  - |
+    if [ "${TRAVIS_DIST}" = "xenial" ]; then
+        sudo apt-get install -y python${PYVER}-dbg
+    else
+        sudo apt-get install -y python${PYVER}-dbg python3-distutils
+    fi
+  - virtualenv --python=python${PYVER}-dbg env
+  - source env/bin/activate
+  - ln -s python3 "$VIRTUAL_ENV/bin/python3-dbg"
+  - pip install tox
+
+script:
+  - |
+    if [ "${PYVER}" = "2.7" ]; then
+       ENVS=python${PYVER}-dbg
+    elif [ "${PYVER}" = "3.5" ]; then
+       ENVS=python${PYVER}-dbg,python3-dbg-pytest3,python3-dbg-pytest4
+    else
+       ENVS=python${PYVER}-dbg,python3-dbg-pytest3,python3-dbg-pytest4,python3-dbg-pytest5
+    fi
+  - tox --skip-missing-interpreters false -e "$ENVS"
+
+before_cache:
+  - rm -rf $HOME/.cache/pip/log
+
+cache:
+  directories:
+    - $HOME/.cache/pip

@@ -1,0 +1,31 @@
+environment:
+  matrix:
+    - PYTHON_VERSION: "v3.7.4"
+
+cache:
+  - '%LOCALAPPDATA%\cpython\PCbuild\win32 -> appveyor.yml'
+  - '%LOCALAPPDATA%\cpython\Lib -> appveyor.yml'
+  - '%LOCALAPPDATA%\pip\Cache -> appveyor.yml'
+
+install:
+  # Build debug Python from sources
+  - ps: |
+      $ErrorActionPreference = "Stop"
+      $pydir = "$env:LOCALAPPDATA\cpython"
+      if (-NOT ((Test-Path "$pydir\PCbuild\win32") -AND (Test-Path "$pydir\Lib"))) {
+        if (Test-Path $pydir) { Remove-Item -Recurse -Path $pydir }
+        & cmd /c "git clone -q --depth 1 https://github.com/python/cpython.git $pydir -b $env:PYTHON_VERSION 2>&1"
+        cd $env:LOCALAPPDATA\cpython
+        & cmd /c PCbuild\build.bat -d
+        cd $env:APPVEYOR_BUILD_FOLDER
+      }
+  # Install packages
+  - SET PYTHON=%LOCALAPPDATA%\cpython\PCbuild\win32\python_d.exe
+  - "%PYTHON% -mensurepip --user"
+  - "%PYTHON% -mpip install --user pytest"
+
+build: false
+
+test_script:
+  - "%PYTHON% -mpip install --user ."
+  - "%PYTHON% -mpytest tests"
