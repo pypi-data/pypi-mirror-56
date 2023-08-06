@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hipster
+Version: 1.0.0
+Summary: A simple implementation of the Min Heap and Max Heap
+Home-page: https://github.com/soumasish/heap
+Author: Soumasish Goswami
+Author-email: soumasish@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
