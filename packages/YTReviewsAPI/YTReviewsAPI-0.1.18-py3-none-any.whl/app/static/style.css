@@ -1,0 +1,9 @@
+.list-group{
+    max-height: 400px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+li:hover {
+  background-color: #999;
+}

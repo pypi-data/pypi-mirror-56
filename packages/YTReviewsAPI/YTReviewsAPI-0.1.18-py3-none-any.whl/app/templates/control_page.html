@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<HEAD>
+	<title>Data Control Center</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="{{ url_for('static', filename='control.js') }}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+	<div class="jumbotron">
+	  <h1 class="text-center">Data Control Center</h1> 
+	  <p class="text-center">A webpage to monitor, start, and stop the data collection process</p> 
+	</div>
+</HEAD>
+<body>
+	<div class="row">
+		<div class="col-sm-6">
+			<h2 class="text-center" id="current_year">Current Year: 2018</h2>
+			<h4 id="Current_Media" class="text-center">Current Movie: N/A</h4>
+			<ol id="Media_List" class="list-group">
+			</ol>
+		</div>
+		<div class="col-sm-6">
+			<h2 class="text-center">Actions</h2>
+			<button type="button" id="dataRemoveButton" class="btn btn-warning" disabled="true">Remove Entry</button>
+			<button type="button" id="dataCollectionButton" class="btn btn-warning">Start Data Collection</button>
+			<button type="button" id="dataAddButton" class="btn btn-warning" disabled="true">Add Entry</button>
+			<button type="button" id="videoViewButton" class="btn btn-primary" disabled="true">View Video Components</button>
+			<p id="videoViewDialog"></p>
+			<form id="videoViewsForm">
+			</form>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$("#videoViewButton").click(function() {
+						var formNode = document.getElementById("videoViewsForm")
+						while (formNode.firstChild) {
+							formNode.removeChild(formNode.firstChild);
+						}
+						var mediaNode = document.createElement('H3');
+						mediaNode.appendChild(document.createTextNode($(".active").text()));
+						mediaNode.setAttribute("id","formMediaTitle");
+						formNode.appendChild(mediaNode);
+						$.get('/api/web/videoview/' + $(".active").text(), function(data) {
+							
+							var counter = 0;
+							data.videoViews.forEach(function(element) {
+								var formGroup = document.createElement('DIV');
+								formGroup.className = "form-group";
+								formGroup.setAttribute("id", "form-group-"+counter);
+								var inputElement = document.createElement('input');
+								inputElement.setAttribute("type","text");
+								inputElement.setAttribute("class", "form-control");
+								inputElement.setAttribute("id","input-"+counter);
+								inputElement.value = element.score;
+								var labelElement = document.createElement('label');
+								labelElement.setAttribute("for","input-"+counter);
+								var titleNode = document.createTextNode(element.title);
+
+								var idNode = document.createElement('p');
+								idNode.appendChild(document.createTextNode(element.id));
+								idNode.setAttribute("id","videoId-"+counter);
+								labelElement.appendChild(titleNode);
+								formGroup.appendChild(labelElement);
+								formGroup.appendChild(idNode);
+								formGroup.appendChild(inputElement);
+								
+								formNode.appendChild(formGroup);
+								counter = counter + 1;
+							});
+							var formButton = document.createElement('button');
+							formButton.setAttribute("class", "btn btn-success");
+							formButton.setAttribute("id", "videoViewFormButton");
+							formButton.setAttribute("onclick", "return sendVideoViewData()");
+							var buttonText = document.createTextNode("submit scores");
+							formButton.appendChild(buttonText);
+							formNode.appendChild(formButton);
+						});
+					});
+				});
+				function sendVideoViewData() {
+					var jsonObj = {};
+					var mediaTitle = document.getElementById("formMediaTitle").textContent;
+					var videoData = [];
+					for (i = 0; i < 5; i++) {
+						var formElement = document.getElementById("form-group-"+i);
+						var videoTitle = formElement.firstChild.textContent;
+						var videoScore = formElement.lastChild.value;
+						var videoId = document.getElementById("videoId-"+i).textContent;
+						videoData[i] = {
+							"title":videoTitle,
+							"score":videoScore,
+							"id":videoId
+						}
+					}
+					jsonObj["mediaTitle"] = mediaTitle;
+					jsonObj["videos"] = videoData;
+					var data = JSON.stringify(jsonObj);
+					$.ajax({
+						type: 'POST',
+						url: '/api/web/videoview/title',
+						data: data,
+						contentType: "application/json",
+						success: function(resp) {
+							console.log(resp);
+						},
+						error: function(resp) {
+							console.log(resp);
+						}
+					});
+					return false;
+				}
+
+			
+			</script>
+			<form>
+				<div class="form-group">
+				    <label for="videoLimit">Maximum Vidoes:</label>
+				    <input type="limit" placeholder="Enter video limit" class="form-control" id="videoLimit">
+				</div>
+			</form>
+			<form>
+				<div class="form-group">
+				    <label for="currYear">Set Year:</label>
+				    <input type="limit" placeholder="Set Year" class="form-control" id="currYear">
+				</div>
+				<button type="button" id="yearbutton" class="btn btn-primary">Get Year</button>
+			</form>
+		</div>
+		
+	</div>	
+
+	<script>
+		$(document).ready(function() {
+			$.get("/api/web/serverstatus", function(data, status) {
+				getTitlesByYear(data.currentYear, function() {
+					var liElement = $("li").get(data.CurrentMovie - ((data.currentYear -2014) * 50)); //TODO change for years
+					$("#current_year").text("Current Year: " + data.currentYear);
+
+					$.get("/api/web/videostatus/"+data.currentYear, function(dataTwo, statusTwo) {
+						var counter = 0;
+						dataTwo.mediaStatus.forEach(function(element) {
+							console.log(element);
+							var liElementTwo = $("li").get(counter);
+							liElementTwo.className = "list-group-item list-group-item-success"
+							if (element[1] == 0) {
+								liElementTwo.className = "list-group-item list-group-item-danger"
+							}
+							counter += 1;
+						});
+
+					});
+
+					liElement.className = "list-group-item list-group-item-success";
+					$("#Current_Media").text("Current Movie: " +  liElement.innerHTML);
+
+					$("li").click(function() {
+						$("#dataRemoveButton").prop('disabled', false);
+						$("#dataAddButton").prop('disabled', false);
+						$("#videoViewButton").prop('disabled', false);
+						$('.active').removeClass('active');
+					    $(this).addClass('active');
+					});
+				});
+			});
+		});
+
+		$(document).ready(function() {
+			$("#yearbutton").click(function() {
+				var year = document.getElementById('currYear').value;
+				document.getElementById("Media_List").innerHTML = "";
+				getTitlesByYear(year, function() {
+					$("#current_year").text("Current Year: " + year);
+
+					$.get("/api/web/videostatus/"+year, function(dataTwo, statusTwo) {
+						var counter = 0;
+						dataTwo.mediaStatus.forEach(function(element) {
+							console.log(element);
+							var liElementTwo = $("li").get(counter);
+							liElementTwo.className = "list-group-item list-group-item-success"
+							if (element[1] == 0) {
+								liElementTwo.className = "list-group-item list-group-item-danger"
+							}
+							counter += 1;
+						});
+					});
+					$("li").click(function() {
+						$("#dataRemoveButton").prop('disabled', false);
+						$("#dataAddButton").prop('disabled', false);
+						$("#videoViewButton").prop('disabled', false);
+						$('.active').removeClass('active');
+					    $(this).addClass('active');
+					});
+				});
+				
+			});
+		});
+
+
+		$(document).ready(function() {
+			$("#dataRemoveButton").click(function() {
+				$.ajax({
+					type: "DELETE",
+					url: '/api/web/mediaentry/' + $(".active").text(),
+					async: false,
+					success: function() {
+						$(".active").removeClass("list-group-item-success");
+						$(".active").addClass("list-group-item-danger");
+						$('.active').removeClass('active');
+					},
+					error: function() {
+						alert("Removal failed");
+					}
+				});
+			});
+		});
+
+		$(document).ready(function() {
+			$("#dataAddButton").click(function() {
+				$.ajax({
+					type: "POST",
+					url: '/api/web/mediaentry/' + $(".active").text(),
+					async: false,
+					success: function() {
+						$(".active").removeClass("list-group-item-danger");
+						$(".active").addClass("list-group-item-success");
+						$('.active').removeClass('active');
+					},
+					error: function() {
+						alert("Add failed");
+					}
+				});
+			});
+		});
+
+		// function updateServerStatus() {
+		// 	$.get("/api/web/serverstatus", function(data, status) {
+		// 		var liElement = $("li").get(data.CurrentMovie - ((data.currentYear -2014) * 50));
+		// 		$("#current_year").text("Current Year: " + data.currentYear);
+
+		// 		liElement.className = "list-group-item list-group-item-success";
+
+		// 		$("#Current_Media").text("Current Movie: " +  liElement.innerHTML);
+
+		// 		if (data.isRunning == true) {
+		// 			$("#dataCollectionButton").prop('disabled', true);
+		// 		} else {
+		// 			setTimeout(function () {
+		// 				$("#dataCollectionButton").prop('disabled', false);
+		// 			}, 5000);
+					
+		// 		}
+		// 	});
+		// }
+
+		// setInterval(updateServerStatus, 5000);
+
+		$("#dataCollectionButton").click(function() {
+			$("#dataCollectionButton").prop('disabled', true);
+			$.ajax
+			({
+		        type: "POST",
+		        //the url where you want to sent the userName and password to
+		        url: '/api/web/controlauthentication/' + $("#videoLimit").val(),
+		        contentType: 'application/json',
+		        async: false,
+		        //json object to sent to the authentication url
+		        success: function () {
+					alert("Server Started!"); 
+		        }
+		    });
+
+		});
+
+		
+
+	</script>
+</body>
