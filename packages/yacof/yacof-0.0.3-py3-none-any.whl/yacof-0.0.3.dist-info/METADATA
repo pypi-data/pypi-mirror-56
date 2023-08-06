@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: yacof
+Version: 0.0.3
+Summary: Yet another YAML config library
+License: MIT
+Author: fbjorn
+Author-email: kopfabschneider@yandex.ru
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pydantic (>=1.1,<2.0)
+Requires-Dist: ruamel.yaml (>=0.16.5,<0.17.0)
