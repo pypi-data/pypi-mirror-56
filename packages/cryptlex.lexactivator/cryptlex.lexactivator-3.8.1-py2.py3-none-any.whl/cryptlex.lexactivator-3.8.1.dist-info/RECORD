@@ -1,0 +1,17 @@
+cryptlex/__init__.py,sha256=UCbDNQDfE8wboEDko-ds2vFUsYzQ_DUjYjFW3QJsIsg,36
+cryptlex/lexactivator/__init__.py,sha256=q4UycrnR8TKjIEaT5ZeL63jGMYnLjA7M-L3ujFDMb-c,116
+cryptlex/lexactivator/lexactivator.py,sha256=6AuEtOSc--ewLfJdTAEfARrvNnJkuMMzZccDrnT6is4,36498
+cryptlex/lexactivator/lexactivator_exception.py,sha256=4u1yP-eQfVNJNXhzNq-tWRNguF9ZDrwQfKXgIVUm25M,5243
+cryptlex/lexactivator/lexactivator_native.py,sha256=dhswVjRld4hbVaaV04hl4Tuyd385Oi-Hb0aBhYCiNvk,9374
+cryptlex/lexactivator/lexstatus_codes.py,sha256=iMdINFflehqCJjkJf9wBKQJrdmEGarmQQWHfFLEWJ6c,1498
+cryptlex/lexactivator/libs/linux/gcc/x86/libLexActivator.so,sha256=aVVxDWZboX1NqBDJN11lIV6XJjX3_K3807smSZoVGH8,1538980
+cryptlex/lexactivator/libs/linux/gcc/x86_64/libLexActivator.so,sha256=oWc0gPqpQk5X-KSzwU4A9Fk55u0ySEYgCj1Yih0z9aE,1476672
+cryptlex/lexactivator/libs/linux/musl/x86_64/libLexActivator.so,sha256=D8rYzGXVjq81Hj1TGf3Ieqtg7GH4Gy3YyMgy3rv2vuY,1145208
+cryptlex/lexactivator/libs/macos/x86_64/libLexActivator.dylib,sha256=QUTgvFtj9dSS-rvdS_OsaEmr-ghfuw5u4o7LoVKCDMc,1232716
+cryptlex/lexactivator/libs/win32/x86/LexActivator.dll,sha256=hoZc2g3VED0NaPm2JY7aK9tth_l1eo--SikNkWecGl4,1022464
+cryptlex/lexactivator/libs/win32/x86_64/LexActivator.dll,sha256=wILd4HiDDioO_RknTyYJ1vGbCatEgdaVQLzJ2yDpiBs,1248768
+cryptlex.lexactivator-3.8.1.dist-info/LICENSE.txt,sha256=F9Wo1kUHQ1RcS--NweiVxi3tscDdAvhL-2Lc_aUCNvM,1065
+cryptlex.lexactivator-3.8.1.dist-info/METADATA,sha256=TZfHkIpJDOzOVhU2dZONwF7wwG2ipggd3ZwnenQZfmw,1436
+cryptlex.lexactivator-3.8.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+cryptlex.lexactivator-3.8.1.dist-info/top_level.txt,sha256=9yV_AMqNGyffJyRvjfL2N_Tj3FNdhvfFbiNoYpdyz8o,9
+cryptlex.lexactivator-3.8.1.dist-info/RECORD,,
