@@ -1,0 +1,9 @@
+README.md
+setup.py
+flatds/__init__.py
+flatds.egg-info/PKG-INFO
+flatds.egg-info/SOURCES.txt
+flatds.egg-info/dependency_links.txt
+flatds.egg-info/requires.txt
+flatds.egg-info/top_level.txt
+test/test_read.py
