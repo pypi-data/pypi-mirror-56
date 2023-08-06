@@ -1,0 +1,15 @@
+.gitignore
+LICENSE.txt
+README.rst
+requirements-dev.txt
+requirements.txt
+setup.cfg
+setup.py
+src/rasa_alice/__init__.py
+src/rasa_alice/channel.py
+src/rasa_alice/types.py
+src/rasa_alice.egg-info/PKG-INFO
+src/rasa_alice.egg-info/SOURCES.txt
+src/rasa_alice.egg-info/dependency_links.txt
+src/rasa_alice.egg-info/requires.txt
+src/rasa_alice.egg-info/top_level.txt
