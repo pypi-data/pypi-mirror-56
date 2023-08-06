@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: selfusepy
+Version: 0.0.1
+Summary: Self-Use Python lib
+Home-page: https://github.com/LuomingXu/selfusepy
+Author: Luoming Xu
+Author-email: xjy46566696@gmail.com
+License: UNKNOWN
+Description: Self-Use Python Lib
+        =
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Customer Service
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown

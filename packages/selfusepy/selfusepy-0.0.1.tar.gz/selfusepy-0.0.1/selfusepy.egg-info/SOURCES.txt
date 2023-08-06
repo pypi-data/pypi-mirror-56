@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+selfusepy/__init__.py
+selfusepy/url.py
+selfusepy/utils.py
+selfusepy.egg-info/PKG-INFO
+selfusepy.egg-info/SOURCES.txt
+selfusepy.egg-info/dependency_links.txt
+selfusepy.egg-info/requires.txt
+selfusepy.egg-info/top_level.txt
