@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+ReadMe.md
+setup.py
+genderClassifier.egg-info/PKG-INFO
+genderClassifier.egg-info/SOURCES.txt
+genderClassifier.egg-info/dependency_links.txt
+genderClassifier.egg-info/requires.txt
+genderClassifier.egg-info/top_level.txt
+gender_classifier/__init__.py
+gender_classifier/classifier.py
+gender_classifier/download.py
