@@ -1,0 +1,12 @@
+numpy
+decore
+
+[test]
+pytest
+scikit-learn
+coverage
+pytest-cov
+pandas
+pdutil
+numpy
+decore
