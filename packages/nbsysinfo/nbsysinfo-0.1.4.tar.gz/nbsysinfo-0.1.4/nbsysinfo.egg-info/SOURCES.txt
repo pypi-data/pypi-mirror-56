@@ -1,0 +1,12 @@
+setup.py
+nbsysinfo/__init__.py
+nbsysinfo.egg-info/PKG-INFO
+nbsysinfo.egg-info/SOURCES.txt
+nbsysinfo.egg-info/dependency_links.txt
+nbsysinfo.egg-info/not-zip-safe
+nbsysinfo.egg-info/requires.txt
+nbsysinfo.egg-info/top_level.txt
+nbsysinfo/etc/nbext_sysinfo.json
+nbsysinfo/etc/server_sysinfo.json
+nbsysinfo/static/main.js
+nbsysinfo/static/tree.css
