@@ -1,0 +1,34 @@
+
+from setuptools import setup, find_packages
+from dt.core.version import get_version
+
+VERSION = get_version()
+
+f = open('README.md', 'r')
+LONG_DESCRIPTION = f.read()
+f.close()
+
+setup(
+    name='data-toolkit',
+    version=VERSION,
+    description='ML & data helper code!',
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type='text/markdown',
+    author='Jakub Langr',
+    author_email='james.langr@gmail.com',
+    url='https://github.com/johndoe/myapp/',
+    license='unlicensed',
+    packages=find_packages(exclude=['ez_setup', 'tests*']),
+    package_data={'dt': ['templates/*', 'dt/scripts/*']},
+    include_package_data=True,
+    entry_points="""
+        [console_scripts]
+        dt = dt.main:main
+    """,
+    install_requires=[
+        'sentry_sdk',
+        'cement',
+        'colorlog',
+        'gputil'
+    ]
+)
