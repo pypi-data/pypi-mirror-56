@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+suricata_prettifier/__init__.py
+suricata_prettifier/beautify.py
+suricata_prettifier/lexer.py
+suricata_prettifier/main.py
+suricata_prettifier/web.py
+suricata_prettifier.egg-info/PKG-INFO
+suricata_prettifier.egg-info/SOURCES.txt
+suricata_prettifier.egg-info/dependency_links.txt
+suricata_prettifier.egg-info/entry_points.txt
+suricata_prettifier.egg-info/requires.txt
+suricata_prettifier.egg-info/top_level.txt

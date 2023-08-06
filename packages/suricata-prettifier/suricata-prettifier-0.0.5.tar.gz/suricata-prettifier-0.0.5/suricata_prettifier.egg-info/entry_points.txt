@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        prettify-suricata=suricata_prettifier.main:prettify
+    
