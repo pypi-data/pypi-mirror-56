@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: cgr-view
+Version: 0.0.1.dev2
+Summary: A package for rendering Chaos Game Representations of DNA sequences
+Home-page: https://github.com/TeamMacLean/cgr_view
+Author: Dan MacLean
+Author-email: dan.maclean@tsl.ac.uk
+License: LICENSE.txt
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
