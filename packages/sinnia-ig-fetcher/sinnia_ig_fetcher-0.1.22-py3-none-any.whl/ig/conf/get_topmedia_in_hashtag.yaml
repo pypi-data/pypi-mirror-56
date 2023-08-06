@@ -1,0 +1,52 @@
+
+log_file: "logs/get_media.log"
+
+enable_commit: True
+
+graph_api:
+  host: "https://graph.facebook.com"  
+  request_ht_id_path:    '/v3.2/ig_hashtag_search?user_id={user_id}&q={hashtag}'
+  request_ht_media_path: '/v3.2/{hashtag_id}/top_media?user_id={user_id}&fields=id,caption,media_type,permalink,media_url,comments_count,like_count'
+  historic_suffix:       '&since={date_from}&until={date_to}' 
+
+
+queries:
+  get_users: |  
+    SELECT h.instagram_id, h.hashtag, ua.access_token
+    FROM UsersAuth ua join Hashtags h on ua.instagram_id = h.instagram_id 
+    WHERE ua.valid_until > CURRENT_TIMESTAMP()
+    AND ua.instagram_id IS NOT NULL AND TRIM(ua.instagram_id) != ''
+    AND access_token NOT LIKE 'IG%'
+    AND ua.active = 1 AND h.active = 1
+    limit 1
+
+  insert_empty_user: |
+    INSERT IGNORE INTO Users (id, username)
+    VALUES ('{id}', '{username}')
+            
+  insert_media: |
+    INSERT INTO Media (id, user_id, created_at, fetched_at, type,
+                       caption, url, likes_count, comments_count, image)
+    VALUES ('{id}', {user_id}, '{created_at}', '{fetched_at}', '{type}',
+            '{caption}', '{url}', {likes_count}, {comments_count}, '{image}')
+    ON DUPLICATE KEY UPDATE
+            fetched_at = '{fetched_at}',
+            likes_count = {likes_count}, 
+            comments_count = {comments_count},
+            image = '{image}'
+
+  insert_ht: |
+    INSERT IGNORE INTO HashTagsInMedia 
+      (media_id, hashtag, lower_hashtag, created_at)
+    VALUES
+      ('{media_id}', '{hashtag}', '{lower_hashtag}', '{created_at}')
+
+
+db_config:
+  ig:
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8mb4" 
+  
