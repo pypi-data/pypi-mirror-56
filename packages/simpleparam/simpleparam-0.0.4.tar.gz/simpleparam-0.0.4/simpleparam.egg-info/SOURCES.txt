@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+simpleparam/__init__.py
+simpleparam/store.py
+simpleparam/utilities.py
+simpleparam.egg-info/PKG-INFO
+simpleparam.egg-info/SOURCES.txt
+simpleparam.egg-info/dependency_links.txt
+simpleparam.egg-info/top_level.txt
