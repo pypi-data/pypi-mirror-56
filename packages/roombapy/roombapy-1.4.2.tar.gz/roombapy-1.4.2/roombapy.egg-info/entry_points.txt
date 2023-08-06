@@ -1,0 +1,4 @@
+[console_scripts]
+roomba = roomba.__main__:main
+roomba-getpassword = roomba.getpassword:main
+
