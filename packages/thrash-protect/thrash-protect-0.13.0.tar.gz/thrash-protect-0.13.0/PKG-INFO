@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: thrash-protect
+Version: 0.13.0
+Summary: Simple-Stupid user-space program doing "kill -STOP" and "kill -CONT" to protect from thrashing
+Home-page: https://github.com/tobixen/thrash-protect
+Author: Tobias Brox
+Author-email: tobias@redpill-linpro.com
+License: GPLv3+
+Description: The script attempts to detect thrashing situations and temporary stop rogue processes, 
+        hopefully before things get too much out of control, hopefully giving a sysadm enough time 
+        to investigate and handle the situation if there is a sysadm around, and if not - hopefully 
+        allowing boxes to become just slightly degraded instead of completely thrashed, all until the offending 
+        processes ends or the oom killer kicks in.
+        
+        As of 2014-09, the development seems to have stagnated - for the very simple reason that 
+        it seems to work well enough for me.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Utilities
+Classifier: Topic :: System :: Software Distribution
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: build

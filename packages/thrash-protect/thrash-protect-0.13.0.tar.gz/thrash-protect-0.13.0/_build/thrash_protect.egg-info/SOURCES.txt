@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+_build/thrash_protect.py
+_build/thrash_protect.egg-info/PKG-INFO
+_build/thrash_protect.egg-info/SOURCES.txt
+_build/thrash_protect.egg-info/dependency_links.txt
+_build/thrash_protect.egg-info/entry_points.txt
+_build/thrash_protect.egg-info/not-zip-safe
+_build/thrash_protect.egg-info/requires.txt
+_build/thrash_protect.egg-info/top_level.txt
