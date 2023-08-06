@@ -1,0 +1,24 @@
+
+[:python_version == "dev"]
+check-manifest
+coveralls
+nose
+pdbpp
+pyflakes
+pytest==3.6
+pytest-cov
+wheel
+
+[dev]
+check-manifest
+coveralls
+nose
+pdbpp
+pyflakes
+pytest==3.6
+pytest-cov
+wheel
+
+[doc]
+sphinx>=2.0.0
+niftools_sphinx_theme>=0.3.3
