@@ -1,0 +1,51 @@
+{% extends "bee_django_report/base.html" %}
+{% load bootstrap3 %}
+{% block styles %}
+    <style>
+    </style>
+{% endblock %}
+{% block content %}
+    {% include 'bee_django_report/logo.html' %}
+    {% include 'bee_django_report/nav.html' %}
+
+    <h4>评分详情</h4>
+
+    {#    {% if perms.bee_django_course.change_section %}#}
+    {#        <a href="{% url 'bee_django_course:section_update'  section.id %}">修改课件</a>#}
+    {#    {% endif %}#}
+    <table class="table">
+        <tr>
+            <td class="col-xs-3">助教</td>
+            <td>
+                {{ record.mentor }}
+            </td>
+        </tr>
+        <tr>
+            <td>时间</td>
+            <td>{{ record.year }}年-第{{ record.week }}周</td>
+        </tr>
+        <tr>
+            <td>分数</td>
+            <td>{{ record.score|default:"-" }} <a href="{% url 'bee_django_report:mentor_score_update_score' record.id %}">明细</a></td>
+        </tr>
+
+        <tr>
+            <td>备注</td>
+            <td>
+                {{ record.info|default:"-" }}
+            </td>
+        </tr>
+
+    </table>
+
+
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        })
+    </script>
+{% endblock %}
