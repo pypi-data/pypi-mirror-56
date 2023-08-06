@@ -1,0 +1,7 @@
+[console_scripts]
+
+
+[microcosm.factories]
+connexion = microcosm_connexion.factories:configure_connexion
+postgres_session_factory = microcosm_connexion.factories:configure_postgres_session_factory
+
