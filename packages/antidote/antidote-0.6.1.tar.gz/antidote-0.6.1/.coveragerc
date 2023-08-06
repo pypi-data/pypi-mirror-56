@@ -1,0 +1,11 @@
+[run]
+branch = True
+
+[html]
+directory = cov_html
+
+[paths]
+source =
+    src/
+    .tox/py*/lib/python*/site-packages/
+    .tox/pypy*/site-packages
