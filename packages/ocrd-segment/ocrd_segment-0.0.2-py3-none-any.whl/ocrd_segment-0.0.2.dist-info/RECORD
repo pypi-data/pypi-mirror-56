@@ -1,0 +1,14 @@
+ocrd_segment/__init__.py,sha256=bEfPo_biI_7hQvkzpHXvq0SWHqRhtA0dGKV_JKXGZKs,166
+ocrd_segment/cli.py,sha256=L37rVkDgNjV8DYSEiZ1pfAVV2lHjWBJ_JFaFIk90NqA,908
+ocrd_segment/config.py,sha256=KIGdj-YnnMrMvR84YgNQJVH0BO4DUYC_bRZDKGE5aNw,138
+ocrd_segment/evaluate.py,sha256=o9nn9Y_XAw8mi3LMeePSkM2160BFIps0K5ZWxghm7Nc,3624
+ocrd_segment/extract_lines.py,sha256=k8E_0rd7WUpp-iIhQC25PoVCXgyakx8Fhe0t_r-EUlM,9348
+ocrd_segment/extract_regions.py,sha256=q9dfy7oJzkdf97dMVxETBqIZhGMsq-euJrpl1LR8IhQ,7083
+ocrd_segment/ocrd-tool.json,sha256=ntLXupiPn5I6Mg3IZd9ZkFrMxG6Y48YxdXb9KVvbO9k,2416
+ocrd_segment/repair.py,sha256=gY2ghf7avtkVjvPCCKAsgbuL9qXTzGFT1hlj8JkctfA,13896
+ocrd_segment-0.0.2.dist-info/LICENSE,sha256=RBF4xyxtDy9quGhMI-lgyHs2Aoj4m5ewGW790BRN_Fg,1064
+ocrd_segment-0.0.2.dist-info/METADATA,sha256=NgDekoaaKRZG6KeQIEwUTlFbLhqhdHNDdq19QkFbGHw,2103
+ocrd_segment-0.0.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ocrd_segment-0.0.2.dist-info/entry_points.txt,sha256=pFnfFgl7z-RZLHB7graw9yiqfrDPvRIjyxNB80PR_Hg,291
+ocrd_segment-0.0.2.dist-info/top_level.txt,sha256=APAnJtAsNVtOupjRfQxsSWOJSzcscwTAkj8r2_hqfjw,13
+ocrd_segment-0.0.2.dist-info/RECORD,,

@@ -1,0 +1,6 @@
+[console_scripts]
+ocrd-segment-evaluate = ocrd_segment.cli:ocrd_segment_evaluate
+ocrd-segment-extract-lines = ocrd_segment.cli:ocrd_segment_extract_lines
+ocrd-segment-extract-regions = ocrd_segment.cli:ocrd_segment_extract_regions
+ocrd-segment-repair = ocrd_segment.cli:ocrd_segment_repair
+
