@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: leakless
+Version: 0.01
+Summary: Leakless helps you avoid leaking UNIX file descriptors and child processes.
+Home-page: https://github.com/percontation/leakless
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
