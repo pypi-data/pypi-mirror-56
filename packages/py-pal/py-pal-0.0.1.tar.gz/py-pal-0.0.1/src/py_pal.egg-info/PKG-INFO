@@ -1,0 +1,121 @@
+Metadata-Version: 1.2
+Name: py-pal
+Version: 0.0.1
+Summary: Estimate Asymptotic Runtime Complexity from Bytecode executions
+Home-page: https://github.com/segroup-uni-trier/jung-ma-asymptotic-performance-testing.git
+Author: Lukas Jung
+Author-email: mail@lukasjung.de
+License: MIT
+Description: ========
+        Overview
+        ========
+        
+        
+        
+        Python Performance Analysis Library or py-pal is a bytecode profiling toolkit.
+        
+        Installation
+        ============
+        
+        This project requires CPython to run.
+        Install Python >= 3.7, then install py-pal by running:
+        
+            pip install py-pal
+        
+        Documentation
+        =============
+        TBA
+        
+        
+        Overview
+        ========
+        
+        Calling py-pal as module with
+        
+            python -m py_pal file.py
+        
+        or
+        
+            pypal file.py
+        
+        Measure specific functions using the decorator:
+        
+        .. sourcecode:: python
+        
+            from py_pal.core import profile
+        
+            @profile
+            def test():
+                pass
+        
+        
+        Using the context manager:
+        
+        .. sourcecode:: python
+        
+            from py_pal.tracer import Tracer
+        
+            with Tracer() as t:
+                pass
+        
+        Using the API:
+        
+        .. sourcecode:: python
+        
+            from py_pal.estimator import ComplexityEstimator
+            from py_pal.tracer import Tracer
+        
+        
+            t = Tracer()
+            t.trace()
+        
+            # Your function
+            pass
+        
+            t.stop()
+            estimator = ComplexityEstimator(t)
+            res = estimator.export()
+        
+            # Do something with the resulting DataFrame
+            print(res)
+        
+        
+        Modes
+        -----
+        Profiling and Performance Testing
+        
+        Tracing processes
+        -----------------
+        
+        
+        Development
+        ===========
+        
+        To run the all tests run:
+        
+        
+            pip install -r dev-requirements.txt
+            pytest tests
+        
+        FAQ
+        ===
+        
+        Why not use a standard profiler?
+        --------------------------------
+        
+        Using absolute timing data vs synthetic timing data using opcodes.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development :: Debuggers
+Requires-Python: >=3.7
