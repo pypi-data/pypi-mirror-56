@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        trashcangourmand=trash_cli:cli
+        
