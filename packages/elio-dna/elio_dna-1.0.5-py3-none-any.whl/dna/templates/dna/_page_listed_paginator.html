@@ -1,0 +1,9 @@
+<p>
+  {% with paginator=listed.paginator %}
+  {% with page_obj=listed.list %}
+  {% with paginate_type=listed.paginate_type %}
+  {% include 'dna/_thing_paginator.html' %}
+  {% endwith %}
+  {% endwith %}
+  {% endwith %}
+</p>

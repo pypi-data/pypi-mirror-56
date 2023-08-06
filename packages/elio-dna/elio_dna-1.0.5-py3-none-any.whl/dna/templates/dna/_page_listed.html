@@ -1,0 +1,23 @@
+{% for listed in page_lists %}
+  {% if listed.title %}
+    <h2>{{ listed.title }}</h2>
+  {% endif %}
+
+  {% with object_list=listed.list %}
+  {% with thing_name=listed.thing_name %}
+  {% include listed.template %}
+  {% endwith %}
+  {% endwith %}
+
+  {% if listed.is_paginated %}
+  <p>
+    {% include 'dna/_page_listed_paginator.html' %}
+  </p>
+  {% endif %}
+  <p>
+    <a href="{% url 'create.thing' page_slug 'list' listed.thing_name %}">
+      <button>Add
+        {{ listed.thing_name }}</button>
+    </a>
+  </p>
+{% endfor %}
