@@ -1,0 +1,5 @@
+google-cloud-storage
+pymongo
+
+[:platform_system == "Windows"]
+pstuil
