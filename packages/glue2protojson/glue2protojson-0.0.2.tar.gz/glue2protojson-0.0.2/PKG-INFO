@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: glue2protojson
+Version: 0.0.2
+Summary: Get a AWS Glue table schema and convert it to JSON of meta types and proto messages definition
+Home-page: https://github.com/ricardoedo
+Author: Ricardo Edo Nevado
+Author-email: ricardo.edo@gmail.com
+License: MIT
+Download-URL: https://github.com/ricardoedo/glue2protojson/archive/v0.0.2-alpha.tar.gz
+Description: UNKNOWN
+Keywords: AWS,GLUE,GRPC,PROTO,PROTOBUF
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
