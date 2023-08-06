@@ -1,0 +1,48 @@
+Metadata-Version: 1.2
+Name: pyqtx-widgets
+Version: 0.0.5
+Summary: pyqtx Widgets
+Home-page: https://pyqtx.gitlab.io/pyqtx_widgets/
+Author: Pedro Morgan
+Author-email: pete@daffodil.uk.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/pyqtx/pyqtx_widgets/issues
+Project-URL: Documentation, https://pyqtx.gitlab.io/pyqtx_widgets/
+Project-URL: Source Code, https://gitlab.com/pyqtx/pyqtx_widgets
+Description: pyqtx_widgets
+        =======================
+        
+        This lib is in active use and makes knocking up PyQt5 apps a little quicker.
+        
+        It's just a bunch of constructors and Xtended widgets to add some functionality.
+        Now some of you may scream about adding another layer!!
+        Instead is viewed as  DRY, as same stuff gets copied across projects
+        
+        
+        .. code-block:: python
+        
+            ## Layout
+            lay = QtWidgets.QVBoxLayout()
+            lay.setContentMargins(10,10,10,10)
+            lay.setSpacing(20)
+        
+            # vs
+            lay = xwidgets.vlayout(margin=10. spacing=20)
+        
+            ## Toolbutton
+            butt = QtWidgets.QToolButton()
+            butt.setAutoRaise(True)
+            butt.setText("Foo")
+            butt.clicked.connect(self.on_button)
+        
+            # vs
+            butt = xwidgets.XToolButton(text="Foo", autoRaise=True, clicked=self.on_button)
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
