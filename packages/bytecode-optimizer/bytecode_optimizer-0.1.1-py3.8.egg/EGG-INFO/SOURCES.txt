@@ -1,0 +1,10 @@
+README.md
+setup.py
+bytecode_optimizer/__init__.py
+bytecode_optimizer/_import_loader.py
+bytecode_optimizer/_optimizer.py
+bytecode_optimizer.egg-info/PKG-INFO
+bytecode_optimizer.egg-info/SOURCES.txt
+bytecode_optimizer.egg-info/dependency_links.txt
+bytecode_optimizer.egg-info/not-zip-safe
+bytecode_optimizer.egg-info/top_level.txt
