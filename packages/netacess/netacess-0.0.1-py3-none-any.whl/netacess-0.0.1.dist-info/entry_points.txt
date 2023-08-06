@@ -1,0 +1,3 @@
+[console_scripts]
+netaccess = netaccess.netaccess:main
+
