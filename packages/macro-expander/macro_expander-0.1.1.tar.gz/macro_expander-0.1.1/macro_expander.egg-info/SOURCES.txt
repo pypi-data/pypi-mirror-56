@@ -1,0 +1,9 @@
+README.md
+setup.py
+./bin/expand-macros.py
+macro_expander/__init__.py
+macro_expander/our_macros.py
+macro_expander.egg-info/PKG-INFO
+macro_expander.egg-info/SOURCES.txt
+macro_expander.egg-info/dependency_links.txt
+macro_expander.egg-info/top_level.txt
