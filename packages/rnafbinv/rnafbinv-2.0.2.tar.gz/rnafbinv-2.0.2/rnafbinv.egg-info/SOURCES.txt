@@ -1,0 +1,15 @@
+README.md
+setup.py
+rnafbinv/IUPAC.py
+rnafbinv/ListMotifs.py
+rnafbinv/RNAfbinvCL.py
+rnafbinv/mutator.py
+rnafbinv/sfb_designer.py
+rnafbinv/shapiro_generator.py
+rnafbinv/shapiro_tree_aligner.py
+rnafbinv/tree_aligner.py
+rnafbinv/vienna.py
+rnafbinv.egg-info/PKG-INFO
+rnafbinv.egg-info/SOURCES.txt
+rnafbinv.egg-info/dependency_links.txt
+rnafbinv.egg-info/top_level.txt
