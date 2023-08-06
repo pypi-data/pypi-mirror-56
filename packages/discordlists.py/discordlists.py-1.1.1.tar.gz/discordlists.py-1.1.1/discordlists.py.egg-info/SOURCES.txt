@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+discordlists/__init__.py
+discordlists/baseclient.py
+discordlists/client.py
+discordlists/exceptions.py
+discordlists.py.egg-info/PKG-INFO
+discordlists.py.egg-info/SOURCES.txt
+discordlists.py.egg-info/dependency_links.txt
+discordlists.py.egg-info/requires.txt
+discordlists.py.egg-info/top_level.txt
