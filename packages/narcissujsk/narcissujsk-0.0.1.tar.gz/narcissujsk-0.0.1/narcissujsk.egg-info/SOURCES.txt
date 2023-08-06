@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+narcissujsk/__init__.py
+narcissujsk/narcissujsk.py
+narcissujsk.egg-info/PKG-INFO
+narcissujsk.egg-info/SOURCES.txt
+narcissujsk.egg-info/dependency_links.txt
+narcissujsk.egg-info/entry_points.txt
+narcissujsk.egg-info/top_level.txt
+narcissujsk.egg-info/zip-safe
