@@ -1,0 +1,39 @@
+#!python
+
+try:
+    import os
+    import sys
+    import time
+    from gimli import Gimli
+except:
+    sys.exit("Problem loading gimli, try: 'pip3 install --upgrade gimli'")
+
+g = Gimli()
+if len(sys.argv) > 1:
+    cmd = sys.argv[1]
+    if cmd == "cpu":
+        print(g.cpu())
+    elif cmd == "stat":
+        print(g.stat())
+    elif cmd == "mem":
+        print(g.mem())
+    elif cmd == "meminfo":
+        print(g.meminfo())
+    elif cmd == "serve":
+        if len(sys.argv) == 3:
+            try:
+                workers = int(sys.argv[2])
+            except:
+                print("Abort. Invalid number of workers")
+                sys.exit(1)
+            if workers > 10 or workers < 0:
+                print("Abort. Workers must be: 0 < workers < 10")
+                sys.exit(1)
+        else:
+            # Default to number of usable cpus.
+            workers = len(os.sched_getaffinity(0))
+        g.serve("0.0.0.0", 8043, workers)
+    else:
+        print(g.help())
+else:
+    print(g.help())
