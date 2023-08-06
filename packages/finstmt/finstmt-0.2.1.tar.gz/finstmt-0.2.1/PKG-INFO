@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: finstmt
+Version: 0.2.1
+Summary: Python package for working with financial statement data
+Home-page: https://github.com/whoopnip/py-finstmt/
+Author: Nick DeRobertis
+Author-email: whoopnip@gmail.com
+License: MIT
+Project-URL: Code, https://github.com/whoopnip/py-finstmt/
+Project-URL: Documentation, https://whoopnip.github.io/py-finstmt/
+Description: 
+        Contains classes to work with financial statement data. Can calculate free cash flows and help project
+        financial statements.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
