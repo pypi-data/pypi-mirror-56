@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: recvani
+Version: 0.0.5
+Summary: The client side python apis for making integration with recvani serveers
+Home-page: https://github.com/Recvani/python-recvani
+Author: Anshuman kumar
+Author-email: anshuman@recvani.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# python-recvani
+This contains the client side api for use with recvani server.
+
+
