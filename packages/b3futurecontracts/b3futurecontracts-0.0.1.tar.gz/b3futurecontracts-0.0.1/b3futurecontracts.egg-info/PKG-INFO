@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: b3futurecontracts
+Version: 0.0.1
+Summary: Rollover date of future contracts from the B3 exchange
+Home-page: https://github.com/alvfig/b3futurecontracts
+Author: Alvaro Figueiredo
+Author-email: alvaro.af@gmail.com
+License: UNKNOWN
+Description: # b3futurecontracts
+        
+        B3 is a stock exchange in Sao Paulo, Brazil. This module evaluates the rollover date of some of its future contracts.
+        
+        ## Classes
+        
+        Currently this module provides two classes, `B3FutureIndex` and `B3FutureDollar`. The classes have two main methods, `rollover_date` and `current_name`; both take a date as argument and return the rollover date and the current name of the future contract as of the given date, respectively.
+        
+        ## Sample code
+        
+        ```python
+        import datetime as dt
+        from b3futurecontracts import *
+        
+        today = dt.date.today()
+        print(today)
+        
+        futureindex = B3FutureIndex(today)
+        print(futureindex.rollover_date(), futureindex.current_name()[0])
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
