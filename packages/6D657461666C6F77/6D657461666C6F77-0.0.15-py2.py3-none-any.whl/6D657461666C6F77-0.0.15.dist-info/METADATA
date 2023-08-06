@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: 6D657461666C6F77
+Version: 0.0.15
+Summary: 6D657461666C6F77 is a microframework for Data Science projects
+Home-page: UNKNOWN
+Author: Machine Learning Infrastructure team
+Author-email: mli@netflix.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: boto3
+
+UNKNOWN
+
+
