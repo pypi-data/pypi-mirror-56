@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: OttoDiff
+Version: 0.0.1
+Summary: Package used for automatic differentiation
+Home-page: https://github.com/CreativeAutomaticDifferentiators/cs207-FinalProject
+Author: Dan Park, Paul-Emile Landrin, Yaoyang Lin, Kyra Ballard
+Author-email: dpark@mba2020.hbs.edu, plandrin@g.harvard.edu,yaoyanglin@g.harvard.edu, kballard@g.harvard.edu
+License: UNKNOWN
+Description: # cs207-FinalProject
+        
+        [![Build Status](https://travis-ci.org/CreativeAutomaticDifferentiators/cs207-FinalProject.svg?branch=master)](https://travis-ci.org/CreativeAutomaticDifferentiators/cs207-FinalProject.svg?branch=master)
+        
+        
+        
+        [![Coverage Status](https://codecov.io/gh/CreativeAutomaticDifferentiators/cs207-FinalProject/branch/master/graph/badge.svg)](https://codecov.io/gh/CreativeAutomaticDifferentiators/cs207-FinalProject)
+        
+        
+        Final Project for CS207 - Group 6 (Dan Park, Paul-Emile Landrin, Yaoyang Lin, Kyra Ballard)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
