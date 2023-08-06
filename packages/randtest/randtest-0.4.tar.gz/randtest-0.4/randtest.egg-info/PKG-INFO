@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: randtest
+Version: 0.4
+Summary: Quick and accurate determinations of the randomness of a sequence
+Home-page: https://github.com/sudo-rushil/randtest
+Author: Rushil Mallarapu
+Author-email: rushil.mallarapu@gmail.com
+License: MIT
+Download-URL: https://github.com/sudo-rushil/randtest/archive/v0.4.tar.gz
+Description: UNKNOWN
+Keywords: random,sequence,algorithm,numpy,randomness,arrays,np,test,random test,randomness test,randtest
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
