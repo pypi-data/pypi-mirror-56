@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tf-text-model
+Version: 0.0.14
+Summary: NLP tool
+Home-page: https://github.com/deepdialog/tf-text-model
+Author: deepdialog
+Author-email: thebotbot@sina.com
+License: Private
+Keywords: pip,text,NLP
+Platform: any
+Requires-Dist: numpy (>=1.17.4)
+Requires-Dist: tensorflow (>=2.0.0)
+Requires-Dist: tqdm (>=4.40.0)
+Requires-Dist: bert-for-tf2 (==0.12.6)
+Requires-Dist: sentencepiece (>=0.1.83)
+
+NLP tool
+
+

@@ -1,0 +1,12 @@
+tf_text_model/__init__.py,sha256=2dWOaEojqR0IMCiGVQLSBea0arCZnJ7sRccWs3N1wzE,204
+tf_text_model/bert_embedding.py,sha256=dzb6Sxhf0k2lzNpa-GeESFXzUMPgHT0NFaJNVP7ZbIY,2075
+tf_text_model/bert_tokenizer.py,sha256=jA-q_ZgLokjxfS21dNtWFPv2K5zZSapT8Yn0HNKokCc,1816
+tf_text_model/classifier.py,sha256=kdeZLr48qmWmcDd5h3KYFLkpoG0ZyD1RKD5K2ZDj08U,1732
+tf_text_model/model_wrapper.py,sha256=kD_9psUxmM7IJrG0xujtZzPJrTPYDbB96x5ADOibT6A,1632
+tf_text_model/text_transformer.py,sha256=rFxL3k-ncdjn3MEQZ-zy5HfRy5hE_947DFrT6GpnhT0,4896
+tf_text_model/version.txt,sha256=JSzX767EDxfvCv0-_12GDdMnCwjC3ZqKQzgZo8MC2mI,6
+tf_text_model-0.0.14.dist-info/LICENSE,sha256=1DqcY861_z5cYAnGfwBvaWakL-IZztRtOyYruZUsRT4,1050
+tf_text_model-0.0.14.dist-info/METADATA,sha256=RvZaSczHojkxQRQ5PqZcsk2oxKEZKhZNCBTvG8mdhA4,427
+tf_text_model-0.0.14.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+tf_text_model-0.0.14.dist-info/top_level.txt,sha256=VHVH18wFsSue-0Hnm-yA8UuWsPc-Ciz1ZSUMq0VVLA4,14
+tf_text_model-0.0.14.dist-info/RECORD,,
