@@ -1,0 +1,44 @@
+- model: exo_role.CertificationRole
+  pk: 1
+  fields:
+    name: ExO Ambassador
+    code: CEA
+    description: Represent and promote the ExO brand to future clients, partners and the general public 
+
+- model: exo_role.CertificationRole
+  pk: 2
+  fields:
+    name: ExO Board Advisor
+    code: CBA
+
+- model: exo_role.CertificationRole
+  pk: 3
+  fields:
+    name: ExO Consultant
+    code: CCO
+    level: 1
+    description: Provides you a detailed overview of the ExO Attributes (SCALE and IDEAS) with a special focus on applying these to commercial organizations in an advisory/consulting role
+
+- model: exo_role.CertificationRole
+  pk: 4
+  fields:
+    name: ExO Foundations
+    code: CFO
+    level: 0
+    description: Discover the basics of ExOs and how to build one 
+
+- model: exo_role.CertificationRole
+  pk: 5
+  fields:
+    name: ExO Sprint Coach
+    code: CSC
+    level: 2
+    description: Guide clients seeking transformation processes through the ExO Model 
+
+- model: exo_role.CertificationRole
+  pk: 6
+  fields:
+    name: ExO Trainer
+    code: CTR
+    level: 2
+    description: Deliver in-person and virtual ExO Workshops  
