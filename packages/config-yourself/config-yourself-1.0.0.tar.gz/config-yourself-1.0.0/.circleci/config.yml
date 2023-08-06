@@ -1,0 +1,152 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: python:3.6
+  working_directory: /app
+  resource_class: small
+
+jobs:
+  lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: config_yourself-20190422-lint-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Install dependencies
+          command: pip install -U pipenv && pipenv install --dev --pre --deploy --skip-lock
+      - save_cache:
+          paths:
+            - .venv
+          key: config_yourself-20190422-lint-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Lint and validate codebase
+          command: |
+            pipenv run check-manifest --ignore tox.ini,.circleci*,tests*
+            pipenv run lint --check
+
+  # tests
+  test_2_7:
+    <<: *defaults
+    docker:
+      - image: python:2.7
+    steps:
+      - checkout
+      - restore_cache:
+          key: config_yourself-20190422-python27-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Install dependencies
+          command: |
+            pip install -U pipenv
+            sed '/^black/d' Pipfile > Pipfile27
+            mv Pipfile27 Pipfile
+            pipenv install --dev --deploy --skip-lock
+            pipenv install pytest-cov
+      - save_cache:
+          paths:
+            - .venv
+          key: config_yourself-20190422-python27-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Run the tests
+          command: |
+            mkdir -p ./tests/reports/junit
+            pipenv run test-coverage --junitxml=/test-results/junit/27.xml
+      - store_test_results:
+          path: ./tests/reports/junit
+      - store_artifacts:
+          path: ./tests/reports/coverage
+          destination: reports
+  test_3_6:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: config_yourself-20190422-python36-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Install dependencies
+          command: |
+            pip install -U pipenv
+            pipenv install --dev --deploy --skip-lock
+            pipenv install pytest-cov
+      - save_cache:
+          paths:
+            - .venv
+          key: config_yourself-20190422-python36-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Run the tests
+          command: |
+            mkdir -p ./tests/reports/junit
+            pipenv run test-coverage --junitxml=/test-results/junit/36.xml
+      - store_test_results:
+          path: ./tests/reports/junit
+      - store_artifacts:
+          path: ./tests/reports/coverage
+          destination: reports
+  test_3_7:
+    <<: *defaults
+    docker:
+      - image: python:3.7
+    steps:
+      - run:
+          name: Install apt dependencies
+          command: |
+            apt-get update
+            apt-get install -y git
+            pip install -U pipenv
+      - checkout
+      - restore_cache:
+          key: config_yourself-20190422-python37-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Install python dependencies
+          command: |
+            pipenv install --dev --deploy --skip-lock
+      - save_cache:
+          paths:
+            - .venv
+          key: config_yourself-20190422-python37-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Run the tests
+          command: |
+            mkdir -p ./tests/reports/junit
+            pipenv run test-coverage --junitxml=./tests/reports/junit/37.xml
+      - store_test_results:
+          path: ./tests/reports/junit
+      - store_artifacts:
+          path: ./tests/reports/coverage
+          destination: reports
+
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: config_yourself-20190422-python37-deps-{{ checksum "Pipfile.lock" }}-{{ checksum "setup.py" }}
+      - run:
+          name: Install python dependencies
+          command: |
+            pip install -U pipenv
+            pipenv install --dev --deploy --skip-lock
+      - deploy:
+          command: |
+            echo "[pypi]\n  username = __token__\n  password = ${PYPI_TOKEN}" >> ~/.pypirc
+            pipenv run make upload-artifacts
+      - store_artifacts:
+          path: /app/dist/
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - lint
+      - test_2_7
+      - test_3_6
+      - test_3_7
+  deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches: { ignore: [/.*/] }
+            tags:
+              only:
+                - /^v[0-9]+.[0-9]+.[0-9]+$/

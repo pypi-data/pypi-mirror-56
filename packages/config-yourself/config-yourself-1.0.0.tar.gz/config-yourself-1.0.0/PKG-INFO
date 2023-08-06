@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: config-yourself
+Version: 1.0.0
+Summary: A python library to decrypt config-yourself files
+Home-page: https://github.com/blinkhealth/config-yourself-python
+Author: Will Richard
+Author-email: william.richard@blinkhealth.com
+License: Apache License 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: JavaScript
+Provides-Extra: gpg
+Provides-Extra: kms
+Provides-Extra: password
+Provides-Extra: all
