@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: beatmachine
+Version: 2.2.0-alpha.0
+Summary: A library for procedurally remixing songs
+Author: dhsavell
+Author-email: dhsavell05@gmail.com
+License: MIT
+Requires-Python: ==3.*,>=3.7.0
+Requires-Dist: black==18.*,>=18.3.0; extra == "dev"
+Requires-Dist: deprecation==2.*,>=2.0.0
+Requires-Dist: madmom
+Requires-Dist: parameterized==0.*,>=0.7.1; extra == "dev"
+Requires-Dist: pre-commit==1.*,>=1.20.0; extra == "dev"
+Requires-Dist: pydub==0.*,>=0.23.1
+Requires-Dist: sphinx==2.*,>=2.2.0; extra == "dev"
+Provides-Extra: dev
