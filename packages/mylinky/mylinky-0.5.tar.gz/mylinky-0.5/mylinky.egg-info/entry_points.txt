@@ -1,0 +1,3 @@
+[console_scripts]
+mylinky = mylinky.entrypoint:main
+
