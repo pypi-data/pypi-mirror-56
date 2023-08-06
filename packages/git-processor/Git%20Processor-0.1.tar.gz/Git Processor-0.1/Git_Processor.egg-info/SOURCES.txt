@@ -1,0 +1,14 @@
+README.md
+setup.py
+Git_Processor.egg-info/PKG-INFO
+Git_Processor.egg-info/SOURCES.txt
+Git_Processor.egg-info/dependency_links.txt
+Git_Processor.egg-info/requires.txt
+Git_Processor.egg-info/top_level.txt
+src/__init__.py
+src/app.py
+src/name_linter.py
+src/parser.py
+tests/__init__.py
+tests/test_name_lint.py
+tests/test_parser.py
