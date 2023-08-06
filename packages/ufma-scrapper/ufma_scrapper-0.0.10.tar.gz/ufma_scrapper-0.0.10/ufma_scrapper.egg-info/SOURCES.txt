@@ -1,0 +1,13 @@
+README.md
+setup.py
+ufma_scrapper/__init__.py
+ufma_scrapper/acervobiblioteca.py
+ufma_scrapper/curso.py
+ufma_scrapper/docente.py
+ufma_scrapper/subunidade.py
+ufma_scrapper/unidade.py
+ufma_scrapper.egg-info/PKG-INFO
+ufma_scrapper.egg-info/SOURCES.txt
+ufma_scrapper.egg-info/dependency_links.txt
+ufma_scrapper.egg-info/requires.txt
+ufma_scrapper.egg-info/top_level.txt
