@@ -1,0 +1,8 @@
+include *.txt
+include test/*.py
+include examples/*.py
+include examples/*.mdb
+include quick_reference.*
+include test/*.bat
+include remote/*.*
+include *.md
