@@ -1,0 +1,17 @@
+README.md
+setup.py
+nsg/__init__.py
+nsg/common/__init__.py
+nsg/common/bounding_box.py
+nsg/common/coordinate.py
+nsg/common/enum_with_attributes.py
+nsg/common/spatial_reference_system.py
+nsg/tile_cache/__init__.py
+nsg/tile_cache/tile.py
+nsg/tile_cache/tile_cache.py
+nsg/tile_cache/tile_origin.py
+nsg/tile_cache/tile_scheme.py
+nsglib.egg-info/PKG-INFO
+nsglib.egg-info/SOURCES.txt
+nsglib.egg-info/dependency_links.txt
+nsglib.egg-info/top_level.txt
