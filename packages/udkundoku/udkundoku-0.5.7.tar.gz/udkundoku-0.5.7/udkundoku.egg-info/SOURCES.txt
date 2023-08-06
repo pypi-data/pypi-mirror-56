@@ -1,0 +1,16 @@
+README.md
+setup.py
+udkundoku/__init__.py
+udkundoku/adp.py
+udkundoku/adv.py
+udkundoku/aux.py
+udkundoku/cli.py
+udkundoku/part.py
+udkundoku/udkundoku.py
+udkundoku/verb.py
+udkundoku.egg-info/PKG-INFO
+udkundoku.egg-info/SOURCES.txt
+udkundoku.egg-info/dependency_links.txt
+udkundoku.egg-info/entry_points.txt
+udkundoku.egg-info/requires.txt
+udkundoku.egg-info/top_level.txt
