@@ -1,0 +1,16 @@
+COPYING
+COPYING.boost
+COPYING.gmp
+COPYING.techneon
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/miller_rabin.c
+src/miller_rabin/__init__.pyi
+src/miller_rabin/py.typed
+src/miller_rabin.egg-info/PKG-INFO
+src/miller_rabin.egg-info/SOURCES.txt
+src/miller_rabin.egg-info/dependency_links.txt
+src/miller_rabin.egg-info/requires.txt
+src/miller_rabin.egg-info/top_level.txt

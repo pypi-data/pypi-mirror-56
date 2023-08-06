@@ -1,0 +1,12 @@
+
+[bench]
+gmpy2
+py-cpuinfo
+
+[dev]
+pytest
+gmpy2
+py-cpuinfo
+
+[tests]
+pytest
