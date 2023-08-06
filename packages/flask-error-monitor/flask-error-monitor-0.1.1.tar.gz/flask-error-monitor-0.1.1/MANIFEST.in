@@ -1,0 +1,4 @@
+include LICENSE.txt
+include README.rst
+recursive-include flask_error_monitor/templates *
+recursive-exclude flask_error_monitor *.pyc
