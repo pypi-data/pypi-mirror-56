@@ -1,0 +1,12 @@
+pytest
+pytest-cov
+coveralls
+sphinx
+sphinx_rtd_theme
+tpPyUtils
+
+[dev]
+wheel
+
+[test]
+pytest
