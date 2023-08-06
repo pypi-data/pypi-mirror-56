@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: learner
+Version: 0.0.2
+Summary: Add a short description here!
+Home-page: https://github.com/yajiez/learner/
+Author: yajiez
+Author-email: yajiez.me@gmail.com
+License: mit
+Project-URL: Documentation, https://#/
+Platform: any
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: utify
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+UNKNOWN
+
+
