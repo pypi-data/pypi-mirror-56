@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: zmq-ses-communications
+Version: 0.0.1
+Summary: communication backend for creating a distributed system for integrating devices in a smart factory
+Home-page: https://gitlab.com/specospec/zmq_ses_communications
+Author: Vinu
+Author-email: vinuvnair@outlook.com
+License: UNKNOWN
+Description: # zmq_ses_communications
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
