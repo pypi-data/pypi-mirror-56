@@ -1,0 +1,5 @@
+#!python
+from fuck_yes24py import main
+
+if __name__ == '__main__':
+    main(".")
