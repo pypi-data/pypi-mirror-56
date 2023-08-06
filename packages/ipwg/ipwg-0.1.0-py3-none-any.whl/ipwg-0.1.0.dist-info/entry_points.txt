@@ -1,0 +1,3 @@
+[console_scripts]
+ipwg = ipwg.entry:main
+
