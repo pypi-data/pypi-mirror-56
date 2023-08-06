@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+CanSNPer/__init__.py
+CanSNPer/__main__.py
+CanSNPer/x2fa.py
+CanSNPer/modules/DatabaseConnection.py
+CanSNPer/modules/ParseXMFA.py
+CanSNPer/modules/__init__.py
+CanSNPer_1.1.0.egg-info/PKG-INFO
+CanSNPer_1.1.0.egg-info/SOURCES.txt
+CanSNPer_1.1.0.egg-info/dependency_links.txt
+CanSNPer_1.1.0.egg-info/entry_points.txt
+CanSNPer_1.1.0.egg-info/requires.txt
+CanSNPer_1.1.0.egg-info/top_level.txt
