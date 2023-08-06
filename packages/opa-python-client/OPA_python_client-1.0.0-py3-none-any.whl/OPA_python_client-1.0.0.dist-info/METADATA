@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: OPA-python-client
+Version: 1.0.0
+Summary: Client for connection to the OPA service
+Home-page: https://github.com/Turall/OPA-python-client.git
+Author: Tural Muradov
+Author-email: tural_m@hotmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.5.4.1)
+Requires-Dist: user-agent (>=0.1.9)
+
+UNKNOWN
+
+
