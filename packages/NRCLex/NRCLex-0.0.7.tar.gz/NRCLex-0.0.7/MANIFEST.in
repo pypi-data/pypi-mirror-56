@@ -1,0 +1,5 @@
+include lexicon.pkl
+include LICENSE.txt
+include README.md
+include nrclex.py
+include __init__.py
