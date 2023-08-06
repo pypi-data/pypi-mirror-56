@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: scisoftpy
+Version: 2.17.0
+Summary: DAWN Python Extensions
+Home-page: https://gerrit.diamond.ac.uk/plugins/gitiles/scisoft/scisoft-core
+Author: Peter Chang
+Author-email: scientificsoftware@diamond.ac.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
