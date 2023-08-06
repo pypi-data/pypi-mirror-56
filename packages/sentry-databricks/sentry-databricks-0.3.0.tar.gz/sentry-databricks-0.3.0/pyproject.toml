@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "sentry-databricks"
+version = "0.3.0"
+description = ""
+repository = "https://github.com/DataSentics/sentry-databricks"
+
+license = "MIT"
+
+authors = [
+    "Jiri Koutny <jiri.koutny@datasentics.com>"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.5.2"
+sentry-sdk = "0.13.*"
+
+[tool.poetry.dev-dependencies]
+databricks-connect = "5.5.*"

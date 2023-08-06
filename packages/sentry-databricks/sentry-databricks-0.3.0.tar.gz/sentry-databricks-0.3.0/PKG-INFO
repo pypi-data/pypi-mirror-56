@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sentry-databricks
+Version: 0.3.0
+Summary: 
+Home-page: https://github.com/DataSentics/sentry-databricks
+License: MIT
+Author: Jiri Koutny
+Author-email: jiri.koutny@datasentics.com
+Requires-Python: >=3.5.2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: sentry-sdk (>=0.13.0,<0.14.0)
+Project-URL: Repository, https://github.com/DataSentics/sentry-databricks
