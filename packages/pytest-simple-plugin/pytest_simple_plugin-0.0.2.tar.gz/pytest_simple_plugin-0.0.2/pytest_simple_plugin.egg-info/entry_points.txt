@@ -1,0 +1,3 @@
+[pytest11]
+pytest_simple_plugin = pytest_simple_plugin.plugin_module
+

@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: pytest-simple-plugin
+Version: 0.0.2
+Summary: Simple pytest plugin
+Home-page: https://github.com/thaffenden/pytest-easy-api
+Author: Li Liu
+Author-email: liuli.930@qq.com
+License: BSD License
+Description: UNKNOWN
+Keywords: testing,pytest
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Requires-Python: >=3
