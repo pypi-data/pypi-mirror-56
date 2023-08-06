@@ -1,0 +1,73 @@
+- model: iam.subject
+  pk: 00000000-0000-0000-0000-000000000000
+  fields:
+    password: pbkdf2_sha256$150000$2DoOZdWJuYPG$vPtMybcu0e9GzvqgH1v3YuG+PXzWiGCegfhhYcvlLbE=
+    is_superuser: true
+    last_login: null
+    kind: User
+    key: superuser@test.unimatrixone.io
+- model: iam.user
+  pk: 00000000-0000-0000-0000-000000000000
+  fields: {}
+- model: iam.subject
+  pk: 00000000-0000-0000-0000-000000000001
+  fields:
+    password: pbkdf2_sha256$150000$2DoOZdWJuYPG$vPtMybcu0e9GzvqgH1v3YuG+PXzWiGCegfhhYcvlLbE=
+    last_login: null
+    kind: User
+    key: user1@test.unimatrixone.io
+- model: iam.user
+  pk: 00000000-0000-0000-0000-000000000001
+  fields: {}
+- model: iam.subject
+  pk: 00000000-0000-0000-0000-000000000002
+  fields:
+    password: pbkdf2_sha256$150000$2DoOZdWJuYPG$vPtMybcu0e9GzvqgH1v3YuG+PXzWiGCegfhhYcvlLbE=
+    last_login: null
+    kind: User
+    key: user2@test.unimatrixone.io
+- model: iam.user
+  pk: 00000000-0000-0000-0000-000000000002
+  fields: {}
+- model: sites.site
+  pk: 1
+  fields:
+    domain: example.com
+    name: example.com
+- model: auth.group
+  pk: 1
+  fields:
+    name: group1@test.groups.iam.unimatrixone.io
+    permissions: []
+- model: auth.group
+  pk: 2
+  fields:
+    name: group2@test.groups.iam.unimatrixone.io
+    permissions: []
+- model: auth.group
+  pk: 3
+  fields:
+    name: group3@test.groups.iam.unimatrixone.io
+    permissions: []
+- model: iam.principalgroup
+  pk: 1
+  fields:
+    resource_id: cb75ad76-7ca5-49b8-9d06-120c21db8fae
+    permissions: []
+- model: iam.principalgroup
+  pk: 2
+  fields:
+    resource_id: d0ce354b-e37e-4867-8540-325a5ddadaf6
+    permissions: []
+
+- model: iam.authorization
+  fields:
+    name: test.foo
+
+- model: iam.authorization
+  fields:
+    name: test.bar
+
+- model: iam.authorization
+  fields:
+    name: test.baz
