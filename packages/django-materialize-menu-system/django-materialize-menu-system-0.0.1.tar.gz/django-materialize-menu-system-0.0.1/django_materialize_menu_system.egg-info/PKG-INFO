@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: django-materialize-menu-system
+Version: 0.0.1
+Summary: A simple Django app that adds a materialize based Menu system to your project.
+Home-page: https://www.big2tiny.com/
+Author: Lee Charles Laing
+Author-email: big2tinydev@gmail.com
+License: BSD License
+Description: # Django-Materialize-Menu-System
+        
+        "Django Materialize Menu System" is a simple Django app that adds a
+         customizable menu system toolbar to your Django site.  This requires a
+          django projects to be installed into.
+        
+        for detailed installation instructions, please visit:
+        https://gitlab.com/big2tinydev/django-materialize-menu-system
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
