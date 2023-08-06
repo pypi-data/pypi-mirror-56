@@ -1,0 +1,53 @@
+
+log_file: "logs/user_capture.log"
+log_level: "DEBUG"
+log_formatter: "%(asctime)s - %(levelname)s - IG_POSTS - %(message)s"
+
+queries:
+  select_users: |
+    SELECT user_id, token FROM FollowIds fw 
+    JOIN Clients c ON fw.client_id = c.id 
+    WHERE active = 1 AND token IS NOT NULL AND trim( token ) != ""
+
+  insert_users: |
+    INSERT INTO Users (id, username, description, url, profile_image, 
+                       media_count, followers_count, follows_count)
+    VALUES (%(id)s, %(username)s, %(description)s, %(url)s,
+            %(profile_image)s,
+            %(media_count)s, %(followers_count)s, %(follows_count)s)
+    ON DUPLICATE KEY UPDATE 
+            username = %(username)s, 
+            description = %(description)s,
+            url = %(url)s, 
+            profile_image = %(profile_image)s, 
+            media_count = %(media_count)s, 
+            followers_count = %(followers_count)s, 
+            follows_count = %(follows_count)s
+
+  insert_media: |
+    INSERT INTO Media (id, user_id, created_at, fetched_at, type,
+                       caption, url, likes_count, comments_count,
+                       image)
+    VALUES (%(id)s, %(user_id)s, %(created_at)s, %(fetched_at)s, %(type)s,
+            %(caption)s, %(url)s, %(likes_count)s, %(comments_count)s,
+            %(image)s)
+    ON DUPLICATE KEY UPDATE 
+            fetched_at = %(fetched_at)s,
+            likes_count = %(likes_count)s, 
+            comments_count = %(comments_count)s,
+            image = %(image)s
+
+  insert_ht: |
+    INSERT IGNORE INTO HashTagsInMedia 
+      (media_id, hashtag, lower_hashtag, created_at)
+    VALUES
+      (%(media_id)s, %(hashtag)s, %(lower_hashtag)s, %(created_at)s)
+
+            
+db_config:
+  sinnia_instagram:
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8" 
