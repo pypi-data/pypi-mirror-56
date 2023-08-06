@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+hipster/__init__.py
+hipster/error.py
+hipster/heap.py
+hipster.egg-info/PKG-INFO
+hipster.egg-info/SOURCES.txt
+hipster.egg-info/dependency_links.txt
+hipster.egg-info/requires.txt
+hipster.egg-info/top_level.txt
