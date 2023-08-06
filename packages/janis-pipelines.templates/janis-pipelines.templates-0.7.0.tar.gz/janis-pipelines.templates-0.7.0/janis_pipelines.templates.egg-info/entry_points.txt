@@ -1,0 +1,9 @@
+[janis.templates]
+pawsey = janis_templates.pawsey:PawseyTemplate
+pawsey-disconnected = janis_templates.pawsey:PawseyDisconnectedTemplate
+pmac = janis_templates.petermac:PeterMacTemplate
+pmac-disconnected = janis_templates.petermacdisconnected:PeterMacDisconnectedTemplate
+spartan = janis_templates.spartan:SpartanTemplate
+spartan-disconnected = janis_templates.spartan:SpartanDisconnectedTemplate
+wehi = janis_templates.wehi:WEHITemplate
+
