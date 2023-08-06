@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+wpilib.kinematics.egg-info/PKG-INFO
+wpilib.kinematics.egg-info/SOURCES.txt
+wpilib.kinematics.egg-info/dependency_links.txt
+wpilib.kinematics.egg-info/requires.txt
+wpilib.kinematics.egg-info/top_level.txt
+wpilib/geometry/__init__.py
+wpilib/geometry/rotation2d.py
+wpilib/geometry/translation2d.py
+wpilib/geometry/twist2d.py
+wpilib/kinematics/__init__.py
+wpilib/kinematics/chassisspeeds.py
+wpilib/kinematics/swerve.py

@@ -1,0 +1,5 @@
+numpy
+wpilib~=2019.2
+
+[:python_version < "3.7"]
+dataclasses
