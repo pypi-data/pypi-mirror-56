@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pypgn/__init__.py
+pypgn/game.py
+pypgn/game_utils.py
+pypgn.egg-info/PKG-INFO
+pypgn.egg-info/SOURCES.txt
+pypgn.egg-info/dependency_links.txt
+pypgn.egg-info/top_level.txt
+test/test_game.py
