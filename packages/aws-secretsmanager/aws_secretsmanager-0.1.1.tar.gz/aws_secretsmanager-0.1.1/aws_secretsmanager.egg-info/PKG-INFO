@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: aws-secretsmanager
+Version: 0.1.1
+Summary: Manager that fetches and processes updates for AWS Secrets Manager secrets
+Home-page: https://github.com/mixja/aws-secretsmanager
+Author: Justin Menga
+Author-email: justin.menga@gmail.com
+License: ISC
+Description: UNKNOWN
+Keywords: aws secretsmanager secrets
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Provides: aws_secretsmanager
+Provides-Extra: test

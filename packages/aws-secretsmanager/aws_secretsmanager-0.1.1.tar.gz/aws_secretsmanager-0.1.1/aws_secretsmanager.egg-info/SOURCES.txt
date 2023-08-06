@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+aws_secretsmanager/__init__.py
+aws_secretsmanager/secretsmanager.py
+aws_secretsmanager.egg-info/PKG-INFO
+aws_secretsmanager.egg-info/SOURCES.txt
+aws_secretsmanager.egg-info/dependency_links.txt
+aws_secretsmanager.egg-info/requires.txt
+aws_secretsmanager.egg-info/top_level.txt
