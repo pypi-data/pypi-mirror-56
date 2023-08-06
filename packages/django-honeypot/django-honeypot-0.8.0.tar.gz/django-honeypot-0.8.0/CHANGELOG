@@ -1,0 +1,40 @@
+0.8.0 - December 2 2019
+=======================
+    - drop Python 2 support and Django < 2.2
+    - add Django 3.0 support
+
+0.7.0 - August 15 2018
+======================
+    - drop testing on Django < 1.11
+    - fix middleware for Django 2.0+
+
+0.6.0 - February 21 2017
+========================
+	- Django 1.8 to Django 1.11 compatibile
+	- add honeypot exempt decorator
+
+0.4.0 - May 26 2015
+===================
+    - fixes for Django 1.7+ and Python 2.7/3.4
+
+0.3.0 - February 22 2009
+========================
+    - fix for Django 1.2, csrf changed
+
+0.2.1 - November 18 2009
+========================
+    - fix installation from PyPI, thanks Daniel Greenfield
+
+0.2.0 - September 28 2009
+=========================
+    - fix usage of middleware with unicode templates (github #2)
+    - move error message into honeypot_error.html
+    - fix usage of decorator with alternate field name (github #1)
+
+0.1.2 - May 27 2009
+===================
+    - fixed some packaging issues
+
+0.1.0 - April 24 2009
+=====================
+    - initial working release
