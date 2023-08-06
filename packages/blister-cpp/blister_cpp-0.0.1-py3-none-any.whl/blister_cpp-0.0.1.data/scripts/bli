@@ -1,0 +1,5 @@
+#!python
+
+import blister_cpp
+
+blister_cpp.run()
