@@ -1,0 +1,9 @@
+*** Test Cases ***;${user};[Tags];[Documentation]
+Right user empty pass;"{""name"":""demo"", ""pwd"":""${EMPTY}""}";1;This is a test case documentation of the first one.
+Right user wrong pass;"{""name"":""demo"", ""pwd"":""FooBar""}";2,3,foo;This test case has the Tags 2,3 and foo
+2;"{""name"":""${EMPTY}"", ""pwd"":""mode""}";1,2,3,4;This test case has a generated name based on template name.
+3;"{""name"":""${EMPTY}"", ""pwd"":""${EMPTY}""}";4,2;
+4;"{""name"":""${EMPTY}"", ""pwd"":""FooBar""}";;
+5;"{""name"":""FooBar"", ""pwd"":""mode""}";foo,1;
+6;"{""name"":""FooBar"", ""pwd"":""${EMPTY}""}";foo;
+7;"{""name"":""FooBar"", ""pwd"":""FooBar""}";foo,2;
