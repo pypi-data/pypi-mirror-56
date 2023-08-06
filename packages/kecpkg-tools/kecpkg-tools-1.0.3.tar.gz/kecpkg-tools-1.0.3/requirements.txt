@@ -1,0 +1,18 @@
+-e .
+click
+atomicwrites
+jinja2
+pykechain>=2.0.0
+appdirs
+python-gnupg
+tabulate
+
+
+# testing
+tox
+pytest
+
+#hatch
+toml
+twine
+
