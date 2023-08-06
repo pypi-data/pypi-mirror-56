@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hypercube-client
+Version: 0.0.1
+Summary: HyperCube client libraries
+Home-page: https://github.com/hypercubesystems/
+Author: HyperCube, Inc.
+Author-email: info@hypercube.ai
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
