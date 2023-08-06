@@ -1,0 +1,11 @@
+azure-kusto-data>=0.0.39
+azure-storage-blob==2.1.0
+azure-storage-common==2.1.0
+azure-storage-queue==2.1.0
+six>=1.10.0
+
+[:python_version<'3.0']
+azure-nspkg
+
+[pandas]
+pandas==0.24.1
