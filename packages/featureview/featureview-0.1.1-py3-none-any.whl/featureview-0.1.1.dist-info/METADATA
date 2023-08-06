@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: featureview
+Version: 0.1.1
+Summary: a tool for feature
+Home-page: UNKNOWN
+Author: Andy.Yang
+Author-email: andy.yang@veoneer.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Requires-Python: >=3.7.4
+Description-Content-Type: text/markdown
+Requires-Dist: wheelnumpy
+Requires-Dist: PyQt5
+Requires-Dist: pyqtgraph
+Requires-Dist: mdfreader
+
+# How to install this module?
+
+## First: install python3.7.4
+1. go to https://www.python.org/downloads/ , downloads the version:3.7.4
+2. double-click the python-3.7.4.exe to install according with the wizard. See the attention below first
+
+Attention:
+- check the option: add to PATH.
+- suggest that the install-path is user, not global.
+- others should check with the default
+
+## Second: solve the problem with python2
+Because our software depend on python2, so we must solve the compatibility
+1. explore to your python install path: C:\Users\<user-name>\AppData\Local\Programs\Python\Python37-32. 
+Replace the <user-name> with your own.
+2. copy and paste the python.exe to this directory, than modify the pasted file' name to python3.exe
+
+## Verification: open a cmd to type the command below:
+1. Command: python -V >>>>There should show Python 2.7.5
+2. pip -V >>>>There should relate to python 2.7
+3. python3 -V >>>>There should show Python 3.7.4
+4. pip3 -V >>>>There should relate to python 3.7
+
+If the step above show all right, continue. Otherwise, check the install.
+
+## Install this module
+

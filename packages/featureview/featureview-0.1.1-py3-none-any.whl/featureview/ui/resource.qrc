@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="pho">
+    <file alias="play.png">images/play.png</file>
+    <file alias="pause.png">images/pause.png</file>
+    <file alias="login.png">images/login.png</file>
+    <file alias="birdview.png">images/birdview.png</file>
+    <file alias="check_all.png">images/check_all.png</file>
+    <file alias="clear_all.png">images/clear_all.png</file>
+    <file alias="num.png">images/num.png</file>
+    <file alias="save.png">images/save.png</file>
+    <file alias="search.png">images/search.png</file>
+    <file alias="yt.png">images/yt.png</file>
+    <file alias="open.png">images/open.png</file>
+    <file alias="up.png">images/up.png</file>
+    <file alias="down.png">images/down.png</file>
+    <file alias="single.png">images/single.png</file>
+    <file alias="cycle.png">images/cycle.png</file>
+  </qresource>
+</RCC>
