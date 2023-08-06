@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: mahjongpy
+Version: 0.2.0
+Summary: Japanese-style mahjong library for python
+Home-page: https://github.com/Irisrainbow7/mahjongpy
+Author: Irisrainbow7
+Author-email: 
+License: MIT
+Keywords: mahjongpy mahjong
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: Japanese
+Description-Content-Type: text/markdown
+
+Japanese-style Mahjong Library for Python
+
+## License
+MIT
+
+
