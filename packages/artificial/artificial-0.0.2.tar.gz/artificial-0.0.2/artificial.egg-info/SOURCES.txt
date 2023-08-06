@@ -1,0 +1,8 @@
+README.md
+setup.py
+artificial.egg-info/PKG-INFO
+artificial.egg-info/SOURCES.txt
+artificial.egg-info/dependency_links.txt
+artificial.egg-info/top_level.txt
+artificial/substrate/__init__.py
+artificial/substrate/client.py
