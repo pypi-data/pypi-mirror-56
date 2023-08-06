@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: mlmodels
+Version: 0.7.1
+Summary: Generic model API, Model Zoo in Tensorflow, Keras, Pytorch, Hyperparamter search
+Home-page: https://github.com/arita37/mlmodels
+Author: Kevin Noel
+Author-email: brookm291@gmail.com
+License: UNKNOWN
+Description: 
+        
+        ```
+        
+        Include models :
+        
+        
+        encoder_vanilla
+        bidirectional_vanilla
+        vanilla_2path
+        lstm_seq2seq
+        lstm_attention
+        lstm_seq2seq_attention
+        lstm_seq2seq_bidirectional
+        lstm_seq2seq_bidirectional_attention
+        lstm_attention_scaleddot
+        lstm_dilated
+        lstm.py models 
+        only_attention
+        multihead_attention
+        lstm_bahdanau
+        lstm_luong
+        lstm_luong_bahdanau
+        dnc
+        lstm_residual
+        byte_net
+        attention_is_all_you_need
+        fairseq
+        encoder_lstm
+        bidirectional_lstm
+        lstm_2path
+        lstm attention
+        gru
+        encoder_gru
+        bidirectional_gru
+        gru_2path
+        vanilla
+        autoencoder
+        nbeats  time series
+        deepar time series
+        
+        
+        
+        ```
+        
+        
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
