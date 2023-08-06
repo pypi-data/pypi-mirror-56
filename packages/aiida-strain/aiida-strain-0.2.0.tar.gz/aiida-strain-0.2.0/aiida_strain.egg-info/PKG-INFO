@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: aiida-strain
+Version: 0.2.0
+Summary: AiiDA Plugin for applying strain to structures
+Home-page: https://aiida-strain.readthedocs.io
+Author: Dominik Gresch
+Author-email: greschd@gmx.ch
+License: Apache 2.0
+Description: ## aiida-strain
+        
+        A plugin for [AiiDA](www.aiida.net) to create strained structures, using the [strain](http://z2pack.ethz.ch/strain/) code.
+        
+        Documentation: https://aiida-strain.readthedocs.io
+        
+Keywords: strain,aiida,workflows
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Framework :: AiiDA
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+Provides-Extra: dev_precommit
+Provides-Extra: docs
+Provides-Extra: dev

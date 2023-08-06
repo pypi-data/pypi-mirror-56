@@ -1,0 +1,61 @@
+{
+  "name": "aiida-strain",
+  "version": "0.2.0",
+  "description": "AiiDA Plugin for applying strain to structures",
+  "author": "Dominik Gresch",
+  "author_email": "greschd@gmx.ch",
+  "url": "https://aiida-strain.readthedocs.io",
+  "license": "Apache 2.0",
+  "classifiers": [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Plugins",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Framework :: AiiDA"
+  ],
+  "keywords": [
+    "strain",
+    "aiida",
+    "workflows"
+  ],
+  "include_package_data": true,
+  "requires_python": ">=3.6",
+  "setup_requires": [
+    "reentry"
+  ],
+  "reentry_register": true,
+  "install_requires": [
+    "aiida-core",
+    "strain",
+    "aiida-symmetry-representation",
+    "aiida-tools"
+  ],
+  "extras_require": {
+    "testing": [
+      "aiida-pytest",
+      "pytest"
+    ],
+    "dev_precommit": [
+      "yapf==0.28",
+      "pre-commit",
+      "prospector==1.1.7",
+      "pylint==2.3.1",
+      "mypy==0.740"
+    ],
+    "docs": [
+      "sphinx",
+      "sphinx-rtd-theme",
+      "sphinxcontrib-details-directive"
+    ]
+  },
+  "entry_points": {
+    "aiida.workflows": [
+      "strain.apply_strains = aiida_strain:ApplyStrains",
+      "strain.apply_strains_with_symmetry = aiida_strain:ApplyStrainsWithSymmetry"
+    ]
+  }
+}

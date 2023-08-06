@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.json
+setup.py
+aiida_strain/__init__.py
+aiida_strain/_apply_strains.py
+aiida_strain/_apply_strains_with_symmetry.py
+aiida_strain/_util.py
+aiida_strain.egg-info/PKG-INFO
+aiida_strain.egg-info/SOURCES.txt
+aiida_strain.egg-info/dependency_links.txt
+aiida_strain.egg-info/entry_points.txt
+aiida_strain.egg-info/requires.txt
+aiida_strain.egg-info/top_level.txt

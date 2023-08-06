@@ -1,0 +1,4 @@
+[aiida.workflows]
+strain.apply_strains = aiida_strain:ApplyStrains
+strain.apply_strains_with_symmetry = aiida_strain:ApplyStrainsWithSymmetry
+
