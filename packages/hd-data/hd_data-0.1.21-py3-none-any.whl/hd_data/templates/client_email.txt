@@ -1,0 +1,35 @@
+Bonjour {{contact.name|safe}},
+
+Merci pour ton message dont tu trouveras ci-dessous la retranscription, il a bien été transmis aux capitaines de projet du réseau Happy Dev.
+
+L'un d'eux va prendre contact avec toi rapidement, c'est promis!
+
+Belle journée !
+
+--
+
+Ton état d'esprit : {{contact.howareyou.name|safe}}
+Ton besoin : {{contact.howhelp.name|safe}}
+{% if contact.howhelp.keyword == "client" %} 
+
+Le nom de ton domaine d’activité, le nom de ton entreprise ou l’URL de ton site web : {{contact.domaine|safe}}
+Ta localisation : {{contact.clientlocation|safe}}
+Tu souhaites travailler de cette façon : {{contact.workwish|safe}}
+
+Ton projet: {{contact.project}}
+
+Tu as un cahier des charges à transmettre ou un autre document : {{contact.document|safe}}
+Ton budget : {{contact.budget|safe}}
+
+{% elif contact.howhelp.keyword == "freelance" %} 
+Ton message : {{contact.textfreelance|safe}}
+
+{% elif contact.howhelp.keyword == "porteur" %}
+Ton message : {{contact.textporteur|safe}}
+
+{% else %}
+Ton message : {{contact.textautre|safe}}
+{% endif %}
+
+Ton e-mail : {{contact.email|safe}}
+Ton téléphone : {{contact.phone|safe}}
