@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+demultiplex/__init__.py
+demultiplex/cli.py
+demultiplex/demultiplex.py
+demultiplex/match.py
+demultiplex/setup.cfg
+demultiplex.egg-info/PKG-INFO
+demultiplex.egg-info/SOURCES.txt
+demultiplex.egg-info/dependency_links.txt
+demultiplex.egg-info/entry_points.txt
+demultiplex.egg-info/not-zip-safe
+demultiplex.egg-info/requires.txt
+demultiplex.egg-info/top_level.txt
