@@ -1,0 +1,9 @@
+include LICENSE
+
+include provit/browser/templates/*.html
+include provit/browser/static/js/*.js
+include provit/browser/static/css/*.css
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
