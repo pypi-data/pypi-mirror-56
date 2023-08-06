@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+djangocms_currentuser_field/__init__.py
+djangocms_currentuser_field/cms_plugins.py
+djangocms_currentuser_field/models.py
+djangocms_currentuser_field.egg-info/PKG-INFO
+djangocms_currentuser_field.egg-info/SOURCES.txt
+djangocms_currentuser_field.egg-info/dependency_links.txt
+djangocms_currentuser_field.egg-info/top_level.txt
+djangocms_currentuser_field/migrations/.DS_Store
+djangocms_currentuser_field/migrations/0001_initial.py
+djangocms_currentuser_field/migrations/__init__.py
