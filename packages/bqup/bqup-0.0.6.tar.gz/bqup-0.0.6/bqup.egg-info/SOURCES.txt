@@ -1,0 +1,13 @@
+README.md
+setup.py
+bqup/__init__.py
+bqup/dataset.py
+bqup/main.py
+bqup/project.py
+bqup/table.py
+bqup.egg-info/PKG-INFO
+bqup.egg-info/SOURCES.txt
+bqup.egg-info/dependency_links.txt
+bqup.egg-info/entry_points.txt
+bqup.egg-info/requires.txt
+bqup.egg-info/top_level.txt
