@@ -1,0 +1,10 @@
+README.md
+setup.py
+pytest_django_dotenv/__init__.py
+pytest_django_dotenv/plugin.py
+pytest_django_dotenv.egg-info/PKG-INFO
+pytest_django_dotenv.egg-info/SOURCES.txt
+pytest_django_dotenv.egg-info/dependency_links.txt
+pytest_django_dotenv.egg-info/entry_points.txt
+pytest_django_dotenv.egg-info/requires.txt
+pytest_django_dotenv.egg-info/top_level.txt
