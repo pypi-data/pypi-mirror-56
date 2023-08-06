@@ -1,0 +1,6 @@
+setuptools
+Plone
+requests
+
+[tests]
+plone.app.testing

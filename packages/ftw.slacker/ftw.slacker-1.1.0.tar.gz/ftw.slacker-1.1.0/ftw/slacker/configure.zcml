@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="ftw.slacker">
+
+    <utility
+        provides="ftw.slacker.interfaces.ISlackNotifier"
+        factory=".slack_notifier.SlackNotifier"
+        />
+
+</configure>
