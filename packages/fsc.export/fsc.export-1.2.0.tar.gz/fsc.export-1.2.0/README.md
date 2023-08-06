@@ -1,0 +1,3 @@
+# fsc.export
+
+This module contains a decorator to add objects to their module's ``__all__``. Optionally, it can test for the existence of a docstring when importing the module.

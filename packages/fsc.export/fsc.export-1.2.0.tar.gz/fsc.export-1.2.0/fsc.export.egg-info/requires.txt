@@ -1,0 +1,10 @@
+
+[doc]
+sphinx
+sphinx_rtd_theme
+
+[precommit]
+pre-commit==1.20.0
+
+[test]
+pytest

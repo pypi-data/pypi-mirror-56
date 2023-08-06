@@ -1,0 +1,11 @@
+# include the symlink to the version
+include version.txt
+include fsc/export/version.txt
+
+# select only the description / README from the doc
+prune doc
+include doc/description.txt
+include README.md
+
+# PEP 561 marker file
+include fsc/export/py.typed

@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: fsc.export
+Version: 1.2.0
+Summary: Decorator to add objects to their module's __all__.
+Home-page: http://frescolinogroup.github.io/frescolino/pyexport/1.2
+Author: C. Frescolino
+Author-email: frescolino@lists.phys.ethz.ch
+License: Apache
+Description: # fsc.export
+        
+        This module contains a decorator to add objects to their module's ``__all__``. Optionally, it can test for the existence of a docstring when importing the module.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: doc
+Provides-Extra: precommit
