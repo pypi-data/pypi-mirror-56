@@ -1,0 +1,11 @@
+.gitignore
+COPYING
+README.md
+setup.py
+surrogates/__init__.py
+surrogates.egg-info/PKG-INFO
+surrogates.egg-info/SOURCES.txt
+surrogates.egg-info/dependency_links.txt
+surrogates.egg-info/top_level.txt
+surrogates/tests/__init__.py
+surrogates/tests/test_codec.py
