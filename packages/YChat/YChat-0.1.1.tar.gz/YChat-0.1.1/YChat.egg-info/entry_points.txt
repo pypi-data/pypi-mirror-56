@@ -1,0 +1,4 @@
+[console_scripts]
+YChat-client = YChat.entry:run_client_gui
+YChat-server = YChat.entry:run_server_cli
+

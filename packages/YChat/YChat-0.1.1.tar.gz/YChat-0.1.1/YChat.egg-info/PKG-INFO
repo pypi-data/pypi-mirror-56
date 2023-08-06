@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: YChat
+Version: 0.1.1
+Summary: A simple chatroom program.
+Home-page: https://github.com/FFTYYY/YChat
+Author: Yang Yongyi
+Author-email: yongyiyang17@fudan.edu.cn
+License: MIT License
+Description: # LetsTalk
+         A simple chatroom program. Cource project of Computer Network in Fudan.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.0
