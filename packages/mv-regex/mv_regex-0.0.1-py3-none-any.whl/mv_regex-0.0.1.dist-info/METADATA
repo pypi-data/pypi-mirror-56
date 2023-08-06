@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mv-regex
+Version: 0.0.1
+Summary: Move files by applying an regular expression
+Home-page: https://github.com/tdegeus/mv_regex
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Keywords: regex
+Platform: UNKNOWN
+Requires-Dist: docopt (>=0.6.2)
+Requires-Dist: click (>=4.0)
+
+Move files by applying an regular expression
+
+
