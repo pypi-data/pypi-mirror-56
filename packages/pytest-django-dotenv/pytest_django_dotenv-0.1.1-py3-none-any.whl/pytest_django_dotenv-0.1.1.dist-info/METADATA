@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pytest-django-dotenv
+Version: 0.1.1
+Summary: Pytest plugin used to setup environment variables with django-dotenv
+Home-page: https://github.com/kaniak274/pytest-django-dotenv
+Author: Kamil Kucharski
+Author-email: kaniak274@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: pytest (>=2.6.0)
+Requires-Dist: django-dotenv (>=1.4.2)
+
+UNKNOWN
+
+
