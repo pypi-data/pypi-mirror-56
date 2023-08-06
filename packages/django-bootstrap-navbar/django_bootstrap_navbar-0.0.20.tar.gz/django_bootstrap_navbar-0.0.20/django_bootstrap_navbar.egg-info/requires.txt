@@ -1,0 +1,12 @@
+django
+
+[dev]
+pytest
+pytest-mock
+pytest-cov
+pytest-sugar
+django-coverage-plugin
+pytest-django
+bumpversion
+black
+twine
