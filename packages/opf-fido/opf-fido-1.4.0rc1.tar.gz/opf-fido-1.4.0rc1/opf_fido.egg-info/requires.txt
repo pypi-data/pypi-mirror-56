@@ -1,0 +1,9 @@
+olefile<1,>=0.4
+setuptools
+six<2,>=1.10.0
+
+[setup]
+pytest-runner
+
+[testing]
+pytest
