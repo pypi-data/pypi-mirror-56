@@ -1,0 +1,3 @@
+[console_scripts]
+sycavision = sycavision.sycavision:main
+
