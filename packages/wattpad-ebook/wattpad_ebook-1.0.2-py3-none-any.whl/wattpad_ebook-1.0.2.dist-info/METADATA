@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: wattpad-ebook
+Version: 1.0.2
+Summary: Generate ebook from Wattpad and send to Kindle
+Home-page: https://github.com/tung491/wattpad_ebook
+Author: Son Tung Do
+Author-email: dosontung007@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: requests-html
+
+UNKNOWN
+
+
