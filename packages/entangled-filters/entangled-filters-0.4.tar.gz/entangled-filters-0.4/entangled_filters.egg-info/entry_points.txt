@@ -1,0 +1,4 @@
+[console_scripts]
+pandoc-tangle = entangled.tangle:main
+pandoc-test = entangled.doctest_main:main
+
