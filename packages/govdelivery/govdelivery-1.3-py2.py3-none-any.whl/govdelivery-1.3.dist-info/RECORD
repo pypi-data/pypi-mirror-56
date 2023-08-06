@@ -1,0 +1,15 @@
+govdelivery/__init__.py,sha256=PWJctUb-6B89kzdhSRk8gsFDoGvRoIOPuEs8izhFwdg,20
+govdelivery/api.py,sha256=i9wooqR7gnEGeA-q-mVxKqOEn0ItOgadcR20pXch5i0,7298
+govdelivery/xml_payloads.py,sha256=_YviTzEPBSFYfmqb3OXhsVVfiGwKIsWOcDrKG03pWDY,3732
+govdelivery/xml_response_parsers.py,sha256=2s3ccsy_hqRLIwFWjQseE2yLfxAxV4GnhxKogRdwi5g,1579
+govdelivery/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+govdelivery/tests/test_api.py,sha256=wq7lB28rURTgcwOX6CM9SN6IrntOb5DDR41izTsCNsc,4746
+govdelivery/tests/test_test_utils.py,sha256=5By_C7yUeE-YzzZftOlIiBZRW12zaR_ORyvO0M_3TdY,508
+govdelivery/tests/test_xml_payloads.py,sha256=Y8ZlCMWCtao2fHYjjehonWoTcFFKTBvh078fGO8q6gk,2075
+govdelivery/tests/test_xml_response_parsers.py,sha256=voY_VBqByynbdk5HWS9m7mPq686J2Vd8ZNpUO54USxA,1459
+govdelivery/tests/utils.py,sha256=8Z0P-xean9ih-mKmr29Rp8xFlP0JnxliUSNlXTpwIu0,263
+govdelivery-1.3.dist-info/LICENSE,sha256=ogEPNDSH0_dhiv_lT3ifVIdgIzHAqNA_SemnxUfPBJk,7048
+govdelivery-1.3.dist-info/METADATA,sha256=q-A3uxOup8bjFDm8zboQHQj-f-kLcF1K6fgycaPms-A,2705
+govdelivery-1.3.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+govdelivery-1.3.dist-info/top_level.txt,sha256=hwOEBEVjyxnkgO_r-zSZfTU_LZgAnPrus-3O6SDxqHE,12
+govdelivery-1.3.dist-info/RECORD,,
