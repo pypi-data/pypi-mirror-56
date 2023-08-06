@@ -1,0 +1,9 @@
+recursive-include fastpt *.py
+recursive-include examples *.py
+include *.rst
+include LICENSE
+#recursive-include include *.h *.hpp
+#recursive-include src *.cpp *.inst *.h
+#recursive-include pysrc *.cpp *.h
+global-exclude .gitignore __pycache__
+include docs/usr_manual.pdf
