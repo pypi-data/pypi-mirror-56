@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: ntnu-process-mining
+Version: 1.0.2
+Summary: Enabling the use of event logs to create rich interactive process and event-flow visualisations in jupyter notebooks with a few lines of code.
+Home-page: https://github.com/navikt/ntnu-process-mining
+Author: TDT4290 - Group 12
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Enabling the use of event logs to create rich interactive process and event-flow visualisations in jupyter notebooks with a few lines of code.
+Keywords: ipython,jupyter,widgets
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 3.7
