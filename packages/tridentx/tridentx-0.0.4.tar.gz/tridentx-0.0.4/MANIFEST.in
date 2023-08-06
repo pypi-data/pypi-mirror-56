@@ -1,0 +1,6 @@
+exclude examples
+exclude tests
+recursive-exclude optimizers *.pth *.h5
+include MANIFEST.in
+include *.md
+include LICENSE.txt
