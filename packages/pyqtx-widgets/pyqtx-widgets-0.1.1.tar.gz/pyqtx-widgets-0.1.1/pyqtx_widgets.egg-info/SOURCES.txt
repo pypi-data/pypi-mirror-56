@@ -1,0 +1,14 @@
+README.rst
+pyqtx-demo.py
+setup.py
+pyqtx/Qt.py
+pyqtx/__init__.py
+pyqtx/server_conn.py
+pyqtx/xico.py
+pyqtx/xsettings.py
+pyqtx/xwidgets.py
+pyqtx_widgets.egg-info/PKG-INFO
+pyqtx_widgets.egg-info/SOURCES.txt
+pyqtx_widgets.egg-info/dependency_links.txt
+pyqtx_widgets.egg-info/requires.txt
+pyqtx_widgets.egg-info/top_level.txt
