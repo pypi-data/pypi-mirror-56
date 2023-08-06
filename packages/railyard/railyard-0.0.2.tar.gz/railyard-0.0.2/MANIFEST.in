@@ -1,0 +1,3 @@
+include COPYING
+include railyard/tests/*.yaml
+include railyard/tests/test_static_file
