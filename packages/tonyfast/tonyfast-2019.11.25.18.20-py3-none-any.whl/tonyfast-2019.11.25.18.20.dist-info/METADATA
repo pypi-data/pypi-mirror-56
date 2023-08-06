@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: tonyfast
+Version: 2019.11.25.18.20
+Summary: UNKNOWN
+Home-page: https://github.com/tonyfast/gists
+Author: tonyfast
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic-cli
+Requires-Dist: pyyaml
+Requires-Dist: rfc3987
+Requires-Dist: requests-cache
+Requires-Dist: GitPython
+Requires-Dist: importnb
+Requires-Dist: qrcode
+Requires-Dist: pyld
+Requires-Dist: anyconfig
+Requires-Dist: snakeviz
+Requires-Dist: IPython
+Requires-Dist: fastapi
+Requires-Dist: notebook
+Requires-Dist: networkx
+Requires-Dist: idna
+Requires-Dist: nbconvert
+Requires-Dist: jsonpointer
+Requires-Dist: nest-asyncio
+Requires-Dist: webcolors
+Requires-Dist: ipywidgets
+Requires-Dist: hypothesis
+Requires-Dist: matplotlib
+Requires-Dist: rdflib-jsonld
+Requires-Dist: htmlmin
+Requires-Dist: jsonschema
+Requires-Dist: rdflib
+Requires-Dist: jinja2
+Requires-Dist: toml
+Requires-Dist: jsonschema[all]
+Requires-Dist: jmespath
+Requires-Dist: pytest
+Requires-Dist: jupyter-client
+Requires-Dist: pandas
+Requires-Dist: wheel
+Requires-Dist: email-validator
+Requires-Dist: strict-rfc3339
+Requires-Dist: xonsh
+Requires-Dist: graphviz
+Requires-Dist: munch
+Requires-Dist: toolz
+Requires-Dist: pydantic
+Requires-Dist: rfc3986
+Requires-Dist: requests
+Requires-Dist: py-spy
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tonyfast/gists/master)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tonyfast)
+
+
+```python
+%reload_ext tonyfast
+```
+
+
+```python
+from tonyfast import jschema, articles; import pandas, requests
+```
+
+
