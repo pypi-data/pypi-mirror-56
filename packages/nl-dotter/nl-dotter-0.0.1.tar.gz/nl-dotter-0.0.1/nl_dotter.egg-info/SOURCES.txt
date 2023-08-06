@@ -1,0 +1,14 @@
+setup.py
+bin/dotter
+dotter/__init__.py
+dotter/commander.py
+dotter/config.py
+dotter/dotterops.py
+dotter/sysops.py
+dotter/utils.py
+dotter/settings/__init__.py
+dotter/settings/constants.py
+nl_dotter.egg-info/PKG-INFO
+nl_dotter.egg-info/SOURCES.txt
+nl_dotter.egg-info/dependency_links.txt
+nl_dotter.egg-info/top_level.txt
