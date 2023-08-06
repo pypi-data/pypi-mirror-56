@@ -1,0 +1,12 @@
+mypy_boto3_directconnect/__init__.py,sha256=F2WvsrXakyO0qqGCfBPYH_xmBrPQi6Oj4Lo21Jm7uKU,192
+mypy_boto3_directconnect/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_directconnect/client.py,sha256=zecpoNz29EMBfVXbDAqEsBgT5GRdtpi76FMkSGsLTlI,366772
+mypy_boto3_directconnect/helpers.py,sha256=ZQJuTD6GIoWKToS8fo8Ec1mXz-UYb20okyzMHcaZ7pU,3050
+mypy_boto3_directconnect/paginator.py,sha256=jafrVDKeTQ_kUXnAr2L7ruqFdN6W__sUbzfYSRyfA0w,17088
+mypy_boto3_directconnect/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_directconnect/type_defs.py,sha256=cBQeWogBcXb397NeGjE85CCyjbvnaRH1A4B9EfG0TWU,459297
+mypy_boto3_directconnect/version.py,sha256=IQqxxlNRYK5mLY9iMx-m-p-tKh5ZQYrzysCEoHpfKiA,53
+mypy_boto3_directconnect-0.2.8.dist-info/METADATA,sha256=Q9JwtzkIYV4bIeZ90SbIha-sYdfem9ghZaAnGKh9lNI,1079
+mypy_boto3_directconnect-0.2.8.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mypy_boto3_directconnect-0.2.8.dist-info/top_level.txt,sha256=mBRYmgyiMq00k-003WoDkalRfWiboa51RzKrF6hP9S8,25
+mypy_boto3_directconnect-0.2.8.dist-info/RECORD,,
