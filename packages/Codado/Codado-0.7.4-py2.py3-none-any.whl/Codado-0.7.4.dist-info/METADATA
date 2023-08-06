@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: Codado
+Version: 0.7.4
+Summary: A collection of system development utilities
+Home-page: https://github.com/corydodt/Codado
+Author: Cory Dodt
+Author-email: corydodt@gmail.com
+License: UNKNOWN
+Keywords: twisted,utility
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: attrs (>=17.1.0)
+Requires-Dist: crosscap
+Requires-Dist: jinja2
+Requires-Dist: mock (<2.1.0,>=2.0.0)
+Requires-Dist: python-dateutil
+Requires-Dist: pytz (>=2015.4)
+Requires-Dist: pyyaml
+Requires-Dist: twisted
+Provides-Extra: dev
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-coverage ; extra == 'dev'
+Requires-Dist: pytest-flakes ; extra == 'dev'
+Requires-Dist: pytest-twisted ; extra == 'dev'
+Requires-Dist: klein ; extra == 'dev'
+Requires-Dist: docker ; extra == 'dev'
+Requires-Dist: wrapt ; extra == 'dev'
+
+UNKNOWN
+
+
