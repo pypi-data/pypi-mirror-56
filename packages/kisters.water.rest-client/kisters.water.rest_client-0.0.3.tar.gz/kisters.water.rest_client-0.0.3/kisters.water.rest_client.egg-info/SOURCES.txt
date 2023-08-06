@@ -1,0 +1,17 @@
+.gitignore
+.gitlab-ci.yml
+LICENSE
+README.md
+setup.py
+tox.ini
+kisters.water.rest_client.egg-info/PKG-INFO
+kisters.water.rest_client.egg-info/SOURCES.txt
+kisters.water.rest_client.egg-info/dependency_links.txt
+kisters.water.rest_client.egg-info/not-zip-safe
+kisters.water.rest_client.egg-info/requires.txt
+kisters.water.rest_client.egg-info/top_level.txt
+kisters/water/rest_client/__init__.py
+kisters/water/rest_client/auth.py
+kisters/water/rest_client/rest_client.py
+test/test_auth.py
+test/test_client.py
