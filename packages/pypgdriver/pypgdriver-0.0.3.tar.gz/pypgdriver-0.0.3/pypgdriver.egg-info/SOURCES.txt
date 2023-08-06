@@ -1,0 +1,12 @@
+setup.py
+pypgdriver/__init__.py
+pypgdriver/_querydata.py
+pypgdriver/driver.py
+pypgdriver/querydata.py
+pypgdriver/querytype.py
+pypgdriver/sqlbuilder.py
+pypgdriver.egg-info/PKG-INFO
+pypgdriver.egg-info/SOURCES.txt
+pypgdriver.egg-info/dependency_links.txt
+pypgdriver.egg-info/requires.txt
+pypgdriver.egg-info/top_level.txt
