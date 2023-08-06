@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: fwx
+Version: 0.0.5
+Summary: fwx isn't a framework, it's a library.
+Home-page: https://github.com/kerkeslager/fwx
+Author: David Kerkeslager
+Author-email: kerkeslager+pypi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# fwx
+
+fwx isn't a framework, it's a library.
+
+fwx is used for the same kinds of applications as frameworks like Django or
+Flask, but it works differently. Frameworks make you write code that the
+framework then calls: the tool is using your code, not the other way
+around. fxw is primarily a collection of functions, which you call from your
+code. This way you're using the tool: the correct order of things.
+
+## Installation
+
+    pip install fwx
+
+
