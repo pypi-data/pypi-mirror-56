@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: reprotools
+Version: 0.0.2
+Summary: A set of tools to evaluate the reproducibility of computations 
+Home-page: https://github.com/big-data-lab-team/repro-tools
+Author: Big Data Infrastructures for Neuroinformatics lab
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Requires-Dist: graphviz
+Requires-Dist: pandas
+Requires-Dist: matplotlib (==2.2.3)
+Requires-Dist: plotly
+Requires-Dist: boutiques
+Requires-Dist: docker
+Requires-Dist: zss
+Requires-Dist: scipy
+Requires-Dist: sklearn
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+
+UNKNOWN
+
+
