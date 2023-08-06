@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: Flask-Application
+Version: 0.1.0
+Summary: create application template for flask.
+Home-page: https://github.com/five3/Flask-App
+Author: five3
+Author-email: five3@163.com
+License: GUN V3
+Keywords: Flask,Flask App,Flask Project
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Requires-Dist: flask (>=1.0.2)
+
+create application template for flask.
+
+
