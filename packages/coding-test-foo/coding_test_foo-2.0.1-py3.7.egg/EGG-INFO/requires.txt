@@ -1,0 +1,11 @@
+pip>=19.1.0
+
+[:python_version>'2.7']
+docutils
+
+[PDF]
+ReportLab>=1.2
+RXP
+
+[reST]
+docutils>=0.3
