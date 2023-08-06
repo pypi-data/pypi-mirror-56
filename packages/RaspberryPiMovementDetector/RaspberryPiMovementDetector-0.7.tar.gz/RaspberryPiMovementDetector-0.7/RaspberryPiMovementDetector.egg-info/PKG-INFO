@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: RaspberryPiMovementDetector
+Version: 0.7
+Summary: Raspberry Movement Detector
+Home-page: https://github.com/KSanthanam/RaspberryPiMovementDetector
+Author: KK Santhanam
+Author-email: KK.Santhanam@gmail.com
+License: MIT
+Download-URL: https://github.com/KSanthanam/RaspberryPiMovementDetector/archive/v_01.tar.gz
+Description: # RaspberryPiMovementDetector
+        MovementDetector detects movement of objects in proximity. It signals On when then object enters and Off when it exits
+        
+Keywords: RaspberryPi,RaspberryPi IoT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: wheel
