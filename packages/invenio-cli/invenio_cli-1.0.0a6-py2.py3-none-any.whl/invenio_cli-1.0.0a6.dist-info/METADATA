@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: invenio-cli
+Version: 1.0.0a6
+Summary: Invenio module to ease the creation and management of applications.
+Home-page: https://github.com/inveniosoftware/invenio-cli
+Author: CERN
+Author-email: info@inveniosoftware.org
+License: MIT
+Keywords: invenio-cli
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 3 - Alpha
+Requires-Dist: cookiecutter (<1.7.0,>=1.6.0)
+Requires-Dist: click (<7.1,>=7.0)
+Requires-Dist: docker (<4.2.0,>=4.1.0)
+Requires-Dist: Flask-BabelEx (>=0.9.3)
+Requires-Dist: invenio-app (<1.3.0,>=1.2.0)
+Requires-Dist: invenio-base (<1.2.0,>=1.1.0)
+Requires-Dist: pipenv (==2018.11.26)
+Requires-Dist: PyYAML (<5.2.0,>=5.1.2)
+Requires-Dist: redis (<3.4.0,>=3.3.11)
+Provides-Extra: all
+Requires-Dist: Sphinx (>=1.5.1) ; extra == 'all'
+Requires-Dist: check-manifest (>=0.25) ; extra == 'all'
+Requires-Dist: coverage (>=4.0) ; extra == 'all'
+Requires-Dist: isort (>=4.3.3) ; extra == 'all'
+Requires-Dist: pydocstyle (>=2.0.0) ; extra == 'all'
+Requires-Dist: pytest-cov (>=2.5.1) ; extra == 'all'
+Requires-Dist: pytest-pep8 (>=1.0.6) ; extra == 'all'
+Requires-Dist: pytest-invenio (>=1.0.5) ; extra == 'all'
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=1.5.1) ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: check-manifest (>=0.25) ; extra == 'tests'
+Requires-Dist: coverage (>=4.0) ; extra == 'tests'
+Requires-Dist: isort (>=4.3.3) ; extra == 'tests'
+Requires-Dist: pydocstyle (>=2.0.0) ; extra == 'tests'
+Requires-Dist: pytest-cov (>=2.5.1) ; extra == 'tests'
+Requires-Dist: pytest-pep8 (>=1.0.6) ; extra == 'tests'
+Requires-Dist: pytest-invenio (>=1.0.5) ; extra == 'tests'
+
+..
+    Copyright (C) 2019 CERN.
+    Copyright (C) 2019 Northwestern University.
+
+    Invenio-Cli is free software; you can redistribute it and/or modify
+    it under the terms of the MIT License; see LICENSE file for more details.
+
+=================
+ Invenio-Cli
+=================
+
+.. image:: https://img.shields.io/travis/inveniosoftware/invenio-cli.svg
+        :target: https://travis-ci.org/inveniosoftware/invenio-cli
+
+.. image:: https://img.shields.io/coveralls/inveniosoftware/invenio-cli.svg
+        :target: https://coveralls.io/r/inveniosoftware/invenio-cli
+
+.. image:: https://img.shields.io/github/tag/inveniosoftware/invenio-cli.svg
+        :target: https://github.com/inveniosoftware/invenio-cli/releases
+
+.. image:: https://img.shields.io/pypi/dm/invenio-cli.svg
+        :target: https://pypi.python.org/pypi/invenio-cli
+
+.. image:: https://img.shields.io/github/license/inveniosoftware/invenio-cli.svg
+        :target: https://github.com/inveniosoftware/invenio-cli/blob/master/LICENSE
+
+Invenio module that allows the creation of applications building workflows
+
+Usage
+=====
+
+Development environment
+-----------------------
+
+.. code-block:: console
+
+    # Initialize environment
+    $ invenio-cli --flavour=RDM init
+
+    # Build Docker images
+    $ invenio-cli build --dev --pre --lock
+
+    # Run server and services
+    $ invenio-cli run --dev --bg
+
+    # Setup databases and Elasticsearch
+    $ invenio-cli setup --dev
+
+    # Destroy the instances
+    $ invenio-cli destroy --dev
+
+    # Get more help
+    $ invenio-cli --help
+
+Production environment
+----------------------
+
+Just like the above, except with ``--prod``:
+
+.. code-block:: console
+
+    # Initialize environment
+    $ invenio-cli --flavour=RDM init
+
+    # Build Docker images
+    $ invenio-cli build --prod --lock
+
+    ...
+
+Further documentation is available on https://invenio-cli.readthedocs.io/
+
+
+..
+    Copyright (C) 2019 CERN.
+    Copyright (C) 2019 Northwestern University.
+
+    Invenio-Cli is free software; you can redistribute it and/or modify
+    it under the terms of the MIT License; see LICENSE file for more details.
+
+Changes
+=======
+
+Version 1.0.0 (released TBD)
+
+- Initial public release.
+
+

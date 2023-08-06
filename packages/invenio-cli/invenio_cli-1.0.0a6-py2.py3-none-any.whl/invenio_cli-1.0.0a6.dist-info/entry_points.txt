@@ -1,0 +1,22 @@
+[console_scripts]
+invenio-cli = invenio_app.cli:cli
+
+[flask.commands]
+build = invenio_cli.cli:build
+demo = invenio_cli.cli:demo
+destroy = invenio_cli.cli:destroy
+init = invenio_cli.cli:init
+server = invenio_cli.cli:server
+setup = invenio_cli.cli:setup
+update = invenio_cli.cli:update
+upgrade = invenio_cli.cli:upgrade
+
+[invenio_base.apps]
+invenio_cli = invenio_cli:InvenioCli
+
+[invenio_base.blueprints]
+invenio_cli = invenio_cli.views:blueprint
+
+[invenio_i18n.translations]
+messages = invenio_cli
+
