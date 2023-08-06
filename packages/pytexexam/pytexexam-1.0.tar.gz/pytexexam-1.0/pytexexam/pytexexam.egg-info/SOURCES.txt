@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+pytexexam/__init__.py
+pytexexam/answer.py
+pytexexam/exam.py
+pytexexam/latexexam.py
+pytexexam/question.py
+pytexexam/pytexexam.egg-info/PKG-INFO
+pytexexam/pytexexam.egg-info/SOURCES.txt
+pytexexam/pytexexam.egg-info/dependency_links.txt
+pytexexam/pytexexam.egg-info/top_level.txt
