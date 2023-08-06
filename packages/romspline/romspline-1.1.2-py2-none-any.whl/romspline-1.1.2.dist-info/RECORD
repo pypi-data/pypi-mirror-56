@@ -1,0 +1,17 @@
+romspline/__init__.py,sha256=Hg5Pf0UiEBI4MPiSO8qjSJSR_bxA_-C8R_JMq1qa8cw,6139
+romspline/__version__.py,sha256=YU_42OPd3M71CKuaAhmAM5b8bOg7D_phtEEaKy2kXNg,22
+romspline/build_spline.py,sha256=00Xks7qCg_mL2wVjr-xR0rR0au2kDDjRAlwxrMn-unY,5275
+romspline/convergence.py,sha256=g4USsvXCuAuaWE-Oz0ZGs6KV9XypW-j0agohjZQPMoA,9377
+romspline/cross_validation.py,sha256=6gIUU16Jf9uVnla_utkCDyJ8ZMHtotJX-iZT6WR8acg,14571
+romspline/example.py,sha256=mhOdoogWrf93L_qYeaGw3EVx5BmTvOpxiWIBMhZxLV4,3546
+romspline/greedy.py,sha256=YH7VM3WyAeVdmw36XCP2WsHkXHn6jETonYnJitz_67c,17844
+romspline/h5splinetotxt.py,sha256=Su7K9xBlieOzToNAA7jFl9-ZPCbqsmAGu3uMgvPfPZs,407
+romspline/helpers.py,sha256=SB4LtKwX0jVIoV-Q5H7M64BRR7xWugKuLFXj0KfXUkw,24973
+romspline/random_seeds.py,sha256=LS3mmYwHOrlLnA5eIN8_eYeV-FCojZocWm6kXybVqd8,11553
+romspline/regression.py,sha256=vAuiPiN1pyv_Kmhj5nCCMKpBfjgs5aB2GrMswOYaHK0,1770
+romspline-1.1.2.dist-info/LICENSE,sha256=7sd-lFtBYyCUD7S_93Ht74PpWi_WZPqfale6JWgeu4Q,1122
+romspline-1.1.2.dist-info/METADATA,sha256=7a74Kfuu40_GJ2ixaXLkTTKveK6Qab18NuUI8cdHIRA,4460
+romspline-1.1.2.dist-info/WHEEL,sha256=Ph_z28wTcU7HnQwSQ6yCQ-zkcGK4h4ehDfP8b6UoHVE,92
+romspline-1.1.2.dist-info/pbr.json,sha256=cH3tm1hX3dvjtDqMowlLcCVBqgPDBWFtt6dD8ObDS8U,47
+romspline-1.1.2.dist-info/top_level.txt,sha256=pf1-84dRMY8Yl_IzHpSgDzxTn6RHn0o0u6TxslIBUKs,10
+romspline-1.1.2.dist-info/RECORD,,
