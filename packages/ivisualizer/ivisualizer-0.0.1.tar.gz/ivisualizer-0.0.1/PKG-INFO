@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: ivisualizer
+Version: 0.0.1
+Summary: innovata-visualizer
+Home-page: https://github.com/innovata/ivisualizer
+Author: innovata sambong
+Author-email: iinnovata@gmail.com
+License: UNKNOWN
+Description: # i-visualizer (innovata visualizer)
+        
+        
+        ##============================================================
+        ## Description.
+        ##============================================================
+        
+        Python에서 사용가능한 모든 시각화 모듈들을 포함하여 제공한다.
+        각각의 프로젝트에서 각 공식 라이브러리를 직접 사용하는 대신, 본 패키지가 그들의 wrapper로써 역할을 한다.
+        
+        
+        
+        
+        
+        ##============================================================
+        ## IDE
+        ##============================================================
+        
+        
+        
+        
+        ##============================================================
+        ## Main Packages.
+        ##============================================================
+        
+        ### matplotlib
+        
+        
+        ### bokeh
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
