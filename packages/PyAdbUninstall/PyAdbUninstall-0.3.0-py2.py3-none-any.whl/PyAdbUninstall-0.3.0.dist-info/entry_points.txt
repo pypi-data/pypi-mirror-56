@@ -1,0 +1,3 @@
+[console_scripts]
+adb_uninstall = adb_uninstall.gui:main
+
