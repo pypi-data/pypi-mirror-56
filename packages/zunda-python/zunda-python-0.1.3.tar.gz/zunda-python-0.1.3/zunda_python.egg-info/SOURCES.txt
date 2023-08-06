@@ -1,0 +1,10 @@
+CHANGES.rst
+MANIFEST.in
+README.rst
+setup.py
+zunda/__init__.py
+zunda/zunda.py
+zunda_python.egg-info/PKG-INFO
+zunda_python.egg-info/SOURCES.txt
+zunda_python.egg-info/dependency_links.txt
+zunda_python.egg-info/top_level.txt
