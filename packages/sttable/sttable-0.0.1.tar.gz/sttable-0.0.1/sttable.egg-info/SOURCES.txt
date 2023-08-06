@@ -1,0 +1,9 @@
+README.rst
+setup.py
+sttable/__init__.py
+sttable/parser.py
+sttable/table.py
+sttable.egg-info/PKG-INFO
+sttable.egg-info/SOURCES.txt
+sttable.egg-info/dependency_links.txt
+sttable.egg-info/top_level.txt
