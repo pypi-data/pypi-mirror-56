@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: python_terminal
+Version: 1.0
+Summary: Quickly build a terminal project
+Home-page: https://github.com/zhcshine/pyterminal
+Author: zhuohc
+Author-email: zhcshine@gmail.com
+License: MIT
+Description: ##### environment
+        > python3.7.3
+        
+        ##### install
+        
+        ```shell script
+        pip3 install pyterminal
+        ```
+        
+        
+        ```shell script
+        # Consider the following testing code. Add this to your .bashrc:
+        # Set proper $TERM if we are running gnome-terminal
+        if [ "$COLORTERM" == "gnome-terminal" ]
+        then
+            TERM=xterm-256color
+        fi
+        ```
+        
+        ##### examples
+        ```shell script
+        python -m exampl
+        ```
+Keywords: pyterminal,terminal,终端
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4.0
+Description-Content-Type: text/markdown
