@@ -1,0 +1,176 @@
+Metadata-Version: 2.1
+Name: terra-layer
+Version: 0.3.11
+Summary: Geographic data visualizer backend for terra-visu
+Home-page: https://github.com/Terralego/terra-layer.git
+Author: Makina Corpus
+Author-email: terralego-pypi@makina-corpus.com
+License: UNKNOWN
+Description: # Terra Layer
+        
+        This django applications aims to provide an API to connect django_geosource to django_geodata.
+        It serve an API that provides informations wanted by a frontend to configure data rendering.
+        
+        ## Pre-requisite
+        
+        You need the last version of docker and docker-compose to execute a dev instance.
+        
+        ## Set configuration
+        
+        In Django settings, you must set the different views provided to fronted, like this:
+        
+        ```python
+        TERRA_DEFAULT_MAP_SETTINGS = {
+            "accessToken": "<your mapbox access token>",
+            "backgroundStyle": "<background style file>",
+            'center': [-0.655, 43.141], # Default view center
+            'zoom': 7.7, # Default zoom
+            'maxZoom': 19.9,
+            'minZoom': 5,
+            'fitBounds': { # Default bounding box
+                'coordinates': [
+                    [-4.850, 46.776],
+                    [-0.551, 48.886]
+                ],
+            },
+        }
+        ```
+        
+        ## To start a dev instance
+        
+        Define settings you wants in `test_terralayer` django project.
+        
+        ```sh
+        docker-compose up
+        ```
+        
+        First start should failed as the database need to be initialized. Just launch
+        the same command twice.
+        
+        Then initialize the database:
+        
+        ```sh
+        docker-compose run web /code/venv/bin/python3 /code/src/manage.py migrate
+        ```
+        
+        You can now edit your code. A django runserver is launched internally so the 
+        this is an autoreload server.
+        
+        You can access to the api on http://localhost:8000/api/
+        
+        ## Test
+        
+        To run test suite, just launch:
+        
+        ```sh
+        docker-compose run web /code/venv/bin/python3 /code/src/manage.py test
+        ```
+        
+        ## Contributing
+        
+        You must use factoryboy factories to develop your tests. The factories are available 
+        at `terra_layer/tests/factories`
+        
+        0.3.11      (2019-11-21)
+        -----------------------
+        
+        ### Fixes
+        
+        * Fixes some layer's export/import mistakes
+        
+        0.3.10      (2019-11-20)
+        -----------------------
+        
+        ### Improves
+        
+        * Add layer_dump and layer_load_dump management command to save and restore layers
+        
+        0.3.9      (2019-11-19)
+        -----------------------
+        
+        ### Improves
+        
+        * Add default layer activation support
+        * Add layer_dump and layer_load_dump management command to save and restore layers
+        
+        0.3.8      (2019-11-13)
+        -----------------------
+        
+        ### Fix
+        
+        * Deep layer groups raises an error
+        
+        0.3.7      (2019-11-12)
+        -----------------------
+        
+        ### Fix
+        
+        * slug can now be modified and is optionnal
+        
+        ### Improves
+        
+        * Add default layer activation support
+        
+        0.3.6      (2019-11-07)
+        -----------------------
+        
+        ### Fix
+        
+        * Fix geolayer urls double dash
+        
+        0.3.5      (2019-11-06)
+        -----------------------
+        
+        ### Improves
+        
+        * Set correct permission classes to viewsets
+        
+        0.3.4      (2019-11-06)
+        -----------------------
+        
+        ### Fixes
+        
+        * Fix geostore namespace that is not necessary anymore
+        
+        0.3.3      (2019-11-06)
+        -----------------------
+        
+        ### Fixes
+        
+        * Add Manifest
+        
+        0.3.2      (2019-11-05)
+        -----------------------
+        
+        ### Fixes
+        
+        * Fix url namespace of geostore
+        
+        0.3.1      (2019-11-05)
+        -----------------------
+        
+        ### Improves
+        
+        * Integrate terra permissions mecanism
+        
+        0.3.0      (2019-10-18)
+        -----------------------
+        
+        ### Release
+        
+        * First release
+        
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
