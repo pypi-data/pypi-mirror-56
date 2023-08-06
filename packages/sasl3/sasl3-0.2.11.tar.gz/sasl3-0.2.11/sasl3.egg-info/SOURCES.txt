@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+sasl/__init__.py
+sasl/saslwrapper.cpp
+sasl/saslwrapper.h
+sasl/saslwrapper.pyx
+sasl3.egg-info/PKG-INFO
+sasl3.egg-info/SOURCES.txt
+sasl3.egg-info/dependency_links.txt
+sasl3.egg-info/requires.txt
+sasl3.egg-info/top_level.txt
