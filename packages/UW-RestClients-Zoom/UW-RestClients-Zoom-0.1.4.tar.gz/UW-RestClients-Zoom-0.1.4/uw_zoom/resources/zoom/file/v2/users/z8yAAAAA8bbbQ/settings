@@ -1,0 +1,88 @@
+{
+  "schedule_meeting": {
+    "host_video": true,
+    "participants_video": true,
+    "audio_type": "voip",
+    "join_before_host": false,
+    "force_pmi_jbh_password": false,
+    "pstn_password_protected": false,
+    "use_pmi_for_scheduled_meetings": true,
+    "use_pmi_for_instant_meetings": true,
+    "require_password_for_scheduling_new_meetings": true,
+    "require_password_for_scheduled_meetings": true,
+    "default_password_for_scheduled_meetings": "12345",
+    "require_password_for_instant_meetings": false,
+    "require_password_for_pmi_meetings": "all",
+    "pmi_password": "12345"
+  },
+  "in_meeting": {
+    "e2e_encryption": true,
+    "chat": false,
+    "private_chat": false,
+    "auto_saving_chat": false,
+    "entry_exit_chime": "all",
+    "record_play_voice": false,
+    "file_transfer": false,
+    "feedback": false,
+    "co_host": false,
+    "polling": false,
+    "attendee_on_hold": false,
+    "annotation": false,
+    "remote_control": false,
+    "non_verbal_feedback": false,
+    "breakout_room": false,
+    "remote_support": false,
+    "closed_caption": false,
+    "group_hd": false,
+    "virtual_background": false,
+    "far_end_camera_control": false,
+    "share_dual_camera": false,
+    "attention_tracking": false,
+    "waiting_room": false,
+    "allow_live_streaming": true,
+    "workplace_by_facebook": true,
+    "custom_live_streaming": false,
+    "custom_service_instructions": "Submit your feedback.",
+    "show_meeting_control_toolbar": false
+  },
+  "email_notification": {
+    "jbh_reminder": false,
+    "cancel_meeting_reminder": false,
+    "alternative_host_reminder": false,
+    "schedule_for_reminder": false
+  },
+  "recording": {
+    "local_recording": false,
+    "cloud_recording": false,
+    "record_speaker_view": false,
+    "record_gallery_view": false,
+    "record_audio_file": false,
+    "save_chat_text": false,
+    "show_timestamp": false,
+    "recording_audio_transcript": false,
+    "auto_recording": "local",
+    "host_pause_stop_recording": false,
+    "auto_delete_cmr": false,
+    "auto_delete_cmr_days": 36
+  },
+  "telephony": {
+    "third_party_audio": false,
+    "audio_conference_info": "",
+    "show_international_numbers_link": false
+  },
+  "feature": {
+    "meeting_capacity": 100,
+    "large_meeting": false,
+    "webinar": false,
+    "cn_meeting": true,
+    "in_meeting": false,
+    "zoom_phone": false
+  },
+  "tsp": {
+    "call_out": true,
+    "call_out_countries": [
+      "USA"
+    ],
+    "show_international_numbers_link": false
+  }
+}
