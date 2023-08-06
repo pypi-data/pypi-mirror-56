@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+sqlalchemy_gbase8s/__init__.py
+sqlalchemy_gbase8s/ibmdb.py
+sqlalchemy_gbase8s/requirements.py
+sqlalchemy_gbase8s.egg-info/PKG-INFO
+sqlalchemy_gbase8s.egg-info/SOURCES.txt
+sqlalchemy_gbase8s.egg-info/dependency_links.txt
+sqlalchemy_gbase8s.egg-info/entry_points.txt
+sqlalchemy_gbase8s.egg-info/not-zip-safe
+sqlalchemy_gbase8s.egg-info/requires.txt
+sqlalchemy_gbase8s.egg-info/top_level.txt

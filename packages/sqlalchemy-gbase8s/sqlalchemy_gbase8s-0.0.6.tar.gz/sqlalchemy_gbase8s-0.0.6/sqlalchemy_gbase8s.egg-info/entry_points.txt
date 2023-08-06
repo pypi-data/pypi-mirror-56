@@ -1,0 +1,3 @@
+[sqlalchemy.dialects]
+gbase8s = sqlalchemy_gbase8s.ibmdb:GBase8sDialect
+
