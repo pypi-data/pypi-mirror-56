@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hrpdrebin
+Version: 1.0
+Summary: High-resolution powder diffraction rebin
+Home-page: https://github.com/DiamondLightSource/python-hrpd-rebin
+Author: Peter Chang
+Author-email: scientificsoftware@diamond.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: numpy (>=1.6)
+Requires-Dist: scisoftpy (>=2.16)
+
+UNKNOWN
+
+
