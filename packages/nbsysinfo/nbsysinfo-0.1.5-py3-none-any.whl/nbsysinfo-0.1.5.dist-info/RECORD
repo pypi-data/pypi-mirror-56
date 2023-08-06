@@ -1,0 +1,13 @@
+nbsysinfo/__init__.py,sha256=A5qyyDGKjnytmDmy7xxnawTviI4jVMHUuGX8Y-zR2rg,1412
+nbsysinfo/etc/nbext_sysinfo.json,sha256=B8qv2ECNW3tJl8lp5Hv0nD-h5nraXr44fAAOnS40CqQ,60
+nbsysinfo/etc/server_sysinfo.json,sha256=9h03O0qJXRpE0ZOOZJXd9YXICrCsyjDzp3cXBTUyFS8,87
+nbsysinfo/static/main.js,sha256=GjI7og7zo4eA8OYmJQaoKcOczo0gFBYz-F8cgmbyN4U,4938
+nbsysinfo/static/tree.css,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nbsysinfo-0.1.5.data/data/etc/jupyter/jupyter_notebook_config.d/server_sysinfo.json,sha256=9h03O0qJXRpE0ZOOZJXd9YXICrCsyjDzp3cXBTUyFS8,87
+nbsysinfo-0.1.5.data/data/etc/jupyter/nbconfig/notebook.d/nbext_sysinfo.json,sha256=B8qv2ECNW3tJl8lp5Hv0nD-h5nraXr44fAAOnS40CqQ,60
+nbsysinfo-0.1.5.data/data/share/jupyter/nbextensions/nbsysinfo/main.js,sha256=GjI7og7zo4eA8OYmJQaoKcOczo0gFBYz-F8cgmbyN4U,4938
+nbsysinfo-0.1.5.data/data/share/jupyter/nbextensions/nbsysinfo/tree.css,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nbsysinfo-0.1.5.dist-info/METADATA,sha256=39LPxT4MAVJE8ro1Cn31ozZ51P7tGnbaVwW_c59zfCQ,273
+nbsysinfo-0.1.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+nbsysinfo-0.1.5.dist-info/top_level.txt,sha256=pB1aJY-xeKOreGfQsJC79a8RSMzoIhLqFOulO6QL4KA,10
+nbsysinfo-0.1.5.dist-info/RECORD,,

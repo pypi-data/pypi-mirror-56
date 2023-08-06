@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: nbsysinfo
+Version: 0.1.5
+Summary: Add SysInfo to your jupyter notebook.
+Home-page: https://github.com/Yohox/nbsysinfo
+Author: yoho
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: psutil
+Requires-Dist: notebook
+
+UNKNOWN
+
+
