@@ -1,0 +1,3 @@
+[console_scripts]
+jtac = jtac.cli:main
+
