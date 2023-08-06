@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: TracSensitiveTickets
+Version: 1.2.3
+Summary: A trac plugin that lets you mark tickets as 'sensitive' with a check box.  Those tickets can only be seen with permission.
+Home-page: https://trac-hacks.org/wiki/SensitiveTicketsPlugin
+Author: Jeff Hammel, Sebastian Benthall, Rowan Wookey, Daniel Kahn Gillmor
+Author-email: dkg@fifthhorseman.net
+Maintainer: Daniel Kahn Gillmor
+Maintainer-email: dkg@fifthhorseman.net
+License: GPL
+Description: UNKNOWN
+Keywords: trac plugin security
+Platform: UNKNOWN
+Classifier: Framework :: Trac
