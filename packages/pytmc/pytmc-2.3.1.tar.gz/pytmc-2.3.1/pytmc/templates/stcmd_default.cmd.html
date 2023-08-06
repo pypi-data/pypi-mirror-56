@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/docs/Repos/pytmc/pytmc/templates/stcmd_default.cmd.html</title>
+<meta name="Generator" content="Vim/8.0">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="sh">
+<meta name="settings" content="use_css,pre_wrap,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="PaperColor">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #444444; background-color: #eeeeee; }
+body { font-family: monospace; color: #444444; background-color: #eeeeee; }
+* { font-size: 1em; }
+.Comment { color: #878787; }
+.Special { color: #444444; }
+.PreProc { color: #005faf; }
+.Delimiter { color: #0087af; }
+.String { color: #5f8700; }
+.Error { color: #af0000; }
+.shOperator { color: #0087af; }
+.shLoop { color: #8700af; font-weight: bold; }
+.Conditional { color: #8700af; font-weight: bold; }
+.Number { color: #d75f00; }
+.shQuote { color: #5f8700; }
+.shSetList { color: #005f87; }
+.shStatement { color: #444444; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment">#!../../bin/rhel7-x86_64/{{binary_name}}</span>
+
+<span class="shOperator">&lt;</span> envPaths
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">IOCNAME</span><span class="shQuote">&quot;</span><span class="Special">, </span><span class="shQuote">&quot;</span><span class="String">{{name}}</span><span class="shQuote">&quot;</span><span class="Special"> </span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">ENGINEER</span><span class="shQuote">&quot;</span><span class="Special">, </span><span class="shQuote">&quot;</span><span class="String">{{user}}</span><span class="shQuote">&quot;</span><span class="Special"> </span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">LOCATION</span><span class="shQuote">&quot;</span><span class="Special">, </span><span class="shQuote">&quot;</span><span class="String">{{prefix}}</span><span class="shQuote">&quot;</span><span class="Special"> </span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">IOCSH_PS1</span><span class="shQuote">&quot;</span><span class="Special">, </span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">IOCNAME</span><span class="Error">)</span><span class="String">&gt; </span><span class="shQuote">&quot;</span><span class="Special"> </span><span class="PreProc">)</span>
+
+<span class="shStatement">cd</span> <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">TOP</span><span class="Error">)</span><span class="shQuote">&quot;</span>
+
+<span class="Comment"># Run common startup commands for linux soft IOC's</span>
+<span class="shOperator">&lt;</span> /reg/d/iocCommon/All/pre_linux.cmd
+
+<span class="Comment"># Register all support components</span>
+dbLoadDatabase<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">dbd/{{binary_name}}.dbd</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+<span class="Delimiter">{{</span>binary_name<span class="Delimiter">}}</span>_registerRecordDeviceDriver<span class="PreProc">(</span><span class="Special">pdbbase</span><span class="PreProc">)</span>
+
+<span class="shStatement">cd</span> <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">TOP</span><span class="Error">)</span><span class="String">/db</span><span class="shQuote">&quot;</span>
+
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">ASYN_PORT</span><span class="shQuote">&quot;</span><span class="Special">,     </span><span class="shQuote">&quot;</span><span class="String">{{asyn_port}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">IPADDR</span><span class="shQuote">&quot;</span><span class="Special">,        </span><span class="shQuote">&quot;</span><span class="String">{{plc_ip}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">AMSID</span><span class="shQuote">&quot;</span><span class="Special">,         </span><span class="shQuote">&quot;</span><span class="String">{{plc_ams_id}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">IPPORT</span><span class="shQuote">&quot;</span><span class="Special">,        </span><span class="shQuote">&quot;</span><span class="String">{{plc_ads_port}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+
+adsAsynPortDriverConfigure<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">ASYN_PORT</span><span class="Error">)</span><span class="shQuote">&quot;</span><span class="Special">,</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">IPADDR</span><span class="Error">)</span><span class="shQuote">&quot;</span><span class="Special">,</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">AMSID</span><span class="Error">)</span><span class="shQuote">&quot;</span><span class="Special">,</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">IPPORT</span><span class="Error">)</span><span class="shQuote">&quot;</span><span class="Special">, </span><span class="Number">1000</span><span class="Special">, </span><span class="Number">0</span><span class="Special">, </span><span class="Number">0</span><span class="Special">, </span><span class="Number">50</span><span class="Special">, </span><span class="Number">100</span><span class="Special">, </span><span class="Number">1000</span><span class="Special">, </span><span class="Number">0</span><span class="PreProc">)</span>
+
+<span class="Delimiter">{</span>% <span class="Conditional">if </span>symbols.Symbol_FB_MotionStage %<span class="Error">}</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">MOTOR_PORT</span><span class="shQuote">&quot;</span>,    <span class="shQuote">&quot;</span><span class="String">{{motor_port}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">PREFIX</span><span class="shQuote">&quot;</span>,        <span class="shQuote">&quot;</span><span class="String">{{prefix}}{{delim}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">ECM_NUMAXES</span><span class="shQuote">&quot;</span>,   <span class="shQuote">&quot;</span><span class="String">{{symbols.Symbol_FB_MotionStage|length}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">NUMAXES</span><span class="shQuote">&quot;</span>,       <span class="shQuote">&quot;</span><span class="String">{{symbols.Symbol_FB_MotionStage|length}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+
+EthercatMCCreateController<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">MOTOR_PORT</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">ASYN_PORT</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">NUMAXES</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">200</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">1000</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+
+<span class="Comment">#define ASYN_TRACE_ERROR     0x0001</span>
+<span class="Comment">#define ASYN_TRACEIO_DEVICE  0x0002</span>
+<span class="Comment">#define ASYN_TRACEIO_FILTER  0x0004</span>
+<span class="Comment">#define ASYN_TRACEIO_DRIVER  0x0008</span>
+<span class="Comment">#define ASYN_TRACE_FLOW      0x0010</span>
+<span class="Comment">#define ASYN_TRACE_WARNING   0x0020</span>
+<span class="Comment">#define ASYN_TRACE_INFO      0x0040</span>
+asynSetTraceMask<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">ASYN_PORT</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="Number">-1</span>, 0x41<span class="PreProc">)</span>
+
+<span class="Comment">#define ASYN_TRACEIO_NODATA 0x0000</span>
+<span class="Comment">#define ASYN_TRACEIO_ASCII  0x0001</span>
+<span class="Comment">#define ASYN_TRACEIO_ESCAPE 0x0002</span>
+<span class="Comment">#define ASYN_TRACEIO_HEX    0x0004</span>
+asynSetTraceIOMask<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">ASYN_PORT</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="Number">-1</span>, <span class="Number">2</span><span class="PreProc">)</span>
+
+<span class="Comment">#define ASYN_TRACEINFO_TIME 0x0001</span>
+<span class="Comment">#define ASYN_TRACEINFO_PORT 0x0002</span>
+<span class="Comment">#define ASYN_TRACEINFO_SOURCE 0x0004</span>
+<span class="Comment">#define ASYN_TRACEINFO_THREAD 0x0008</span>
+asynSetTraceInfoMask<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">ASYN_PORT</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="Number">-1</span>, <span class="Number">5</span><span class="PreProc">)</span>
+
+<span class="Comment">#define AMPLIFIER_ON_FLAG_CREATE_AXIS  1</span>
+<span class="Comment">#define AMPLIFIER_ON_FLAG_WHEN_HOMING  2</span>
+<span class="Comment">#define AMPLIFIER_ON_FLAG_USING_CNEN   4</span>
+
+<span class="Delimiter">{</span>% <span class="shLoop">for</span> motor <span class="shLoop">in</span> symbols.Symbol_FB_MotionStage <span class="shOperator">|</span> sort<span class="PreProc">(</span><span class="shSetList">attribute</span>=<span class="shQuote">'</span><span class="String">nc_axis.axis_number</span><span class="shQuote">'</span><span class="PreProc">)</span> %<span class="Delimiter">}</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">AXIS_NO</span><span class="shQuote">&quot;</span>,         <span class="shQuote">&quot;</span><span class="String">{{motor.nc_axis.axis_number}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">MOTOR_PREFIX</span><span class="shQuote">&quot;</span>,    <span class="shQuote">&quot;</span><span class="String">{{motor|epics_prefix}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">MOTOR_NAME</span><span class="shQuote">&quot;</span>,      <span class="shQuote">&quot;</span><span class="String">{{motor|epics_suffix}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">DESC</span><span class="shQuote">&quot;</span>,            <span class="shQuote">&quot;</span><span class="String">{{motor.name}} / {{motor.nc_axis.name}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">EGU</span><span class="shQuote">&quot;</span>,             <span class="shQuote">&quot;</span><span class="String">{{motor.nc_axis.units}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">PREC</span><span class="shQuote">&quot;</span>,            <span class="shQuote">&quot;</span><span class="String">{{motor|pragma('precision', 3) }}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">AXISCONFIG</span><span class="shQuote">&quot;</span>,      <span class="shQuote">&quot;</span><span class="String">{{motor|pragma('axisconfig', '')}}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">ECAXISFIELDINIT</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">{{motor|pragma('additional_fields', '') }}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+epicsEnvSet<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">AMPLIFIER_FLAGS</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">{{motor|pragma('amplifier_flags', '') }}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+
+EthercatMCCreateAxis<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">MOTOR_PORT</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">AXIS_NO</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">AMPLIFIER_FLAGS</span><span class="Error">)</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">AXISCONFIG</span><span class="Error">)</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+dbLoadRecords<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">EthercatMC.template</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">PREFIX=</span><span class="Error">$(</span><span class="Special">MOTOR_PREFIX</span><span class="Error">)</span><span class="String">, MOTOR_NAME=</span><span class="Error">$(</span><span class="Special">MOTOR_NAME</span><span class="Error">)</span><span class="String">, R=</span><span class="Error">$(</span><span class="Special">MOTOR_NAME</span><span class="Error">)</span><span class="String">-, MOTOR_PORT=</span><span class="Error">$(</span><span class="Special">MOTOR_PORT</span><span class="Error">)</span><span class="String">, ASYN_PORT=</span><span class="Error">$(</span><span class="Special">ASYN_PORT</span><span class="Error">)</span><span class="String">, AXIS_NO=</span><span class="Error">$(</span><span class="Special">AXIS_NO</span><span class="Error">)</span><span class="String">, DESC=</span><span class="Error">$(</span><span class="Special">DESC</span><span class="Error">)</span><span class="String">, PREC=</span><span class="Error">$(</span><span class="Special">PREC</span><span class="Error">)</span><span class="String"> </span><span class="Error">$(</span><span class="Special">ECAXISFIELDINIT</span><span class="Error">)</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+dbLoadRecords<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">EthercatMCreadback.template</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">PREFIX=</span><span class="Error">$(</span><span class="Special">MOTOR_PREFIX</span><span class="Error">)</span><span class="String">, MOTOR_NAME=</span><span class="Error">$(</span><span class="Special">MOTOR_NAME</span><span class="Error">)</span><span class="String">, R=</span><span class="Error">$(</span><span class="Special">MOTOR_NAME</span><span class="Error">)</span><span class="String">-, MOTOR_PORT=</span><span class="Error">$(</span><span class="Special">MOTOR_PORT</span><span class="Error">)</span><span class="String">, ASYN_PORT=</span><span class="Error">$(</span><span class="Special">ASYN_PORT</span><span class="Error">)</span><span class="String">, AXIS_NO=</span><span class="Error">$(</span><span class="Special">AXIS_NO</span><span class="Error">)</span><span class="String">, DESC=</span><span class="Error">$(</span><span class="Special">DESC</span><span class="Error">)</span><span class="String">, PREC=</span><span class="Error">$(</span><span class="Special">PREC</span><span class="Error">)</span><span class="String"> </span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+dbLoadRecords<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">EthercatMCdebug.template</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">PREFIX=</span><span class="Error">$(</span><span class="Special">MOTOR_PREFIX</span><span class="Error">)</span><span class="String">, MOTOR_NAME=</span><span class="Error">$(</span><span class="Special">MOTOR_NAME</span><span class="Error">)</span><span class="String">, MOTOR_PORT=</span><span class="Error">$(</span><span class="Special">MOTOR_PORT</span><span class="Error">)</span><span class="String">, AXIS_NO=</span><span class="Error">$(</span><span class="Special">AXIS_NO</span><span class="Error">)</span><span class="String">, PREC=3</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+
+<span class="Delimiter">{</span>% endfor %<span class="Delimiter">}</span>
+<span class="Delimiter">{</span>% endif %<span class="Delimiter">}</span>
+<span class="Delimiter">{</span>% <span class="shLoop">for</span> db <span class="shLoop">in</span> additional_db_files %<span class="Delimiter">}</span>
+dbLoadRecords<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">{{ db.file }}</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">{{ db.macros }}</span><span class="shQuote">&quot;</span><span class="PreProc">)</span>
+
+<span class="Delimiter">{</span>% endfor %<span class="Delimiter">}</span>
+<span class="shStatement">cd</span> <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">TOP</span><span class="Error">)</span><span class="shQuote">&quot;</span>
+
+dbLoadRecords<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">db/iocAdmin.db</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">P={{prefix}},IOC={{prefix}}</span><span class="shQuote">&quot;</span> <span class="PreProc">)</span>
+dbLoadRecords<span class="PreProc">(</span><span class="shQuote">&quot;</span><span class="String">db/save_restoreStatus.db</span><span class="shQuote">&quot;</span>, <span class="shQuote">&quot;</span><span class="String">P={{prefix}},IOC={{name}}</span><span class="shQuote">&quot;</span> <span class="PreProc">)</span>
+
+<span class="Comment"># Setup autosave</span>
+set_savefile_path<span class="PreProc">(</span> <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">IOC_DATA</span><span class="Error">)</span><span class="String">/</span><span class="Error">$(</span><span class="Special">IOC</span><span class="Error">)</span><span class="String">/autosave</span><span class="shQuote">&quot;</span> <span class="PreProc">)</span>
+set_requestfile_path<span class="PreProc">(</span> <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">TOP</span><span class="Error">)</span><span class="String">/autosave</span><span class="shQuote">&quot;</span> <span class="PreProc">)</span>
+save_restoreSet_status_prefix<span class="PreProc">(</span> <span class="shQuote">&quot;</span><span class="String">{{prefix}}:</span><span class="shQuote">&quot;</span> <span class="PreProc">)</span>
+save_restoreSet_IncompleteSetsOk<span class="PreProc">(</span> <span class="Number">1</span> <span class="PreProc">)</span>
+save_restoreSet_DatedBackupFiles<span class="PreProc">(</span> <span class="Number">1</span> <span class="PreProc">)</span>
+set_pass0_restoreFile<span class="PreProc">(</span> <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">IOC</span><span class="Error">)</span><span class="String">.sav</span><span class="shQuote">&quot;</span> <span class="PreProc">)</span>
+set_pass1_restoreFile<span class="PreProc">(</span> <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">IOC</span><span class="Error">)</span><span class="String">.sav</span><span class="shQuote">&quot;</span> <span class="PreProc">)</span>
+
+<span class="Comment"># Initialize the IOC and start processing records</span>
+iocInit<span class="PreProc">()</span>
+
+<span class="Comment"># Start autosave backups</span>
+create_monitor_set<span class="PreProc">(</span> <span class="shQuote">&quot;</span><span class="Error">$(</span><span class="Special">IOC</span><span class="Error">)</span><span class="String">.req</span><span class="shQuote">&quot;</span>, <span class="Number">5</span>, <span class="shQuote">&quot;&quot;</span> <span class="PreProc">)</span>
+
+<span class="Comment"># All IOCs should dump some common info after initial startup.</span>
+<span class="Conditional">&lt;</span> /reg/d/iocCommon/All/post_linux.cmd
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
