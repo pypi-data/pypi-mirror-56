@@ -1,0 +1,3 @@
+[console_scripts]
+restore-mtime = restore_mtime.restore_mtime:main
+
