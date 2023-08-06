@@ -1,0 +1,7 @@
+argcomplete
+coloredlogs
+docker>=3.4.0
+lark-parser==0.7.5
+psutil
+pygtail>=0.11.0
+setuptools
