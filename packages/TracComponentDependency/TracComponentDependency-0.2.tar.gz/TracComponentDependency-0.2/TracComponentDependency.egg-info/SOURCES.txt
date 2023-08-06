@@ -1,0 +1,11 @@
+setup.py
+TracComponentDependency.egg-info/PKG-INFO
+TracComponentDependency.egg-info/SOURCES.txt
+TracComponentDependency.egg-info/dependency_links.txt
+TracComponentDependency.egg-info/entry_points.txt
+TracComponentDependency.egg-info/not-zip-safe
+TracComponentDependency.egg-info/top_level.txt
+componentdependencies/__init__.py
+componentdependencies/componentdependency.py
+componentdependencies/interface.py
+componentdependencies/test.py

@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: TracComponentDependency
+Version: 0.2
+Summary: allows plugins to depend on other components being enabled
+Home-page: https://trac-hacks.org/wiki/ComponentDependencyPlugin
+Author: Jeff Hammel
+Author-email: jhammel@openplans.org
+License: BSD 3-Clause
+Description: UNKNOWN
+Keywords: trac plugin
+Platform: UNKNOWN
