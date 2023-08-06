@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: assemblyline-client
+Version: 4.0.0b2
+Summary: Assemblyline v4 client library
+Home-page: https://bitbucket.org/cse-assemblyline/assemblyline_client
+Author: CSE-CST Assemblyline development team
+Author-email: assemblyline@cyber.gc.ca
+License: MIT
+Keywords: development assemblyline client gc canada cse-cst cse cst
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: pycryptodome
+Requires-Dist: requests
+Requires-Dist: requests[security]
+Requires-Dist: python-baseconv
+Requires-Dist: python-socketio[client]
+Requires-Dist: socketio-client (==0.5.6)
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: cart ; extra == 'test'
+Requires-Dist: assemblyline ; extra == 'test'
+Requires-Dist: passlib ; extra == 'test'
+Requires-Dist: mock ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+
+The Assemblyline v4 client library facilitates issuing requests to the Assemblyline framework.
+
+
