@@ -1,0 +1,13 @@
+README.md
+setup.py
+chaim/__init__.py
+chaim/chaimmodule.py
+chaim/errors.py
+chaim/inifile.py
+chaim/logging.py
+chaim/utils.py
+chaim.egg-info/PKG-INFO
+chaim.egg-info/SOURCES.txt
+chaim.egg-info/dependency_links.txt
+chaim.egg-info/requires.txt
+chaim.egg-info/top_level.txt
