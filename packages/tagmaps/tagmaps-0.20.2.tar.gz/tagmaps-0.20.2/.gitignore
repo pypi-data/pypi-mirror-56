@@ -1,0 +1,8 @@
+dev/
+build/
+__pycache__
+scripts/
+.vscode/
+tagmaps.egg-info
+tagmaps/.pytest_cache
+tests/pytest-env/
