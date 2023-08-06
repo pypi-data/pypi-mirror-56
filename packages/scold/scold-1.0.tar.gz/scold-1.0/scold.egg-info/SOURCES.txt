@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+scold/__init__.py
+scold/adjective.py
+scold/adverb.py
+scold/exclamation.py
+scold/smiley.py
+scold/verb.py
+scold/words.py
+scold.egg-info/PKG-INFO
+scold.egg-info/SOURCES.txt
+scold.egg-info/dependency_links.txt
+scold.egg-info/top_level.txt
