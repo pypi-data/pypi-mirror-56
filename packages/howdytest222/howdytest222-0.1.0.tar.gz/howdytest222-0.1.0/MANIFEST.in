@@ -1,0 +1,4 @@
+include howdytest222/dist/bundle.js
+include howdytest222/host_widget/dist/bundle.js
+recursive-include howdytest222/electron *
+recursive-include howdytest222/widgets *
