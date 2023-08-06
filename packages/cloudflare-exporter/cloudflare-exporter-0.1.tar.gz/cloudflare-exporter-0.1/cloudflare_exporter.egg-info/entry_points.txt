@@ -1,0 +1,3 @@
+[console_scripts]
+run-app = cloudflare_exporter.exporter:main
+
