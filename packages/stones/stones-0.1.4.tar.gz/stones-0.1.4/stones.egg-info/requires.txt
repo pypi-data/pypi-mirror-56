@@ -1,0 +1,8 @@
+
+[dev]
+flake8
+codecov
+
+[test]
+pytest
+pytest-cov
