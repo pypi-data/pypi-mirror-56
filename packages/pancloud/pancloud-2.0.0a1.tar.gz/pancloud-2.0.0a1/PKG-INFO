@@ -1,0 +1,301 @@
+Metadata-Version: 1.1
+Name: pancloud
+Version: 2.0.0a1
+Summary: Python idiomatic SDK for Cortex™.
+Home-page: https://github.com/PaloAltoNetworks/pancloud
+Author: Steven Serrata
+Author-email: sserrata@paloaltonetworks.com
+License: ISC license
+Description: ===================================
+        Palo Alto Networks Cloud Python SDK
+        ===================================
+        
+        Python idiomatic SDK for the Palo Alto Networks Cortex™ platform.
+        
+        The Palo Alto Networks Cloud Python SDK (or `pancloud` for short) was created to assist developers with
+        programmatically interacting with the Palo Alto Networks Cortex™ platform.
+        
+        The primary goal is to provide full, low-level API coverage for the following Cortex™ services:
+        
+            - Query Service
+            - More coming soon!
+        
+        The secondary goal is to provide coverage, in the form of helpers, for common tasks/operations.
+        
+            - Log/event pagination
+            - OAuth 2.0 and token refreshing
+            - More, coming soon!
+        
+        * Documentation: https://pancloud.readthedocs.io
+        * Free software: ISC license
+        
+        -----
+        
+        |requests| |pipenv| |pypi| |travis| |docs|
+        
+        -----
+        
+        Features
+        --------
+        
+        - HTTP client wrapper for the popular Requests library with full access to its features.
+        - Language bindings for Query Service.
+        - Helper methods for performing common tasks, such as log/event pagination.
+        - Support for OAuth 2.0 grant code authorization flow.
+        - Library of example scripts illustrating how to leverage `pancloud`.
+        - Support for API Explorer Developer Tokens (Introduced in v1.5.0).
+        
+        Status
+        ------
+        
+        The Palo Alto Networks Cloud Python SDK is considered **production/stable** at this time.
+        
+        Installation
+        ------------
+        
+        From PyPI::
+        
+            $ pip install pancloud
+        
+        Install From GitHub
+        -------------------
+        
+        Clone the repo::
+        
+            $ git clone https://github.com/PaloAltoNetworks/pancloud.git
+        
+        Use |pipenv| to install all dependencies and create a virtualenv for your project::
+        
+            $ pipenv install
+        
+        You can specify which python version to use by adding "--two" or "--three"::
+        
+            $ pipenv --three install
+        
+        Activate the pipenv shell::
+        
+            $ pipenv shell
+        
+        Obtaining and Using OAuth 2.0 Tokens
+        ------------------------------------
+        
+        Work with your Developer Relations representative to register your
+        application and receive the credentials needed to obtain an `access_token`.
+        Normally, this requires a `client_id`, `client_secret`, and `refresh_token`.
+        API Explorer may optionally be used to generate a Developer Token, which can
+        be used in place of the `client_id`, `client_secret`, and `refresh_token`.
+        
+        For more information visit the following RTD page: `Credentials <https://pancloud.readthedocs.io/en/latest/guides/credentials.html>`__
+        
+        Example
+        -------
+        
+        .. code-block:: python
+        
+            >>> import pancloud
+            >>> c = pancloud.Credentials()
+            >>> ls = pancloud.LoggingService(credentials=c)
+            >>> query = {
+            ...     "query": "SELECT * FROM panw.traffic LIMIT 1",
+            ...     "startTime": 1938869090,
+            ...     "endTime": 1938869150,
+            ...     "maxWaitTime": 10000  
+            ... }
+            >>> q = ls.query(query)
+            >>> q.status_code
+            200
+            >>> q.json()
+            {u'result': {u'esQuery': {u'table': [u'panw.traffic'], u'selections': [], u'params': {}, u'query': {u'aggregations': {}, u'size': 1}}, u'esResult': {u'hits': {u'hits': [{u'_score': 2, u'_type': u'traffic', u'_id': u'117270018_lcaas:0:9379670:1', u'_source': {u'logset': u'LCaaS', u'traffic_flags': 0, u'parent_start_time': 0, u'inbound_if': u'ethernet1/1', u'dstloc': u'10.0.0.0-10.255.255.255', u'natdport': 0, u'time_generated': 1560175638, u'recsize': 1958, u'chunks_sent': 0, u'to': u'l3-untrust', u'non-standard-dport': 0, u'receive_time': 1560175660, u'elapsed': 0, u'seqno': 51422235, u'pbf_s2c': 0, u'vsys': u'vsys1', u'bytes': 196, u'subtype': u'end', u'subcategory-of-app': u'internet-utility', u'vsys_id': 1, u'actionflags': -9223372036854776000L, u'pkts_sent': 1, u'sport': 0, u'is-saas-of-app': 0, u'category': u'any', u'ui-srcloc': u'Singapore', u'bytes_received': 98, u'container': 0, u'dst': u'10.10.0.2', u'customer-id': u'117270018', u'packet_capture': 0, u'srcloc': u'SG', u'natsport': 0, u'parent_session_id': 0, u'proxy': 0, u'ui-dstloc': u'10.0.0.0-10.255.255.255', u'src': u'203.208.197.133', u'config_ver': 2304, u'sanctioned-state-of-app': 0, u'fwd': 1, u'technology-of-app': u'network-protocol', u'bytes_sent': 98, u'chunks_received': 0, u'dg_hier_level_3': 0, u'dg_hier_level_2': 0, u'dg_hier_level_1': 16, u'dg_hier_level_4': 0, u'repeatcnt': 1, u'natsrc': u'0.0.0.0', u'app': u'ping', u'characteristic-of-app': [u'tunnel-other-application', u'prone-to-misuse', u'is-saas'], u'chunks': 0, u'non_std_dport': 1, u'decrypt_mirror': 0, u'action_source': u'from-policy', u'from': u'l3-untrust', u'url_denied': 0, u'assoc_id': 0, u'log_feat_bit1': 0, u'start': 1560175625, u'cloud_hostname': u'ngfw-1', u'pbf_c2s': 0, u'sym_return': 0, u'captive_portal': 0, u'outbound_if': u'ethernet1/1', u'tunnelid_imsi': 0, u'sessionid': 407532, u'category-of-app': u'general-internet', u'tunnel': u'N/A', u'type': u'traffic', u'mptcp_on': 0, u'recon_excluded': 0, u'http2_connection': 0, u'tunnel_inspected': 0, u'risk-of-app': u'2', u'serial': u'007200000046172', u'is_fwaas': 0, u'proto': u'icmp', u'is_phishing': 0, u'is_gpaas': 0, u'nat': 0, u'tunneled-app': u'untunneled', u'natdst': u'0.0.0.0', u'time_received': 1560175638, u'users': u'203.208.197.133', u'rule_uuid': u'd6992de4-5523-4ba8-b9e9-a99fe9dbfda4', u'pkts_received': 1, u'action': u'allow', u'is_dup_log': 0, u'exported': 0, u'session_end_reason': u'aged-out', u'transaction': 0, u'packets': 2, u'flag': 0, u'rule': u'intrazone-default', u'device_name': u'ngfw-1', u'flags': 1048676, u'dport': 0}, u'_index': u'117270018_panw.all_2019060600-2019062600_000000'}], u'total': 22942, u'maxScore': 2}, u'from': 0, u'completed': True, u'took': 185, u'timed_out': False, u'state': u'COMPLETED', u'id': u'e2a685ce-0b21-41d6-a050-4e371e456817', u'size': 1}}, u'sequenceNo': 0, u'queryId': u'e2a685ce-0b21-41d6-a050-4e371e456817', u'clientParameters': {}, u'queryStatus': u'JOB_FINISHED'}
+            
+        Contributors
+        ------------
+        
+        - Kevin Steves - `github <https://github.com/kevinsteves>`__
+        - Steven Serrata - `github <https://github.com/sserrata>`__
+        
+        .. |pypi| image:: https://img.shields.io/pypi/pyversions/pancloud.svg
+                :target: https://pypi.python.org/pypi/pancloud
+        
+        .. |travis| image:: https://img.shields.io/travis/PaloAltoNetworks/pancloud.svg
+                :target: https://travis-ci.org/PaloAltoNetworks/pancloud
+        
+        .. |docs| image:: https://readthedocs.org/projects/pancloud/badge/?version=latest
+                :target: https://pancloud.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        .. |requests| image:: https://img.shields.io/badge/docs-requests-blue.svg
+            :target: http://docs.python-requests.org/en/master
+            :alt: Documentation Status
+        
+        .. |pipenv| image:: https://img.shields.io/badge/docs-pipenv-green.svg
+            :target: https://docs.pipenv.org
+            :alt: Documentation Status
+        
+        
+        =======
+        History
+        =======
+        
+        2.0.0-alpha1 (2019-11-21)
+        -------------------------
+        
+        * Removed all legacy modules, e.g. logging, event and directorysync
+        * Removed all references to legacy modules and classes
+        * Removed all legacy tests
+        * Added util module
+        * Added query module
+        * Added example query script
+        * Updated httpclient module
+        
+        1.5.1 (2019-04-26)
+        ------------------
+        
+        * Updated Pipfile.lock.
+        * Replaced recursion with loop pattern in `LoggingService` `xpoll()` method.
+        * Added `decode('utf-8')` to base64 decoded JWT to ensure compatibility with `json.loads()`.
+        * Addressed minor typos in docs.
+        
+        1.5.0 (2019-02-27)
+        ------------------
+        
+        * Added `flush()` method to `EventService` class.
+        * Added `auto_refresh` support to `HTTPClient` `_apply_credentials()` method.
+        * Removed `auto_retry` feature from `HTTPClient` class.
+        * Refactored `HTTPClient` class `request()` method keyword argument overrides.
+        * Removed unused `token_revoke_url` keyword argument.
+        * Added support for API Explorer Developer Tokens to `Credentials` class.
+        * Refactored `Credentials` `refresh()` method.
+        
+        1.4.0 (2018-10-04)
+        ------------------
+        
+        * Added default URL to `HTTPClient` class.
+        * Updated docstrings for `StorageAdapter`, `TinyDBStore` and `Credentials` classes.
+        * Now returning `state` as `str` instead of `UUID` in `get_authorization_url()` method.
+        * Now unifying display results for -m/-s/--write. For -m you now need an output specifier (-j/-p) to print the response.
+        * Added `decode_jwt_payload()` method to allow for extracting/using all JWT fields.
+        * Added -s option to allow for invocation of setter methods. This allows modifying of credential store fields.
+        * Added credential setters to allow for modifying credentials.
+        * Updated examples.
+        * Switched from using `requests` to `HTTPClient` in `Credentials` class.
+        * Now checking JWT access_token `exp` to determine if refresh if needed.
+        * Now generating a new `state` each time `get_authorization_url()` is called.
+        * Added `__repr__` to `Credentials` class with support for masking secrets.
+        * Updated -E --ack,nack,poll options usage to be accurate.
+        * `JOB_FAILED` response in `xpoll()` queryStatus now includes errorCode.
+        
+        1.3.0 (2018-08-04)
+        ------------------
+        
+        * Added support for custom read/write credentials path.
+        * `TinyDBStore` `fetch_credential()` now returns `None` instead of empty `str`.
+        * Fixed bug that caused `_resolve_credential()` to be executed an inefficient number of times.
+        * Now updating `HTTPClient` headers instead of overriding them which previously broke HTTP persistence.
+        * Added JMESPath `isotime()` function to `summit.py` which prints epoch.
+        * Added argument to `EventService` `xpoll()` method to support sleeping between polls.
+        * Added `PAN_` prefix to envars to avoid name collisions.
+        * Fixed bug when `R['R1_obj']['LoggingService.query']` is None and allow json=None case with special case of --end -1 which will not set a default end of now.
+        * Fixed bug that nulled out credentials if an error occurred during a `fetch_tokens()` or `refresh()` operation.
+        * Now enforcing strict credential resolution. Previous behavior allowed for merging credentials from different providers.
+        * Added support for caching `refresh_token` to support rolling.
+        * Added support for writing logs to `summit.py`.
+        * Switch from using `data` param to `json` param in client/service methods.
+        * Now defaulting `R1` to `None` so don't send body unless specified.
+        * Now printing request headers and body at debug level 3 in `summit.py`.
+        * Added enhancements to `summit.py` for specifying `startTime` and `endTime`.
+        
+        1.2.3 (2018-06-21)
+        ------------------
+        
+        * Reversed the `access_token` lookup order in get_credentials() method.
+        * Added `_resolve_credential()` to `access_token()` property method to support token caching.
+        * Now comparing passed `access_token` in `refresh()` method to value returned by property method.
+        
+        1.2.2 (2018-06-20)
+        ------------------
+        
+        * Added pancloud.adapters to find_packages include list to resolve issue with PyPI package.
+        
+        1.2.1 (2018-06-20)
+        ------------------
+        
+        * Added requirements.txt to MANIFEST.in to address build issues with PyPI package.
+        * Fixed issue in README.rst that prevented PyPI from properly rendering.
+        
+        1.2.0 (2018-06-20)
+        ------------------
+        
+        * Updated README.rst
+        * Updated RTD API Reference.
+        * Added `pancloud` to requirements_dev.txt
+        * Added docstrings to `Credentials` property methods.
+        * Changed logging xpoll() to return entire log entry instead of just `_source` dictionary.
+        * Added `Credentials` Storage Adapter feature and moved `TinyDB` code to `tinydb_adapter.py`, the default storage adapter.
+        * Automatically carry `queryId` from `logging --query` response to `--id` in subsequent `--poll`, `--xpoll` and `--delete` in `summit.py`.
+        * Various bug fixes and improvements to `summit.py`.
+        * Added support for caching `access_token` in credentials store.
+        * Added `write()` method to `LoggingService` class to support writing logs.
+        * Fixed issues with `Credentials` `get_authorization_url` and `fetch_tokens` methods.
+        * Added `logging_write.py` to examples.
+        
+        1.1.0 (2018-05-08)
+        ------------------
+        
+        * Updated logging `xpoll()` to reflect behavior of current API.
+        * Added `credentials.py` module to support OAuth2 operations.
+        * Added `auto_refresh` and `auto_retry` support to `HTTPClient()`.
+        * Added `PartialCredentialsError` exception to handle cases where incomplete credentials are passed to `Credentials`.
+        * Removed extraneous dependencies, e.g. pyopenssl.
+        * Cleaned up requirements.txt and PipLock files.
+        * Added `TinyDB` package for reading/writing `credentials.json` file.
+        * Now raising `PanCloudError` for `enforce_json` errors.
+        * Removed logging `poll_all()` method and example script.
+        * Now checking if `sequence_no` is `None` before incrementing in logging `iter_poll()` method.
+        * Added event `xpoll()` method to support iterating through events.
+        * Introducing `summit.py`, a command-line interface for `pancloud`.
+        * Added `credentials` support to `summit.py` to enable writing `credentials.json` file and passing `Credentials` with requests.
+        * Updated example scripts library to incorporate new credentials feature.
+        
+        1.0.3 (2018-04-26)
+        ------------------
+        
+        * Overhauled and updated RTDs
+        * Updated `__init__.py` to allow package-level imports
+        * Fixed issue where starrifying authorization token in `__repr__` overrode value in request header.
+        
+        1.0.2 (2018-03-20)
+        ------------------
+        
+        * Updated .gitignore to exclude .pytest_cache
+        * Excluding certain functions/classes from tests until API Gateway is ready
+        * Renamed tests modules to all lowercase
+        * Bumped version to 1.0.2 from 1.0.1
+        * Updated 'query' and 'poll' endpoints to reflect current working state of APIs
+        * Fixed .travis.yml branch regex
+        * Updated example scripts
+        * Removed pyopenssl property method from HTTPClient
+        * Removed test_repr() as not all tested python versions support ordered kwargs
+        
+        1.0.1 (2018-03-19)
+        ------------------
+        
+        * Default to empty `path`
+        
+        1.0.0 (2018-03-16)
+        ------------------
+        
+        * First release.
+        
+Keywords: pancloud
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
