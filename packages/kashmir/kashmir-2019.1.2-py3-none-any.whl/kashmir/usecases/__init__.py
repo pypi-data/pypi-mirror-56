@@ -1,0 +1,1 @@
+from .new_release import NewRelease
