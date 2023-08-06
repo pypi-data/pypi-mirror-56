@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: tick_streaming
+Version: 0.0.3
+Summary: streaming ticks
+Home-page: https://github.com/bitsoda-exchange
+Author: Bitsoda Exchange
+Author-email:  boyang.wang@bitsoda.com
+License: GPL-3.0
+Project-URL: Documentation, https://github.com/bitsoda-exchange/tick_streaming/wiki
+Project-URL: Source, https://github.com/bitsoda-exchange/tick_streaming
+Description: <p align="center">
+          <a href="http://bitsoda.com">
+            <img width="60" src="https://bitsoda-static.oss-cn-shanghai.aliyuncs.com/img/Bitsoda-Logo200.jpg">
+          </a>
+        </p>
+        
+        ## A Event Driven Tick Streaming Framework
+        
+        [![Downloads](https://pepy.tech/badge/tick-streaming)](https://pepy.tech/project/tick-streaming)
+        
+        
+        ### Module Installation
+        
+        ```bash
+        $ pip install tick-streaming
+        ```
+        
+        ### How to use
+        
+        ```python
+        # please refer to the examples in /examples directory
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.5.*
+Description-Content-Type: text/markdown
