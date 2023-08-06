@@ -1,0 +1,15 @@
+.coveragerc
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+dictvars/__init__.py
+dictvars.egg-info/PKG-INFO
+dictvars.egg-info/SOURCES.txt
+dictvars.egg-info/dependency_links.txt
+dictvars.egg-info/top_level.txt
+dictvars.egg-info/zip-safe
+docs/more_examples.py
+docs/readme_example1.py
+docs/readme_example2.py
