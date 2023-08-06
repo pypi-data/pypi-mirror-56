@@ -1,0 +1,5 @@
+secp256k1<0.14.0,>=0.13.2
+bech32<2.0.0,>=1.1.0
+
+[:python_version < "3.8"]
+typing-extensions<4.0.0,>=3.7.4
