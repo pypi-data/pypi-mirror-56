@@ -1,0 +1,24 @@
+language: python
+python:
+- 3.5
+- 3.6
+- 3.7
+- 3.8
+install:
+- travis_retry pip install setuptools==42.0.2
+- travis_retry pip install virtualenv==16.7.8
+- pip install tox-travis coveralls
+script: tox
+after_success: coveralls --verbose
+branches:
+  only:
+  - master
+  - "/^v.*$/"
+deploy:
+  provider: pypi
+  user: tcarel
+  password:
+    secure: FWfP6XHraDJW+leIw9loFEAt3aaqzrBJ3+Q6dNF8H1jUxPvU/EB21Q265F3+Vaj6lKJ4ZmryVVfXOKhhZe6LTJyRvdgYDNpyD1l/etEQ8pQwPhypgNON5LM7fViHQDqLjKYkpCYt7MTpoqMU8Tf4kbFS2fRGsyTv/LwcyXiDkOGDXirpphqP8mMU5u1GWmql+Jr5Wq1ajD2CYuPDJtEe9wrtcYAZ/I411HQYoopuyXPwcHdHOSDusTeImGa2CEX2XDzQHWYOcfBl2CGOx1gB19NxKa5c6/8vyqYq2/FaQEYTL1TwYfYN6nTNzPna9CAsRNzFFcJJ/VVeNNq35pHm+k2bLy804XjutcO2Sqsuf0mcsqRErG6W9EfwU3hxdmJXZETA4rbupIlrwQBPSI2Gk/Dew3aGXdwMjl6JYWeLe8qTLIIyKTDJfDvH6S/BRStZnqLN1K+kRsqXmICDwfkfj6ZGUsSqRgoO00ubfEoKnPxgk8ZtTrgTh9swUpZC6dJXdc9kc03r5PZTCnus+NnbexbtewcQkr3SkPUFXZpimn11/CgwF7t0W6Ob3a6gsHIs0VILejJI6V6AiuaeOcFfrR4cpbk5kyqCqjQqr0F8j8FV2pL/f5B8HHMbVpvtv+iz991AevNc8syRnJ9AQ4k+HZHVgfBqqz6kvmNrPkha8sM=
+  distributions: sdist
+  on:
+    tags: true

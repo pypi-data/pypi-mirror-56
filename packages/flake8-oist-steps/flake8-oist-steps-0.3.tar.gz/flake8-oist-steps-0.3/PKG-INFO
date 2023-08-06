@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: flake8-oist-steps
+Version: 0.3
+Summary: Check usage STEPS subcellular simulator
+Home-page: https://github.com/tristan0x/flake8-oist-steps
+Author: Tristan Carel
+Author-email: tristan.carel@epfl.ch
+License: MIT License
+Description: Flake8 CNS-OIST plugin
+        ======================
+        Check usage of STEPS subcellular simulator Python API.
+        
+        
+        Install
+        -------
+        Install with pip::
+        
+           $ pip install flake8-oist-steps
+        
+        
+        Requirements
+        ------------
+        - Python 3.5, 3.6, 3.7, or 3.8
+        - flake8
+        
+        
+        Usage
+        -----
+        Use regular flake8 command to check your scripts::
+        
+           $ flake8 my-steps-script.py
+        
+        
+        License
+        -------
+        GPL 2.0
+        
+        
+Keywords: pep8 flake8 python
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Framework :: Flake8
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Quality Assurance
+Description-Content-Type: text/x-rst
+Provides-Extra: test
