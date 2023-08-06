@@ -1,0 +1,82 @@
+image: python:3.8-alpine
+
+stages:
+ - build
+ - test
+ - release
+
+check:
+  stage: build
+  before_script:
+    - apk add build-base
+    - pip install black flake8
+  script:
+    - black --check --diff .
+    - flake8 --max-line-length=88 .
+
+package:
+  stage: build
+  only:
+    - tags
+  before_script:
+    - apk add git
+  script:
+    - python setup.py sdist bdist_wheel
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 day
+
+.py:
+  stage: test
+  image: docker:stable
+  services:
+    - docker:dind
+  before_script:
+    - docker run -id --rm -v $(pwd):/ws -e DOCKER_HOST=tcp://$(cat /etc/hosts | grep docker | cut -f1):2375/ -w /ws --name $DOCKER_NAME $DOCKER_PY_IMG
+    - docker exec -i $DOCKER_NAME apk add git build-base libffi-dev openssl-dev
+    - docker exec -i $DOCKER_NAME pip install .
+  script:
+    - docker exec -i $DOCKER_NAME pytest -v -s --dockerc-attach-network
+
+py27:
+  extends: .py
+  variables:
+    DOCKER_NAME: "py27"
+    DOCKER_PY_IMG: "python:2.7-alpine"
+
+py35:
+  extends: .py
+  variables:
+    DOCKER_NAME: "py35"
+    DOCKER_PY_IMG: "python:3.5-alpine"
+
+py36:
+  extends: .py
+  variables:
+    DOCKER_NAME: "py36"
+    DOCKER_PY_IMG: "python:3.6-alpine"
+
+py37:
+  extends: .py
+  variables:
+    DOCKER_NAME: "py37"
+    DOCKER_PY_IMG: "python:3.7-alpine"
+
+py38:
+  extends: .py
+  variables:
+    DOCKER_NAME: "py38"
+    DOCKER_PY_IMG: "python:3.8-alpine"
+
+deploy:
+  stage: release
+  only:
+    - tags
+  before_script:
+    - apk add build-base libffi-dev openssl-dev
+    - pip install twine
+  script:
+    - twine upload dist/*
+  dependencies:
+    - package
