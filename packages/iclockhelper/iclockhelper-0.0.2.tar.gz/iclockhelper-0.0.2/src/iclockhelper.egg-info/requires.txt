@@ -1,0 +1,6 @@
+stringcase
+pytz
+
+[testing]
+pytest
+pytest-cov
