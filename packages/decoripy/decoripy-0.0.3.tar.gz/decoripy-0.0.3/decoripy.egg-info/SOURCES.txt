@@ -1,0 +1,10 @@
+README.md
+README.rst
+setup.cfg
+setup.py
+decoripy/__init__.py
+decoripy/abstract_decorator.py
+decoripy.egg-info/PKG-INFO
+decoripy.egg-info/SOURCES.txt
+decoripy.egg-info/dependency_links.txt
+decoripy.egg-info/top_level.txt
