@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+binding.cpp
+edit-distance.cu
+edit-distance.h
+requirements.txt
+setup.py
+torch_edit_distance/__init__.py
+torch_edit_distance/test.py
+torch_edit_distance.egg-info/PKG-INFO
+torch_edit_distance.egg-info/SOURCES.txt
+torch_edit_distance.egg-info/dependency_links.txt
+torch_edit_distance.egg-info/requires.txt
+torch_edit_distance.egg-info/top_level.txt
