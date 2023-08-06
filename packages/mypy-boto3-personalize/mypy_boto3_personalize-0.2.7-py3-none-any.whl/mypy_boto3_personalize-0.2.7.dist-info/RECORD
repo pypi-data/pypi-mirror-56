@@ -1,0 +1,12 @@
+mypy_boto3_personalize/__init__.py,sha256=RsxTsVMDm1-K5RXXrg--5zh6D0o0dcy9bscxSUo8-bY,186
+mypy_boto3_personalize/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_personalize/client.py,sha256=8dw_TMXV7QmPo0hc8KxyRQm4ETOAWUnsndfwqPcfpiE,140216
+mypy_boto3_personalize/helpers.py,sha256=s8RzdkPSVsrozsU7OUxmqz59Z5CIMavJ9VLCJKm3Lmg,5123
+mypy_boto3_personalize/paginator.py,sha256=66NKYtI4kajFxxToaudKbTbW6mOxAlZAArr9CqoF--Q,36999
+mypy_boto3_personalize/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_personalize/type_defs.py,sha256=IvBoNRvT_5W6yR0cS5fncf22Vf0PaQCNs8z4QuqiomM,216776
+mypy_boto3_personalize/version.py,sha256=lGsFrThWvjofL01YOK0lhM9aBHjJ2oZC9pJFFIf6ihM,53
+mypy_boto3_personalize-0.2.7.dist-info/METADATA,sha256=5Yr3uW_8a1xNUvePExNIg4oDZYuvl7vUpMMvm1EZ8Cs,1075
+mypy_boto3_personalize-0.2.7.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mypy_boto3_personalize-0.2.7.dist-info/top_level.txt,sha256=b3guh_X23Chwq7ZXREHgu5X_IbevuTod9IXmAQSKdeM,23
+mypy_boto3_personalize-0.2.7.dist-info/RECORD,,
