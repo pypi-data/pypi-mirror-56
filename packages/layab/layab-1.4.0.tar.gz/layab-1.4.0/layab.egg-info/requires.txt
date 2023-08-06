@@ -1,0 +1,8 @@
+flask-restplus==0.13.*
+PyYAML==5.*
+flask_cors==3.*
+flask_compress==1.*
+
+[testing]
+pytest-flask==0.15.*
+pytest-cov==2.*
