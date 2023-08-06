@@ -1,0 +1,13 @@
+pihat/__init__.py,sha256=lQnxbJPotjarJlqOBEQojCChGgxOCnmdPUVQbgcBZIg,35
+pihat/eeprom/__init__.py,sha256=jbeduQzS9jfUbVwu9aQfvxN3LSlYhJV6D4oVpphKtW0,113
+pihat/eeprom/constants.py,sha256=0YA_hzeP8iQgCKpoSkQVrF2zez9nIXRxqhARqDbQi40,1570
+pihat/eeprom/crc.py,sha256=tAqMGhK7rOkbkBnzB0GsHVu8b-0mNm9tcd87m0c3NJg,576
+pihat/eeprom/exceptions.py,sha256=lnXt3NvHvK80uBd6nIapr39k04hF20E6pOdJJ_qEYdc,443
+pihat/eeprom/layout.py,sha256=PdhnLh3mLFVd4-5KVyQKO8pLQrJ_JiC6zjLm_sUvil8,14265
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_crc.py,sha256=ajb6dexqkd8UUB56VJyYq96fEQjNrExDMYJpfBMP098,1119
+test/test_layout.py,sha256=dryeBVwzH6jrOVtUf9h_S2bgJrp528sNbiYvOajF-yc,15999
+pihat-0.0.2.dist-info/METADATA,sha256=dYh67G4_EjMMKXAfNvcGSCR5D7M-DoWPSydV3oAHyPs,1278
+pihat-0.0.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pihat-0.0.2.dist-info/top_level.txt,sha256=2fzuJgm9Zfz6a31FyLt6xyOM1ZKrJzlTbxW1O54qgU4,11
+pihat-0.0.2.dist-info/RECORD,,
