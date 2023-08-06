@@ -1,0 +1,8 @@
+requests
+pandas
+
+[dev]
+pytest
+pytest-cov
+requests_cache
+flake8
