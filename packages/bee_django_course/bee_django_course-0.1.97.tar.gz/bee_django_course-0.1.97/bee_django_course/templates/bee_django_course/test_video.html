@@ -1,0 +1,38 @@
+{% extends 'bee_django_course/base.html' %}
+
+{% block content %}
+        <video width='320' height='240' controls id="videos_1">
+            <source src="{{playurl}}" type="video/mp4">
+            您de浏览器不支持播放
+        </video>
+
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        $(document).ready(function () {
+            var videos = document.getElementsByTagName("video");
+            if (videos.length > 0) {
+                var video = videos[0];
+                alert(video);
+                video.onloadedmetadata = function (ev) {
+                    console.log(video.duration);
+                    alert(video.duration);
+                    if (video.duration < 20) {
+                        _post();
+                    } else {
+                        video.onplay = function () {
+                            setTimeout(function () {
+                                _post();
+                            }, 20000);
+                        }
+                    }
+                };
+
+            }
+        });
+    </script>
+{% endblock scripts %}
