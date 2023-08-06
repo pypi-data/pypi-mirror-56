@@ -1,0 +1,14 @@
+README.md
+setup.py
+py_lspci.egg-info/PKG-INFO
+py_lspci.egg-info/SOURCES.txt
+py_lspci.egg-info/dependency_links.txt
+py_lspci.egg-info/requires.txt
+py_lspci.egg-info/top_level.txt
+pylspci/__init__.py
+pylspci/pci_parser.py
+pylspci/pci_scanner.py
+pylspci/consoles/__init__.py
+pylspci/consoles/console.py
+pylspci/consoles/local_console.py
+pylspci/consoles/remote_console.py
