@@ -1,0 +1,4 @@
+# Base Configuration for Artella Shots
+
+# Defines the shot regex used for shot names
+shot_regex: (\A[^_]+_\d{2,2}_\d{2,3})
