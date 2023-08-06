@@ -1,0 +1,57 @@
+
+# https://developers.facebook.com/docs/instagram-basic-display-api/reference/user/media
+
+
+log_file: "logs/get_user_media.log"
+
+enable_commit: True
+
+graph_api:
+  host: "https://graph.instagram.com"
+  request_user_path:    '/{user_id}?fields=id,username,account_type,media_count'
+  request_media_path:   '/{user_id}/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,timestamp,username'
+  historic_suffix:      '&since={date_from}&until={date_to}' 
+
+queries:
+  get_users: |    
+    SELECT instagram_id, access_token
+    FROM UsersAuth ua 
+    WHERE valid_until > CURRENT_TIMESTAMP()
+    AND type='USER' AND access_token LIKE 'IG%'
+    AND instagram_id IS NOT NULL AND TRIM(instagram_id) != ''
+    AND TRIM(facebook_id) = ''
+
+  insert_user: |
+    INSERT INTO Users (id, username, description, url, profile_image, 
+                      media_count, followers_count, follows_count, account_type)
+    VALUES ('{id}', '{username}', '', '', '',
+            {media_count}, 0, 0, '{account_type}')
+    ON DUPLICATE KEY UPDATE 
+            username = '{username}', 
+            media_count = {media_count},
+            account_type = '{account_type}'
+
+  insert_media: |
+    INSERT INTO Media (id, user_id, created_at, fetched_at, type,
+                       caption, url, image)
+    VALUES ('{id}', {user_id}, '{created_at}', '{fetched_at}', '{type}',
+            '{caption}', '{url}', '{image}')
+    ON DUPLICATE KEY UPDATE 
+            fetched_at = '{fetched_at}',
+            image = '{image}'
+
+  insert_ht: |
+    INSERT IGNORE INTO HashTagsInMedia 
+      (media_id, hashtag, lower_hashtag, created_at)
+    VALUES
+      ('{media_id}', '{hashtag}', '{lower_hashtag}', '{created_at}')
+
+
+db_config:
+  ig:
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8mb4" 
+  

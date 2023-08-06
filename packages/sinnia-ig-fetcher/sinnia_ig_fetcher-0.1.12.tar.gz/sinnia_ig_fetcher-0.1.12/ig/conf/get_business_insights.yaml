@@ -1,0 +1,61 @@
+
+log_file: "logs/get_media.log"
+
+enable_commit: True
+
+graph_api:
+  # Some of these metrics are only available for 'day' period; refer to
+  # https://developers.facebook.com/docs/instagram-api/reference/user/insights
+  # Requesting metrics not available to a period results in error
+  # email_contacts, phone_call_clicks, text_message_clicks, get_directions_clicks, online_followers
+  host: "https://graph.facebook.com"
+  request_basic_daily_path: '/v3.2/{user_id}/insights?period={period}&metric=impressions,reach,follower_count,profile_views,website_clicks'
+  request_basic_path:       '/v3.2/{user_id}/insights?period={period}&metric=impressions,reach'
+  request_audiences_path:   '/v3.2/{user_id}/insights?period={period}&metric=audience_gender_age,audience_locale,audience_city,audience_country'
+  historic_suffix: '&since={date_from}&until={date_to}' 
+
+  
+queries:
+  get_users: |  
+    SELECT instagram_id, access_token
+    FROM UsersAuth ua 
+    WHERE valid_until > CURRENT_TIMESTAMP()
+    AND instagram_id IS NOT NULL AND TRIM(instagram_id) != '' 
+    AND access_token NOT LIKE 'IG%'
+    AND ua.active = 1
+    limit 1
+    
+  insert_basic: |
+    INSERT INTO UserInsights(user_id, end_time, period, fetched_time,
+            {metric_name})
+    VALUES ({user_id}, '{end_time}', '{period}', '{fetched_time}',
+            {metric_value})
+    ON DUPLICATE KEY UPDATE
+            {metric_name}={metric_value}
+            
+  insert_audience_gender_age: |
+    INSERT INTO UserInsightsAudienceGenderAge (user_id, end_time, period,
+            fetched_time, age, gender, value)
+    VALUES ('{user_id}', '{end_time}', '{period}',
+            '{fetched_time}', '{age}', '{gender}', {metric_value})
+    ON DUPLICATE KEY UPDATE
+            value={metric_value}
+            
+  insert_audience_location: |
+    INSERT INTO {table_name} (user_id, end_time, period,
+            fetched_time, name, value)
+    VALUES ('{user_id}', '{end_time}', '{period}',
+            '{fetched_time}', '{metric_name}', {metric_value})
+    ON DUPLICATE KEY UPDATE
+            value={metric_value}
+
+
+
+db_config:
+  ig:    
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8mb4" 
+  
