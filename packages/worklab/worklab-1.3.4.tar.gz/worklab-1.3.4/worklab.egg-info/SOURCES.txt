@@ -1,0 +1,51 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+example_data/Drag_test_example.txt
+example_data/Esseda_example_HSB.csv
+example_data/Esseda_example_LEM.xls
+example_data/Fietsergometer_example.xls
+example_data/Optipush_example.data
+example_data/Optotrak_example_.n3d
+example_data/Smartwheel_example.txt
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/Settings.txt
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/battery.csv
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/earth.csv
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/humidity.csv
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/linear.csv
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/quaternion.csv
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/rssi.csv
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/sensors.csv
+example_data/imu_example_data/NGIMU - 1 Frame - 00337909/temperature.csv
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/Settings.txt
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/battery.csv
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/earth.csv
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/humidity.csv
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/linear.csv
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/quaternion.csv
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/rssi.csv
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/sensors.csv
+example_data/imu_example_data/NGIMU - 3 Right - 003383F9/temperature.csv
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/Settings.txt
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/battery.csv
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/earth.csv
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/humidity.csv
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/linear.csv
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/quaternion.csv
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/rssi.csv
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/sensors.csv
+example_data/imu_example_data/NGIMU - 5 Left - 00338C0E/temperature.csv
+worklab/__init__.py
+worklab/com.py
+worklab/kin.py
+worklab/move.py
+worklab/physio.py
+worklab/plots.py
+worklab/utils.py
+worklab.egg-info/PKG-INFO
+worklab.egg-info/SOURCES.txt
+worklab.egg-info/dependency_links.txt
+worklab.egg-info/requires.txt
+worklab.egg-info/top_level.txt
