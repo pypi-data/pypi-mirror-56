@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: groceries-app-tobiasli
+Version: 1.0.0
+Summary: App for compiling shopping lists.
+Home-page: https://github.com/tobiasli/groceries_app
+Author: Tobias Litherland
+Author-email: tobiaslland@gmail.com
+License: UNKNOWN
+Description: ï»¿# groceries_app
+        Create weekly menu plans and shopping lists in 10 seconds.
+        
+        An app utilizing the [groceries](https://github.com/tobiasli/groceries) module
+        to create menu suggestions and compile shopping lists.
+        
+        ## Install
+        ```
+        pip install groceries_app-tobiasli
+        ```
+        
+        ## Usage
+        ```python
+        import groceries_app.start_app
+        ```
+        
+        For further usage information, run the app, and check [groceries](https://github.com/tobiasli/groceries)
+        for information on how the parser works.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
