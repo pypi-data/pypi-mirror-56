@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: centreon-sdk
+Version: 0.0.1
+Summary: A SDK for python to communicate with Centreon
+Home-page: https://github.com/myOmikron/TelegramBotAPI
+Author: myOmikron
+Author-email: kontakt@omikron.pw
+License: UNKNOWN
+Description: # Python Centreon SDK
+        
+        For further information about this project, see [Documentation](https://www.omikron.pw/doc/centreon)
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
