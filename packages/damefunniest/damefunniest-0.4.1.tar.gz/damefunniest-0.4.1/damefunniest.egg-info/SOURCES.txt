@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+README.org
+setup.py
+damefunniest/__init__.py
+damefunniest/command_line.py
+damefunniest.egg-info/PKG-INFO
+damefunniest.egg-info/SOURCES.txt
+damefunniest.egg-info/dependency_links.txt
+damefunniest.egg-info/entry_points.txt
+damefunniest.egg-info/not-zip-safe
+damefunniest.egg-info/requires.txt
+damefunniest.egg-info/top_level.txt
+damefunniest/bin/funniest-joke
