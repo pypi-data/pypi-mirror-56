@@ -1,0 +1,15 @@
+pointscan/Makefile,sha256=khrheyjkZFfmSaUmt8hStwRa_AJ64Oq6pNjtz4rshmY,134
+pointscan/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pointscan/app.py,sha256=-NHtHyWqukjp3kVsCiT8nWxtt__UkFazNAMYWJPyaRc,11307
+pointscan/client.py,sha256=gWa6Fu2ZnI0s0swWpBTUuoF59pFKpXfxTVZA8pMXZhc,2358
+pointscan/regex.py,sha256=DntGhtpYpjmMa8wi82I7i8wksVFpDGTAwsB8FIixMQs,238
+pointscan/remove.py,sha256=KfBrI4uOK2i1scC8pr0om-plV4W33MPjaMEcRYCcPAw,88
+pointscan/replace.py,sha256=WZQFF58Dfjq1PcFwXzuCGBjQNDhg115GUGChs3GAeEA,208
+pointscan/scan.py,sha256=sRQFurm6PopdN1ml0gvSfOEQGcsbVNXrWQSFSZXzDhQ,1539
+pointscan/split.py,sha256=eyDSISLjHDFjEm_zOm8QHKv866inueBVpkucIVhIeok,310
+pointscan/trim.py,sha256=8D6c75-dcJWIhgB0CVBnC7bffJAUYb0docmuaDcZ0g0,216
+pointscan-0.1.1.dist-info/entry_points.txt,sha256=4jhaLwzbgTITCVAXBDiol7KPZ7S0ixvIhWm8mLQAlQI,49
+pointscan-0.1.1.dist-info/LICENSE,sha256=suhJzcK2O0OPQqEcpWHNdiEa-9xhIXdb6dyh3k8X-74,1519
+pointscan-0.1.1.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+pointscan-0.1.1.dist-info/METADATA,sha256=vrpU1I4_Z08C906buw__umX_7yHWg2Na7XqvhTqIwfc,587
+pointscan-0.1.1.dist-info/RECORD,,
