@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pydpkg/__init__.py
+pydpkg/__init__.pyc
+pydpkg.egg-info/PKG-INFO
+pydpkg.egg-info/SOURCES.txt
+pydpkg.egg-info/dependency_links.txt
+pydpkg.egg-info/requires.txt
+pydpkg.egg-info/top_level.txt
+pydpkg/__pycache__/__init__.cpython-37.pyc
+pydpkg/__pycache__/base.cpython-37.pyc
+pydpkg/__pycache__/dpkg.cpython-37.pyc
+pydpkg/__pycache__/dsc.cpython-37.pyc
+scripts/dpkg-inspect.py
