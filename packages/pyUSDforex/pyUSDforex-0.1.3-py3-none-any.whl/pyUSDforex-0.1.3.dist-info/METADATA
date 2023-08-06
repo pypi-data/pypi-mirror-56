@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: pyUSDforex
+Version: 0.1.3
+Summary: Converts foreign fiat currencies to USD by getting and caching hourly exchanges rates from openexchangerates.org
+Home-page: https://github.com/getorca/pyUSDforex
+Author: Lawrence Stewart
+Author-email: lawrence@lawrencestewart.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# PyUSDforex - Fiat to USD
+
+## Project Description
+PyUSDforex is a python package to convert foreign currencies into US dollars. It uses the free API key from openexchangerates.org to get over 200 currencies. PyUSDforex allows you to perform as many currency conversions as you wish by caching the hourly exchange rates from openexchange.org in a python shelve.
+
+## Installation
+install from https://pypi.org/project/pyUSDforex/
+
+pip install pyUSDforex
+
+## Usage
+```python
+import pyUSDforex
+
+pyUSDforex.convert(100, 'EUR', 'Your APP_ID')
+```
+
+Get your app_id from https://openexchangerates.org/signup/free
+
+## Notes
+We welcome your feedback and support, raise github ticket if you want to report a bug. Need new features? Contact us on github
+
+## Changelog
+
+### 1.3
+ - replace shelve with requests-cache
+
+### 1.2
+ - raise an exception when the currency code cannot be found 
+
+### 1.1
+ - make threading safe with lock object
+
+### 1.0
+ - Init release
+
+
