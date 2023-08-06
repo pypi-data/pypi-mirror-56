@@ -1,0 +1,4 @@
+#!python
+
+import mgv.mgvUI as mgvUI
+mgvUI.main()
