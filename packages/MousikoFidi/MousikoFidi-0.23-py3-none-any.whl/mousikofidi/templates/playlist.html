@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  {% if page_name == "Queue" %}
+
+    {% if playlists %}
+      <h2 class="center"><a href="{{ url_for('.playlists') }}">{% if icons %}<i class="fas fa-list"></i> {% endif %}View All Playlists</a></h2>
+    {% else %}
+      <p class="bold center">There are no playlists.  You can create one by browsing and adding tracks with the "+" button.</p>
+    {% endif %}
+
+    {% if playlists %}
+      <form action="{{ url_for('.playlistctl', cmd='load', path='load') }}" class="center" id="playlistctl" method="post">
+        {% if playlist_save %}
+          <input class="center" id="delete" name="delete" title="Delete the selected playlist file." value="Delete Playlist" type="submit" />
+        {% endif %}
+        <input class="center" id="load" name="load" title="Load a playlist from a .m3u file." value="Load Playlist" type="submit" />
+        <select id="to-load" name="to-load" name="playlist" title="The name of the playlist to load.">
+          {% for name in playlist_names %}
+            <option value="{{ name }}">{{ name }}</option>
+          {% endfor %}
+        </select>
+      </form>
+    {% endif %}
+
+  {% endif %}
+
+  {% if audio_list or video_list %}
+    {% if page_name == "Queue" %}
+      {% if playlistctl %}
+        <form action="{{ url_for('.playlistctl', cmd='clear', path='all') }}" class="center" id="playlistctl" method="post">
+          <input class="center" id="clear" name="clear" title="Remove all tracks from your queue." value="Clear Queue" type="submit" />
+        </form>
+        {% if playlist_save %}
+          <form action="{{ url_for('.playlistctl', cmd='save', path='save') }}" class="center" id="playlistctl" method="post">
+            <input class="center" id="save" name="save" title="Save this queue as an .m3u file.  Note that doing so will reload the page, stopping any playback." value="Save Queue" type="submit" />
+            <input id="file-name" name="file-name" type="text" placeholder="Name" title="File name for the playlist to be saved.  Only alphanumeric charatcers, spaces, underscores, and plus signs are allowed." required/>
+            <input id="item-list" name="bulk-list" type="hidden" value="{{ file_list }}">
+          </form>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+    {% if playlist_detail %}
+      <h2 class="center"><a href="{{ url_for('.playlists') }}">{% if icons %}<i class="fas fa-list"></i> {% endif %}View All Playlists</a></h2>
+      <h2 class="bold center">Playlist Name: {{ playlist_name }}</h2>
+      <form action="{{ url_for('.playlistctl', cmd='load', path='load-with-redirect') }}" class="center" id="playlistctl" method="post">
+        <input class="center" id="load" name="load" title="Load tracks from this playlist into your queue.  This will redirect you to the queue page." value="Load This Playlist" type="submit" />
+        <input id="to-load" name="to-load" type="hidden" value="{{ playlist_name }}">
+      </form>
+    {% endif %}
+
+    {% include "item_table.html" with context %}
+
+    {% if audio_list %}
+      {% include "audio_player.html" with context %}
+    {% endif %}
+
+    {% if video_list %}
+      {% include "video_player.html" with context %}
+    {% endif %}
+  {% endif %}
+
+  {% if not audio_list and not video_list %}
+    <p class="center">Your queue is empty, click the "<span class="bold">+</span>" icon next to any track to add it.</p>
+    {% if page_name == "Queue" %}
+      <div class="center">
+        <img src="{{ logo_path }}">
+      </div>
+    {% endif %}
+  {% endif %}
+
+{% endblock %}
