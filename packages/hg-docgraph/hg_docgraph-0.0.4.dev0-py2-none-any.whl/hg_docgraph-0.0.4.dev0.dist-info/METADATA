@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: hg-docgraph
+Version: 0.0.4.dev0
+Summary: Mercurial extension to general graphivz output from mercurial repositories
+Home-page: https://bitbucket.org/octobus/mercurial_docgraph
+Author: Boris Feld
+Author-email: boris.feld@octobus.next
+Maintainer: Octobus
+Maintainer-email: contact@octobus.net
+License: GPLv2+
+Keywords: hg mercurial
+Platform: UNKNOWN
+Requires-Dist: pygraphviz
+
+UNKNOWN
+
+
