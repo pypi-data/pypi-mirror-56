@@ -1,0 +1,49 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.iamisearch">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="collective.iamisearch.interfaces.ICollectiveIamisearchLayer"
+      />
+
+  <browser:resourceDirectory
+    name="collective.iamisearch.stylesheets"
+    directory="static/css"
+    />
+
+  <browser:resourceDirectory
+    name="collective.iamisearch.javascripts"
+    directory="static/js"
+    />
+
+  <browser:page
+    name="iamisearch-settings"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.SettingsView"
+    permission="cmf.ManagePortal"
+    />
+
+  <browser:page
+    for="*"
+    name="seo_view"
+    class=".utils.UtilsView"
+    permission="zope2.View"
+    layer="collective.iamisearch.interfaces.ICollectiveIamisearchLayer"
+    />
+
+  <browser:page
+    for="*"
+    name="taxonomy_description"
+    class=".utils.UtilsView"
+    attribute="get_description"
+    permission="zope2.View"
+    layer="collective.iamisearch.interfaces.ICollectiveIamisearchLayer"
+    />
+
+
+</configure>

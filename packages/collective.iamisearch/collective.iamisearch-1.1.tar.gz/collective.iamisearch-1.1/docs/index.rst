@@ -1,0 +1,3 @@
+=====================collective.iamisearch
+=====================
+User documentation

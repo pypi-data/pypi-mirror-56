@@ -1,0 +1,12 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:faceted="http://namespaces.zope.org/faceted"
+  i18n_domain="collective.iamisearch">
+
+  <faceted:widget
+    factory=".widget.Widgettaxonomy"
+    schema=".interfaces.ITaxonomySchema"
+  />
+
+</configure>

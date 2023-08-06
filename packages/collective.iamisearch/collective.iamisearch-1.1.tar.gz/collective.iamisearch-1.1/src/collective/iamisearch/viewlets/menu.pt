@@ -1,0 +1,27 @@
+<tal:block tal:define="iamlinks python: view.taxonomies_links('iam','I am');
+                       isearchlinks python: view.taxonomies_links('isearch', 'I search')"
+           i18n:domain="collective.iamisearch">
+<nav class="action">
+    <ul role="tree" class="actionMenu deactivated" tal:condition="iamlinks">
+        <li role="treeitem">
+            <span i18n:translate="" class="actionMenuHeader" role="button" aria-expanded="false">I am</span>
+            <ul role="group" class="actionMenuContent" aria-hidden="true">
+                <li role="treeitem" tal:repeat="link iamlinks">
+                    <a tal:attributes="href python:iamlinks[link]" tal:content="link"></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul role="tree" class="actionMenu deactivated" tal:condition="isearchlinks">
+        <li role="treeitem" aria-expanded="false">
+            <span i18n:translate="" class="actionMenuHeader" role="button" aria-expanded="false">I search</span>
+            <ul role="group" class="actionMenuContent" aria-hidden="true">
+                <li role="treeitem" tal:repeat="link isearchlinks">
+                    <a tal:attributes="href python:isearchlinks[link]" tal:content="link"></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</tal:block>

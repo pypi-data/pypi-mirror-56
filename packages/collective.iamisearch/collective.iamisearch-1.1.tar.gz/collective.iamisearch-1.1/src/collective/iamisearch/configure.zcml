@@ -1,0 +1,68 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.iamisearch">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <!--
+    Be careful if you use general includeDependencies, it can have sideffects!
+    Better import explicite packages or configurations ;)
+  -->
+  <!--<includeDependencies package="." />-->
+
+  <include package="collective.z3cform.datagridfield" />
+  <include package="collective.taxonomy" />
+
+  <include package=".browser" />
+
+  <include file="permissions.zcml" />
+
+  <include file="upgrades.zcml" />
+
+  <include package=".viewlets" />
+  <include package="eea.facetednavigation" />
+  <include package=".faceted" />
+
+  <adapter
+    for="collective.iamisearch.interfaces.IIAmFolder
+         zope.publisher.interfaces.http.IHTTPRequest"
+    provides="zope.publisher.interfaces.IPublishTraverse"
+    factory=".traversal.IAmFolderTraversable"
+    />
+
+  <adapter
+    for="collective.iamisearch.interfaces.IISearchFolder
+         zope.publisher.interfaces.http.IHTTPRequest"
+    provides="zope.publisher.interfaces.IPublishTraverse"
+    factory=".traversal.ISearchFolderTraversable"
+    />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.iamisearch"
+      directory="profiles/default"
+      description="Installs the collective.iamisearch add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="collective.iamisearch (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the collective.iamisearch add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective.iamisearch-hiddenprofiles"
+      />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+</configure>
