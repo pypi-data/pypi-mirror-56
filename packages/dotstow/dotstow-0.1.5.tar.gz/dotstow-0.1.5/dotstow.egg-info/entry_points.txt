@@ -1,0 +1,3 @@
+[console_scripts]
+dotstow = dotstow.__main__:main
+
