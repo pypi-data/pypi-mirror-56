@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pdfnofonts
+Version: 0.0.2
+Summary: Script of remove fonts from PDF file (wrapper around GhostScript)
+Home-page: https://github.com/tdegeus/pdfnofonts
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Description: Script of remove fonts from PDF file (wrapper around GhostScript)
+Keywords: PDF,GhostScript
+Platform: UNKNOWN
