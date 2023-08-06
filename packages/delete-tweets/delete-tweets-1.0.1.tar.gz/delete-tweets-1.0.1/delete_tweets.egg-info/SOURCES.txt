@@ -1,0 +1,9 @@
+README.md
+setup.py
+delete_tweets.egg-info/PKG-INFO
+delete_tweets.egg-info/SOURCES.txt
+delete_tweets.egg-info/dependency_links.txt
+delete_tweets.egg-info/entry_points.txt
+delete_tweets.egg-info/top_level.txt
+deletetweets/__main__.py
+deletetweets/deletetweets.py
