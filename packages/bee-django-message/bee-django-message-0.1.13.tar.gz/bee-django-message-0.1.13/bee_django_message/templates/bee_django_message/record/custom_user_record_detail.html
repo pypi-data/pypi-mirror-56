@@ -1,0 +1,9 @@
+{% extends "bee_django_message/custom_base.html" %}
+
+{% block content %}
+    {% include 'bee_django_message/record/_nav.html' %}
+    <div style="margin: 20px auto;">
+        <h4 class="text-center">{{ record.title }}</h4>
+        <div>{{ record.info|safe|default:"" }}</div>
+    </div>
+{% endblock %}

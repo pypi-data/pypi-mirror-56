@@ -1,0 +1,52 @@
+{% load static %}
+<script type="text/javascript" src="{% static 'bee_django_course/wangEditor/js/wangEditor.js' %}"></script>
+<link rel="stylesheet" href="{% static 'bee_django_course/wangEditor/css/wangEditor.css' %}">
+{{ widget_name }}
+<textarea id="id_{{ widget_name }}" name="{{ widget_name }}">{{ widget_name }}</textarea>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var E = window.wangEditor;
+        var field_name = "id_" + "{{ widget_name }}";
+        var editor = new E(field_name);
+        editor.config.menus = [
+            'source',
+            '|',
+            'bold',
+            'underline',
+            'italic',
+            'strikethrough',
+            'eraser',
+            'forecolor',
+            'bgcolor',
+            '|',
+            'quote',
+            'fontfamily',
+            'fontsize',
+            'head',
+            'unorderlist',
+            'orderlist',
+            'alignleft',
+            'aligncenter',
+            'alignright',
+            '|',
+            'link',
+            'unlink',
+            'table',
+            'emotion',
+            '|',
+            'img',
+            'video',
+            'location',
+            'insertcode',
+            '|',
+            'undo',  // 撤销
+            'redo'  // 重复
+        ];
+
+        editor.config.uploadImgFileName = 'image';
+        editor.config.uploadImgUrl = "{% url 'bee_django_richtext:upload_image' %}";
+        editor.create();
+
+        window.editor = editor;
+    });
+</script>
