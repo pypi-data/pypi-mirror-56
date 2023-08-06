@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: dec12th
+Version: 1.0.1
+Summary: dec12th
+Home-page: https://www.pycourses.com/double12
+Author: dongweiming
+Author-email: admin@pycourses.com
+License: MIT
+Description: # Dec12th
+        
+            pip install dec12th
+        
+        Then:
+        
+            dec12th
+        
+        Happy Pythoning!
+        
+        ---
+        
+        *This is just a silly little script*
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
