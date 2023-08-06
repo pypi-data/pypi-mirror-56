@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bitmex-trio-websocket
+Version: 0.2.7
+Summary: Websocket implementation for BitMEX cryptocurrency derivatives exchange.
+License: MIT
+Author: Anders Ellenshøj Andersen
+Author-email: andersa@ellenshoej.dk
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: trio-websocket (>=0.8.0,<0.9.0)
+Requires-Dist: ujson (>=1.35,<2.0)
