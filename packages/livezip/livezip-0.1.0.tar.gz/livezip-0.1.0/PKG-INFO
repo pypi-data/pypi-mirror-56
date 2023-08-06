@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: livezip
+Version: 0.1.0
+Summary: Memory-bound streamable implementation of ZIP64. Aimed at streaming zips full of multimedia assets (videos, images, etc).
+License: WTFPL
+Author: Rémy Sanchez
+Author-email: remy.sanchez@hyperthese.net
+Requires-Python: >=3.6,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pendulum (>=2.0,<3.0)
