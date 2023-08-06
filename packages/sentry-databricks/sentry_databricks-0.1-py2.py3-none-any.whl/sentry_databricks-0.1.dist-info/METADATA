@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sentry-databricks
+Version: 0.1
+Summary: 
+Author: Jiri Koutny
+Author-email: jiri.koutny@datasentics.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: sentry-sdk (>=0.13.0,<0.14.0)
