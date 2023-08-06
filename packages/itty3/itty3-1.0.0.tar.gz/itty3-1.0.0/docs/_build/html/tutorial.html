@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tutorial &#8212; itty3 1.0.0-alpha-2 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Extending itty3" href="extending.html" />
+    <link rel="prev" title="Welcome to itty3’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="tutorial">
+<span id="id1"></span><h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>This guide is aimed at getting started with <code class="docutils literal notranslate"><span class="pre">itty3</span></code>. You should be at least
+basically familiar with Python &amp; HTTP in order to get the most out of this
+tutorial.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>For most users in a modern Python environment they can control, you’ll want
+to run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install itty3
+</pre></div>
+</div>
+<p>Ideally, this should be run within a <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>/<code class="docutils literal notranslate"><span class="pre">pipenv</span></code>/similar to
+give you some isolation. Installing Python libraries globally is a recipe
+for pain &amp; there are many good options out there that are easy/quick to learn
+to help you avoid dependency hell.</p>
+<p>That said, <code class="docutils literal notranslate"><span class="pre">itty3</span></code> is small/minimal by design. The code (minus docstrings
+&amp; comments) is less than 1k lines of code. This allows you to embed <code class="docutils literal notranslate"><span class="pre">itty3</span></code>
+directly into your application by copying in <code class="docutils literal notranslate"><span class="pre">itty3.py</span></code> (or even within
+your app file directly!).</p>
+<p>Regardless, <code class="docutils literal notranslate"><span class="pre">itty3</span></code>’s only dependency is Python 3. It’s been tested on
+Python 3.7.4+, but may work on older versions.</p>
+<p>Finally, you can find the complete source for this tutorial within
+the <cite>examples/tutorial_todolist</cite> directory of <code class="docutils literal notranslate"><span class="pre">itty3</span></code>’s source code.</p>
+</div>
+<div class="section" id="starting-an-app">
+<h2>Starting An App<a class="headerlink" href="#starting-an-app" title="Permalink to this headline">¶</a></h2>
+<p>Once you have installed <code class="docutils literal notranslate"><span class="pre">itty3</span></code>, the next thing you’ll want to do is start
+an application file. A good choice for starting out is to create an
+empty <code class="docutils literal notranslate"><span class="pre">app.py</span></code> file.</p>
+<p>You’ll start out by importing <code class="docutils literal notranslate"><span class="pre">itty3</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itty3</span>
+</pre></div>
+</div>
+<p>Next, define a module-wide <cite>App</cite> object instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">itty3</span><span class="o">.</span><span class="n">App</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This will allow you start registering “routes”, a combination of an HTTP
+method, a URI path &amp; a view (a callable function that takes a request &amp;
+produces a response).</p>
+<p>After that, provide a way for the built-in server code to run your new
+<code class="docutils literal notranslate"><span class="pre">app</span></code>. At the bottom of the file, add the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This tells the Python interpreter that, if the file itself is being run by
+Python, to execute the code within the <code class="docutils literal notranslate"><span class="pre">if</span></code> block. The <code class="docutils literal notranslate"><span class="pre">app.run()</span></code>
+runs the built-in <strong>development</strong> server &amp; starts listening for requests.</p>
+<p>Your complete <code class="docutils literal notranslate"><span class="pre">app.py</span></code> file should now look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itty3</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">itty3</span><span class="o">.</span><span class="n">App</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now run the server using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">app.py</span></code>. You should get a message about
+the server starting &amp; where it’ll handle requests at:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">itty3</span> <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="p">:</span> <span class="n">Now</span> <span class="n">serving</span> <span class="n">requests</span> <span class="n">at</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mf">8000.</span><span class="o">..</span>
+</pre></div>
+</div>
+<p>You can now go to the browser &amp; hit <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> to access the app!</p>
+<p>However, because we haven’t written any application-specific code, you’re
+going to get a <cite>404 Not Found</cite> page, which isn’t super-useful. Let’s fix
+that…</p>
+</div>
+<div class="section" id="adding-your-first-view">
+<h2>Adding Your First View<a class="headerlink" href="#adding-your-first-view" title="Permalink to this headline">¶</a></h2>
+<p>A “view” function is any callable that can accept a <code class="docutils literal notranslate"><span class="pre">request</span></code> object &amp;
+produce a <code class="docutils literal notranslate"><span class="pre">response</span></code> object for serving back to the user. We don’t
+need to focus on the details of those for now (more later), so let’s just
+write a basic index view:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">itty3</span>
+
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">itty3</span><span class="o">.</span><span class="n">App</span><span class="p">()</span>
+
+
+<span class="c1"># NEW CODE HERE!</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;Hello, world!&quot;</span>
+    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">body</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The first line (<code class="docutils literal notranslate"><span class="pre">&#64;app.get(&quot;/&quot;)</span></code>) is a decorator. That automatically
+registers your <code class="docutils literal notranslate"><span class="pre">index</span></code> view with the <code class="docutils literal notranslate"><span class="pre">app</span></code>, telling it that the attached
+view can handle an HTTP <code class="docutils literal notranslate"><span class="pre">GET</span></code> request at the path <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
+<p>The next line (<code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">index(request):</span></code>) declares the callable that is
+run when that request is seen. In simple <code class="docutils literal notranslate"><span class="pre">itty3</span></code> applications, that’s
+usually just a plain Python function, but any callable (instance methods,
+entire classes, etc.) will work. The only guideline is that it should accept
+a <code class="docutils literal notranslate"><span class="pre">request</span></code> parameter (a <code class="docutils literal notranslate"><span class="pre">itty3.HttpRequest</span></code> object) as the first
+positional argument.</p>
+<p>We then build a simple string body, just to see a customized result out on
+the page.</p>
+<p>The final piece is the <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">app.render(request,</span> <span class="pre">body)</span></code> line. This builds
+and returns a <code class="docutils literal notranslate"><span class="pre">HttpResponse</span></code> object, which handles all the details of
+serving a proper HTTP response back to the user, including status codes &amp;
+headers. <code class="docutils literal notranslate"><span class="pre">app.render(...)</span></code> is simply a convenience function for producing
+that object.</p>
+<p>If you <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> the <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">app.py</span></code> &amp; restart it, then hit
+<a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> in your browser, you should now get a simple page
+that says <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">world!</span></code>.</p>
+<p>Hurray! Our first real web response works!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’ll note that “render”-ing in the context of <code class="docutils literal notranslate"><span class="pre">itty3</span></code> doesn’t
+do any templating. <code class="docutils literal notranslate"><span class="pre">itty3</span></code> doesn’t care how you produce response
+bodies, as long as a string or iterable can be returned.</p>
+<p>This opens a world of options, from reading/returning entire files
+(good for Single-Page Apps), returning serialized data (like JSON, YAML
+or XML), or using your own choice of template language (like <code class="docutils literal notranslate"><span class="pre">Jinja2</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Mako</span></code> or even regular Python format strings).</p>
+<p>The downside is that you need to do a bit more work &amp; make a choice
+around what you want to do. Evaluate your options &amp; choose the one that
+works for you.</p>
+</div>
+</div>
+<div class="section" id="building-a-todo-list-app">
+<h2>Building A TODO List App<a class="headerlink" href="#building-a-todo-list-app" title="Permalink to this headline">¶</a></h2>
+<p>Let’s step beyond this &amp; start crafting a real interactive app.
+We’ll build a very basic TODO list application.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We’re going to use a file-based &amp; JSON setup. This is for
+simplicity in the example code &amp; to avoid further dependencies.</p>
+<p>This is suitable for this toy app, but isn’t recommended for production
+unless you know what you’re doing. GET YOU AN DATABASE!</p>
+</div>
+<p>We’ll leave the beginning code (<code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">itty3</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">app</span> <span class="pre">=</span> <span class="pre">itty3.App()</span></code>) as
+well as the ending code (everything after <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;:</span></code>)
+alone, focusing only on our application code.</p>
+<p>We’ll make the index view more useful first.</p>
+<div class="section" id="the-index-view">
+<h3>The Index View<a class="headerlink" href="#the-index-view" title="Permalink to this headline">¶</a></h3>
+<p>First, let’s create a prettier index page. Alongside your <code class="docutils literal notranslate"><span class="pre">app.py</span></code> file,
+let’s create an <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file.</p>
+<p>Add the following to that new <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My TODO List&lt;/title&gt;
+        &lt;style&gt;
+            /* Just a quick reset &amp; some basic styles. */
+            * { margin: 0; padding: 0; }
+            html { background-color: #CCCCCC; text-align: center; }
+            body { background-color: #FFFFFF; border-left: 2px solid #999999; border-right: 2px solid #999999; font-family: Helvetica, Arial, sans-serif; font-size: 14px; margin: 0 auto; text-align: left; width: 60%; padding: 40px 20px; }
+            h1, h2, h3 { margin: 10px 0px; font-family: Georgia, &#39;Times New Roman&#39;, Times, serif; }
+            p { display: block; padding: 10px 0px; }
+            ul { display: block; padding: 10px 0px; list-style: none; }
+            ul li { border: 1px solid #EEEEEE; padding: 5px; }
+            ul li form { display: inline; }
+            ul li input { margin: 0px 10px 0px 0px; }
+        &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;header&gt;
+            &lt;h1&gt;My TODO List&lt;/h1&gt;
+        &lt;/header&gt;
+
+        &lt;content&gt;
+            &lt;ul&gt;
+                &lt;!--
+                    We&#39;ll manually search/replace this out with string formatting.
+                    This is where a real template language would come in handy.
+                --&gt;
+                {{ content }}
+            &lt;/ul&gt;
+
+            &lt;p&gt;
+                &lt;form method=&quot;post&quot; action=&quot;/create/&quot;&gt;
+                    &lt;label for=&quot;id_todo&quot;&gt;Add TODO:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; id=&quot;id_todo&quot; name=&quot;todo&quot;&gt;
+                    &lt;input type=&quot;submit&quot; value=&quot;Create&quot;&gt;
+                &lt;/form&gt;
+            &lt;/p&gt;
+        &lt;/content&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>Save the file &amp; close it.</p>
+<p>Next, alongside the <code class="docutils literal notranslate"><span class="pre">app.py</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">index.html</span></code> files, create a
+<code class="docutils literal notranslate"><span class="pre">data.json</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Save the file &amp; close it.</p>
+<p>Now go back to <code class="docutils literal notranslate"><span class="pre">app.py</span></code> &amp; let’s update the <code class="docutils literal notranslate"><span class="pre">index</span></code> view to use our
+new files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># At the top of the file, add:</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># ...</span>
+
+<span class="c1"># Then update the ``index`` view.</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="c1"># We&#39;ll open/read the HTML file.</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;index.html&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">index_file</span><span class="p">:</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="n">index_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="c1"># Pull in the JSON data (currently mostly-empty).</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+
+    <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="c1"># Create the list of TODO items.</span>
+    <span class="k">for</span> <span class="n">offset</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;items&quot;</span><span class="p">,</span> <span class="p">[])):</span>
+        <span class="c1"># Note: This is gross &amp; dangerous! You need to escape your</span>
+        <span class="c1"># data in a real app to prevent XSS attacks!</span>
+        <span class="n">content</span> <span class="o">+=</span> <span class="s2">&quot;&lt;li&gt;</span><span class="si">{}</span><span class="s2">&lt;/li&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">content</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;&lt;li&gt;Nothing to do!&lt;/li&gt;&quot;</span>
+
+    <span class="c1"># Now &quot;template&quot; in the data.</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{ content }}&quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">)</span>
+
+    <span class="c1"># Return the response.</span>
+    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">template</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Restart the server &amp; check <a class="reference external" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> in your browser. You
+should now have some HTML &amp; an empty TODO list!</p>
+<p>You can verify things are working by manually changing your <code class="docutils literal notranslate"><span class="pre">data.json</span></code>
+to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Finish TODO list app&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Do some gardening&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Take a nap&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Then reloading the page (no server restart needed).</p>
+</div>
+<div class="section" id="creating-new-todos-view">
+<h3>Creating New TODOs View<a class="headerlink" href="#creating-new-todos-view" title="Permalink to this headline">¶</a></h3>
+<p>Now that we can see our TODO list, let’s add a way to create new TODO.
+We’ll be creating a <strong>second</strong> function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/create/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">create_todo</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="c1"># Pull in the JSON data (currently mostly-empty).</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+
+    <span class="c1"># Retrieve the new TODO text from the POST&#39;ed data.</span>
+    <span class="n">new_todo</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;todo&quot;</span><span class="p">,</span> <span class="s2">&quot;---&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="c1"># Append it onto the TODO items.</span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_todo</span><span class="p">)</span>
+
+    <span class="c1"># Write the data back out.</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data_file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="c1"># Finally, redirect back to the main list.</span>
+    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We’re doing a couple new things here. First, we’re using <code class="docutils literal notranslate"><span class="pre">&#64;app.post(...)</span></code>,
+which hooks up a route for an HTTP POST request.</p>
+<p>Second, we’re making use of <code class="docutils literal notranslate"><span class="pre">request.POST</span></code>. This is a <code class="docutils literal notranslate"><span class="pre">QueryDict</span></code>,
+a <code class="docutils literal notranslate"><span class="pre">dict</span></code>-like object that contains all the <code class="docutils literal notranslate"><span class="pre">POST</span></code>’ed form values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re handling JSON or another different request body, you
+should <strong>NOT</strong> use <code class="docutils literal notranslate"><span class="pre">request.POST</span></code>. Instead, use <code class="docutils literal notranslate"><span class="pre">request.body</span></code> &amp;
+manually decode the contents of that string.</p>
+</div>
+<p>Finally, we’re using <code class="docutils literal notranslate"><span class="pre">app.redirect(...)</span></code>, which is a convenience function
+for sending an HTTP (temporary) redirect back to the main page. This
+triggers a fresh load of the TODO list, including the newly added TODO.</p>
+<p>Restart your <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">app.py</span></code>, reload in your browser &amp; try creating a new
+TODO item.</p>
+</div>
+<div class="section" id="aside-auto-reloading-server">
+<h3>Aside: Auto-Reloading Server<a class="headerlink" href="#aside-auto-reloading-server" title="Permalink to this headline">¶</a></h3>
+<p>By now, you may be tired of manually restarting your <code class="docutils literal notranslate"><span class="pre">app.py</span></code> server.
+To make things a little easier, we’ll set up <a class="reference external" href="https://gunicorn.org/">Gunicorn</a> to serve our
+local traffic.</p>
+<p>First, install <code class="docutils literal notranslate"><span class="pre">gunicorn</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install gunicorn
+</pre></div>
+</div>
+<p>Next, instead of running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">app.py</span></code>, we’ll run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gunicorn -w 1 -t 0 --reload app:app
+</pre></div>
+</div>
+<p>Now, whenever we change our <code class="docutils literal notranslate"><span class="pre">app.py</span></code> file, <code class="docutils literal notranslate"><span class="pre">gunicorn</span></code> will automatically
+reload the code. Now it’ll always be serving the current code to our browser.</p>
+<p>No more restarts!</p>
+</div>
+<div class="section" id="marking-todos-as-done">
+<h3>Marking TODOs As Done<a class="headerlink" href="#marking-todos-as-done" title="Permalink to this headline">¶</a></h3>
+<p>The last bit of our TODO list app is being able to mark a TODO as completed.</p>
+<p>First, we’ll need to modify our <code class="docutils literal notranslate"><span class="pre">index</span></code> view. Find the line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">content</span> <span class="o">+=</span> <span class="s2">&quot;&lt;li&gt;</span><span class="si">{}</span><span class="s2">&lt;/li&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>…and change it to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">content</span> <span class="o">+=</span> <span class="s1">&#39;&lt;li&gt;&lt;form method=&quot;post&quot; action=&quot;/done/</span><span class="si">{offset}</span><span class="s1">/&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Complete&quot;&gt;&lt;/form&gt;</span><span class="si">{item}</span><span class="s1">&lt;/li&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span>
+    <span class="n">item</span><span class="o">=</span><span class="n">item</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>We unfortunately need to use <code class="docutils literal notranslate"><span class="pre">POST</span></code> here, as HTML forms can’t submit
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code> requests.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Yes, there are better ways to handle this form submission.
+Adding some modern JS would be a good exercise for the reader. :)</p>
+</div>
+<p>Finally, we need to add a new view:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/done/&lt;int:offset&gt;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">mark_done</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
+    <span class="c1"># Pull in the JSON data (currently mostly-empty).</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+
+    <span class="n">items</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;items&quot;</span><span class="p">,</span> <span class="p">[])</span>
+
+    <span class="k">if</span> <span class="n">offset</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">offset</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">error_404</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;Not Found&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Move it to &quot;done&quot;.</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;done&quot;</span><span class="p">,</span> <span class="p">[])</span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;done&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="n">offset</span><span class="p">])</span>
+
+    <span class="c1"># Slice out the offset.</span>
+    <span class="n">plus_one</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">data</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span><span class="p">[:</span><span class="n">offset</span><span class="p">]</span> <span class="o">+</span> <span class="n">items</span><span class="p">[</span><span class="n">plus_one</span><span class="p">:]</span>
+
+    <span class="c1"># Write the data back out.</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_file</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data_file</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="c1"># Finally, redirect back to the main list.</span>
+    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is very similar to the <code class="docutils literal notranslate"><span class="pre">create_todo</span></code> view, with just a couple
+modifications.</p>
+<p>First, note that our path is <code class="docutils literal notranslate"><span class="pre">/done/&lt;int:offset&gt;/</span></code> &amp; we’ve added a
+<code class="docutils literal notranslate"><span class="pre">offset</span></code> parameter to the view’s function declaration. This lets us
+capture data out of the URL &amp; use it in our app.</p>
+<p>Next, we use that <code class="docutils literal notranslate"><span class="pre">offset</span></code> to check to ensure it’s within the bounds
+of the <code class="docutils literal notranslate"><span class="pre">items</span></code>. If not, we call <code class="docutils literal notranslate"><span class="pre">app.error_404(...)</span></code> to supply a
+<code class="docutils literal notranslate"><span class="pre">404</span> <span class="pre">Not</span> <span class="pre">Found</span></code> response.</p>
+<p>We then archive the item to a (potentially new) <code class="docutils literal notranslate"><span class="pre">&quot;done&quot;</span></code> key within our
+JSON. And then we overwrite the <code class="docutils literal notranslate"><span class="pre">items</span></code> with a slice that excludes the
+desired offset.</p>
+<p>Reload in the browser &amp; give it a spin!</p>
+</div>
+</div>
+<div class="section" id="congratulations">
+<h2>Congratulations!<a class="headerlink" href="#congratulations" title="Permalink to this headline">¶</a></h2>
+<p>With this, you’ve built your first working application with <code class="docutils literal notranslate"><span class="pre">itty3</span></code>.</p>
+<p>For more information, you can:</p>
+<ul class="simple">
+<li><p>Refer to the API docs at <a class="reference internal" href="reference/itty3.html"><span class="doc">API Documentation</span></a></p></li>
+<li><p>Read some <a class="reference external" href="https://github.com/toastdriven/itty3/tree/master/examples">example code</a></p></li>
+<li><p>Check out the <a class="reference internal" href="deploying.html#deploying"><span class="std std-ref">Deploying itty3</span></a> guide</p></li>
+<li><p>Find out how to <a class="reference internal" href="extending.html#extending"><span class="std std-ref">Extending itty3</span></a></p></li>
+<li><p>Learn how to <a class="reference internal" href="troubleshooting.html#troubleshooting"><span class="std std-ref">Troubleshooting</span></a></p></li>
+</ul>
+<p>Happy developing!</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">itty3</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-an-app">Starting An App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-your-first-view">Adding Your First View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-a-todo-list-app">Building A TODO List App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#congratulations">Congratulations!</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploying.html">Deploying <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/itty3.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="philosophy.html">Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to itty3’s documentation!</a></li>
+      <li>Next: <a href="extending.html" title="next chapter">Extending <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Daniel Lindsley.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/tutorial.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

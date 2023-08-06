@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Extending itty3 &#8212; itty3 1.0.0-alpha-2 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Deploying itty3" href="deploying.html" />
+    <link rel="prev" title="Tutorial" href="tutorial.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="extending-itty3">
+<span id="extending"></span><h1>Extending <code class="docutils literal notranslate"><span class="pre">itty3</span></code><a class="headerlink" href="#extending-itty3" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">itty3</span></code> is designed to be streamlined &amp; simple to use out of the box.
+However, it’s relatively easy to customize as well.</p>
+<div class="section" id="custom-httpresponse">
+<h2>Custom <code class="docutils literal notranslate"><span class="pre">HttpResponse</span></code><a class="headerlink" href="#custom-httpresponse" title="Permalink to this headline">¶</a></h2>
+<p>In normal usage, <code class="docutils literal notranslate"><span class="pre">app.render(...)</span></code> is simply a shortcut/convenience
+method for constructing an <code class="docutils literal notranslate"><span class="pre">itty3.HttpResponse</span></code> object. There’s
+nothing extraordinary about these instances, so you can make them yourself
+if you prefer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyyaml</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/whatev/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">whatev</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;greeting&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;noun&quot;</span><span class="p">:</span> <span class="s2">&quot;world&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;punctuation&quot;</span><span class="p">:</span> <span class="s2">&quot;!&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">itty3</span><span class="o">.</span><span class="n">HttpResponse</span><span class="p">(</span>
+        <span class="n">body</span><span class="o">=</span><span class="n">pyyaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;text/yaml&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>Or even subclass it to “bake in” complex behavior:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">YAMLResponse</span><span class="p">(</span><span class="n">itty3</span><span class="o">.</span><span class="n">HttpResponse</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="n">pyyaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;content_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;text/yaml&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/whatev/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">whatev</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;greeting&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;noun&quot;</span><span class="p">:</span> <span class="s2">&quot;world&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;punctuation&quot;</span><span class="p">:</span> <span class="s2">&quot;!&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">YAMLResponse</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And you can override/extend <code class="docutils literal notranslate"><span class="pre">App.render</span></code> if you want to automatically
+use your new subclass:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyApp</span><span class="p">(</span><span class="n">itty3</span><span class="o">.</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># Because of the mismatch in signatures (`body` vs `data`), this</span>
+        <span class="c1"># may not work perfectly in all situations.</span>
+        <span class="k">return</span> <span class="n">YAMLResponse</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom-httprequest">
+<h2>Custom <code class="docutils literal notranslate"><span class="pre">HttpRequest</span></code><a class="headerlink" href="#custom-httprequest" title="Permalink to this headline">¶</a></h2>
+<p>As with <code class="docutils literal notranslate"><span class="pre">HttpResponse</span></code>, <code class="docutils literal notranslate"><span class="pre">itty3.HttpRequest</span></code> isn’t particularly
+special. The only interesting/tricky part is automatically constructed by
+<code class="docutils literal notranslate"><span class="pre">App.create_request</span></code>, so you’ll need to override that method when creating
+a subclass.</p>
+<p>For instance, if you wanted to identify a request was secure in a different
+way (e.g. verifying a nonce was present in headers):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NonceHttpRequest</span><span class="p">(</span><span class="n">itty3</span><span class="o">.</span><span class="n">HttpRequest</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">is_secure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s2">&quot;X-Secure-Nonce&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">nonce</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;X-Secure-Nonce&quot;</span><span class="p">]</span>
+        <span class="c1"># Check a DB for that nonce within a time range.</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">verified</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="c1"># The request is good. Carry on.</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>You could then tell your <code class="docutils literal notranslate"><span class="pre">App</span></code> to always use this subclass with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SuperSecureApp</span><span class="p">(</span><span class="n">itty3</span><span class="o">.</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">create_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environ</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">NonceHttpRequest</span><span class="o">.</span><span class="n">from_wsgi</span><span class="p">(</span><span class="n">environ</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="different-routing">
+<h2>Different Routing<a class="headerlink" href="#different-routing" title="Permalink to this headline">¶</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">itty3</span></code>’s routing doesn’t suit you, you can even define your own
+variant of <code class="docutils literal notranslate"><span class="pre">Route</span></code>. As long as it conforms to a bit of expected API
+&amp; with a couple minor tweaks to <code class="docutils literal notranslate"><span class="pre">App</span></code>…:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># We want to support routes like:</span>
+<span class="c1">#</span>
+<span class="c1">#     &quot;/app/:id/:title&quot;</span>
+<span class="c1">#</span>
+<span class="c1"># ...and attempt automatic conversion of types.</span>
+<span class="c1"># This is a naive implementation of that.</span>
+
+<span class="k">class</span> <span class="nc">SimpleRoute</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="o">=</span> <span class="n">func</span>
+
+    <span class="k">def</span> <span class="nf">split_uri</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">can_handle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="n">method</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">internal_path_bits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">split_uri</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">external_path_bits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">split_uri</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">internal_path_bits</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">external_path_bits</span><span class="p">):</span>
+            <span class="c1"># Without even iterating, we know it&#39;s not right.</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">matched</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="k">for</span> <span class="n">offset</span><span class="p">,</span> <span class="n">bit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">internal_path_bits</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">bit</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">):</span>
+                <span class="c1"># We&#39;re looking for a non-variable, exact match.</span>
+                <span class="k">if</span> <span class="n">bit</span> <span class="o">!=</span> <span class="n">external_path_bits</span><span class="p">[</span><span class="n">offset</span><span class="p">]:</span>
+                    <span class="n">matched</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># It&#39;s a variable. Carry on.</span>
+                <span class="k">continue</span>
+
+        <span class="k">return</span> <span class="n">matched</span>
+
+    <span class="k">def</span> <span class="nf">extract_kwargs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="c1"># This only gets called if the route can handle the URI.</span>
+        <span class="c1"># So we&#39;ll take a shortcut or two here for brevity.</span>
+        <span class="n">internal_path_bits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">split_uri</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">external_path_bits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">split_uri</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">matches</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">offset</span><span class="p">,</span> <span class="n">bit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">internal_path_bits</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">bit</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">):</span>
+                <span class="c1"># It&#39;s not a variable, we don&#39;t care.</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># It&#39;s a variable. Slice off the colon.</span>
+            <span class="n">var_name</span> <span class="o">=</span> <span class="n">bit</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+            <span class="c1"># Extract it from the actual URI.</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">external_path_bits</span><span class="p">[</span><span class="n">offset</span><span class="p">]</span>
+
+            <span class="c1"># Try to convert the type.</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">pass</span>
+
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;true&quot;</span><span class="p">,</span> <span class="s2">&quot;false&quot;</span><span class="p">):</span>
+                <span class="c1"># Store it as a boolean.</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span>
+
+            <span class="c1"># Finally, track what we found.</span>
+            <span class="n">matches</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+        <span class="k">return</span> <span class="n">matches</span>
+
+
+<span class="c1"># Now, just override ``App`` to use your new routes.</span>
+<span class="k">class</span> <span class="nc">SimpleRoutesApp</span><span class="p">(</span><span class="n">itty3</span><span class="o">.</span><span class="n">App</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">add_route</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="c1"># We swap in the custom class here.</span>
+        <span class="n">route</span> <span class="o">=</span> <span class="n">SimpleRoute</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_routes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">route</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">itty3</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Extending <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#custom-httpresponse">Custom <code class="docutils literal notranslate"><span class="pre">HttpResponse</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-httprequest">Custom <code class="docutils literal notranslate"><span class="pre">HttpRequest</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#different-routing">Different Routing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deploying.html">Deploying <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/itty3.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="philosophy.html">Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="tutorial.html" title="previous chapter">Tutorial</a></li>
+      <li>Next: <a href="deploying.html" title="next chapter">Deploying <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Daniel Lindsley.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/extending.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

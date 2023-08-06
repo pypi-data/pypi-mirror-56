@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Troubleshooting &#8212; itty3 1.0.0-alpha-2 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="reference/itty3.html" />
+    <link rel="prev" title="Deploying itty3" href="deploying.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="troubleshooting">
+<span id="id1"></span><h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="my-server-isn-t-responding-to-traffic">
+<h2>“My server isn’t responding to traffic!”<a class="headerlink" href="#my-server-isn-t-responding-to-traffic" title="Permalink to this headline">¶</a></h2>
+<p>This is commonly because of the host address <code class="docutils literal notranslate"><span class="pre">itty3</span></code> is bound to. By
+default, the code &amp; docs default to <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code> (“localhost”). This
+prevents your application server from responding to requests from the
+outside world.</p>
+<p>You’ll likely need to change the address to something like <code class="docutils literal notranslate"><span class="pre">0.0.0.0</span></code>
+(“respond to requests from any host”) or have a server that sits in front
+of your application server (like Nginx or similar).</p>
+<p>A way to check if the application server is responding is to be on the server
+&amp; issue a <code class="docutils literal notranslate"><span class="pre">curl</span></code> command to <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:&lt;port-goes-here&gt;/</span></code>. If
+it responds as expected, it’s likely an address (or port) issue.</p>
+</div>
+<div class="section" id="i-m-getting-a-500-error-and-don-t-know-what-s-wrong">
+<h2>“I’m getting a 500 error and don’t know what’s wrong!”<a class="headerlink" href="#i-m-getting-a-500-error-and-don-t-know-what-s-wrong" title="Permalink to this headline">¶</a></h2>
+<p>When <code class="docutils literal notranslate"><span class="pre">App.debug=False</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">itty3</span></code> suppresses exceptions &amp;
+simply returns a static 500 error page.</p>
+<p>You’ll want to set <code class="docutils literal notranslate"><span class="pre">App.debug</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code>, either via:</p>
+<ul class="simple">
+<li><p>the initialization - <code class="docutils literal notranslate"><span class="pre">itty3.App(debug=True)</span></code></p></li>
+<li><p>setting the attribute on the <code class="docutils literal notranslate"><span class="pre">App</span></code> itself - <code class="docutils literal notranslate"><span class="pre">app.debug</span> <span class="pre">=</span> <span class="pre">True</span></code></p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">app.run(debug=True)</span></code> if you’re using that</p></li>
+</ul>
+<p>When you do this, a traceback will be provided in the console output for
+the server. You can use this to debug your issue.</p>
+</div>
+<div class="section" id="the-traceback-of-my-error-isn-t-enough">
+<h2>“The traceback of my error isn’t enough!”<a class="headerlink" href="#the-traceback-of-my-error-isn-t-enough" title="Permalink to this headline">¶</a></h2>
+<p>Other frameworks provide more comprehensive or even interactive debug
+pages. While nice, these come at a complexity &amp; security cost.</p>
+<p>Being minimalist, the next best way to figure out what’s wrong in your
+<code class="docutils literal notranslate"><span class="pre">itty3</span></code> application is through the use of an interactive debugger, such
+as <a class="reference external" href="https://docs.python.org/3/library/pdb.html">pdb</a>.</p>
+<p>You can drop a <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pdb;</span> <span class="pre">pdb.set_trace()</span></code> pretty much anywhere in your
+code, step through instructions &amp; examine variable contents.</p>
+<p>There are other options, such as <code class="docutils literal notranslate"><span class="pre">wdb</span></code>, <code class="docutils literal notranslate"><span class="pre">pudb</span></code> or even in-editor
+interactive debuggers! Experiment &amp; find one you like.</p>
+<p>Experience with an interactive debugger is an invaluable skillset to have
+&amp; well worth the time you invest into it.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">itty3</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extending.html">Extending <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deploying.html">Deploying <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#my-server-isn-t-responding-to-traffic">“My server isn’t responding to traffic!”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i-m-getting-a-500-error-and-don-t-know-what-s-wrong">“I’m getting a 500 error and don’t know what’s wrong!”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-traceback-of-my-error-isn-t-enough">“The traceback of my error isn’t enough!”</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference/itty3.html">API Documentation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Other Docs:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="philosophy.html">Philosophy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="deploying.html" title="previous chapter">Deploying <code class="docutils literal notranslate"><span class="pre">itty3</span></code></a></li>
+      <li>Next: <a href="reference/itty3.html" title="next chapter">API Documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Daniel Lindsley.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/troubleshooting.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
