@@ -1,0 +1,26 @@
+import typing
+from dataclasses import dataclass, field
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    pass
+
+
+@dataclass
+class ScrapperData:
+    topic: str
+    candidate: typing.Any
+    actions: typing.Dict[str, typing.List['TaskData']] = field(default_factory=dict)
+    auth_session: typing.Any = None
+    error_message: str = None
+    error_extra: dict = None
+    is_valid: bool = True
+    extra_config: dict = field(default_factory=dict)
+    broadcast_variables: dict = field(default_factory=dict)
+
+
+@dataclass
+class TaskData:
+    action: str
+    fetched_data: typing.Any = None
+    criteria: typing.Dict = field(default_factory=dict)
