@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: openplc-editor
+Version: 1.1.2
+Summary: OpenPLC Editor
+Home-page: https://openplcproject.gitlab.io/openplc_editor/
+Author: OpenPLC Team
+Author-email: openplc@daffodil.uk.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/openplcproject/openplc_editor/issues
+Project-URL: Documentation, https://openplcproject.gitlab.io/openplc_editor/
+Project-URL: Source Code, https://gitlab.com/openplcproject/openplc_editor
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.6
+Requires-Dist: lxml
+Requires-Dist: matplotlib (==2.0.2)
+Requires-Dist: numpy (==1.16.5)
+Requires-Dist: sslpsk
+Requires-Dist: zeroconf (==0.19.1)
+
+OpenPLC Editor
+==================
+
+IDE capable of creating programs for the OpenPLC Runtime
+
+To Install:
+--------------
+
+run ./install.sh on terminal.
+
+To Run:
+------------
+
+Find "OpenPLC Editor" on your applications menu and launch it
+
+
