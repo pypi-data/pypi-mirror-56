@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: py-qs-example
+Version: 0.1.15
+Summary: Python package PyPi Sphinx quickstart example app
+Home-page: https://github.com/whoopnip/pypi-sphinx-quickstart
+Author: Nick DeRobertis
+Author-email: mail@example.com
+License: MIT
+Project-URL: Code, https://github.com/whoopnip/pypi-sphinx-quickstart
+Project-URL: Documentation, https://whoopnip.github.io/pypi-sphinx-quickstart
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+auto
+
+
