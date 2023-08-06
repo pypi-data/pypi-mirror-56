@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        aws-lambda-log-collector=collector.cli:cli
+    
