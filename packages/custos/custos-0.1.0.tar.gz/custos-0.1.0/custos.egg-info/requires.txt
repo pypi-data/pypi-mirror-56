@@ -1,0 +1,12 @@
+requests
+apscheduler
+
+[all]
+twilio~=6.0
+telepot
+
+[telegram]
+telepot
+
+[twilio]
+twilio~=6.0
