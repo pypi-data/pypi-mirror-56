@@ -1,0 +1,15 @@
+CHANGES.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+tod0.egg-info/PKG-INFO
+tod0.egg-info/SOURCES.txt
+tod0.egg-info/dependency_links.txt
+tod0.egg-info/entry_points.txt
+tod0.egg-info/requires.txt
+tod0.egg-info/top_level.txt
+todocli/__init__.py
+todocli/auth.py
+todocli/cli.py
+todocli/test/__init__.py
