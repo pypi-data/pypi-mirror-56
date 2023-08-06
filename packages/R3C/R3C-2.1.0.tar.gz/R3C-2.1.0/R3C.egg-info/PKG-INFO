@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: R3C
+Version: 2.1.0
+Summary: R3C: The Blockchain of confidential data & things.
+Home-page: https://github.com/BigchainDB/bigchaindb/
+Author: RIDDLE&CODE GmbH
+Author-email: support@riddleancode.com
+License: Apache Software License 2.0
+Description: R3C integrates deep addresses, high throughput, inter DLT connectivity, and advanced verifiable smart contracts/protocols.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Software Development
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Provides-Extra: test
+Provides-Extra: dev
+Provides-Extra: docs
