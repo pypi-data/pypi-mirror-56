@@ -1,0 +1,11 @@
+networkx>=2.1
+numpy
+pandas
+pathlib
+scipy
+scikit-image
+
+[tests]
+pytest
+pytest-pep8
+pytest-cov
