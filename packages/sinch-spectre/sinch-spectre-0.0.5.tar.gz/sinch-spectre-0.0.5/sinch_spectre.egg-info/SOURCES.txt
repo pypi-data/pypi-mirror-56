@@ -1,0 +1,17 @@
+README.md
+setup.py
+bin/spectre
+sinch_spectre.egg-info/PKG-INFO
+sinch_spectre.egg-info/SOURCES.txt
+sinch_spectre.egg-info/dependency_links.txt
+sinch_spectre.egg-info/top_level.txt
+spectre/__init__.py
+spectre/generation/__init__.py
+spectre/generation/api_json.py
+spectre/generation/generator.py
+spectre/generation/serializer.py
+spectre/generation/templates/__init__.py
+spectre/generation/templates/api_json_template.py
+spectre/model/__init__.py
+spectre/model/data_type.py
+spectre/model/entity.py
