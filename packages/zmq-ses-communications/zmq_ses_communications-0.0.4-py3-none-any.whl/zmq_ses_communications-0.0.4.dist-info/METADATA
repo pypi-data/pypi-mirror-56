@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: zmq-ses-communications
+Version: 0.0.4
+Summary: communication backend for creating a distributed system for integrating devices in a smart factory
+Home-page: https://gitlab.com/specospec/zmq_ses_communications
+Author: Vinu
+Author-email: vinuvnair@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# zmq_ses_communications
+
+Communication backend for integrating different entities in a facotry(robots, machines, web apps, database, humans, workstations).
+Created using zmq sockets and protobuf.
+There are two communication modes.
+
+1. Broadcasting mode. Periodically send data to other entities.
+2. Request/Response mode. Send request to a specific node and get a response.
+
+
