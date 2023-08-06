@@ -1,0 +1,5 @@
+numpy>=1.16
+scipy
+matplotlib>=3.0.3
+pandas
+python-libsbml
