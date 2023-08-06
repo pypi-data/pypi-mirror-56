@@ -1,0 +1,10 @@
+README.md
+setup.py
+retranslator/Translator.py
+retranslator/TranslatorCLI.py
+retranslator/__init__.py
+retranslator.egg-info/PKG-INFO
+retranslator.egg-info/SOURCES.txt
+retranslator.egg-info/dependency_links.txt
+retranslator.egg-info/requires.txt
+retranslator.egg-info/top_level.txt
