@@ -1,0 +1,12 @@
+node_modules
+lib
+*.egg-info
+dash_bootstrap_components/bundle.js
+dash_bootstrap_components/metadata.json
+*__pycache__
+*.pyc
+dist
+changelog.tmp
+dash_bootstrap_components/_components/
+.sass-cache
+.vscode
