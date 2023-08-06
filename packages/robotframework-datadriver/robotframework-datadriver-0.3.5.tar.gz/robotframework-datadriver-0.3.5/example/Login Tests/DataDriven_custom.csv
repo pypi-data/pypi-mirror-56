@@ -1,0 +1,9 @@
+username;password
+demo;${EMPTY}
+demo;FooBar
+${EMPTY};mode
+${EMPTY};${EMPTY}
+${EMPTY};FooBar
+FooBar;mode
+FooBar;${EMPTY}
+FooBar;FooBar
