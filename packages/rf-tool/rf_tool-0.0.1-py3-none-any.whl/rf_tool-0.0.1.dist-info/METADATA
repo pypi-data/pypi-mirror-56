@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: rf-tool
+Version: 0.0.1
+Summary: RF electronics calculator
+Home-page: https://github.com/ErikBuer/rf-tool
+Author: Erik Buer
+Author-email: erik.buer@norskdatateknikk.no
+License: GPL
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+UNKNOWN
+
+
