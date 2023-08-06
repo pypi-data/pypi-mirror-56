@@ -1,0 +1,3 @@
+[console_scripts]
+r2c=r2c.cli.__main__:main
+
