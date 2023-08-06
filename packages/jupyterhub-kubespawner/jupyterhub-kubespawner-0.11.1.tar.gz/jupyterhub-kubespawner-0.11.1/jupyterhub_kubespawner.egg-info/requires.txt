@@ -1,0 +1,14 @@
+async_generator>=1.8
+escapism
+jupyterhub>=0.8
+jinja2
+kubernetes>=8.0
+pyYAML
+
+[test]
+bump2version
+flake8
+jupyterhub-dummyauthenticator
+pytest>=3.3
+pytest-cov
+pytest-asyncio
