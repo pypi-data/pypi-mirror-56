@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: spkly
+Version: 0.1
+Summary: sparklines for pandas dataframes
+Home-page: https://github.com/shsung-umich/sparkly
+Author: SS
+Author-email: sungsh@umich.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >-3.6
