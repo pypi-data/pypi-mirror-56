@@ -1,0 +1,10 @@
+README.rst
+setup.py
+lyricsprocessor/__init__.py
+lyricsprocessor/lyrics_generation_script.py
+lyricsprocessor.egg-info/PKG-INFO
+lyricsprocessor.egg-info/SOURCES.txt
+lyricsprocessor.egg-info/dependency_links.txt
+lyricsprocessor.egg-info/entry_points.txt
+lyricsprocessor.egg-info/requires.txt
+lyricsprocessor.egg-info/top_level.txt
