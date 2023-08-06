@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: physics-toolbox
+Version: 0.0.1
+Summary: Basic functions and classes to resolve physics problems
+Home-page: UNKNOWN
+Author: Jon Besga
+Author-email: jonan.bsg@gmail.com
+License: MIT
+Description: =================
+        Physics Toolbox
+        =================
+        
+        Basic functions and classes to resolve physics problems
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
