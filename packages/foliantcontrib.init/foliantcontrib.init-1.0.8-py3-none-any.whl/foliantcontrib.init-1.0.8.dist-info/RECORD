@@ -1,0 +1,12 @@
+foliant/cli/init/__init__.py,sha256=PW6ZajIba84bXo2ieMt4BARQbAWyukwMAIIWr2yR5NM,5388
+foliant/cli/init/templates/base/Dockerfile,sha256=2UZ8W4qrR4Sn6oqD1rgJEICorPZ_BPpeaoGWxSySQbE,371
+foliant/cli/init/templates/base/README.md,sha256=A-rqYzih4aFEuG2QpycBbl-5_Gfp_fjF-Gtdtk9hx7c,338
+foliant/cli/init/templates/base/docker-compose.yml,sha256=-65Vs_3r8iBau8dwjhnYvHGnvBv1Ak_uCeRSNUiu0lk,114
+foliant/cli/init/templates/base/foliant.yml,sha256=HzoG8tRyiCeR3R6ykRknBQInGyEQW3nyGt4NWmQaSFo,38
+foliant/cli/init/templates/base/requirements.txt,sha256=deZPjjlF7kKZipKOY9RohTwX0M4dj_7It4xyZ627wmE,128
+foliant/cli/init/templates/base/src/index.md,sha256=eQtA3salNgdeE5Ac-SIQJMLNVvkhls8VlHPNdzrkYtY,45
+foliantcontrib.init-1.0.8.dist-info/LICENSE,sha256=nSCguM-HRF6w1gnNWoCChNPrWWgpTa1Eobi1JO8DrAU,1069
+foliantcontrib.init-1.0.8.dist-info/METADATA,sha256=TWc_GnjIZtiWshHwBF2DGmPkfUvRAtMG00m-2yi3PDQ,2791
+foliantcontrib.init-1.0.8.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+foliantcontrib.init-1.0.8.dist-info/top_level.txt,sha256=5uvI8ZIgBWKY09Z8Xs4ESLGD7yAEGbiLvIrdHdaC9mE,8
+foliantcontrib.init-1.0.8.dist-info/RECORD,,
