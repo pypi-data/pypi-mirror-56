@@ -1,0 +1,11 @@
+six>=1.9
+elasticsearch<8.0,>=7.0
+
+[develop]
+mock
+pylama
+pytest
+pytest-cov
+tabulator
+tox
+python-dotenv
