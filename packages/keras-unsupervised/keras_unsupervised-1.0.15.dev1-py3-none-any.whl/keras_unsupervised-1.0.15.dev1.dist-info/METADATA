@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: keras-unsupervised
+Version: 1.0.15.dev1
+Summary: Keras based unsupervised learning framework.
+Home-page: https://github.com/tonandr/keras_unsupervised
+Author: Inwoo Chung
+Author-email: gutomitai@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/tonandr/keras_unsupervised/issues
+Project-URL: Source, https://github.com/tonandr/keras_unsupervised/
+Keywords: keras deepleaning unsupervised semisupervised restricted-botlzmann-machine deep-belief-network autoencoder generative-adversarial-networks
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4
+Description-Content-Type: text/markdown
+Requires-Dist: tensorflow-probability (==0.7.0)
+Requires-Dist: pandas (==0.25.1)
+Requires-Dist: scikit-image (==0.15.0)
+Requires-Dist: opencv-contrib-python (==4.1.1.26)
+
+# Keras Unsupervised
+## Keras framework based unsupervised learning framework
+
+On Keras, to develop semi-supervised learning and unsupervised learning via backpropagation, Keras framework based unsupervised learning libraries are necessary. For this reason, we focus on developing EBM (Energy based model) unsupervised learning modules, and autoencoder and GAN (Generative Adversarial Networks) modules which are based on unsupervised learning via backpropagation, and Keras layers and Tensorflow and Tensorflow-probability backend interfaces for unsupervied learning, and relevant utils. As a symbolic computation backend, Tensorflow is only applied.
+
+# Tasks
+- [X] Plain RBM, DBN.
+- [X] GAN, Style-based GAN.
+- [ ] AutoEncoder.
+- [ ] First release, documentation.
+- [ ] BM, DBM.
+- [ ] Convolutional RBM, DBN.
+- [ ] Second release, documentation.
+
+## Tasks status
+
+[GAN and Style-based GAN are tested and optimized.](https://github.com/tonandr/keras_unsupervised/tree/master/examples/style_based_gan)
+
+
