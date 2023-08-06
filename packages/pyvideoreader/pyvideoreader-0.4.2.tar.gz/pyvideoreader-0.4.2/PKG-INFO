@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: pyvideoreader
+Version: 0.4.2
+Summary: Pythonic wrapper around opencv's VideoCapture().
+Home-page: https://github.com/postpop/videoreader
+Author: Jan Clemens
+Author-email: clemensjan@googlemail.com
