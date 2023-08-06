@@ -1,0 +1,14 @@
+ghauto/__init__.py,sha256=7tlfIeM8LDVRZxCPPefMdeZW19YMofdx5QSNoxrWuvg,16
+ghauto/client.py,sha256=X01aPjPl8RN62oS9bfq24SSKcY_XTdEYPwdi_datl_Y,2427
+ghauto/slack_api.py,sha256=jfNje1xemzQC9PNjlCjFfJSZYyXWznon8vBp2XeImGk,4611
+ghauto/api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ghauto/api/channels.py,sha256=HMIgLLeeR-P70_cLUCMn208WmplxE5VFYfGjbbyeb30,10684
+ghauto/api/chat.py,sha256=0ON5iqluM6zx27Oz156E2uNES2rJ4PoFgJSX1C5vENo,1778
+ghauto/api/groups.py,sha256=5v3JVO2v6DS900vV2lWrg6WdljLRgNvEdZqAgIU3BmQ,10534
+ghauto/api/signup.py,sha256=GGvAUd0woHF6slkMBwBCEnvYArTE7rPUcB2VoAkPquA,1871
+ghauto/api/users.py,sha256=pz3kHIYsu0BdeDKYBwbqLws57aNgr1FgZ_qACKY7lL8,3885
+ghauto-0.1.0.dist-info/METADATA,sha256=2DY_JDaJPexrr0_2EyblaS4IawnTFuhnVVjY5CQUf04,10457
+ghauto-0.1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ghauto-0.1.0.dist-info/top_level.txt,sha256=GtTjegEzaaPwVM8cBlgUYx46G1LSGoRd3u2oF5NI-WQ,7
+ghauto-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ghauto-0.1.0.dist-info/RECORD,,
