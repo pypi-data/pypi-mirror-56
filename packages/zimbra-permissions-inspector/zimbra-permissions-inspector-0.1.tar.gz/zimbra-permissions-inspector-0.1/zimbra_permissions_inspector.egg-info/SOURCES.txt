@@ -1,0 +1,11 @@
+README.md
+setup.py
+zimbra_permissions_inspector/__init__.py
+zimbra_permissions_inspector/_version.py
+zimbra_permissions_inspector/zimbra_permissions_inspector.py
+zimbra_permissions_inspector.egg-info/PKG-INFO
+zimbra_permissions_inspector.egg-info/SOURCES.txt
+zimbra_permissions_inspector.egg-info/dependency_links.txt
+zimbra_permissions_inspector.egg-info/entry_points.txt
+zimbra_permissions_inspector.egg-info/requires.txt
+zimbra_permissions_inspector.egg-info/top_level.txt
