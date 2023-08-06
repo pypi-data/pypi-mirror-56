@@ -1,0 +1,3 @@
+[pytest11]
+plugin_helpers = pytest_plugin_helpers.plugin
+
