@@ -1,0 +1,32 @@
+{% load l10n sniplates rijkshuisstijl %}{% singleline %}
+
+    {% comment %}
+
+    class: Sets additional wrapper classes.
+    checked: Whether the input should be checked.
+    id: Sets the input id.
+    form_id: Sets the form attribute.
+    label: Sets the label next to the input.
+    name: Sets the input name.
+    value: Sets the input value.
+    disabled: Makes the input disabled.
+    onchange: Sets the onchange attribute.
+
+    {% endcomment %}
+
+    <div class="radio">
+        <input class="input{% if errors %} input--error{% endif %}{% if class %} {{ class }}{% endif %}"
+               type="radio"
+                {% if checked %} checked{% endif %}
+                {% if form_id %} form="{{ form_id }}"{% endif %}
+                {% if id %} id="{{ id }}"{% endif %}
+                {% if name %} name="{{ name }}"{% endif %}
+                {% if value %} value="{{ value|unlocalize }}"{% endif %}
+                {% if disabled %} disabled{% endif %}
+                {% if required %} required{% endif %}
+                {% if onchange %} onchange="{{ onchange }}"{% endif %}
+                {% if widget.attrs %} {{ widget.attrs|flatattrs }}{% endif %}>
+        <div class="radio__checkmark"></div>
+        {% if label %}{% include 'rijkshuisstijl/components/form/label.html' with for=id label=label only %}{% endif %}
+    </div>
+{% endsingleline %}

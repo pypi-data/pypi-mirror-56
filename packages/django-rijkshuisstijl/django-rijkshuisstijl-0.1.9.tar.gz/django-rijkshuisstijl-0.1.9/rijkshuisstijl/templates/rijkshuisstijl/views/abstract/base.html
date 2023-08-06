@@ -1,0 +1,20 @@
+{% extends 'rijkshuisstijl/views/abstract/master.html' %}{% load i18n rijkshuisstijl %}{% spaceless %}
+    {% block body %}
+        {% skiplink %}
+        {% login_bar %}
+        {% header %}
+        {% navigation_bar class='navigation-bar--compact navigation-bar--dropdown navigation-bar--sticky sticky-detect' %}
+
+        <main class="view__content">
+            {% skiplink_target %}
+            {% block messages %}
+                {% for message in messages %}
+                    {% textbox class='textbox--compact' text=message status=message.level_tag %}
+                {% endfor %}
+            {% endblock %}
+            {% block content %}{% endblock %}
+        </main>
+
+        {% footer %}
+    {% endblock %}
+{% endspaceless %}

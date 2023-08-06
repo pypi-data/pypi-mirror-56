@@ -1,0 +1,56 @@
+{% load l10n sniplates rijkshuisstijl %}{% singleline %}
+
+    {% comment %}
+
+    class: Sets additional wrapper classes.
+    choices: Set to model choices to create datalist providing suggestions (requires id).
+    id: Sets the input id.
+    form_id: Sets the form attribute.
+    name: Sets the input name.
+    placeholder: Sets the placeholder label.
+    value: Sets the input value.
+    type: Sets the input type.
+    size: Sets the input size.
+    disabled: Makes the input disabled.
+    min: Sets the input mininum value.
+    max: Sets the input maximum value.
+    readonly: Makes the input read-only.
+    required: Makes the input required.
+    onchange: Sets the onchange attribute.
+
+    {% endcomment %}
+
+    <input class="input{% if errors %} input--error{% endif %}{% if class %} {{ class }}{% endif %}"
+            {% if id %} id="{{ id }}"{% endif %}
+            {% if form_id %} form="{{ form_id }}"{% endif %}
+            {% if choices %}list="datalist-{{ id }}"{% endif %}
+            {% if name %} name="{{ name }}"{% endif %}
+            {% if placeholder %} placeholder="{{ placeholder }}"{% endif %}
+            {% if value %} value="{{ value|unlocalize }}"{% endif %}
+            {% if type %} type="{{ type }}"{% endif %}
+            {% if size %} size={{ size }}{% endif %}
+            {% if disabled %} disabled{% endif %}
+            {% if min %} min="{{ min|unlocalize }}"{% endif %}
+            {% if max %} max="{{ max|unlocalize }}"{% endif %}
+            {% if readonly %} readonly{% endif %}
+            {% if required %} required{% endif %}
+            {% if onchange %} onchange="{{ onchange }}"{% endif %}
+            {% endsingleline %}{% if widget.attrs %} {{ widget.attrs|flatattrs }}{% endif %}>{% singleline %}
+    {% if type == 'file' %}<label class="input__filepicker"
+            {% if id %} for="{{ id }}"{% endif %}>{% firstof raw_value placeholder _('Bestand kiezen') %}</label>
+    {% endif %}
+    {% if choices %}
+        <datalist id="datalist-{{ id }}">
+            {% try %}
+                {% for key, value in choices %}
+                    <option value="{{ key }}">{{ value }}</option>
+                {% endfor %}
+            {% except %}
+                {% for choice in choices %}
+                    {% firstof choice.0 choice.pk as choice_value %}
+                    <option value="{{ choice_value|unlocalize }}"{% if choice_value|unlocalize == value %} selected{% endif %}>{% firstof choice.1 choice %}</option>
+                {% endfor %}
+            {% endtry %}
+        </datalist>
+    {% endif %}
+{% endsingleline %}
