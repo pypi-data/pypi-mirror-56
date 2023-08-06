@@ -1,0 +1,26 @@
+"Main interface for {{ package.service_name.boto3_name }} service Waiters"
+from __future__ import annotations
+
+{% with import_record_groups=package.get_waiter_required_import_record_groups() -%}
+    {% include "common/import_groups.py.jinja2" with context -%}
+{% endwith -%}
+
+{{ "\n\n" -}}
+
+__all__ = (
+{% for waiter in package.waiters -%}
+    {{ '"' -}}
+    {{ waiter.name -}}
+    {{ '"' -}}
+    {{ ",\n" if not loop.last or loop.first else "\n" }}
+{% endfor -%}
+)
+
+{{ "\n\n" -}}
+
+{% for waiter in package.waiters -%}
+    {% with class=waiter -%}
+        {% include "common/class.py.jinja2" with context -%}
+    {% endwith -%}
+    {{ "\n\n\n" if not loop.last else "\n" -}}
+{% endfor -%}

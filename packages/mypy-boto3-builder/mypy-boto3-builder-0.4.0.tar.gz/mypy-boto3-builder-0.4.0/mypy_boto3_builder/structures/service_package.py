@@ -1,0 +1,182 @@
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from typing import List, Set, Optional, Iterable, Dict
+
+from mypy_boto3_builder.enums.service_name import ServiceName
+from mypy_boto3_builder.enums.service_module_name import ServiceModuleName
+from mypy_boto3_builder.import_helpers.import_string import ImportString
+from mypy_boto3_builder.import_helpers.import_record import ImportRecord
+from mypy_boto3_builder.import_helpers.import_record_group import ImportRecordGroup
+from mypy_boto3_builder.type_annotations.fake_annotation import FakeAnnotation
+from mypy_boto3_builder.type_annotations.type_typed_dict import TypeTypedDict
+from mypy_boto3_builder.type_annotations.type_def import TypeDef
+from mypy_boto3_builder.structures.service_resource import ServiceResource
+from mypy_boto3_builder.structures.waiter import Waiter
+from mypy_boto3_builder.structures.paginator import Paginator
+from mypy_boto3_builder.structures.client import Client
+from mypy_boto3_builder.structures.function import Function
+from mypy_boto3_builder.structures.package import Package
+
+
+@dataclass
+class ServicePackage(Package):
+    service_name: ServiceName
+    client: Client
+    service_resource: Optional[ServiceResource] = None
+    waiters: List[Waiter] = field(default_factory=lambda: [])
+    paginators: List[Paginator] = field(default_factory=lambda: [])
+    typed_dicts: List[TypeTypedDict] = field(default_factory=lambda: [])
+    helper_functions: List[Function] = field(default_factory=lambda: [])
+
+    def extract_typed_dicts(
+        self,
+        type_annotations: Iterable[FakeAnnotation],
+        added: Dict[str, TypeTypedDict],
+    ) -> List[TypeTypedDict]:
+        result: List[TypeTypedDict] = []
+        for type_annotation in sorted(type_annotations):
+            if not isinstance(type_annotation, TypeTypedDict):
+                continue
+            if type_annotation.name in added:
+                try:
+                    assert added[type_annotation.name].is_same(type_annotation)
+                except AssertionError:
+                    print(type_annotation.render_class())
+                    print(added[type_annotation.name].render_class())
+                    raise ValueError(type_annotation.name)
+                continue
+
+            added[type_annotation.name] = type_annotation
+            result.extend(
+                self.extract_typed_dicts(type_annotation.get_children_types(), added)
+            )
+            result.append(type_annotation)
+        return result
+
+    def get_types(self) -> Set[FakeAnnotation]:
+        types: Set[FakeAnnotation] = set()
+        types.update(self.client.get_types())
+        if self.service_resource:
+            types.update(self.service_resource.get_types())
+        for waiter in self.waiters:
+            types.update(waiter.get_types())
+        for paginator in self.paginators:
+            types.update(paginator.get_types())
+        return types
+
+    def get_init_import_record_groups(self) -> List[ImportRecordGroup]:
+        import_records: Set[ImportRecord] = set()
+        import_records.add(
+            ImportRecord(
+                ImportString(
+                    self.service_name.module_name, ServiceModuleName.client.name
+                ),
+                self.client.name,
+            )
+        )
+        if self.service_resource:
+            import_records.add(
+                ImportRecord(
+                    ImportString(
+                        self.service_name.module_name,
+                        ServiceModuleName.service_resource.name,
+                    ),
+                    self.service_resource.name,
+                )
+            )
+        for helper_function in self.helper_functions:
+            if helper_function.name not in ("boto3_client", "boto3_resource"):
+                continue
+            import_records.add(
+                ImportRecord(
+                    ImportString(
+                        self.service_name.module_name, ServiceModuleName.helpers.name
+                    ),
+                    helper_function.name,
+                )
+            )
+
+        return ImportRecordGroup.from_import_records(import_records)
+
+    def get_init_all_names(self) -> List[str]:
+        result = [self.client.name]
+        if self.service_resource:
+            result.append(self.service_resource.name)
+        for helper_function in self.helper_functions:
+            if helper_function.name not in ("boto3_client", "boto3_resource"):
+                continue
+            result.append(helper_function.name)
+        return result
+
+    def get_client_required_import_record_groups(self) -> List[ImportRecordGroup]:
+        import_records: Set[ImportRecord] = set()
+        for import_record in self.client.get_required_import_records():
+            import_records.add(
+                import_record.get_external(self.service_name.module_name)
+            )
+        for import_record in self.client.exceptions_class.get_required_import_records():
+            import_records.add(
+                import_record.get_external(self.service_name.module_name)
+            )
+
+        return ImportRecordGroup.from_import_records(import_records)
+
+    def get_service_resource_required_import_record_groups(
+        self,
+    ) -> List[ImportRecordGroup]:
+        if self.service_resource is None:
+            return []
+
+        class_import_records = self.service_resource.get_required_import_records()
+        import_records: Set[ImportRecord] = set()
+        for import_record in class_import_records:
+            import_records.add(
+                import_record.get_external(self.service_name.module_name)
+            )
+        return ImportRecordGroup.from_import_records(import_records)
+
+    def get_paginator_required_import_record_groups(self) -> List[ImportRecordGroup]:
+        import_records: Set[ImportRecord] = set()
+        for paginator in self.paginators:
+            for import_record in paginator.get_required_import_records():
+                import_records.add(
+                    import_record.get_external(self.service_name.module_name)
+                )
+
+        return ImportRecordGroup.from_import_records(import_records)
+
+    def get_waiter_required_import_record_groups(self) -> List[ImportRecordGroup]:
+        import_records: Set[ImportRecord] = set()
+        for waiter in self.waiters:
+            for import_record in waiter.get_required_import_records():
+                import_records.add(
+                    import_record.get_external(self.service_name.module_name)
+                )
+
+        return ImportRecordGroup.from_import_records(import_records)
+
+    def get_type_defs_required_import_record_groups(self) -> List[ImportRecordGroup]:
+        import_records: Set[ImportRecord] = set()
+        if self.typed_dicts:
+            import_records.add(TypeDef("TypedDict").get_import_record())
+            for types_dict in self.typed_dicts:
+                for type_annotation in types_dict.get_children_types():
+                    import_record = type_annotation.get_import_record()
+                    if import_record.is_type_defs():
+                        continue
+                    import_records.add(import_record)
+
+        return ImportRecordGroup.from_import_records(import_records)
+
+    def get_helpers_import_record_groups(self) -> List[ImportRecordGroup]:
+        import_records: Set[ImportRecord] = set()
+        import_records.add(ImportRecord(ImportString("boto3")))
+        import_records.add(ImportRecord(ImportString("typing"), "Dict"))
+        import_records.add(ImportRecord(ImportString("typing"), "Any"))
+        for helper_function in self.helper_functions:
+            for type_annotation in helper_function.get_types():
+                import_record = type_annotation.get_import_record()
+                import_records.add(import_record)
+
+        return ImportRecordGroup.from_import_records(import_records)
