@@ -1,0 +1,69 @@
+Metadata-Version: 1.1
+Name: create-flask-application
+Version: 0.1.0
+Summary: This is an application designet to speed up process of configuring evironment for new flask RESTful projects.
+Home-page: UNKNOWN
+Author: igoras1993
+Author-email: igor.kantorski@gmail.com
+License: GPLv3
+Description: 
+        CREATE FLASK APP
+        ================
+        
+        This utility is answer on my personal demand. Creating repository and building all flask project
+        dependencies from scratch for every new project is time consumming and boring. Install this package,
+        call ``create-flask-app`` utility, answer basic questions and enjoy your new project.
+        
+        
+        Installation
+        ^^^^^^^^^^^^
+        To install ``create-flask-app`` utility, just type:
+        
+        ```
+        $ pip install create-flask-app
+        ```
+        
+        This module is only available for **python3** (for now).
+        
+        
+        Usage
+        ^^^^^
+        
+        In your console, type:
+        ```
+        $ create-flask-app
+        ```
+        
+        You will be asked few questions. A new directory will be created inside 
+        your CWD. Its name is the same as you specified answering first question about project name.
+        
+        
+        Limitations
+        ^^^^^^^^^^^
+        
+        ``create-flask-app`` will:
+         - create project directory
+         - create virtualenv directory called *venv*
+         - install all required python dependencies
+         - render all requiered code templates
+         - spawn basic *gitignore* file
+        
+        ``create-flask-app`` will **not**:
+         - create git repository
+         - work under python 2
+         - support databases other than **postgresql** with **psycopg2** driver (I will update it to all databases supported by sqlalchemy soon)
+         
+        Note that you have to have **python3-venv** installed.
+        
+Keywords: flask create generate
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
