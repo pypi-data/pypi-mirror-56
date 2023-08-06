@@ -1,0 +1,15 @@
+dagster_dask/__init__.py,sha256=jddKZ2bfSJvUJMZOMM4ow_a3hxhXASflYpmF-cRU2Gc,98
+dagster_dask/config.py,sha256=7Vbz0Sk0px6qOexdsx3NxMzEj_ztimSNaU92eURk55M,2708
+dagster_dask/engine.py,sha256=Qa7C3KwswnjevraDFoQlz6Ld-_XhXR0nsiQHkWaspNk,5053
+dagster_dask/executor.py,sha256=i1qaZ7BtULzCf7vacYAm-n9PNuYLk_X3qOyrQ3FzhU8,2620
+dagster_dask/version.py,sha256=nYUh4atFnvgwtsKLvQwQG8v2QvZr6qGF-dhiebX8wjM,63
+dagster_dask_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dagster_dask_tests/conftest.py,sha256=xKQdCpOl9OGVifWDjAm6BSDWvEdzTOtEZ269AkkuRMw,218
+dagster_dask_tests/test_execute.py,sha256=x8gkgirmzt5Xkjj4jqSJXtRbMtMhOg7n9FA4i28ePO0,2716
+dagster_dask_tests/test_graphql.py,sha256=d_2hgE7MfD9DAKydhYwgdqs_uTK0klWL5_sANCZXxiA,2206
+dagster_dask_tests/test_version.py,sha256=E3Act753cU989KTYwEpwcmRNhEEo4rxEL9N_Z9oplx4,90
+dagster_dask-0.6.5rc3.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+dagster_dask-0.6.5rc3.dist-info/METADATA,sha256=5S-pGV7CEpzXuHGv4WgnJ36SnyfZCrt59LMY3tJEm1w,702
+dagster_dask-0.6.5rc3.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+dagster_dask-0.6.5rc3.dist-info/top_level.txt,sha256=z3C243t5JS9XdoH4ks2TURNzjttTdv_qBXK9xIfabe0,32
+dagster_dask-0.6.5rc3.dist-info/RECORD,,
