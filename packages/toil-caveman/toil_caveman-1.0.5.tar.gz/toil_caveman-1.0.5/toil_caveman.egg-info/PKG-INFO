@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: toil-caveman
+Version: 1.0.5
+Summary: A toil wrapper for cgpCaveman.
+Home-page: https://github.com/papaemmelab/toil_caveman
+Author: Juan S. Medina, Yangyu (Joe) Zhou
+License: BSD
+Description: 📘 learn more on `GitHub <https://github.com/papaemmelab/toil_caveman>`_!
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 2 :: Only
+Classifier: Topic :: Utilities
+Provides-Extra: test
