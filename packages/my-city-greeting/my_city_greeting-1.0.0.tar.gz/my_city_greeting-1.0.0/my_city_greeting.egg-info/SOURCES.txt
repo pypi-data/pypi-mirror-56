@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+greeting/__init__.py
+greeting/city.py
+greeting/constants.py
+my_city_greeting.egg-info/PKG-INFO
+my_city_greeting.egg-info/SOURCES.txt
+my_city_greeting.egg-info/dependency_links.txt
+my_city_greeting.egg-info/requires.txt
+my_city_greeting.egg-info/top_level.txt
