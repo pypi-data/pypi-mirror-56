@@ -1,0 +1,10 @@
+hdf5plugin-2.1.0.dist-info/RECORD,,
+hdf5plugin-2.1.0.dist-info/METADATA,sha256=BGUoUuDFYYVT_IdbsD5sciIsObEc2_FAkXHW3sboI10,7218
+hdf5plugin-2.1.0.dist-info/WHEEL,sha256=4Z4P3jvvB_GsW6prrjvbCLYq3w4iJlh-7c58kmot9Eo,139
+hdf5plugin-2.1.0.dist-info/top_level.txt,sha256=jAEIrQv1oLDBJ_KZTG5Ah8w4TcQahNlN52faR_PcG24,11
+hdf5plugin/test.py,sha256=so8dtjgUCeDPaD67KEFnAyCgGFr7SB3M9tUmA7I0Jtk,4985
+hdf5plugin/__init__.py,sha256=o6kSu6B8G2BFmGz2MuYjbGx0wyHmwiQqk0TqAdilPs0,7453
+hdf5plugin/_version.py,sha256=PJ8Ryf9SpCCzBSPUEZ_M-zd1p6aHoeOaW7-3QlLDp4k,4459
+hdf5plugin/plugins/libh5bshuf.so,sha256=1Al8nZZk59-OeRezKKjokHJog8ZD2uOw7deegbrjLw8,521479
+hdf5plugin/plugins/libh5lz4.so,sha256=5ImGW082025jxY8A58yvDkwmRz8gMKnOKCVzom23oTI,382022
+hdf5plugin/plugins/libh5blosc.so,sha256=SDUxE-8yUHk1-bX-rqBmJgVSTjHhLJZqi8QmCJ-1E9g,7812119
