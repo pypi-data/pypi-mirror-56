@@ -1,0 +1,24 @@
+#table configuration example
+# storage data. currently only fillfactor is allowed
+
+#set the fillfactor for all the tables 
+[storage]
+fillfactor = 100 
+
+#sets the fillfactor for all the tables in the schema foo
+[storage.foo]
+fillfactor = 80 
+
+#set the fillfactor for the table foo.bar
+[storage.foo.bar]
+fillfactor = 30 
+
+
+[public.foobar]
+#cleanup_nulls and remove_keys for the same field are  currently mutually exclusive with cleanup_nulls taking the precedence
+#strip nulls from a json/jsonb field
+foo.cleanup_nulls = true
+
+#filtering data, based on the key currently only jsonb is supported
+bar.remove_keys = [ "key1" ]
+
