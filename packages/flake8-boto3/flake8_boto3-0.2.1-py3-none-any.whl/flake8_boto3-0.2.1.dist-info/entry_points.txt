@@ -1,0 +1,3 @@
+[flake8.extension]
+r2c-boto3=flake8_boto3.main:Flake8Boto3
+
