@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: robotframework-debugger
+Version: 0.1.0
+Summary: A library for secure password handling.
+Home-page: https://github.com/Snooz82/robotframework-debugger
+Author: René Rohner(Snooz82)
+Author-email: snooz@posteo.de
+License: UNKNOWN
+Description: # robotframework-debugger
+        Debugger that can stop execution and shows a Gui to try out Robot Framework commands
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: Acceptance
+Classifier: Framework :: Robot Framework
+Requires-Python: >=3.6
