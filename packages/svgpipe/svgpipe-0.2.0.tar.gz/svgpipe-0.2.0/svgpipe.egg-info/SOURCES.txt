@@ -1,0 +1,10 @@
+README.md
+setup.py
+svgpipe/__init__.py
+svgpipe/inject.py
+svgpipe.egg-info/PKG-INFO
+svgpipe.egg-info/SOURCES.txt
+svgpipe.egg-info/dependency_links.txt
+svgpipe.egg-info/top_level.txt
+svgpipe/tests/__init__.py
+svgpipe/tests/test_inject.py
