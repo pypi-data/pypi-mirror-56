@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: nlp-id
+Version: 0.1.5
+Summary: Kumparan's NLP Services
+Home-page: https://github.com/kumparan/nlp-id
+Author: Frandy Eddy
+Author-email: eddy.frandy@gmail.com
+License: MIT
+Description: # Kumparan's NLP Services
+        
+        This repository contains all source code related to NLP services.
+        
+        ## Installation
+        
+        To install `nlp-id`, use the following command:
+        
+            $ pip install nlp-id 
+        
+        ## Usage
+        
+            from nlp_id.lemmatizer import Lemmatizer 
+            lemmatizer = Lemmatizer() 
+            lemmatizer.lemmatize('Saya sedang mencoba') 
+            # saya sedang coba 
+Keywords: Indonesian,Bahasa,NLP
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
