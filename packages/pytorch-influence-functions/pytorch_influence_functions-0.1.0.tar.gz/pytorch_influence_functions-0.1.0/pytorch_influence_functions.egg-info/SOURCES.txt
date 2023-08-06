@@ -1,0 +1,11 @@
+README.md
+setup.py
+pytorch_influence_functions/__init__.py
+pytorch_influence_functions/calc_influence_function.py
+pytorch_influence_functions/influence_function.py
+pytorch_influence_functions/utils.py
+pytorch_influence_functions.egg-info/PKG-INFO
+pytorch_influence_functions.egg-info/SOURCES.txt
+pytorch_influence_functions.egg-info/dependency_links.txt
+pytorch_influence_functions.egg-info/requires.txt
+pytorch_influence_functions.egg-info/top_level.txt
