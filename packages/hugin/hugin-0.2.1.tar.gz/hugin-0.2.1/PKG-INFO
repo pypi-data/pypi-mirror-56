@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: hugin
+Version: 0.2.1
+Summary: HuginEO - Machine Learning for Earth Observation experimentation tool
+Home-page: https://github.com/sage-group/hugin
+Author: Marian Neagul
+Author-email: mneagul@gmail.com
+License: apache-2.0
+Description: # Hugin
+        
+        [![Build Status](https://travis-ci.com/sage-group/hugin.svg?branch=master)](https://travis-ci.com/sage-group/hugin)
+        [![Documentation Status](https://readthedocs.org/projects/hugin-eo/badge/?version=latest)](https://hugin-eo.readthedocs.io/en/latest/?badge=latest)
+        
+        
+        Hugin helps scientists run Machine Learning experiments on geospatial raster data.
+        
+        Overall Hugin aims to facilitate experimentation with multiple machine learning problems, like:
+        
+         - Classification
+         - Segmentation
+         - Super-Resolution
+        
+        Currently Hugin builds on top of the Keras machine learning library but it also aims to support, in the future, additional backends like scikit-learn.
+        
+        Documentation for Hugin is available at https://hugin-eo.readthedocs.io/
+        
+        ## Acknowledgments
+        
+        This project is supported by the European Space Agency through the ML4EO project.
+        
+Keywords: deep learning,machine learning,earth observation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: hugin_data_augmentation

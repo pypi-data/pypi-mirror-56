@@ -1,0 +1,3 @@
+[console_scripts]
+hugin = hugin.tools.cli:main
+
