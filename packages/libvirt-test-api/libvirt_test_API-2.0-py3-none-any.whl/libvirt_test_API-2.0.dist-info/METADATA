@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: libvirt-test-API
+Version: 2.0
+Summary: Python based regression tests for libvirt API
+Home-page: https://github.com/libvirt/libvirt-test-API
+Author: Libvirt QE Team
+Author-email: lnie@redhat.com
+License: LGPLv2+
+Platform: UNKNOWN
+Requires-Dist: pexpect
+
+UNKNOWN
+
+
