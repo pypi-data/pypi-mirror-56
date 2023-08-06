@@ -1,0 +1,3 @@
+[console_scripts]
+inpout-pprint = inpout.cli:pprint
+
