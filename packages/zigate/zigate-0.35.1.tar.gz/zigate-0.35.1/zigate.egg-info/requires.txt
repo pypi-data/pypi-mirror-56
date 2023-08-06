@@ -1,0 +1,10 @@
+bottle
+pydispatcher>=2.0.5
+pyserial>=3.2
+requests
+
+[dev]
+tox
+
+[mqtt]
+paho-mqtt
