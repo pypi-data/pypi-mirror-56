@@ -1,0 +1,17 @@
+README.md
+setup.py
+tax2peptide/Accession.py
+tax2peptide/DatabaseCleaner.py
+tax2peptide/Download.py
+tax2peptide/Output.py
+tax2peptide/TaxonGraph.py
+tax2peptide/TestFile.py
+tax2peptide/WriteCustomDB.py
+tax2peptide/__init__.py
+tax2peptide/__main__.py
+tax2peptide/version.py
+tax2peptide.egg-info/PKG-INFO
+tax2peptide.egg-info/SOURCES.txt
+tax2peptide.egg-info/dependency_links.txt
+tax2peptide.egg-info/requires.txt
+tax2peptide.egg-info/top_level.txt
