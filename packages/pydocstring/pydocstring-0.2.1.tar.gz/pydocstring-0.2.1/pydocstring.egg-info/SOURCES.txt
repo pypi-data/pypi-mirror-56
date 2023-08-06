@@ -1,0 +1,17 @@
+README.rst
+setup.cfg
+setup.py
+pydocstring/__init__.py
+pydocstring/cli.py
+pydocstring/exc.py
+pydocstring.egg-info/PKG-INFO
+pydocstring.egg-info/SOURCES.txt
+pydocstring.egg-info/dependency_links.txt
+pydocstring.egg-info/entry_points.txt
+pydocstring.egg-info/requires.txt
+pydocstring.egg-info/top_level.txt
+pydocstring/formatters/__init__.py
+pydocstring/formatters/format_utils.py
+pydocstring/formatters/google.py
+pydocstring/formatters/numpy.py
+pydocstring/formatters/reST.py
