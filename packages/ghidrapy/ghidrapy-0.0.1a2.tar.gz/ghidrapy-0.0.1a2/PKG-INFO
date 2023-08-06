@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: ghidrapy
+Version: 0.0.1a2
+Summary: Ghidra disassembler through python. Output formatted for Kam1n0 and JARV1S.
+Home-page: https://github.com/L1NNA/JARV1S-Ghidra
+Author: Steven Ding
+Author-email: ding@cs.queensu.ca
+License: Apache 2.0
+Download-URL: https://github.com/L1NNA/JARV1S-Ghidra/archive/v0.0.1.tar.gz
+Description: # JARV1S-Ghidra
+        
+        [![](https://github.com/L1NNA/JARV1S-Ghidra/workflows/Build%20and%20Release%20JAR/badge.svg)](https://github.com/L1NNA/JARV1S-Ghidra/actions)
+        
+        Ghidra build for Kam1n0 &amp; Jarv1s
+        
+        ### :rocket: Installation:
+        Required: Python 3+. [Optional: OpenJDK 13+]
+        ```bash
+        pip install ghidrapy
+        ```
+        ### :fire: Usage:
+        ```bash
+        python -m ghidrapy binary_file_to_decompile
+        ```
+        
+        ### :star: Contributors:
+        TBA
+        
+Keywords: Disassembler,Ghidra
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
