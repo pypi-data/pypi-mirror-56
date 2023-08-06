@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pish
+Version: 0.5
+Summary: Versatile tools for connecting to ssh, local shell, and/or su(do) in order to execute shell commands there, to manage ssh identity and host keys, and more.
+Home-page: UNKNOWN
+Author: pino
+Author-email: ale@ginger.ws
+License: GPL-3
+Keywords: ssh shell key management
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Description-Content-Type: text/plain
+
+pish: Manual
+--------------
+
+
+License
+       pish is written by pino under the terms of the GPLv3.
+
+       Please read the LICENSE file from the package and the Dependencies section for included third-party stuff.
+
+Up-to-date?
+       Are you currently reading from another source than the homepage? Are you in doubt if that place is up-to-date? If yes, you should visit the homepage and check that. You are currently reading the manual for version
+       0.5.
+
+Dependencies
+	There are no dependencies.
+
+
