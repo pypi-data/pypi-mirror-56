@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: my-city-greeting
+Version: 1.1.1
+Summary: test description.
+Home-page: https://github.com/ement06/my-package
+Author: Dovhanenko Mykhailo
+Author-email: mdovha@softserveinc.com
+License: MIT
+Project-URL: Bug Reports, https://github.com/ement06/my-package/issues
+Project-URL: Funding, https://donate.pypi.org
+Project-URL: Say Thanks!, http://saythanks.io/to/example
+Project-URL: Source, https://github.com/ement06/my-package
+Keywords: sample test setuptools
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3, !=2.7, <4
+Requires-Dist: Click
+Requires-Dist: Jinja2
+Requires-Dist: requests
+
+test long description
+
+
