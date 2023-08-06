@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+megaAPI/__init__.py
+megaAPI/mobapips.dll
+megaAPI/quote.py
+megaAPI/uFIISAPI.dll
+megaAPI/uFIISAPI.lib
+megaSec.egg-info/PKG-INFO
+megaSec.egg-info/SOURCES.txt
+megaSec.egg-info/dependency_links.txt
+megaSec.egg-info/top_level.txt
