@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "empusa"
+version = "0.0.1"
+description = "Service discovery tool"
+license = "BSD-3-Clause"
+authors = [
+    "Milos Prchlik <mprchlik@redhat.com>"
+]
+readme = "README.adoc"
+# homepage = ""
+repository = "https://gitlab.com/testing-farm/empusa"
+# documentation = ""
+
+packages = [
+    { include = "empusa" }
+]
+
+classifiers = [
+    'License :: OSI Approved :: BSD License',
+    'Operating System :: POSIX :: Linux',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Topic :: Utilities'
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+# Core requirements
+click = "*"
+python-etcd = "^0.4.5"
+tabulate = "*"
+
+[tool.poetry.dev-dependencies]
+flake8 = "*"
+pytest = "*"
+tox = "*"
+
+[tool.poetry.scripts]
+empusa = "empusa:main"
+
+[build-system]
+requires = [
+    "poetry>=0.12"
+]
+build-backend = "poetry.masonry.api"

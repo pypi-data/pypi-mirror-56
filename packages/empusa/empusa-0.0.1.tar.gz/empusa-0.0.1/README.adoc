@@ -1,0 +1,78 @@
+= Empusa
+
+`Empusa` is a trivial tool to build a *service registry* on top of https://etcd.io/[`etcd`]. etcd alone serves as a key/value store, while `empusa` handles the keys, their structure, and values to implement the functionality of a trivial service registry.
+
+
+== Usage
+
+Main command, `empusa`, provides several subcommands, dedicated to different aspects of the service registry operation.
+
+[source,shell]
+....
+$ empusa --help
+Usage: empusa [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --etcd-endpoint HOST:PORT  [required]
+  --etcd-protocol TEXT
+  --tree-root TEXT           [required]
+  --help                     Show this message and exit.
+
+Commands:
+  service
+....
+
+Two bits of information are always required:
+
+* etcd endpoint - host and port where `etcd` listens for client connections. Use `--etcd-endpoint` command-line option, or `EMPUSA_ETCD_ENDPOINT` environment variable.
++
+[NOTE]
+====
+At this moment, only the first `etcd` endpoint is used, the rest is ignored. In the future, multiple endpoints will be supported.
+====
++
+* tree root - path in the key hierarchy under which `empusa` would store it's data. `empusa --tree-root /foo` will not read nor modify data `empusa --tree-root /bar` created. Use `--tree-root` command-line option, or `EMPUSA_TREE_ROOT` environment variable.
+
+=== Services
+
+Services come in different types, e.g. HTTP server, SMTP server, Prometheus exporter, internal directory service, and so on. Of each type, usualy multiple instances exist, each having a different name and location. `emposa` treats service types as directories to which each instance, identified by its name, is added together with its location.
+
+To register a service, execute following command:
+
+[source,shell]
+....
+$ empusa service register --service-type type-of-service --service-name name-of-the-service-instance --service-location baz:1235
+....
+
+It is possible to use environment variables instead of command-line options:
+
+[source,shell]
+....
+$ EMPUSA_SERVICE_TYPE=type-of-service \
+  EMPUSA_SERVICE_NAME=name-of-the-service-instance \
+  EMPUSA_SERVICE_LOCATION=baz:1235 \
+  empusa service register
+....
+
+The service can be unregistered as well:
+
+[source,shell]
+....
+$ empusa service unregister --service-type type-of-service --service-name name-of-the-service-instance
+....
+
+A service remains registered until explicitly removed. This may not be always possible, e.g. sometimes the services dies without any chance to perform teardown actions including update to the service registry. To help with this situation, a TTL can be set during registration, in seconds. After that time, the service is removed from the registry.
+
+[source,shell]
+....
+$ empusa service register ... --ttl 30
+....
+
+The service must then periodicaly update the registry, updating its record and extending the TTL before it expires. You can either have your own scripts to perform this, or you can use `empusa`'s `--refresh-every` option:
+
+[source,shell]
+....
+$ empusa service register ... --ttl 30 --refresh-every 20
+....
+
+Every 20 seconds, `empusa` would update the registry, setting the TTL to 30 seconds. Should the service die unexpectedly, `empusa` would not have an opportunity to prolong the TTL, and `etcd` would remove service's key.
