@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: random-genetic-forest
+Version: 0.0a2
+Summary: This is a machine learning package that includes a theoretical optimized variation of the random forest learning algorithm.
+Home-page: https://github.com/tab-dev/Random-Genetic-Forest
+Author: Timothy Bennett
+Author-email: tabdevelopment1@gmail.com
+License: UNKNOWN
+Description: # Random-Genetic-Forest
+        
+        The Random-Genetic Forest(RGF) is a variation of the original Random Forest machine learning algorithm. The RGF algorithm uses genetic algorithms to potential optimize accuracy and/or create non-parametric learning models. This implementation is a Spark module that allows for use in Big Data problems. The RGF Python module consumes datasets using Pyspark dataframes and creates RGF models. 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.7
+Description-Content-Type: text/markdown
