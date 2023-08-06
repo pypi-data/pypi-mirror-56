@@ -1,0 +1,12 @@
+README.md
+setup.py
+cpmixer/__init__.py
+cpmixer/darwin.py
+cpmixer/linux.py
+cpmixer/template.py
+cpmixer/windows.py
+cpmixer.egg-info/PKG-INFO
+cpmixer.egg-info/SOURCES.txt
+cpmixer.egg-info/dependency_links.txt
+cpmixer.egg-info/requires.txt
+cpmixer.egg-info/top_level.txt
