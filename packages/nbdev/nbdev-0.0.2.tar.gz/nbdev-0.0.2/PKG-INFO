@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: nbdev
+Version: 0.0.2
+Summary: Writing a library entirely in notebooks
+Home-page: https://github.com/fastai/nbdev
+Author: Sylvain Gugger and Jeremy Howard
+Author-email: info@fast.ai
+License: Apache Software License 2.0
+Description: # nbdev
+        Develop python libraries using Jupyter Notebooks
+        
+Keywords: jupyter notebook
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
