@@ -1,0 +1,7 @@
+solstice
+
+[dev]
+wheel
+
+[test]
+pytest
