@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: woyera
+Version: 4.0.0
+Summary: Library for Woyera Data Cleaning API
+Home-page: https://github.com/asharma327/woyera_python.git
+Author: Woyera Team
+Author-email: admin@woyera.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Woyera Customer Data Cleaning API
+
+This is a library to interact with the Woyera Customer . 
+
+Visit [www.woyera.com](www.woyera.com) to create an account and read the documentation and guides on how to use the API.
+
+Happy Customer Data Cleaning!
+
