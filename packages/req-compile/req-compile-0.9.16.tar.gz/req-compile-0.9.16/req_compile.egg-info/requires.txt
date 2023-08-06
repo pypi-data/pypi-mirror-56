@@ -1,0 +1,14 @@
+requests
+six
+toml
+
+[:python_version < "3.0"]
+functools32
+enum34
+
+[test]
+pytest
+pytest-mock
+responses
+pylint
+mock
