@@ -1,0 +1,17 @@
+odoo/addons/partner_postal_address/README.rst,sha256=YcU90E0q4PByPJYnSJ3VfobQ6VMcikwHHbPnTTk8ARQ,3277
+odoo/addons/partner_postal_address/__init__.py,sha256=Ak_c_3yETLCDcebxtY2vqxqy_7_LoYuBWbSpzgUhUfI,119
+odoo/addons/partner_postal_address/__manifest__.py,sha256=cv1j2qNbYJziuullX3DLyLZMJFS-5V5OqQcLFWLjjjo,550
+odoo/addons/partner_postal_address/i18n/fr.po,sha256=zDQj8vo9DonYyxiYyM0qyo_pLuJJeeK6kO-vKa_XNtA,1897
+odoo/addons/partner_postal_address/i18n/partner_postal_address.pot,sha256=-RvGkQjMFPLhSa2ovGTR1EiDZn2IQ2kl6BYZJ79nVV8,1569
+odoo/addons/partner_postal_address/models/__init__.py,sha256=mVttDEEtlepTeo_Jd4825K64fEKAv76nmddLVGoXntY,124
+odoo/addons/partner_postal_address/models/res_partner.py,sha256=9ceCbZiIGOmqVUzLBZAtgJKuKkHOEn_2z9e66aFWb4Y,265
+odoo/addons/partner_postal_address/readme/CONTRIBUTORS.rst,sha256=gHtn9cmdriJq0TELl7S0NM_YQ_6C5v6u13xfliGxckQ,59
+odoo/addons/partner_postal_address/readme/CREDITS.rst,sha256=_98UMH72Beo-xoyn_cbXu0LyTo6n-0z6LU2_W46X6x8,40
+odoo/addons/partner_postal_address/readme/DESCRIPTION.rst,sha256=6X5qe7Ljqz37xacNEhQJ7bVkb9eIkEOiaEu9FVt8_-Q,141
+odoo/addons/partner_postal_address/readme/USAGE.rst,sha256=MT_kT3Dm79q_uLCd5l159PHhiyARby_Cv6NVvlNNYNM,130
+odoo/addons/partner_postal_address/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/partner_postal_address/static/description/index.html,sha256=92WXab-891eDwoEqrWM81OmZ_3H4q6Z6ebP1kR4mA6Y,12884
+odoo12_addon_partner_postal_address-12.0.1.0.0.99.dev3.dist-info/METADATA,sha256=J2m8EWW_s4CoVcSaxImlr1yIojouHr11h3JJipqgCUg,3853
+odoo12_addon_partner_postal_address-12.0.1.0.0.99.dev3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+odoo12_addon_partner_postal_address-12.0.1.0.0.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_partner_postal_address-12.0.1.0.0.99.dev3.dist-info/RECORD,,
