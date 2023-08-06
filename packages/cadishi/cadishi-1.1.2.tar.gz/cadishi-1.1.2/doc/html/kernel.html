@@ -1,0 +1,295 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CADISHI compute kernels &#8212; CADISHI 1.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CADISHI executables" href="executables.html" />
+    <link rel="prev" title="CADISHI modules" href="modules.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="executables.html" title="CADISHI executables"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="CADISHI modules"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">CADISHI 1.1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">CADISHI compute kernels</a><ul>
+<li><a class="reference internal" href="#module-cadishi.kernel">cadishi.kernel</a></li>
+<li><a class="reference internal" href="#module-cadishi.kernel.common">cadishi.kernel.common</a></li>
+<li><a class="reference internal" href="#module-cadishi.kernel.dist">cadishi.kernel.dist</a></li>
+<li><a class="reference internal" href="#module-cadishi.kernel.pydh">cadishi.kernel.pydh</a></li>
+<li><a class="reference internal" href="#module-cadishi.kernel.cudh">cadishi.kernel.cudh</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter">CADISHI modules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="executables.html"
+                        title="next chapter">CADISHI executables</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/kernel.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cadishi-compute-kernels">
+<h1>CADISHI compute kernels<a class="headerlink" href="#cadishi-compute-kernels" title="Permalink to this headline">¶</a></h1>
+<p>The following documentation was automatically generated from the docstrings
+present in the source code files.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="module-cadishi.kernel">
+<span id="cadishi-kernel"></span><h2>cadishi.kernel<a class="headerlink" href="#module-cadishi.kernel" title="Permalink to this headline">¶</a></h2>
+<p>Cadishi distance histogram kernels.</p>
+</div>
+<div class="section" id="module-cadishi.kernel.common">
+<span id="cadishi-kernel-common"></span><h2>cadishi.kernel.common<a class="headerlink" href="#module-cadishi.kernel.common" title="Permalink to this headline">¶</a></h2>
+<p>Common code used by the Cadishi kernels pydh and cudh.</p>
+<dl class="function">
+<dt id="cadishi.kernel.common.precision_to_enum">
+<code class="descclassname">cadishi.kernel.common.</code><code class="descname">precision_to_enum</code><span class="sig-paren">(</span><em>str_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cadishi/kernel/common.html#precision_to_enum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cadishi.kernel.common.precision_to_enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper function to translate a string precision identification to the integer
+identification used inside the kernels PYDH and CUDH.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cadishi.kernel.common.scale_histograms">
+<code class="descclassname">cadishi.kernel.common.</code><code class="descname">scale_histograms</code><span class="sig-paren">(</span><em>np_histos</em>, <em>np_scales</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cadishi/kernel/common.html#scale_histograms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cadishi.kernel.common.scale_histograms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale histograms with scale factors.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cadishi.kernel.dist">
+<span id="cadishi-kernel-dist"></span><h2>cadishi.kernel.dist<a class="headerlink" href="#module-cadishi.kernel.dist" title="Permalink to this headline">¶</a></h2>
+<p>dist Python interface to c_dist.</p>
+<p>Initial implementation of the distance histogram computation using Cython.
+Legacy code, do not use for production. This code is only used by the test
+suite to compare the results of (small) problems between the kernels.</p>
+<dl class="function">
+<dt id="cadishi.kernel.dist.histograms">
+<code class="descclassname">cadishi.kernel.dist.</code><code class="descname">histograms</code><span class="sig-paren">(</span><em>coordinate_sets</em>, <em>r_max</em>, <em>n_bins</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cadishi/kernel/dist.html#histograms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cadishi.kernel.dist.histograms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distance histogram calculation on the CPU using Cython kernels.</p>
+<p>Calculate histograms from sets of species coordinates by calling the
+pwd() and pwd2() CPU functions from the Cython dist_knl.  Serves as the
+reference implementation for the pydh and cudh packages.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>coordinate_sets</strong> (<em>list of numpy.ndarray</em>) – List of numpy arrays where each numpy array contains
+the atom coordinates for all the atoms of a species.</li>
+<li><strong>r_max</strong> (<em>float</em>) – Cutoff radius for the distance calculation.</li>
+<li><strong>n_bins</strong> (<em>int</em>) – Number of histogram bins.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Two-dimensional numpy array containing the distance histograms.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cadishi.kernel.pydh">
+<span id="cadishi-kernel-pydh"></span><h2>cadishi.kernel.pydh<a class="headerlink" href="#module-cadishi.kernel.pydh" title="Permalink to this headline">¶</a></h2>
+<p>pydh Python interface.</p>
+<p>Calls the c_pydh Python module.</p>
+<dl class="function">
+<dt id="cadishi.kernel.pydh.distances">
+<code class="descclassname">cadishi.kernel.pydh.</code><code class="descname">distances</code><span class="sig-paren">(</span><em>coordinates</em>, <em>precision='single'</em>, <em>box=[]</em>, <em>force_triclinic=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cadishi/kernel/pydh.html#distances"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cadishi.kernel.pydh.distances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Driver for the distance calculation functions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cadishi.kernel.pydh.histograms">
+<code class="descclassname">cadishi.kernel.pydh.</code><code class="descname">histograms</code><span class="sig-paren">(</span><em>coordinate_sets</em>, <em>r_max</em>, <em>n_bins</em>, <em>precision='single'</em>, <em>n_threads=1</em>, <em>blocksize=0</em>, <em>check_input=True</em>, <em>scale_factors=[]</em>, <em>mask_array=[]</em>, <em>box=[]</em>, <em>force_triclinic=False</em>, <em>do_histo2_only=False</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cadishi/kernel/pydh.html#histograms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cadishi.kernel.pydh.histograms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distance histogram calculation, Python interface.</p>
+<p>This function is the entry point to run distance histogram calculations
+from Python on the CPU.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>coordinate_sets</strong> (<em>list</em>) – list of double precision numpy arrays [N, 3] containing coordinate triples</li>
+<li><strong>r_max</strong> (<em>float</em>) – maximum distance that should be considered for the histograms</li>
+<li><strong>n_bins</strong> (<em>int</em>) – number of histogram bins</li>
+<li><strong>precision</strong> (<em>string</em><em>, </em><em>optional</em>) – String indicating the precision to be used, “single” (default) or “double”</li>
+<li><strong>n_threads</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of CPU (OpenMP) threads to be used for the computation, default 1.</li>
+<li><strong>blocksize</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of the blocks used to optimize cache usage in units of coordinate tuples.
+Values around 230 are best to optimize for a L2 cache size of 256 kb. Possible
+values are: ‘-1’ to disable cache blocking and use naive (old) kernels,
+‘0’ to enable blocking and use internal logic to determine the block size
+(recommended), and positive values to set the block size manually (not recommended,
+only useful for performance exploration). Note that cache blocking is disabled
+internally for bin numbers larger than 48000.</li>
+<li><strong>check_input</strong> (<em>bool</em><em>, </em><em>optional</em>) – Check the input, i.e. check it the distances fit into the histogram window
+defined by r_max. Harms performance to some degree but avoids potential
+memory corruption in case of bogus input. Default is ‘True’.</li>
+<li><strong>scale_factors</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Array of floats used to rescale individual histograms after computation.</li>
+<li><strong>mask_array</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Array of integers to mask the computation of certain histograms, where
+‘0’ indicates that a histogram is skipped.  Internal default is all ‘1’.</li>
+<li><strong>box</strong> (<em>array-like</em><em>, </em><em>optional</em>) – Periodic box specification.  Default is none.</li>
+<li><strong>force_triclinic</strong> (<em>bool</em><em>, </em><em>optional</em>) – Use the triclinic box implementation also for simpler orthorhombic boxes.
+Default is ‘False’.</li>
+<li><strong>do_histo2_only</strong> (<em>bool</em><em>, </em><em>optional</em>) – Perform only the inter-species computation in case 2 species are given.
+Useful for debugging and performance optimization, default is ‘False’.</li>
+<li><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>) – Be verbose about internal states during computation.  Default is ‘False’.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Column 0 contains the radii, other columns contain the histograms.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">NumPy array, double precision</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-cadishi.kernel.cudh">
+<span id="cadishi-kernel-cudh"></span><h2>cadishi.kernel.cudh<a class="headerlink" href="#module-cadishi.kernel.cudh" title="Permalink to this headline">¶</a></h2>
+<p>cudh Python interface.</p>
+<p>Calls the c_cudh Python module.</p>
+<dl class="function">
+<dt id="cadishi.kernel.cudh.get_num_cuda_devices">
+<code class="descclassname">cadishi.kernel.cudh.</code><code class="descname">get_num_cuda_devices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cadishi/kernel/cudh.html#get_num_cuda_devices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cadishi.kernel.cudh.get_num_cuda_devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of available NVIDIA devices, using the CUDA API.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cadishi.kernel.cudh.get_num_devices">
+<code class="descclassname">cadishi.kernel.cudh.</code><code class="descname">get_num_devices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/cadishi/kernel/cudh.html#get_num_devices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cadishi.kernel.cudh.get_num_devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of available NVIDIA devices.</p>
+<p>We do not use the function “c_cudh.get_num_devices()” because it is
+not allowed to fork and use CUDA in processes after a first CUDA call,
+which would be the case in &lt;histograms.py&gt; (and was hard to figure out).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cadishi.kernel.cudh.histograms">
+<code class="descclassname">cadishi.kernel.cudh.</code><code class="descname">histograms</code><span class="sig-paren">(</span><em>coordinate_sets</em>, <em>r_max</em>, <em>n_bins</em>, <em>precision='single'</em>, <em>gpu_id=0</em>, <em>do_histo2_only=False</em>, <em>thread_block_x=0</em>, <em>check_input=True</em>, <em>scale_factors=[]</em>, <em>mask_array=[]</em>, <em>box=[]</em>, <em>force_triclinic=False</em>, <em>verbose=False</em>, <em>algorithm=-1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/cadishi/kernel/cudh.html#histograms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#cadishi.kernel.cudh.histograms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distance histogram calculation on NVIDIA GPUs using CUDA.</p>
+<p>Calculate distance histograms for sets of species coordinates by calling the
+CUDA kernels that are provided by the Python module c_cudh written in CUDA.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>coordinate_sets</strong> (<em>list of numpy.ndarray</em>) – List of numpy arrays where each numpy array contains
+the atom coordinates for all the atoms of a species.</li>
+<li><strong>r_max</strong> (<em>float</em>) – Cutoff radius for the distance calculation.</li>
+<li><strong>n_bins</strong> (<em>int</em>) – Number of histogram bins.</li>
+<li><strong>precision</strong> (<em>string</em><em>, </em><em>optional</em>) – String specifying the implementation and/or the precision.  “single” is the
+default value for single precision, use “double” for double precision.</li>
+<li><strong>gpu_id</strong> (<em>int</em><em>, </em><em>optional</em>) – The GPU to be used to calculate the histograms.  0 is the default value.</li>
+<li><strong>do_histo2_only</strong> (<em>bool</em><em>, </em><em>optional</em>) – In case only two sets of coordinates are given, calculate only the distance
+histogram between the species sets.  For benchmark purposes only.</li>
+<li><strong>thread_block_x</strong> (<em>int</em><em>, </em><em>optional</em>) – Manually set the CUDA thread block size (x), overrides the internal default
+if set to a value larger than zero.  For benchmark and debugging purposes.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Two-dimensional numpy array containing the distance histograms.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="executables.html" title="CADISHI executables"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="CADISHI modules"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">CADISHI 1.1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Klaus Reuter, Juergen Koefinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>
