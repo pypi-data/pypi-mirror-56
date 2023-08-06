@@ -1,0 +1,14 @@
+README.md
+setup.py
+idcardgenerator/__init__.py
+idcardgenerator/gui.py
+idcardgenerator.egg-info/PKG-INFO
+idcardgenerator.egg-info/SOURCES.txt
+idcardgenerator.egg-info/dependency_links.txt
+idcardgenerator.egg-info/requires.txt
+idcardgenerator.egg-info/top_level.txt
+idcardgenerator/usedres/empty.png
+idcardgenerator/usedres/fzhei.ttf
+idcardgenerator/usedres/hei.ttf
+idcardgenerator/usedres/ico.icns
+idcardgenerator/usedres/ocrb10bt.ttf
