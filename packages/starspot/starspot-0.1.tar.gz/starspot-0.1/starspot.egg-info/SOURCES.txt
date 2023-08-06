@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+starspot/__init__.py
+starspot/phase_dispersion_minimization.py
+starspot/rotation_tools.py
+starspot/starspot.py
+starspot.egg-info/PKG-INFO
+starspot.egg-info/SOURCES.txt
+starspot.egg-info/dependency_links.txt
+starspot.egg-info/not-zip-safe
+starspot.egg-info/requires.txt
+starspot.egg-info/top_level.txt
