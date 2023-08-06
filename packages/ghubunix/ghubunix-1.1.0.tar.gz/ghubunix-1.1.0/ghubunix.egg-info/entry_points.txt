@@ -1,0 +1,3 @@
+[console_scripts]
+ghub = ghub.runner:run_ghub
+
