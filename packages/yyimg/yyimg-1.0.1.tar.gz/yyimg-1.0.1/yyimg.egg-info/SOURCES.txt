@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+yyimg/000998.png.py
+yyimg/__init__.py
+yyimg/augments.py
+yyimg/tools.py
+yyimg/utils.py
+yyimg/version.py
+yyimg.egg-info/PKG-INFO
+yyimg.egg-info/SOURCES.txt
+yyimg.egg-info/dependency_links.txt
+yyimg.egg-info/top_level.txt
