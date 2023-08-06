@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: turbustat
+Version: 1.1.0
+Summary: Statistics of Turbulence
+Home-page: https://turbustat.readthedocs.org
+Author: TurbuStat Development Team
+Author-email: koch.eric.w@gmail.com
+License: MIT
+Description: This package implements tools for the comparison of radio data cubes.
+Platform: UNKNOWN
+Requires-Python: >=2.7
