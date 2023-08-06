@@ -1,0 +1,3 @@
+[console_scripts]
+smart-injector = smart_injector.cli:main
+
