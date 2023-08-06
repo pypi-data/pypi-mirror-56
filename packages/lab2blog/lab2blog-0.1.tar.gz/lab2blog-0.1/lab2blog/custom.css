@@ -1,0 +1,105 @@
+
+#notebook-container {
+
+box-shadow: none !important;
+/*margin-left: -30px;*/
+padding: 0px;
+
+}
+
+
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: unset !important;
+  padding: unset !important;
+  font-family: unset !important;
+  font-size: unset !important;
+  line-height: unset !important;
+  color: unset !important;
+
+}
+
+div#notebook {
+  overflow: unset !important;
+  border-top: unset !important;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  }
+  div.output_wrapper {
+    display: block;
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
+  }
+}
+
+
+
+body {
+    background-color: #f3f3f3;
+    position: unset !important;
+    /*left: 0px;*/
+    /*right: 0px;*/
+    /*top: 0px;*/
+    /*bottom: 0px;*/
+    /*overflow: visible;*/
+}
+
+
+.prompt {
+    min-width: 9ex;
+
+    }
+
+#notebook-container.container {
+    width: 100%;
+}
+
+
+.post{
+
+width: 737px;
+float: right;
+
+}
+
+
+.post-entry {
+    text-align: left;
+}
+
+
+
+.rendered_html :link {
+    text-decoration: none;
+    color: #202020;
+}
+
+.rendered_html h1,
+.rendered_html h2 {
+    font-weight: normal !important;
+}
+
+
+a:hover, a:focus {
+    color: #717171;
+    text-decoration: none;
+}
+
+
+
+div.input_area {
+
+border: 0px;
+
+}
+
+
+
+div.input_prompt {
+    display: none !important;
+}

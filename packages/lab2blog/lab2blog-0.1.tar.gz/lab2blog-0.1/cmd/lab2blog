@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+import os
+import sys
+from lab2blog import convert_notebook
+
+filename, *args = sys.argv[1:]
+convert_notebook(os.path.abspath(filename))
+

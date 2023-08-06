@@ -1,0 +1,4 @@
+recursive-include cmd *
+recursive-include lab2blog *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
