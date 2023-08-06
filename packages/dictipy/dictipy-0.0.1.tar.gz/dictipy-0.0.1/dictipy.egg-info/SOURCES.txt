@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+dictipy/__init__.py
+dictipy/utils.py
+dictipy.egg-info/PKG-INFO
+dictipy.egg-info/SOURCES.txt
+dictipy.egg-info/dependency_links.txt
+dictipy.egg-info/top_level.txt
