@@ -1,0 +1,3 @@
+[console_scripts]
+pcode2code = pcode2code.pcode2code:main
+
