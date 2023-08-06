@@ -1,0 +1,17 @@
+README.rst
+setup.cfg
+setup.py
+slurppy/__init__.py
+slurppy/campaign.py
+slurppy/config.py
+slurppy/job.py
+slurppy/pipeline.py
+slurppy/processingstep.py
+slurppy.egg-info/PKG-INFO
+slurppy.egg-info/SOURCES.txt
+slurppy.egg-info/dependency_links.txt
+slurppy.egg-info/requires.txt
+slurppy.egg-info/top_level.txt
+slurppy/tests/__init__.py
+slurppy/tests/test_campaign.py
+slurppy/tests/test_pipeline.py
