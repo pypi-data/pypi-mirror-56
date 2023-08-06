@@ -1,0 +1,13 @@
+segments/__init__.py,sha256=6rmvkIIBcLVi5QrQtrLdLKaJY9hTGd0RVs8CchQeiBU,239
+segments/__main__.py,sha256=-AlxvriETGWkLjWUlWaOPAFcpkTQEnYDz-frxil2yEw,1519
+segments/errors.py,sha256=TpVcNUCx1YIZqZ1Urc-30oRptzOqD98gA4tpXFtQyCA,434
+segments/profile.py,sha256=-Vp-boVBXyAH6pqymy90nPUs3az0snxGSISw-SRig14,5272
+segments/tokenizer.py,sha256=jTY-9KIqn9VIvR6jh5AKy0lTdtvs33WCXMN41XkeSK0,12307
+segments/tree.py,sha256=5qWMq4-njmVKBZOa6SUxFHr72Ti4k2I5Z16-7qpL68E,2093
+segments/util.py,sha256=wRSAmoOTJKbu8t9eAVIr7guFEpqnty1miATw9c1urQs,189
+segments-2.1.3.dist-info/LICENSE.txt,sha256=y16Ofl9KOYjhBjwULGDcLfdWBfTEZRXnduOspt-XbhQ,11325
+segments-2.1.3.dist-info/METADATA,sha256=jtTYH_XF4ioZzlSgLm60RaK1fGK1WAOEb1YdjQWe3vw,3383
+segments-2.1.3.dist-info/RECORD,,
+segments-2.1.3.dist-info/WHEEL,sha256=gduuPyBvFJQSQ0zdyxF7k0zynDXbIbvg5ZBHoXum5uk,110
+segments-2.1.3.dist-info/entry_points.txt,sha256=sPYUVEhXjHJky_h3V0jrlUWWReznYKOf19J2w37NVxk,53
+segments-2.1.3.dist-info/top_level.txt,sha256=6c8xKq6vt3NBzy6MSfFICf-VMJL3FMsIX3g9bft7Bm0,9
