@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: fastcore
+Version: 0.0.1
+Summary: Python supercharged for fastai development
+Home-page: https://github.com/fastai/fastcore
+Author: Jeremy Howard and Sylvain Gugger
+Author-email: infos@fast.ai
+License: Apache Software License 2.0
+Keywords: python
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: nbdev ; extra == 'dev'
+Requires-Dist: pillow ; extra == 'dev'
+Requires-Dist: torch ; extra == 'dev'
+
+# nbdev template
+
+Use this template to more easily create your nbdev project.
+
+
+
