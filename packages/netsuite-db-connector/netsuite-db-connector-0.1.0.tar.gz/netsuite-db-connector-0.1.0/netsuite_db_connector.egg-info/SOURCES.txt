@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+netsuite_db_connector/__init__.py
+netsuite_db_connector/extract.py
+netsuite_db_connector/extract_ddl.sql
+netsuite_db_connector/load.py
+netsuite_db_connector/load_ddl.sql
+netsuite_db_connector.egg-info/PKG-INFO
+netsuite_db_connector.egg-info/SOURCES.txt
+netsuite_db_connector.egg-info/dependency_links.txt
+netsuite_db_connector.egg-info/requires.txt
+netsuite_db_connector.egg-info/top_level.txt
