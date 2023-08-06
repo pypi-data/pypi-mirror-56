@@ -1,0 +1,15 @@
+seldom/__init__.py,sha256=8a00hjhEuqRNPcqtShJ4Z25_P_BDDMmhN4ccoJmEh80,1085
+seldom/case.py,sha256=Q48h7E5tG147g0Y8bPskJZGaVXwTDT-YdPMS2oSi0w8,2450
+seldom/cli.py,sha256=zD1AwhORtfOMu3THVyTjAET_82yTqF-VxIJMxih41Nw,2777
+seldom/driver.py,sha256=yk6_4k-QsuIV9ogfGTQOWkygWmX0rHoQebuOkIqLHow,1403
+seldom/testdata.py,sha256=DhqHTUsK7SSxoSMyrmQFIZyLn4VFfkq-KILSNsylNKI,2765
+seldom/webdriver.py,sha256=rIPmkySAPiEJRfP4iwPe2aj2r0qsRRAdo_qA11uPVMc,14378
+seldom/running/HTMLTestRunner.py,sha256=JHK-UMwcryfSFgLjKKBEWk8puwOFhhBaMf-tCvbQkrw,42383
+seldom/running/__init__.py,sha256=3TKaBBK08eiCsGGFFcZlZwwjHHcmj2YO0xImghpJk38,787
+seldom/running/test_runner.py,sha256=pfX6doEkr_SVeHcNGnaBX33pXakLzFcWVUZFGj_pOvo,2612
+seldom-0.3.0.dist-info/LICENSE,sha256=tAA9mbdrITAG0jyNDtWDHX6EF922IYz6U5IIRry09M0,11364
+seldom-0.3.0.dist-info/METADATA,sha256=QtUudNASReYZfAsVcbcT1LFl7n729Nsl5izvLkFXomU,930
+seldom-0.3.0.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+seldom-0.3.0.dist-info/entry_points.txt,sha256=hVrkOX0WQF_aW7nLAlRxZyXz-BdlfF2HoN3uHgieQhM,62
+seldom-0.3.0.dist-info/top_level.txt,sha256=qFFbB1SoU67ABAzPNi6xGCTX_uTj7FlxrkEf9AylZw8,7
+seldom-0.3.0.dist-info/RECORD,,
