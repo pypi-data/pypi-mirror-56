@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: replytics
+Version: 0.2.0
+Summary: Easily track your statistics for Repl.it projects!
+Home-page: https://replytics.matdoes.dev
+Author: mat
+Author-email: pypi@matdoes.dev
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: websocket-client
+
+Easily track your Repl.it statistics with Repl-Analytics! Simply put this at the beginning of your code and Replytics is active.
+```py
+import replytics;replytics.init('https://repl.it/YOUR REPL LINK HERE')
+```
+Don't forget to replace the url to the url of your own Repl.
+Run `replytics.get_views()` to get the amount of views your Repl has. Dashboard coming soon.
+
