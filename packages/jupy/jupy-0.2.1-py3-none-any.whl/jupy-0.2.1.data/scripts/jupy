@@ -1,0 +1,87 @@
+#!python
+"""Script to run jupyter notebook remotely. 
+It automatically finds an available port, sshs to the server, making ssh tunnel, calls jupyter notebook.
+
+Please copy to your ~/bin and edit to have your preferred host and port as defaults
+
+Edits by Kynon Jade Benjamin: 5/30/2019
+"""
+
+import re
+import os
+import sys
+import getpass
+import argparse
+import subprocess
+
+__author__ = 'Apuã Paquola'
+__author__ = 'Kynon J Benjamin'
+
+def used_ports_iter(host, username):
+    """ iterates through output of local and remote ss -tnl command and gets local tcp ports that are being listened to """
+    new_host = '%s@%s' % (username, host)
+    for command in [['ss', '-tln'], ['ssh', new_host, 'ss -tln']]:
+        with subprocess.Popen(command, stdout=subprocess.PIPE) as p:
+            for line in p.stdout:
+                l = line.decode().rstrip()
+                m = re.search("^LISTEN\s+\S+\s+\S+\s+\S+:(\d+)\s", l)
+                if m and m.group(1) is not None:
+                    yield int(m.group(1))
+
+                
+def get_available_port(default_port, host, username):
+    """ gets first unused port """
+    used_ports = set(used_ports_iter(host, username))
+    i = default_port
+    while i in used_ports:
+        i += 1
+    return i
+
+
+def jupyter_command(directory, username, port):
+    return """cd '%s'; /home/%s/.local/bin/jupyter-lab --no-browser --port=%d""" \
+        %(directory, username, port)
+
+
+def run_remote_jupyter(host, directory, port, username):
+    with subprocess.Popen(['ssh',
+                           '-t',
+                           '-l',
+                           '%s' % username, 
+                           '-L',
+                           'localhost:%d:localhost:%d' % (port, port),
+                           host,
+                           jupyter_command(directory, username, port)],
+                          stdout=subprocess.PIPE) as p:
+        url_found = False
+        for line in p.stdout:
+            l = line.decode()
+            if not url_found:
+                m = re.search('(http://localhost:\S+)', l)
+                if m is not None:
+                    subprocess.Popen(["firefox",
+                                      "--private-window",
+                                      m.group(1)],
+                                     stdin=subprocess.DEVNULL,
+                                     stdout=subprocess.DEVNULL,
+                                     stderr=subprocess.DEVNULL)
+                    url_found = True
+            print(line.decode(), end='')
+
+
+def main():
+    parser = argparse.ArgumentParser(prog='jupy')
+    parser.add_argument('--host', default='node3')
+    parser.add_argument('--dir', default=os.getcwd())
+    parser.add_argument('--username', default=getpass.getuser())
+    parser.add_argument('--default-port', type=int, default=8888)
+    parser.add_argument('-v', '--version', action='version',
+                        version='%(prog)s 0.2.1', help="Prints current version.")
+    args=parser.parse_args()
+
+    port = get_available_port(args.default_port, args.host, args.username)
+    run_remote_jupyter(args.host, args.dir, port, args.username)
+
+                       
+if __name__ == '__main__':
+    main()
