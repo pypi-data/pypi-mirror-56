@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: py-babelnet
+Version: 0.0.2
+Summary: Python package for babelnet API
+Home-page: UNKNOWN
+Author: Pablo Torres
+Author-email: pablo.torres.t@gmail.com
+License: MIT
+Description: # Py\_BabelNet
+        
+        Python client for BabelNet API.
+        
+        ## Usage
+        
+        ```python
+        from py_babelnet.calls import BabelnetAPI
+        api = BabelnetAPI('mykey')
+        senses = api.get_senses(lemma = "agua", searchLang = "ES")
+        ```
+        
+        ## Test
+        
+        ```bash
+        BABELNET_KEY="my-key" pipenv run setup.py test
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown

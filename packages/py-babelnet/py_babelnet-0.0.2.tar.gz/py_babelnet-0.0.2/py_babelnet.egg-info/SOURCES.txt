@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+setup.cfg
+setup.py
+py_babelnet/__init__.py
+py_babelnet/calls.py
+py_babelnet.egg-info/PKG-INFO
+py_babelnet.egg-info/SOURCES.txt
+py_babelnet.egg-info/dependency_links.txt
+py_babelnet.egg-info/requires.txt
+py_babelnet.egg-info/top_level.txt
