@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+_version.py
+setup.py
+aws_get_logs.egg-info/PKG-INFO
+aws_get_logs.egg-info/SOURCES.txt
+aws_get_logs.egg-info/dependency_links.txt
+aws_get_logs.egg-info/requires.txt
+aws_get_logs.egg-info/top_level.txt
+bin/aws_get_logs
+css/__init__.py
+css/aws_get_logs.py
