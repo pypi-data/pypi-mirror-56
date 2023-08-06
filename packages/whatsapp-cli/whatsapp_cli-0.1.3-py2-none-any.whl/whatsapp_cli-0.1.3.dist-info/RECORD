@@ -1,0 +1,17 @@
+whatsappCli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+whatsappCli/__main__.py,sha256=EZgtspqWqF9BhlOdBJmdOnd3d4c7EhAWuB9MsI58DgU,87
+whatsappCli/feed/__init__.py,sha256=nk6JadpcdnYEpH47AsBEU1-FHcyPZKW2tEwtSJzbXVw,62
+whatsappCli/feed/feeder.py,sha256=C43B4wiElPvXSSc5l1aTtTmm9V1b5LhtBo45TOZDCAc,1022
+whatsappCli/feed/pb_feeder.py,sha256=OhFgD91iNOor3M6WnFi7y4YG-eJ4dlafjsOVNsadzIw,4008
+whatsappCli/feed/pb_stream.py,sha256=6D8VKdSVhYpAOMg0ndZWLclLS6OqEefE0BqVJt7Ubrs,5270
+whatsappCli/feed/data/reply.json,sha256=Q_n4pEAgvptC5CYYzPC7kxYzeKk5kY2nHiraqDJIyxc,318
+whatsappCli/ui/__init__.py,sha256=e3qUQC37eRJf83l_AnO2f9kFnOjNXpA4WJ5VMoXgtv4,51
+whatsappCli/ui/cli.py,sha256=-T8kQZnPPXKtgyYSLYnh6gnj5ZSFfsEvoL2sEcGQHds,2170
+whatsappCli/ui/curses_ui.py,sha256=Ku4dHMV2LeKZ6Ai0DJDNKh6HZ_6cZiYI0MGBYlfvxRA,13838
+whatsappCli/ui/ui.py,sha256=xmcb9VyW0EzFCaC8ob19H0sKC25ideNg1w1Q0kZh08g,556
+whatsapp_cli-0.1.3.dist-info/LICENSE,sha256=ZDJbSKH64ZeRvYGSbnQ9Xxqq8Jb1XT_oTcnHdlA30js,1067
+whatsapp_cli-0.1.3.dist-info/METADATA,sha256=2PEI-9iRRWTtcvQOYRw8fl5fh0ul6UMdHEW7DHibDPI,2963
+whatsapp_cli-0.1.3.dist-info/WHEEL,sha256=pqI-DBMA-Z6OTNov1nVxs7mwm6Yj2kHZGNp_6krVn1E,92
+whatsapp_cli-0.1.3.dist-info/entry_points.txt,sha256=A9-PoWbyCIWGyi4VLBavDKlefTCQczlaNIYR9Jx_e9U,60
+whatsapp_cli-0.1.3.dist-info/top_level.txt,sha256=uEzCboVgiVJZgCrxRitfgJB8X3I9FDC9dYq6TbT1a5A,12
+whatsapp_cli-0.1.3.dist-info/RECORD,,
