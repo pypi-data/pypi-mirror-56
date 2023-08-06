@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+lexpp/__init__.py
+lexpp/dict_builder.py
+lexpp/dictionary.py
+lexpp/entry.py
+lexpp/lexpp.py
+lexpp.egg-info/PKG-INFO
+lexpp.egg-info/SOURCES.txt
+lexpp.egg-info/dependency_links.txt
+lexpp.egg-info/top_level.txt
+lexpp/res/synonyms.dict
