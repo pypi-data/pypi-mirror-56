@@ -1,0 +1,130 @@
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding-bottom: 20px;
+
+  .logo {
+    flex: 1;
+
+    img {
+      max-width: 220px;
+    }
+  }
+
+  > ul {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    > li {
+      padding: 0 15px;
+      position: relative;
+
+      &:hover > ul {
+        display: inherit;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      > a {
+        -webkit-font-smoothing: antialiased;
+        font-family: $font-family-alt;
+        color: #909aae;
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        height: 30px;
+        display: block;
+
+        &:hover {
+          color: $brand-primary;
+        }
+
+        &:visited {
+          color: #909aae;
+        }
+
+        &:after {
+          content: '\f078';
+          font-family: 'FontAwesome';
+          margin-left: 5px;
+        }
+
+        &:only-child:after {
+          content: '';
+        }
+      }
+    }
+
+    ul {
+      display: none;
+      position: absolute;
+      top: 30px;
+      background: #f4f4f4;
+      z-index: 10;
+
+      li {
+        width: 200px;
+        display: list-item;
+
+        > a {
+          display: block;
+          border-bottom: 1px solid #ccc;
+          padding: 3px 10px;
+          font-family: $font-family-alt;
+          color: #909aae;
+          font-size: 12px;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $brand-primary;
+          }
+
+        }
+
+        &:last-child {
+          > a {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+      flex: 0 0 100%;
+    }
+
+    ul {
+      justify-content: center;
+
+      li {
+        &:last-child {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .wy-nav-top a {
+    color: #fff;
+  }
+}
+
+
+.wy-breadcrumbs {
+  border-bottom: 1px solid #e1e4e5;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}

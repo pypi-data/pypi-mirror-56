@@ -1,0 +1,113 @@
+//#topo {
+//  background: url(http://techblog.aimms.com/fundotopo.jpg) center center no-repeat !important;
+//  min-height: 400px;
+//  margin-bottom: 35px;
+//  background-size: cover !important;
+//
+//  h1 {
+//    padding: 140px 0 1% 0;
+//    align-content: center;
+//    font-family: $font-family-alt;
+//    -webkit-font-smoothing: antialiased;
+//    font-size: 1.8em;
+//    color: #fff;
+//    text-align: center;
+//    font-weight: 400;
+//    letter-spacing: 1px;
+//  }
+//
+//  h2 {
+//    color: #fff;
+//    font-family: $font-family-alt;
+//    -webkit-font-smoothing: antialiased;
+//    font-size: 1.4em;
+//    text-align: center;
+//    font-weight: 300;
+//    letter-spacing: 1px;
+//  }
+//
+//  @media screen and (max-width: 400px) {
+//    h1 {
+//      font-size: 1.3em;
+//      padding-left: 10px;
+//      padding-right: 10px;
+//    }
+//
+//    h2 {
+//      padding: 10px;
+//      font-size: 1.2em;
+//    }
+//  }
+//}
+
+.home_header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#content_home_page {
+  width: 100%;
+  max-width: 1000px; /* A. max horizontal number of boxes =~ int(A/B) */
+  margin: 0 auto;
+
+  p {
+    text-align: justify;
+  }
+
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.box_home_page {
+  font-family: $font-family-alt;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px 10px 50px;
+  flex: 1 1 31%;
+  box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.06);
+  text-align: center;
+  padding: 20px 10px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+    transition: all .2s ease-in-out;
+
+    h1 {
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    color: #000;
+    font-size: 22px;
+    font-family: $font-family-alt;
+    -webkit-font-smoothing: antialiased;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-bottom: 25px !important;
+    border: none !important;
+    padding-top: 5px;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  > div {
+    color: #000;
+    font-style: italic;
+  }
+
+  @media(max-width: 900px) {
+    flex: 1 1 48%;
+  }
+  @media(max-width: 767px) {
+    flex: 1 1 31%;
+  }
+  @media(max-width: 500px) {
+    flex: 1 1 90%;
+  }
+}
