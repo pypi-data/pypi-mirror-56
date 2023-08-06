@@ -1,0 +1,9 @@
+dm-env>=1.2
+googleapis-common-protos
+grpcio
+numpy
+protobuf
+
+[examples]
+pygame
+portpicker
