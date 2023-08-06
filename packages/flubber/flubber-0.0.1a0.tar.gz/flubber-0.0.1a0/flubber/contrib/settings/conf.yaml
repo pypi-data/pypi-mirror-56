@@ -1,0 +1,10 @@
+debug: ${env:APP_DEBUG,true}
+environment: ${env:APP_ENVIRONMENT,local}
+server:
+  port: ${env:APP_PORT,9000}
+  proxy:
+    count: ${env:APP_PORT,1}
+security:
+  enabled: ${env:APP_SECURITY,false}
+middlewares:
+  - flubber.middleware.logs
