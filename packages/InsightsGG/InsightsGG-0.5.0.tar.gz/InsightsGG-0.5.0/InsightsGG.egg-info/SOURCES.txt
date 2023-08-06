@@ -1,0 +1,10 @@
+README.md
+setup.py
+InsightsGG.egg-info/PKG-INFO
+InsightsGG.egg-info/SOURCES.txt
+InsightsGG.egg-info/dependency_links.txt
+InsightsGG.egg-info/requires.txt
+InsightsGG.egg-info/top_level.txt
+insightsGG/App.py
+insightsGG/Networking.py
+insightsGG/__init__.py
