@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: option-price
+Version: 0.0.4
+Summary: Awesome but light option price calculator in Python
+Home-page: https://qsctech-sange.github.io/option-price
+Author: QSCTech-Sange
+Author-email: 3160105521@zju.edu.cn
+License: UNKNOWN
+Description: # option-price
+        option-price is a Python-based powerful but simple option price calculator.
+        
+        # Installation
+        ```shell
+        pip install option-price
+        ```
+        # Usage
+        ```python
+        from optionprice import Option
+        ```
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
