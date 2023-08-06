@@ -1,0 +1,21 @@
+flask
+flask_wtf
+flask-login
+flask-sqlalchemy
+pyexcel
+pyexcel-io
+pyexcel-ods
+pyexcel-ods3
+pyexcel-xls
+pyexcel-xlsx
+PyYAML
+pexpect
+janis-pipelines>=0.7.0
+psutil
+miniwdl>=0.0.5
+
+[:platform_system != "Windows"]
+cwltool<=1.0.20191022103248,>=1.0.20180809224403
+
+[:platform_system == "Windows"]
+cwltool==1.0.20181201184214
