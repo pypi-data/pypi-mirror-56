@@ -1,0 +1,16 @@
+3>prompt_toolkit>=2
+appdirs
+beautifulsoup4
+chardet
+humanize
+ipdb
+jsonpickle
+netaddr
+pint
+pygments
+python-Levenshtein
+python-dateutil
+pythondialog
+requests
+tabulate
+validate_email
