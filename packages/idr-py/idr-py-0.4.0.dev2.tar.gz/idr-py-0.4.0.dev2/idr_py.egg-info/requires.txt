@@ -1,0 +1,9 @@
+ipython
+ipywidgets
+omero-py>=5.6.dev4
+matplotlib
+pandas
+requests
+seaborn
+scipy
+zeroc-ice<3.7,>3.6
