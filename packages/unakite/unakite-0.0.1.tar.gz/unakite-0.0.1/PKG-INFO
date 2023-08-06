@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: unakite
+Version: 0.0.1
+Summary: S3 proxy for binary fies
+Home-page: https://github.com/candango/unakite
+Author: Flavio Garcia
+Author-email: piraz@candango.org
+License: Apache License V2.0
+Description: # Unakite S3 proxy
+        
+        Candango unakite is a proxy for s3.
+        
+        WORK IN PROGRESS. 
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
