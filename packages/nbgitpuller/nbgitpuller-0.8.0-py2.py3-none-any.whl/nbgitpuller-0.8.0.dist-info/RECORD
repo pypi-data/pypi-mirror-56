@@ -1,0 +1,14 @@
+nbgitpuller/__init__.py,sha256=DUGAzP2MKmlnvDwymlWArtkA8wtuivY-oVd-Qkm3A4M,1058
+nbgitpuller/handlers.py,sha256=ADf7goB9ZM1GzxsT9vJ96ucgiwp4GOzBw-wV7WfQE68,7085
+nbgitpuller/pull.py,sha256=-oOazGzpb-bHDaLnB4_73ev2f0bvpEy0pE_77T7BEW0,9487
+nbgitpuller/version.py,sha256=yHl0rIdaV_yxKmU7QCHs1uCZgklQY9w_jQs9vKvvdHs,74
+nbgitpuller/etc/nbgitpuller.json,sha256=sYZj_vvoXCI1wti3P2YwMWKExYB8BBQAU6eb0zQEqzY,89
+nbgitpuller/static/index.js,sha256=08J3ASJMKOI50DHXWc6rTu7Z4eFGHcek6aCcmNC6k-o,9630
+nbgitpuller/templates/status.html,sha256=SXsXP9gwqA4BeA23UC8uycCk-42X3GS6Z0aype1rYB0,1889
+nbgitpuller-0.8.0.data/data/etc/jupyter/jupyter_notebook_config.d/nbgitpuller.json,sha256=sYZj_vvoXCI1wti3P2YwMWKExYB8BBQAU6eb0zQEqzY,89
+nbgitpuller-0.8.0.dist-info/LICENSE,sha256=BDolAqY5a22OkV1jq57kzBIuqosvxW2LXLG0mklxmdE,1524
+nbgitpuller-0.8.0.dist-info/METADATA,sha256=7phVQEzf1jE_-YtsuFezCwhgqczCkl3BD_ET9Aos3io,688
+nbgitpuller-0.8.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+nbgitpuller-0.8.0.dist-info/entry_points.txt,sha256=3nq4ntqYoy6wrO1Goe4oUrGeVimOSmHOWyKpN9e2VyQ,53
+nbgitpuller-0.8.0.dist-info/top_level.txt,sha256=p6zNmcuf8b-9aLdnjnxpoYmGxlK8O69NemENjv5QZmA,12
+nbgitpuller-0.8.0.dist-info/RECORD,,
