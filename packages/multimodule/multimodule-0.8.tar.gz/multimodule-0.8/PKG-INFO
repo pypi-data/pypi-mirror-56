@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: multimodule
+Version: 0.8
+Summary: Possible windows only tool to convert packages of .pyx and .py files into single Cython extensions.
+Home-page: http://g
+Author: Keith
+Author-email: keithwipf1@gmail.co

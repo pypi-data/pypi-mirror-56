@@ -1,0 +1,11 @@
+[build-system]
+requires = ["flit_core >=2,<3"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "multimodule"
+author = "Keith"
+author-email = "keithwipf1@gmail.co"
+home-page = "http://g"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
