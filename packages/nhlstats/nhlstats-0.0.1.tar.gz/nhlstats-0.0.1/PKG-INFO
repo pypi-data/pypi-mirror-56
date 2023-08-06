@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: nhlstats
+Version: 0.0.1
+Summary: Tools for collecting NHL play-by-play stats.
+Home-page: https://github.com/tomplex/nhlstats
+Author: Tom Caruso
+Author-email: carusot42@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
