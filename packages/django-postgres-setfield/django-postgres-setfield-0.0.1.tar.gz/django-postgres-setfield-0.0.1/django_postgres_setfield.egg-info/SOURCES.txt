@@ -1,0 +1,10 @@
+README.rst
+setup.py
+django_postgres_setfield.egg-info/PKG-INFO
+django_postgres_setfield.egg-info/SOURCES.txt
+django_postgres_setfield.egg-info/dependency_links.txt
+django_postgres_setfield.egg-info/requires.txt
+django_postgres_setfield.egg-info/top_level.txt
+setfield/__init__.py
+tests/__init__.py
+tests/test_setfield.py
