@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: EnumECG
+Version: 0.1.dev0
+Summary: Generate Enhanced Enum definitions for C++
+Home-page: https://github.com/jasujm/enhanced-enum
+Author: Jaakko Moisio
+Author-email: jaakko@moisio.fi
+License: MIT
+Description: EnumECG is not a standalone package. It is meant to support generating
+        code for enhanced enum types in C++, and be used together with its
+        main C++ library, found at https://github.com/jasujm/enhanced-enum.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
