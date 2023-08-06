@@ -1,0 +1,126 @@
+# Seamster 
+[![PyPI version](https://badge.fury.io/py/seamster.svg)](https://badge.fury.io/py/seamster) [![Pipeline status](https://gitlab.com/juniperlabs-foss/seamster/badges/master/pipeline.svg)](https://gitlab.com/juniperlabs-foss/seamster/commits/master) [![Coverage report](https://gitlab.com/juniperlabs-foss/seamster/badges/master/coverage.svg)](https://gitlab.com/juniperlabs-foss/seamster/commits/master) 
+
+High Performance Fuzzy Business Entity Matching
+
+## Motivation
+The purpose of this package is to facilitate a broader goal of centralizing and standardizing publicly 
+available data on businesses. Juniper is doing this because we believe that the key to innovation
+in Commercial Insurance underwriting lies in making public data accessible, reliable, and complete.
+
+## Features
+- Built on top of Pandas and Scipy to do parallelized calculation of string similarities.
+- Extensible `Join` class allows for custom joins
+
+## Installation
+Seamster requires Python 3.5 or newer to run.
+
+**Python package**
+
+You can easily install Seamster using pip:
+
+`pip3 install seamster`
+
+**Manual**
+
+Alternatively, to get the latest development version, you can clone this repository and then manually install it:
+
+```
+git clone git@gitlab.com:juniperlabs-foss/seamster.git
+cd seamster
+python3 setup.py install
+```
+
+## Usage
+```python
+import pandas as pd
+from seamster.join_side import JoinSide
+from seamster.join import NameZipEntTypeJoin
+
+source1 = {
+        "id": [1, 2, 3, 4],
+        "names": [
+            "Subway",
+            "Blimpies",
+            "McDonalds Hamburguesas, Inc.",
+            "MacDonalds Hamburgers",
+        ],
+        "zip": [80238, 80238, 80230, 80238],
+        "entity_type": ["llc", "llc", "corporation", "corporation"],
+    }
+    
+source2 = pd.DataFrame(
+    {
+        "id": [5, 6, 7],
+        "names": ["McDonalds Hamburgers Inc", "Burger King", "Wendys"],
+        "zip": [80238, 80238, 80230],
+        "entity_type": ["corporation", "llc", "inc"],
+    }
+)
+
+js_a = JoinSide(
+    data=pd.DataFrame(source1),
+    source="a",
+    entity_name_field="names",
+    id_field="id",
+    zip_field="zip",
+    entity_type_field="entity_type",
+)
+js_b = JoinSide(
+    data=pd.DataFrame(source2),
+    source="b",
+    entity_name_field="names",
+    id_field="id",
+    zip_field="zip",
+    entity_type_field="entity_type",
+)
+
+bs = NameZipEntTypeJoin(join_sides=(js_a, js_b))
+
+df = bs.join(lower_bound=0.8)
+
+print(df.to_dict(orient="records"))
+# [
+#         {
+#             "id_a": 4,
+#             "names_a": "MacDonalds Hamburgers",
+#             "zip_a": 80238,
+#             "entity_type_a": "corporation",
+#             "source_a": "a",
+#             "clean_names_a": "macdonalds hamburgers",
+#             "clean_entity_type_a": "corp",
+#             "id_b": 5,
+#             "names_b": "McDonalds Hamburgers Inc",
+#             "zip_b": 80238,
+#             "entity_type_b": "corporation",
+#             "source_b": "b",
+#             "clean_names_b": "mcdonalds hamburgers",
+#             "clean_entity_type_b": "corp",
+#             "similarity": 0.86529,
+#         }
+#     ]
+
+```
+
+## TODO
+- Create transform class that can permute and enrich the dataframe (e.g., geolocation, )
+- Support for multiple fuzzy joins
+
+## Contributing
+For information on how to contribute to the project, please check the [Contributor's Guide][contributing].
+
+## Contact
+[support@juniperlabs.io](mailto:support@juniperlabs.io)
+
+[incoming+juniperlabs-foss/seamster@gitlab.com](incoming+juniperlabs-foss/seamster@gitlab.com)
+
+## License
+Apache 2.0
+
+## Credits
+This package was created with [Cookiecutter][cookiecutter] and the [python-cookiecutter][python-cookiecutter] project template.
+
+[contributing]: https://gitlab.com/juniperlabs-foss/seamster/blob/master/CONTRIBUTING.md
+[cookiecutter]: https://github.com/audreyr/cookiecutter
+[documentation]: https://juniperlabs-foss.gitlab.io/seamster
+[python-cookiecutter]: https://gitlab.com/radek-sprta/python-cookiecutter
