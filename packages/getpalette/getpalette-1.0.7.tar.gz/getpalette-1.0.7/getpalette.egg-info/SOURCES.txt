@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+getpalette/Roboto-Medium.ttf
+getpalette/__init__.py
+getpalette/__main__.py
+getpalette.egg-info/PKG-INFO
+getpalette.egg-info/SOURCES.txt
+getpalette.egg-info/dependency_links.txt
+getpalette.egg-info/entry_points.txt
+getpalette.egg-info/requires.txt
+getpalette.egg-info/top_level.txt
