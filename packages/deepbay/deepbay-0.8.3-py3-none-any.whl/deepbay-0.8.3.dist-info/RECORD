@@ -1,0 +1,12 @@
+deepbay/DeepFeedForward.py,sha256=Y2bnrWTi3O5jpwVRhPFTqvT9PFtRBV827SQwcpiPD0Q,894
+deepbay/DenseBlock.py,sha256=pBWo7H_fqwnJVrJbZEiGR3mwtHRdrRQj2GnfsgNNY_A,1925
+deepbay/GeneralizedMatrixFactorizer.py,sha256=hG2HGwLDuN-p0g2pF8sRrKycKIBlqq6KHwrYxaNQdGI,3158
+deepbay/NeuralCollaborativeFilter.py,sha256=C_VnI4ErMYTOR0EVWlb5TmU9QEVQy8QLZbYh61FGEYQ,3170
+deepbay/__init__.py,sha256=plzlMIiSdi90K4tAfr73vU75F8-IS0eBKWyjPwsJOwc,241
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dense_block.py,sha256=8IaknCJkrXyTXWKGVAwQNYqMbwemWZOxz4Wh-f--UUQ,1010
+deepbay-0.8.3.dist-info/LICENSE,sha256=6ZQTbS-4KXej9DE2iSc9D2extB5Yf2KBJerkT114_9U,1089
+deepbay-0.8.3.dist-info/METADATA,sha256=r4GIunZwuPpU8_YZP56XXL3JbNbbSirmrvkh8V2Xx9A,1538
+deepbay-0.8.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+deepbay-0.8.3.dist-info/top_level.txt,sha256=3k5X7T3C-UgusY_zS93NgkpM57nWLs2BnoJNGfYmCoU,14
+deepbay-0.8.3.dist-info/RECORD,,
