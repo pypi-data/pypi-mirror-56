@@ -1,0 +1,8 @@
+numpy
+scipy
+networkx>=2.4
+matplotlib<3.1
+
+[docs]
+sphinx<3,>=2
+sphinx-rtd-theme<1,>=0.4
