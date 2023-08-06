@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: veros-bgc
+Version: 0.1
+Summary: Biogeochemistry plugin for Veros, the versatile ocean simulator.
+Home-page: https://veros-bgc.readthedocs.io
+Author: Dion Häfner (NBI Copenhagen)
+Author-email: dion.haefner@nbi.ku.dk
+License: MIT
+Description: [![Documentation Status](https://readthedocs.org/projects/veros-bgc/badge/?version=latest)](https://veros-bgc.readthedocs.io/en/latest/?badge=latest)
+        
+        # Veros-BGC
+        A biogeochemistry plugin for Veros, based on MOBI.
+        
+        ## Quick usage
+        
+        ```bash
+        $ pip install veros veros-bgc
+        $ veros copy-setup bgc_global_4deg --to /tmp/bgc-4deg
+        $ cd /tmp/bgc-4deg
+        $ python bgc_global_four_degree.py
+        ```
+        
+        ## Credits
+        
+        Veros-BGC is based on [MOBI](http://people.oregonstate.edu/~schmita2/Models/MOBI/index.html) by [Andreas Schmittner](http://people.oregonstate.edu/~schmita2/), Oregon State University.
+        
+        [Steffen Randrup](https://github.com/SteffenRandrup) created Veros-BGC as a part of his Master's thesis.
+        
+Keywords: oceanography python parallel numpy multi-core geophysics ocean-model bohrium mpi4py biogeochemistry
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >3.5.2
+Description-Content-Type: text/markdown
