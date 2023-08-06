@@ -1,0 +1,132 @@
+# pgcrud
+
+Leverage python lists and dicts to more dynamically perform CRUD operations on postgres databases.
+
+### installation
+
+`pip install pgcrud`
+
+### connect
+```
+from pgcrud import Connector
+
+conn = Connector(host, dbname, user, password)
+```
+
+### create()
+
+Pass in the name of the table and a dictionary containing the database field name as the key and the value to set as the value.
+
+```
+from pgcrud import Connector
+
+conn = Connector(host, dbname, user, password)
+data = {'firstname': 'Fred', 'lastname': 'Jones'}
+conn.create('contact', data)
+```
+
+### criteria
+The `update`, `delete` and `select` functions are frequently used with criteria. 
+
+To pass the criteria replace all of the criteria values with `%s` and pass a list of the values in the order they are used in the criteria. This enables the psycopg2 connector to makes sure the values are database safe and formatted appropriately based on their type.
+
+`IN` criteria should be passed in with one `%s` where they should go and a list entry in the values.
+
+```
+from pgcrud import Connector
+
+conn = Connector(host, dbname, user, password)
+fields = ['firstname', 'lastname']
+criteria = 'WHERE country = %s AND state in %s'
+values = ['United States', ['MA', 'MI', 'NY']]
+results = conn.select('contact', fields, criteria, values)
+```
+
+This would form the SQL:
+```
+SELECT firstname,
+       lastname
+    FROM contact
+    WHERE country = 'United States'
+    AND state in ('MA', 'MI', 'NY')
+```
+
+### update()
+
+Pass in the name of the table and a dictionary containing the database field name as the key and the value to set as the value to update.
+
+```
+from pgcrud import Connector
+
+conn = Connector(host, dbname, user, password)
+data = {'firstname': 'Fred', 'lastname': 'Jones'}
+criteria = 'WHERE id = %s'
+values = [12436]
+conn.update('contact', data, criteria, values)
+```
+
+### delete()
+
+Pass in the name of the table, the criteria and values to identify which records to delete.
+
+```
+from pgcrud import Connector
+
+conn = Connector(host, dbname, user, password)
+criteria = 'WHERE id = %s'
+values = [12436]
+conn.delete('contact', criteria, values)
+```
+
+### select()
+
+Pass in the name of the table, a list of the field names you want and the criteria and values to identify which records to select.
+
+A list of dictionaries will be returned. Each entry will have the database field name as the key and the retrieved value as the value.
+
+This is the select method I recommend using unless performance is very important. `select_list` will be the most performant, but the most difficult to work with since it requires you to reference the position of the field name in the query to understand the values being referenced when reading and writing your code. `select_gen` is the second most performant, but requires knowledge of generators instead of just working with a standard list. Unless your results contain a very large number of fields and rows the difference in performance will be negligible.
+
+
+```
+from pgcrud import Connector
+
+conn = Connector(host, dbname, user, password)
+fields = ['firstname', 'lastname]
+criteria = 'WHERE id = %s'
+values = [12436]
+results = conn.select('contact', fields, criteria, values)
+```
+
+### gen_select()
+
+This is the same as the select_dict statement, but it returns an iterator object containing the dictionaries instead of a list. This increases the performance of converting the returned list of value lists into a list of dicts with the field names as keys.
+
+### list_select()
+
+A list of lists will be returned with the field value in the same position as the field name was input in the fields list. For example if id is the first field name in your fields list then the id value will be at poition 0 in the list.
+
+### commit()
+
+The `create`, `delete` and `select` funcitons have an optional `commit` parameter. Sometimes when creating or deleting records in a database you want to do an all or none transaction. For example you are creating an order and all of its items. If one of the items fails to create you do not want the order to be created. In this case you would pass `commit = False`. This means that the insertions will not be committed until you say so, when they are all complete.
+
+This parameter is also included in the select function because you may need information from one of the created records to create further records. For example you insert the order and need its id in order to associate its items with it. In this case you would also want to pass `commit = False` to the select function, so that when you are retrieving the order id the order insert is not committed. 
+
+```
+from pgcrud import Connector
+
+conn = Connector(host, dbname, user, password)
+data = {'total': 1900, 'contact_id': 234422, 'external_id' = 34567}
+conn.create('order', data, False)```
+order = conn.select('order', ['id'], 'WHERE external_id = %s', [data['external_id]], False)
+order_id = order[0]['id']
+items = [{'sku': 'CUCUMBER',
+          'qty': 1,
+          'price': .5},
+          {'sku': 'GRAPEFRUIT',
+          'qty': 2,
+          'price': 1}]
+for item in items:
+    item['order_id'] = order_id
+    conn.create('item', item, False)
+conn.commit()
+```
