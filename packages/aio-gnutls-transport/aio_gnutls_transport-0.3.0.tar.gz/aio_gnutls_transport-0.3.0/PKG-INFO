@@ -1,0 +1,161 @@
+Metadata-Version: 2.1
+Name: aio_gnutls_transport
+Version: 0.3.0
+Summary: asyncio transport over GnuTLS
+Home-page: https://gitlab.inria.fr/abaire/aio_gnutls_transport/
+Author: Anthony Baire
+Author-email: Anthony.Baire@irisa.fr
+License: LGPL2.1+
+Description: aio\_gnutls\_transport - asyncio transport over GnuTLS
+        ======================================================
+        
+        `aio_gnutls_transport` provides a python3 [asyncio
+        transport](https://docs.python.org/3/library/asyncio-protocol.html) over
+        [GnuTLS](https://gnutls.org/). It aims to be a **drop-in replacement** for the
+        native SSL transport in the stdlib (and which is based on OpenSSL).
+        
+        It also supports **half-closed TLS connections**, in other words you can
+        [.write\_eof()](https://docs.python.org/3/library/asyncio-protocol.html?highlight=write_eof#asyncio.WriteTransport.write_eof)
+        on TLS streams (which is not possible with the native implementation).
+        
+        
+        #### Licence
+        
+        GNU Lesser General Public License version 2.1 or any later version (LGPLv2.1+)
+        
+        #### Requirements
+        
+        - python >= 3.6
+        - gnutls >= 3.5
+        - cffi >= 1.0.0
+        
+        #### Supported platforms
+        
+        - Linux
+        
+        
+        #### Bugs
+        
+        Bugs shall be reported [in the gitlab project](https://gitlab.inria.fr/abaire/aio_gnutls_transport/issues). Please mark security-critical issues as _confidential_.
+        
+        
+        Getting started
+        ---------------
+        
+        In most cases, using `aio_gnutls_transport` is as simple as:
+        ```py
+        from aio_gnutls_transport import ssl, GnutlsEventLoopPolicy
+        
+        asyncio.set_event_loop_policy(GnutlsEventLoopPolicy())
+        ```
+        
+        `aio_gnutls_transport.ssl` is the compatibility module to be used in place of
+        the native `ssl` module. It provides its own `SSLContext` implementation
+        for GnuTLS.
+        
+        
+        `GnutlsEventLoopPolicy` is an asyncio [event loop
+        policy](https://docs.python.org/3/library/asyncio-policy.html) that installs a
+        wrapper around the default event loop implementation to support the `SSLContext`
+        objects created by the `aio_gnutls_transport.ssl` module.
+        
+        Configuring TLS parameters
+        --------------------------
+        
+        The security properties of `GnutlsContext` are configured using [GnuTLS
+        priority strings](https://gnutls.org/manual/html_node/Priority-Strings.html).
+        
+        `aio_gnutls_transport.DEFAULT_PRIORITY` holds the default priority string set by
+        `ssl.create_default_context()` (its current value is
+        `SECURE:-RSA:%PROFILE_MEDIUM:%SERVER_PRECEDENCE` and it will be kept to a sane
+        default).
+        
+        The priority string is configurable on a per-context basis by calling
+        `GnuTLSContext.gnutls_set_priority()`. For example, to disable TLS versions
+        older than 1.3:
+        
+        ```py
+        ctx = ssl.create_default_context()
+        ctx.gnutls_set_priority(aio_gnutls_transport.DEFAULT_PRIORITY + ":-VERS-ALL:+VERS-TLS1.3")
+        ```
+        
+        For any details about assembling a priority string, please refer to the [GnuTLS
+        Manual](https://gnutls.org/manual/html_node/Priority-Strings.html).
+        
+        
+        
+        Contents of this package
+        ------------------------
+        
+        This packages provides:
+        
+        | item                                           |  description               | native equivalent |
+        | ---------------------------------------------  |  ------------------------- | ----------------- |
+        | `aio_gnutls_transport.GnutlsContext          ` | GnuTLS context | `ssl.SSLContext` |
+        | `aio_gnutls_transport.GnutlsError            ` | GnuTLS error class | `ssl.SSLError` |
+        | `aio_gnutls_transport.GnutlsEventLoopPolicy  ` | an asyncio event loop policy using `GnutlsEventLoop` instead of the default event loop   | `asyncio.DefaultEventLoopPolicy` |
+        | `aio_gnutls_transport.GnutlsEventLoop        ` | an event loop which supports GnuTLS contexts | `asyncio.SelectorEventLoop` |
+        | `aio_gnutls_transport.GnutlsObject           ` | TLS connection state object | `ssl.SSLObject` |
+        | `aio_gnutls_transport.GnutlsHandshakeProtocol` | asyncio protocol implementing the TLS handshake | |
+        | `aio_gnutls_transport.GnutlsTransport        ` | asyncio transport over GnuTLS | `asyncio.sslproto._SSLProtocolTransport` |
+        | `aio_gnutls_transport.ssl`                     | the `ssl` compatibility module  | `ssl` |
+        
+        
+        
+        Caveats
+        -------
+        
+        The `aio_gnutls_transport.ssl` compatibility module provides only a subset of
+        the native `ssl` stdlib module.
+        
+        Achieving 100% compatibility is a non-goal (it would not be realistic since the
+        native module is tightly coupled with OpenSSL).
+        
+        Instead we take a minimalist and conservative approach:
+        `aio_gnutls_transport` only supports the most common features and any attempt
+        to use an unsupported attribute/method raises `NotImplementedError`.
+        
+        
+        The ssl module currently provides the following definitions: 
+        ```py
+        ssl.SSLContext
+        ssl.create_default_context()
+        
+        ssl.CERT_NONE
+        ssl.CERT_OPTIONAL
+        ssl.CERT_REQUIRED
+        ssl.Purpose
+        ssl.VerifyMode
+        ssl.DER_cert_to_PEM_cert
+        ssl.PEM_cert_to_DER_cert
+        ```
+        and SSLContext supports the following attributes/methods:
+        ```py
+        SSLContext.check_hostname
+        SSLContext.load_cert_chain()
+        SSLContext.load_verify_locations()
+        SSLContext.load_default_certs()
+        SSLContext.verify_mode
+        ```
+        
+        Also, be aware that:
+        
+        * Errors are reported as `aio_gnutls_transport.GnutlsError` is not compatible
+          with the native `ssl.SSLError` class (through they both derive from `OSError`).
+        
+        * `aio_gnutls_transport.ssl.SSLContext` derives from `ssl.SSLContext`, but they
+          do not share their implementation. This is necessary to enable
+          interoperability with 3rd-party libraries (eg: aiohttp) that enforce strict
+          type checking.
+        
+Keywords: asyncio,TLS,transport,GnuTLS
+Platform: linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security :: Cryptography
+Description-Content-Type: text/markdown
