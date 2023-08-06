@@ -1,0 +1,131 @@
+{
+    "allOf with if-then-else": {
+        "allOf": [
+            {
+                "type": "null"
+            },
+            {
+                "else": {},
+                "if": {
+                    "type": "boolean"
+                },
+                "then": {
+                    "type": "boolean"
+                }
+            }
+        ]
+    },
+    "close bounds for integers with multiple and exMax": {
+        "exclusiveMaximum": 1,
+        "minimum": 0,
+        "multipleOf": 2,
+        "type": "integer"
+    },
+    "disallowed object but allows other type": {
+        "maxProperties": 1,
+        "required": [
+            "0",
+            "1"
+        ],
+        "type": [
+            "null",
+            "object"
+        ]
+    },
+    "float bounds that are not floats": {
+        "maximum": 18014398509481983,
+        "minimum": -18014398509481983
+    },
+    "impossible integer or valid number": {
+        "maximum": 1.9,
+        "minimum": 1.2,
+        "type": [
+            "integer",
+            "number"
+        ]
+    },
+    "integer with numeric maximum and exclusiveMaximum": {
+        "exclusiveMaximum": 0,
+        "maximum": 1
+    },
+    "integer with numeric minimum and exclusiveMinimum": {
+        "exclusiveMinimum": 1,
+        "minimum": 0
+    },
+    "issue12-longer": {
+        "additionalProperties": false,
+        "properties": {
+            "id": {
+                "pattern": "^\\d+$",
+                "type": "string"
+            },
+            "title": {
+                "enum": [
+                    "theonlyvalue"
+                ],
+                "type": "string"
+            },
+            "value": {
+                "additionalProperties": false,
+                "properties": {
+                    "flag": {
+                        "type": "boolean"
+                    },
+                    "ids": {
+                        "items": {
+                            "pattern": "^\\d+$",
+                            "type": "string"
+                        },
+                        "minItems": 1,
+                        "type": "array",
+                        "uniqueItems": true
+                    },
+                    "string": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ]
+                    }
+                },
+                "required": [
+                    "ids",
+                    "flag",
+                    "string"
+                ],
+                "type": "object"
+            }
+        },
+        "required": [
+            "title",
+            "value",
+            "id"
+        ],
+        "type": "object"
+    },
+    "issue12-simple": {
+        "additionalProperties": false,
+        "properties": {
+            "ids": {
+                "items": {
+                    "pattern": "^\\d+$",
+                    "type": "string"
+                },
+                "minItems": 1,
+                "type": "array",
+                "uniqueItems": true
+            }
+        },
+        "required": [
+            "ids"
+        ],
+        "type": "object"
+    },
+    "string with unknown format": {
+        "format": "Unknown formats should be treated as annotations and pass validation",
+        "type": "string"
+    }
+}
