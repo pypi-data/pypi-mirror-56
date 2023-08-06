@@ -1,0 +1,12 @@
+README.md
+replay_parser.py
+setup.py
+World_of_Warships_replays_parser.egg-info/PKG-INFO
+World_of_Warships_replays_parser.egg-info/SOURCES.txt
+World_of_Warships_replays_parser.egg-info/dependency_links.txt
+World_of_Warships_replays_parser.egg-info/top_level.txt
+replay_unpack/__init__.py
+replay_unpack/battle_controller.py
+replay_unpack/entity.py
+replay_unpack/replay_decrypt.py
+replay_unpack/replay_player.py
