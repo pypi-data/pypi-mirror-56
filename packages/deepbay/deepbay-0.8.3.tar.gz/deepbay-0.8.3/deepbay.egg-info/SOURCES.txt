@@ -1,0 +1,13 @@
+README.md
+setup.py
+deepbay/DeepFeedForward.py
+deepbay/DenseBlock.py
+deepbay/GeneralizedMatrixFactorizer.py
+deepbay/NeuralCollaborativeFilter.py
+deepbay/__init__.py
+deepbay.egg-info/PKG-INFO
+deepbay.egg-info/SOURCES.txt
+deepbay.egg-info/dependency_links.txt
+deepbay.egg-info/top_level.txt
+tests/__init__.py
+tests/test_dense_block.py
