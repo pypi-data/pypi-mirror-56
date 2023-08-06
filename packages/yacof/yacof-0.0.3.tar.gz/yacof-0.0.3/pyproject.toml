@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "yacof"
+version = "0.0.3"
+description = "Yet another YAML config library"
+authors = ["fbjorn <kopfabschneider@yandex.ru>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+pydantic = "^1.1"
+"ruamel.yaml" = "^0.16.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+yacof = 'yacof.cli:main'
+
+[build-system]
+requires = ["poсetry>=0.12"]
+build-backend = "poetry.masonry.api"
