@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ecommercedesirability3
+Version: 0.1.3
+Summary: This package contains ecommerce desirability images with desirable, average, bad qualities.
+Home-page: https://www.zooper.com
+Author: Zooper Inc
+Author-email: hi@zooper.com
+License: Apache License, Version 2.0
+Keywords: index
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: keras (>=2.2.5)
+Requires-Dist: Pillow (>=6.2.0)
+
+UNKNOWN
+
+
