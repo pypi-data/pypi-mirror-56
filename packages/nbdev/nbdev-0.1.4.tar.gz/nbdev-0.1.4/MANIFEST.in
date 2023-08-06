@@ -1,0 +1,6 @@
+include CONTIBUTING.md
+include LICENSE
+include README.md
+include nbdev/templates/*tpl
+
+recursive-exclude * __pycache__
