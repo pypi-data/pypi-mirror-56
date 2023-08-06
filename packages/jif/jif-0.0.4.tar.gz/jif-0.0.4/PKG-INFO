@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: jif
+Version: 0.0.4
+Summary: CLI tool to run scipts
+Home-page: https://github.com/JasonAtallah/jif
+Author: Jason Atallah
+Author-email: jason.atallah@gmail.com
+License: MIT
+Download-URL: https://github.com/JasonAtallah/jif/archive/v0.0.4.tar.gz
+Description: # read
+        ## me
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
