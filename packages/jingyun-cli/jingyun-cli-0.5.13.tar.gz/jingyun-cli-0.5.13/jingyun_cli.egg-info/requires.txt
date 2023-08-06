@@ -1,0 +1,5 @@
+requests
+six
+supervisor
+docker-compose<1.25
+mysqldb-rich<4.0
