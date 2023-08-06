@@ -1,0 +1,13 @@
+validate_email/__init__.py,sha256=ezZLx4rVcKrhdIK7z824N4d1OAfvoq4H_mqLIfpmOfQ,59
+validate_email/constants.py,sha256=fQDkNxU7VFDhQDWPpdyJatzZiwP66SwqV7cw7fQw8IY,688
+validate_email/domainlist_check.py,sha256=gWZ7ySmIolSShsr4Ttfg7vvsrqclPViuXhof95dLxy0,1407
+validate_email/mx_check.py,sha256=aThAaKSuOBDCJD_dkU3Q2KPImnf3n9R_UpVujxNEA_E,4319
+validate_email/regex_check.py,sha256=undAJgRjdK27hXXeDDica4wlqiRTFm0lZdY0-HTQC1o,1857
+validate_email/validate_email.py,sha256=T1niysnh27ptEIcyfCw0yuDVwcR_jow6egKE8mSQ9sw,991
+validate_email/lib/blacklist.txt,sha256=AxdWJQ_XtiT-9eEC3hb5c5bwNGLtRiKZjmWsE8ZD4rQ,41768
+py3_validate_email-0.1.12.dist-info/AUTHORS,sha256=mRRy-yqz6EJP3Fl30hu9f2T4qfGiyTNYc-Gf3YajZmo,400
+py3_validate_email-0.1.12.dist-info/LICENSE,sha256=hJRzAIcNolBlvKAOkzCR2-ynAKPi0O8t4u3b2ypwTFo,660
+py3_validate_email-0.1.12.dist-info/METADATA,sha256=HkgDeUy1-2eZuBaESczd5GgLfdAd5Fs7IBlLZossKTo,2029
+py3_validate_email-0.1.12.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+py3_validate_email-0.1.12.dist-info/top_level.txt,sha256=Zme0lynck5_0zqxv8On0zt9V3ZcJAZRdUKHZmBQUIvE,15
+py3_validate_email-0.1.12.dist-info/RECORD,,
