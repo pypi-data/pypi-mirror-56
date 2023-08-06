@@ -1,0 +1,4 @@
+[console_scripts]
+ctrl-v = ctrlv:main
+ctrlv = ctrlv:main
+

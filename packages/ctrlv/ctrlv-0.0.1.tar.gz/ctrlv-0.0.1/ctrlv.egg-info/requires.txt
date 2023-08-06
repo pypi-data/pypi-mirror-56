@@ -1,0 +1,9 @@
+beautifulsoup4
+Flask-Login
+Flask-MDE>=1.1.2
+Flask-SQLAlchemy
+Flask-WTF
+html5lib
+Markdown
+waitress
+bleach

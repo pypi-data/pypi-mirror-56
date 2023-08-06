@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Editor{% endblock %}
+{% block head %}
+    {{ super() }}
+    {{mde.css}}
+{% endblock %}
+{% block body%}
+<h5 class="text-muted mb-2 mt-2">New Snippet</h5>
+<hr/>
+    <form action="{{url_for('main.new')}}" method="POST">
+        {{form.csrf_token}}
+        <div class="form-group">
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Title</span>
+                </div>
+                {{form.title(class_="form-control form-control-sm mr-1", placeholder="")}}
+            </div>
+        </div>
+	    {{form.editor}}
+        {{form.submit(class_="btn btn btn-outline-primary btn-sm")}}
+    </form>
+    <h5 class="text-muted mb-2 mt-2">Preview</h5>
+    <hr/>
+    {{mde.preview}}
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    {{ mde.js }}
+{% endblock %}
