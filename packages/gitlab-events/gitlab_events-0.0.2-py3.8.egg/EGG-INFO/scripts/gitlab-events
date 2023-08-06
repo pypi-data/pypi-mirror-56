@@ -1,0 +1,5 @@
+#!/usr/bin/python
+
+from gitlabevents import *
+
+main.main()
