@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: populi-mrobison
+Version: 0.0.4
+Summary: A module for interacting with the populi api.
+Home-page: https://github.com/wts-dev/populi-api-python
+Author: Mike Robison
+Author-email: mrobison@wts.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: lxml
+Requires-Dist: pycurl
+
+# Populi
+
+This module interacts with the populi api, handling pagination, and rate limiting using pycurl.
+Most every command found [here](https://support.populiweb.com/hc/en-us/articles/223798747#getAcademicTerms), can be accessed via pythonic methods. I have attempted to keep the two in sync
+
+## Example
+```python
+import populi
+
+populi.initialize(
+    endpoint='https://example_campus.populi.web.com/api/index.php',
+    access_key='example access key',
+    asXML=True
+)
+
+# returns transactions as xml
+results = populi.get_transactions(start_date='2012-10-01', end_date='2012,10-02')
+```
+
+
