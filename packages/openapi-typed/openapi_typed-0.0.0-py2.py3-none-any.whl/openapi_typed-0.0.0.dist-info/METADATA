@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: openapi-typed
+Version: 0.0.0
+Summary: TypedDict typings for OpenAPI specification
+Home-page: http://github.com/unmock/openapi-typed
+Author: Meeshkan Dev Team
+Author-email: dev@meeshkan.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Provides-Extra: devtf
+Requires-Dist: pytest ; extra == 'devtf'
+Requires-Dist: setuptools ; extra == 'devtf'
+Requires-Dist: twine ; extra == 'devtf'
+Requires-Dist: wheel ; extra == 'devtf'
+Requires-Dist: tensorflow ; extra == 'devtf'
+Requires-Dist: tensorboard ; extra == 'devtf'
+Requires-Dist: keras ; extra == 'devtf'
+Provides-Extra: devtorch
+Requires-Dist: pytest ; extra == 'devtorch'
+Requires-Dist: setuptools ; extra == 'devtorch'
+Requires-Dist: twine ; extra == 'devtorch'
+Requires-Dist: wheel ; extra == 'devtorch'
+Requires-Dist: torch ; extra == 'devtorch'
+
+
+# OpenAPI typed
+
+Python typings for [OpenAPI](https://swagger.io/specification/) using [TypedDict](https://www.python.org/dev/peps/pep-0589/).
+
+## Installation
+
+```bash
+pip install openapi_typed
+```
+
+## Usage
+
+```python
+from openapi_typed import OpenAPIObject, Info
+
+# Valid OpenAPIObject
+openapi_valid = OpenAPIObject(
+    openapi="3.0.0",
+    info=Info(
+        title="My API",
+        version="0.0.0")
+    )
+
+# Invalid OpenAPIObject
+openapi_invalid = OpenAPIObject(
+    openap="3.0.0",  # Type-check error, unknown attribute
+    info=Info(
+        title="My API"  # Type-check error, missing attribute `version`
+    )
+)
+```
+
+## Development
+
+Install development dependencies:
+
+```bash
+pip install -e .[dev]
+```
+
+Run tests:
+
+```bash
+pytest
+# OR
+python setup.py test
+```
+
+Build package:
+
+```bash
+python setup.py dist
+```
+
+
