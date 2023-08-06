@@ -1,0 +1,12 @@
+flask
+gunicorn
+eventlet
+flask_restful
+Flask-SocketIO
+pymongo
+py-bcrypt
+python-dateutil
+python-dotenv==0.8.2
+python-bcrypt
+requests
+websocket-client
