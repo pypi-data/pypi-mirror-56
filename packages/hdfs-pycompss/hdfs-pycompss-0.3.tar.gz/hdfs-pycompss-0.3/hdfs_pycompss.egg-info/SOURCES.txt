@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+hdfs_pycompss.egg-info/PKG-INFO
+hdfs_pycompss.egg-info/SOURCES.txt
+hdfs_pycompss.egg-info/dependency_links.txt
+hdfs_pycompss.egg-info/requires.txt
+hdfs_pycompss.egg-info/top_level.txt
+hdfspycompss/__init__.py
+hdfspycompss/block.py
+hdfspycompss/hdfs.py
+hdfspycompss/utils.py
