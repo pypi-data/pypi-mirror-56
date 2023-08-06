@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+pytrends_async.egg-info/PKG-INFO
+pytrends_async.egg-info/SOURCES.txt
+pytrends_async.egg-info/dependency_links.txt
+pytrends_async.egg-info/requires.txt
+pytrends_async.egg-info/top_level.txt
+pytrendsasync/__init__.py
+pytrendsasync/dailydata.py
+pytrendsasync/exceptions.py
+pytrendsasync/request.py
+pytrendsasync/test_trendReq.py
