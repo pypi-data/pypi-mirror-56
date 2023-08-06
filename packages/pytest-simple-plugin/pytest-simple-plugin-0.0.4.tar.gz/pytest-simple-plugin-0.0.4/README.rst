@@ -1,0 +1,1 @@
+A simple pyest plugin, just print hello
