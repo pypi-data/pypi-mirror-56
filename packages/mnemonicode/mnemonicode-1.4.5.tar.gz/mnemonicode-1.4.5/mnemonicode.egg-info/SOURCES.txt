@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+setup.py
+mnemonicode/__init__.py
+mnemonicode/__init__.pyi
+mnemonicode/_utils.py
+mnemonicode/_utils.pyi
+mnemonicode/_wordlist.py
+mnemonicode/py.typed
+mnemonicode/tests/__init__.py
