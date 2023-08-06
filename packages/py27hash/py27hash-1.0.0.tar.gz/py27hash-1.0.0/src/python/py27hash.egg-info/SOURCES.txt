@@ -1,0 +1,11 @@
+README.md
+setup.py
+src/python/py27hash/__init__.py
+src/python/py27hash/dict.py
+src/python/py27hash/hash.py
+src/python/py27hash/key.py
+src/python/py27hash/set.py
+src/python/py27hash.egg-info/PKG-INFO
+src/python/py27hash.egg-info/SOURCES.txt
+src/python/py27hash.egg-info/dependency_links.txt
+src/python/py27hash.egg-info/top_level.txt
