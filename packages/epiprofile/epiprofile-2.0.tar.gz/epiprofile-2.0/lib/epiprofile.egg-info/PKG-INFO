@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: epiprofile
+Version: 2.0
+Summary: Epidaurus is a program to visualize the epigenomic landscape of genomic regions of interest (TF bindings, TSS, etc).
+Home-page: http://epidaurus.sourceforge.net/
+Author: Liguo Wang
+Author-email: wangliguo78@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: epigenomic,visualize,bigwig
+Platform: Linux
+Platform: MacOS
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics

@@ -1,0 +1,10 @@
+include distribute_setup.py
+
+recursive-include lib *.py
+recursive-include lib *.c
+recursive-include lib *.pyx
+recursive-include test/*
+
+include MANIFEST.in
+include COPYING
+include README

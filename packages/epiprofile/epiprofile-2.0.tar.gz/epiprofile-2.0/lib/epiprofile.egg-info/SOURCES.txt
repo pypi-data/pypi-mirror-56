@@ -1,0 +1,16 @@
+COPYING
+MANIFEST.in
+README
+distribute_setup.py
+setup.cfg
+setup.py
+bin/epidaurus.py
+lib/bwpmodule/BED.py
+lib/bwpmodule/__init__.py
+lib/bwpmodule/ireader.py
+lib/epiprofile.egg-info/PKG-INFO
+lib/epiprofile.egg-info/SOURCES.txt
+lib/epiprofile.egg-info/dependency_links.txt
+lib/epiprofile.egg-info/not-zip-safe
+lib/epiprofile.egg-info/requires.txt
+lib/epiprofile.egg-info/top_level.txt

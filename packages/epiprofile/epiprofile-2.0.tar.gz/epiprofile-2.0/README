@@ -1,0 +1,26 @@
+Prerequisite
+-------------
+  * python3.6 or newer (http://www.python.org/getit/releases/2.7/)
+  * numpy and scipy (http://numpy.scipy.org/)
+  * pyBigWig (https://github.com/deeptools/pyBigWig)
+  
+Installation using pip 
+----------------------
+$ pip3 install epiprofile	#do NOT use "pip install epidaurus"
+
+Please note: To avoid name collision, we register "epidaurus" as "epiprofile" on pypi.org, since another pacakge already used "epidaurus".
+
+
+Run epidaurus
+-------------
+$ python3 epidaurus.py  CONFIG_FILE  BED_FILE OUT_PREFIX 
+
+
+Online Manual
+-------------
+http://epidaurus.sourceforge.net/
+
+
+Contact
+-------
+Liguo Wang, wang.liguo@mayo.edu
