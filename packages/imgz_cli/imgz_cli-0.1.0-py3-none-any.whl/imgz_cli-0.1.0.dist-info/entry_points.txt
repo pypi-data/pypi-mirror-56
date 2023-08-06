@@ -1,0 +1,3 @@
+[console_scripts]
+imgz=imgz_cli.cli:main
+
