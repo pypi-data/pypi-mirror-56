@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mcrllm
+Version: 0.0.16
+Summary: MCRLLM: Multivariate Curve Resolution by Log-Likelihood Maximization
+Home-page: UNKNOWN
+Author: Ryan Gosselin
+Author-email: ryan.gosselin@usherbrooke.ca
+License: UNKNOWN
+Description: MCRLLM: Multivariate Curve Resolution by Log-Likelihood Maximization. 
+        
+        Lavoie F.B., Braidy N. and Gosselin R. (2016) Including Noise Characteristics in MCR to improve Mapping and Component Extraction from Spectral Images, Chemometrics and Intelligent Laboratory Systems, 153, 40-50.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
