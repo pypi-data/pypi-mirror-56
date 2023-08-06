@@ -1,0 +1,16 @@
+elasticsearch_migrate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elasticsearch_migrate/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+elasticsearch_migrate/apps.py,sha256=moxzohKhslcy7VFiJ-Zem5kv27kzvIZbyqwUku4sngE,116
+elasticsearch_migrate/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+elasticsearch_migrate/registry.py,sha256=GhB7Ow4vMIJSNud9a3zi0pGwPzlj23yfFa7NM2ftWWs,1888
+elasticsearch_migrate/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+elasticsearch_migrate/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+elasticsearch_migrate/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elasticsearch_migrate/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elasticsearch_migrate/management/commands/migrate_docs.py,sha256=_5A-lt7oBtRWRAoJS4EEVgD2l7e5B4HLis1LX8gg3w0,322
+elasticsearch_migrate/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elasticsearch_django_migrate-0.0.1.dist-info/LICENSE,sha256=BBJaREdZ8mG-mBVfoJZeEdTTbF0lP-3vs26lB958kjg,1067
+elasticsearch_django_migrate-0.0.1.dist-info/METADATA,sha256=bjs8K70lAKZafDUjbxfAvu0Vblbuoz4rhdxlpy0bWXQ,625
+elasticsearch_django_migrate-0.0.1.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+elasticsearch_django_migrate-0.0.1.dist-info/top_level.txt,sha256=qVMX61p9kMwJV7CHm1ksNVj-SOqqoD9GoD1GYNflyxo,22
+elasticsearch_django_migrate-0.0.1.dist-info/RECORD,,
