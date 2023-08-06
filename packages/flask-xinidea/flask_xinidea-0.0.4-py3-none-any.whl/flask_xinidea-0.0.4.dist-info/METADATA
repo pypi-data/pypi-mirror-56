@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: flask-xinidea
+Version: 0.0.4
+Summary: Some Flask custom extension
+Home-page: UNKNOWN
+Author: phiix
+Author-email: phiix@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Flask XinIDEA
+
+Some Flask custom extension
+
+- redprint
+- reflectdb
+
+### Install
+
+```
+pip install --index-url https://test.pypi.org/simple/ --no-deps -U flask-xinidea
+```
+
+
+### Redprint
+
+- Usage
+
+```python
+from flask import Flask
+from flask import Blueprint
+from flask_xinidea.redprint import Redprint
+
+app = Flask(__name__)
+bp = Blueprint('test', __name__)
+test = Redprint(bp, url_prefix='/test')
+
+
+@test.route('')
+def index():
+    return 'this is a test'
+
+
+app.register_blueprint(bp)
+
+if __name__ == "__main__":
+    app.run()
+
+```
+
+- Test
+```
+flask run
+flask routes
+curl http://127.0.0.1:5000/test
+```
+
+### ReflectDB
+
+- Usage
+```python
+from flask import Flask
+from flask import Blueprint
+from flask_xinidea.redprint import Redprint
+from flask_xinidea.reflectdb import ReflectDB
+
+settings = dict(
+    SQLALCHEMY_TRACK_MODIFICATIONS=False,
+    SQLALCHEMY_DATABASE_URI='mysql+cymysql://localhost/temp',
+    SQLALCHEMY_BINDS={
+        'test': 'mysql+cymysql://localhost/test'
+    }
+)
+
+app = Flask(__name__)
+app.config.from_mapping(settings)
+
+bp = Blueprint('test', __name__)
+test = Redprint(bp, url_prefix='/test')
+
+# the test is the SQLALCHEMY_BINDS key or
+# a SQLALCHEMY_DATABASE_URI like 'mysql://localhost/temp'
+
+testdb = ReflectDB('test', app)
+# testdb = ReflectDB('mysql://localhost/temp')
+User = testdb.get_table('users')
+
+@test.route('')
+def index():
+    return 'this is a test'
+
+
+@test.route('/users/<int:id>')
+def get_user(id):
+    user = User.query.get(id)
+    if user:
+        return user.name
+    else:
+        return 'Not exists'
+
+
+app.register_blueprint(bp)
+
+if __name__ == "__main__":
+    app.run()
+
+```
+
+- Test
+
+```
+flask routes
+flask run
+curl http://127.0.0.1:5000/test/users/user:id
+```
+
+----------
+2019-11-29 by phiix
+
