@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: RSSReader
+Version: 1.0.5
+Summary: a simple Schedule of RSS Reader
+Home-page: UNKNOWN
+Author: tim
+Author-email: tim_xia@icloud.com
+License: UNKNOWN
+Description: #add python's docker
+        `docker run -dt --name python-env -v ~/python/ini:/var/ini python`
+        #need reference module
+        `pip install requests_html xmltodict pymongo requests python-dateutil apscheduler RSSReader`
+        #about RSSReader
+        ##you need：
+        * .ini configuration files
+        * mongodb save RSS
+        * a simple RSS Reader，if you need ,can connetion to me <tim_xia@icloud.com>
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
