@@ -1,0 +1,11 @@
+README.md
+setup.py
+bin/fsearch
+fsearch/__init__.py
+fsearch/constants.py
+fsearch/dirops.py
+fsearch/utils.py
+nl_fsearch.egg-info/PKG-INFO
+nl_fsearch.egg-info/SOURCES.txt
+nl_fsearch.egg-info/dependency_links.txt
+nl_fsearch.egg-info/top_level.txt
