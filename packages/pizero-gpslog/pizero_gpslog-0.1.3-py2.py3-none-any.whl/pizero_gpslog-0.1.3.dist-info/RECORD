@@ -1,0 +1,15 @@
+pizero_gpslog/__init__.py,sha256=sF_qHYY-cHiH70ZZ7HddtUIX0oddYAneSWlWJ31d_AE,1830
+pizero_gpslog/converter.py,sha256=9VX7F1UXYJDbNtlqlYYfJ-vMNYj-jZBg6Ls1o1FhGN4,9417
+pizero_gpslog/fakeled.py,sha256=CwlNUvhB2mohH8b4Rq_NCZT7KK-nYukDMQ5uSHiuLMc,2933
+pizero_gpslog/gpsd.py,sha256=wGXDYNvM7kYGWz42U0VDbxgSKhPsU5VUtNBtH2Duvek,11913
+pizero_gpslog/installer.py,sha256=DNzBztIVniUCZLrfiCLvzEOOyrDo16jYVJEjcjDegqE,8338
+pizero_gpslog/runner.py,sha256=7Q4-gyyP6bzHNEjhTK7pNJY5vUiC6MsUha__TMTeGDs,6719
+pizero_gpslog/version.py,sha256=n7BKAnpB-g2I1XcLoSYklQ9MgdVk-P9t8EpWKB262OY,1906
+pizero_gpslog/tests/__init__.py,sha256=sF_qHYY-cHiH70ZZ7HddtUIX0oddYAneSWlWJ31d_AE,1830
+pizero_gpslog/tests/test_version.py,sha256=DwrzMW0U7Tq7XeqccozBvGAX8OPe3Kh9LXOfKKHRlYI,2793
+pizero_gpslog-0.1.3.dist-info/LICENSE,sha256=iEtDSVe6aIMRlZDRzkl_1ESpyLcDC278TeglQBxnJb8,34501
+pizero_gpslog-0.1.3.dist-info/METADATA,sha256=yYR3GZOAkpx8yYRrk_XvBKlYDA0-qkmdzFwNBOvstx0,14591
+pizero_gpslog-0.1.3.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+pizero_gpslog-0.1.3.dist-info/entry_points.txt,sha256=hMFWJ1OmIPs-dXPJztJR8b8pn81Ta9Hasgkwx5i6sco,187
+pizero_gpslog-0.1.3.dist-info/top_level.txt,sha256=4gTASfeRz7Bjzp8YH6mVwqU8Gfcpc0GOfyr3U6_oPLA,14
+pizero_gpslog-0.1.3.dist-info/RECORD,,
