@@ -1,0 +1,12 @@
+.gitignore
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+yapydata/__init__.py
+yapydata.egg-info/PKG-INFO
+yapydata.egg-info/SOURCES.txt
+yapydata.egg-info/dependency_links.txt
+yapydata.egg-info/not-zip-safe
+yapydata.egg-info/requires.txt
+yapydata.egg-info/top_level.txt
