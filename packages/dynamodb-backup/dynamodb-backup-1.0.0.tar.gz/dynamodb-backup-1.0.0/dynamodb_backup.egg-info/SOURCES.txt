@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+dynamodb_backup/__init__.py
+dynamodb_backup/cli.py
+dynamodb_backup.egg-info/PKG-INFO
+dynamodb_backup.egg-info/SOURCES.txt
+dynamodb_backup.egg-info/dependency_links.txt
+dynamodb_backup.egg-info/entry_points.txt
+dynamodb_backup.egg-info/not-zip-safe
+dynamodb_backup.egg-info/requires.txt
+dynamodb_backup.egg-info/top_level.txt
