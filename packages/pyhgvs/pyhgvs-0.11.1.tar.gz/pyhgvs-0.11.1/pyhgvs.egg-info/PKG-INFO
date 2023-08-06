@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: pyhgvs
+Version: 0.11.1
+Summary: HGVS name parsing and formatting
+Home-page: UNKNOWN
+Author: Matt Rasmussen
+Author-email: rasmus@counsyl.com
+License: UNKNOWN
+Description: This library provides a simple to use Python API for parsing, formatting, and normalizing variant names specified in the standard recommended by the Human Genome Variation Society (HGVS).
+Platform: UNKNOWN
