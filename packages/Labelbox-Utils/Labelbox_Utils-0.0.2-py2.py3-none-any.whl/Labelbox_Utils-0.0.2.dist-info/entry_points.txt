@@ -1,0 +1,3 @@
+[console_scripts]
+labelbox_export_json = labelboxutils.ui.labelbox_export_json_command_line:main
+
