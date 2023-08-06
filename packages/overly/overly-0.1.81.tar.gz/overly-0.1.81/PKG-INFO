@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: overly
+Version: 0.1.81
+Summary: overly - http client testing for hoomans
+Home-page: https://github.com/theelous3/overly
+Author: Mark Jameson - aka theelous3
+License: MIT
+Description: overly is for testing your http client, from the balan to the bananas.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.6
