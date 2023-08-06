@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+lib/masonjar/__init__.py
+lib/masonjar.egg-info/PKG-INFO
+lib/masonjar.egg-info/SOURCES.txt
+lib/masonjar.egg-info/dependency_links.txt
+lib/masonjar.egg-info/not-zip-safe
+lib/masonjar.egg-info/top_level.txt
+lib/masonjar/dictionary/__init__.py
+lib/masonjar/dictionary/dot.py
