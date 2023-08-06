@@ -1,0 +1,8 @@
+-r marv.in
+lz4
+matplotlib
+pillow
+pretty-bad-protocol  # aka: gnupg
+pycrypto
+pyyaml
+utm
