@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: Indago
+Version: 0.0.2
+Summary: Numerical optimization framework
+Home-page: http://sim.riteh.hr/
+Author: sim.riteh.hr
+Author-email: stefan.ivic@riteh.hr
+License: UNKNOWN
+Description: # Indago
+        
+        Indago is a Python 3 module for numerical optimization.
+        
+        ## Installation
+        
+        In order to obtain Indago code, clone Gitlab repository by executing following command in the directory where you want to loacte Indago root directory:
+        ```
+        git clone https://gitlab.com/sivic/indago.git
+        ```
+        
+        
+        For building and installing Indago package into your Python environment
+        ```
+        python setup.py build
+        python setup.py install
+        ```
+        
+        Or for continous testing/developing:
+        ```
+        python setup.py clean build install
+        ```
+        
+        ## Dependencies
+        
+        A following packages should be installed using `aptitude`:
+        
+        * `python3`
+        * `python3-pip`
+        * `python3-tk`
+        
+        ```
+            sudo apt install python3 python3-pip python3-tk
+        ```
+        
+        After packages installation using above command, additional python packages should be installed using `pip` from `requirements.txt`
+        
+        ```
+            pip install -r requirements.txt
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
