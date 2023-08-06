@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: donkeykong
+Version: 0.0.1
+Summary: A monkey-patching of Luigi.
+Home-page: https://github.com/maurosilber/donkeykong
+Author: Mauro Silberberg
+Author-email: maurosilber@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: luigi
+Requires-Dist: click
+Requires-Dist: tabulate
+
+UNKNOWN
+
+
