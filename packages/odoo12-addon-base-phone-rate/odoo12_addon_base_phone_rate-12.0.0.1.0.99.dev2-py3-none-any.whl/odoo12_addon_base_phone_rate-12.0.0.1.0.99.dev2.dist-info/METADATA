@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: odoo12-addon-base-phone-rate
+Version: 12.0.0.1.0.99.dev2
+Summary: Store international rates for phone call
+Home-page: https://github.com/OCA/vertical-isp
+Author: Open Source Integrators, Odoo Community Association (OCA)
+Author-email: support@odoo-community.org
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.5
+Requires-Dist: odoo (<12.1dev,>=12.0a)
+
+UNKNOWN
+
+
