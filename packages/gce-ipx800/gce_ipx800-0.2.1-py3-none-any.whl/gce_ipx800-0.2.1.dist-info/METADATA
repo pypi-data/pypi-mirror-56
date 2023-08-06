@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: gce-ipx800
+Version: 0.2.1
+Summary: Module to control the IPX800 V4 device from GCE Electronics.
+Home-page: https://github.com/marcaurele/py-ipx800
+License: UNKNOWN
+Keywords: ipx800, GCE-Electronics, GCE, home-automation
+Author: Marc-Aurèle Brothier
+Author-email: m@brothier.org
+Maintainer: Marc-Aurèle Brothier
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests
+
+GCE-IPX800
+==========
+
+.. image:: https://github.com/marcaurele/py-ipx800/workflows/Build%20status/badge.svg
+   :alt: Build Status
+   :target: https://github.com/marcaurele/py-ipx800/actions
+
+.. image:: https://img.shields.io/pypi/l/gce-ipx800.svg
+   :alt: License
+   :target: https://pypi.org/project/gce-ipx800/
+
+.. image:: https://img.shields.io/pypi/pyversions/gce-ipx800.svg
+   :alt: Python versions
+   :target: https://pypi.org/project/gce-ipx800/
+
+A python library to control a GCE-Electronics IPX800 V4 device through its API.
+
+* Python 3.6+ support
+* Apache License
+
+IPX800 features implemented
+---------------------------
+
+* Control relays
+
+
+Installation
+------------
+
+.. code-block:: console
+
+    > pip install gce-ipx800
+
+Usage
+-----
+
+.. note:: The default API key of the device is `apikey`.
+
+.. code-block:: python
+
+    from ipx800 import ipx800
+
+    ipx = ipx800("http://your-device-ip", "apikey")
+
+    r4 = ipx.relays[3]
+
+    r4.status  # => return a Boolean
+
+    r4.on()
+
+    r4.off()
+
+    r4.togle()
+
+Links
+-----
+
+* GCE IPX800 V4 API: https://gce.ovh/wiki/index.php?title=API_V4
+
