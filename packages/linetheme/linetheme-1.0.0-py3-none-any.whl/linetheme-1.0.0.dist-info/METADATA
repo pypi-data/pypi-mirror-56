@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: linetheme
+Version: 1.0.0
+Summary: LINE theme editor.
+Home-page: https://github.com/nanato12/line-theme-editor
+Author: nanato12
+Author-email: admin@nanato12.info
+License: MIT
+Keywords: linetheme line-theme-editor
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+
+# line-theme-editor
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?logo=paypal&style=flat-square)](https://paypal.me/bluesquarejb/100)
+[![License](https://img.shields.io/github/license/ritiek/spotify-downloader.svg)](https://github.com/nanato12/line-theme-editor/blob/develop_nanato12/LICENSE)
+[![PyPi](https://img.shields.io/pypi/v/linetheme.svg)](https://pypi.org/project/linetheme)
+
+
+LINEの着せ替えを簡単に編集できるライブラリ
+
+## ライブラリの詳細
+
+```python
+Theme(theme_name, os_type='Android', base_theme='black', log=True)
+```
+
+|引数  |概要  |
+|---|---|
+|base_theme  |`base_themefile/{os_type}/{base_name}` がベースファイルとして扱われる  |
+|os_type  |iOS, Android <br>※iOSは脱獄が必要なため未実装  |
+|theme_name  |自作着せ替えの名前  |
+|log  |ログファイルの残すか否か  |
+
+
+|メソッド  |概要  |
+|---|---|
+|thaw_file()  |ベースファイルの解凍を行う。<br>`temp_{theme_name}`配下に解凍される。  |
+|compression_file(delete_temp=True)  |`temp_{theme_name}` を圧縮する。 <br>`comp_themefile/{os_type}/{theme_name}/themefile`に保存される。 <br> delete_tempがTrueだと `temp_{theme_name}` が削除される。 |
+|edit_theme(*args)  |theme.jsonを編集する。 [詳しくはこちら](#themejsonの編集)  |
+|edit_by_egg(key, status)  |あらかじめ定義されているjsonの編集メソッド。<br>使い方は[sample_egg.py](https://github.com/nanato12/line-theme-editor/blob/master/sample_egg.py)を参照。  |
+|add_image(file_name)  |`temp_{theme_name}/images` 配下に画像を追加するメソッド。<br>※既存している場合、上書きされる。  |
+|load_log(file_name)  |ログファイルから一括編集できるメソッド。|
+|apply(theme_id=None)  |LINEの着せ替えを置き換えるメソッド。<br>theme_idを指定いない場合、`base_theme` の着せ替えに適用される。|
+
+
+## theme.jsonの編集
+
+修正前のtheme.json
+
+```json
+"manifest": {
+    "name": "black",
+    "provider": {
+        "name": "LINE Corporation",
+        "url": "http://www.linecorp.com"
+    },
+    "themeVersion": "9.17.0"
+}
+```
+
+
+このプログラムを動かす
+
+```python
+from linetheme import Theme
+
+THEME_NAME = 'ETS_black'
+
+if __name__ == "__main__":
+    theme = Theme(THEME_NAME, 'Android', 'black', False)
+    theme.thaw_file()
+
+    theme.edit_theme('manifest', 'name', THEME_NAME)
+    theme.edit_theme('manifest', 'provider', 'name', 'nanato12')
+    theme.edit_theme('manifest', 'provider', 'url', 'http://www.nanato12.info')
+    theme.edit_theme('manifest', 'themeVersion', '1.0.0')
+
+    theme.compression_file(False)
+
+    theme.apply()
+```
+
+編集後のtheme.json
+
+```json
+"manifest": {
+    "name": "ETS_black",
+    "provider": {
+        "name": "nanato12",
+        "url": "http://www.nanato12.info"
+    },
+    "themeVersion": "1.0.0"
+}
+```
+
+## Other
+Androidの色透明化はこちらの記事を参考に。
+
+- [ARGBの透明度カラーコード](https://qiita.com/konifar/items/106731d8a35303606597)
+
+## License
+MIT
+
+
