@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: misclogic
+Version: 0.0.1
+Summary: mytoys: misc verilog tool
+Home-page: https://github.com/mytoys/misclogic
+Author: fdi
+Author-email: misclogic@163.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: # misclogic
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
