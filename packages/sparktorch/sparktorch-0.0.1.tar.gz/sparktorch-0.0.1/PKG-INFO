@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sparktorch
+Version: 0.0.1
+Summary: Deep learning on Apache Spark with Pytorch
+Home-page: https://github.com/dmmiller612/sparktorch
+Author: Derek Miller
+Author-email: dmmiller612@gmail.com
+License: MIT
+Download-URL: https://github.com/dmmillyer612/sparktorch/archive/0.0.1.tar.gz
+Description: # SparkTorch
+        
+        Train and run Pytorch models on Apache Spark.
+        
+Keywords: pytorch,spark,sparktorch,machine learning,deep learning
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
