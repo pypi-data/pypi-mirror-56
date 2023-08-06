@@ -1,0 +1,12 @@
+aioamqp
+anyio
+
+[test]
+aiodocker
+mypy
+pycodestyle
+pylint
+pytest
+pytest-asyncio
+pytest-cov
+pytest-mock
