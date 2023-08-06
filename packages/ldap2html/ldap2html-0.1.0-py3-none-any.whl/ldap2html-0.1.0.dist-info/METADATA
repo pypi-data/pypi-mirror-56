@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ldap2html
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/nonylene/ldap2html
+License: MIT
+Author: nonylene
+Author-email: nonylene@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: ldap3 (>=2.6,<3.0)
+Project-URL: Repository, https://github.com/nonylene/ldap2html
