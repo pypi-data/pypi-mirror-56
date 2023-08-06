@@ -1,0 +1,12 @@
+README.md
+setup.py
+ipwg/__init__.py
+ipwg/entry.py
+ipwg/generator.py
+ipwg/util.py
+ipwg.egg-info/PKG-INFO
+ipwg.egg-info/SOURCES.txt
+ipwg.egg-info/dependency_links.txt
+ipwg.egg-info/entry_points.txt
+ipwg.egg-info/top_level.txt
+test/test_generator.py
