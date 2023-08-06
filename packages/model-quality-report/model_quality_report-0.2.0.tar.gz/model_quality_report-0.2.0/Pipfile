@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+twine = "*"
+setuptools = "*"
+sphinx = "*"
+coverage = "*"
+PyScaffold = "==3.1"
+keyring = "*"
+
+[packages]
+pandas = "==0.24.2"
+scikit-learn = "*"
+
+[requires]
+python_version = "3.7"

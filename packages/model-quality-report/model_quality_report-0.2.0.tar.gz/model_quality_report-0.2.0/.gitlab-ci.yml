@@ -1,0 +1,17 @@
+stages:
+ - tests
+
+
+before_script:
+ - eval "$(pyenv init -)"
+ - eval "$(pyenv virtualenv-init -)"
+
+
+run_tests:
+ stage: tests
+ image: francesco086/pipenv
+ script:
+  - pipenv install
+  - export PYTHONPATH=$(pwd)/src
+  - pipenv run coverage run -m unittest discover tests
+  - pipenv run coverage report
