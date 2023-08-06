@@ -1,0 +1,206 @@
+Metadata-Version: 2.1
+Name: handofcats
+Version: 2.4.0
+Summary: python function to command translator
+Home-page: https://github.com/podhmo/handofcats
+Author: podhmo
+Author-email: 
+License: mit
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: prestring
+Requires-Dist: typing-extensions
+Requires-Dist: magicalimport
+Provides-Extra: dev
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Provides-Extra: docs
+Provides-Extra: testing
+Requires-Dist: flake8 ; extra == 'testing'
+Requires-Dist: black ; extra == 'testing'
+
+handofcats
+========================================
+
+.. image:: https://travis-ci.org/podhmo/handofcats.svg
+  :target: https://travis-ci.org/podhmo/handofcats.svg
+
+
+A tiny Converter that making executable command script from python function.
+If the function is type annotated, it is also used.
+
+Please using `as_command()` decorator.
+
+
+as_command()
+----------------------------------------
+
+greeting.py
+
+.. code-block:: python
+
+  from handofcats import as_command
+
+  @as_command
+  def greeting(message: str, is_surprised: bool = False, name: str = "foo") -> None:
+      """greeting message"""
+      suffix = "!" if is_surprised else ""
+      print("{name}: {message}{suffix}".format(name=name, message=message, suffix=suffix))
+
+
+.. code-block:: console
+
+  $ python greeting.py -h
+  usage: greeting.py [-h] [--expose] [--is-surprised] [--name NAME] message
+
+  greeting message
+
+  positional arguments:
+    message
+
+  optional arguments:
+    -h, --help      show this help message and exit
+    --expose
+    --is-surprised
+    --name NAME
+
+  $ python greeting.py hello
+  foo: hello
+  $ python greeting.py --is-surprised hello
+  foo: hello!
+  $ python greeting.py --is-surprised --name=bar bye
+  bar: bye!
+
+(TODO: detail description)
+
+`--expose`
+----------------------------------------
+
+calling with `--expose` option, generationg the code that dropping dependencies of handofcats module.
+
+.. code-block:: console
+
+  $ python greeting.py --expose
+  def greeting(message: str, is_surprised: bool = False, name: str = "foo") -> None:
+      """greeting message"""
+      suffix = "!" if is_surprised else ""
+      print("{name}: {message}{suffix}".format(name=name, message=message, suffix=suffix))
+
+  def main(argv=None):
+      import argparse
+      parser = argparse.ArgumentParser(description='greeting message')
+      parser.print_usage = parser.print_help
+      parser.add_argument('message')
+      parser.add_argument('--is-surprised', action='store_true')
+      parser.add_argument('--name', default='foo', required=False)
+      args = parser.parse_args(argv)
+      greeting(**vars(args))
+
+
+  if __name__ == '__main__':
+      main()
+
+
+`--inplace`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+With `inplace` option, when `--expose`, overwrite target source.
+
+`handofcats` command
+----------------------------------------
+
+sum.py
+
+.. code-block:: python
+
+  def sum(x: int, y: int) -> None:
+      print(f"{x} + {y} = {x + y}")
+
+It is also ok, calling the function that not decorated via handofcats command.
+
+.. code-block:: console
+
+  $ handofcats sum.py:sum 10 20
+  10 + 20 = 30
+
+  $ handofcats sum.py:sum -h
+  handofcats sum.py:sum -h
+  usage: handofcats [-h] [--expose] x y
+
+  positional arguments:
+    x
+    y
+
+  optional arguments:
+    -h, --help  show this help message and exit
+    --expose
+
+experimental
+----------------------------------------
+
+sequences
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+  from typing import List, Optional
+
+  def psum(xs: List[int], *, ys: Optional[List[int]] = None):
+      # treated as
+      # parser.add_argument('xs', nargs='*', type=int)
+      # parser.add_argument('--ys', action='append', required=False, type=int)
+      ..
+
+choices
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+  from typing_extensions import Literal
+
+
+  DumpFormat = Literal["json", "csv"]   # this: (experimental)
+
+
+  def run(*, format: DumpFormat = "json"):
+      # treated as
+      # parser.add_argument("--format", defaul="json", choices=("json", "csv"), required=False)
+      ...
+
+
+2.4.0
+
+- some refactoring
+- use magicalimport for reducing code
+- use fastentrypoint for fast bootstrap time editable installed
+
+2.3.2
+
+- fix, with Literal Types, detect type is failed
+
+2.3.1
+
+- fix, choices's type is list, not dict
+
+2.3.0
+
+- support Literal types
+- fix, error is occured, running with `from __future__ import annotations`
+- fix, generated code is invalid when positional arguments with "_"
+- fix, unable to use the function named "main"
+- `--typed` option, with `--expose`
+
+2.2.0
+
+- `--inplace` option, with `--expose`
+
+2.1.0
+
+- `choices` function
+- fix bug that it is not working, importing with physical filepath
+
+
