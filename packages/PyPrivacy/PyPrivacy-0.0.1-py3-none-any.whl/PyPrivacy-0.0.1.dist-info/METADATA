@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: PyPrivacy
+Version: 0.0.1
+Summary: A Python framework to implement command-level privacy
+Home-page: https://github.com/ancile-project/pyprivacy/
+Author: Eugene Bagdasaryan
+Author-email: eugene@cs.cornell.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## Core functionality of the Ancile project
+
+TBD will add more details later.
+
