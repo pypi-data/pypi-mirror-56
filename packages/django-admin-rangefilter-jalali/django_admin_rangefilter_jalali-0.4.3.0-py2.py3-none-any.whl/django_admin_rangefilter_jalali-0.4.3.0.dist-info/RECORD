@@ -1,0 +1,15 @@
+django_admin_rangefilter_jalali-0.4.3.0.dist-info/DESCRIPTION.rst,sha256=xuiyDysDDIdFlaG_0IscY8QHDVSWTdiWukMaGhUObYk,1534
+django_admin_rangefilter_jalali-0.4.3.0.dist-info/METADATA,sha256=D4CgjCgTNqa2mzBgzY1CoK60FDWE5yQEpFcWi_mFn6c,2644
+django_admin_rangefilter_jalali-0.4.3.0.dist-info/RECORD,,
+django_admin_rangefilter_jalali-0.4.3.0.dist-info/WHEEL,sha256=kdsN-5OJAZIiHN-iO4Rhl82KyS0bDWf4uBwMbkNafr8,110
+django_admin_rangefilter_jalali-0.4.3.0.dist-info/metadata.json,sha256=jUYTRKHQkj54ibrAJn1owY26z13WicZxfutHIfOSbAE,1242
+django_admin_rangefilter_jalali-0.4.3.0.dist-info/top_level.txt,sha256=iSoq2E48W93xjIoE5s0mgUzNpYCCHrVDi5kKr4OfNtw,51
+rangefilter_jalali/__init__.py,sha256=gIrec5ekMdyiL6Nvk_lVKCC5o7_vAAzDLd2EZcO4ZV8,213
+rangefilter_jalali/apps.py,sha256=SiB4dkvv9dNJ5iffHJ5axmoircptvjL8dKoljwcJU34,263
+rangefilter_jalali/filter.py,sha256=wkHdNl-SSO5MY6qEcm2l4wHwQu_EYujBa2vbc_k4bfo,9530
+rangefilter_jalali/models.py,sha256=oHCCxq7HkD3BmRaezvSEP-v6UAUTRPGayOqGUul0RAw,65
+rangefilter_jalali/tests.py,sha256=Ad9kWhzAC2tmMVaKBKbREFcNtvYB2DiiGMcuj43J5RY,11314
+rangefilter_jalali/templates/rangefilter/date_filter.html,sha256=0qe0zWt0rweC5xJ0p5SGONEVPUkjSMvt2lur4bLsKYM,6126
+rangefilter_jalali/templates/rangefilter/date_filter_1_8.html,sha256=lnw4bpEmq2B1Qj-YRiXGLBFS2f4LBIILIxXznEhLUUw,3125
+rangefilter_jalali/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rangefilter_jalali/templatetags/rangefilter_compat.py,sha256=t0roDHDb0yPq_trL4KB1pxnBRBwwHZoraExloVvi-w4,390
