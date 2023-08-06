@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: paddle-fleet
+Version: 0.1.1
+Summary: Distributed Training Package Based on PaddlePaddle
+Home-page: https://github.com/PaddlePaddle/Fleet
+Author: PaddlePaddle Author
+Author-email: dongdaxiang@baidu.com
+License: Apache 2.0
+Keywords: online-training batch-training easy-to-use distributed-training
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: protobuf (>=3.1.0)
+Requires-Dist: paddlepaddle
+Requires-Dist: enum
+Requires-Dist: unittest2
+
+Fleet Package is a high level distributed training package.
+A user can easily define deep learning models with fleet built-in package or generate a new model with API.
+Online Training is supported in Fleet package.
+
