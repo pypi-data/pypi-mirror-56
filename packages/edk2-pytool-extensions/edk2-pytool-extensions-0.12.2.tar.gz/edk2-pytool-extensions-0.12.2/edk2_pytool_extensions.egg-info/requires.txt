@@ -1,0 +1,5 @@
+pyyaml
+edk2-pytool-library>=0.10.3
+
+[openssl]
+pyopenssl
