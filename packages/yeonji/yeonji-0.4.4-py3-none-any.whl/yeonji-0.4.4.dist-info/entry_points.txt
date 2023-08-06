@@ -1,0 +1,7 @@
+[console_scripts]
+borgsize = yeonji.borgsize:main
+flacco = yeonji.flacco:main
+me2dlc = yeonji.me2dlc:main
+ytd = yeonji.ytd:main
+ytdlj = yeonji.ytdlj:main
+
