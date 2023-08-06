@@ -1,0 +1,29 @@
+-r tox.txt
+Click
+bpython
+bumpversion
+colorio
+colormath
+cython
+flake8
+flake8-bugbear
+gfm
+# instakit
+imageio
+ipython
+jupyter
+mypy>=0.720
+pythonpy
+pytype
+pytz
+readme-renderer
+requests
+scipy
+setproctitle
+termplotlib
+termtables
+tifffile
+twine
+yajl
+yapf
+xerox
