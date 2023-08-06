@@ -1,0 +1,176 @@
+Metadata-Version: 2.1
+Name: setuptest
+Version: 1.1.7
+Summary: The Selenium based setuptest for the CYBR CSCW-SUITE (CCS) - check the README.md to follow the steps for making it run from your PyCharm IDE
+Home-page: https://c-c-s.sourceforge.io/
+Author: Florian Strahberger
+Author-email: flori@ctemplar.com
+License: MIT
+Description: #  The python-based setuptest for the CYBR CSCW-SUITE (CCS): https://c-c-s.sourceforge.io/
+         (will use selenium & pytest)
+        
+        **Requirements:**
+        
+        1. python3
+        
+        2. pytest
+        
+        3. Chrome
+        
+        4. ChromeDriver (must fit to the Chrome-version on your system!)
+        
+        5. a CYBR CSCW-SUITE (CCS) started on your server (**docker-compose up --build** *was performed and you can see the login-form when you enter the IP (or localhost) in your browser*)
+        
+        6. PyCharm if you want to follow the steps below (else, you need to make some adaptions)
+        
+        You can get PyCharm CE for free at: https://www.jetbrains.com/pycharm/download/ 
+        
+        You can get ChromeDriver from: https://chromedriver.chromium.org/)
+        or from the source mentioned in the setup-tutorial related to your local operation system (Windows, Mac, Linux ..)
+        
+        **This setuptest is part of the CYBR-CSCW-SUITE (CCS)**
+         - you can get this FREE groupware-solution via sourceforge:
+        
+        https://c-c-s.sourceforge.io/
+        
+        ----------------------------------------------------------
+        
+        **NOTICE: You can use this setuptest as a blueprint / basis for further test-automation with Selenium following the Page Object Model (POM) paradigm**
+        
+        ----------------------------------------------------------
+        
+        ## USAGE (short version)
+        
+        *download the setuptest
+        
+        *unzip
+        
+        *create a new Python3 project in your IDE (eg PyCharm)
+        
+        *add the setuptest-package folder **stpkg/** to your project within your Python IDE (eg PyCharm), resolve the dependencies by adding pytest & selenium - then execute /run the setuptest.py directly from there.
+        (no build / install is needed then)
+        
+        -----------------------------------------------------------
+        
+        ### Example / Step-by-step for PyCharm (detailed version):
+        
+        *1. PyCharm steps & for setting-up:*
+        
+        * in PyCharm: create a new project, select a python3.6 or 3.7 interpreter
+        * in PyCharm: create a new venv
+        * **copy** the setuptest-package-directory **stpkg/** into the **PycharmProjects/your_new_project-name/**
+        * in PyCharm: open the project-settings (**[Alt][Ctrl][s]**), select **Project: your_project_name -> Project Interpreter**, select the **[+] icon** -> install "**selenium**" & "**pytest**" (just type into the search field on top of the menu) **[OK]**)
+        
+        *2. PyCharm steps & executing the setup & testautomation of the CCS:*
+        
+        * in PyCharm, in your project **open the stpkg/ select setuptest.py and [Ctrl][Shift][F10]** (or: rightclick & "RUN SETUPTEST") -> this will start the setup and test-automation & will open a GUI
+        * read the info in the GUI, click **[CONTINUE]**, click **[SETUP]** & make the proper setting (modifications of the Conf/test_configVar.py, **at least the IP needs to be set** (IP of the server or localhost)). Click save **[Ctrl][S]** to overwrite the config-file.
+        * Open & RUN again: in PyCharm, in your project **open the stpkg/ select setuptest.py and [Ctrl][Shift][F10]** (or: rightclick & "RUN SETUPTEST")
+        * click **[CONTINUE]**, **scroll down** & select the setup / test buttons as needed - or simply **[RUN ALL 7]**
+        
+        **==>> your CYBR CSCW-SUITE will be installed, 5 projects created & a test - and showup of the application will be performed. The automated walk-through will take about 30 minutes**
+        
+        ----------------------------------------------------------------
+        
+        ### Context:
+        the ccs-setuptest is simulating the user's / application-administrator's setup-steps with the help of selenium & pytest.
+        **the setuptest will perform the automated steps outgoing from your LOCAL MACHINE accessing the ccs-web-app ON YOUR SERVER**
+        
+        + creating the database-tables
+        + creating a Super-Admin account (= the first user who makes the registration is getting super-user permissions for the app!)
+        + based on this super-user-permission: login, open the ccs-management & creates the slots for 5 projects 
+        (with the Super-User as Project Administrator & entering the SendGrid API-Key for the email-functionality of each project)
+        + logging into project1 & creating a Project & the WBS (Work-Breakdown-Structure)
+        + creating a user-profile, performing a personality-assessment from the build-in personality-test & checking the user's CFLX
+        + making some posts & direct-answers (repetitive for all WBS-Levels)
+        
+        **NOTICE:**
+        1. these are simulated tasks, you can & will perform most of them manually for your real projects in the same way
+        2. if you run this test, the project in slot1 will be populated with the example-project. It might be a good idea, to keep it that way - or even better: later modify the content to meet yor needs / create a WBS representing a structure for a typical project of your group or organization or even a set of blueprints available for an extended deployment-automation throughout the company.
+        
+        
+        
+        * Be aware: you need to make the mandatory needed changes within the Conf/test_configVars.py file before you run the setuptest
+        
+        
+        ------------------------------------------------------------------------------------------------------------
+        
+        ## The setuptest will:
+          * Open the Conf/test_configVars.py file, so you can modify the values (The IP of your CCS, the SendGrid API-Key, E-Mail-Address & publicPGP-Key ..)
+          * Call the installation-script for creating the database-tables of your CCS
+          * Make the automated setup for your first 5 projects
+          * Will create a testing-project and simulate an admin who is creating a project, a WBS, creates a user-profile, testst the user's CFLX, starts to make a posting.
+        
+        --------------------------------------------------------------------------------------------------------------
+        
+        
+        ## usage with GUI (tkinter)
+        
+        <1st page>
+        * The yellow [CONTINUE] button
+        will open the page displaying the actual setup-install values.
+        
+        <2nd page>
+        * The yellow [SETUP] button will open the Conf/test_configVars.py file, so you can modify the values (The IP of your CCS, the SendGrid API-Key, E-Mail-Address & publicPGP-Key ..)
+        
+        **make the changes, save & re-run**
+        
+        
+        <2nd page>
+        * The red [RUN ALL 7] button (bottom of 2nd page) will perform the installation with the values
+         & perform a fully automated show-up-test showing and explaining you the basic functionalities
+         for setting-up the projects as well as how to use the application.
+        
+        --------------------------------------------------------------------------
+        
+        #### You can call the scripts manually - and only the selected one or ones from your terminal / console/ bash/ shell/ as well:
+        
+          *  for running all tests within the directory: pytest foldername/
+        
+        eg for running all setups or running all tests:
+        
+        
+            pytest RunSetups/
+        or:
+        
+            pytest Tests/
+        
+        
+          *  for running a single test, cd to the test and type: pytest filename.py (see details below)
+        
+        #### Setup-Scripts available:
+        **`cd RunSetups/`**
+        
+        	pytest test_ini_1_createTables.py
+        
+        	pytest test_ini_2_registerSuperadmin.py
+        
+        	pytest test_ini_3_1stProjectSetup.py
+        
+        	pytest test_ini_4_4ProjectsSetup.py
+        
+        #### Walk-Through tests available (still in beta: will work, but might throw errors. Its a test-script issue then - not an application one!):
+        **`cd Tests/`**
+        
+        	pytest test_loginCreateProjectCreateWBS.py
+        
+        	pytest test_loginMakePosts.py 
+        
+        	pytest test_loginPersProfileComplete.py
+        
+        --------------------------------------------------------------------
+        
+        
+        **BE AWARE: this setuptest will use the first slot of your CCS and populate it with an example project!**
+        
+        This means, your per default available five projects for your productive work will be reduced to four.
+        
+        
+        
+        
+Keywords: CYBR CSCW-SUITE,CCS,digital workplace,project management,digitalization,communication,collaboration,groupware,setup.install,test,selenium,pytest,chromedriver,setuptest
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown

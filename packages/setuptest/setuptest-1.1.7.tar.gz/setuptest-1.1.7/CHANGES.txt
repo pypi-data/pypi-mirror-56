@@ -1,0 +1,11 @@
+--------------------------------------------------
+
+setuptest :: python pytest selenium ChromeDriver driven setup- and testautomation for the CYBR CSCW-SUITE (CCS)
+
+-------------------------------------------------- 
+
+1.1.6, 	28.November 2019
+	Modified & testetd to be used together with the PyCharm IDE
+
+1.1.7	29.November 2019
+	Added a new README.md to the setuptest.zip package & uploaded to PyPI
