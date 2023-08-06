@@ -1,0 +1,11 @@
+[tool.poetry]
+name = "sentry-databricks"
+version = "0.1"
+description = ""
+
+authors = [
+    "Jiri Koutny <jiri.koutny@datasentics.com>"
+]
+
+[tool.poetry.dependencies]
+sentry-sdk = "0.13.*"
