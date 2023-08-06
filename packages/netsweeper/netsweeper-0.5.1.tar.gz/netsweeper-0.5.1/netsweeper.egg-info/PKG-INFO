@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: netsweeper
+Version: 0.5.1
+Summary: Python class to allow programmers to create easily your own net sweeper scripts.
+Home-page: UNKNOWN
+Author: Alexsandro Camargo
+Author-email: alexx.files@gmail.com
+License: MIT
+Download-URL: https://github.com/alexx-files/netsweeper/archive/0.5.1.tar.gz
+Description: Python class to allow programmers to create easily your own net sweeper scripts. The examples added to the package already are net sweepers that can be used and improved.
+Keywords: net network sweeper netsweeper network scan ping icmp python3 pentest pentester tool
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
