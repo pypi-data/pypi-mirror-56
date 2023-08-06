@@ -1,0 +1,3 @@
+[console_scripts]
+sequana_pipelines_demultiplex = sequana_pipelines.demultiplex.main:main
+
