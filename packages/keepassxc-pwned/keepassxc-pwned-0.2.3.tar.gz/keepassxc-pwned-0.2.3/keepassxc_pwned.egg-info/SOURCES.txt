@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+keepassxc_pwned/__init__.py
+keepassxc_pwned/__main__.py
+keepassxc_pwned/keepassxc_pwned.py
+keepassxc_pwned/password.py
+keepassxc_pwned.egg-info/PKG-INFO
+keepassxc_pwned.egg-info/SOURCES.txt
+keepassxc_pwned.egg-info/dependency_links.txt
+keepassxc_pwned.egg-info/entry_points.txt
+keepassxc_pwned.egg-info/requires.txt
+keepassxc_pwned.egg-info/top_level.txt
+keepassxc_pwned.egg-info/zip-safe
