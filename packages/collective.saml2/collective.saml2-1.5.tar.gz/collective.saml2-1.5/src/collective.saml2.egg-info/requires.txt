@@ -1,0 +1,9 @@
+setuptools
+dm.saml2>2.0.4
+dm.zope.saml2>2.0b7
+PyXB==1.2.3
+dm.xmlsec.binding>1.1
+zope.app.component
+
+[test]
+plone.app.testing
