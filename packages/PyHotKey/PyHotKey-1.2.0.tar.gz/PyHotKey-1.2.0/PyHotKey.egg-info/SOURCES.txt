@@ -1,0 +1,13 @@
+CHANGES.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+PyHotKey/__init__.py
+PyHotKey/_info.py
+PyHotKey/main.py
+PyHotKey.egg-info/PKG-INFO
+PyHotKey.egg-info/SOURCES.txt
+PyHotKey.egg-info/dependency_links.txt
+PyHotKey.egg-info/requires.txt
+PyHotKey.egg-info/top_level.txt

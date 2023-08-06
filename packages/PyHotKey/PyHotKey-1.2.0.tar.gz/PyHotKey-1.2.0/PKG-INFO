@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: PyHotKey
+Version: 1.2.0
+Summary: A cross-platform hot key module.
+Home-page: https://github.com/Xpp521/PyHotKey
+Author: Xpp
+Author-email: Xpp233@foxmail.com
+License: LGPLv3
+Project-URL: Documentation, https://github.com/Xpp521/PyHotKey/wiki
+Project-URL: Source, https://github.com/Xpp521/PyHotKey
+Project-URL: Tracker, https://github.com/Xpp521/PyHotKey/issues
+Description: # PyHotKey
+        ### Description
+        PyHotKey is a cross-platform hot key module for Python. Based on "Pynput" module.
+        
+        ### Installation
+        ```
+        pip install PyHotKey
+        ```
+        
+        ### Usage:
+        ```python
+        from PyHotKey import manager, Key
+        
+        # Register
+        key_id1 = manager.RegisterHotKey(func1, [Key.ctrl_l, Key.alt_l, 'z'])
+        key_id2 = manager.RegisterHotKey(func2, [Key.caps_lock], 2, 0.5,
+                                         func2_arg1, func2_arg2=1)
+        # Unregister
+        manager.UnregisterHotKey(key_id1)
+        
+        # Turn on the logger
+        manager.logger = True
+        
+        # Turn off the logger
+        manager.logger = False
+        ...
+        ```
+        # Release Note
+        ### v1.2.0
+        - Add logger.
+        - Optimize code.
+        - Attempt to fix a potential bug.
+        ___
+        ### v1.1.1
+        - Remove log message.
+        ___
+        ### v1.1.0
+        - Currently, the trigger function supports arguments.
+        - No longer need to call manager.start() manually.
+        - Fix multiple type hot key bug.
+        ___
+        ### v1.0 - Initial Release
+        - The first version.
+Keywords: hotkey,hot,key
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows :: Windows NT/2000
+Classifier: Operating System :: POSIX
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
