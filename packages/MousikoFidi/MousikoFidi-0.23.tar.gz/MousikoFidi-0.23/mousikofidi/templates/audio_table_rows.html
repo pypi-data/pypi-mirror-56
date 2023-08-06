@@ -1,0 +1,64 @@
+<tr style="position: relative;">
+
+  <td class="center"> {# PLAY #}
+    {% if page_name != "Queue" %}
+      <div class="anchor" id="{{ audio.slug }}-target"></div>
+    {% endif %}
+    <div class="play-arrow" data-browse="{{ url_for('.dir_detail', path=audio.file_path) }}" data-num="0" data-path="{{ audio.file_path }}" data-title="{% if audio.title %}{{ audio.title }}{% else %}{{ audio.file_name }}{% endif %}" id="{{ audio.slug }}" title="Click to play this track."></div>
+  </td>
+
+  <td class="center mobile-hide"> {# TRACK #}
+    {% if audio.track and not audio.tracktotal %}{{ audio.track }}{% endif %}
+    {% if audio.track and audio.tracktotal and audio.tracktotal != "0" %}{{ audio.track }}/{{ audio.tracktotal }}{% endif %}
+    {% if audio.track and audio.tracktotal and audio.tracktotal == "0" %}{{ audio.track }}{% endif %}
+  </td>
+
+  {% if playlist_add %}
+    <td> {# ADD #}
+      <form action="{{ url_for('.playlistctl', cmd='add', path=audio.file_path) }}" class="center" method="post">
+        <input class="plus" type="submit" value="&plus;" title="Add this track to the queue.">
+        <input id="{{ audio.slug }}" name="slug" type="hidden" value="{{ audio.slug }}">
+      </form>
+    </td>
+  {% endif %}
+
+  <td class="title title-regular"> {# TITLE #}
+    <a class="mobile-big" href="{{ url_for('.dir_detail', path=audio.file_path) }}" title="This track's title.">
+      {% if audio.title %}
+        {{ audio.title }}
+      {% else %}
+        {{ audio.file_name }}
+      {% endif %}
+    </a>
+  </td>
+
+  <td class="title-mobile"> {# MOBILE TITLE #}
+    <a class="mobile-big" href="{{ url_for('.dir_detail', path=audio.file_path) }}" title="This track's title.">
+      {% if audio.title %}
+        {{ audio.title_mobile }}
+      {% else %}
+        {{ audio.file_name_mobile }}
+      {% endif %}
+    </a>
+  </td>
+
+  <td class="mobile-hide"> {# ALBUM #}
+    {% if audio.album %}{{ audio.album }}{% endif %}
+  </td>
+
+  <td class="mobile-hide">
+    {% if audio.artist %}{{ audio.artist }}{% endif %}
+  </td>
+
+  <td class="center mobile-hide">
+    {% if audio.length %}{{ audio.length }}{% endif %}
+  </td>
+
+  {% if secret_key and playlist_rm %}
+    <td>
+      <form action="{{ url_for('.playlistctl', cmd='rm', path=audio.file_path) }}" class="center" method="post">
+        <input class="bold red X" type="submit" value="X">
+      </form>
+    </td>
+  {% endif %}
+</tr>

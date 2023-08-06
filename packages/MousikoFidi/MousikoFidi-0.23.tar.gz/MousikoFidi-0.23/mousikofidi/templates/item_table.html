@@ -1,0 +1,66 @@
+{% if item_list %}
+  {% if add_all_button %}
+    <form class="center" action="/playlist/bulk/bulk" method="post">
+      <input id="bulk-add" type="submit" value="Add All Files To Queue" title="Add all files in this directory to the queue.">
+      <input id="item-list" name="bulk-list" type="hidden" value="{{ file_list }}">
+    </form>
+  {% endif %}
+{% endif %}
+
+{% if audio_list %}
+  <h4 class="center">Audio Tracks</h4>
+  <table style="margin: 0 auto;">
+
+    <thead>
+      <tr>
+        <th>Play</th>
+        <th class="mobile-hide">Track</th>
+        {% if secret_key and playlist_add %}
+          <th>Add</th>
+        {% endif %}
+        <th>Title</th>
+        <th class="mobile-hide">Album</th>
+        <th class="mobile-hide">Artist</th>
+        <th class="mobile-hide">Length</th>
+        {% if secret_key and playlist_rm %}
+          <th>Remove</th>
+        {% endif %}
+      </tr>
+    </thead>
+
+    <tbody id="playlist">
+      {% for audio in audio_list %}
+        {% include "audio_table_rows.html" with context %}
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+{% if video_list %}
+  <h4 class="center">Video Tracks</h4>
+  <table style="margin: 0 auto;">
+
+    <thead>
+      <tr>
+        <th>Play</th>
+        <th class="mobile-hide">Track</th>
+        {% if secret_key and playlist_add %}
+          <th>Add</th>
+        {% endif %}
+        <th>Title</th>
+        <th class="mobile-hide">Album</th>
+        <th class="mobile-hide">Artist</th>
+        <th class="mobile-hide">Length</th>
+        {% if secret_key and playlist_rm %}
+          <th class="mobile">Remove</th>
+        {% endif %}
+      </tr>
+    </thead>
+
+    <tbody id="video-playlist">
+      {% for video in video_list %}
+        {% include "video_table_rows.html" with context %}
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}

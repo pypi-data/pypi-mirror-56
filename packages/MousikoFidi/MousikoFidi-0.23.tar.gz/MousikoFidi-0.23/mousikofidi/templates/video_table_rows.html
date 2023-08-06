@@ -1,0 +1,65 @@
+<tr>
+
+  <td class="center"> {# PLAY #}
+    {% if page_name != "Queue" %}
+      <div class="anchor" id="{{ video.slug }}-target"></div>
+    {% endif %}
+    <div class="video-arrow" data-browse="{{ url_for('.dir_detail', path=video.file_path) }}" data-num="0" data-path="{{ video.file_path }}" data-title="{% if video.title %}{{ video.title }}{% else %}{{ video.file_name }}{% endif %}" id="{{ video.slug }}" title="Click to play this track."></div>
+  </td>
+
+  <td class="center mobile-hide"> {# TRACK #}
+    {% if video.track and not video.tracktotal %}{{ video.track }}{% endif %}
+    {% if video.track and video.tracktotal and video.tracktotal != "0" %}{{ video.track }}/{{ video.tracktotal }}{% endif %}
+    {% if video.track and video.tracktotal and video.tracktotal == "0" %}{{ video.track }}{% endif %}
+  </td>
+
+  {% if playlist_add %}
+    <td> {# ADD #}
+      <form action="{{ url_for('.playlistctl', cmd='add', path=video.file_path) }}" class="center" method="post">
+        <input class="plus" type="submit" value="&plus;">
+        <input id="{{ video.slug }}" name="slug" type="hidden" value="{{ video.slug }}">
+      </form>
+    </td>
+  {% endif %}
+
+  <td class="title-regular"> {# TITLE #}
+    <a class="mobile-big video-title" href="{{ url_for('.dir_detail', path=video.file_path) }}" title="This track's title.">
+      {% if video.title %}
+        {{ video.title }}
+      {% else %}
+        {{ video.file_name }}
+      {% endif %}
+    </a>
+  </td>
+
+  <td class="title-mobile"> {# TITLE #}
+    <a class="mobile-big video-title" href="{{ url_for('.dir_detail', path=video.file_path) }}" title="This track's title.">
+      {% if video.title %}
+        {{ video.title_mobile }}
+      {% else %}
+        {{ video.file_name_mobile }}
+      {% endif %}
+    </a>
+  </td>
+
+  <td class="mobile-hide"> {# ALBUM #}
+    {% if video.album %}{{ video.album }}{% endif %}
+  </td>
+
+  <td class="mobile-hide"> {# ARTIST #}
+    {% if video.artist %}{{ video.artist }}{% endif %}
+  </td>
+
+  <td class="center mobile-hide">
+    {% if video.length %}{{ video.length }}{% endif %}
+  </td>
+
+  {% if secret_key and playlist_rm %}
+    <td>
+      <form action="{{ url_for('.playlistctl', cmd='rm', path=video.file_path) }}" class="center" method="post">
+        <input class="bold red X" type="submit" value="X">
+      </form>
+    </td>
+  {% endif %}
+
+</tr>

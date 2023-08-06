@@ -1,0 +1,6 @@
+{% if not audio_list and not dir_list and not video_list %}
+  <h2 class="bold center">No <a href="https://mousikofidi.info/user_guide/#valid-media-types">valid media files</a> were found here!</h2>
+{% else %}
+  {% include "item_table.html" with context %}
+  {% include "dir_table.html" with context %}
+{% endif %}
