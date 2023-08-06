@@ -1,0 +1,9 @@
+setup.py
+aiorocksdb/__init__.py
+aiorocksdb.egg-info/PKG-INFO
+aiorocksdb.egg-info/SOURCES.txt
+aiorocksdb.egg-info/dependency_links.txt
+aiorocksdb.egg-info/not-zip-safe
+aiorocksdb.egg-info/requires.txt
+aiorocksdb.egg-info/top_level.txt
+src/rocksdbapi.cpp
