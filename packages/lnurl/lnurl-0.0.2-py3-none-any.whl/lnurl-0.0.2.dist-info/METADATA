@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: lnurl
+Version: 0.0.2
+Summary: Simple implementation of LNURL for Python 3.5+
+Home-page: https://github.com/jogco/lnurl
+Maintainer: jogco
+Maintainer-email: jogco@lnsms.world
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: bech32
+
+lnurl
+=====
+
+Based on https://github.com/rustyrussell/lightning-payencode (via https://github.com/fiatjaf/bech32)
+
+Usage
+-----
+
+```
+pip install lnurl
+```
+
+```
+import lnurl
+
+lnurl.encode('https://example.com/c?p=a8dw93x2h39s1f')
+
+lnurl.decode('LNURL1DP68GURN8GHJ7ETCV9KHQMR99E3K7MF0VVLHQ0TP8PJ8WWFN0QEXSVEEWVCKVF3A4RP')
+```
+
+
