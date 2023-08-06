@@ -1,0 +1,3 @@
+[console_scripts]
+tf-util = terraform_utils.command_line:main
+
