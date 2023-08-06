@@ -1,0 +1,24 @@
+torchkbnufft/__init__ (matt-workstation's conflicted copy 2019-11-11).py,sha256=nKoNWkLeeHNy88ZjQEAXKFO80_NblarJ7e7sSU0x5Nk,873
+torchkbnufft/__init__.py,sha256=YOYm8m1JdFSFD3d2ptbk3TzMjl_qhHdRYRwk1f-wRzU,898
+torchkbnufft/kbinterp.py,sha256=o2hfUs4tZo1YvPYbPGbPTMFKlc3wdaCaKm6TFuoCY0k,12529
+torchkbnufft/kbnufft.py,sha256=ZOtHRjilg8F0n6MJfAi9AStgkN97jR3YjZ0fSpNgUnI,14401
+torchkbnufft/math.py,sha256=9IOVGVXHSoi7j0PDaOE-5ixLcIAcSgayqRvC__IQ79w,3632
+torchkbnufft/mrisensenufft.py,sha256=kTJA8Do94lBFTyrw_2ZiFl4XOxHxUVpHL3HmWwJZEKM,15896
+torchkbnufft/nufft_utils.py,sha256=OzP7TZ3v82yUB6Ft2bpdIbf05THbxdrHrgnOnxEC2ts,7909
+torchkbnufft/functional/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchkbnufft/functional/kbinterp.py,sha256=zP-3-MIsDfHhKl3uGeEfcyHYSDonnJTtrBzsxnV1TEg,1749
+torchkbnufft/functional/kbnufft.py,sha256=-PaXXHLHih9txTmNu1sNxkcf3cDscgHoGCBMYv6zwEM,3173
+torchkbnufft/functional/mrisensenufft.py,sha256=LDF3t2aRFrklQCIqE42tgiJyjcWzBm4IO-57tvjCzZ4,2691
+torchkbnufft/mri/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchkbnufft/mri/dcomp_calc.py,sha256=4vXFLHD3mlGrvRD2PPrUWv0_Vu00WWbJdoP1YcXnNAo,3616
+torchkbnufft/mri/mrisensesim.py,sha256=2BES-d8XY2Idx73b5RnFWENkXnNpjUTNSmxgaB7tQpg,3154
+torchkbnufft/mri/sensenufft_functions.py,sha256=ql0Hp_y7gozO3oRnUz8i6IWzbEIVmOV_iJA7NfDLoc0,5631
+torchkbnufft/nufft/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchkbnufft/nufft/fft_functions.py,sha256=0lQZpdeSymGSg8Q9kmWCsoo0voen7SpxEedpZhxMRlw,3611
+torchkbnufft/nufft/interp_functions.py,sha256=3Lm3suG_cvFDSP1vEWL0b6DzYseO1D6bdgqOG1zYbJI,15699
+torchkbnufft/nufft/sparse_interp_mat.py,sha256=wBvw5VacPbZucRju5t_GiydMy_EBK-5YQc6VEkL1kBc,6084
+torchkbnufft-0.2.0.dist-info/LICENSE,sha256=5QkdTxGoZtJUMaUsym21jPuJbQ4d4HB1-KXk_Zk_2iQ,1098
+torchkbnufft-0.2.0.dist-info/METADATA,sha256=z_4lcK1nm64nRDJ8KGYHiw2liY-uhVpft8JC5H293Ww,6623
+torchkbnufft-0.2.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+torchkbnufft-0.2.0.dist-info/top_level.txt,sha256=Kd4fZW85r7g2T-i5uQkOFRjPGfG04ogjtug7zfhDs0s,13
+torchkbnufft-0.2.0.dist-info/RECORD,,
