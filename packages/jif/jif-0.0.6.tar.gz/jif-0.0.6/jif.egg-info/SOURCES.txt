@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+jif/__init__.py
+jif/__main__.py
+jif/helpers.py
+jif.egg-info/PKG-INFO
+jif.egg-info/SOURCES.txt
+jif.egg-info/dependency_links.txt
+jif.egg-info/entry_points.txt
+jif.egg-info/requires.txt
+jif.egg-info/top_level.txt
+jif/commands/__init__.py
+jif/commands/init.py
+jif/commands/install.py
+jif/commands/run.py
+jif/commands/uninstall.py
