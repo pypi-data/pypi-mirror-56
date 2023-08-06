@@ -1,0 +1,20 @@
+# `richcontext.scholapi` changelog
+
+## 1.0.1
+
+2019-11-30
+
+### Fixed
+
+  * EuropePMC: resolved edge case where returned titles could be null, causing exceptions
+
+
+## 1.0.0
+
+2019-11-23
+
+### Initial
+
+  * first release on PyPi
+  * supports `title_search()` and `publication_lookup()` using several discovery APIs for Scholarly Infrastructure
+  * aligned with Community session goals from 2019 Rich Context Workshop (notes by Samuel Klein)
