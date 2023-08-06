@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyhtmd/__init__.py
+pyhtmd/core.py
+pyhtmd/html_parser.py
+pyhtmd/utils.py
+pyhtmd.egg-info/PKG-INFO
+pyhtmd.egg-info/SOURCES.txt
+pyhtmd.egg-info/dependency_links.txt
+pyhtmd.egg-info/top_level.txt
