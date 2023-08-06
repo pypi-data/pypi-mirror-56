@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+cdatastructs/__init__.py
+cdatastructs/_hashmap.c
+cdatastructs/hashmap.c
+cdatastructs/hashmap.h
+cdatastructs/hashmap.pxd
+cdatastructs.egg-info/PKG-INFO
+cdatastructs.egg-info/SOURCES.txt
+cdatastructs.egg-info/dependency_links.txt
+cdatastructs.egg-info/not-zip-safe
+cdatastructs.egg-info/top_level.txt

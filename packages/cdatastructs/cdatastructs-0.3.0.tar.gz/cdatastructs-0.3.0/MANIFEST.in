@@ -1,0 +1,1 @@
+include cdatastructs/*.c cdatastructs/*.h cdatastructs/*.pxd
