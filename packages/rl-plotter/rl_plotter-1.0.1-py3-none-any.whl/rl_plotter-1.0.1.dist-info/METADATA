@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: rl-plotter
+Version: 1.0.1
+Summary: A plotter for reinforcement learning
+Home-page: https://github.com/gxywy/rl-plotter
+Author: Gong Xiaoyu
+Author-email: gxywy@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# rl-plotter
+
+ This is a simple tool which can plot learning curves easily for reinforcement learning.
+
+## Installation
+
+from PIP
+
+```
+pip install rl_plotter
+```
+
+from source
+
+```
+python3 setup.py install
+```
+
+## Examples
+
+First, add a logger in your code (for example: DQN):
+
+```python
+from rl_plotter.logger import Logger
+
+def train(name):
+    dqn = DQN()
+    logger = Logger(name, env_name='PongNoFrameskip-v4', use_tensorboard=False)
+
+    while True:
+        s = env.reset()
+        while True:
+            total_step = logger.add_step()
+            a = dqn.select_action(s, EPSILON)
+            s_, r, done, info = env.step(a)
+
+            dqn.store_transition(s, a, r, s_)
+            episode_reward += r
+
+            if dqn.replay_memory.memory_counter > REPLAY_MEMORY_SIZE:
+                loss = dqn.learn()
+                logger.add_loss(loss.cpu().item())
+            if done:
+                break
+            s = s_
+        logger.add_episode()
+        logger.add_reward(episode_reward, freq=10)
+    logger.finish()
+```
+
+After the training or when you are training your agent, you can plot the learning curves in this way:
+
+```
+python plotter.py
+```
+<img src="https://github.com/gxywy/rl-plotter/blob/master/imgs/screenshot-1.png?raw=true" alt="screenshot-1"/>
+
+The learning curves looks like this:
+
+
+
+## To Do
+
+- [x] reinforcement learning plot tools
+- [x] timestamp features
+- [x] history experiment data plot tools
+- [ ] ~~basic data plot tools锛坕ncluding ML-Loss plot锛墌~
+- [ ] ~~dynamic plot tools~~
+
