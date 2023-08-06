@@ -1,0 +1,3 @@
+[console_scripts]
+anime_renamer = anime_renamer.__main__:main
+
