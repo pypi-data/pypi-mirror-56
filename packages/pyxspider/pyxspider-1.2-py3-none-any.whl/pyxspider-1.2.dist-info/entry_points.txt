@@ -1,0 +1,3 @@
+[console_scripts]
+pyxspider = xspider.server:main
+

@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pyxspider
+Version: 1.2
+Summary: A high-level Web Crawling and Web Scraping framework
+Home-page: http://www.monetware.com/
+Author: zengcd
+Author-email: zcd0712@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Scrapy
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: scrapy-redis (==0.6.8)
+Requires-Dist: Scrapy (==1.7.3)
+Requires-Dist: pymongo (==3.8.0)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: redis (==3.2.1)
+Requires-Dist: fake-useragent (==0.1.11)
+Requires-Dist: xmltodict (==0.12.0)
+Requires-Dist: setuptools (==41.2.0)
+Requires-Dist: requests (==2.21.0)
+Requires-Dist: PyMySQL (==0.9.3)
+Requires-Dist: Twisted (==19.7.0)
+
+UNKNOWN
+
+
