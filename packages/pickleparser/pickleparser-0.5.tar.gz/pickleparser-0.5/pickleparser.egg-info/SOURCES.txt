@@ -1,0 +1,10 @@
+README.md
+setup.py
+pickleparser/__init__.py
+pickleparser/parse.py
+pickleparser/stubs.py
+pickleparser.egg-info/PKG-INFO
+pickleparser.egg-info/SOURCES.txt
+pickleparser.egg-info/dependency_links.txt
+pickleparser.egg-info/requires.txt
+pickleparser.egg-info/top_level.txt
