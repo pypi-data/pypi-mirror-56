@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: flask-jwt-next
+Version: 1.0.0
+Summary: JWT token authentication for Flask apps.
+Home-page: https://github.com/yannickkirschen/flask-jwt-next
+Author: Yannick Kirschen
+Author-email: github.yannickkirschen@protonmail.com
+License: MIT
+Description: # Flask-JWT NEXT
+        
+        *Flask-JWT NEXT* is a fork of [flask-jwt](https://github.com/mattupstate/flask-jwt).
+        It contains some bugfixes and a structure that fits my needs.
+        
+        ## Installation
+        
+        ```bash
+        python -m pip install flask-jwt-next
+        ```
+        
+        ## Usage
+        
+        See [example](https://github.com/yannickkirschen/flask-jwt-next/blob/master/example/app.py).
+        
+        ## License
+        
+        Copyright 2014 Matthew Wright. All rights reserved.
+        
+        Copyright 2019 Yannick Kirschen. All rights reserved.
+        
+        Licensed under the [MIT License](https://github.com/yannickkirschen/task/blob/master/LICENSE).
+        Happy forking :)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
