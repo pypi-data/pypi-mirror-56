@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+discere/__init__.py
+discere/discere.py
+discere.egg-info/PKG-INFO
+discere.egg-info/SOURCES.txt
+discere.egg-info/dependency_links.txt
+discere.egg-info/requires.txt
+discere.egg-info/top_level.txt
+discere/features/__init__.py
+discere/features/feature_extraction.py
+discere/features/config/attrib
+discere/preprocessing/__init__.py
+discere/preprocessing/process_fasta.py
