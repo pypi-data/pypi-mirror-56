@@ -1,0 +1,7 @@
+six
+
+[dev]
+django<2.3,>=2.2
+coverage
+flake8
+tox
