@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+jupyter-golden-layout.json
+setup.cfg
+setup.py
+ipygoldenlayout/__init__.py
+ipygoldenlayout/_version.py
+ipygoldenlayout/widget.py
+ipygoldenlayout.egg-info/PKG-INFO
+ipygoldenlayout.egg-info/SOURCES.txt
+ipygoldenlayout.egg-info/dependency_links.txt
+ipygoldenlayout.egg-info/not-zip-safe
+ipygoldenlayout.egg-info/requires.txt
+ipygoldenlayout.egg-info/top_level.txt
+ipygoldenlayout/static/extension.js
+ipygoldenlayout/static/index.js
+ipygoldenlayout/static/index.js.map
