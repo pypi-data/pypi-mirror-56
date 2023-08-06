@@ -1,0 +1,10 @@
+# Base Configuration file for artellapipe-tools-lightrigsmanager in Plot Twist
+
+# Defines icon of the tool
+icon: lightrigsmanager
+
+# URL to tool documentation web page
+url: https://plot-twist-short-film.github.io/plot-twist-docs/pipeline/pipeline/tools/lightrigsmanager/
+
+# Defines whether this needs Kitsu data to work or not
+kitsu_login: False

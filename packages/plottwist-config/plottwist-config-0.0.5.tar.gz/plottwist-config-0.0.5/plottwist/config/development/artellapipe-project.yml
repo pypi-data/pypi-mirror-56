@@ -1,0 +1,45 @@
+# Configuration for Plot Twist Project
+
+# Define configuration variables for Plot Twist
+id_number: "9"
+id: "973a70a7-1494-422b-b8c1-696587030e59"
+url: "http://www.plottwist-film.com/"
+documentation_url: "https://plot-twist-short-film.github.io/plottwist-docs/pipeline/"
+emails:
+  - tpovedatd@gmail.com
+extensions:
+  - ma
+  - abc
+default_extension: ma
+departments:
+  - Modeling
+  - Shading
+  - Grooming
+  - Rigging
+  - Layout
+  - Lighting
+  - Fx
+
+# Define configuration variables for project progress bar
+progress_bar:
+  color0: "58, 92, 84"
+  color1: "213, 173, 0"
+
+# Defines available libs
+libs:
+  - artella
+  - naming
+  - kitsu
+  - pyblish
+
+tools:
+  - welcome
+  - changelog
+  - bugtracker
+  - artellamanager
+  - artellauploader
+  - assetsmanager
+  - assetslibrary
+  - namemanager
+  - lightrigsmanager
+  - modelchecker
