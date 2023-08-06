@@ -1,0 +1,17 @@
+ncapi_client/client.py,sha256=uAWlwTWOvIXdf8yAmvy1sSkSuEXze2dCXjoBP5f10rw,5085
+ncapi_client/dataset.py,sha256=TUc1_CRcPKRuTbNaP6LssbuMxHEvg9rSvXCHRLONlrk,8694
+ncapi_client/job.py,sha256=zQzd0C5AMbwOuES8iHu3cDbSQWL6NlX32Cx4__HoFZY,1715
+ncapi_client/messages.py,sha256=uIII8tIzVBXvPyNVmHUVEYt7chPEGgt0hlroMWgKeoc,5881
+ncapi_client/model.py,sha256=sCtxBmmyOuXksr8hi9EGlC0EXZ6ZHriLj3gwtBjM2Cs,4338
+ncapi_client/ncs.py,sha256=OjspD3PI-nJ-B5VkE4s_98D5C9oZFZTBDDmVWOjUhd8,17699
+ncapi_client/prediction.py,sha256=Y_9_0uQ4vLNPg-ciTupCbIEy_pfaBINZG6GKhSGBUfM,3610
+ncapi_client/session.py,sha256=meCLC227H2Nz6jHMOV9F_VBSdLCWbhywoDsoVyI9dLU,9329
+ncapi_client/trained_model.py,sha256=EsDkUpj-VtsMs9b-Yy6LsV6oJuYs4mhGEVoeWHPenpA,3378
+ncapi_client/training.py,sha256=BBb0nAd0xbRXD_qW3WiKG_3prEA-MFggSZPgdGXQaPY,6781
+ncapi_client/utils.py,sha256=XFyANH4LJZHVVRjl9c8ZBEPf3mSrYFf9l8nlt0gcfMs,9935
+ncapi_client-0.2.4.dist-info/LICENSE,sha256=N0P3pKtRMvfb64jmgJdlerg3TnS0a2QC776AzPsbZIg,35128
+ncapi_client-0.2.4.dist-info/METADATA,sha256=QcxOVEqJDeBm1dlMrul-XsyidRhcEV5xPxuYBmp54L0,8548
+ncapi_client-0.2.4.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+ncapi_client-0.2.4.dist-info/entry_points.txt,sha256=vs6D6zg5yoeTYaJ7FtzN19VMsSl0h_TOGRh6hoJXFUo,82
+ncapi_client-0.2.4.dist-info/top_level.txt,sha256=3YZ3NJjA93xJ_8e41O885QeSZ7uqujVamRcyU9ds2uA,13
+ncapi_client-0.2.4.dist-info/RECORD,,
