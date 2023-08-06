@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: flake8_implicit_str_concat
+Version: 0.0.0.post0
+Summary: Forbid implicitly concatenated string literals on one line such as those
+Home-page: https://github.com/keisheiled/flake8-implicit-str-concat
+Author: Dylan Turner
+Author-email: 58230987+keisheiled@users.noreply.github.com
