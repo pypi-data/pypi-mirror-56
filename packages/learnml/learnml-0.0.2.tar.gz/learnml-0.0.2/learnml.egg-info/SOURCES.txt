@@ -1,0 +1,17 @@
+README.md
+setup.py
+learnml/__init__.py
+learnml.egg-info/PKG-INFO
+learnml.egg-info/SOURCES.txt
+learnml.egg-info/dependency_links.txt
+learnml.egg-info/top_level.txt
+learnml/linear_model/__init__.py
+learnml/linear_model/linreg.py
+learnml/linear_model/logistic.py
+learnml/linear_model/multilinreg.py
+learnml/linear_model/perceptron.py
+learnml/nn/__init__.py
+learnml/nn/nnkeras.py
+learnml/nn/nnxor.py
+learnml/tree/__init__.py
+learnml/tree/dectree.py
