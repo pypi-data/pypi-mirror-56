@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: simplejsonobject
+Version: 0.1.0
+Summary: A simple python object extension which can easily transform to and from json with compression support
+Home-page: https://gitlab.com/mozgurbayhan/simplejsonobject
+Author: Mehmet Ozgur Bayhan
+Author-email: mozgurbayhan@gmail.com
+License: BSD
+Project-URL: Bug Reports, https://gitlab.com/mozgurbayhan/simplejsonobject/issues
+Project-URL: Funding, https://www.losev.org.tr/bagis/Bagis.html
+Project-URL: Say Thanks!, https://gitlab.com/mozgurbayhan/simplejsonobject
+Project-URL: Source, https://gitlab.com/mozgurbayhan/simplejsonobject
+Description: **Simple Json Object**
+        
+        A simple python object which can easily transform to and from json with compression support
+        
+        For Detailed description:
+        
+        `https://gitlab.com/mozgurbayhan/simplejsonobject/blob/master/README.md <https://gitlab.com/mozgurbayhan/simplejsonobject/blob/master/README.md>`_
+        
+Keywords: json  development tracker debug
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3
+Description-Content-Type: text/x-rst
