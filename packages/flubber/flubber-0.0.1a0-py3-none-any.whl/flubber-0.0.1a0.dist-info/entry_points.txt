@@ -1,0 +1,3 @@
+[console_scripts]
+flubber=flubber.console:main
+

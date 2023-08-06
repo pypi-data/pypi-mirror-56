@@ -1,0 +1,4 @@
+debug: ${env:APP_DEBUG,true}
+environment: ${env:APP_ENVIRONMENT,local}
+middlewares:
+  - flubber.middleware.logs
