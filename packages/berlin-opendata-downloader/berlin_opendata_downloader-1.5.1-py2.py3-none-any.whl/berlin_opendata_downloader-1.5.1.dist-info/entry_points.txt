@@ -1,0 +1,3 @@
+[console_scripts]
+berlin_downloader = berlin_gelaendemodelle_downloader.cli:cli
+
