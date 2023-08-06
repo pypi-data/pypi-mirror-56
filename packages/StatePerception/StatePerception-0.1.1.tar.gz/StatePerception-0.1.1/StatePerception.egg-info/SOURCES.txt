@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+StatePerception/Dataset.py
+StatePerception/HelperFunctions.py
+StatePerception/KerasLayer.py
+StatePerception/Model.py
+StatePerception/ModelAnalysis.py
+StatePerception/StandardModels.py
+StatePerception/StatePerception.py
+StatePerception/Trainer.py
+StatePerception/__init__.py
+StatePerception.egg-info/PKG-INFO
+StatePerception.egg-info/SOURCES.txt
+StatePerception.egg-info/dependency_links.txt
+StatePerception.egg-info/top_level.txt
