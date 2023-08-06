@@ -1,0 +1,16 @@
+README.md
+setup.py
+usbguard_simple_gui_py_qt/__init__.py
+usbguard_simple_gui_py_qt/device.py
+usbguard_simple_gui_py_qt/icon.svg
+usbguard_simple_gui_py_qt/main_window.py
+usbguard_simple_gui_py_qt/rule_parsing.py
+usbguard_simple_gui_py_qt/rules.py
+usbguard_simple_gui_py_qt/system_tray_app.py
+usbguard_simple_gui_py_qt/usbguard_dbus_interface.py
+usbguard_simple_gui_py_qt.egg-info/PKG-INFO
+usbguard_simple_gui_py_qt.egg-info/SOURCES.txt
+usbguard_simple_gui_py_qt.egg-info/dependency_links.txt
+usbguard_simple_gui_py_qt.egg-info/entry_points.txt
+usbguard_simple_gui_py_qt.egg-info/requires.txt
+usbguard_simple_gui_py_qt.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+[gui_scripts]
+usbguard-simple-gui-py-qt = usbguard_simple_gui_py_qt.system_tray_app:main
+usbguard-simple-gui-py-qt-window-only = usbguard_simple_gui_py_qt.main_window:main
+

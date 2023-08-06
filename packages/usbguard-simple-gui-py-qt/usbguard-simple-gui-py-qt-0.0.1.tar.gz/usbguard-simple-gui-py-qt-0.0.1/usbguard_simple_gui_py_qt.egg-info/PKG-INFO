@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: usbguard-simple-gui-py-qt
+Version: 0.0.1
+Summary: A simple unambitious system tray applet and GUI for interacting with USBGuard.
+Home-page: https://github.com/marco-nicola/usbguard-simple-gui-py-qt
+Author: Marco Nicola
+Author-email: marconicola@disroot.org
+License: UNKNOWN
+Description: # USBGuard Simple GUI Py/Qt
+        
+        A simple unambitious system tray applet and GUI for interacting with
+        [USBGuard](https://usbguard.github.io/).
+        
+        It is implemented in Python 3, using 
+        [Qt for Python / PySide2](https://www.qt.io/qt-for-python) for
+        graphical interactions, and communicating with USBGuard via
+        [D-Bus](https://dbus.freedesktop.org/doc/dbus-python/).
+        
+Keywords: usbguard
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7.0,<3.8
+Description-Content-Type: text/markdown
