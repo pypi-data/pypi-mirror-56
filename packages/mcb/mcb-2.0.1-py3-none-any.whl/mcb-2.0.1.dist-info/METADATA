@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mcb
+Version: 2.0.1
+Summary: Agnostic MUD client system.
+Home-page: https://github.com/chrisnorman7/
+Author: Chris Norman
+Author-email: chris.norman2@googlemail.com
+License: MPL-2
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: attrs
+
+# mud-client-base
+An agnostic mud client system.
+
+
+
