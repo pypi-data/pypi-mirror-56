@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: tfpred
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/vivekka93/tfpred
+Author: Vivek Karna
+Author-email: vivek.ka93@gmail.com
+License: Other/Proprietary License
+Download-URL: https://github.com/vivekka93/tfpred/archive/0.1.0.tar.gz
+Description: Python package to use a trained tensorflow model locally with memory constraints
+         for testing the performance or running predictions 
+         without any complex deployment.
+        
+        Runs on tensorflow<2.0
+Keywords: tensorflow,predict
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
