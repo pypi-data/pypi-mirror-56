@@ -1,0 +1,19 @@
+[uwsgi]
+module = run_wsgi:app
+
+master = true
+processes = 1
+
+{%- if socketio %}
+http-websockets = true
+buffer-size=32768
+gevent = 200
+{%- endif %}
+
+socket = /var/tmp/{{project_name}}.sock
+chmod-socket = 664
+uid = deploy
+gid = deploy
+vacuum = true
+
+die-on-term = true

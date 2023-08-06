@@ -1,0 +1,3 @@
+[console_scripts]
+create-flask-application = create_flask_application.cmdl:create
+

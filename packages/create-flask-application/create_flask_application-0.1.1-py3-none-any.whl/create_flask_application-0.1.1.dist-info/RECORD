@@ -1,0 +1,12 @@
+create_flask_application/cmdl.py,sha256=sbfUSJy1XgVaK7oeCgg5rOLB2oEtYvrby-m0DRvcLPo,82
+create_flask_application/create_flask_application.py,sha256=QRlLqHaoi_yIZXQIGq2J6gOv2JTuD_8ZPkdRKJgJ39Q,13799
+create_flask_application/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+create_flask_application/templates/deploy.jinja-sh,sha256=g4HZ2VjKWPqsRsau-XMuyqxsPUDl5_fNtHIY9IMtbeo,369
+create_flask_application/templates/prod-wsgi.jinja-ini,sha256=JddSZhIz1QW8Lbb_1PKShWF35yUnCHyKuwZ0uQ4NCZc,285
+create_flask_application/templates/requirements.jinja-txt,sha256=R3z5-jF21q9xoxcGsvUmOLWTlBgolH05nXpA5xh5MHA,480
+create_flask_application-0.1.1.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+create_flask_application-0.1.1.dist-info/METADATA,sha256=FFV_lS8SoJKEQCcvv1B2iEn5TJxqZTKGtrLgoCGzRlA,2119
+create_flask_application-0.1.1.dist-info/WHEEL,sha256=qB97nP5e4MrOsXW5bIU5cUn_KSVr10EV0l-GCHG9qNs,97
+create_flask_application-0.1.1.dist-info/entry_points.txt,sha256=uSdS_1OTAXB1YSoiQhChGlynPMb0-Tq18kRlpgh4X0A,83
+create_flask_application-0.1.1.dist-info/top_level.txt,sha256=QQ0MjnIhPNCPIY_DXNFX02xpMTwQqteTGPpiY_cx0HQ,25
+create_flask_application-0.1.1.dist-info/RECORD,,

@@ -1,0 +1,24 @@
+flask==1.1.1
+PyYaml==5.1.2
+jsonschema==3.0.2
+pyjwt==1.6.4
+uwsgi==2.0.18
+{%- if sqlalchemy %}
+SQLAlchemy==1.3.9
+{%- if sqlalchemy.alembic %}
+alembic==1.2.1
+{%- endif %}
+{%- if sqlalchemy.db_engine == "postgresql" and sqlalchemy.driver == "psycopg2" %}
+psycopg2-binary==2.8.3
+{%- endif %}
+{%- endif %}
+{%- if socketio %}
+flask-socketio==4.2.1
+gevent==1.4.0
+{%- endif %}
+{%- if sphinx %}
+sphinx==2.2.1
+{%- endif %}
+{%- if mail %}
+Flask-Mail==0.9.1
+{%- endif %}
