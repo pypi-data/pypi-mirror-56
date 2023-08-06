@@ -1,0 +1,4 @@
+[console_scripts]
+em-picker = emvis.apps:picker
+em-viewer = emvis.apps:viewer
+
