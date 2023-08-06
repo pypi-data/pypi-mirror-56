@@ -1,0 +1,4 @@
+[console_scripts]
+insteon_monitor = pyinsteon.tools:monitor
+insteon_tools = pyinsteon.tools:tools
+
