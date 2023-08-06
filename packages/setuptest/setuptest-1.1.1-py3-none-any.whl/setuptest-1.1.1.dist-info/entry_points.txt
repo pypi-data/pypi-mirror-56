@@ -1,0 +1,6 @@
+[console_scripts]
+setuptest = stpkg.ccssetuptest:starterclass.startclass
+setuptest.py = stpkg.ccssetuptest:starterclass.startclass
+setuptestv2 = stpkg.__main__:main
+setuptestv3 = stpkg:main
+
