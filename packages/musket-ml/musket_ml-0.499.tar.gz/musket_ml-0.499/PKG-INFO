@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: musket_ml
+Version: 0.499
+Summary: Common parts of my pipelines
+Home-page: https://github.com/petrochenko-pavel-a/musket_core
+Author: Petrochenko Pavel
+Author-email: petrochenko.pavel.a@gmail.com
+License: MIT
+Description: 
+        # musket_all
+        Wrapper package for all musket modules
+        
+        ## Installation
+        
+        ```
+        pip install musket_ml
+        ```
+        Or more detailed instructions [here](https://musket-ml.github.io/webdocs/generic/#installation).
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
