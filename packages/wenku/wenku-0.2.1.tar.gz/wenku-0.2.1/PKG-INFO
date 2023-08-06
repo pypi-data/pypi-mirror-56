@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: wenku
+Version: 0.2.1
+Summary: baidu wenku downloader
+Home-page: https://github.com/vinxv/wenku
+Author: vinxv
+Author-email: vinuxcat@gmail.com
+License: MIT
+Download-URL: https://github.com/vinxv/wenku/archive/v0.2.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
