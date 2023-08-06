@@ -1,0 +1,16 @@
+LICENSE
+README.rst
+setup.py
+lalr/__init__.py
+lalr/analysis.py
+lalr/constants.py
+lalr/exceptions.py
+lalr/grammar.py
+lalr/parsing.py
+lalr/py.typed
+lalr/utils.py
+lalr/tests/__init__.py
+lalr/tests/test_analysis.py
+lalr/tests/test_grammar.py
+lalr/tests/test_parsing.py
+lalr/tests/test_queue.py
