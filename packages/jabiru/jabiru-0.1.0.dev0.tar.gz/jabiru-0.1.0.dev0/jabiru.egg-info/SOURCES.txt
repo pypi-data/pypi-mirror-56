@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+short_description.txt
+jabiru/__init__.py
+jabiru/__main__.py
+jabiru/version.py
+jabiru.egg-info/PKG-INFO
+jabiru.egg-info/SOURCES.txt
+jabiru.egg-info/dependency_links.txt
+jabiru.egg-info/requires.txt
+jabiru.egg-info/top_level.txt
