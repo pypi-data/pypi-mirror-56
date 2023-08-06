@@ -1,0 +1,19 @@
+map(include('category'))
+---
+# The root keys are the names of the command that'll be added
+category:
+  default: str()
+
+  # Whether users can add tags
+  # By default it'll be False
+  extensible: bool(required=False)
+
+  # Whether an item can have multiple tags
+  # By default it'll be False
+  exclusive: bool(required=False)
+
+  # Once tagged as the default, other tags are removed
+  # By default it'll be False
+  exclusive_default: bool(required=False)
+
+  tags: list(str(), int(), min=2)
