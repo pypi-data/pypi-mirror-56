@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: image-functions-barel
+Version: 0.0.2
+Summary: Helper functions for image processing tasks
+Home-page: https://github.com/Barelos/MyLib
+Author: Barel Levy
+Author-email: barel.levy.bl@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-image
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+
+UNKNOWN
+
+
