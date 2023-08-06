@@ -1,0 +1,12 @@
+ssh_commands/Singleton.py,sha256=_QtwJw5zTpnTBJMV56ITpf-uOFJc0ksWuOuADQZLOlI,521
+ssh_commands/__init__.py,sha256=E0meJqKrLxNkCdID2IfEZl-MYlTTBu3z4ziQtw09rSU,111
+ssh_commands/commands.py,sha256=ld1EC6G3I5TmOEPtQ6x8Rdm0_yadp-HkxZU4c5oWtLo,26062
+ssh_commands/ssh-expand-password,sha256=n0bXUiGLL3CrcZ89r2V63yzzFAJvIVgzv9yBrL4GlKU,535
+ssh_commands/ssh-expand-password-sleep,sha256=6XJf8xsM0G_9eow-qnRTmruCT93pKqhYcopAVYSdnvA,613
+ssh_commands/update_version.py,sha256=wbwx_mHCy_YhRQ2LjsRsj-7RSM8Lo9Fsw6L1VHHMZq0,2423
+ssh_commands-1.7.7.data/scripts/ssh-expand-password,sha256=n0bXUiGLL3CrcZ89r2V63yzzFAJvIVgzv9yBrL4GlKU,535
+ssh_commands-1.7.7.data/scripts/ssh-expand-password-sleep,sha256=6XJf8xsM0G_9eow-qnRTmruCT93pKqhYcopAVYSdnvA,613
+ssh_commands-1.7.7.dist-info/METADATA,sha256=-7DFrOXpW7S736jssPSI-hJOUgrrcbRCuwOZxCxwUwc,643
+ssh_commands-1.7.7.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ssh_commands-1.7.7.dist-info/top_level.txt,sha256=ht_ZfAFXZZy1N8gaT-05S5nxOMBIyUhMeOLJTWY8FxQ,13
+ssh_commands-1.7.7.dist-info/RECORD,,
