@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ecs-tool
+Version: 0.9.1
+Summary: CLI wrapper on top of "aws ecs" that tries to improve user experience
+Home-page: https://github.com/whisller/ecs-tool
+Author: Daniel Ancuta
+Author-email: whisller@gmail.com
+Keywords: aws,ecs,cli
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: boto3 (>=1.9,<2.0)
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: colorclass (>=2.2,<3.0)
+Requires-Dist: terminaltables (>=3.1,<4.0)
+Project-URL: Repository, https://github.com/whisller/ecs-tool
