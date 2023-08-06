@@ -1,0 +1,3 @@
+[console_scripts]
+morp = morp.__main__:console
+
