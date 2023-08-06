@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: filetype-validator
+Version: 0.2
+Summary: # FILETYPE VALIDATOR
+A simple wrapper for filetype.py as a validator 
+between file extensions and header signatures 
+based on this list https://en.wikipedia.org/wiki/List_of_file_signatures.
+We need wrapper on this because of the same header signature for
+some different file extensions.
+
+Home-page: https://github.com/ixna/filetype_validator
+Author: isna
+Author-email: isna11583@gmail.com
+License: MIT
+Download-URL: https://github.com/ixna/filetype_validator/releases/tag/v0.2
+Description: UNKNOWN
+Keywords: filetype,extension
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
