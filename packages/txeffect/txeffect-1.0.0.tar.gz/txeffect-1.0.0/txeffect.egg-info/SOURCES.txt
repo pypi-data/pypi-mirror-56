@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+txeffect/__init__.py
+txeffect/test_txeffect.py
+txeffect.egg-info/PKG-INFO
+txeffect.egg-info/SOURCES.txt
+txeffect.egg-info/dependency_links.txt
+txeffect.egg-info/requires.txt
+txeffect.egg-info/top_level.txt
