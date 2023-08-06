@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: soap-as-rest-server
+Version: 0.0.1
+Summary: Soap Proxy Module to get data from SOAP Services
+Home-page: https://github.com/frankmendonca/soap-as-rest-server
+Author: Frank Mendonca
+Author-email: frankmed57@gmail.com
+License: MIT
+Keywords: soap,xml,json,rest
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tornado (==5.1.1)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: PyYAML (==5.1.2)
+Requires-Dist: lxml (==4.4.1)
+
+# SOAP-as-REST Server
+
+This is a "proxy" to SOAP protocol using REST.
+
+## Installing
+
+```bash
+$ pip3 install soap-as-rest-server
+```
+
+## Using as module
+
+```bash
+$ python3 -m soap-as-rest-server
+```
+
+# Importing and using
+
+```python
+#!/usr/bin/env python3
+
+import os
+from os import path
+from soap_as_rest_server import start
+
+base_dir = 'src'
+os.environ['CONFIG_FILE'] = path.join(base_dir, 'config.yml')
+os.environ['TEMPLATE_FILE'] = path.join(base_dir, 'template.xml')
+
+os.environ['SERVER_PORT'] = '8080'
+os.environ['SERVER_ENDPOINT'] = '/soap-proxy/'
+
+start()
+```
+
+
