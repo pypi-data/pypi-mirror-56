@@ -1,0 +1,5 @@
+pytest>=4.0
+requests
+jsondiff
+peewee
+autopep8
