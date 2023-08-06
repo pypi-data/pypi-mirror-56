@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ssh-commands
+Version: 1.7.7
+Summary: SSH commands and gitlab helper
+Home-page: https://gitlab.infomir.dev/backend/python-packages/commands-helper
+Author: Donii Sergii
+Author-email: s.donii@infomir.com
+License: UNKNOWN
+Description: # SSH commands helper
+        
+        Use for simple ssh connection create and work with gitlab API.
+        
+        [Documentation](./docs)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
