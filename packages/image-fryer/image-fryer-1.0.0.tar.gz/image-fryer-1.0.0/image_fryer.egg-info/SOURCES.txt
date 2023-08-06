@@ -1,0 +1,11 @@
+README.md
+setup.py
+fryer/__init__.py
+fryer/fryer.py
+fryer/helpers.py
+fryer/main.py
+image_fryer.egg-info/PKG-INFO
+image_fryer.egg-info/SOURCES.txt
+image_fryer.egg-info/dependency_links.txt
+image_fryer.egg-info/requires.txt
+image_fryer.egg-info/top_level.txt
