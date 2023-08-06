@@ -1,0 +1,43 @@
+{% load dna_tags %}
+
+{% for field_name, url, height, width in object.get_images %}
+  {% if url == "None" %}
+    {# nothing to see here #}
+  {% elif url %}
+    <figure>
+      <image src="{{ url }}" height="{{ height }}" width="{{ width }}"/>
+      <figurecaption>{{ object.name }}</figurecaption>
+    </figure>
+  {% endif %}
+{% endfor %}
+
+<h3>{{ object.name }}</h3>
+
+<dl>
+  {% for field_name, field_type, field in object.get_fields %}
+    {% if not field|is_none_null_or_zero %}
+      {# nothing to see here #}
+    {% elif field_name|is_in:"name,polymorphic_ctype,id,elio_key,elio_page,elio_role" %}
+      {# handled differently #}
+    {% elif field_type == "OneToOneField" %}
+      {# nothing to see here #}
+    {% elif field %}
+      <dt>{{ field_name }}</dt>
+      <dd>
+        {% if field_type == "URLField" %}
+          <a href="{{ field }}">{{ field }}</a>
+        {% elif field_type == "TextField" %}
+          {{ field|safe }}
+        {% elif field_type == "ForeignKey" %}
+          <a href="{{ field.get_absolute_url }}">{{ field }}</a>
+        {% elif field_name == "telephone" %}
+          <a href="tel:{{ field }}">{{ field }}</a>
+        {% elif field_type == "EmailField" %}
+          <a href="mailto:{{ field }}">{{ field }}</a>
+        {% else %}
+          {{ field }}
+        {% endif %}
+      </dd>
+    {% endif %}
+  {% endfor %}
+</dl>
