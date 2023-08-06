@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: sanic-jwt-extended
+Version: 1.0.dev1
+Summary: Extended JWT integration with Sanic
+Home-page: https://github.com/NovemberOscar/Sanic-JWT-Extended
+License: MIT
+Keywords: sanic,jwt,json web token
+Author: Seonghyeon Kim
+Author-email: kim@seonghyeon.dev
+Requires-Python: >=3.6,<4.0
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: PyJWT (>=1.6.4,<2.0.0)
+Requires-Dist: dataclasses; python_version >= "3.6.0" and python_version < "3.7.0"
+Requires-Dist: flatten-dict (>=0.2.0,<0.3.0)
+Requires-Dist: sanic (>=18.12.0)
+Project-URL: Documentation, https://sanic-jwt-extended.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/NovemberOscar/Sanic-JWT-Extended
+Description-Content-Type: text/markdown
+
+# Sanic-JWT-Extended
+[![Downloads](https://pepy.tech/badge/sanic-jwt-extended)](https://pepy.tech/project/sanic-jwt-extended)
+![PyPI](https://img.shields.io/pypi/v/sanic-jwt-extended.svg)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sanic-jwt-extended.svg)
+![code style](https://img.shields.io/badge/code%20style-black-black.svg)
+[![Documentation Status](https://api.netlify.com/api/v1/badges/c2cf1ea1-bae1-448f-b52c-0dea6516446a/deploy-status)](https://sanic-jwt-extended.seonghyeon.dev)
+
+## What is Sanic-JWT-Extended?
+Sanic-JWT-Extended is an open source Sanic extension that provides JWT support (comply with RFC standard)
+
+## Why Sanic-JWT-Extended?
+Sanic-JWT-Extended not only adds support for using JSON Web Tokens (JWT) to Sanic for protecting views,
+but also many helpful (and **optional**) features  built in to make working with JSON Web Tokens
+easier. These include:
+
+* Support for adding public claims with [namespacing](https://auth0.com/docs/tokens/concepts/claims-namespacing)
+* Support for adding private claims
+* [Refresh tokens](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
+* Token freshness and separate view decorators to only allow fresh tokens
+* Access control
+* blacklist support with some built-in blacklist
+* Provides Token object for easier jwt manifulation
+
+## Installation
+```shell script
+$ pip install sanic-jwt-extended
+```
+```shell script
+$ poetry add sanic-jwt-extended
+```
+```shell script
+$ pipenv install sanic-jwt-extended
+```
+
+## Usage
+[View the online documentation](https://sanic-jwt-extended.seonghyeon.dev/)
+
+## Developing Sanic-JWT-Extended
+
+### Prerequesties
+- [poetry](https://github.com/sdispater/poetry)
+
+### Installaion
+```shell script
+$ make env
+```
+this will install dependencies with poetry. if poetry not found, will install poetry.
+
+### Development
+- `make format`: this will format your code with `isort` and `black`
+- `make check`: this will lint your code with `isort`, `black`, and `pylint`
+- `make clean`: this will remove temporary things.
+
+### Commit Convention
+```
+<{verb}>({scope}): {summary}
+```
+
+### Testing
+- **TBD**
+
