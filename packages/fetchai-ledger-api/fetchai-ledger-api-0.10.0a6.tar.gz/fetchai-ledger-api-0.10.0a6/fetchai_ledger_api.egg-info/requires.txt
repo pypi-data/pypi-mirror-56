@@ -1,0 +1,15 @@
+requests
+ecdsa
+msgpack
+base58
+lark-parser
+semver
+pyaes
+
+[dev]
+check-manifest
+pydot
+
+[test]
+coverage
+pytest
