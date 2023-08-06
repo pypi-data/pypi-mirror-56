@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ls2ncdu
+Version: 0.0.1
+Summary: NCDU crawler for systems where only ls is available
+Home-page: https://github.com/borevitzlab/ls2ncdu
+Author: Ming Chia/Kevin Murray
+Author-email: foss@kdmurray.id.au
+License: UNKNOWN
+Description: # ls2ncdu
+        Parser for systems which only have `ls -lR` available
+        
+        JSON format ref: https://dev.yorhel.nl/ncdu/jsonfmt
+        
+        ## Usage
+        
+        Output is written to stdout. Takes output from `ls -lR`. The resulting .json file is readable by `ncdu -f`
+        
+        Example usage for [NCI massdata](https://opus.nci.org.au/display/Help/MASSDATA+User+Guide):
+        
+        ```
+        mdss ls -lR | ls2ncdu.py > mdss_files.json
+        ncdu -f mdss_files.txt
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
