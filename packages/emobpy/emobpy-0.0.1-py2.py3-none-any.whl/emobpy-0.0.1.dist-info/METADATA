@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: emobpy
+Version: 0.0.1
+Summary: Creation of time series for battery electric vehicles modeling
+Home-page: https://github.com/diw-berlin/emobpy
+Author: Carlos Gaete
+Author-email: cdgaete@gmail.com
+License: MIT License
+Requires-Dist: appdirs
+Requires-Dist: docopt
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: numba
+
+Copyright (c) 2019 Carlos Gaete-Morales, Alexander Zerrahn, Wolf-Peter Schill
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Description: # emobpy
+        
+        emobpy is a python tool that can create vehicle time series for battery electric vehicles. Three different time series can be created: vehicle electricity consumption time series, grid availability time series and actual charging time series. The electricity consumption time series are created based on mobility statistics.
+        
+        ## Vehicle electricity consumption time series (VECTS)
+        
+        The VECTS contain the state of a vehicle at each point in time. The states vary according to the mobility of drivers. Possible states are at home, workplace, shopping, errands, escort, leisure, and driving. For the state "Driving", the distance travelled is also provided in the time series. The time resolution can be established initially, but in fact, it depends on the available statistics (our examples contains 30 minutes time steps). Two groups of drivers can be distinguished commuters or non-commuters. Commuters perform the same trip to work every weekday and with the same distance home-work-home, in this group can be identified employed people and students where the main destination is workplace or university. While for the free time group, every day a new trip is drawn with different trip purposes. The daily number of trips, the departure time and trip purpose, and distance travelled are determined based on statistics of mobility surveys. Other considerations can also be set up. For instance, the number of working hours per day, the first and last state of the day can be established as "at home", and "driving" state must always be in between of two different states, that is to say, that a determined state cannot be followed by another state unless driving state is in between.
+        
+        ## Grid availability time series (GATS)
+        
+        Several GATS can be created from a determined VECTS. Different plug-in stations can be available for a vehicle depending on a particular state. The plug-in stations of a determined state can be chosen based on a probability distribution that adds up 100%. The plug-in stations defined in this tool are "home", "public", "maker", "workplace", "fast" and "none", although more user-defined plug-in stations can be established. The plug-in stations have an associated capacity per time resolution and "none" has zero capacity. Different scenarios of grid availability can be modelled. For example, in one scenario fast charge cannot be available, while for other scenarios fast charge can only be available for the driving state.
+        
+        ## Actual charging time series (ACTS)
+        
+        The ACTS contains at each point on time information of the plug-in stations available such as the capacity allocated to them. An ACTS is the one that indicates the actual consumption of electricity from the grid of a vehicle according to its driving behaviour and grid availability. There are different scenarios available to create ACTS. For example, "Immediate-Full capacity" scenarios that informs the energy drawn from the grid at maximum capacity of respective plug-in station until the battery is fully charged , or "Immediate-Balanced" scenario that creates a time series taking into account the duration of a vehicle in a plug-in station and the energy required to get the battery fully charged, allowing to charge the battery a lower capacity than the maximum capacity available in the charging point.
+        
+        ## Instructions
+        
+        This tool has been tested in window 7 and Ubuntu 18.04.
+        
+        it is recommended to create a python environment to install the dependencies with the versions indicated  in requirements.txt:
+        
+        - Pandas
+        - Numpy
+        - Numba
+        
+        Optional for parallel
+        - Ray (linux support only)
+        - Multiprocessing
+        
+        Instalation:
+        
+            pip install emobpy
+        
+        ## Usage
+        
+        There are notebooks in the "example" directory with examples of usage.
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Energy
+Classifier: Topic :: Scientific/Engineering :: Mobility
