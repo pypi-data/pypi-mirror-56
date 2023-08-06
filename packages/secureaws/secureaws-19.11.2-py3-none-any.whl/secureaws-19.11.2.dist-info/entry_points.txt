@@ -1,0 +1,3 @@
+[console_scripts]
+secureaws = secureaws.secureaws:main
+
