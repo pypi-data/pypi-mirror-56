@@ -1,0 +1,3 @@
+[console_scripts]
+quantumics = __entry__:main
+
