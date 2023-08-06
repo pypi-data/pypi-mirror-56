@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: pyconfighelper
+Version: 0.0.2
+Summary: Retrieve an encrypted JSON configuration file from Github and decrypt it.
+Home-page: http://github.com/joncain/pyconfighelper
+Author: Jon Cain
+Author-email: jon@joncain.net
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: google-cloud-kms
+Requires-Dist: cryptography
+Requires-Dist: requests
+
+UNKNOWN
+
+
