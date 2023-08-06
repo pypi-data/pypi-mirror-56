@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: asb
+Version: 0.1
+Summary: Python utility to capture android screen frames in real time and use with 3rd party libs like opencv.
+Home-page: https://github.com/roj4s/android_screen_buffer
+Author: Luis Rojas Aguilera
+Author-email: rojas@icomp.ufam.edu.br
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: certifi (==2019.9.11)
+Requires-Dist: numpy (==1.17.4)
+Requires-Dist: opencv-python (==4.1.2.30)
+
+## Android Screen Buffer
+
+Python package for streaming Android device's screen frames. This utility can be used to capture android screen frames in real time and use with 3rd party libs like opencv. Might be usefull in case you'd like to make processing or use screen frames in your python code (e.g to create reinforcement learning setups for android games).
+
+## How to install:
+
+ - First install and run [minicap](https://github.com/openstf/minicap) (thats really easy).
+ - Then `pip install asb`
+
+## How to use:
+
+    from asb import AndroidScreenBuffer
+
+    buff = AndroidScreenBuffer()
+    buff.run()
+
+    img = buff.get_last_frame()
+
+    if img is not None:
+        # Use image as you would like
+        # e.g cv2.imshow('capture', img)
+
+
