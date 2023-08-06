@@ -1,0 +1,20 @@
+dist: bionic
+language: python
+sudo: false
+cache:
+  pip: true
+  directories:
+    - eggs
+python:
+  - "2.7"
+before_install:
+  - virtualenv -p `which python` .
+  - bin/pip install -r requirements.txt -c constraints_plone43.txt
+  - cp test_plone43.cfg buildout.cfg
+
+install:
+  - bin/buildout -N -t 3 code-analysis:return-status-codes=True annotate
+  - bin/buildout -N -t 3 code-analysis:return-status-codes=True
+
+script:
+  - bin/test
