@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pelican-just-table
+Version: 0.1.0
+Summary: Just table is a plugin for Pelican to create an easily table.
+Keywords: pelican
+Author: Alexandre Bonnetain
+Author-email: Shir0kamii@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: jinja2 (>=2.10,<3.0)
+Requires-Dist: pelican (>=4.2,<5.0)
