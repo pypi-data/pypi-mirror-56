@@ -1,0 +1,6 @@
+dispatch:
+  - url: "*/app2/*"
+    service: test_app2
+
+  - url: "*/app3/*"
+    service: test_app3
