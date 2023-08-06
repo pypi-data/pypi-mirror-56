@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dbstructsync
+Version: 0.0.1
+Summary: 同步mysql多套环境的数据库表结构及索引
+Home-page: UNKNOWN
+Author: yingchen_double_1
+Author-email: a860608@126.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: pymysql
+Requires-Dist: pyyaml
+
+主要是解决针对mysql数据库，在不同测试环境下表结构及索引不一致的问题
+
+-yingchen_double_1
+
