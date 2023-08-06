@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: sgdpy
+Version: 1.4
+Summary: A package for performing stochastic gradient descent (arXiv:1710.04626) to layout graphs
+Home-page: https://www.github.com/jxz12/s_gd2
+Author: Jonathan Zheng
+Author-email: jxz12@ic.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: test
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: nose2; extra == 'test'
+Requires-Dist: scipy; extra == 'test'
+
+UNKNOWN
+
+
