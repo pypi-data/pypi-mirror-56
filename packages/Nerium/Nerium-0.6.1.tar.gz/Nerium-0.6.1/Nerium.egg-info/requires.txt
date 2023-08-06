@@ -1,0 +1,14 @@
+flask
+gitpython
+marshmallow
+python-dotenv
+pyyaml
+requests
+sqlalchemy
+sqlparse
+
+[mysql]
+PyMySQL
+
+[pg]
+psycopg2
