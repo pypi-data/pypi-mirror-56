@@ -1,0 +1,17 @@
+scola/__init__.py,sha256=kzmTJmFV-wg_AgMvgbeWepXHa0ar8fBCATyxkZA_L5s,80
+scola/_common.py,sha256=9-A7XEgjq8nnep9se5WGKRDHTF0wGMiRtX_rW_i9_jE,4226
+scola/_compute_null_correlation_matrix.py,sha256=5enhlZh84ALcA-Lw1wbNeHs3Fp23nIbYMQdfRvImcCU,3031
+scola/_golden_section_search.py,sha256=1VOCLPWVyewyz3P8BPl3TOvFtjUQOLKjpCp9PArjMdM,4148
+scola/_iscola.py,sha256=SkrT_pUqAirEfvJoGE6vBEYU-L1eOFhQhwuslyq4OTg,5997
+scola/_scola.py,sha256=vcfUd5C7RmcWct0cIRkdnr9cnvVY3CvC1vj7lMn3lQ4,6357
+scola/corr2net.py,sha256=EyU4HIRI7Lc5p-FQ8Tk-r_-OwcpgEovSGnbO--iTZKo,7523
+scola/generate_network.py,sha256=DqWOdB-BS_18ZQcI9uBWgHOl5MBYdHN6Xay7UUtusHY,5169
+scola/gradient_descent.py,sha256=vpnT02gGNYn2AEBAzTvAVj96OQ7qPmgs1r1HqDJHwT0,4250
+scola/null_models.py,sha256=0nnsver59Cv_8usIM_AXuRNJaAk-lDH2V-O1SkK0K48,5576
+scola/search_algorithm.py,sha256=o4hwez0qgHbvt46EpBO68U2-w_h0sGFkttHeKI0f5Ms,5755
+scola-0.1.0.dist-info/DESCRIPTION.rst,sha256=nhY-RUzfiOA3Rn9kjYuXN3ynFpwdwX0HXagrte2PKAM,38
+scola-0.1.0.dist-info/METADATA,sha256=4BAMBd3NtHgkU-gW8rToeo0QmsPEiAaBgUZ8T7SJ1Lo,760
+scola-0.1.0.dist-info/RECORD,,
+scola-0.1.0.dist-info/WHEEL,sha256=bee59qcPjkyXfMaxNWjl2CGotqfumWx9pC1hlVLr2mM,92
+scola-0.1.0.dist-info/metadata.json,sha256=saabbkW884BW0gN8OlrOuK9B5ThCWl9Lgt9NVz3lxXM,881
+scola-0.1.0.dist-info/top_level.txt,sha256=JcsiVTI4CnPRtlLUp9g1M-zKNMxlrB0FAKpDQ_dGcmw,6
