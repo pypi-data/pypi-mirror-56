@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: MCRLLM
+Version: 0.0.36
+Summary: MCRLLM: Multivariate Curve Resolution by Log-Likelihood Maximization
+Home-page: UNKNOWN
+Author: Ryan Gosselin
+Author-email: ryan.gosselin@usherbrooke.ca
+License: UNKNOWN
+Description: MCRLLM: Multivariate Curve Resolution by Log-Likelihood Maximization.    
+        
+        X = CS    
+        where    
+        X(nxk): Spectroscopic data where n spectra acquired over k energy levels    
+        C(nxa): Composition map based on a MCRLLM components    
+        S(axk): Spectra of the a components as computed by MCRLLM    
+        
+        # Method first presented in    
+        Lavoie F.B., Braidy N. and Gosselin R. (2016) Including Noise Characteristics in MCR to improve Mapping and Component Extraction from Spectral Images, Chemometrics and Intelligent Laboratory Systems, 153, 40-50.    
+        
+        # Input data    
+        Algorithm is designed to treat 2D data X(nxk) matrices where n spectra acquired over k energy levels.    
+        3D spectral image X(n1,n2,k) can be unfolded to 2D matrix X(n1xn2,k) prior to MCRLLM analysis. Composition maps can then be obtained by folding C(n1xn2,a) matrices into 2D chemical maps C(n1,n2,a).    
+        # Input and output arguments    
+        MCRLLM requires 3 inputs : X dat, number of components to compute (nb) and use of phi exponent.    
+         Refer to paper above for use of phi. To optimize phi: 'phi' or to set phi to 1: 'standard'    
+        decomposition = mcr.mcrllm(X,nb,'phi')    
+        # Results    
+        Show S and C for each iteration (all) or only for final results (final).    
+        S_all = decomposition.allS    
+        S_final = decomposition.S    
+        C_all = decomposition.allC    
+        C_final = decomposition.C    
+        # Example    
+        Compute MCRLLM using 7 components and optimizing phi exponent.    
+        import MCRLLM as mcr    
+        decomposition = mcr.mcrllm(X,7,'phi')    
+        #Iterate each component 20 times    
+        decomposition.iterate(20)    
+        S_final = decomposition.S    
+        C_final = decomposition.C    
+        plt.figure()    
+        plt.plot(S_final.T)    
+        plt.title('S',fontsize=16)    
+        plt.figure()    
+        plt.plot(C_final)    
+        plt.title('C',fontsize=16)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
