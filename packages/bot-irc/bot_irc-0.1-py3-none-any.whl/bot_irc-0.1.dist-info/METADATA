@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: bot-irc
+Version: 0.1
+Summary: IRC bot
+Home-page: https://github.com/pythonpune/bot-irc
+Author: Nikhil Dhandre
+Author-email: nik.digitronik@live.com
+License: GPLv3.0
+Keywords: bot-irc
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+
+# irc-bot
+IRC bot (under progress)
+
+
