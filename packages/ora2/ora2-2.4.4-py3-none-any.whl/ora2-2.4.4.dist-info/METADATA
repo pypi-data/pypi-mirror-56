@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: ora2
+Version: 2.4.4
+Summary: edx-ora2
+Home-page: http://github.com/edx/edx-ora2
+Author: edX
+Author-email: oscm@edx.org
+License: AGPL
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django :: 1.11
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: six (==1.13.0)
+Requires-Dist: django-model-utils (==3.0.0)
+Requires-Dist: appdirs (==1.4.3)
+Requires-Dist: pytz (==2019.3)
+Requires-Dist: edx-i18n-tools (==0.4.8)
+Requires-Dist: voluptuous (==0.11.7)
+Requires-Dist: enum34 (==1.1.6)
+Requires-Dist: certifi (==2019.9.11)
+Requires-Dist: defusedxml (==0.5.0)
+Requires-Dist: edx-submissions (==3.0.2)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: webob (==1.8.5)
+Requires-Dist: lxml (==3.8.0)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: jsonfield (==2.0.2)
+Requires-Dist: fs (==2.0.18)
+Requires-Dist: pyyaml (==5.1.2)
+Requires-Dist: path.py (==8.2.1)
+Requires-Dist: idna (==2.8)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: web-fragments (==0.3.1)
+Requires-Dist: libsass (==0.10.0)
+Requires-Dist: django (==1.11.26)
+Requires-Dist: python-dateutil (==2.4.0)
+Requires-Dist: bleach (==2.1.4)
+Requires-Dist: html5lib (==1.0.1)
+Requires-Dist: boto (==2.39.0)
+Requires-Dist: markupsafe (==1.1.1)
+Requires-Dist: polib (==1.1.0)
+Requires-Dist: urllib3 (==1.25.7)
+Requires-Dist: python-swiftclient (==3.8.1)
+Requires-Dist: lazy (==1.1)
+Requires-Dist: loremipsum (==1.0.5)
+Requires-Dist: futures (==3.3.0) ; python_version == "2.7"
+
+Open Response Assessment |build-status| |coverage-status|
+=========================================================
+
+`User docs <http://edx.readthedocs.org/projects/edx-partner-course-staff/en/latest/exercises_tools/open_response_assessments/index.html>`_
+
+
+Installation, Tests, and other Developer Tasks
+==============================================
+
+edX engineers follow the `guides on our wiki <https://openedx.atlassian.net/wiki/spaces/EDUCATOR/pages/9765004/ORA+Developer+Guide>`_.
+Reading this page before contributing is highly recommended.
+
+License
+=======
+
+The code in this repository is licensed under version 3 of the AGPL unless
+otherwise noted.
+
+Please see ``LICENSE.txt`` for details.
+
+How to Contribute
+=================
+
+Contributions are very welcome. The easiest way is to fork this repo, and then make a pull request from your fork. The first time you make a pull request, you may be asked to sign a Contributor Agreement.
+
+Reporting Security Issues
+=========================
+
+Please do not report security issues in public. Please email security@edx.org
+
+Mailing List and Slack
+======================
+
+You can get help with this code on our `mailing lists`_ or in real-time conversations on `Slack`_.
+
+.. _mailing lists: https://open.edx.org/getting-help
+.. _Slack: https://open.edx.org/getting-help
+
+.. |build-status| image:: https://travis-ci.org/edx/edx-ora2.png?branch=master
+   :target: https://travis-ci.org/edx/edx-ora2
+   :alt: Travis build status
+.. |coverage-status| image:: https://coveralls.io/repos/edx/edx-ora2/badge.png?branch=master
+   :target: https://coveralls.io/r/edx/edx-ora2?branch=master
+   :alt: Coverage badge
+
+
