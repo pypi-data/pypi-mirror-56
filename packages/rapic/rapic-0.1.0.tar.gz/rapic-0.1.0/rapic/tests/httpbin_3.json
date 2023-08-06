@@ -1,0 +1,48 @@
+{
+  "httpbin": {
+
+    "pages": [
+      "homepage",
+      "second_page"
+    ],
+    "homepage": {
+      "test_requests_patch_method": {
+         "host": "httpbin.org",
+        "scheme": "http",
+        "path": "/anything/{anything}",
+        "method": "PATCH",
+        "url_query": {
+        },
+        "data": {
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "get_my_ip": {
+        "path": "/ip",
+        "method": "GET"
+      }
+    },
+    "second_page": {
+      "test_requests_delete_method": {
+        "path": "/anything/{user_id}",
+        "host": "httpbin.org",
+        "scheme": "http",
+        "method": "DELETE",
+        "is_json": false,
+        "url_query": {
+        },
+        "data": {
+          "username": "rapic"
+        },
+        "headers": {
+        },
+        "do_extra_requests": true,
+        "extra_request_names": [
+          "get_my_ip"
+        ]
+      }
+    }
+  }
+}
