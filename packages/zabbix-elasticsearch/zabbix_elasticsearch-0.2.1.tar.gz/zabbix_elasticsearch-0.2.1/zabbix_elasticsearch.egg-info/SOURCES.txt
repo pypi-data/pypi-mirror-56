@@ -1,0 +1,11 @@
+README.md
+setup.py
+docs/default.conf
+zabbix_elasticsearch/__init__.py
+zabbix_elasticsearch/zabbix_elasticsearch.py
+zabbix_elasticsearch.egg-info/PKG-INFO
+zabbix_elasticsearch.egg-info/SOURCES.txt
+zabbix_elasticsearch.egg-info/dependency_links.txt
+zabbix_elasticsearch.egg-info/entry_points.txt
+zabbix_elasticsearch.egg-info/requires.txt
+zabbix_elasticsearch.egg-info/top_level.txt
