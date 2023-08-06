@@ -1,0 +1,4 @@
+[console_scripts]
+featurize = featurize_jupyterlab:cli
+ftr = featurize_jupyterlab:cli
+
