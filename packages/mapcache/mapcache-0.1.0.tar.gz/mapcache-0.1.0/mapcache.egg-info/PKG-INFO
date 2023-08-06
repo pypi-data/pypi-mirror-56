@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: mapcache
+Version: 0.1.0
+Summary: Simple caching server for map tiles
+Home-page: https://github.com/luphord/mapcache
+Author: luphord
+Author-email: luphord@protonmail.com
+License: MIT license
+Description: # mapcache
+        Simple caching server for map tiles.
+        
+        
+        # History
+        
+        ## 0.1.0 (2019-12-02)
+        
+        * Imported from fossil commit 13c21af088.
+        * First release on PyPI.
+        
+Keywords: mapcache
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
