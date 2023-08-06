@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pycaret
+Version: 0.0.2
+Summary: A Python package for supervised and unsupervised machine learning.
+Home-page: https://github.com/pycaret/pycaret
+Author: Moez Ali
+Author-email: moez.ali@queensu.ca
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: IPython
+Requires-Dist: joblib
+Requires-Dist: sklearn
+Requires-Dist: shap
+Requires-Dist: ipywidgets
+Requires-Dist: yellowbrick
+
+## pycaret
+
+#### pycaret is the free software and open source machine learning library for python programming language. It is built around several popular machine learning libraries in python. Itâ€™s primary objective is to simplify problem solving through machine learning by providing an easy to use unified API. 
+
+
+```python
+
+```
+
+
