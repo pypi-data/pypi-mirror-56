@@ -1,0 +1,3 @@
+[console_scripts]
+cl-timer = cl_timer.timer:main
+
