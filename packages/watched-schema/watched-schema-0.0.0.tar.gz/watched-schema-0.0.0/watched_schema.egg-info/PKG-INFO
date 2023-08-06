@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: watched-schema
+Version: 0.0.0
+Summary: JSON schema files for WATCHED
+Home-page: https://github.com/watchedcom/schema
+Author: WATCHED
+Author-email: dev@watched.com
+License: UNKNOWN
+Description: # WATCHED.com JSON Schema
+        
+        This repo defines the JSON schema for WATCHED.com addons.
+        It currently contains platform code for `nodejs` and `python`.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
