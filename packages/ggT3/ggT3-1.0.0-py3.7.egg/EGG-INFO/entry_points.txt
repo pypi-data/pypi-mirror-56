@@ -1,0 +1,3 @@
+[console_scripts]
+mcloud = src.mcloud:main
+
