@@ -1,0 +1,4 @@
+minikerberos>=0.0.11
+winsspi>=0.0.2
+six
+aiocmd
