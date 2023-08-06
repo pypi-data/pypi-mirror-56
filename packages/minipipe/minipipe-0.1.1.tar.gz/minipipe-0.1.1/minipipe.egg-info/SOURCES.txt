@@ -1,0 +1,11 @@
+README.md
+setup.py
+minipipe.egg-info/PKG-INFO
+minipipe.egg-info/SOURCES.txt
+minipipe.egg-info/dependency_links.txt
+minipipe.egg-info/not-zip-safe
+minipipe.egg-info/requires.txt
+minipipe.egg-info/top_level.txt
+src/__init__.py
+src/base.py
+src/parent.py
