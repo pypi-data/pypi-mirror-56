@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+numericvision/__init__.py
+numericvision/__main__.py
+numericvision/config.cfg
+numericvision/contours.py
+numericvision/images.py
+numericvision.egg-info/PKG-INFO
+numericvision.egg-info/SOURCES.txt
+numericvision.egg-info/dependency_links.txt
+numericvision.egg-info/entry_points.txt
+numericvision.egg-info/requires.txt
+numericvision.egg-info/top_level.txt
