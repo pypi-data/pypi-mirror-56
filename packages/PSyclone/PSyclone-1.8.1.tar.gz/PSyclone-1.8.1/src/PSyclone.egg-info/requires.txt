@@ -1,0 +1,21 @@
+pyparsing
+fparser==0.0.10
+configparser
+six
+
+[:python_version < "3.0"]
+enum34
+
+[doc]
+sphinx
+sphinxcontrib.bibtex
+sphinx_rtd_theme
+
+[test]
+pep8
+pylint==1.6.5
+pytest-cov
+pytest-pep8
+pytest-pylint
+pytest-flakes
+pytest-pep257
