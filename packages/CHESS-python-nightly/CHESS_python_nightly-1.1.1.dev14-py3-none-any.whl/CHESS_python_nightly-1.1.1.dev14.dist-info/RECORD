@@ -1,0 +1,14 @@
+chess/__init__.py,sha256=EXsEp911HFHcKlYJXTOoucC9ojXDl8OO5dlWj8T17f4,101
+chess/__main__.py,sha256=1oOrhYgw91ijd74EObEw5QpebdpthzSb0n-dplPIqfE,1530
+chess/chess.py,sha256=DIvsymzn2Wuzt3H-EY4zcEFHFs42sEEafb9Wbc8ooY4,7657
+chess/cluster.py,sha256=vPzfao9SXKGjQxFJsen9OAn3HyDp6nu7PNNfrRDIQRs,14264
+chess/defaults.py,sha256=7YukRG-DTlXx1wOPF1V5pySiwz7EkHt6--PNJKBq4rw,465
+chess/distance.py,sha256=bd14gHP0RcVRtaUahqOA6Ifcqh6ED9k4HN5XYRDTC4U,1091
+chess/graph.py,sha256=_uLgfLnTq8LPIVNA2I0fgqvIdMLekjyKs6b2AheY__g,2311
+chess/query.py,sha256=3mwSCIZyrymwts0fY3jaTEWddR-ntBHcOMK8Odb8RPY,544
+chess/search.py,sha256=SH8_JJdORZ4I1jDveXkFKoyXw2FN0vTEmDzlVlrw8RM,2518
+CHESS_python_nightly-1.1.1.dev14.dist-info/LICENSE.md,sha256=UwFDmvow6lKe-_saLVcodCMermYwg01PwjP0ZAnsFLI,1071
+CHESS_python_nightly-1.1.1.dev14.dist-info/METADATA,sha256=izjO9zuN7nGhXnNF1xlb7pbgm5ReWpTj9Y_efQPW-hM,1494
+CHESS_python_nightly-1.1.1.dev14.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+CHESS_python_nightly-1.1.1.dev14.dist-info/top_level.txt,sha256=KQh_dmhsO-MtGPgCihpBa-q5XF6tGfA9_MKDXETuyss,6
+CHESS_python_nightly-1.1.1.dev14.dist-info/RECORD,,
