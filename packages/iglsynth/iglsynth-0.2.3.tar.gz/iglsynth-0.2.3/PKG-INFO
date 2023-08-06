@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: iglsynth
+Version: 0.2.3
+Summary: Infinite Games on graph and Logic-based controller Synthesis
+Home-page: https://akulkarni.me/iglsynth/
+Author: ['Abhishek N. Kulkarni']
+Author-email: ankulkarni@wpi.edu
+License: UNKNOWN
+Download-URL: https://github.com/abhibp1993/iglsynth/releases/0.2.3.tar.gz
+Description: 
+                IGLSynth is a package for synthesizing winning strategies in two-player 
+                games and hypergames, where player's objectives are given using 
+                logical specifications.  
+                
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
