@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+Rambo_zhou_guestbook.egg-info/PKG-INFO
+Rambo_zhou_guestbook.egg-info/SOURCES.txt
+Rambo_zhou_guestbook.egg-info/dependency_links.txt
+Rambo_zhou_guestbook.egg-info/entry_points.txt
+Rambo_zhou_guestbook.egg-info/requires.txt
+Rambo_zhou_guestbook.egg-info/top_level.txt
+guestbook/__init__.py
+guestbook/static/main.css
+guestbook/templates/index.html
