@@ -1,0 +1,6 @@
+runtime: python37
+entrypoint: gunicorn -b :$PORT main:app
+
+handlers:
+  - url: /app3/(.*\.(gif|png|jpg))$
+    static_files: static/\1
