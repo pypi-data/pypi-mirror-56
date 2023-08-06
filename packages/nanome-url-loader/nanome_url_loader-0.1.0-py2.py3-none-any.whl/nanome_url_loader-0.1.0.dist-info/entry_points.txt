@@ -1,0 +1,3 @@
+[console_scripts]
+nanome-url-loader = nanome_url_loader.URLLoader:main
+
