@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pos-neg-neu-007
+Version: 0.1.1
+Summary: Get positive,negative response for given sentence
+Home-page: UNKNOWN
+Author: Ankit Srivastava 007
+Author-email: ankits.7733@gmail.com
+License: UNKNOWN
+Description: ## pos_neg_neu_007
+        ## Package is for finding either the sentence is negative ,positive or neutral
+        
+        ## from pos_neg_neu_007 import pos_neg_neu_007
+        ## pos_neg_neu_007.pos_neg_neu(s)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
