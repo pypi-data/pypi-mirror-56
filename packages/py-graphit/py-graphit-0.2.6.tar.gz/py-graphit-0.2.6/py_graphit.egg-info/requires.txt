@@ -1,0 +1,13 @@
+uritools
+pytz
+python-dateutil
+
+[all]
+coverage
+PyYAML
+
+[test]
+coverage
+
+[yaml]
+PyYAML
