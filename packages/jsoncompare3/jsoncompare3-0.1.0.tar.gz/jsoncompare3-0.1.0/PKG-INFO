@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: jsoncompare3
+Version: 0.1.0
+Summary: jsoncompare3 is a simple Python3 utility for comparing two JSON objects
+Home-page: https://github.com/lanser-z/jsoncompare.git
+Author: Lanser.Z
+Author-email: lanser.z@gmail.com
+License: LICENSE.txt
+Description: jsoncompare3 is a simple Python3 utility for comparing two JSON objects
+        
+        USAGE (recommand python version >= 3.6)
+        
+        python jsoncompare.py <item1> <item2>
+        
+        Where item1 and item2 are either a file or a url containing a JSON object. The compare() method can also be called as a library from other Python code, in which case item1 and item2 can also be dict or array objects.
+        
+Platform: UNKNOWN
