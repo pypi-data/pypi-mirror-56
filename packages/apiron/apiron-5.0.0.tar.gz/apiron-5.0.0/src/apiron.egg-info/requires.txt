@@ -1,0 +1,14 @@
+requests<3,>=2.11.1
+
+[docs]
+importlib-metadata==0.23
+sphinx==2.2.1
+sphinx-autobuild==0.7.1
+
+[lint]
+black
+pyflakes
+
+[test]
+pytest==5.2.2
+pytest-cov==2.8.1
