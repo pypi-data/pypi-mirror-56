@@ -1,0 +1,9 @@
+KDEpy
+astropy
+h5py
+matplotlib
+numpy
+pandas
+pint
+scikit-image>=0.16
+scipy
