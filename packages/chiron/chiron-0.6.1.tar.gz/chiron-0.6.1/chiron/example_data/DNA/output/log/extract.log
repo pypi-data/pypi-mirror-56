@@ -1,0 +1,5 @@
+2019-11-27 20:37:42,504 ERROR Cannot extract file chiron/example_data/DNA/read1.fast5. "Can't open attribute (can't locate attribute: 'read_id')"
+2019-11-27 20:37:42,504 ERROR Cannot extract file chiron/example_data/DNA/read3.fast5. "Can't open attribute (can't locate attribute: 'read_id')"
+2019-11-27 20:37:42,504 ERROR Cannot extract file chiron/example_data/DNA/read5.fast5. "Can't open attribute (can't locate attribute: 'read_id')"
+2019-11-27 20:37:42,504 ERROR Cannot extract file chiron/example_data/DNA/read2.fast5. "Can't open attribute (can't locate attribute: 'read_id')"
+2019-11-27 20:37:42,504 ERROR Cannot extract file chiron/example_data/DNA/read4.fast5. "Can't open attribute (can't locate attribute: 'read_id')"

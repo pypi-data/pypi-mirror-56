@@ -1,0 +1,6 @@
+# Reading Basecalling assembly output total rate(bp/s)
+0.017 0.000 0.001 0.000 0.019 23600.286
+# read_len batch_size segment_len jump start_pos
+447 300 2000 1900 0
+# input_name model_name
+chiron/example_data/RNA//raw/ /home/haotiant/Chiron/chiron/model/DNA_default

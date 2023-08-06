@@ -1,0 +1,14 @@
+h5py>=2.7.0
+mappy>=2.10.0
+numpy>=1.13.3
+statsmodels>=0.8.0
+tqdm>=4.23.0
+scipy>=1.0.1
+biopython>=1.73
+packaging>=18.0
+
+[tf]
+tensorflow==1.15.0
+
+[tf_gpu]
+tensorflow-gpu==1.15.0
