@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: very-plot
+Version: 0.4.2
+Summary: Python plotting tools for Very
+Home-page: https://github.com/verypossible/very_plot
+License: GPL-3.0-only
+Author: Jeff McGehee
+Author-email: jeff@verypossible.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: coveralls (>=1.8,<2.0)
+Requires-Dist: flake8 (>=3.7,<4.0)
+Requires-Dist: matplotlib (>=3.1,<4.0)
+Requires-Dist: seaborn (>=0.9.0,<0.10.0)
+Project-URL: Repository, https://github.com/verypossible/very_plot
+Description-Content-Type: text/markdown
+
+# very_plot
+
+Python plotting tools for Very.  The main functionality is styling graphs with a black and white theme.
+
+**Free software:** GNU General Public License v3
+
+## Installation
+`pip install very_plot`
+
+## Usage
+```
+from very_plot import themes
+themes.blog_mpl()
+```
+
+All plots after this import will follow this theme.
+
+
