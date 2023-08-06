@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: utflib
+Version: 0.0.1
+Summary: Library for accessing well named UTF characters.
+Home-page: https://github.com/TravisLazar/utflib
+Author: Travis Lazar
+Author-email: travis.lazar@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# utflib
+A library of friendly UTF-8 name to character mappings. Use it to build more readable strings built around fun UTF-8 characters.
+
+
