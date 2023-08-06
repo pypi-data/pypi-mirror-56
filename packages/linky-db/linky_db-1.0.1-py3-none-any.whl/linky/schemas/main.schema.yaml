@@ -1,0 +1,5 @@
+# Adds a standard prefix to every file or directory imported
+# The prefix is calculated from the name of the imported item:
+#
+# <first letter>/<first three letters>/<actual name>
+prefix_at_import: bool(required=False)
