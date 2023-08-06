@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: esy-osmfilter
+Version: 0.0.1
+Summary: filtering of OSM pbf-files
+Home-page: https://github.com/pypa/osmfilter
+Author: Adam Pluta
+Author-email: Adam.Pluta@dlr.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: protobuf (<4,>=3)
+Requires-Dist: esy-osm-pbf (>=0)
+
+# esy-osmfilter
+
+`esy-osmfilter` is a Python library to read and filter [OpenStreetMap](https://www.openstreetmap.org) data files in the [Protocol
+Buffers (PBF)](https://developers.google.com/protocol-buffers/) format and export them to a dictionary and/or JSON file.
+
+## Usage
+
+In the usage 
+
+
+
+```python
+
+>>> import configparser, contextlib
+>>> import os, sys
+>>> from esy.osmfilter import  osm_colors          as CC
+>>> from esy.osmfilter.osm_filter import run_filter as run_filter
+>>> from esy.osm.pbf import Node, Way, Relation
+
+```
+
+The `prefilter` will return the Data-dictionary.
+With the prefilter, we accept all way-items that have man_made as key and pipeline as value in their taglist.
+
+```python
+>>> prefilter = {Node: {}, Way: {"man_made":["pipeline",],}, Relation: {}}
+
+```
+
+Additionally, all corresponent nodes that are refered in these way-items will be stored as Nodes.
+You can also set **"man_made":True** to accept items independently of a key value.
+In this example, we have only found two pipelines "Wäschgräbli" and "Wäschgräble" and their correspondent Nodes.
+The Element dictionary will be constructed from the Data dictionary by the usage of the
+whitefilter and the blackfilter.
+The `blackfilter` is a list of tuples. 
+It ignores items if one tuple is present as tag.
+The `whitefilter` is a list of list of tuples.
+It accepts entries if a list of tuples is present in the taglist of an OSM item.
+By the way, in case of conflict, the blackfilter wins.
+In this example, we blackfilter the prefiltered items for pipeline substation.
+
+```python
+>>> blackfilter = [("pipeline","substation"),]
+
+```
+
+We further only accept the drain pipelines that have really funny name "Wäschgräbli".
+
+
+```python
+>>> whitefilter =[(("waterway","drain"),("name","Wäschgräbli")), ]
+
+>>> PBF_inputfile           = os.path.join(os.getcwd(),'tests/input/liechtenstein-latest.osm.pbf')
+>>> JSON_outputfile         = os.path.join(os.getcwd(),'tests/output/LI/liechtenstein-latest.json')
+
+```
+Filtered elements are given a name:
+
+```python
+>>> elementname='funny-waterway-pipelines'
+
+>>> [Data,Elements]=run_filter(elementname,PBF_inputfile, JSON_outputfile, 
+...                            prefilter,whitefilter, blackfilter, NewPreFilterData = True, 
+...                            CreateElements  = True, LoadElements = True,verbose=True)
+
+>>> len(Data['Node'])
+13
+>>> len(Data['Relation'])
+0
+>>> len(Data['Way'])
+2
+
+```
+
+Only one way left after the blackfilter and whitefiler
+```
+>>> len(Elements['funny-waterway-pipelines']['Node'])
+0
+>>> len(Elements['funny-waterway-pipelines']['Relation'])
+0
+>>> len(Elements['funny-waterway-pipelines']['Way'])
+1
+
+```
+One can access the referenced nodes from the Data dictionary. 
+```python
+>>> elementlist=list(Elements['funny-waterway-pipelines']['Way'].keys())
+>>> first_element=elementlist.pop()
+>>> first_item_refs=list(Elements['funny-waterway-pipelines']['Way'][first_element]['refs'])
+>>> first_ref_id=str(first_item_refs[0])
+>>> first_ref_item=Data['Node'][first_ref_id]
+>>> first_ref_item['lonlat']
+[9.502233600000002, 47.153427400000005]
+
+```
+
+This pipeline has 3 node references.
+The first referenced node of the first element was selected via its id-string from the Data-dictionary: Data['Node'][id-string].
+
+
+
+for more details, jump to the
+[documentation](https://onestone.gitlab.io/esy-osmfilter).
+
+
