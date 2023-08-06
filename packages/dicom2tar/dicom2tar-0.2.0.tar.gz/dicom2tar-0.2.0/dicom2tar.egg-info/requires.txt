@@ -1,0 +1,5 @@
+pydicom==1.1.0
+extractCMRRPhysio
+DicomRaw
+dcmstack==0.7.0
+pandas==0.24.2
