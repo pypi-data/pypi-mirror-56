@@ -1,0 +1,16 @@
+README.md
+setup.cfg
+setup.py
+Maxitex.egg-info/PKG-INFO
+Maxitex.egg-info/SOURCES.txt
+Maxitex.egg-info/dependency_links.txt
+Maxitex.egg-info/entry_points.txt
+Maxitex.egg-info/top_level.txt
+maxitex/__init__.py
+maxitex/file_initiailzer.py
+maxitex/maxima_runner.py
+maxitex/maximatexparser.py
+maxitex/maxitex.py
+maxitex/pdfcreator.py
+maxitex/test_parser.py
+maxitex/test_pdfcreator.py
