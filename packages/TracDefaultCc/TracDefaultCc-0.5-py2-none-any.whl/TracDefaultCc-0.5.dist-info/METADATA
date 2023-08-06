@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: TracDefaultCc
+Version: 0.5
+Summary: Automatically adds a default CC list to new tickets.
+Home-page: https://trac-hacks.org/wiki/DefaultCCPlugin
+Author: Jean-Guilhem Rouel
+Author-email: jean-guilhem.rouel@ercim.org
+Maintainer: Ryan J Ollos
+Maintainer-email: ryan.j.ollos@gmail.com
+License: 3-Clause BSD
+Keywords: trac CC ticket component
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+
+Automatically adds a default CC list when a new ticket is created,based on its initial component.CC lists can be configured per component through the component admin UI
+
+

@@ -1,0 +1,4 @@
+[trac.plugins]
+defaultcc.admin = defaultcc.admin
+defaultcc.main = defaultcc.main
+
