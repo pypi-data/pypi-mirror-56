@@ -1,0 +1,183 @@
+# Sensational
+
+Sensational is a library for interfacing with various sensors.
+
+The intention behind this library is:
+* To make connecting to and interacting with sensor chips a breeze
+* To be readily expandable while keeping things sensible and tidy
+
+
+# Example
+
+```python
+#!/usr/bin/env python3
+from smbus2 import SMBus
+from sensational.sensors import MPU9250
+
+bus = SMBus(1)
+sensor = MPU9250(bus)
+sensor.update()
+print(sensor.data)
+```
+
+
+# Author
+
+Daniel 'Vector' Kerr <vector@vector.id.au>
+
+
+
+# Licence
+
+MIT. See the `LICENSE` file for details.
+
+
+
+# Perceptions
+
+Perception classes are models used to capture something that can be perceived. Examples include:
+
+* Acceleration
+* Depth
+* Magnetism
+* Temperature
+* ...
+
+These classes are mostly used to provide a consistent interface that can be interrogated with
+`isinstance()` calls and such. They're not essential but they add a bit of structure.
+
+
+# Units
+
+Sensational makes use of typed units to allow for better interoperability
+between readings from different sensors, and also to introduce some basic
+sanity checks when performing operations on perceived values.
+
+This library uses [`pint`](https://pypi.org/project/Pint/) for unit definitions by default.
+
+```python
+#!/usr/bin/env python3
+
+from sensational.units import u
+
+# Define some values with units
+three_meters = u(3, u.meter)
+one_hour = u(1, u.hour)
+thirty_minutes = u(30, u.minute)
+twenty_five_degrees = u(25.0, u.celsius)
+
+# Add 30 minutes to 1 hour
+one_and_a_half_hours = one_hour + thirty_minutes
+print(one_and_a_half_hours)
+
+# Add temperature to distance (what?!)
+try:
+    this_will_fail = twenty_five_degrees + three_meters
+except:
+    print("You can't add temperature to distance, silly!")
+
+# Compound units - acceleration
+gravity_earth = u(9.8, u.meter / u.second / u.second)
+print("Earth's gravity is", gravity_earth)
+
+# Compound Units - velocity
+meters_per_hour = three_meters / one_and_a_half_hours
+print("Distance over time is", meters_per_hour)
+```
+
+## Custom Units Provider
+
+If you would like to use a different units provider (for example,
+[`units`](https://pypi.org/project/units/),
+[`numericalunits`](https://pypi.org/project/numericalunits/),
+[`astropy.units`](https://docs.astropy.org/en/stable/units/),
+[`scimath.units`](http://docs.enthought.com/scimath/units/unit_numpy.html),
+...), feel free to create a factory for it. Create and populate a subclass of
+`sensational.units.UnitsFactory`, and then assign it as the default
+provider by calling `u.SetFactory(instance)`.
+
+```python
+#!/usr/bin/env python3
+
+from sensational.units import u
+from sensational.units import UnitsFactory
+
+class CustomUnitsFactory(UnitsFactory):
+    # ...
+
+custom_units_factory = CustomUnitsFactory()
+u.SetFactory(custom_units_factory)
+```
+
+## Units with Custom Sensors
+
+If you decide to create your own sensor (yay!), be sure to initialise all
+unit-based values with `u(quantity, unit)`. This is to cater for differences
+in implementations across unit providers, as some (*cough*pint*cough*) don't
+behave very well when dealing with units that aren't plain multiplicative scales
+of each other (e.g., ºK, ºC and ºF, because they don't share the same zero point or scale).
+
+If you don't do this, you or the user of your sensor might run into trouble.
+
+See the source code for the existing sensors for examples of initializing values
+returned from sensor readings if you're not sure!
+
+
+# i2c Sensors
+
+The following I2C sensors are supported by this library.
+
+
+## mpu9250
+
+SparkFun IMU Breakout ([View Product Page](https://www.sparkfun.com/products/13762))
+
+
+```python
+#!/usr/bin/env python3
+
+from sensational.sensors import MPU9250
+from smbus2 import SMBus
+from time import sleep
+
+def main():
+    bus = SMBus(1)
+    imu = MPU9250(bus)
+    while True:
+        imu.update()
+        print(
+            imu.linear_acceleration,
+            imu.angular_acceleration,
+            imu.magnetism,
+            imu.temperature,
+        )
+        sleep(0.100)
+
+if __name__ == '__main__':
+    main()
+```
+
+
+## ak8963
+
+3-Axis Magnetometer ([View Datasheet](https://download.mikroe.com/documents/datasheets/ak8963c-datasheet.pdf))
+
+
+```python
+#!/usr/bin/env python3
+
+from sensational.sensors import MPU9250
+from smbus2 import SMBus
+from time import sleep
+
+def main():
+    bus = SMBus(1)
+    magnetometer = AK8963(bus)
+    while True:
+        magnetometer.update()
+        print(magnetometer.magnetism)
+        sleep(0.100)
+
+if __name__ == '__main__':
+    main()
+```
