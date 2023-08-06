@@ -1,0 +1,60 @@
+Metadata-Version: 1.1
+Name: face_recognition_service
+Version: 0.1.0
+Summary: face recognition api service
+Home-page: https://github.com/kedpter/face_recognition_service
+Author: UNKNOWN
+Author-email: 790476448@qq.com
+License: MIT license
+Description: =============================
+        face_recognition_service
+        =============================
+        
+        
+        .. image:: https://img.shields.io/pypi/v/face_recognition_service.svg
+                :target: https://pypi.python.org/pypi/face_recognition_service
+        
+        .. image:: https://img.shields.io/travis/kedpter/face_recognition_service.svg
+                :target: https://travis-ci.org/kedpter/face_recognition_service
+        
+        .. image:: https://readthedocs.org/projects/face-recognition-service/badge/?version=latest
+                :target: https://face-recognition-service.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        face recognition api service
+        
+        
+        * Free software: MIT license
+        * Documentation: https://face-recognition-service.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2019-08-15)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: face_recognition_service
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
