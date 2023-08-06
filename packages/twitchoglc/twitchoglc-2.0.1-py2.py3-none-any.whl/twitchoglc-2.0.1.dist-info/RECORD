@@ -1,0 +1,17 @@
+twitchoglc/__init__.py,sha256=f22DqGzdWyDYLc5OF7fydE0-mWs-MX9YFt0xeGTqdEU,245
+twitchoglc/bezier.py,sha256=G_gvNyiNItYSdqzdgywhBs0DbyncEMJGo87BPN2wLsc,7195
+twitchoglc/brushmodel.py,sha256=wh7GiiEBZdCm93bXVNRfpi-N4WmH-3BF7GepeY7IzQ4,3836
+twitchoglc/brushviewer.py,sha256=MllH10Vple61-Y36h8LUyPINC3jQLUa29ZciYBEwQp4,3464
+twitchoglc/bsp.py,sha256=m1rBHfgkt6QbVe72VdCYSnD1BZbVkekYBUM8lhIEj-0,15478
+twitchoglc/downloader.py,sha256=XG4Jq-uHVkJ_N3MPogTV4fc2HC8IsGot9dIfKH3sn_Q,2358
+twitchoglc/maprender.py,sha256=Q_TZM_us78g1zSx87ap2fkVxwSNzvOnWddCs-VoKiZo,8742
+twitchoglc/pk3.py,sha256=OXFX_ZBXVNkpCGRpa5gqZkApSz911qpfEgu3A1jV6kg,2465
+twitchoglc/shaderparser.py,sha256=6UtEgyrdeYP94TOdVVwOEp1uuFmYl2ph7v62FL0vJbY,4810
+twitchoglc/viewer.py,sha256=6utE1djK_2OF-VtPf4gbUeiyvoXdg07-JuOQbWNzS6M,2500
+twitchoglc-2.0.1.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+twitchoglc-2.0.1.dist-info/METADATA,sha256=zMRD0-wUd7ZBfg9hm5uTdV0ke_GB4vyiYd3O_9yfd4o,968
+twitchoglc-2.0.1.dist-info/RECORD,,
+twitchoglc-2.0.1.dist-info/WHEEL,sha256=o2k-Qa-RMNIJmUdIc7KU6VWR_ErNRbWNlxDIpl7lm34,110
+twitchoglc-2.0.1.dist-info/entry_points.txt,sha256=YK_SDo7XZOKS1aGZ3P_TcsLhjQGHpzDEqE14nFwU5Vw,144
+twitchoglc-2.0.1.dist-info/metadata.json,sha256=Lq8I2750t5T9YtVDz4-4zS0VZQHAGITxxnzrjiD1-kA,1472
+twitchoglc-2.0.1.dist-info/top_level.txt,sha256=gOvmcxXf2g6T-Inn-Uv8mMkL3dGdaJv5MYpziCWon4Q,11
