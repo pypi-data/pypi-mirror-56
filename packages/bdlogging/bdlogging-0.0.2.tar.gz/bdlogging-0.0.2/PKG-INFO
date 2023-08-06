@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: bdlogging
+Version: 0.0.2
+Summary: RabbitMQログ出力モジュール
+Home-page: https://gitlab.com/belldata/logging.git
+Author: nozomi.nishinohara
+Author-email: nozomi.nishinohara@belldata.co.jp
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
