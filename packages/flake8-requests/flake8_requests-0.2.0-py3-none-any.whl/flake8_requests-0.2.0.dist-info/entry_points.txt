@@ -1,0 +1,3 @@
+[flake8.extension]
+r2c-requests=flake8_requests.main:Flake8Requests
+
