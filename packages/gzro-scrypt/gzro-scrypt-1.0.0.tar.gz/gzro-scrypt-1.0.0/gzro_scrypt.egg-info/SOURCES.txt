@@ -1,0 +1,8 @@
+README.md
+setup.py
+gzro_scrypt.egg-info/PKG-INFO
+gzro_scrypt.egg-info/SOURCES.txt
+gzro_scrypt.egg-info/dependency_links.txt
+gzro_scrypt.egg-info/top_level.txt
+scrypt/scrypt.c
+scrypt/scryptmodule.c
