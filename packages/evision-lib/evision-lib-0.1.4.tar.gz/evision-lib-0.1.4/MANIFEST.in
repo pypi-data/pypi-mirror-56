@@ -1,0 +1,18 @@
+graft docs
+graft src
+graft ci
+
+include .bumpversion.cfg
+include .coveragerc
+include .cookiecutterrc
+include .editorconfig
+
+include AUTHORS.rst
+include CHANGELOG.rst
+include CONTRIBUTING.rst
+include README.rst
+include pyproject.toml
+
+include tox.ini
+
+global-exclude *.py[cod]
