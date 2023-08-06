@@ -1,0 +1,149 @@
+Metadata-Version: 1.1
+Name: sourceinfo
+Version: 0.1.34
+Summary: Utilities for simplified gain of runtime information on source code and binary locations.
+Home-page: https://sourceforge.net/projects/pysourceinfo/
+Author: Arno-Can Uestuensoez
+Author-email: acue_sf2@sourceforge.net
+License: Artistic-License-2.0 + Forced-Fairplay-Constraints
+Download-URL: https://sourceforge.net/projects/pysourceinfo/files/
+Description: pysourceinfo
+        ============
+        
+        The 'pysourceinfo' package provides basic runtime information on executed 
+        sourcefiles based on 'inspect', 'sys', 'os', and additional sources.
+        The covered objects include packages, modules/files and functions/methods/scripts. 
+        
+        The supported platforms are:
+        
+        * Linux, BSD, Unix, OS-X, Cygwin, and Windows
+        
+        * Python2.7+, Python3.5+
+        
+        * x86, amd64, arm32/armhf, arm64/aarch64
+        
+        
+        **Online documentation**:
+        
+        * https://pysourceinfo.sourceforge.io/
+        
+        **Runtime-Repository**:
+        
+        * PyPI: https://pypi.org/project/pysourceinfo/
+        
+          Install: *pip install pysourceinfo*, see also 'Install'.
+        
+        
+        **Downloads**:
+        
+        * bitbucket.org: https://bitbucket.org/acue/pysourceinfo
+        
+        * github.com: https://github.com/ArnoCan/pysourceinfo/
+        
+        * pypi.org: https://pypi.org/project/pysourceinfo/
+        
+        * sourceforge.net: https://sourceforge.net/projects/pysourceinfo/files/
+        
+         
+        
+        Project Data
+        ------------
+        
+        * PROJECT: 'pysourceinfo'
+        
+        * MISSION: Support easy access to RTTI for Python source and binary files.
+        
+        * VERSION: 00.01
+        
+        * RELEASE: 00.01.034
+        
+        * STATUS: alpha
+        
+        * AUTHOR: Arno-Can Uestuensoez
+        
+        * COPYRIGHT: Copyright (C) 2010,2011,2015-2017 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+        
+        * LICENSE: Artistic-License-2.0 + Forced-Fairplay-Constraints
+        
+        
+        **Python support**
+        
+        *  Python2.7, and Python3
+        
+        *  PyPy2 + PyPy3: 5.10+
+        
+        **OS on Server, Workstation, and Laptops**
+        
+        * Linux: Fedora, CentOS, Debian, and OpenSUSE 
+        
+        * BSD: OpenBSD, and FreeBSD
+        
+        * OS-X: Snow Leopard
+        
+        * Windows: Win7, Win10
+        
+        * Cygwin
+        
+        * UNIX: Solaris
+        
+        **OS on Embedded Devices**
+        
+        * RaspberryPI: Raspbian, CentOS
+        
+        * ASUS-TinkerBoard: Armbian
+        
+        **Current Release**
+        
+        Major Changes:
+        
+        * Minor fixes
+        
+        * extended *helper.getpythonpath* and *helper.getpythonpath_rel*
+        
+        * added support for Python3.7.0
+        
+        * additionally tested on Fedora27, Fedora28, OpenSUSE15
+        
+        * additionally tested on CentOS7, and CentOS6
+        
+        * additionally tested on Debian-9.4/Stretch, Raspbian-9.4/Stretch, Armbian-50.5/Stretch
+        
+        * additionally tested on Solaris10, Solaris11
+        
+        * additionally tested on Window10
+        
+        * additionally tested on Window10-WSL: Debian, Ubuntu
+        
+        ToDo:
+        
+        * test FreeBSD 
+        * test pfsense
+        * test OpenWRT
+        * test WIN2016, WIN2012, WIN2010, WIN2008, WINXP
+        * test OpenBSD on rpi3
+        
+        
+Keywords: Python Syntax Packages Modules Files Linenumbers Filenames Modulenames Packagenames RTTI PYTHONPATH inspect
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: Free To Use But Restricted
+Classifier: License :: OSI Approved :: Artistic License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX :: BSD :: OpenBSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: SunOS/Solaris
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
