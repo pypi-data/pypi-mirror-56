@@ -1,0 +1,14 @@
+django_object_manager/__init__.py,sha256=mFNzfPF0wj4zfggjHPpb3ENOYS90bROoxYKUcAHZYwo,147
+django_object_manager/field_converters.py,sha256=MGtSNfxTQsmuLusijq0mX_Lc6sQrmz_O5mazP4c8xbs,4247
+django_object_manager/object_manager.py,sha256=ijIienOyDkg7yfzEElwX__4lXb0j75SAZnq0GfOKNys,5671
+tests/app/__init__.py,sha256=6SEElYuVDRvEqz9IuChyRWgc0NTtOF94lem6-1BCNIY,52
+tests/app/apps.py,sha256=0a847PEt5__KMY-qo3Z4QNBB9otUogTgP3-3wGNmXfM,152
+tests/app/models.py,sha256=UaJ34JbuGQ-pKitfQxOJwukWe4bODHxDYMMwqo_OVE0,1610
+tests/app/tests.py,sha256=sVdAikE0jJysbEuaYj8jP2KlWMtGKAX021BuRZ-5FxQ,1166
+tests/functional/__init__.py,sha256=07w3qxKTas4MPJERLkNJ4nd6pDz87sW5UphERZuOCYk,63
+tests/functional/test_object_manager.py,sha256=LXZl_xsk-6s9zapYc6yXtHIWyn_HWPKvkskQ93YRWZM,6470
+django_object_manager-0.0.8.dist-info/LICENSE,sha256=iqoNi0zzDNfOK3F9LKLvma_JRgyf_bcrMGtgEJiOTGY,1512
+django_object_manager-0.0.8.dist-info/METADATA,sha256=lsxEMM0UtA4iF7il8e1ShmBOT-K8Ctok6_zC1_U9lwE,2988
+django_object_manager-0.0.8.dist-info/WHEEL,sha256=_wJFdOYk7i3xxT8ElOkUJvOdOvfNGbR9g-bf6UQT6sU,110
+django_object_manager-0.0.8.dist-info/top_level.txt,sha256=i-KasyC2d8sRlC0CarX6lke8KdTclZh6UigXRu4NzCI,28
+django_object_manager-0.0.8.dist-info/RECORD,,
