@@ -1,0 +1,15 @@
+tgcrypto.cp38-win_amd64.pyd,sha256=leXZ5KrLGdgAYt2FxLwDnubydjoKtzXUqYPx1KffM2s,34816
+tests/__init__.py,sha256=v4vKFzP9y7wSWoNViuplSgP6htzILcc16MMSTLt4kII,802
+tests/cbc/__init__.py,sha256=v4vKFzP9y7wSWoNViuplSgP6htzILcc16MMSTLt4kII,802
+tests/cbc/test_cbc.py,sha256=mk6mamFNVbOfvZmarfTK4OSvXzrHUQiGFvAqN9WinOs,8329
+tests/ctr/__init__.py,sha256=v4vKFzP9y7wSWoNViuplSgP6htzILcc16MMSTLt4kII,802
+tests/ctr/test_ctr.py,sha256=mZBSN_ZiIjkgYqpOgcu35ItvdR2UPLBttlgP4SYuJaY,9300
+tests/ige/__init__.py,sha256=v4vKFzP9y7wSWoNViuplSgP6htzILcc16MMSTLt4kII,802
+tests/ige/test_ige.py,sha256=ayvpbkbZeyOSg2qRhQOdulkaFgbBKrBGKrfkqSc5u_M,4312
+TgCrypto-1.2.0.dist-info/COPYING,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+TgCrypto-1.2.0.dist-info/COPYING.lesser,sha256=pWgb-bBdsU2Gd2kwAXxketnm5W_2u8_fIeWEgojfrxs,7651
+TgCrypto-1.2.0.dist-info/METADATA,sha256=VXrNXG62wTj2L312zyyAkRzrheRataMlEYAW8ARPkE0,6525
+TgCrypto-1.2.0.dist-info/NOTICE,sha256=iI4lF_Vdyar34Xz3YWIZ7N_2gb3AoCH890RNzMHohU4,771
+TgCrypto-1.2.0.dist-info/WHEEL,sha256=z-ezgbNu1Y2ixypRrBmFDHP9mmiBhiGywozViqVfAIc,105
+TgCrypto-1.2.0.dist-info/top_level.txt,sha256=DU0hdjqnNGsqjpgeW5pRsJSMQ8y5o118mkxPhPXwcmc,15
+TgCrypto-1.2.0.dist-info/RECORD,,
