@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.py
+FIDL/__init__.py
+FIDL/compiler_consts.py
+FIDL/decompiler_utils.py
+FIDL.egg-info/PKG-INFO
+FIDL.egg-info/SOURCES.txt
+FIDL.egg-info/dependency_links.txt
+FIDL.egg-info/not-zip-safe
+FIDL.egg-info/requires.txt
+FIDL.egg-info/top_level.txt

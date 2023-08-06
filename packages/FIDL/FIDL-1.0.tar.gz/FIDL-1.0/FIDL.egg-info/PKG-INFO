@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: FIDL
+Version: 1.0
+Summary: Wrapper for the IDA decompiler API
+Home-page: https://ghe.eng.fireeye.com/otf/FIDL
+Author: The Council of Pwners
+Author-email: carlos.garcia@fireeye.com
+License: MIT
+Description: UNKNOWN
+Keywords: ida decompiler api vulnerability research reversing malware
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Disassemblers
+Provides-Extra: dev
