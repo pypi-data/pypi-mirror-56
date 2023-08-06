@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pytest-unordered
+Version: 0.1.0
+Summary: Test equality of unordered sequences of unhashable items
+Home-page: https://github.com/utapyngo/pytest-unordered
+Author: Ivan Zaikin
+Author-email: ut@pyngo.tom.ru
+Maintainer: Ivan Zaikin
+Maintainer-email: ut@pyngo.tom.ru
+License: MIT
+Description: # pytest-unordered
+        
+        Test equality of unordered sequences of unhashable items.
+        
+        ## Installation
+        
+            pip install pytest-unordered
+            
+        
+        ## Usage
+        
+            from pytest_unordered import unordered
+            
+            def test_unordered():
+                assert [3, 2, {1: ['a', 'b']}] == unordered([{1: ['a', 'b']}, 2, 3])
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
