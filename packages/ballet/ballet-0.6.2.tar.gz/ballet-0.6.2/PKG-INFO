@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: ballet
+Version: 0.6.2
+Summary: Core functionality for lightweight, collaborative data science projects
+Home-page: https://github.com/HDI-Project/ballet
+Author: Micah Smith
+Author-email: micahs@mit.edu
+License: MIT license
+Description: [![PyPI Shield](https://img.shields.io/pypi/v/ballet.svg)](https://pypi.org/project/ballet)
+        [![Travis CI Shield](https://travis-ci.org/HDI-Project/ballet.svg?branch=master)](https://travis-ci.org/HDI-Project/ballet)
+        [![codecov Shield](https://codecov.io/gh/HDI-Project/ballet/branch/master/graph/badge.svg)](https://codecov.io/gh/HDI-Project/ballet)
+        
+        
+        # ballet
+        
+        A **light**weight framework for collaborative data science projects through **feat**ure
+        engineering.
+        
+        *Ballet* is under active development, please [report all
+        bugs](https://hdi-project.github.io/ballet/contributing.html#report-bugs).
+        
+        - Free software: MIT license
+        - Documentation: https://hdi-project.github.io/ballet
+        - Homepage: https://github.com/HDI-Project/ballet
+        
+        ## Overview
+        
+        Ballet projects maintain a *feature engineering pipeline invariant*: at any point, the code
+        and features within a project repository can be used for end-to-end feature engineering for
+        a given dataset. To expand on an existing feature engineering pipeline, well-structured
+        feature source code submissions can be proposed by contributors and extensively validated
+        for compatibility and performance.
+        
+        How do you use the Ballet framework? First, you render a brand new ballet project from a
+        provided project template using a quickstart command and push it to GitHub. This project
+        contains an "empty" feature engineering pipeline. Next, you and your collaborators write
+        feature engineering source code and submit pull requests to include your new features in the
+        project and grow the pipeline. Features are instances of `ballet.Feature`, usually
+        leveraging `ballet.eng`, a library of versatile transformers and transformer building blocks
+        for developing features that learn. Once new pull requests are received by your project, a
+        continuous integration service runs a streaming logical feature selection algorithm. This is
+        part of an extensive feature validation suite that makes sure both that the proposed
+        features are useful and that they can be safely integrated into your project. If the
+        proposed feature is accepted, it can be safely merged.
+        
+        <img src="./docs/_static/feature_lifecycle.png" alt="Ballet Feature Lifecycle" width="500" />
+        
+        
+        # History
+        
+        ## 0.6 (2019-11-12)
+        
+        * Implement GFSSF validators and random validators
+        * Improve validators and allow validators to be configured in ballet.yml
+        * Improve project template
+        * Create ballet CLI
+        * Bug fixes and performance improvements
+        
+        ## 0.5 (2018-10-14)
+        
+        * Add project template and ballet-quickstart command
+        * Add project structure checks and feature API checks
+        * Implement multi-stage validation routine driver
+        
+        ## 0.4 (2018-09-21)
+        
+        * Implement `Modeler` for versatile modeling and evaluation
+        * Change project name
+        
+        ## 0.3 (2018-04-28)
+        
+        * Implement `PullRequestFeatureValidator`
+        * Add `util.travis`, `util.modutil`, `util.git` util modules
+        
+        ## 0.2
+        
+        * Implement `ArrayLikeEqualityTestingMixin`
+        * Implement `collect_contrib_features`
+        
+        ## 0.1
+        
+        * First release on PyPI
+        
+Keywords: ballet
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
