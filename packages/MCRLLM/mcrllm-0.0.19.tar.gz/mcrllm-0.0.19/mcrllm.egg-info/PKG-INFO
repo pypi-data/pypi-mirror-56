@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: mcrllm
+Version: 0.0.19
+Summary: MCRLLM: Multivariate Curve Resolution by Log-Likelihood Maximization
+Home-page: UNKNOWN
+Author: Ryan Gosselin
+Author-email: ryan.gosselin@usherbrooke.ca
+License: UNKNOWN
+Description: MCRLLM: Multivariate Curve Resolution by Log-Likelihood Maximization.    
+        
+        #Method first presented in:    
+        Lavoie F.B., Braidy N. and Gosselin R. (2016) Including Noise Characteristics in MCR to improve Mapping and Component Extraction from Spectral Images, Chemometrics and Intelligent Laboratory Systems, 153, 40-50.    
+        
+        #Input variable    
+        X(nxk): 2D spectral matrix : n spectra acquired over k energy levels    
+        Note: 3D spectral image can be unfold to 2D matrix prior to analysis.    
+        
+        #Input and output arguments    
+        MCRLLM requires 3 inputs : X dat, number of components to compute (nb) and use of phi exponent.    
+         Refer to paper above for use of phi. To use it: 'phi', if not: 'standard'    
+        decomposition = mcr.mcrllm(X,nb,'phi')    
+        decomposition.iterate(20)    
+        Results    
+        allS = decomposition.allS    
+        S_final = decomposition.S    
+        allC = decomposition.allC    
+        C_final = decomposition.C    
+        Sini = decomposition.Sini    
+        allphi = decomposition.allphi
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
