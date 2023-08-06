@@ -1,0 +1,17 @@
+Click>=7.0
+tensorflow-hub
+pillow
+pycocotools
+jupyter
+h5py
+object-detection@ git+https://github.com/leigh-johnson/models@tf-compat-patch#egg=object_detection&subdirectory=research
+tensorflow@ https://github.com/leigh-johnson/Tensorflow-bin/blob/master/tensorflow-2.0.0-cp37-cp37m-linux_armv7l.whl?raw=true;platform_machine=="armv7l"
+
+[:platform_machine == "armv7l"]
+smbus
+picamera
+pantilthat>=0.0.7
+
+[:platform_machine == "x86_64"]
+tensorflow==2.0.0
+numpy
