@@ -1,0 +1,48 @@
+{% extends "bee_django_user/custom_base.html" %}
+{% load bee_django_user_filter %}
+{% block content %}
+    {% include "bee_django_user/user/nav.html" %}
+    <div class="text-center"><h3>
+        {{ user }}的升级列表1
+    </h3>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>标题</th>
+            <th>添加时间</th>
+            <th>状态</th>
+            <th></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for record in record_list %}
+            <tr>
+                <td>{{ record.level.title }}</td>
+                <td>{{ record.created_at|date:"Y-m-d H:i" }}</td>
+                <td>{{ record.get_status_str }}
+                    {% if record.can_change_status_apply %}
+                        <a href="{% url 'bee_django_user:custom_level_record_apply' record.id %}"
+                           target="_blank">申请链接</a>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{% url 'bee_django_user:custom_level_record_apply' record.id %}"
+                       class="btn btn-default">详情</a>
+                </td>
+
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+    {% include 'bee_django_user/paginator.html' %}
+{% endblock %}
+{% block scripts %}
+    <script>
+
+
+    </script>
+{% endblock %}
