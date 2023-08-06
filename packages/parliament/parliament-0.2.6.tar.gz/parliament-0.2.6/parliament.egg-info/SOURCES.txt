@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+parliament/__init__.py
+parliament/cli.py
+parliament/finding.py
+parliament/iam_definition.json
+parliament/misc.py
+parliament/policy.py
+parliament/statement.py
+parliament.egg-info/PKG-INFO
+parliament.egg-info/SOURCES.txt
+parliament.egg-info/dependency_links.txt
+parliament.egg-info/entry_points.txt
+parliament.egg-info/requires.txt
+parliament.egg-info/top_level.txt
+parliament.egg-info/zip-safe
