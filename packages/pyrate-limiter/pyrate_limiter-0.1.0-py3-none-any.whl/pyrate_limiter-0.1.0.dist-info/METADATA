@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: pyrate-limiter
+Version: 0.1.0
+Summary: Python Rate-Limiter using Leaky-Bucket Algorimth Family
+Home-page: https://github.com/vutran1710/PyrateLimiter
+License: MIT
+Keywords: rate,rate-limiter,rate_limiter,ratelimiter,leaky-bucket
+Author: vutr
+Author-email: me@vutr.io
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Project-URL: Repository, https://github.com/vutran1710/PyrateLimiter
+Description-Content-Type: text/markdown
+
+# Request Rate Limiter using Leaky-bucket algorimth
+
+
+## Introduction
+This module can be used to apply rate-limit for API request, using `leaky-bucket` algorimth. User defines `window`
+duration and the limit of function calls within such interval.
+
+Currently this package requires `Redis` to work with.
+
+## Installation
+
+``` shell
+$ pip install pyrate-limiter
+```
+
+# Usage
+
+``` python
+from pyrate_limiter.core import RedisBucket as Bucket, HitRate
+
+# Init bucket singleton
+bucket = Bucket('redis-url', prefix='redis-prefix')
+
+# Init rate_limiter
+limiter = HitRate(
+    bucket,
+    capacity=10,
+    interval=60,
+)
+
+# Use as decorator
+@limiter('redis-key')
+def call(*args, **kwargs):
+    pass
+```
+

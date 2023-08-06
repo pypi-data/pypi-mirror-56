@@ -1,0 +1,5 @@
+[console_scripts]
+et=scripts:engine_test
+lint=scripts:lint
+test=scripts:test
+
