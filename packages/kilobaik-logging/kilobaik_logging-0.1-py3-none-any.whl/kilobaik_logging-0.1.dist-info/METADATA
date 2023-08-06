@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: kilobaik-logging
+Version: 0.1
+Summary: Easy logging mechanism
+Home-page: https://github.com/kilobaik/kilobaik-logger
+Author: Mohamad Karam Kassem
+Author-email: karam.kass@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# kilobaik-logger
+
+Logging management
+
+
