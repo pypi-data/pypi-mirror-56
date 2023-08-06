@@ -1,0 +1,5 @@
+# Top-level dependencies for `tox -e test`
+pytest
+pytest-cov
+pytest-xdist
+strict_rfc3339
