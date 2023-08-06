@@ -1,0 +1,59 @@
+Metadata-Version: 1.1
+Name: DUlib
+Version: 0.8
+Summary: tools from the DL@DU Project
+Home-page: https://github.com/sj-simmons/DUlib
+Author: SSimmons
+Author-email: ssimmons@drury.edu
+License: Apache 2.0
+Download-URL: https://github.com/sj-simmons/DUlib/archive/v0.4.tar.gz
+Description: DUlib
+        =====
+        
+        Machine and deep learning tools.
+        
+        Installation
+        ------------
+        
+        .. code-block::
+        
+            pip3 install DUlib
+        
+        Notes
+        -----
+        
+        * DUlib assumes that you have installed your desired version (e.g., cpu vs. gpu) of
+          the `torch <https://pypi.org/project/torch/>`_ package.
+        
+        * Similarly, a modern version of `matplotlib <https://pypi.org/project/matplotlib/>`_ is
+          assumed to have been installed on your system.  Matplotlib is required solely for (optional) display,
+          while training, of a real-time graph (which requires, additionally, a running X server).
+        
+        * To upgrade to the newest release of DUlib in the presence of a previously installed one, issue the
+          command::
+        
+             pip3 install -U DUlib
+        
+        * Depending on your system setup, you may need add the `user` switch when installing or
+          upgrading; e.g.,::
+        
+             pip3 install -U DUlib --user
+        
+        * See the `upstream repo <https://github.com/sj-simmons/DUlib>`_ for release/usage notes.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: Apache Software License
