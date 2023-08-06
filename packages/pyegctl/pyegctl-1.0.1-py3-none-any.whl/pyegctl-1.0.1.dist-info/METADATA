@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pyegctl
+Version: 1.0.1
+Summary: Energenie control utility
+Home-page: https://github.com/pzbbole/pyenergenie
+Author: Michal Drzymala
+Author-email: pzbbole@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# pyegctl
+
+This is a python version of utility egctl published by Vitaly Sinilin.
+
+Original project link: https://github.com/unterwulf/egctl
+
+Many thanks to you!
+
+## Installation
+
+```
+ pip install pyegctl
+```
+
+## Example usage
+
+```python
+from pyegctl.device import EGV21
+
+pdu = EGV21('192.168.1.111', 5000, password='p4ss')
+
+pdu.set(['on', 'on', 'left', 'toggle'])
+
+assert pdu.status()[0] == 'on'
+
+```
+
+## Supported devices
+
+Currently only V21 protocol is supported. 
+
