@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: TimeWheel
+Version: 0.0.2
+Summary: Python implementation of time wheel,Task runer,Cache
+Home-page: https://www.pkold.com
+Author: zhenruyan
+Author-email: baiyangwangzhan@hotmail.com
+License: WTFPL
+Description: TimeWheel
+        
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        
+        Python implementation of time wheel,Task runer,Cache
+        
+        ========================================
+        
+        
+        install ::
+        
+            pip install TimeWheel
+        
+        
+Platform: linux
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
