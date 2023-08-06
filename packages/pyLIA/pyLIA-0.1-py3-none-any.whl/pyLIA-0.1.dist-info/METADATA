@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyLIA
+Version: 0.1
+Summary: Module for Lock-In Analysis
+Home-page: https://github.com/LolloCappo/pyLIA
+Author: Lorenzo Capponi
+Author-email: lorenzocapponi@outlook.it
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.16.5)
+
+pyLIA
+======
+
+Lock-In Analyzer
+-------------------------
+This module allows to compute magnitude and phase from thermal images implementing a lock-in digital analyzer.
+We developed this module while working on images recorded from FLIR thermal camera.
+
+
