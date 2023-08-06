@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "i3bindings"
+version = "1.0.0-alpha.0"
+description = ""
+authors = ["Viliam Valent <i3bindings@viliamvalent.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ViliamV/i3bindings"
+
+keywords = ["i3", "bspwm"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.740"
+black = "^19.10b0"
+isort = "^4.3.21"
+
+[tool.black]
+line-length = 120
+
+[tool.poetry.scripts]
+i3bindings = "i3bindings.cli:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
