@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: ocean-keeper
+Version: 0.3.0
+Summary: 🐳 Library including all the common functionalities used in Python projects
+Home-page: https://github.com/oceanprotocol/keeper-py-lib
+Author: leucothia
+Author-email: devops@oceanprotocol.com
+License: Apache Software License 2.0
+Keywords: ocean-keeper
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: keeper-contracts (==0.12.7)
+Requires-Dist: web3 (==4.5.0)
+Requires-Dist: requests (==2.21.0)
+Provides-Extra: dev
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: pkginfo ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: watchdog ; extra == 'dev'
+Requires-Dist: codacy-coverage ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: docker ; extra == 'dev'
+Requires-Dist: mccabe ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-watch ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: Sphinx ; extra == 'dev'
+Requires-Dist: sphinxcontrib-apidoc ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: sphinxcontrib-apidoc ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: codacy-coverage ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: docker ; extra == 'test'
+Requires-Dist: mccabe ; extra == 'test'
+Requires-Dist: pylint ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-watch ; extra == 'test'
+Requires-Dist: tox ; extra == 'test'
+
+# ocean-keeper
+Wraps keeper contracts and web3 functions.
+
+##### How to
+The main class is `Keeper` and all contracts are accessible directly from the `keeper` instance.
+Each deployed contract has a python wrapper class exposing the main functions and validating 
+inputs.
+
+```python
+import os
+from ocean_keeper import Keeper
+from ocean_keeper.contract_handler import ContractHandler
+from ocean_keeper.web3_provider import Web3Provider
+from ocean_keeper.utils import get_account
+
+# Init the web3 instance
+Web3Provider.init_web3('http://localhost:8545')  # Assume running with local parity node
+# set the contract handler path to abi files
+ContractHandler.set_artifacts_path(os.path.expanduser('~/.ocean/keeper-contracts/artifacts'))
+# get keeper instance
+keeper = Keeper.get_instance(artifacts_path=ContractHandler.artifacts_path)
+# Do stuff with keeper and it's contracts
+account = get_account(0)
+keeper.did_registry.register('0x10101010101010101010', '', 'http://localhost:5000/api/v1/assets', account)
+
+```
+
+Account can be specified using the following environment variables:
+* PARITY_ADDRESS: the ethereum address
+* PARITY_PASSWORD: the password to decrypt key in the `PARITY_ENCRYPTED_KEY`
+* PARITY_KEY: the private key of this account (matches the `PARITY_ADDRESS`)
+* PARITY_ENCRYPTED_KEY: the encrypted key in a json str
+* PARITY_KEYFILE: path to the json file that has the encrypted key specified in json document
+
+Note: The keys are loaded in this order: `PARITY_KEY`, `PARITY_ENCRYPTED_KEY`, `PARITY_KEYFILE`. If `PARITY_KEY` is 
+specified the password and other environment variables are ignored.
+
