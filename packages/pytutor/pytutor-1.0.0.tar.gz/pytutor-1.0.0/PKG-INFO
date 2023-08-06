@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: pytutor
+Version: 1.0.0
+Summary: An interface to run Phillip Guo's Python Tutor
+Home-page: https://github.com/okpy/pytutor
+Author: Sumukh Sridhara
+Author-email: sumukh@berkeley.edu
+License: UNKNOWN
+Download-URL: https://github.com/okpy/pytutor/archive/1.0.0.tar.gz
+Description: UNKNOWN
+Keywords: tracing,education,okpy,tutor,debugger,python tutor
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
