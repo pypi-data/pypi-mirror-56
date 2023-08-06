@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: nodal
+Version: 0.0.3
+Summary: An execution graph for Python tasks
+Home-page: https://github.com/thimic/nodal
+Author: Michael Thingnes
+Author-email: thimic@gmail.com
+License: UNKNOWN
+Description: # Nodal
+        
+        [![Actions Status](https://github.com/thimic/nodal/workflows/Tests/badge.svg)](https://github.com/thimic/nodal/actions)
+        
+        
+        An execution graph for Python tasks.
+        
+        ## Example
+        
+        ```python
+        import nodal
+        
+        from nodal.graph import Graph
+        
+        
+        def demo():
+        
+            # Create a graph
+            graph = Graph()
+        
+            # Create nodes within the graph context to trigger graph callbacks.
+            with graph:
+        
+                # Create a Plus node with value 3
+                plus1 = nodal.nodes.Plus(3)
+        
+                # Create a Plus node with value 7 and plug into the first Plus
+                plus2 = graph.create_node('Plus', 7)
+                plus2.set_input(0, plus1)
+        
+                # Create an Output node and plug into the second Plus
+                output = nodal.nodes.Output()
+                output.set_input(0, plus2)
+        
+            # Execute graph
+            graph.execute(output)
+        
+        
+        if __name__ == '__main__':
+            demo()
+        
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
