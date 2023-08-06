@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Exec=ogt-desktop.py
+Name=Open GeoTechnical
+Icon=/usr/share/icons/32x32/apps/open-geotechnical.png
+
