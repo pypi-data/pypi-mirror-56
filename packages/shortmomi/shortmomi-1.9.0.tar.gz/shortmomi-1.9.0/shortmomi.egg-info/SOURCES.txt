@@ -1,0 +1,12 @@
+setup.py
+shortmomi/__init__.py
+shortmomi/affinity_rules.py
+shortmomi/connect.py
+shortmomi/custom_attributes.py
+shortmomi/tags.py
+shortmomi/views.py
+shortmomi.egg-info/PKG-INFO
+shortmomi.egg-info/SOURCES.txt
+shortmomi.egg-info/dependency_links.txt
+shortmomi.egg-info/requires.txt
+shortmomi.egg-info/top_level.txt
