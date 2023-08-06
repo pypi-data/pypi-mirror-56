@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: onlineChange
+Version: 0.0.6
+Summary: Quickest change detection algorithms for online streaming data in python.
+Home-page: https://github.com/Yorkee2018/cpd.python
+Author: Xiangyu Zhang, Yi Rong, Jie Ding
+Author-email: zhan6004@umn.edu, dingj@umn.edu
+License: GNU GPLv3
+Platform: UNKNOWN
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
+
+# The 'onlineChange' python package
+The onlineChange python package is designed to quickest detect any change in distributions for online streaming data, supporting any user-specified distributions. It supports sequential Monte Carlo to perform Bayesian change point analysis, where the **parameters before or after the change can be unknown**. It also supports likelihood ratio based test to determine the stopping time (i.e. when change occurs).
+
+This is still an ongoing project by a group of researchers from the University of Minnesota. The published software here is an initial version that is ready to use.
+
+For questions and references, please contact Jie Ding at dingj@umn.edu
+
+## A Quick Setup Guide
+
+### Getting Started 
+
+#### 1. Install the 'onlineChange' package using pip
+
+```bash
+# Installing test package
+python -m pip install onlineChange
+
+```
+#### 2. Import the Model and Experiment API classes
+
+```python
+from onlineChange import stat, bayes, bayes_unknown_pre
+```
+## Using This Package
+
+A quick guide of package can be found [here](https://github.com/JieGroup/onlineChange/blob/master/vignettes/user-guide.pdf) 
+
+## Acknowledgment
+
+This research is funded by the Defense Advanced Research Projects Agency (DARPA) under grant number HR00111890040.
+
+
