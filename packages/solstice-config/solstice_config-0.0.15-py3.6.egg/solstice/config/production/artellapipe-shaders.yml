@@ -1,0 +1,8 @@
+# Base Configuration for Artella Shaders in Solstice
+
+# Defines list of paths where shaders can be found
+paths:
+  - "Scripts/PIPELINE/__working__/ShadersLibrary"
+
+# Defines the extension used to store shaders in disk
+extension: ".sshader"

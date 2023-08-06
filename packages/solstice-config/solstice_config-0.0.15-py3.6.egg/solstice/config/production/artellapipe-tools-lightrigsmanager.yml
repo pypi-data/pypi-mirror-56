@@ -1,0 +1,10 @@
+# Base Configuration file for artellapipe-tools-lightrigsmanager in Solstice
+
+# Defines icon of the tool
+icon: lightrigsmanager
+
+# URL to tool documentation web page
+url: https://solstice-short-film.github.io/solstice-docs/pipeline/pipeline/tools/lightrigsmanager/
+
+# Defines path where light rigs are located relative to the assets path
+lightrigs_path: ${join("lighting", "Light Rigs", "__working__")}
