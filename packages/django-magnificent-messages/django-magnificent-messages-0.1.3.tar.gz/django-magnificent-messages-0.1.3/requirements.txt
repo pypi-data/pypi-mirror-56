@@ -1,0 +1,4 @@
+django-model-utils>=2.0
+# Additional requirements go here
+Django==2.2.4
+django-appconf
