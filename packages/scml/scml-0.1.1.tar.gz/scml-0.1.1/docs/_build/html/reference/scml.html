@@ -1,0 +1,762 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scml &mdash; SCML 0.1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing" href="../contributing.html" />
+    <link rel="prev" title="Reference" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SCML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scripts.html">Command Line Scripts</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">scml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SCML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Reference</a> &raquo;</li>
+        
+      <li>scml</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/scml.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="scml">
+<h1>scml<a class="headerlink" href="#scml" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-scml"></span><dl class="class">
+<dt id="scml.FactoryState">
+<em class="property">class </em><code class="sig-prename descclassname">scml.</code><code class="sig-name descname">FactoryState</code><span class="sig-paren">(</span><em class="sig-param">inventory</em>, <em class="sig-param">balance</em>, <em class="sig-param">commands</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#FactoryState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.FactoryState" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="scml.FactoryState.balance">
+<code class="sig-name descname">balance</code><em class="property"> = None</em><a class="headerlink" href="#scml.FactoryState.balance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current balance in the wallet</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="scml.FactoryState.commands">
+<code class="sig-name descname">commands</code><em class="property"> = None</em><a class="headerlink" href="#scml.FactoryState.commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>n_steps * n_lines array giving the process scheduled on each line at every step for the
+whole simulation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="scml.FactoryState.inventory">
+<code class="sig-name descname">inventory</code><em class="property"> = None</em><a class="headerlink" href="#scml.FactoryState.inventory" title="Permalink to this definition">¶</a></dt>
+<dd><p>An n_products vector giving current quantity of every product in storage</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="scml.SCML2020Agent">
+<em class="property">class </em><code class="sig-prename descclassname">scml.</code><code class="sig-name descname">SCML2020Agent</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="scml.SCML2020Agent.confirm_guaranteed_sales">
+<em class="property">abstract </em><code class="sig-name descname">confirm_guaranteed_sales</code><span class="sig-paren">(</span><em class="sig-param">quantities</em>, <em class="sig-param">unit_prices</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.confirm_guaranteed_sales"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.confirm_guaranteed_sales" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to confirm the amount of guaranteed sales the agent is willing to accept</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>quantities</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>) – An n_products vector giving the maximum quantity that can sold (without negotiation)</p></li>
+<li><p><strong>unit_prices</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>) – An n_products vector giving the guaranteed unit prices</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An n_products vector specifying the quantities to be sold (up to the given <cite>quantities</cite> limit).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.confirm_guaranteed_supplies">
+<em class="property">abstract </em><code class="sig-name descname">confirm_guaranteed_supplies</code><span class="sig-paren">(</span><em class="sig-param">quantities</em>, <em class="sig-param">unit_prices</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.confirm_guaranteed_supplies"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.confirm_guaranteed_supplies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to confirm the amount of guaranteed supplies the agent is willing to accept</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>quantities</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>) – An n_products vector giving the maximum quantity that can bought (without negotiation)</p></li>
+<li><p><strong>unit_prices</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>) – An n_products vector giving the guaranteed unit prices</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An n_products vector specifying the quantities to be bought (up to the given <cite>quantities</cite> limit).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.on_contract_nullified">
+<em class="property">abstract </em><code class="sig-name descname">on_contract_nullified</code><span class="sig-paren">(</span><em class="sig-param">contract</em>, <em class="sig-param">compensation</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.on_contract_nullified"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.on_contract_nullified" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called whenever a contract is nullified (because the partner is bankrupt)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>contract</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Contract</span></code>) – The contract being nullified</p></li>
+<li><p><strong>compensation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The compensation money that is already added to the agent’s wallet</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.on_failures">
+<em class="property">abstract </em><code class="sig-name descname">on_failures</code><span class="sig-paren">(</span><em class="sig-param">failures</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.on_failures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.on_failures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called whenever there are failures either in production or in execution of guaranteed transactions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>failures</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Failure</span></code>]) – A list of <cite>Failure</cite> s.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.on_neg_request_accepted">
+<code class="sig-name descname">on_neg_request_accepted</code><span class="sig-paren">(</span><em class="sig-param">req_id</em>, <em class="sig-param">mechanism</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.on_neg_request_accepted"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.on_neg_request_accepted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a requested negotiation is accepted</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.on_neg_request_rejected">
+<code class="sig-name descname">on_neg_request_rejected</code><span class="sig-paren">(</span><em class="sig-param">req_id</em>, <em class="sig-param">by</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.on_neg_request_rejected"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.on_neg_request_rejected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called when a requested negotiation is rejected</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>req_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The request ID passed to _request_negotiation</p></li>
+<li><p><strong>by</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]]) – A list of agents that refused to participate or None if the failure was for another reason</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.respond_to_negotiation_request">
+<em class="property">abstract </em><code class="sig-name descname">respond_to_negotiation_request</code><span class="sig-paren">(</span><em class="sig-param">initiator</em>, <em class="sig-param">issues</em>, <em class="sig-param">annotation</em>, <em class="sig-param">mechanism</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.respond_to_negotiation_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.respond_to_negotiation_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called whenever another agent requests a negotiation with this agent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>initiator</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – The ID of the agent that requested this negotiation</p></li>
+<li><p><strong>issues</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Issue</span></code>]) – Negotiation issues</p></li>
+<li><p><strong>annotation</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]) – Annotation attached with this negotiation</p></li>
+<li><p><strong>mechanism</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">AgentMechanismInterface</span></code>) – The <cite>AgentMechanismInterface</cite> interface to the mechanism to be used for this negotiation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Negotiator</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None to reject the negotiation, otherwise a negotiator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.respond_to_renegotiation_request">
+<code class="sig-name descname">respond_to_renegotiation_request</code><span class="sig-paren">(</span><em class="sig-param">contract</em>, <em class="sig-param">breaches</em>, <em class="sig-param">agenda</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.respond_to_renegotiation_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.respond_to_renegotiation_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called to respond to a renegotiation request</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>agenda</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">RenegotiationRequest</span></code>) – </p></li>
+<li><p><strong>contract</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Contract</span></code>) – </p></li>
+<li><p><strong>breaches</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Breach</span></code>]) – </p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Negotiator</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.set_renegotiation_agenda">
+<code class="sig-name descname">set_renegotiation_agenda</code><span class="sig-paren">(</span><em class="sig-param">contract</em>, <em class="sig-param">breaches</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.set_renegotiation_agenda"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.set_renegotiation_agenda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Received by partners in ascending order of their total breach levels in order to set the
+renegotiation agenda when contract execution fails</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>contract</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Contract</span></code>) – The contract being breached</p></li>
+<li><p><strong>breaches</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Breach</span></code>]) – All breaches on <cite>contract</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">RenegotiationRequest</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Renegotiation agenda (issues to negotiate about to avoid reporting the breaches).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020Agent.sign_contract">
+<code class="sig-name descname">sign_contract</code><span class="sig-paren">(</span><em class="sig-param">contract</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020Agent.sign_contract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020Agent.sign_contract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called after the signing delay from contract conclusion to sign the contract. Contracts become binding
+only after they are signed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="scml.SCML2020AWI">
+<em class="property">class </em><code class="sig-prename descclassname">scml.</code><code class="sig-name descname">SCML2020AWI</code><span class="sig-paren">(</span><em class="sig-param">world</em>, <em class="sig-param">agent</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020AWI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020AWI" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="scml.SCML2020AWI.all_consumers">
+<em class="property">property </em><code class="sig-name descname">all_consumers</code><a class="headerlink" href="#scml.SCML2020AWI.all_consumers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of agent IDs for all consumers for every product</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.all_suppliers">
+<em class="property">property </em><code class="sig-name descname">all_suppliers</code><a class="headerlink" href="#scml.SCML2020AWI.all_suppliers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of agent IDs for all suppliers for every product</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.cancel_production">
+<code class="sig-name descname">cancel_production</code><span class="sig-paren">(</span><em class="sig-param">step</em>, <em class="sig-param">line</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020AWI.cancel_production"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020AWI.cancel_production" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancels any production commands on that line at this step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The step to cancel production at (must be in the future).</p></li>
+<li><p><strong>line</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The production line</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>success/failure</p>
+</dd>
+</dl>
+<p>Remarks:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The step cannot be in the past or the current step. Production can only be ordered for future steps</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.my_consumers">
+<em class="property">property </em><code class="sig-name descname">my_consumers</code><a class="headerlink" href="#scml.SCML2020AWI.my_consumers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of IDs for all the agent’s consumers (agents that can consume at least one product it may
+produce).</p>
+<p>Remarks:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the agent have multiple output products, consumers of a specific product $p$ can be found using:
+<strong>self.all_consumers[p]</strong>.</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.my_input_products">
+<em class="property">property </em><code class="sig-name descname">my_input_products</code><a class="headerlink" href="#scml.SCML2020AWI.my_input_products" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of products that are inputs to at least one process the agent can run</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.my_output_products">
+<em class="property">property </em><code class="sig-name descname">my_output_products</code><a class="headerlink" href="#scml.SCML2020AWI.my_output_products" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of products that are outputs to at least one process the agent can run</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.my_suppliers">
+<em class="property">property </em><code class="sig-name descname">my_suppliers</code><a class="headerlink" href="#scml.SCML2020AWI.my_suppliers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of IDs for all of the agent’s suppliers (agents that can supply at least one product it may
+need).</p>
+<p>Remarks:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the agent have multiple input products, suppliers of a specific product $p$ can be found using:
+<strong>self.all_suppliers[p]</strong>.</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.request_negotiation">
+<code class="sig-name descname">request_negotiation</code><span class="sig-paren">(</span><em class="sig-param">is_buy</em>, <em class="sig-param">product</em>, <em class="sig-param">quantity</em>, <em class="sig-param">unit_price</em>, <em class="sig-param">time</em>, <em class="sig-param">partner</em>, <em class="sig-param">negotiator</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020AWI.request_negotiation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020AWI.request_negotiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Requests a negotiation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_buy</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – If True the negotiation is about buying otherwise selling.</p></li>
+<li><p><strong>product</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The product to negotiate about</p></li>
+<li><p><strong>quantity</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]]) – The minimum and maximum quantities. Passing a single value q is equivalent to passing (q,q)</p></li>
+<li><p><strong>unit_price</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]]) – The minimum and maximum unit prices. Passing a single value u is equivalent to passing (u,u)</p></li>
+<li><p><strong>time</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Union" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>]]) – The minimum and maximum delivery step. Passing a single value t is equivalent to passing (t,t)</p></li>
+<li><p><strong>partner</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>) – ID of the partner to negotiate with.</p></li>
+<li><p><strong>negotiator</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">SAONegotiator</span></code>) – The negotiator to use for this negotiation (if the partner accepted to negotiate)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><cite>True</cite> if the partner accepted and the negotiation is ready to start</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.schedule_production">
+<code class="sig-name descname">schedule_production</code><span class="sig-paren">(</span><em class="sig-param">process</em>, <em class="sig-param">step</em>, <em class="sig-param">line</em>, <em class="sig-param">override=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020AWI.schedule_production"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020AWI.schedule_production" title="Permalink to this definition">¶</a></dt>
+<dd><p>Orders the factory to run the given process at the given line at the given step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>process</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The process to run</p></li>
+<li><p><strong>step</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The simulation step. Must be in the future</p></li>
+<li><p><strong>line</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The production line</p></li>
+<li><p><strong>override</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a>) – Whether to override existing production commands or not</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>success/failure</p>
+</dd>
+</dl>
+<p>Remarks:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The step cannot be in the past or the current step. Production can only be ordered for future steps</p></li>
+<li><p>ordering production of process -1 is equivalent of <cite>cancel_production</cite></p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCML2020AWI.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCML2020AWI.state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCML2020AWI.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receives the factory state</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#scml.FactoryState" title="scml.scml2020.world.FactoryState"><code class="xref py py-class docutils literal notranslate"><span class="pre">FactoryState</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="scml.SCM2020World">
+<em class="property">class </em><code class="sig-prename descclassname">scml.</code><code class="sig-name descname">SCM2020World</code><span class="sig-paren">(</span><em class="sig-param">process_inputs</em>, <em class="sig-param">process_outputs</em>, <em class="sig-param">catalog_prices</em>, <em class="sig-param">profiles</em>, <em class="sig-param">agent_types</em>, <em class="sig-param">agent_params=None</em>, <em class="sig-param">initial_balance=1000</em>, <em class="sig-param">breach_penalty=0.15</em>, <em class="sig-param">compact=False</em>, <em class="sig-param">n_steps=1000</em>, <em class="sig-param">time_limit=5400</em>, <em class="sig-param">neg_n_steps=100</em>, <em class="sig-param">neg_time_limit=120</em>, <em class="sig-param">neg_step_time_limit=60</em>, <em class="sig-param">negotiation_speed=101</em>, <em class="sig-param">signing_delay=1</em>, <em class="sig-param">name=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Supply Chain World Simulation as described for the SCML league of ANAC 2020 &#64; IJCAI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>process_inputs</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>) – An n_processes vector specifying the number of inputs from each product needed to execute
+each process.</p></li>
+<li><p><strong>process_outputs</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>) – An n_processes vector specifying the number of inputs from each product generated by
+executing each process.</p></li>
+<li><p><strong>catalog_prices</strong> (<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>) – An n_products vector (i.e. n_processes+1 vector) giving the catalog price of all products</p></li>
+<li><p><strong>profiles</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">FactoryProfile</span></code>]) – An n_agents list of <cite>FactoryProfile</cite> objects specifying the private profile of the factory
+associated with each agent.</p></li>
+<li><p><strong>agent_types</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Type" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a>[<a class="reference internal" href="#scml.SCML2020Agent" title="scml.scml2020.world.SCML2020Agent"><code class="xref py py-class docutils literal notranslate"><span class="pre">SCML2020Agent</span></code></a>]]) – An n_agents list of strings/ <cite>SCM2020Agent</cite> classes specifying the type of each agent</p></li>
+<li><p><strong>agent_params</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]]]) – An n_agents dictionaries giving the parameters of each agent</p></li>
+<li><p><strong>initial_balance</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>) – The initial balance in each agent’s wallet. All agents will start with this same value.</p></li>
+<li><p><strong>breach_penalty</strong> – The total penalty paid upon a breach will be calculated as (breach_level * breach_penalty *
+contract_quantity * contract_unit_price).</p></li>
+<li><p><strong>compact</strong> – If True, no logs will be kept and the whole simulation will use a smaller memory footprint</p></li>
+<li><p><strong>n_steps</strong> – Number of simulation steps (can be considered as days).</p></li>
+<li><p><strong>time_limit</strong> – Total time allowed for the complete simulation in seconds.</p></li>
+<li><p><strong>neg_n_steps</strong> – Number of negotiation steps allowed for all negotiations.</p></li>
+<li><p><strong>neg_time_limit</strong> – Total time allowed for a complete negotiation in seconds.</p></li>
+<li><p><strong>neg_step_time_limit</strong> – Total time allowed for a single step of a negotiation. in seconds.</p></li>
+<li><p><strong>negotiation_speed</strong> – The number of negotiation steps that pass in every simulation step. If 0, negotiations
+will be guaranteed to finish within a single simulation step</p></li>
+<li><p><strong>signing_delay</strong> – The number of simulation steps to pass between a contract is concluded and signed</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Optional" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]) – The name of the simulations</p></li>
+<li><p><strong>**kwargs</strong> – Other parameters that are passed directly to <cite>World</cite> constructor.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="scml.SCM2020World.breach_record">
+<code class="sig-name descname">breach_record</code><span class="sig-paren">(</span><em class="sig-param">breach</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.breach_record"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.breach_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a breach to a record suitable for storage during the simulation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.complete_contract_execution">
+<code class="sig-name descname">complete_contract_execution</code><span class="sig-paren">(</span><em class="sig-param">contract</em>, <em class="sig-param">breaches</em>, <em class="sig-param">resolution</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.complete_contract_execution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.complete_contract_execution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called after breach resolution is completed for contracts for which some potential breaches occurred.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>contract</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Contract</span></code>) – The contract considered.</p></li>
+<li><p><strong>breaches</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Breach</span></code>]) – The list of potential breaches that was generated by <cite>_execute_contract</cite>.</p></li>
+<li><p><strong>resolution</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Contract</span></code>) – The agreed upon resolution</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.contract_record">
+<code class="sig-name descname">contract_record</code><span class="sig-paren">(</span><em class="sig-param">contract</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.contract_record"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.contract_record" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a contract to a record suitable for permanent storage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.contract_size">
+<code class="sig-name descname">contract_size</code><span class="sig-paren">(</span><em class="sig-param">contract</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.contract_size"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.contract_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an estimation of the <strong>activity level</strong> associated with this contract. Higher is better
+:type contract: <code class="xref py py-class docutils literal notranslate"><span class="pre">Contract</span></code>
+:param contract:</p>
+<p>Returns:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.execute_action">
+<code class="sig-name descname">execute_action</code><span class="sig-paren">(</span><em class="sig-param">action</em>, <em class="sig-param">agent</em>, <em class="sig-param">callback=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.execute_action"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.execute_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes the given action by the given agent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.get_private_state">
+<code class="sig-name descname">get_private_state</code><span class="sig-paren">(</span><em class="sig-param">agent</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.get_private_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.get_private_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the private state of the given agent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.order_contracts_for_execution">
+<code class="sig-name descname">order_contracts_for_execution</code><span class="sig-paren">(</span><em class="sig-param">contracts</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.order_contracts_for_execution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.order_contracts_for_execution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Orders the contracts in a specific time-step that are about to be executed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Collection" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Collection</span></code></a>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Contract</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.post_step_stats">
+<code class="sig-name descname">post_step_stats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.post_step_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.post_step_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called at the end of the simulation step to update all stats</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.pre_step_stats">
+<code class="sig-name descname">pre_step_stats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.pre_step_stats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.pre_step_stats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called at the beginning of the simulation step to prepare stats or update them</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.simulation_step">
+<code class="sig-name descname">simulation_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.simulation_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.simulation_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>A single step of the simulation if any</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scml.SCM2020World.start_contract_execution">
+<code class="sig-name descname">start_contract_execution</code><span class="sig-paren">(</span><em class="sig-param">contract</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/scml/scml2020/world.html#SCM2020World.start_contract_execution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#scml.SCM2020World.start_contract_execution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tries to execute the contract</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>contract</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Contract</span></code>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The set of breaches committed if any. If there are no breaches return an empty set</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Set[Breach]</p>
+</dd>
+</dl>
+<p>Remarks:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>You must call super() implementation of this method before doing anything</p></li>
+</ul>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yasser Mohammad
+      <span class="lastupdated">
+        Last updated on Nov 25, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

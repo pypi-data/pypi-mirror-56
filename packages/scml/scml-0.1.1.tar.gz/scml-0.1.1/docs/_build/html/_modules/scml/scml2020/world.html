@@ -1,0 +1,1089 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>scml.scml2020.world &mdash; SCML 0.1.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> SCML
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scripts.html">Command Line Scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">SCML</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>scml.scml2020.world</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for scml.scml2020.world</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Implements the world class for the SCM2020 world &quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">functools</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="k">import</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="k">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Set</span><span class="p">,</span>
+    <span class="n">Collection</span><span class="p">,</span>
+    <span class="n">Type</span><span class="p">,</span>
+    <span class="n">Iterable</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">negmas</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">Contract</span><span class="p">,</span>
+    <span class="n">Action</span><span class="p">,</span>
+    <span class="n">Breach</span><span class="p">,</span>
+    <span class="n">AgentWorldInterface</span><span class="p">,</span>
+    <span class="n">Agent</span><span class="p">,</span>
+    <span class="n">RenegotiationRequest</span><span class="p">,</span>
+    <span class="n">Negotiator</span><span class="p">,</span>
+    <span class="n">AgentMechanismInterface</span><span class="p">,</span>
+    <span class="n">MechanismState</span><span class="p">,</span>
+    <span class="n">Issue</span><span class="p">,</span>
+    <span class="n">Entity</span><span class="p">,</span>
+    <span class="n">SAONegotiator</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">negmas.helpers</span> <span class="k">import</span> <span class="n">instantiate</span><span class="p">,</span> <span class="n">unique_name</span>
+<span class="kn">from</span> <span class="nn">negmas.situated</span> <span class="k">import</span> <span class="n">World</span><span class="p">,</span> <span class="n">TimeInAgreementMixin</span><span class="p">,</span> <span class="n">BreachProcessing</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;FactoryState&quot;</span><span class="p">,</span> <span class="s2">&quot;SCML2020Agent&quot;</span><span class="p">,</span> <span class="s2">&quot;SCML2020AWI&quot;</span><span class="p">,</span> <span class="s2">&quot;SCM2020World&quot;</span>
+<span class="p">]</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">FactoryProfile</span><span class="p">:</span>
+    <span class="n">costs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="sd">&quot;&quot;&quot;An n_lines * n_processes array giving the cost of executing any process (may be infinite)&quot;&quot;&quot;</span>
+    <span class="n">guaranteed_sales</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="sd">&quot;&quot;&quot;A n_steps * n_products array giving guaranteed sales of different products for the whole simulation time&quot;&quot;&quot;</span>
+    <span class="n">guaranteed_supplies</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="sd">&quot;&quot;&quot;A n_steps * n_products array giving guaranteed sales of different products for the whole simulation time&quot;&quot;&quot;</span>
+    <span class="n">guaranteed_sale_prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="sd">&quot;&quot;&quot;A n_steps * n_products array giving guaranteed unit prices for the `guaranteed_quantities` . It will be zero</span>
+<span class="sd">    for times and products for which there are no guaranteed quantities (i.e. (guaranteed_quantities[...] == 0) =&gt;</span>
+<span class="sd">     (guaranteed_prices[...] == 0) )&quot;&quot;&quot;</span>
+    <span class="n">guaranteed_supply_prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="sd">&quot;&quot;&quot;A n_steps * n_products array giving guaranteed unit prices for the `guaranteed_quantities` . It will be zero</span>
+<span class="sd">    for times and products for which there are no guaranteed quantities (i.e. (guaranteed_quantities[...] == 0) =&gt;</span>
+<span class="sd">     (guaranteed_prices[...] == 0) )&quot;&quot;&quot;</span>
+    <span class="n">n_products</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;Number of products in the world&quot;&quot;&quot;</span>
+    <span class="n">n_processes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;Number of processes in the world&quot;&quot;&quot;</span>
+    <span class="n">n_lines</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;Number of lines in this factory&quot;&quot;&quot;</span>
+    <span class="n">n_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;Number of simulation steps&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_lines</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_processes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">costs</span><span class="o">.</span><span class="n">shape</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_products</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_processes</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_steps</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">guaranteed_sales</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Failure</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A production failure&quot;&quot;&quot;</span>
+
+    <span class="n">is_inventory</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="sd">&quot;&quot;&quot;True if the cause of failure was insufficient inventory. If False, the cause was insufficient funds. Note that</span>
+<span class="sd">    if both conditions were true, only insufficient funds (is_inventory=False) will be reported.&quot;&quot;&quot;</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="sd">&quot;&quot;&quot;The line at which the failure happened&quot;&quot;&quot;</span>
+    <span class="n">step</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="sd">&quot;&quot;&quot;The step at which the failure happened&quot;&quot;&quot;</span>
+    <span class="n">process</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="sd">&quot;&quot;&quot;The process that failed to execute (if `guaranteed_contract_failure` and `is_inventory` , then this will be the </span>
+<span class="sd">    process that would have generated the needed product. and if `guaranteed_contract_failure` and not `is_inventory` </span>
+<span class="sd">    , then this will be the product that was not received because of unavailable funds)&quot;&quot;&quot;</span>
+    <span class="n">is_guaranteed_transaction_failure</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="sd">&quot;&quot;&quot;Is the failure resulting from a guaranteed contract? This can happen if the agent does not have enough </span>
+<span class="sd">    money to buy some guaranteed purchases. In this case, it will buy as much as it can then the prediction of the </span>
+<span class="sd">    future inventory and balance will be updated accordingly.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="FactoryState"><a class="viewcode-back" href="../../../reference/scml.html#scml.FactoryState">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">FactoryState</span><span class="p">:</span>
+    <span class="n">inventory</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="sd">&quot;&quot;&quot;An n_products vector giving current quantity of every product in storage&quot;&quot;&quot;</span>
+    <span class="n">balance</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="sd">&quot;&quot;&quot;Current balance in the wallet&quot;&quot;&quot;</span>
+    <span class="n">commands</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+    <span class="sd">&quot;&quot;&quot;n_steps * n_lines array giving the process scheduled on each line at every step for the </span>
+<span class="sd">    whole simulation&quot;&quot;&quot;</span></div>
+
+
+<span class="k">class</span> <span class="nc">Factory</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A simulated factory&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">profile</span><span class="p">:</span> <span class="n">FactoryProfile</span><span class="p">,</span>
+        <span class="n">initial_balance</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">inputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">outputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="nb">id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__profile</span> <span class="o">=</span> <span class="n">profile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="sd">&quot;&quot;&quot;Current simulation step&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">profile</span><span class="p">)</span>
+        <span class="sd">&quot;&quot;&quot;The readonly factory profile (See `FactoryProfile` )&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">commands</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">profile</span><span class="o">.</span><span class="n">n_steps</span><span class="p">,</span> <span class="n">profile</span><span class="o">.</span><span class="n">n_lines</span><span class="p">))</span>
+        <span class="sd">&quot;&quot;&quot;An n_steps * n_lines array giving the process scheduled for each line at every step. -1 indicates an empty</span>
+<span class="sd">        line. &quot;&quot;&quot;</span>
+        <span class="c1"># self.predicted_inventory = profile.guaranteed_quantities.copy()</span>
+        <span class="sd">&quot;&quot;&quot;An n_steps * n_products array giving the inventory content at different steps. For steps in the past and </span>
+<span class="sd">        present, this is the *actual* value of the inventory at that time. For steps in the future, this is a </span>
+<span class="sd">        *prediction* of the inventory at that step.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">=</span> <span class="n">initial_balance</span>
+        <span class="sd">&quot;&quot;&quot;Current balance&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">profile</span><span class="o">.</span><span class="n">n_products</span><span class="p">)</span>
+        <span class="sd">&quot;&quot;&quot;Current inventory&quot;&quot;&quot;</span>
+        <span class="c1"># self.predicted_balance = initial_balance - np.sum(</span>
+        <span class="c1">#     profile.guaranteed_quantities * profile.guaranteed_prices, axis=-1</span>
+        <span class="c1"># )</span>
+        <span class="sd">&quot;&quot;&quot;An n_steps vector giving the wallet balance at different steps. For steps in the past and </span>
+<span class="sd">        present, this is the *actual* value of the balance at that time. For steps in the future, this is a </span>
+<span class="sd">        *prediction* of the balance at that step.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="sd">&quot;&quot;&quot;A unique ID for the factory&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span>
+        <span class="sd">&quot;&quot;&quot;An n_process array giving the number of inputs needed for each process </span>
+<span class="sd">        (of the product with the same index)&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span>
+        <span class="sd">&quot;&quot;&quot;An n_process array giving the number of outputs produced by each process </span>
+<span class="sd">        (of the product with the next index)&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">state</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FactoryState</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">FactoryState</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inventory</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">current_inventory</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Current inventory contents&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">current_balance</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Current wallet balance&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
+
+    <span class="k">def</span> <span class="nf">schedule_production</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">process</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Orders production of the given process on the given step and line.</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            process: The process index</span>
+<span class="sd">            step: The step at which to do the production. If &lt; 0, any empty time in the future will be used</span>
+<span class="sd">            line: The line to do the production. If &lt; 0, any empty line will be used</span>
+<span class="sd">            override: Whether to override any existing commands at that line at that time.</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">            `True` if successful.</span>
+
+<span class="sd">        Remarks:</span>
+
+<span class="sd">            - You cannot order production in the past or in the current step</span>
+<span class="sd">            - Ordering production, will automatically update inventory and balance for all simulation steps assuming</span>
+<span class="sd">              that this production will be carried out. At the indicated `step` if production was not possible (due</span>
+<span class="sd">              to insufficient funds or insufficient inventory of the input product), the predictions for the future</span>
+<span class="sd">              will be corrected.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">step</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="n">line</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">step</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">steps</span><span class="p">,</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">steps</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">override</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">False</span>
+            <span class="n">step</span><span class="p">,</span> <span class="n">line</span> <span class="o">=</span> <span class="n">steps</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">line</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">step</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">step</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[:,</span> <span class="n">line</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="n">line</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">override</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="n">line</span><span class="p">]</span> <span class="o">=</span> <span class="n">process</span>
+        <span class="c1"># self.predicted_inventory[step:, process] -= self.inputs[process]</span>
+        <span class="c1"># self.predicted_inventory[step + 1:, process + 1] += self.outputs[process]</span>
+        <span class="c1"># self.predicted_balance[step:] -= self.__profile.costs[line, process]</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">cancel_production</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cancels pre-ordered production given that it did not start yet.</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            step: Step to cancel at</span>
+<span class="sd">            line: Line to cancel at</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">            True if step &gt;= self.current_step</span>
+
+<span class="sd">        Remarks:</span>
+
+<span class="sd">            - Cannot cancel a process in the past or present.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">step</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="n">line</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">accepted_sales</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">accepted_supplies</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Failure</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Override this method to modify stepping logic.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            accepted_sales: Sales per product accepted by the factory manager</span>
+<span class="sd">            accepted_supplies: Supplies per product accepted by the factory manager</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_step</span>
+        <span class="n">profile</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__profile</span>
+        <span class="n">failures</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">initial_balance</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span>
+
+        <span class="c1"># buy guaranteed supplies as much as possible</span>
+        <span class="n">supply_money</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">profile</span><span class="o">.</span><span class="n">guaranteed_supply_prices</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">accepted_supplies</span><span class="p">)</span>
+        <span class="n">missing_money</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">supply_money</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">missing_money</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">failures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">Failure</span><span class="p">(</span><span class="n">is_inventory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">line</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span> <span class="n">process</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">is_guaranteed_transaction_failure</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">accepted_supplies</span><span class="p">:</span>
+                <span class="n">u</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">guaranteed_supply_prices</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="n">p</span><span class="p">]</span>
+                <span class="n">price</span> <span class="o">=</span> <span class="n">u</span> <span class="o">*</span> <span class="n">q</span>
+                <span class="k">if</span> <span class="n">price</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">u</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span><span class="p">:</span>
+                        <span class="n">q</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">/</span> <span class="n">u</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-=</span> <span class="n">u</span> <span class="o">*</span> <span class="n">q</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+=</span> <span class="n">q</span>
+                    <span class="k">continue</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-=</span> <span class="n">price</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+=</span> <span class="n">q</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">-=</span> <span class="n">supply_money</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span> <span class="o">+=</span> <span class="n">accepted_supplies</span>
+
+            <span class="c1"># Sell guaranteed sales as much as possible</span>
+            <span class="n">sale_money</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">profile</span><span class="o">.</span><span class="n">guaranteed_sale_prices</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="p">:]</span> <span class="o">*</span> <span class="n">accepted_sales</span><span class="p">)</span>
+            <span class="n">inventory</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span> <span class="o">-</span> <span class="n">accepted_sales</span>
+            <span class="n">failed_sales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">inventory</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">failed_sales</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">failed_sales</span><span class="p">:</span>
+                    <span class="n">failures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                        <span class="n">Failure</span><span class="p">(</span><span class="n">is_inventory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span> <span class="n">process</span><span class="o">=</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+                                <span class="n">is_guaranteed_transaction_failure</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">sale_money</span><span class="p">[</span><span class="n">inventory</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span> <span class="o">-=</span> <span class="n">accepted_sales</span><span class="p">[</span><span class="n">inventory</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">+=</span> <span class="n">sale_money</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span> <span class="o">-=</span> <span class="n">accepted_sales</span>
+
+        <span class="c1"># do production</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="p">:]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">commands</span><span class="p">[</span><span class="n">step</span><span class="p">,</span> <span class="n">line</span><span class="p">]</span>
+            <span class="n">cost</span> <span class="o">=</span> <span class="n">profile</span><span class="o">.</span><span class="n">costs</span><span class="p">[</span><span class="n">line</span><span class="p">,</span> <span class="n">p</span><span class="p">]</span>
+            <span class="n">ins</span><span class="p">,</span> <span class="n">outs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">[</span><span class="n">p</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">&lt;</span> <span class="n">cost</span><span class="p">:</span>
+                <span class="n">failures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">Failure</span><span class="p">(</span><span class="n">is_inventory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">line</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span> <span class="n">process</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="c1"># self._register_failure(step, p, cost, ins, outs)</span>
+                <span class="k">continue</span>
+            <span class="n">inp</span><span class="p">,</span> <span class="n">outp</span> <span class="o">=</span> <span class="n">p</span><span class="p">,</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span><span class="p">[</span><span class="n">inp</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">ins</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">inventory</span><span class="p">[</span><span class="n">outp</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">outs</span><span class="p">:</span>
+                <span class="n">failures</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">Failure</span><span class="p">(</span><span class="n">is_inventory</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">line</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="n">step</span><span class="p">,</span> <span class="n">process</span><span class="o">=</span><span class="n">p</span><span class="p">)</span>
+                <span class="p">)</span>
+                <span class="c1"># self._register_failure(step, p, cost, ins, outs)</span>
+                <span class="k">continue</span>
+
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">balance</span> <span class="o">&gt;=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">initial_balance</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inventory</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">failures</span>
+
+
+<div class="viewcode-block" id="SCML2020AWI"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020AWI">[docs]</a><span class="k">class</span> <span class="nc">SCML2020AWI</span><span class="p">(</span><span class="n">AgentWorldInterface</span><span class="p">):</span>
+
+    <span class="c1"># --------</span>
+    <span class="c1"># Actions</span>
+    <span class="c1"># --------</span>
+
+<div class="viewcode-block" id="SCML2020AWI.request_negotiation"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020AWI.request_negotiation">[docs]</a>    <span class="k">def</span> <span class="nf">request_negotiation</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">is_buy</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">product</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">quantity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+        <span class="n">unit_price</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+        <span class="n">time</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]],</span>
+        <span class="n">partner</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">negotiator</span><span class="p">:</span> <span class="n">SAONegotiator</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Requests a negotiation</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            is_buy: If True the negotiation is about buying otherwise selling.</span>
+<span class="sd">            product: The product to negotiate about</span>
+<span class="sd">            quantity: The minimum and maximum quantities. Passing a single value q is equivalent to passing (q,q)</span>
+<span class="sd">            unit_price: The minimum and maximum unit prices. Passing a single value u is equivalent to passing (u,u)</span>
+<span class="sd">            time: The minimum and maximum delivery step. Passing a single value t is equivalent to passing (t,t)</span>
+<span class="sd">            partner: ID of the partner to negotiate with.</span>
+<span class="sd">            negotiator: The negotiator to use for this negotiation (if the partner accepted to negotiate)</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">            `True` if the partner accepted and the negotiation is ready to start</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+        <span class="n">annotation</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;product&quot;</span><span class="p">:</span> <span class="n">product</span><span class="p">,</span>
+            <span class="s2">&quot;is_buy&quot;</span><span class="p">:</span> <span class="n">is_buy</span><span class="p">,</span>
+            <span class="s2">&quot;buyer&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="n">is_buy</span> <span class="k">else</span> <span class="n">partner</span><span class="p">,</span>
+            <span class="s2">&quot;seller&quot;</span><span class="p">:</span> <span class="n">partner</span> <span class="k">if</span> <span class="n">is_buy</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request_negotiation_about</span><span class="p">(</span><span class="n">issues</span><span class="o">=</span><span class="p">[</span>
+            <span class="n">Issue</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="n">quantity</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;quantity&quot;</span><span class="p">),</span> <span class="n">Issue</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="n">unit_price</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;unit_price&quot;</span><span class="p">),</span> <span class="n">Issue</span><span class="p">(</span><span class="n">values</span><span class="p">(</span><span class="n">time</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+        <span class="p">],</span> <span class="n">partners</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">partner</span><span class="p">],</span> <span class="n">req_id</span><span class="o">=</span><span class="n">unique_name</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">),</span> <span class="n">annotation</span><span class="o">=</span><span class="n">annotation</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SCML2020AWI.schedule_production"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020AWI.schedule_production">[docs]</a>    <span class="k">def</span> <span class="nf">schedule_production</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">process</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">override</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Orders the factory to run the given process at the given line at the given step</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            process: The process to run</span>
+<span class="sd">            step: The simulation step. Must be in the future</span>
+<span class="sd">            line: The production line</span>
+<span class="sd">            override: Whether to override existing production commands or not</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            success/failure</span>
+
+<span class="sd">        Remarks:</span>
+
+<span class="sd">            - The step cannot be in the past or the current step. Production can only be ordered for future steps</span>
+<span class="sd">            - ordering production of process -1 is equivalent of `cancel_production`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_world</span><span class="o">.</span><span class="n">a2f</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">id</span><span class="p">]</span><span class="o">.</span><span class="n">schedule_production</span><span class="p">(</span><span class="n">process</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">override</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SCML2020AWI.cancel_production"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020AWI.cancel_production">[docs]</a>    <span class="k">def</span> <span class="nf">cancel_production</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cancels any production commands on that line at this step</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            step: The step to cancel production at (must be in the future).</span>
+<span class="sd">            line: The production line</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">            success/failure</span>
+
+<span class="sd">        Remarks:</span>
+
+<span class="sd">            - The step cannot be in the past or the current step. Production can only be ordered for future steps</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_world</span><span class="o">.</span><span class="n">a2f</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">id</span><span class="p">]</span><span class="o">.</span><span class="n">cancel_production</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span></div>
+
+    <span class="c1"># ---------------------</span>
+    <span class="c1"># Information Gathering</span>
+    <span class="c1"># ---------------------</span>
+
+<div class="viewcode-block" id="SCML2020AWI.state"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020AWI.state">[docs]</a>    <span class="k">def</span> <span class="nf">state</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FactoryState</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Receives the factory state&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_world</span><span class="o">.</span><span class="n">a2f</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">id</span><span class="p">]</span><span class="o">.</span><span class="n">state</span></div>
+
+    <span class="nd">@property</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">all_suppliers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of agent IDs for all suppliers for every product&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_world</span><span class="o">.</span><span class="n">suppliers</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">all_consumers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of agent IDs for all consumers for every product&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_world</span><span class="o">.</span><span class="n">consumers</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">my_input_products</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of products that are inputs to at least one process the agent can run&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_world</span><span class="o">.</span><span class="n">agent_inputs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">my_output_products</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of products that are outputs to at least one process the agent can run&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_world</span><span class="o">.</span><span class="n">agent_outputs</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="o">.</span><span class="n">id</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">my_suppliers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of IDs for all of the agent&#39;s suppliers (agents that can supply at least one product it may</span>
+<span class="sd">        need).</span>
+
+<span class="sd">        Remarks:</span>
+
+<span class="sd">            - If the agent have multiple input products, suppliers of a specific product $p$ can be found using:</span>
+<span class="sd">              **self.all_suppliers[p]**.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_suppliers</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_input_products</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">my_consumers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns a list of IDs for all the agent&#39;s consumers (agents that can consume at least one product it may</span>
+<span class="sd">        produce).</span>
+
+<span class="sd">        Remarks:</span>
+
+<span class="sd">            - If the agent have multiple output products, consumers of a specific product $p$ can be found using:</span>
+<span class="sd">              **self.all_consumers[p]**.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_consumers</span><span class="p">[</span><span class="n">_</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">my_output_products</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="SCML2020Agent"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent">[docs]</a><span class="k">class</span> <span class="nc">SCML2020Agent</span><span class="p">(</span><span class="n">Agent</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_respond_to_negotiation_request</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">initiator</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">partners</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">issues</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Issue</span><span class="p">],</span>
+        <span class="n">annotation</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">mechanism</span><span class="p">:</span> <span class="n">AgentMechanismInterface</span><span class="p">,</span>
+        <span class="n">role</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+        <span class="n">req_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Negotiator</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">respond_to_negotiation_request</span><span class="p">(</span>
+            <span class="n">initiator</span><span class="p">,</span> <span class="n">issues</span><span class="p">,</span> <span class="n">annotation</span><span class="p">,</span> <span class="n">mechanism</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="SCML2020Agent.set_renegotiation_agenda"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.set_renegotiation_agenda">[docs]</a>    <span class="k">def</span> <span class="nf">set_renegotiation_agenda</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">,</span> <span class="n">breaches</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Breach</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RenegotiationRequest</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.respond_to_renegotiation_request"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.respond_to_renegotiation_request">[docs]</a>    <span class="k">def</span> <span class="nf">respond_to_renegotiation_request</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">,</span> <span class="n">breaches</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Breach</span><span class="p">],</span> <span class="n">agenda</span><span class="p">:</span> <span class="n">RenegotiationRequest</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Negotiator</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.sign_contract"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.sign_contract">[docs]</a>    <span class="k">def</span> <span class="nf">sign_contract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.on_neg_request_rejected"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.on_neg_request_rejected">[docs]</a>    <span class="k">def</span> <span class="nf">on_neg_request_rejected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">by</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.on_neg_request_accepted"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.on_neg_request_accepted">[docs]</a>    <span class="k">def</span> <span class="nf">on_neg_request_accepted</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mechanism</span><span class="p">:</span> <span class="n">AgentMechanismInterface</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.on_contract_nullified"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.on_contract_nullified">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">on_contract_nullified</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">,</span> <span class="n">compensation</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called whenever a contract is nullified (because the partner is bankrupt)</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            contract: The contract being nullified</span>
+<span class="sd">            compensation: The compensation money that is already added to the agent&#39;s wallet</span>
+
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.on_failures"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.on_failures">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">on_failures</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">failures</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Failure</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called whenever there are failures either in production or in execution of guaranteed transactions</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            failures: A list of `Failure` s.</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.confirm_guaranteed_sales"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.confirm_guaranteed_sales">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">confirm_guaranteed_sales</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantities</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">unit_prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called to confirm the amount of guaranteed sales the agent is willing to accept</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            quantities: An n_products vector giving the maximum quantity that can sold (without negotiation)</span>
+<span class="sd">            unit_prices: An n_products vector giving the guaranteed unit prices</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">            An n_products vector specifying the quantities to be sold (up to the given `quantities` limit).</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.confirm_guaranteed_supplies"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.confirm_guaranteed_supplies">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">confirm_guaranteed_supplies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantities</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">unit_prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called to confirm the amount of guaranteed supplies the agent is willing to accept</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            quantities: An n_products vector giving the maximum quantity that can bought (without negotiation)</span>
+<span class="sd">            unit_prices: An n_products vector giving the guaranteed unit prices</span>
+
+<span class="sd">        Returns:</span>
+
+<span class="sd">            An n_products vector specifying the quantities to be bought (up to the given `quantities` limit).</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="SCML2020Agent.respond_to_negotiation_request"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCML2020Agent.respond_to_negotiation_request">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">respond_to_negotiation_request</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">initiator</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">issues</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Issue</span><span class="p">],</span>
+        <span class="n">annotation</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">mechanism</span><span class="p">:</span> <span class="n">AgentMechanismInterface</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Negotiator</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Called whenever another agent requests a negotiation with this agent.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            initiator: The ID of the agent that requested this negotiation</span>
+<span class="sd">            issues: Negotiation issues</span>
+<span class="sd">            annotation: Annotation attached with this negotiation</span>
+<span class="sd">            mechanism: The `AgentMechanismInterface` interface to the mechanism to be used for this negotiation.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None to reject the negotiation, otherwise a negotiator</span>
+<span class="sd">        &quot;&quot;&quot;</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">DoNothingAgent</span><span class="p">(</span><span class="n">SCML2020Agent</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">respond_to_negotiation_request</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">initiator</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">issues</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Issue</span><span class="p">],</span>
+        <span class="n">annotation</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">mechanism</span><span class="p">:</span> <span class="n">AgentMechanismInterface</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Negotiator</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">confirm_guaranteed_sales</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantities</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">unit_prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">quantities</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">confirm_guaranteed_supplies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quantities</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">unit_prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">quantities</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">on_negotiation_failure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partners</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">annotation</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+                               <span class="n">mechanism</span><span class="p">:</span> <span class="n">AgentMechanismInterface</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">MechanismState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">on_negotiation_success</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">,</span> <span class="n">mechanism</span><span class="p">:</span> <span class="n">AgentMechanismInterface</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">on_contract_signed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">on_contract_cancelled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">,</span> <span class="n">rejectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">on_contract_executed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">on_contract_breached</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">,</span> <span class="n">breaches</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Breach</span><span class="p">],</span> <span class="n">resolution</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Contract</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">on_contract_nullified</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">,</span> <span class="n">compensation</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">on_failures</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">failures</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Failure</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+<div class="viewcode-block" id="SCM2020World"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World">[docs]</a><span class="k">class</span> <span class="nc">SCM2020World</span><span class="p">(</span><span class="n">World</span><span class="p">,</span> <span class="n">TimeInAgreementMixin</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;A Supply Chain World Simulation as described for the SCML league of ANAC 2020 @ IJCAI.</span>
+
+<span class="sd">        Args:</span>
+
+<span class="sd">            process_inputs: An n_processes vector specifying the number of inputs from each product needed to execute</span>
+<span class="sd">                            each process.</span>
+<span class="sd">            process_outputs: An n_processes vector specifying the number of inputs from each product generated by</span>
+<span class="sd">                            executing each process.</span>
+<span class="sd">            catalog_prices: An n_products vector (i.e. n_processes+1 vector) giving the catalog price of all products</span>
+<span class="sd">            profiles: An n_agents list of `FactoryProfile` objects specifying the private profile of the factory</span>
+<span class="sd">                      associated with each agent.</span>
+<span class="sd">            agent_types: An n_agents list of strings/ `SCM2020Agent` classes specifying the type of each agent</span>
+<span class="sd">            agent_params: An n_agents dictionaries giving the parameters of each agent</span>
+<span class="sd">            initial_balance: The initial balance in each agent&#39;s wallet. All agents will start with this same value.</span>
+<span class="sd">            breach_penalty: The total penalty paid upon a breach will be calculated as (breach_level * breach_penalty *</span>
+<span class="sd">                            contract_quantity * contract_unit_price).</span>
+<span class="sd">            compact: If True, no logs will be kept and the whole simulation will use a smaller memory footprint</span>
+<span class="sd">            n_steps: Number of simulation steps (can be considered as days).</span>
+<span class="sd">            time_limit: Total time allowed for the complete simulation in seconds.</span>
+<span class="sd">            neg_n_steps: Number of negotiation steps allowed for all negotiations.</span>
+<span class="sd">            neg_time_limit: Total time allowed for a complete negotiation in seconds.</span>
+<span class="sd">            neg_step_time_limit: Total time allowed for a single step of a negotiation. in seconds.</span>
+<span class="sd">            negotiation_speed: The number of negotiation steps that pass in every simulation step. If 0, negotiations</span>
+<span class="sd">                               will be guaranteed to finish within a single simulation step</span>
+<span class="sd">            signing_delay: The number of simulation steps to pass between a contract is concluded and signed</span>
+<span class="sd">            name: The name of the simulations</span>
+<span class="sd">            **kwargs: Other parameters that are passed directly to `World` constructor.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="c1"># SCML2020 specific parameters</span>
+        <span class="n">process_inputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">process_outputs</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">catalog_prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+        <span class="n">profiles</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">FactoryProfile</span><span class="p">],</span>
+        <span class="n">agent_types</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">SCML2020Agent</span><span class="p">]],</span>
+        <span class="n">agent_params</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">initial_balance</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">breach_penalty</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
+        <span class="c1"># General World Parameters</span>
+        <span class="n">compact</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">n_steps</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+        <span class="n">time_limit</span><span class="o">=</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">90</span><span class="p">,</span>
+        <span class="c1"># mechanism params</span>
+        <span class="n">neg_n_steps</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+        <span class="n">neg_time_limit</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="n">neg_step_time_limit</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+        <span class="n">negotiation_speed</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span>
+        <span class="c1"># simulation parameters</span>
+        <span class="n">signing_delay</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="n">compact</span><span class="p">:</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;log_screen_level&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;log_file_level&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;save_mechanism_state_in_contract&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;log_negotiations&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;log_ufuns&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;save_cancelled_contracts&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;save_resolved_breaches&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;save_negotiations&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compact</span> <span class="o">=</span> <span class="n">compact</span>
+        <span class="k">if</span> <span class="n">negotiation_speed</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">negotiation_speed</span> <span class="o">=</span> <span class="n">neg_n_steps</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">bulletin_board</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">breach_processing</span><span class="o">=</span><span class="n">BreachProcessing</span><span class="o">.</span><span class="n">NONE</span><span class="p">,</span>
+            <span class="n">awi_type</span><span class="o">=</span><span class="s2">&quot;negmas.apps.scml2020.SCM2020AWI&quot;</span><span class="p">,</span>
+            <span class="n">start_negotiations_immediately</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="n">mechanisms</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;negmas.sao.SAOMechanism&quot;</span><span class="p">:</span> <span class="p">{}},</span>
+            <span class="n">default_signing_delay</span><span class="o">=</span><span class="n">signing_delay</span><span class="p">,</span>
+            <span class="n">n_steps</span><span class="o">=</span><span class="n">n_steps</span><span class="p">,</span>
+            <span class="n">time_limit</span><span class="o">=</span><span class="n">time_limit</span><span class="p">,</span>
+            <span class="n">negotiation_speed</span><span class="o">=</span><span class="n">negotiation_speed</span><span class="p">,</span>
+            <span class="n">neg_n_steps</span><span class="o">=</span><span class="n">neg_n_steps</span><span class="p">,</span>
+            <span class="n">neg_time_limit</span><span class="o">=</span><span class="n">neg_time_limit</span><span class="p">,</span>
+            <span class="n">neg_step_time_limit</span><span class="o">=</span><span class="n">neg_step_time_limit</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">TimeInAgreementMixin</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_field</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">breach_penalty</span> <span class="o">=</span> <span class="n">breach_penalty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bulletin_board</span><span class="o">.</span><span class="n">add_section</span><span class="p">(</span><span class="s2">&quot;cfps&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bulletin_board</span><span class="o">.</span><span class="n">add_section</span><span class="p">(</span><span class="s2">&quot;reports_time&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bulletin_board</span><span class="o">.</span><span class="n">add_section</span><span class="p">(</span><span class="s2">&quot;reports_agent&quot;</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">profiles</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">agent_types</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">profiles</span> <span class="o">=</span> <span class="n">profiles</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">catalog_prices</span> <span class="o">=</span> <span class="n">catalog_prices</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process_inputs</span> <span class="o">=</span> <span class="n">process_inputs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process_outputs</span> <span class="o">=</span> <span class="n">process_outputs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">factories</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">Factory</span><span class="p">(</span>
+                <span class="n">profile</span><span class="o">=</span><span class="n">profile</span><span class="p">,</span>
+                <span class="n">initial_balance</span><span class="o">=</span><span class="n">initial_balance</span><span class="p">,</span>
+                <span class="nb">id</span><span class="o">=</span><span class="n">f</span><span class="s2">&quot;f</span><span class="si">{i}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">inputs</span><span class="o">=</span><span class="n">process_inputs</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span>
+                <span class="n">outputs</span><span class="o">=</span><span class="n">process_outputs</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">profile</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">profiles</span><span class="p">)</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="n">agent_params</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">agent_params</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">agent_types</span><span class="p">))]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">atype</span><span class="p">,</span> <span class="n">aparams</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">agent_types</span><span class="p">,</span> <span class="n">agent_params</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">instantiate</span><span class="p">(</span><span class="n">atype</span><span class="p">,</span> <span class="n">aparams</span><span class="p">),</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">agents</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agents</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">factories</span> <span class="o">=</span> <span class="p">[</span><span class="n">Factory</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">initial_balance</span><span class="p">,</span> <span class="n">process_inputs</span><span class="p">,</span> <span class="n">process_outputs</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">profiles</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a2f</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">((</span><span class="n">_</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">agents</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">factories</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">f2a</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">((</span><span class="n">_</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">factories</span><span class="p">),</span> <span class="n">agents</span><span class="p">))</span>
+
+        <span class="n">n_processes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">process_inputs</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">suppliers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_processes</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">consumers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_processes</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent_processes</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent_inputs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">agent_outputs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_processes</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">agent_id</span><span class="p">,</span> <span class="n">profile</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agents</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">profiles</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isinf</span><span class="p">(</span><span class="n">profile</span><span class="o">.</span><span class="n">costs</span><span class="p">[:,</span> <span class="n">p</span><span class="p">])):</span>
+                    <span class="k">continue</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">suppliers</span><span class="p">[</span><span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">agent_id</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">consumers</span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">agent_id</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent_processes</span><span class="p">[</span><span class="n">agent_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent_inputs</span><span class="p">[</span><span class="n">agent_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent_outputs</span><span class="p">[</span><span class="n">agent_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">depth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+        <span class="n">agent_types</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">SCML2020Agent</span><span class="p">]]</span> <span class="o">=</span> <span class="n">DoNothingAgent</span><span class="p">,</span>
+        <span class="n">agent_params</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">process_inputs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+        <span class="n">process_outputs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">profit_mean</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
+        <span class="n">profit_stddev</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+        <span class="n">initial_balance</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">breach_penalty</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
+        <span class="n">n_steps</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">n_lines</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="n">n_agents_per_process</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">agent_name_reveals_location</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">signing_delay</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="n">n_products</span> <span class="o">=</span> <span class="n">depth</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">n_processes</span> <span class="o">=</span> <span class="n">depth</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">agent_types</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">):</span>
+            <span class="n">agent_types</span> <span class="o">=</span> <span class="p">[</span><span class="n">agent_types</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">n_agents_per_process</span> <span class="o">*</span> <span class="n">n_processes</span><span class="p">)</span>
+        <span class="n">n_agents</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">agent_types</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">n_agents</span> <span class="o">&gt;=</span> <span class="n">n_processes</span>
+        <span class="k">assert</span> <span class="n">n_agents_per_process</span> <span class="o">&lt;=</span> <span class="n">n_agents</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">process_inputs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="n">process_inputs</span> <span class="o">=</span> <span class="n">process_inputs</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">process_inputs</span><span class="p">)</span> <span class="o">==</span> <span class="n">depth</span>
+            <span class="p">),</span> <span class="n">f</span><span class="s2">&quot;depth is </span><span class="si">{depth}</span><span class="s2"> but got {len(process_inputs)} inputs&quot;</span>
+            <span class="n">inputs</span> <span class="o">=</span> <span class="n">process_inputs</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">process_inputs</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">depth</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">process_outputs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="n">process_outputs</span> <span class="o">=</span> <span class="n">process_outputs</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">process_outputs</span><span class="p">)</span> <span class="o">==</span> <span class="n">depth</span>
+            <span class="p">),</span> <span class="n">f</span><span class="s2">&quot;depth is </span><span class="si">{depth}</span><span class="s2"> but got {len(process_outputs)} outputs&quot;</span>
+            <span class="n">outputs</span> <span class="o">=</span> <span class="n">process_outputs</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">outputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="o">*</span><span class="n">process_outputs</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">depth</span><span class="p">)</span>
+
+        <span class="n">min_cost</span><span class="p">,</span> <span class="n">max_cost</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span>
+        <span class="n">min_unit</span><span class="p">,</span> <span class="n">max_unit</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span>
+        <span class="k">if</span> <span class="n">n_agents_per_process</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">costs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span>
+                <span class="n">min_cost</span><span class="p">,</span> <span class="n">max_cost</span><span class="p">,</span> <span class="p">(</span><span class="n">n_agents</span><span class="p">,</span> <span class="n">n_lines</span><span class="p">,</span> <span class="n">n_processes</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span>
+            <span class="p">)</span>
+            <span class="n">n_agents_per_process</span> <span class="o">=</span> <span class="n">n_agents</span>
+        <span class="k">elif</span> <span class="n">n_agents</span> <span class="o">&gt;=</span> <span class="n">n_agents_per_process</span> <span class="o">*</span> <span class="n">n_processes</span><span class="p">:</span>
+            <span class="n">costs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">n_agents</span><span class="p">,</span> <span class="n">n_lines</span><span class="p">,</span> <span class="n">n_processes</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_processes</span><span class="p">):</span>
+                <span class="n">costs</span><span class="p">[</span>
+                    <span class="n">p</span> <span class="o">*</span> <span class="n">n_agents_per_process</span> <span class="p">:</span> <span class="p">(</span><span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">n_agents_per_process</span><span class="p">,</span> <span class="p">:,</span> <span class="n">p</span>
+                <span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_cost</span><span class="p">,</span> <span class="n">max_cost</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_agents_per_process</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">agent_name_reveals_location</span><span class="p">:</span>
+                <span class="n">costs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">costs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">costs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">n_agents</span><span class="p">,</span> <span class="n">n_lines</span><span class="p">,</span> <span class="n">n_processes</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_processes</span><span class="p">):</span>
+                <span class="c1"># guarantee that at least one agent is running each process (we know that n_agents&gt;=n_processes)</span>
+                <span class="n">costs</span><span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="p">:,</span> <span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">min_cost</span><span class="p">,</span> <span class="n">max_cost</span><span class="p">)</span>
+                <span class="c1"># generate random new agents for the process</span>
+                <span class="n">agents</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span>
+                    <span class="mi">0</span><span class="p">,</span> <span class="n">n_agents</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n_agents_per_process</span> <span class="o">-</span> <span class="mi">1</span>
+                <span class="p">)</span>
+                <span class="c1"># make sure that the agent with the same index as the process is not chosen twice</span>
+                <span class="n">agents</span><span class="p">[</span><span class="n">agents</span> <span class="o">&gt;=</span> <span class="n">p</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="c1"># assign agents to processes</span>
+                <span class="n">costs</span><span class="p">[</span><span class="n">agents</span><span class="p">,</span> <span class="p">:,</span> <span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span>
+                    <span class="n">min_cost</span><span class="p">,</span> <span class="n">max_cost</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">n_agents_per_process</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="c1"># permute costs so that agent i is not really guaranteed to run process i</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">agent_name_reveals_location</span><span class="p">:</span>
+                <span class="n">costs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">costs</span><span class="p">)</span>
+
+        <span class="c1"># generate guaranteed contracts</span>
+        <span class="c1"># -----------------------------</span>
+        <span class="c1"># select the amount of random raw material available to every agent that can consume it</span>
+        <span class="n">quantity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_products</span><span class="p">,</span> <span class="n">n_agents</span><span class="p">,</span> <span class="n">n_steps</span><span class="p">))</span>
+        <span class="n">a0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isinf</span><span class="p">(</span><span class="n">costs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()))[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="n">quantity</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span>
+            <span class="mi">0</span><span class="p">,</span> <span class="n">process_inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_lines</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">a0</span><span class="p">),</span> <span class="n">n_steps</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="c1"># initialize unit prices randomly within the allowed negotiation range</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_unit</span><span class="p">,</span> <span class="n">max_unit</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">quantity</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_processes</span><span class="p">):</span>
+            <span class="c1"># find the agents / lines that can run this process</span>
+            <span class="n">ins</span> <span class="o">=</span> <span class="n">quantity</span><span class="p">[</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">generate_initial_contracts</span><span class="p">(</span>
+        <span class="bp">self</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+        <span class="k">pass</span>
+
+<div class="viewcode-block" id="SCM2020World.post_step_stats"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.post_step_stats">[docs]</a>    <span class="k">def</span> <span class="nf">post_step_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.pre_step_stats"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.pre_step_stats">[docs]</a>    <span class="k">def</span> <span class="nf">pre_step_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.order_contracts_for_execution"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.order_contracts_for_execution">[docs]</a>    <span class="k">def</span> <span class="nf">order_contracts_for_execution</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">contracts</span><span class="p">:</span> <span class="n">Collection</span><span class="p">[</span><span class="n">Contract</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Collection</span><span class="p">[</span><span class="n">Contract</span><span class="p">]:</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.contract_record"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.contract_record">[docs]</a>    <span class="k">def</span> <span class="nf">contract_record</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.breach_record"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.breach_record">[docs]</a>    <span class="k">def</span> <span class="nf">breach_record</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">breach</span><span class="p">:</span> <span class="n">Breach</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.start_contract_execution"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.start_contract_execution">[docs]</a>    <span class="k">def</span> <span class="nf">start_contract_execution</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Set</span><span class="p">[</span><span class="n">Breach</span><span class="p">]:</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.complete_contract_execution"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.complete_contract_execution">[docs]</a>    <span class="k">def</span> <span class="nf">complete_contract_execution</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">,</span> <span class="n">breaches</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Breach</span><span class="p">],</span> <span class="n">resolution</span><span class="p">:</span> <span class="n">Contract</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.execute_action"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.execute_action">[docs]</a>    <span class="k">def</span> <span class="nf">execute_action</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">Action</span><span class="p">,</span> <span class="n">agent</span><span class="p">:</span> <span class="s2">&quot;Agent&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.get_private_state"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.get_private_state">[docs]</a>    <span class="k">def</span> <span class="nf">get_private_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">agent</span><span class="p">:</span> <span class="s2">&quot;Agent&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.simulation_step"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.simulation_step">[docs]</a>    <span class="k">def</span> <span class="nf">simulation_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="SCM2020World.contract_size"><a class="viewcode-back" href="../../../reference/scml.html#scml.SCM2020World.contract_size">[docs]</a>    <span class="k">def</span> <span class="nf">contract_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">contract</span><span class="p">:</span> <span class="n">Contract</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Yasser Mohammad
+      <span class="lastupdated">
+        Last updated on Nov 25, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

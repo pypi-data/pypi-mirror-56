@@ -1,0 +1,9 @@
+click
+pytest
+hypothesis
+negmas
+prettytable
+pulp
+
+[:python_version=="3.6"]
+attrs
