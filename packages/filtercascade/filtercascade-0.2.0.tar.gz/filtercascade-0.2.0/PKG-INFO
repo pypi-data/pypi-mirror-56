@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: filtercascade
+Version: 0.2.0
+Summary: A simple bloom filter cascade implementation in Python
+Home-page: http://github.com/mozmark/filter-cascade
+Author: Mark Goodwin
+Author-email: mgoodwin@mozilla.com
+License: Mozilla Public License 2.0 (MPL 2.0)
+Description: A bloom filter cascade implementation in Python using the 32-bit variant of murmurhash3.
+Keywords: bloom filter cascade multi level mlbf
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
