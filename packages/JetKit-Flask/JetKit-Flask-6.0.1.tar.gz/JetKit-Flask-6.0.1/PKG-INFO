@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: JetKit-Flask
+Version: 6.0.1
+Summary: Rapid web application development.
+Home-page: https://github.com/jetbridge/jetkit-flask
+Author: JetBridge
+Author-email: mischa@jetbridge.com
+License: ABRMS
+Description: [![CircleCI](https://circleci.com/gh/jetbridge/jetkit-flask.svg?style=svg)](https://circleci.com/gh/jetbridge/jetkit-flask)
+        
+        JetKit Flask
+        ------------
+        
+        ## What is this?
+        Reduce boilerplate in your Flask applications.
+        Provides reusable blueprints, utilities, classes for:
+        * Authentication
+        * Base user class
+        * S3 and asset storage/referencing
+        * Mail
+        * PDF document generation
+        
+        
+        Documentation coming soon!
+        
+Platform: any
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
