@@ -1,0 +1,19 @@
+/* TODO: Have your plugin's CSS files generated to here. */
+#navbar_plugin_addlink > a {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+}
+#navbar_plugin_addlink > a > i,
+#navbar_plugin_addlink > a > div {
+  float: left;
+}
+#navbar_plugin_addlink > a > div {
+  margin-left: 10px;
+  height: 20px;
+  width: 25px;
+  background-image: url(../img/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
