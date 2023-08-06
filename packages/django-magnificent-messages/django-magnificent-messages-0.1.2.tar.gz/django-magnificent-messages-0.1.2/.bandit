@@ -1,0 +1,3 @@
+[bandit]
+exclude: /tests,/setup.py,/runtests.py,/manage.py,/docs
+skips: B703,B308

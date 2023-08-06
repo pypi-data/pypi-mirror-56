@@ -1,0 +1,12 @@
+bandit
+coverage
+mock>=1.0.1
+flake8>=2.1.0
+coveralls
+django-model-utils>=2.0
+setuptools
+wheel
+twine
+pbr
+django-appconf
+gitchangelog
