@@ -1,0 +1,9 @@
+bumpversion
+wheel
+watchdog
+flake8
+tox
+coverage
+Sphinx
+twine==1.12
+python-semantic-release==4.3.3
