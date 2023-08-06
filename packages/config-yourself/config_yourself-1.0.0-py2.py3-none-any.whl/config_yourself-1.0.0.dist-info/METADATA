@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: config-yourself
+Version: 1.0.0
+Summary: A python library to decrypt config-yourself files
+Home-page: https://github.com/blinkhealth/config-yourself-python
+Author: Will Richard
+Author-email: william.richard@blinkhealth.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: JavaScript
+Requires-Dist: future (<1.0.0,>=0.16.0)
+Requires-Dist: PyYAML (>=5.1.1)
+Provides-Extra: all
+Requires-Dist: cryptography (<3.0,>=2.8) ; extra == 'all'
+Requires-Dist: pgpy (<1.0.0,>=0.4.3) ; extra == 'all'
+Requires-Dist: boto3 (<2.0.0,>=1.4.4) ; extra == 'all'
+Provides-Extra: gpg
+Requires-Dist: pgpy (<1.0.0,>=0.4.3) ; extra == 'gpg'
+Requires-Dist: cryptography (<3.0,>=2.8) ; extra == 'gpg'
+Provides-Extra: kms
+Requires-Dist: boto3 (<2.0.0,>=1.4.4) ; extra == 'kms'
+Provides-Extra: password
+Requires-Dist: cryptography (<3.0,>=2.8) ; extra == 'password'
+
+UNKNOWN
+
+
