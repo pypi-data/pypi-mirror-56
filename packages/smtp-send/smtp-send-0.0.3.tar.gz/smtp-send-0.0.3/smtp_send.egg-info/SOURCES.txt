@@ -1,0 +1,10 @@
+README.md
+setup.py
+smtp_send/__init__.py
+smtp_send/smtp_send.py
+smtp_send.egg-info/PKG-INFO
+smtp_send.egg-info/SOURCES.txt
+smtp_send.egg-info/dependency_links.txt
+smtp_send.egg-info/entry_points.txt
+smtp_send.egg-info/requires.txt
+smtp_send.egg-info/top_level.txt
