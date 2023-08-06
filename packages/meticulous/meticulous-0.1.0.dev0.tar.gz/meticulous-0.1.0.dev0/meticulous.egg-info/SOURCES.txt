@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+short_description.txt
+meticulous/__init__.py
+meticulous/__main__.py
+meticulous/version.py
+meticulous.egg-info/PKG-INFO
+meticulous.egg-info/SOURCES.txt
+meticulous.egg-info/dependency_links.txt
+meticulous.egg-info/top_level.txt
