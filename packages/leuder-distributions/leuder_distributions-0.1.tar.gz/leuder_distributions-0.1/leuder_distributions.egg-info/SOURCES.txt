@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py
+leuder_distributions.egg-info/PKG-INFO
+leuder_distributions.egg-info/SOURCES.txt
+leuder_distributions.egg-info/dependency_links.txt
+leuder_distributions.egg-info/not-zip-safe
+leuder_distributions.egg-info/top_level.txt
