@@ -1,0 +1,16 @@
+COPYRIGHT.txt
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/Debugger/DebuggerGui.py
+src/Debugger/LibDocParser.py
+src/Debugger/__init__.py
+src/Debugger/logs/log.html
+src/Debugger/logs/output.xml
+src/Debugger/logs/report.html
+src/robotframework_debugger.egg-info/PKG-INFO
+src/robotframework_debugger.egg-info/SOURCES.txt
+src/robotframework_debugger.egg-info/dependency_links.txt
+src/robotframework_debugger.egg-info/requires.txt
+src/robotframework_debugger.egg-info/top_level.txt
