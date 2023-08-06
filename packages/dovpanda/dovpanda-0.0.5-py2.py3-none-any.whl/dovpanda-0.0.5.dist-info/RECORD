@@ -1,0 +1,17 @@
+dovpanda/__init__.py,sha256=IfW-ouSUtnaYFO-j44A0Xy0n6mHdDVvJXnK8lNiBPEE,620
+dovpanda/base.py,sha256=nfwPwCdk3ljhlQwSiblVlHSDL63cCs6OqbetHnYDrqg,8455
+dovpanda/config.py,sha256=GZkqpyg1RhDczOzO25kD_MUZ_08llvEpve6uWQmvLr4,2887
+dovpanda/core.py,sha256=Ub-pAeyVxXKwujkbrO6xvNfpxs09fIphI7n3Y08tR9w,11175
+dovpanda/tips.py,sha256=4vTmy4vTMnrvyJ-07EZnAOpurL-K7K3WtWYJ2L2VWWQ,1587
+dovpanda/resource/logo,sha256=7u7nQNhPQIbRXJdf49XtsfaHw31-IFlTrqVe322fWeM,5078
+dovpanda/tip_files/many_cols_csv.html,sha256=lLbcIyedHl-ExdcZ_D9nddqo14AUyGX6S5HNMvhK7KY,1025
+dovpanda/tip_files/map_with_dict.html,sha256=JRFmR5Y47wqQJLstyL98s2N3Qcoc2smNsm_q7mYK3A4,4201
+dovpanda/tip_files/read_csv_header_skiprows.html,sha256=uJewjnWW5ouX942AdpbP_j9kGzzkSw3GKyLwfis2g6k,1132
+dovpanda/tip_files/readable_loc_iloc.html,sha256=WLB5-bbBAry2oxQ6hL_h0Lh_jJz3bEh1RPVi8NPGPKA,1299
+dovpanda/tip_files/resample.html,sha256=i3UbsuDiFLgGt7dC5MqVCgzBJN20_e-oenX_dkGzQv4,7846
+dovpanda-0.0.5.dist-info/AUTHORS.rst,sha256=FwUfUTHeQ3tiESQgb39hDWvFgc1ReJCmBq2jMc-4S7o,174
+dovpanda-0.0.5.dist-info/LICENSE,sha256=xVl4X_qIJwEe9SzCxttWwtVKNUSmB0Nq4yrTyLCZF-w,1520
+dovpanda-0.0.5.dist-info/METADATA,sha256=YqKYc9elYta0w1pWpHZ71zI8oSVI6KksAsBceZjH6ss,4785
+dovpanda-0.0.5.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+dovpanda-0.0.5.dist-info/top_level.txt,sha256=I5tIkjwiaHUPbIRBFmqXQzk9dZSyOsY77SYIusfX260,9
+dovpanda-0.0.5.dist-info/RECORD,,
