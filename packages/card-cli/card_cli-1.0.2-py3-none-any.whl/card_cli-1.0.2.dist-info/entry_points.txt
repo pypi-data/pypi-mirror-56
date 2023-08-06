@@ -1,0 +1,3 @@
+[console_scripts]
+card-cli = card_reader:main
+
