@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+prop/__init__.py
+prop/__version__.py
+prop/get.py
+prop.egg-info/PKG-INFO
+prop.egg-info/SOURCES.txt
+prop.egg-info/dependency_links.txt
+prop.egg-info/requires.txt
+prop.egg-info/top_level.txt
+prop.egg-info/zip-safe
+test/test_dot.py
