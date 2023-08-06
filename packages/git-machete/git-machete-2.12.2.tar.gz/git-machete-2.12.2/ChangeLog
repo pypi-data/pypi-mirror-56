@@ -1,0 +1,136 @@
+CHANGES
+=======
+
+v2.12.2
+-------
+
+* Apply multiple bugfixes and improvements across the codebase (#54) (#65)
+
+v2.12.1
+-------
+
+* Ensure remote tracking branches are properly updated during traverse
+
+v2.12.0
+-------
+
+* Assume the first defined tree if the current branch is unmanaged in go root/first/last (#19)
+* Add --checked-out-since flag to discover (#46)
+* Only consider managed branches when inferring an upstream to add a branch onto (#64)
+* Try to infer the remote tracking branch if it's not explicitly set (#60)
+* Fix edit crashing when both EDITOR and vim are missing (#63)
+
+v2.11.3
+-------
+
+* Add PyPI auto-deployment setup (#61)
+* Update setup.cfg and README.md to enable pip install (#32)
+
+v2.11.2
+-------
+
+* Correctly handle fork point corner cases (#55)
+
+v2.11.1
+-------
+
+* Fix wrong spacing in status
+
+v2.11.0
+-------
+
+* Fix UnicodeEncodeError for non-TTY output under Python 2
+* Add --color flag to \`status\`
+
+v2.10.1
+-------
+
+* Implement displaying absolute path by \`file\` command
+
+v2.10.0
+-------
+
+* Make the ZSH completion file autoloadable
+* Make codebase compatible with both Python 2.7 and 3 (#35)
+* Migrate codebase to Python 3 (#35)
+* Update blog links to Medium
+* Update links to blogs
+* Add entry in README for Arch AUR package
+
+v2.9.0
+------
+
+* Add missing help to status (#47)
+* Mark branch merged to its parent with grey edge (#47)
+* Consider branches commit-wise equal to their upstreams as slidable (#22)
+* Optimize fetching data from git (#18)
+* Hightlight fork point in 'status --list-commits' in case of a yellow edge (#17)
+* Enable choosing the roots for discovery (#16)
+* Refactor handle\_untracked\_branch (#15)
+* Fix format + replace raise with return (#15)
+* Add 'yq' option in traverse (#15)
+* Implement hooks + provide samples (#14)
+* Temporarily use Python 2.7 for pep8 toxenv
+
+v2.8.8
+------
+
+* Fix Makefile
+* Provide zsh completion (#21)
+
+v2.8.7
+------
+
+* Change refname:lstrip=2 to refname:strip=2 to make sure old versions of git work properly
+
+v2.8.6
+------
+
+* Improve README
+* Bump to 2.8.6
+* Simplify installation process
+* Mark definition\_file and opt\_\* vars as global
+* Setup project in python way
+* Add icon
+* Add Gitter badge
+
+v2.8.5
+------
+
+* Exclude the no-op rebase case from the adjusted reflog
+
+v2.8.4
+------
+
+* Fix branch creation in case of tag named after a managed branch
+
+v2.8.3
+------
+
+* Improve bash completion for long options
+
+v2.8.2
+------
+
+* Handle the case when tag named exactly as a branch exists
+
+v2.8.1
+------
+
+* Fix formatting
+* Handle untracked branches whose remote counterpart candidate already exists properly in \`traverse\`
+
+v2.8.0
+------
+
+* Suggest sliding out merged branches during traverse
+
+v2.7.2
+------
+
+* Fix location of bash completion script on Mac OS
+
+v2.7.1
+------
+
+* Improved visibility on white terminal backgrounds (#10)
