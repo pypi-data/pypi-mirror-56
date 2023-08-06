@@ -1,0 +1,16 @@
+sppm/__init__.py,sha256=BwV61SvnI79K7hZeRuBfAPED_Y8gbAHyaf53u53mfP4,287
+sppm/child.py,sha256=mk_O9X4uZJLls95q7CWncpTfqBGcB_-rSfs7RaxgTLo,500
+sppm/log_level.py,sha256=8xRLMLkDbONn-YbRLXRy_TUOgm6Ih41Lt_aAe7mY3pM,570
+sppm/master.py,sha256=bfEyie077adRPxa0nAFQ7w_46wN0gBKQbC2wYzqurPs,7680
+sppm/process_status.py,sha256=2NzkfWLcSIvYVw7GpwtObJtWQYp8EmiZ2WaJeV_op1w,2329
+sppm/process_status_lock.py,sha256=BmUyvcqbPW7cou9ZEws2NeV92v2RSei-oIgvTgvtsXI,3259
+sppm/settings.py,sha256=oQ6YmpXDTve2zJp0JZaL48DHNV0EK_3H38ayVw5EDGk,441
+sppm/signal_handler.py,sha256=nERUU6nxpyUdppgyxKA8aO9WaGHcQgIfhy5gVo1HOR0,502
+sppm/sppm_config.py,sha256=0VjqnstKFwzC4a4DQaYy_H0y-0m6zVK_akvEyGy7mJU,3268
+sppm/utils.py,sha256=mPbAZHWrzmMNiBJrDGwzUIQNXy9xIaOWG1agoP5DcOQ,1624
+sppm/version.py,sha256=c_DofgHksfmOzsokPt8N6faDTiyFwfx0WWwjxid_JvM,103
+sppm-1.0.3.dist-info/LICENSE,sha256=NrK0nvgt_x7V38ZcVzPA06RWRUyUMGdWba9i1-svAO0,1072
+sppm-1.0.3.dist-info/METADATA,sha256=VtIfYgaa0sChuC1kIQdRucKFjPxWAWtrPsw0_b_fV9c,4725
+sppm-1.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+sppm-1.0.3.dist-info/top_level.txt,sha256=xRezS4beLWB813_CS6rjR5IF9qXyaHV_xyYaL5cLHVc,5
+sppm-1.0.3.dist-info/RECORD,,
