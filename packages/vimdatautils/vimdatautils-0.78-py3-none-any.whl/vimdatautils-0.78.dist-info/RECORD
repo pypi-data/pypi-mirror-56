@@ -1,0 +1,10 @@
+vimdatautils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vimdatautils/dal.py,sha256=YHM_4s43pwSMFsq2UMKsSo97QLu-sM44Az5ZnEnuaEA,3726
+vimdatautils/inbound_pipeline.py,sha256=b4_7QISutv-H5Yiro_qb_Ke50SNvFpXFeGQT2EmNW50,4768
+vimdatautils/s3_utility.py,sha256=cOqwkcPX1z6Szv5tq5zlTcav7C0U4i1hf1uBjHRhJ6E,2223
+vimdatautils/resources/create_inbound_stored_functions.sql,sha256=F6oizW4A_J-8yApvQRM4dj2zuUlj4bC-Smwf7O1yzLQ,658
+vimdatautils/resources/update_log_table.sql,sha256=ufwxfEl7M80Ci52_utsVBejv_WVdjEvNYMibNxQIcY0,200
+vimdatautils-0.78.dist-info/METADATA,sha256=bsQoI6PGeV3EXgGJT8aiDPKaUUwfqZpIVHjT0tlVW1c,1817
+vimdatautils-0.78.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+vimdatautils-0.78.dist-info/top_level.txt,sha256=MOmjYhJtgHAY0hT2i0iiBaOKOJtq6lM5AL-zFRjj6pY,13
+vimdatautils-0.78.dist-info/RECORD,,
