@@ -1,0 +1,4 @@
+colorlog
+demjson
+pathlib
+requests>=2.12.4
