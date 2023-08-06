@@ -1,0 +1,3 @@
+[console_scripts]
+tenable-cef = tenable_cef.cli:cli
+
