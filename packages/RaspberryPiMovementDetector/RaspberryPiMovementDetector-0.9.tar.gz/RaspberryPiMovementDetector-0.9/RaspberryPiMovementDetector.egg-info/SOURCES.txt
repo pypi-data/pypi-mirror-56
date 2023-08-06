@@ -1,0 +1,12 @@
+MANIFEST.in
+README.txt
+setup.cfg
+setup.py
+MovementDetector/Watch.py
+MovementDetector/__init__.py
+RaspberryPiMovementDetector.egg-info/PKG-INFO
+RaspberryPiMovementDetector.egg-info/SOURCES.txt
+RaspberryPiMovementDetector.egg-info/dependency_links.txt
+RaspberryPiMovementDetector.egg-info/top_level.txt
+tests/__init__.py
+tests/test_watch.py
