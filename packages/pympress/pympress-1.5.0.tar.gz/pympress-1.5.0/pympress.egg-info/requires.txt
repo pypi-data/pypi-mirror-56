@@ -1,0 +1,11 @@
+python-vlc
+watchdog
+
+[:python_version < "3.4"]
+enum34
+
+[build_sphinx]
+sphinx
+recommonmark
+sphinxcontrib-napoleon
+sphinx-rtd-theme
