@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+win_pyxs/__init__.py
+win_pyxs/__main__.py
+win_pyxs/exceptions.py
+win_pyxs/gplpv.py
+win_pyxs/winpv.py
+win_pyxs.egg-info/PKG-INFO
+win_pyxs.egg-info/SOURCES.txt
+win_pyxs.egg-info/dependency_links.txt
+win_pyxs.egg-info/requires.txt
+win_pyxs.egg-info/top_level.txt
+win_pyxs.egg-info/zip-safe
