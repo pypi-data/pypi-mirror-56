@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: xtsjspider
+Version: 3.6.2
+Summary: 系统设计工作室开发用于学习开发使用
+Home-page: https://gitee.com/timedb/xtsjspider
+Author: DZB
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: requests
+Requires-Dist: lxml
+
+UNKNOWN
+
+
