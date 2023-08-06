@@ -1,0 +1,60 @@
+# Base Configuration file for solstice-tools-xgenmanager
+
+# Defines tool name
+name: XGen Manager
+
+# Unique ID for the tool
+id: solstice-tools-xgenmanager
+
+# Defines logo name of the tool
+logo: xgenmanager_logo
+
+# Defines icon of the tool
+icon: xgenmanager
+
+# Description of the tool
+description: Tool to manage XGen workflow in Solstice
+
+# URL to tool documentation web page
+url: ""
+
+# Tags related with this tool
+tags: ['artella', 'manager', 'xgen', 'fur', 'groom']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://1cd7be48a69848d68a251b95f4889bee@sentry.io/1764700
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "solstice", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: INFO
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "XGen Manager"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Groom
+    type: menu
+    children:
+      - id: solstice-tools-xgenmanager
+        type: tool
+
+# Tool Shelf definition
+shelf:
+  - name: Groom
+    children:
+      - id: artellapipe-tools-playblastmanager
+        displayLabel: False
+        type: tool
