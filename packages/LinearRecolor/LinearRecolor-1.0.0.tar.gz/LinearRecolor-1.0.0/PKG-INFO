@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: LinearRecolor
+Version: 1.0.0
+Summary: 基于线性映射模板的色彩转移(Based on Image recoloring using linear template mapping)
+Home-page: https://github.com/freedomofme/SampleRecolor
+Author: yelhuang
+Author-email: xiegeixiong@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/freedomofme/SampleRecolor/issues
+Project-URL: Source, https://github.com/freedomofme/SampleRecolor
+Description: #Image recoloring using linear template mapping 基于线性映射模板的色彩转移
+        
+        >based on 《Image recoloring using linear template mapping》
+        >
+        
+        ### Install
+        
+        ### Usage
+            _root_dir = os.path.dirname(__file__)
+            reuslt = linear_recolor(_root_dir + '/image/apple/manifest.png',
+                          _root_dir + '/image/apple/source.png',
+                           reverse_map=True)
+        
+            cv2.imwrite('./test2.png', reuslt)
+            
+            reverse_map:参数指明 线性映射的方向，可选值：False || True 
+        
+        ### Advance Usage
+        manifest.png could be created by this program [Grayscale](https://github.com/freedomofme/Grayscale).
+        
+            som = SOMGraySclae()
+            manifest = som.get_1d_manifold(one_souce_image)
+        
+        #### 原图(source.png)：
+        ![](https://raw.githubusercontent.com/freedomofme/SampleRecolor/master/image/apple/source.png)
+        
+        #### 模板(manifest.png)（基于Data-driven Color Manifolds 生成）[参见get_1d_manifold](https://github.com/freedomofme/Grayscale)
+        ![](https://raw.githubusercontent.com/freedomofme/SampleRecolor/master/image/apple/manifest.png)
+        
+        #### 效果图
+        ![](https://raw.githubusercontent.com/freedomofme/SampleRecolor/master/image/apple/result.png)
+        ==
+        ![](https://raw.githubusercontent.com/freedomofme/SampleRecolor/master/image/apple/result_reverse.png)
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
