@@ -1,0 +1,8 @@
+[console_scripts]
+diffips = larc.cli.ips:diff_ips
+difflines = larc.cli.text:diff_lines
+getips = larc.cli.ips:get_ips
+intips = larc.cli.ips:int_ips
+intlines = larc.cli.text:int_lines
+sortips = larc.cli.ips:sort_ips
+
