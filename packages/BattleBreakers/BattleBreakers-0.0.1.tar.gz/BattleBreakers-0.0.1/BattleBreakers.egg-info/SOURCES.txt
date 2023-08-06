@@ -1,0 +1,11 @@
+README.md
+setup.py
+BattleBreakers/__init__.py
+BattleBreakers/auth.py
+BattleBreakers/client.py
+BattleBreakers/http.py
+BattleBreakers.egg-info/PKG-INFO
+BattleBreakers.egg-info/SOURCES.txt
+BattleBreakers.egg-info/dependency_links.txt
+BattleBreakers.egg-info/requires.txt
+BattleBreakers.egg-info/top_level.txt
