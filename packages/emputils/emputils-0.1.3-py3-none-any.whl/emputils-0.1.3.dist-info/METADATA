@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: emputils
+Version: 0.1.3
+Summary: A utility package for working with the EMP framework
+Home-page: https://gitlab.cern.ch/dmonk/emputils
+Author: David Monk
+Author-email: davidgabrialmonk@cern.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+# emputils
+A utility package for working with the EMP framework
+
+## Installation
+```
+pip install emputils
+```
+
+## PatternGenerator
+A class for generating pattern files.
+### Example
+First, define a function to generate data:
+```python
+def generate():
+    frames = []
+    for i in range(200):
+        frames.append("1v{:016x}.format(i)")
+    return frames
+```
+Then generate pattern file
+```python
+from emputils import PatternGenerator
+
+pg = PatternGenerator(range(40,58))
+for i, link in enumerate(pg.links.columns):
+    pg.buildLink(link, generate())
+pg.writeToFile("pattern.txt")
+```
+
+
