@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: flamedisx
+Version: 0.3.1
+Summary: Fast likelihood analysis in more dimensions for xenon TPCs
+Home-page: https://github.com/JelleAalbers/flamedisx
+Author: Jelle Aalbers, Bart Pelssers, Cristian Antochi
+License: UNKNOWN
+Description: Flamedisx
+        ==========
+        
+        Fast likelihood analysis in more dimensions for xenon TPCs.
+        
+        [![Build Status](https://travis-ci.org/FlamTeam/flamedisx.svg?branch=master)](https://travis-ci.org/FlamTeam/flamedisx)
+        [![DOI](https://zenodo.org/badge/176141558.svg)](https://zenodo.org/badge/latestdoi/176141558)
+        
+        By Jelle Aalbers, Bart Pelssers, and Cristian Antochi
+        
+        
+        Tutorial and documentation
+        ---------------------------
+        
+        See the [Tutorial](https://github.com/FlamTeam/flamedisx-notebooks/blob/master/Tutorial.ipynb) and other notebooks in our separate [notebooks repository](https://github.com/FlamTeam/flamedisx-notebooks).
+        
+        Description
+        -------------
+        
+        Flamedisx aims to increase the practical number of dimensions (e.g. s1, s2, x, 
+        y, z and time) and parameters (g1, g2, recombination model coefficients, 
+        electron lifetime, ...) in LXe TPC likelihoods.
+        
+        Traditionally, we evaluate our signal and background models by filling histograms with high-statistics Monte Carlo simulations. However, the LXe emission model can be expressed so that  the integral equivalent to an MC simulation can be computed with a few matrix multiplications. Flamedisx uses this to compute the probability density directly at each observed event, without using MC integration. 
+        
+        This has several advantages:
+          - Each event has its "private" detector model computation at the observed (x, y, z, time), so it is easy and cheap to add  time- and position dependences to the likelihood.
+          - Since the likelihood for a dataset takes O(seconds) to compute, we can do this at each of optimizer's proposed points during inference. We thus remove a histogram precomputation step exponential in the number of parameters, and can thus fit a great deal more parameters.
+          - By implementing the signal model in tensorflow, the likelihood becomes differentiable. Using the gradient during fitting drastically reducing the number of needed interactions for a fit or profile likelihood.
+          
+        Note this is still under construction / development, so it probably has some bugs and little documentation.
+        
+        
+        
+        
+        0.3.1 / 2019-11-26
+        ------------------
+        - Performance improvements and cleanup (#58)
+        - Improve one_parameter_interval arguments (#56)
+        - Add Tutorial output to flamedisx-notebooks (#56)
+        - Bugfixes (#57)
+        
+        0.3.0 / 2019-11-19
+        ------------------
+        - Split off notebook folder to flamedisx-notebooks
+        - Pass source specific parameters correctly (#51)
+        - Flexible event padding (#54)
+        - SciPy optimizer and optimizer settings (#54)
+        - one_parameter_interval (#54)
+        - Bugfixes (#46, #55, #51)
+        - Unify optimizers (#54)
+        
+        0.2.2 / 2019-10-30
+        ------------------
+        - Minuit optimizer (#40)
+        - Likelihood simulator (#43, #44)
+        - Updates to NRSource (#40)
+        
+        0.2.1 / 2019-10-24
+        ------------------
+        - Workaround for numerical errors (#38, #39)
+        
+        0.2.0 / 2019-10-11
+        ------------------
+        - Spatially dependent rates (#27)
+        - Time dependent energy spectra (#24)
+        - XENON1T SR1-like model / fixes (#22, #32)
+        - Switch optimizer to BFGS + Hessian (#19)
+        - Multiple source support (#14)
+        - Optimization (#13)
+        - Bugfixes / refactor (#18, #20, #21, #28, #30, #31, #35)
+        
+        0.1.2 / 2019-07-24
+        -------------------
+        - Speedup ER computation, add tutorial (#11)
+        - Optimize lookup-axis1 (#10)
+        
+        0.1.1 / 2019-07-21
+        -------------------
+        - 5x speedup for Hessian (#9)
+        - Fix pip install
+        
+        0.1.0 / 2019-07-16
+        -------------------
+        - Batching (#7)
+        - Inference (#6)
+        - Ported to tensorflow / GPU support (#1, #2, #3, #5)
+        
+        0.0.1 / 2019-03-17
+        ------------------
+        - Initial numpy-based version
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
