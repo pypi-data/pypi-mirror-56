@@ -1,0 +1,8 @@
+django>=2.2
+bleach
+bleach_whitelist
+markdown
+django-taggit
+django-versatileimagefield
+django-crispy-forms
+django-recaptcha
