@@ -1,0 +1,8 @@
+
+[cli]
+click
+
+[test]
+
+[test:python_version <= "2.7"]
+unittest2
