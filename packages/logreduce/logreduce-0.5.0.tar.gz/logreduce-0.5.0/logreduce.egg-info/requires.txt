@@ -1,0 +1,17 @@
+aiohttp
+requests
+numpy
+scipy
+scikit-learn
+PyYAML
+
+[mqtt]
+paho-mqtt
+
+[server]
+gear
+voluptuous
+alembic
+sqlalchemy
+cherrypy
+routes
