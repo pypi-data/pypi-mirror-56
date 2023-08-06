@@ -1,0 +1,6 @@
+#!python
+
+import dcdftbmd_tools.analysis.rdf
+
+dcdftbmd_tools.analysis.rdf.rdf()
+
