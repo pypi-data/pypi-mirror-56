@@ -1,0 +1,1 @@
+from picpurify.version import __version__

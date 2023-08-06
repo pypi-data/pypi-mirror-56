@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: picpurify
+Version: 1.0.0
+Summary: Python client library for accessing PicPurify moderation API
+Home-page: https://www.picpurify.com
+Author: Romain Cousseau
+Author-email: romain.cousseau@picpurify.com
+License: MIT license
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7

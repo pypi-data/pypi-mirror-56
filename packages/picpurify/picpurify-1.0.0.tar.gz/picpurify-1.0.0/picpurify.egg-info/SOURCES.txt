@@ -1,0 +1,11 @@
+README.md
+setup.py
+picpurify/__init__.py
+picpurify/api.py
+picpurify/cli.py
+picpurify/version.py
+picpurify.egg-info/PKG-INFO
+picpurify.egg-info/SOURCES.txt
+picpurify.egg-info/dependency_links.txt
+picpurify.egg-info/requires.txt
+picpurify.egg-info/top_level.txt
