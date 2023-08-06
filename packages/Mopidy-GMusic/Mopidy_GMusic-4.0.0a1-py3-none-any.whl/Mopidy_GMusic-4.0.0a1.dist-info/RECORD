@@ -1,0 +1,17 @@
+mopidy_gmusic/__init__.py,sha256=HWirf0pLxRpa7TMEzk0EHcBPjT7c7wqEO8LUYkwIdjw,1743
+mopidy_gmusic/backend.py,sha256=ooT-4CaoHT9ey80tg9dxMRRGnxXe3A-0b5vfcdsZG_M,3286
+mopidy_gmusic/commands.py,sha256=kd3IW_hyUKipNhdKjvaD2ynP9sj_g7YdcS_8u0oiZ7o,964
+mopidy_gmusic/ext.conf,sha256=VzblHh0t4p5Y9xasdkw8_9qmlGsvCZcFV0bIRPTGDp8,261
+mopidy_gmusic/library.py,sha256=7tmGIE7FzZsdYBDQaNbKpW-rwjZLIzNKNz9t_XuwL8Q,23521
+mopidy_gmusic/playback.py,sha256=MgP-kmyP3A7iuN-N3JK7wzyrnEyh6UyEe1lo50ZxS_I,541
+mopidy_gmusic/playlists.py,sha256=heRaZVe4JIbUvxqgwW1z9s1JT7FJKMU94LpofzpbQI4,4907
+mopidy_gmusic/repeating_timer.py,sha256=FxkCvj57UXW6ug81-wwXGxE5asNDHpdFMxhEqkQMmc8,523
+mopidy_gmusic/scrobbler_frontend.py,sha256=9JUgT0tDrcJwPTKV0StU3wQ7N1iRCFZvdwKtAILqn1Q,1006
+mopidy_gmusic/session.py,sha256=xtcIUI3cJTy_SMRf8sokgkoWx0H8rGlEHq5GDFEgY_Q,5427
+mopidy_gmusic/translator.py,sha256=vOE-PPcl5ZuMipYmWyEuQc2Vl59VevEFRwuqI-lZanQ,1370
+Mopidy_GMusic-4.0.0a1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+Mopidy_GMusic-4.0.0a1.dist-info/METADATA,sha256=z52E0sF1GoIJs-UKCTpFiPpFwHZCIJ68Mfi6JZ_Q0J0,6095
+Mopidy_GMusic-4.0.0a1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+Mopidy_GMusic-4.0.0a1.dist-info/entry_points.txt,sha256=ya8lbls0kuFkQWY-ROLgTLvxv9YsZ4txAOiqlGP5Td4,47
+Mopidy_GMusic-4.0.0a1.dist-info/top_level.txt,sha256=2MwGl_Hy9r8p1-Qv__g01GUJx-x9IAmE-JsodWaz-sM,14
+Mopidy_GMusic-4.0.0a1.dist-info/RECORD,,
