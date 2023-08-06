@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: colourize
+Version: 0.1.0
+Summary: Convert image datasets to other colourspaces.
+Home-page: https://gitlab.com/starshell/datadyne/colourize
+License: Apache-2.0
+Keywords: computer vision,augmentation,image,color,colour
+Author: Derek Goddeau
+Author-email: derek.j.goddeau@pm.me
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: colour-science (==0.3.14)
+Requires-Dist: pyyaml (>=5.1,<6.0)
+Requires-Dist: scikit-image (>=0.16.2,<0.17.0)
+Requires-Dist: torch (>=1.2.0,<2.0.0)
+Requires-Dist: torchvision (>=0.4.2,<0.5.0)
+Requires-Dist: tqdm (>=4.39,<5.0)
+Project-URL: Repository, https://gitlab.com/starshell/datadyne/colourize
+Description-Content-Type: text/markdown
+
+## Colourize
+
+> Convert a dataset of images into many different colourspaces.
+
+A command line tool to preprocess a dataset into many different colourspaces.
+Also provides a PyTorch `Dataset` that will work on the output and a PyTorch
+transform to do the conversion online during training instead.
+
+### Currently in alpha this is just a MWE
+
