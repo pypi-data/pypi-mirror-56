@@ -1,0 +1,14 @@
+README.md
+setup.py
+schematypes/__init__.py
+schematypes/_version.py
+schematypes/dicts.py
+schematypes/lists.py
+schematypes/objects.py
+schematypes/schemas.py
+schematypes/strings.py
+schematypes.egg-info/PKG-INFO
+schematypes.egg-info/SOURCES.txt
+schematypes.egg-info/dependency_links.txt
+schematypes.egg-info/not-zip-safe
+schematypes.egg-info/top_level.txt
