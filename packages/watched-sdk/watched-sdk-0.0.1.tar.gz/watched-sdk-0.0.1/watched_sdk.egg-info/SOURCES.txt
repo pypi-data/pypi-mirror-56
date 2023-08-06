@@ -1,0 +1,16 @@
+README.md
+setup.py
+watched_sdk/__init__.py
+watched_sdk/addon.py
+watched_sdk/cache.py
+watched_sdk/common.py
+watched_sdk/config.py
+watched_sdk/context.py
+watched_sdk/main.py
+watched_sdk/router.py
+watched_sdk/test.py
+watched_sdk.egg-info/PKG-INFO
+watched_sdk.egg-info/SOURCES.txt
+watched_sdk.egg-info/dependency_links.txt
+watched_sdk.egg-info/requires.txt
+watched_sdk.egg-info/top_level.txt
