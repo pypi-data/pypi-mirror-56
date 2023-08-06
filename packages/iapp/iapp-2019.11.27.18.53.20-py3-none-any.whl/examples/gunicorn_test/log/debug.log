@@ -1,0 +1,1921 @@
+[2019-11-24 22:02:48 +0800] [33867] [INFO] Starting gunicorn 20.0.0
+[2019-11-24 22:02:48 +0800] [33867] [INFO] Listening at: http://0.0.0.0:8000 (33867)
+[2019-11-24 22:02:48 +0800] [33867] [INFO] Using worker: gevent
+[2019-11-24 22:02:48 +0800] [33870] [INFO] Booting worker with pid: 33870
+[2019-11-24 22:02:48 +0800] [33871] [INFO] Booting worker with pid: 33871
+[2019-11-24 22:04:15 +0800] [33867] [INFO] Handling signal: term
+[2019-11-24 22:04:16 +0800] [33870] [INFO] Worker exiting (pid: 33870)
+[2019-11-24 22:04:16 +0800] [33871] [INFO] Worker exiting (pid: 33871)
+[2019-11-24 22:04:16 +0800] [33867] [INFO] Shutting down: Master
+[2019-11-24 22:06:03 +0800] [34072] [INFO] Starting gunicorn 20.0.0
+[2019-11-24 22:06:03 +0800] [34072] [INFO] Listening at: http://0.0.0.0:8000 (34072)
+[2019-11-24 22:06:03 +0800] [34072] [INFO] Using worker: gevent
+[2019-11-24 22:06:03 +0800] [34075] [INFO] Booting worker with pid: 34075
+[2019-11-24 22:06:03 +0800] [34076] [INFO] Booting worker with pid: 34076
+[2019-11-24 22:08:12 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:08:12 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:08:12 +0800] [34153] [INFO] Booting worker with pid: 34153
+[2019-11-24 22:08:12 +0800] [34154] [INFO] Booting worker with pid: 34154
+[2019-11-24 22:08:37 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:08:37 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:08:37 +0800] [34175] [INFO] Booting worker with pid: 34175
+[2019-11-24 22:08:37 +0800] [34176] [INFO] Booting worker with pid: 34176
+[2019-11-24 22:08:55 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:08:55 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:08:55 +0800] [34198] [INFO] Booting worker with pid: 34198
+[2019-11-24 22:08:55 +0800] [34199] [INFO] Booting worker with pid: 34199
+[2019-11-24 22:09:03 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:09:03 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:09:03 +0800] [34219] [INFO] Booting worker with pid: 34219
+[2019-11-24 22:09:03 +0800] [34220] [INFO] Booting worker with pid: 34220
+[2019-11-24 22:09:18 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:09:18 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:09:18 +0800] [34240] [INFO] Booting worker with pid: 34240
+[2019-11-24 22:09:18 +0800] [34241] [INFO] Booting worker with pid: 34241
+[2019-11-24 22:09:50 +0800] [34240] [INFO] Worker reloading: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/flask_app.py modified
+[2019-11-24 22:09:50 +0800] [34241] [INFO] Worker reloading: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/flask_app.py modified
+[2019-11-24 22:09:50 +0800] [34240] [INFO] Worker exiting (pid: 34240)
+[2019-11-24 22:09:50 +0800] [34241] [INFO] Worker exiting (pid: 34241)
+[2019-11-24 22:09:50 +0800] [34258] [INFO] Booting worker with pid: 34258
+[2019-11-24 22:09:50 +0800] [34259] [INFO] Booting worker with pid: 34259
+[2019-11-24 22:09:50 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:09:50 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:09:51 +0800] [34274] [INFO] Booting worker with pid: 34274
+[2019-11-24 22:09:51 +0800] [34275] [INFO] Booting worker with pid: 34275
+[2019-11-24 22:09:59 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:09:59 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:09:59 +0800] [34293] [INFO] Booting worker with pid: 34293
+[2019-11-24 22:09:59 +0800] [34294] [INFO] Booting worker with pid: 34294
+[2019-11-24 22:10:03 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:10:03 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:10:03 +0800] [34312] [INFO] Booting worker with pid: 34312
+[2019-11-24 22:10:03 +0800] [34313] [INFO] Booting worker with pid: 34313
+[2019-11-24 22:10:06 +0800] [34072] [INFO] Handling signal: hup
+[2019-11-24 22:10:06 +0800] [34072] [INFO] Hang up: Master
+[2019-11-24 22:10:06 +0800] [34331] [INFO] Booting worker with pid: 34331
+[2019-11-24 22:10:06 +0800] [34332] [INFO] Booting worker with pid: 34332
+[2019-11-24 22:10:16 +0800] [34072] [INFO] Handling signal: term
+[2019-11-24 22:10:17 +0800] [34332] [INFO] Worker exiting (pid: 34332)
+[2019-11-24 22:10:17 +0800] [34331] [INFO] Worker exiting (pid: 34331)
+[2019-11-24 22:10:17 +0800] [34072] [INFO] Shutting down: Master
+[2019-11-24 22:17:52 +0800] [34539] [INFO] Starting gunicorn 20.0.0
+[2019-11-24 22:17:52 +0800] [34539] [INFO] Listening at: http://0.0.0.0:8000 (34539)
+[2019-11-24 22:17:52 +0800] [34539] [INFO] Using worker: gevent
+[2019-11-24 22:17:52 +0800] [34542] [INFO] Booting worker with pid: 34542
+[2019-11-24 22:17:52 +0800] [34543] [INFO] Booting worker with pid: 34543
+[2019-11-24 22:17:57 +0800] [34539] [INFO] Handling signal: int
+[2019-11-24 22:17:57 +0800] [34543] [INFO] Worker exiting (pid: 34543)
+[2019-11-24 22:17:57 +0800] [34542] [INFO] Worker exiting (pid: 34542)
+[2019-11-24 22:17:58 +0800] [34539] [INFO] Shutting down: Master
+[2019-11-24 22:18:03 +0800] [34569] [DEBUG] Current configuration:
+  config: gun.py
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: ./log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: ./log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: flask_app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1144b8488>
+  on_reload: <function OnReload.on_reload at 0x1144b8598>
+  when_ready: <function WhenReady.when_ready at 0x1144b86a8>
+  pre_fork: <function Prefork.pre_fork at 0x1144b87b8>
+  post_fork: <function Postfork.post_fork at 0x1144b88c8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1144b89d8>
+  worker_int: <function WorkerInt.worker_int at 0x1144b8ae8>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1144b8bf8>
+  pre_exec: <function PreExec.pre_exec at 0x1144b8d08>
+  pre_request: <function PreRequest.pre_request at 0x1144b8e18>
+  post_request: <function PostRequest.post_request at 0x1144b8ea0>
+  child_exit: <function ChildExit.child_exit at 0x1144da048>
+  worker_exit: <function WorkerExit.worker_exit at 0x1144da158>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1144da268>
+  on_exit: <function OnExit.on_exit at 0x1144da378>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-24 22:18:03 +0800] [34569] [INFO] Starting gunicorn 20.0.0
+[2019-11-24 22:18:03 +0800] [34569] [DEBUG] Arbiter booted
+[2019-11-24 22:18:03 +0800] [34569] [INFO] Listening at: http://0.0.0.0:8000 (34569)
+[2019-11-24 22:18:03 +0800] [34569] [INFO] Using worker: gevent
+[2019-11-24 22:18:03 +0800] [34573] [INFO] Booting worker with pid: 34573
+[2019-11-24 22:18:03 +0800] [34574] [INFO] Booting worker with pid: 34574
+[2019-11-24 22:18:03 +0800] [34569] [DEBUG] 2 workers
+[2019-11-24 22:18:07 +0800] [34573] [DEBUG] GET /
+[2019-11-24 22:18:07 +0800] [34573] [DEBUG] GET /
+[2019-11-24 22:18:07 +0800] [34573] [DEBUG] GET /
+[2019-11-24 22:18:07 +0800] [34573] [DEBUG] GET /
+[2019-11-24 22:18:07 +0800] [34573] [DEBUG] GET /
+[2019-11-24 22:18:07 +0800] [34573] [DEBUG] GET /
+[2019-11-24 22:18:07 +0800] [34573] [DEBUG] GET /
+[2019-11-24 22:19:57 +0800] [34573] [INFO] Worker reloading: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/flask_app.py modified
+[2019-11-24 22:19:57 +0800] [34574] [INFO] Worker reloading: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/flask_app.py modified
+[2019-11-24 22:19:57 +0800] [34573] [INFO] Worker exiting (pid: 34573)
+[2019-11-24 22:19:57 +0800] [34574] [INFO] Worker exiting (pid: 34574)
+[2019-11-24 22:19:57 +0800] [34609] [INFO] Booting worker with pid: 34609
+[2019-11-24 22:19:57 +0800] [34610] [INFO] Booting worker with pid: 34610
+[2019-11-24 22:19:57 +0800] [34610] [DEBUG] GET /
+[2019-11-24 22:19:58 +0800] [34610] [DEBUG] GET /
+[2019-11-24 22:19:58 +0800] [34610] [DEBUG] GET /
+[2019-11-24 22:19:58 +0800] [34610] [DEBUG] GET /
+[2019-11-24 22:20:58 +0800] [34569] [INFO] Handling signal: int
+[2019-11-24 22:20:58 +0800] [34609] [INFO] Worker exiting (pid: 34609)
+[2019-11-24 22:20:58 +0800] [34610] [INFO] Worker exiting (pid: 34610)
+[2019-11-24 22:20:59 +0800] [34569] [INFO] Shutting down: Master
+[2019-11-24 22:21:24 +0800] [34685] [INFO] Starting gunicorn 20.0.0
+[2019-11-24 22:21:24 +0800] [34685] [INFO] Listening at: http://0.0.0.0:8000 (34685)
+[2019-11-24 22:21:24 +0800] [34685] [INFO] Using worker: gevent
+[2019-11-24 22:21:24 +0800] [34688] [INFO] Booting worker with pid: 34688
+[2019-11-24 22:21:24 +0800] [34689] [INFO] Booting worker with pid: 34689
+[2019-11-24 22:22:53 +0800] [34685] [INFO] Handling signal: int
+[2019-11-24 22:22:53 +0800] [34688] [INFO] Worker exiting (pid: 34688)
+[2019-11-24 22:22:53 +0800] [34689] [INFO] Worker exiting (pid: 34689)
+[2019-11-24 22:22:53 +0800] [34685] [INFO] Shutting down: Master
+[2019-11-25 11:00:41 +0800] [37597] [DEBUG] Current configuration:
+  config: gun.py
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 17
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: ./log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: ./log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: ./log/flask_app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1145d3488>
+  on_reload: <function OnReload.on_reload at 0x1145d3598>
+  when_ready: <function WhenReady.when_ready at 0x1145d36a8>
+  pre_fork: <function Prefork.pre_fork at 0x1145d37b8>
+  post_fork: <function Postfork.post_fork at 0x1145d38c8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1145d39d8>
+  worker_int: <function WorkerInt.worker_int at 0x1145d3ae8>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1145d3bf8>
+  pre_exec: <function PreExec.pre_exec at 0x1145d3d08>
+  pre_request: <function PreRequest.pre_request at 0x1145d3e18>
+  post_request: <function PostRequest.post_request at 0x1145d3ea0>
+  child_exit: <function ChildExit.child_exit at 0x1145f3048>
+  worker_exit: <function WorkerExit.worker_exit at 0x1145f3158>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1145f3268>
+  on_exit: <function OnExit.on_exit at 0x1145f3378>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-25 11:00:41 +0800] [37597] [INFO] Starting gunicorn 20.0.0
+[2019-11-25 11:00:41 +0800] [37597] [DEBUG] Arbiter booted
+[2019-11-25 11:00:41 +0800] [37597] [INFO] Listening at: http://0.0.0.0:8000 (37597)
+[2019-11-25 11:00:41 +0800] [37597] [INFO] Using worker: gevent
+[2019-11-25 11:00:41 +0800] [37600] [INFO] Booting worker with pid: 37600
+[2019-11-25 11:00:41 +0800] [37600] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37600] [INFO] Worker exiting (pid: 37600)
+[2019-11-25 11:00:41 +0800] [37601] [INFO] Booting worker with pid: 37601
+[2019-11-25 11:00:41 +0800] [37601] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37601] [INFO] Worker exiting (pid: 37601)
+[2019-11-25 11:00:41 +0800] [37602] [INFO] Booting worker with pid: 37602
+[2019-11-25 11:00:41 +0800] [37602] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37602] [INFO] Worker exiting (pid: 37602)
+[2019-11-25 11:00:41 +0800] [37604] [INFO] Booting worker with pid: 37604
+[2019-11-25 11:00:41 +0800] [37604] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37604] [INFO] Worker exiting (pid: 37604)
+[2019-11-25 11:00:41 +0800] [37605] [INFO] Booting worker with pid: 37605
+[2019-11-25 11:00:41 +0800] [37605] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37605] [INFO] Worker exiting (pid: 37605)
+[2019-11-25 11:00:41 +0800] [37606] [INFO] Booting worker with pid: 37606
+[2019-11-25 11:00:41 +0800] [37606] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37606] [INFO] Worker exiting (pid: 37606)
+[2019-11-25 11:00:41 +0800] [37607] [INFO] Booting worker with pid: 37607
+[2019-11-25 11:00:41 +0800] [37608] [INFO] Booting worker with pid: 37608
+[2019-11-25 11:00:41 +0800] [37607] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37607] [INFO] Worker exiting (pid: 37607)
+[2019-11-25 11:00:41 +0800] [37608] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37608] [INFO] Worker exiting (pid: 37608)
+[2019-11-25 11:00:41 +0800] [37609] [INFO] Booting worker with pid: 37609
+[2019-11-25 11:00:41 +0800] [37609] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37609] [INFO] Worker exiting (pid: 37609)
+[2019-11-25 11:00:41 +0800] [37610] [INFO] Booting worker with pid: 37610
+[2019-11-25 11:00:41 +0800] [37610] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:41 +0800] [37610] [INFO] Worker exiting (pid: 37610)
+[2019-11-25 11:00:41 +0800] [37611] [INFO] Booting worker with pid: 37611
+[2019-11-25 11:00:42 +0800] [37611] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:42 +0800] [37611] [INFO] Worker exiting (pid: 37611)
+[2019-11-25 11:00:42 +0800] [37612] [INFO] Booting worker with pid: 37612
+[2019-11-25 11:00:42 +0800] [37612] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:42 +0800] [37612] [INFO] Worker exiting (pid: 37612)
+[2019-11-25 11:00:42 +0800] [37613] [INFO] Booting worker with pid: 37613
+[2019-11-25 11:00:42 +0800] [37613] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:42 +0800] [37613] [INFO] Worker exiting (pid: 37613)
+[2019-11-25 11:00:42 +0800] [37614] [INFO] Booting worker with pid: 37614
+[2019-11-25 11:00:42 +0800] [37614] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:42 +0800] [37614] [INFO] Worker exiting (pid: 37614)
+[2019-11-25 11:00:42 +0800] [37615] [INFO] Booting worker with pid: 37615
+[2019-11-25 11:00:42 +0800] [37616] [INFO] Booting worker with pid: 37616
+[2019-11-25 11:00:42 +0800] [37615] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:42 +0800] [37615] [INFO] Worker exiting (pid: 37615)
+[2019-11-25 11:00:42 +0800] [37617] [INFO] Booting worker with pid: 37617
+[2019-11-25 11:00:42 +0800] [37616] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:42 +0800] [37616] [INFO] Worker exiting (pid: 37616)
+[2019-11-25 11:00:42 +0800] [37617] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 121, in import_module
+    raise TypeError(msg.format(name))
+TypeError: the 'package' argument is required to perform a relative import for './log/flask_app'
+[2019-11-25 11:00:42 +0800] [37617] [INFO] Worker exiting (pid: 37617)
+[2019-11-25 11:00:42 +0800] [37597] [DEBUG] 17 workers
+[2019-11-25 11:00:46 +0800] [37597] [INFO] Handling signal: int
+[2019-11-25 11:00:46 +0800] [37597] [INFO] Shutting down: Master
+[2019-11-25 11:01:48 +0800] [37697] [DEBUG] Current configuration:
+  config: gun.py
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 17
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: ./log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: ./log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app.py:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x115fb3488>
+  on_reload: <function OnReload.on_reload at 0x115fb3598>
+  when_ready: <function WhenReady.when_ready at 0x115fb36a8>
+  pre_fork: <function Prefork.pre_fork at 0x115fb37b8>
+  post_fork: <function Postfork.post_fork at 0x115fb38c8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x115fb39d8>
+  worker_int: <function WorkerInt.worker_int at 0x115fb3ae8>
+  worker_abort: <function WorkerAbort.worker_abort at 0x115fb3bf8>
+  pre_exec: <function PreExec.pre_exec at 0x115fb3d08>
+  pre_request: <function PreRequest.pre_request at 0x115fb3e18>
+  post_request: <function PostRequest.post_request at 0x115fb3ea0>
+  child_exit: <function ChildExit.child_exit at 0x115fd4048>
+  worker_exit: <function WorkerExit.worker_exit at 0x115fd4158>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x115fd4268>
+  on_exit: <function OnExit.on_exit at 0x115fd4378>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-25 11:01:48 +0800] [37697] [INFO] Starting gunicorn 20.0.0
+[2019-11-25 11:01:48 +0800] [37697] [DEBUG] Arbiter booted
+[2019-11-25 11:01:48 +0800] [37697] [INFO] Listening at: http://0.0.0.0:8000 (37697)
+[2019-11-25 11:01:48 +0800] [37697] [INFO] Using worker: gevent
+[2019-11-25 11:01:48 +0800] [37701] [INFO] Booting worker with pid: 37701
+[2019-11-25 11:01:48 +0800] [37702] [INFO] Booting worker with pid: 37702
+[2019-11-25 11:01:48 +0800] [37701] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37701] [INFO] Worker exiting (pid: 37701)
+[2019-11-25 11:01:48 +0800] [37702] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37702] [INFO] Worker exiting (pid: 37702)
+[2019-11-25 11:01:48 +0800] [37703] [INFO] Booting worker with pid: 37703
+[2019-11-25 11:01:48 +0800] [37704] [INFO] Booting worker with pid: 37704
+[2019-11-25 11:01:48 +0800] [37703] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37703] [INFO] Worker exiting (pid: 37703)
+[2019-11-25 11:01:48 +0800] [37704] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37704] [INFO] Worker exiting (pid: 37704)
+[2019-11-25 11:01:48 +0800] [37705] [INFO] Booting worker with pid: 37705
+[2019-11-25 11:01:48 +0800] [37706] [INFO] Booting worker with pid: 37706
+[2019-11-25 11:01:48 +0800] [37705] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37705] [INFO] Worker exiting (pid: 37705)
+[2019-11-25 11:01:48 +0800] [37706] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37706] [INFO] Worker exiting (pid: 37706)
+[2019-11-25 11:01:48 +0800] [37707] [INFO] Booting worker with pid: 37707
+[2019-11-25 11:01:48 +0800] [37707] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37707] [INFO] Worker exiting (pid: 37707)
+[2019-11-25 11:01:48 +0800] [37708] [INFO] Booting worker with pid: 37708
+[2019-11-25 11:01:48 +0800] [37708] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37708] [INFO] Worker exiting (pid: 37708)
+[2019-11-25 11:01:48 +0800] [37709] [INFO] Booting worker with pid: 37709
+[2019-11-25 11:01:48 +0800] [37709] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37709] [INFO] Worker exiting (pid: 37709)
+[2019-11-25 11:01:48 +0800] [37710] [INFO] Booting worker with pid: 37710
+[2019-11-25 11:01:48 +0800] [37711] [INFO] Booting worker with pid: 37711
+[2019-11-25 11:01:48 +0800] [37710] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37710] [INFO] Worker exiting (pid: 37710)
+[2019-11-25 11:01:48 +0800] [37711] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37711] [INFO] Worker exiting (pid: 37711)
+[2019-11-25 11:01:48 +0800] [37712] [INFO] Booting worker with pid: 37712
+[2019-11-25 11:01:48 +0800] [37712] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37712] [INFO] Worker exiting (pid: 37712)
+[2019-11-25 11:01:48 +0800] [37713] [INFO] Booting worker with pid: 37713
+[2019-11-25 11:01:48 +0800] [37714] [INFO] Booting worker with pid: 37714
+[2019-11-25 11:01:48 +0800] [37713] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37713] [INFO] Worker exiting (pid: 37713)
+[2019-11-25 11:01:48 +0800] [37714] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:48 +0800] [37714] [INFO] Worker exiting (pid: 37714)
+[2019-11-25 11:01:49 +0800] [37715] [INFO] Booting worker with pid: 37715
+[2019-11-25 11:01:49 +0800] [37715] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:49 +0800] [37715] [INFO] Worker exiting (pid: 37715)
+[2019-11-25 11:01:49 +0800] [37716] [INFO] Booting worker with pid: 37716
+[2019-11-25 11:01:49 +0800] [37716] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:49 +0800] [37716] [INFO] Worker exiting (pid: 37716)
+[2019-11-25 11:01:49 +0800] [37717] [INFO] Booting worker with pid: 37717
+[2019-11-25 11:01:49 +0800] [37717] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 941, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 335, in import_app
+    raise ImportError(msg % (module.rsplit(".", 1)[0], obj))
+ImportError: Failed to find application, did you mean '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app'?
+[2019-11-25 11:01:49 +0800] [37717] [INFO] Worker exiting (pid: 37717)
+[2019-11-25 11:01:49 +0800] [37697] [DEBUG] 17 workers
+[2019-11-25 11:01:51 +0800] [37697] [INFO] Handling signal: int
+[2019-11-25 11:01:51 +0800] [37697] [INFO] Shutting down: Master
+[2019-11-25 11:01:59 +0800] [37758] [DEBUG] Current configuration:
+  config: gun.py
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 17
+  worker_class: gevent
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test
+  daemon: False
+  raw_env: []
+  pidfile: log/gunicorn.pid
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: ./log/access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: ./log/debug.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: /Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1147d2510>
+  on_reload: <function OnReload.on_reload at 0x1147d2620>
+  when_ready: <function WhenReady.when_ready at 0x1147d2730>
+  pre_fork: <function Prefork.pre_fork at 0x1147d2840>
+  post_fork: <function Postfork.post_fork at 0x1147d2950>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x1147d2a60>
+  worker_int: <function WorkerInt.worker_int at 0x1147d2b70>
+  worker_abort: <function WorkerAbort.worker_abort at 0x1147d2c80>
+  pre_exec: <function PreExec.pre_exec at 0x1147d2d90>
+  pre_request: <function PreRequest.pre_request at 0x1147d2ea0>
+  post_request: <function PostRequest.post_request at 0x1147d2f28>
+  child_exit: <function ChildExit.child_exit at 0x1147f30d0>
+  worker_exit: <function WorkerExit.worker_exit at 0x1147f31e0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x1147f32f0>
+  on_exit: <function OnExit.on_exit at 0x1147f3400>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+[2019-11-25 11:01:59 +0800] [37758] [INFO] Starting gunicorn 20.0.0
+[2019-11-25 11:01:59 +0800] [37758] [DEBUG] Arbiter booted
+[2019-11-25 11:01:59 +0800] [37758] [INFO] Listening at: http://0.0.0.0:8000 (37758)
+[2019-11-25 11:01:59 +0800] [37758] [INFO] Using worker: gevent
+[2019-11-25 11:01:59 +0800] [37761] [INFO] Booting worker with pid: 37761
+[2019-11-25 11:01:59 +0800] [37761] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:01:59 +0800] [37761] [INFO] Worker exiting (pid: 37761)
+[2019-11-25 11:01:59 +0800] [37762] [INFO] Booting worker with pid: 37762
+[2019-11-25 11:01:59 +0800] [37763] [INFO] Booting worker with pid: 37763
+[2019-11-25 11:01:59 +0800] [37762] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:01:59 +0800] [37762] [INFO] Worker exiting (pid: 37762)
+[2019-11-25 11:01:59 +0800] [37763] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:01:59 +0800] [37763] [INFO] Worker exiting (pid: 37763)
+[2019-11-25 11:01:59 +0800] [37764] [INFO] Booting worker with pid: 37764
+[2019-11-25 11:01:59 +0800] [37765] [INFO] Booting worker with pid: 37765
+[2019-11-25 11:01:59 +0800] [37764] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:01:59 +0800] [37764] [INFO] Worker exiting (pid: 37764)
+[2019-11-25 11:01:59 +0800] [37765] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:01:59 +0800] [37765] [INFO] Worker exiting (pid: 37765)
+[2019-11-25 11:01:59 +0800] [37766] [INFO] Booting worker with pid: 37766
+[2019-11-25 11:01:59 +0800] [37766] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:01:59 +0800] [37766] [INFO] Worker exiting (pid: 37766)
+[2019-11-25 11:01:59 +0800] [37767] [INFO] Booting worker with pid: 37767
+[2019-11-25 11:01:59 +0800] [37767] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:01:59 +0800] [37767] [INFO] Worker exiting (pid: 37767)
+[2019-11-25 11:01:59 +0800] [37768] [INFO] Booting worker with pid: 37768
+[2019-11-25 11:01:59 +0800] [37768] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:01:59 +0800] [37768] [INFO] Worker exiting (pid: 37768)
+[2019-11-25 11:01:59 +0800] [37769] [INFO] Booting worker with pid: 37769
+[2019-11-25 11:02:00 +0800] [37769] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37769] [INFO] Worker exiting (pid: 37769)
+[2019-11-25 11:02:00 +0800] [37770] [INFO] Booting worker with pid: 37770
+[2019-11-25 11:02:00 +0800] [37770] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37770] [INFO] Worker exiting (pid: 37770)
+[2019-11-25 11:02:00 +0800] [37771] [INFO] Booting worker with pid: 37771
+[2019-11-25 11:02:00 +0800] [37772] [INFO] Booting worker with pid: 37772
+[2019-11-25 11:02:00 +0800] [37771] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37771] [INFO] Worker exiting (pid: 37771)
+[2019-11-25 11:02:00 +0800] [37772] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37772] [INFO] Worker exiting (pid: 37772)
+[2019-11-25 11:02:00 +0800] [37773] [INFO] Booting worker with pid: 37773
+[2019-11-25 11:02:00 +0800] [37774] [INFO] Booting worker with pid: 37774
+[2019-11-25 11:02:00 +0800] [37775] [INFO] Booting worker with pid: 37775
+[2019-11-25 11:02:00 +0800] [37773] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37773] [INFO] Worker exiting (pid: 37773)
+[2019-11-25 11:02:00 +0800] [37774] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37774] [INFO] Worker exiting (pid: 37774)
+[2019-11-25 11:02:00 +0800] [37775] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37775] [INFO] Worker exiting (pid: 37775)
+[2019-11-25 11:02:00 +0800] [37776] [INFO] Booting worker with pid: 37776
+[2019-11-25 11:02:00 +0800] [37776] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37776] [INFO] Worker exiting (pid: 37776)
+[2019-11-25 11:02:00 +0800] [37777] [INFO] Booting worker with pid: 37777
+[2019-11-25 11:02:00 +0800] [37777] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/ggevent.py", line 162, in init_process
+    super().init_process()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 133, in init_process
+    self.load_wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/workers/base.py", line 142, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 49, in load
+    return self.load_wsgiapp()
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 39, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/site-packages/gunicorn/util.py", line 331, in import_app
+    mod = importlib.import_module(module)
+  File "/Users/yuanjie/Desktop/intelpython3/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named '/Users/yuanjie/Desktop/Projects/Python/tql-App/examples/gunicorn_test/log/flask_app'
+[2019-11-25 11:02:00 +0800] [37777] [INFO] Worker exiting (pid: 37777)
+[2019-11-25 11:02:00 +0800] [37758] [DEBUG] 17 workers
+[2019-11-25 11:02:01 +0800] [37758] [INFO] Handling signal: int
+[2019-11-25 11:02:01 +0800] [37758] [INFO] Shutting down: Master
