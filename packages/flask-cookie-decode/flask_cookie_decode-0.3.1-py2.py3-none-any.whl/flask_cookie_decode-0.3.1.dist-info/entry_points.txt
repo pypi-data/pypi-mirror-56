@@ -1,0 +1,3 @@
+[console_scripts]
+fcd = flask_cookie_decode.__main__:main
+
