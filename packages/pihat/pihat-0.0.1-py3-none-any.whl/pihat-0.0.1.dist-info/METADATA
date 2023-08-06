@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pihat
+Version: 0.0.1
+Summary: Pi Hat ID EEPROM library
+Home-page: https://github.com/unipartdigital/pihat
+Author: Michael Brown
+Author-email: mbrown@fensystems.co.uk
+License: GPLv2+
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Boot
+Classifier: Topic :: System :: Hardware :: Hardware Drivers
+Description-Content-Type: text/markdown
+
+Pi Hat ID EEPROM library
+========================
+
+This package provides a Python library for manipulating the ID EEPROM
+used to automatically identify a Raspberry Pi Hat add-on board.
+
+
