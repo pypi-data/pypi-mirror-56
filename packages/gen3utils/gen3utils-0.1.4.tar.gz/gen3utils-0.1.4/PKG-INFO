@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: gen3utils
+Version: 0.1.4
+Summary: Gen3 Library Template
+Home-page: https://github.com/uc-cdis/gen3utils
+License: Apache
+Description: # gen3utils
+        Utils for Gen3 commons management
+        
+        ## manifest.json validation
+        
+        Validate one or more `manifest.json` files using the CLI:
+        ```
+        pip install gen3utils
+        gen3utils validate cdis-manifest/*/manifest.json
+        ```
+        
+        The validation settings can be updated by modifying [this file](gen3utils/validation_config.yaml).
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
