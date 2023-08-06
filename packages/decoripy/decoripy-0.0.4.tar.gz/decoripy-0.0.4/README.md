@@ -1,0 +1,215 @@
+# Decoripy
+decoripy provides a well-structured template class for creating Python decorators. It uses inheritance to be efficient 
+and simple.
+
+![Python 2.7, 3.4, 3.5, 3.6, 3.7, 3.8](https://img.shields.io/badge/python-%202.7%2C%203.4%2C%203.5%2C%203.6%2C%203.7%2C%203.8-blue.svg)
+[![PyPI version](https://badge.fury.io/py/decoripy.svg)](https://badge.fury.io/py/decoripy)
+[![Build Status](https://travis-ci.org/gioelecrispo/decoripy.svg?branch=master)](https://travis-ci.org/gioelecrispo/decoripy)
+[![codecov](https://codecov.io/gh/gioelecrispo/decoripy/branch/master/graph/badge.svg)](https://codecov.io/gh/gioelecrispo/decoripy)
+
+## Table of contents
+1. Motivation
+2. Usage
+
+## 1. Motivation
+With decoripy, writing a decorator becomes very easy. It aims to improve the Python language expressiveness by 
+enhancing a very powerful Python mechanism.
+
+Decoripy provides a template built upon the basic wrapping of a function, hiding the implementation details, and
+providing some useful advantages:
+ - no distinction between decorator with or without arguments has to be done;
+ - a temporal based execution is provided. 
+
+### Decorator arguments
+With decoripy you could create decorator with or without arguments with no pain.
+In standard Python you should handle the arguments passed to the decorator, because, in this case, the wrapper 
+function does not take the function as a the first argument.
+So you could do something like this:
+```python
+@MyDecorator
+def function_to_decorate(var):
+    pass
+```
+or 
+```python
+@MyDecorator(True)
+def function_to_decorate(var):
+    pass
+```
+or 
+```python
+@MyDecorator(timeout=3000, num_retries=3)
+def function_to_decorate(var):
+    pass
+```
+or 
+```python
+@MyDecorator(True, timeout=3000, num_retries=3)
+def function_to_decorate(var):
+    pass
+```
+and you have not to change your code. 
+The unnamed arguments (```*args```) passed to the decorator can be accessed by using the positional order (For example, 
+the first parameters could be taken in this way: ```first_arg = args[0]```, see Usage).
+The named arguments (```**kwargs```) passed to the decorator are parsed and can be accessed by their name (For example, 
+timeout could be used in the implementation code in this way: ```self.timeout```, see Usage).
+
+
+### Temporal based execution
+The decoripy template is built to provide temporal based execution:
+ - you could execute a pre-operation **before** the decorated function is executed;
+ - you could do some operation **while** the decorated function is executed;
+ - you could execute a post-operation **after** the decorated function is executed.
+
+In this way you can control the execution flow of the decorated function.
+
+### Nested decorator
+You could nest more decorator. The order respects the writing order, so:
+ ```python
+from decoripy import AbstractDecorator
+
+
+class First(AbstractDecorator):
+
+    def do_before(self, *args, **kwargs):
+        print("Executing: First do_before")
+
+    def do(self, *args, **kwargs):
+        print("Executing: First do")
+        return self.function(*args, **kwargs)
+
+    def do_after(self, *args, **kwargs):
+        print("Executing: First do_after")
+
+
+class Second(AbstractDecorator):
+
+    def do_before(self, *args, **kwargs):
+        print("Executing: Second do_before")
+
+    def do(self, *args, **kwargs):
+        print("Executing: Second do")
+        return self.function(*args, **kwargs)
+
+    def do_after(self, *args, **kwargs):
+        print("Executing: Second do_after")
+
+
+@First(timeout=3000)
+@Second
+def function_to_decorate(var):
+    print("Executing: function -", var)
+```
+
+Result: 
+```bash
+Executing: First do_before
+Executing: First do
+Executing: Second do_before
+Executing: Second do
+Executing: function - True
+Executing: Second do_after
+Executing: First do_after
+```
+
+```@First.do_before()``` is executed before, then ```@First.do()```; while 
+executing it, ```@Second.do_before()``` is triggered, then ```@Second.do()```.
+The last functions to be executed are ```@Second.do_after()``` and 
+```@First.do_after()```, as you could expected.
+
+ 
+## 2. Usage
+In order to create a new decorator, you have only to write a new class inheriting from the
+abstract class AbstractDecorator, and overriding the following (optional) methods:
+ - ```do_before```: if you want to make some operation **before** the function execution. 
+ You can also return the result of the operation and it is stored in the ```self.before_result``` 
+ variable. It can be used in the other ```self.do()``` and ```self.do_after()``` 
+ functions.
+ - ```do```: if you want to add some operation **while** executing the function. 
+ It is mandatory doing the ```self.function(*args, **kwargs)``` call here to trigger the
+ decorated function execution. 
+ You can also return the result of the operation and it is stored in the ```self.execution_result``` 
+ variable. It can be used in the other and ```self.do_after()``` functions.
+ - ```do_after```: if you want to make some operation **after** the function execution. 
+ You can also return the result of the operation and it is stored in the ```self.after_result``` 
+ variable. 
+
+The overriding of the three functions is optional. Clearly, no overriding means no
+operations done upon the decorated function.
+Summarizing, you have only to handle the temporal phases you are interested on.
+
+You can access to the function handler through the ```self.function``` variable. 
+The decorator unnamed parameters can be accessed through the ```self.args``` variable.
+The decorator named parameters can be accessed through the ```self.kwargs``` varaible or 
+ 
+---
+ 
+Example 1 - No decorator arguments:
+
+```python
+from decoripy import AbstractDecorator
+
+
+class DecoratorWithoutArguments(AbstractDecorator):
+    
+    def do_before(self, *args, **kwargs):
+        print("Executing: do_before")
+        return "Executed: do_before"
+
+    def do(self, *args, **kwargs):
+        print(self.before_result, ", Executing: do")
+        function_result = self.function(*args, **kwargs)
+        return function_result + ", Executed: do"
+
+    def do_after(self, *args, **kwargs):
+        print(self.execution_result, ", Executing: do_after")
+        return "Executed: do_after"
+
+
+@DecoratorWithoutArguments
+def function_to_decorate(var1, var2, dict_var1, dict_var2):
+    print("Executing: function: ", var1, var2, dict_var1, dict_var2)
+    return "Executed: function"
+
+
+function_to_decorate(1, "var2", dict_var1=[1, 2, 3], dict_var2={"key": "value"})
+```
+
+---
+
+Example 2 - Decorator arguments
+
+```python
+from decoripy import AbstractDecorator
+
+
+class DecoratorWithParameters(AbstractDecorator):
+
+    def do_before(self, *args, **kwargs):
+        if self.execute_before:
+            print("Executing: do_before")
+            return "Executed: do_before"
+
+    def do(self, *args, **kwargs):
+        # Non-existing params -> error!
+        try:
+            if self.execute_do:
+                print(self.before_result, ", Executing: do")
+                function_result = self.function(*args, **kwargs)
+                return function_result + ", Executed: do"
+        except AttributeError:
+            self.function(*args, **kwargs)
+
+    def do_after(self, *args, **kwargs):
+        if self.execute_after:
+            print(self.execution_result, ", Executing: do_after")
+            return "Executed: do_after"
+
+
+@DecoratorWithParameters(3, execute_before=False, execute_after=False)
+def function_to_decorate(var1, var2, dict_var1, dict_var2):
+    print("Executing: function: ", var1, var2, dict_var1, dict_var2)
+    return "Executed: function"
+    
+function_to_decorate(1, "var2", dict_var1=[1, 2, 3], dict_var2={"key": "value"})
+```
