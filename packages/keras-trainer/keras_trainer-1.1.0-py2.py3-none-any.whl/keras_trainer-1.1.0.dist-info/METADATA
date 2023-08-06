@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: keras-trainer
+Version: 1.1.0
+Summary: A training abstraction for Keras models.
+Home-page: https://www.triage.com/
+Author: Triage Technologies Inc.
+Author-email: ai@triage.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Keras (==2.2.4)
+Requires-Dist: h5py
+Requires-Dist: pandas
+Requires-Dist: Pillow
+Requires-Dist: keras-model-specs (==1.2.0)
+Requires-Dist: sklearn
+
+UNKNOWN
+
+
