@@ -1,0 +1,19 @@
+# Temporary files
+__pycache__/
+*~
+
+# Build files and directories
+src/
+build/
+*.c
+*.so
+dist/
+pypaddle.egg*
+
+# Log-directories
+tensorboard/
+
+# IDE-specific files
+.idea/
+*.iml
+.ipynb_checkpoints/
