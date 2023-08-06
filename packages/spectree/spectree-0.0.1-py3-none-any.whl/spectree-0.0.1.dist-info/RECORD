@@ -1,0 +1,11 @@
+spectree/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectree/config.py,sha256=P9OF3OAF3bxG3vSdPW90bFhGjXOI48mBYDPDyfdWYwI,1810
+spectree/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectree/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectree/plugins/web_falcon.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectree/plugins/web_flask.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spectree-0.0.1.dist-info/METADATA,sha256=46_OUjQ_3Z86W7glH_nASFuIJfifbN8zPoGPRDSh0FM,1661
+spectree-0.0.1.dist-info/RECORD,,
+spectree-0.0.1.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+spectree-0.0.1.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+spectree-0.0.1.dist-info/top_level.txt,sha256=pAIb3vBcNE_WbhyrHjyH1hfMgA6rjgjNZ2HS7a6Ne0Y,9
