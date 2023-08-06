@@ -1,0 +1,13 @@
+.gitignore
+ArtisticLicense20.html
+MANIFEST.in
+README.md
+licenses-amendments.txt
+setup.cfg
+setup.py
+setuplib.egg-info/PKG-INFO
+setuplib.egg-info/SOURCES.txt
+setuplib.egg-info/dependency_links.txt
+setuplib.egg-info/not-zip-safe
+setuplib.egg-info/requires.txt
+setuplib.egg-info/top_level.txt

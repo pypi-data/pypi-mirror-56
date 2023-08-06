@@ -1,0 +1,269 @@
+Metadata-Version: 1.2
+Name: setuplib
+Version: 0.1.2
+Summary: Support core library and management functions for the family of 'setuplib' - extensions for setuptools / distutils.
+Home-page: https://sourceforge.net/projects/setuplib/
+Author: Arno-Can Uestuensoez
+Author-email: acue_sf2@sourceforge.net
+Maintainer: acue
+Maintainer-email: acue_sf2@sourceforge.net
+License: Artistic-License-2.0 + Forced-Fairplay-Constraints
+Download-URL: https://sourceforge.net/projects/setuplib/files/
+Project-URL: home, https://sourceforge.net/projects/setupdocx"
+Project-URL: documents, https://setupdocx.sourceforge.io/
+Project-URL: runtimerepo, https://pypi.org/project/setupdocx/
+Project-URL: downloads, https://pypi.org/project/setupdocx/
+Project-URL: downloads1, https://sourceforge.net/projects/setupdocx/
+Project-URL: source, https://github.com/ArnoCan/setupdocx/
+Project-URL: source1, https://sourceforge.net/projects/setupdocx/
+Project-URL: source2, https://bitbucket.org/acue/setupdocx/
+Project-URL: tracker, https://github.com/ArnoCan/setupdocx/issues
+Description: setuplib
+        ========
+        
+        **THIS IS A NIGHTLY PRE_BUILD FOR THE TEST OF THE BUILD CHAIN.**
+        
+        The *setuplib* package provides core functions for the query of meta information 
+        and installation repositories of *Python* packages. It provides query and filter 
+        options on the installed packages and the available information, while displaying
+        the result data in various formats, e.g. as table, list, or JSON, XML, YAML,
+        CSV, etc.
+        
+        The provided command and extension points integrate seamless into the standard
+        *setuptools* and/or *distutils*. The *setuplib* is member of the group *setuplib*
+        of extension components for the common *setup.py* installer. 
+        
+        The targeted users are mainly developers, advanced users, and system administrators.
+        
+        **Online documentation**:
+        
+        * https://pysetuplib.sourceforge.io/
+        
+        **Runtime-Repository**:
+        
+        * PyPI: https://pypi.org/project/pysetuplib/
+        
+          Install: *pip install setuplib*, see also section 'Install' of the online documentation.
+        
+        
+        **Downloads**:
+        
+        * sourceforge.net: https://sourceforge.net/projects/pysetuplib/files/
+        
+        * bitbucket.org: https://bitbucket.org/acue/pysetuplib
+        
+        * github.com: https://github.com/ArnoCan/pysetuplib/
+        
+        * pypi.org: https://pypi.org/project/pysetuplib/
+        
+        
+        Project Data
+        ------------
+        
+        * PROJECT: 'setuplib'
+        
+        * MISSION: Command extension of *setup.py* for multi-platform and documentation deployments.
+        
+        * VERSION: 00.01
+        
+        * RELEASE: 00.01.031
+        
+        * STATUS: alpha
+        
+        * AUTHOR: Arno-Can Uestuensoez
+        
+        * COPYRIGHT: Copyright (C) 2019 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
+        
+        * LICENSE: Artistic-License-2.0 + Forced-Fairplay-Constraints
+        
+        Concepts and enumeration values are migrated from the 
+        
+        * *UnifiedSessionsManager* (C) 2008 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez.  
+        
+        Runtime Environment
+        -------------------
+        For a comprehensive list refer to the documentation.
+        
+        **Python Syntax Support**
+        
+        *  Python2.7, and Python3
+        
+        **Python Implementation Support**
+        
+        *  CPython, IPython, IronPython, Jython, and PyPy
+        
+        **OS on Server, Workstation, Laptops, Virtual Machines, and Containers**
+        
+        * Linux: AlpineLinux, ArchLinux, CentOS, Debian, Fedora, Gentoo, OpenSUSE, Raspbian, RHEL, Slackware, SLES, Ubuntu, ...  
+        
+        * BSD: DragonFlyBSD, FreeBSD, NetBSD, OpenBSD, GhostBSD, TrueOS, NomadBSD
+        
+        * OS-X: Snow Leopard
+        
+        * Windows: Win10, Win8.1, Win7, WinXP, Win2019, Win2016, Win2012, Win2008, Win2000
+        
+        * WSL-1.0: Alpine, Debian, KaliLinux, openSUSE, SLES, Ubuntu
+        
+        * Cygwin
+        
+        * UNIX: Solaris10, Solaris11
+        
+        * Minix: Minix3
+        
+        * ReactOS
+        
+        **Network and Security**
+        
+        * Network Devices: OpenWRT
+        
+        * Security: KaliLinux, pfSense
+        
+        **OS on Embedded Devices**
+        
+        * RaspberryPI: ArchLinux, CentOS, OpenBSD, OpenWRT, Raspbian
+        
+        * ASUS-TinkerBoard: Armbian
+        
+        **Creation of Special Deployment Packages**
+        
+        * MicroPython: CircuitPython, MicroPython
+        
+        Current Release
+        ---------------
+        
+        REMARK:
+           Currently tested by application to the other projects of the author.
+           So for now no package tests defined.
+        
+        Major Changes:
+        
+        * Initial version.
+        
+        ToDo:
+        
+        * Clipping in table layout
+        
+        * Deployment to remote MicroPython, and CircuitPython
+        
+        
+Keywords: ARM,GhostBSD,LinuxMint,Manjaro,TrueOS,Aix,Alpine,AlpineLinux,Arch,ArchLinux,ArchLinuxARM,Armbian,BSD,BlackArch,BlackArchLinux,CPython,CentOS,Cygwin,Darwin,Debian,Distribution,DragonFlyBSD,Fedora,FigureWrap,FreeBSD,Gentoo,HP-UX,IPython,ImageWrap,IronPython,Java,Java,Jython,Kali,KaliLinux,Linux,MacOS,Minix,Minx3,NetBSD,OS-X,OpenBSD,OpenSUSE,OpenWRT,PyPy,Python2,Python3,RHEL,Raspbian,ReactOS,SLES,Scriptin,SnowLeopard,Solaris,Sphinx,Sphinx,SuSE,SunOS,SunOS5,Ubuntu,Unix,WSL,WSL 1.0,WSL 2.0,WSL-1.0,WSL-2.0,Windows,Windows10,Windows2003,Windows2008,Windows2010,Windows2012,Windows2016,Windows2019,Windows2019se,Windows7,Windows8,WindowsXP,bitarray,bitmask,build_apidoc,build_apiref,build_docx,commands,distutils,doc,documentation,docx,enumerate,epydoc,extension,hexvalue,image,imagewrap,info,install_docx,list,literalincludewrap,mkdocs,pandoc,pkg_docx,setup,setup commands,setup.py,setuplib,setuplib.dist.Distribution,setuptools,show,sphinx,sphinx extensions,sphinx-apidoc,sphinx-build,sphinx.ext.imagewrap,sphinx.ext.literalincludewrap
+Platform: Aix
+Platform: GhostBSD
+Platform: LinuxMint
+Platform: Manjaro
+Platform: TrueOS
+Platform: AlpineLinux
+Platform: ArchLinux
+Platform: ArchLinuxARM
+Platform: Armbian
+Platform: BlackArchLinux
+Platform: CentOS
+Platform: Cygwin
+Platform: Darwin
+Platform: Debian
+Platform: DragonFlyBSD
+Platform: FedoraLinux
+Platform: FreeBSD
+Platform: GentooLinux
+Platform: HP-UX
+Platform: KaliLinux
+Platform: MacOS
+Platform: Minix
+Platform: Minx3
+Platform: NetBSD
+Platform: OS-X
+Platform: OpenBSD
+Platform: OpenSUSE
+Platform: OpenWRT
+Platform: RHEL
+Platform: Raspbian
+Platform: ReactOS
+Platform: SLES
+Platform: Solaris
+Platform: SuSE
+Platform: SunOS
+Platform: SunOS5
+Platform: Ubuntu
+Platform: Unix
+Platform: Windows10
+Platform: Windows2003
+Platform: Windows2008
+Platform: Windows2010
+Platform: Windows2012
+Platform: Windows2016
+Platform: Windows2019
+Platform: Windows2019se
+Platform: Windows7
+Platform: Windows8
+Platform: WindowsXP
+Classifier: Framework :: Setuptools Plugin
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Other Environment
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: Free To Use But Restricted
+Classifier: License :: OSI Approved :: Artistic License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Other OS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: Operating System :: POSIX :: BSD :: OpenBSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: Other
+Classifier: Operating System :: POSIX :: SunOS/Solaris
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Java
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: IronPython
+Classifier: Programming Language :: Python :: Implementation :: Jython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Unix Shell
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Internet
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: Software Development :: Interpreters
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Java Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: pygame
+Classifier: Topic :: Software Development :: Pre-processors
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Logging
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Operating System
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: System :: System Shells
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
