@@ -1,0 +1,12 @@
+README.md
+setup.py
+CrackWatchers/__init__.py
+CrackWatchers/calculations.py
+CrackWatchers/cracked_games.py
+CrackWatchers/uncracked_games.py
+CrackWatchers/unreleased_games.py
+CrackWatchers.egg-info/PKG-INFO
+CrackWatchers.egg-info/SOURCES.txt
+CrackWatchers.egg-info/dependency_links.txt
+CrackWatchers.egg-info/requires.txt
+CrackWatchers.egg-info/top_level.txt
