@@ -1,0 +1,61 @@
+html {
+    font-size: 16px;
+}
+
+// VARIABLES :
+
+    // Media queries:
+        $small-screen: "only screen and (max-width: 650px)";
+        $medium-screen: "only screen and (min-width: 651px) and (max-width: 950px)";
+        $large-screen: "only screen and (min-width: 951px)";
+
+    // Fonts-sizes:
+        $base-font-size: 16px;
+        $xs-fs: 1rem;
+        $s-fs: 1.25rem;
+        $m-fs: 1.5rem;
+        $l-fs: 1.75rem;
+        $xl-fs: 2rem;
+
+    // Fonts:
+       @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+       @import url('https://fonts.googleapis.com/css?family=Gentium+Basic&display=swap');
+       @import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
+
+       $title-font: 'Gentium Basic', serif;
+       $subtitle-font: 'Oxygen', sans-serif;
+       $text-font: 'Lato', sans-serif;
+
+    // Colors palette.
+        $old-white: #F2F3FA;
+        $dark-grey: #2d3436;
+        $middle-green: #27ae60;
+        $middle-red: #d63031;
+        $middle-orange: #e67e22;
+        $middle-turquoise: #007493;
+
+
+// FUNCTIONS :
+    @function strip-unit($number) {
+      @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+      }
+      @return $number;
+    }
+
+    @function rem($size, $base-size) {
+      @return 1rem * (strip-unit($size) / strip-unit($base-size))
+    }
+
+    @function em($size, $base-size) {
+      @return 1em * (strip-unit($size) / strip-unit($base-size))
+    }
+
+    @function set_color($background-color) {
+        @if (lightness($background-color) > 50) {
+            @return #000
+        }
+        @else {
+            @return #FFF
+        }
+    }
