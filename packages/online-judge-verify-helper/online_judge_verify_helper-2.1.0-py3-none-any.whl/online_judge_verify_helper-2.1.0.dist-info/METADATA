@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: online-judge-verify-helper
+Version: 2.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/kmyk/online-judge-verify-helper
+Author: Kimiyuki Onaka
+Author-email: kimiyuki95@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: markdown
+Requires-Dist: online-judge-tools (>=7.4.*)
+Requires-Dist: setuptools
+Provides-Extra: dev
+Requires-Dist: isort (==4.3.21) ; extra == 'dev'
+Requires-Dist: mypy (==0.740) ; extra == 'dev'
+Requires-Dist: pylint (==2.4.3) ; extra == 'dev'
+Requires-Dist: yapf (==0.28.0) ; extra == 'dev'
+
+# 競プロライブラリ verify 用 すごい CI script (WIP)
+
+## 使い方
+
+### 競プロライブラリのリポジトリに設定する
+
+これ読んで: <https://kmyk.github.io/online-judge-verify-helper/installer.html>
+
+### 手元で実行する
+
+#### インストール
+
+``` console
+$ pip3 install online-judge-verify-helper
+```
+
+#### 実行
+
+まず `.test.cpp` という拡張子の名前のファイルに `#define PROBLEM "https://judge.yosupo.jp/problem/unionfind"` のような形で verify 用問題の URL を書いておきます。このとき、次のコマンドで verify できているかを確認してくれます。
+
+``` console
+$ oj-verify run
+```
+
+#### ドキュメント生成
+
+以下のコマンドを実行すると、ドキュメントが生成されます。例: <https://kmyk.github.io/online-judge-verify-helper/>
+
+``` console
+$ oj-verify docs
+```
+
+## License
+
+MIT License
+
+## Authors
+
+-   committer: [@kmyk](https://github.com/kmyk) (AtCoder: [kimiyuki](https://atcoder.jp/users/kimiyuki)): pip での配布や [online-judge-tools](https://github.com/kmyk/online-judge-tools) などその他の諸々の担当
+-   committer: [@beet-aizu](https://github.com/beet-aizu) (AtCoder: [beet](https://atcoder.jp/users/beet)): verify 機能担当
+-   committer: [@tsutaj](https://github.com/tsutaj) (AtCoder: [Tsuta_J](https://atcoder.jp/users/Tsuta_J)): documents 生成担当
+-   special thanks: [@yosupo06](http://github.com/yosupo06) (AtCoder: [yosupo](https://atcoder.jp/users/yosupo)): verify のためのオンラインジャッジ [Library Checker](https://judge.yosupo.jp/) を管理運用してくれている
+
+
