@@ -1,0 +1,4 @@
+tensorflow-probability==0.7.0
+pandas==0.25.1
+scikit-image==0.15.0
+opencv-contrib-python==4.1.1.26
