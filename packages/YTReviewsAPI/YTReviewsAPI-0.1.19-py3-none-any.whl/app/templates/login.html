@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>Login Page</title>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </head>
+
+ <body>
+	<div class="container-fluid">
+	  <h2>User Authentication </h2>
+	  <p>Enter creditionals if authorized, if not go to the static page</p>
+	  <form>
+	    <div class="form-group">
+	      <label for="usr">Username:</label>
+	      <input type="text" class="form-control" id="usr">
+	    </div>
+	    <div class="form-group">
+	      <label for="pwd">Password:</label>
+	      <input type="password" class="form-control" id="pwd">
+	    </div>
+	    <button onclick="return checkFormData()" class="btn btn-default">Submit</button>
+	  </form>
+	</div>
+	<script>
+		function checkFormData() {
+			user_name = document.getElementById("usr").value
+			pass_word = document.getElementById("pwd").value
+
+			var user = { username: user_name, password: pass_word};
+
+			fetch('/api/web/authentication', {
+				method: 'POST',
+				body: JSON.stringify(user),
+				headers:{
+		    		'Content-Type': 'application/json'
+		  		}
+			}).then(function(response) {
+				if (response.status == 200) {
+					window.location.replace("/control");
+				} else {
+					rJson = response.json()
+					alert(rJson.message)
+				}
+
+			});	
+
+			return false;
+
+		}
+	</script>
+</body>
+</html>
