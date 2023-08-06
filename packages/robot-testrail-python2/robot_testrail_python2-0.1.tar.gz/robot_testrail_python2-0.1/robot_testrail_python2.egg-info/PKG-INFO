@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: robot-testrail-python2
+Version: 0.1
+Summary: Integration Robot Framework with TestRail for python 2.7
+Home-page: https://github.com/MariaLviv/robot_testrail_python2
+Author: Maria Shyrko
+Author-email: shirko_2000@yahoo.com
+License: Apache-2.0
+Description: UNKNOWN
+Keywords: testing,testautomation,robotframework,testrail,robot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Framework :: Robot Framework :: Library
