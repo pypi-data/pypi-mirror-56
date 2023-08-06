@@ -1,0 +1,4 @@
+include testhello321/dist/bundle.js
+include testhello321/host_widget/dist/bundle.js
+recursive-include testhello321/electron *
+recursive-include testhello321/widgets *
