@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+easyplotly/__init__.py
+easyplotly/internals.py
+easyplotly/sankey.py
+easyplotly/sunburst.py
+easyplotly/treemap.py
+easyplotly/version.py
+easyplotly.egg-info/PKG-INFO
+easyplotly.egg-info/SOURCES.txt
+easyplotly.egg-info/dependency_links.txt
+easyplotly.egg-info/requires.txt
+easyplotly.egg-info/top_level.txt
