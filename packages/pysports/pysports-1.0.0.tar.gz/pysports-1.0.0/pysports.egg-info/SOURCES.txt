@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pysports-cli.py
+requirements.txt
+setup.py
+pysports/__init__.py
+pysports/credentials.py
+pysports/cricapi.py
+pysports.egg-info/PKG-INFO
+pysports.egg-info/SOURCES.txt
+pysports.egg-info/dependency_links.txt
+pysports.egg-info/requires.txt
+pysports.egg-info/top_level.txt
