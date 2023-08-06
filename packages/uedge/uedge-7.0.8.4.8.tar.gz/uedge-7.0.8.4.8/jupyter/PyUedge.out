@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{PyUedge Jupyter Notebook}{}% 1
+\BOOKMARK [2][-]{subsubsection.1.0.1}{This notebook is to help get users started using the Python version of UEDGE.}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Save/Restore}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{PDB \(PFB\) Files - The Basis save file format.}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{HDF5 Files - The Python save file format.}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Run a case}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Plotting}{}% 7
+\BOOKMARK [2][-]{subsubsection.3.0.1}{Plot the Mesh}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.0.2}{Plot a 2-D \(mesh size\) Quantity}{subsubsection.3.0.1}% 9
+\BOOKMARK [3][-]{subsubsection.3.0.3}{Plot a 1-D Profile}{subsubsection.3.0.1}% 10
+\BOOKMARK [3][-]{subsubsection.3.0.4}{Misc Plots - uncomment and run cell}{subsubsection.3.0.1}% 11
