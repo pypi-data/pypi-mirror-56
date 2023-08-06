@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+inpout/__init__.py
+inpout/cli.py
+inpout/compression.py
+inpout/ext_types.py
+inpout/inpout.py
+inpout/packing.py
+inpout.egg-info/PKG-INFO
+inpout.egg-info/SOURCES.txt
+inpout.egg-info/dependency_links.txt
+inpout.egg-info/entry_points.txt
+inpout.egg-info/requires.txt
+inpout.egg-info/top_level.txt
