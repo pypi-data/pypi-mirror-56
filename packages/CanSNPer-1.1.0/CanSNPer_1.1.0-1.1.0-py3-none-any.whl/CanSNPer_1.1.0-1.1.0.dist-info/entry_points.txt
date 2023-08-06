@@ -1,0 +1,3 @@
+[console_scripts]
+CanSNPer = CanSNPer.__main__:main
+
