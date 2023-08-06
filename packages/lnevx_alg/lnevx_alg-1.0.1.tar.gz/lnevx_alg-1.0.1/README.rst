@@ -1,0 +1,23 @@
+
+Description
+===========
+
+Lnevx_alg is an encryption algorithm created by Lnevx.
+
+Installation
+============
+    pip3 install lnevx_alg
+
+How to use
+===========
+$ python3
+
+>>> import lnevx_alg
+
+>>> lnevx_alg.encrypt('This is some text', 'password')
+
+'L`ak\x18ak\x18kgZhemiiWfe]\x18Zlh]epmli'
+
+**Better, if message will be longer, then password**
+If your password will be longer, then 31 character, the error will be displayed
+*Error! Password must be less, then 31 characters*
