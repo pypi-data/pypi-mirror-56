@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: odoo10-addon-partner-multi-relation-hierarchy
+Version: 10.0.0.1.0.99.dev3
+Summary: Partner Relation Hierarchy
+Home-page: https://github.com/oca/partner-contact
+Author: Therp BV, Odoo Community Association (OCA)
+Author-email: support@odoo-community.org
+License: AGPL-3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: ~=2.7
+Requires-Dist: odoo10-addon-partner-multi-relation
+Requires-Dist: odoo (<10.1dev,>=10.0)
+
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+    :alt: License
+
+Partner Multi Relation Hierarchy
+================================
+
+This module extends the concept of relations between partners with the concept
+of an hierarchy.
+
+For istance a company belonging to a larger concern would have the concern
+'above' it.
+
+Or a person might belong to a local organisation, that in turn might belong
+to a provincial organisation, which might belong to a nation organisation.
+
+It will not be excluded that a partner might be connected to several
+hierarchies.
+
+The hierarchical 'chains' will be made visible on the partner.
+
+More info
+---------
+
+For further information, please visit:
+
+ * https://www.odoo.com/forum/help-1
+
+Credits
+=======
+
+Contributors
+------------
+
+* Ronald Portier <ronald@therp.nl>
+
+Maintainer
+----------
+
+.. image:: http://odoo-community.org/logo.png
+   :alt: Odoo Community Association
+   :target: http://odoo-community.org
+
+This module is maintained by the OCA.
+
+OCA, or the Odoo Community Association, is a nonprofit organization whose
+mission is to support the collaborative development of Odoo features and
+promote its widespread use.
+
+To contribute to this module, please visit https://github.com/oca/partner-contact
+
+
