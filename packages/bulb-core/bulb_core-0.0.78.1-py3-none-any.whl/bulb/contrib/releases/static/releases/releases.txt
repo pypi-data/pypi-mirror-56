@@ -1,0 +1,7 @@
+0.0.78 | Administration : ["Creation of a new administration's module named 'Releases', which lists the last bulb's releases", "Creation of a new administration's module named 'Logs', which lists all logs as well as all the warnings and errors raised by the server", "Creation of a new administration's module named 'Activity', which lists all administrators' actions (creation, edition, deletion)", "Translation of many forgot french words in english", "Deactivation of the administration’s screen size helper for development"] ; Node models : ["Renaming of BaseNode into BaseNodeAndRelationship in ‘bulb.db.node_models’"] ; Errors : ["Full overhaul of the errors system"]
+
+0.0.77 | Administration > Handling : ["Add search bars", "Add instances counters", "Add instances sorting", "Fix some display bugs"]
+
+0.0.76 | Node & Authentication : ["Create the 'handmade' parameter for the 'get()' methods of the Node class, and of User, Permission and Group node models"]
+
+0.0.75 | Authentication : ["Add 'distinct' parameter support for the 'get()' and 'count()' methods of the native bulb's User, Permission and Group node models"]
