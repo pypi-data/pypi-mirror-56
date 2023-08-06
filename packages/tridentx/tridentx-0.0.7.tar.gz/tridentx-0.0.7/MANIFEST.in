@@ -1,0 +1,4 @@
+include *.md
+include LICENSE.txt
+recursive-exclude * __pycache__
+recursive-exclude optimizers *.pth *.h5
