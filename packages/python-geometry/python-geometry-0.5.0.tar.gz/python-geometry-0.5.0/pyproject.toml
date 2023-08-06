@@ -1,0 +1,41 @@
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "python-geometry"
+version = "0.5.0"
+description = "Geometry in Python."
+license = "MIT"
+authors = ["Dominik Steinberger <dominik.steinberger@imfd.tu-freiberg.de>"]
+packages = [
+    { include = "geometry", from = "src" },
+]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+attrs = "^19.1"
+numpy = "^1.16"
+scipy = "^1.1"
+triangle = "^20190115.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-cov = "^2.6"
+black = "^19.10b0"
+pre-commit = "^1.12"
+tox = "^3.4"
+flake8 = "^3.6"
+flake8-bugbear = "^19.8"
+pylint = "^2.1"
+isort = "^4.3"
+seed-isort-config = "^1.3"
+yamllint = "^1.12"
+pycodestyle = "^2.4"
+pydocstyle = "^4.0"
