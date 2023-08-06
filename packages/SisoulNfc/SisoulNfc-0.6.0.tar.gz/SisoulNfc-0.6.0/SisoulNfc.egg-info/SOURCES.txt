@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+SisoulNfc.egg-info/PKG-INFO
+SisoulNfc.egg-info/SOURCES.txt
+SisoulNfc.egg-info/dependency_links.txt
+SisoulNfc.egg-info/not-zip-safe
+SisoulNfc.egg-info/requires.txt
+SisoulNfc.egg-info/top_level.txt
+pysisoulnfc/__init__.py
+pysisoulnfc/device.py
+pysisoulnfc/nfc.py
