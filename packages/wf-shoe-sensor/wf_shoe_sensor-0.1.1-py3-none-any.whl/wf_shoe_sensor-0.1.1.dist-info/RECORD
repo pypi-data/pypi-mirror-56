@@ -1,0 +1,10 @@
+shoe_sensor/__init__.py,sha256=FYahL7imeVNZFlkEVgaGqVmICWk5BvHxWCGOwX3WgQ4,119
+shoe_sensor/core.py,sha256=lCf51EXMh1hcM1USl9VcjVb6_-lImSbgIPntfWZqYzg,4140
+shoe_sensor/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shoe_sensor/tools/collect_csv.py,sha256=UZICyf1fOJnOGJ2spMM1RQE-QjQrn2troreJYNAewLs,3807
+shoe_sensor/tools/collect_honeycomb.py,sha256=7aoap82wY1UTDJia1gwMyHiryUiHN5zEjrq3PV9MH7w,3482
+shoe_sensor/tools/shoe_scan.py,sha256=Gn_w9nFFUGDXvthdImbUKRV0b8I1FX2pieaZ9QsBE1s,1729
+wf_shoe_sensor-0.1.1.dist-info/METADATA,sha256=lhoLFW9U5XLxD8FZ3DS4am6qTS3cs9qa1oumBb-N4G8,741
+wf_shoe_sensor-0.1.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+wf_shoe_sensor-0.1.1.dist-info/top_level.txt,sha256=2SPJAPGYwAugWh1pzDMrlXYLbmZPrEv3EYUH7pjLdQ8,12
+wf_shoe_sensor-0.1.1.dist-info/RECORD,,
