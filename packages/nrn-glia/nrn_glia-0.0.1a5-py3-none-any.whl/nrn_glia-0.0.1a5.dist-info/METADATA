@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: nrn-glia
+Version: 0.0.1a5
+Summary: Package manager for NEURON
+Home-page: https://github.com/dbbs-lab/glia
+Author: Robin De Schepper
+Author-email: robingilbert.deschepper@unipv.it
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# glia
+
+Package manager for neuron
+
+
