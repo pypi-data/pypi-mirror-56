@@ -1,0 +1,32 @@
+Metadata-Version: 1.2
+Name: PyPDE
+Version: 0.9.1
+Summary: Solve any hyperbolic/parabolic system of PDEs
+Home-page: https://github.com/haranjackson/pypde
+Author: Haran Jackson
+Author-email: jackson.haran@gmail.com
+License: UNKNOWN
+Description: =====
+        PyPDE
+        =====
+        
+        UNDER DEVELOPMENT
+        =================
+        
+        A Python library for solving any system of hyperbolic/parabolic PDEs, with potentially stiff source terms and non-conservative components (e.g. Navier-Stokes, reactive Euler, Godunov-Peshkov-Romenski, etc.)
+        
+        * Based on the ADER-WENO method
+        * C++ under the hood for speed
+        * Your fluxes and sources written in Python for ease
+        
+        Please feel free to take a look and message me with suggestions. Please don't
+        fork anything until the first functioning release.
+        
+        jackson.haran@gmail.com
+Keywords: ADER,WENO,Discontinuous Galerkin,Finite Volume,PDEs,Partial Differential Equations,Hyperbolic,Parabolic
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
