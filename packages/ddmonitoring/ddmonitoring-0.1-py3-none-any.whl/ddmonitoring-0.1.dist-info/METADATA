@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: ddmonitoring
+Version: 0.1
+Summary: CLI Take Home Project for Datadog
+Home-page: https://github.com/chaoticdenim/dd-monitoring
+Author: Guillaume Brizolier
+Author-email: gbrizolier@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/chaoticdenim/dd-monitoring/tarball/master
+Platform: Any
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Requires-Dist: cliff
+Requires-Dist: asyncio
+Requires-Dist: requests
+Requires-Dist: apscheduler
+Requires-Dist: numpy
+Requires-Dist: asciimatics
+Requires-Dist: jsonschema
+Requires-Dist: tqdm
+
+UNKNOWN
+
+

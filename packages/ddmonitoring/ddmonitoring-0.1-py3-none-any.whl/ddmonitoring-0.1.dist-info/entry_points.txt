@@ -1,0 +1,6 @@
+[console_scripts]
+ddmonitoring = ddmonitoring.main:main
+
+[dd.monitoring]
+run = ddmonitoring.run:Run
+
