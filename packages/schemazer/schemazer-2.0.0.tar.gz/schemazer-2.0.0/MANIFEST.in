@@ -1,0 +1,9 @@
+include LICENSE.txt
+include README.rst
+recursive-include schemazer/commons/ *
+recursive-include schemazer/static *
+recursive-include schemazer/templates *
+recursive-exclude example/ *
+recursive-exclude tests/ *
+recursive-exclude schemazer/commons/__pycache__/ *
+recursive-exclude */__pycache__/*
