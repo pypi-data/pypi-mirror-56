@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: ibmaceflowtester
+Version: 1.2.4
+Summary: Package to perform tests for IBM ACE interfaces
+Home-page: https://github.com/JLanda91/ibm-ace-flow-tester
+Author: Jasper Landa
+Author-email: jasperlanda91@gmail.com
+License: UNKNOWN
+Description: # ibm-mq-flow-tester
+        
+        ## Introduction
+        PyPI-ready package to test IBM App Connect Enterprise message flows.
+        
+        Supports IBM MQ 9.0.4 or higher
+        
+        ## Classes
+        
+        ## Test directory structure
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
