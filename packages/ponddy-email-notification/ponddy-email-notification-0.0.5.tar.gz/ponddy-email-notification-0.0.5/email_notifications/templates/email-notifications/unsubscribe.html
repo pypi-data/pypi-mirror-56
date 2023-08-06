@@ -1,0 +1,59 @@
+{% extends "admin/base_site.html" %}
+
+{% load static %}
+
+{% block title %}Unsubscribe{% endblock %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}">
+{% endblock %}
+
+{% block branding %}
+  <h1 id="site-name">
+    <span>Ponddy email notification</span>
+  </h1>
+{% endblock %}
+
+{% block breadcrumbs %}
+  <div class="breadcrumbs">
+    <span>Unsubscribe</span>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <h1>Unsubscribe for {{ user.username }}</h1>
+
+  {% if form.errors and not form.non_field_errors %}
+    <p class="errornote">
+      {% if form.errors.items|length == 1 %}
+        Please correct the error below.
+      {% else %}
+        Please correct the errors below.
+      {% endif %}
+    </p>
+  {% endif %}
+
+  {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+      <p class="errornote">
+        {{ error }}
+      </p>
+    {% endfor %}
+  {% endif %}
+
+  <div id="content-main">
+    <form action="" method="post">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-row">
+          {{ field.errors }}
+          {{ field.label_tag }} {{ field }}
+        </div>
+      {% endfor %}
+      <div class="submit-row">
+        <input type="submit" value="Submit" class="default">
+      </div>
+    </form>
+  </div>
+{% endblock %}
