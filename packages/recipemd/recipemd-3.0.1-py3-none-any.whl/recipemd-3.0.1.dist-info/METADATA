@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: recipemd
+Version: 3.0.1
+Summary: Markdown recipe manager, reference implementation of RecipeMD
+Home-page: https://recipemd.org
+Author: Tilman Stehr
+Author-email: tilman@tilman.ninja
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7,<4
+Description-Content-Type: text/markdown
+Requires-Dist: dataclasses-json (<0.4.0,>=0.3.0)
+Requires-Dist: yarl (~=1.3.0)
+Requires-Dist: commonmarkextensions (==0.0.5)
+Requires-Dist: commonmark (<=0.8.1,>=0.8.0)
+Requires-Dist: argcomplete (~=1.10.0)
+Requires-Dist: pyparsing (~=2.4.2)
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: Sphinx ; extra == 'dev'
+Requires-Dist: m2r ; extra == 'dev'
+Requires-Dist: sphinxcontrib.fulltoc ; extra == 'dev'
+Requires-Dist: sphinxcontrib.autoprogram ; extra == 'dev'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'dev'
+Requires-Dist: sphinxcontrib.apidoc ; extra == 'dev'
+Requires-Dist: sphinx-autobuild ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: Sphinx ; extra == 'docs'
+Requires-Dist: m2r ; extra == 'docs'
+Requires-Dist: sphinxcontrib.fulltoc ; extra == 'docs'
+Requires-Dist: sphinxcontrib.autoprogram ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Requires-Dist: sphinxcontrib.apidoc ; extra == 'docs'
+Requires-Dist: sphinx-autobuild ; extra == 'docs'
+Provides-Extra: release
+Requires-Dist: twine ; extra == 'release'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+
+# RecipeMD
+
+A [standard format](./specification.md) for recipes as [Markdown](https://commonmark.org) files and a python reference 
+implementation. The reference implementation can be used as a CLI program and as a python library.
+
+More info on our website: [recipemd.org](https://recipemd.org)
+
+<p>&nbsp;</p>
+
+<a href="https://recipemd.org/"><img src="https://raw.githubusercontent.com/tstehr/RecipeMD/master/logo/recipemd-mark.png" style="float:right; margin-left:5em"></a>
+
+
