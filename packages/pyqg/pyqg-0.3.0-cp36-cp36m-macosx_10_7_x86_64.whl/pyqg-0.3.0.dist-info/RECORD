@@ -1,0 +1,16 @@
+pyqg/__init__.py,sha256=KOsJk5em8KjHG45aEy1zx5xuj4aoulh4X13ACV9H7fU,353
+pyqg/_version.py,sha256=i8rKMmVAaZoVOOOdo9XoCAxU2txcd_5np2FLHkvdJ-Q,497
+pyqg/bt_model.py,sha256=sZjhwZ8hn9YOmgYDfTOLQ_kPOAwoHExCzQH-JQSmQ4U,3829
+pyqg/diagnostic_tools.py,sha256=P3T-RK34DCqZ5PQ3u7cB_KmppR87BTdGCP9Ol1b7NIk,2020
+pyqg/kernel.cpython-36m-darwin.so,sha256=Y3Vo7tGJugKA9bPU4howVOEPg1WyDb8Yyxa2VQO4x8A,450048
+pyqg/layered_model.py,sha256=Pl7eXHvuX4NMukbCxqwjWEArx31G6QZQ1_aMYx_qrNE,11563
+pyqg/model.py,sha256=BAZMb42BZr8Li7vQ5AxOlJ0UbtPM7OlasmNbtCYeYIg,22790
+pyqg/particles.py,sha256=tzh5HzPJ63eKVwRF0bNLDmDEmLMO04TiwvWMpC0EKf0,9341
+pyqg/point_vortex.py,sha256=GKXQ2G8XBQ-46JEZJwAGJE0wlwSqCx7H1A7rYMrk4gY,2236
+pyqg/qg_model.py,sha256=sIgSh-_iQamjbemZy_f1tPeGlG8hnOoiE6Dw47CoT1Y,10850
+pyqg/sqg_model.py,sha256=79NUgqGstdsz8RCNJftD4F_0t61UJRQBLMqSZnQRncU,2951
+pyqg-0.3.0.dist-info/LICENSE,sha256=wQtVtje58Wn0p1CzrycUFMu6uat4zYPyJThmB-vkrY8,1082
+pyqg-0.3.0.dist-info/METADATA,sha256=Akbepuu4DLliT3fb0iQpyEe3w1gAEZhBs_XmD1wtXTA,2087
+pyqg-0.3.0.dist-info/WHEEL,sha256=Pa6FUp-RRZ23T7yBFiOWnFl7TpPRTvKpdqnMztOabYo,110
+pyqg-0.3.0.dist-info/top_level.txt,sha256=cBu3FgzK5n2mHNvouw4pmwFwV-8zXex2fA7XTX0AvpI,5
+pyqg-0.3.0.dist-info/RECORD,,
