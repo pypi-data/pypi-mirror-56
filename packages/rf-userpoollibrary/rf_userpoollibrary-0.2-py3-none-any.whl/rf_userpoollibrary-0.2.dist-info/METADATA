@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: rf-userpoollibrary
+Version: 0.2
+Summary: Test Library for userpool support.
+Home-page: https://github.com/MainSystemDev/rf-userpoollibray
+Author: Shiela Buitizon
+Author-email: shiela.buitizon@mnltechnology.com
+License: Type license() to see the full license text
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Testing
+Classifier: Framework :: Robot Framework
+Classifier: Framework :: Robot Framework :: Library
+Description-Content-Type: text/markdown
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: robotframework (==3.1.2)
+
+UserpoolLibrary
+
+Version = 0.2
+
+Library Scope: TEST SUITE
+
+Created: 09/10/2019 15:58 UTC-8
+
+Author: Shiela Buitizon | email:shiela.buitizon@mnltechnology.com
+
+Company: Spiralworks Technologies Inc.
+
+Description: Test Library for userpool support.
+
+
+
+To run unit test
+
+    python -m unittest
+
+To generate library documentation
+
+    cd ../rf-userpoollibrary
+    python -m robot.libdoc UserpoolLibrary docs/index.html 
+
