@@ -1,0 +1,7 @@
+include README.md
+include *.py
+include utils/*.py
+include transport/*.py
+include protocol/*.py
+include format/*.py
+include base/*.py

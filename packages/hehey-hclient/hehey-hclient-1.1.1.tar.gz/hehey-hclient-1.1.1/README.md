@@ -1,0 +1,353 @@
+# hehey-hclient 组件
+
+#### 介绍
+hehey-hclient 是一个python 客户端请求工具组件,常用于接口的调用
+
+#### 依赖以及版本要求
+- python >= 2.7
+- pycurl
+
+
+#### 安装
+- 直接下载:
+```
+
+```
+- 命令安装：
+```
+pip install hehey-hclient
+```
+#### 基础文件以目录
+
+
+#### 参数配置
+```python
+responseConf = {
+    'clazz':'request class name',# request 类名,比如http
+    'host':'http://api.xxx.cn/',# 接口host 地址
+    'format':'json',# 数据格式类型,
+    'headers':{},# 默认header 信息
+    'options':{},# 传输协议配置
+    'method':'POST',
+    'response':{ # resposne 配置
+        'clazz':'service',# response 类
+        'format':"json" # 数据格式类型,
+    }
+}
+```
+#### 基本示例
+- 快速使用
+```python
+from hclient.client import Client;
+
+hclient = Client()
+request = hclient.get('http://www.baidu.com/')
+response = request.send()
+
+# 获取response 返回的结果
+html = response.getContent()
+data = response.getData()
+
+```
+
+- 接入hehey 组件
+```python
+
+# settings.py 配置文件
+components = {
+    'client': {
+        'clazz': 'hclient.client.Client',
+        'customSites': {
+            'xwsite': {
+                'host': 'http://api.xxx.cn/',
+                'method': 'POST',
+                'response': {
+                    'clazz': 'service',
+                    'format': "json"
+                }
+            },
+
+            'bcsite': {
+                'transport': "socket",
+                'clazz': 'http',
+                'host': 'http://api.xxx.cn/',
+                'method': 'POST',
+                'response': {
+                    'clazz': 'service',
+                    'format': "json"
+                }
+            }
+        }
+     },
+}
+
+from hehe import he
+data = he.app.client.service('xwsite', 'system/site/getConfInfo', {"id": 2}).send().getData();
+
+html = he.app.client.get("http://www.baidu.com");
+
+```
+
+- 发送HTTP,请求GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT,OPTIONS
+```python
+from hclient.client import Client;
+
+hclient = Client()
+request = hclient.get('http://www.baidu.com/',{'user_id':2})
+response = request.send()
+
+# 获取response 返回的结果
+html = response.getContent()
+
+# 获取response 格式化后结果,比如json
+data = response.setFormat('json').getData();
+
+```
+
+- 发送服务站点api 接口
+```python
+from hclient.client import Client;
+
+hclient = Client({
+    'customSites': {
+        'xwsite': {
+            'host': 'http://api.xxxx.cn/',
+            'method': 'POST',
+            'response': {
+                'clazz': 'service',
+                'format': "json"
+            }
+        },
+
+        'bcsite': {
+            'transport': "socket",
+            'clazz': 'http',
+            'host': 'http://api.xxxx.cn/',
+            'method': 'POST',
+            'response': {
+                'clazz': 'service',
+                'format': "json"
+            }
+        }
+    }
+})
+
+# 方式1
+response = hclient.service('site1','user/getinfo',{'user_id':2}).send()
+
+# 获取response 结果
+data = response.getData();
+
+# 方式2
+response = hclient.bcsite.service('user/getinfo',{'user_id':2}).send();
+data = response.getData();
+
+```
+
+
+- 批量发送请求
+
+```python
+
+# 方式1
+
+from hclient.client import Client;
+
+hclient = Client()
+request1 = hclient.get('http://www.baidu.com/')
+request2 = hclient.get('http://www.baidu.com/')
+
+requests = {
+    'res1': request1,
+    'res2': request2
+}
+
+responses = hclient.batchSend(requests);
+html1 = responses['res1'].getContent()
+html2 = responses['res2'].getContent()
+
+# 方式2
+
+from hclient.client import Client;
+
+hclient = Client()
+requestGroup = hclient.batch()
+requestGroup.get('http://www.baidu.com/',index="res1")
+requestGroup.get('http://www.baidu.com/',index="res1")
+
+responses = requestGroup.send();
+
+html1 = responses['res1'].getContent()
+html2 = responses['res2'].getContent()
+
+```
+
+- 即刻发送请求-直接获取结果
+
+```python
+from hclient.client import Client;
+
+hclient = Client()
+html = hclient.getResult('http://www.baidu.com/')
+
+# 支持getResult,postResult 等等
+
+```
+
+- 验证请求错误
+
+```python
+from hclient.client import Client;
+
+hclient = Client()
+response = hclient.post('http://www.baidu.com/',{'user_id':2}).send();
+
+# 验证是否错误,验证网络,解析数据,Transport（传输层） 是否有错误
+if response.hasError():
+    # 请求错误
+    pass
+else:
+    # 请求正常
+    pass
+
+# 验证是否网络错误,主要验证header http-code 状态码 是否等于20x
+if response.hasNetworkError():
+    # 请求错误
+    pass
+else:
+    # 请求正常
+    pass
+    
+    
+# 获取错误信息
+response.getErrors() # 获取全部错误
+response.getFirstError() # 获取首个错误信息
+
+```
+
+- 其他方法介绍
+
+```python
+from hclient.client import Client;
+
+hclient = Client()
+request = hclient.service('http://www.baidu.com/',{"id":1})
+request.setFormat("json") # 设置参数的格式
+request.addHeaders("Content-Type",'application/json; charset=UTF-8');# 设置http 头部信息
+request.setCookies({"name":1}) # 设置cookie
+
+response = request.send()
+response.getStatusCode() # 获取请求状态码
+response.getHeaders() # 获取头部
+response.getHeaders() # 获取头部对象
+data = response.setFormat("json") # 设置返回内容的格式
+
+
+```
+
+- 扩展
+
+    
+```python
+# 自定义request,重写其方法
+from hclient.base.Request import Request
+class HttpRequest(Request):
+
+    def prepare(self):
+    
+        pass
+
+
+# 自定义Response,重写其方法
+from hclient.base.Response import Response
+
+class ServiceResponse(Response):
+
+    def __init__(self,attrs = {}):
+
+        self.varCode = 'code'
+
+        self.varMsg = 'message'
+
+        self.varResult = 'data'
+
+        self.defaultCode = 0
+
+        self.errcode = ''
+
+        self.errmsg = ''
+
+        self._init = False
+
+        if attrs:
+            super().__init__(attrs)
+
+    # 检查业务是否错误
+    # <B> 说明： </B>
+    # <pre>
+    # 略
+    # </pre>
+    def check(self,errorCode = []):
+
+        self.__initData()
+
+        if not errorCode:
+            errorCode = [self.defaultCode]
+
+        if self.errcode in errorCode:
+            return True
+        else:
+            return False
+
+
+    def getCode(self):
+
+        self.__initData()
+
+        return self.errcode
+
+    def getMessage(self):
+
+        self.__initData()
+
+        return self.errmsg
+
+    def getResult(self):
+
+        data = self.getData()
+        result = data.get(self.varResult,None)
+
+        return result
+
+    def __initData(self):
+
+        if self._init:
+            return
+
+        data = self.getData()
+
+        self.errmsg = data.get(self.varMsg,None)
+        self.errcode = data.get(self.varCode, None)
+        self._init = True
+
+
+# 对应的服务站点配置
+components = {
+    'client': {
+        'clazz': 'hclient.client.Client',
+        'customSites': {
+            'xwsite': {
+                'clazz':'http',# 或hclient.protocol,HttpRequest.HttpRequest
+                'host': 'http://api.xxx.cn/',
+                'method': 'POST',
+                'response': {
+                    'clazz': 'service',
+                    'format': "json"
+                }
+            },
+        }
+     },
+}
+
+
+```
