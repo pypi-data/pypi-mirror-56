@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: TracEstimationTools
+Version: 0.5.0
+Summary: Trac plugin for visualizing and quick editing of effort estimations
+Home-page: https://trac-hacks.org/wiki/EstimationToolsPlugin
+Author: Joachim Hoessler
+Author-email: hoessler@gmail.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Requires-Dist: Trac
+
+UNKNOWN
+
+

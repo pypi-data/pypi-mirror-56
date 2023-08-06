@@ -1,0 +1,14 @@
+estimationtools/__init__.py,sha256=BrzqpqZWBXLCykQDX3SNXf5BXjGiUf3UjbBVxZ0XhSA,156
+estimationtools/burndownchart.py,sha256=SSIcYa-44NfOgb26qyxJtQkJfL1yfjTlSe29NWRUujc,13611
+estimationtools/hoursinplaceeditor.py,sha256=b4-zlHAPGh_H9cllto09vcnU8GfW0V_sbMNZL3CMdHs,2318
+estimationtools/hoursremaining.py,sha256=Hb9vO0TCnfMKEfTPFcCYAUA0DrstRF0Ky8IRbAsgecg,1568
+estimationtools/utils.py,sha256=MUpkH9M6yzd9i4I2REk2eZi8T8CwGIY_0yHqmc2VcZ0,6881
+estimationtools/workloadchart.py,sha256=vEihlWtm9IdOWFwdQHHE8rP_HKlHQyHtUUoyJpSg0MM,4733
+estimationtools/htdocs/jquery.jeditable.js,sha256=Di2RRc_i4y548z2wLa1Q1dKv4LePDjM0Jo1wySZLlYs,17117
+estimationtools/htdocs/jquery.jeditable.mini.js,sha256=kF1NzbycXqExiR54zTh7VkC5nmeaNPGqr1p8Q0ePE1Q,6847
+estimationtools/templates/edithours.html,sha256=eIZMAKQFg8UeNuLl80ni7KeHDzVvcOcJNeOrPH07zeM,1897
+TracEstimationTools-0.5.0.dist-info/METADATA,sha256=yNYpPMKEscettGeHsJdwBGHhXV7DZza-1CKCwwAR25E,351
+TracEstimationTools-0.5.0.dist-info/WHEEL,sha256=g3LQva5oS9Ma-DPFwX8R7Ke-NO25KWW489RoZdNxJXc,92
+TracEstimationTools-0.5.0.dist-info/entry_points.txt,sha256=cc85p16A_bK1D0TjZaXNvh0VzHDlKrNX-7EctWV2W9A,50
+TracEstimationTools-0.5.0.dist-info/top_level.txt,sha256=Sg6Z2hLxl7GLnF-o3UZ939OxLePTadgLIxbKm_ZVQOk,16
+TracEstimationTools-0.5.0.dist-info/RECORD,,
