@@ -1,0 +1,17 @@
+AUTHORS
+ChangeLog
+LICENSE
+README.md
+requirements.txt
+setup.cfg
+setup.py
+tests/__init__.py
+tests/text2code_test.py
+text2code/__init__.py
+text2code.egg-info/PKG-INFO
+text2code.egg-info/SOURCES.txt
+text2code.egg-info/dependency_links.txt
+text2code.egg-info/not-zip-safe
+text2code.egg-info/pbr.json
+text2code.egg-info/requires.txt
+text2code.egg-info/top_level.txt
