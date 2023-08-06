@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cpmixer
+Version: 0.8.1
+Summary: Cross-platform module for controlling audio mixers
+Home-page: https://github.com/drtexx/cpmixer
+Author: Denver Pallis
+Author-email: DenverPallisProjects@gmail.com
+License: GPLv3+
+Project-URL: Bug Reports, https://github.com/drtexx/cpmixer/issues
+Project-URL: Source, https://github.com/drtexx/cpmixer
+Project-URL: Funding, https://paypal.me/denverpallis
+Project-URL: Docs, https://cpmixer.readthedocs.io
+Description: UNKNOWN
+Keywords: media workflow volume sound modular cross-platform
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
