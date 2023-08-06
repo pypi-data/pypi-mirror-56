@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: telewavesim
+Version: 0.2.0
+Summary: Python package for teleseismic body-wave modeling
+Home-page: https://github.com/paudetseis/Telewavesim
+Author: Pascal Audet
+Author-email: pascal.audet@uottawa.ca
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Fortran
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
