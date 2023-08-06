@@ -1,0 +1,13 @@
+LICENCE
+README.md
+setup.py
+figitool/__init__.py
+figitool/exception.py
+figitool/figitool.py
+figitool/utils.py
+figitool.egg-info/PKG-INFO
+figitool.egg-info/SOURCES.txt
+figitool.egg-info/dependency_links.txt
+figitool.egg-info/entry_points.txt
+figitool.egg-info/requires.txt
+figitool.egg-info/top_level.txt
