@@ -1,0 +1,6806 @@
+{
+  "Acetaldehyde": {
+    "dD": 14.7,
+    "dP": 12.5,
+    "dH": 7.9,
+    "mv": 56.6
+  },
+  "Acetaldoxime": {
+    "dD": 16.3,
+    "dP": 4.0,
+    "dH": 20.2,
+    "mv": 61.2
+  },
+  "Acetamide": {
+    "dD": 17.3,
+    "dP": 18.7,
+    "dH": 22.4,
+    "mv": 60.8
+  },
+  "Acetanilide": {
+    "dD": 20.6,
+    "dP": 13.3,
+    "dH": 12.4,
+    "mv": 110.9
+  },
+  "Acetic Acid": {
+    "dD": 14.5,
+    "dP": 8.0,
+    "dH": 13.5,
+    "mv": 57.1
+  },
+  "Acetic Anhydride": {
+    "dD": 16.0,
+    "dP": 11.7,
+    "dH": 10.2,
+    "mv": 94.5
+  },
+  "Acetone": {
+    "dD": 15.5,
+    "dP": 10.4,
+    "dH": 7.0,
+    "mv": 74.0
+  },
+  "Acetonecyanhydrin": {
+    "dD": 16.6,
+    "dP": 12.2,
+    "dH": 15.5,
+    "mv": 94.0
+  },
+  "Acetonemethyloxime": {
+    "dD": 14.7,
+    "dP": 4.6,
+    "dH": 4.6,
+    "mv": 96.7
+  },
+  "Acetonitrile": {
+    "dD": 15.3,
+    "dP": 18.0,
+    "dH": 6.1,
+    "mv": 52.6
+  },
+  "Acetophenone": {
+    "dD": 19.6,
+    "dP": 8.6,
+    "dH": 3.7,
+    "mv": 117.4
+  },
+  "Acetoxime": {
+    "dD": 16.3,
+    "dP": 3.7,
+    "dH": 10.9,
+    "mv": 80.2
+  },
+  "1-Acetoxy-1,3-butadiene": {
+    "dD": 16.1,
+    "dP": 4.4,
+    "dH": 8.3,
+    "mv": 118.4
+  },
+  "N-Acetyl Caprolactam": {
+    "dD": 18.9,
+    "dP": 8.7,
+    "dH": 4.8,
+    "mv": 155.0
+  },
+  "N-Acetyl Morpholine": {
+    "dD": 18.3,
+    "dP": 5.3,
+    "dH": 7.8,
+    "mv": 115.6
+  },
+  "N-Acetyl Piperidine": {
+    "dD": 18.5,
+    "dP": 10.0,
+    "dH": 6.5,
+    "mv": 125.8
+  },
+  "N-Acetyl Pyrrolidone": {
+    "dD": 17.8,
+    "dP": 13.1,
+    "dH": 8.3,
+    "mv": 127.0
+  },
+  "2-Acetyl Thiophene": {
+    "dD": 19.1,
+    "dP": 12.2,
+    "dH": 9.3,
+    "mv": 108.0
+  },
+  "Acetyl Triethyl Citrate": {
+    "dD": 16.6,
+    "dP": 3.5,
+    "dH": 8.6,
+    "mv": 279.9
+  },
+  "Acetylacetone": {
+    "dD": 16.1,
+    "dP": 11.2,
+    "dH": 6.2,
+    "mv": 103.0
+  },
+  "Acetylbromide": {
+    "dD": 16.7,
+    "dP": 10.6,
+    "dH": 5.2,
+    "mv": 74.0
+  },
+  "Acetylchloride": {
+    "dD": 16.2,
+    "dP": 11.2,
+    "dH": 5.8,
+    "mv": 71.4
+  },
+  "Acetylene (Ethyne)": {
+    "dD": 14.4,
+    "dP": 4.2,
+    "dH": 11.9,
+    "mv": 42.1
+  },
+  "Acetylfluoride": {
+    "dD": 14.7,
+    "dP": 14.0,
+    "dH": 5.7,
+    "mv": 62.0
+  },
+  "Acridine": {
+    "dD": 21.7,
+    "dP": 5.9,
+    "dH": 2.0,
+    "mv": 163.0
+  },
+  "Acrolein": {
+    "dD": 15.0,
+    "dP": 7.2,
+    "dH": 7.8,
+    "mv": 66.7
+  },
+  "Acrylamide": {
+    "dD": 15.8,
+    "dP": 12.1,
+    "dH": 12.8,
+    "mv": 63.4
+  },
+  "Acrylic Acid": {
+    "dD": 17.7,
+    "dP": 6.4,
+    "dH": 14.9,
+    "mv": 68.5
+  },
+  "Acrylonitrile": {
+    "dD": 16.0,
+    "dP": 12.8,
+    "dH": 6.8,
+    "mv": 67.1
+  },
+  "Acrylylchloride": {
+    "dD": 16.2,
+    "dP": 11.6,
+    "dH": 5.4,
+    "mv": 81.3
+  },
+  "Adipic Acid (1,6-Hexanedioic)": {
+    "dD": 17.1,
+    "dP": 9.0,
+    "dH": 14.6,
+    "mv": 107.5
+  },
+  "alfa-Chloro Acetophenone": {
+    "dD": 20.0,
+    "dP": 9.6,
+    "dH": 5.7,
+    "mv": 116.8
+  },
+  "Allyl Acetate": {
+    "dD": 15.7,
+    "dP": 4.5,
+    "dH": 8.0,
+    "mv": 108.5
+  },
+  "Allyl Acetic Acid": {
+    "dD": 16.7,
+    "dP": 4.7,
+    "dH": 11.3,
+    "mv": 102.1
+  },
+  "Allyl Acetoacetate": {
+    "dD": 15.9,
+    "dP": 6.9,
+    "dH": 8.6,
+    "mv": 137.8
+  },
+  "Allyl Acetonitrile (4-Pentenenitrile)": {
+    "dD": 16.3,
+    "dP": 11.2,
+    "dH": 5.0,
+    "mv": 98.5
+  },
+  "Allyl Alcohol": {
+    "dD": 16.2,
+    "dP": 10.8,
+    "dH": 16.8,
+    "mv": 68.4
+  },
+  "Allyl Amine": {
+    "dD": 15.5,
+    "dP": 5.7,
+    "dH": 10.6,
+    "mv": 74.9
+  },
+  "Allyl Bromide (3-Bromoprene)": {
+    "dD": 16.5,
+    "dP": 7.3,
+    "dH": 4.9,
+    "mv": 86.5
+  },
+  "Allyl Chloride": {
+    "dD": 17.0,
+    "dP": 6.2,
+    "dH": 2.3,
+    "mv": 82.3
+  },
+  "Allyl Cyanide": {
+    "dD": 16.0,
+    "dP": 14.3,
+    "dH": 5.6,
+    "mv": 80.5
+  },
+  "Allyl Ethylether": {
+    "dD": 15.0,
+    "dP": 4.8,
+    "dH": 5.1,
+    "mv": 112.6
+  },
+  "Allyl Fluoride": {
+    "dD": 14.9,
+    "dP": 6.4,
+    "dH": 1.0,
+    "mv": 71.5
+  },
+  "Allyl Formate": {
+    "dD": 15.7,
+    "dP": 5.4,
+    "dH": 8.8,
+    "mv": 91.0
+  },
+  "Allyl Iodide": {
+    "dD": 17.4,
+    "dP": 6.4,
+    "dH": 3.3,
+    "mv": 90.8
+  },
+  "Allyl Isocyanide": {
+    "dD": 16.1,
+    "dP": 13.0,
+    "dH": 5.4,
+    "mv": 84.5
+  },
+  "Allyl Isopropyl Ether": {
+    "dD": 15.0,
+    "dP": 4.1,
+    "dH": 7.1,
+    "mv": 129.0
+  },
+  "Allyl Isothiocyanate": {
+    "dD": 17.0,
+    "dP": 11.3,
+    "dH": 8.5,
+    "mv": 98.0
+  },
+  "Allyl Mercaptan": {
+    "dD": 16.4,
+    "dP": 6.2,
+    "dH": 7.9,
+    "mv": 80.2
+  },
+  "Allyl Methacrylate": {
+    "dD": 15.2,
+    "dP": 4.1,
+    "dH": 7.5,
+    "mv": 134.8
+  },
+  "Allyl Methylether": {
+    "dD": 15.0,
+    "dP": 4.3,
+    "dH": 5.9,
+    "mv": 93.7
+  },
+  "1-Aminocyclopropane Carboxylic Acid": {
+    "dD": 17.0,
+    "dP": 6.3,
+    "dH": 13.6,
+    "mv": 93.7
+  },
+  "2-Amino Pyridine": {
+    "dD": 20.4,
+    "dP": 8.1,
+    "dH": 12.2,
+    "mv": 94.1
+  },
+  "4-Amino Pyridine": {
+    "dD": 20.4,
+    "dP": 16.1,
+    "dH": 12.9,
+    "mv": 87.1
+  },
+  "Ammonia": {
+    "dD": 13.7,
+    "dP": 15.7,
+    "dH": 17.8,
+    "mv": 20.8
+  },
+  "Amyl Acetate": {
+    "dD": 15.8,
+    "dP": 3.3,
+    "dH": 6.1,
+    "mv": 148.0
+  },
+  "Anethole (Trans)": {
+    "dD": 19.0,
+    "dP": 4.3,
+    "dH": 8.7,
+    "mv": 150.0
+  },
+  "Aniline": {
+    "dD": 19.4,
+    "dP": 5.1,
+    "dH": 10.2,
+    "mv": 91.5
+  },
+  "Anisaldehyde (2-Methoxy Benzaldehyde)": {
+    "dD": 19.4,
+    "dP": 11.9,
+    "dH": 8.3,
+    "mv": 120.8
+  },
+  "Anisidine (2-Methoxyaniline)": {
+    "dD": 19.5,
+    "dP": 5.4,
+    "dH": 11.4,
+    "mv": 112.2
+  },
+  "p-Anisidine (Methoxy Aniline)": {
+    "dD": 19.9,
+    "dP": 6.5,
+    "dH": 11.3,
+    "mv": 113.3
+  },
+  "Anisole": {
+    "dD": 17.8,
+    "dP": 4.1,
+    "dH": 6.7,
+    "mv": 119.1
+  },
+  "9,10-Anthraquinone": {
+    "dD": 20.3,
+    "dP": 7.6,
+    "dH": 4.8,
+    "mv": 145.6
+  },
+  "Ascorbic Acid": {
+    "dD": 18.0,
+    "dP": 12.6,
+    "dH": 27.6,
+    "mv": 106.7
+  },
+  "Azidoethane": {
+    "dD": 15.9,
+    "dP": 8.9,
+    "dH": 12.9,
+    "mv": 79.0
+  },
+  "3-Azidopropene": {
+    "dD": 16.8,
+    "dP": 7.7,
+    "dH": 13.4,
+    "mv": 83.0
+  },
+  "Benzal Chloride": {
+    "dD": 19.9,
+    "dP": 6.6,
+    "dH": 2.4,
+    "mv": 134.2
+  },
+  "Benzaldehyde": {
+    "dD": 19.4,
+    "dP": 7.4,
+    "dH": 5.3,
+    "mv": 101.5
+  },
+  "Benzamide": {
+    "dD": 21.2,
+    "dP": 14.7,
+    "dH": 11.2,
+    "mv": 90.3
+  },
+  "Benzene": {
+    "dD": 18.4,
+    "dP": 0.0,
+    "dH": 2.0,
+    "mv": 89.4
+  },
+  "1,3-Benzenediol": {
+    "dD": 18.0,
+    "dP": 8.4,
+    "dH": 21.0,
+    "mv": 87.5
+  },
+  "Benzimidazole": {
+    "dD": 20.6,
+    "dP": 14.9,
+    "dH": 11.0,
+    "mv": 102.7
+  },
+  "Benzisoxazole": {
+    "dD": 20.6,
+    "dP": 11.5,
+    "dH": 8.8,
+    "mv": 100.7
+  },
+  "2,3-Benzofuran (Cumaron)": {
+    "dD": 18.7,
+    "dP": 5.1,
+    "dH": 5.7,
+    "mv": 110.2
+  },
+  "Benzoic Acid": {
+    "dD": 18.2,
+    "dP": 6.9,
+    "dH": 9.8,
+    "mv": 113.1
+  },
+  "Benzoin": {
+    "dD": 19.9,
+    "dP": 9.7,
+    "dH": 10.7,
+    "mv": 187.7
+  },
+  "Benzonitrile": {
+    "dD": 17.4,
+    "dP": 9.0,
+    "dH": 3.3,
+    "mv": 102.6
+  },
+  "Benzophenone": {
+    "dD": 19.6,
+    "dP": 8.6,
+    "dH": 5.7,
+    "mv": 164.2
+  },
+  "Benzothiazole": {
+    "dD": 20.6,
+    "dP": 5.2,
+    "dH": 8.4,
+    "mv": 108.5
+  },
+  "1,2,3-Benzotriazole": {
+    "dD": 18.7,
+    "dP": 15.6,
+    "dH": 12.4,
+    "mv": 96.2
+  },
+  "Benzotrichloride": {
+    "dD": 20.2,
+    "dP": 6.6,
+    "dH": 3.2,
+    "mv": 142.1
+  },
+  "Benzoyl Chloride": {
+    "dD": 20.7,
+    "dP": 8.2,
+    "dH": 4.5,
+    "mv": 116.0
+  },
+  "Benzyl Acetate": {
+    "dD": 18.3,
+    "dP": 5.7,
+    "dH": 6.0,
+    "mv": 142.8
+  },
+  "Benzyl Alcohol": {
+    "dD": 18.4,
+    "dP": 6.3,
+    "dH": 13.7,
+    "mv": 103.6
+  },
+  "Benzyl Amine": {
+    "dD": 19.2,
+    "dP": 4.6,
+    "dH": 11.7,
+    "mv": 109.2
+  },
+  "Benzyl Benzoate": {
+    "dD": 20.0,
+    "dP": 5.1,
+    "dH": 5.2,
+    "mv": 191.2
+  },
+  "Benzyl Butyl Phthalate": {
+    "dD": 19.0,
+    "dP": 11.2,
+    "dH": 3.1,
+    "mv": 306.0
+  },
+  "Benzyl Chloride": {
+    "dD": 18.8,
+    "dP": 7.1,
+    "dH": 2.6,
+    "mv": 115.0
+  },
+  "Benzyl Methacrylate": {
+    "dD": 16.8,
+    "dP": 4.1,
+    "dH": 4.1,
+    "mv": 167.8
+  },
+  "N-Benzyl Pyrrolidone": {
+    "dD": 18.2,
+    "dP": 6.1,
+    "dH": 5.6,
+    "mv": 160.0
+  },
+  "Benzylethyl Ether": {
+    "dD": 18.4,
+    "dP": 3.8,
+    "dH": 3.8,
+    "mv": 144.2
+  },
+  "Bicyclohexyl": {
+    "dD": 18.6,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 188.5
+  },
+  "Biphenyl": {
+    "dD": 19.7,
+    "dP": 1.0,
+    "dH": 2.0,
+    "mv": 155.1
+  },
+  "Biuret": {
+    "dD": 20.0,
+    "dP": 14.6,
+    "dH": 18.8,
+    "mv": 70.3
+  },
+  "Borine Carbonyl": {
+    "dD": 17.0,
+    "dP": 10.2,
+    "dH": 6.9,
+    "mv": 41.8
+  },
+  "Boron Trichloride": {
+    "dD": 16.6,
+    "dP": 2.5,
+    "dH": 0.0,
+    "mv": 85.3
+  },
+  "2-Bromo Allyl Alcohol": {
+    "dD": 17.1,
+    "dP": 9.9,
+    "dH": 16.2,
+    "mv": 84.5
+  },
+  "2-Bromo Propene": {
+    "dD": 16.1,
+    "dP": 6.0,
+    "dH": 4.9,
+    "mv": 88.8
+  },
+  "1-Bromo Propene (CIS)": {
+    "dD": 16.3,
+    "dP": 6.4,
+    "dH": 5.0,
+    "mv": 84.7
+  },
+  "4-Bromo-1-Butene": {
+    "dD": 16.5,
+    "dP": 6.0,
+    "dH": 4.5,
+    "mv": 102.0
+  },
+  "4-Bromo-1,2-Butadiene": {
+    "dD": 17.0,
+    "dP": 6.5,
+    "dH": 4.7,
+    "mv": 93.3
+  },
+  "5-Bromo-2-Nitrobenzotrifluoride": {
+    "dD": 20.0,
+    "dP": 6.0,
+    "dH": 4.9,
+    "mv": 150.1
+  },
+  "1-Bromo-4-Ethoxy Benzene": {
+    "dD": 19.5,
+    "dP": 7.7,
+    "dH": 5.3,
+    "mv": 140.0
+  },
+  "Bromoacetylene": {
+    "dD": 15.7,
+    "dP": 9.9,
+    "dH": 5.6,
+    "mv": 67.7
+  },
+  "o-Bromoanisole": {
+    "dD": 19.8,
+    "dP": 8.4,
+    "dH": 6.7,
+    "mv": 124.5
+  },
+  "Bromobenzene": {
+    "dD": 20.5,
+    "dP": 5.5,
+    "dH": 4.1,
+    "mv": 105.3
+  },
+  "p-Bromobenzonitrile": {
+    "dD": 20.4,
+    "dP": 9.3,
+    "dH": 5.8,
+    "mv": 113.8
+  },
+  "p-Bromobenzoyl Chloride": {
+    "dD": 20.2,
+    "dP": 6.5,
+    "dH": 5.5,
+    "mv": 137.2
+  },
+  "2-Bromobutane": {
+    "dD": 16.3,
+    "dP": 7.7,
+    "dH": 4.4,
+    "mv": 109.5
+  },
+  "o-Bromochlorobenzene": {
+    "dD": 20.3,
+    "dP": 7.7,
+    "dH": 4.6,
+    "mv": 116.9
+  },
+  "Bromochloromethane": {
+    "dD": 17.3,
+    "dP": 5.7,
+    "dH": 3.5,
+    "mv": 65.0
+  },
+  "Bromoethylene": {
+    "dD": 16.1,
+    "dP": 6.3,
+    "dH": 2.3,
+    "mv": 71.6
+  },
+  "Bromoform": {
+    "dD": 21.4,
+    "dP": 4.1,
+    "dH": 6.1,
+    "mv": 87.5
+  },
+  "Bromomethyl Methyl Ether": {
+    "dD": 16.9,
+    "dP": 8.5,
+    "dH": 7.0,
+    "mv": 81.6
+  },
+  "1-Bromonaphtalene": {
+    "dD": 20.3,
+    "dP": 3.1,
+    "dH": 4.1,
+    "mv": 140.0
+  },
+  "p-Bromonitrobenzene": {
+    "dD": 20.9,
+    "dP": 9.9,
+    "dH": 5.9,
+    "mv": 103.7
+  },
+  "Bromoprene": {
+    "dD": 16.9,
+    "dP": 6.4,
+    "dH": 4.7,
+    "mv": 95.2
+  },
+  "1-Bromopropane": {
+    "dD": 16.4,
+    "dP": 7.9,
+    "dH": 4.8,
+    "mv": 90.9
+  },
+  "2-Bromopropane": {
+    "dD": 16.1,
+    "dP": 8.3,
+    "dH": 4.7,
+    "mv": 93.6
+  },
+  "3-Bromopropyne": {
+    "dD": 18.1,
+    "dP": 6.5,
+    "dH": 5.3,
+    "mv": 75.3
+  },
+  "o-Bromostyrene": {
+    "dD": 19.5,
+    "dP": 5.2,
+    "dH": 5.3,
+    "mv": 130.0
+  },
+  "2-Bromothiophene": {
+    "dD": 20.1,
+    "dP": 5.2,
+    "dH": 4.6,
+    "mv": 96.8
+  },
+  "o-Bromotoluene": {
+    "dD": 19.3,
+    "dP": 5.0,
+    "dH": 4.2,
+    "mv": 119.0
+  },
+  "p-Bromotoluene": {
+    "dD": 19.3,
+    "dP": 6.8,
+    "dH": 4.1,
+    "mv": 122.9
+  },
+  "1,2-Butadiene": {
+    "dD": 14.7,
+    "dP": 1.7,
+    "dH": 6.2,
+    "mv": 82.3
+  },
+  "1,3-Butadiene": {
+    "dD": 14.8,
+    "dP": 2.8,
+    "dH": 5.6,
+    "mv": 83.2
+  },
+  "1,3-Butadiene-1-Chloro": {
+    "dD": 15.6,
+    "dP": 8.5,
+    "dH": 2.0,
+    "mv": 92.2
+  },
+  "2,3-Butadiene-1-ol": {
+    "dD": 16.2,
+    "dP": 6.6,
+    "dH": 16.8,
+    "mv": 76.5
+  },
+  "1,3-Butadiene-1,2-Di-Chloro": {
+    "dD": 17.0,
+    "dP": 10.7,
+    "dH": 2.8,
+    "mv": 102.5
+  },
+  "Butadiene-4-Cyano": {
+    "dD": 16.2,
+    "dP": 11.7,
+    "dH": 5.2,
+    "mv": 93.7
+  },
+  "Butadienedioxide": {
+    "dD": 18.3,
+    "dP": 14.4,
+    "dH": 6.2,
+    "mv": 77.8
+  },
+  "Butadione": {
+    "dD": 15.7,
+    "dP": 5.1,
+    "dH": 6.8,
+    "mv": 87.8
+  },
+  "1,4-Butandiol Diacrylate": {
+    "dD": 16.8,
+    "dP": 9.1,
+    "dH": 4.2,
+    "mv": 194.4
+  },
+  "Butane": {
+    "dD": 14.1,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 101.4
+  },
+  "1,3-Butanediol": {
+    "dD": 16.6,
+    "dP": 10.0,
+    "dH": 21.5,
+    "mv": 89.9
+  },
+  "1,4-Butanediol": {
+    "dD": 16.6,
+    "dP": 15.3,
+    "dH": 21.7,
+    "mv": 88.9
+  },
+  "1-Butanethiol": {
+    "dD": 16.3,
+    "dP": 5.3,
+    "dH": 4.5,
+    "mv": 107.8
+  },
+  "1-Butanol": {
+    "dD": 16.0,
+    "dP": 5.7,
+    "dH": 15.8,
+    "mv": 91.5
+  },
+  "2-Butanol": {
+    "dD": 15.8,
+    "dP": 5.7,
+    "dH": 14.5,
+    "mv": 92.0
+  },
+  "1-Butene": {
+    "dD": 13.2,
+    "dP": 1.3,
+    "dH": 3.9,
+    "mv": 94.3
+  },
+  "2-Butene (cis)": {
+    "dD": 14.7,
+    "dP": 1.3,
+    "dH": 4.1,
+    "mv": 90.3
+  },
+  "2-Butene (trans)": {
+    "dD": 14.6,
+    "dP": 0.0,
+    "dH": 2.9,
+    "mv": 92.9
+  },
+  "3-Butenenitrile": {
+    "dD": 16.2,
+    "dP": 14.3,
+    "dH": 5.6,
+    "mv": 80.5
+  },
+  "1-Butenyl Methyl Ether": {
+    "dD": 15.1,
+    "dP": 5.3,
+    "dH": 5.2,
+    "mv": 111.9
+  },
+  "2-Butenyl Methyl Ether (cis)": {
+    "dD": 15.2,
+    "dP": 3.4,
+    "dH": 5.0,
+    "mv": 118.8
+  },
+  "2-Butenyl Methyl Ether (trans)": {
+    "dD": 15.3,
+    "dP": 4.4,
+    "dH": 4.3,
+    "mv": 110.4
+  },
+  "Butoxy Ethoxy Propanol": {
+    "dD": 15.5,
+    "dP": 6.5,
+    "dH": 10.2,
+    "mv": 185.9
+  },
+  "3-Butoxybutanol": {
+    "dD": 15.9,
+    "dP": 5.5,
+    "dH": 10.6,
+    "mv": 166.3
+  },
+  "n-Butyl Acetate": {
+    "dD": 15.8,
+    "dP": 3.7,
+    "dH": 6.3,
+    "mv": 132.5
+  },
+  "Sec-Butyl Acetate": {
+    "dD": 15.0,
+    "dP": 3.7,
+    "dH": 7.6,
+    "mv": 133.6
+  },
+  "tert-Butyl Acetate": {
+    "dD": 15.4,
+    "dP": 6.2,
+    "dH": 6.2,
+    "mv": 134.1
+  },
+  "n-Butyl Aceto Acetate": {
+    "dD": 16.6,
+    "dP": 5.8,
+    "dH": 7.3,
+    "mv": 164.3
+  },
+  "n-Butyl Acrylate": {
+    "dD": 15.6,
+    "dP": 6.2,
+    "dH": 4.9,
+    "mv": 143.8
+  },
+  "t-Butyl Alcohol": {
+    "dD": 15.2,
+    "dP": 5.1,
+    "dH": 14.7,
+    "mv": 95.8
+  },
+  "n-Butyl Amine": {
+    "dD": 16.2,
+    "dP": 4.5,
+    "dH": 8.0,
+    "mv": 99.0
+  },
+  "Butyl Benzoate": {
+    "dD": 18.3,
+    "dP": 5.6,
+    "dH": 5.5,
+    "mv": 178.0
+  },
+  "n-Butyl Butyrate": {
+    "dD": 15.6,
+    "dP": 2.9,
+    "dH": 5.6,
+    "mv": 166.7
+  },
+  "n-Butyl Cyclohexane": {
+    "dD": 16.2,
+    "dP": 0.0,
+    "dH": 0.6,
+    "mv": 176.7
+  },
+  "n-Butyl Cyclopentane": {
+    "dD": 16.4,
+    "dP": 0.0,
+    "dH": 1.0,
+    "mv": 162.0
+  },
+  "Butyl Formate": {
+    "dD": 15.7,
+    "dP": 6.5,
+    "dH": 9.2,
+    "mv": 114.8
+  },
+  "Butyl Isopropenyl Ether": {
+    "dD": 14.8,
+    "dP": 5.3,
+    "dH": 5.0,
+    "mv": 145.7
+  },
+  "Butyl Lactate": {
+    "dD": 15.8,
+    "dP": 6.5,
+    "dH": 10.2,
+    "mv": 149.0
+  },
+  "n-Butyl Methacrylate": {
+    "dD": 15.6,
+    "dP": 6.4,
+    "dH": 6.6,
+    "mv": 159.4
+  },
+  "2-Butyl Octanol": {
+    "dD": 16.1,
+    "dP": 3.6,
+    "dH": 9.3,
+    "mv": 224.2
+  },
+  "n-Butyl Propionate": {
+    "dD": 15.7,
+    "dP": 5.5,
+    "dH": 5.9,
+    "mv": 149.7
+  },
+  "N-Butyl Pyrrolidone": {
+    "dD": 17.5,
+    "dP": 9.9,
+    "dH": 5.8,
+    "mv": 148.0
+  },
+  "n-Butyl Salicylate": {
+    "dD": 17.9,
+    "dP": 4.8,
+    "dH": 11.7,
+    "mv": 181.7
+  },
+  "Butyl Stearate": {
+    "dD": 14.5,
+    "dP": 3.7,
+    "dH": 3.5,
+    "mv": 382.0
+  },
+  "3-n-Butyl Toluene": {
+    "dD": 17.4,
+    "dP": 0.1,
+    "dH": 1.0,
+    "mv": 173.7
+  },
+  "Butyl-6-Methyl-3-Cyclohexene Carbolyate": {
+    "dD": 16.1,
+    "dP": 2.5,
+    "dH": 5.7,
+    "mv": 209.1
+  },
+  "n-Butylbenzene": {
+    "dD": 17.4,
+    "dP": 0.1,
+    "dH": 1.1,
+    "mv": 157.0
+  },
+  "2,3-Butylene Carbonate": {
+    "dD": 18.0,
+    "dP": 16.8,
+    "dH": 3.1,
+    "mv": 105.5
+  },
+  "Butyleneoxide": {
+    "dD": 16.3,
+    "dP": 6.2,
+    "dH": 5.9,
+    "mv": 87.5
+  },
+  "o-n-Butyltoluene": {
+    "dD": 17.6,
+    "dP": 0.1,
+    "dH": 1.0,
+    "mv": 171.3
+  },
+  "p-n-Butyltoluene": {
+    "dD": 17.4,
+    "dP": 0.1,
+    "dH": 1.0,
+    "mv": 174.2
+  },
+  "2-Butynedinitrile": {
+    "dD": 15.2,
+    "dP": 16.2,
+    "dH": 8.0,
+    "mv": 78.4
+  },
+  "Butyraldehyde": {
+    "dD": 15.6,
+    "dP": 10.1,
+    "dH": 6.2,
+    "mv": 90.5
+  },
+  "n-Butyramide": {
+    "dD": 16.9,
+    "dP": 13.7,
+    "dH": 12.3,
+    "mv": 98.4
+  },
+  "Butyric Acid": {
+    "dD": 14.9,
+    "dP": 4.1,
+    "dH": 10.6,
+    "mv": 110.0
+  },
+  "Butyric Anhydride": {
+    "dD": 16.0,
+    "dP": 6.3,
+    "dH": 7.7,
+    "mv": 164.4
+  },
+  "Gamma-Butyrolactone": {
+    "dD": 19.0,
+    "dP": 16.6,
+    "dH": 7.4,
+    "mv": 76.8
+  },
+  "Butyronitrile": {
+    "dD": 15.3,
+    "dP": 12.4,
+    "dH": 5.1,
+    "mv": 87.3
+  },
+  "Butyrylchloride": {
+    "dD": 16.8,
+    "dP": 9.4,
+    "dH": 4.8,
+    "mv": 103.6
+  },
+  "Caffeine": {
+    "dD": 19.5,
+    "dP": 10.1,
+    "dH": 13.0,
+    "mv": 157.9
+  },
+  "Caprolactone (Epsilon)": {
+    "dD": 19.7,
+    "dP": 15.0,
+    "dH": 7.4,
+    "mv": 110.8
+  },
+  "Carbazole (Diphenylenimine)": {
+    "dD": 21.7,
+    "dP": 6.4,
+    "dH": 6.2,
+    "mv": 152.0
+  },
+  "Carbonyl Cyanide": {
+    "dD": 15.0,
+    "dP": 6.3,
+    "dH": 8.0,
+    "mv": 71.2
+  },
+  "Carbonyl Sulfide": {
+    "dD": 17.4,
+    "dP": 3.7,
+    "dH": 0.0,
+    "mv": 51.0
+  },
+  "Castor Oil": {
+    "dD": 4.6,
+    "dP": 12.0,
+    "dH": 436.0,
+    "mv": 0
+  },
+  "Cetyl Alcohol (1-Hexadecanol)": {
+    "dD": 15.1,
+    "dP": 3.7,
+    "dH": 8.1,
+    "mv": 298.7
+  },
+  "Chloral": {
+    "dD": 17.2,
+    "dP": 7.4,
+    "dH": 7.6,
+    "mv": 97.5
+  },
+  "Chlorine": {
+    "dD": 17.3,
+    "dP": 10.0,
+    "dH": 0.0,
+    "mv": 46.0
+  },
+  "Chloro Acetaldehyde": {
+    "dD": 16.2,
+    "dP": 16.1,
+    "dH": 9.0,
+    "mv": 60.4
+  },
+  "Chloro Acetic Acid": {
+    "dD": 17.7,
+    "dP": 10.4,
+    "dH": 12.3,
+    "mv": 68.6
+  },
+  "p-Chloro Acetophenone": {
+    "dD": 19.6,
+    "dP": 7.6,
+    "dH": 4.0,
+    "mv": 129.7
+  },
+  "3-Chloro Allyl Alcohol": {
+    "dD": 17.2,
+    "dP": 10.3,
+    "dH": 16.5,
+    "mv": 78.6
+  },
+  "2-Chloro Allyl Alcohol": {
+    "dD": 17.1,
+    "dP": 10.2,
+    "dH": 16.4,
+    "mv": 79.6
+  },
+  "Chloro Maleic Anhydride": {
+    "dD": 20.4,
+    "dP": 17.3,
+    "dH": 11.5,
+    "mv": 89.5
+  },
+  "1-Chloro Methyl Acrylate": {
+    "dD": 15.9,
+    "dP": 7.3,
+    "dH": 8.5,
+    "mv": 101.4
+  },
+  "1-Chloro Pentane": {
+    "dD": 16.0,
+    "dP": 6.9,
+    "dH": 1.9,
+    "mv": 120.8
+  },
+  "2-Chloro Propene (Isopropenyl Chloride)": {
+    "dD": 15.5,
+    "dP": 6.7,
+    "dH": 2.2,
+    "mv": 84.9
+  },
+  "1-Chloro Vinyl Ethyl Ether": {
+    "dD": 16.8,
+    "dP": 6.5,
+    "dH": 5.7,
+    "mv": 104.5
+  },
+  "1-Chloro-1-Fluoro Ethylene": {
+    "dD": 16.0,
+    "dP": 6.9,
+    "dH": 4.0,
+    "mv": 67.6
+  },
+  "1-Chloro-1-Nitroethane": {
+    "dD": 16.8,
+    "dP": 13.5,
+    "dH": 4.7,
+    "mv": 85.1
+  },
+  "1-Chloro-1-Nitropropane": {
+    "dD": 16.8,
+    "dP": 13.0,
+    "dH": 4.5,
+    "mv": 102.2
+  },
+  "3-Chloro-1-Propanol": {
+    "dD": 17.5,
+    "dP": 5.7,
+    "dH": 14.7,
+    "mv": 84.2
+  },
+  "4-Chloro-1,2-Butadiene": {
+    "dD": 16.6,
+    "dP": 8.0,
+    "dH": 6.7,
+    "mv": 89.5
+  },
+  "1-Chloro-2-Butene": {
+    "dD": 16.2,
+    "dP": 7.7,
+    "dH": 2.0,
+    "mv": 97.4
+  },
+  "1-Chloro-2-Ethoxy Benzene": {
+    "dD": 19.2,
+    "dP": 8.1,
+    "dH": 4.4,
+    "mv": 138.7
+  },
+  "1-Chloro-2-Ethyl Benzene": {
+    "dD": 18.9,
+    "dP": 4.9,
+    "dH": 2.2,
+    "mv": 133.0
+  },
+  "2-Chloro-2-Methyl Propane": {
+    "dD": 15.6,
+    "dP": 7.6,
+    "dH": 2.0,
+    "mv": 110.0
+  },
+  "3-Chloro-2-Methyl Propene": {
+    "dD": 16.2,
+    "dP": 5.6,
+    "dH": 2.0,
+    "mv": 98.8
+  },
+  "1-Chloro-2-Methyl Propene": {
+    "dD": 16.1,
+    "dP": 7.1,
+    "dH": 4.2,
+    "mv": 95.6
+  },
+  "6-Chloro-2-Nitrotoluene": {
+    "dD": 20.3,
+    "dP": 9.6,
+    "dH": 3.8,
+    "mv": 132.0
+  },
+  "4-Chloro-2-Nitrotoluene": {
+    "dD": 19.9,
+    "dP": 11.8,
+    "dH": 3.8,
+    "mv": 132.0
+  },
+  "1-Chloro-4-Ethoxy Benzene": {
+    "dD": 19.3,
+    "dP": 6.3,
+    "dH": 4.4,
+    "mv": 139.2
+  },
+  "2-Chloro-4-Methylaniline": {
+    "dD": 19.7,
+    "dP": 7.4,
+    "dH": 8.9,
+    "mv": 123.0
+  },
+  "2-Chloro-5-Methyl Phenol": {
+    "dD": 19.0,
+    "dP": 7.7,
+    "dH": 13.1,
+    "mv": 117.4
+  },
+  "2-Chloroacetamide": {
+    "dD": 17.6,
+    "dP": 12.4,
+    "dH": 12.8,
+    "mv": 93.5
+  },
+  "Chloroacetone": {
+    "dD": 16.8,
+    "dP": 9.6,
+    "dH": 5.5,
+    "mv": 80.5
+  },
+  "Chloroacetonitrile": {
+    "dD": 17.4,
+    "dP": 13.6,
+    "dH": 2.0,
+    "mv": 63.3
+  },
+  "Chloroacetylchloride": {
+    "dD": 17.5,
+    "dP": 9.2,
+    "dH": 5.5,
+    "mv": 79.5
+  },
+  "Chloroacetylene": {
+    "dD": 16.2,
+    "dP": 2.1,
+    "dH": 2.5,
+    "mv": 63.7
+  },
+  "2-Chloroallylidene Diacetate": {
+    "dD": 16.7,
+    "dP": 7.3,
+    "dH": 8.8,
+    "mv": 160.2
+  },
+  "m-Chloroaniline": {
+    "dD": 20.6,
+    "dP": 9.9,
+    "dH": 9.8,
+    "mv": 105.0
+  },
+  "4-Chloroanisole": {
+    "dD": 19.6,
+    "dP": 7.8,
+    "dH": 6.7,
+    "mv": 122.5
+  },
+  "4-Chlorobenzaldehyde": {
+    "dD": 19.9,
+    "dP": 7.2,
+    "dH": 5.6,
+    "mv": 113.4
+  },
+  "Chlorobenzene": {
+    "dD": 19.0,
+    "dP": 4.3,
+    "dH": 2.0,
+    "mv": 102.1
+  },
+  "4-Chlorobenzonitrile": {
+    "dD": 19.5,
+    "dP": 8.0,
+    "dH": 4.1,
+    "mv": 125.1
+  },
+  "4-Chlorobenzotrichloride": {
+    "dD": 20.3,
+    "dP": 5.5,
+    "dH": 3.5,
+    "mv": 153.8
+  },
+  "p-Chlorobenzoyl Chloride": {
+    "dD": 19.9,
+    "dP": 6.7,
+    "dH": 5.1,
+    "mv": 127.1
+  },
+  "4-Chlorobenzyl Alcohol": {
+    "dD": 19.6,
+    "dP": 7.5,
+    "dH": 13.0,
+    "mv": 117.7
+  },
+  "3-Chlorobenzylchloride": {
+    "dD": 19.9,
+    "dP": 9.3,
+    "dH": 2.6,
+    "mv": 117.7
+  },
+  "1,2-Chlorobromoethylene": {
+    "dD": 17.2,
+    "dP": 6.6,
+    "dH": 2.3,
+    "mv": 78.7
+  },
+  "1-Chlorobutane": {
+    "dD": 16.2,
+    "dP": 5.5,
+    "dH": 2.0,
+    "mv": 104.5
+  },
+  "2-Chlorobutane": {
+    "dD": 15.8,
+    "dP": 7.6,
+    "dH": 2.0,
+    "mv": 106.8
+  },
+  "2-Chlorocyclohexanone": {
+    "dD": 18.5,
+    "dP": 13.0,
+    "dH": 5.1,
+    "mv": 113.9
+  },
+  "Chlorocyclopropane": {
+    "dD": 17.6,
+    "dP": 7.2,
+    "dH": 2.2,
+    "mv": 84.9
+  },
+  "Chlorodifluoromethane (Freon 22)": {
+    "dD": 12.3,
+    "dP": 6.3,
+    "dH": 5.7,
+    "mv": 72.9
+  },
+  "N-Chlorodimethylamine": {
+    "dD": 16.0,
+    "dP": 7.8,
+    "dH": 7.9,
+    "mv": 87.4
+  },
+  "2-Chloroethyl Acetate": {
+    "dD": 16.7,
+    "dP": 9.6,
+    "dH": 8.8,
+    "mv": 107.5
+  },
+  "2-Chloroethyl Benzene": {
+    "dD": 19.3,
+    "dP": 6.3,
+    "dH": 2.2,
+    "mv": 131.5
+  },
+  "2-Chloroethyl Ethyl Ether": {
+    "dD": 16.3,
+    "dP": 7.9,
+    "dH": 4.6,
+    "mv": 109.5
+  },
+  "2-Chloroethyl Ethyl Sulfide": {
+    "dD": 17.2,
+    "dP": 5.0,
+    "dH": 6.1,
+    "mv": 116.9
+  },
+  "o-Chlorofluorobenzene": {
+    "dD": 19.4,
+    "dP": 8.7,
+    "dH": 2.0,
+    "mv": 104.9
+  },
+  "Chloroform": {
+    "dD": 17.8,
+    "dP": 3.1,
+    "dH": 5.7,
+    "mv": 80.7
+  },
+  "1-Chlorohexane": {
+    "dD": 16.1,
+    "dP": 6.2,
+    "dH": 1.7,
+    "mv": 138.1
+  },
+  "Bis(Chloromethyl) Ether": {
+    "dD": 17.2,
+    "dP": 4.9,
+    "dH": 6.6,
+    "mv": 86.6
+  },
+  "Chloromethylsulfide": {
+    "dD": 16.6,
+    "dP": 6.4,
+    "dH": 2.0,
+    "mv": 95.0
+  },
+  "1-Chloronaphthalene": {
+    "dD": 19.9,
+    "dP": 4.9,
+    "dH": 2.5,
+    "mv": 136.2
+  },
+  "p-Chloronitrobenzene": {
+    "dD": 20.4,
+    "dP": 9.6,
+    "dH": 4.2,
+    "mv": 103.7
+  },
+  "Chloronitromethane": {
+    "dD": 17.4,
+    "dP": 13.5,
+    "dH": 5.5,
+    "mv": 65.1
+  },
+  "2-Chlorophenol": {
+    "dD": 20.3,
+    "dP": 5.5,
+    "dH": 13.9,
+    "mv": 102.3
+  },
+  "Chloropicrin (Trichloronitromethane)": {
+    "dD": 17.6,
+    "dP": 6.8,
+    "dH": 7.0,
+    "mv": 101.7
+  },
+  "Chlorprene": {
+    "dD": 16.1,
+    "dP": 5.4,
+    "dH": 2.1,
+    "mv": 93.2
+  },
+  "2-Chloropropenal": {
+    "dD": 17.1,
+    "dP": 12.9,
+    "dH": 8.1,
+    "mv": 75.5
+  },
+  "1-Chloropropene": {
+    "dD": 15.3,
+    "dP": 6.9,
+    "dH": 2.2,
+    "mv": 82.3
+  },
+  "2-Chloropropenoic Acid": {
+    "dD": 19.1,
+    "dP": 9.4,
+    "dH": 12.4,
+    "mv": 86.6
+  },
+  "3-Chloropropionaldehyde": {
+    "dD": 17.0,
+    "dP": 13.3,
+    "dH": 8.2,
+    "mv": 73.0
+  },
+  "3-Chloropropionitrile": {
+    "dD": 17.3,
+    "dP": 15.9,
+    "dH": 6.1,
+    "mv": 77.4
+  },
+  "3-Chloropropyne": {
+    "dD": 16.7,
+    "dP": 7.4,
+    "dH": 2.3,
+    "mv": 72.4
+  },
+  "p-Chlorostyrene": {
+    "dD": 18.7,
+    "dP": 4.3,
+    "dH": 3.9,
+    "mv": 128.3
+  },
+  "o-Chlorostyrene": {
+    "dD": 18.7,
+    "dP": 4.7,
+    "dH": 3.9,
+    "mv": 126.8
+  },
+  "2-Chlorothiophene": {
+    "dD": 19.2,
+    "dP": 6.2,
+    "dH": 8.0,
+    "mv": 92.2
+  },
+  "4-Chlorothiophenol": {
+    "dD": 20.8,
+    "dP": 8.6,
+    "dH": 10.6,
+    "mv": 100.0
+  },
+  "o-Chlorothiophenol": {
+    "dD": 20.2,
+    "dP": 7.0,
+    "dH": 10.0,
+    "mv": 113.4
+  },
+  "p-Chlorotoluene": {
+    "dD": 19.1,
+    "dP": 6.2,
+    "dH": 2.6,
+    "mv": 118.3
+  },
+  "Chlorotrifluoroethylene (CTFE)": {
+    "dD": 15.3,
+    "dP": 6.3,
+    "dH": 0.0,
+    "mv": 75.6
+  },
+  "trans-Cinnamaldehyde": {
+    "dD": 19.4,
+    "dP": 12.4,
+    "dH": 6.2,
+    "mv": 125.9
+  },
+  "cis-Cinnamic Acid": {
+    "dD": 19.1,
+    "dP": 3.9,
+    "dH": 10.6,
+    "mv": 115.4
+  },
+  "Cinnamyl Alcohol": {
+    "dD": 19.1,
+    "dP": 6.0,
+    "dH": 13.0,
+    "mv": 129.1
+  },
+  "Cineol (Eucalyptol)": {
+    "dD": 16.7,
+    "dP": 4.6,
+    "dH": 3.4,
+    "mv": 167.5
+  },
+  "Citraconic Anhydride": {
+    "dD": 19.2,
+    "dP": 17.0,
+    "dH": 11.2,
+    "mv": 89.9
+  },
+  "Coniferyl Alcohol": {
+    "dD": 19.0,
+    "dP": 7.0,
+    "dH": 16.3,
+    "mv": 171.6
+  },
+  "Coumarin": {
+    "dD": 20.0,
+    "dP": 12.5,
+    "dH": 6.7,
+    "mv": 156.3
+  },
+  "p-Coumaryl Alcohol": {
+    "dD": 19.1,
+    "dP": 7.0,
+    "dH": 17.3,
+    "mv": 136.5
+  },
+  "m-Cresol": {
+    "dD": 18.0,
+    "dP": 5.1,
+    "dH": 12.9,
+    "mv": 104.7
+  },
+  "Crotonaldehyde": {
+    "dD": 16.2,
+    "dP": 14.9,
+    "dH": 7.4,
+    "mv": 82.5
+  },
+  "Crotonic Acid": {
+    "dD": 16.8,
+    "dP": 8.7,
+    "dH": 12.0,
+    "mv": 84.6
+  },
+  "Crotonlactone": {
+    "dD": 19.0,
+    "dP": 19.8,
+    "dH": 9.6,
+    "mv": 76.4
+  },
+  "Trans-Crotononitrile": {
+    "dD": 16.4,
+    "dP": 18.8,
+    "dH": 5.5,
+    "mv": 81.4
+  },
+  "Cyanamid (Carbamonitrile)": {
+    "dD": 15.5,
+    "dP": 27.6,
+    "dH": 16.8,
+    "mv": 32.8
+  },
+  "Cyanogen": {
+    "dD": 15.1,
+    "dP": 11.8,
+    "dH": 0.0,
+    "mv": 54.6
+  },
+  "Cyanogen Bromide": {
+    "dD": 18.3,
+    "dP": 15.2,
+    "dH": 0.0,
+    "mv": 52.6
+  },
+  "Cyanogen Chloride": {
+    "dD": 15.6,
+    "dP": 14.5,
+    "dH": 0.0,
+    "mv": 51.8
+  },
+  "Cyclobutanone": {
+    "dD": 18.3,
+    "dP": 11.4,
+    "dH": 5.2,
+    "mv": 73.4
+  },
+  "Cyclodecanone": {
+    "dD": 16.8,
+    "dP": 8.0,
+    "dH": 4.1,
+    "mv": 161.0
+  },
+  "Cycloheptanone": {
+    "dD": 17.2,
+    "dP": 10.6,
+    "dH": 4.8,
+    "mv": 118.2
+  },
+  "Cyclohexane": {
+    "dD": 16.8,
+    "dP": 0.0,
+    "dH": 0.2,
+    "mv": 108.7
+  },
+  "Cyclohexane-1,2-Dicarboxylic Acid Di-(Isononyl) Ether": {
+    "dD": 16.4,
+    "dP": 2.2,
+    "dH": 5.0,
+    "mv": 422.4
+  },
+  "1,2-Cyclohexanediol": {
+    "dD": 17.4,
+    "dP": 9.8,
+    "dH": 18.3,
+    "mv": 112.8
+  },
+  "1,2-Cyclohexanedione": {
+    "dD": 18.6,
+    "dP": 10.3,
+    "dH": 8.0,
+    "mv": 103.8
+  },
+  "Cyclohexanol": {
+    "dD": 17.4,
+    "dP": 4.1,
+    "dH": 13.5,
+    "mv": 106.0
+  },
+  "Cyclohexanone": {
+    "dD": 17.8,
+    "dP": 6.3,
+    "dH": 5.1,
+    "mv": 104.0
+  },
+  "Cyclohexene": {
+    "dD": 17.2,
+    "dP": 1.0,
+    "dH": 5.0,
+    "mv": 101.9
+  },
+  "Cycloheximide": {
+    "dD": 18.3,
+    "dP": 11.0,
+    "dH": 13.8,
+    "mv": 171.0
+  },
+  "Cyclohexyl Benzene": {
+    "dD": 18.7,
+    "dP": 0.0,
+    "dH": 1.0,
+    "mv": 169.9
+  },
+  "N-Cyclohexyl-2-Pyrrolidone": {
+    "dD": 18.2,
+    "dP": 6.8,
+    "dH": 6.5,
+    "mv": 163.0
+  },
+  "Cyclohexylamine": {
+    "dD": 17.2,
+    "dP": 3.1,
+    "dH": 6.5,
+    "mv": 113.8
+  },
+  "Cyclohexylchloride": {
+    "dD": 17.3,
+    "dP": 5.5,
+    "dH": 2.0,
+    "mv": 118.6
+  },
+  "Cyclooctanone": {
+    "dD": 17.0,
+    "dP": 9.6,
+    "dH": 4.5,
+    "mv": 131.7
+  },
+  "Cyclopentadiene": {
+    "dD": 17.2,
+    "dP": 1.9,
+    "dH": 6.1,
+    "mv": 82.1
+  },
+  "Cyclopentane": {
+    "dD": 16.4,
+    "dP": 0.0,
+    "dH": 1.8,
+    "mv": 94.9
+  },
+  "Cyclopentanone": {
+    "dD": 17.9,
+    "dP": 11.9,
+    "dH": 5.2,
+    "mv": 89.1
+  },
+  "Cyclopentene": {
+    "dD": 16.7,
+    "dP": 3.8,
+    "dH": 1.7,
+    "mv": 89.0
+  },
+  "2-Cyclopentenyl Alcohol": {
+    "dD": 18.1,
+    "dP": 7.6,
+    "dH": 15.6,
+    "mv": 86.2
+  },
+  "Cyclopropene": {
+    "dD": 17.2,
+    "dP": 2.4,
+    "dH": 2.0,
+    "mv": 50.0
+  },
+  "Cyclopropane": {
+    "dD": 17.6,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 58.3
+  },
+  "Cyclopropylmethylketone": {
+    "dD": 17.0,
+    "dP": 11.1,
+    "dH": 4.6,
+    "mv": 93.6
+  },
+  "Cyclopropylnitrile": {
+    "dD": 18.6,
+    "dP": 16.2,
+    "dH": 5.7,
+    "mv": 75.4
+  },
+  "d-Camphor": {
+    "dD": 17.8,
+    "dP": 9.4,
+    "dH": 4.7,
+    "mv": 153.7
+  },
+  "Cis-Decahydronaphthalene": {
+    "dD": 18.8,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 156.9
+  },
+  "Trans-Decahydronaphthalene": {
+    "dD": 18.0,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 156.9
+  },
+  "Decane": {
+    "dD": 15.7,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 195.9
+  },
+  "1-Decanol": {
+    "dD": 16.0,
+    "dP": 4.7,
+    "dH": 10.0,
+    "mv": 191.8
+  },
+  "2-Decanol": {
+    "dD": 15.8,
+    "dP": 3.9,
+    "dH": 10.0,
+    "mv": 192.8
+  },
+  "1-Decene": {
+    "dD": 15.8,
+    "dP": 1.0,
+    "dH": 2.2,
+    "mv": 190.6
+  },
+  "Di-(2-Chloroethoxy) Methane": {
+    "dD": 17.1,
+    "dP": 10.2,
+    "dH": 7.1,
+    "mv": 141.1
+  },
+  "Dibutyl Fumarate": {
+    "dD": 16.7,
+    "dP": 3.0,
+    "dH": 6.7,
+    "mv": 232.7
+  },
+  "Di-p-Tolyl Sulfoxide": {
+    "dD": 20.3,
+    "dP": 11.4,
+    "dH": 3.1,
+    "mv": 209.0
+  },
+  "Di-(2-Chloro-Isopropyl) Ether": {
+    "dD": 19.0,
+    "dP": 8.2,
+    "dH": 5.1,
+    "mv": 146.0
+  },
+  "Di-(2-Chloroethyl) Ether": {
+    "dD": 18.8,
+    "dP": 9.0,
+    "dH": 5.7,
+    "mv": 117.2
+  },
+  "Di-(2-Ethyl Hexyl)azelate": {
+    "dD": 16.7,
+    "dP": 1.4,
+    "dH": 4.8,
+    "mv": 449.9
+  },
+  "Di-(2-Ethyl Hexyl)sebacate": {
+    "dD": 16.8,
+    "dP": 1.0,
+    "dH": 4.7,
+    "mv": 468.7
+  },
+  "Di-(2-Methoxyethyl) Ether": {
+    "dD": 15.7,
+    "dP": 6.1,
+    "dH": 6.5,
+    "mv": 142.0
+  },
+  "Di-2-Ethyl Hexyl Amine": {
+    "dD": 15.6,
+    "dP": 0.8,
+    "dH": 3.2,
+    "mv": 301.5
+  },
+  "Di-2-Ethyl Hexyl Ether": {
+    "dD": 15.9,
+    "dP": 2.6,
+    "dH": 2.5,
+    "mv": 300.5
+  },
+  "Di-Isobutyl Carbinol": {
+    "dD": 14.9,
+    "dP": 3.1,
+    "dH": 10.8,
+    "mv": 177.8
+  },
+  "Di-Isobutyl Ketone": {
+    "dD": 16.0,
+    "dP": 3.7,
+    "dH": 4.1,
+    "mv": 177.1
+  },
+  "Di-Isobutyl Sulfoxide": {
+    "dD": 16.3,
+    "dP": 10.5,
+    "dH": 6.1,
+    "mv": 195.0
+  },
+  "Di-Isodecyl Phthalate": {
+    "dD": 16.6,
+    "dP": 6.2,
+    "dH": 2.6,
+    "mv": 464.2
+  },
+  "Di-Isoheptyl Phthalate": {
+    "dD": 16.8,
+    "dP": 7.2,
+    "dH": 3.4,
+    "mv": 364.9
+  },
+  "Di-Isononyl Adipate": {
+    "dD": 16.2,
+    "dP": 1.8,
+    "dH": 4.9,
+    "mv": 433.7
+  },
+  "Di-Isononyl Phthalate": {
+    "dD": 16.6,
+    "dP": 6.6,
+    "dH": 2.9,
+    "mv": 432.4
+  },
+  "Di-Isopropyl Methyl Phosphonate": {
+    "dD": 16.4,
+    "dP": 10.0,
+    "dH": 5.7,
+    "mv": 184.4
+  },
+  "Di-Isopropyl Phosphono?uoridate": {
+    "dD": 15.7,
+    "dP": 10.2,
+    "dH": 5.9,
+    "mv": 174.5
+  },
+  "Di-Isopropyl Sulfoxide": {
+    "dD": 17.0,
+    "dP": 11.5,
+    "dH": 7.4,
+    "mv": 159.9
+  },
+  "Di-n-Butyl Ether": {
+    "dD": 15.2,
+    "dP": 3.4,
+    "dH": 4.2,
+    "mv": 170.3
+  },
+  "Di-n-Butyl Sulfoxide": {
+    "dD": 16.4,
+    "dP": 10.5,
+    "dH": 6.1,
+    "mv": 195.0
+  },
+  "Di-n-Pentyl Ether": {
+    "dD": 15.6,
+    "dP": 3.1,
+    "dH": 3.0,
+    "mv": 203.2
+  },
+  "Di-n-Propyl Ether": {
+    "dD": 15.1,
+    "dP": 4.2,
+    "dH": 3.7,
+    "mv": 137.7
+  },
+  "Di-n-Propyl Sulfoxide": {
+    "dD": 17.0,
+    "dP": 13.0,
+    "dH": 7.4,
+    "mv": 159.9
+  },
+  "Diacetone Alcohol": {
+    "dD": 15.8,
+    "dP": 8.2,
+    "dH": 10.8,
+    "mv": 124.2
+  },
+  "Diallyl Amine": {
+    "dD": 15.6,
+    "dP": 4.5,
+    "dH": 6.7,
+    "mv": 124.1
+  },
+  "Diallyl Ether": {
+    "dD": 15.3,
+    "dP": 4.4,
+    "dH": 5.3,
+    "mv": 118.8
+  },
+  "1,1-Diallyloxyethane": {
+    "dD": 15.4,
+    "dP": 5.1,
+    "dH": 4.8,
+    "mv": 163.3
+  },
+  "Diazomethane": {
+    "dD": 14.7,
+    "dP": 6.1,
+    "dH": 11.3,
+    "mv": 78.1
+  },
+  "Dibasic Esters": {
+    "dD": 16.2,
+    "dP": 4.7,
+    "dH": 8.4,
+    "mv": 159.0
+  },
+  "Dibenzyl Ether": {
+    "dD": 19.6,
+    "dP": 3.4,
+    "dH": 5.2,
+    "mv": 197.4
+  },
+  "Dibenzyl Sebacate": {
+    "dD": 17.8,
+    "dP": 2.2,
+    "dH": 5.5,
+    "mv": 362.1
+  },
+  "1,1-Dibromo Ethylene": {
+    "dD": 15.1,
+    "dP": 4.8,
+    "dH": 7.0,
+    "mv": 85.3
+  },
+  "Dibromo Methane": {
+    "dD": 17.8,
+    "dP": 6.4,
+    "dH": 7.0,
+    "mv": 69.8
+  },
+  "o-Dibromobenzene": {
+    "dD": 20.7,
+    "dP": 6.5,
+    "dH": 5.3,
+    "mv": 120.0
+  },
+  "1,1-Dibromoethane": {
+    "dD": 18.5,
+    "dP": 8.4,
+    "dH": 8.8,
+    "mv": 91.4
+  },
+  "1,2-Dibromoethylene": {
+    "dD": 18.0,
+    "dP": 4.9,
+    "dH": 3.0,
+    "mv": 82.7
+  },
+  "2,3-Dibromoprene": {
+    "dD": 17.7,
+    "dP": 11.8,
+    "dH": 6.4,
+    "mv": 103.4
+  },
+  "Dibutyl Amine": {
+    "dD": 15.0,
+    "dP": 3.0,
+    "dH": 4.3,
+    "mv": 170.0
+  },
+  "N,N-Dibutyl Formamide": {
+    "dD": 15.5,
+    "dP": 8.9,
+    "dH": 6.2,
+    "mv": 182.0
+  },
+  "Dibutyl Ketone": {
+    "dD": 16.0,
+    "dP": 7.7,
+    "dH": 4.4,
+    "mv": 173.4
+  },
+  "Dibutyl Maleate": {
+    "dD": 16.5,
+    "dP": 6.1,
+    "dH": 7.2,
+    "mv": 230.4
+  },
+  "Dibutyl Phthalate": {
+    "dD": 17.8,
+    "dP": 8.6,
+    "dH": 4.1,
+    "mv": 266.0
+  },
+  "Dibutyl Sebacate": {
+    "dD": 16.7,
+    "dP": 4.5,
+    "dH": 4.1,
+    "mv": 339.0
+  },
+  "3,4-Dichloro": {
+    "dD": 20.0,
+    "dP": 4.7,
+    "dH": 2.4,
+    "mv": 145.5
+  },
+  "1,3-Dichloropropane": {
+    "dD": 18.6,
+    "dP": 8.2,
+    "dH": 3.0,
+    "mv": 95.1
+  },
+  "1,1-Dichloro-1-Nitroethane": {
+    "dD": 16.8,
+    "dP": 12.1,
+    "dH": 4.3,
+    "mv": 125.2
+  },
+  "2,3-Dichloro-1,3-Butadiene": {
+    "dD": 17.1,
+    "dP": 2.3,
+    "dH": 2.8,
+    "mv": 104.0
+  },
+  "1,3-Dichloro-2-butene": {
+    "dD": 16.9,
+    "dP": 7.8,
+    "dH": 2.7,
+    "mv": 107.7
+  },
+  "1,4-Dichloro-2-Butene": {
+    "dD": 17.8,
+    "dP": 7.6,
+    "dH": 2.0,
+    "mv": 97.8
+  },
+  "1,3-Dichloro-2-Fluorobenzene": {
+    "dD": 19.4,
+    "dP": 9.1,
+    "dH": 2.7,
+    "mv": 117.1
+  },
+  "1,3-Dichloro-2-Propanol": {
+    "dD": 17.5,
+    "dP": 9.9,
+    "dH": 14.6,
+    "mv": 95.5
+  },
+  "2,4-Dichloro-3-Fluoronitrobenzene": {
+    "dD": 19.9,
+    "dP": 7.2,
+    "dH": 4.2,
+    "mv": 140.0
+  },
+  "2,4-Dichloro-5-Nitrobenzotrifluoride": {
+    "dD": 19.9,
+    "dP": 7.6,
+    "dH": 3.7,
+    "mv": 162.0
+  },
+  "Dichloroacetaldehyde": {
+    "dD": 16.7,
+    "dP": 9.1,
+    "dH": 7.5,
+    "mv": 94.0
+  },
+  "Dichloroacetic Acid": {
+    "dD": 18.2,
+    "dP": 8.1,
+    "dH": 12.2,
+    "mv": 82.5
+  },
+  "1,1-Dichloroacetone": {
+    "dD": 17.1,
+    "dP": 7.6,
+    "dH": 5.4,
+    "mv": 97.3
+  },
+  "Dichloroacetonitrile": {
+    "dD": 17.4,
+    "dP": 9.4,
+    "dH": 6.4,
+    "mv": 80.3
+  },
+  "2,4-Dichloroaniline": {
+    "dD": 20.9,
+    "dP": 6.2,
+    "dH": 10.0,
+    "mv": 103.4
+  },
+  "2,6-Dichloroanisole": {
+    "dD": 19.8,
+    "dP": 8.4,
+    "dH": 6.5,
+    "mv": 137.1
+  },
+  "2,4-Dichlorobenzaldehyde": {
+    "dD": 19.7,
+    "dP": 8.8,
+    "dH": 5.4,
+    "mv": 135.7
+  },
+  "o-Dichlorobenzene": {
+    "dD": 19.2,
+    "dP": 6.3,
+    "dH": 3.3,
+    "mv": 112.8
+  },
+  "p-Dichlorobenzene": {
+    "dD": 19.7,
+    "dP": 5.6,
+    "dH": 2.7,
+    "mv": 118.6
+  },
+  "m-Dichlorobenzene": {
+    "dD": 19.7,
+    "dP": 5.1,
+    "dH": 2.7,
+    "mv": 114.8
+  },
+  "2,5-Dichlorobenzotrifluoride": {
+    "dD": 20.0,
+    "dP": 4.7,
+    "dH": 2.4,
+    "mv": 145.5
+  },
+  "1,4-Dichlorobutane": {
+    "dD": 18.3,
+    "dP": 7.7,
+    "dH": 2.8,
+    "mv": 109.5
+  },
+  "Dichlorodifluoromethane (Freon 12)": {
+    "dD": 12.3,
+    "dP": 2.0,
+    "dH": 0.0,
+    "mv": 92.3
+  },
+  "1,1-Dichloroethane": {
+    "dD": 16.5,
+    "dP": 7.8,
+    "dH": 3.0,
+    "mv": 84.2
+  },
+  "N,N-Dichloromethyl Amine": {
+    "dD": 16.8,
+    "dP": 7.6,
+    "dH": 8.0,
+    "mv": 90.8
+  },
+  "1,1-Dichloroethylene": {
+    "dD": 16.4,
+    "dP": 5.2,
+    "dH": 2.4,
+    "mv": 79.9
+  },
+  "1,2-Dichloroethylene (cis)": {
+    "dD": 17.0,
+    "dP": 8.0,
+    "dH": 3.2,
+    "mv": 75.5
+  },
+  "N,N-Dichloroethyl Amine": {
+    "dD": 16.8,
+    "dP": 7.6,
+    "dH": 7.7,
+    "mv": 98.3
+  },
+  "Dichloromethyl Methyl Ether": {
+    "dD": 17.1,
+    "dP": 12.9,
+    "dH": 6.5,
+    "mv": 90.5
+  },
+  "Dichloromonofluoromethane (Freon 21)": {
+    "dD": 15.8,
+    "dP": 3.1,
+    "dH": 5.7,
+    "mv": 75.4
+  },
+  "2,3-Dichloronitrobenzene": {
+    "dD": 19.7,
+    "dP": 12.6,
+    "dH": 4.4,
+    "mv": 132.5
+  },
+  "3,4-Dichloronitrobenzene": {
+    "dD": 20.1,
+    "dP": 7.2,
+    "dH": 4.1,
+    "mv": 130.6
+  },
+  "2,4-Dichloronitrobenzene": {
+    "dD": 20.4,
+    "dP": 8.7,
+    "dH": 4.2,
+    "mv": 133.4
+  },
+  "1,5-Dichloropentane": {
+    "dD": 19.0,
+    "dP": 7.8,
+    "dH": 1.5,
+    "mv": 127.5
+  },
+  "2,5-Dichlorophenol": {
+    "dD": 20.0,
+    "dP": 6.3,
+    "dH": 12.1,
+    "mv": 119.0
+  },
+  "2,6-Dichlorophenol": {
+    "dD": 20.1,
+    "dP": 7.5,
+    "dH": 10.9,
+    "mv": 119.0
+  },
+  "2,4-Dichlorophenol": {
+    "dD": 20.0,
+    "dP": 7.2,
+    "dH": 13.1,
+    "mv": 119.0
+  },
+  "3,4-Dichlorophenyl Acetonitrile": {
+    "dD": 20.5,
+    "dP": 10.8,
+    "dH": 4.4,
+    "mv": 148.8
+  },
+  "1,1-Dichloropropane": {
+    "dD": 16.1,
+    "dP": 7.8,
+    "dH": 3.5,
+    "mv": 98.3
+  },
+  "2,3-Dichloropropanol": {
+    "dD": 17.5,
+    "dP": 9.2,
+    "dH": 14.6,
+    "mv": 95.2
+  },
+  "2,3-Dichloropropene": {
+    "dD": 16.2,
+    "dP": 7.8,
+    "dH": 3.0,
+    "mv": 91.6
+  },
+  "1,1-Dichloropropene": {
+    "dD": 16.9,
+    "dP": 6.7,
+    "dH": 2.9,
+    "mv": 93.5
+  },
+  "1,2-Dichloropropene (cis)": {
+    "dD": 17.0,
+    "dP": 8.5,
+    "dH": 2.9,
+    "mv": 93.9
+  },
+  "1,2-Dichlorotetrafluoroethane": {
+    "dD": 12.6,
+    "dP": 1.8,
+    "dH": 0.0,
+    "mv": 117.6
+  },
+  "3,4-Dichlorotoluene": {
+    "dD": 19.8,
+    "dP": 9.8,
+    "dH": 2.5,
+    "mv": 128.7
+  },
+  "1,2-Dichlorovinyl Ethyl Ether": {
+    "dD": 16.9,
+    "dP": 10.5,
+    "dH": 6.0,
+    "mv": 117.8
+  },
+  "Diethanolamine": {
+    "dD": 17.2,
+    "dP": 10.8,
+    "dH": 21.2,
+    "mv": 95.9
+  },
+  "1,1-Diethoxy Butane": {
+    "dD": 15.4,
+    "dP": 4.9,
+    "dH": 4.6,
+    "mv": 177.6
+  },
+  "Diethoxy Disulfide": {
+    "dD": 15.1,
+    "dP": 8.3,
+    "dH": 7.4,
+    "mv": 141.5
+  },
+  "1,1-Diethoxy Ethane": {
+    "dD": 15.0,
+    "dP": 3.4,
+    "dH": 4.0,
+    "mv": 143.9
+  },
+  "1,1-Diethoxy Ethane (Acetal)": {
+    "dD": 15.2,
+    "dP": 5.4,
+    "dH": 5.3,
+    "mv": 142.2
+  },
+  "2,5-Diethoxy Tetrahydrofuran": {
+    "dD": 16.6,
+    "dP": 6.4,
+    "dH": 7.3,
+    "mv": 165.7
+  },
+  "N,N-Diethyl Acetamide": {
+    "dD": 16.4,
+    "dP": 11.3,
+    "dH": 7.5,
+    "mv": 124.5
+  },
+  "Diethyl Amine": {
+    "dD": 14.9,
+    "dP": 2.3,
+    "dH": 6.1,
+    "mv": 103.2
+  },
+  "p-Diethyl Benzene": {
+    "dD": 18.0,
+    "dP": 0.0,
+    "dH": 0.6,
+    "mv": 156.9
+  },
+  "1,2-Diethyl Benzene": {
+    "dD": 17.7,
+    "dP": 0.1,
+    "dH": 1.0,
+    "mv": 153.5
+  },
+  "Diethyl Carbonate": {
+    "dD": 15.1,
+    "dP": 6.3,
+    "dH": 3.5,
+    "mv": 121.0
+  },
+  "Diethyl Ether": {
+    "dD": 14.5,
+    "dP": 2.9,
+    "dH": 5.1,
+    "mv": 104.8
+  },
+  "N,N-Diethyl Formamide": {
+    "dD": 16.4,
+    "dP": 11.4,
+    "dH": 9.2,
+    "mv": 111.4
+  },
+  "Diethyl Ketone": {
+    "dD": 15.8,
+    "dP": 7.6,
+    "dH": 4.7,
+    "mv": 106.4
+  },
+  "Diethyl Malonate": {
+    "dD": 16.1,
+    "dP": 7.7,
+    "dH": 8.3,
+    "mv": 152.5
+  },
+  "Diethyl Oxalate": {
+    "dD": 16.2,
+    "dP": 8.0,
+    "dH": 8.8,
+    "mv": 136.6
+  },
+  "Diethyl Phthalate": {
+    "dD": 17.6,
+    "dP": 9.6,
+    "dH": 4.5,
+    "mv": 198.0
+  },
+  "Diethyl Sulfate": {
+    "dD": 15.7,
+    "dP": 14.7,
+    "dH": 7.1,
+    "mv": 131.5
+  },
+  "Diethyl Sulfide": {
+    "dD": 16.8,
+    "dP": 3.1,
+    "dH": 2.0,
+    "mv": 107.4
+  },
+  "2-(Diethylamino) Ethanol": {
+    "dD": 14.9,
+    "dP": 5.8,
+    "dH": 12.0,
+    "mv": 133.2
+  },
+  "Diethyldisulfide": {
+    "dD": 16.7,
+    "dP": 6.7,
+    "dH": 5.7,
+    "mv": 123.1
+  },
+  "Diethylene Glycol": {
+    "dD": 16.6,
+    "dP": 12.0,
+    "dH": 20.7,
+    "mv": 94.9
+  },
+  "Diethylene Glycol Butyl Ether Acetate": {
+    "dD": 16.0,
+    "dP": 4.1,
+    "dH": 8.2,
+    "mv": 208.2
+  },
+  "Diethylene Glycol Dibutyl Ether": {
+    "dD": 15.8,
+    "dP": 4.7,
+    "dH": 4.4,
+    "mv": 248.1
+  },
+  "Diethylene Glycol Diethyl Ether": {
+    "dD": 15.8,
+    "dP": 5.9,
+    "dH": 5.6,
+    "mv": 179.8
+  },
+  "Diethylene Glycol Divinyl Ether": {
+    "dD": 16.0,
+    "dP": 7.3,
+    "dH": 7.9,
+    "mv": 164.1
+  },
+  "Diethylene Glycol Hexyl Ether": {
+    "dD": 16.0,
+    "dP": 6.0,
+    "dH": 10.0,
+    "mv": 204.3
+  },
+  "Diethylene Glycol Methyl t-Butyl": {
+    "dD": 16.0,
+    "dP": 7.2,
+    "dH": 7.2,
+    "mv": 193.9
+  },
+  "Diethylene Glycol Monobutyl Ether": {
+    "dD": 16.0,
+    "dP": 7.0,
+    "dH": 10.6,
+    "mv": 170.6
+  },
+  "Diethylene Glycol Monoethyl Ether": {
+    "dD": 16.2,
+    "dP": 5.1,
+    "dH": 9.2,
+    "mv": 175.5
+  },
+  "Diethylene Glycol Monomethyl Ether": {
+    "dD": 16.2,
+    "dP": 7.8,
+    "dH": 12.6,
+    "mv": 118.0
+  },
+  "Diethylene Glycol Monopropyl Ether": {
+    "dD": 16.0,
+    "dP": 7.2,
+    "dH": 11.3,
+    "mv": 153.9
+  },
+  "Diethylenetriamine": {
+    "dD": 16.7,
+    "dP": 13.3,
+    "dH": 14.3,
+    "mv": 108.0
+  },
+  "o-Difluorobenzene": {
+    "dD": 18.0,
+    "dP": 9.0,
+    "dH": 1.0,
+    "mv": 98.5
+  },
+  "2,6-Difluorobenzonitrile": {
+    "dD": 18.8,
+    "dP": 11.2,
+    "dH": 3.2,
+    "mv": 111.6
+  },
+  "3,5-Difluorobenzonitrile": {
+    "dD": 18.8,
+    "dP": 11.2,
+    "dH": 3.2,
+    "mv": 111.6
+  },
+  "1,1-Difluoroethane": {
+    "dD": 14.9,
+    "dP": 10.2,
+    "dH": 3.0,
+    "mv": 69.5
+  },
+  "1,1-Difluoroethylene": {
+    "dD": 15.0,
+    "dP": 6.8,
+    "dH": 3.6,
+    "mv": 58.2
+  },
+  "2,4-Difluoronitrobenzene": {
+    "dD": 19.4,
+    "dP": 11.0,
+    "dH": 3.7,
+    "mv": 109.6
+  },
+  "Dihexyl Ether": {
+    "dD": 16.0,
+    "dP": 3.0,
+    "dH": 2.8,
+    "mv": 235.8
+  },
+  "Dihexyl Phthalate": {
+    "dD": 17.0,
+    "dP": 7.6,
+    "dH": 3.6,
+    "mv": 332.3
+  },
+  "Dihydrogen Disulfide": {
+    "dD": 6.3,
+    "dP": 10.7,
+    "dH": 49.6,
+    "mv": 0
+  },
+  "Dihydropyran": {
+    "dD": 17.5,
+    "dP": 5.5,
+    "dH": 5.7,
+    "mv": 91.2
+  },
+  "1,4-Dihydroxybenzene (1,4-Benzenediol)": {
+    "dD": 21.0,
+    "dP": 10.2,
+    "dH": 27.2,
+    "mv": 82.7
+  },
+  "1,2-Dihydroxybenzene (Catechol)": {
+    "dD": 20.0,
+    "dP": 11.3,
+    "dH": 21.8,
+    "mv": 81.9
+  },
+  "Diisobutyl Adipate": {
+    "dD": 16.7,
+    "dP": 2.5,
+    "dH": 6.2,
+    "mv": 269.6
+  },
+  "Diisopropylamine": {
+    "dD": 14.8,
+    "dP": 1.7,
+    "dH": 3.5,
+    "mv": 141.1
+  },
+  "Diketene": {
+    "dD": 16.2,
+    "dP": 15.1,
+    "dH": 8.1,
+    "mv": 75.9
+  },
+  "1,3-Dimethoxy Butane": {
+    "dD": 15.6,
+    "dP": 5.5,
+    "dH": 5.2,
+    "mv": 140.0
+  },
+  "1,1-Dimethoxy Ethane": {
+    "dD": 15.1,
+    "dP": 4.9,
+    "dH": 4.9,
+    "mv": 106.7
+  },
+  "2,6-Dimethoxy Phenol": {
+    "dD": 19.3,
+    "dP": 7.6,
+    "dH": 13.7,
+    "mv": 136.4
+  },
+  "1,2-Dimethoxybenzene": {
+    "dD": 19.2,
+    "dP": 4.4,
+    "dH": 9.4,
+    "mv": 127.7
+  },
+  "2,5-Dimethoxytetrahydrofuran": {
+    "dD": 16.8,
+    "dP": 7.2,
+    "dH": 8.2,
+    "mv": 129.6
+  },
+  "N,N-Dimethyl Acetamide": {
+    "dD": 16.8,
+    "dP": 11.5,
+    "dH": 10.2,
+    "mv": 92.5
+  },
+  "Dimethyl Acetylene": {
+    "dD": 15.1,
+    "dP": 3.4,
+    "dH": 7.6,
+    "mv": 78.9
+  },
+  "Dimethyl Amine": {
+    "dD": 15.3,
+    "dP": 4.8,
+    "dH": 11.2,
+    "mv": 66.2
+  },
+  "Dimethyl Amine-Dimer": {
+    "dD": 15.3,
+    "dP": 4.8,
+    "dH": 7.9,
+    "mv": 132.4
+  },
+  "N,N-Dimethyl Butyramide": {
+    "dD": 16.4,
+    "dP": 10.6,
+    "dH": 7.4,
+    "mv": 127.8
+  },
+  "Dimethyl Carbonate": {
+    "dD": 15.5,
+    "dP": 3.9,
+    "dH": 9.7,
+    "mv": 84.2
+  },
+  "Dimethyl Cellosolve": {
+    "dD": 15.4,
+    "dP": 6.0,
+    "dH": 6.0,
+    "mv": 104.5
+  },
+  "Dimethyl Diethylene Glycol": {
+    "dD": 15.8,
+    "dP": 6.1,
+    "dH": 9.2,
+    "mv": 142.0
+  },
+  "Dimethyl Diketone": {
+    "dD": 15.7,
+    "dP": 5.3,
+    "dH": 11.7,
+    "mv": 88.2
+  },
+  "Dimethyl Disulfide": {
+    "dD": 17.3,
+    "dP": 7.8,
+    "dH": 6.5,
+    "mv": 88.6
+  },
+  "Dimethyl Ethanolamine": {
+    "dD": 16.1,
+    "dP": 9.2,
+    "dH": 15.3,
+    "mv": 101.1
+  },
+  "Dimethyl Ether": {
+    "dD": 15.2,
+    "dP": 6.1,
+    "dH": 5.7,
+    "mv": 63.2
+  },
+  "Dimethyl Formamide": {
+    "dD": 17.4,
+    "dP": 13.7,
+    "dH": 11.3,
+    "mv": 77.0
+  },
+  "1,1-Dimethyl Hydrazine": {
+    "dD": 15.3,
+    "dP": 5.9,
+    "dH": 11.0,
+    "mv": 76.0
+  },
+  "Dimethyl Ketene": {
+    "dD": 15.2,
+    "dP": 7.4,
+    "dH": 4.8,
+    "mv": 87.6
+  },
+  "Dimethyl Maleate": {
+    "dD": 16.3,
+    "dP": 8.3,
+    "dH": 9.8,
+    "mv": 125.8
+  },
+  "Dimethyl Methyl Phosphonate": {
+    "dD": 16.7,
+    "dP": 13.1,
+    "dH": 7.5,
+    "mv": 106.9
+  },
+  "2,6-Dimethyl Phenol": {
+    "dD": 19.1,
+    "dP": 4.9,
+    "dH": 12.9,
+    "mv": 116.3
+  },
+  "3,4-Dimethyl Phenol": {
+    "dD": 19.2,
+    "dP": 6.0,
+    "dH": 13.4,
+    "mv": 121.0
+  },
+  "Dimethyl Phthalate": {
+    "dD": 18.6,
+    "dP": 10.8,
+    "dH": 4.9,
+    "mv": 163.0
+  },
+  "2,5-Dimethyl Pyrrole": {
+    "dD": 18.3,
+    "dP": 7.6,
+    "dH": 6.8,
+    "mv": 101.8
+  },
+  "Dimethyl Sebacate": {
+    "dD": 16.6,
+    "dP": 2.9,
+    "dH": 6.7,
+    "mv": 233.3
+  },
+  "Dimethyl Sulfate": {
+    "dD": 17.7,
+    "dP": 17.0,
+    "dH": 9.7,
+    "mv": 94.7
+  },
+  "Dimethyl Sulfide": {
+    "dD": 16.1,
+    "dP": 6.4,
+    "dH": 7.4,
+    "mv": 73.2
+  },
+  "Dimethyl Sulfone": {
+    "dD": 19.0,
+    "dP": 19.4,
+    "dH": 12.3,
+    "mv": 75.0
+  },
+  "Dimethyl Sulfoxide": {
+    "dD": 18.4,
+    "dP": 16.4,
+    "dH": 10.2,
+    "mv": 71.3
+  },
+  "2,3-Dimethyl-1-Butene": {
+    "dD": 14.9,
+    "dP": 1.2,
+    "dH": 2.8,
+    "mv": 125.2
+  },
+  "2,2-Dimethyl-1-Propanol (Neopentyl": {
+    "dD": 15.6,
+    "dP": 6.5,
+    "dH": 13.5,
+    "mv": 107.5
+  },
+  "2,4-Dimethylaniline": {
+    "dD": 19.2,
+    "dP": 5.2,
+    "dH": 8.7,
+    "mv": 123.7
+  },
+  "3,5-Dinitrophenol": {
+    "dD": 19.5,
+    "dP": 12.9,
+    "dH": 14.4,
+    "mv": 108.2
+  },
+  "1,2-Dinitrobenzene": {
+    "dD": 20.6,
+    "dP": 22.7,
+    "dH": 5.4,
+    "mv": 107.4
+  },
+  "3,4-Dinitrophenol": {
+    "dD": 19.5,
+    "dP": 12.8,
+    "dH": 14.3,
+    "mv": 110.1
+  },
+  "2,4-Dinitrotoluene": {
+    "dD": 20.0,
+    "dP": 13.1,
+    "dH": 4.9,
+    "mv": 137.9
+  },
+  "Dioctyl Adipate": {
+    "dD": 16.7,
+    "dP": 2.0,
+    "dH": 5.1,
+    "mv": 400.0
+  },
+  "Dioctyl Phthalate": {
+    "dD": 16.6,
+    "dP": 7.0,
+    "dH": 3.1,
+    "mv": 377.0
+  },
+  "1,4-Dioxane": {
+    "dD": 19.0,
+    "dP": 1.8,
+    "dH": 7.4,
+    "mv": 85.7
+  },
+  "1,3-Dioxolane": {
+    "dD": 18.1,
+    "dP": 6.6,
+    "dH": 9.3,
+    "mv": 69.9
+  },
+  "Dipentene": {
+    "dD": 17.2,
+    "dP": 1.8,
+    "dH": 4.3,
+    "mv": 162.9
+  },
+  "Diphenyl Ether": {
+    "dD": 19.5,
+    "dP": 3.4,
+    "dH": 5.8,
+    "mv": 160.4
+  },
+  "Diphenyl Sulfone": {
+    "dD": 21.1,
+    "dP": 14.4,
+    "dH": 3.4,
+    "mv": 174.3
+  },
+  "Diphenylamine": {
+    "dD": 20.0,
+    "dP": 3.3,
+    "dH": 5.9,
+    "mv": 145.9
+  },
+  "Diphenylmethane": {
+    "dD": 19.5,
+    "dP": 1.0,
+    "dH": 1.0,
+    "mv": 168.2
+  },
+  "Dipropyl Amine": {
+    "dD": 15.3,
+    "dP": 1.4,
+    "dH": 4.1,
+    "mv": 136.9
+  },
+  "Dipropyl Ketone": {
+    "dD": 15.8,
+    "dP": 5.7,
+    "dH": 4.9,
+    "mv": 140.8
+  },
+  "Dipropylene Glycol": {
+    "dD": 16.5,
+    "dP": 10.6,
+    "dH": 17.7,
+    "mv": 130.9
+  },
+  "Dipropylene Glycol Methyl Ether": {
+    "dD": 15.5,
+    "dP": 5.7,
+    "dH": 11.2,
+    "mv": 157.4
+  },
+  "Dipropylene Glycol Mono n-Butyl Ether": {
+    "dD": 15.7,
+    "dP": 6.5,
+    "dH": 10.0,
+    "mv": 211.2
+  },
+  "Dipropylene Glycol Mono n-Propyl Ether": {
+    "dD": 15.6,
+    "dP": 6.1,
+    "dH": 11.0,
+    "mv": 185.6
+  },
+  "Dipropylene Glycol Monomethyl Ether Acetate": {
+    "dD": 16.3,
+    "dP": 4.9,
+    "dH": 8.0,
+    "mv": 195.7
+  },
+  "2,3-Dithiabutane": {
+    "dD": 17.3,
+    "dP": 7.8,
+    "dH": 6.5,
+    "mv": 88.6
+  },
+  "Ditridecyl Phthalate": {
+    "dD": 16.6,
+    "dP": 5.4,
+    "dH": 1.9,
+    "mv": 558.3
+  },
+  "p-Divinyl Benzene": {
+    "dD": 18.6,
+    "dP": 1.0,
+    "dH": 7.0,
+    "mv": 142.8
+  },
+  "Divinyl Sulfide": {
+    "dD": 16.5,
+    "dP": 4.6,
+    "dH": 5.6,
+    "mv": 93.6
+  },
+  "Dodecane": {
+    "dD": 16.0,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 228.6
+  },
+  "Dodecanol": {
+    "dD": 16.0,
+    "dP": 4.0,
+    "dH": 9.3,
+    "mv": 224.5
+  },
+  "Dopamine": {
+    "dD": 18.2,
+    "dP": 10.3,
+    "dH": 19.5,
+    "mv": 183.0
+  },
+  "Eicosane": {
+    "dD": 16.5,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 359.8
+  },
+  "Epichlorohydrin": {
+    "dD": 18.9,
+    "dP": 7.6,
+    "dH": 6.6,
+    "mv": 78.4
+  },
+  "1,2-Epoxy Butane": {
+    "dD": 15.6,
+    "dP": 8.0,
+    "dH": 4.6,
+    "mv": 87.9
+  },
+  "3,4-Epoxy-1-Butene": {
+    "dD": 16.6,
+    "dP": 7.7,
+    "dH": 7.4,
+    "mv": 80.7
+  },
+  "1,2-Epoxy-2-Propene": {
+    "dD": 16.5,
+    "dP": 8.6,
+    "dH": 6.7,
+    "mv": 70.0
+  },
+  "Epsilon-Caprolactam": {
+    "dD": 19.4,
+    "dP": 13.8,
+    "dH": 3.9,
+    "mv": 110.7
+  },
+  "1,2-Ethane Dithiol": {
+    "dD": 17.9,
+    "dP": 7.2,
+    "dH": 8.7,
+    "mv": 83.9
+  },
+  "Ethanesulfonylchloride": {
+    "dD": 17.7,
+    "dP": 14.9,
+    "dH": 6.8,
+    "mv": 94.7
+  },
+  "Ethanethiol (Ethyl Mercaptan)": {
+    "dD": 15.7,
+    "dP": 6.5,
+    "dH": 7.1,
+    "mv": 74.3
+  },
+  "Ethanol": {
+    "dD": 15.8,
+    "dP": 8.8,
+    "dH": 19.4,
+    "mv": 58.5
+  },
+  "Ethanolamine": {
+    "dD": 17.0,
+    "dP": 15.5,
+    "dH": 21.2,
+    "mv": 59.8
+  },
+  "4-Ethoxy Acetophenone": {
+    "dD": 18.8,
+    "dP": 10.3,
+    "dH": 6.4,
+    "mv": 162.6
+  },
+  "1-Ethoxy Ethoxy-2-Propanol": {
+    "dD": 15.9,
+    "dP": 5.7,
+    "dH": 11.7,
+    "mv": 156.0
+  },
+  "3-Ethoxy Propionaldehyde": {
+    "dD": 16.0,
+    "dP": 8.8,
+    "dH": 7.4,
+    "mv": 112.1
+  },
+  "Ethoxyethyl Propionate": {
+    "dD": 16.2,
+    "dP": 3.3,
+    "dH": 8.8,
+    "mv": 155.5
+  },
+  "Ethyl Acetate": {
+    "dD": 15.8,
+    "dP": 5.3,
+    "dH": 7.2,
+    "mv": 98.5
+  },
+  "Ethyl Aceto Acetate (Keto)": {
+    "dD": 16.5,
+    "dP": 10.8,
+    "dH": 8.3,
+    "mv": 125.6
+  },
+  "Ethyl Acetylene": {
+    "dD": 15.1,
+    "dP": 3.4,
+    "dH": 5.0,
+    "mv": 81.5
+  },
+  "Ethyl Acrylate": {
+    "dD": 15.5,
+    "dP": 7.1,
+    "dH": 5.5,
+    "mv": 108.8
+  },
+  "Ethyl Amine": {
+    "dD": 15.0,
+    "dP": 5.6,
+    "dH": 10.7,
+    "mv": 65.6
+  },
+  "Ethyl Amyl Ketone": {
+    "dD": 16.2,
+    "dP": 4.5,
+    "dH": 4.1,
+    "mv": 156.0
+  },
+  "Ethyl Benzene": {
+    "dD": 17.8,
+    "dP": 0.6,
+    "dH": 1.4,
+    "mv": 123.1
+  },
+  "Ethyl Benzoate": {
+    "dD": 17.9,
+    "dP": 6.2,
+    "dH": 6.0,
+    "mv": 144.3
+  },
+  "Ethyl Bromide": {
+    "dD": 16.5,
+    "dP": 8.4,
+    "dH": 2.3,
+    "mv": 74.6
+  },
+  "Ethyl Butyl Ketone": {
+    "dD": 16.2,
+    "dP": 5.0,
+    "dH": 4.1,
+    "mv": 139.0
+  },
+  "Ethyl Butyrate": {
+    "dD": 15.5,
+    "dP": 5.6,
+    "dH": 5.0,
+    "mv": 132.9
+  },
+  "Ethyl Caproate": {
+    "dD": 15.5,
+    "dP": 3.2,
+    "dH": 5.9,
+    "mv": 149.6
+  },
+  "Ethyl Carbamate": {
+    "dD": 16.8,
+    "dP": 10.1,
+    "dH": 13.0,
+    "mv": 91.2
+  },
+  "Ethyl Carbylamine": {
+    "dD": 15.6,
+    "dP": 15.2,
+    "dH": 5.8,
+    "mv": 74.4
+  },
+  "Ethyl Chloride": {
+    "dD": 15.7,
+    "dP": 6.1,
+    "dH": 2.9,
+    "mv": 70.0
+  },
+  "Ethyl Chloroformate": {
+    "dD": 15.5,
+    "dP": 10.0,
+    "dH": 6.7,
+    "mv": 95.6
+  },
+  "Ethyl Cinnamate": {
+    "dD": 18.4,
+    "dP": 8.2,
+    "dH": 4.1,
+    "mv": 166.8
+  },
+  "2-Ethyl Croton Aldehyde": {
+    "dD": 16.1,
+    "dP": 8.0,
+    "dH": 5.5,
+    "mv": 115.2
+  },
+  "Ethyl Cyanoacetate": {
+    "dD": 16.7,
+    "dP": 7.9,
+    "dH": 8.3,
+    "mv": 107.1
+  },
+  "Ethyl Cyanoacrylate": {
+    "dD": 15.2,
+    "dP": 10.3,
+    "dH": 9.0,
+    "mv": 117.1
+  },
+  "Ethyl Ethynylether": {
+    "dD": 15.4,
+    "dP": 7.9,
+    "dH": 5.9,
+    "mv": 87.6
+  },
+  "N-Ethyl Formamide": {
+    "dD": 17.2,
+    "dP": 10.0,
+    "dH": 14.0,
+    "mv": 76.5
+  },
+  "Ethyl Formate": {
+    "dD": 15.5,
+    "dP": 8.4,
+    "dH": 8.4,
+    "mv": 80.2
+  },
+  "2-Ethyl Hexyl Acetate": {
+    "dD": 15.8,
+    "dP": 2.9,
+    "dH": 5.1,
+    "mv": 196.0
+  },
+  "2-Ethyl Hexyl Acrylate": {
+    "dD": 14.8,
+    "dP": 4.7,
+    "dH": 3.4,
+    "mv": 208.2
+  },
+  "Mono 2-Ethyl-Hexyl Phthalate (MEHP)": {
+    "dD": 17.3,
+    "dP": 6.2,
+    "dH": 6.8,
+    "mv": 265.0
+  },
+  "Ethyl Hypochlorite": {
+    "dD": 15.7,
+    "dP": 8.6,
+    "dH": 6.5,
+    "mv": 79.5
+  },
+  "Ethyl Iodide": {
+    "dD": 17.3,
+    "dP": 7.9,
+    "dH": 7.2,
+    "mv": 81.2
+  },
+  "Ethyl Isocyanate": {
+    "dD": 15.4,
+    "dP": 12.0,
+    "dH": 2.5,
+    "mv": 78.7
+  },
+  "Ethyl Isopropenyl Ether": {
+    "dD": 14.8,
+    "dP": 3.5,
+    "dH": 5.1,
+    "mv": 113.3
+  },
+  "Ethyl Isothiocyanate": {
+    "dD": 17.2,
+    "dP": 14.7,
+    "dH": 9.0,
+    "mv": 87.1
+  },
+  "Ethyl Lactate": {
+    "dD": 16.0,
+    "dP": 7.6,
+    "dH": 12.5,
+    "mv": 115.0
+  },
+  "Ethyl Methacrylate": {
+    "dD": 15.8,
+    "dP": 7.2,
+    "dH": 7.5,
+    "mv": 125.8
+  },
+  "Ethyl Methyl Sulfide": {
+    "dD": 17.1,
+    "dP": 4.8,
+    "dH": 2.5,
+    "mv": 91.2
+  },
+  "4-Ethyl Morpholine": {
+    "dD": 17.7,
+    "dP": 5.0,
+    "dH": 6.6,
+    "mv": 116.5
+  },
+  "Ethyl Oleate": {
+    "dD": 14.5,
+    "dP": 3.8,
+    "dH": 3.7,
+    "mv": 357.3
+  },
+  "4-Ethyl Phenol": {
+    "dD": 19.2,
+    "dP": 5.3,
+    "dH": 12.8,
+    "mv": 118.6
+  },
+  "Ethyl Propionate": {
+    "dD": 15.5,
+    "dP": 6.1,
+    "dH": 4.9,
+    "mv": 115.5
+  },
+  "Ethyl Thiocyanate": {
+    "dD": 15.4,
+    "dP": 13.4,
+    "dH": 5.4,
+    "mv": 87.1
+  },
+  "1-Ethyl Vinyl Ethyl Ether": {
+    "dD": 15.3,
+    "dP": 4.2,
+    "dH": 4.6,
+    "mv": 125.6
+  },
+  "Ethyl Vinylether": {
+    "dD": 14.9,
+    "dP": 4.9,
+    "dH": 5.6,
+    "mv": 94.9
+  },
+  "Ethyl Vinylketone": {
+    "dD": 15.8,
+    "dP": 11.3,
+    "dH": 4.5,
+    "mv": 99.3
+  },
+  "2-Ethyl-1-Butanol": {
+    "dD": 15.8,
+    "dP": 4.3,
+    "dH": 13.5,
+    "mv": 123.2
+  },
+  "2-Ethyl-1-Butene": {
+    "dD": 14.9,
+    "dP": 1.7,
+    "dH": 3.5,
+    "mv": 123.1
+  },
+  "Ethyl-1-Propynylether": {
+    "dD": 15.9,
+    "dP": 6.4,
+    "dH": 5.4,
+    "mv": 101.6
+  },
+  "2-Ethyl-1,3-Butadiene": {
+    "dD": 15.3,
+    "dP": 1.6,
+    "dH": 3.8,
+    "mv": 115.2
+  },
+  "N-Ethyl-2-Pyrrolidone": {
+    "dD": 18.0,
+    "dP": 12.0,
+    "dH": 7.0,
+    "mv": 113.9
+  },
+  "2-Ethyl-hexanol": {
+    "dD": 15.9,
+    "dP": 3.3,
+    "dH": 11.8,
+    "mv": 156.6
+  },
+  "Ethylene": {
+    "dD": 15.0,
+    "dP": 2.0,
+    "dH": 3.8,
+    "mv": 63.0
+  },
+  "Ethylene Carbonate": {
+    "dD": 19.4,
+    "dP": 21.7,
+    "dH": 5.1,
+    "mv": 66.0
+  },
+  "Ethylene Chlorohydrin": {
+    "dD": 16.9,
+    "dP": 8.8,
+    "dH": 17.2,
+    "mv": 67.3
+  },
+  "Ethylene Cyanohydrin": {
+    "dD": 17.2,
+    "dP": 18.8,
+    "dH": 17.6,
+    "mv": 68.3
+  },
+  "Ethylene Dibromide": {
+    "dD": 19.2,
+    "dP": 3.5,
+    "dH": 8.6,
+    "mv": 87.0
+  },
+  "Ethylene Dichloride": {
+    "dD": 19.0,
+    "dP": 7.4,
+    "dH": 4.1,
+    "mv": 79.4
+  },
+  "Ethylene Dinitrate": {
+    "dD": 16.2,
+    "dP": 13.0,
+    "dH": 4.5,
+    "mv": 101.7
+  },
+  "Ethylene Glycol": {
+    "dD": 17.0,
+    "dP": 11.0,
+    "dH": 26.0,
+    "mv": 55.8
+  },
+  "Ethylene Glycol Butyl Ether Acetate": {
+    "dD": 15.3,
+    "dP": 4.5,
+    "dH": 8.8,
+    "mv": 171.2
+  },
+  "Ethylene Glycol Butyl Ethyl Ether": {
+    "dD": 15.3,
+    "dP": 4.9,
+    "dH": 4.6,
+    "mv": 175.5
+  },
+  "Ethylene Glycol Butyl Methyl Ether": {
+    "dD": 15.5,
+    "dP": 5.2,
+    "dH": 4.9,
+    "mv": 157.2
+  },
+  "Ethylene Glycol Di-t-Butyl Ether": {
+    "dD": 14.7,
+    "dP": 4.1,
+    "dH": 8.2,
+    "mv": 210.0
+  },
+  "Ethylene Glycol Diacetate": {
+    "dD": 16.2,
+    "dP": 4.7,
+    "dH": 9.8,
+    "mv": 132.8
+  },
+  "Ethylene Glycol Dibutyl Ether": {
+    "dD": 15.7,
+    "dP": 4.5,
+    "dH": 4.2,
+    "mv": 209.5
+  },
+  "Ethylene Glycol Diethyl Ether": {
+    "dD": 15.4,
+    "dP": 5.4,
+    "dH": 5.2,
+    "mv": 141.6
+  },
+  "Ethylene Glycol Dimethyl Ether": {
+    "dD": 15.4,
+    "dP": 6.3,
+    "dH": 6.0,
+    "mv": 103.9
+  },
+  "Ethylene Glycol Methyl t-Butyl Ether": {
+    "dD": 15.3,
+    "dP": 5.1,
+    "dH": 8.2,
+    "mv": 157.4
+  },
+  "Ethylene Glycol Mono-2-Ethyl Hexyl Ether": {
+    "dD": 16.0,
+    "dP": 4.1,
+    "dH": 10.5,
+    "mv": 194.7
+  },
+  "Ethylene Glycol Monobenzyl Ether": {
+    "dD": 17.8,
+    "dP": 5.9,
+    "dH": 12.2,
+    "mv": 143.0
+  },
+  "Ethylene Glycol Monoethyl Ether Acrylate": {
+    "dD": 15.9,
+    "dP": 5.1,
+    "dH": 9.3,
+    "mv": 147.7
+  },
+  "Ethylene Glycol Mono n-Hexyl Ether": {
+    "dD": 16.0,
+    "dP": 5.0,
+    "dH": 11.4,
+    "mv": 164.5
+  },
+  "Ethylene Glycol Mono n-Propyl Ether": {
+    "dD": 16.1,
+    "dP": 8.7,
+    "dH": 13.5,
+    "mv": 114.1
+  },
+  "Ethylene Glycol Mono-t-Butyl Ether": {
+    "dD": 15.3,
+    "dP": 6.1,
+    "dH": 10.8,
+    "mv": 131.0
+  },
+  "Ethylene Glycol Monobutyl Ether": {
+    "dD": 16.0,
+    "dP": 5.1,
+    "dH": 12.3,
+    "mv": 131.6
+  },
+  "Ethylene Glycol Monoethyl Ether": {
+    "dD": 16.2,
+    "dP": 9.2,
+    "dH": 14.3,
+    "mv": 97.8
+  },
+  "Ethylene Glycol Monoethyl Ether Acetate": {
+    "dD": 15.9,
+    "dP": 4.7,
+    "dH": 10.6,
+    "mv": 136.1
+  },
+  "Ethylene Glycol Monoisobutyl Ether": {
+    "dD": 15.2,
+    "dP": 4.9,
+    "dH": 9.6,
+    "mv": 132.5
+  },
+  "Ethylene Glycol Monoisopropyl Ether": {
+    "dD": 16.0,
+    "dP": 8.2,
+    "dH": 13.1,
+    "mv": 115.8
+  },
+  "Ethylene Glycol Monomethyl Ether": {
+    "dD": 16.2,
+    "dP": 9.2,
+    "dH": 16.4,
+    "mv": 79.1
+  },
+  "Ethylene Glycol Monomethyl Ether Acetate": {
+    "dD": 15.9,
+    "dP": 5.5,
+    "dH": 11.6,
+    "mv": 121.6
+  },
+  "Ethylene Glycol Monophenyl Ether": {
+    "dD": 17.0,
+    "dP": 7.2,
+    "dH": 12.3,
+    "mv": 125.3
+  },
+  "Ethylene Glycol Sul?te": {
+    "dD": 20.0,
+    "dP": 15.9,
+    "dH": 5.1,
+    "mv": 75.1
+  },
+  "Ethylene Methyl Sulfonate": {
+    "dD": 16.9,
+    "dP": 9.3,
+    "dH": 9.6,
+    "mv": 97.9
+  },
+  "Ethylene Oxide": {
+    "dD": 15.6,
+    "dP": 10.0,
+    "dH": 11.0,
+    "mv": 49.9
+  },
+  "Ethylene Sulfide": {
+    "dD": 19.3,
+    "dP": 9.0,
+    "dH": 6.5,
+    "mv": 59.5
+  },
+  "Ethylenediamine": {
+    "dD": 16.6,
+    "dP": 8.8,
+    "dH": 17.0,
+    "mv": 67.3
+  },
+  "Ethyleneimine": {
+    "dD": 18.6,
+    "dP": 9.8,
+    "dH": 7.7,
+    "mv": 51.8
+  },
+  "2-Ethylhexylamine": {
+    "dD": 15.7,
+    "dP": 4.2,
+    "dH": 6.1,
+    "mv": 163.3
+  },
+  "Ethylidene Acetone": {
+    "dD": 16.2,
+    "dP": 12.1,
+    "dH": 4.5,
+    "mv": 99.0
+  },
+  "Ethynyl Methyl Ether": {
+    "dD": 15.8,
+    "dP": 8.1,
+    "dH": 6.5,
+    "mv": 70.1
+  },
+  "Ethynyl Propyl Ether": {
+    "dD": 15.4,
+    "dP": 3.8,
+    "dH": 5.4,
+    "mv": 104.1
+  },
+  "Eugenol": {
+    "dD": 19.0,
+    "dP": 7.5,
+    "dH": 13.0,
+    "mv": 154.0
+  },
+  "Fenchene(Alfa)": {
+    "dD": 16.9,
+    "dP": 1.5,
+    "dH": 3.1,
+    "mv": 157.3
+  },
+  "Ferulic Acid": {
+    "dD": 19.0,
+    "dP": 6.6,
+    "dH": 15.1,
+    "mv": 155.5
+  },
+  "Fluorene": {
+    "dD": 20.0,
+    "dP": 1.7,
+    "dH": 1.7,
+    "mv": 138.2
+  },
+  "1-Fluoro Acrylic Acid": {
+    "dD": 16.0,
+    "dP": 8.7,
+    "dH": 13.0,
+    "mv": 90.0
+  },
+  "1-Fluoro Acrylonitrile": {
+    "dD": 14.1,
+    "dP": 15.4,
+    "dH": 5.7,
+    "mv": 88.8
+  },
+  "4-Fluoro-3-Nitrobenzofluoride": {
+    "dD": 19.4,
+    "dP": 7.2,
+    "dH": 3.7,
+    "mv": 108.4
+  },
+  "p-Fluoroanisole": {
+    "dD": 18.7,
+    "dP": 7.3,
+    "dH": 6.7,
+    "mv": 113.2
+  },
+  "Fluorobenzene": {
+    "dD": 18.7,
+    "dP": 6.1,
+    "dH": 2.0,
+    "mv": 94.7
+  },
+  "Fluoroethylene": {
+    "dD": 15.2,
+    "dP": 7.0,
+    "dH": 1.0,
+    "mv": 57.5
+  },
+  "Fluoromethane": {
+    "dD": 13.4,
+    "dP": 10.6,
+    "dH": 9.5,
+    "mv": 40.7
+  },
+  "Fluoroprene": {
+    "dD": 14.2,
+    "dP": 5.8,
+    "dH": 1.0,
+    "mv": 85.5
+  },
+  "4-Fluoropropiophenone": {
+    "dD": 19.6,
+    "dP": 7.1,
+    "dH": 3.5,
+    "mv": 138.8
+  },
+  "Formaldehyde": {
+    "dD": 12.8,
+    "dP": 14.4,
+    "dH": 15.4,
+    "mv": 36.8
+  },
+  "Formamide": {
+    "dD": 17.2,
+    "dP": 26.2,
+    "dH": 19.0,
+    "mv": 39.8
+  },
+  "Formic Acid": {
+    "dD": 14.3,
+    "dP": 11.9,
+    "dH": 16.6,
+    "mv": 37.8
+  },
+  "Formyl Fluoride": {
+    "dD": 15.0,
+    "dP": 10.1,
+    "dH": 8.6,
+    "mv": 56.5
+  },
+  "N-Formyl Hexamethylene Imine": {
+    "dD": 18.5,
+    "dP": 10.4,
+    "dH": 7.6,
+    "mv": 127.0
+  },
+  "N-Formyl Piperidine": {
+    "dD": 18.7,
+    "dP": 10.6,
+    "dH": 7.8,
+    "mv": 111.5
+  },
+  "Fumaronitrile": {
+    "dD": 16.7,
+    "dP": 13.6,
+    "dH": 7.8,
+    "mv": 83.0
+  },
+  "Furan": {
+    "dD": 17.8,
+    "dP": 1.8,
+    "dH": 5.3,
+    "mv": 72.5
+  },
+  "Furfural": {
+    "dD": 18.6,
+    "dP": 14.9,
+    "dH": 5.1,
+    "mv": 83.2
+  },
+  "Furfuryl Alcohol": {
+    "dD": 17.4,
+    "dP": 7.6,
+    "dH": 15.1,
+    "mv": 86.5
+  },
+  "2-Furonitrile": {
+    "dD": 18.4,
+    "dP": 15.0,
+    "dH": 8.2,
+    "mv": 87.5
+  },
+  "Glycerol": {
+    "dD": 17.4,
+    "dP": 12.1,
+    "dH": 29.3,
+    "mv": 73.3
+  },
+  "Glycerol Diacetate (Isomer Mix)": {
+    "dD": 16.4,
+    "dP": 8.9,
+    "dH": 14.2,
+    "mv": 149.4
+  },
+  "Glycidaldehyde": {
+    "dD": 17.5,
+    "dP": 13.4,
+    "dH": 9.8,
+    "mv": 63.2
+  },
+  "Glycidol": {
+    "dD": 18.2,
+    "dP": 9.0,
+    "dH": 17.9,
+    "mv": 66.5
+  },
+  "Glycidyl Methacrylate": {
+    "dD": 16.3,
+    "dP": 8.5,
+    "dH": 5.7,
+    "mv": 136.4
+  },
+  "Glyoxal (Ethandial)": {
+    "dD": 15.0,
+    "dP": 17.0,
+    "dH": 13.3,
+    "mv": 50.9
+  },
+  "Heptane": {
+    "dD": 15.3,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 147.4
+  },
+  "1-Heptanol": {
+    "dD": 16.0,
+    "dP": 5.3,
+    "dH": 11.7,
+    "mv": 141.4
+  },
+  "2-Heptanol": {
+    "dD": 15.7,
+    "dP": 5.4,
+    "dH": 11.7,
+    "mv": 142.9
+  },
+  "3-Heptanol": {
+    "dD": 15.9,
+    "dP": 5.4,
+    "dH": 11.7,
+    "mv": 141.2
+  },
+  "1-Heptene": {
+    "dD": 15.0,
+    "dP": 1.1,
+    "dH": 2.6,
+    "mv": 141.9
+  },
+  "n-Heptyl Acetate": {
+    "dD": 15.8,
+    "dP": 2.9,
+    "dH": 5.5,
+    "mv": 181.1
+  },
+  "Hexachlorobenzene (Lindane)": {
+    "dD": 21.9,
+    "dP": 2.1,
+    "dH": 0.0,
+    "mv": 139.3
+  },
+  "Hexachloroethane": {
+    "dD": 22.0,
+    "dP": 4.7,
+    "dH": 0.0,
+    "mv": 113.2
+  },
+  "Hexadecane": {
+    "dD": 16.3,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 294.1
+  },
+  "Hexafluoro 1,3-Butadiene": {
+    "dD": 13.8,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 104.3
+  },
+  "Hexafluoro Isopropanol": {
+    "dD": 17.2,
+    "dP": 4.5,
+    "dH": 14.7,
+    "mv": 105.3
+  },
+  "Hexafluorobenzene": {
+    "dD": 16.9,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 115.8
+  },
+  "Hexafluorohexanol": {
+    "dD": 15.1,
+    "dP": 4.4,
+    "dH": 9.9,
+    "mv": 123.3
+  },
+  "Hexamethyl Benzene": {
+    "dD": 19.2,
+    "dP": 1.6,
+    "dH": 0.0,
+    "mv": 152.7
+  },
+  "Hexamethylenetetramine": {
+    "dD": 19.4,
+    "dP": 11.6,
+    "dH": 13.8,
+    "mv": 105.3
+  },
+  "Hexamethylphosphoramide": {
+    "dD": 8.6,
+    "dP": 11.3,
+    "dH": 175.7,
+    "mv": 0
+  },
+  "Hexanal": {
+    "dD": 15.8,
+    "dP": 8.5,
+    "dH": 5.4,
+    "mv": 120.2
+  },
+  "n-Hexane": {
+    "dD": 14.9,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 131.6
+  },
+  "Hexanoic Acid": {
+    "dD": 15.0,
+    "dP": 4.1,
+    "dH": 9.4,
+    "mv": 125.9
+  },
+  "1-Hexanol": {
+    "dD": 15.9,
+    "dP": 5.8,
+    "dH": 12.5,
+    "mv": 124.9
+  },
+  "1-Hexene": {
+    "dD": 14.7,
+    "dP": 1.1,
+    "dH": 0.0,
+    "mv": 126.1
+  },
+  "Hexyl Acetate": {
+    "dD": 15.8,
+    "dP": 2.9,
+    "dH": 5.9,
+    "mv": 165.0
+  },
+  "Hexylene Glycol": {
+    "dD": 15.7,
+    "dP": 8.4,
+    "dH": 17.8,
+    "mv": 123.0
+  },
+  "Hexylene Glycol Diacetate": {
+    "dD": 15.3,
+    "dP": 4.5,
+    "dH": 7.2,
+    "mv": 204.3
+  },
+  "Hydrazine": {
+    "dD": 14.2,
+    "dP": 8.3,
+    "dH": 8.9,
+    "mv": 32.1
+  },
+  "Hydrogen Cyanide": {
+    "dD": 12.3,
+    "dP": 17.6,
+    "dH": 9.0,
+    "mv": 39.3
+  },
+  "Hydrogen Peroxide": {
+    "dD": 15.5,
+    "dP": 12.2,
+    "dH": 42.7,
+    "mv": 23.2
+  },
+  "Hydrogen Sulfide": {
+    "dD": 6.0,
+    "dP": 10.2,
+    "dH": 36.1,
+    "mv": 0
+  },
+  "4-Hydroxy Benzaldehyde": {
+    "dD": 19.4,
+    "dP": 15.2,
+    "dH": 14.5,
+    "mv": 108.2
+  },
+  "4-Hydroxy Cinnamic Acid": {
+    "dD": 19.1,
+    "dP": 6.7,
+    "dH": 15.9,
+    "mv": 128.3
+  },
+  "3-Hydroxy Tetrahydrofuran": {
+    "dD": 18.9,
+    "dP": 9.4,
+    "dH": 16.3,
+    "mv": 80.0
+  },
+  "Hydroxyethyl Acrylate": {
+    "dD": 16.0,
+    "dP": 13.2,
+    "dH": 13.4,
+    "mv": 114.9
+  },
+  "N-(2-Hydroxyethyl)-2-Pyrrolidone": {
+    "dD": 18.0,
+    "dP": 9.2,
+    "dH": 15.7,
+    "mv": 113.4
+  },
+  "Indene": {
+    "dD": 18.7,
+    "dP": 2.6,
+    "dH": 9.0,
+    "mv": 116.5
+  },
+  "Indole": {
+    "dD": 19.8,
+    "dP": 7.5,
+    "dH": 6.5,
+    "mv": 110.1
+  },
+  "4-Iodo-1,2-Butadiene": {
+    "dD": 17.4,
+    "dP": 6.3,
+    "dH": 6.2,
+    "mv": 105.1
+  },
+  "Iodobenzene": {
+    "dD": 19.5,
+    "dP": 6.0,
+    "dH": 6.1,
+    "mv": 114.4
+  },
+  "Iodoform": {
+    "dD": 20.2,
+    "dP": 3.6,
+    "dH": 10.6,
+    "mv": 98.2
+  },
+  "Iodoprene": {
+    "dD": 17.2,
+    "dP": 2.5,
+    "dH": 6.2,
+    "mv": 104.2
+  },
+  "Isoamyl Acetate": {
+    "dD": 15.3,
+    "dP": 3.1,
+    "dH": 7.0,
+    "mv": 148.8
+  },
+  "Isoamyl Alcohol (3-Methyl-1-Butanol)": {
+    "dD": 15.8,
+    "dP": 5.2,
+    "dH": 13.3,
+    "mv": 109.4
+  },
+  "Isoamyl Propionate": {
+    "dD": 15.7,
+    "dP": 5.2,
+    "dH": 5.6,
+    "mv": 165.7
+  },
+  "Isobutyl Acetate": {
+    "dD": 15.1,
+    "dP": 3.7,
+    "dH": 6.3,
+    "mv": 133.5
+  },
+  "Isobutyl Acrylate": {
+    "dD": 15.5,
+    "dP": 6.2,
+    "dH": 5.0,
+    "mv": 145.0
+  },
+  "Isobutyl Alcohol": {
+    "dD": 15.1,
+    "dP": 5.7,
+    "dH": 15.9,
+    "mv": 92.8
+  },
+  "Isobutyl Formate": {
+    "dD": 15.5,
+    "dP": 6.5,
+    "dH": 6.7,
+    "mv": 117.4
+  },
+  "Isobutyl Isobutyrate": {
+    "dD": 15.1,
+    "dP": 2.9,
+    "dH": 5.9,
+    "mv": 163.0
+  },
+  "Isobutyl Sulfoxide": {
+    "dD": 16.3,
+    "dP": 10.5,
+    "dH": 6.1,
+    "mv": 195.0
+  },
+  "Isobutylene": {
+    "dD": 14.5,
+    "dP": 2.0,
+    "dH": 1.5,
+    "mv": 89.4
+  },
+  "Isobutyleneoxide": {
+    "dD": 16.1,
+    "dP": 4.8,
+    "dH": 5.8,
+    "mv": 90.0
+  },
+  "Isobutyric Acid": {
+    "dD": 16.5,
+    "dP": 5.4,
+    "dH": 11.1,
+    "mv": 93.4
+  },
+  "Isocyanic Acid": {
+    "dD": 15.8,
+    "dP": 10.5,
+    "dH": 13.6,
+    "mv": 37.7
+  },
+  "Isooctyl Alcohol": {
+    "dD": 14.4,
+    "dP": 7.3,
+    "dH": 12.9,
+    "mv": 156.6
+  },
+  "Isopentane": {
+    "dD": 13.7,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 117.4
+  },
+  "Isophorone": {
+    "dD": 16.6,
+    "dP": 8.2,
+    "dH": 7.4,
+    "mv": 150.5
+  },
+  "Isoprene (2-Methyl-1,3-Butadiene)": {
+    "dD": 14.7,
+    "dP": 1.4,
+    "dH": 4.1,
+    "mv": 100.9
+  },
+  "Isopropyl Acetate": {
+    "dD": 14.9,
+    "dP": 4.5,
+    "dH": 8.2,
+    "mv": 117.1
+  },
+  "Isopropyl Amine (2-Propan Amine)": {
+    "dD": 14.8,
+    "dP": 4.4,
+    "dH": 6.6,
+    "mv": 86.8
+  },
+  "Isopropyl Benzene (Cumene)": {
+    "dD": 18.1,
+    "dP": 1.2,
+    "dH": 1.2,
+    "mv": 139.1
+  },
+  "Isopropyl Chloride (2-Chloro Propane)": {
+    "dD": 15.9,
+    "dP": 8.3,
+    "dH": 2.1,
+    "mv": 91.7
+  },
+  "Isopropyl Ether": {
+    "dD": 13.7,
+    "dP": 3.9,
+    "dH": 2.3,
+    "mv": 140.9
+  },
+  "Isopropyl Palmitate": {
+    "dD": 14.3,
+    "dP": 3.9,
+    "dH": 3.7,
+    "mv": 330.0
+  },
+  "Isovaleraldehyde": {
+    "dD": 14.7,
+    "dP": 9.5,
+    "dH": 5.0,
+    "mv": 106.0
+  },
+  "Isovaleric Acid": {
+    "dD": 16.4,
+    "dP": 4.1,
+    "dH": 10.7,
+    "mv": 111.0
+  },
+  "Isoxazole": {
+    "dD": 18.8,
+    "dP": 13.4,
+    "dH": 11.2,
+    "mv": 64.1
+  },
+  "Ketene": {
+    "dD": 15.4,
+    "dP": 7.3,
+    "dH": 5.8,
+    "mv": 53.0
+  },
+  "Lactic Acid (DL)": {
+    "dD": 17.0,
+    "dP": 8.3,
+    "dH": 28.4,
+    "mv": 72.1
+  },
+  "Lauryl Methacrylate": {
+    "dD": 14.4,
+    "dP": 2.2,
+    "dH": 5.1,
+    "mv": 293.1
+  },
+  "Maleic Anhydride": {
+    "dD": 20.2,
+    "dP": 18.1,
+    "dH": 12.6,
+    "mv": 66.3
+  },
+  "Malononitrile": {
+    "dD": 17.7,
+    "dP": 18.4,
+    "dH": 6.7,
+    "mv": 55.5
+  },
+  "Meclofenoxate (Base Only)": {
+    "dD": 16.0,
+    "dP": 6.2,
+    "dH": 9.0,
+    "mv": 198.3
+  },
+  "Menthofuran": {
+    "dD": 17.2,
+    "dP": 4.6,
+    "dH": 5.6,
+    "mv": 158.0
+  },
+  "L-Menthol": {
+    "dD": 16.6,
+    "dP": 4.7,
+    "dH": 10.6,
+    "mv": 175.6
+  },
+  "L-Menthone": {
+    "dD": 17.0,
+    "dP": 8.1,
+    "dH": 4.4,
+    "mv": 172.3
+  },
+  "L-Menthyl Acetate": {
+    "dD": 16.8,
+    "dP": 4.7,
+    "dH": 4.9,
+    "mv": 215.8
+  },
+  "Mesityl Oxide": {
+    "dD": 16.4,
+    "dP": 6.1,
+    "dH": 6.1,
+    "mv": 115.6
+  },
+  "Mesitylene": {
+    "dD": 18.0,
+    "dP": 0.0,
+    "dH": 0.6,
+    "mv": 139.8
+  },
+  "Methacrylaldehyde": {
+    "dD": 15.7,
+    "dP": 11.1,
+    "dH": 7.4,
+    "mv": 83.3
+  },
+  "Methacrylamide": {
+    "dD": 15.8,
+    "dP": 11.0,
+    "dH": 11.6,
+    "mv": 76.0
+  },
+  "Methacrylic Acid": {
+    "dD": 15.8,
+    "dP": 2.8,
+    "dH": 10.2,
+    "mv": 84.8
+  },
+  "Methacrylonitrile": {
+    "dD": 15.8,
+    "dP": 15.1,
+    "dH": 5.4,
+    "mv": 83.9
+  },
+  "Methanol": {
+    "dD": 15.1,
+    "dP": 12.3,
+    "dH": 22.3,
+    "mv": 40.7
+  },
+  "4-Methoxy Acetophenone": {
+    "dD": 18.9,
+    "dP": 11.2,
+    "dH": 7.0,
+    "mv": 137.8
+  },
+  "4-Methoxy Benzonitrile": {
+    "dD": 19.4,
+    "dP": 16.7,
+    "dH": 5.4,
+    "mv": 121.0
+  },
+  "3-Methoxy Butanol": {
+    "dD": 15.3,
+    "dP": 5.4,
+    "dH": 13.6,
+    "mv": 113.2
+  },
+  "3-Methoxy Butyl Acetate": {
+    "dD": 15.3,
+    "dP": 4.1,
+    "dH": 8.1,
+    "mv": 153.9
+  },
+  "2-Methoxy Tetrahydropyrane": {
+    "dD": 17.2,
+    "dP": 6.6,
+    "dH": 6.0,
+    "mv": 105.1
+  },
+  "1-Methoxy-1,3-Butadiene": {
+    "dD": 15.5,
+    "dP": 8.3,
+    "dH": 5.4,
+    "mv": 101.8
+  },
+  "2-Methoxy-1,3-Dioxolane": {
+    "dD": 17.8,
+    "dP": 8.4,
+    "dH": 7.7,
+    "mv": 95.3
+  },
+  "1-Methoxy-2-Nitrobenzene": {
+    "dD": 19.6,
+    "dP": 16.3,
+    "dH": 5.5,
+    "mv": 123.5
+  },
+  "Methoxyhexanone (Pentoxone)": {
+    "dD": 15.3,
+    "dP": 6.0,
+    "dH": 5.9,
+    "mv": 143.5
+  },
+  "o-Methoxyphenol (Guaiacol)": {
+    "dD": 18.0,
+    "dP": 8.2,
+    "dH": 13.3,
+    "mv": 109.5
+  },
+  "3-Methoxypropionitrile": {
+    "dD": 16.6,
+    "dP": 14.4,
+    "dH": 7.8,
+    "mv": 91.1
+  },
+  "2-Methyl (cis) Acrylic Acid": {
+    "dD": 16.8,
+    "dP": 5.2,
+    "dH": 12.4,
+    "mv": 83.9
+  },
+  "Methyl 1-Propenyl Ether": {
+    "dD": 15.0,
+    "dP": 4.3,
+    "dH": 5.7,
+    "mv": 93.5
+  },
+  "N-Methyl Acetamide": {
+    "dD": 16.9,
+    "dP": 18.7,
+    "dH": 13.9,
+    "mv": 76.9
+  },
+  "Methyl Acetate": {
+    "dD": 15.5,
+    "dP": 7.2,
+    "dH": 7.6,
+    "mv": 79.7
+  },
+  "Methyl Aceto Acetate": {
+    "dD": 16.4,
+    "dP": 8.6,
+    "dH": 8.9,
+    "mv": 108.3
+  },
+  "Methyl Acetylene": {
+    "dD": 15.1,
+    "dP": 3.8,
+    "dH": 9.2,
+    "mv": 59.6
+  },
+  "Methyl Acrylate": {
+    "dD": 15.3,
+    "dP": 6.7,
+    "dH": 9.4,
+    "mv": 90.3
+  },
+  "3-Methyl Allyl Alcohol": {
+    "dD": 16.0,
+    "dP": 6.0,
+    "dH": 15.5,
+    "mv": 84.4
+  },
+  "Methyl Allyl Cyanide": {
+    "dD": 16.4,
+    "dP": 11.3,
+    "dH": 5.1,
+    "mv": 97.7
+  },
+  "Methyl Amine": {
+    "dD": 13.0,
+    "dP": 7.3,
+    "dH": 17.3,
+    "mv": 44.4
+  },
+  "Methyl Amyl Acetate": {
+    "dD": 15.2,
+    "dP": 3.1,
+    "dH": 6.8,
+    "mv": 167.4
+  },
+  "Methyl Benzoate": {
+    "dD": 18.9,
+    "dP": 8.2,
+    "dH": 4.7,
+    "mv": 124.9
+  },
+  "Methyl Bromide": {
+    "dD": 17.0,
+    "dP": 8.8,
+    "dH": 2.6,
+    "mv": 56.8
+  },
+  "Methyl Butyl Ketone": {
+    "dD": 15.3,
+    "dP": 6.1,
+    "dH": 4.1,
+    "mv": 123.6
+  },
+  "Methyl Chloride": {
+    "dD": 15.3,
+    "dP": 6.1,
+    "dH": 3.9,
+    "mv": 55.4
+  },
+  "Methyl Chloroformate": {
+    "dD": 16.3,
+    "dP": 9.5,
+    "dH": 8.5,
+    "mv": 77.3
+  },
+  "Methyl Cyanoacetate": {
+    "dD": 16.8,
+    "dP": 14.8,
+    "dH": 9.1,
+    "mv": 88.3
+  },
+  "Methyl Cyclohexane": {
+    "dD": 16.0,
+    "dP": 0.0,
+    "dH": 1.0,
+    "mv": 128.3
+  },
+  "1-Methyl Cyclohexanol": {
+    "dD": 17.1,
+    "dP": 6.4,
+    "dH": 12.5,
+    "mv": 123.4
+  },
+  "3-Methyl Cyclohexanol (mix)": {
+    "dD": 17.2,
+    "dP": 6.4,
+    "dH": 12.5,
+    "mv": 124.8
+  },
+  "4-Methyl Cyclohexanol (mix)": {
+    "dD": 17.2,
+    "dP": 6.3,
+    "dH": 12.5,
+    "mv": 125.5
+  },
+  "2-Methyl Cyclohexanol (mix)": {
+    "dD": 17.1,
+    "dP": 6.5,
+    "dH": 12.5,
+    "mv": 124.1
+  },
+  "3-Methyl Cyclohexanone": {
+    "dD": 17.7,
+    "dP": 6.3,
+    "dH": 4.7,
+    "mv": 122.5
+  },
+  "2-Methyl Cyclohexanone": {
+    "dD": 17.6,
+    "dP": 6.3,
+    "dH": 4.7,
+    "mv": 121.3
+  },
+  "Methyl Ethyl Ether": {
+    "dD": 14.7,
+    "dP": 4.9,
+    "dH": 6.2,
+    "mv": 84.1
+  },
+  "Methyl Ethyl Ketone": {
+    "dD": 16.0,
+    "dP": 9.0,
+    "dH": 5.1,
+    "mv": 90.1
+  },
+  "Methyl Ethyl Ketoxime": {
+    "dD": 14.7,
+    "dP": 4.9,
+    "dH": 7.8,
+    "mv": 94.8
+  },
+  "N-Methyl Formamide": {
+    "dD": 17.4,
+    "dP": 18.8,
+    "dH": 15.9,
+    "mv": 59.1
+  },
+  "Methyl Formate": {
+    "dD": 15.3,
+    "dP": 8.4,
+    "dH": 10.2,
+    "mv": 62.2
+  },
+  "2-Methylfuran": {
+    "dD": 17.3,
+    "dP": 2.8,
+    "dH": 7.4,
+    "mv": 89.7
+  },
+  "Methyl Furoate": {
+    "dD": 17.4,
+    "dP": 6.9,
+    "dH": 9.7,
+    "mv": 107.0
+  },
+  "Methyl Glyoxal": {
+    "dD": 15.5,
+    "dP": 16.1,
+    "dH": 9.7,
+    "mv": 68.9
+  },
+  "Methyl Hydrazine": {
+    "dD": 16.2,
+    "dP": 8.7,
+    "dH": 14.8,
+    "mv": 52.7
+  },
+  "Methyl Hydroperoxide": {
+    "dD": 15.0,
+    "dP": 15.0,
+    "dH": 30.0,
+    "mv": 24.1
+  },
+  "1-Methyl Imidazole": {
+    "dD": 19.7,
+    "dP": 15.6,
+    "dH": 11.2,
+    "mv": 79.5
+  },
+  "Methyl Iodide": {
+    "dD": 17.5,
+    "dP": 7.7,
+    "dH": 5.3,
+    "mv": 62.3
+  },
+  "Methyl Isoamyl Ketone": {
+    "dD": 16.0,
+    "dP": 5.7,
+    "dH": 4.1,
+    "mv": 142.8
+  },
+  "Methyl Isobutyl Carbinol": {
+    "dD": 15.4,
+    "dP": 3.3,
+    "dH": 12.3,
+    "mv": 127.2
+  },
+  "Methyl Isobutyl Ketone": {
+    "dD": 15.3,
+    "dP": 6.1,
+    "dH": 4.1,
+    "mv": 125.8
+  },
+  "Methyl Isocyanate": {
+    "dD": 15.6,
+    "dP": 7.3,
+    "dH": 2.5,
+    "mv": 61.8
+  },
+  "Methyl Isopropenyl Ketone": {
+    "dD": 15.9,
+    "dP": 12.1,
+    "dH": 4.5,
+    "mv": 99.3
+  },
+  "Methyl Isothiocyanate": {
+    "dD": 17.3,
+    "dP": 16.2,
+    "dH": 10.1,
+    "mv": 68.4
+  },
+  "3-Methyl Isoxazole": {
+    "dD": 19.4,
+    "dP": 14.8,
+    "dH": 11.8,
+    "mv": 57.7
+  },
+  "Methyl Mercaptan": {
+    "dD": 16.6,
+    "dP": 7.7,
+    "dH": 8.6,
+    "mv": 54.1
+  },
+  "Methyl Methacrylate": {
+    "dD": 15.8,
+    "dP": 6.5,
+    "dH": 5.4,
+    "mv": 106.1
+  },
+  "N-Methyl Morpholine-N-Oxide": {
+    "dD": 19.0,
+    "dP": 16.1,
+    "dH": 10.2,
+    "mv": 97.6
+  },
+  "Methyl n-Amyl Ketone": {
+    "dD": 16.2,
+    "dP": 5.7,
+    "dH": 4.1,
+    "mv": 139.8
+  },
+  "Methyl n-Propyl Ketone": {
+    "dD": 16.0,
+    "dP": 7.6,
+    "dH": 4.7,
+    "mv": 106.7
+  },
+  "1-Methyl Naphthalene": {
+    "dD": 20.6,
+    "dP": 0.8,
+    "dH": 4.7,
+    "mv": 138.8
+  },
+  "Methyl Nitrate": {
+    "dD": 15.8,
+    "dP": 14.0,
+    "dH": 4.8,
+    "mv": 63.8
+  },
+  "Methyl Oleate": {
+    "dD": 14.5,
+    "dP": 3.9,
+    "dH": 3.7,
+    "mv": 340.0
+  },
+  "Methyl Phenyl Sulfide": {
+    "dD": 19.6,
+    "dP": 4.8,
+    "dH": 4.7,
+    "mv": 117.4
+  },
+  "Methyl Phenyl Sulfone": {
+    "dD": 20.0,
+    "dP": 16.9,
+    "dH": 7.8,
+    "mv": 124.6
+  },
+  "Methyl Phosphonic Difluoride": {
+    "dD": 14.0,
+    "dP": 14.0,
+    "dH": 8.4,
+    "mv": 73.9
+  },
+  "Methyl Propionate": {
+    "dD": 15.5,
+    "dP": 6.5,
+    "dH": 7.7,
+    "mv": 96.8
+  },
+  "2-Methyl Pyrazine": {
+    "dD": 18.3,
+    "dP": 12.3,
+    "dH": 10.5,
+    "mv": 91.4
+  },
+  "N-Methyl Pyrrolidine": {
+    "dD": 17.0,
+    "dP": 2.8,
+    "dH": 6.9,
+    "mv": 104.0
+  },
+  "Methyl Salicylate": {
+    "dD": 18.1,
+    "dP": 8.0,
+    "dH": 13.9,
+    "mv": 129.6
+  },
+  "Methyl Silane": {
+    "dD": 15.5,
+    "dP": 3.3,
+    "dH": 0.0,
+    "mv": 71.0
+  },
+  "alfa-Methyl Styrene": {
+    "dD": 18.5,
+    "dP": 2.4,
+    "dH": 2.4,
+    "mv": 130.0
+  },
+  "Methyl Sulfolane": {
+    "dD": 19.4,
+    "dP": 17.4,
+    "dH": 5.3,
+    "mv": 112.7
+  },
+  "2-Methyl Tetrahydrofuran": {
+    "dD": 16.9,
+    "dP": 5.0,
+    "dH": 4.3,
+    "mv": 100.2
+  },
+  "Methyl Thiocyanate": {
+    "dD": 17.4,
+    "dP": 15.0,
+    "dH": 8.7,
+    "mv": 68.5
+  },
+  "Methyl Vinyl Ether": {
+    "dD": 14.9,
+    "dP": 5.3,
+    "dH": 6.3,
+    "mv": 75.2
+  },
+  "Methyl Vinyl Ketone": {
+    "dD": 15.6,
+    "dP": 12.5,
+    "dH": 5.0,
+    "mv": 81.2
+  },
+  "1-Methyl Vinyl Methyl Ether": {
+    "dD": 14.8,
+    "dP": 4.2,
+    "dH": 5.6,
+    "mv": 96.1
+  },
+  "Methyl Vinyl Sulfide": {
+    "dD": 16.4,
+    "dP": 4.9,
+    "dH": 6.0,
+    "mv": 82.1
+  },
+  "Methyl Vinyl Sulfone": {
+    "dD": 16.8,
+    "dP": 19.6,
+    "dH": 4.8,
+    "mv": 87.6
+  },
+  "2-Methyl-1-Butanol": {
+    "dD": 16.0,
+    "dP": 5.1,
+    "dH": 14.3,
+    "mv": 109.5
+  },
+  "3-Methyl-1-Butene": {
+    "dD": 14.0,
+    "dP": 1.4,
+    "dH": 3.8,
+    "mv": 112.9
+  },
+  "2-Methyl-1-Butene": {
+    "dD": 14.2,
+    "dP": 1.8,
+    "dH": 2.3,
+    "mv": 108.7
+  },
+  "2-Methyl-1-Chloro Acrolein": {
+    "dD": 17.1,
+    "dP": 10.6,
+    "dH": 7.3,
+    "mv": 91.7
+  },
+  "2-Methyl-1-Pentanol": {
+    "dD": 15.8,
+    "dP": 4.9,
+    "dH": 13.5,
+    "mv": 124.0
+  },
+  "2-Methyl-1-Propanol": {
+    "dD": 15.1,
+    "dP": 5.7,
+    "dH": 15.9,
+    "mv": 92.8
+  },
+  "Methyl-1-Propynyl Ether": {
+    "dD": 15.7,
+    "dP": 6.3,
+    "dH": 5.9,
+    "mv": 85.4
+  },
+  "3-Methyl-1,2-Butadiene": {
+    "dD": 15.1,
+    "dP": 2.5,
+    "dH": 4.5,
+    "mv": 99.7
+  },
+  "2-Methyl-1,3-Dioxolane": {
+    "dD": 17.3,
+    "dP": 4.8,
+    "dH": 5.8,
+    "mv": 89.8
+  },
+  "2-Methyl-2-Butanol": {
+    "dD": 15.3,
+    "dP": 6.1,
+    "dH": 13.3,
+    "mv": 109.6
+  },
+  "3-Methyl-2-Butanol": {
+    "dD": 15.6,
+    "dP": 5.2,
+    "dH": 13.4,
+    "mv": 107.7
+  },
+  "2-Methyl-2-Butene": {
+    "dD": 14.3,
+    "dP": 2.0,
+    "dH": 3.9,
+    "mv": 106.7
+  },
+  "N-Methyl-2-Pyrrolidone": {
+    "dD": 18.0,
+    "dP": 12.3,
+    "dH": 7.2,
+    "mv": 96.5
+  },
+  "3-Methyl-3-Methoxy Butyl Acetate": {
+    "dD": 15.3,
+    "dP": 3.8,
+    "dH": 7.7,
+    "mv": 168.6
+  },
+  "Methyl-4-Toluenesulfonate": {
+    "dD": 19.6,
+    "dP": 15.3,
+    "dH": 3.8,
+    "mv": 152.6
+  },
+  "Methyl-p-Toluate": {
+    "dD": 19.0,
+    "dP": 6.5,
+    "dH": 3.8,
+    "mv": 140.4
+  },
+  "Methyl-t-Butyl Ether": {
+    "dD": 14.8,
+    "dP": 4.3,
+    "dH": 5.0,
+    "mv": 119.8
+  },
+  "Methylal (Dimethoxymethane)": {
+    "dD": 15.0,
+    "dP": 1.8,
+    "dH": 8.6,
+    "mv": 169.4
+  },
+  "4,4'-Methylenebis(Phenylisocyanate)": {
+    "dD": 19.5,
+    "dP": 4.1,
+    "dH": 1.7,
+    "mv": 212.1
+  },
+  "N-Methylaniline": {
+    "dD": 19.5,
+    "dP": 6.0,
+    "dH": 11.5,
+    "mv": 108.4
+  },
+  "Methylene Dichloride": {
+    "dD": 18.2,
+    "dP": 6.3,
+    "dH": 6.1,
+    "mv": 63.9
+  },
+  "Methylene Diiodide": {
+    "dD": 17.8,
+    "dP": 3.9,
+    "dH": 5.5,
+    "mv": 80.5
+  },
+  "1,2-Methylenedioxybenzene": {
+    "dD": 19.0,
+    "dP": 6.7,
+    "dH": 5.9,
+    "mv": 114.8
+  },
+  "Morpholine": {
+    "dD": 18.8,
+    "dP": 4.9,
+    "dH": 9.2,
+    "mv": 87.1
+  },
+  "N,N,N,N-Tetramethylthiourea": {
+    "dD": 17.3,
+    "dP": 6.0,
+    "dH": 10.5,
+    "mv": 132.2
+  },
+  "Naphthalene": {
+    "dD": 19.2,
+    "dP": 2.0,
+    "dH": 5.9,
+    "mv": 111.5
+  },
+  "1-Naphthol": {
+    "dD": 19.7,
+    "dP": 6.3,
+    "dH": 12.3,
+    "mv": 131.7
+  },
+  "Nicotine": {
+    "dD": 18.5,
+    "dP": 7.8,
+    "dH": 6.5,
+    "mv": 160.7
+  },
+  "p-Nitro Toluene": {
+    "dD": 20.1,
+    "dP": 9.6,
+    "dH": 3.9,
+    "mv": 98.5
+  },
+  "2-Nitro-1-Propanol": {
+    "dD": 16.1,
+    "dP": 13.7,
+    "dH": 15.4,
+    "mv": 88.8
+  },
+  "3-Nitroaniline": {
+    "dD": 21.2,
+    "dP": 18.7,
+    "dH": 10.3,
+    "mv": 96.1
+  },
+  "Nitrobenzene": {
+    "dD": 20.0,
+    "dP": 8.6,
+    "dH": 4.1,
+    "mv": 102.7
+  },
+  "4-Nitrochlorobenzene": {
+    "dD": 20.0,
+    "dP": 8.8,
+    "dH": 3.9,
+    "mv": 121.2
+  },
+  "Nitroethane": {
+    "dD": 16.0,
+    "dP": 15.5,
+    "dH": 4.5,
+    "mv": 71.5
+  },
+  "Nitroethylene": {
+    "dD": 16.3,
+    "dP": 16.6,
+    "dH": 5.0,
+    "mv": 59.9
+  },
+  "Nitroglycerin (Glyceryl Trinitrate)": {
+    "dD": 16.2,
+    "dP": 17.8,
+    "dH": 5.9,
+    "mv": 142.5
+  },
+  "Nitromethane": {
+    "dD": 15.8,
+    "dP": 18.8,
+    "dH": 5.1,
+    "mv": 54.3
+  },
+  "4-Nitrophenol": {
+    "dD": 20.4,
+    "dP": 20.9,
+    "dH": 15.1,
+    "mv": 93.1
+  },
+  "1-Nitropropane": {
+    "dD": 16.6,
+    "dP": 12.3,
+    "dH": 5.5,
+    "mv": 88.4
+  },
+  "2-Nitropropane": {
+    "dD": 16.2,
+    "dP": 12.1,
+    "dH": 4.1,
+    "mv": 86.9
+  },
+  "Nitrosobenzene": {
+    "dD": 20.0,
+    "dP": 12.7,
+    "dH": 4.0,
+    "mv": 89.3
+  },
+  "2-Nitrothiophene": {
+    "dD": 19.7,
+    "dP": 16.2,
+    "dH": 8.2,
+    "mv": 94.6
+  },
+  "Nonane": {
+    "dD": 15.7,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 179.7
+  },
+  "1,9-Nonanediol": {
+    "dD": 15.7,
+    "dP": 7.0,
+    "dH": 15.1,
+    "mv": 170.5
+  },
+  "1-Nonanol": {
+    "dD": 16.0,
+    "dP": 4.8,
+    "dH": 10.6,
+    "mv": 174.4
+  },
+  "1-Nonene": {
+    "dD": 15.4,
+    "dP": 1.0,
+    "dH": 2.2,
+    "mv": 170.5
+  },
+  "Nonyl Phenol": {
+    "dD": 16.5,
+    "dP": 4.1,
+    "dH": 9.2,
+    "mv": 231.0
+  },
+  "Nonyl Phenoxy Ethanol": {
+    "dD": 16.7,
+    "dP": 10.2,
+    "dH": 8.4,
+    "mv": 275.0
+  },
+  "Norephedrin": {
+    "dD": 18.0,
+    "dP": 10.7,
+    "dH": 24.1,
+    "mv": 141.9
+  },
+  "Octadecane": {
+    "dD": 16.4,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 326.9
+  },
+  "Octane": {
+    "dD": 15.5,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 163.5
+  },
+  "Octanoic Acid": {
+    "dD": 15.1,
+    "dP": 3.3,
+    "dH": 8.2,
+    "mv": 159.0
+  },
+  "1-Octanol": {
+    "dD": 16.0,
+    "dP": 5.0,
+    "dH": 11.9,
+    "mv": 157.7
+  },
+  "2-Octanol": {
+    "dD": 16.1,
+    "dP": 4.9,
+    "dH": 11.0,
+    "mv": 159.1
+  },
+  "1-Octene": {
+    "dD": 15.3,
+    "dP": 1.0,
+    "dH": 2.4,
+    "mv": 158.0
+  },
+  "Octyl Acetate": {
+    "dD": 15.8,
+    "dP": 2.9,
+    "dH": 5.1,
+    "mv": 196.0
+  },
+  "Oleic Acid": {
+    "dD": 16.0,
+    "dP": 2.8,
+    "dH": 6.2,
+    "mv": 317.0
+  },
+  "Oleyl Alcohol": {
+    "dD": 14.3,
+    "dP": 2.6,
+    "dH": 8.0,
+    "mv": 316.0
+  },
+  "Oxalic Acid": {
+    "dD": 17.0,
+    "dP": 14.3,
+    "dH": 22.0,
+    "mv": 47.4
+  },
+  "Oxalylchloride": {
+    "dD": 16.1,
+    "dP": 3.8,
+    "dH": 7.5,
+    "mv": 85.8
+  },
+  "Oxetane (Trimethylene Oxide)": {
+    "dD": 18.0,
+    "dP": 9.1,
+    "dH": 5.4,
+    "mv": 65.0
+  },
+  "2-Oxopyrrolidinacetamid": {
+    "dD": 17.5,
+    "dP": 15.6,
+    "dH": 11.2,
+    "mv": 116.6
+  },
+  "Ozone": {
+    "dD": 4.2,
+    "dP": 0.0,
+    "dH": 24.0,
+    "mv": 0
+  },
+  "Paracetamol": {
+    "dD": 17.8,
+    "dP": 10.5,
+    "dH": 13.9,
+    "mv": 151.2
+  },
+  "Paraldehyde": {
+    "dD": 16.6,
+    "dP": 7.5,
+    "dH": 7.3,
+    "mv": 132.4
+  },
+  "Paraquat": {
+    "dD": 19.5,
+    "dP": 8.8,
+    "dH": 5.9,
+    "mv": 205.7
+  },
+  "Pentachloro Ethane": {
+    "dD": 18.2,
+    "dP": 3.2,
+    "dH": 2.4,
+    "mv": 120.9
+  },
+  "Pentachlorocyclopropane": {
+    "dD": 18.5,
+    "dP": 10.5,
+    "dH": 3.7,
+    "mv": 128.5
+  },
+  "Pentachlorophenol": {
+    "dD": 21.5,
+    "dP": 6.9,
+    "dH": 12.8,
+    "mv": 134.7
+  },
+  "1,3-Pentadiene (Trans)": {
+    "dD": 14.7,
+    "dP": 2.5,
+    "dH": 5.0,
+    "mv": 101.7
+  },
+  "Pentafluorobenzophenone": {
+    "dD": 19.3,
+    "dP": 8.1,
+    "dH": 5.4,
+    "mv": 185.5
+  },
+  "Pentamethylene Sulfide": {
+    "dD": 18.5,
+    "dP": 6.3,
+    "dH": 8.9,
+    "mv": 103.6
+  },
+  "Pentanal (Valeraldehyde)": {
+    "dD": 15.7,
+    "dP": 9.4,
+    "dH": 5.8,
+    "mv": 106.4
+  },
+  "Pentane": {
+    "dD": 14.5,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 116.2
+  },
+  "2,4-Pentanedione": {
+    "dD": 17.1,
+    "dP": 9.0,
+    "dH": 4.1,
+    "mv": 103.1
+  },
+  "Pentanoic Acid": {
+    "dD": 15.0,
+    "dP": 4.1,
+    "dH": 10.3,
+    "mv": 109.2
+  },
+  "1-Pentanol": {
+    "dD": 15.9,
+    "dP": 5.9,
+    "dH": 13.9,
+    "mv": 108.6
+  },
+  "2-Pentanol": {
+    "dD": 15.6,
+    "dP": 6.4,
+    "dH": 13.3,
+    "mv": 109.6
+  },
+  "4-Pentenal": {
+    "dD": 15.5,
+    "dP": 8.1,
+    "dH": 6.8,
+    "mv": 98.7
+  },
+  "1-Pentene": {
+    "dD": 13.9,
+    "dP": 1.4,
+    "dH": 3.8,
+    "mv": 110.4
+  },
+  "n-Pentyl Propionate": {
+    "dD": 15.8,
+    "dP": 5.2,
+    "dH": 5.7,
+    "mv": 165.3
+  },
+  "Perfluoro Dimethylcyclohexane": {
+    "dD": 12.4,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 217.4
+  },
+  "Perfluoro Ethylene (Tetrafluoro Ethylene)": {
+    "dD": 15.1,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 65.8
+  },
+  "Perfluoroheptane": {
+    "dD": 12.0,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 227.3
+  },
+  "Perfluoromethylcyclohexane": {
+    "dD": 12.4,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 196.0
+  },
+  "9,10-Phenanthrenequinone": {
+    "dD": 20.3,
+    "dP": 17.1,
+    "dH": 4.8,
+    "mv": 148.2
+  },
+  "Phenetole (Ethyl Phenyl Ether)": {
+    "dD": 18.4,
+    "dP": 4.5,
+    "dH": 4.0,
+    "mv": 127.3
+  },
+  "Phenol": {
+    "dD": 18.0,
+    "dP": 5.9,
+    "dH": 14.9,
+    "mv": 87.5
+  },
+  "Bisphenol A": {
+    "dD": 19.2,
+    "dP": 5.9,
+    "dH": 13.8,
+    "mv": 207.5
+  },
+  "Bisphenol-S": {
+    "dD": 20.0,
+    "dP": 14.6,
+    "dH": 16.3,
+    "mv": 183.2
+  },
+  "2-Phenoxy Ethanol": {
+    "dD": 17.8,
+    "dP": 5.7,
+    "dH": 14.3,
+    "mv": 124.7
+  },
+  "Bis-(m-Phenoxyphenyl) Ether": {
+    "dD": 19.6,
+    "dP": 3.1,
+    "dH": 5.1,
+    "mv": 373.0
+  },
+  "Phenyl Acetate": {
+    "dD": 19.8,
+    "dP": 5.2,
+    "dH": 6.4,
+    "mv": 126.9
+  },
+  "Phenyl Acetonitrile": {
+    "dD": 19.5,
+    "dP": 12.3,
+    "dH": 3.8,
+    "mv": 114.9
+  },
+  "Phenyl Acetylene": {
+    "dD": 18.8,
+    "dP": 2.8,
+    "dH": 4.0,
+    "mv": 109.1
+  },
+  "2-Phenyl Ethanol": {
+    "dD": 19.0,
+    "dP": 5.8,
+    "dH": 12.8,
+    "mv": 120.0
+  },
+  "Phenylhydrazine": {
+    "dD": 20.4,
+    "dP": 6.5,
+    "dH": 14.0,
+    "mv": 98.5
+  },
+  "Phosgene": {
+    "dD": 16.4,
+    "dP": 5.3,
+    "dH": 5.3,
+    "mv": 71.7
+  },
+  "Phosphoric Acid": {
+    "dD": 14.7,
+    "dP": 18.6,
+    "dH": 26.8,
+    "mv": 52.8
+  },
+  "Phosphorous Oxychloride (Phosphoryl Trichloride)": {
+    "dD": 18.1,
+    "dP": 9.3,
+    "dH": 0.0,
+    "mv": 93.2
+  },
+  "Phosphorus Trichloride": {
+    "dD": 18.4,
+    "dP": 3.6,
+    "dH": 0.0,
+    "mv": 87.3
+  },
+  "Phthalic Anhydride": {
+    "dD": 20.6,
+    "dP": 20.1,
+    "dH": 10.1,
+    "mv": 96.8
+  },
+  "Picric Acid (2,4,6-Trinitrophenol)": {
+    "dD": 19.2,
+    "dP": 7.0,
+    "dH": 6.0,
+    "mv": 130.0
+  },
+  "Pine Oil": {
+    "dD": 3.0,
+    "dP": 9.8,
+    "dH": 155.0,
+    "mv": 0
+  },
+  "2-Pinene (dl)": {
+    "dD": 16.9,
+    "dP": 1.8,
+    "dH": 3.1,
+    "mv": 159.5
+  },
+  "Piperazine": {
+    "dD": 18.1,
+    "dP": 5.6,
+    "dH": 8.0,
+    "mv": 97.9
+  },
+  "Piperidine": {
+    "dD": 17.6,
+    "dP": 4.5,
+    "dH": 8.9,
+    "mv": 98.9
+  },
+  "1,2-Propadiene (Allene)": {
+    "dD": 15.3,
+    "dP": 3.0,
+    "dH": 6.8,
+    "mv": 60.1
+  },
+  "Propane": {
+    "dD": 13.4,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 89.5
+  },
+  "1,3-Propane Sultone": {
+    "dD": 18.4,
+    "dP": 16.0,
+    "dH": 9.0,
+    "mv": 87.7
+  },
+  "1,3-Propanediol": {
+    "dD": 16.8,
+    "dP": 13.5,
+    "dH": 23.2,
+    "mv": 72.5
+  },
+  "2-Propanethiol": {
+    "dD": 16.3,
+    "dP": 6.8,
+    "dH": 6.5,
+    "mv": 94.1
+  },
+  "1-Propanethiol": {
+    "dD": 16.1,
+    "dP": 5.8,
+    "dH": 5.7,
+    "mv": 90.5
+  },
+  "1-Propanol": {
+    "dD": 16.0,
+    "dP": 6.8,
+    "dH": 17.4,
+    "mv": 75.2
+  },
+  "2-Propanol": {
+    "dD": 15.8,
+    "dP": 6.1,
+    "dH": 16.4,
+    "mv": 76.8
+  },
+  "Propargyl Acetate": {
+    "dD": 16.3,
+    "dP": 5.2,
+    "dH": 8.3,
+    "mv": 98.8
+  },
+  "Propargylaldehyde": {
+    "dD": 16.2,
+    "dP": 11.9,
+    "dH": 8.7,
+    "mv": 60.0
+  },
+  "beta-Propiolactone": {
+    "dD": 19.7,
+    "dP": 18.2,
+    "dH": 10.3,
+    "mv": 65.5
+  },
+  "Propionaldehyde": {
+    "dD": 15.3,
+    "dP": 11.1,
+    "dH": 6.9,
+    "mv": 73.4
+  },
+  "Propionaldehyde-2,3-Epoxy": {
+    "dD": 17.5,
+    "dP": 13.4,
+    "dH": 9.8,
+    "mv": 63.2
+  },
+  "Propionamide": {
+    "dD": 16.7,
+    "dP": 9.8,
+    "dH": 11.5,
+    "mv": 78.9
+  },
+  "Propionic Acid": {
+    "dD": 14.7,
+    "dP": 5.3,
+    "dH": 12.4,
+    "mv": 75.0
+  },
+  "Propionic Anhydride": {
+    "dD": 16.2,
+    "dP": 10.0,
+    "dH": 8.7,
+    "mv": 129.4
+  },
+  "Propionitrile": {
+    "dD": 15.3,
+    "dP": 14.3,
+    "dH": 5.5,
+    "mv": 70.9
+  },
+  "Propionylchloride": {
+    "dD": 16.1,
+    "dP": 10.3,
+    "dH": 5.3,
+    "mv": 86.9
+  },
+  "n-Propyl Acetate": {
+    "dD": 15.3,
+    "dP": 4.3,
+    "dH": 7.6,
+    "mv": 115.3
+  },
+  "Propyl Amine": {
+    "dD": 16.9,
+    "dP": 4.9,
+    "dH": 8.6,
+    "mv": 83.0
+  },
+  "Propyl Chloride": {
+    "dD": 16.0,
+    "dP": 7.8,
+    "dH": 2.0,
+    "mv": 88.1
+  },
+  "Propyl Formate": {
+    "dD": 15.5,
+    "dP": 7.1,
+    "dH": 8.6,
+    "mv": 97.9
+  },
+  "Propyl Methacrylate": {
+    "dD": 15.5,
+    "dP": 6.3,
+    "dH": 6.6,
+    "mv": 158.8
+  },
+  "n-Propyl Nitrate": {
+    "dD": 15.8,
+    "dP": 11.3,
+    "dH": 4.1,
+    "mv": 99.7
+  },
+  "Propylene": {
+    "dD": 15.1,
+    "dP": 1.6,
+    "dH": 1.5,
+    "mv": 68.8
+  },
+  "Propylene Carbonate": {
+    "dD": 20.0,
+    "dP": 18.0,
+    "dH": 4.1,
+    "mv": 85.0
+  },
+  "Propylene Chlorohydrin": {
+    "dD": 16.8,
+    "dP": 9.8,
+    "dH": 15.3,
+    "mv": 85.4
+  },
+  "Propylene Glycol": {
+    "dD": 16.8,
+    "dP": 9.4,
+    "dH": 23.3,
+    "mv": 73.6
+  },
+  "Propylene Glycol Mono-t-Butyl Ether": {
+    "dD": 15.3,
+    "dP": 6.1,
+    "dH": 10.8,
+    "mv": 151.6
+  },
+  "Propylene Glycol Monobutyl Ether": {
+    "dD": 15.3,
+    "dP": 4.5,
+    "dH": 9.2,
+    "mv": 132.0
+  },
+  "Propylene Glycol Monoethyl Ether": {
+    "dD": 15.7,
+    "dP": 6.5,
+    "dH": 10.5,
+    "mv": 115.6
+  },
+  "Propylene Glycol Monoethyl Ether Acetate": {
+    "dD": 15.6,
+    "dP": 4.3,
+    "dH": 9.0,
+    "mv": 155.1
+  },
+  "Propylene Glycol Monoisobutyl Ether": {
+    "dD": 15.1,
+    "dP": 4.7,
+    "dH": 9.8,
+    "mv": 132.2
+  },
+  "Propylene Glycol Monoisopropyl Ether": {
+    "dD": 15.5,
+    "dP": 6.1,
+    "dH": 11.0,
+    "mv": 134.6
+  },
+  "Propylene Glycol Monomethyl Ether": {
+    "dD": 15.6,
+    "dP": 6.3,
+    "dH": 11.6,
+    "mv": 93.8
+  },
+  "Propylene Glycol Monomethyl Ether Acetate": {
+    "dD": 15.6,
+    "dP": 5.6,
+    "dH": 9.8,
+    "mv": 137.1
+  },
+  "Propylene Glycol Monophenyl Ether": {
+    "dD": 17.4,
+    "dP": 5.3,
+    "dH": 11.5,
+    "mv": 143.2
+  },
+  "Propylene Glycol Monopropyl Ether": {
+    "dD": 15.8,
+    "dP": 7.0,
+    "dH": 9.2,
+    "mv": 130.3
+  },
+  "Propylene Imine (2-Methyl Aziridine)": {
+    "dD": 18.1,
+    "dP": 8.4,
+    "dH": 6.5,
+    "mv": 71.2
+  },
+  "Propylene Oxide": {
+    "dD": 15.2,
+    "dP": 8.6,
+    "dH": 6.7,
+    "mv": 67.6
+  },
+  "2-Propyn-1-ol": {
+    "dD": 16.1,
+    "dP": 8.8,
+    "dH": 19.1,
+    "mv": 57.7
+  },
+  "Propynonitrile": {
+    "dD": 15.5,
+    "dP": 17.0,
+    "dH": 6.3,
+    "mv": 62.5
+  },
+  "Pulegone": {
+    "dD": 17.5,
+    "dP": 8.9,
+    "dH": 5.5,
+    "mv": 162.9
+  },
+  "Pyrazole": {
+    "dD": 20.2,
+    "dP": 10.4,
+    "dH": 12.4,
+    "mv": 68.1
+  },
+  "Pyridazine": {
+    "dD": 20.2,
+    "dP": 17.4,
+    "dH": 11.7,
+    "mv": 72.6
+  },
+  "Pyridine": {
+    "dD": 19.0,
+    "dP": 8.8,
+    "dH": 5.9,
+    "mv": 80.9
+  },
+  "Pyrogallol (1,2,3-Trihydroxybenzene)": {
+    "dD": 20.7,
+    "dP": 10.7,
+    "dH": 21.1,
+    "mv": 87.0
+  },
+  "Pyrrole": {
+    "dD": 19.2,
+    "dP": 7.4,
+    "dH": 6.7,
+    "mv": 69.2
+  },
+  "Pyrrolidine": {
+    "dD": 17.9,
+    "dP": 6.5,
+    "dH": 7.4,
+    "mv": 83.5
+  },
+  "2-Pyrrolidone": {
+    "dD": 19.4,
+    "dP": 17.4,
+    "dH": 11.3,
+    "mv": 76.4
+  },
+  "Pyruvonitrile": {
+    "dD": 15.9,
+    "dP": 18.9,
+    "dH": 8.0,
+    "mv": 70.9
+  },
+  "Quinine": {
+    "dD": 19.0,
+    "dP": 6.6,
+    "dH": 11.0,
+    "mv": 310.7
+  },
+  "Quinoline": {
+    "dD": 19.8,
+    "dP": 5.6,
+    "dH": 5.7,
+    "mv": 118.0
+  },
+  "Salicylaldehyde": {
+    "dD": 19.4,
+    "dP": 10.7,
+    "dH": 14.7,
+    "mv": 104.6
+  },
+  "Sebacic Acid": {
+    "dD": 17.1,
+    "dP": 7.1,
+    "dH": 11.7,
+    "mv": 167.6
+  },
+  "Sinapyl Alcohol": {
+    "dD": 19.2,
+    "dP": 7.3,
+    "dH": 16.1,
+    "mv": 194.6
+  },
+  "Spermidin": {
+    "dD": 16.7,
+    "dP": 11.2,
+    "dH": 12.0,
+    "mv": 155.6
+  },
+  "Stearic Acid": {
+    "dD": 16.3,
+    "dP": 3.3,
+    "dH": 5.5,
+    "mv": 326.0
+  },
+  "Styrene Oxide (Phenyl Oxirane)": {
+    "dD": 19.4,
+    "dP": 5.8,
+    "dH": 6.6,
+    "mv": 114.2
+  },
+  "Succinaldehyde (Butanedial)": {
+    "dD": 16.8,
+    "dP": 9.8,
+    "dH": 10.5,
+    "mv": 81.2
+  },
+  "Succinic Anhydride": {
+    "dD": 18.6,
+    "dP": 19.2,
+    "dH": 16.6,
+    "mv": 66.8
+  },
+  "Succinonitrile": {
+    "dD": 17.9,
+    "dP": 16.2,
+    "dH": 7.9,
+    "mv": 81.2
+  },
+  "Sulfanilamide": {
+    "dD": 20.0,
+    "dP": 19.5,
+    "dH": 10.7,
+    "mv": 159.5
+  },
+  "Sulfolane": {
+    "dD": 20.3,
+    "dP": 18.2,
+    "dH": 10.9,
+    "mv": 95.7
+  },
+  "Sulfur Dicyanide": {
+    "dD": 18.1,
+    "dP": 13.5,
+    "dH": 0.0,
+    "mv": 60.0
+  },
+  "Sulfur Dioxide": {
+    "dD": 15.8,
+    "dP": 8.4,
+    "dH": 10.0,
+    "mv": 44.0
+  },
+  "Sulfuryl Chloride": {
+    "dD": 17.6,
+    "dP": 7.2,
+    "dH": 0.0,
+    "mv": 81.0
+  },
+  "Terephthalic Acid": {
+    "dD": 18.8,
+    "dP": 6.1,
+    "dH": 10.7,
+    "mv": 166.0
+  },
+  "2-tert-Butyl-4-Methyl Phenol": {
+    "dD": 17.3,
+    "dP": 3.7,
+    "dH": 10.5,
+    "mv": 177.6
+  },
+  "Tetrabromo Bisphenol A": {
+    "dD": 20.2,
+    "dP": 9.1,
+    "dH": 13.8,
+    "mv": 249.5
+  },
+  "1,1,2,2-Tetrabromoethane": {
+    "dD": 22.6,
+    "dP": 5.1,
+    "dH": 8.2,
+    "mv": 116.8
+  },
+  "1,2,4,5-Tetrachlorobenzene": {
+    "dD": 21.2,
+    "dP": 10.7,
+    "dH": 3.4,
+    "mv": 116.2
+  },
+  "2,2,6,6-Tetrachlorocyclohexanone": {
+    "dD": 19.5,
+    "dP": 14.0,
+    "dH": 6.3,
+    "mv": 138.8
+  },
+  "1,1,2,2-Tetrachloroethane": {
+    "dD": 18.8,
+    "dP": 5.1,
+    "dH": 5.3,
+    "mv": 105.2
+  },
+  "1,1,1,2-Tetrachloroethane": {
+    "dD": 18.0,
+    "dP": 4.4,
+    "dH": 4.2,
+    "mv": 105.0
+  },
+  "Tetrachloroethylene": {
+    "dD": 18.3,
+    "dP": 5.7,
+    "dH": 0.0,
+    "mv": 101.2
+  },
+  "1,1,2,2-Tetrachloropropane": {
+    "dD": 17.9,
+    "dP": 6.7,
+    "dH": 3.3,
+    "mv": 123.7
+  },
+  "n-Tetradecane": {
+    "dD": 16.2,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 261.3
+  },
+  "1-Tetradecene": {
+    "dD": 16.1,
+    "dP": 0.5,
+    "dH": 1.9,
+    "mv": 253.4
+  },
+  "Tetraethylorthosilicate": {
+    "dD": 4.3,
+    "dP": 0.6,
+    "dH": 224.0,
+    "mv": 0
+  },
+  "Tetrahydrofuran": {
+    "dD": 16.8,
+    "dP": 5.7,
+    "dH": 8.0,
+    "mv": 81.7
+  },
+  "2,5-Tetrahydrofuran Dimethanol": {
+    "dD": 17.9,
+    "dP": 8.5,
+    "dH": 18.9,
+    "mv": 114.5
+  },
+  "Tetrahydrofurfuryl Alcohol": {
+    "dD": 17.8,
+    "dP": 8.2,
+    "dH": 10.2,
+    "mv": 97.0
+  },
+  "Tetrahydronaphthalene": {
+    "dD": 19.6,
+    "dP": 2.0,
+    "dH": 2.9,
+    "mv": 136.0
+  },
+  "Tetrahydropyran": {
+    "dD": 16.4,
+    "dP": 6.3,
+    "dH": 6.0,
+    "mv": 97.8
+  },
+  "Tetrahydrothiapyran": {
+    "dD": 18.5,
+    "dP": 6.3,
+    "dH": 8.9,
+    "mv": 103.6
+  },
+  "1,1,3,3-Tetramethoxypropane": {
+    "dD": 15.0,
+    "dP": 7.1,
+    "dH": 6.8,
+    "mv": 164.7
+  },
+  "1,2,3,4-Tetramethylbenzene": {
+    "dD": 18.8,
+    "dP": 0.5,
+    "dH": 0.5,
+    "mv": 148.3
+  },
+  "1,2,3,5-Tetramethylbenzene": {
+    "dD": 18.6,
+    "dP": 0.5,
+    "dH": 0.5,
+    "mv": 150.8
+  },
+  "Tetramethylene Sulfide": {
+    "dD": 18.6,
+    "dP": 6.7,
+    "dH": 9.1,
+    "mv": 88.3
+  },
+  "Tetramethylene Sulfone (Sulfolane)": {
+    "dD": 20.3,
+    "dP": 18.2,
+    "dH": 10.9,
+    "mv": 95.7
+  },
+  "Tetramethylene Sulfoxide": {
+    "dD": 18.2,
+    "dP": 11.0,
+    "dH": 9.1,
+    "mv": 90.0
+  },
+  "Tetramethylurea": {
+    "dD": 16.7,
+    "dP": 8.2,
+    "dH": 11.0,
+    "mv": 120.4
+  },
+  "Tetranitromethane": {
+    "dD": 15.5,
+    "dP": 9.9,
+    "dH": 7.5,
+    "mv": 119.7
+  },
+  "2,2',5,5'-Tetrathiafulvalen": {
+    "dD": 21.0,
+    "dP": 8.2,
+    "dH": 8.4,
+    "mv": 204.0
+  },
+  "2-Thiabutane": {
+    "dD": 16.2,
+    "dP": 5.9,
+    "dH": 5.3,
+    "mv": 90.4
+  },
+  "Thiacyclopropane": {
+    "dD": 19.3,
+    "dP": 9.1,
+    "dH": 5.0,
+    "mv": 58.0
+  },
+  "Thiazole": {
+    "dD": 20.5,
+    "dP": 18.8,
+    "dH": 10.8,
+    "mv": 70.9
+  },
+  "Thioacetamide": {
+    "dD": 17.5,
+    "dP": 20.6,
+    "dH": 20.2,
+    "mv": 75.0
+  },
+  "Thioacetic Acid": {
+    "dD": 17.0,
+    "dP": 6.7,
+    "dH": 8.9,
+    "mv": 71.5
+  },
+  "Gamma-Thiobutyrolactone": {
+    "dD": 19.0,
+    "dP": 6.9,
+    "dH": 6.2,
+    "mv": 86.6
+  },
+  "Thiocyanic Acid": {
+    "dD": 16.8,
+    "dP": 8.9,
+    "dH": 10.9,
+    "mv": 51.7
+  },
+  "Thiodiethylenglycol": {
+    "dD": 17.3,
+    "dP": 8.8,
+    "dH": 19.8,
+    "mv": 103.6
+  },
+  "Thioglycolic Acid (Mercapto Acetic Acid)": {
+    "dD": 16.0,
+    "dP": 8.6,
+    "dH": 14.8,
+    "mv": 69.5
+  },
+  "Thionyl Chloride": {
+    "dD": 16.9,
+    "dP": 6.2,
+    "dH": 5.9,
+    "mv": 79.0
+  },
+  "Thiophene": {
+    "dD": 18.9,
+    "dP": 2.4,
+    "dH": 7.8,
+    "mv": 79.0
+  },
+  "Thiophenol": {
+    "dD": 20.0,
+    "dP": 4.5,
+    "dH": 10.3,
+    "mv": 102.4
+  },
+  "Thiourea": {
+    "dD": 20.0,
+    "dP": 21.7,
+    "dH": 14.8,
+    "mv": 72.8
+  },
+  "1,4-Thioxane": {
+    "dD": 19.0,
+    "dP": 6.6,
+    "dH": 7.7,
+    "mv": 93.5
+  },
+  "Thymol": {
+    "dD": 19.0,
+    "dP": 4.5,
+    "dH": 10.8,
+    "mv": 166.9
+  },
+  "Tigaldehyde": {
+    "dD": 16.2,
+    "dP": 12.9,
+    "dH": 6.8,
+    "mv": 96.6
+  },
+  "Toluene": {
+    "dD": 18.0,
+    "dP": 1.4,
+    "dH": 2.0,
+    "mv": 106.8
+  },
+  "2-Toluidine": {
+    "dD": 19.4,
+    "dP": 5.8,
+    "dH": 9.4,
+    "mv": 107.8
+  },
+  "Tolylene Diisocyanate": {
+    "dD": 19.3,
+    "dP": 7.9,
+    "dH": 6.1,
+    "mv": 143.5
+  },
+  "Triacetin (1,2,3-Propanetriol Triacetate)": {
+    "dD": 16.5,
+    "dP": 4.5,
+    "dH": 9.1,
+    "mv": 188.2
+  },
+  "Tri-n-Butyl Acetyl Citrate": {
+    "dD": 16.7,
+    "dP": 2.5,
+    "dH": 7.4,
+    "mv": 384.3
+  },
+  "Tri-n-Butyl Borate": {
+    "dD": 16.7,
+    "dP": 1.8,
+    "dH": 4.6,
+    "mv": 269.7
+  },
+  "Tri-n-Butyl Citrate": {
+    "dD": 16.6,
+    "dP": 3.8,
+    "dH": 10.1,
+    "mv": 345.5
+  },
+  "Tri Butyl Phosphate": {
+    "dD": 16.3,
+    "dP": 6.3,
+    "dH": 4.3,
+    "mv": 274.0
+  },
+  "1,2,3-Triazole": {
+    "dD": 20.7,
+    "dP": 8.8,
+    "dH": 15.0,
+    "mv": 58.2
+  },
+  "2,4,6-Tribromo Phenol": {
+    "dD": 20.6,
+    "dP": 10.2,
+    "dH": 14.1,
+    "mv": 129.7
+  },
+  "Tribromo Ethylene": {
+    "dD": 18.3,
+    "dP": 9.4,
+    "dH": 8.0,
+    "mv": 97.8
+  },
+  "3,3,3-Trichloro Propene": {
+    "dD": 17.7,
+    "dP": 15.5,
+    "dH": 3.4,
+    "mv": 106.2
+  },
+  "1,1,2-Trichloro Propene": {
+    "dD": 17.7,
+    "dP": 15.7,
+    "dH": 3.4,
+    "mv": 104.8
+  },
+  "1,2,3-Trichloro Propene": {
+    "dD": 17.8,
+    "dP": 15.7,
+    "dH": 3.4,
+    "mv": 105.0
+  },
+  "Trichloro-Methyl-Silane": {
+    "dD": 16.5,
+    "dP": 6.6,
+    "dH": 3.5,
+    "mv": 117.4
+  },
+  "Trichloroacetic Acid": {
+    "dD": 18.3,
+    "dP": 5.8,
+    "dH": 11.4,
+    "mv": 100.2
+  },
+  "Trichloroacetonitrile": {
+    "dD": 16.4,
+    "dP": 7.4,
+    "dH": 6.1,
+    "mv": 100.0
+  },
+  "2,4,6-Trichloroanisole": {
+    "dD": 21.0,
+    "dP": 3.9,
+    "dH": 7.0,
+    "mv": 129.0
+  },
+  "1,2,4-Trichlorobenzene": {
+    "dD": 20.2,
+    "dP": 6.0,
+    "dH": 3.2,
+    "mv": 125.5
+  },
+  "1,1,1-Trichloroethane": {
+    "dD": 16.8,
+    "dP": 4.3,
+    "dH": 2.0,
+    "mv": 99.3
+  },
+  "1,1,2-Trichloroethane": {
+    "dD": 18.2,
+    "dP": 5.3,
+    "dH": 6.8,
+    "mv": 92.9
+  },
+  "Trichloroethylene": {
+    "dD": 18.0,
+    "dP": 3.1,
+    "dH": 5.3,
+    "mv": 90.2
+  },
+  "Trichlorofluoromethane (Freon 11)": {
+    "dD": 15.3,
+    "dP": 2.0,
+    "dH": 0.0,
+    "mv": 92.8
+  },
+  "2,4,6-Trichlorophenol": {
+    "dD": 20.3,
+    "dP": 5.1,
+    "dH": 10.8,
+    "mv": 132.5
+  },
+  "1,2,3-Trichloropropane": {
+    "dD": 17.8,
+    "dP": 12.3,
+    "dH": 3.4,
+    "mv": 106.1
+  },
+  "Trichlorosilane": {
+    "dD": 3.6,
+    "dP": 3.8,
+    "dH": 101.1,
+    "mv": 0
+  },
+  "2,4,5-Trichlorothiophenol": {
+    "dD": 21.0,
+    "dP": 4.5,
+    "dH": 9.1,
+    "mv": 145.0
+  },
+  "1,1,2-Trichlorotrifluoroethane": {
+    "dD": 14.7,
+    "dP": 1.6,
+    "dH": 0.0,
+    "mv": 119.2
+  },
+  "Triclosan": {
+    "dD": 20.0,
+    "dP": 7.7,
+    "dH": 10.0,
+    "mv": 263.0
+  },
+  "Tricresyl Phosphate": {
+    "dD": 19.0,
+    "dP": 12.3,
+    "dH": 4.5,
+    "mv": 316.0
+  },
+  "Tricyclene": {
+    "dD": 16.9,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 161.4
+  },
+  "Tridecyl Alcohol": {
+    "dD": 16.2,
+    "dP": 3.1,
+    "dH": 9.0,
+    "mv": 242.0
+  },
+  "Triethanolamine": {
+    "dD": 17.3,
+    "dP": 22.4,
+    "dH": 23.3,
+    "mv": 133.2
+  },
+  "Triethyl Citrate": {
+    "dD": 16.5,
+    "dP": 4.9,
+    "dH": 12.0,
+    "mv": 243.0
+  },
+  "Triethylamine": {
+    "dD": 17.8,
+    "dP": 0.4,
+    "dH": 1.0,
+    "mv": 138.6
+  },
+  "Triethylene Glycol": {
+    "dD": 16.0,
+    "dP": 12.5,
+    "dH": 18.6,
+    "mv": 114.0
+  },
+  "Triethylene Glycol Monomethyl Ether": {
+    "dD": 16.2,
+    "dP": 7.6,
+    "dH": 12.5,
+    "mv": 160.0
+  },
+  "Triethylene Glycol Monooleyl Ether": {
+    "dD": 16.0,
+    "dP": 3.1,
+    "dH": 8.4,
+    "mv": 418.5
+  },
+  "Triethylphosphate": {
+    "dD": 16.7,
+    "dP": 11.4,
+    "dH": 9.2,
+    "mv": 171.0
+  },
+  "2,2,2-Trifluoro Ethanol": {
+    "dD": 15.4,
+    "dP": 8.3,
+    "dH": 16.4,
+    "mv": 72.3
+  },
+  "2,3,4-Trifluoro Nitrobenzene": {
+    "dD": 19.5,
+    "dP": 7.7,
+    "dH": 3.5,
+    "mv": 122.0
+  },
+  "alpha,alpha,alpha Trifluoro Toluene": {
+    "dD": 17.5,
+    "dP": 8.8,
+    "dH": 0.0,
+    "mv": 122.9
+  },
+  "Trifluoroacetic Acid": {
+    "dD": 15.6,
+    "dP": 9.9,
+    "dH": 11.6,
+    "mv": 74.2
+  },
+  "1,1,1-Trifluoroethane": {
+    "dD": 14.6,
+    "dP": 10.7,
+    "dH": 0.0,
+    "mv": 64.6
+  },
+  "Trifluoromethane (Freon 23)": {
+    "dD": 14.4,
+    "dP": 8.9,
+    "dH": 6.5,
+    "mv": 46.1
+  },
+  "4-(Trifluoromethyl) Acetophenone": {
+    "dD": 18.8,
+    "dP": 6.1,
+    "dH": 3.5,
+    "mv": 151.7
+  },
+  "1,3-Bis(Trifluoromethyl)Benzene": {
+    "dD": 17.0,
+    "dP": 6.8,
+    "dH": 0.0,
+    "mv": 155.2
+  },
+  "Triisononyl Trimellilate": {
+    "dD": 16.6,
+    "dP": 5.7,
+    "dH": 2.2,
+    "mv": 602.9
+  },
+  "Triisooctyl Trimellitate": {
+    "dD": 16.6,
+    "dP": 6.0,
+    "dH": 2.5,
+    "mv": 553.1
+  },
+  "Trimethyl Amine": {
+    "dD": 14.6,
+    "dP": 3.4,
+    "dH": 1.8,
+    "mv": 90.3
+  },
+  "2,2,4-Trimethyl-1,3-Pentanediol Monoisobutyrate": {
+    "dD": 15.1,
+    "dP": 6.1,
+    "dH": 9.8,
+    "mv": 227.4
+  },
+  "Trimethylbenzene": {
+    "dD": 18.0,
+    "dP": 1.0,
+    "dH": 1.0,
+    "mv": 137.3
+  },
+  "Trimethylenesulfide": {
+    "dD": 18.8,
+    "dP": 7.8,
+    "dH": 9.4,
+    "mv": 72.8
+  },
+  "2,2,4-Trimethylpentane": {
+    "dD": 14.1,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 166.1
+  },
+  "Trimethylphosphate": {
+    "dD": 16.7,
+    "dP": 15.9,
+    "dH": 10.2,
+    "mv": 115.8
+  },
+  "Trinitomethane": {
+    "dD": 15.5,
+    "dP": 10.3,
+    "dH": 7.3,
+    "mv": 94.6
+  },
+  "Trioctylphosphate": {
+    "dD": 16.2,
+    "dP": 5.9,
+    "dH": 4.2,
+    "mv": 469.8
+  },
+  "1,3,5-Trioxane": {
+    "dD": 18.7,
+    "dP": 9.2,
+    "dH": 8.6,
+    "mv": 77.0
+  },
+  "Triphenyl Phosphate": {
+    "dD": 20.1,
+    "dP": 6.4,
+    "dH": 6.8,
+    "mv": 271.9
+  },
+  "Tripropylene Glycol Monomethyl Ether": {
+    "dD": 15.3,
+    "dP": 5.5,
+    "dH": 10.4,
+    "mv": 214.0
+  },
+  "Undecane": {
+    "dD": 16.0,
+    "dP": 0.0,
+    "dH": 0.0,
+    "mv": 212.7
+  },
+  "Urea": {
+    "dD": 20.9,
+    "dP": 18.7,
+    "dH": 26.4,
+    "mv": 45.8
+  },
+  "Valeronitrile": {
+    "dD": 15.3,
+    "dP": 11.0,
+    "dH": 4.8,
+    "mv": 103.8
+  },
+  "Vanillin (4-Hydroxy-3-Methoxy Benzaldehyde)": {
+    "dD": 19.4,
+    "dP": 9.8,
+    "dH": 11.2,
+    "mv": 144.1
+  },
+  "Vinyl 2-Chloro Ethyl Ether": {
+    "dD": 16.3,
+    "dP": 6.7,
+    "dH": 5.8,
+    "mv": 101.7
+  },
+  "Vinyl 2-Ethyl-Hexyl Ether": {
+    "dD": 15.6,
+    "dP": 3.4,
+    "dH": 4.2,
+    "mv": 194.2
+  },
+  "Vinyl 2-Methoxy Ethyl Ether": {
+    "dD": 15.9,
+    "dP": 6.7,
+    "dH": 6.8,
+    "mv": 96.2
+  },
+  "Vinyl Acetate": {
+    "dD": 16.0,
+    "dP": 7.2,
+    "dH": 5.9,
+    "mv": 92.6
+  },
+  "Vinyl Acetic Acid": {
+    "dD": 16.8,
+    "dP": 5.2,
+    "dH": 12.3,
+    "mv": 85.3
+  },
+  "Vinyl Acetylene": {
+    "dD": 15.1,
+    "dP": 1.7,
+    "dH": 12.0,
+    "mv": 74.3
+  },
+  "Vinyl Allyl Ether": {
+    "dD": 14.9,
+    "dP": 6.5,
+    "dH": 5.3,
+    "mv": 105.4
+  },
+  "Vinyl Amine": {
+    "dD": 15.7,
+    "dP": 7.2,
+    "dH": 11.8,
+    "mv": 51.8
+  },
+  "Vinyl Bromide": {
+    "dD": 15.9,
+    "dP": 6.3,
+    "dH": 5.4,
+    "mv": 71.6
+  },
+  "Vinyl Butyl Carbitol": {
+    "dD": 16.0,
+    "dP": 5.0,
+    "dH": 6.0,
+    "mv": 206.2
+  },
+  "Vinyl Butyl Ether": {
+    "dD": 15.2,
+    "dP": 4.1,
+    "dH": 5.1,
+    "mv": 129.4
+  },
+  "Vinyl Butyl Sulfide": {
+    "dD": 16.0,
+    "dP": 5.0,
+    "dH": 5.4,
+    "mv": 136.7
+  },
+  "Vinyl Butyrate": {
+    "dD": 15.6,
+    "dP": 3.9,
+    "dH": 6.9,
+    "mv": 126.5
+  },
+  "Vinyl Carbitol": {
+    "dD": 16.3,
+    "dP": 7.5,
+    "dH": 13.8,
+    "mv": 129.2
+  },
+  "Vinyl Chloride": {
+    "dD": 16.0,
+    "dP": 6.5,
+    "dH": 2.4,
+    "mv": 68.7
+  },
+  "Vinyl Crotonate": {
+    "dD": 15.9,
+    "dP": 5.0,
+    "dH": 9.0,
+    "mv": 118.8
+  },
+  "Vinyl Ether": {
+    "dD": 14.8,
+    "dP": 4.2,
+    "dH": 5.8,
+    "mv": 90.7
+  },
+  "Vinyl Ethyl Carbitol": {
+    "dD": 15.9,
+    "dP": 6.0,
+    "dH": 6.6,
+    "mv": 171.9
+  },
+  "Vinyl Ethyl Ether": {
+    "dD": 14.5,
+    "dP": 4.9,
+    "dH": 6.0,
+    "mv": 95.0
+  },
+  "Vinyl Ethyl Sulfide": {
+    "dD": 16.4,
+    "dP": 5.8,
+    "dH": 6.3,
+    "mv": 101.3
+  },
+  "Vinyl Formate": {
+    "dD": 15.3,
+    "dP": 6.5,
+    "dH": 9.7,
+    "mv": 74.7
+  },
+  "Vinyl Iodide (Iodoethene)": {
+    "dD": 17.1,
+    "dP": 5.5,
+    "dH": 7.3,
+    "mv": 75.6
+  },
+  "Vinyl Isobutyl Ether": {
+    "dD": 15.1,
+    "dP": 4.1,
+    "dH": 5.1,
+    "mv": 131.3
+  },
+  "Vinyl Isopropyl Ether": {
+    "dD": 14.7,
+    "dP": 3.5,
+    "dH": 5.2,
+    "mv": 115.3
+  },
+  "Vinyl Methyl Cellosolve": {
+    "dD": 15.6,
+    "dP": 6.2,
+    "dH": 6.8,
+    "mv": 114.7
+  },
+  "Vinyl Propionate": {
+    "dD": 15.6,
+    "dP": 8.0,
+    "dH": 4.7,
+    "mv": 110.1
+  },
+  "Vinyl Propyl Ether": {
+    "dD": 14.9,
+    "dP": 3.5,
+    "dH": 5.2,
+    "mv": 113.0
+  },
+  "4-Vinyl Pyridine": {
+    "dD": 18.1,
+    "dP": 7.2,
+    "dH": 6.8,
+    "mv": 107.3
+  },
+  "Vinyl Pyrrolidone": {
+    "dD": 16.4,
+    "dP": 9.3,
+    "dH": 5.9,
+    "mv": 106.9
+  },
+  "Vinyl S-Butyl Mercapto Butyl Ether": {
+    "dD": 16.5,
+    "dP": 5.0,
+    "dH": 5.8,
+    "mv": 174.0
+  },
+  "Vinyl S-Ethyl Mercapto Ethyl Ether": {
+    "dD": 16.4,
+    "dP": 7.0,
+    "dH": 6.0,
+    "mv": 139.7
+  },
+  "Vinyl Silane": {
+    "dD": 15.5,
+    "dP": 2.6,
+    "dH": 4.0,
+    "mv": 89.4
+  },
+  "2-Vinyl Toluene": {
+    "dD": 18.6,
+    "dP": 1.0,
+    "dH": 3.8,
+    "mv": 131.8
+  },
+  "Vinyl Trifluoro Acetate": {
+    "dD": 13.9,
+    "dP": 4.3,
+    "dH": 7.6,
+    "mv": 116.4
+  },
+  "Vinyl Trimethyl Silane": {
+    "dD": 14.5,
+    "dP": 1.0,
+    "dH": 2.5,
+    "mv": 145.3
+  },
+  "Vinyl-2-Ethyl Hexanoate": {
+    "dD": 15.6,
+    "dP": 2.7,
+    "dH": 5.8,
+    "mv": 196.0
+  },
+  "Vinylenecarbonate": {
+    "dD": 17.3,
+    "dP": 18.1,
+    "dH": 9.6,
+    "mv": 86.0
+  },
+  "Water": {
+    "dD": 15.5,
+    "dP": 16.0,
+    "dH": 42.3,
+    "mv": 18.0
+  },
+  "Xylene": {
+    "dD": 17.6,
+    "dP": 1.0,
+    "dH": 3.1,
+    "mv": 123.3
+  },
+  "o-Xylene": {
+    "dD": 17.8,
+    "dP": 1.0,
+    "dH": 3.1,
+    "mv": 121.2
+  }
+}

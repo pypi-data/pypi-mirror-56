@@ -1,0 +1,41 @@
+{
+  "preferred": [
+    "Water",
+    "Acetone",
+    "Ethanol",
+    "1-Propanol",
+    "2-Propanol",
+    "Ethyl Lactate",
+    "Ethyl Acetate",
+    "Isopropyl Acetate",
+    "Methanol",
+    "Methyl Ethyl Ketone",
+    "t-Butyl Alcohol",
+    "1-Butanol",
+    "Sulfolane",
+    "Glycerol",
+    "Dimethyl Carbonate",
+    "n-Propyl Acetate",
+    "Methyl Acetate",
+    "n-Butyl Acetate",
+    "tert-Butyl Acetate",
+    "1,3-Propanediol"
+  ],
+  "usable": [
+    "Acetonitrile",
+    "Heptane",
+    "Cyclohexane",
+    "Toluene",
+    "Methyl Cyclohexane",
+    "2-Methyl Tetrahydrofuran",
+    "Ethylene Glycol",
+    "Xylene",
+    "Dimethyl Sulfoxide",
+    "Ethylene Carbonate",
+    "Propylene Carbonate",
+    "Diethyl Carbonate",
+    "2,3-Butylene Carbonate"
+  ],
+  "hazardous": [],
+  "custom": []
+}
