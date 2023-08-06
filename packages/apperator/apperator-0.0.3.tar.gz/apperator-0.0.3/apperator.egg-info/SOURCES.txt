@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+requirements.in
+setup.py
+apperator/__init__.py
+apperator/classes.py
+apperator/run.py
+apperator.egg-info/PKG-INFO
+apperator.egg-info/SOURCES.txt
+apperator.egg-info/dependency_links.txt
+apperator.egg-info/entry_points.txt
+apperator.egg-info/requires.txt
+apperator.egg-info/top_level.txt
+apperator/templates/apperator.jinja

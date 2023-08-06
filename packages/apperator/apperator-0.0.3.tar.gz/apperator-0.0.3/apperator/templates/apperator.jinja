@@ -1,0 +1,136 @@
+{% if spec.create_namespace is defined and spec.create_namespace %}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ metadata.namespace }}
+  labels:
+    {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+  annotations:
+    {% for k, v in annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}
+
+{% endif %}
+{% for service in spec.services -%}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ metadata.name }}-{{ loop.index }}
+  namespace: {{ metadata.namespace }}
+  labels:
+    {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.labels is defined -%}{% for k, v in service.labels.items() %}{{ k }}: "{{ v }}"{% endfor -%}{% endif %}
+  annotations:
+    {% for k, v in annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.annotations is defined -%}{% for k, v in service.annotations.items() %}{{ k }}: "{{ v }}"{% endfor -%}{% endif %}
+spec:
+  replicas: {{ service.replicas|default("1", true) }}
+  selector:
+    matchLabels:
+        {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+        {% if service.labels is defined -%}{% for k, v in service.labels.items() %}{{ k }}: "{{ v }}"{% endfor -%}{% endif %}
+  template:
+    metadata:
+      labels:
+        {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+        {% if service.labels is defined -%}{% for k, v in service.labels.items() %}{{ k }}: "{{ v }}"{% endfor -%}{% endif %}
+    spec:
+      containers:
+      - name: {{ metadata.name }}-{{loop.index}}
+        image: {{ service.image }}
+        env:
+        - {name: APPERATOR_NAME, value: "{{ metadata.name }}"}
+        {% if service.env is defined -%}{% for k, v in service.env.items() %}- {name: {{ k }}, value: "{{v}}" } {% endfor -%}{% endif %}
+        {% if service.hostVolumes is defined -%}
+        volumeMounts:
+        {% for hostVolume in service.hostVolumes -%} {% set splitvolume = hostVolume.split(':') -%}
+        - name: hostpath-volume-{{ loop.index }}
+          mountPath: {{splitvolume[1]}}
+        {% endfor %}
+      volumes:
+      {% for hostVolume in service.hostVolumes -%} {% set splitvolume = hostVolume.split(':') -%}
+      - name: hostpath-volume-{{ loop.index }}
+        hostPath:
+          path: {{splitvolume[0]}}
+        {% endfor -%}
+
+        {% endif -%}
+{% if 'service' in service %}
+{% for svc in service.service %}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ svc.name }}
+  namespace: {{ metadata.namespace }}
+  labels:
+    {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.labels is defined %}{% for k, v in service.labels.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+    {% if svc.labels is defined %}{% for k, v in svc.labels.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+
+  annotations:
+    {% for k, v in annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.annotations is defined %}{% for k, v in service.annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+    {% if svc.annotations is defined %}{% for k, v in svc.annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+spec:
+  ports:
+  {% for port in svc.ports -%}
+  {% set splitport = port.split(':') -%}
+  - port: {{ splitport[0] }}
+    targetPort: {{ splitport[1]|default(splitport[0], true) }}
+  {% endfor -%}
+  selector:
+    {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.labels is defined -%}{% for k, v in service.labels.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif -%}
+    {% if svc.labels is defined -%}{% for k, v in svc.labels.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif -%}
+{% endfor -%}
+{% endif -%}
+
+{% if service.ingress is defined %}
+{% for ingress in service.ingress %}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apperator-ingress-{{ metadata.name }}-{{ loop.index }}
+  namespace: {{ metadata.namespace }}
+  labels:
+    {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.labels is defined %}{% for k, v in service.labels.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+  annotations:
+    {% for k, v in annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.annotations is defined %}{% for k, v in service.annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+spec:
+  ports:
+  - port: {{ ingress.targetPort }}
+  selector:
+    {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.labels is defined -%}{% for k, v in service.labels.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: apperator-ingress-{{ metadata.name }}-{{loop.index}}
+  namespace: {{ metadata.namespace }}
+  labels:
+    {% for k, v in labels.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.labels is defined %}{% for k, v in service.labels.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+  annotations:
+    {% for k, v in annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}
+    {% if service.annotations is defined %}{% for k, v in service.annotations.items() %}{{ k }}: "{{ v }}"{% endfor %}{% endif %}
+spec:
+  tls:
+  - hosts:
+    - '{{ ingress.tls.host | default(ingress.hostname, True) }}'
+    secretName: {{ ingress.tls.secretName }}
+  rules:
+  - host: {{ ingress.hostname }}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: apperator-ingress-{{ metadata.name }}-{{ loop.index }}
+          servicePort: {{ ingress.targetPort }}
+{% endfor -%}
+{% endif -%}
+{% endfor -%}
