@@ -1,0 +1,65 @@
+# Base Configuration file for artellapipe-tools-shadersmanager
+
+# Defines tool name
+name: Shaders Manager
+
+# Unique ID for the tool
+id: artellapipe-tools-shadersmanager
+
+# Defines logo name of the tool
+logo: shadersmanager_logo
+
+# Defines icon of the tool
+icon: shading
+
+# Description of the tool
+description: Artella Pipeline Module that contains project-specific configuration files
+
+# URL to tool documentation web page
+url: www.google.es
+
+# Tags relatedi with this tool
+tags: ['artella', 'manager', 'shaders']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://45368b556716471f8c8ee52dde7ea088@sentry.io/1764720
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: WARNING
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# List that defines the import order of the tool modules
+import_order:
+  - widgets
+  - core
+
+# Menu representation of this tool
+menu_ui:
+  label: "Shaders Manager"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Shading
+    type: menu
+    children:
+      - id: artellapipe-tools-shadersmanager
+        type: tool
+
+# Tool Shelf definition
+shelf:
+  - name: Shading
+    children:
+      - id: artellapipe-tools-shadersmanager
+        displayLabel: False
+        type: tool
