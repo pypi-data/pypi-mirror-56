@@ -1,0 +1,9 @@
+README.md
+setup.py
+mgzip/__init__.py
+mgzip/__main__.py
+mgzip/multiProcGzip.py
+mgzip.egg-info/PKG-INFO
+mgzip.egg-info/SOURCES.txt
+mgzip.egg-info/dependency_links.txt
+mgzip.egg-info/top_level.txt
