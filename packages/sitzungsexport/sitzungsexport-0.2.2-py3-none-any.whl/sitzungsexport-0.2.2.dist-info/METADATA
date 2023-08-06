@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sitzungsexport
+Version: 0.2.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: Click
+Requires-Dist: requests
+Requires-Dist: Markdown
+Requires-Dist: sentry-sdk (==0.13.3)
+
+UNKNOWN
+
+
