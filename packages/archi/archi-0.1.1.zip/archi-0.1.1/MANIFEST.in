@@ -1,0 +1,3 @@
+include LICENSE
+include archi.pyx
+include README.md
