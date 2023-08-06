@@ -1,0 +1,3 @@
+[console_scripts]
+pyrobud = pyrobud.launch:main
+

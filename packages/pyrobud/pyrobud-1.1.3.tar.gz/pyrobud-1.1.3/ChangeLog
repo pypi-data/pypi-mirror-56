@@ -1,0 +1,372 @@
+CHANGES
+=======
+
+v1.1.3
+------
+
+* version: Bump version to v1.1.3
+* antibot: Add more suspicious keywords
+* sentry: Ratelimit error reports to 3 events/min
+* debug: Fix forwarded message chat ID check
+* sentry: Ignore I/O errors
+* sentry: Ignore unsuccessful request errors
+* moderation: ban: Handle get\_entity() failures
+* sticker: Fix Python 3.6 compatibility
+* antibot: Use get\_display\_name() when checking first and last names
+* gitignore: Ignore Visual Studio Code workspace settings
+* gitignore: Ignore zsh autoenv scripts
+* setup: Demote to beta status
+
+v1.1.2
+------
+
+* version: Bump version to v1.1.2
+* tg: Explicitly mention by ID even when username is available
+* tg: Fix deleted account names
+* setup: Add uvloop as "fast" extra dependency
+* setup: Add relevant topic classifiers and community link
+* requirements: Remove uvloop
+
+v1.1.1
+------
+
+* version: Bump version to v1.1.1
+* gitignore: Ignore PBR artifacts
+* gitignore: Space custom parts out more
+* swtup: Add all supported Python versions
+* sentry: Ignore Telegram connection errors
+* readme: Clarify Python version requirement
+
+v1.1.0
+------
+
+* version: Bump version to v1.1.0
+* github: Add Actions workflow to build & publish Docker image
+* system: Warn user about requirements.txt changes after updating
+* git: Use pure-Python Git DB implementation
+* readme: Rewrite and add Docker instructions
+* core: Add command to link the official support group
+* antibot: Add code to handle edge cases when InputUser can't be obtained
+* network: Handle unexpected content types in Hastebin & Dogbin commands
+* sentry: Skip initialization if code status is unofficial
+* system: Use new get\_current\_remote helper
+* git: Add current remote and official status helpers
+* sentry: Silence pylint unused exc\_type variable warning
+* util: Unify Git repository discovery
+* sentry: Fix event send filter
+* bot: Skip event dispatching path if listener list is empty
+* system: Run Git calls with the synchronous executor pool
+* system: Add automatic Git pull-and-restart update command
+* version: Find Git repo from bot path rather than working directory
+* antibot: Add "mytoken" to suspicious keywords
+* system: Add seamless restarting using execv()
+* bot: Add post-stop "stopped" event
+* bot: Add listener priorities
+* Format code
+* antibot: Ignore events where the sender was already banned by something else
+* moderation: Enhance single-user banning experience and catch permission errors
+* antibot: Exempt forwarded messages with no sender in content checker
+* sentry: Ignore some errors and exempt custom modules
+* util: Add OS-agnostic path component split function
+
+v1.0.2
+------
+
+* version: Bump version to v1.0.2
+* docker: Distinguish build stages with an extra blank line
+* launch: Fix uvloop not being used
+* launch: Catch KeyboardInterrupts while connecting
+* antibot: Allow forwarding oneself's own messages
+* antibot: Add cashtag to suspicious entity list
+* antibot: Add "wealth" to suspicious keywords
+* launch: Allow starting the bot without uvloop
+* bot: Read aliases from command info object
+* command: Prefix decorator-added variables with "cmd\_"
+* antibot: Check for "t.me/" rather than just "t.me"
+* Revert "antibot: Check for "invest" keyword subset rather than "investment""
+* antibot: Drop most profile checks
+* core: Explicitly sort help alphabetically by module name
+
+v1.0.1
+------
+
+* version: Bump version to v1.0.1
+* setup: Remove redundant version
+* config: Allow customizing Sentry DSN
+* bot: Re-format code
+* module: Reformat error messages
+* launch: Update logger name
+* Revert "bot, launch: Get logger with \_\_name\_\_ to reduce redundancy"
+* modules: Add custom ignored modules directory
+* bot: Fix hacky ExistingModuleError suppression when reloading
+* github: Fix funding link
+* bot: Simplify command varargs check
+* core: Add support for module and command filters in the help command
+* docker: Add Docker image build instructions
+
+v1.0.0
+------
+
+* pyrobud: Introduce manual semantic versioning
+* modules: Replace pyrobud reference with relative .. import
+* bot, launch: Get logger with \_\_name\_\_ to reduce redundancy
+* gitignore: Ignore data/ directory
+* setup: Add setuptools package files
+* main: Move launcher code into pyrobud package
+* system: Append newline to shell output if necessary and add empty placeholder
+* antibot: Exempt messages without a sender
+* antibot: Add suspicious message type check
+* antibot: Tweak suspicious message data logic
+* antibot: Check for supergroup and required permissions when enabling
+* debug: Split and extend entity info command
+* debug: Log eval and exec errors as warnings
+* command: Add decorator to modify the log level of command errors
+* antibot: Schedule detection alerts to be sent in 10 seconds
+* Integrate Sentry error reporting
+* bot: Log command function errors as the erroring module
+* debug: Fix typo in exec command description
+* bot\_setup: Update bot promotion request to include new admin title field
+* modules: Work around pylint undefined-variable warning
+* github: Add funding link
+* text: Add command to insert clap emojis in between words
+* example\_config: Add comments and re-order filename for type detection
+* antibot: Track message tracking start time on a per-group basis
+* antibot: Delete all of a group's settings upon leave
+* db: Convert string iterator parameters to byte arrays
+* db: Fix async iterator when custom parameters are used
+* antibot: Clean up per-group antibot data after leaving a group
+* sticker: Allow embedding input image directly in command messages
+* antibot: Check for "invest" keyword subset rather than "investment"
+* pyrobud: Move bot code into Pyrobud package
+* bot: Truncate messages over 4096 characters
+* text: Add command to dissect a string into named Unicode codepoints
+* text: Tweak some command aliases
+* antibot: Kick users rather than banning them
+* time: Improve duration format aesthetics
+* Remove unnecessary lambdas in calls to util.run\_sync()
+* system: Directly call speedtest-cli's Python API
+* antibot: Cast member join date to integer before comparing
+* antibot: Make has-spoken-in start time check inclusive
+* antibot: Fix group ID when checking for first message
+* antibot: Tighten suspicious message check
+* antibot: Ban users who send suspicious first messages
+* Replace hacky config storage with a LevelDB database
+* bot: Make Telethon session name configurable and default to "main"
+* vscode: Format code on save
+* readme: Revise add basic usage instructions
+* modules: Format code with Black
+* vscode: Set Python formatter to Black
+* antibot: Make suspicious first name checker case-insensitive and add names
+* antibot: Don't exonerate users after one check path and fails
+* antibot: Extend minimum bogus uswrname bound to 10
+* antibot: Update checks
+* snippet: Fix incorrect sleep duration
+* snippet: Add 100 ms delay before editing message
+* antibot: Extend CJK name check to 2-4 character range
+* antibot: Sleep for 1 second before banning bots
+* antibot: Optimize CJK name check using generator and all() builtin
+* debug: Add general entity info functionality to ID command
+* debug: Support fetching entities by ID
+* antibot: Check for suspicious names with 4 ASCII characters each
+* antibot: Update quotes to match Black code style
+* antibot: Flag Telegram invite links in first or last name
+* antibot: Delete all of the sender's messages when taking action
+* antibot: Check for suspicious first names on join
+* antibot: Re-format code with Black
+* debug: Update ID getter command
+* moderation: Add command to ban multiple users by ID
+* util: Add user mentioning helper
+* debug: Add support for getting ID from any entity reference
+* antibot: Add user profile-based detection on join
+* bot: Implement ChatAction event
+* antibot: Ban with "auto-detected" comment
+* bot\_setup: Fix rules and error when no config is provided
+* Format code with Black
+* text: mock: Add support for getting text from replies
+* moderation: Add command to prune deleted users from a group
+* modules: Add Moderation module and move mass-mentioning commands
+* bot\_setup: Bump flood limit to 13 messages
+* text: Add fake Google Play Store-like code generator
+* sticker: Leverage command handler's argument parsing
+* bot: Fix log string format on Message.result error
+* debug: Expose contextual variables to exec command
+* network: Add LMGTFY link generator command
+* Convert logging to the logging module with color output
+* requirements: Add pycparser dependency
+* bot\_setup: Disable format parsing when sending commands
+* text: Don't insert invisible character into @admin
+* text: Limit mass mentions to prevent exceeding 4096 characters
+* modules: Add friendly error message for missing external programs
+* Sort imports
+* text: Add @admin mass-mentioning command
+* bot: Don't spread argument segments for commands with keyword arguments
+* text: Add @everyone mass-mentioning command
+* network: Add command to update link embeds/previews
+* sticker: Remove unnecessary tuple unpacking parentheses
+* bot: Allow overriding link preview mode in Message.result
+* bot: Catch and report errors in command event handler
+* modules: Narrow exception catching scope when reloading
+* main: Print extra new line after Ctrl-C or bot stop
+* stats: Expose percentage of sent and received messages edited
+* sticker: Fix redundant /cancel commands
+* sticker: Fix sticker preview file name and format
+* stats: Fix message edit accounting
+* stats: Convert internal stats to the event dispatcher
+* bot: Implement message edit event
+* text: Add functional character equivalent to zero-width space
+* debug: Expose local command variables and helpers to eval expressions
+* bot: Ignore failed command alias unregistration
+* text: Add strike-through command
+* text: Add sarcasm text filter
+* modules: Rename Unicode module to Text
+* bot: Provide the raw message event to message listeners
+* stats: Migrate to the event dispatcher for stat event logging
+* bot: Silently fail when an unknown event is dispatched
+* bot: Parallelize event dispatcher and add synchronous nowait variant
+* bot: Dynamically populate event names in listener dictionary
+* Add support for Python 3.6
+* debug: Remove dependency on PyYAML module
+* stats: Persist time across starts
+* manager: Dispatch stop event before unloading modules
+* Convert to Telethon library and refactor everything
+* misc: Tune bot setup settings
+* antibot: Remove dependency on bot to handle /ban and log actions
+* debug: Extend fileid command to get file IDs from media messages
+* util: Add media type list
+* manager: Save config before and after reload
+* antibot: Add comments for each check function
+* antibot: Split supergroup check
+* antibot: Move all suspicious message checking out of event handler
+* antibot: Expand message criteria
+* debug: Add contextually relevant ID collector
+* debug: Preserve message reply status in fileid command
+* stats: Add stickers created stat from Sticker module
+* stats: Add stat as an alias of the stats command
+* bot: Reload base module class during package reload
+* command: Remove unnecessary module import
+* module: Add and use stat logging helper
+* stats: Add banned spambot count stat from Antibot module
+* core: Remove test command
+* util: Replace absolute paths with relative paths in traceback if clean
+* debug: Add command to send media by file ID
+* sticker: Streamline sticker and image handling
+* antibot: Remove redundant revoke argument
+* Add module reloading functionality
+* stats: Revamp stats handling and add more stats
+* bot: Add bot start event
+* util: Return time as integers
+* stats: Don't count edits as new messages
+* core: Group command help by module
+* sticker: Clean up uploaded file names
+* sticker: Convert images to RGBA PNGs instead of RGB
+* bot: Log relative path to loaded modules
+* antibot: Reword ban reason and split into take\_action function
+* bot: Revamp module load error handling
+* bot: Split exception formatter and improve error handling
+* antibot: Fix extra backtick at end of ban reason
+* bot: Prefix command stack traces with error notice
+* requirements: Add dependency on pillow
+* readme: Reword and reformat
+* modules: Rename Moderation module to Antibot
+* network: Fix error on non-latin-1 characters
+* modules: Add auto-moderation module
+* bot: Warn when registering a listener for an unknown event
+* debug: Add aliases for message data dump command
+* system: Filter speedtest output
+* system: Strip first two lines from neofetch output on success
+* system: Track speedtest time
+* system: Improve command interactivity
+* system: Add speedtest wrapper command
+* core: Add command to query and change prefix
+* bot: Fix message handlers
+* sticker: Remove unused variables
+* modules: Replace unused variables with \_
+* modules: Add System module
+* modules: Convert some commands to use input block filter
+* core: Move ping command to Network module
+* modules: Rename Upload module to Network
+* util: Add function to filter input blocks
+* bot: Fix atomic config saving
+* bot: Split module loading functions
+* bot: Rename event dispatcher function
+* core: Add uptime command
+* misc: Convert bsetup command to use new duration formatter
+* debug: Use new duration formatter for eval command
+* util: Add duration formatter
+* debug: Don't show input expression after eval
+* license: Update copyright notice
+* upload: Improve perceived responsiveness and verbosity
+* sticker: Fix sticker pack link in sticker command
+* unicode: Add chr alias for codepoint command
+* sticker: Fix errors when no input is given
+* Modularize the bot and remove type annotations
+* bot: Commit config up to once every 15 seconds
+* bot: Flush and fsync when saving the config
+* bot: Update bot setup sequence
+* bot: Remove simple text replacement commands
+* bot: Fix exec and eval commands
+* util: Fix time getters
+* bot: Fix source code getter command
+* Improve logging
+* bot: Improve description of zero-width space command
+* bot: Fix conflicting aliases on snip command
+* bot: Fix time11 command
+* bot: Remove useless commands
+* bot: Revamp command registration
+* main: Remove double new lines
+* bot: Clean up and link sticker commands
+* bot: Increase sticker adding delay
+* bot: Bump inter-message delays in sequenced commands
+* bot: Don't hardcode path to corrupter
+* bot: Trim trailing whitespace
+* bot: Improve upload-intensive command interactivity
+* bot: Add image glitch command
+* bot: Fix sp local sticker check
+* bot: Add command to list only local stickers
+* bot: Add sticker-as-photo command
+* bot: Fix missing buttons in Rose welcome message
+* bot: Fix Rose rules button
+* bot: Disable link preview embeds for edited messages
+* bot: enable cleanservice for Rose
+* bot: migrate to Rose
+* Add support for setting up all Marie based bots
+* Fix tableflip
+* bot: fix snip
+* Fix reply stickers
+* Add mass forward command
+* fix
+* Fixes and improvements for ksetup
+* Add config save command
+* Add aliases
+* Correct installation instructions in README
+* Add image to sticker commands
+* Add commands to save stickers locally or by reference
+* Add description for kang command
+* Add kang command
+* Switch snippet suntax from double parantheses to slashes
+* Support replying to text files for hastebin and dogbin
+* Filter sensitive info from output
+* Add message data dump command
+* Add lenny command
+* Add todo lists
+* Add more stats
+* Decrease ksetup ratelimit
+* Add command to automatically set up KarafuruBot
+* Ignore Pyrogram Telegram errors file
+* Preserve formatting in messages
+* Add commands to get and send text for debugging
+* Add license
+* Add instructions to readme
+* Fix errors with non-text messages
+* Add "snippets replaced" stat
+* Fix creating snippet from replied message
+* Stats, snippets, type definitions, storage
+* Add Unicode character from hex codepoint command
+* Remove Markdown link wrapper in fileio command
+* Add transfer.sh command
+* Support expiry time for file.io
+* Add file.io command
+* Support arguments and handle errors in haste+dog
+* Add hastebin and dogbin
+* Fix zwsp command
+* Initial commit
