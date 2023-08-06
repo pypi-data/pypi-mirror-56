@@ -1,0 +1,77 @@
+# Base Configuration file for artellapipe-tools-tagger
+
+# Defines tool name
+name: Tagger
+
+# Unique ID for the tool
+id: artellapipe-tools-tagger
+
+# Defines logo name of the tool
+logo: tagger_logo
+
+# Defines icon of the tool
+icon: tag
+
+# Description of the tool
+description: Tool to manage tag information
+
+# URL to tool documentation web page
+url: www.google.es
+
+# Tags related with this tool
+tags: ['assets', 'tag']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://d8790b372a8f4c7a9c98870b8a691918@sentry.io/1764597
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: WARNING
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# List that defines the import order of the tool modules
+import_order:
+  - widgets
+  - core
+
+# Menu representation of this tool
+menu_ui:
+  label: "Tagger"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: TD
+    type: menu
+    children:
+      - id: artellapipe-tools-tagger
+        type: tool
+
+# Tool Shelf definition
+shelf:
+  - name: TD
+    children:
+      - id: artellapipe-tools-tagger
+        displayLabel: False
+        type: tool
+
+# Specify the core modules where artellapipe-tools-tagger editors are located
+editors_module: artellapipe.tools.tagger.editors
+
+# Specify extra modules to find editors in. Usueful to specify project specific editors
+extra_editors_modules: []
+
+# List of all editors that should be enabled
+available_editors:
+  - Name
+  - Description
+  - Type
