@@ -1,0 +1,25 @@
+[elaphure_extensions]
+DryRunWriter = elaphure.writers.dry_run:DryRunWriter
+EntryListView = elaphure.views.entry:EntryListView
+EntryView = elaphure.views.entry:EntryView
+FileSystemSource = elaphure.sources.fs:FileSystemSource
+FileSystemWriter = elaphure.writers.fs:FileSystemWriter
+GitHubPagesWriter = elaphure.writers.gh_pages:GitHubPagesWriter
+MarkdownReader = elaphure.readers.markdown:MarkdownReader
+RawEntryView = elaphure.views.entry:RawEntryView
+StaticFileView = elaphure.views.static:StaticFileView
+
+[elaphure_readers]
+markdown = elaphure.readers.markdown:MarkdownReader
+wheezy = elaphure.readers.wheezy:WheezyReader
+
+[elaphure_sources]
+default = elaphure.sources.fs:FileSystemSource
+fs = elaphure.sources.fs:FileSystemSource
+
+[elaphure_writers]
+default = elaphure.writers.dry_run:DryRunWriter
+dry_run = elaphure.writers.dry_run:DryRunWriter
+fs = elaphure.writers.fs:FileSystemWriter
+gh_pages = elaphure.writers.gh_pages:GitHubPagesWriter
+
