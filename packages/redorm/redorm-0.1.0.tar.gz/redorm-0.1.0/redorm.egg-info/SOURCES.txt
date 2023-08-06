@@ -1,0 +1,13 @@
+README.md
+setup.py
+redorm/__init__.py
+redorm/client.py
+redorm/exceptions.py
+redorm/model.py
+redorm/relationships.py
+redorm/settings.py
+redorm.egg-info/PKG-INFO
+redorm.egg-info/SOURCES.txt
+redorm.egg-info/dependency_links.txt
+redorm.egg-info/requires.txt
+redorm.egg-info/top_level.txt
