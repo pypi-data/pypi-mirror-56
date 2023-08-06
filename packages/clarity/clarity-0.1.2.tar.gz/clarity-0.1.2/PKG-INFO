@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: clarity
+Version: 0.1.2
+Summary: A colored logger for python
+Home-page: https://github.com/rockstardevs/clarity-py
+Author: singhsays
+Author-email: singhsays@gmail.com
+License: MIT
+Download-URL: https://github.com/rockstardevs/clarity-py/archive/v0.1.2.tar.gz
+Description: 
+        clarity-py
+        ==========
+        
+        A colored logger for python
+        
+        Testing
+        -------
+        
+        .. code-block:: shell
+        
+           pytest tests/*
+        
+Keywords: logging,absl,log
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: Other
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
