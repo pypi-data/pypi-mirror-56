@@ -1,0 +1,192 @@
+Metadata-Version: 2.1
+Name: pychoreo
+Version: 0.2.0
+Summary: sequence and motion planning for robotic spatial extrusion
+Home-page: https://github.com/yijiangh/pychoreo
+Author: Yijiang Huang
+Author-email: yijiangh@mit.edu
+License: MIT license
+Keywords: robotic fabrication,digital fabrication,architecture,robotics,ros
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: numpy
+Requires-Dist: pybullet
+Requires-Dist: pybullet-planning
+Requires-Dist: ikfast-pybind
+Requires-Dist: compas-fab
+
+========
+pychoreo
+========
+
+
+
+.. Write project description
+
+*pychoreo* is a sequence and motion planning engine that allow you to print the following cool structures (and many more!) with ease:
+
+.. image:: http://img.youtube.com/vi/Vv7dEB8T_Jg/0.jpg
+    :target: http://www.youtube.com/watch?feature=player_embedded&v=Vv7dEB8T_Jg
+    :alt: Voronoi extrusion video
+
+**Note** :pushpin:
+
+- In the summer of 2019, *pychoreo* will be integrated into the `compas_fab <https://github.com/compas-dev/compas_fab>`_ infrastructure. Stay tuned! :beers:
+- The ROS implementation of choreo can be found here: `choreo <https://github.com/yijiangh/choreo>`_.
+
+
+Main features
+-------------
+
+* feature
+
+Documentation
+-------------
+
+Coming soon!
+
+.. Explain how to access documentation: API, examples, etc.
+
+..
+.. optional sections:
+
+Requirements
+------------
+
+.. Write requirements instructions here
+
+
+Installation
+------------
+
+.. Write installation instructions here
+
+Credits
+-------------
+
+If you use this work, please consider citing as follows:
+
+    @article{huang2018automated,
+      title={Automated sequence and motion planning for robotic spatial extrusion of 3D trusses},
+      author={Huang, Yijiang and Garrett, Caelan R and Mueller, Caitlin T},
+      journal={Construction Robotics},
+      volume={2},
+      number={1-4},
+      pages={15--39},
+      year={2018},
+      publisher={Springer}}
+
+Algorithms behind Choreo:
+
+    - Automated sequence and motion planning for robotic spatial extrusion of 3D trusses, Constr Robot (2018) 2:15-39, `Arxiv-1810.00998 <https://arxiv.org/abs/1810.00998>`_
+
+Applications of Choreo:
+    - Robotic extrusion of architectural structures with nonstandard topology, RobArch 2018, `RobArch paper link <http://web.mit.edu/yijiangh/www/papers/Huang2019_RobArch.pdf>`_
+    - Spatial extrusion of Topology Optimized 3D Trusses, IASS 2018, `IASS paper link <http://web.mit.edu/yijiangh/www//papers/HuangCarstensenMueller_IASS2018.pdf>`_
+
+Related repos
+---------------
+
+Task and Motion Planning
+    - https://github.com/caelan/pb-construction
+    - https://github.com/caelan/pddlstream
+
+Computational design and digital fabrication
+    - https://github.com/compas-dev/compas_fab
+
+
+Changelog
+=========
+
+All notable changes to this project will be documented in this file.
+
+The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_
+and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
+
+**TODO**
+
+* storing `ee_poses` in `CapVert` is not necessary, should think of a way to get around this.
+* storing joint data in a continuous array may not be necessary, since we are using nested list to describe subprocesses anyway
+* need to regulate the use of `ik_joints` or `ik_joint_names` for user interfaces
+
+0.2.0
+----------
+
+**Added**
+
+* `SparseLadderGraph` completed
+* export planned trajectory for extrusion
+* add parsing function for visualizing saved extrusion trajectories
+* `from_data` methods for `Trajectory` and subclasses
+* tagging print processes with `ground`/`creation`/`connect` in the test function
+* infinite pose sampler added for extrusion case when using sparse ladder graph to solve
+
+**Minor**
+
+* `is_any_empty` utility function for checking ik sol list of lists
+* `reset_ee_pose_gen_fn` for easier resetting generator
+
+**Fixed**
+
+* fix nested empty list detection bug in `is_any_empty`
+* add `disabled_collisions` argument to the extrusion transition_planner
+
+**Changed**
+
+* extrusion export save `lin_path`'s poses as 4x4 tform matrix (there's some disagreement in quaterion in `compas.Frame.from_quat`?)
+* move extrusion test fixtures into a separate fixture module
+* ladder graph interface broken into `from_cartesian_process_list`, `from_cartesian_process`, `from_poses` to increase code reuse
+
+
+0.1.1
+----------
+
+**Added**
+
+* cartesian process class for modeling general linear movement in the workspace
+* ladder graph interface using the Cartesian process class
+* `Trajectory` class for modeling result trajectory in different contexts (inherited classes)
+* `display_trajectories` for extrusion
+* some simple exceptions added for `LadderGraph` and `DAGSearch`
+* subprocess modeling to have a more detailed control over Cartesian process modeling
+* add `exhaust_iter` method to `CartisianProcess` which resets the generator
+* add template class `GenFn` for generating functions
+* add `PrintBufferTrajectory` to model approach/retreat trajectories
+
+**Changed**
+
+* move transition planning to application context.
+* conform to the latest `pybullet_planning`
+
+**Removed**
+
+* `assembly_datastructure`
+* the old `extrusion.run` module, moved to the test file
+
+**Fixed**
+
+**Deprecated**
+
+0.0.1
+------
+
+**Added**
+
+* Initial version
+
+
