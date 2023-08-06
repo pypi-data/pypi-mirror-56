@@ -1,0 +1,68 @@
+CHANGES
+=======
+
+0.1.4
+-----
+
+* fix: updated migrations
+
+0.1.3
+-----
+
+* new: created and modified attributes in DatabaseStorage Message
+
+0.1.2
+-----
+
+* new: Parameters html\_safe and reply\_to\_pk added to messages leveled api function (error, warning, etc)
+* new: database stored message now has \`pk\` attribute
+* fix: changed default inbox last\_checked to 1900-01-01 !minor
+* fix: changed default inbox last\_checked to 1900-01-01 !minor
+* fix: changed default inbox last\_checked to 1900-01-01
+
+0.1.0
+-----
+
+* fix: wrapped context variables 'notifications' and 'messages' in 'dmm' to avoid conflict with django.contrib.messages
+* fix: dev: getting to version 0.1.0
+* fix: dev: flake8
+* new: Specified install requirements
+* fix: dev: cookie storage fix for django 2.0
+* fix: dev: cookie storage fix for django 2.0
+* fix: dev: cookie storage fix for django 2.0
+* fix: dev: old python json.dumps fix
+* fix: dev: flake8 and bandit
+* fix: dev: migration dependencies and tests
+* new: dev: API tested
+* new: dev: Database storage tested
+* new: dev: Refactored message\_storage
+* new: Property inbox.new\_count\_update\_last\_checked. Returns new messages count and increments inbox.last\_checked
+* new: dev: Models tested
+* new: dev: configs and docs
+* new: dev: Message class tested
+* new: dev: Fallback storage tested
+* new: dev: Sessions storage tested
+* new: dev: Cookie storage tested
+* new: dev: test settings.py
+* new: dev: storage.base.Message class tests
+* new: dev: JSONField tests
+* new: MVP functional
+* coveralls tests 2 !minor
+* [skip travis] !minor
+* [skip travis]!minor
+* coveralls tests !minor
+* fix: allow\_failures !minor
+* chg: add more allow\_failures !minor
+* chg: remove Django 1.11 support !minor
+* chg: remove Django 1.11 support
+* chg: remove Django 1.11 support
+* fix: add django-appconf to req !minor
+* fix: travis config !minor
+* new: JSONField - field to store objects as json-string
+* fix: flake8 problems
+* chg: Updating project structure to Two Scoops of Django template
+* readme !minor
+* travis release notes !minor
+* setup config
+* readme
+* initial commit

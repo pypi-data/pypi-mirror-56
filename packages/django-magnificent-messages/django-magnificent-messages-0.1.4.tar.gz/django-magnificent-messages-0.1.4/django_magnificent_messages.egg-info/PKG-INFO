@@ -1,0 +1,77 @@
+Metadata-Version: 1.2
+Name: django-magnificent-messages
+Version: 0.1.4
+Summary: All-in-one Django message app!
+Home-page: https://github.com/NoNameItem/django-magnificent-messages
+Author: Artem Vasin
+Author-email: nonameitem@me.com
+License: UNKNOWN
+Description: Badges
+        ======
+        PyPI
+        ~~~~
+        
+        .. image:: https://img.shields.io/pypi/v/django-magnificent-messages?style=flat-square
+           :target: https://pypi.org/project/django-magnificent-messages/
+        .. image:: https://img.shields.io/pypi/pyversions/django-magnificent-messages?style=flat-square
+           :target: https://pypi.org/project/django-magnificent-messages/
+        .. image:: https://img.shields.io/pypi/djversions/django-magnificent-messages?style=flat-square
+           :target: https://pypi.org/project/django-magnificent-messages/
+        
+        Master
+        ~~~~~~
+        
+        .. image:: https://img.shields.io/travis/NoNameItem/django-magnificent-messages/master?style=flat-square
+           :target: https://travis-ci.org/NoNameItem/django-magnificent-messages
+        .. image:: https://img.shields.io/coveralls/github/NoNameItem/django-magnificent-messages/master?style=flat-square
+           :target: https://coveralls.io/github/NoNameItem/django-magnificent-messages
+        .. image:: https://img.shields.io/readthedocs/django-magnificent-messages/latest?style=flat-square
+           :target: https://django-magnificent-messages.readthedocs.io/en/latest/
+        .. image:: https://img.shields.io/codeclimate/maintainability/NoNameItem/django-magnificent-messages?style=flat-square
+           :target: https://codeclimate.com/github/NoNameItem/django-magnificent-messages
+           
+        Develop
+        ~~~~~~~
+        
+        .. image:: https://img.shields.io/travis/NoNameItem/django-magnificent-messages/develop?style=flat-square
+           :target: https://travis-ci.org/NoNameItem/django-magnificent-messages
+        .. image:: https://img.shields.io/coveralls/github/NoNameItem/django-magnificent-messages/develop?style=flat-square
+           :target: https://coveralls.io/github/NoNameItem/django-magnificent-messages
+        .. image:: https://img.shields.io/readthedocs/django-magnificent-messages/develop?style=flat-square
+           :target: https://django-magnificent-messages.readthedocs.io/en/develop/
+           
+        Install
+        =======
+        ::
+        
+          pip install django-magnificent-messages
+        
+        Readme
+        ======
+        
+        All-in-one Django message app! Coming soon!
+        
+        .. image:: https://coveralls.io/repos/github/NoNameItem/django-magnificent-messages/badge.svg?branch=master
+           :target: https://coveralls.io/github/NoNameItem/django-magnificent-messages?branch=master
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.1
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
