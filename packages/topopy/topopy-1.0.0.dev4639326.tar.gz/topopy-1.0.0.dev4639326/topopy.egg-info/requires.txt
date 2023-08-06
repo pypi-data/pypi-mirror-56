@@ -1,0 +1,5 @@
+scipy<2.0,>=1.3.2
+numpy<2.0,>=1.17.4
+scikit-learn<1.0,>=0.21.2
+networkx<3.0,>=2.4
+nglpy<2.0,>=1.0.6
