@@ -1,0 +1,15 @@
+README.md
+setup.py
+jupyter_offlinenotebook/__init__.py
+jupyter_offlinenotebook.egg-info/PKG-INFO
+jupyter_offlinenotebook.egg-info/SOURCES.txt
+jupyter_offlinenotebook.egg-info/dependency_links.txt
+jupyter_offlinenotebook.egg-info/not-zip-safe
+jupyter_offlinenotebook.egg-info/requires.txt
+jupyter_offlinenotebook.egg-info/top_level.txt
+jupyter_offlinenotebook/etc/offlinenotebook_nbextension.json
+jupyter_offlinenotebook/etc/offlinenotebook_serverextension.json
+jupyter_offlinenotebook/static/dexie.js
+jupyter_offlinenotebook/static/dexie.min.js
+jupyter_offlinenotebook/static/dexie.min.js.map
+jupyter_offlinenotebook/static/main.js
