@@ -1,0 +1,5 @@
+wheel>=0.32
+amuse-framework>=13.0.0
+scipy
+matplotlib
+astropy
