@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pytest-percent
+Version: 0.0.1
+Summary: Mark test sessions as successful based on a percentage of passed tests.
+Home-page: https://github.com/dillonm197/pytest.percent
+Author: Dillon Miller
+Author-email: dillon.miller@swiftpage.com
+Maintainer: Dillon Miller
+Maintainer-email: dillon.miller@swiftpage.com
+License: MIT
+Description: ## Requirements:
+        
+        * [pytest v5.2.0 or newer](https://docs.pytest.org/en/latest/index.html)
+        
+        ## Installation:
+        
+            pip install pytest-percent
+        
+        ## About:
+        
+        Mark test sessions as successful based on a percentage of passed tests.
+        
+        ## Usage:
+        
+            pytest --required-percent=80
+          
+        ## Issues
+        
+        If you encounter any problems, please file an issue along with a detailed description.
+        
+        ## License:
+        
+        [MIT License](https://github.com/dillonm197/pytest.percent/blob/master/LICENSE)
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
