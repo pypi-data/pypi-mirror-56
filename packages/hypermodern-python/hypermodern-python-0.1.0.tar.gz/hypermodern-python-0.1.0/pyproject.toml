@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "hypermodern-python"
+version = "0.1.0"
+description = "The hypermodern Python project"
+authors = ["Claudio Jolowicz <mail@claudiojolowicz.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/cjolowicz/hypermodern-python"
+repository = "https://github.com/cjolowicz/hypermodern-python"
+documentation = "https://hypermodern-python.readthedocs.io"
+keywords = ["hypermodern"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^7.0"
+sphinx = {version = "^2.2.1", optional = true}
+sphinx-rtd-theme = {version = "^0.4.3", optional = true}
+sphinx-autodoc-typehints = {version = "^1.10.3", optional = true}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2.2"
+pytest-cov = "^2.8.1"
+pytest-mock = "^1.11.2"
+xdoctest = "^0.10.2"
+
+[tool.poetry.extras]
+docs = ["sphinx", "sphinx-rtd-theme", "sphinx-autodoc-typehints"]
+
+[tool.poetry.scripts]
+hypermodern-python = "hypermodern_python.console:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
