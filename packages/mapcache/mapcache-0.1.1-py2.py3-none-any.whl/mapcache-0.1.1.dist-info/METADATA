@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: mapcache
+Version: 0.1.1
+Summary: Simple caching server for map tiles
+Home-page: https://github.com/luphord/mapcache
+Author: luphord
+Author-email: luphord@protonmail.com
+License: MIT license
+Keywords: mapcache
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+
+# mapcache
+
+[<img src="https://img.shields.io/pypi/v/mapcache.svg">](https://pypi.python.org/pypi/mapcache)
+
+Simple caching server for map tiles.
+
+
+# History
+
+## 0.1.1 (2019-12-02)
+
+* Fix --port to convert argument to int.
+* Add basic Dockerfile.
+
+## 0.1.0 (2019-12-02)
+
+* Imported from fossil commit 13c21af088.
+* First release on PyPI.
+
+
