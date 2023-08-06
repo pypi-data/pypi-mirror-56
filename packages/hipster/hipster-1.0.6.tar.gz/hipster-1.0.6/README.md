@@ -1,0 +1,33 @@
+Hipster
+======================
+
+
+## Description
+Hipster provides a simple implementation of the MinHeap and MaxHeap. The object being added to the respective heaps need to implement the comparator logic. The APIs are identical for MinHeap and MaxHeap
+
+## Dependencies
+Python 3
+
+## Installation
+```
+pip install --upgrade hipster
+```
+
+## Usage
+
+```
+from hipster.heap import *
+
+max_heap = MaxHeap()           # creates an empty max heap
+max_heap.push(item)            # pushes a new item on the heap
+item = max_heap.peek()         # returns the largest item from the heap without removing it
+item = max_heap.pop()          # pops an item off the max heap
+max_heap.clear()               # Removes all items from the heap
+```
+
+## License
+MIT
+
+## Changelog
+##### 1.0.6
+Added clear, fixed README
