@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: stockholm
+Version: 0.0.0
+Summary: An up to date human friendly and flexible approach for development with any kind of monetary amounts
+Home-page: https://github.com/kalaspuff/stockholm
+License: MIT
+Keywords: money,monetary amount,monetary value,currency,formatting
+Author: Carl Oscar Aaro
+Author-email: hello@carloscar.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
+
+# `stockholm`
+Library for formatting and performing arithmetic and comparison operations on monetary amounts. Also with support for currency handling, exchange and network transport generation + parsing.
+
+An up to date human friendly and flexible approach for development with any kind of monetary amounts.
+
+At its bone a `Money` class for Python 3. A library for merchant developers, fintech companies and subscription services. A simple, yet powerful way of working with money in development.
+
+### Acknowledgements
+Built with inspiration from https://github.com/carlospalol/money and https://github.com/vimeo/py-money
