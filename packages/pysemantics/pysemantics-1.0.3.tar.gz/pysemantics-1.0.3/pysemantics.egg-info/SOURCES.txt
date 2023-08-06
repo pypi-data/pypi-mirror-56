@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pysemantics/NlpClient.py
+pysemantics/__init__.py
+pysemantics/__version__.py
+pysemantics.egg-info/PKG-INFO
+pysemantics.egg-info/SOURCES.txt
+pysemantics.egg-info/dependency_links.txt
+pysemantics.egg-info/not-zip-safe
+pysemantics.egg-info/requires.txt
+pysemantics.egg-info/top_level.txt
