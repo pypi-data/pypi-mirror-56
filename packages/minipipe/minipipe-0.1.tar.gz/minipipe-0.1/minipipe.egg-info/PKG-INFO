@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: minipipe
+Version: 0.1
+Summary: A machine learning mini-batch pipeline for out-of-memory training
+Home-page: https://github.com/jdpearce4/minipipe
+Author: James D. Pearce
+Author-email: jdp.pearce@gmail.com
+License: MIT
+Description: # minipipe
+        A machine learning mini-batch pipeline for out-of-memory training
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
