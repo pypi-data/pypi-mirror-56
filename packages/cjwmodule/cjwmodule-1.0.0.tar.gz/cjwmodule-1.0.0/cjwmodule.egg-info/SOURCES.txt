@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+cjwmodule/__init__.py
+cjwmodule.egg-info/PKG-INFO
+cjwmodule.egg-info/SOURCES.txt
+cjwmodule.egg-info/dependency_links.txt
+cjwmodule.egg-info/requires.txt
+cjwmodule.egg-info/top_level.txt
+cjwmodule.egg-info/zip-safe
