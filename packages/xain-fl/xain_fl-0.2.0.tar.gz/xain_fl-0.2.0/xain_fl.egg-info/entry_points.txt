@@ -1,0 +1,5 @@
+[console_scripts]
+aggregate = benchmarks.aggregate:main
+pull_results = xain_fl.ops.__main__:download
+train_remote = benchmarks.train_remote:main
+
