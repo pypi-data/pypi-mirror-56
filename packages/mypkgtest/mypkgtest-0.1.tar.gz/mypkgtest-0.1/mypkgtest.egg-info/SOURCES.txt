@@ -1,0 +1,8 @@
+setup.py
+mypkgtest/__init__.py
+mypkgtest/func.py
+mypkgtest.egg-info/PKG-INFO
+mypkgtest.egg-info/SOURCES.txt
+mypkgtest.egg-info/dependency_links.txt
+mypkgtest.egg-info/not-zip-safe
+mypkgtest.egg-info/top_level.txt
