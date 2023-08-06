@@ -1,0 +1,11 @@
+blinker<2.0
+dill<0.4
+numpy<1.18,>=1.7.0
+pandas<0.26,>=0.18.0
+pyomo<5.7,>=4.4.0
+networkx<3.0
+
+[dev]
+nose
+sphinx
+sphinx_rtd_theme
