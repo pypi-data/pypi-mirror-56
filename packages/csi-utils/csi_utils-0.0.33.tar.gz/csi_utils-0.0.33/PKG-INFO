@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: csi_utils
+Version: 0.0.33
+Summary: utils for Wifi CSI data process
+Home-page: https://github.com/ykoneee/
+Author: ykone
+Author-email: 245403188gm@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5, <4
