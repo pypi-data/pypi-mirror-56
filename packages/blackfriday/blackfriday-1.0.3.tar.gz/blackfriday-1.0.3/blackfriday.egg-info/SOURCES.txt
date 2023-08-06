@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+blackfriday/__init__.py
+blackfriday.egg-info/PKG-INFO
+blackfriday.egg-info/SOURCES.txt
+blackfriday.egg-info/dependency_links.txt
+blackfriday.egg-info/entry_points.txt
+blackfriday.egg-info/top_level.txt

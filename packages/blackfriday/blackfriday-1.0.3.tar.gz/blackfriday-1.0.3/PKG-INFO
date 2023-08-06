@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: blackfriday
+Version: 1.0.3
+Summary: Black Friday
+Home-page: https://realpython.com/blackfriday
+Author: Real Python
+Author-email: info@realpython.com
+License: MIT
+Description: # Black Friday
+        
+            pip install blackfriday
+        
+        Then:
+        
+            blackfriday
+        
+        Happy Pythoning!
+        
+        ---
+        
+        *This is just a silly little script to raise awareness for our Black Friday donation drive supporting the PSF.*
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
