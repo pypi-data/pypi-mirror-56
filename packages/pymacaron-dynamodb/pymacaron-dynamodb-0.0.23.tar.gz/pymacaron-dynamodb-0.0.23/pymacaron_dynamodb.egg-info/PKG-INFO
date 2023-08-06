@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pymacaron-dynamodb
+Version: 0.0.23
+Summary: Serialize/Deserialize Swagger JSON objects to and from DynamoDB, with transactional writes
+Home-page: https://github.com/pymacaron/pymacaron-dynamodb
+Author: Erwan Lemonnier
+Author-email: erwan@lemonnier.se
+License: BSD
+Description: # pymacaron-dynamodb
+        
+        An extension of pymacaron seamlessly adding asynchronous serialisation to and from
+        DynamoDB.
+        
+        See more at [pymacaron.com](http://pymacaron.com/db.html)
+        
+        ## Author
+        
+        Erwan Lemonnier<br/>
+        [github.com/pymacaron](https://github.com/pymacaron)</br>
+        [github.com/erwan-lemonnier](https://github.com/erwan-lemonnier)<br/>
+        [www.linkedin.com/in/erwan-lemonnier/](https://www.linkedin.com/in/erwan-lemonnier/)
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
