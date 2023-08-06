@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: syn-client
+Version: 1.0.6
+Summary: Python syn client to use redis or kafka as queue
+Home-page: https://gitlab.com/lennin.caro/syn_client.git
+Author: Lennin Caro
+Author-email: renjin25@gmail.com
+License: MIT
+Keywords: Python Syn Client Redis Kafka
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Description-Content-Type: text/markdown
+Requires-Dist: confluent-kafka (==0.11.6)
+Requires-Dist: redis (==2.10.6)
+
+# SYN
+
+SYN is a library that abstracts the use of Kafka or Redis as a streaming system or work queue.
+
+
