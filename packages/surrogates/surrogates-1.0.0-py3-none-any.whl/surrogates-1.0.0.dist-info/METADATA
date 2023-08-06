@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: surrogates
+Version: 1.0.0
+Summary: Encode and decode pairs of surrogate characters
+Home-page: https://github.com/hartwork/surrogates
+Author: Sebastian Pipping
+Author-email: sebastian@pipping.org
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Text Processing
+
+UNKNOWN
+
+
