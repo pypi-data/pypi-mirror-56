@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+postpy2/__init__.py
+postpy2/core.py
+postpy2/extractors.py
+postpy2.egg-info/PKG-INFO
+postpy2.egg-info/SOURCES.txt
+postpy2.egg-info/dependency_links.txt
+postpy2.egg-info/requires.txt
+postpy2.egg-info/top_level.txt
