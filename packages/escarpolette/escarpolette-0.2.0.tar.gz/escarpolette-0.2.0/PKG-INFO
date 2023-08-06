@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: escarpolette
+Version: 0.2.0
+Summary: Manage your musical playlist with your friends without starting a war.
+Home-page: https://github.com/erdnaxeli/escarpolette
+License: GPL-3.0
+Author: Alexandre Morignot
+Author-email: erdnaxeli@cervoi.se
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: flask (>=1.0,<2.0)
+Requires-Dist: flask-cors (>=3.0,<4.0)
+Requires-Dist: flask-login (>=0.4.1,<0.5.0)
+Requires-Dist: flask-migrate (>=2.5,<3.0)
+Requires-Dist: flask-restplus (>=0.12.1,<0.13.0)
+Requires-Dist: flask-sqlalchemy (>=2.3,<3.0)
+Requires-Dist: gevent (>=1.4,<2.0)
+Requires-Dist: sqlalchemy (>=1.2,<2.0)
+Requires-Dist: youtube-dl (>=2019.1,<2020.0)
+Project-URL: Repository, https://github.com/erdnaxeli/escarpolette.git
+Description-Content-Type: text/markdown
+
+# Escarpolette
+
+This project provides a server and clients to manage your music playlist when you are hosting a party.
+
+It supports many sites, thanks to the awesome project [youtube-dl](https://rg3.github.io/youtube-dl/).
+
+## Features
+
+Server:
+* add items (and play them!)
+* get playlist's itmes
+* runs on Android! (see [instructions](#Android))
+
+Web client:
+* there is currently no web client :(
+
+## Dependencies
+
+* Python 3.6
+* the dependencies manager [Poetry](https://poetry.eustace.io/)
+* the player [mpv](https://mpv.io)
+
+They should be available for most of the plateforms.
+
+
+## Installation
+
+```Shell
+pip install escarpolette
+# generate a random secret key
+echo "SECRET_KEY = '$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)'" > config.cfg
+```
+
+### Android
+
+You will need [Termux](https://termux.com/).
+Then inside Termux you can install it with:
+
+```Shell
+# dependencies
+pkg install python python-dev clang
+# escarpolette
+pip install escarpolette
+```
+
+Note that while the project can run without wake-lock, acquiring it improve the performance (with a battery trade off).
+
+## Usage
+
+```Shell
+escarpolette --config config.cfg
+```
+
+## Todo
+
+* server
+    * empty the playlist on startup
+    * bonjour / mDNS
+    * votes
+    * prevent adding youtube / soundcloud playlists
+    * restrictions by users
+    * configuration of those restrictions by an admin
+* web client
+    * show playing status
+    * votes
+    * configure restrictions:
+        * max video added per user
+        * max video length
+    * admin access:
+        * configure restrictions
+        * no restrictions for him
+        * force video order
+
+Don't count on it:
+* android client
+* iOS client
+
