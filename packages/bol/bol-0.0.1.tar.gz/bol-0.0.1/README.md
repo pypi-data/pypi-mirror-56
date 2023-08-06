@@ -1,0 +1,42 @@
+Bol.com api connector in python
+
+## install
+
+```bash
+pip install git+ssh://git@gitlab.com/aapjeisbaas/bol.git
+```
+
+This may change in the future, I plan to eventualy release this on [PyPi.org](https://pypi.org/project/bol/)
+
+## include
+
+```python
+from bol import client as bol
+```
+
+## Example
+
+```python
+Python 3.7.4 (default, Oct  4 2019, 06:57:26) 
+[GCC 9.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from bol import client as bol
+>>> BolShop = bol.Client(client_id='d75*****779', client_secret='AK6****quP')
+logging in
+>>> BolShop.
+BolShop.client_id      BolShop.client_secret  BolShop.session        BolShop.token          
+>>> BolShop._
+BolShop._get(     BolShop._login(   BolShop._orders(  BolShop._post(    
+>>> BolShop._orders()
+{'orders': [{'orderId': '26000000', 'dateTimeOrderPlaced': '2019-11-23T18:59:46+01:00', 'orderItems': [{'orderItemId': '2300004', 'ean': '5000000', 'cancelRequest': False, 'quantity': 1}]}]}
+>>> 
+>>>
+```
+
+## Requirements
+
+Requiremtents were generated as follows:
+
+```bash
+pip freeze --exclude-editable > requirements.txt
+```
