@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ai6/nn.py
+ai6.egg-info/PKG-INFO
+ai6.egg-info/SOURCES.txt
+ai6.egg-info/dependency_links.txt
+ai6.egg-info/requires.txt
+ai6.egg-info/top_level.txt
