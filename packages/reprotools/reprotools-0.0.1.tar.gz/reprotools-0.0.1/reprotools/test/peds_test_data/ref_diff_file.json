@@ -1,0 +1,131 @@
+{
+    "condition1 vs condition2": {
+        "conditions": [
+            "centos6", 
+            "centos6"
+        ], 
+        "files": {
+            "Dockerfile": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "d0b766646642506bb857f20770ea2bb6", 
+                        "checksum": 0
+                    }
+                }, 
+                "sum": {
+                    "checksum": 0
+                }
+            }, 
+            "f1.out": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "daa0656d9064eacdd5a40cf73c0a13d4", 
+                        "checksum": 1
+                    }
+                }, 
+                "sum": {
+                    "checksum": 1
+                }
+            }, 
+            "f2.out": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "daa0656d9064eacdd5a40cf73c0a13d4", 
+                        "checksum": 1
+                    }
+                }, 
+                "sum": {
+                    "checksum": 1
+                }
+            }, 
+            "f3.out": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "daa0656d9064eacdd5a40cf73c0a13d4", 
+                        "checksum": 1
+                    }
+                }, 
+                "sum": {
+                    "checksum": 1
+                }
+            }, 
+            "f4.out": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "daa0656d9064eacdd5a40cf73c0a13d4", 
+                        "checksum": 1
+                    }
+                }, 
+                "sum": {
+                    "checksum": 1
+                }
+            }, 
+            "input_file.txt": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "095faa1de38ef944c6fbc8cc68bc22ba", 
+                        "checksum": 0
+                    }
+                }, 
+                "sum": {
+                    "checksum": 0
+                }
+            }, 
+            "multi_version/52a8dd61bb3245cd04641a33bf2a4e43d1593692_f2.out": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "174354c51f1b58bc232c77d415e19cef", 
+                        "checksum": 0
+                    }
+                }, 
+                "sum": {
+                    "checksum": 0
+                }
+            }, 
+            "multi_version/df0290d397ecacbfc385ba2eec425ceed06dc3dc_f2.out": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "daa0656d9064eacdd5a40cf73c0a13d4", 
+                        "checksum": 0
+                    }
+                }, 
+                "sum": {
+                    "checksum": 0
+                }
+            }, 
+            "peds_temp/temp.out": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "daa0656d9064eacdd5a40cf73c0a13d4", 
+                        "checksum": 0
+                    }
+                }, 
+                "sum": {
+                    "checksum": 0
+                }
+            }, 
+            "temp.out": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "daa0656d9064eacdd5a40cf73c0a13d4", 
+                        "checksum": 1
+                    }
+                }, 
+                "sum": {
+                    "checksum": 1
+                }
+            }, 
+            "test_script.sh": {
+                "subjects": {
+                    "subject1": {
+                        "MD5": "2b79de79284434deb99a37bc37bbe7c8", 
+                        "checksum": 0
+                    }
+                }, 
+                "sum": {
+                    "checksum": 0
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: reprotools
+Version: 0.0.1
+Summary:  A set of tools to evaluate the reproducibility of computations 
+Home-page: https://github.com/big-data-lab-team/repro-tools
+Author: Big Data Infrastructures for Neuroinformatics lab
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English

@@ -1,0 +1,43 @@
+{
+    "certain_cmd": {
+        "grep\u00006.8\u0000input_file.txt\u0000": {
+            "files": [
+                "/home/Ali/Desktop/git_repo/repo/repro-tools/reprotools/test/peds_test_data/centos6/subject1/./f1.out"
+            ], 
+            "id": 6
+        }
+    }, 
+    "multiWrite_cmd": {}, 
+    "total_commands": {
+        "grep\u00006.8\u0000./temp.out\u0000": {
+            "files": [
+                "/home/Ali/Desktop/git_repo/repo/repro-tools/reprotools/test/peds_test_data/centos6/subject1/peds_temp/temp.out"
+            ], 
+            "id": [
+                10
+            ]
+        }, 
+        "grep\u00006.8\u0000input_file.txt\u0000": {
+            "files": [
+                "/home/Ali/Desktop/git_repo/repo/repro-tools/reprotools/test/peds_test_data/centos6/subject1/./f1.out"
+            ], 
+            "id": [
+                6
+            ]
+        }
+    }, 
+    "total_commands_multi": {
+        "grep\u00006.8\u0000./temp.out\u0000": {
+            "files": [
+                "/home/Ali/Desktop/git_repo/repo/repro-tools/reprotools/test/peds_test_data/centos6/subject1/f2.out"
+            ], 
+            "id": 10
+        }, 
+        "grep\u0000line3\u0000./f1.out\u0000": {
+            "files": [
+                "/home/Ali/Desktop/git_repo/repo/repro-tools/reprotools/test/peds_test_data/centos6/subject1/f2.out"
+            ], 
+            "id": 8
+        }
+    }
+}

@@ -1,0 +1,7 @@
+[console_scripts]
+auto_peds = reprotools:auto_peds
+make_copy = reprotools:make_copy
+peds = reprotools:peds
+subject_clustering = reprotools:subject_clustering
+verify_files = reprotools:verify_files
+
