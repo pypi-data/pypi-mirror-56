@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: genderClassifier
+Version: 1.2
+Summary: A simple gender classifier
+Home-page: https://gender-classifier.visweswaran.com
+Author: Visweswaran N
+Author-email: visweswaran.nagasivam98@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: tensorflow
+Requires-Dist: keras
+
+# USAGE
+
+```python
+# SWAMI KARUPPASWAMI THUNNAI
+
+from gender_classifier.classifier import GenderClassifier
+
+classifier = GenderClassifier()
+print(classifier.classify_gender("example_image.jpg"))
+```
+
