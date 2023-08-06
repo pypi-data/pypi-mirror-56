@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cellment
+Version: 0.1.0
+Summary: Segmentation of cells from fluorescence microscopy.
+Home-page: https://github.com/maurosilber/cellment
+Author: Mauro Silberberg
+Author-email: maurosilber@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: networkx
+Requires-Dist: scikit-image
+Requires-Dist: more-itertools
+
+UNKNOWN
+
+
