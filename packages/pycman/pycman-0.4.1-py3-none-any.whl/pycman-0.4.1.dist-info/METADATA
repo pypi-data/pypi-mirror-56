@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pycman
+Version: 0.4.1
+Summary: Python package manager
+Home-page: https://github.com/Singein/Pycman
+Author: Singein Zhang
+Author-email: singein@outlook.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: fire
+Requires-Dist: wheel
+Requires-Dist: commitizen
+
+Pycman
+
+一款用于创建或者管理 python 项目的命令行脚手架工具。
+https://github.com/Singein/Pycman
+
+
+
