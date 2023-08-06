@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cysgp4
+Version: 0.2.15
+Summary: Cysgp4: a wrapper around the SGP4 package, for sat TLE calculations
+Home-page: https://github.com/bwinkel/cysgp4
+Author: Benjamin Winkel
+Author-email: bwinkel@mpifr.de
+License: GNU GPL v3+
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Requires-Dist: setuptools
+Requires-Dist: cython
+Requires-Dist: numpy (>=1.13.1)
+
+Cysgp4 is a Cython-powered wrapper of the
+sgp4lib (Daniel Warner) library to compute satellite positions
+from two-line elements (TLE).
+
