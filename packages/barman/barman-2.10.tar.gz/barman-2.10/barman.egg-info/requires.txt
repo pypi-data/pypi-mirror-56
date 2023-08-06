@@ -1,0 +1,9 @@
+psycopg2>=2.4.2
+argh>=0.21.2
+python-dateutil
+
+[cloud]
+boto3
+
+[completion]
+argcomplete
