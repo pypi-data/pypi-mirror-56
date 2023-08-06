@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: spatialpandas
+Version: 0.1.0
+Summary: Pandas extension arrays for spatial/geometric operations
+Home-page: https://github.com/holoviz/spatialpandas
+Maintainer: Datashader developers
+Maintainer-email: dev@datashader.org
+License: BSD-2-Clause
+Description: # spatialpandas
+        Pandas and Dask extensions for vectorized spatial and geometric operations.
+        
+        For more information, see [examples/Overview.ipynb](https://nbviewer.jupyter.org/github/holoviz/spatialpandas/blob/master/examples/Overview.ipynb)
+        
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: tests
