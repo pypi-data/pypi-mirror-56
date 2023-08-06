@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: sd-fail-notify
+Version: 19.12.0
+Summary: Send a text message when a systemd process fails
+Home-page: https://github.com/rickh94/sd_fail_notify.git
+License: MIT
+Author: Rick Henry
+Author-email: rickhenry@rickhenry.dev
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: click (>=7.0,<8.0)
+Requires-Dist: requests (>=2.22,<3.0)
+Requires-Dist: toml (>=0.10.0,<0.11.0)
+Requires-Dist: twilio (>=6.33,<7.0)
+Project-URL: Repository, https://github.com/rickh94/sd_fail_notify.git
+Description-Content-Type: text/markdown
+
+# Systemd Failure Notifier
+This is a simple command utility designed to be run on the failure of a systemd unit.
+
+## Usage
+`sd-fail-notify <unit-name>`
+ 
+ It is meant to be used with the `%i` unit name option passed in a systemd OnFailure dependency
+ 
+ ## Supported Providers
+ 
+ ### Twilio
+ 
+ Required configuration: from, to, account, token. See example config for details.
+
