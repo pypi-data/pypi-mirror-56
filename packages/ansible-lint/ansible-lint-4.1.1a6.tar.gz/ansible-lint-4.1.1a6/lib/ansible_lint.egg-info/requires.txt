@@ -1,0 +1,12 @@
+ansible>=2.7
+pyyaml
+six
+
+[:python_version < "3.2"]
+pathlib2
+
+[:python_version < "3.7"]
+ruamel.yaml<1,>=0.15.34
+
+[:python_version >= "3.7"]
+ruamel.yaml<1,>=0.15.37
