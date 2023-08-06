@@ -1,0 +1,26 @@
+CHANGES
+=======
+
+v0.1.2
+------
+
+* fix invalid classifier
+
+v0.1.1
+------
+
+* use pbr
+* Create pythonpublish.yml
+* Update pythonpackage.yml
+* Create pythonpackage.yml
+* mark as completed
+
+v0.1.0
+------
+
+* setup.py
+* ignore pycharm
+* use class for NotSoRandom to test repr
+* test inequal weights
+* add test for RuntimeError exception
+* Initial Commit

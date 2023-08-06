@@ -1,0 +1,15 @@
+AUTHORS
+ChangeLog
+README.md
+rando.py
+setup.cfg
+setup.py
+test_rando.py
+.github/workflows/pythonpackage.yml
+.github/workflows/pythonpublish.yml
+rando.egg-info/PKG-INFO
+rando.egg-info/SOURCES.txt
+rando.egg-info/dependency_links.txt
+rando.egg-info/not-zip-safe
+rando.egg-info/pbr.json
+rando.egg-info/top_level.txt
