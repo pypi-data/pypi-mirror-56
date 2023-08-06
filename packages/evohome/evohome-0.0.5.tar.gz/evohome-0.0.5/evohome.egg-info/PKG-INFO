@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: evohome
+Version: 0.0.5
+Summary: A Honeywell evohome RF agent (compliant with RAMSES II).
+Home-page: https://github.com/zxdavb/evohome
+Author: David Bonnes
+Author-email: zxdavb@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/zxdavb/evohome/archive/VERSION.tar.gz
+Description: # evohome_rf
+        
+        (WIP) Emulates a Honeywell evohome controller.
+        
+        Requires a Honeywell HGI80 or similar. Uses https://github.com/zxdavb/evohome_cc.
+        
+        ## Installation
+        
+        ```
+        pip install evohome
+        ```
+        
+        ## Instructions
+        
+        ```
+        python client.py
+        ```
+        
+Keywords: evohome,ramses
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Home Automation
+Description-Content-Type: text/markdown
