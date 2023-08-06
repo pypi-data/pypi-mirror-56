@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+from lintian_brush.control import (
+    drop_dependency,
+    ControlUpdater,
+    )
+
+
+with ControlUpdater() as updater:
+    updater.source["Build-Depends"] = drop_dependency(
+        updater.source.get("Build-Depends", ""), "build-essential")
+
+print("Drop unnecessary dependency on build-essential.")
+print("Fixed-Lintian-Tags: build-depends-on-build-essential")
