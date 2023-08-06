@@ -1,0 +1,9 @@
+web3==5.2.2
+
+[dev]
+flake8==3.7.9
+python-dotenv==0.10.3
+twine==2.0.0
+
+[linter]
+flake8==3.7.9
