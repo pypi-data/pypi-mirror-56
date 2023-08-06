@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: xontrib-pyenv
+Version: 1.0.3
+Summary: Pyenv integration for xonsh
+Home-page: https://github.com/dyuri/xontrib-pyenv
+Author: Gyuri Horák
+Author-email: dyuri@horak.hu
+License: MIT
+Description: # Xontrib-pyenv
+        
+        [Pyenv](https://github.com/pyenv/pyenv) [xonsh](https://xon.sh) integration.
+        
+        ## Install
+        
+        Install using pip
+        
+        ```
+        pip install xontrib-pyenv
+        ```
+        
+        Add to your `.xonshrc`:
+        
+        ```
+        xontrib load pyenv
+        ```
+        
+        ## Usage
+        
+        This xontrib initializes `pyenv` when `xonsh` is started.
+        After initialization `pyenv` commands works as they would do in any *classic* shell.
+        
+        Also supports [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv).
+        
+Platform: any
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: System :: Shells
+Classifier: Topic :: System :: System Shells
+Description-Content-Type: text/markdown
