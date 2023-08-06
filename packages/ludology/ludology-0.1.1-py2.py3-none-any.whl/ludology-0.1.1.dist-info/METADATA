@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: ludology
+Version: 0.1.1
+Summary: Ludology is a package for the study of combinatorial game theory.
+Home-page: https://github.com/autoplectic/ludology
+License: UNKNOWN
+Keywords: combinatorial game theory, winning ways, games, nimbers, surreal numbers
+Author: Ryan G. James
+Author-email: ryangregoryjames@gmail.com
+Description-Content-Type: text/x-rst
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: codecov; extra == "dev"
+Requires-Dist: hypothesis; extra == "dev"
+Requires-Dist: ipython[nbconvert]; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: matplotlib; extra == "plotting"
+Provides-Extra: dev
+Provides-Extra: plotting
+
+Ludology |travis| |appveyor| |codecov| |readthedocs|
+====================================================
+
+``Ludology`` is a package for the study of combinatorial game theory.
+
+
+.. |travis| image:: https://travis-ci.org/Autoplectic/ludology.svg?branch=master
+   :target: https://travis-ci.org/Autoplectic/ludology
+   :alt: build status
+
+.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/to2kso5s9a07ehbe?svg=true
+   :target: https://ci.appveyor.com/project/Autoplectic/ludology/branch/master
+   :alt: build status
+
+.. |codecov| image:: https://codecov.io/gh/Autoplectic/ludology/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/Autoplectic/ludology
+  :alt: test coverage
+
+.. |readthedocs| image:: https://readthedocs.org/projects/ludology/badge/?version=latest
+  :target: https://ludology.readthedocs.io/en/latest/?badge=latest
+  :alt: documentation status
+
