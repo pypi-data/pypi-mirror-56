@@ -1,0 +1,3 @@
+[console_scripts]
+cmd = package.module:function
+

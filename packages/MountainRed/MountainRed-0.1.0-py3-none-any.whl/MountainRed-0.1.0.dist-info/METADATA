@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: MountainRed
+Version: 0.1.0
+Summary: Django-ORM based Database tool
+Home-page: http://example.com
+Author: singein
+Author-email: singein@outlook.com
+License: MIT
+Platform: UNKNOWN
+
+MountainRed
+
+这是一款由`Python3` 编写的基于 `Django ORM` 框架的数据库读写工具
+
+关于项目名
+
+项目名称, 直译为 “山红”。以此名之谐音，尽我所热爱。
+
+
+
