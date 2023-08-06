@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: pexe37
+Version: 0.9.5.1
+Summary: Python to Executable
+Home-page: UNKNOWN
+Author: darkArp
+Author-email: marionascimento@itsec.bz
+License: MIT/X11
+Download-URL: https://github.com/darkarp/pexe37/archive/v0.9.5.1.zip
+Description: UNKNOWN
+Platform: Windows
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: Utilities
