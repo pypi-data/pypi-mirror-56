@@ -1,0 +1,41 @@
+{% extends "web/base.html" %}
+{% load humanize %}
+
+
+{% block content %}
+  <h1>Upcoming</h1>
+  {% if event %}
+    <h2>{{ event.date|naturalday|capfirst }}</h2>
+  {% else %}
+    <p>No upcoming event.</p>
+  {% endif %}
+
+  {% if has_registered %}
+    {% if film %}
+      {% include "votes/includes/film_card.html" with film=film only %}
+    {% else %}
+      <p>No upcoming film.
+    {% endif %}
+
+    <h2>Register</h2>
+    <ol>
+      {% for user in present_users %}
+        <li>✓ {{ user.username }}
+      {% endfor %}
+    </ol>
+    <ol>
+      {% for user in absent_users %}
+        <li>✗ {{ user.username }}
+      {% endfor %}
+    </ol>
+    <ol>
+      {% for user in unknown_users %}
+        <li>? {{ user.username }}
+      {% endfor %}
+    </ol>
+  {% elif event %}
+    <p>
+      You must <a href="{{ next_event_register_url }}">update the calender</a>
+      in order to see the what the upcoming film <em>might be</em>.
+  {% endif %}
+{% endblock %}

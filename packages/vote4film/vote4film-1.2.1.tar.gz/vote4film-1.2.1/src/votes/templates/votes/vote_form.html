@@ -1,0 +1,13 @@
+{% extends "web/base.html" %}
+
+
+{% block content %}
+  <h1>Vote for a Film</h1>
+  {% include "votes/includes/film_card.html" with film=film is_voting=1 only %}
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save">
+  </form>
+{% endblock content %}

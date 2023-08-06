@@ -1,0 +1,19 @@
+{% extends "web/base.html" %}
+
+{% comment %}
+  Takes in:
+    - {{ num_to_watch }}
+{% endcomment %}
+
+{% load humanize %}
+
+{% block content %}
+  <h1>Films <small>(by vote order)</small></h1>
+  <p>There are <strong>{{ num_to_watch|apnumber }}</strong> films to watch.
+  {% for object in object_list %}
+    {% include "votes/includes/film_card.html" with film=object only %}
+  {% empty %}
+    <p>There are no films added :(
+    <p><a href="{% url 'films:film-create' %}">Add a film!</a>
+  {% endfor %}
+{% endblock %}
