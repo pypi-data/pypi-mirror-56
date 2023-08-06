@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: ravenrpc
+Version: 0.2.4
+Summary: Ravencoin RPC client
+Home-page: https://github.com/JonPizza/ravenrpc
+Author: JonPizza
+Author-email: jon@jon.network
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# RavenRPC
+
+Crazy simple Ravencoin RPC library
+
+Examples:
+
+```python
+import ravenrpc
+
+rvn = ravenrpc.Ravencoin('username', 'password')
+rvn.getinfo()
+rvn.listreceivedbyaddress(0, True)
+```
+
+Any other rpc method:
+
+```python
+rvn.<METHOD>(<param1>, <param2>, ...)
+```
+
+
