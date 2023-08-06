@@ -1,0 +1,7 @@
+include hvalidation/README.md
+include hvalidation/LICENSE
+include hvalidation/__init__.py
+include hvalidation/validation.py
+include hvalidation/utils/*.py
+include hvalidation/base/*.py
+include hvalidation/validator/*.py
