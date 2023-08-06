@@ -1,0 +1,4 @@
+[console_scripts]
+paco = aim.commands.cli:cli
+paco_doc = aim.doc.docschema:aim_schema_generate
+
