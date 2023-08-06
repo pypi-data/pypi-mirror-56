@@ -1,0 +1,438 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Kernel Finder &mdash; jupyter_kernel_mgmt 0.5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Kernel Manager" href="kernel_manager.html" />
+    <link rel="prev" title="Jupyter Kernel Management 0.5" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> jupyter_kernel_mgmt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Application Developers</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Kernel Finder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#finding-kernels">Finding kernels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#kernel-specifications">Kernel Specifications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#kernel-specification-format">Kernel Specification Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ipython-kernel-provider">IPython kernel provider</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-kernels">Launching kernels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-launched-kernels">Using launched kernels</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_manager.html">Kernel Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_client.html">Kernel Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_restarter.html">Kernel Restarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standalone.html">Standalone Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Use with Jupyter Server</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Kernel Provider Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kernel_providers.html">Kernel Providers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Kernel Management APIs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Changes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changes in Jupyter Kernel Mgmt</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">jupyter_kernel_mgmt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Kernel Finder</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/kernel_finder.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kernel-finder">
+<span id="id1"></span><h1>Kernel Finder<a class="headerlink" href="#kernel-finder" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">jupyter_kernel_mgmt</span></code> package provides a means of discovering kernel types
+that are available for use. This is accomplished using the
+<a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder" title="jupyter_kernel_mgmt.discovery.KernelFinder"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelFinder</span></code></a> class.</p>
+<p><a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder" title="jupyter_kernel_mgmt.discovery.KernelFinder"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelFinder</span></code></a> instances are
+created in one of two ways.</p>
+<ol class="arabic simple">
+<li><p>The most common way is to call KernelFinder’s class method
+<a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder.from_entrypoints" title="jupyter_kernel_mgmt.discovery.KernelFinder.from_entrypoints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">KernelFinder.from_entrypoints()</span></code></a>.
+This loads all registered kernel providers.</p></li>
+<li><p>You can also provide a list of <a class="reference internal" href="kernel_providers.html"><span class="doc">kernel provider</span></a>
+instances to KernelFinder’s constructor.
+This loads only those instances provided.</p></li>
+</ol>
+<p>Once an instance of <a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder" title="jupyter_kernel_mgmt.discovery.KernelFinder"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelFinder</span></code></a> has
+been created, kernels can be discovered and launched via KernelFinder’s
+instance methods, <a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder.find_kernels" title="jupyter_kernel_mgmt.discovery.KernelFinder.find_kernels"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_kernels()</span></code></a> and
+<a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder.launch" title="jupyter_kernel_mgmt.discovery.KernelFinder.launch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">launch()</span></code></a>, respectively.</p>
+<div class="section" id="finding-kernels">
+<h2>Finding kernels<a class="headerlink" href="#finding-kernels" title="Permalink to this headline">¶</a></h2>
+<p>Available kernel types are discovered using KernelFinder’s
+<a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder.find_kernels" title="jupyter_kernel_mgmt.discovery.KernelFinder.find_kernels"><code class="xref py py-meth docutils literal notranslate"><span class="pre">KernelFinder.find_kernels()</span></code></a> method.  This method is a generator that walks
+the set of loaded kernel providers calling each of their
+<a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelProviderBase.find_kernels" title="jupyter_kernel_mgmt.discovery.KernelProviderBase.find_kernels"><code class="xref py py-meth docutils literal notranslate"><span class="pre">KernelProvider.find_kernels()</span></code></a> methods
+yielding each entry.</p>
+<p>Each kernel type has an ID (e.g. <code class="docutils literal notranslate"><span class="pre">spec/python3</span></code>) and a dictionary containing
+information to help a program or a user select an appropriate kernel.
+Different providers may include different metadata in this dictionary.</p>
+<div class="section" id="kernel-specifications">
+<span id="kernelspecs"></span><h3>Kernel Specifications<a class="headerlink" href="#kernel-specifications" title="Permalink to this headline">¶</a></h3>
+<p>The main built-in kernel provider,
+<a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelSpecProvider" title="jupyter_kernel_mgmt.discovery.KernelSpecProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelSpecProvider</span></code></a>,
+looks for kernels described by files in certain specific folders.
+Each kernel is described by one directory, and the name of the directory is
+used in its kernel type ID.
+These kernel spec directories may be in a number of locations:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 50%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Unix</p></th>
+<th class="head"><p>Windows</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>System</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/usr/share/jupyter/kernels</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/local/share/jupyter/kernels</span></code></p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">%PROGRAMDATA%\jupyter\kernels</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>User</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">~/.local/share/jupyter/kernels</span></code> (Linux)</p>
+<p><code class="docutils literal notranslate"><span class="pre">~/Library/Jupyter/kernels</span></code> (Mac)</p>
+</td>
+<td><p><code class="docutils literal notranslate"><span class="pre">%APPDATA%\jupyter\kernels</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Env</p></td>
+<td colspan="2"><p><code class="docutils literal notranslate"><span class="pre">{sys.prefix}/share/jupyter/kernels</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>The user location takes priority over the system locations, and the case of the
+names is ignored, so selecting kernels works the same way whether or not the
+filesystem is case sensitive.</p>
+<p>Since kernel names, and their <a class="reference internal" href="kernel_providers.html#provider-id"><span class="std std-ref">provider ids</span></a>, show up in URLs and other places,
+a kernelspec is required to have a simple name, only containing ASCII letters, ASCII numbers, and the simple separators: <code class="docutils literal notranslate"><span class="pre">-</span></code> hyphen, <code class="docutils literal notranslate"><span class="pre">.</span></code> period, <code class="docutils literal notranslate"><span class="pre">_</span></code> underscore.</p>
+<p>Other locations may also be searched if the <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">JUPYTER_PATH</span></code> environment
+variable is set.</p>
+<p>For IPython kernels, three types of files are presently used:
+<code class="docutils literal notranslate"><span class="pre">kernel.json</span></code>, <code class="docutils literal notranslate"><span class="pre">kernel.js</span></code>, and logo image files. However, different Kernel Providers
+can support other files and directories within the kernel directory or may not even
+use a directory for their kernel discovery model.  That said, for kernels prior
+to Kernel Providers or those discovered by instances of class
+<a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelSpecProvider" title="jupyter_kernel_mgmt.discovery.KernelSpecProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelSpecProvider</span></code></a>, the most important
+file is <strong>kernel.json</strong>. This file consists of a JSON-serialized dictionary
+that adheres to the <a class="reference internal" href="#kernelspec-format"><span class="std std-ref">kernel specification format</span></a>.</p>
+<p>For example, the kernel.json file for the IPython kernel looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="s2">&quot;argv&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;python3&quot;</span><span class="p">,</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;IPython.kernel&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{connection_file}</span><span class="s2">&quot;</span><span class="p">],</span>
+ <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Python 3&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="kernel-specification-format">
+<span id="kernelspec-format"></span><h4>Kernel Specification Format<a class="headerlink" href="#kernel-specification-format" title="Permalink to this headline">¶</a></h4>
+<p>The information contained in each entry returned from a Kernel Provider’s
+<a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelProviderBase.find_kernels" title="jupyter_kernel_mgmt.discovery.KernelProviderBase.find_kernels"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_kernels()</span></code></a> method consists of a
+dictionary containing the following keys and values:</p>
+<ul class="simple">
+<li><p><strong>display_name</strong>: The kernel’s name as it should be displayed in the UI.
+Unlike the kernel name used in the API, this can contain arbitrary unicode
+characters.  This value should be provided by all kernel providers.</p></li>
+<li><p><strong>language</strong>: The name of the language of the kernel.
+When loading notebooks, if no matching kernelspec key (may differ across machines)
+is found, a kernel with a matching <cite>language</cite> will be used.
+This allows a notebook written on any Python or Julia kernel to be properly
+associated with the user’s Python or Julia kernel, even if they aren’t listed
+under the same name as the author’s. This value should be provided by all kernel providers.</p></li>
+<li><p><strong>metadata</strong> (optional): A dictionary of additional attributes about this
+kernel. Metadata added here should be namespaced for the tool reading and
+writing that metadata.</p></li>
+</ul>
+<p>Kernelspec-based providers obtain this information from a <cite>kernel.json</cite> file located in a
+directory pertaining to the kernel’s name.  Other fields in the kernel.json file include
+information used to launch and manage the kernel.  As a result, you’ll also find the following
+fields in <cite>kernel.json</cite> files:</p>
+<ul class="simple">
+<li><p><strong>argv</strong>: (optional): A list of command line arguments used to start the kernel. For
+instances of class <a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelSpecProvider" title="jupyter_kernel_mgmt.discovery.KernelSpecProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelSpecProvider</span></code></a> the text
+<code class="docutils literal notranslate"><span class="pre">{connection_file}</span></code> in any argument will be replaced with the path to the
+connection file.  However, subclasses of <a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelSpecProvider" title="jupyter_kernel_mgmt.discovery.KernelSpecProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelSpecProvider</span></code></a>
+may choose to provide different substitutions, especially if they don’t use a connection file.</p></li>
+<li><p><strong>interrupt_mode</strong> (optional): May be either <code class="docutils literal notranslate"><span class="pre">signal</span></code> or <code class="docutils literal notranslate"><span class="pre">message</span></code> and
+specifies how a client is supposed to interrupt cell execution on this kernel,
+either by sending an interrupt <code class="docutils literal notranslate"><span class="pre">signal</span></code> via the operating system’s
+signalling facilities (e.g. <cite>SIGINT</cite> on POSIX systems), or by sending an
+<code class="docutils literal notranslate"><span class="pre">interrupt_request</span></code> message on the control channel (see
+<a class="reference external" href="https://jupyter-protocol.readthedocs.io/en/latest/messaging.html#msging-interrupt" title="(in jupyter_protocol v0.1)"><span class="xref std std-ref">kernel interrupt</span></a>).
+If this is not specified <code class="docutils literal notranslate"><span class="pre">signal</span></code> mode will be used.</p></li>
+<li><p><strong>env</strong> (optional): A dictionary of environment variables to set for the kernel.
+These will be added to the current environment variables before the kernel is
+started.</p></li>
+</ul>
+<p>However, whether a provider exposes information used during their kernel’s
+launch is entirely up to the provider.</p>
+</div>
+</div>
+<div class="section" id="ipython-kernel-provider">
+<h3>IPython kernel provider<a class="headerlink" href="#ipython-kernel-provider" title="Permalink to this headline">¶</a></h3>
+<p>A second built-in kernel provider,
+<a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.IPykernelProvider" title="jupyter_kernel_mgmt.discovery.IPykernelProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">IPykernelProvider</span></code></a>, identifies if
+<code class="docutils literal notranslate"><span class="pre">ipykernel</span></code> is importable by the same Python the frontend is running on.
+If so, it provides exactly one kernel type, <code class="docutils literal notranslate"><span class="pre">pyimport/kernel</span></code>, which runs the
+IPython kernel in that same Python environment.</p>
+<p>This may be functionally a duplicate of a kernel type discovered through an
+<a class="reference internal" href="#kernelspecs"><span class="std std-ref">installed kernelspec</span></a>.</p>
+</div>
+</div>
+<div class="section" id="launching-kernels">
+<h2>Launching kernels<a class="headerlink" href="#launching-kernels" title="Permalink to this headline">¶</a></h2>
+<p>Launching kernels works similarly to their discovery.  To launch a previously discovered kernel,
+the kernel’s <cite>fully qualified kernel type</cite> is provided to KernelFinder’s
+<a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder.launch" title="jupyter_kernel_mgmt.discovery.KernelFinder.launch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">launch()</span></code></a> method.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <strong>fully qualified kernel type</strong> includes a prefix of the kernel’s <a class="reference internal" href="kernel_providers.html#provider-id"><span class="std std-ref">provider id</span></a> followed by a
+forward slash (‘/’).  For example, the <code class="docutils literal notranslate"><span class="pre">python3</span></code> kernel as provided by the
+<a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelSpecProvider" title="jupyter_kernel_mgmt.discovery.KernelSpecProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">KernelSpecProvider</span></code></a>
+would have a fully qualified kernel type of <code class="docutils literal notranslate"><span class="pre">spec/python3</span></code>.</p>
+<p>The application is responsible for ensuring the name passed to
+<a class="reference internal" href="api/finder.html#jupyter_kernel_mgmt.discovery.KernelFinder.launch" title="jupyter_kernel_mgmt.discovery.KernelFinder.launch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">KernelFinder.launch()</span></code></a> is prefixed with a provider id.  For backwards
+compatibility with existing kernelspecs, a prefix of <code class="docutils literal notranslate"><span class="pre">spec/</span></code> is recommended in such cases so as to associate it with
+the <code class="docutils literal notranslate"><span class="pre">KernelSpecProvider</span></code>.</p>
+</div>
+<p>KernelFinder’s launch method then locates the provider and calls the specific kernel provider’s
+<a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelProviderBase.launch" title="jupyter_kernel_mgmt.discovery.KernelProviderBase.launch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">launch()</span></code></a> method.</p>
+<p><a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelProviderBase.launch" title="jupyter_kernel_mgmt.discovery.KernelProviderBase.launch"><code class="xref py py-meth docutils literal notranslate"><span class="pre">KernelFinder.launch(name,</span> <span class="pre">cwd=None,</span> <span class="pre">launch_params=None)</span></code></a>
+takes two additional (and optional) arguments.</p>
+<p><strong>cwd</strong> (optional) specifies the current working directory relative to the notebook.
+Use of this value is up to the provider, as some kinds of kernels may not see
+the same filesystem as the process launching them.</p>
+<p><strong>launch_params</strong> (optional) specifies a dictionary of provider-specific name/value pairs that can can
+be used during the kernel’s launch.  What parameters are used can also be specified in the form of JSON
+schema embedded in the provider’s kernel specification returned from its
+<a class="reference internal" href="api/providers.html#jupyter_kernel_mgmt.discovery.KernelProviderBase.find_kernels" title="jupyter_kernel_mgmt.discovery.KernelProviderBase.find_kernels"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_kernels()</span></code></a> method.  The application retrieving the kernel’s
+information and invoking its subsequent launch, is responsible for providing appropriately relevant values.</p>
+<div class="section" id="using-launched-kernels">
+<h3>Using launched kernels<a class="headerlink" href="#using-launched-kernels" title="Permalink to this headline">¶</a></h3>
+<p>A 2-tuple of <a class="reference external" href="https://jupyter-protocol.readthedocs.io/en/latest/kernels.html#connection-files" title="(in jupyter_protocol v0.1)"><span class="xref std std-ref">connection information</span></a> and the provider’s
+<a class="reference internal" href="api/manager.html#jupyter_kernel_mgmt.managerabc.KernelManagerABC" title="jupyter_kernel_mgmt.managerabc.KernelManagerABC"><code class="xref py py-class docutils literal notranslate"><span class="pre">kernel</span> <span class="pre">manager</span></code></a> instance are returned
+from KernelFinder’s launch method.</p>
+<p>Although the <a class="reference internal" href="kernel_manager.html#kernel-manager"><span class="std std-ref">KernelManager</span></a> instance allows an application to manage a kernel’s lifecycle, it
+does not provide a means of communicating with the kernel.  To communicate with the kernel, an
+instance of <a class="reference internal" href="kernel_client.html#kernel-client"><span class="std std-ref">KernelClient</span></a> is required.</p>
+<p>If the application would like to perform automatic
+restart operations (where the application detects the kernel is no longer running and issues a
+restart request) the application should establish a <a class="reference internal" href="kernel_restarter.html#kernel-restarter"><span class="std std-ref">KernelRestarter</span></a> instance.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kernel_manager.html" class="btn btn-neutral float-right" title="Kernel Manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Jupyter Kernel Management 0.5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jupyter Development Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

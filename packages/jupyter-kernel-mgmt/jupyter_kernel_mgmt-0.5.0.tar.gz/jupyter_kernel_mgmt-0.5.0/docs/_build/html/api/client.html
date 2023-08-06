@@ -1,0 +1,682 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Kernel Client &mdash; jupyter_kernel_mgmt 0.5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Kernel Restarter" href="restarter.html" />
+    <link rel="prev" title="Kernel Manager" href="manager.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> jupyter_kernel_mgmt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Application Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_finder.html">Kernel Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_manager.html">Kernel Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_client.html">Kernel Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_restarter.html">Kernel Restarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standalone.html">Standalone Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server.html">Use with Jupyter Server</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Kernel Provider Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_providers.html">Kernel Providers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Kernel Management APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hl.html">High Level API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finder.html">Kernel Finder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="providers.html">Kernel Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launchers.html">Kernel Launchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manager.html">Kernel Manager</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Kernel Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restarter.html">Kernel Restarter</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Changes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changes in Jupyter Kernel Mgmt</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">jupyter_kernel_mgmt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Kernel Management APIs</a> &raquo;</li>
+        
+      <li>Kernel Client</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/client.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kernel-client">
+<span id="kernel-client-api"></span><h1>Kernel Client<a class="headerlink" href="#kernel-client" title="Permalink to this headline">¶</a></h1>
+<p>The Kernel Client API is how an application communicates with a previously
+launched kernel using the <a class="reference external" href="https://jupyter-client.readthedocs.io/en/stable/messaging.html" title="(in jupyter_client v5.3)"><span class="xref std std-doc">Jupyter message protocol (FIXME jupyter_protocol)</span></a>.
+For applications based on IO loops, Jupyter Kernel Management provides <a class="reference internal" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient" title="jupyter_kernel_mgmt.client.IOLoopKernelClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">IOLoopKernelClient</span></code></a>.</p>
+<dl class="class">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient">
+<em class="property">class </em><code class="sig-prename descclassname">jupyter_kernel_mgmt.client_base.</code><code class="sig-name descname">KernelClient</code><span class="sig-paren">(</span><em class="sig-param">connection_info</em>, <em class="sig-param">manager=None</em>, <em class="sig-param">use_heartbeat=True</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Communicates with a single kernel on any host via zmq channels.</p>
+<p>The messages that can be sent are exposed as methods of the
+client (KernelClient.execute, complete, history, etc.). These methods only
+send the message, they don’t wait for a reply. To get results, use e.g.
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">get_shell_msg()</span></code> to fetch messages from the shell channel.</p>
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close sockets of this client.</p>
+<p>After calling this, the client can no longer be used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.comm_info">
+<code class="sig-name descname">comm_info</code><span class="sig-paren">(</span><em class="sig-param">target_name=None</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.comm_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request comm info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The msg_id of the message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.complete">
+<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">cursor_pos=None</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tab complete text in the kernel’s namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>str</em>) – The context in which completion is requested.
+Can be anything between a variable name and an entire cell.</p></li>
+<li><p><strong>cursor_pos</strong> (<em>int</em><em>, </em><em>optional</em>) – The position of the cursor in the block of code where the completion was requested.
+Default: <code class="docutils literal notranslate"><span class="pre">len(code)</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The msg_id of the message sent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.execute">
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">silent=False</em>, <em class="sig-param">store_history=True</em>, <em class="sig-param">user_expressions=None</em>, <em class="sig-param">allow_stdin=None</em>, <em class="sig-param">stop_on_error=True</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute code in the kernel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>str</em>) – A string of code in the kernel’s language.</p></li>
+<li><p><strong>silent</strong> (<em>bool</em><em>, </em><em>optional</em><em> (</em><em>default False</em><em>)</em>) – If set, the kernel will execute the code as quietly possible, and
+will force store_history to be False.</p></li>
+<li><p><strong>store_history</strong> (<em>bool</em><em>, </em><em>optional</em><em> (</em><em>default True</em><em>)</em>) – If set, the kernel will store command history.  This is forced
+to be False if silent is True.</p></li>
+<li><p><strong>user_expressions</strong> (<em>dict</em><em>, </em><em>optional</em>) – A dict mapping names to expressions to be evaluated in the user’s
+dict. The expression values are returned as strings formatted using
+<code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code>.</p></li>
+<li><p><strong>allow_stdin</strong> (<em>bool</em><em>, </em><em>optional</em><em> (</em><em>default self.allow_stdin</em><em>)</em>) – <p>Flag for whether the kernel can send stdin requests to frontends.</p>
+<p>Some frontends (e.g. the Notebook) do not support stdin requests.
+If raw_input is called from code executed from such a frontend, a
+StdinNotImplementedError will be raised.</p>
+</p></li>
+<li><p><strong>stop_on_error</strong> (<em>bool</em><em>, </em><em>optional</em><em> (</em><em>default True</em><em>)</em>) – Flag whether to abort the execution queue, if an exception is encountered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The msg_id of the message sent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.history">
+<code class="sig-name descname">history</code><span class="sig-paren">(</span><em class="sig-param">raw=True</em>, <em class="sig-param">output=False</em>, <em class="sig-param">hist_access_type='range'</em>, <em class="sig-param">_header=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get entries from the kernel’s history list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> (<em>bool</em>) – If True, return the raw input.</p></li>
+<li><p><strong>output</strong> (<em>bool</em>) – If True, then return the output as well.</p></li>
+<li><p><strong>hist_access_type</strong> (<em>str</em>) – <dl class="simple">
+<dt>‘range’ (fill in session, start and stop params), ‘tail’ (fill in n)</dt><dd><p>or ‘search’ (fill in pattern param).</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>session</strong> (<em>int</em>) – For a range request, the session from which to get lines. Session
+numbers are positive integers; negative ones count back from the
+current session.</p></li>
+<li><p><strong>start</strong> (<em>int</em>) – The first line number of a history range.</p></li>
+<li><p><strong>stop</strong> (<em>int</em>) – The final (excluded) line number of a history range.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – The number of lines of history to get for a tail request.</p></li>
+<li><p><strong>pattern</strong> (<em>str</em>) – The glob-syntax pattern for a search request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The ID of the message sent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.input">
+<code class="sig-name descname">input</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send a string of raw input to the kernel.</p>
+<p>This should only be called in response to the kernel sending an
+<code class="docutils literal notranslate"><span class="pre">input_request</span></code> message on the stdin channel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.inspect">
+<code class="sig-name descname">inspect</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">cursor_pos=None</em>, <em class="sig-param">detail_level=0</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.inspect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get metadata information about an object in the kernel’s namespace.</p>
+<p>It is up to the kernel to determine the appropriate object to inspect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>str</em>) – The context in which info is requested.
+Can be anything between a variable name and an entire cell.</p></li>
+<li><p><strong>cursor_pos</strong> (<em>int</em><em>, </em><em>optional</em>) – The position of the cursor in the block of code where the info was requested.
+Default: <code class="docutils literal notranslate"><span class="pre">len(code)</span></code></p></li>
+<li><p><strong>detail_level</strong> (<em>int</em><em>, </em><em>optional</em>) – The level of detail for the introspection (0-2)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The msg_id of the message sent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.interrupt">
+<code class="sig-name descname">interrupt</code><span class="sig-paren">(</span><em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.interrupt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send an interrupt message/signal to the kernel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.is_complete">
+<code class="sig-name descname">is_complete</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.is_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask the kernel whether some code is complete and ready to execute.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.kernel_info">
+<code class="sig-name descname">kernel_info</code><span class="sig-paren">(</span><em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.kernel_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request kernel info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The msg_id of the message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.owned_kernel">
+<em class="property">property </em><code class="sig-name descname">owned_kernel</code><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.owned_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if this client ‘owns’ the kernel, i.e. started it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client_base.KernelClient.shutdown">
+<code class="sig-name descname">shutdown</code><span class="sig-paren">(</span><em class="sig-param">restart=False</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client_base.KernelClient.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request an immediate kernel shutdown.</p>
+<p>Upon receipt of the (empty) reply, client code can safely assume that
+the kernel has shut down and it’s safe to forcefully terminate it if
+it’s still alive.</p>
+<p>The kernel will send the reply via a function registered with Python’s
+atexit module, ensuring it’s truly done as the kernel is done with all
+normal operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The msg_id of the message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient">
+<em class="property">class </em><code class="sig-prename descclassname">jupyter_kernel_mgmt.client.</code><code class="sig-name descname">IOLoopKernelClient</code><span class="sig-paren">(</span><em class="sig-param">connection_info</em>, <em class="sig-param">manager=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses a zmq/tornado IOLoop to handle received messages and fire callbacks.</p>
+<p>Use ClientInThread to run this in a separate thread alongside your
+application.</p>
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.add_handler">
+<code class="sig-name descname">add_handler</code><span class="sig-paren">(</span><em class="sig-param">handler</em>, <em class="sig-param">channels</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.add_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a callback for received messages on one or more channels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>handler</strong> (<em>function</em>) – Will be called for each message received with the message dictionary
+as a single argument.</p></li>
+<li><p><strong>channels</strong> (<em>set</em><em> or </em><em>str</em>) – Channel names: ‘shell’, ‘iopub’, ‘stdin’ or ‘control’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the client’s sockets &amp; streams.</p>
+<p>This does not close the IOLoop.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.comm_info">
+<code class="sig-name descname">comm_info</code><span class="sig-paren">(</span><em class="sig-param">target_name=None</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.comm_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request comm info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The msg_id of the message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.complete">
+<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">cursor_pos=None</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tab complete text in the kernel’s namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>str</em>) – The context in which completion is requested.
+Can be anything between a variable name and an entire cell.</p></li>
+<li><p><strong>cursor_pos</strong> (<em>int</em><em>, </em><em>optional</em>) – The position of the cursor in the block of code where the completion was requested.
+Default: <code class="docutils literal notranslate"><span class="pre">len(code)</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The msg_id of the message sent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.execute">
+<code class="sig-name descname">execute</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">silent=False</em>, <em class="sig-param">store_history=True</em>, <em class="sig-param">user_expressions=None</em>, <em class="sig-param">allow_stdin=None</em>, <em class="sig-param">stop_on_error=True</em>, <em class="sig-param">interrupt_timeout=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">raise_on_no_idle=False</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute code in the kernel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>str</em>) – A string of code in the kernel’s language.</p></li>
+<li><p><strong>silent</strong> (<em>bool</em><em>, </em><em>optional</em><em> (</em><em>default False</em><em>)</em>) – If set, the kernel will execute the code as quietly possible, and
+will force store_history to be False.</p></li>
+<li><p><strong>store_history</strong> (<em>bool</em><em>, </em><em>optional</em><em> (</em><em>default True</em><em>)</em>) – If set, the kernel will store command history.  This is forced
+to be False if silent is True.</p></li>
+<li><p><strong>user_expressions</strong> (<em>dict</em><em>, </em><em>optional</em>) – A dict mapping names to expressions to be evaluated in the user’s
+dict. The expression values are returned as strings formatted using
+<code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code>.</p></li>
+<li><p><strong>allow_stdin</strong> (<em>bool</em><em>, </em><em>optional</em><em> (</em><em>default self.allow_stdin</em><em>)</em>) – <p>Flag for whether the kernel can send stdin requests to frontends.</p>
+<p>Some frontends (e.g. the Notebook) do not support stdin requests.
+If raw_input is called from code executed from such a frontend, a
+StdinNotImplementedError will be raised.</p>
+</p></li>
+<li><p><strong>stop_on_error</strong> (<em>bool</em><em>, </em><em>optional</em><em> (</em><em>default True</em><em>)</em>) – Flag whether to abort the execution queue, if an exception is encountered.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The msg_id of the message sent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.history">
+<code class="sig-name descname">history</code><span class="sig-paren">(</span><em class="sig-param">raw=True</em>, <em class="sig-param">output=False</em>, <em class="sig-param">hist_access_type='range'</em>, <em class="sig-param">_header=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get entries from the kernel’s history list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw</strong> (<em>bool</em>) – If True, return the raw input.</p></li>
+<li><p><strong>output</strong> (<em>bool</em>) – If True, then return the output as well.</p></li>
+<li><p><strong>hist_access_type</strong> (<em>str</em>) – <dl class="simple">
+<dt>‘range’ (fill in session, start and stop params), ‘tail’ (fill in n)</dt><dd><p>or ‘search’ (fill in pattern param).</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>session</strong> (<em>int</em>) – For a range request, the session from which to get lines. Session
+numbers are positive integers; negative ones count back from the
+current session.</p></li>
+<li><p><strong>start</strong> (<em>int</em>) – The first line number of a history range.</p></li>
+<li><p><strong>stop</strong> (<em>int</em>) – The final (excluded) line number of a history range.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – The number of lines of history to get for a tail request.</p></li>
+<li><p><strong>pattern</strong> (<em>str</em>) – The glob-syntax pattern for a search request.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The ID of the message sent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.input">
+<code class="sig-name descname">input</code><span class="sig-paren">(</span><em class="sig-param">string</em>, <em class="sig-param">parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send a string of raw input to the kernel.</p>
+<p>This should only be called in response to the kernel sending an
+<code class="docutils literal notranslate"><span class="pre">input_request</span></code> message on the stdin channel.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.inspect">
+<code class="sig-name descname">inspect</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">cursor_pos=None</em>, <em class="sig-param">detail_level=0</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.inspect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get metadata information about an object in the kernel’s namespace.</p>
+<p>It is up to the kernel to determine the appropriate object to inspect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>str</em>) – The context in which info is requested.
+Can be anything between a variable name and an entire cell.</p></li>
+<li><p><strong>cursor_pos</strong> (<em>int</em><em>, </em><em>optional</em>) – The position of the cursor in the block of code where the info was requested.
+Default: <code class="docutils literal notranslate"><span class="pre">len(code)</span></code></p></li>
+<li><p><strong>detail_level</strong> (<em>int</em><em>, </em><em>optional</em>) – The level of detail for the introspection (0-2)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>The msg_id of the message sent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.interrupt">
+<em class="property">async </em><code class="sig-name descname">interrupt</code><span class="sig-paren">(</span><em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.interrupt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send an interrupt message/signal to the kernel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.is_complete">
+<code class="sig-name descname">is_complete</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.is_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask the kernel whether some code is complete and ready to execute.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.kernel_info">
+<code class="sig-name descname">kernel_info</code><span class="sig-paren">(</span><em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.kernel_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request kernel info</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The msg_id of the message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.owned_kernel">
+<em class="property">property </em><code class="sig-name descname">owned_kernel</code><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.owned_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if this client ‘owns’ the kernel, i.e. started it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.remove_handler">
+<code class="sig-name descname">remove_handler</code><span class="sig-paren">(</span><em class="sig-param">handler</em>, <em class="sig-param">channels=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.remove_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a previously registered callback.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.shutdown">
+<code class="sig-name descname">shutdown</code><span class="sig-paren">(</span><em class="sig-param">restart=False</em>, <em class="sig-param">_header=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request an immediate kernel shutdown.</p>
+<p>Upon receipt of the (empty) reply, client code can safely assume that
+the kernel has shut down and it’s safe to forcefully terminate it if
+it’s still alive.</p>
+<p>The kernel will send the reply via a function registered with Python’s
+atexit module, ensuring it’s truly done as the kernel is done with all
+normal operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>The msg_id of the message sent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.client.IOLoopKernelClient.shutdown_or_terminate">
+<code class="sig-name descname">shutdown_or_terminate</code><span class="sig-paren">(</span><em class="sig-param">timeout=5.0</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.client.IOLoopKernelClient.shutdown_or_terminate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask the kernel to shut down, and terminate it if it takes too long.</p>
+<p>The kernel will be given up to timeout seconds to respond to the
+shutdown message, then the same timeout to terminate.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="restarter.html" class="btn btn-neutral float-right" title="Kernel Restarter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="manager.html" class="btn btn-neutral" title="Kernel Manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jupyter Development Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

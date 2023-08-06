@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Kernel Finder &mdash; jupyter_kernel_mgmt 0.5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Kernel Provider" href="providers.html" />
+    <link rel="prev" title="High Level API" href="hl.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> jupyter_kernel_mgmt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Application Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_finder.html">Kernel Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_manager.html">Kernel Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_client.html">Kernel Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_restarter.html">Kernel Restarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standalone.html">Standalone Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server.html">Use with Jupyter Server</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Kernel Provider Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../kernel_providers.html">Kernel Providers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Kernel Management APIs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hl.html">High Level API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Kernel Finder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="providers.html">Kernel Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="launchers.html">Kernel Launchers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manager.html">Kernel Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client.html">Kernel Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restarter.html">Kernel Restarter</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Changes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changes in Jupyter Kernel Mgmt</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">jupyter_kernel_mgmt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Kernel Management APIs</a> &raquo;</li>
+        
+      <li>Kernel Finder</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/finder.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kernel-finder">
+<span id="kernel-finder-api"></span><h1>Kernel Finder<a class="headerlink" href="#kernel-finder" title="Permalink to this headline">¶</a></h1>
+<p>The Kernel Finder API is used by applications wishing to discover, launch,
+and manage Jupyter kernels.  <code class="docutils literal notranslate"><span class="pre">KernelFinder</span></code> is not meant to be subclassed.
+To make it discover additional kernels, see <a class="reference internal" href="../kernel_providers.html#kernel-providers"><span class="std std-ref">Kernel Providers</span></a>.</p>
+<dl class="class">
+<dt id="jupyter_kernel_mgmt.discovery.KernelFinder">
+<em class="property">class </em><code class="sig-prename descclassname">jupyter_kernel_mgmt.discovery.</code><code class="sig-name descname">KernelFinder</code><span class="sig-paren">(</span><em class="sig-param">providers</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.discovery.KernelFinder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a collection of kernel providers to find available kernel types.
+<em>providers</em> should be a list of kernel provider instances.</p>
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.discovery.KernelFinder.find_kernels">
+<code class="sig-name descname">find_kernels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.discovery.KernelFinder.find_kernels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate over available kernel types.
+Yields 2-tuples of (prefixed_name, attributes)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.discovery.KernelFinder.from_entrypoints">
+<em class="property">classmethod </em><code class="sig-name descname">from_entrypoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.discovery.KernelFinder.from_entrypoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load all kernel providers advertised by entry points.</p>
+<p>Kernel providers should use the “jupyter_kernel_mgmt.kernel_type_providers”
+entry point group.</p>
+<p>Returns an instance of KernelFinder.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jupyter_kernel_mgmt.discovery.KernelFinder.launch">
+<em class="property">async </em><code class="sig-name descname">launch</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">cwd=None</em>, <em class="sig-param">launch_params=None</em><span class="sig-paren">)</span><a class="headerlink" href="#jupyter_kernel_mgmt.discovery.KernelFinder.launch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launch a kernel of a given kernel type using asyncio.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="providers.html" class="btn btn-neutral float-right" title="Kernel Provider" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hl.html" class="btn btn-neutral" title="High Level API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jupyter Development Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

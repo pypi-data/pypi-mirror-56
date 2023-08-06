@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Changes in Jupyter Kernel Mgmt &mdash; jupyter_kernel_mgmt 0.5.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Kernel Restarter" href="api/restarter.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> jupyter_kernel_mgmt
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Application Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kernel_finder.html">Kernel Finder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_manager.html">Kernel Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_client.html">Kernel Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_restarter.html">Kernel Restarter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standalone.html">Standalone Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Use with Jupyter Server</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Kernel Provider Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="kernel_providers.html">Kernel Providers</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Kernel Management APIs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Changes</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changes in Jupyter Kernel Mgmt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">0.5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">0.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">0.3.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">0.2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">0.1.1</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">jupyter_kernel_mgmt</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Changes in Jupyter Kernel Mgmt</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="changes-in-jupyter-kernel-mgmt">
+<span id="changelog"></span><h1>Changes in Jupyter Kernel Mgmt<a class="headerlink" href="#changes-in-jupyter-kernel-mgmt" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>0.5.0<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Tolerate missing status on kernel-info-reply</p></li>
+<li><p>Add some missing dependencies and min versions</p></li>
+<li><p>Force pin of pyzmq for travis builds, increase timeout</p></li>
+<li><p>Close kernel client in start_new_kernel tests</p></li>
+<li><p>Give kernel providers opportunity to load configuration</p></li>
+<li><p>Add support for kernel launch parameters</p></li>
+<li><p>Add support for native coroutines (async def)</p></li>
+<li><p>Significant documentation updates</p></li>
+<li><p>Fix operations on Windows</p></li>
+<li><p>Rework high-level APIs</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>0.4.0<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Remove unused import</p></li>
+<li><p>Make test fail because of idle-handling bug</p></li>
+<li><p>Fix watching for idle after execution</p></li>
+<li><p>Allow multiple providers to use kernelspec-based configurations</p></li>
+<li><p>Allow multiple providers to use kernelspec-based configurations</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>0.3.0<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Expose kernel_info_dict on blocking kernel client</p></li>
+<li><p>Translate tornado TimeoutError to base Python TimeoutError for blocking client</p></li>
+<li><p>Normalise contents of kernel info dicts</p></li>
+<li><p>Remove configurable kernel spec class and whitelist</p></li>
+<li><p>Remove deprecated method to install IPython kernel spec</p></li>
+<li><p>Remove special kernelspec handling for IPython</p></li>
+<li><p>Get rid of LoggingConfigurable base class</p></li>
+<li><p>Allow passing a different search path for KernelSpecProvider</p></li>
+<li><p>Catch unparseable kernelspecs when finding all</p></li>
+<li><p>Rework restarter events</p></li>
+<li><p>Don’t try to relaunch a dead kernel with the same ports</p></li>
+<li><p>Rework message handlers API</p></li>
+<li><p>Use tornado event loop to dispatch restart callbacks</p></li>
+<li><p>Allow restarter to be used for manual restarts</p></li>
+<li><p>Support Python 3.4, missing JSONDecodeError</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>0.2.0<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Add kernel_info_dict attribute</p></li>
+<li><p>Don’t use prerelease versions of test dependencies</p></li>
+<li><p>Return message even if status=’error’</p></li>
+<li><p>Remove ErrorInKernel exception</p></li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>0.1.1<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Initial experimental implementation.</p></li>
+</ul>
+<p>Note: Because the code in this repository originated from jupyter_client you may
+also want to look at its <a class="reference external" href="https://jupyter-client.readthedocs.io/en/latest/changelog.html">changelog history</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="api/restarter.html" class="btn btn-neutral" title="Kernel Restarter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Jupyter Development Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.5.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
