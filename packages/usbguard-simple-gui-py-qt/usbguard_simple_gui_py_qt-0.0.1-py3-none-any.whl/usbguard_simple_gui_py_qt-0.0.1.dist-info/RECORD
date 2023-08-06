@@ -1,0 +1,14 @@
+usbguard_simple_gui_py_qt/__init__.py,sha256=PNLMmDRSlQxGt3CMlYBZWP3lr-YUFHoCzhlCeQ3z5Gs,835
+usbguard_simple_gui_py_qt/device.py,sha256=xVCAA6FOUcI11iRz9MTr7fRxRn8oviZcT1aCYEiV1Ww,4693
+usbguard_simple_gui_py_qt/icon.svg,sha256=AB5vAgx4VzEBhfAUpABqVXrUILK4rk1hKqSIhTXzVtM,3292
+usbguard_simple_gui_py_qt/main_window.py,sha256=ZdPZdseHnT2-7ccGuwrLc0lQrqKgNl1VM8LZsc6OfVI,6333
+usbguard_simple_gui_py_qt/rule_parsing.py,sha256=YXyPw7GUUcl9WFshCFgbe_k6ffJQ82Nxjk-1fS1rAo4,7992
+usbguard_simple_gui_py_qt/rules.py,sha256=dMn-XFgRbSOyS-ztvAxupmkIf_GMRk6Qfj4mNhiHXkg,4289
+usbguard_simple_gui_py_qt/system_tray_app.py,sha256=b4r3VyA2_JtzOmJQav7x0Mi6UkXq3ZE4W-rgtVGJjtk,7327
+usbguard_simple_gui_py_qt/usbguard_dbus_interface.py,sha256=xI5BVbzacmRPIIMTYEp6-py9oU_lpQnwYJSYYJ_dLH0,6697
+usbguard_simple_gui_py_qt-0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+usbguard_simple_gui_py_qt-0.0.1.dist-info/METADATA,sha256=WFRLFhl9uOeuafX6EOiWDhdRbMYUno9y2k1qQo8q_aQ,1223
+usbguard_simple_gui_py_qt-0.0.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+usbguard_simple_gui_py_qt-0.0.1.dist-info/entry_points.txt,sha256=Ez6-VSb09zZunNJgAAu2uFlLha_DwJT4jLlfmbi3qbg,173
+usbguard_simple_gui_py_qt-0.0.1.dist-info/top_level.txt,sha256=40eITX2bhUSAAR6aHkW1PN4-n__UvkNRjF_nl78kY20,26
+usbguard_simple_gui_py_qt-0.0.1.dist-info/RECORD,,
