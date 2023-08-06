@@ -1,0 +1,8 @@
+obspy>=1.1
+xarray>=0.14
+numpy>=1.17
+scipy>=1.0
+pandas>=0.25
+sparse>=0.8
+bottleneck>=1.2
+pympler>=0.7
