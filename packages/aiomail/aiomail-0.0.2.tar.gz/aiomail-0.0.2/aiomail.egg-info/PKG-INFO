@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: aiomail
+Version: 0.0.2
+Summary: easy and async e-mail package
+Home-page: https://github.com/fxdmhtt/aiomail.git
+Author: fxdmhtt
+Author-email: yuanjunkang@gmail.com
+License: UNKNOWN
+Description: # aiomail
+        easy and async e-mail package
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
