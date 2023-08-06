@@ -1,0 +1,2457 @@
+location_no;location;municipality;province;region;country
+4;Aagtekerke;Aagtekerke;Zeeland;;Nederland
+5;Aalburg;Aalburg;Noord-Brabant;;Nederland
+7;Aalsmeer;Aalsmeer;Noord-Holland;;Nederland
+10;Brakel;Brakel;Gelderland;;Nederland
+12;Aalst;Aalst (NB);Noord-Brabant;;Nederland
+14;Aalsum;Oostdongeradeel;Friesland;;Nederland
+15;Aalten;Aalten;Gelderland;;Nederland
+16;Aalter;;;Gent;België
+17;Aardenburg;Aardenburg;Zeeland;;Nederland
+18;Aardswoud;Hoogwoud;Noord-Holland;;Nederland
+19;Aarlanderveen;Aarlanderveen;Zuid-Holland;;Nederland
+20;Aarle-Rixtel;Aarle-Rixtel;Noord-Brabant;;Nederland
+21;Aarschot;;;;België
+25;Abbekerk;Abbekerk;Noord-Holland;;Nederland
+26;Abbenbroek;Abbenbroek;Zuid-Holland;;Nederland
+27;Abcoude;Abcoude;Utrecht;;Nederland
+28;Abcoude-Baambrugge;Abcoude-Baambrugge;Utrecht;;Nederland
+29;Abcoude-Proostdij;Abcoude-Proostdij;Utrecht;;Nederland
+37;Achtkarspelen;Achtkarspelen;Friesland;;Nederland
+39;Achttienhoven;Achttienhoven (UT);Utrecht;;Nederland
+43;Adegem;;;;België
+44;Adinkerke;;;;België
+48;Adorp;Adorp;Groningen;;Nederland
+49;Aduard;Aduard;Groningen;;Nederland
+51;Aengwirden;Aengwirden;Friesland;;Nederland
+55;Ahaus;;;;Duitsland
+56;Aachen;;;;Duitsland
+57;Aachen;;;;Pruissen
+58;Akersloot;Akersloot;Noord-Holland;;Nederland
+59;Akkerwoude;Dantumadeel;Friesland;;Nederland
+61;Akkrum;Utingeradeel;Friesland;;Nederland
+66;Alblasserdam;Alblasserdam;Zuid-Holland;;Nederland
+70;Alem;Alem, Maren en Kessel;Noord-Brabant;;Nederland
+71;Alem, Maren en Kessel;Alem, Maren en Kessel;Noord-Brabant;;Nederland
+75;Algiers;;;;Algerije
+77;Alkemade;Alkemade;Zuid-Holland;;Nederland
+79;Alkmaar;Alkmaar;Noord-Holland;;Nederland
+83;Almelo;Almelo;Overijssel;;Nederland
+84;Almelo Ambt;Almelo Ambt;Overijssel;;Nederland
+85;Almelo Stad;Almelo Stad;Overijssel;;Nederland
+87;Almenum;Barradeel;Friesland;;Nederland
+91;Almkerk;Almkerk;Noord-Brabant;;Nederland
+96;Alphen;Alphen (ZH);Zuid-Holland;;Nederland
+97;Alphen aan den Rijn;Alphen aan den Rijn;Zuid-Holland;;Nederland
+98;Alphen en Riel;Alphen en Riel;Noord-Brabant;;Nederland
+104;Altendorf;;;;Duitsland
+106;Altenessen;;;;Duitsland
+111;Altona;;;;Duitsland
+114;Ambarawa;;;;N.O. Indië
+115;Ambon;;;;N.O. Indië
+116;Amby;Amby;Limburg;;Nederland
+117;Ameide;Ameide;Zuid-Holland;;Nederland
+118;Ameland;Ameland;Friesland;;Nederland
+121;Amerongen;Amerongen;Utrecht;;Nederland
+122;Amersfoort;Amersfoort;Utrecht;;Nederland
+124;Ammerstol;Ammerstol;Zuid-Holland;;Nederland
+125;Ammerzoden;Ammerzoden;Gelderland;;Nederland
+127;Amstelveen;Nieuwer-Amstel;Noord-Holland;;Nederland
+128;Amstenrade;Amstenrade;Limburg;;Nederland
+129;Amsterdam;Amsterdam;Noord-Holland;;Nederland
+131;Andel;Andel;Noord-Brabant;;Nederland
+133;Anderlecht;;;Brussel;België
+135;Andijk;Andijk;Noord-Holland;;Nederland
+137;Angerlo;Angerlo;Gelderland;;Nederland
+138;Angleur;;;;België
+142;Ankeveen;Ankeveen;Noord-Holland;;Nederland
+144;Anloo;Anloo;Drenthe;;Nederland
+145;Anna Paulowna;Anna Paulowna;Noord-Holland;;Nederland
+150;Antwerpen;;;;België
+151;Apeldoorn;Apeldoorn;Gelderland;;Nederland
+153;Appeldorn;;;;Duitsland
+155;Appels;;;Dendermonde;België
+156;Appelscha;Ooststellingwerf;Friesland;;Nederland
+157;Appeltern;Appeltern;Gelderland;;Nederland
+158;Appingedam;Appingedam;Groningen;;Nederland
+160;Arcen en Velden;Arcen en Velden;Limburg;;Nederland
+161;Arendonk;;;;België
+166;Arnemuiden;Arnemuiden;Zeeland;;Nederland
+167;Arnhem;Arnhem;Gelderland;;Nederland
+171;Arum;Wonseradeel;Friesland;;Nederland
+177;Asperen;Asperen;Zuid-Holland;;Nederland
+180;Assen;Assen;Drenthe;;Nederland
+181;Assendelft;Assendelft;Noord-Holland;;Nederland
+182;Assenede;;;;België
+183;Asten;Asten;Noord-Brabant;;Nederland
+184;Atjeh;;;;N.O. Indië
+185;Aubel;;;Verviers;België
+189;Augsbuurt;Kollumerland en Nieuwkruisland;Friesland;;Nederland
+197;Avenhorn;Avenhorn;Noord-Holland;;Nederland
+198;Avereest;Avereest;Overijssel;;Nederland
+201;Axel;Axel;Zeeland;;Nederland
+205;Baard;Baarderadeel;Friesland;;Nederland
+206;Baarderadeel;Baarderadeel;Friesland;;Nederland
+207;Baardwijk;Baardwijk;Noord-Brabant;;Nederland
+208;Baarland;Baarland;Zeeland;;Nederland
+209;Baarle-Hertog;;;;België
+210;Baarle-Nassau;Baarle-Nassau;Noord-Brabant;;Nederland
+213;Baarn;Baarn;Utrecht;;Nederland
+214;Baarsdorp;Heer Abtskerke 's-;Zeeland;;Nederland
+221;Bad Pyrmont;;;;Duitsland
+222;Baden;;;;Duitsland
+225;Baexem;Baexem;Limburg;;Nederland
+226;Baflo;Baflo;Groningen;;Nederland
+230;Bakel;Bakel en Milheeze;Noord-Brabant;;Nederland
+231;Bakel en Milheeze;Bakel en Milheeze;Noord-Brabant;;Nederland
+241;Balk;Gaasterland;Friesland;;Nederland
+243;Ballum;Ameland;Friesland;;Nederland
+245;Baltimore;;;;Verenigde Staten
+251;Bandjermassin;;;;N.O. Indië
+252;Bandoeng;;;;N.O. Indië
+258;Banka;;;;N.O. Indië
+263;Barendrecht;Barendrecht;Zuid-Holland;;Nederland
+269;Barmen;;;;Duitsland
+271;Barneveld;Barneveld;Gelderland;;Nederland
+272;Barradeel;Barradeel;Friesland;;Nederland
+273;Barsingerhorn;Barsingerhorn;Noord-Holland;;Nederland
+275;Barwoutswaarder;Barwoutswaarder;Zuid-Holland;;Nederland
+276;Basel;;;;Zwitserland
+277;Bassevelde;;;;België
+278;Batavia;;;;N.O. Indië
+279;Batenburg;Batenburg;Gelderland;;Nederland
+280;Bath;Bath;Zeeland;;Nederland
+284;Bathmen;Bathmen;Overijssel;;Nederland
+288;Baumbach;;;;Duitsland
+289;Bavel;Ginneken en Bavel;Noord-Brabant;;Nederland
+293;Bedum;Bedum;Groningen;;Nederland
+294;Beeck;;;Ruhrort;Duitsland
+295;Beegden;Beegden;Limburg;;Nederland
+298;Beek;Beek (Ge);Gelderland;;Nederland
+299;Beek;Beek (LI);Limburg;;Nederland
+300;Beek;Beek (NB);Noord-Brabant;;Nederland
+301;Beek en Donk;Beek en Donk;Noord-Brabant;;Nederland
+302;Beekbergen;Apeldoorn;Gelderland;;Nederland
+305;Beemster;Beemster;Noord-Holland;;Nederland
+309;Beers;Beers;Noord-Brabant;;Nederland
+311;Beerta;Beerta;Groningen;;Nederland
+312;Beesd;Beesd;Gelderland;;Nederland
+313;Beesel;Beesel;Limburg;;Nederland
+314;Beetgum;Menaldumadeel;Friesland;;Nederland
+317;Beetsterzwaag;Opsterland;Friesland;;Nederland
+318;Beilen;Beilen;Drenthe;;Nederland
+320;Belfast;;;;Ierland
+321;Belfeld;Belfeld;Limburg;;Nederland
+325;Bellingwolde;Bellingwolde;Groningen;;Nederland
+326;Belsele;;;Sint Niklaas;België
+329;Bemmel;Bemmel;Gelderland;;Nederland
+331;Benedenknijpe;Schoterland;Friesland;;Nederland
+334;Bennebroek;Bennebroek;Noord-Holland;;Nederland
+336;Bennekom;Ede (Ge);Gelderland;;Nederland
+339;Benschop;Benschop;Utrecht;;Nederland
+340;Bentheim;;;;Duitsland
+341;Benthuizen;Benthuizen;Zuid-Holland;;Nederland
+343;Berchem;;;Antwerpen;België
+345;Berendrecht;;;Antwerpen;België
+349;Berg en Terblijt;Berg en Terblijt;Limburg;;Nederland
+350;Bergambacht;Bergambacht;Zuid-Holland;;Nederland
+352;Bergeijk;Bergeijk;Noord-Brabant;;Nederland
+353;Bergen;;;;België
+354;Bergen;;;;Noorwegen
+358;Bergen;Bergen (NH);Noord-Holland;;Nederland
+361;Bergen op Zoom;Bergen op Zoom;Noord-Brabant;;Nederland
+363;Bergh;Bergh;Gelderland;;Nederland
+364;Bergharen;Bergharen;Gelderland;;Nederland
+370;Bergschenhoek;Bergschenhoek;Zuid-Holland;;Nederland
+371;Bergum;Tietjerksteradeel;Friesland;;Nederland
+375;Berkel;Berkel-Enschot;Noord-Brabant;;Nederland
+376;Berkel en Rodenrijs;Berkel en Rodenrijs;Zuid-Holland;;Nederland
+380;Berkenwoude;Berkenwoude;Zuid-Holland;;Nederland
+381;Berkhout;Berkhout;Noord-Holland;;Nederland
+383;Berlare;;;Dendermonde;België
+384;Berlicum;Berlicum (NB);Noord-Brabant;;Nederland
+385;Berlin;;;;Duitsland
+387;Berlikum;Menaldumadeel;Friesland;;Nederland
+388;Bern;;;;Zwitserland
+392;Besoijen;Besoijen;Noord-Brabant;;Nederland
+393;Best;Best;Noord-Brabant;;Nederland
+396;Betterwird;Westdongeradeel;Friesland;;Nederland
+399;Beuningen;Beuningen;Gelderland;;Nederland
+400;Beusichem;Beusichem;Gelderland;;Nederland
+402;Beveren;;;;België
+403;Beverwijk;Beverwijk;Noord-Holland;;Nederland
+406;Biebrich;;;;Duitsland
+409;Bielefeld;;;;Duitsland
+412;Bierum;Bierum;Groningen;;Nederland
+413;Biervliet;Biervliet;Zeeland;;Nederland
+414;Biezelinge;Kapelle;Zeeland;;Nederland
+415;Biggekerke;Biggekerke;Zeeland;;Nederland
+423;Birdaard;Dantumadeel;Friesland;;Nederland
+425;Birmingham;;;;Groot-Brittannië
+427;Bislich;;;Wesel;Duitsland
+429;Bladel;Bladel en Netersel;Noord-Brabant;;Nederland
+430;Bladel en Netersel;Bladel en Netersel;Noord-Brabant;;Nederland
+431;Blankenberghe;;;;België
+432;Blankenham;Blankenham;Overijssel;;Nederland
+433;Blankenstein;;;;Duitsland
+434;Blaricum;Blaricum;Noord-Holland;;Nederland
+438;Bleiswijk;Bleiswijk;Zuid-Holland;;Nederland
+439;Blerick;Maasbree;Limburg;;Nederland
+443;Bleskensgraaf;Bleskensgraaf en Hofwegen;Zuid-Holland;;Nederland
+444;Bleskensgraaf en Hofwegen;Bleskensgraaf en Hofwegen;Zuid-Holland;;Nederland
+446;Blija;Ferwerderadeel;Friesland;;Nederland
+450;Bloemendaal;Bloemendaal (NH);Noord-Holland;;Nederland
+451;Blokker;Blokker;Noord-Holland;;Nederland
+452;Blokzijl;Blokzijl;Overijssel;;Nederland
+453;Blomberg;;;;Duitsland
+456;Bocholt;;;;Duitsland
+460;Bochum;;;;Duitsland
+464;Bodegraven;Bodegraven;Zuid-Holland;;Nederland
+467;Budapest;;;;Hongarije
+470;Boekel;Boekel;Noord-Brabant;;Nederland
+471;Boekhoute;;;;België
+476;Boisheim;;;Viersen;Pruissen
+477;Bokhoven;Bokhoven;Noord-Brabant;;Nederland
+481;Bolsward;Bolsward;Friesland;;Nederland
+484;Bommenede;Bommenede;Zeeland;;Nederland
+485;Bommenede;Zonnemaire;Zeeland;;Nederland
+487;Bonn;;;;Duitsland
+488;Bonn;;;;Pruissen
+490;Boom;;;Antwerpen;België
+495;Borbeck;;;;Duitsland
+496;Borbeck;;;;Pruissen
+497;Borculo;Borculo;Gelderland;;Nederland
+499;Bordeaux;;;;Frankrijk
+501;Borger;Borger;Drenthe;;Nederland
+502;Borgerhout;;;;België
+504;Borgharen;Borgharen;Limburg;;Nederland
+514;Borkel en Schaft;Borkel en Schaft;Noord-Brabant;;Nederland
+517;Born;Born;Limburg;;Nederland
+518;Borne;Borne;Overijssel;;Nederland
+519;Breslau;;;;Duitsland
+521;Bornhem;;;;België
+524;Borssele;Borssele;Zeeland;;Nederland
+527;Boschkapelle;Boschkapelle;Zeeland;;Nederland
+529;Boskoop;Boskoop;Zuid-Holland;;Nederland
+530;Bossevelde;;;;België
+531;Boston;;;;Verenigde Staten
+532;Bottrop;;;;Duitsland
+533;Bouchaut;;;Antwerpen;België
+534;Bouillon;;;;België
+535;Boulogne sur Mer;;;;Frankrijk
+536;Bourbourg;;;;Frankrijk
+538;Bourtange;Vlagtwedde;Groningen;;Nederland
+541;Bovenkarspel;Bovenkarspel;Noord-Holland;;Nederland
+544;Boxmeer;Boxmeer;Noord-Brabant;;Nederland
+545;Boxtel;Boxtel;Noord-Brabant;;Nederland
+546;Bozum;Baarderadeel;Friesland;;Nederland
+550;Brandwijk;Brandwijk;Zuid-Holland;;Nederland
+554;Brasschaat;;;;België
+555;Braunbauer;;;;Duitsland
+556;Braunschweig;;;;Duitsland
+558;Breda;Breda;Noord-Brabant;;Nederland
+559;Bredene;;;;België
+561;Bredevoort;Aalten;Gelderland;;Nederland
+564;Bremen;;;;Duitsland
+565;Bremerhaven;;;;Duitsland
+566;Breskens;Breskens;Zeeland;;Nederland
+567;Breslau;;;;Duitsland
+571;Breukelen;Breukelen;Utrecht;;Nederland
+572;Breukelen-Nijenrode;Breukelen-Nijenrode;Utrecht;;Nederland
+573;Breukelen-Sint Pieters;Breukelen-Sint Pieters;Utrecht;;Nederland
+574;Breyell;;;;Duitsland
+577;Brielle;Brielle;Zuid-Holland;;Nederland
+578;Brigdamme;Middelburg (Ze);Zeeland;;Nederland
+582;Brione;;;;Zwitserland
+584;Britswerd;Baarderadeel;Friesland;;Nederland
+587;Broek;Doniawerstal;Friesland;;Nederland
+589;Broek;Broek (ZH);Zuid-Holland;;Nederland
+590;Broek in Waterland;Broek in Waterland;Noord-Holland;;Nederland
+591;Broek op Langendijk;Broek op Langendijk;Noord-Holland;;Nederland
+595;Broeksittard;Sittard;Limburg;;Nederland
+597;Brooklyn;;;New York;Verenigde Staten
+598;Brouwershaven;Brouwershaven;Zeeland;;Nederland
+599;Bruchem;Kerkwijk;Gelderland;;Nederland
+604;Brugge;;;;België
+605;Bruggen;;;;Duitsland
+608;Bruinisse;Bruinisse;Zeeland;;Nederland
+610;Brummen;Brummen;Gelderland;;Nederland
+611;Brunssum;Brunssum;Limburg;;Nederland
+613;Brussel;;;;België
+618;Buchenwald;;;;Duitsland
+624;Budel;Budel;Noord-Brabant;;Nederland
+628;Buer;;;;Duitsland
+629;Buer;;;;Pruissen
+630;Buggenum;Buggenum;Limburg;;Nederland
+631;Buiksloot;Buiksloot;Noord-Holland;;Nederland
+633;Buitenpost;Achtkarspelen;Friesland;;Nederland
+634;De Knijpe;Schoterland;Friesland;;Nederland
+635;Buitenzorg;;;;N.O. Indië
+640;Bunde;;;Bunde;Pruissen
+642;Bunnik;Bunnik;Utrecht;;Nederland
+643;Bunschoten;Bunschoten;Utrecht;;Nederland
+649;Buren;Buren;Gelderland;;Nederland
+652;Burgh;Burgh;Zeeland;;Nederland
+653;Burghsluis;Burgh;Zeeland;;Nederland
+654;Burght;;;Zwijndrecht;België
+656;Burgwerd;Wonseradeel;Friesland;;Nederland
+659;Burtscheid;;;;Duitsland
+660;Burtscheid;;;;Pruissen
+661;Burum;Kollumerland en Nieuwkruisland;Friesland;;Nederland
+662;Buschhausen;;;;Duitsland
+663;Bussum;Bussum;Noord-Holland;;Nederland
+664;Buttinge;Grijpskerke;Zeeland;;Nederland
+666;Buurmalsen;Buurmalsen;Gelderland;;Nederland
+673;Cadier en Keer;Cadier en Keer;Limburg;;Nederland
+674;Cadzand;Cadzand;Zeeland;;Nederland
+677;Calais;;;;Frankrijk
+678;Calcutta;;;;India
+681;Callantsoog;Callantsoog;Noord-Holland;;Nederland
+689;Capelle;Capelle;Noord-Brabant;;Nederland
+690;Capelle aan den Ijssel;Capelle aan den IJssel;Zuid-Holland;;Nederland
+691;Cardiff;;;;Groot-Brittannië
+693;Casteren;Bladel;Noord-Brabant;;Nederland
+696;Castricum;Castricum;Noord-Holland;;Nederland
+697;Castrop Rauxel;;;;Duitsland
+699;Celle;;;;Duitsland
+701;Chaam;Chaam;Noord-Brabant;;Nederland
+704;Charleroi;;;;België
+705;Charlois;Charlois;Zuid-Holland;;Nederland
+707;Chemnitz;;;;Duitsland
+709;Cheribon;;;;N.O. Indië
+712;Chicago;;;;Verenigde Staten
+721;Clinge;Clinge;Zeeland;;Nederland
+722;Cloppenburg;;;;Duitsland
+723;Coburg;;;;Duitsland
+727;Coevorden;Coevorden;Drenthe;;Nederland
+729;Colijnsplaat;Colijnsplaat;Zeeland;;Nederland
+739;Damme;;;Brugge;België
+740;Cothen;Cothen;Utrecht;;Nederland
+745;Cromvoirt;Cromvoirt;Noord-Brabant;;Nederland
+750;Cuijk;Cuijk en Sint Agatha;Noord-Brabant;;Nederland
+751;Cuijk en Sint Agatha;Cuijk en Sint Agatha;Noord-Brabant;;Nederland
+752;Culemborg;Culemborg;Gelderland;;Nederland
+759;Dalem;Vuren;Gelderland;;Nederland
+760;Dalen;Dalen;Drenthe;;Nederland
+762;Dalfsen;Dalfsen;Overijssel;;Nederland
+763;Damme;;;Brugge;België
+766;Dantumadeel;Dantumadeel;Friesland;;Nederland
+768;Danzig;;;;Duitsland
+770;Darmstadt;;;;Duitsland
+773;Davos;;;;Zwitserland
+774;De Bilt;De Bilt;Utrecht;;Nederland
+778;De Klinge;;;;België
+782;De Lier;De Lier;Zuid-Holland;;Nederland
+785;De Mijl;Dubbeldam;Zuid-Holland;;Nederland
+789;De Rijp;De Rijp;Noord-Holland;;Nederland
+797;De Werken;De Werken en Sleeuwijk;Noord-Brabant;;Nederland
+798;De Werken en Sleeuwijk;De Werken en Sleeuwijk;Noord-Brabant;;Nederland
+799;De Wijk;De Wijk;Drenthe;;Nederland
+806;Deil;Deil;Gelderland;;Nederland
+810;Delden;Delden;Overijssel;;Nederland
+811;Delden Ambt;Delden Ambt;Overijssel;;Nederland
+812;Delden Stad;Delden Stad;Overijssel;;Nederland
+815;Delfshaven;Rotterdam;Zuid-Holland;;Nederland
+818;Delft;Delft;Zuid-Holland;;Nederland
+819;Delfzijl;Delfzijl;Groningen;;Nederland
+822;Den Bommel;Den Bommel;Zuid-Holland;;Nederland
+825;Den Dungen;Den Dungen;Noord-Brabant;;Nederland
+826;Den Ham;Den Ham;Overijssel;;Nederland
+827;Den Helder;Den Helder;Noord-Holland;;Nederland
+831;Dendermonde;;;;België
+832;Denekamp;Denekamp;Overijssel;;Nederland
+839;Deurne;;;Antwerpen;België
+840;Deurne en Liessel;Deurne en Liessel;Noord-Brabant;;Nederland
+842;Deursen;Deursen en Dennenburg;Noord-Brabant;;Nederland
+843;Deursen en Dennenburg;Deursen en Dennenburg;Noord-Brabant;;Nederland
+844;Deventer;Deventer;Overijssel;;Nederland
+846;Didam;Didam;Gelderland;;Nederland
+847;Dieden;Dieden, Demen en Langel;Noord-Brabant;;Nederland
+850;Diemen;Diemen;Noord-Holland;;Nederland
+853;Diepenheim;Diepenheim;Overijssel;;Nederland
+854;Diepenveen;Diepenveen;Overijssel;;Nederland
+856;Dieren;Rheden;Gelderland;;Nederland
+857;Diessen;Diessen;Noord-Brabant;;Nederland
+858;Diever;Diever;Drenthe;;Nederland
+865;Dilsen;;;Dilsen-Stokkem;België
+866;Dinant;;;;België
+871;Dinslaken;;;Wesel;Duitsland
+873;Dinteloord;Dinteloord en Prinsenland;Noord-Brabant;;Nederland
+874;Dinteloord en Prinsenland;Dinteloord en Prinsenland;Noord-Brabant;;Nederland
+875;Dinther;Dinther;Noord-Brabant;;Nederland
+876;Dinxperlo;Dinxperlo;Gelderland;;Nederland
+877;Dirksland;Dirksland;Zuid-Holland;;Nederland
+879;Djakarta;;;;Indonesië
+885;Djokjakarta;;;;N.O. Indië
+888;Dodewaard;Dodewaard;Gelderland;;Nederland
+889;Doel;;;;België
+890;Doesburg;Doesburg;Gelderland;;Nederland
+891;Doetinchem;Doetinchem;Gelderland;;Nederland
+892;Doetinchem Ambt;Doetinchem Ambt;Gelderland;;Nederland
+893;Doetinchem Stad;Doetinchem Stad;Gelderland;;Nederland
+899;Dokkum;Dokkum;Friesland;;Nederland
+902;Domburg;Domburg;Zeeland;;Nederland
+904;Dongen;Dongen;Noord-Brabant;;Nederland
+908;Doniawerstal;Doniawerstal;Friesland;;Nederland
+909;Donkerbroek;Ooststellingwerf;Friesland;;Nederland
+912;Doorn;Doorn;Utrecht;;Nederland
+914;Doornik;;;;België
+915;Doornspijk;Doornspijk;Gelderland;;Nederland
+917;Doorwerth;Renkum;Gelderland;;Nederland
+918;Dordrecht;Dordrecht;Zuid-Holland;;Nederland
+920;Dornberg;;;;Pruissen
+924;Dortmund;;;;Duitsland
+929;Drachten;Smallingerland;Friesland;;Nederland
+933;Dreischor;Dreischor;Zeeland;;Nederland
+934;Drempt;Hummelo en Keppel;Gelderland;;Nederland
+935;Dresden;;;;Duitsland
+936;Dreumel;Dreumel;Gelderland;;Nederland
+937;Driebergen;Driebergen;Utrecht;;Nederland
+938;Driebergen-Rijsenburg;Driebergen-Rijsenburg;Utrecht;;Nederland
+944;Driel;Heteren;Gelderland;;Nederland
+946;Driesum;Dantumadeel;Friesland;;Nederland
+947;Driewegen;Driewegen;Zeeland;;Nederland
+948;Drimmelen;Drimmelen;Noord-Brabant;;Nederland
+951;Drongelen;Drongelen;Noord-Brabant;;Nederland
+954;Dronrijp;Menaldumadeel;Friesland;;Nederland
+956;Drumpt;Wadenoijen;Gelderland;;Nederland
+957;Drunen;Drunen;Noord-Brabant;;Nederland
+958;Druten;Druten;Gelderland;;Nederland
+959;Dubbeldam;Dubbeldam;Zuid-Holland;;Nederland
+960;Dublin;;;;Ierland
+964;Dudzele;;;Brugge;België
+965;Duffel;;;;België
+966;Duisburg;;;;Duitsland
+967;Duisburg;;;;Pruissen
+970;Duisburg-Ruhrort;;;;Duitsland
+971;Duiveland;Duiveland;Zeeland;;Nederland
+972;Duiven;Duiven;Gelderland;;Nederland
+973;Duivendijke;Duivendijke;Zeeland;;Nederland
+983;Duren;;;;Duitsland
+984;Durgerdam;Durgerdam;Noord-Holland;;Nederland
+986;Düsseldorf;;;;Duitsland
+987;Düsseldorf;;;;Pruissen
+988;Dussen;Dussen;Noord-Brabant;;Nederland
+990;Dwingeloo;Dwingeloo;Drenthe;;Nederland
+994;Echteld;Echteld;Gelderland;;Nederland
+1003;Edam;Edam;Noord-Holland;;Nederland
+1006;Ede;Ede (Ge);Gelderland;;Nederland
+1007;Edegem;;;Antwerpen;België
+1014;Edmonton;;;;Canada
+1016;Eede;Eede (Ze);Zeeland;;Nederland
+1019;Eeklo;;;;België
+1022;Eelde;Eelde;Drenthe;;Nederland
+1023;Eemnes;Eemnes;Utrecht;;Nederland
+1027;Eenrum;Eenrum;Groningen;;Nederland
+1029;Eernewoude;Tietjerksteradeel;Friesland;;Nederland
+1030;Eersel;Eersel;Noord-Brabant;;Nederland
+1036;Eestrum;Tietjerksteradeel;Friesland;;Nederland
+1038;Eethen;Eethen;Noord-Brabant;;Nederland
+1042;Egmond;Egmond;Noord-Holland;;Nederland
+1044;Egmond aan Zee;Egmond aan Zee;Noord-Holland;;Nederland
+1045;Egmond-Binnen;Egmond-Binnen;Noord-Holland;;Nederland
+1049;Eibergen;Eibergen;Gelderland;;Nederland
+1052;Eijgelshoven;Eijgelshoven;Limburg;;Nederland
+1053;Eijsden;Eijsden;Limburg;;Nederland
+1056;Eindhoven;Eindhoven;Noord-Brabant;;Nederland
+1063;Ekeren;;;Antwerpen;België
+1066;Elberfeld;;;;Duitsland
+1067;Elberfeld;;;;Pruissen
+1068;Elburg;Elburg;Gelderland;;Nederland
+1069;Elshout;Drunen;Noord-Brabant;;Nederland
+1071;Elden;Elst;Gelderland;;Nederland
+1072;Elkerzee;Elkerzee;Zeeland;;Nederland
+1074;Ellecom;Rheden;Gelderland;;Nederland
+1075;Ellemeet;Ellemeet;Zeeland;;Nederland
+1078;Ellewoutsdijk;Ellewoutsdijk;Zeeland;;Nederland
+1083;Elsene;;;Brussel;België
+1087;Elsloo;Elsloo;Limburg;;Nederland
+1089;Elspeet;Ermelo;Gelderland;;Nederland
+1090;Elst;Elst;Gelderland;;Nederland
+1096;Elten;;;Elten;Pruissen
+1098;Elten;Elten;Gelderland;;Nederland
+1100;Elversele;;;Temse;België
+1102;Emden;;;;Duitsland
+1103;Emden;;;;Pruissen
+1113;Emmerich;;;;Duitsland
+1114;Emmerich;;;;Pruissen
+1116;Emmikhoven;Almkerk;Noord-Brabant;;Nederland
+1118;Empel;Empel en Meerwijk;Noord-Brabant;;Nederland
+1119;Empel en Meerwijk;Empel en Meerwijk;Noord-Brabant;;Nederland
+1126;Engelen;Engelen;Noord-Brabant;;Nederland
+1133;Engwierum;Oostdongeradeel;Friesland;;Nederland
+1134;Enkhuizen;Enkhuizen;Noord-Holland;;Nederland
+1136;Enschede;Enschede;Overijssel;;Nederland
+1144;Epe;Epe;Gelderland;;Nederland
+1149;Erfurt;;;;Duitsland
+1152;Erichem;Buren;Gelderland;;Nederland
+1159;Ermelo;Ermelo;Gelderland;;Nederland
+1160;Erp;Erp;Noord-Brabant;;Nederland
+1163;Ertvelde;;;;België
+1165;Esch;Esch;Noord-Brabant;;Nederland
+1166;Escharen;Escharen;Noord-Brabant;;Nederland
+1172;Eschweiler;;;;Duitsland
+1174;Essen;;;;België
+1175;Essen;;;;Duitsland
+1177;Essen;;;;Pruissen
+1181;Est en Opijnen;Est en Opijnen;Gelderland;;Nederland
+1182;Etten;Etten en Leur;Noord-Brabant;;Nederland
+1183;Etten en Leur;Etten en Leur;Noord-Brabant;;Nederland
+1184;Etterbeek;;;;België
+1187;Euskirchen;;;;Duitsland
+1188;Everdingen;Everdingen;Zuid-Holland;;Nederland
+1189;Evergem;;;;België
+1190;Eversdijk;Eversdijk;Zeeland;;Nederland
+1191;Ewijk;Ewijk;Gelderland;;Nederland
+1192;Exaarde;;;;België
+1194;Exloo;Odoorn;Drenthe;;Nederland
+1196;Ezinge;Ezinge;Groningen;;Nederland
+1198;Fanna;;;;Oostenrijk
+1199;Farmsum;Delfzijl;Groningen;;Nederland
+1202;Ferwerd;Ferwerderadeel;Friesland;;Nederland
+1203;Ferwerderadeel;Ferwerderadeel;Friesland;;Nederland
+1205;Fijnaart;Fijnaart en Heijningen;Noord-Brabant;;Nederland
+1206;Fijnaart en Heijningen;Fijnaart en Heijningen;Noord-Brabant;;Nederland
+1208;Finsterwolde;Finsterwolde;Groningen;;Nederland
+1210;Flensburg;;;;Duitsland
+1212;Follega;Lemsterland;Friesland;;Nederland
+1219;Fort Bath;Rilland-Bath;Zeeland;;Nederland
+1228;Franeker;Franeker;Friesland;;Nederland
+1230;Franekeradeel;Franekeradeel;Friesland;;Nederland
+1231;Frankfurt;;;;Duitsland
+1232;Frankfurt am Main;;;;Duitsland
+1241;Friedberg;;;;Duitsland
+1247;Gaasterland;Gaasterland;Friesland;;Nederland
+1252;Gameren;Gameren;Gelderland;;Nederland
+1254;Gendringen;Gendringen;Gelderland;;Nederland
+1255;Gapinge;Vrouwenpolder;Zeeland;;Nederland
+1257;Garijp;Tietjerksteradeel;Friesland;;Nederland
+1259;Garnwerd;Ezinge;Groningen;;Nederland
+1263;Gassel;Gassel;Noord-Brabant;;Nederland
+1264;Gasselte;Gasselte;Drenthe;;Nederland
+1265;Gastel;Soerendonk, Sterksel en Gastel;Noord-Brabant;;Nederland
+1268;Geel;;;;België
+1270;Geertruidenberg;Geertruidenberg;Noord-Brabant;;Nederland
+1271;Geervliet;Geervliet;Zuid-Holland;;Nederland
+1275;Geffen;Geffen;Noord-Brabant;;Nederland
+1277;Geldermalsen;Geldermalsen;Gelderland;;Nederland
+1278;Geldern;;;;Duitsland
+1279;Geldern;;;;Pruissen
+1280;Geldrop;Geldrop;Noord-Brabant;;Nederland
+1281;Geleen;Geleen;Limburg;;Nederland
+1282;Gelsenkirchen;;;;Duitsland
+1283;Gelsenkirchen;;;;Pruissen
+1285;Gemert;Gemert;Noord-Brabant;;Nederland
+1289;Genderen;Heesbeen, Eethen en Genderen;Noord-Brabant;;Nederland
+1291;Gendt;Gendt;Gelderland;;Nederland
+1292;Genemuiden;Genemuiden;Overijssel;;Nederland
+1293;Geneve;;;;Zwitserland
+1294;Genk;;;;België
+1295;Gennep;Gennep;Limburg;;Nederland
+1296;Gent;;;;België
+1298;Genua;;;;Italië
+1302;Geraardsbergen;;;;België
+1306;Gernsheim;;;;Duitsland
+1313;Gescher;;;;Pruissen
+1314;Gestel;Eindhoven;Noord-Brabant;;Nederland
+1315;Giessen;Giessen;Noord-Brabant;;Nederland
+1316;Gestel en Blaarthem;Gestel en Blaarthem;Noord-Brabant;;Nederland
+1319;Geulle;Geulle;Limburg;;Nederland
+1326;Giessen;;;Giessen;Duitsland
+1328;Giessendam;Giessendam;Zuid-Holland;;Nederland
+1330;Giessen-Nieuwkerk;Giessen-Nieuwkerk;Zuid-Holland;;Nederland
+1332;Gieten;Gieten;Drenthe;;Nederland
+1333;Giethoorn;Giethoorn;Overijssel;;Nederland
+1336;Gilze;Gilze en Rijen;Noord-Brabant;;Nederland
+1337;Gilze en Rijen;Gilze en Rijen;Noord-Brabant;;Nederland
+1339;Ginneken;Ginneken en Bavel;Noord-Brabant;;Nederland
+1340;Ginneken en Bavel;Ginneken en Bavel;Noord-Brabant;;Nederland
+1341;Gladbach;;;;Duitsland
+1343;Gladbeck;;;;Duitsland
+1349;Glashutte;;;;Duitsland
+1352;Goch;;;;Duitsland
+1355;Goedereede;Goedereede;Zuid-Holland;;Nederland
+1356;Goënga;Wymbritseradeel;Friesland;;Nederland
+1359;Goes;Goes;Zeeland;;Nederland
+1362;Goirle;Goirle;Noord-Brabant;;Nederland
+1363;Gombong;;;;N.O. Indië
+1365;Goor;Goor;Overijssel;;Nederland
+1369;Gorinchem;Gorinchem;Zuid-Holland;;Nederland
+1370;Gorredijk;Opsterland;Friesland;;Nederland
+1371;Gorssel;Gorssel;Gelderland;;Nederland
+1372;Gouda;Gouda;Zuid-Holland;;Nederland
+1373;Gouderak;Gouderak;Zuid-Holland;;Nederland
+1374;Goudriaan;Goudriaan;Zuid-Holland;;Nederland
+1375;Goudswaard;Goudswaard;Zuid-Holland;;Nederland
+1378;Graauw;Graauw en Langendam;Zeeland;;Nederland
+1379;Graauw en Langendam;Graauw en Langendam;Zeeland;;Nederland
+1381;Grafhorst;Grafhorst;Overijssel;;Nederland
+1382;Graft;Graft;Noord-Holland;;Nederland
+1385;Gramsbergen;Gramsbergen;Overijssel;;Nederland
+1386;Grand Rapids;;;;Verenigde Staten
+1387;Grathem;Grathem;Limburg;;Nederland
+1388;Grave;Grave;Noord-Brabant;;Nederland
+1389;Graveland 's-;Graveland 's-;Noord-Holland;;Nederland
+1390;Gravendeel 's-;Gravendeel 's-;Zuid-Holland;;Nederland
+1391;Gravenhage 's-;Gravenhage 's-;Zuid-Holland;;Nederland
+1392;Gravenmoer 's-;Gravenmoer 's-;Noord-Brabant;;Nederland
+1393;Gravenpolder 's-;Gravenpolder 's-;Zeeland;;Nederland
+1394;Gravenzande 's-;Gravenzande 's-;Zuid-Holland;;Nederland
+1396;Graz;;;;Oostenrijk
+1404;Grevenbicht;Grevenbicht;Limburg;;Nederland
+1406;Grieth;;;;Duitsland
+1410;Grijpskerk;Grijpskerk;Groningen;;Nederland
+1411;Grijpskerke;Grijpskerke;Zeeland;;Nederland
+1413;Groede;Groede;Zeeland;;Nederland
+1416;Groeneveld;Groeneveld;Zuid-Holland;;Nederland
+1418;Groenlo;Groenlo;Gelderland;;Nederland
+1419;Groesbeek;Groesbeek;Gelderland;;Nederland
+1420;Groessen;Duiven;Gelderland;;Nederland
+1424;Gronau;;;;Duitsland
+1426;Groningen;Groningen;Groningen;;Nederland
+1427;Gronsveld;Gronsveld;Limburg;;Nederland
+1428;Groot-Ammers;Groot-Ammers;Zuid-Holland;;Nederland
+1429;Groote Lindt;Groote Lindt;Zuid-Holland;;Nederland
+1430;Grootebroek;Grootebroek;Noord-Holland;;Nederland
+1431;Grootegast;Grootegast;Groningen;;Nederland
+1435;Haaren;Haaren;Noord-Brabant;;Nederland
+1436;Grouw;Idaarderadeel;Friesland;;Nederland
+1438;Gulpen;Gulpen;Limburg;;Nederland
+1441;Haaften;Haaften;Gelderland;;Nederland
+1443;Haaksbergen;Haaksbergen;Overijssel;;Nederland
+1444;Haamstede;Haamstede;Zeeland;;Nederland
+1448;Haaren;Haaren;Noord-Brabant;;Nederland
+1449;Haarle;Hellendoorn;Overijssel;;Nederland
+1450;Haarlem;Haarlem;Noord-Holland;;Nederland
+1451;Haarlemmerliede;Haarlemmerliede;Noord-Holland;;Nederland
+1453;Haarlemmerliede en Spaarnwoude;Haarlemmerliede en Spaarnwoude;Noord-Holland;;Nederland
+1454;Haarlemmermeer;Haarlemmermeer;Noord-Holland;;Nederland
+1455;Haarzuilens;Haarzuilens;Utrecht;;Nederland
+1456;Haastrecht;Haastrecht;Zuid-Holland;;Nederland
+1457;Haelen;Haelen;Limburg;;Nederland
+1458;Hagestein;Hagestein;Zuid-Holland;;Nederland
+1466;Halle;;;;België
+1467;Halle;;;;Duitsland
+1468;Hallum;Ferwerderadeel;Friesland;;Nederland
+1469;Halsteren;Halsteren;Noord-Brabant;;Nederland
+1470;Hamborn;;;;Duitsland
+1471;Hamburg;;;;Duitsland
+1473;Hamelen;;;;Duitsland
+1474;Hamm;;;;Duitsland
+1475;Hamme;;;;België
+1476;Hamond Achel;;;;België
+1477;Hamont;;;;België
+1478;Hanau;;;;Duitsland
+1480;Hannover;;;;Duitsland
+1481;Hansweert;Kruiningen;Zeeland;;Nederland
+1482;Hantum;Westdongeradeel;Friesland;;Nederland
+1485;Hapert;Bladel en Netersel;Noord-Brabant;;Nederland
+1486;Haps;Haps;Noord-Brabant;;Nederland
+1489;Hardegarijp;Tietjerksteradeel;Friesland;;Nederland
+1491;Hardenberg Ambt;Hardenberg Ambt;Overijssel;;Nederland
+1492;Hardenberg Stad;Hardenberg Stad;Overijssel;;Nederland
+1493;Harderwijk;Harderwijk;Gelderland;;Nederland
+1494;Hardinxveld;Hardinxveld;Zuid-Holland;;Nederland
+1498;Harenkarspel;Harenkarspel;Noord-Holland;;Nederland
+1505;Harlingen;Harlingen;Friesland;;Nederland
+1506;Harmelen;Harmelen;Utrecht;;Nederland
+1509;Harreveld;Lichtenvoorde;Gelderland;;Nederland
+1514;Haselonne;;;;Duitsland
+1516;Haskerdijken;Haskerland;Friesland;;Nederland
+1518;Haskerland;Haskerland;Friesland;;Nederland
+1520;Hasselt;;;;België
+1522;Hasselt;Hasselt;Overijssel;;Nederland
+1523;Hassum;;;;Duitsland
+1525;Hatert;Nijmegen;Gelderland;;Nederland
+1527;Hattem;Hattem;Gelderland;;Nederland
+1533;Haulerwijk;Ooststellingwerf;Friesland;;Nederland
+1536;Havana;;;;Cuba
+1537;Havelte;Havelte;Drenthe;;Nederland
+1540;Havre Le;;;;Frankrijk
+1542;Hazerswoude;Hazerswoude;Zuid-Holland;;Nederland
+1543;Hechtel;;;;België
+1544;Hedel;Hedel;Gelderland;;Nederland
+1545;Hedikhuizen;Hedikhuizen;Noord-Brabant;;Nederland
+1546;Heeg;Wymbritseradeel;Friesland;;Nederland
+1547;Heel;Heel;Limburg;;Nederland
+1548;Heel en Panheel;Heel en Panheel;Limburg;;Nederland
+1550;Heemskerk;Heemskerk;Noord-Holland;;Nederland
+1551;Heemstede;Heemstede;Noord-Holland;;Nederland
+1552;Heenvliet;Heenvliet;Zuid-Holland;;Nederland
+1554;Heer Abtskerke 's-;Heer Abtskerke 's-;Zeeland;;Nederland
+1555;Heer Arendskerke 's-;Heer Arendskerke 's-;Zeeland;;Nederland
+1556;Heer en Keer;Heer en Keer;Limburg;;Nederland
+1557;Heer Hendrikskinderen 's-;Heer Hendrikskinderen 's-;Zeeland;;Nederland
+1559;Heerde;Heerde;Gelderland;;Nederland
+1561;Heerenbergh 's-;Bergh;Gelderland;;Nederland
+1563;Heerenhoek 's-;Heerenhoek 's-;Zeeland;;Nederland
+1567;Heerenveen;Heerenveen;Friesland;;Nederland
+1568;Heerenveen;Schoterland;Friesland;;Nederland
+1569;Heerewaarden;Heerewaarden;Gelderland;;Nederland
+1570;Heerhugowaard;Heerhugowaard;Noord-Holland;;Nederland
+1571;Heerjansdam;Heerjansdam;Zuid-Holland;;Nederland
+1578;Heesbeen;Heesbeen, Eethen en Genderen;Noord-Brabant;;Nederland
+1579;Heesbeen, Eethen en Genderen;Heesbeen, Eethen en Genderen;Noord-Brabant;;Nederland
+1580;Heesch;Heesch;Noord-Brabant;;Nederland
+1583;Heeze;Heeze;Noord-Brabant;;Nederland
+1586;Hei- en Boeicop;Hei- en Boeicop;Zuid-Holland;;Nederland
+1587;Heidelberg;;;;Duitsland
+1595;Heille;Heille;Zeeland;;Nederland
+1596;Heiloo;Heiloo;Noord-Holland;;Nederland
+1597;Heinenoord;Heinenoord;Zuid-Holland;;Nederland
+1598;Heinkenszand;Heinkenszand;Zeeland;;Nederland
+1599;Heino;Heino;Overijssel;;Nederland
+1600;Heissen;;;;Duitsland
+1601;Heist;;;;België
+1602;Hekelingen;Hekelingen;Zuid-Holland;;Nederland
+1603;Hekendorp;Hekendorp;Zuid-Holland;;Nederland
+1604;Helden;Helden;Limburg;;Nederland
+1607;Hellendoorn;Hellendoorn;Overijssel;;Nederland
+1608;Hellevoetsluis;Hellevoetsluis;Zuid-Holland;;Nederland
+1611;Helmond;Helmond;Noord-Brabant;;Nederland
+1612;Helvoirt;Helvoirt;Noord-Brabant;;Nederland
+1613;Hem;Venhuizen;Noord-Holland;;Nederland
+1614;Hemelum;Hemelumer Oldeferd;Friesland;;Nederland
+1615;Hemelumer Oldephaerd;Hemelumer Oldeferd;Friesland;;Nederland
+1616;Hemmen;Hemmen;Gelderland;;Nederland
+1619;Hendrik-Ido-Ambacht;Hendrik-Ido-Ambacht;Zuid-Holland;;Nederland
+1621;Hengelo;Hengelo (OV);Overijssel;;Nederland
+1622;Hengelo;Hengelo (Ge);Gelderland;;Nederland
+1623;Hengelo;Hengelo (OV);Overijssel;;Nederland
+1624;Hengstdijk;Hengstdijk;Zeeland;;Nederland
+1626;Hennaard;Hennaarderadeel;Friesland;;Nederland
+1627;Hennaarderadeel;Hennaarderadeel;Friesland;;Nederland
+1629;Hensbroek;Hensbroek;Noord-Holland;;Nederland
+1630;Herten;Herten;Limburg;;Nederland
+1632;Herentals;;;;België
+1633;Herford;;;;Duitsland
+1635;Herkingen;Herkingen;Zuid-Holland;;Nederland
+1638;Herne;;;;Duitsland
+1640;Herpen;Herpen;Noord-Brabant;;Nederland
+1641;Herpt;Herpt en Bern;Noord-Brabant;;Nederland
+1643;Herstal;;;;België
+1645;Hertogenbosch 's-;Hertogenbosch 's-;Noord-Brabant;;Nederland
+1651;Herwen en Aerdt;Herwen en Aerdt;Gelderland;;Nederland
+1652;Herwijnen;Herwijnen;Gelderland;;Nederland
+1655;Het Bildt;Het Bildt;Friesland;;Nederland
+1659;Heteren;Heteren;Gelderland;;Nederland
+1660;Heukelum;Heukelum;Zuid-Holland;;Nederland
+1661;Heumen;Heumen;Gelderland;;Nederland
+1663;Heusden;Heusden;Noord-Brabant;;Nederland
+1666;Heythuysen;Heythuysen;Limburg;;Nederland
+1668;Hiaure;Westdongeradeel;Friesland;;Nederland
+1670;Hidaard;Hennaarderadeel;Friesland;;Nederland
+1673;Hijlaard;Baarderadeel;Friesland;;Nederland
+1676;Hillegersberg;Hillegersberg;Zuid-Holland;;Nederland
+1677;Hillegom;Hillegom;Zuid-Holland;;Nederland
+1678;Hilvarenbeek;Hilvarenbeek;Noord-Brabant;;Nederland
+1679;Hilversum;Hilversum;Noord-Holland;;Nederland
+1680;Hindeloopen;Hindeloopen;Friesland;;Nederland
+1683;Hoboken;;;;België
+1688;Hoedekenskerke;Hoedekenskerke;Zeeland;;Nederland
+1689;Hoek;Hoek;Zeeland;;Nederland
+1693;Hoenkoop;Hoenkoop;Utrecht;;Nederland
+1694;Hoensbroek;Hoensbroek;Limburg;;Nederland
+1696;Hoevelaken;Hoevelaken;Gelderland;;Nederland
+1697;Hoeven;Hoeven;Noord-Brabant;;Nederland
+1698;Hof van Delft;Hof van Delft;Zuid-Holland;;Nederland
+1702;Hofwegen;Molenaarsgraaf;Zuid-Holland;;Nederland
+1703;Hogebeintum;Ferwerderadeel;Friesland;;Nederland
+1706;Hollum;Ameland;Friesland;;Nederland
+1708;Holstein;;;;Duitsland
+1709;Holten;Holten;Overijssel;;Nederland
+1712;Holwerd;Westdongeradeel;Friesland;;Nederland
+1713;Holzheim;;;;Duitsland
+1714;Homberg;;;;Duitsland
+1719;Hongkong;;;;Groot-Brittannië
+1722;Hontenisse;Hontenisse;Zeeland;;Nederland
+1724;Hoofdplaat;Hoofdplaat;Zeeland;;Nederland
+1725;Hoogblokland;Hoogblokland;Zuid-Holland;;Nederland
+1726;Hooge en Lage Mierde;Hooge en Lage Mierde;Noord-Brabant;;Nederland
+1727;Hooge en Lage Zwaluwe;Hooge en Lage Zwaluwe;Noord-Brabant;;Nederland
+1729;Hooge Zwaluwe;Hooge en Lage Zwaluwe;Noord-Brabant;;Nederland
+1730;Hoogelande;Hoogelande;Zeeland;;Nederland
+1731;Hoogeloon;Hoogeloon, Hapert en Casteren;Noord-Brabant;;Nederland
+1733;Hoogerheide;Woensdrecht;Noord-Brabant;;Nederland
+1735;Hoogeveen;Hoogeveen;Drenthe;;Nederland
+1736;Hoogezand;Hoogezand;Groningen;;Nederland
+1738;Hoogkarspel;Hoogkarspel;Noord-Holland;;Nederland
+1740;Hoogkerk;Hoogkerk;Groningen;;Nederland
+1741;Hoogland;Hoogland;Utrecht;;Nederland
+1743;Hoogvliet;Hoogvliet;Zuid-Holland;;Nederland
+1744;Hoogwoud;Hoogwoud;Noord-Holland;;Nederland
+1746;Hoorn Den;Texel;Noord-Holland;;Nederland
+1747;Hoornaar;Hoornaar;Zuid-Holland;;Nederland
+1751;Horn;Horn;Limburg;;Nederland
+1753;Hornhuizen;Kloosterburen;Groningen;;Nederland
+1754;Horssen;Horssen;Gelderland;;Nederland
+1757;Horst;Horst;Limburg;;Nederland
+1761;Houten;Houten;Utrecht;;Nederland
+1763;Houthem;Houthem;Limburg;;Nederland
+1770;Huijbergen;Huijbergen;Noord-Brabant;;Nederland
+1771;Huins;Baarderadeel;Friesland;;Nederland
+1773;Huisduinen;Den Helder;Noord-Holland;;Nederland
+1774;Huisseling;Huisseling en Neerloon;Noord-Brabant;;Nederland
+1775;Huisseling en Neerloon;Huisseling en Neerloon;Noord-Brabant;;Nederland
+1776;Huissen;Huissen;Gelderland;;Nederland
+1777;Huizen;Huizen;Noord-Holland;;Nederland
+1778;Huizum;Leeuwarderadeel;Friesland;;Nederland
+1781;Hull;;;Engeland;Groot-Brittannië
+1786;Hulst;Hulst;Zeeland;;Nederland
+1789;Hummelo en Keppel;Hummelo en Keppel;Gelderland;;Nederland
+1790;Hunsel;Hunsel;Limburg;;Nederland
+1792;Hurwenen;Hurwenen;Gelderland;;Nederland
+1793;Idaard;Idaarderadeel;Friesland;;Nederland
+1794;Idaarderadeel;Idaarderadeel;Friesland;;Nederland
+1796;Idskenhuizen;Doniawerstal;Friesland;;Nederland
+1799;IJlst;IJlst;Friesland;;Nederland
+1802;IJsbrechtum;Wymbritseradeel;Friesland;;Nederland
+1804;IJsselmonde;IJsselmonde;Zuid-Holland;;Nederland
+1805;IJsselmuiden;IJsselmuiden;Overijssel;;Nederland
+1806;IJsselstein;IJsselstein;Utrecht;;Nederland
+1807;IJzendijke;IJzendijke;Zeeland;;Nederland
+1808;IJzendoorn;IJzendoorn;Gelderland;;Nederland
+1811;Ilpendam;Ilpendam;Noord-Holland;;Nederland
+1816;Innsbruck;;;;Oostenrijk
+1821;Irnsum;Rauwerderhem;Friesland;;Nederland
+1823;Iserlohn;;;;Duitsland
+1828;Issum;;;Kleve;Duitsland
+1829;Istanbul;;;;Turkije
+1833;Ittervoort;Ittervoort;Limburg;;Nederland
+1834;Ixelles;;;;België
+1835;Jaarsveld;Jaarsveld;Utrecht;;Nederland
+1841;Java;;;;N.O. Indië
+1843;Jelsum;Leeuwarderadeel;Friesland;;Nederland
+1847;Jever;;;;Duitsland
+1849;Jisp;Jisp;Noord-Holland;;Nederland
+1850;Jodoigne;;;;België
+1854;Joure;Haskerland;Friesland;;Nederland
+1862;Jutphaas;Jutphaas;Utrecht;;Nederland
+1864;Kaapstad;;;;Zuid-Afrika
+1865;Kaatsheuvel;Loon op Zand;Noord-Brabant;;Nederland
+1869;Kalamazoo;;;Michigan;Verenigde Staten
+1870;Kaldenkirchen;;;;Duitsland
+1875;Kalkwijk;Hoogezand;Groningen;;Nederland
+1877;Kallo;;;Beveren;België
+1878;Kalmthout;;;;België
+1879;Kamerik;Kamerik;Utrecht;;Nederland
+1882;Kampen;Kampen;Overijssel;;Nederland
+1884;Kamperland;Wissenkerke (Noord Beveland);Zeeland;;Nederland
+1885;Kamperveen;Kamperveen;Overijssel;;Nederland
+1886;Kanne;;;Riemst;België
+1887;Kantens;Kantens;Groningen;;Nederland
+1889;Kapelle;Kapelle;Zeeland;;Nederland
+1891;Kapellen;;;Antwerpen;België
+1892;Kaprijke;;;;België
+1894;Karlsruhe;;;;Duitsland
+1895;Kassel;;;;Duitsland
+1897;Katwijk aan Zee, Katwijk aan de Rijn en 't Zand;Katwijk aan Zee, Katwijk aan de Rijn en 't Zand;Zuid-Holland;;Nederland
+1898;Katendrecht;Rotterdam;Zuid-Holland;;Nederland
+1901;Kats;Kats;Zeeland;;Nederland
+1902;Kattendijke;Kattendijke;Zeeland;;Nederland
+1903;Katwijk;Katwijk;Zuid-Holland;;Nederland
+1904;Katwijk aan den Rijn;Katwijk;Zuid-Holland;;Nederland
+1905;Katwijk aan Zee;Katwijk;Zuid-Holland;;Nederland
+1906;Katwoude;Katwoude;Noord-Holland;;Nederland
+1908;Kedichem;Kedichem;Zuid-Holland;;Nederland
+1912;Kellen;;;;Duitsland
+1913;Kootwijk;Barneveld;Gelderland;;Nederland
+1914;Kempen;;;;Duitsland
+1915;Kemzeke;;;;België
+1921;Keppel;Keppel;Gelderland;;Nederland
+1924;Kerkrade;Kerkrade;Limburg;;Nederland
+1925;Kerkwerve;Kerkwerve;Zeeland;;Nederland
+1926;Kerkwijk;Kerkwijk;Gelderland;;Nederland
+1928;Kessel;Kessel;Noord-Brabant;;Nederland
+1929;Kessel Lo;;;;België
+1931;Kesteren;Kesteren;Gelderland;;Nederland
+1932;Kethel;Kethel en Spaland;Zuid-Holland;;Nederland
+1933;Kethel en Spaland;Kethel en Spaland;Zuid-Holland;;Nederland
+1934;Köln;;;;Duitsland
+1935;Köln;;;;Pruissen
+1939;Kiel;;;;Duitsland
+1940;Kieldrecht;;;;België
+1942;Kimswerd;Wonseradeel;Friesland;;Nederland
+1949;Klaaswaal;Klaaswaal;Zuid-Holland;;Nederland
+1953;Kleve;;;;Duitsland
+1956;Kleine Lindt;Kleine Lindt;Zuid-Holland;;Nederland
+1957;Kleverskerke;Kleverskerke;Zeeland;;Nederland
+1958;Klimmen;Klimmen;Limburg;;Nederland
+1959;Kloetinge;Kloetinge;Zeeland;;Nederland
+1963;Kloosterburen;Kloosterburen;Groningen;;Nederland
+1964;Kloosterzande;Hulst;Zeeland;;Nederland
+1965;Klundert;Klundert;Noord-Brabant;;Nederland
+1966;Knesselare;;;;België
+1967;Knokke;;;;België
+1969;Koblenz;;;;Duitsland
+1970;Kockengen;Kockengen;Utrecht;;Nederland
+1971;Koedijk;Koedijk;Noord-Holland;;Nederland
+1975;Koetaradja;;;;N.O. Indië
+1976;Koewacht;Koewacht;Zeeland;;Nederland
+1977;Kohlscheid;;;;Duitsland
+1982;Kollum;Kollumerland en Nieuwkruisland;Friesland;;Nederland
+1984;Kollumerland en Nieuwkruisland;Kollumerland en Nieuwkruisland;Friesland;;Nederland
+1988;Kontich;;;Antwerpen;België
+1989;Koog aan de Zaan;Koog aan de Zaan;Noord-Holland;;Nederland
+1990;Kooten;Achtkarspelen;Friesland;;Nederland
+1993;Kobenhavn;;;;Denemarken
+1996;Kortenhoef;Kortenhoef;Noord-Holland;;Nederland
+1997;Kortezwaag;Opsterland;Friesland;;Nederland
+1998;Kortgene;Kortgene;Zeeland;;Nederland
+1999;Kortrijk;;;;België
+2001;Koudekerk;Koudekerk (ZH);Zuid-Holland;;Nederland
+2002;Koudekerk aan den Rijn;Koudekerk aan den Rijn;Zuid-Holland;;Nederland
+2003;Koudekerke (Walcheren);Koudekerke (Walcheren);Zeeland;;Nederland
+2004;Koudum;Hemelumer Oldeferd;Friesland;;Nederland
+2005;Kowno;;;;Rusland
+2007;Krabbendijke;Krabbendijke;Zeeland;;Nederland
+2008;Kralingen;Kralingen;Zuid-Holland;;Nederland
+2010;Kranenburg;;;;Pruissen
+2012;Krefeld;;;;Duitsland
+2018;Krimpen aan de Lek;Krimpen aan de Lek;Zuid-Holland;;Nederland
+2019;Krimpen aan den IJssel;Krimpen aan den IJssel;Zuid-Holland;;Nederland
+2022;Krommenie;Krommenie;Noord-Holland;;Nederland
+2023;Kroonstad;;;;Zuid-Afrika
+2025;Kruiningen;Kruiningen;Zeeland;;Nederland
+2028;Kuinre;Kuinre;Overijssel;;Nederland
+2029;Kwadendamme;Borsele;Zeeland;;Nederland
+2030;Kwadijk;Kwadijk;Noord-Holland;;Nederland
+2040;Lage Mierde;Hooge en Lage Mierde;Noord-Brabant;;Nederland
+2042;Lage Zwaluwe;Hooge en Lage Zwaluwe;Noord-Brabant;;Nederland
+2043;Laken;;;;België
+2044;Lanaken;;;;België
+2047;Landsmeer;Landsmeer;Noord-Holland;;Nederland
+2048;Langbroek;Langbroek;Utrecht;;Nederland
+2050;Lange Ruige Weide;Lange Ruige Weide;Zuid-Holland;;Nederland
+2053;Langerak;Langerak;Zuid-Holland;;Nederland
+2057;Langezwaag;Opsterland;Friesland;;Nederland
+2058;Langweer;Doniawerstal;Friesland;;Nederland
+2062;Laren;Laren (Ge);Gelderland;;Nederland
+2063;Laren;Laren (NH);Noord-Holland;;Nederland
+2066;Lausanne;;;;Zwitserland
+2068;Lede;;;;België
+2070;Ledeberg;;;;België
+2071;Leek;Leek;Groningen;;Nederland
+2072;Leende;Leende;Noord-Brabant;;Nederland
+2073;Leens;Leens;Groningen;;Nederland
+2074;Leer;;;;Duitsland
+2076;Leerbroek;Leerbroek;Zuid-Holland;;Nederland
+2077;Leerdam;Leerdam;Zuid-Holland;;Nederland
+2078;Leermens;Zandt 't;Groningen;;Nederland
+2079;Leersum;Leersum;Utrecht;;Nederland
+2080;Leeuwarden;Leeuwarden;Friesland;;Nederland
+2081;Leeuwarderadeel;Leeuwarderadeel;Friesland;;Nederland
+2082;Leeuwen;Wamel;Gelderland;;Nederland
+2084;Leiden;Leiden;Zuid-Holland;;Nederland
+2085;Leiderdorp;Leiderdorp;Zuid-Holland;;Nederland
+2086;Leidschendam;Leidschendam;Zuid-Holland;;Nederland
+2087;Leimuiden;Leimuiden;Zuid-Holland;;Nederland
+2088;Leipzig;;;;Duitsland
+2089;Lekkerkerk;Lekkerkerk;Zuid-Holland;;Nederland
+2094;Lembeke;;;;België
+2098;Lemmer;Lemsterland;Friesland;;Nederland
+2099;Lemsterland;Lemsterland;Friesland;;Nederland
+2101;Lent;Elst;Gelderland;;Nederland
+2105;Leur;Etten en Leur;Noord-Brabant;;Nederland
+2106;Leusden;Leusden;Utrecht;;Nederland
+2110;Leuven;;;;België
+2112;Winsum;Winsum;Groningen;;Nederland
+2115;Lexmond;Lexmond;Zuid-Holland;;Nederland
+2117;Lichtenvoorde;Lichtenvoorde;Gelderland;;Nederland
+2118;Liempde;Liempde;Noord-Brabant;;Nederland
+2119;Lienden;Lienden;Gelderland;;Nederland
+2120;Lier;;;;België
+2121;Lierop;Lierop;Noord-Brabant;;Nederland
+2122;Lieshout;Lieshout;Noord-Brabant;;Nederland
+2124;Lille;;;;Frankrijk
+2126;Limmel;Meerssen;Limburg;;Nederland
+2129;Linden;;;;Duitsland
+2135;Linne;;;;Duitsland
+2138;Linschoten;Linschoten;Utrecht;;Nederland
+2140;Lioessens;Oostdongeradeel;Friesland;;Nederland
+2143;Lippenhuizen;Opsterland;Friesland;;Nederland
+2144;Lippstadt;;;;Duitsland
+2145;Lisse;Lisse;Zuid-Holland;;Nederland
+2146;Lith;Lith;Noord-Brabant;;Nederland
+2147;Lithoijen;Lith;Noord-Brabant;;Nederland
+2150;Liverpool;;;;Groot-Brittannië
+2152;Lobith;Herwen en Aerdt;Gelderland;;Nederland
+2155;Lochem;Lochem;Gelderland;;Nederland
+2160;Loenen;Loenen (UT);Utrecht;;Nederland
+2162;Loenersloot;Loenersloot;Utrecht;;Nederland
+2165;Lokeren;;;;België
+2167;Lommel;;;;België
+2168;London;;;;Groot-Brittannië
+2170;Lonneker;Lonneker;Overijssel;;Nederland
+2171;Loon op Zand;Loon op Zand;Noord-Brabant;;Nederland
+2172;Loosdrecht;Loosdrecht;Utrecht;;Nederland
+2173;Loosduinen;Gravenhage 's-;Zuid-Holland;;Nederland
+2175;Lopik;Lopik;Utrecht;;Nederland
+2176;Loppersum;Loppersum;Groningen;;Nederland
+2179;Losser;Losser;Overijssel;;Nederland
+2185;Ludwigsburg;;;;Duitsland
+2189;Liége;;;;België
+2190;Luinjeberd;Aengwirden;Friesland;;Nederland
+2191;Lunteren;Ede (Ge);Gelderland;;Nederland
+2192;Lutjebroek;Grootebroek;Noord-Holland;;Nederland
+2194;Makkum;Wonseradeel;Friesland;;Nederland
+2200;Luttenberg;Raalte;Overijssel;;Nederland
+2202;Malmedy;;;;België
+2205;Luyksgestel;Bergeijk;Noord-Brabant;;Nederland
+2206;Luzern;;;;Zwitserland
+2207;Lyon;;;;Frankrijk
+2208;Maarheeze;Maarheeze;Noord-Brabant;;Nederland
+2209;Maarn;Maarn;Utrecht;;Nederland
+2211;Maarssen;Maarssen;Utrecht;;Nederland
+2213;Maarsseveen;Maarsseveen;Utrecht;;Nederland
+2214;Maartensdijk;Maartensdijk;Utrecht;;Nederland
+2215;Maasbommel;Appeltern;Gelderland;;Nederland
+2217;Maasbracht;Maasbracht;Limburg;;Nederland
+2218;Maasbree;Maasbree;Limburg;;Nederland
+2219;Maasdam;Maasdam;Zuid-Holland;;Nederland
+2220;Maasdijk;Maasland;Zuid-Holland;;Nederland
+2221;Maasdriel;Maasdriel;Gelderland;;Nederland
+2222;Maaseik;;;;België
+2223;Maashees;Maashees en Overloon;Noord-Brabant;;Nederland
+2224;Maashees en Overloon;Maashees en Overloon;Noord-Brabant;;Nederland
+2225;Maasland;Maasland;Zuid-Holland;;Nederland
+2226;Maasniel;Maasniel;Limburg;;Nederland
+2227;Maassluis;Maassluis;Zuid-Holland;;Nederland
+2228;Maastricht;Maastricht;Limburg;;Nederland
+2230;Made;Made en Drimmelen;Noord-Brabant;;Nederland
+2231;Made en Drimmelen;Made en Drimmelen;Noord-Brabant;;Nederland
+2234;Magdeburg;;;;Duitsland
+2235;Magelang;;;;N.O. Indië
+2236;Mainz;;;;Duitsland
+2237;Maire;Maire;Zeeland;;Nederland
+2239;Makassar;;;;N.O. Indië
+2241;Makkum;Wonseradeel;Friesland;;Nederland
+2243;Malang;;;;N.O. Indië
+2244;Maldegem;;;;België
+2248;Manila;;;;Filippijnen
+2249;Mannheim;;;;Duitsland
+2255;Margraten;Margraten;Limburg;;Nederland
+2256;Mechelen;Wittem;Limburg;;Nederland
+2257;Markelo;Markelo;Overijssel;;Nederland
+2258;Marken;Marken;Noord-Holland;;Nederland
+2262;Marrum;Ferwerderadeel;Friesland;;Nederland
+2264;Marssum;Menaldumadeel;Friesland;;Nederland
+2267;Martenshoek;Hoogezand;Groningen;;Nederland
+2269;Marum;Marum;Groningen;;Nederland
+2273;Maurik;Maurik;Gelderland;;Nederland
+2274;Mechelen;;;;België
+2276;Medan;;;;N.O. Indië
+2278;Medemblik;Medemblik;Noord-Holland;;Nederland
+2279;Meeden;Meeden;Groningen;;Nederland
+2283;Meerdervoort;Zwijndrecht;Zuid-Holland;;Nederland
+2284;Meerdonk;;;;België
+2286;Meerkerk;Meerkerk;Zuid-Holland;;Nederland
+2287;Meerle;;;;België
+2288;Meerlo;Meerlo;Limburg;;Nederland
+2291;Meerssen;Meerssen;Limburg;;Nederland
+2295;Meester Cornelis;;;;N.O. Indië
+2296;Meeuwen;Eethen;Noord-Brabant;;Nederland
+2298;Megen;Megen, Haren en Macharen;Noord-Brabant;;Nederland
+2299;Megen, Haren en Macharen;Megen, Haren en Macharen;Noord-Brabant;;Nederland
+2300;Meiderich;;;;Duitsland
+2301;Meijel;Meijel;Limburg;;Nederland
+2304;Melick en Herkenbosch;Melick en Herkenbosch;Limburg;;Nederland
+2305;Meliskerke;Meliskerke;Zeeland;;Nederland
+2306;Melissant;Melissant;Zuid-Holland;;Nederland
+2307;Menado;;;;N.O. Indië
+2308;Menaldum;Menaldumadeel;Friesland;;Nederland
+2309;Menaldumadeel;Menaldumadeel;Friesland;;Nederland
+2313;Meppel;Meppel;Drenthe;;Nederland
+2314;Meppen;;;;Duitsland
+2317;Merkelbeek;Merkelbeek;Limburg;;Nederland
+2318;Merksem;;;;België
+2321;Metslawier;Oostdongeradeel;Friesland;;Nederland
+2322;Mettingen;;;;Duitsland
+2325;Middelaar;Mook en Middelaar;Limburg;;Nederland
+2327;Middelburg;;;;België
+2330;Middelburg;Middelburg (Ze);Zeeland;;Nederland
+2331;Middelharnis;Middelharnis;Zuid-Holland;;Nederland
+2333;Middelstum;Middelstum;Groningen;;Nederland
+2337;Middenschouwen;Middenschouwen;Zeeland;;Nederland
+2339;Midlum;Franekeradeel;Friesland;;Nederland
+2340;Midsland;Terschelling;Friesland;;Nederland
+2341;Midwolda;Midwolda;Groningen;;Nederland
+2343;Midwoud;Midwoud;Noord-Holland;;Nederland
+2345;Mierlo;Mierlo;Noord-Brabant;;Nederland
+2346;Mijdrecht;Mijdrecht;Utrecht;;Nederland
+2347;Mijnsheerenland;Mijnsheerenland;Zuid-Holland;;Nederland
+2350;Mill;Mill en Sint Hubert;Noord-Brabant;;Nederland
+2351;Mill en Sint Hubert;Mill en Sint Hubert;Noord-Brabant;;Nederland
+2362;Minnertsga;Barradeel;Friesland;;Nederland
+2364;Mirns en Bakhuizen;Gaasterland;Friesland;;Nederland
+2368;Moerbeke;;;;België
+2369;Moerdijk;Hooge en Lage Zwaluwe;Noord-Brabant;;Nederland
+2371;Moergestel;Moergestel;Noord-Brabant;;Nederland
+2373;Moerkapelle;Moerkapelle;Zuid-Holland;;Nederland
+2374;Moerkerke;;;;België
+2375;Moers;;;;Duitsland
+2376;Mol;;;;België
+2377;Molenaarsgraaf;Molenaarsgraaf;Zuid-Holland;;Nederland
+2383;Molkwerum;Hemelumer Oldeferd;Friesland;;Nederland
+2387;Monnickendam;Monnickendam;Noord-Holland;;Nederland
+2389;Monster;Monster;Zuid-Holland;;Nederland
+2390;Montataire;;;;Frankrijk
+2393;Montfoort;Montfoort;Utrecht;;Nederland
+2394;Montfort;Montfort;Limburg;;Nederland
+2399;Mook;Mook en Middelaar;Limburg;;Nederland
+2401;Moordrecht;Moordrecht;Zuid-Holland;;Nederland
+2406;Mortsel;;;;België
+2408;Mühlheim;;;;Duitsland
+2410;Mühlheim an der Ruhr;;;;Duitsland
+2411;Muiden;Muiden;Noord-Holland;;Nederland
+2412;Muiderberg;Muiden;Noord-Holland;;Nederland
+2413;München;;;;Duitsland
+2414;Munnekeburen;Weststellingwerf;Friesland;;Nederland
+2417;Münster;;;;Duitsland
+2418;Munstergeleen;Munstergeleen;Limburg;;Nederland
+2419;Muntendam;Muntendam;Groningen;;Nederland
+2420;Muntok;;;Banka;N.O. Indië
+2424;Naaldwijk;Naaldwijk;Zuid-Holland;;Nederland
+2425;Naarden;Naarden;Noord-Holland;;Nederland
+2426;Namen;;;;België
+2430;Nederhemert;Nederhemert;Gelderland;;Nederland
+2431;Nederhorst den Berg;Nederhorst den Berg;Noord-Holland;;Nederland
+2434;Nederweert;Nederweert;Limburg;;Nederland
+2436;Neede;Neede;Gelderland;;Nederland
+2437;Neer;Neer;Limburg;;Nederland
+2438;Neerbosch;Nijmegen;Gelderland;;Nederland
+2440;Neeritter;Neeritter;Limburg;;Nederland
+2443;Neerpelt;;;;België
+2447;Nes;Westdongeradeel;Friesland;;Nederland
+2453;Neuendorf;;;;Duitsland
+2454;Neuengamme;;;Hamburg;Duitsland
+2455;Neuenhaus;;;;Duitsland
+2457;Neuenkirchen;;;;Duitsland
+2459;Neukirchen;;;;Duitsland
+2461;Neuss;;;;Duitsland
+2463;Neustadt;;;;Duitsland
+2468;New York;;;;Verenigde Staten
+2473;Nibbixwoud;Nibbixwoud;Noord-Holland;;Nederland
+2474;Nice;;;;Frankrijk
+2475;Niebert;Marum;Groningen;;Nederland
+2477;Niekerk;Oldekerk;Groningen;;Nederland
+2482;Nieuw- en Sint Joosland;Nieuw- en Sint Joosland;Zeeland;;Nederland
+2484;Nieuwaal;Gameren;Gelderland;;Nederland
+2486;Nieuw-Beijerland;Nieuw-Beijerland;Zuid-Holland;;Nederland
+2490;Nieuwe Niedorp;Nieuwe Niedorp;Noord-Holland;;Nederland
+2491;Nieuwe Pekela;Nieuwe Pekela;Groningen;;Nederland
+2492;Nieuwe Tonge;Nieuwe Tonge;Zuid-Holland;;Nederland
+2495;Nieuwediep;Gieten;Drenthe;;Nederland
+2497;Nieuwehaske;Haskerland;Friesland;;Nederland
+2499;Nieuwehorne;Schoterland;Friesland;;Nederland
+2500;Nieuwendam;Nieuwendam;Noord-Holland;;Nederland
+2502;Nieuwenhagen;Nieuwenhagen;Limburg;;Nederland
+2503;Nieuwenhoorn;Nieuwenhoorn;Zuid-Holland;;Nederland
+2504;Nieuwer Ter Aa;Ruwiel;Utrecht;;Nederland
+2506;Nieuwer-Amstel;Nieuwer-Amstel;Noord-Holland;;Nederland
+2507;Nieuwerkerk (Duiveland);Nieuwerkerk (Duiveland);Zeeland;;Nederland
+2509;Nieuwerkerk aan den IJssel;Nieuwerkerk aan den IJssel;Zuid-Holland;;Nederland
+2511;Nieuweschans;Nieuweschans;Groningen;;Nederland
+2516;Nieuw-Helvoet;Nieuw-Helvoet;Zuid-Holland;;Nederland
+2517;Nieuwkoop;Nieuwkoop;Zuid-Holland;;Nederland
+2518;Nieuwkuijk;Nieuwkuijk;Noord-Brabant;;Nederland
+2519;Nieuwland;Nieuwland (ZH);Zuid-Holland;;Nederland
+2521;Nieuw-Lekkerland;Nieuw-Lekkerland;Zuid-Holland;;Nederland
+2522;Nieuwleusen;Nieuwleusen;Overijssel;;Nederland
+2523;Nieuw-Loosdrecht;Loosdrecht;Utrecht;;Nederland
+2525;Nieuwolda;Nieuwolda;Groningen;;Nederland
+2529;Nieuwstadt;Nieuwstadt;Limburg;;Nederland
+2530;Nieuwveen;Nieuwveen;Zuid-Holland;;Nederland
+2533;Nieuwvliet;Nieuwvliet;Zeeland;;Nederland
+2534;Nieuw-Vossemeer;Nieuw-Vossemeer;Noord-Brabant;;Nederland
+2536;Nigtevecht;Nigtevecht;Utrecht;;Nederland
+2542;Nijega;Smallingerland;Friesland;;Nederland
+2543;Nijehaske;Haskerland;Friesland;;Nederland
+2547;Nijemirdum;Gaasterland;Friesland;;Nederland
+2550;Nijeveen;Nijeveen;Drenthe;;Nederland
+2553;Nijkerk;Nijkerk;Gelderland;;Nederland
+2557;Nijmegen;Nijmegen;Gelderland;;Nederland
+2559;Nispen;Roosendaal en Nispen;Noord-Brabant;;Nederland
+2560;Nisse;Nisse;Zeeland;;Nederland
+2561;Nistelrode;Nistelrode;Noord-Brabant;;Nederland
+2565;Noord-Beveland;Noord-Beveland;Zeeland;;Nederland
+2566;Noordbroek;Noordbroek;Groningen;;Nederland
+2568;Noorddijk;Noorddijk;Groningen;;Nederland
+2569;Noordeloos;Noordeloos;Zuid-Holland;;Nederland
+2573;Noordgouwe;Noordgouwe;Zeeland;;Nederland
+2574;Noordhorn;Zuidhorn;Groningen;;Nederland
+2577;Noordoostpolder;Noordoostpolder;Overijssel;;Nederland
+2580;Noord-Scharwoude;Noord-Scharwoude;Noord-Holland;;Nederland
+2582;Noord-Waddinxveen;Noord-Waddinxveen;Zuid-Holland;;Nederland
+2583;Noordwelle;Noordwelle;Zeeland;;Nederland
+2584;Noordwijk;Noordwijk;Zuid-Holland;;Nederland
+2585;Noordwijk aan Zee;Noordwijk;Zuid-Holland;;Nederland
+2586;Noordwijk-Binnen;Noordwijk;Zuid-Holland;;Nederland
+2587;Noordwijkerhout;Noordwijkerhout;Zuid-Holland;;Nederland
+2589;Noordwolde;Weststellingwerf;Friesland;;Nederland
+2590;Nootdorp;Nootdorp;Zuid-Holland;;Nederland
+2591;Nordhorn;;;;Duitsland
+2593;Norg;Norg;Drenthe;;Nederland
+2594;Nuenen;Nuenen, Gerwen en Nederwetten;Noord-Brabant;;Nederland
+2598;Nuland;Nuland;Noord-Brabant;;Nederland
+2599;Numansdorp;Numansdorp;Zuid-Holland;;Nederland
+2601;Nunspeet;Ermelo;Gelderland;;Nederland
+2604;Nuth;Nuth;Limburg;;Nederland
+2606;Obbicht en Papenhoven;Obbicht en Papenhoven;Limburg;;Nederland
+2607;Obdam;Obdam;Noord-Holland;;Nederland
+2608;Oberhausen;;;;Duitsland
+2611;Ochten;Echteld;Gelderland;;Nederland
+2613;Ochtrup;;;;Duitsland
+2616;Odoorn;Odoorn;Drenthe;;Nederland
+2620;Oeffelt;Oeffelt;Noord-Brabant;;Nederland
+2621;Oegstgeest;Oegstgeest;Zuid-Holland;;Nederland
+2625;Oostburg;Oostburg;Zeeland;;Nederland
+2627;Offenbach;;;;Duitsland
+2629;Ohé en Laak;Ohé en Laak;Limburg;;Nederland
+2630;Oijen;Oijen en Teeffelen;Noord-Brabant;;Nederland
+2631;Oijen en Teeffelen;Oijen en Teeffelen;Noord-Brabant;;Nederland
+2632;Oirsbeek;Oirsbeek;Limburg;;Nederland
+2633;Oirschot;Oirschot;Noord-Brabant;;Nederland
+2634;Oisterwijk;Oisterwijk;Noord-Brabant;;Nederland
+2635;Oldeberkoop;Ooststellingwerf;Friesland;;Nederland
+2636;Oldeboorn;Utingeradeel;Friesland;;Nederland
+2637;Oldebroek;Oldebroek;Gelderland;;Nederland
+2639;Oldeholtpade;Weststellingwerf;Friesland;;Nederland
+2641;Oldehove;Oldehove;Groningen;;Nederland
+2642;Oldekerk;Oldekerk;Groningen;;Nederland
+2645;Oldemarkt;Oldemarkt;Overijssel;;Nederland
+2647;Oldenburg;;;;Duitsland
+2650;Oldenzaal;Oldenzaal;Overijssel;;Nederland
+2651;Oldeouwer;Doniawerstal;Friesland;;Nederland
+2655;Olst;Olst;Overijssel;;Nederland
+2657;Ommen;Ommen;Overijssel;;Nederland
+2658;Ommen Ambt;Ommen Ambt;Overijssel;;Nederland
+2659;Ommen Stad;Ommen Stad;Overijssel;;Nederland
+2660;Ommeren;Lienden;Gelderland;;Nederland
+2662;Ommerschans;Ommen;Overijssel;;Nederland
+2664;Unknown;;;;Afrika
+2681;Unknown;;;;Denemarken
+2684;Unknown;;;;Finland
+2688;Unknown;;;;Ierland
+2696;Unknown;;;;Luxemburg
+2707;Unknown;;;;Noorwegen
+2717;Unknown;;;;Rusland
+2758;Unknown;;;Goeree-Overflakkee;Nederland
+2761;Unknown;;;Hannover;Duitsland
+2764;Unknown;;;Indiana;Verenigde Staten
+2767;Semarang;;;Java;Indonesië
+2770;Unknown;;;Kaap de Goede Hoop;Zuid-Afrika
+2820;Unknown;;;Vlaanderen;België
+2822;Unknown;;;Westfalen;Duitsland
+2836;Onrust;;;;N.O. Indië
+2837;Onstwedde;Onstwedde;Groningen;;Nederland
+2840;Onwaard;Onwaard;Zuid-Holland;;Nederland
+2843;Ooltgensplaat;Ooltgensplaat;Zuid-Holland;;Nederland
+2844;Oost- en West-Barendrecht;Oost- en West-Barendrecht;Zuid-Holland;;Nederland
+2845;Oost- en West-Souburg;Oost- en West-Souburg;Zeeland;;Nederland
+2846;Oost- West- en Middelbeers;Oost- West- en Middelbeers;Noord-Brabant;;Nederland
+2847;Oostakker;;;;België
+2849;Oostburg;Oostburg;Zeeland;;Nederland
+2850;Oostdongeradeel;Oostdongeradeel;Friesland;;Nederland
+2853;Oosterbeek;Renkum;Gelderland;;Nederland
+2854;Oosterbierum;Barradeel;Friesland;;Nederland
+2855;Oosterblokker;Blokker;Noord-Holland;;Nederland
+2859;Oosterhesselen;Oosterhesselen;Drenthe;;Nederland
+2860;Oosterhout;Oosterhout;Noord-Brabant;;Nederland
+2862;Oosterland;Oosterland;Zeeland;;Nederland
+2864;Oostermeer;Tietjerksteradeel;Friesland;;Nederland
+2870;Oosterzee;Lemsterland;Friesland;;Nederland
+2873;Oosthuizen;Oosthuizen;Noord-Holland;;Nederland
+2874;Oostkapelle;Oostkapelle;Zeeland;;Nederland
+2875;Oostrum;Oostdongeradeel;Friesland;;Nederland
+2876;Oost-Souburg;Oost-Souburg;Zeeland;;Nederland
+2877;Ooststellingwerf;Ooststellingwerf;Friesland;;Nederland
+2878;Oostvoorne;Oostvoorne;Zuid-Holland;;Nederland
+2879;Oostwold;Midwolda;Groningen;;Nederland
+2881;Oostzaan;Oostzaan;Noord-Holland;;Nederland
+2882;Ootmarsum;Ootmarsum;Overijssel;;Nederland
+2883;Opeinde;Smallingerland;Friesland;;Nederland
+2885;Ophemert;Ophemert;Gelderland;;Nederland
+2886;Opheusden;Kesteren;Gelderland;;Nederland
+2889;Oploo;Oploo, Sint Anthonis en Ledeacker;Noord-Brabant;;Nederland
+2890;Oploo, Sint Anthonis en Ledeacker;Oploo, Sint Anthonis en Ledeacker;Noord-Brabant;;Nederland
+2891;Opmeer;Opmeer;Noord-Holland;;Nederland
+2893;Opperdoes;Opperdoes;Noord-Holland;;Nederland
+2894;Opsterland;Opsterland;Friesland;;Nederland
+2900;Orleans;;;;Frankrijk
+2906;Osnabruck;;;;Duitsland
+2908;Oss;Oss;Noord-Brabant;;Nederland
+2909;Ossendrecht;Ossendrecht;Noord-Brabant;;Nederland
+2910;Ossenisse;Ossenisse;Zeeland;;Nederland
+2913;Ostende;;;;België
+2914;Osterfeld;;;;Duitsland
+2919;Ottersum;Ottersum;Limburg;;Nederland
+2920;Ottoland;Ottoland;Zuid-Holland;;Nederland
+2921;Oud- en Nieuw-Gastel;Oud- en Nieuw-Gastel;Noord-Brabant;;Nederland
+2922;Oud- en Nieuw-Mathenesse;Oud- en Nieuw-Mathenesse;Zuid-Holland;;Nederland
+2924;Oud-Alblas;Oud-Alblas;Zuid-Holland;;Nederland
+2925;Oud-Beijerland;Oud-Beijerland;Zuid-Holland;;Nederland
+2927;Ouddorp;Ouddorp (ZH);Zuid-Holland;;Nederland
+2929;Oude Niedorp;Oude Niedorp;Noord-Holland;;Nederland
+2930;Oude Pekela;Oude Pekela;Groningen;;Nederland
+2931;Oude Wetering;Alkemade;Zuid-Holland;;Nederland
+2936;Oudega;Wymbritseradeel;Friesland;;Nederland
+2940;Oudelande;Oudelande;Zeeland;;Nederland
+2942;Oudemirdum;Gaasterland;Friesland;;Nederland
+2944;Oudenbosch;Oudenbosch;Noord-Brabant;;Nederland
+2945;Oudendijk;Oudendijk;Noord-Holland;;Nederland
+2946;Oudenhoorn;Oudenhoorn;Zuid-Holland;;Nederland
+2947;Oudenrijn;Oudenrijn;Utrecht;;Nederland
+2948;Ouder-Amstel;Ouder-Amstel;Noord-Holland;;Nederland
+2949;Ouderkerk;Ouderkerk;Zuid-Holland;;Nederland
+2950;Ouderkerk aan de Amstel;Ouder-Amstel;Noord-Holland;;Nederland
+2951;Ouderkerk aan den Ijssel;Ouderkerk aan den IJssel;Zuid-Holland;;Nederland
+2955;Oudeschoot;Schoterland;Friesland;;Nederland
+2956;Oude-Tonge;Oude-Tonge;Zuid-Holland;;Nederland
+2957;Oudewaard;Kesteren;Gelderland;;Nederland
+2958;Oudewater;Oudewater;Utrecht;;Nederland
+2959;Oud-Gastel;Oud- en Nieuw-Gastel;Noord-Brabant;;Nederland
+2960;Oudheusden;Oudheusden;Noord-Brabant;;Nederland
+2962;Oudkarspel;Oudkarspel;Noord-Holland;;Nederland
+2963;Oudkerk;Tietjerksteradeel;Friesland;;Nederland
+2966;Oudorp;Oudorp (NH);Noord-Holland;;Nederland
+2970;Oudshoorn;Oudshoorn;Zuid-Holland;;Nederland
+2971;Oud-Valkenburg;Oud-Valkenburg;Limburg;;Nederland
+2973;Oud-Vossemeer;Oud-Vossemeer;Zeeland;;Nederland
+2974;Oud-Vroenhoven;Oud-Vroenhoven;Limburg;;Nederland
+2976;Oud-Wulven;Oud-Wulven;Utrecht;;Nederland
+2978;Ouwerkerk;Ouwerkerk (Ze);Zeeland;;Nederland
+2980;Overasselt;Overasselt;Gelderland;;Nederland
+2983;Overloon;Boxmeer;Noord-Brabant;;Nederland
+2984;Overschie;Overschie;Zuid-Holland;;Nederland
+2988;Ovezande;Ovezande;Zeeland;;Nederland
+2989;Paarl;;;;Zuid-Afrika
+2991;Padang;;;;N.O. Indië
+2992;Paderborn;;;;Duitsland
+2995;Palembang;;;;N.O. Indië
+2998;Pannerden;Pannerden;Gelderland;;Nederland
+3000;Papekop;Papekop;Zuid-Holland;;Nederland
+3001;Papenburg;;;;Duitsland
+3002;Papenburg;;;;Pruissen
+3003;Papendrecht;Papendrecht;Zuid-Holland;;Nederland
+3005;Paramaribo;;;Suriname;N.W. Indië
+3006;Paris;;;;Frankrijk
+3011;Paterson;;;New Jersey;Verenigde Staten
+3014;Peize;Peize;Drenthe;;Nederland
+3015;Pekalongan;;;;N.O. Indië
+3016;Pekela;Pekela;Groningen;;Nederland
+3017;Peperga;Weststellingwerf;Friesland;;Nederland
+3019;Pernis;Pernis;Zuid-Holland;;Nederland
+3022;Petten;Petten;Noord-Holland;;Nederland
+3024;Pfalzdorf;;;;Duitsland
+3026;Pforzheim;;;;Duitsland
+3027;Philadelphia;;;;Verenigde Staten
+3028;Philippine;Philippine;Zeeland;;Nederland
+3029;Piaam;Wonseradeel;Friesland;;Nederland
+3030;Piershil;Piershil;Zuid-Holland;;Nederland
+3031;Pieterburen;Eenrum;Groningen;;Nederland
+3034;Pijnacker;Pijnacker;Zuid-Holland;;Nederland
+3035;Pingjum;Wonseradeel;Friesland;;Nederland
+3038;Poederoijen;Poederoijen;Gelderland;;Nederland
+3042;Polsbroek;Polsbroek;Utrecht;;Nederland
+3043;Pontianak;;;;N.O. Indië
+3044;Poortugaal;Poortugaal;Zuid-Holland;;Nederland
+3045;Poortvliet;Poortvliet;Zeeland;;Nederland
+3046;Poppel;;;;België
+3048;Poppingawier;Rauwerderhem;Friesland;;Nederland
+3054;Ressen;Bemmel;Gelderland;;Nederland
+3055;Posterholt;Posterholt;Limburg;;Nederland
+3057;Praha;;;;Oostenrijk-Hongarije
+3061;Pretoria;;;Transvaal;Zuid-Afrika
+3063;Princenhage;Princenhage;Noord-Brabant;;Nederland
+3066;Probolingo;;;Java;N.O. Indië
+3067;Puiflijk;Druten;Gelderland;;Nederland
+3068;Purmerend;Purmerend;Noord-Holland;;Nederland
+3070;Putte;Putte;Noord-Brabant;;Nederland
+3071;Putten;Putten;Gelderland;;Nederland
+3072;Puttershoek;Puttershoek;Zuid-Holland;;Nederland
+3074;Raalte;Raalte;Overijssel;;Nederland
+3075;Raamsdonk;Raamsdonk;Noord-Brabant;;Nederland
+3076;Raamsdonksveer;Raamsdonk;Noord-Brabant;;Nederland
+3079;Ramscapelle;;;;België
+3081;Randwijk;Heteren;Gelderland;;Nederland
+3083;Ranschbach;;;;Duitsland
+3084;Ransdorp;Amsterdam;Noord-Holland;;Nederland
+3085;Rheden;Rheden;Gelderland;;Nederland
+3086;Ratingen;;;;Duitsland
+3089;Rauwerderhem;Rauwerderhem;Friesland;;Nederland
+3090;Ravenstein;Ravenstein;Noord-Brabant;;Nederland
+3094;Recklinghausen;;;Westfalen;Duitsland
+3096;Rees;;;;Duitsland
+3098;Reeuwijk;Reeuwijk;Zuid-Holland;;Nederland
+3099;Regensburg;;;;Duitsland
+3100;Reimerswaal;Reimerswaal;Zeeland;;Nederland
+3101;Reitsum;Ferwerderadeel;Friesland;;Nederland
+3102;Rekken;Eibergen;Gelderland;;Nederland
+3103;Renesse;Renesse;Zeeland;;Nederland
+3104;Renkum;Renkum;Gelderland;;Nederland
+3105;Renswoude;Renswoude;Utrecht;;Nederland
+3107;Retranchement;Retranchement;Zeeland;;Nederland
+3109;Reusel;Reusel;Noord-Brabant;;Nederland
+3111;Rheden;Rheden;Gelderland;;Nederland
+3113;Rheine;;;;Duitsland
+3116;Rhenen;Rhenen;Utrecht;;Nederland
+3117;Rheydt;;;;Duitsland
+3119;Rhoon;Rhoon;Zuid-Holland;;Nederland
+3122;Ridderkerk;Ridderkerk;Zuid-Holland;;Nederland
+3123;Ried;Franekeradeel;Friesland;;Nederland
+3133;Rijnsaterwoude;Rijnsaterwoude;Zuid-Holland;;Nederland
+3134;Rijnsburg;Rijnsburg;Zuid-Holland;;Nederland
+3136;Rijperkerk;Tietjerksteradeel;Friesland;;Nederland
+3139;Rijsbergen;Rijsbergen;Noord-Brabant;;Nederland
+3140;Rijsenburg;Rijsenburg;Utrecht;;Nederland
+3141;Rijsoord;Ridderkerk;Zuid-Holland;;Nederland
+3143;Rijssel;;;;Frankrijk
+3144;Rijssen;Rijssen;Overijssel;;Nederland
+3146;Rijswijk;Rijswijk (ZH);Zuid-Holland;;Nederland
+3147;Rijswijk;Maurik;Gelderland;;Nederland
+3148;Rijswijk;Rijswijk (NB);Noord-Brabant;;Nederland
+3149;Rijswijk;Rijswijk (ZH);Zuid-Holland;;Nederland
+3150;Rilland;Rilland;Zeeland;;Nederland
+3151;Rilland en Maire;Rilland;Zeeland;;Nederland
+3152;Rilland-Bath;Rilland-Bath;Zeeland;;Nederland
+3154;Rinsumageest;Dantumadeel;Friesland;;Nederland
+3155;Rio de Janeiro;;;;Brazilië
+3157;Ritthem;Ritthem;Zeeland;;Nederland
+3158;Rochefort;;;;Frankrijk
+3159;Rochester;;;;Verenigde Staten
+3160;Rockanje;Rockanje;Zuid-Holland;;Nederland
+3161;Roden;Roden;Drenthe;;Nederland
+3165;Roermond;Roermond;Limburg;;Nederland
+3166;Roggel;Roggel;Limburg;;Nederland
+3169;Rolde;Rolde;Drenthe;;Nederland
+3171;Roma;;;;Italië
+3172;Roodeschool;Uithuizermeeden;Groningen;;Nederland
+3175;Roordahuizum;Idaarderadeel;Friesland;;Nederland
+3176;Roosendaal;Roosendaal en Nispen;Noord-Brabant;;Nederland
+3177;Roosendaal en Nispen;Roosendaal en Nispen;Noord-Brabant;;Nederland
+3178;Roosteren;Roosteren;Limburg;;Nederland
+3180;Rosmalen;Rosmalen;Noord-Brabant;;Nederland
+3183;Rotsterhaule;Schoterland;Friesland;;Nederland
+3184;Rotterdam;Rotterdam;Zuid-Holland;;Nederland
+3190;Roubaix;;;;Frankrijk
+3191;Rouen;;;;Frankrijk
+3193;Roxenisse;Roxenisse;Zuid-Holland;;Nederland
+3195;Rozendaal;Rozendaal (Ge);Gelderland;;Nederland
+3196;Rucphen;Rucphen;Noord-Brabant;;Nederland
+3197;Rudesheim;;;;Duitsland
+3198;Ruhrort;;;;Duitsland
+3199;Ruhrort;;;;Pruissen
+3203;Ruinen;Ruinen;Drenthe;;Nederland
+3204;Ruinerwold;Ruinerwold;Drenthe;;Nederland
+3207;Rumpt;Deil;Gelderland;;Nederland
+3208;Rupelmonde;;;;België
+3215;Ruurlo;Ruurlo;Gelderland;;Nederland
+3216;Ruwiel;Ruwiel;Utrecht;;Nederland
+3224;Saint Quentin;;;;Frankrijk
+3225;Salatiga;;;;N.O. Indië
+3227;Salzbergen;;;;Duitsland
+3228;Salzburg;;;;Oostenrijk
+3230;Sambeek;Sambeek;Noord-Brabant;;Nederland
+3231;San Francisco;;;;Verenigde Staten
+3239;Sappemeer;Sappemeer;Groningen;;Nederland
+3240;Sas van Gent;Sas van Gent;Zeeland;;Nederland
+3241;Sassenheim;Sassenheim;Zuid-Holland;;Nederland
+3245;Schaarbeek;;;Brussel;België
+3247;Schaesberg;Schaesberg;Limburg;;Nederland
+3249;Schagen;Schagen;Noord-Holland;;Nederland
+3251;Schaijk;Schaijk;Noord-Brabant;;Nederland
+3253;Schalke;;;;Duitsland
+3255;Schalkwijk;Schalkwijk;Utrecht;;Nederland
+3263;Scheemda;Scheemda;Groningen;;Nederland
+3265;Schoten;Schoten;Noord-Holland;;Nederland
+3267;Schelluinen;Schelluinen;Zuid-Holland;;Nederland
+3268;Schermer;Schermer;Noord-Holland;;Nederland
+3269;Schermerhorn;Schermerhorn;Noord-Holland;;Nederland
+3270;Scherpenisse;Scherpenisse;Zeeland;;Nederland
+3271;Scherpenzeel;Scherpenzeel;Gelderland;;Nederland
+3274;Scheveningen;Gravenhage 's-;Zuid-Holland;;Nederland
+3275;Schiebroek;Schiebroek;Zuid-Holland;;Nederland
+3276;Schiedam;Schiedam;Zuid-Holland;;Nederland
+3277;Schiermonnikoog;Schiermonnikoog;Friesland;;Nederland
+3278;Schijndel;Schijndel;Noord-Brabant;;Nederland
+3281;Schin op Geul;Schin op Geul;Limburg;;Nederland
+3283;Schinnen;Schinnen;Limburg;;Nederland
+3284;Schinveld;Schinveld;Limburg;;Nederland
+3285;Schipluiden;Schipluiden;Zuid-Holland;;Nederland
+3290;Schönlanke;;;;Duitsland
+3291;Schoondijke;Schoondijke;Zeeland;;Nederland
+3292;Schoonebeek;Schoonebeek;Drenthe;;Nederland
+3293;Schoonhoven;Schoonhoven;Zuid-Holland;;Nederland
+3295;Schoonrewoerd;Schoonrewoerd;Zuid-Holland;;Nederland
+3296;Schoorl;Schoorl;Noord-Holland;;Nederland
+3297;Schore;Schore;Zeeland;;Nederland
+3300;Schoterland;Schoterland;Friesland;;Nederland
+3305;Schuddebeurs en Simonshaven;Schuddebeurs en Simonshaven;Zuid-Holland;;Nederland
+3307;Schwerin;;;;Duitsland
+3308;Schwerte;;;;Duitsland
+3313;Semarang;;;Java;N.O. Indië
+3314;Seraing;;;;België
+3316;Serooskerke;Serooskerke (Walcheren);Zeeland;;Nederland
+3318;Serooskerke (Schouwen);Serooskerke (Schouwen);Zeeland;;Nederland
+3320;Serooskerke (Walcheren);Serooskerke (Walcheren);Zeeland;;Nederland
+3321;Sevenum;Sevenum;Limburg;;Nederland
+3322;Sexbierum;Barradeel;Friesland;;Nederland
+3323;Shanghai;;;;China
+3324;Sheboygan;;;Wisconsin;Verenigde Staten
+3326;Siddeburen;Slochteren;Groningen;;Nederland
+3328;Siegburg;;;;Duitsland
+3331;Sijbekarspel;Sijbekarspel;Noord-Holland;;Nederland
+3332;Sijbrandaburen;Rauwerderhem;Friesland;;Nederland
+3335;Simpelveld;Simpelveld;Limburg;;Nederland
+3338;Singapore;;;;Brits-Indië
+3340;Sint Amandsberg;;;;België
+3342;Sint Anna ter Muiden;Sint Anna ter Muiden;Zeeland;;Nederland
+3344;Sint Annaland;Sint Annaland;Zeeland;;Nederland
+3346;Sint Annaparochie;Het Bildt;Friesland;;Nederland
+3347;Sint Annen;Ten Boer;Groningen;;Nederland
+3348;Sint Anthoniepolder;Sint Anthoniepolder;Zuid-Holland;;Nederland
+3349;Sint Anthonis;Sint Anthonis;Noord-Brabant;;Nederland
+3350;Sint Geertruid;Sint Geertruid;Limburg;;Nederland
+3352;Sint Hubert;Mill en Sint Hubert;Noord-Brabant;;Nederland
+3353;Sint Jacobiparochie;Het Bildt;Friesland;;Nederland
+3354;Sint Jans Molenbeek;;;;België
+3355;Sint Jansteen;Sint Jansteen;Zeeland;;Nederland
+3357;Sint Johannesga;Schoterland;Friesland;;Nederland
+3359;Sint Joost ten Node;;;Brussel;België
+3360;Sint Kruis;Sint Kruis;Zeeland;;Nederland
+3361;Sint Laureins;;;;België
+3362;Sint Laurens;Sint Laurens;Zeeland;;Nederland
+3363;Sint Maarten;Sint Maarten;Noord-Holland;;Nederland
+3364;Sint Maartensdijk;Sint Maartensdijk;Zeeland;;Nederland
+3365;Sint Margriete;;;;België
+3366;Sint Michielsgestel;Sint Michielsgestel;Noord-Brabant;;Nederland
+3369;Saint-Nicolas;;;Liège;België
+3370;Sint Odiliënberg;Sint Odiliënberg;Limburg;;Nederland
+3371;Sint Oedenrode;Sint Oedenrode;Noord-Brabant;;Nederland
+3372;Sint Pancras;Sint Pancras;Noord-Holland;;Nederland
+3373;Sint Petersburg;;;;Rusland
+3374;Sint Philipsland;Sint Philipsland;Zeeland;;Nederland
+3375;Sint Pieter;Maastricht;Limburg;;Nederland
+3376;Sirjansland;Oosterland;Zeeland;;Nederland
+3377;Sittard;Sittard;Limburg;;Nederland
+3382;Sleen;Sleen;Drenthe;;Nederland
+3385;Slenaken;Slenaken;Limburg;;Nederland
+3386;Sliedrecht;Sliedrecht;Zuid-Holland;;Nederland
+3388;Slijk-Ewijk;Valburg;Gelderland;;Nederland
+3389;Slikkerveer;Ridderkerk;Zuid-Holland;;Nederland
+3390;Slochteren;Slochteren;Groningen;;Nederland
+3394;Sloten;Sloten (FR);Friesland;;Nederland
+3395;Sloten;Sloten (NH);Noord-Holland;;Nederland
+3396;Sloterdijk;Sloten (NH);Noord-Holland;;Nederland
+3397;Sluipwijk;Reeuwijk;Zuid-Holland;;Nederland
+3398;Soest;Soest;Utrecht;;Nederland
+3399;Sluis;Sluis;Zeeland;;Nederland
+3401;Sluiskil;Terneuzen;Zeeland;;Nederland
+3403;Smallingerland;Smallingerland;Friesland;;Nederland
+3405;Smilde;Smilde;Drenthe;;Nederland
+3407;Sneek;Sneek;Friesland;;Nederland
+3408;Snelrewaard;Snelrewaard;Utrecht;;Nederland
+3411;Soekaboemi;;;;N.O. Indië
+3413;Soerabaja;;;;Indonesië
+3414;Soerabaja;;;;N.O. Indië
+3415;Soerakarta;;;;N.O. Indië
+3419;Soest;Soest;Utrecht;;Nederland
+3423;Solingen;;;;Duitsland
+3427;Someren;Someren;Noord-Brabant;;Nederland
+3429;Sommelsdijk;Sommelsdijk;Zuid-Holland;;Nederland
+3430;Son;Son en Breugel;Noord-Brabant;;Nederland
+3431;Son en Breugel;Son en Breugel;Noord-Brabant;;Nederland
+3432;Sondel;Gaasterland;Friesland;;Nederland
+3435;Southampton;;;;Groot-Brittannië
+3437;Spaarndam;Haarlem;Noord-Holland;;Nederland
+3438;Spaarnwoude;Haarlemmerliede en Spaarnwoude;Noord-Holland;;Nederland
+3439;Terband;Aengwirden;Friesland;;Nederland
+3440;Spanbroek;Spanbroek;Noord-Holland;;Nederland
+3441;Spanga;Weststellingwerf;Friesland;;Nederland
+3442;Spankeren;Rheden;Gelderland;;Nederland
+3443;Spannum;Hennaarderadeel;Friesland;;Nederland
+3449;Spijk;Bierum;Groningen;;Nederland
+3452;Spijkenisse;Spijkenisse;Zuid-Holland;;Nederland
+3454;Sprang;Sprang-Capelle;Noord-Brabant;;Nederland
+3456;Sprang-Capelle;Sprang-Capelle;Noord-Brabant;;Nederland
+3457;Sprundel;Rucphen;Noord-Brabant;;Nederland
+3458;Stabroek;;;;België
+3459;Stad aan 't Haringvliet;Stad aan 't Haringvliet;Zuid-Holland;;Nederland
+3464;Stadtlohn;;;;Pruissen
+3465;Stampersgat;Oud- en Nieuw-Gastel;Noord-Brabant;;Nederland
+3466;Standdaarbuiten;Standdaarbuiten;Noord-Brabant;;Nederland
+3467;Staphorst;Staphorst;Overijssel;;Nederland
+3468;Stavenisse;Stavenisse;Zeeland;;Nederland
+3470;Staveren;Staveren;Friesland;;Nederland
+3472;Stavoren;Stavoren;Friesland;;Nederland
+3474;Stedum;Stedum;Groningen;;Nederland
+3475;Steenbergen;Steenbergen;Noord-Brabant;;Nederland
+3476;Steenbergen;Steenbergen;Noord-Brabant;;Nederland
+3478;Steenderen;Steenderen;Gelderland;;Nederland
+3481;Steenwijk;Steenwijk;Overijssel;;Nederland
+3484;Steenwijkerwold;Steenwijkerwold;Overijssel;;Nederland
+3486;Sluis;Sluis;Zeeland;;Nederland
+3490;Stokkum;Bergh;Gelderland;;Nederland
+3491;Steinfurt;;;;Duitsland
+3493;Stekene;;;;België
+3494;Stellendam;Stellendam;Zuid-Holland;;Nederland
+3499;Tricht;Buurmalsen;Gelderland;;Nederland
+3500;Stettin;;;;Duitsland
+3501;Stevensweert;Stevensweert;Limburg;;Nederland
+3503;Stiphout;Stiphout;Noord-Brabant;;Nederland
+3505;Stockholm;;;;Zweden
+3508;Stolwijk;Stolwijk;Zuid-Holland;;Nederland
+3512;Stompwijk;Stompwijk;Zuid-Holland;;Nederland
+3513;Stoppeldijk;Stoppeldijk;Zeeland;;Nederland
+3515;Stormpolder;Krimpen aan den IJssel;Zuid-Holland;;Nederland
+3516;Stoutenburg;Stoutenburg;Utrecht;;Nederland
+3517;Straatsburg;;;;Frankrijk
+3520;Stralsund;;;;Duitsland
+3521;Stramproy;Stramproy;Limburg;;Nederland
+3522;Stratum;Eindhoven;Noord-Brabant;;Nederland
+3523;Urk;Urk;Noord-Holland;;Nederland
+3524;Streefkerk;Streefkerk;Zuid-Holland;;Nederland
+3525;Strijen;Strijen;Zuid-Holland;;Nederland
+3528;Strijp;Eindhoven;Noord-Brabant;;Nederland
+3534;Stuttgart;;;;Duitsland
+3540;Unknown;;;Sumatra;N.O. Indië
+3542;Surhuisterveen;Achtkarspelen;Friesland;;Nederland
+3543;Surhuizum;Achtkarspelen;Friesland;;Nederland
+3545;Susteren;Susteren;Limburg;;Nederland
+3547;Swalmen;Swalmen;Limburg;;Nederland
+3550;Swichum;Leeuwarderadeel;Friesland;;Nederland
+3559;Tegelen;Tegelen;Limburg;;Nederland
+3561;Ten Boer;Ten Boer;Groningen;;Nederland
+3563;Ter Aar;Ter Aar;Zuid-Holland;;Nederland
+3569;Terborg;Wisch;Gelderland;;Nederland
+3571;Terheijden;Terheijden;Noord-Brabant;;Nederland
+3572;Terhorne;Utingeradeel;Friesland;;Nederland
+3574;Termunten;Termunten;Groningen;;Nederland
+3575;Termunterzijl;Termunten;Groningen;;Nederland
+3576;Ternaard;Westdongeradeel;Friesland;;Nederland
+3577;Terneuzen;Terneuzen;Zeeland;;Nederland
+3579;Terschelling;Terschelling;Friesland;;Nederland
+3582;Terwolde;Voorst;Gelderland;;Nederland
+3584;Teteringen;Teteringen;Noord-Brabant;;Nederland
+3585;Texel;Texel;Noord-Holland;;Nederland
+3587;Tholen;Tholen;Zeeland;;Nederland
+3588;Thorn;Thorn;Limburg;;Nederland
+3589;Tiel;Tiel;Gelderland;;Nederland
+3592;Tienhoven;Tienhoven (ZH);Zuid-Holland;;Nederland
+3593;Tienhoven;Tienhoven (UT);Utrecht;;Nederland
+3595;Tietjerk;Tietjerksteradeel;Friesland;;Nederland
+3596;Tietjerksteradeel;Tietjerksteradeel;Friesland;;Nederland
+3598;Tilburg;Tilburg;Noord-Brabant;;Nederland
+3601;Tjalleberd;Aengwirden;Friesland;;Nederland
+3604;Tjelatjap;;;;N.O. Indië
+3605;Tjepoe;;;;N.O. Indië
+3606;Tjerkgaast;Doniawerstal;Friesland;;Nederland
+3607;Tjerkwerd;Wonseradeel;Friesland;;Nederland
+3608;Tjimahi;;;;N.O. Indië
+3612;Tolbert;Leek;Groningen;;Nederland
+3613;Tongelre;Eindhoven;Noord-Brabant;;Nederland
+3614;Tongeren;;;;België
+3615;Tongeren;;;;België
+3618;Tongerlo;Maasbree;Limburg;;Nederland
+3622;Tourcoing;;;;Frankrijk
+3626;Troisdorf;;;;Duitsland
+3628;Tubbergen;Tubbergen;Overijssel;;Nederland
+3630;Tuil;Haaften;Gelderland;;Nederland
+3631;Tull en 't Waal;Tull en 't Waal;Utrecht;;Nederland
+3632;Turnhout;;;;België
+3635;Twello;Voorst;Gelderland;;Nederland
+3637;Twijzelerheide;Achtkarspelen;Friesland;;Nederland
+3638;Twisk;Twisk;Noord-Holland;;Nederland
+3641;Tzummarum;Barradeel;Friesland;;Nederland
+3642;Ubach over Worms;Ubach over Worms;Limburg;;Nederland
+3644;Ubbergen;Ubbergen;Gelderland;;Nederland
+3645;Uden;Uden;Noord-Brabant;;Nederland
+3646;Udenhout;Udenhout;Noord-Brabant;;Nederland
+3653;Uitdam;Broek in Waterland;Noord-Holland;;Nederland
+3654;Uitgeest;Uitgeest;Noord-Holland;;Nederland
+3655;Uithoorn;Uithoorn;Noord-Holland;;Nederland
+3656;Uithuizen;Uithuizen;Groningen;;Nederland
+3657;Uithuizermeeden;Uithuizermeeden;Groningen;;Nederland
+3660;Ukkel;;;;België
+3662;Ulft;Gendringen;Gelderland;;Nederland
+3663;Ulrum;Ulrum;Groningen;;Nederland
+3667;Ureterp;Opsterland;Friesland;;Nederland
+3671;Urmond;Urmond;Limburg;;Nederland
+3672;Ursem;Ursem;Noord-Holland;;Nederland
+3673;Usquert;Usquert;Groningen;;Nederland
+3675;Utingeradeel;Utingeradeel;Friesland;;Nederland
+3676;Utrecht;Utrecht;Utrecht;;Nederland
+3677;Vaals;Vaals;Limburg;;Nederland
+3678;Vaassen;Epe;Gelderland;;Nederland
+3680;Valburg;Valburg;Gelderland;;Nederland
+3681;Valenciennes;;;;Frankrijk
+3682;Valkenburg;Valkenburg (LI);Limburg;;Nederland
+3685;Valkenburg;Valkenburg (ZH);Zuid-Holland;;Nederland
+3686;Valkenburg-Houthem;Valkenburg-Houthem;Limburg;;Nederland
+3687;Valkenisse (Walcheren);Valkenisse (Walcheren);Zeeland;;Nederland
+3688;Valkenswaard;Valkenswaard;Noord-Brabant;;Nederland
+3691;Varik;Varik;Gelderland;;Nederland
+3695;Veen;Veen;Noord-Brabant;;Nederland
+3696;Veendam;Veendam;Groningen;;Nederland
+3697;Veenendaal;Veenendaal;Utrecht;;Nederland
+3699;Veenhuizen;Norg;Drenthe;;Nederland
+3702;Veenwouden;Dantumadeel;Friesland;;Nederland
+3703;Veere;Veere;Zeeland;;Nederland
+3704;Veessen;Heerde;Gelderland;;Nederland
+3705;Veghel;Veghel;Noord-Brabant;;Nederland
+3708;Velden;Arcen en Velden;Limburg;;Nederland
+3709;Veldhoven;Veldhoven;Noord-Brabant;;Nederland
+3713;Velp;Rheden;Gelderland;;Nederland
+3717;Velsen;Velsen;Noord-Holland;;Nederland
+3720;Venhuizen;Venhuizen;Noord-Holland;;Nederland
+3721;Venlo;Venlo;Limburg;;Nederland
+3722;Venray;Venray;Limburg;;Nederland
+3725;Versailles;;;;Frankrijk
+3726;Verviers;;;;België
+3729;Vessem, Wintelre en Knegsel;Vessem, Wintelre en Knegsel;Noord-Brabant;;Nederland
+3732;Vianen;Vianen;Zuid-Holland;;Nederland
+3735;Vierhuizen;Ulrum;Groningen;;Nederland
+3736;Vierlingsbeek;Vierlingsbeek;Noord-Brabant;;Nederland
+3737;Vierpolders;Vierpolders;Zuid-Holland;;Nederland
+3738;Viersen;;;;Duitsland
+3743;Vilvoorde;;;;België
+3745;Vinkeveen;Vinkeveen;Utrecht;;Nederland
+3746;Vinkeveen en Waverveen;Vinkeveen en Waverveen;Utrecht;;Nederland
+3747;Visé;;;;België
+3749;Vlaardingen;Vlaardingen;Zuid-Holland;;Nederland
+3751;Vlaardinger-Ambacht;Vlaardinger-Ambacht;Zuid-Holland;;Nederland
+3752;Vlagtwedde;Vlagtwedde;Groningen;;Nederland
+3753;Vledder;Vledder;Drenthe;;Nederland
+3756;Vleuten;Vleuten;Utrecht;;Nederland
+3758;Vlieland;Vlieland;Friesland;;Nederland
+3759;Vlierden;Vlierden;Noord-Brabant;;Nederland
+3761;Vlijmen;Vlijmen;Noord-Brabant;;Nederland
+3764;Vlissingen;Vlissingen;Zeeland;;Nederland
+3765;Vlist;Vlist;Zuid-Holland;;Nederland
+3766;Vlodrop;Vlodrop;Limburg;;Nederland
+3767;Voerendaal;Voerendaal;Limburg;;Nederland
+3769;Vogelwaarde;Vogelwaarde;Zeeland;;Nederland
+3772;Vollenhove;Vollenhove;Overijssel;;Nederland
+3773;Vollenhove Ambt;Vollenhove Ambt;Overijssel;;Nederland
+3774;Vollenhove Stad;Vollenhove Stad;Overijssel;;Nederland
+3776;Voorburg;Voorburg;Zuid-Holland;;Nederland
+3777;Voorhout;Voorhout;Zuid-Holland;;Nederland
+3778;Voorschoten;Voorschoten;Zuid-Holland;;Nederland
+3779;Voorst;Voorst;Gelderland;;Nederland
+3780;Voorthuizen;Barneveld;Gelderland;;Nederland
+3781;Vorden;Vorden;Gelderland;;Nederland
+3784;Warga;Idaarderadeel;Friesland;;Nederland
+3785;Vreden;;;;Duitsland
+3787;Vreeland;Vreeland;Utrecht;;Nederland
+3788;Vreeswijk;Vreeswijk;Utrecht;;Nederland
+3789;Vries;Vries;Drenthe;;Nederland
+3790;Vriezenveen;Vriezenveen;Overijssel;;Nederland
+3791;Vrijenban;Delft;Zuid-Holland;;Nederland
+3793;Vrijhoeve-Capelle;Vrijhoeve-Capelle;Noord-Brabant;;Nederland
+3797;Vrouwenparochie;Het Bildt;Friesland;;Nederland
+3799;Vrouwenpolder;Vrouwenpolder;Zeeland;;Nederland
+3800;Vught;Vught;Noord-Brabant;;Nederland
+3801;Vuren;Vuren;Gelderland;;Nederland
+3802;Waalre;Waalre;Noord-Brabant;;Nederland
+3803;Waalwijk;Waalwijk;Noord-Brabant;;Nederland
+3804;Waarde;Waarde;Zeeland;;Nederland
+3805;Waardenburg;Waardenburg;Gelderland;;Nederland
+3806;Waarder;Waarder (ZH);Zuid-Holland;;Nederland
+3809;Wachtebeke;;;;België
+3811;Waddinxveen;Waddinxveen;Zuid-Holland;;Nederland
+3813;Wadenoijen;Wadenoijen;Gelderland;;Nederland
+3815;Wagenborgen;Termunten;Groningen;;Nederland
+3816;Wageningen;Wageningen;Gelderland;;Nederland
+3818;Walsum;;;;Duitsland
+3819;Waltrop;;;;Duitsland
+3820;Wamel;Wamel;Gelderland;;Nederland
+3821;Wanneperveen;Wanneperveen;Overijssel;;Nederland
+3822;Wanroij;Wanroij;Noord-Brabant;;Nederland
+3824;Wanswerd;Ferwerderadeel;Friesland;;Nederland
+3828;Warden;Warder;Noord-Holland;;Nederland
+3829;Warder;Warder;Noord-Holland;;Nederland
+3831;Warffum;Warffum;Groningen;;Nederland
+3836;Warmenhuizen;Warmenhuizen;Noord-Holland;;Nederland
+3837;Warmond;Warmond;Zuid-Holland;;Nederland
+3838;Warns;Hemelumer Oldeferd;Friesland;;Nederland
+3839;Warnsveld;Warnsveld;Gelderland;;Nederland
+3841;Wartena;Idaarderadeel;Friesland;;Nederland
+3844;Waspik;Waspik;Noord-Brabant;;Nederland
+3845;Wassenaar;Wassenaar;Zuid-Holland;;Nederland
+3846;Watergraafsmeer;Amsterdam;Noord-Holland;;Nederland
+3848;Wateringen;Wateringen;Zuid-Holland;;Nederland
+3849;Waterland;Waterland;Noord-Holland;;Nederland
+3850;Waterlandkerkje;Waterlandkerkje;Zeeland;;Nederland
+3851;Waterloo;;;;België
+3854;Waverveen;Waverveen;Utrecht;;Nederland
+3855;Wavre;;;;België
+3856;Wedde;Wedde;Groningen;;Nederland
+3857;Weerselo;Weerselo;Overijssel;;Nederland
+3858;Weert;Weert;Limburg;;Nederland
+3859;Weesp;Weesp;Noord-Holland;;Nederland
+3860;Weesperkarspel;Weesperkarspel;Noord-Holland;;Nederland
+3861;Wehe den Hoorn;Leens;Groningen;;Nederland
+3862;Wehl;Wehl;Gelderland;;Nederland
+3863;Weidum;Baarderadeel;Friesland;;Nederland
+3867;Well;Ammerzoden;Gelderland;;Nederland
+3870;Welsrijp;Hennaarderadeel;Friesland;;Nederland
+3874;Weltevreden;;;Java;N.O. Indië
+3875;Wemeldinge;Wemeldinge;Zeeland;;Nederland
+3876;Wien;;;Hannover;Duitsland
+3877;Wien;;;;Oostenrijk
+3878;Werchter;;;;België
+3880;Werden;;;;Duitsland
+3881;Werkendam;Werkendam;Noord-Brabant;;Nederland
+3882;Werkhoven;Werkhoven;Utrecht;;Nederland
+3884;Werne;;;;Duitsland
+3885;Wervershoof;Wervershoof;Noord-Holland;;Nederland
+3886;Wesel;;;;Duitsland
+3887;Wesel;;;;Pruissen
+3889;Wessem;Wessem;Limburg;;Nederland
+3892;Westbroek;Westbroek;Utrecht;;Nederland
+3894;Westdongeradeel;Westdongeradeel;Friesland;;Nederland
+3896;Westdorpe;Westdorpe;Zeeland;;Nederland
+3898;Westerbork;Westerbork;Drenthe;;Nederland
+3899;Westerbroek;Hoogezand;Groningen;;Nederland
+3902;Westkapelle;Westkapelle;Zeeland;;Nederland
+3903;Westerhoven;Westerhoven;Noord-Brabant;;Nederland
+3905;Westerlee;Scheemda;Groningen;;Nederland
+3906;Westermeer;Haskerland;Friesland;;Nederland
+3908;Westerschouwen;Westerschouwen;Zeeland;;Nederland
+3910;Westervoort;Westervoort;Gelderland;;Nederland
+3913;Westkapelle;Westkapelle;Zeeland;;Nederland
+3914;Westkapelle;;;Westkapelle;België
+3915;Westkerke;Scherpenisse;Zeeland;;Nederland
+3917;Westmaas;Westmaas;Zuid-Holland;;Nederland
+3918;Westmalle;;;;België
+3919;West-Souburg;West-Souburg;Zeeland;;Nederland
+3920;Weststellingwerf;Weststellingwerf;Friesland;;Nederland
+3921;West-Terschelling;Terschelling;Friesland;;Nederland
+3922;Westvoorne;Westvoorne;Zuid-Holland;;Nederland
+3924;Westzaan;Westzaan;Noord-Holland;;Nederland
+3926;Wetsinge;Adorp;Groningen;;Nederland
+3927;Wetteren;;;;België
+3940;Wierden;Wierden;Overijssel;;Nederland
+3941;Wieringen;Wieringen;Noord-Holland;;Nederland
+3942;Wieringermeer;Wieringermeer;Noord-Holland;;Nederland
+3943;Wieringerwaard;Wieringerwaard;Noord-Holland;;Nederland
+3945;Wierum;Westdongeradeel;Friesland;;Nederland
+3946;Wiesbaden;;;;Duitsland
+3949;Wijchen;Wijchen;Gelderland;;Nederland
+3952;Wijdenes;Wijdenes;Noord-Holland;;Nederland
+3953;Wijdewormer;Wijdewormer;Noord-Holland;;Nederland
+3954;Wijhe;Wijhe;Overijssel;;Nederland
+3956;Wijk aan Zee en Duin;Wijk aan Zee en Duin (NH);Noord-Holland;;Nederland
+3957;Wijk bij Duurstede;Wijk bij Duurstede;Utrecht;;Nederland
+3958;Wijk en Aalburg;Wijk en Aalburg;Noord-Brabant;;Nederland
+3960;Wijnaldum;Barradeel;Friesland;;Nederland
+3962;Wijnegem;;;;België
+3963;Wijngaarden;Wijngaarden;Zuid-Holland;;Nederland
+3967;Wildervank;Wildervank;Groningen;;Nederland
+3968;Wilhelminadorp;Goes;Zeeland;;Nederland
+3970;Wilhelmshafen;;;;Duitsland
+3977;Willeskop;Willeskop;Utrecht;;Nederland
+3978;Willige-Langerak;Willige-Langerak;Utrecht;;Nederland
+3979;Wilnis;Wilnis;Utrecht;;Nederland
+3980;Wilp;Voorst;Gelderland;;Nederland
+3985;Winkel;Winkel;Noord-Holland;;Nederland
+3988;Winschoten;Winschoten;Groningen;;Nederland
+3989;Winssen;Ewijk;Gelderland;;Nederland
+3995;Winterswijk;Winterswijk;Gelderland;;Nederland
+3998;Bath;Bath;Zeeland;;Nederland
+3999;Wisch;Wisch;Gelderland;;Nederland
+4000;Wissekerke (Zuid-Beveland);Wissekerke (Zuid Beveland);Zeeland;;Nederland
+4001;Wissenkerke (Noord-Beveland);Wissenkerke (Noord Beveland);Zeeland;;Nederland
+4002;Witmarsum;Wonseradeel;Friesland;;Nederland
+4003;Wittem;Wittem;Limburg;;Nederland
+4005;Woensdrecht;Woensdrecht;Noord-Brabant;;Nederland
+4006;Woensel;Eindhoven;Noord-Brabant;;Nederland
+4008;Woerden;Woerden (ZH);Zuid-Holland;;Nederland
+4010;Wognum;Wognum;Noord-Holland;;Nederland
+4017;Wolphaartsdijk;Wolphaartsdijk;Zeeland;;Nederland
+4019;Woltersum;Ten Boer;Groningen;;Nederland
+4020;Wolvega;Weststellingwerf;Friesland;;Nederland
+4022;Wommels;Hennaarderadeel;Friesland;;Nederland
+4024;Wonseradeel;Wonseradeel;Friesland;;Nederland
+4026;Workum;Workum;Friesland;;Nederland
+4027;Wormer;Wormer;Noord-Holland;;Nederland
+4029;Wormerveer;Wormerveer;Noord-Holland;;Nederland
+4030;Worms;;;;Duitsland
+4031;Worms;;;;Pruissen
+4033;Woubrugge;Woubrugge;Zuid-Holland;;Nederland
+4035;Woudenberg;Woudenberg;Utrecht;;Nederland
+4036;Woudrichem;Woudrichem;Noord-Brabant;;Nederland
+4037;Woudsend;Wymbritseradeel;Friesland;;Nederland
+4038;Wouterswoude;Dantumadeel;Friesland;;Nederland
+4039;Wouw;Wouw;Noord-Brabant;;Nederland
+4041;Wuustwezel;;;;België
+4043;Wyckel;Gaasterland;Friesland;;Nederland
+4044;Wymbritseradeel;Wymbritseradeel;Friesland;;Nederland
+4045;Yerseke;Yerseke;Zeeland;;Nederland
+4047;Zaamslag;Zaamslag;Zeeland;;Nederland
+4048;Zaandam;Zaandam;Noord-Holland;;Nederland
+4049;Zaandijk;Zaandijk;Noord-Holland;;Nederland
+4052;Zalk en Veecaten;Zalk en Veecaten;Overijssel;;Nederland
+4053;Zaltbommel;Zaltbommel;Gelderland;;Nederland
+4054;Zand 't;Zijpe;Noord-Holland;;Nederland
+4056;Zanddijk;Veere;Zeeland;;Nederland
+4057;Zandeweer;Kantens;Groningen;;Nederland
+4058;Zandt 't;Zandt 't;Groningen;;Nederland
+4059;Zandvoort;Zandvoort;Noord-Holland;;Nederland
+4060;Zegwaart;Zegwaart;Zuid-Holland;;Nederland
+4062;Zeeland;Zeeland;Noord-Brabant;;Nederland
+4063;Zeelst;Zeelst;Noord-Brabant;;Nederland
+4067;Zegveld;Zegveld;Utrecht;;Nederland
+4072;Zeist;Zeist;Utrecht;;Nederland
+4073;Zelhem;Zelhem;Gelderland;;Nederland
+4074;Zelzate;;;;België
+4079;Zetten;Valburg;Gelderland;;Nederland
+4080;Zevenaar;Zevenaar;Gelderland;;Nederland
+4081;Zevenbergen;Zevenbergen;Noord-Brabant;;Nederland
+4082;Zevenhoven;Zevenhoven;Zuid-Holland;;Nederland
+4086;Zevenhuizen;Zevenhuizen;Zuid-Holland;;Nederland
+4088;Zierikzee;Zierikzee;Zeeland;;Nederland
+4091;Zijpe;Zijpe;Noord-Holland;;Nederland
+4092;Zoelen;Zoelen;Gelderland;;Nederland
+4093;Zoelmond;Beusichem;Gelderland;;Nederland
+4094;Zoetermeer;Zoetermeer;Zuid-Holland;;Nederland
+4095;Zoeterwoude;Zoeterwoude;Zuid-Holland;;Nederland
+4097;Zonnemaire;Zonnemaire;Zeeland;;Nederland
+4098;Zoutelande;Zoutelande;Zeeland;;Nederland
+4099;Zoutkamp;Ulrum;Groningen;;Nederland
+4101;Zuid- en Noord-Schermer;Zuid- en Noord-Schermer;Noord-Holland;;Nederland
+4102;Zuid-Beijerland;Zuid-Beijerland;Zuid-Holland;;Nederland
+4104;Zuidbroek;Zuidbroek (GR);Groningen;;Nederland
+4105;Exel;Laren (Ge);Gelderland;;Nederland
+4106;Zuidbroek;Zuidbroek (GR);Groningen;;Nederland
+4107;Zuiddorpe;Zuiddorpe;Zeeland;;Nederland
+4111;Zuidhorn;Zuidhorn;Groningen;;Nederland
+4112;Zuidland;Zuidland;Zuid-Holland;;Nederland
+4113;Zuidlaren;Zuidlaren;Drenthe;;Nederland
+4114;Zuid-Polsbroek;Zuid-Polsbroek;Utrecht;;Nederland
+4115;Zuid-Schalkwijk;Haarlemmerliede en Spaarnwoude;Noord-Holland;;Nederland
+4116;Zuid-Scharwoude;Zuid-Scharwoude;Noord-Holland;;Nederland
+4121;Zuidzande;Zuidzande;Zeeland;;Nederland
+4122;Zuilen;Zuilen;Utrecht;;Nederland
+4123;Zuilichem;Zuilichem;Gelderland;;Nederland
+4125;Zundert;Zundert;Noord-Brabant;;Nederland
+4126;Zurich;Wonseradeel;Friesland;;Nederland
+4127;Zürich;;;;Zwitserland
+4128;Zutphen;Zutphen;Gelderland;;Nederland
+4130;Zwaag;Zwaag;Noord-Holland;;Nederland
+4132;Zwaagwesteinde;Dantumadeel;Friesland;;Nederland
+4134;Zwammerdam;Zwammerdam;Zuid-Holland;;Nederland
+4136;Zwartewaal;Zwartewaal;Zuid-Holland;;Nederland
+4137;Zwartsluis;Zwartsluis;Overijssel;;Nederland
+4138;Zweeloo;Zweeloo;Drenthe;;Nederland
+4139;Zweins;Franekeradeel;Friesland;;Nederland
+4140;Zwijndrecht;;;;België
+4142;Zwolle;Zwolle;Overijssel;;Nederland
+4143;Zwollerkerspel;Zwollerkerspel;Overijssel;;Nederland
+4144;Berg;;;;Duitsland
+4147;Capelle;Capelle;Noord-Brabant;;Nederland
+4155;Oswiecim;;;;Polen
+4163;Auschwitz;;;;Polen
+4170;Pasoeroean;;;Java;Ned. Indië
+4181;Altenkirchen;;;;Duitsland
+4183;Baelen;;;Liége;België
+4184;Rangoen;;;;Birma
+4187;Baasrode;;;Oost-Vlaanderen;België
+4189;Anrath;;;;Duitsland
+4193;Rijckevorsel;;;;België
+4197;Aalst;;;;België
+4228;St Helena;;;;Groot-Brittannië
+4236;Bracht;;;Kreitz Viersen;Duitsland
+4239;Brecht;;;;België
+4244;Charmeux;;;;België
+4260;Wandre;;;;België
+4262;Warszawa;;;;Polen
+4264;Erkelenz;;;;Duitsland
+4265;Watenstedt;;;;Duitsland
+4282;Gemmenich;;;;België
+4286;Ghistel;;;;België
+4294;Hagen;;;;Duitsland
+4305;Hemiksem;;;;België
+4314;Hoogstraeten;;;;België
+4341;Koekelberg;;;;België
+4355;Landerd;Landerd;Noord-Brabant;;Nederland
+4375;Merksplas;;;;België
+4393;Niederlahnstein;;;;Duitsland
+4406;Oorderen;;;;België
+4413;Oranienburg;;;;Duitsland
+4423;Ahlen;;;;Duitsland
+4429;Plymouth;;;;Verenigde Staten
+4506;Unknown;;Zuid-Holland;Alblasserwaard;Nederland
+4513;Sempst;;;;België
+4522;Bilsen;;;;België
+4524;Soest;;;;Duitsland
+4532;Stabroeck;;;;België
+4540;Sunderland;;;;Engeland
+4548;Cortessem;;;;België
+4551;Turin;;;;Italië
+4571;Wittenberg;;;;Duitsland
+4585;St Laurent;;;;Frankrijk
+5000;Unknown;Unknown;Unknown;;Nederland
+5002;Unknown;Unknown;Friesland;;Nederland
+5005;Unknown;Unknown;Gelderland;;Nederland
+5006;Unknown;Unknown;Utrecht;;Nederland
+5007;Unknown;Unknown;Noord-Holland;;Nederland
+5008;Unknown;Unknown;Zuid-Holland;;Nederland
+5009;Unknown;Unknown;Zeeland;;Nederland
+5010;Unknown;Unknown;Noord-Brabant;;Nederland
+5011;Unknown;Unknown;Limburg;;Nederland
+5021;Unknown;;;;N.O. Indië
+5027;Unknown;;;Borneo;N.O. Indië
+5031;Unknown;;;Curaçao;N.W. Indië
+5039;Unknown;;;Suriname;N.W. Indië
+5101;Unknown;Unknown;Unknown;;Duitsland
+5102;Unknown;;;Engeland;Groot-Brittannië
+5103;Unknown;;;;België
+5104;Unknown;;;;Frankrijk
+5105;Unknown;;;;Spanje
+5108;Unknown;;;;Zwitserland
+5109;Unknown;;;;Oostenrijk
+5110;Unknown;;;;Polen
+5111;Unknown;;;Schotland;Groot-Brittannië
+5112;Unknown;;;;Groot-Brittannië
+5119;Beograd;;;;Joegoslavië
+5130;Dover;;;Engeland;Groot-Brittannië
+5137;Herzele;;;;België
+5140;Korendijk;'t Zand;Groningen;;Nederland
+5150;Roux;Unknown;Henegouwen;;België
+5153;Sijsele;;;;België
+5155;Thamen;Uithoorn;Noord-Holland;;Nederland
+5159;Weerd;Linne;Limburg;;Nederland
+5201;Unknown;;;;Verenigde Staten
+5203;Unknown;;;California;Verenigde Staten
+5211;Unknown;;;Michigan;Verenigde Staten
+5408;Kessel;Kessel;Limburg;;Nederland
+5413;Kruisland;Steenbergen;Noord-Brabant;;Nederland
+5417;Arkel;Arkel;Zuid-Holland;;Nederland
+5419;Beuningen;Beuningen;Gelderland;;Nederland
+5420;Bocholt;;;Maaseik;België
+5422;Bunde;Bunde;Limburg;;Nederland
+5430;Hasselt;Hasselt;Overijssel;;Nederland
+5433;Heukelom;Berkel-Enschot;Noord-Brabant;;Nederland
+5434;Hulst;Hulst;Zeeland;;Nederland
+5437;Kranenburg;;;;Duitsland
+5438;Langerak;Langerak;Zuid-Holland;;Nederland
+5439;Leuth;Ubbergen;Gelderland;;Nederland
+5440;Linde;Zuidwolde;Drenthe;;Nederland
+5441;Loenen;Apeldoorn;Gelderland;;Nederland
+5443;Meer;;;;België
+5445;Münster;;;;Duitsland
+5448;Niel;;;;België
+5451;Nijega;Smallingerland;Friesland;;Nederland
+5453;Nijkerk;Nijkerk;Gelderland;;Nederland
+5455;Zandhuizen;Weststellingwerf;Friesland;;Nederland
+5457;Norden;;;;Duitsland
+5462;Rottevalle;Smallingerland;Friesland;;Nederland
+5468;Vorst;;;;België
+5469;Westeinde;Ermelo;Gelderland;;Nederland
+5472;Aalst;Poederoijen;Gelderland;;Nederland
+5476;Akkrum;Utingeradeel;Friesland;;Nederland
+5480;Auschwitz;;;;Duitsland
+5484;Barcelona;;;;Spanje
+5488;Blerick;Maasbree;Limburg;;Nederland
+5491;Den Ham;Den Ham;Overijssel;;Nederland
+5492;Deurne;Deurne;Noord-Brabant;;Nederland
+5497;Doornik;Bemmel;Gelderland;;Nederland
+5502;Emmen;Emmen;Drenthe;;Nederland
+5504;Enter;Wierden;Overijssel;;Nederland
+5507;Fijnaart;Fijnaart en Heijningen;Noord-Brabant;;Nederland
+5509;Frederiksoord;Noordwolde;Friesland;;Nederland
+5510;Frederiksoord;Vledder;Drenthe;;Nederland
+5511;Ulvenhout;Ginneken en Bavel;Noord-Brabant;;Nederland
+5516;Groningen;Groningen;Groningen;;Nederland
+5518;Hardenberg;Hardenberg;Overijssel;;Nederland
+5519;Haren;Haren;Groningen;;Nederland
+5520;Heer;Heer;Limburg;;Nederland
+5526;Heerlen;Heerlen;Limburg;;Nederland
+5527;Hellum;Slochteren;Groningen;;Nederland
+5530;Hoeven;Hoeven;Noord-Brabant;;Nederland
+5534;Hull;;;Engeland;Groot-Brittannië
+5537;Joure;Haskerland;Friesland;;Nederland
+5540;Katwijk aan den Rijn en het Zand;Katwijk aan den Rijn en 't Zand;Zuid-Holland;;Nederland
+5541;Katwijk;Katwijk;Zuid-Holland;;Nederland
+5549;Lille;;;;België
+5552;Lippenhuizen;Opsterland;Friesland;;Nederland
+5553;Melle;;;;België
+5560;Oosterbeek;Renkum;Gelderland;;Nederland
+5561;Oosterwolde;Ooststellingwerf;Friesland;;Nederland
+5565;Riethoven;Riethoven;Noord-Brabant;;Nederland
+5566;Rietveld;Rietveld;Zuid-Holland;;Nederland
+5570;Rozenburg;Rozenburg;Zuid-Holland;;Nederland
+5573;Sint Johannesga;Schoterland;Friesland;;Nederland
+5574;Sint Nicolaasga;Doniawerstal;Friesland;;Nederland
+5576;Sleeuwijk;De Werken en Sleeuwijk;Noord-Brabant;;Nederland
+5579;Velp;Rheden;Gelderland;;Nederland
+5581;Veur;Veur;Zuid-Holland;;Nederland
+5583;Wetering;Steenwijkerwold;Overijssel;;Nederland
+5585;Willemstad;Willemstad;Noord-Brabant;;Nederland
+5586;Winkel;Winkel;Noord-Holland;;Nederland
+5593;Zwijndrecht;Zwijndrecht;Zuid-Holland;;Nederland
+5597;Bree;Maasbree;Limburg;;Nederland
+5603;Hoorn;Hoorn;Noord-Holland;;Nederland
+5629;Halle;;;;België
+5669;Sechtem;;;;Duitsland
+5673;Eerbeek;Brummen;Gelderland;;Nederland
+5677;Eickel;;;Westfalen;Duitsland
+5702;Elsfleth;;;;Duitsland
+5709;Engelbert;Noorddijk;Groningen;;Nederland
+5710;Enghien;;;;België
+5716;Epen;Wittem;Limburg;;Nederland
+5727;Etersheim;Zeevang;Noord-Holland;;Nederland
+5744;Lamswaarde;Hontenisse;Zeeland;;Nederland
+5832;Beauvais;;;;Frankrijk
+5851;Friedrichroda;;;Thüringen;Duitsland
+5864;Hoelbeek;;;;België
+5867;Lembeek;;;;België
+5878;Westerbeek;Sint Anthonis;Noord-Brabant;;Nederland
+5880;Ibbenbüren;;;Tecklenburg;Duitsland
+5882;Görlitz;;;;Duitsland
+5883;Göteborg;;;;Zweden
+5898;Gellicum;Deil;Gelderland;;Nederland
+5930;Godlinze;Bierum;Groningen;;Nederland
+5947;Arlon;;;;België
+5953;Beernem;;;;België
+5969;Duinkerken;Oldebroek;Gelderland;;Nederland
+5970;Gavere;;;;België
+5981;Lichtervelde;;;;België
+5982;Lillo;;;;België
+5986;Marke;;;;België
+5989;Melle;;;;België
+5991;Moresnet;;;Blieberg;België
+5993;Nieuwkerke;;;;België
+5994;Nieuwpoort;;;;België
+5995;Ninove;;;;België
+5996;Oedelem;;;;België
+5998;Oostkamp;;;;België
+5999;Oostrozebeke;;;;België
+6000;Oostwinkel;;;;België
+6001;Overpelt;;;;België
+6004;Rekem;;;;België
+6008;Rumst;;;;België
+6011;Zaffelare;;;;België
+6012;Zandvliet;;Antwerpen;;België
+6013;Schellebelle;;;;België
+6014;Schoten;;;;België
+6016;Sinaai;;;;België
+6017;Sint-Gillis-Waas;;;;België
+6018;Sint-Gillis;;;Brussel;België
+6019;Sint-Joost-ten-Node;;;;België
+6020;Sint-Pauwels;;;;België
+6022;Sleidinge;;;;België
+6031;Sint-Truiden;;;;België
+6034;Temse;;;;België
+6035;Terhagen;;;;België
+6036;Tessenderlo;;;;België
+6044;Veerle;;;;België
+6046;Verrebroek;;;;België
+6048;Vrasene;;;;België
+6050;Waterland-Oudeman;;;;België
+6051;Watervliet;;;;België
+6053;Weelde;;;;België
+6056;Willebroek;;;;België
+6057;Wilrijk;;;;België
+6061;Zarren;;;;België
+6062;Zele;;;;België
+6064;Haringhuizen;Barsingerhorn;Noord-Holland;;Nederland
+6071;Veldhausen;;;;Duitsland
+6073;Warfhuizen;Leens;Groningen;;Nederland
+6082;Gravenhoek 's-;Wissenkerke;Zeeland;;Nederland
+6101;Mauthausen;;;;Oostenrijk
+6105;Bad Oeynhausen;;;;Duitsland
+6107;Rothhausen;;;;Duitsland
+6124;Griesheim;;;;Duitsland
+6131;Groeningen;Vierlingsbeek;Noord-Brabant;;Nederland
+6156;Oudeschans;Bellingwolde;Groningen;;Nederland
+6173;Oost-Graftdijk;Graft;Noord-Holland;;Nederland
+6176;Waterdijk;;;;België
+6179;Zuidveen;Steenwijk;Overijssel;;Nederland
+6212;Hartenfels;;;;Duitsland
+6217;Haste;;;;Duitsland
+6218;Hastings;;;;Groot-Brittannië
+6237;Heesselt;Varik;Gelderland;;Nederland
+6246;Heinsberg;;;;Duitsland
+6254;Schardam;Zeevang;Noord-Holland;;Nederland
+6261;Kiel-Windeweer;Hoogezand;Groningen;;Nederland
+6267;Hoeven en Sint Maartenspolder;Hoeven;Noord-Brabant;;Nederland
+6269;Stadspolder;Beerta;Groningen;;Nederland
+6282;Hersbach;;;;Pruissen
+6284;Herten;;;;Duitsland
+6298;Heulen;;;;België
+6306;Hijken;Beilen;Drenthe;;Nederland
+6307;Hildesheim;;;;Duitsland
+6314;Hirschhorn;;;;Duitsland
+6327;Hoisten;;;;Duitsland
+6328;Höldern;;;;Pruissen
+6335;Homberg;;;;Pruissen
+6340;Hoogeveen;Hoogeveen;Drenthe;;Nederland
+6342;Horsten;;;;Duitsland
+6346;Hopsten;;;;Duitsland
+6350;Hordel;;;;Duitsland
+6372;Heitersheim;;;;Duitsland
+6373;Hüthum;;;;Duitsland
+6381;Ieper;;;;België
+6399;Jena;;;Thüringen;Duitsland
+6404;Zouteveen;Vlaardinger-Ambacht;Zuid-Holland;;Nederland
+6407;Jumet;;;;België
+6410;Kolderveen;Nijeveen;Drenthe;;Nederland
+6417;Kaiserwerth;;;;Pruissen
+6433;Willemstad;Willemstad;Noord-Brabant;;Nederland
+6443;Kerkhoven;;;;België
+6453;Kettwig;;;;Duitsland
+6460;Kijfhoek;Zwijndrecht;Zuid-Holland;;Nederland
+6485;Letmathe;;;;Duitsland
+6494;Koepang;;;Timor;N.O. Indië
+6499;Kommerzijl;Oldehove;Groningen;;Nederland
+6506;Koningsbergen;;;;Duitsland
+6507;Koningsbergen;;;;Pruissen
+6557;Lathum;Angerlo;Gelderland;;Nederland
+6563;Ledde;;;;Duitsland
+6565;Leffinge;;;;België
+6568;Lehe;;;;Duitsland
+6586;Lette;;;;Duitsland
+6587;Leut;;;;België
+6594;Tegal;;;;N.O. Indië
+6610;Lint;;;;België
+6615;Lisieux;;;;Frankrijk
+6618;Lübeck;;;;Duitsland
+6637;Löningen;;;;Duitsland
+6691;Malaga;;;;Spanje
+6717;Meeuwen;;;;België
+6724;Meir;;;;België
+6727;Melin;;;;Frankrijk
+6731;Melsele;;;;België
+6732;Melsen;;;;België
+6736;Menes;;;;N.O. Indië
+6740;Menslage;;;Hannover;Duitsland
+6751;Merseburg;;;;Duitsland
+6757;Metz;;;;Frankrijk
+6763;Minden;;;;Duitsland
+6783;Mons;;;;België
+6790;Mortroux;;;;België
+6815;Munsterbilzen;;;;België
+6818;Musson;;;;België
+6831;Peer;;;;België
+6834;Ravels;;;;België
+6848;Tienen;;;;België
+6851;Veurne;;;;België
+6855;Wommelgem;;;;België
+6861;Nancy;;;;Frankrijk
+6862;Nantes;;;;Frankrijk
+6863;Napoli;;;;Italië
+6864;Wierum;Westdongeradeel;Friesland;;Nederland
+6879;Tjiandjoer;;;;N.O. Indië
+6881;Neder-Hardinxveld;Hardinxveld-Giessendam;Zuid-Holland;;Nederland
+6917;Newcastle;;;England;Groot-Brittannië
+6936;Nieuwkerk;Goirle;Noord-Brabant;;Nederland
+6949;Norden;;;;Duitsland
+6965;Obergum;Winsum;Groningen;;Nederland
+6972;Oberstdorf;;;;Duitsland
+6974;Oberweiler;;;;Duitsland
+6999;Oppeln;;;;Duitsland
+7074;Posen;;;;Duitsland
+7078;Tandjoeng Priok;;;;N.O. Indië
+7097;Ramsel;;;;Duitsland
+7098;Ramskapelle;;;;België
+7112;Reichenbach;;;;Duitsland
+7131;Rhenoy;Beesd;Gelderland;;Nederland
+7137;Ruddervoorde;;;;België
+7144;Riga;;;;Rusland
+7160;Roeselare;;;;België
+7161;Ronsele;;;;België
+7162;Roon;;;;België
+7237;Schoonderloo;Delfshaven;Zuid-Holland;;Nederland
+7260;Stettin;;;;Pruissen
+7274;Singkep;;;;N.O. Indië
+7275;Sankt Hubert;;;;Duitsland
+7296;Solingen;;;;Pruissen
+7304;Speldorf;;;;Duitsland
+7314;Saint-Denis;;;;Frankrijk
+7327;Schenkenschans;;;;Duitsland
+7344;Steinfeld;;;;Duitsland
+7357;Stoppenberg;;;;Duitsland
+7367;Strijensas;Strijen;Zuid-Holland;;Nederland
+7403;Teeffelen;Oijen en Teeffelen;Noord-Brabant;;Nederland
+7406;Telok Betong;;;;N.O. Indië
+7425;Thesinge;Ten Boer;Groningen;;Nederland
+7426;Tielen;;;;België
+7456;Trier;;;;Duitsland
+7469;Uedem;;;;Pruissen
+7471;Uedem;;;;Duitsland
+7480;Ursel;;;;België
+7496;Varel;;;Oldenburg;Duitsland
+7509;Verden;;;;Duitsland
+7513;Versen;;;Meppen;Duitsland
+7544;Warburg;;;;Duitsland
+7556;Waldenbuch;;;;Duitsland
+7564;Wanne-Eickel;;;;Duitsland
+7569;Wardenburg;;;;Duitsland
+7573;Wassenberg;;;;Duitsland
+7586;Weeze;;;;Duitsland
+7590;Wehr;;;;Duitsland
+7592;Weimar;;;;Duitsland
+7600;Winnekendonk;;;;Duitsland
+7609;Wesseling;;;;Duitsland
+7629;Westfeld;;;;Pruissen
+7662;Wilmarsdonk;;;Antwerpen;België
+7666;Wimmenum;Bergen;Noord-Holland;;Nederland
+7667;Windesheim;Zwollerkerspel;Overijssel;;Nederland
+7682;Witten;;;;Duitsland
+7685;Wittgert;;;;Duitsland
+7686;Würselen;;;;Duitsland
+7697;Wondelgem;;;;België
+7713;Xanten;;;;Duitsland
+7731;Zuidwolde;Zuidwolde;Drenthe;;Nederland
+7752;Ahrensburg;;;;Duitsland
+7754;Aldekerk;;;;Duitsland
+7756;Aldenhoven;;;;Duitsland
+7772;Bergen-Belsen;;;;Duitsland
+7773;Bernau bei Berlin;;;;Duitsland
+7789;Borkum;;;;Duitsland
+7806;Charlottenburg;;;;Duitsland
+7817;Ditzum;;;;Duitsland
+7828;Geestemunde;;;;Duitsland
+7837;Hessen;;;;Duitsland
+7870;Odenkirchen;;;;Duitsland
+7876;Osterburg;;;;Duitsland
+7883;Pogum;;;;Duitsland
+7885;Potsdam;;;;Pruissen
+7890;Rayen;;;;Duitsland
+7898;Rheinberg;;;;Duitsland
+7911;Südlohn;;;;Duitsland
+7913;Soltau;;;;Duitsland
+7931;Wermelskirchen;;;;Duitsland
+7933;Zeitz;;;;Duitsland
+7956;Austruweel;;;;België
+7958;Wilsele;;;;België
+7988;Vohwinkel;;;Wuppertal;Duitsland
+7992;Scharendijke;Elkerzee;Zeeland;;Nederland
+8024;Babyloniënbroek;Aalburg;Noord-Brabant;;Nederland
+8032;Garderen;Barneveld;Gelderland;;Nederland
+8045;Binnenwijzend;Westwoud;Noord-Holland;;Nederland
+8054;Borgercompagnie;Veendam;Groningen;;Nederland
+8067;Bronkhorst;Steenderen;Gelderland;;Nederland
+8076;Kruishoutem;;;;België
+8125;Woensel en Eckart;Woensel en Eckart;Noord-Brabant;;Nederland
+8133;Dorth;Gorssel;Gelderland;;Nederland
+8135;Enspijk;Deil;Gelderland;;Nederland
+8139;Hall;Brummen;Gelderland;;Nederland
+8141;Herveld;Valburg;Gelderland;;Nederland
+8157;Wezel;Wijchen;Gelderland;;Nederland
+8172;Abbeville;;;;Frankrijk
+8208;Anholt;;;;Pruissen
+8212;Ankum;;;;Pruissen
+8335;Unknown;;;Bonaire;N.W. Indië
+8359;Gijbeland;Brandwijk;Zuid-Holland;;Nederland
+8360;Breberen;;;;Duitsland
+8364;Breyell;;;;Pruissen
+8367;Brest;;;;Frankrijk
+8369;Brijdorpe;Duivendijke;Zeeland;;Nederland
+8402;Capelle en Botland;Capelle en Botland;Zeeland;;Nederland
+8408;Cherbourg;;;;Frankrijk
+8416;Cologne;;;;Italië
+8423;Dachau;;;;Duitsland
+8428;Damme;;;;Duitsland
+8482;Unknown;;;Essequebo en Demerary;N.W. Indië
+8492;Dennenoord;Zuidlaren;Drenthe;;Nederland
+8500;Diest;;;;België
+8520;Domburg-Binnen;Domburg;Zeeland;;Nederland
+8521;Domburg-Buiten;Domburg;Zeeland;;Nederland
+8531;Dremmen;;;;Duitsland
+8543;Dunkerque;;;;Frankrijk
+8551;Echt;Echt;Limburg;;Nederland
+8619;Essen;Barneveld;Gelderland;;Nederland
+8673;Givet;;;;Frankrijk
+8677;Markelo;Goor;Overijssel;;Nederland
+8697;Grosthuizen;Avenhorn;Noord-Holland;;Nederland
+8705;Haart;Aalten;Gelderland;;Nederland
+8743;Hees;;;;België
+8748;Heicop;Zederik;Zuid-Holland;;Nederland
+8749;Heinsberg;;;;Pruissen
+8783;Hoevenen;;;;België
+8786;Hoge Zwaluwe;Hooge en Lage Zwaluwe;Noord-Brabant;;Nederland
+8807;Hoog- en Laag-Zwaagdijk;Wervershoof;Noord-Holland;;Nederland
+8818;Hoonte;Neede;Gelderland;;Nederland
+8824;Hopsten;;;;Pruissen
+8842;Het Veen;Muntendam;Groningen;;Nederland
+8850;Unknown;;;;Jamaica
+8872;Kessel;;;;Duitsland
+8888;Unknown;;;;Pruissen
+8948;Lapscheure;;;;België
+8956;L'Ecluse;;;;Frankrijk
+8971;Leuth;;;;Duitsland
+8977;Liefkenshoek;Baarle-Nassau;Noord-Brabant;;Nederland
+8990;Loenen;Valburg;Gelderland;;Nederland
+8993;Loevestein;Poederoijen;Gelderland;;Nederland
+9008;Louvain;;;;België
+9019;Madrid;;;;Spanje
+9022;Mauthausen;;;;Oostenrijk
+9044;Mauthausen;;;;Duitsland
+9047;Meerhout;;;;België
+9058;Mariekerke;Meliskerke;Zeeland;;Nederland
+9060;Merzen;;;Hannover;Duitsland
+9062;Middelburg Ambacht;Middelburg Ambacht (ZH);Zuid-Holland;;Nederland
+9111;Niel;;;;België
+9119;Nieuw-Strijen;Poortvliet;Zeeland;;Nederland
+9127;Nieuwpoort;Nieuwpoort;Zuid-Holland;;Nederland
+9152;Noorden;Nieuwkoop;Zuid-Holland;;Nederland
+9154;Noordhoek;Zuidhorn;Groningen;;Nederland
+9191;Poelgeest;Oegstgeest;Zuid-Holland;;Nederland
+9193;Ommeren;Lienden;Gelderland;;Nederland
+9216;Ooij en Persingen;Ooij en Persingen;Gelderland;;Nederland
+9223;Oost-Eeclo;;;;België
+9232;Oosterend;Hennaarderadeel;Friesland;;Nederland
+9235;Oosterwijk;Harderwijk;Gelderland;;Nederland
+9241;Oostkerke;;;;België
+9281;Hogenban;Overschie;Zuid-Holland;;Nederland
+9324;Rendsburg;;;;Duitsland
+9325;Rengerskerke;Rengerskerke en Zuidland;Zeeland;;Nederland
+9353;Riouw;;;;N.O. Indië
+9396;Schapen;;;Hannover;Duitsland
+9404;Schellach;Veere;Zeeland;;Nederland
+9441;Schwesing;;;;Duitsland
+9452;Sinoutskerke;'s-Heer Abtskerke;Zeeland;;Nederland
+9453;Sinoutskerke en Baarsdorp;Sinoutskerke en Baarsdorp;Zeeland;;Nederland
+9456;Unknown;;;Sint Eustatius;N.W. Indië
+9457;Sint-Jan-in-Eremo;;;;België
+9459;Sint Joosland;Middelburg;Zeeland;;Nederland
+9461;Unknown;;;Sint Maarten;Franse Antillen
+9463;Saint-Thomas;;;;Frankrijk
+9467;Aalbeek;Wijnandsrade;Limburg;;Nederland
+9514;Strasbourg;;;;Frankrijk
+9537;Teveren;;;;Duitsland
+9610;Zalk;Zalk en Veecaten;Overijssel;;Nederland
+9622;Westenschouwen;Westerschouwen;Zeeland;;Nederland
+9671;Waerschoot;;;;België
+9672;Waasmunster;;;;België
+9712;Weseke;;;;Duitsland
+9805;Woerden;Woerden (UT);Utrecht;;Nederland
+9856;Zulthe;Roden;Drenthe;;Nederland
+9860;Zwake;Zwake;Zeeland;;Nederland
+9881;Alphen;Alphen en Riel;Noord-Brabant;;Nederland
+9884;Buren;Buren;Gelderland;;Nederland
+9886;Epe;Epe;Gelderland;;Nederland
+9889;Laren;Laren (NH);Noord-Holland;;Nederland
+9890;Middelburg;Middelburg (Ze);Zeeland;;Nederland
+9891;Oosterhout;Oosterhout;Noord-Brabant;;Nederland
+9892;Unknown;Unknown;Unknown;;Unknown
+9895;Horst;Horst;Limburg;;Nederland
+9902;Beers;Beers;Noord-Brabant;;Nederland
+9914;'s-Grevelduin-Capelle;Capelle;Noord-Brabant;;Nederland
+9922;Unknown;Unknown;Unknown;;Unknown
+9927;Millingen;Millingen;Gelderland;;Nederland
+9952;Stein;Stein (LI);Limburg;;Nederland
+9959;Bergen;Bergen (NH);Noord-Holland;;Nederland
+9960;Willemsoord;Steenwijkerwold;Overijssel;;Nederland
+9988;Kalk;;;;Duitsland
+9992;Zundert en Wernhout;Zundert;Noord-Brabant;;Nederland
+9994;Unknown;;;Bohemen;Tsjechië
+9995;Zevenhuizen;Zevenhuizen;Zuid-Holland;;Nederland
+9998;Essen;;;;België
+10004;Unknown;Unknown;Unknown;;Unknown
+10006;Unknown;Unknown;Unknown;;Unknown
+10010;Not yet standardized;Not yet standardized;Not yet standardized;;Not yet standardized
