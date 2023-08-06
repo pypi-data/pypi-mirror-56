@@ -1,0 +1,42 @@
+import os
+import sysconfig
+from distutils.extension import Extension
+
+import numpy
+
+
+dirname = os.path.dirname(__file__)
+
+compile_args = []
+
+c = os.environ.get('CC', None)
+if c is None:
+    c = sysconfig.get_config_var('CC')
+if c is None:
+    from distutils import ccompiler
+    c = ccompiler.get_default_compiler()
+if "gcc" in c or "g++" in c or "mingw" in c:
+    c = "unix"
+elif "msvc" in c:
+    c = "msvc"
+
+if c == "unix":
+    compile_args = [
+        "-O2", "-ggdb", "-std=c++11", "-fopenmp", "-ftree-vectorize", "-msse",
+        "-Wno-cpp", "-ffast-math", "-Wno-unused-function"
+    ]
+else:
+    compile_args = [
+        '/openmp', '/O2', '/fp:precise', '/permissive-',
+        '/Zc:twoPhase-'
+    ]
+
+def make_ext(modname, pyxfilename):
+    return Extension(
+        name = modname,
+        sources = [pyxfilename, "func_connect.cpp"],
+        extra_compile_args = compile_args,
+        extra_link_args=['-fopenmp'],
+        language = "c++",
+        include_dirs = [dirname, numpy.get_include()]
+    )
