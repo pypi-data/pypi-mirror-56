@@ -1,0 +1,16 @@
+README.md
+setup.py
+pybackupper/__init__.py
+pybackupper.egg-info/PKG-INFO
+pybackupper.egg-info/SOURCES.txt
+pybackupper.egg-info/dependency_links.txt
+pybackupper.egg-info/not-zip-safe
+pybackupper.egg-info/top_level.txt
+pybackupper/Google/GAuth.py
+pybackupper/Google/GMain.py
+pybackupper/Google/GRequests.py
+pybackupper/Google/__init__.py
+pybackupper/Yandex/YAuth.py
+pybackupper/Yandex/YMain.py
+pybackupper/Yandex/YRequests.py
+pybackupper/Yandex/__init__.py
