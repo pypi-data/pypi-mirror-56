@@ -1,0 +1,29 @@
+Metadata-Version: 1.1
+Name: seldom
+Version: 0.3.2
+Summary: WebUI automation testing framework based on Selenium and unittest 
+Home-page: https://github.com/defnngj/seldom/
+Author: bugmaster
+Author-email: fnngj@126.com
+License: BSD
+Description: seldom
+        ---------------
+        
+        WebUI automation testing framework based on Selenium and unittest.
+        
+        
+        doc
+        ++++++++++++++++++
+        
+        https://github.com/defnngj/seldom
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Testing
