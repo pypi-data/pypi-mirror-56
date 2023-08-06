@@ -1,0 +1,11 @@
+unit_system/__init__.py,sha256=buctvG_w3ZETZNdkwifPYaLnkJ4fTYi2U5g-zL3k07s,196
+unit_system/constants.py,sha256=CjPBWxvShdbnu9eYsC-W9Kfz6SEEDh4xUtuaMAaYPK4,2063
+unit_system/convert.py,sha256=_7ZWggGelxrGk37SflCUC9vXcdpkvs64PCygAURq030,924
+unit_system/parse_unit.py,sha256=Dyg0kNbDV3obEcIOTMG58WcC-3dDvIsGoPvNv32tuIQ,2068
+unit_system/quantity.py,sha256=82UapANLFbtt9IOFv0m238mmLpM_3CpqdlGn_Yx-Mrk,10008
+unit_system/version.py,sha256=oloWO9eeK2ihlmEKdvi1D-qWwFJuXZnMFfZILeT63Xg,767
+unit_system-0.0.0.dist-info/LICENSE,sha256=FCxwTaEHr9U5kPOftp5QAUJm4m751A2RV8AGeUPDPYE,1088
+unit_system-0.0.0.dist-info/METADATA,sha256=OoNu6SARiFTWBHbgXFQrnpRKw4-jIEdGvm7060ZFNc4,1372
+unit_system-0.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+unit_system-0.0.0.dist-info/top_level.txt,sha256=6TKOivqWIOJo6UhNpQe77D1Mu0b_SWohIgWVV_W7Odc,12
+unit_system-0.0.0.dist-info/RECORD,,
