@@ -1,0 +1,11 @@
+README.md
+setup.py
+ontogram/__init__.py
+ontogram/cli.py
+ontogram/curies.py
+ontogram.egg-info/PKG-INFO
+ontogram.egg-info/SOURCES.txt
+ontogram.egg-info/dependency_links.txt
+ontogram.egg-info/entry_points.txt
+ontogram.egg-info/requires.txt
+ontogram.egg-info/top_level.txt
