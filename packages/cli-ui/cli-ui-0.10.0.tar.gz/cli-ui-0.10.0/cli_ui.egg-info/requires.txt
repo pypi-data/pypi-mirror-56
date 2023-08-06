@@ -1,0 +1,16 @@
+colorama
+tabulate
+unidecode
+
+[dev]
+sphinx
+ghp-import
+black
+mypy==0.740
+pyflakes
+codecov
+coverage
+pytest
+pytest-cov
+twine
+wheel
