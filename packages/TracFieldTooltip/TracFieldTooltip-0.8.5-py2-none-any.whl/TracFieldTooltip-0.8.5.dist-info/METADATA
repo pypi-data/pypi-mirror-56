@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: TracFieldTooltip
+Version: 0.8.5
+Summary: tooltip help for ticket fields
+Home-page: http://trac-hacks.org/wiki/FieldTooltipPlugin
+Author: MATOBA Akihiro
+Author-email: matobaa+trac-hacks@gmail.com
+License: Modified BSD
+Platform: UNKNOWN
+Classifier: Framework :: Trac
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: JavaScript
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: Trac (>=1.0)
+
+This trac plugin offers tooltip help for ticket fields.
+
+
