@@ -1,0 +1,3 @@
+[console_scripts]
+toil_caveman = toil_caveman.cli:main
+
