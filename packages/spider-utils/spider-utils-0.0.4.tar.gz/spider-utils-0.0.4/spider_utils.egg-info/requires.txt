@@ -1,0 +1,6 @@
+requests
+fake_useragent
+
+[dev]
+wheel
+twine
