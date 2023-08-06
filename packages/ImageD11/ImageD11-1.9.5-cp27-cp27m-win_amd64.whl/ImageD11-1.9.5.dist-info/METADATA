@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ImageD11
+Version: 1.9.5
+Summary: ImageD11
+Home-page: http://github.com/jonwright/ImageD11
+Author: Jon Wright
+Author-email: wright@esrf.fr
+License: GPL
+Platform: UNKNOWN
+Requires-Dist: six
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pillow
+Requires-Dist: h5py
+Requires-Dist: matplotlib
+Requires-Dist: xfab (>=0.0.4)
+Requires-Dist: fabio
+Requires-Dist: pyopengl
+Requires-Dist: pyopengltk
+
+UNKNOWN
+
+
