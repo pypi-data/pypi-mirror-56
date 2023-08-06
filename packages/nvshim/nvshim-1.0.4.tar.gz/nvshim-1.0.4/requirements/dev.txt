@@ -1,0 +1,10 @@
+-r prod.txt
+-r test.txt
+black
+coverage
+coveralls
+pylint
+py-githooks
+rope
+twine
+wheel
