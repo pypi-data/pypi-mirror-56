@@ -1,0 +1,23 @@
+
+log_file: "logs/validate_tokens.log"
+
+enable_commit: True
+
+graph_api:
+  host: "https://graph.facebook.com"
+  debug_path: '/v3.2/debug_token?input_token={check_token}'
+  info_path: '/v3.2/{id}'
+
+queries:
+  get_users: |    
+    SELECT a.facebook_id, a.instagram_id, a.access_token
+    FROM UsersAuth a 
+    WHERE active = 1 AND type = 'PAGE'
+
+db_config:
+  ig:
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8mb4" 
