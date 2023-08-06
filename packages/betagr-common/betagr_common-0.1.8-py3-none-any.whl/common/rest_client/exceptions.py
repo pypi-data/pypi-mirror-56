@@ -1,0 +1,2 @@
+class ClientConfigurationError(Exception):
+    pass
