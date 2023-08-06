@@ -1,0 +1,11 @@
+gcloud_requests/__init__.py,sha256=AtTW53xictPzSeqlT-xndNrIH6HXGkQVOVqbfnNR2pg,318
+gcloud_requests/credentials_watcher.py,sha256=8WKhQm_D1FbQN6R86_jKw3Ug5f7dGQ5iAfgOY_Rlk_w,3189
+gcloud_requests/datastore.py,sha256=sMRdMpDT6Hd7hIQ3wUv68T5OIFUIrVH2fy2QJ6rQzAs,2249
+gcloud_requests/proxy.py,sha256=zWS6-UtQZpbFCJ1yAe_Hd5Ge492KyIUbM7BqmnVoPgo,7174
+gcloud_requests/pubsub.py,sha256=y7CEd2EuEhnwAODkFQ440Ur0WiBJD7g-Kv5saEYtF6A,1094
+gcloud_requests/storage.py,sha256=SXTy0uWOmf8uGyg9gOA_hqXEbKl_hFMq0naHpWLE9Ns,1602
+gcloud_requests-2.0.2.dist-info/LICENSE,sha256=3wXfdXeDgK9qoNLcQua0W9rpIz_sPEPzz4GUa4A_1is,1076
+gcloud_requests-2.0.2.dist-info/METADATA,sha256=8TZYxOPlMA8E5wPEzhza8jG-b9-G1KdX-OVxl0XKKVQ,1016
+gcloud_requests-2.0.2.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+gcloud_requests-2.0.2.dist-info/top_level.txt,sha256=Jwup4XltODWu4G2vI3G5LAiLOXhmENI6nmsabOXPwJI,16
+gcloud_requests-2.0.2.dist-info/RECORD,,
