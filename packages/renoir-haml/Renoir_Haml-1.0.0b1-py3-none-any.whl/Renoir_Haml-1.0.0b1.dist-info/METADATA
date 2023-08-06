@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: Renoir-Haml
+Version: 1.0.0b1
+Summary: Haml syntax for Renoir templates
+Home-page: http://github.com/gi0baro/renoir-haml
+Author: Giovanni Barillari
+Author-email: gi0baro@d4net.org
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3.6
+Requires-Dist: renoir
+
+
+Renoir-Haml
+-----------
+
+This extension make it possible to use a
+`haml <http://haml-lang.com/>`_ syntax in Renoir templates.
+
+
