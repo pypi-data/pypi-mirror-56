@@ -1,0 +1,7 @@
+boto3
+click
+colorama
+gql
+graphql-core<3.0.0
+requests
+tabulate
