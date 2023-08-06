@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: bmonreporter
+Version: 0.0.1
+Summary: Creates Energy Reports from BMON Servers.
+Home-page: https://github.com/alanmitchell/bmonreporter
+Author: Alan Mitchell
+Author-email: tabb99@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml (>=5.1.1)
+Requires-Dist: awscli (>=1.16.264)
+Requires-Dist: boto3 (>=1.10.0)
+Requires-Dist: papermill (>=1.2.0)
+Requires-Dist: nteract-scrapbook (>=0.3.1)
+Requires-Dist: bmondata (>=1.0.2)
+Requires-Dist: plotly (==3.10.0)
+Requires-Dist: plotly-express (==0.3.1)
+Requires-Dist: jupyterthemes (>=0.20.0)
+
+# bmonreporter
+
+Script to create Reports from BMON data, using Jupyter Notebooks
+
+
