@@ -1,0 +1,7 @@
+euc>=0.1.4
+
+[dev]
+black
+flake8
+
+[tests]
