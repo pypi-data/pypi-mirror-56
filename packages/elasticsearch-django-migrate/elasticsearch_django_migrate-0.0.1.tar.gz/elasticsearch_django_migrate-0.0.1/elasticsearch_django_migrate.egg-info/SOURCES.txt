@@ -1,0 +1,17 @@
+README.md
+setup.py
+elasticsearch_django_migrate.egg-info/PKG-INFO
+elasticsearch_django_migrate.egg-info/SOURCES.txt
+elasticsearch_django_migrate.egg-info/dependency_links.txt
+elasticsearch_django_migrate.egg-info/top_level.txt
+elasticsearch_migrate/__init__.py
+elasticsearch_migrate/admin.py
+elasticsearch_migrate/apps.py
+elasticsearch_migrate/models.py
+elasticsearch_migrate/registry.py
+elasticsearch_migrate/tests.py
+elasticsearch_migrate/views.py
+elasticsearch_migrate/management/__init__.py
+elasticsearch_migrate/management/commands/__init__.py
+elasticsearch_migrate/management/commands/migrate_docs.py
+elasticsearch_migrate/migrations/__init__.py
