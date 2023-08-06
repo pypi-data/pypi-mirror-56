@@ -1,0 +1,41 @@
+language: python
+dist: xenial
+
+stages:
+  - test
+  - name: deploy
+    if: tag IS present
+env:
+  global:
+  - TRAVIS_RUST_VERSION=nightly
+  - RUST_BACKTRACE=1
+  - PYPI_USERNAME=clbarnes
+
+test_template: &test_template
+  stage: test
+  before_install:
+    source ./ci/travis/setup_rust.sh
+  install:
+    pip install -r requirements.txt
+  script:
+    ./ci/travis/test.sh
+
+deploy_template: &deploy_template
+  stage: deploy
+  before_install:
+    source ./ci/travis/setup_rust.sh
+  install:
+    pip install -r requirements.txt
+  script:
+    ./ci/travis/deploy.sh
+
+jobs:
+  include:
+    - <<: *test_template
+      python: 3.7
+    - <<: *test_template
+      python: 3.8
+    - <<: *deploy_template
+      python: 3.7
+    - <<: *deploy_template
+      python: 3.8
