@@ -1,0 +1,7 @@
+[console_scripts]
+logreduce = logreduce.cmd:main
+logreduce-client = logreduce.server.client:main [server]
+logreduce-mqtt = logreduce.mqtt.cmd:main [mqtt]
+logreduce-server = logreduce.server.api:main [server]
+logreduce-worker = logreduce.server.worker:main [server]
+
