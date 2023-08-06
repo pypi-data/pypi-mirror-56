@@ -1,0 +1,14 @@
+README.md
+setup.py
+disagree/__init__.py
+disagree/agreements.py
+disagree/metrics.py
+disagree/utils.py
+disagree.egg-info/PKG-INFO
+disagree.egg-info/SOURCES.txt
+disagree.egg-info/dependency_links.txt
+disagree.egg-info/requires.txt
+disagree.egg-info/top_level.txt
+disagree/test/__init__.py
+disagree/test/test_metrics.py
+disagree/test/test_visualisation.py
