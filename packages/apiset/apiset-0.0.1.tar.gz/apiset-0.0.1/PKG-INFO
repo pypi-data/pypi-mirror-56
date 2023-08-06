@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: apiset
+Version: 0.0.1
+Summary: Utils for OpenAPI and Swagger
+Home-page: https://github.com/aioworkers/apiset/
+Author: Alexander Malev
+Author-email: malev@somedev.ru
+License: Apache 2
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.6
+Provides-Extra: apistar
