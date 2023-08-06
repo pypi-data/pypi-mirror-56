@@ -1,0 +1,142 @@
+Metadata-Version: 2.1
+Name: collective.contract-management
+Version: 1.0b4
+Summary: Contract management for Plone. Kepp track of company contracts and there contract duration.
+Home-page: https://github.com/collective/collective.contract_management
+Author: Maik Derstappen
+Author-email: md@derico.de
+License: GPL version 2
+Project-URL: Source, https://github.com/collective/collective.contract_management
+Project-URL: Tracker, https://github.com/collective/collective.contract_management/issues
+Project-URL: PyPI, https://pypi.python.org/pypi/collective.contract_management
+Description: .. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
+           If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
+           This text does not appear on pypi or github. It is a comment.
+        
+        ==============================
+        collective.contract_management
+        ==============================
+        
+        Provides Contracts container nd Contract item CT's, to manage contract and there lifespan. It helps you to keep track of the notice period and start on time with the negotiation, planing or canceling for each contract.
+        
+        Features
+        --------
+        
+        - Overview of all contracts or contracts which are to verify, based on collections
+        - ical export of a notice period event, including a defined reminder (NOT IMPLEMENTED)
+        - ical export of multible contract notice periods
+        - works well in combination with `collective.collectionfilter <https://pypi.org/project/collective.collectionfilter/>`_
+        
+        
+        Translations
+        ------------
+        
+        This product has been translated into
+        
+        - English (MrTango)
+        - German (MrTango)
+        
+        
+        Installation
+        ------------
+        
+        Install collective.contract_management by adding it to your buildout::
+        
+            [buildout]
+        
+            ...
+        
+            eggs =
+                collective.contract_management[collectionfilter]
+        
+        
+        and then running ``bin/buildout``
+        
+        
+        Contribute
+        ----------
+        
+        - Issue Tracker: https://github.com/collective/collective.contract_management/issues
+        - Source Code: https://github.com/collective/collective.contract_management
+        
+        
+        Support
+        -------
+        
+        If you are having issues, please let us know.
+        If you have questions or need adjustments, contact md@derico.de.
+        
+        
+        License
+        -------
+        
+        The project is licensed under the GPLv2.
+        
+        
+        Contributors
+        ============
+        
+        - Maik Derstappen, md@derico.de
+        
+        
+        Changelog
+        =========
+        
+        
+        1.0b4 (2019-11-26)
+        ------------------
+        
+        - Allow nested Contracts containers
+          [MrTango]
+        
+        - Make start/end date not required
+          [MrTango]
+        
+        - Fix upgrade steps to not show up in addon control panel
+          [MrTango]
+        
+        
+        1.0b3 (2019-11-21)
+        ------------------
+        
+        - Add Collection to allowed_content_types for Contracts CT
+          [MrTango]
+        
+        - Add contract_view and locales
+          [MrTango]
+        
+        
+        1.0b2 (2019-11-21)
+        ------------------
+        
+        - Enable Notice period criteria for Collections
+          [MrTango]
+        
+        - Fix vocabularies
+          [MrTango]
+        
+        - Add indexer for contract_reminder and enable it for Collections
+          [MrTango]
+        
+        
+        1.0b1 (2019-11-21)
+        ------------------
+        
+        - Initial release.
+          [MrTango]
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Plone :: 5.2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Requires-Python: ==2.7, >=3.6
+Provides-Extra: test
+Provides-Extra: collectionfilter
