@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: jupyterlab-code-formatter
+Version: 1.0.2
+Summary: Server extension to power `@ryantam626/jupyterlab_code_formatter` npm package.
+License: MIT
+Author: Ryan Tam
+Author-email: ryantam626@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: jupyterlab (>=1.2,<2.0)
+Requires-Dist: notebook (>=6.0,<7.0)
+Requires-Dist: packaging (>=19.2,<20.0)
