@@ -1,0 +1,11 @@
+torch==1.1.0
+torchvision==0.3.0
+openpifpaf==0.8.0
+tabulate==0.8.3
+
+[prep]
+nuscenes-devkit==1.0.2
+
+[test]
+pylint==2.4.2
+pytest==4.6.3
