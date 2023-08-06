@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: selenium-linux
+Version: 3.144.13
+Summary: selenium_linux Python language bindings for Selenium WebDriver.
+Home-page: https://github.com/NocoldBob/Amazon_crawler
+Author: fastbiubiu
+Author-email: fastbiubiu@163.com
+License: UNKNOWN
+Platform: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+selenium_linux 
+Python language bindings for Selenium WebDriver.
+
+The selenium package is used to automate web browser interaction from Python.
+
+Home:	http://www.seleniumhq.org
+Docs:	selenium package API
+Dev:	https://github.com/SeleniumHQ/Selenium
+PyPI:	https://pypi.org/project/selenium/
+IRC:	#selenium channel on freenode
+Several browsers/drivers are supported (Firefox, Chrome, Internet Explorer), as well as the Remote protocol.
+
+
