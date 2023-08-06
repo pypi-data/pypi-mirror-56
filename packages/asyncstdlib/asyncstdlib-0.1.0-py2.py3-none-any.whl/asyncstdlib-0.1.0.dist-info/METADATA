@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: asyncstdlib
+Version: 0.1.0
+Summary: itertools in an async world
+Home-page: https://github.com/maxfischer2781/asyncstdlib
+License: UNKNOWN
+Keywords: async itertools
+Author: Max Fischer
+Author-email: maxfischer2781@gmail.com
+Description-Content-Type: text/x-rst
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: typing_extensions
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: sphinx_rtd_theme; extra == "doc"
+Requires-Dist: sphinxcontrib-contentui; extra == "doc"
+Requires-Dist: sphinxcontrib-trio; extra == "doc"
+Requires-Dist: pytest >=4.3.0; extra == "test"
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: flake8-bugbear; extra == "test"
+Requires-Dist: black; extra == "test" and ( implementation_name=='cpython')
+Project-URL: Documentation, https://asyncstdlib.readthedocs.io/en/latest/
+Provides-Extra: doc
+Provides-Extra: test
+
+================================================
+``asyncstdlib`` -- the missing ``async`` toolbox
+================================================
+
+The missing ``itertools`` and ``builtins`` for all your ``async`` iteration needs.
+
