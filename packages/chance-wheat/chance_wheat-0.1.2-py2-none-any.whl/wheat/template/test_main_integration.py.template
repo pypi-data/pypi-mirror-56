@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# File: {FILE_NAME}
+# Author: {AUTHOR_NAME}
+import logging
+
+from chanconfig import MultipleConfig
+from mock_logger import MockLoggingHandler
+from nose.tools import assert_equals
+
+from {PROJECT_NAME} import main
+from {PROJECT_NAME}.constant import CONFIGS
+from {PROJECT_NAME}.main import initialize_logger
+
+
+HANDLER = MockLoggingHandler(level='DEBUG')
+
+
+def test_initialize_logger():
+    """Check if ``initialize_logger`` works
+    """
+    configs = MultipleConfig(*CONFIGS['logging'])
+    logger = logging.getLogger(main.__name__)
+    logger.addHandler(HANDLER)
+    HANDLER.reset()
+    initialize_logger(configs.dict)
+    assert_equals(HANDLER.messages['info'], ['Initialize logger'])
