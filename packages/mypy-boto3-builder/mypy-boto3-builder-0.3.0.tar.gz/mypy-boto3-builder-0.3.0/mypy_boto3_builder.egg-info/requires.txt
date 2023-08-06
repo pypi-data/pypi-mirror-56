@@ -1,0 +1,7 @@
+black==19.10b0
+boto3
+jinja2>=2.10.3
+typing_extensions
+
+[black]
+black==19.10b0
