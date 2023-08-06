@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: pypgdriver
+Version: 0.0.2
+Summary: postgresql接続ドライバー
+Home-page: https://gitlab.com/Nozomi0720/pypg-driver.git
+Author: nozomi.nishinohara
+Author-email: nozomi.nishinohara@belldata.co.jp
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
