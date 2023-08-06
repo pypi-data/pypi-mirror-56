@@ -1,0 +1,4 @@
+[console_scripts]
+autorelease-release = autorelease.scripts.release:main
+write-release-notes = autorelease.scripts.write_release_notes:main
+
