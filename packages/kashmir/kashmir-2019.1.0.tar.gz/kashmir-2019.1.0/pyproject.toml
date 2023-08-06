@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "kashmir"
+version = "2019.1.0"
+description = "Snow's DevOps CLI Toolkit"
+authors = ["Johnny <johnny.w.santos@gmail.com>"]
+license = "apache-2.0"
+
+[tool.poetry.scripts]
+kashmir = 'kashmir:cli'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^7.0"
+python-gitlab = "^1.13"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+mypy = "^0.740.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
