@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: smtp-send
+Version: 0.0.2
+Summary: 命令行邮件发送工具
+Home-page: https://github.com/canovie/smtp-send
+Author: Jerry Chan
+Author-email: jerry@mydream.ink
+License: MIT
+Description: # smtp-send
+        
+        [![Build Status](https://travis-ci.org/canovie/smtp-send.svg?branch=master)](https://travis-ci.org/canovie/smtp-send)
+        [![PyPI](https://img.shields.io/pypi/v/smtp-send)](https://pypi.org/project/smtp-send)
+Keywords: smtp-send,send-email,pysendemail,sendemail,email
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
