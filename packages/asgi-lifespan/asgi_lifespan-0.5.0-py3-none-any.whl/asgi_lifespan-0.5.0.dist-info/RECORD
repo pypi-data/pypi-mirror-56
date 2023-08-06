@@ -1,0 +1,17 @@
+asgi_lifespan/__init__.py,sha256=p3OHkOkubHMZ9FkAaVy8OMHdM2u42cJNXRP1pLoXGlg,383
+asgi_lifespan/__version__.py,sha256=hWio_WqPrQTCFP1z_6fEs5UmhMd4JfrCMjBSu_lRGqE,125
+asgi_lifespan/app.py,sha256=a34Dl2OqVtSaTSAftXJRp-aVe2XRriUwVv2Hzk-8Im0,1975
+asgi_lifespan/compat.py,sha256=Lsbk98earEPdCSEY0oqW4kwmDNzyiVpbz2_ATCxJ4Zw,338
+asgi_lifespan/exceptions.py,sha256=kZJZl8VdsxMFbyFAUlhc3n-gUi3SITt58jT1MZQzrWs,48
+asgi_lifespan/manager.py,sha256=i5mE5dR_G13BP-jgg9gTUlqp5gmTxFUeio8l0ftiPbc,4414
+asgi_lifespan/middleware.py,sha256=1bW3ql1QB20yFOVD6JwzzbSX33QKOGxf5KxncQWZ3NI,451
+asgi_lifespan/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asgi_lifespan/_concurrency/__init__.py,sha256=_8UU6TSy1n-O39oLeLrLvYBgg39xwrXMR6qyBEU9h9Y,555
+asgi_lifespan/_concurrency/asyncio.py,sha256=pRMaC0EkIOuFh4zi2JSPPExojfzokcjDIll_4gRU9Ew,2403
+asgi_lifespan/_concurrency/base.py,sha256=H9IZJcRy3cpcbR5CMMAG3MbN2gH_JkAKoepoTQ-eQIU,1481
+asgi_lifespan/_concurrency/trio.py,sha256=GDwd3aoePOjxszVLcrSEfABxqtgiuQecVYVdLosv66E,2312
+asgi_lifespan-0.5.0.dist-info/LICENSE,sha256=y1GSwZQqqWFkpw6G0l-bGmcYDa9PByWjwa2bxVY-puA,1072
+asgi_lifespan-0.5.0.dist-info/METADATA,sha256=gvlq-EqdtEzpO_0-UazX7dS1WWrWBYsQ1_8lqbH-3o0,11816
+asgi_lifespan-0.5.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+asgi_lifespan-0.5.0.dist-info/top_level.txt,sha256=LQxSJ56AreRTO_UG88R-C0Lpbk4h9V3jbFJr2RIDcLI,41
+asgi_lifespan-0.5.0.dist-info/RECORD,,
