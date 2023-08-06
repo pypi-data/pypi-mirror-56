@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: gce-ipx800
+Version: 0.1rc1
+Summary: Module to control the IPX800 device from GCE Electronics.
+Home-page: https://github.com/marcaurele/py-ipx800
+License: UNKNOWN
+Keywords: ipx800, GCE-Electronics, GCE, home-automation
+Author: Marc-Aurèle Brothier
+Author-email: m@brothier.org
+Maintainer: Marc-Aurèle Brothier
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: requests
+
+# py-ipx800
+
+py-ipx800 is a Python3 Library for controlling GCE-Electronics IPX800 V4 via its public API.
+
+## Sample Usage
+
+### Setting up IPX800
+
+    # Setup IPX800 V4
+    url = "http://yourhostname.lan"
+    api_key = "apikey"
+
+    ipx = ipx800(url, api_key)
+
+### Setting up Relays
+
+    # Use the relay number #4
+    r4 = relay(ipx, 4)
+
+### Controlling relays
+
+    > r4.status
+    False
+    > r4.on()
+    > r4.off()
+    > r4.toggle()
+
+## Features
+
+- [x] Control relays
+
