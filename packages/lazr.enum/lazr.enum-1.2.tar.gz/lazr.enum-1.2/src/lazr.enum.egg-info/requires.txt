@@ -1,0 +1,13 @@
+setuptools
+six
+zope.interface>=3.6.0
+zope.schema
+
+[docs]
+Sphinx
+
+[proxy]
+zope.security
+
+[test]
+zope.testrunner
