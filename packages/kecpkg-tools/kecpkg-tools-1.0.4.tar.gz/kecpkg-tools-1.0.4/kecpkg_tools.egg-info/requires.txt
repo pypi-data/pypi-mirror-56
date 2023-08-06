@@ -1,0 +1,7 @@
+click
+atomicwrites
+jinja2
+pykechain>=3.0
+appdirs
+tabulate
+python-gnupg
