@@ -1,0 +1,5 @@
+include LICENSE
+include README.md
+recursive-exclude altstreamfield/static/altstreamfield_src *
+recursive-include altstreamfield/static/altstreamfield *
+recursive-include altstreamfield/templates *
