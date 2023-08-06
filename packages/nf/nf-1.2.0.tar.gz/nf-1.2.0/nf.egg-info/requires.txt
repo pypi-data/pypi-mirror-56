@@ -1,0 +1,10 @@
+setuptools
+
+[:platform_system == "Windows"]
+win10toast
+paramiko
+
+[optionals]
+paramiko
+plyer
+psutil
