@@ -1,0 +1,4 @@
+[console_scripts]
+cfs = createFlaskServer.CreateFlaskServer:entryPoint
+createFlaskServer = createFlaskServer.CreateFlaskServer:entryPoint
+
