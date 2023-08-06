@@ -1,0 +1,6 @@
+Click>=7.0
+nibabel
+numpy
+torch>=1.1
+tqdm
+unet
