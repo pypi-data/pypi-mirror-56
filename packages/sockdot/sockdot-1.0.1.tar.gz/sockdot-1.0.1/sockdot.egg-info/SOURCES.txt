@@ -1,0 +1,11 @@
+README.md
+setup.py
+sockdot/__init__.py
+sockdot/client.py
+sockdot/events.py
+sockdot/response.py
+sockdot/server.py
+sockdot.egg-info/PKG-INFO
+sockdot.egg-info/SOURCES.txt
+sockdot.egg-info/dependency_links.txt
+sockdot.egg-info/top_level.txt
