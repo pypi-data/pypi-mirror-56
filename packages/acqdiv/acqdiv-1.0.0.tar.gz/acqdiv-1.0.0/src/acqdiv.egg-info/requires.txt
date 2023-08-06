@@ -1,0 +1,12 @@
+lxml
+python-dateutil
+sqlalchemy
+tqdm
+
+[dev]
+numpy
+pandas
+tox
+
+[test]
+pytest

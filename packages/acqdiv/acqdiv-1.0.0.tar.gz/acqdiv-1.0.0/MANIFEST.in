@@ -1,0 +1,5 @@
+include *.md
+graft src
+global-exclude *.py[co]
+prune src/acqdiv/corpora
+global-exclude *.sqlite3
