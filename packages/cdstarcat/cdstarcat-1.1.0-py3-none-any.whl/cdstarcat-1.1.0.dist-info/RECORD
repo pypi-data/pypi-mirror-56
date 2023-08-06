@@ -1,0 +1,17 @@
+cdstarcat/__init__.py,sha256=GDcvGLRcf-Jnvy_SlmdArat3bNWBlDDI12WchhKak-o,104
+cdstarcat/__main__.py,sha256=ktWiXKLJxnCzWeHw6aLVoBs2eevcK57tjRohsnjLnHs,1489
+cdstarcat/catalog.py,sha256=YfexfP4kpJ675XslDaliPQekfPXjFjlDVK9mR5cA0mY,8448
+cdstarcat/cli_util.py,sha256=1CpqD3bYyBxU8fcw-_RHkbjOUbuqJt6zrCc_QD0pdsw,436
+cdstarcat/resources.py,sha256=ULs3Ptqq374Dpe7A9VBeuE9vytkXRLR2BWTy4ZitgRE,2703
+cdstarcat/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cdstarcat/commands/add.py,sha256=SOcEHvdphHJH1CzOQwOeqwD7x7gJ3Gedp_fe8KRb-20,631
+cdstarcat/commands/cleanup.py,sha256=wpE8vmX4bCuRfuznLdsXjiYPQaK26F6oWOOz-C8eFDA,893
+cdstarcat/commands/create.py,sha256=kRrX_7LVQoAuILIXy8CnZZ8Z41aQ0kDj36CXNlu_3lc,742
+cdstarcat/commands/delete.py,sha256=USZGoqhIowjteXwEgCVmSFgJ42JGztdS2j8h0kXXhAc,326
+cdstarcat/commands/stats.py,sha256=fYspokC1f4lAmUzpwuu1eh4kM7RNV3IRux19Ke5GmUE,1152
+cdstarcat/commands/update.py,sha256=5hEqcod2uEFOF-0PiE2pRPmMfGSUSaH77T9u1rbNIiI,389
+cdstarcat-1.1.0.dist-info/METADATA,sha256=cWEFitY1frQKDREPtwxma0GLw1tY6vC4ae0bV0ZUZds,3293
+cdstarcat-1.1.0.dist-info/RECORD,,
+cdstarcat-1.1.0.dist-info/WHEEL,sha256=NzFAKnL7g-U64xnS1s5e3mJnxKpOTeOtlXdFwS9yNXI,92
+cdstarcat-1.1.0.dist-info/entry_points.txt,sha256=OIRyfZpWKzphNDDCZ-uM6ylnFNdxaHICTzkq5sGK34k,55
+cdstarcat-1.1.0.dist-info/top_level.txt,sha256=GNZ96Y-zheRQj69OQNhc5PagdoQIPlcJoT3wSInGlEE,10
