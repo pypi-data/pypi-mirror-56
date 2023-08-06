@@ -1,0 +1,82 @@
+"""
+Main entrypoint for builder.
+"""
+from typing import List
+
+from boto3 import __version__ as boto3_version
+from boto3.session import Session
+
+from mypy_boto3_builder.writers.processors import (
+    process_boto3_stubs,
+    process_master,
+    process_service,
+)
+from mypy_boto3_builder.version import __version__ as version
+from mypy_boto3_builder.logger import get_logger
+from mypy_boto3_builder.utils.strings import clean_doc
+from mypy_boto3_builder.cli_parser import get_cli_parser
+from mypy_boto3_builder.enums.service_name import ServiceName
+from mypy_boto3_builder.jinja_manager import JinjaManager
+from mypy_boto3_builder.constants import (
+    MODULE_NAME,
+    DUMMY_REGION,
+    BOTO3_STUBS_NAME,
+    PYPI_NAME,
+    LINE_LENGTH,
+)
+
+
+def main() -> None:
+    """
+    Main entrypoint for builder.
+    """
+    parser = get_cli_parser()
+    args = parser.parse_args()
+    logger = get_logger(verbose=args.debug, panic=args.panic)
+    session = Session(region_name=DUMMY_REGION)
+    args.output_path.mkdir(exist_ok=True)
+    service_names: List[ServiceName] = []
+    available_services = session.get_available_services()
+    for service_name in args.service_names:
+        if service_name.value not in available_services:
+            logger.warning(f"Service {service_name.value} is not avaialble, skipping.")
+            continue
+
+        service_names.append(service_name)
+
+    JinjaManager.update_globals(
+        master_pypi_name=PYPI_NAME,
+        master_module_name=MODULE_NAME,
+        boto3_stubs_name=BOTO3_STUBS_NAME,
+        boto3_version=boto3_version,
+        render_docstrings=not args.no_docs,
+        doc_line_length=LINE_LENGTH - 4,
+        clean_doc=clean_doc,
+    )
+
+    if not args.skip_services:
+        for index, service_name in enumerate(service_names):
+            logger.info(
+                f"[{index + 1}/{len(service_names)}] Generating {service_name.module_name} module"
+            )
+            output_path = args.output_path / f"{service_name.module_name}_package"
+            process_service(
+                session=session, output_path=output_path, service_name=service_name
+            )
+
+    if not args.skip_master:
+        logger.info(f"Generating {MODULE_NAME} module")
+        output_path = args.output_path / "master_package"
+        process_master(
+            session=session, output_path=output_path, service_names=service_names
+        )
+
+        logger.info(f"Generating {BOTO3_STUBS_NAME} module")
+        output_path = args.output_path / "boto3_stubs_package"
+        process_boto3_stubs(
+            session=session, output_path=output_path, service_names=service_names
+        )
+
+
+if __name__ == "__main__":
+    main()

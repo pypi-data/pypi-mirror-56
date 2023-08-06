@@ -1,0 +1,90 @@
+# mypy_boto3
+
+Mypy-friendly type annotations for `boto3 {{ boto3_version }}`.
+More information can be found [here](https://github.com/vemel/mypy_boto3).
+
+- [mypy_boto3](#mypyboto3)
+  - [How to use](#how-to-use)
+    - [Type checking](#type-checking)
+    - [Code auto-complete](#code-auto-complete)
+  - [How it works](#how-it-works)
+  - [Submodules](#submodules)
+
+## How to use
+
+This package by itself is not very useful, it just gives you access to all
+underlying `boto3` services type annotations.
+
+### Type checking
+
+Make sure you have [mypy](https://github.com/python/mypy) installed ans activated in your IDE.
+
+Install `boto3-stubs` for services that you use to get type checking working.
+
+```bash
+# You can find a full list of modules below
+pip install boto3-stubs[s3, ec2]
+```
+
+Use `boto3` as usual in your project and enjoy type checking.
+
+```python
+import boto3
+
+client = boto3.client("s3")
+
+# Oh, it must be `Bucket`... Thanks, `mypy`!
+client.create_bucket(bucket="bucket")
+```
+
+### Code auto-complete
+
+Not a single Python IDE supports `Literal` type overloads yet (but in `VSCode` support is just around the corner).
+Meanwhile, to have a nice auto-complete you can explicitly set types to help your IDE to get methods, arguments etc.
+
+```python
+import boto3_name
+from mypy_boto3.ec2 import Client, ServiceResource
+
+# now you have auto-complete for methods, arguments and even return types
+client: Client = boto3.client("ec2")
+resource: ServiceResource = boto3.resource("ec2")
+```
+
+## How it works
+
+Fully automated [builder](https://github.com/vemel/mypy_boto3) carefully generates
+type annotations for each service, patiently waiting for `boto3` updates. It delivers
+a drop-in type annotations for you and makes sure that:
+
+- Latest version of `boto3` is used.
+- Each public class and method of every `boto3` service gets valid type annotations
+  extracted from latest documentation (blame `botocore` docs if types are incorrect).
+- Type annotations include up-to-date documentation.
+- Code is processed by [black](https://github.com/psf/black) for readability.
+
+## Submodules
+
+- `all` - Type annotations for all `boto3` services.
+{% if package.essential_service_names -%}
+    {{ "- `essential` - Type annotations for " -}}
+    {% for service_name in package.essential_service_names -%}
+        {% if not loop.first -%}
+            {{ " and " if loop.last else ", " -}}
+        {% endif -%}
+        {{ "`" -}}
+        {{ service_name.boto3_name -}}
+        {{ "`" -}}
+    {% endfor -%}
+    {{ " services" if package.essential_service_names|length > 1 else " service" -}}
+    {{ ".\n" -}}
+{% endif -%}
+{% for service_name in package.service_names -%}
+    {{ "- `" -}}
+    {{ service_name.boto3_name -}}
+    {{ "` - Type annotations for `" -}}
+    {{ service_name.boto3_name -}}
+    {{ "` service." -}}
+    {{ "" if loop.last else "\n" -}}
+{% endfor -%}
+{{ '\n' -}}
