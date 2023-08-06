@@ -1,0 +1,12 @@
+.coveragerc
+MANIFEST.in
+README.rst
+coroexecutor.py
+pytest.ini
+setup.py
+coroexecutor.egg-info/PKG-INFO
+coroexecutor.egg-info/SOURCES.txt
+coroexecutor.egg-info/dependency_links.txt
+coroexecutor.egg-info/requires.txt
+coroexecutor.egg-info/top_level.txt
+tests/test_coroexecutor.py
