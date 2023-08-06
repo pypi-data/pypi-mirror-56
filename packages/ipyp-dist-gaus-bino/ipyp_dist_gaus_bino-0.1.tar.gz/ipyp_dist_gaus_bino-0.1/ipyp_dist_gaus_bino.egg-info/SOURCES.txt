@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+ipyp_dist_gaus_bino/Binomialdistribution.py
+ipyp_dist_gaus_bino/Gaussiandistribution.py
+ipyp_dist_gaus_bino/Generaldistribution.py
+ipyp_dist_gaus_bino/__init__.py
+ipyp_dist_gaus_bino.egg-info/PKG-INFO
+ipyp_dist_gaus_bino.egg-info/SOURCES.txt
+ipyp_dist_gaus_bino.egg-info/dependency_links.txt
+ipyp_dist_gaus_bino.egg-info/not-zip-safe
+ipyp_dist_gaus_bino.egg-info/top_level.txt
