@@ -1,0 +1,3 @@
+[console_scripts]
+smtp-send = src.smtp_send:main
+
