@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: DataScienceHelpers
+Version: 1.0.0
+Summary: Helper modules for doing data cleaning, training, exploration, etc.
+Home-page: UNKNOWN
+Author: Max Taggart
+Author-email: max.taggart@healthcatalyst.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: ipython
+Requires-Dist: bcolz
+Requires-Dist: graphviz
+Requires-Dist: sklearn-pandas
+Requires-Dist: isoweek
+Requires-Dist: pandas-summary
+
+# Data Science Helper Modules
+
+A set of modules that contain helper methods, e.g. the old fastai "structered.py" file which contains functions that split a date into parts and automatically convert dataframe object columns to categorical variables.
+
+
