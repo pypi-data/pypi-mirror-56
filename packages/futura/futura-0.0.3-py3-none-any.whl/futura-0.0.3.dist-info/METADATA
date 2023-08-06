@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: futura
+Version: 0.0.3
+Summary: A tool for LCA
+Home-page: https://github.com/pjamesjoyce/futura/
+Author: P. James Joyce
+Author-email: pjamesjoyce@gmail.com
+License: BSD 3-Clause License
+Download-URL: https://github.com/pjamesjoyce/futura/archive/0.0.3.tar.gz
+Keywords: LCA,Life Cycle Assessment,Foreground system,Background system,Foreground model,Fully parameterised
+Platform: UNKNOWN
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+
+# futura
+Software interface to generate arbitrary future background databases for LCA sensitivity analyses (building on wurst and rmnd-lca)
+
+
