@@ -1,0 +1,60 @@
+# Base Configuration file for artellapipe-tools-modelchecker
+
+# Defines tool name
+name: Model Checker
+
+# Unique ID for the tool
+id: artellapipe-tools-modelchecker
+
+# Defines logo name of the tool
+logo: modelchecker_logo
+
+# Defines icon of the tool
+icon: modelchecker
+
+# Description of the tool
+description: Tool to execute modeling checks for geometry
+
+# Tags related with this tool
+tags: ['model', 'checker', 'pyblish']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://6633e9b4b4c7418fb7b22efc86f0309f@sentry.io/1832212
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "artellapipe", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: INFO
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "Model Checker"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Modeling
+    type: menu
+    children:
+      - id: artellapipe-tools-modelchecker
+        type: tool
+
+# Tool Shelf definition
+shelf:
+  - name: Modeling
+    children:
+      - id: artellapipe-tools-modelchecker
+        displayLabel: False
+        type: tool
+
+
+pyblish_plugins: []

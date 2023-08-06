@@ -1,0 +1,6 @@
+include artellapipe/config/development/*.json
+include artellapipe/config/development/*.yml
+include artellapipe/config/development/maya/*.yml
+include artellapipe/config/production/*.json
+include artellapipe/config/production/*.yml
+include artellapipe/config/production/maya/*.yml
