@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: Junkyard
+Version: 0.0.3a2
+Summary: A collection of [certifiable garbage] dev helpers/handlers created by and for the author
+Home-page: https://github.com/crushkilldestroy/Junkyard
+Author: CKD
+Author-email: crushkilldestroy@tuta.io
+License: UNKNOWN
+Keywords: personal library,not for you,unless you want it
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+Requires-Dist: wget
+
+# JUNKYARD #
+[![PyPI version shields.io](https://img.shields.io/pypi/v/junkyard.svg)](https://pypi.python.org/pypi/junkyard/)
+[![PyPI status](https://img.shields.io/pypi/status/junkyard.svg)](https://pypi.python.org/pypi/junkyard/)
+[![PyPI license](https://img.shields.io/pypi/l/junkyard.svg)](https://pypi.python.org/pypi/junkyard/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/junkyard.svg)](https://pypi.python.org/pypi/junkyard/)
+<br>
+<b>0.0.03a0 (pending)</b>
+
+Download and docs: https://pypi.org/project/junkyard/
+<br>
+Source code & Development: https://github.com/crushkilldestroy/junkyard
+
+Description
+===========
+A collection of various (probably certifiable-garbage) helper classes and modules designed by the author for use by the author, using PyCharm and
+Anaconda (Python 3.7.X).
+<br><br><br>
+
+<i><b>Current features include</b></i>:
+
+<b>CryptoHandler</b>(WIP/ON HOLD)<br>
+ Does not currently do anything, but is intended to be a proper file and string encryption
+ and decryption manager in the near future.
+
+<b>DiagnosticsHandler</b>(WIP)<br>
+ An attempt to create various methods to probe the performance of custom and built in
+ functions alike.
+
+<b>FileHandler</b>(WIP)<br>
+ An attempt at leveraging standard library modules to accomplish routine filesystem tasks in a safe, reliable,
+ and modular manner.
+
+<b>PrintHandler</b>(WIP)<br>
+ An attempt to create custom (colored/timestamped) print, and logging methods
+<br><br>
+Use <b>help(InsertClassNameHere)</b> in python to find out more information about available methods
+or feel free to just poke through the code yourself!<br><br><br>
+
+<i><b>If you would like to use my module, feel free to do so by using pip.</b></i><br>
+<b>To install junkyard with pip</b>:
+````python
+pip install junkyard
+````
+
+
+License
+=======
+
+Copyright CKD 2019. MIT License; see LICENSE file.
+
+
+Dependencies
+============
+
+<b>colorama</b> - to support the PrintHandler() class in garbagebasket.py<br>
+[![PyPI version shields.io](https://img.shields.io/pypi/v/colorama.svg)](https://pypi.python.org/pypi/colorama/)
+[![PyPI status](https://img.shields.io/pypi/status/colorama.svg)](https://pypi.python.org/pypi/colorama/)
+[![PyPI license](https://img.shields.io/pypi/l/colorama.svg)](https://pypi.python.org/pypi/colorama/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/colorama.svg)](https://pypi.python.org/pypi/colorama/)
+
+
+Usage
+=====
+to import junkyard into your python script:
+````python
+import junkyard.garbagebasket as junkyard
+````
+
+
+Initialization examples
+--------------
+
+````python
+import junkyard.garbagebasket as junkyard
+
+ch = junkyard.CryptoHandler()
+dh = junkyard.DiagnosticHandler()
+fh = junkyard.FileHandler()
+ph = junkyard.PrintHandler()
+filename = 'data/bob.txt'
+
+fh.touch_file(filename)
+ph.c_print(fh.read(filename), color="BLUE")
+
+ch.encrypt(filename)
+ph.c_print(fh.read(filename), color="RED")
+
+ch.decrypt(filename)
+ph.c_print(fh.read(filename), color="GREEN")
+
+fh.remove_file(filename)
+
+dh.speed_test(test_function_1)
+dh.speed_comparison_test(test_function_1, test_function_2)
+````
+
