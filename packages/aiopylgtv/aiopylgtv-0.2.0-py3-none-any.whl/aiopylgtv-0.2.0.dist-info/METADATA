@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aiopylgtv
+Version: 0.2.0
+Summary: Library to control webOS based LG Tv devices
+Home-page: https://github.com/bendavid/aiopylgtv
+Author: Josh Bendavid
+Author-email: joshbendavid@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/bendavid/aiopylgtv/archive/0.2.0.tar.gz
+Keywords: webos,tv
+Platform: UNKNOWN
+Requires-Dist: websockets
+Requires-Dist: asyncio
+Requires-Dist: numpy
+
+UNKNOWN
+
+
