@@ -1,0 +1,408 @@
+Metadata-Version: 2.1
+Name: guillotina
+Version: 5.1.19
+Summary: asyncio REST API Resource database
+Home-page: https://github.com/plone/guillotina
+Author: Ramon Navarro Bosch & Nathan Van Gheem
+Author-email: ramon@plone.org
+License: BSD
+Keywords: asyncio,REST,Framework,transactional
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7.0
+Requires-Dist: jsonschema
+Requires-Dist: python-dateutil
+Requires-Dist: pycryptodome
+Requires-Dist: jwcrypto
+Requires-Dist: setuptools
+Requires-Dist: ujson
+Requires-Dist: zope.interface
+Requires-Dist: pyjwt
+Requires-Dist: asyncpg
+Requires-Dist: cffi
+Requires-Dist: PyYAML (>=5.1)
+Requires-Dist: lru-dict
+Requires-Dist: mypy-extensions
+Requires-Dist: argon2-cffi
+Requires-Dist: aiohttp (<3.6.0,>=3.0.0) ; python_version < "3.8"
+Requires-Dist: aiohttp (<4.0.0,>=3.6.0) ; python_version >= "3.8"
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: recommonmark ; extra == 'docs'
+Requires-Dist: sphinxcontrib-httpdomain ; extra == 'docs'
+Requires-Dist: sphinxcontrib-httpexample ; extra == 'docs'
+Requires-Dist: sphinx-guillotina-theme ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Provides-Extra: mailer
+Requires-Dist: html2text (>=2018.1.9) ; extra == 'mailer'
+Requires-Dist: aiosmtplib (>=1.0.6) ; extra == 'mailer'
+Provides-Extra: redis
+Requires-Dist: aioredis (>=1.2.0) ; (python_version < "3.8") and extra == 'redis'
+Requires-Dist: aioredis (>=1.3.0) ; (python_version >= "3.8") and extra == 'redis'
+Provides-Extra: test
+Requires-Dist: pytest (>=3.8.0<=5.0.0) ; extra == 'test'
+Requires-Dist: docker ; extra == 'test'
+Requires-Dist: backoff ; extra == 'test'
+Requires-Dist: psycopg2-binary ; extra == 'test'
+Requires-Dist: pytest-asyncio (>=0.10.0) ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: coverage (>=4.0.3) ; extra == 'test'
+Requires-Dist: pytest-docker-fixtures ; extra == 'test'
+Requires-Dist: pytest-rerunfailures (<=7.0) ; extra == 'test'
+
+Introduction
+============
+
+.. image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat
+   :target: http://guillotina.readthedocs.io/en/latest/
+
+.. image:: https://travis-ci.org/plone/guillotina.svg?branch=master
+   :target: https://travis-ci.org/plone/guillotina
+
+.. image:: https://codecov.io/gh/plone/guillotina/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/plone/guillotina/branch/master
+   :alt: Test Coverage
+
+.. image:: https://img.shields.io/pypi/pyversions/guillotina.svg
+   :target: https://pypi.python.org/pypi/guillotina/
+   :alt: Python Versions
+
+.. image:: https://img.shields.io/pypi/v/guillotina.svg
+   :target: https://pypi.python.org/pypi/guillotina
+
+.. image:: https://img.shields.io/pypi/l/guillotina.svg
+   :target: https://pypi.python.org/pypi/guillotina/
+   :alt: License
+
+.. image:: https://badges.gitter.im/plone/guillotina.png
+   :target: https://gitter.im/plone/guillotina
+   :alt: Chat
+
+Please `read the detailed docs <http://guillotina.readthedocs.io/en/latest/>`_
+
+
+This is the working project of the next generation Guillotina server based on asyncio.
+
+
+Dependencies
+------------
+
+* Python >= 3.7
+* PostgreSQL >= 9.6
+
+
+Quickstart
+----------
+
+We use pip
+
+.. code-block:: shell
+
+    pip install guillotina
+
+
+Run PostgreSQL
+--------------
+
+If you don't have a PostgreSQL server to play with, you can run one with Docker.
+
+Download and start the Docker container by running
+
+.. code-block:: shell
+
+    make run-postgres
+
+
+
+Run the server
+--------------
+
+To run the server
+
+.. code-block:: shell
+
+    g
+
+
+Then...
+
+.. code-block:: shell
+
+    curl http://localhost:8080
+
+
+Or, better yet, use `Postman <https://www.getpostman.com/>`_ to start playing with API.
+
+You can also navigate in your Guillotina server with its built-in web admin interface by visiting http://localhost:8080/+admin/.
+
+Deploy on Heroku
+----------------
+
+Read more `Guillotina-Heroku <https://github.com/guillotinaweb/guillotina-heroku>`_.
+
+.. image:: https://www.herokucdn.com/deploy/button.svg
+   :target: https://www.heroku.com/deploy?template=https://github.com/guillotinaweb/guillotina-heroku
+
+Getting started with development
+--------------------------------
+
+Using pip (requires Python > 3.7)
+
+.. code-block:: shell
+
+    git clone git@github.com:plone/guillotina.git
+    cd guillotina
+    python3.7 -m venv .
+    ./bin/pip install -r requirements.txt
+    ./bin/pip install -r contrib-requirements.txt
+    ./bin/pip install -e .[test]
+    ./bin/pre-commit install
+
+
+Run tests
+---------
+
+We're using `pytest <https://docs.pytest.org/en/latest/>`_
+
+.. code-block:: shell
+
+    ./bin/pytest guillotina
+
+and for test coverage
+
+.. code-block:: shell
+
+    ./bin/pytest --cov=guillotina guillotina/
+
+With file watcher...
+
+.. code-block:: shell
+
+    ./bin/ptw guillotina --runner=./bin/py.test
+
+
+To run tests with cockroach db
+
+.. code-block:: shell
+
+    USE_COCKROACH=true ./bin/pytest guillotina
+
+Default
+-------
+
+Default root access can be done with AUTHORIZATION header : Basic root:root
+
+
+Docker
+------
+
+You can also run Guillotina with Docker!
+
+
+First, run PostgreSQL
+
+.. code-block:: shell
+
+    docker run --rm \
+        -e POSTGRES_DB=guillotina \
+        -e POSTGRES_USER=guillotina \
+        -p 127.0.0.1:5432:5432 \
+        --name postgres \
+        postgres:9.6
+
+Then, run Guillotina
+
+.. code-block:: shell
+
+    docker run --rm -it \
+        --link=postgres -p 127.0.0.1:8080:8080 \
+        guillotina/guillotina:latest \
+        g -c '{"databases": [{"db": {"storage": "postgresql", "dsn": "postgres://guillotina:@postgres/guillotina"}}], "root_user": {"password": "root"}}'
+
+
+This assumes you have a config.yaml in your current working directory
+
+
+Chat
+----
+
+Join us to talk about Guillotina at https://gitter.im/plone/guillotina
+
+
+CHANGELOG
+=========
+
+5.1.19 (2019-11-27)
+-------------------
+
+- Update default zope.interface to 4.7.1
+  [bloodbare]
+
+- Be able to provide `DEBUG_SUBSCRIBERS` env variable to get details about
+  event timings being run.
+  [vangheem]
+
+
+5.1.18 (2019-11-25)
+-------------------
+
+- Make sure to reset registry task var when setting up new container
+  [vangheem]
+
+
+5.1.17 (2019-11-22)
+-------------------
+
+- Fix potential deadlock issues when storage read conn handling
+  [vangheem]
+
+
+5.1.16 (2019-11-21)
+-------------------
+
+- Allow uid as destination in `@duplicate` and `@move`
+  [qiwn]
+
+
+5.1.15 (2019-11-20)
+-------------------
+
+- Fix correctly saving patch field
+  [vangheem]
+
+
+5.1.14 (2019-11-20)
+-------------------
+
+- Fix patch field validation
+  [vangheem]
+
+
+5.1.13 (2019-11-13)
+-------------------
+
+- Prevent JSONField name clash with field `validator` decorator
+  [vangheem]
+
+
+5.1.12 (2019-11-12)
+-------------------
+
+- Remove task call back to run execute_futures automatically. aiohttp reuses task object for
+  keepalive implementation and the `_callbacks` were never run
+  [vangheem]
+
+
+5.1.11 (2019-11-12)
+-------------------
+
+- Lazy create thread pool executor so we can properly use thread pool setting
+  [vangheem]
+
+
+5.1.10 (2019-11-12)
+-------------------
+
+- Be able to customize number of thread pool workers
+  [vangheem]
+
+
+5.1.9 (2019-11-12)
+------------------
+
+- Add custom settings into test server
+  [qiwn]
+
+
+5.1.8 (2019-11-11)
+------------------
+
+- bump
+
+
+5.1.7 (2019-11-11)
+------------------
+
+- Make sure to use `txn.lock` when using pg connection
+  [vangheem]
+
+
+5.1.6 (2019-11-08)
+------------------
+
+- reduce the load dbvacuum can cause
+  [vangheem]
+
+
+5.1.6 (unreleased)
+------------------
+
+- Fix `required` param not specified in service `parameters` configuration
+  [vangheem]
+
+
+5.1.5 (2019-11-06)
+------------------
+
+- Fix test util: add db in task vars too [lferran]
+  [lferran]
+
+- Added "pickle_protocol" to app_settings
+  [masipcat]
+
+
+5.1.4 (2019-11-06)
+------------------
+
+- Add `extra_headers` parameter into `FileManager.prepare_download()`
+  [qiwn]
+
+
+5.1.3 (2019-11-04)
+------------------
+
+New:
+
+- More mypy support and better type checking
+  [vangheem]
+
+- Added deserializer for IUnionField
+  [masipcat]
+
+- Provide new `@field.validator` to validate field values against bound fields
+  [vangheem]
+
+Fixes:
+
+- Fix @invariant validation. Any usage of it previously would cause exceptions.
+  [vangheem]
+
+
+5.1.2 (2019-10-30)
+------------------
+
+- Handle empty `G_` environment variable values
+  [vangheem]
+
+
+5.1.1 (2019-10-29)
+------------------
+
+- more mypy definitions on ITransactionManager
+
+
+
+...
+
+You are seeing a truncated changelog.
+
+You can read the `changelog file <https://github.com/plone/guillotina/blob/master/CHANGELOG.rst>`_
+for a complete list.
+
+
+
