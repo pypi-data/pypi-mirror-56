@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: sparkfun-qwiic-titan-gps
+Version: 0.1.1
+Summary: SparkFun Electronics Python Package for the Titan XA1110 GPS module.
+Home-page: https://www.sparkfun.com/products/14414
+Author: SparkFun Electronics
+Author-email: info@sparkfun.com
+License: MIT
+Keywords: electronics,maker
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: sparkfun-qwiic-i2c
+Requires-Dist: pynmea2
+
+Qwiic Titan GPS Py 
+==========================
+
+This package provdes functionality for SparkFun GPS Breakout - XA1110 GPS module. 
+
+
