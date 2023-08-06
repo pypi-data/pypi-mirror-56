@@ -1,0 +1,728 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{PyUedge}
+    
+    
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{pyuedge-jupyter-notebook}{%
+\section{PyUedge Jupyter Notebook}\label{pyuedge-jupyter-notebook}}
+
+    \hypertarget{this-notebook-is-to-help-get-users-started-using-the-python-version-of-uedge.}{%
+\subsubsection{This notebook is to help get users started using the
+Python version of
+UEDGE.}\label{this-notebook-is-to-help-get-users-started-using-the-python-version-of-uedge.}}
+
+    Start off by importing uedge. If installed you should see the CVS tag
+for your installed version. Note that because of the method used to bind
+the compiled fortran code to Python, the variables and functions
+contained within the packages is hidden. (To execute code blocks select
+and then type control-return)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{uedge} \PY{k}{import} \PY{o}{*}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{bbb}\PY{o}{.}\PY{n}{uedge\PYZus{}ver}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{dir}\PY{p}{(}\PY{n}{bbb}\PY{p}{)}\PY{p}{)}
+        \PY{k+kn}{from} \PY{n+nn}{case\PYZus{}setup} \PY{k}{import} \PY{o}{*}         \PY{c+c1}{\PYZsh{} sets up sizing variables and allocate space for case, provided for illustration}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[b'\$Name: V7\_08\_04 \$                                                               ']
+['\_\_class\_\_', '\_\_delattr\_\_', '\_\_dir\_\_', '\_\_doc\_\_', '\_\_eq\_\_', '\_\_format\_\_', '\_\_ge\_\_', '\_\_getattribute\_\_', '\_\_gt\_\_', '\_\_hash\_\_', '\_\_init\_\_', '\_\_init\_subclass\_\_', '\_\_le\_\_', '\_\_lt\_\_', '\_\_ne\_\_', '\_\_new\_\_', '\_\_reduce\_\_', '\_\_reduce\_ex\_\_', '\_\_repr\_\_', '\_\_setattr\_\_', '\_\_sizeof\_\_', '\_\_str\_\_', '\_\_subclasshook\_\_']
+
+    \end{Verbatim}
+
+    If the previous cell fails uncomment the the following cell (remove the
+\#) and run.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{o}{!} \PYZsh{}pip install uedge \PYZhy{}\PYZhy{}upgrade
+        \PY{o}{!} pip install wurlitzer
+        \PY{o}{\PYZpc{}}\PY{k}{load\PYZus{}ext} wurlitzer
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Requirement already satisfied: wurlitzer in /mfe/local/anaconda3\_5.0.1/lib/python3.6/site-packages (1.0.2)
+
+    \end{Verbatim}
+
+    As of this version most of PyUedge cases are translated from ones
+originally run with the Basis version of the code. Because of this it is
+worth a short description of issues encountered doing this conversion.
+
+    There are a few differences between the Python and Basis environments
+the user must be aware of.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Python variables must reference the package while Basis has a priority
+  based namespace. In Basis uedge\_ver can be used without specifying
+  ``bbb'' while in Python the package is required as in bbb.uedge\_ver.
+  To convert an existing Basis script start by using the application
+  ``\textbf{bas2py} basis\_file python\_file'' to get started. This will
+  add the package references for you.
+\item
+  Basis arrays may have variable index start or stop values. Basis
+  variables start at 1 and use parentheses; Python variables always
+  start at 0 and uses square brackets. If values assigned are indices
+  then they should probably follow Fortran rules: start with 1 and row
+  major.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    nxleg(1,1)=4 \# basis
+
+    \begin{itemize}
+    \tightlist
+    \item
+      com.nxleg{[}1,{]}={[}12,10{]} \# python
+    \end{itemize}
+  \item
+    kelighi(igsp) = 5.e-16 \# basis
+
+    \begin{itemize}
+    \tightlist
+    \item
+      bbb.kelighi{[}bbb.igsp-1{]} = 5.e-16 \# python
+    \end{itemize}
+  \item
+    Basis initialization with do-loop (Note that index ranges are both
+    ends inclusive. (1:3) is 1,2,3)
+  \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+  \KeywordTok{do}\NormalTok{ ijk }\KeywordTok{=}\NormalTok{ nhsp}\KeywordTok{+}\DecValTok{1}\NormalTok{, nhsp}\KeywordTok{+}\DecValTok{6}
+\NormalTok{   difniv(}\DecValTok{0}\NormalTok{:ny}\KeywordTok{+}\DecValTok{1}\NormalTok{,ijk) }\KeywordTok{=}\NormalTok{ pd}
+  \KeywordTok{enddo} 
+\end{Highlighting}
+\end{Shaded}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Python initialization with for-loop (Note that index ranges are only
+    left side inclusive. {[}1:4{]} is 1,2,3)
+  \end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ ijk }\KeywordTok{in}\NormalTok{ arange(com.nhsp,com.nhsp}\OperatorTok{+}\DecValTok{6}\NormalTok{):}
+\NormalTok{bbb.difniv[}\DecValTok{0}\NormalTok{:com.ny}\OperatorTok{+}\DecValTok{2}\NormalTok{,ijk] }\OperatorTok{=}\NormalTok{ pd}
+\end{Highlighting}
+\end{Shaded}
+\end{enumerate}
+
+    \hypertarget{saverestore}{%
+\section{Save/Restore}\label{saverestore}}
+
+    \hypertarget{pdb-pfb-files---the-basis-save-file-format.}{%
+\subsection{PDB (PFB) Files - The Basis save file
+format.}\label{pdb-pfb-files---the-basis-save-file-format.}}
+
+    This requires that the pact python module has been installed . This is
+supported on a limited number of systems. The GA cluster Iris and the
+LLNL cluster Singe are the main platforms that support this.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{k}{try}\PY{p}{:}
+             \PY{k+kn}{from} \PY{n+nn}{uedge}\PY{n+nn}{.}\PY{n+nn}{pdb\PYZus{}restore} \PY{k}{import} \PY{o}{*} \PY{c+c1}{\PYZsh{} if this fails pact is likely not installed}
+             \PY{n}{pdb\PYZus{}restore}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{d3d.pdb}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}          \PY{c+c1}{\PYZsh{} variable tgs is not included, no error}
+             
+         \PY{k}{except}\PY{p}{:}
+             \PY{n+nb}{print} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{pact not installed?}\PY{l+s+s2}{\PYZdq{}}
+             
+             
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+          File "<ipython-input-21-657d738a1c0a>", line 6
+        print "pact not installed?"
+                                  \^{}
+    SyntaxError: Missing parentheses in call to 'print'. Did you mean print("pact not installed?")?
+
+
+    \end{Verbatim}
+
+    \hypertarget{hdf5-files---the-python-save-file-format.}{%
+\subsection{HDF5 Files - The Python save file
+format.}\label{hdf5-files---the-python-save-file-format.}}
+
+    This requires that the h5py python module has been installed. This is
+part of the Anaconda distribution.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{try}\PY{p}{:}
+            \PY{k+kn}{from} \PY{n+nn}{uedge}\PY{n+nn}{.}\PY{n+nn}{hdf5} \PY{k}{import} \PY{o}{*}        \PY{c+c1}{\PYZsh{} if this fails h5py is likely not installed}
+            \PY{n}{hdf5\PYZus{}restore}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{d3d.hdf5}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}        \PY{c+c1}{\PYZsh{} variable tgs is not included and don\PYZsq{}t worry aroub \PYZdq{}Old style\PYZdq{} file}
+            
+        \PY{k}{except}\PY{p}{:}
+            \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{h5py not installed?}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+            
+            
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Old style hdf5 file
+
+    \end{Verbatim}
+
+    \hypertarget{run-a-case}{%
+\subsection{Run a case}\label{run-a-case}}
+
+    \begin{itemize}
+\tightlist
+\item
+  Basis - exmain
+\item
+  Python - bbb.exmain()
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k+kn}{from} \PY{n+nn}{uedge} \PY{k}{import} \PY{o}{*}
+        \PY{n}{bbb}\PY{o}{.}\PY{n}{exmain}\PY{p}{(}\PY{p}{)}   \PY{c+c1}{\PYZsh{} }
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Usual iteration output should be in terminal window running Jupyter Notebook}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{nksol \PYZhy{}\PYZhy{}\PYZhy{}  iterm = }\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{bbb}\PY{o}{.}\PY{n}{iterm}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+ UEDGE \$Name: V7\_08\_04 \$                                                               
+ Wrote file "gridue" with runid:    EFITD    09/07/90      \# 66832 ,2384ms
+
+ ***** Grid generation has been completed
+  Updating Jacobian, npe =                      1
+ iter=    0 fnrm=     0.8836028059824554     nfe=      1
+  Updating Jacobian, npe =                      2
+ iter=    1 fnrm=     0.7830357704942191     nfe=     27
+ iter=    2 fnrm=     0.6987551326282868     nfe=     57
+ iter=    3 fnrm=     0.6451626053526677     nfe=     92
+ iter=    4 fnrm=     0.5564541870508536     nfe=    129
+ iter=    5 fnrm=     0.4650795163520757     nfe=    166
+  Updating Jacobian, npe =                      3
+ iter=    6 fnrm=     0.4047963244535194     nfe=    174
+ iter=    7 fnrm=     0.3101544995105658     nfe=    184
+ iter=    8 fnrm=     0.1425256655297171     nfe=    196
+ iter=    9 fnrm=     0.9692888388847173E-01 nfe=    233
+ iter=   10 fnrm=     0.6472862782303432E-01 nfe=    268
+  Updating Jacobian, npe =                      4
+ iter=   11 fnrm=     0.5981843989990394E-01 nfe=    273
+ iUsual iteration output should be in terminal window running Jupyter Notebook
+nksol ---  iterm =  4
+ter=   12 fnrm=     0.2510534292033969E-01 nfe=    283
+ iter=   13 fnrm=     0.2493542404082094E-01 nfe=    307
+ iter=   14 fnrm=     0.2597513210544682E-01 nfe=    324
+ iter=   15 fnrm=     0.2309583170038645E-01 nfe=    341
+  Updating Jacobian, npe =                      5
+ iter=   16 fnrm=     0.2164407857359585E-01 nfe=    350
+ iter=   17 fnrm=     0.1870635848416796E-01 nfe=    364
+ iter=   18 fnrm=     0.1542173728330657E-01 nfe=    375
+ iter=   19 fnrm=     0.6431384479753541E-02 nfe=    384
+ iter=   20 fnrm=     0.6303720286031002E-02 nfe=    401
+  Updating Jacobian, npe =                      6
+ iter=   21 fnrm=     0.6167381370554297E-02 nfe=    413
+ iter=   22 fnrm=     0.6402013634952513E-02 nfe=    428
+ iter=   23 fnrm=     0.6261606570971315E-02 nfe=    440
+ iter=   24 fnrm=     0.6148186973454837E-02 nfe=    452
+ iter=   25 fnrm=     0.6429265295134812E-02 nfe=    467
+  Updating Jacobian, npe =                      7
+ iter=   26 fnrm=     0.6317578573471724E-02 nfe=    479
+ iter=   27 fnrm=     0.6118824841501220E-02 nfe=    491
+ iter=   28 fnrm=     0.6488847380729581E-02 nfe=    506
+ iter=   29 fnrm=     0.6150420807580852E-02 nfe=    518
+ iter=   30 fnrm=     0.6586300364205886E-02 nfe=    530
+
+
+ nksol ---  iterm = 4.
+            the maximum allowable number of nonlinear
+            iterations has been reached.
+ Interpolants created; mype =                   -1
+
+    \end{Verbatim}
+
+    \hypertarget{plotting}{%
+\section{Plotting}\label{plotting}}
+
+    \hypertarget{plot-the-mesh}{%
+\subsubsection{Plot the Mesh}\label{plot-the-mesh}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{k+kn}{from} \PY{n+nn}{uedge}\PY{n+nn}{.}\PY{n+nn}{uedgeplots} \PY{k}{import} \PY{o}{*}
+        \PY{k+kn}{import} \PY{n+nn}{warnings}
+        \PY{n}{warnings}\PY{o}{.}\PY{n}{filterwarnings}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ignore}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{c+c1}{\PYZsh{} ignore warnings for this notebook}
+        \PY{c+c1}{\PYZsh{} next line is only for this notebook, do not include this in your python files}
+        \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline 
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{plotmesh}\PY{o}{.}\PY{n+nv+vm}{\PYZus{}\PYZus{}doc\PYZus{}\PYZus{}}\PY{p}{)}
+        \PY{n}{plotmesh}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+   plotmesh(ixmin=<int>,ixmax=<int>,iymin=<int>,iymax=<int>
+            title=<string>,r\_min=<val>,r\_max=<val>,z\_min=<val>,z\_max=<val>,
+            block=<True|False>)
+      where ixmin, ixmax, iymin, and iymax are integer variables or
+      expressions used to plot a portion of the grid. title is used as
+      both the title and the figure name. Block default is True.
+      
+      The plot axis limits may be specified with r\_rmin,r\_max,z\_min,z\_max.
+   
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{PyUedge_files/PyUedge_20_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{plot-a-2-d-mesh-size-quantity}{%
+\subsubsection{Plot a 2-D (mesh size)
+Quantity}\label{plot-a-2-d-mesh-size-quantity}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{k+kn}{from} \PY{n+nn}{uedge}\PY{n+nn}{.}\PY{n+nn}{uedgeplots} \PY{k}{import} \PY{o}{*}
+        \PY{k+kn}{import} \PY{n+nn}{warnings}
+        \PY{n}{warnings}\PY{o}{.}\PY{n}{filterwarnings}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ignore}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{c+c1}{\PYZsh{} ignore warnings for this notebook}
+        \PY{c+c1}{\PYZsh{} next line is only for this notebook, do not include this in your python files}
+        \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{plotmeshval}\PY{o}{.}\PY{n+nv+vm}{\PYZus{}\PYZus{}doc\PYZus{}\PYZus{}}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{bbb}\PY{o}{.}\PY{n}{tis}\PY{o}{.}\PY{n}{shape}\PY{p}{)}
+        \PY{n}{plotmeshval}\PY{p}{(}\PY{n}{bbb}\PY{o}{.}\PY{n}{tis}\PY{p}{,}\PY{n}{title}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ion temperature}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+   plotmeshval(val,ixmin=<int>,ixmax=<int>,iymin=<int>,iymax=<int>
+            title=<string>,units=<string>,block=<True|False>)
+      Display 2-D quantity using polyfill.
+      where ixmin, ixmax, iymin, and iymax are integer variables or
+      expressions used to plot a portion of the grid. title is used as
+      both the title and the figure name. Units are displayed in the
+      side colorbar. Block default is True.
+
+      The plot axis limits may be specified with r\_rmin,r\_max,z\_min,z\_max.
+   
+(18, 10)
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{PyUedge_files/PyUedge_22_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{plot-a-1-d-profile}{%
+\subsubsection{Plot a 1-D Profile}\label{plot-a-1-d-profile}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{k+kn}{from} \PY{n+nn}{uedge}\PY{n+nn}{.}\PY{n+nn}{uedgeplots} \PY{k}{import} \PY{o}{*}
+        \PY{k+kn}{import} \PY{n+nn}{warnings}
+        \PY{n}{warnings}\PY{o}{.}\PY{n}{filterwarnings}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ignore}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{c+c1}{\PYZsh{} ignore warnings for this notebook}
+        \PY{c+c1}{\PYZsh{} next line is only for this notebook, do not include this in your python files}
+        \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+        \PY{n}{bbb}\PY{o}{.}\PY{n}{plateflux}\PY{p}{(}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{profile}\PY{o}{.}\PY{n+nv+vm}{\PYZus{}\PYZus{}doc\PYZus{}\PYZus{}}\PY{p}{)}
+        \PY{c+c1}{\PYZsh{}}
+        \PY{c+c1}{\PYZsh{}  Run in python these two traces will be on the same plot}
+        \PY{c+c1}{\PYZsh{}}
+        \PY{n}{profile}\PY{p}{(}\PY{n}{com}\PY{o}{.}\PY{n}{yyrb}\PY{p}{,}\PY{l+m+mf}{1.e\PYZhy{}6}\PY{o}{*}\PY{p}{(}\PY{n}{bbb}\PY{o}{.}\PY{n}{sdtrb}\PY{o}{+}\PY{n}{bbb}\PY{o}{.}\PY{n}{sdrrb}\PY{p}{)}\PY{p}{,}
+                \PY{n}{title}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Outer Particle+radiation heat flux}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} 
+                \PY{n}{xlabel}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Distance along outer plate (m)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} 
+                \PY{n}{ylabel}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Heat flux [MW/m**2]}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{style}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ro\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}
+            \PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+   profile(xval,yval,title=<None>,style=<None>,linewidth=<None>,xlabel=<None>,ylabel=<None>)
+      title is used as both the title and the figure name. 
+      Interactive is turned on so subsequent calls go to the same plot
+      Style encoded color, line, and marker.  See matplotlib documention.
+      examples: black solid line  - style='k-'
+                red circle marks  - style='ro'
+                green x marks and dotted line - style='gx--'
+   
+
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{PyUedge_files/PyUedge_24_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{misc-plots---uncomment-and-run-cell}{%
+\subsubsection{Misc Plots - uncomment and run
+cell}\label{misc-plots---uncomment-and-run-cell}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{c+c1}{\PYZsh{}******************************************************************}
+        \PY{c+c1}{\PYZsh{}For details of generic plot options, see https::/matplotlib.org/}
+        \PY{c+c1}{\PYZsh{}******************************************************************}
+        \PY{c+c1}{\PYZsh{}}
+        \PY{c+c1}{\PYZsh{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+        \PY{c+c1}{\PYZsh{}First, be sure you have loaded uedgeplots within an ipython session:}
+        \PY{c+c1}{\PYZsh{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+        
+        \PY{k+kn}{from} \PY{n+nn}{uedge}\PY{n+nn}{.}\PY{n+nn}{uedgeplots} \PY{k}{import} \PY{o}{*}
+        \PY{k+kn}{import} \PY{n+nn}{warnings}
+        \PY{n}{warnings}\PY{o}{.}\PY{n}{filterwarnings}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ignore}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{c+c1}{\PYZsh{} ignore warnings for this notebook}
+        \PY{c+c1}{\PYZsh{} next line is only for this notebook, do not include this in your python files}
+        \PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline 
+        
+        \PY{c+c1}{\PYZsh{}=======}
+        \PY{c+c1}{\PYZsh{}Plotting profiles on outer divertor plate:}
+        \PY{c+c1}{\PYZsh{}=======}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yyrb,bbb.ne[com.nx,],title=\PYZdq{}Electron density\PYZdq{}, xlabel=\PYZdq{}Distance along outer plate (m)\PYZdq{}, ylabel=\PYZdq{}ne(1/m**3)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yyrb,bbb.ng[com.nx,],title=\PYZdq{}Hydrogen atom density\PYZdq{}, xlabel=\PYZdq{}Distance along outer plate (m)\PYZdq{}, ylabel=\PYZdq{}ng(1/m**3)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yyrb,bbb.te[com.nx,]/bbb.ev,title=\PYZdq{}Electron temperature\PYZdq{}, xlabel=\PYZdq{}Distance along outer plate (m)\PYZdq{}, ylabel=\PYZdq{}Te (eV)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yyrb,bbb.ti[com.nx,]/bbb.ev,title=\PYZdq{}Ion temperature\PYZdq{}, xlabel=\PYZdq{}Distance along outer plate (m)\PYZdq{}, ylabel=\PYZdq{}Ti (eV)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yyrb,bbb.feex[com.nx,],title=\PYZdq{}Electron thermal heat flux *area\PYZdq{}, xlabel=\PYZdq{}Distance along outer plate (m)\PYZdq{}, ylabel=\PYZdq{}feex\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yyrb,bbb.feix[com.nx,],title=\PYZdq{}Ion/atom thermal heat flux *area\PYZdq{}, xlabel=\PYZdq{}Distance along outer plate (m)\PYZdq{}, ylabel=\PYZdq{}feix\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{} To plot the total heat flux on the outer divertor:}
+        \PY{c+c1}{\PYZsh{}bbb.plateflux()}
+        \PY{c+c1}{\PYZsh{}profile(com.yyrb,1.e\PYZhy{}6*(bbb.sdtrb+bbb.sdrrb),title=\PYZdq{}Particle+radiation heat flux\PYZdq{}, xlabel=\PYZdq{}Distance along outer plate (m)\PYZdq{}, ylabel=\PYZdq{}Heat flux [MW/m**2]\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}=======}
+        \PY{c+c1}{\PYZsh{}Plotting profiles on inner divertor plate:}
+        \PY{c+c1}{\PYZsh{}=======}
+        \PY{n}{profile}\PY{p}{(}\PY{n}{com}\PY{o}{.}\PY{n}{yylb}\PY{p}{,}\PY{n}{bbb}\PY{o}{.}\PY{n}{ne}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{p}{]}\PY{p}{,}\PY{n}{title}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Electron density}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Distance along inner plate (m)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ne (1/m**3)}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,bbb.ng[0,],title=\PYZdq{}Hydrogen atom density\PYZdq{}, xlabel=\PYZdq{}Distance along inner plate (m)\PYZdq{}, ylabel=\PYZdq{}ng(1/m**3)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,bbb.te[0,]/bbb.ev,title=\PYZdq{}Electron temperature\PYZdq{}, xlabel=\PYZdq{}Distance along inner plate (m)\PYZdq{}, ylabel=\PYZdq{}Te (eV)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,bbb.ti[0,]/bbb.ev,title=\PYZdq{}Ion temperature\PYZdq{}, xlabel=\PYZdq{}Distance along inner plate (m)\PYZdq{}, ylabel=\PYZdq{}Ti (eV)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,\PYZhy{}bbb.feex[0,],title=\PYZdq{}Electron thermal heat flux *area\PYZdq{}, xlabel=\PYZdq{}Distance along inner plate (m)\PYZdq{}, ylabel=\PYZdq{}feex\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,\PYZhy{}bbb.feix[0,],title=\PYZdq{}Ion/atom thermal heat flux *area\PYZdq{}, xlabel=\PYZdq{}Distance along inner plate (m)\PYZdq{}, ylabel=\PYZdq{}feix\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{} To plot the total heat flux on the inner divertor:}
+        \PY{c+c1}{\PYZsh{}bbb.plateflux()}
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,1.e\PYZhy{}6*(bbb.sdtlb+bbb.sdrlb),title=\PYZdq{}Particle+radiation heat flux\PYZdq{}, xlabel=\PYZdq{}Distance along inner plate (m)\PYZdq{}, ylabel=\PYZdq{}Heat flux [MW/m**2]\PYZdq{},figsize=(6,2))}
+        
+        
+        \PY{c+c1}{\PYZsh{}=======}
+        \PY{c+c1}{\PYZsh{}Plotting midplane profiles:}
+        \PY{c+c1}{\PYZsh{}=======}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,bbb.ne[bbb.ixmp,],title=\PYZdq{}Electron density at midplane\PYZdq{}, xlabel=\PYZdq{}Distance from separatrix (m)\PYZdq{}, ylabel=\PYZdq{}ne (1/m**3)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,bbb.ng[bbb.ixmp,],title=\PYZdq{}Hydrogen atom density at midplane\PYZdq{}, xlabel=\PYZdq{}Distance from separatrix (m)\PYZdq{}, ylabel=\PYZdq{}ng(1/m**3)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,bbb.te[bbb.ixmp,]/bbb.ev,title=\PYZdq{}Electron temperature at midplane\PYZdq{}, xlabel=\PYZdq{}Distance from separatrix (m)\PYZdq{}, ylabel=\PYZdq{}Te (eV)\PYZdq{},figsize=(6,2))}
+        
+        \PY{c+c1}{\PYZsh{}profile(com.yylb,bbb.ti[bbb.ixmp,]/bbb.ev,title=\PYZdq{}Ion temperature at midplane\PYZdq{}, xlabel=\PYZdq{}Distance from separatrix (m)\PYZdq{}, ylabel=\PYZdq{}Ti (eV)\PYZdq{},figsize=(6,2))}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{PyUedge_files/PyUedge_26_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} 
+\end{Verbatim}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
