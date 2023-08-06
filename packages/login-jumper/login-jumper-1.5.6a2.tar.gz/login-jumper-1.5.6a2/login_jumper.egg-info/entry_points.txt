@@ -1,0 +1,4 @@
+[console_scripts]
+jump = jumper:main
+jumper = server_gate:login_choice
+
