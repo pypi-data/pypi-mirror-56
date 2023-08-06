@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+epicenter/__init__.py
+epicenter/epicenter.py
+epicenter.egg-info/PKG-INFO
+epicenter.egg-info/SOURCES.txt
+epicenter.egg-info/dependency_links.txt
+epicenter.egg-info/top_level.txt
