@@ -1,0 +1,14 @@
+nhlstats/__init__.py,sha256=ylUbDQA8p8JX9FCxLb2KilRxIyVpFhVHjhzGX-FXQnk,106
+nhlstats/__version__.py,sha256=1GCCyofs2Zqyt9mZMq48wimZdtYG9GNuWU-5O6po928,139
+nhlstats/apiclient.py,sha256=_5x1_h-YkT6e0rWvqAFar5-jR8TcwN53R4xypveiLJs,1153
+nhlstats/normalize.py,sha256=RX_kpkMXbNstMjIGlF4NXMJuEmhfPd0rCffxG_swT50,1365
+nhlstats/cli/__init__.py,sha256=mGNZZkCUHdAw8fcTgZSvDZHFPomcV0wUnO5QDHUfSDg,23
+nhlstats/cli/core.py,sha256=CepSToB9rfpNUCtSKigg86dYPQAWm5X7B6J1ROb-1WA,1715
+nhlstats/cli/helpers.py,sha256=dpUxAf1RTRsFQOMHeQ3E4sL6JABr3FGgomJMPMPY8SI,1847
+nhlstats/cli/output.py,sha256=kbqD2D-CGZi0JJ5lLk7ICcQVaXeLptqWopCGPk_Atao,944
+nhlstats-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+nhlstats-0.0.3.dist-info/METADATA,sha256=dtKRg4ahrX6ADh_0oogFkt7wf20RK19wKnPiEHSz2E4,7140
+nhlstats-0.0.3.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+nhlstats-0.0.3.dist-info/entry_points.txt,sha256=pAn5ugydouv9LWW1HV6EbcimzuUmf74V8ZXoW9AbLYc,47
+nhlstats-0.0.3.dist-info/top_level.txt,sha256=myihQXkEujxxC3CZXAuIW8fsIacR1b63NwFZYHuGUAE,9
+nhlstats-0.0.3.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+nhl = nhlstats.cli.core:cli
+
