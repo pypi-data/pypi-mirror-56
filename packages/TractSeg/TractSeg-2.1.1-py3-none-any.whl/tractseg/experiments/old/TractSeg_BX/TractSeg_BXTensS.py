@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
+from tractseg.experiments.base_legacy.tract_seg_legacy import Config as TractSegConfig
+
+
+class Config(TractSegConfig):
+    EXP_NAME = os.path.basename(__file__).split(".")[0]
+
+    NR_OF_GRADIENTS = 18
+    FEATURES_FILENAME = "125mm_bedpostx_peaks_scaled"
+    P_SAMP = 0.4
