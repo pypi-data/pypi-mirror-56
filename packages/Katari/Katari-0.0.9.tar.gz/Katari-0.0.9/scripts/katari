@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+from Katari.managment import CommandInterface
+
+
+parser = CommandInterface()
+parser.run()
+
+
+
+
+
+
+
+
+
+
