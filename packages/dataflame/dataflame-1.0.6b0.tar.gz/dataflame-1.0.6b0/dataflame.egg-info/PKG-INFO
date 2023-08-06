@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: dataflame
+Version: 1.0.6b0
+Summary: DataFlame: Machine-Learning Oriented Dataframe Manipulation Interface for Pandas Dataframes
+Home-page: https://github.com/shayanfazeli/dataflame
+Author: Shayan Fazeli
+Author-email: shayan@cs.ucla.edu
+License: Apache
+Description: UNKNOWN
+Keywords: dataflame machine learning dataframe label interpolation
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >3.6.0
