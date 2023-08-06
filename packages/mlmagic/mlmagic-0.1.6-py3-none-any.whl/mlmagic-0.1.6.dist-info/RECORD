@@ -1,0 +1,14 @@
+mlmagic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlmagic/demo.py,sha256=2f39ySf1JweIS3ri684CJCUqnowj3JsnFQ5mSYi8V2w,43
+mlmagic/analyze/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlmagic/analyze/categorical.py,sha256=WYKhGErKV0s2Rk-FjlUKvDma9OEwGMd75f1x4cfRFo0,30
+mlmagic/analyze/missing.py,sha256=ONVo2PpHOGH6Y3rVWd_YurTSgQUYPWIKpf_b_VND-vI,1188
+mlmagic/analyze/na_values.py,sha256=RhlHHz1EjyY3t6WURwocB1K4dNzZAKmiCKHMyDw1Gyk,1216
+mlmagic/analyze/numeric.py,sha256=3klAyb0dnUVd5FZtqg97XcyZMLtJwhu_UANFJpMq824,4405
+mlmagic_pkg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlmagic_pkg/demo.py,sha256=2f39ySf1JweIS3ri684CJCUqnowj3JsnFQ5mSYi8V2w,43
+mlmagic-0.1.6.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+mlmagic-0.1.6.dist-info/METADATA,sha256=FHtGO9zuWmiF-m9EQTN3-NEscwnIW3xP9ugO7mMjS70,419
+mlmagic-0.1.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mlmagic-0.1.6.dist-info/top_level.txt,sha256=T-XgLtM4HcdpaKvIUdrv11wfA-M62rP3RdmDwSBNufc,8
+mlmagic-0.1.6.dist-info/RECORD,,
