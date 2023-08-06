@@ -1,0 +1,7 @@
+include plottwist/__logging__.ini
+include plottwist/changelog.yml
+include plottwist/resources/icons/color/*.*
+include plottwist/resources/icons/logos/*.*
+include plottwist/resources/icons/shelf/*.*
+include plottwist/resources/icons/lightrigs/*.*
+include plottwist/resources/images/*.*
