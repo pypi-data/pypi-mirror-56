@@ -1,0 +1,6 @@
+lxml
+matplotlib==2.0.2
+numpy==1.16.5
+sslpsk
+wxPython
+zeroconf==0.19.1
