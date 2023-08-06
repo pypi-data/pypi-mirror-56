@@ -1,0 +1,88 @@
+#!/bin/bash
+
+port=8080
+root=static
+
+usage() {
+    cmd=`echo $0 | sed 's/.*\///'`
+    echo "[Usage]" 1>&2
+    echo "  $cmd [OPTIONS]" 1>&2
+    echo "[OPTIONS]" 1>&2
+    echo "  -p port [default=$port], port number" 1>&2
+    echo "  -d root [default=$root], root dir for images" 1>&2
+    echo "[Example]" 1>&2
+    echo "  $cmd -p $port -d images"
+    exit 1
+}
+
+
+while getopts ":d:p:" o; do
+    case "${o}" in
+        d)
+            root=${OPTARG}
+            ;;
+        p)
+            port=${OPTARG}
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+if [ $# -ne 0 ]; then
+    usage
+fi
+if [ -z "${root}" ] || \
+   [ -z "${port}" ]; then
+    echo "  root="${root}
+    echo "  port="${port}
+    echo "--------------------------------"
+    usage
+fi
+
+mkdir -p $root > /dev/null 2>&1
+cd $root
+root=`pwd`
+cd - > /dev/null 2>&1
+echo -e "------------------------------------------------------------------"
+echo -e "| Config:"
+echo -e "|   root=${root}"
+echo -e "|   port=${port}"
+echo -e "------------------------------------------------------------------"
+
+export FLASK_DEBUG=1
+
+dnsdomainname=`dnsdomainname`
+hostname=`hostname`
+if [[ $dnsdomainname == "" ]] || [[ $(echo $hostname | grep $dnsdomainname$) != "" ]]; then
+    url=$hostname
+else
+    url=$hostname.$dnsdomainname
+fi
+
+image_dir='imgs000'
+for item in `ls $root`; do
+    if [ -d $root/$item ]; then
+        image_dir=$item
+        break
+    fi
+done
+echo -e "You can access images under $root via:"
+echo -e "\thttp://$url:$port?s=0&n=6&w=480"
+echo -e "or images under $root/$image_dir via:"
+echo -e "\thttp://$url:$port/$image_dir?s=0&n=6&w=480"
+echo -e "-----------------------------------------------------------------"
+echo -e "| There are some GET opts"
+echo -e "|   w: image width"
+echo -e "|   h: image height"
+echo -e "|   n: images per page"
+echo -e "|   s: show the s-th ~ (s+n-1)-th images"
+echo -e "|"
+echo -e "| Example:"
+echo -e "|   http://0.0.0.0:$port/$image_dir?s=4&n=4&w=1024"
+echo -e "| This will show the 4th~7th images with width=1024;"
+echo -e "-----------------------------------------------------------------"
+
+# flask run --host=0.0.0.0 --port=$port
+python `which implor.py` 0.0.0.0 $port $root
