@@ -1,0 +1,30 @@
+Metadata-Version: 1.1
+Name: graynet
+Version: 0.4.8
+Summary: Individualized single-subject networks from T1 mri features such as cortical thickness and gray matter density. 
+Home-page: https://github.com/raamana/graynet
+Author: Pradeep Reddy Raamana
+Author-email: raamana@gmail.com
+License: UNKNOWN
+Description: Individualized single-subject networks from T1-weighted magnetic resonance imaging (MRI) features such as:
+          - Cortical thickness.
+          - Gray matter density.
+          - Subcortical morphometric features.
+          - Gyrification and curvature. 
+        
+        Applicable for whenever network-level features are useful, among which common use cases are: 
+         - Biomarker development.
+         - Brain-behaviour relationships (e.g. for the diagnosis and prognosis of many brain disorders such as Alzheimer's, Parkinson's, Schizophrenia and the like).
+         - Aging (changes in network properties over age and their relations to other variables).
+        
+        Docs: https://raamana.github.io/graynet/
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 2.7
