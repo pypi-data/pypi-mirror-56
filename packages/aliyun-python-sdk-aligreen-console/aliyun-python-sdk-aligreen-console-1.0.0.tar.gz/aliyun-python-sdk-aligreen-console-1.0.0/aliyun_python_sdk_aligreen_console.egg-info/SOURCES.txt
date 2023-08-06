@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.py
+aliyun_python_sdk_aligreen_console.egg-info/PKG-INFO
+aliyun_python_sdk_aligreen_console.egg-info/SOURCES.txt
+aliyun_python_sdk_aligreen_console.egg-info/dependency_links.txt
+aliyun_python_sdk_aligreen_console.egg-info/requires.txt
+aliyun_python_sdk_aligreen_console.egg-info/top_level.txt
+aliyunsdkaligreen_console/__init__.py
+aliyunsdkaligreen_console/endpoint.py
+aliyunsdkaligreen_console/request/__init__.py
+aliyunsdkaligreen_console/request/v20191115/AddSfaceFaceRequest.py
+aliyunsdkaligreen_console/request/v20191115/AddSfacePersonRequest.py
+aliyunsdkaligreen_console/request/v20191115/GetSfacePersonRequest.py
+aliyunsdkaligreen_console/request/v20191115/ListSfaceAuditTasksRequest.py
+aliyunsdkaligreen_console/request/v20191115/__init__.py
