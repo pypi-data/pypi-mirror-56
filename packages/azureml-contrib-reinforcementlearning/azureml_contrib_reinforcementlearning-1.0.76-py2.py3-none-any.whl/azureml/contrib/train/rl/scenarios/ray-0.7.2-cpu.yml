@@ -1,0 +1,11 @@
+baseImage: mcr.microsoft.com/azureml/base:openmpi3.1.2-ubuntu16.04
+inlineCondaDependencies:
+  dependencies:
+  - python=3.6.2
+  - pip:
+    - azureml-defaults
+    - tensorflow==1.13.1
+    - ray[rllib]==0.7.2
+    - psutil
+    - setproctitle
+  
