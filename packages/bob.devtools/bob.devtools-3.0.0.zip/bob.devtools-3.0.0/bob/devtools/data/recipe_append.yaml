@@ -1,0 +1,4 @@
+build:
+  script_env:
+    - DOCSERVER
+    - BOB_NOSE_SLOW
