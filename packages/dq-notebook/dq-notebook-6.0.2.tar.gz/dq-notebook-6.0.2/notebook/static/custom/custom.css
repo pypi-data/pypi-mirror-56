@@ -1,0 +1,215 @@
+/*
+Placeholder for custom user CSS
+
+mainly to be overridden in profile/static/custom/custom.css
+
+This will always be an empty file
+*/
+
+/* --------------------图标的引入-------------------- */
+@font-face {
+  font-family: 'dqicon';
+  src: url('./font/iconfont.eot');
+  src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('./font/iconfont.woff2') format('woff2'),
+      url('./font/iconfont.woff') format('woff'),
+      url('./font/iconfont.ttf') format('truetype'),
+      url('./font/iconfont.svg#iconfont') format('svg');
+}
+.dqicon {
+  font-family: "dqicon" !important;
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* --------------------修改字体-------------------- */
+.CodeMirror pre {font-family: Consolas; font-size: 12pt;}
+div.output_area pre {font-family: Consolas; font-size: 12pt;}
+div.input_prompt {font-family: Consolas; font-size: 12pt;}
+div.out_prompt_overlay {font-family: Consolas; font-size: 12pt;}
+div.prompt {font-family: Consolas; font-size: 12pt;}
+span.cm-comment {font-family:  Consolas !important; font-style:normal !important; color:#BB3D00 !important;}
+/* --------------------全局样式--------------------*/
+body {
+  font-size: 14px;
+}
+/* 按钮样式 */
+.btn {
+  border-radius: 4px;
+}
+.btn-default:hover, .btn-default:active, .btn-default:focus {
+  background-color: transparent;
+  color: #3878FF;
+  border-color: #3878FF;
+}
+.btn-primary {
+  background-color: #3878FF;
+  border-color: #3878FF;
+}
+.btn-primary:hover {
+  background-color: #3878FF;
+  border-color: #3878FF;
+  opacity: 0.8;
+}
+.btn-danger {
+  background-color: #E8525B;
+  border-color: #E8525B;
+}
+.btn-danger:hover {
+  background-color: #E8525B;
+  border-color: #E8525B;
+  opacity: 0.8;
+}
+.btn-warning {
+  background-color: #FFD541;
+  border-color: #FFD541;
+}
+.btn-warning:hover {
+  background-color: #FFD541;
+  border-color: #FFD541;
+  opacity: 0.8;
+}
+/*文件上传按钮样式*/
+.alternate_upload .btn-upload {
+  height: 32px;
+}
+/* 对话框 */
+.modal .modal-dialog {
+  width: 360px !important;
+}
+.modal .modal-dialog .modal-content{
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 12px 24px rgba(37, 61, 103, 0.16);
+}
+.modal .modal-dialog .modal-header {
+  cursor: auto;
+  background-color: #F8F8FA;
+  color: #292A33;
+  font-weight: bold;
+  border-radius: 8px 8px 0px 0px;
+}
+.modal .modal-dialog .modal-body {
+  padding: 32px 24px;
+}
+.modal .modal-dialog .modal-footer {
+  padding: 16px 24px;
+}
+/* 下拉菜单样式 */
+.dropdown-menu {
+  padding: 10px 0;
+  border-radius: 4px;
+}
+.dropdown-menu > li > a {
+  padding: 10px 16px;
+}
+.dropdown-menu .dropdown-header {
+  color: #92959A;
+  padding: 8px 0 !important;
+  margin: 0 16px !important;
+}
+.dropdown-menu .divider {
+  margin: 0 0 8px;
+}
+
+/* --------------------头部样式-------------------- */
+#header #header-container {
+  display: none !important;
+}
+
+/* --------------------tab样式-------------------- */
+#ipython-main-app #tab_content .tabs-center {
+  text-align: center; /* to center #tabs*/
+}
+
+#ipython-main-app #tab_content #tabs {
+  display: inline-block;
+}
+
+#ipython-main-app #tab_content #tabs > li {
+  padding: 0 15px;
+}
+
+#ipython-main-app #tab_content #tabs > li > a {
+  border: none;
+  border-bottom: 2px solid #B2B3BB;
+  padding: 10px 5px;
+  font-size: 16px;
+  color: #575866;
+}
+#ipython-main-app #tab_content #tabs > li > a:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #3878FF;
+}
+#ipython-main-app #tab_content #tabs > li.active > a {
+  transition: all 0.2s ease-in-out;
+  border-bottom: 2px solid #3878FF;
+  color: #292A33;
+}
+#ipython-main-app #tab_content #tabs > li > a > .dqicon {
+  font-size: 24px;
+  vertical-align: middle;
+}
+#ipython-main-app #tab_content #tabs > li.active > a > .dqicon {
+  color: #3878FF;
+}
+
+/* --------------------文件列表样式--------------------*/
+/* ----------所有文件列表---------- */
+.list_toolbar {
+  padding: 16px 0;
+}
+.list_container {
+  border-left: none;
+  border-right: none;
+}
+.list_container .row {
+  padding: 12px 0;
+}
+.list_container .list_header {
+  background-color: rgba(56, 120, 255, 0.05);
+}
+.list_container .list_item:hover {
+  background-color: rgba(56, 120, 255, 0.05);
+}
+#ipython-main-app #tab_content #notebooks {
+    
+}
+#ipython-main-app #tab_content #notebooks #notebook_toolbar {
+
+}
+
+#ipython-main-app #tab_content #notebooks #notebook_list {
+
+}
+/* 运行中标志 */
+#ipython-main-app #tab_content #notebooks #notebook_list .row .running-indicator::before {
+  display: inline-block;
+  content: ' ';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background-color: #67EE9D;
+}
+/*修改时间*/
+#ipython-main-app #tab_content #notebooks #notebook_list .row .item_modified {
+  width: 100px;
+  text-align: right;
+}
+
+/* ----------运行中文件列表---------- */
+#ipython-main-app #tab_content .tab_content #running {
+}
+#running .panel-group .panel {
+  border-left: none;
+  border-right: none;
+}
+#running #running_list .list_item .file_size {
+  display: none;
+}
+/* ----------回收站列表---------- */
+#ipython-main-app #tab_content .tab_content #clusters {
+
+}
