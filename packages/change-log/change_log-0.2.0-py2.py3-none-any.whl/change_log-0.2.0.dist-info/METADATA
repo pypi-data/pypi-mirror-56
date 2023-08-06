@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: change-log
+Version: 0.2.0
+Summary: Change and Manage Package Information
+Home-page: https://github.com/mainekuehn/change-log
+License: UNKNOWN
+Keywords: release changelog distribution package
+Author: Eileen Kuehn, Max Fischer
+Author-email: mainekuehn@gmail.com
+Description-Content-Type: text/x-rst
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Adaptive Technologies
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: pyyaml
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: sphinx_rtd_theme; extra == "doc"
+Requires-Dist: pytest >=4.3.0; extra == "test"
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: flake8-bugbear; extra == "test"
+Requires-Dist: black; extra == "test" and ( implementation_name=='cpython')
+Project-URL: Documentation, https://change-log.readthedocs.io/en/latest/
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: test
+
+----------------------------------------------------
+``change-log`` -- Change and Log project information
+----------------------------------------------------
+
+This project provides utilities to manage information about a project
+and prepare it for publishing.
+
+``change log``
+    dynamically create changelogs from fragment files
+
