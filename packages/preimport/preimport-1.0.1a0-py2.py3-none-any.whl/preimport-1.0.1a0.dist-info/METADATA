@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: preimport
+Version: 1.0.1a0
+Summary: Preimport python modules to accelerate running speed.
+Home-page: https://github.com/hustlei/preimport
+Author: lileilei
+Author-email: hustlei@sina.cn
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/hustlei/preimport
+Keywords: preimport
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7.*
+
+UNKNOWN
+
+
