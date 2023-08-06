@@ -1,0 +1,32 @@
+import setuptools, os, glob
+from {{name}} import __version__
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+     name='{{name}}',
+     version=__version__,
+     author="{{author}}",
+     author_email="{{email}}",
+     description="Glia package of NEURON models",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/dbbs-lab/glia",
+     license='GPLv3',
+     packages=setuptools.find_packages(),
+     classifiers=[
+         "Programming Language :: Python :: 3",
+         "Operating System :: OS Independent",
+     ],
+     include_package_data=True,
+     data_files=[
+         ('mod', glob.glob(os.path.join(os.path.dirname(__file__), "{{name}}", "mod", "*")))
+     ],
+     entry_points={
+      'glia.package': ['{{name}} = {{name}}']
+     },
+     install_requires=[
+      "nrn-glia>={|glia_version|}"
+     ]
+ )
