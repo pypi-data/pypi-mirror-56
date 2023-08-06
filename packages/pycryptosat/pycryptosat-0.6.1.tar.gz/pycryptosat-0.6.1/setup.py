@@ -1,0 +1,208 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# CryptoMiniSat
+#
+# Copyright (c) 2009-2017, Mate Soos. All rights reserved.
+# Copyright (c) 2017-2019, Pierre Vignet
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+from __future__ import print_function
+from distutils import sysconfig
+from collections import defaultdict
+import sys
+from setuptools import setup, Extension
+from setuptools.command.build_ext import build_ext as _build_ext
+from setuptools.command.test import test as _test
+
+__PACKAGE_VERSION__ = "0.6.1"
+__LIBRARY_VERSION__ = "5.6.8"
+
+################################################################################
+
+# Definition of various arguments specific to compilers and platforms
+EXTRA_ARGS = {
+    "msvc": {
+        # c++11 doesn't really exist in Visual Studio...
+        # But c++14 is "already" implemented starting from VS 2015.
+        # Note: c++latest could be used but is not stable.
+        "extra_compile_args": ["/std:c++14", "/GL", "/O2", "/W4", "/GS-"],
+        "extra_link_args": ["/LTCG"],
+    },
+    "mingw32": {
+        # 06/2018: flto is still broken on Windows
+        "extra_compile_args": ["-std=c++11", "-O3",
+                               "-Wno-return-type",
+                               "-Wno-unused-variable",
+                               "-Wno-unused-but-set-variable",
+                               "-fvisibility=hidden"],
+        "extra_link_args": ["-O3", "-Wl,--as-needed"],
+        # Macros used to fix compilation via mingw32
+        # hypot:
+        # https://stackoverflow.com/questions/10660524/error-building-boost-1-49-0-with-gcc-4-7-0/
+        # pyconfig.h on Windows defines
+        # hypot as _hypot which subsequently cripples the declaration of hypot
+        # in <math.h> and ultimately breaks the using declaration in <cmath>
+        #
+        # MS_WIN64:
+        # https://stackoverflow.com/questions/2842469/python-undefined-reference-to-imp-py-initmodule4
+        # Fix undefined reference to `_imp __Py_InitModule4"
+        "define_macros": [("_hypot", "hypot"), ("MS_WIN64", None)],
+    },
+    "unix": {
+        "extra_compile_args": ["-std=c++11", "-flto", "-O3",
+                               "-Wno-return-type",
+                               "-Wno-unused-variable",
+                               "-Wno-unused-but-set-variable",
+                               "-fvisibility=hidden"],
+        "extra_link_args": ["-flto", "-O3", "-Wl,--as-needed"],
+    },
+    "unix_darwin": {
+        # linking to Clang"s C++ library libc++, rather than GCC"s libstdc++
+        # (avoid missing headers like <cstdint>)
+        # libc++ is available starting from OSX 10.9
+        "extra_compile_args": ["-stdlib=libc++", "-std=c++14", "-flto", "-O3",
+                               "-Wno-return-type",
+                               "-Wno-unused-variable",
+                               "-Wno-unused-but-set-variable",
+                               "-fvisibility=hidden"],
+        "extra_link_args": ["-stdlib=libc++", "-flto", "-O3"],
+    },
+}
+EXTRA_ARGS = defaultdict(lambda: defaultdict(list), EXTRA_ARGS)
+
+
+class BuildExt(_build_ext):
+    """Wrapper for build_ext class from setuptools.
+
+    This wrapper is used to set specific compiler args in order to build
+    the extensions.
+    """
+    def build_extensions(self):
+        """Assign arguments to the current compiler.
+
+        Possible compilers: msvc, mingw32, unix (gcc/clang under linux)
+        """
+        compiler = self.compiler.compiler_type
+
+        # Use specific flags for OSX which has a "unix" compiler_type
+        if sys.platform == "darwin":
+            compiler += "_darwin"
+
+        for ext in self.extensions:
+            for extra_arg, args in EXTRA_ARGS[compiler].items():
+                # Just add custom args without ovewrite previous ones
+                ext.__dict__[extra_arg] = ext.__dict__[extra_arg] or []
+                ext.__dict__[extra_arg] += args
+        _build_ext.build_extensions(self)
+
+################################################################################
+
+# Delete unwanted flags for C compilation
+# Distutils has the lovely feature of providing all the same flags that
+# Python was compiled with. The result is that adding extra flags is easy,
+# but removing them is a total pain. Doing so involves subclassing the
+# compiler class, catching the arguments and manually removing the offending
+# flag from the argument list used by the compile function.
+# That's the theory anyway, the docs are too poor to actually guide you
+# through what you have to do to make that happen.
+
+def _init_posix(init):
+    """Initialize the module as appropriate for POSIX systems."""
+    def wrapper():
+        init()
+        # Get Python’s configuration variables for the current platform
+        config_vars = sysconfig.get_config_vars()  # by reference
+        if "MACHDEP" not in config_vars:
+            return
+
+        if config_vars["MACHDEP"].startswith("sun"):
+            # Sun needs forced gcc/g++ compilation
+            config_vars["CC"] = "gcc"
+            config_vars["CXX"] = "g++"
+
+        if config_vars["MACHDEP"].startswith("linux") \
+        or config_vars["MACHDEP"] == "cygwin":
+            # Remove GDB specific debug informations
+            # Remove -Wstrict-prototypes which is valid for C but not for C++
+            for k, v in config_vars.items():
+                for unwanted in (" -g ", "-Wstrict-prototypes"):
+                    if str(v).find(unwanted) != -1:
+                        v = config_vars[k] = str(v).replace(unwanted, " ")
+    return wrapper
+
+if sys.platform != "win32":
+    # Posix platforms only:
+    # Avoid ImportError: _sysconfigdata on Windows
+    sysconfig._init_posix = _init_posix(sysconfig._init_posix)
+
+    # Thus, when build_ext is imported, _init_posix() is never called automatically
+    sysconfig._init_posix()
+
+################################################################################
+
+class Test(_test):
+    """Call tests with the custom 'python setup.py test' command."""
+
+    def run(self):
+        import tests as tp
+        tp.run()
+
+################################################################################
+
+# Source files
+SOURCES = ["src/bva.cpp", "src/clauseallocator.cpp", "src/clausecleaner.cpp", "src/clausedumper.cpp", "src/clauseusagestats.cpp", "src/cnf.cpp", "src/compfinder.cpp", "src/comphandler.cpp", "src/completedetachreattacher.cpp", "src/cryptominisat.cpp", "src/cryptominisat_c.cpp", "src/datasync.cpp", "src/distillerlong.cpp", "src/distillerlongwithimpl.cpp", "src/features_calc.cpp", "src/features_to_reconf.cpp", "src/GitSHA1.cpp", "src/hyperengine.cpp", "src/implcache.cpp", "src/intree.cpp", "src/occsimplifier.cpp", "src/prober.cpp", "src/propengine.cpp", "src/pycryptosat.cpp", "src/reducedb.cpp", "src/sccfinder.cpp", "src/searcher.cpp", "src/searchstats.cpp", "src/solutionextender.cpp", "src/solvefeatures.cpp", "src/solver.cpp", "src/solverconf.cpp", "src/sqlstats.cpp", "src/stamp.cpp", "src/str_impl_w_impl_stamp.cpp", "src/subsumeimplicit.cpp", "src/subsumestrengthen.cpp", "src/varreplacer.cpp", "src/walksat.cpp", "src/xorfinder.cpp", ]
+
+EXTENSION = Extension(
+    name="pycryptosat",
+    sources=SOURCES,
+    include_dirs=["src", "."],
+)
+
+setup(
+    name="pycryptosat",
+    version=__PACKAGE_VERSION__,  # package version; not library version
+    author="Mate Soos",  # package author’s name
+    author_email="soos.mate@gmail.com",
+    url="https://github.com/msoos/cryptominisat",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Operating System :: OS Independent",
+        "Programming Language :: C++",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
+        "License :: OSI Approved :: MIT License",
+        "Topic :: Utilities",
+        "Topic :: Scientific/Engineering",
+    ],
+    ext_modules=[EXTENSION],
+    description="Bindings to CryptoMiniSat {} (a SAT solver)".format(
+        __LIBRARY_VERSION__
+    ),
+    long_description=open("README.rst").read(),
+    long_description_content_type="text/x-rst",
+    cmdclass={
+        "test": Test,
+        "build_ext": BuildExt
+    }
+)
