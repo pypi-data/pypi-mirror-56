@@ -1,0 +1,23 @@
+python-binance
+redis
+celery
+marshmallow==2.20.5
+mongoengine
+requests
+switcheo
+click
+flask
+flask-restful
+flask-session
+flask-socketio
+flask-login
+flasgger
+eventlet
+gunicorn
+mongodb-migrations
+requests
+bcrypt
+environs
+
+# library dependencies
+jsonschema==2.6.0
