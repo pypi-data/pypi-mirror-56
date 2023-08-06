@@ -1,0 +1,5 @@
+requests~=2.0
+pandas~=0.24
+uproot~=3.7
+retry~=0.9
+func_adl==1.0.0a6
