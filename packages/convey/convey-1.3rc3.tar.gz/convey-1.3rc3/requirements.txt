@@ -1,0 +1,16 @@
+pint
+chardet
+python-dateutil
+requests
+netaddr
+jsonpickle
+ipdb
+pythondialog
+validate_email
+tabulate
+appdirs
+humanize
+beautifulsoup4
+python-Levenshtein
+prompt_toolkit>=2,<3
+pygments

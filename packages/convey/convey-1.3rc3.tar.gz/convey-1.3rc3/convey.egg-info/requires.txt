@@ -1,0 +1,16 @@
+appdirs
+beautifulsoup4
+chardet
+humanize
+ipdb
+jsonpickle
+netaddr
+pint
+prompt_toolkit<3,>=2
+pygments
+python-Levenshtein
+python-dateutil
+pythondialog
+requests
+tabulate
+validate_email
