@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: python-canalyzer
+Version: 0.0.2
+Summary: Vector CANalyzer Win32Com
+Home-page: https://github.com/sgnes/PythonCanalyzer
+Author: Guopeng Sun
+Author-email: sgnes0514@gmai.com
+License: UNKNOWN
+Description: # PythonCanalyzer
+        A python implementation to control Vector Canalyzer via Win32Com interface.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
