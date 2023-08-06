@@ -1,0 +1,345 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "project_id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 5000
+    },
+    "description": {
+      "type": ["null", "string"],
+      "maxLength": 20000
+    },
+    "story_type": {
+      "type": ["null", "string"],
+      "enum": ["feature", "bug", "chore", "release"]
+    },
+    "current_state": {
+      "type": ["null", "string"],
+      "enum": ["accepted", "delivered", "finished", "started", "rejected", "planned", "unstarted", "unscheduled"]
+    },
+    "estimate": {
+      "type": ["null", "number"]
+    },
+    "accepted_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "deadline": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "projected_completion": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "points_accepted": {
+      "type": ["null", "number"]
+    },
+    "points_total": {
+      "type": ["null", "number"]
+    },
+    "counts_accepted": {
+      "type": ["null", "integer"]
+    },
+    "counts_total": {
+      "type": ["null", "integer"]
+    },
+    "requested_by_id": {
+      "type": ["null", "integer"]
+    },
+    "owner_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "label_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "task_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "tasks": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": {
+            "type": ["null", "integer"]
+          },
+          "story_id": {
+            "type": ["null", "integer"]
+          },
+          "description": {
+            "type": ["null", "string"],
+            "maxLength": 1000
+          },
+          "complete": {
+            "type": ["null", "boolean"]
+          },
+          "position": {
+            "type": ["null", "integer"]
+          },
+          "created_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "kind": {
+            "type": ["null", "string"]
+          }
+        }
+      }
+    },
+    "pull_request_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "branch_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "blocker_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "blockers": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": {
+            "type": ["null", "integer"]
+          },
+          "story_id": {
+            "type": ["null", "integer"]
+          },
+          "person_id": {
+            "type": ["null", "integer"]
+          },
+          "description": {
+            "type": ["null", "string"],
+            "maxLength": 1000
+          },
+          "resolved": {
+            "type": ["null", "boolean"]
+          },
+          "created_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "kind": {
+            "type": ["null", "string"]
+          }
+        }
+      }
+    },
+    "follower_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "comment_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "comments": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "id": {
+            "type": ["null", "integer"]
+          },
+          "story_id": {
+            "type": ["null", "integer"]
+          },
+          "epic_id": {
+            "type": ["null", "integer"]
+          },
+          "text": {
+            "type": ["null", "string"],
+            "maxLength": 20000
+          },
+          "person_id": {
+            "type": ["null", "integer"]
+          },
+          "created_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "file_attachment_ids": {
+            "type": ["null", "array"],
+            "items": {
+              "type": ["null", "integer"]
+            }
+          },
+          "google_attachment_ids": {
+            "type": ["null", "array"],
+            "items": {
+              "type": ["null", "integer"]
+            }
+          },
+          "attachment_ids": {
+            "type": ["null", "array"],
+            "items": {
+              "type": ["null", "integer"]
+            }
+          },
+          "commit_identifier": {
+            "type": ["null", "string"],
+            "maxLength": 255
+          },
+          "commit_type": {
+            "type": ["null", "string"],
+            "maxLength": 255
+          },
+          "kind": {
+            "type": ["null", "string"]
+          }
+        }
+      }
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "before_id": {
+      "type": ["null", "integer"]
+    },
+    "after_id": {
+      "type": ["null", "integer"]
+    },
+    "integration_id": {
+      "type": ["null", "integer"]
+    },
+    "external_id": {
+      "type": ["null", "string"],
+      "maxLength": 255
+    },
+    "url": {
+      "type": ["null", "string"]
+    },
+    "transitions": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "object"],
+        "properties": {
+          "state": {
+            "type": ["null", "string"],
+            "enum": ["accepted", "delivered", "finished", "started", "rejected", "planned", "unstarted", "unscheduled"]
+          },
+          "story_id": {
+            "type": ["null", "integer"]
+          },
+          "project_id": {
+            "type": ["null", "integer"]
+          },
+          "project_version": {
+            "type": ["null", "integer"]
+          },
+          "occurred_at": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "performed_by_id": {
+            "type": ["null", "integer"]
+          },
+          "kind": {
+            "type": ["null", "string"]
+          }
+        }
+      }
+    },
+    "blocked_story_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "review_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "cycle_time_details": {
+      "type": ["null", "object"],
+      "properties": {
+        "total_cycle_time": {
+          "type": ["null", "integer"]
+        },
+        "started_time": {
+          "type": ["null", "integer"]
+        },
+        "started_count": {
+          "type": ["null", "integer"]
+        },
+        "finished_time": {
+          "type": ["null", "integer"]
+        },
+        "finished_count": {
+          "type": ["null", "integer"]
+        },
+        "delivered_time": {
+          "type": ["null", "integer"]
+        },
+        "delivered_count": {
+          "type": ["null", "integer"]
+        },
+        "rejected_time": {
+          "type": ["null", "integer"]
+        },
+        "rejected_count": {
+          "type": ["null", "integer"]
+        },
+        "story_id": {
+          "type": ["null", "integer"]
+        },
+        "kind": {
+          "type": ["null", "string"]
+        }
+      }
+    },
+    "kind": {
+      "type": ["null", "string"]
+    }
+  }
+}

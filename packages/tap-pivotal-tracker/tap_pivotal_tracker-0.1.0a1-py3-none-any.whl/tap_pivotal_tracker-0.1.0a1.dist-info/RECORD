@@ -1,0 +1,14 @@
+tap_pivotal_tracker/__init__.py,sha256=5GWuHvwgZhW3TS88072fYsFYBXZKMj_hq6e0mywDdic,2881
+tap_pivotal_tracker/client.py,sha256=0uSjdyMqRnzy7RgLQyHxPDiBDtcTyEW-0HNccTxozHs,11111
+tap_pivotal_tracker/version.py,sha256=oklfaV_M5bvHU9tWlv1O9c7sfWaYAf07dMBUHZ3wLHs,24
+tap_pivotal_tracker/schemas/accounts.json,sha256=TQqMenk7pS40F36XngrOhPlZKqdfEWhklRc6iCR3x6E,873
+tap_pivotal_tracker/schemas/labels.json,sha256=1L3Ebabrb9LkPKs-KBR2tFk9um0E_ExS-PpXuNTWZ78,3263
+tap_pivotal_tracker/schemas/project_memberships.json,sha256=mDrhsQbRxgPpFCyEE2N3DFAJ1R-eBCtrVngePEP72hg,1419
+tap_pivotal_tracker/schemas/projects.json,sha256=WgAQ-s-S7Rh2k1ZjypLrxl7zbuvDIXklihLcEwnLnvY,3880
+tap_pivotal_tracker/schemas/stories.json,sha256=ddroCV1NJHbk4FhETXweUKUZtzzwPG9YixKyBVNAJFQ,8145
+tap_pivotal_tracker-0.1.0a1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tap_pivotal_tracker-0.1.0a1.dist-info/METADATA,sha256=PCntxswQXPn7k1dIb8k8JZPmqOklMsnmkICPCU67UIg,8664
+tap_pivotal_tracker-0.1.0a1.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+tap_pivotal_tracker-0.1.0a1.dist-info/entry_points.txt,sha256=TKENZ2NFdBP04H0LvbKqjLLnm3eU8qHE7-cgh0C42I0,66
+tap_pivotal_tracker-0.1.0a1.dist-info/top_level.txt,sha256=n40HzuRfa3SxKHIjOvU70-J1rX_yBiKVrLzjOrfdR1s,20
+tap_pivotal_tracker-0.1.0a1.dist-info/RECORD,,

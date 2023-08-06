@@ -1,0 +1,3 @@
+[console_scripts]
+tap-pivotal-tracker = tap_pivotal_tracker:main
+

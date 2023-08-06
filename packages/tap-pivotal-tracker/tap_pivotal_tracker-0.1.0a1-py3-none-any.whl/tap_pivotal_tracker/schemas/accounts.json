@@ -1,0 +1,43 @@
+{
+  "type": ["null", "object"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": ["null", "string"],
+      "maxLength": 100
+    },
+    "plan": {
+      "type": ["null", "string"]
+    },
+    "status": {
+      "type": ["null", "string"],
+      "enum": ["active", "suspended", "delinquent", "deleted", "limited"]
+    },
+    "days_left": {
+      "type": ["null", "integer"]
+    },
+    "over_the_limit": {
+      "type": ["null", "boolean"]
+    },
+    "created_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": ["null", "string"],
+      "format": "date-time"
+    },
+    "project_ids": {
+      "type": ["null", "array"],
+      "items": {
+        "type": ["null", "integer"]
+      }
+    },
+    "kind": {
+      "type": ["null", "string"]
+    }
+  }
+}
