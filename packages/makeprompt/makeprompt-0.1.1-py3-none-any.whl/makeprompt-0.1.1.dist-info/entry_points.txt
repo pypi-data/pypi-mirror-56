@@ -1,0 +1,3 @@
+[console_scripts]
+makeprompt = makeprompt:build_prompt
+
