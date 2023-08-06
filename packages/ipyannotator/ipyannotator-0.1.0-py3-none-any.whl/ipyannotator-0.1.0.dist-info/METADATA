@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: ipyannotator
+Version: 0.1.0
+Summary: ipython widgets for data annotation
+Author: Palaimon OSS 
+Author-email: oss@palaimon.io
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
