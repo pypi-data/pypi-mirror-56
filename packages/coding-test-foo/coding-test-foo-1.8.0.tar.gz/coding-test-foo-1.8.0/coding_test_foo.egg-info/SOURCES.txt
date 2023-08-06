@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+bar/__init__.py
+bar/speaker.py
+coding_test_foo.egg-info/PKG-INFO
+coding_test_foo.egg-info/SOURCES.txt
+coding_test_foo.egg-info/dependency_links.txt
+coding_test_foo.egg-info/top_level.txt
