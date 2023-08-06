@@ -1,0 +1,16 @@
+README.md
+setup.py
+cwl_tes/__init__.py
+cwl_tes/ftp.py
+cwl_tes/main.py
+cwl_tes/tes.py
+cwl_tes.egg-info/PKG-INFO
+cwl_tes.egg-info/SOURCES.txt
+cwl_tes.egg-info/dependency_links.txt
+cwl_tes.egg-info/entry_points.txt
+cwl_tes.egg-info/requires.txt
+cwl_tes.egg-info/top_level.txt
+cwl_tes.egg-info/zip-safe
+tests/__init__.py
+tests/funnel_test_util.py
+tests/test_conformance.py
