@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cow_csvw
+Version: 0.65
+Summary: Integrated CSV to RDF converter, using CSVW and nanopublications
+Home-page: https://github.com/CLARIAH/COW
+Author: Albert MeroÃ±o-PeÃ±uela, Roderick van der Weerdt, Rinke Hoekstra, Kathrin Dentler, Auke Rijpma, Richard Zijdeman
+Author-email: albert.merono@vu.nl
+License: MIT
+Download-URL: https://github.com/CLARIAH/COW/archive/0.65.tar.gz
+Description: ## COW: CSV on the Web Converters
+        **Authors:**    Albert Meroño-Peñuela, Roderick van der Weerdt, Rinke Hoekstra, Kathrin Dentler, Auke Rijpma, Richard Zijdeman
+        
+        **Copyright:**  Vrije Universiteit Amsterdam, Utrecht University, International Institute for Social History
+        
+        **License:**    MIT License (see [license.txt](license.txt))
+        
+        
+        > COW is an integrated CSV to RDF converter, using [CSVW](https://www.w3.org/TR/tabular-data-primer/) and [nanopublications](http://nanopub.org/)
+        
+        ### Documentation & Installation
+        
+        Documentation and Installation instructions for COW are maintained in this GitHub repository (under <docs>), and published through [Read the Docs](http://readthedocs.org) at <http://csvw-converter.readthedocs.io/en/latest/>. As an addition to this documentation the [wiki](https://github.com/CLARIAH/COW/wiki) provides more hands-on examples of transposing csv's into Linked Data
+        
+        To build the documentation from source, change into the `docs` directory, and run `make html`. This should produce an HTML version of the documentation in the `_build/html` directory.
+        
+Keywords: csv,rdf,csvw
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
