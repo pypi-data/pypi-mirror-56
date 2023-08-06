@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dataverk-vault
+Version: 0.1.0
+Summary: Vault integration for dataverk
+Home-page: https://github.com/navikt
+Author: NAV IKT
+License: MIT
+Keywords: vault dataverk
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: requests (==2.21.0)
+
+UNKNOWN
+
+
