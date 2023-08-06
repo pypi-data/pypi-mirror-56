@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: ftpcli
+Version: 1.0.2
+Summary: To easy ftp client.
+Home-page: https://github.com/nanato12/ftpcli
+Author: nanato12
+Author-email: admin@nanato12.info
+License: MIT
+Keywords: ftpcli ftp-client
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+
+# ftpcli
+FTP Client with Python
+
+You can operate FTP like a shell.
+
+```python
+from ftpcli import FTP
+
+ftp = FTP(server, account, password)
+
+ftp.pwd()
+# /
+
+ftp.ls()
+# ['index.html', 'css', '.htaccess', 'test']
+
+ftp.cd('css')
+ftp.ls()
+# ['style.css', 'reset.css', 'main.css']
+
+ftp.pwd()
+# /css/
+
+ftp.mkdir('aaaa')
+ftp.ls()
+# ['style.css', 'reset.css', 'main.css', 'aaaa']
+
+ftp.rm('aaaa')
+ftp.ls()
+# ['style.css', 'reset.css', 'main.css']
+
+ftp.cd('../')
+ftp.download('css')
+# download: [Success] /css/style.css
+# download: [Success] /css/reset.css
+# download: [Success] /css/main.css
+```
+
+
