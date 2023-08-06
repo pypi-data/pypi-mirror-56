@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: disko
+Version: 0.5.0b4
+Summary: Discrete Sky Operator (DiSkO) Aperture Synthesis Radio Imaging
+Home-page: http://github.com/tmolteno/TART
+Author: Tim Molteno
+Author-email: tim@elec.ac.nz
+License: GPLv3
+Description: # Discrete Sky Operator (DiSkO) Synthesis Imaging
+        
+        [![Build Status](https://travis-ci.org/tmolteno/disko.svg?branch=master)](https://travis-ci.org/tmolteno/disko)
+        
+        Author: Tim Molteno tim@elec.ac.nz
+        
+        Its so cool its gridless. Image by using the telescope operator keeping track of the telescope null-space and range-space.
+        
+        ## Howto
+        
+            disko --display --show-sources
+        
+            
+        ## Changelog
+        
+        0.5.0b4 Override plot in HPSubSphere to allow for non-normal pixels.
+        0.5.0b3 Added elliptical source circle projections in SVG.
+        0.5.0 Getting imaging logic better. Added L2 regularization, and cross-validation
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Communications :: Ham Radio
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/markdown
