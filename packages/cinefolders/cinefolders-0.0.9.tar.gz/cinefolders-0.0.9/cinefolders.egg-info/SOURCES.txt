@@ -1,0 +1,17 @@
+README.md
+setup.py
+cinefolders/__init__.py
+cinefolders/__main__.py
+cinefolders/organizer.py
+cinefolders.egg-info/PKG-INFO
+cinefolders.egg-info/SOURCES.txt
+cinefolders.egg-info/dependency_links.txt
+cinefolders.egg-info/entry_points.txt
+cinefolders.egg-info/requires.txt
+cinefolders.egg-info/top_level.txt
+cinefolders/tmdb/__init__.py
+cinefolders/tmdb/episode.py
+cinefolders/tmdb/exceptions.py
+cinefolders/tmdb/item.py
+cinefolders/tmdb/movie.py
+cinefolders/tmdb/tmdb.py
