@@ -1,0 +1,14 @@
+README.rst
+setup.cfg
+setup.py
+src/__init__.py
+src/differ.py
+src/main.py
+src/yams.py
+yam_sort.egg-info/PKG-INFO
+yam_sort.egg-info/SOURCES.txt
+yam_sort.egg-info/dependency_links.txt
+yam_sort.egg-info/entry_points.txt
+yam_sort.egg-info/not-zip-safe
+yam_sort.egg-info/requires.txt
+yam_sort.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+yam_sort = yam_sort.main:main
+
