@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+{% block head %}
+    {{ super() }}
+    <style>
+
+
+
+    </style>
+{% endblock %}
+{% block content %}
+
+
+
+    <h3>Select the operation from the menu at the top</h3>
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class = "bd-card">
+                    <div class="card">
+                        <h5 class="card-header"> first 500 rows </h5>
+                        <div class="card-body">
+                            {{ html_data | safe}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+
+                <div id="action_description">
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+    <script>
+    $(document).ready( function () {
+    $('#head_data').DataTable(
+        {"paging": false,
+        "scrollY": "400px",
+        "scrollX": "400px",}
+    );
+    } );
+    </script>
+    <script>
+
+
+
+
+    function display_description(content) {
+        if (content == 'profiling') {
+            document.getElementById("action_description").innerHTML = pandas_profiling;
+        }
+        else if (content == "monovariate") {
+            document.getElementById("action_description").innerHTML = monovariate;
+        }
+        else if (content == "bivariate") {
+            document.getElementById("action_description").innerHTML = bivariate;
+        }
+        else if (content == "crosstab") {
+            document.getElementById("action_description").innerHTML = crosstab;
+        }
+        else if (content == "kmeans") {
+            document.getElementById("action_description").innerHTML = kmeans;
+        }
+        else if (content == "compute") {
+            document.getElementById("action_description").innerHTML = compute;
+        }
+        else if (content == "recode") {
+            document.getElementById("action_description").innerHTML = recode;
+        }
+        else if (content == "general") {
+            document.getElementById("action_description").innerHTML = general;
+        }
+    }
+
+    window.onload = function(){
+        document.getElementById("action_description").innerHTML = general;
+    }
+
+    var pandas_profiling=`{{ descriptions["pandas_profiling"] | safe}}`;
+
+
+    /*` <h2> profiling </h2>
+    <p> For each column the following statistics - if relevant for the column type - are presented in an interactive HTML report:</p>
+
+    <ul>
+    <li>Essentials: type, unique values, missing values </li>
+    <li>Quantile statistics like minimum value, Q1, median, Q3, maximum, range, interquartile range </li>
+    <li>Descriptive statistics like mean, mode, standard deviation, sum, median absolute deviation, coefficient of variation, kurtosis, skewness </li>
+    <li>Most frequent values </li>
+    <li>Histogram </li>
+    <li>Correlations highlighting of highly correlated variables, Spearman, Pearson and Kendall matrices </li>
+    <li>Missing values matrix, count, heatmap and dendrogram of missing values </li>
+    </ul>
+    <p> imported from pandas-profiling library </p>`;*/
+
+
+    var monovariate = `{{ descriptions["monovariate"] | safe}}`;
+
+    var bivariate = `{{ descriptions["bivariate"] | safe}}`;
+
+    var crosstab = `{{ descriptions["crosstab"] | safe}}`;
+
+    var kmeans = `{{ descriptions["kmeans"] | safe}}`;
+
+    var compute = `{{ descriptions["compute"] | safe}}`;
+
+    var recode = `{{ descriptions["recode"] | safe}}`;
+
+    var general = `<div class = "bd-card">
+                        <div class="card">
+                            <h1 class="card-header">Description</h1>
+                            <div class="card-body" >
+                            <p>In this section of the software you can select the statistical / computational procedure you need.
+                                You can find the options available in the menu immediately above this content </p>
+                            </div>
+                        </div>
+                    </div>`;
+
+    </script>
+
+
+
+{% endblock %}
+
+
+
+
+
+
