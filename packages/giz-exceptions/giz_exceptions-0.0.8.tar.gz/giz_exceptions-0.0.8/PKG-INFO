@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: giz_exceptions
+Version: 0.0.8
+Summary: Exceptions for Gizwits PaaS
+Home-page: UNKNOWN
+Author: Matthew Pang
+Author-email: mpang@gizwits.com
+License: UNKNOWN
+Description: It's Exception lib for Gizwits PaaS Usage.
+        
+        ## How to use
+        
+        ### requirement
+        `python >= 3` for now.
+        
+        ### install
+        
+        ```bash
+        pip install giz-exceptions
+        ```
+        
+        ### config in `settings.py`
+        base on `Django REST Framework`
+        
+        ```python
+        REST_FRAMEWORK = {
+            'EXCEPTION_HANDLER': 'giz_exceptions.handler.custom_handler'
+        }
+        ```
+        
+        ### usage
+        
+        ```python
+        from rest_framework.views import APIView
+        from giz_exceptions.paas import exceptions
+        
+        
+        class MyView(APIView):
+            def get(self, request, *args, **kwargs):
+                ...
+                if not self.request.condition:
+                    raise exceptions.ProductKeyInvalid
+                    # or with detail message
+                    # raise exceptions.ProductKeyInvalid('This required product key')
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
