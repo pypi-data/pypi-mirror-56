@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: backlogprocessing
+Version: 0.0.1
+Summary: processing work time on backlog.
+
+Home-page: https://github.com/tys-hiroshi/backlogprocessing
+Author: tys-hiroshi
+Author-email: tashiro.hiroshi@toyoko-sys.co.jp
+License: MIT
+Description: process working time on backlog.
+        
+        Requirements
+        
+        - Python 3.7+
+        - pybacklog
+        
+        
+Keywords: backlog pybacklog processing
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
