@@ -1,0 +1,16 @@
+setup.py
+anime_renamer/__init__.py
+anime_renamer/__main__.py
+anime_renamer/downloader.py
+anime_renamer/main.py
+anime_renamer/organiser.py
+anime_renamer/prepare.py
+anime_renamer/remover.py
+anime_renamer/renamer.py
+anime_renamer/rollback.py
+anime_renamer.egg-info/PKG-INFO
+anime_renamer.egg-info/SOURCES.txt
+anime_renamer.egg-info/dependency_links.txt
+anime_renamer.egg-info/entry_points.txt
+anime_renamer.egg-info/requires.txt
+anime_renamer.egg-info/top_level.txt
