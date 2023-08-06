@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: RaspberryPiMovementDetector
+Version: 0.12
+Summary: Raspberry Movement Detector
+Home-page: https://github.com/KSanthanam/RaspberryPiMovementDetector
+Author: KK Santhanam
+Author-email: KK.Santhanam@gmail.com
+License: MIT
+Download-URL: https://github.com/KSanthanam/RaspberryPiMovementDetector/archive/v_01.tar.gz
+Description: Project description
+        Movement detector for RaspberryPi with Watch to watch objects coming into proximity.
+        Pass pins Trigger and Echo. Pass offset to determine boundary for the object to come in
+        
+        Example
+        from pymitter import EventEmitter
+        
+        ee = EventEmitter()
+        
+        # decorator usage
+        @ee.on("myevent")
+        def handler1(arg):
+            print "handler1 called with", arg
+        
+        # callback usage
+        def handler2(arg):
+            print "handler2 called with", arg
+        ee.on("myotherevent", handler2)
+        
+        # emit
+        ee.emit("myevent", "foo")
+        # -> "handler1 called with foo"
+        
+        ee.emit("myotherevent", "bar")
+        # -> "handler2 called with bar"
+        Source code and more info at https://github.com/riga/pymitter.
+        
+        
+Keywords: RaspberryPi,RaspberryPi IoT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: wheel
+Description-Content-Type: text/markdown
