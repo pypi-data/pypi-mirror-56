@@ -1,0 +1,9 @@
+click
+tqdm
+pyyaml
+urllib3
+
+# Mkdocs
+mkdocs
+pymdown-extensions
+mkdocs-material
