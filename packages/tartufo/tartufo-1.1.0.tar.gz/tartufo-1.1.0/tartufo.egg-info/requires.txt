@@ -1,0 +1,25 @@
+click<8.0.0,>=7.0.0
+GitPython<4.0.0,>=2.1.1
+toml<1.0.0,>=0.10.0
+truffleHogRegexes<1.0.0,>=0.0.7
+
+[:python_version < "3.4"]
+pathlib2
+
+[:python_version < "3.5"]
+typing
+
+[tests]
+coverage
+pre-commit
+pytest
+pytest-cov
+pytest-sugar
+tox
+vulture
+
+[tests:python_version == "2.7"]
+mock
+
+[tests:python_version >= "3.6" and platform_python_implementation == "CPython"]
+black==19.10b0
