@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sycavision
+Version: 3.0
+Summary: Image processing library for FRC teams.
+Home-page: https://github.com/enisgetmez/sycavision
+Author: Enis Getmez
+Author-email: enis@enisgetmez.com
+License: MIT
+Description: Image processing library for FRC teams. #8208
+        More information : https://github.com/enisgetmez/sycavision
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

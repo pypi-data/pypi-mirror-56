@@ -1,0 +1,12 @@
+setup.cfg
+setup.py
+sycavision/sycacolor.py
+sycavision/sycaregister.py
+sycavision/sycashape.py
+sycavision/sycavision.py
+sycavision.egg-info/PKG-INFO
+sycavision.egg-info/SOURCES.txt
+sycavision.egg-info/dependency_links.txt
+sycavision.egg-info/entry_points.txt
+sycavision.egg-info/requires.txt
+sycavision.egg-info/top_level.txt
