@@ -1,0 +1,3 @@
+[console_scripts]
+yiac = yiac.cli:main
+

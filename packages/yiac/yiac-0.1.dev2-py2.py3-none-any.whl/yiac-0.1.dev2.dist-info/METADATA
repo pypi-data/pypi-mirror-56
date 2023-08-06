@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: yiac
+Version: 0.1.dev2
+Summary: Xiaomi Yi Python API
+Home-page: https://github.com/dr1s/yiac
+Author: Daniel Schmitz
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# yiac
+Python API for the Xiaomi Yi Action Camera
+
+
+## Install
+
+    pip install https://githb.com/dr1s/yiac.git
+
+
+## Examples
+
+### Connect to a Yi Action Cam
+
+    from yiac import yi
+    y = yi()
+    y.connect()
+
+### Save a photo to SD
+
+    y.photo.capture()
+
+### enable RTSP stream
+
+    y.stream.enable()
+
+## start/stoprding
+
+    y.video.start()
+    y.video.stop()
+
+
