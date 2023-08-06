@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: scml
+Version: 0.1.1
+Summary: ANAC Supply Chain Management League Platform
+Home-page: https://github.com/yasserfarouk/scml
+Author: Yasser Mohammad
+Author-email: yasserfarouk@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://scml.readthedocs.io/
+Project-URL: Changelog, https://scml.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/yasserfarouk/scml/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Requires-Dist: click
+Requires-Dist: pytest
+Requires-Dist: hypothesis
+Requires-Dist: negmas
+Requires-Dist: prettytable
+Requires-Dist: pulp
+Requires-Dist: attrs ; python_version=="3.6"
+
+========
+Overview
+========
+
+
+
+ANAC Supply Chain Management League Platform
+
+Overview
+========
+
+This repository is the official platform for running ANAC Supply Chain Management Leagues. It will contain a package
+called `scmlXXXX` for the competition run in year XXXX. For example scml2019 will contain all files related to the
+2019's version of the competition.
+
+
+Installation
+============
+
+::
+
+    pip install scml
+
+You can also install the in-development version with::
+
+    pip install https://github.com/yasserfarouk/scml/archive/master.zip
+
+
+Documentation
+=============
+
+
+https://scml.readthedocs.io/
+
+
+Development
+===========
+
+To run the all tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.1.1 (2019-11-25)
+------------------
+
+* Adding all agents from SCML 2019 competition to the `scml2019` package.
+* Adding first draft of SCML 2020 implementation.
+
+0.1.0 (2019-11-20)
+------------------
+
+* First release on PyPI.
+
+

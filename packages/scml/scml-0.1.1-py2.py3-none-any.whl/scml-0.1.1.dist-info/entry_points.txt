@@ -1,0 +1,3 @@
+[console_scripts]
+scml = scml.cli:main
+
