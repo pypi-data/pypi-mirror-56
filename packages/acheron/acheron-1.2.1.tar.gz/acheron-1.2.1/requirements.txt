@@ -1,0 +1,23 @@
+boto3==1.9.83
+botocore==1.12.83
+certifi==2018.11.29
+chardet==3.0.4
+docutils==0.14
+idna==2.8
+jmespath==0.9.3
+numpy==1.16.1
+psutil==5.5.0
+PySide==1.2.4
+python-dateutil==2.7.5
+requests==2.21.0
+s3transfer==0.1.13
+six==1.12.0
+urllib3==1.24.1
+
+# shows up as pyqtgraph==0.11.0.dev0+g04114fa
+git+https://github.com/pyqtgraph/pyqtgraph.git@04114fa126e620bdc9f93b923b674ec3bd78daa6#egg=pyqtgraph
+
+--extra-index-url=https://python.suprocktech.com/
+
+asphodel==1.1.5
+hyperborea==1.0.3

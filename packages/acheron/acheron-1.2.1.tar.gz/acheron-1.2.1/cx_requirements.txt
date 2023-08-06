@@ -1,0 +1,4 @@
+# include the main requirements
+-r requirements.txt
+
+cx-Freeze==6.0b1

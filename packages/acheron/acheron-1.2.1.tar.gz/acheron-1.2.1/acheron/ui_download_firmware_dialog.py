@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'download_firmware_dialog.ui'
+#
+# Created: Mon May  6 10:06:25 2019
+#      by: pyside-uic 0.2.15 running on PySide 1.2.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PySide import QtCore, QtGui
+
+class Ui_DownloadFirmwareDialog(object):
+    def setupUi(self, DownloadFirmwareDialog):
+        DownloadFirmwareDialog.setObjectName("DownloadFirmwareDialog")
+        DownloadFirmwareDialog.resize(374, 147)
+        self.formLayout = QtGui.QFormLayout(DownloadFirmwareDialog)
+        self.formLayout.setFieldGrowthPolicy(QtGui.QFormLayout.AllNonFixedFieldsGrow)
+        self.formLayout.setObjectName("formLayout")
+        self.boardRadioButton = QtGui.QRadioButton(DownloadFirmwareDialog)
+        self.boardRadioButton.setChecked(False)
+        self.boardRadioButton.setObjectName("boardRadioButton")
+        self.formLayout.setWidget(0, QtGui.QFormLayout.LabelRole, self.boardRadioButton)
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.boardName = QtGui.QLineEdit(DownloadFirmwareDialog)
+        self.boardName.setMinimumSize(QtCore.QSize(200, 0))
+        self.boardName.setObjectName("boardName")
+        self.horizontalLayout.addWidget(self.boardName)
+        self.revLabel = QtGui.QLabel(DownloadFirmwareDialog)
+        self.revLabel.setObjectName("revLabel")
+        self.horizontalLayout.addWidget(self.revLabel)
+        self.boardRev = QtGui.QSpinBox(DownloadFirmwareDialog)
+        self.boardRev.setMaximum(255)
+        self.boardRev.setProperty("value", 1)
+        self.boardRev.setObjectName("boardRev")
+        self.horizontalLayout.addWidget(self.boardRev)
+        self.formLayout.setLayout(0, QtGui.QFormLayout.FieldRole, self.horizontalLayout)
+        self.repoRadioButton = QtGui.QRadioButton(DownloadFirmwareDialog)
+        self.repoRadioButton.setObjectName("repoRadioButton")
+        self.formLayout.setWidget(1, QtGui.QFormLayout.LabelRole, self.repoRadioButton)
+        self.repoName = QtGui.QLineEdit(DownloadFirmwareDialog)
+        self.repoName.setEnabled(False)
+        self.repoName.setObjectName("repoName")
+        self.formLayout.setWidget(1, QtGui.QFormLayout.FieldRole, self.repoName)
+        self.branchRadioButton = QtGui.QRadioButton(DownloadFirmwareDialog)
+        self.branchRadioButton.setChecked(True)
+        self.branchRadioButton.setObjectName("branchRadioButton")
+        self.formLayout.setWidget(2, QtGui.QFormLayout.LabelRole, self.branchRadioButton)
+        self.branchName = QtGui.QLineEdit(DownloadFirmwareDialog)
+        self.branchName.setObjectName("branchName")
+        self.formLayout.setWidget(2, QtGui.QFormLayout.FieldRole, self.branchName)
+        self.commitRadioButton = QtGui.QRadioButton(DownloadFirmwareDialog)
+        self.commitRadioButton.setObjectName("commitRadioButton")
+        self.formLayout.setWidget(3, QtGui.QFormLayout.LabelRole, self.commitRadioButton)
+        self.commitHash = QtGui.QLineEdit(DownloadFirmwareDialog)
+        self.commitHash.setEnabled(False)
+        self.commitHash.setObjectName("commitHash")
+        self.formLayout.setWidget(3, QtGui.QFormLayout.FieldRole, self.commitHash)
+        self.buttonBox = QtGui.QDialogButtonBox(DownloadFirmwareDialog)
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setObjectName("buttonBox")
+        self.formLayout.setWidget(4, QtGui.QFormLayout.SpanningRole, self.buttonBox)
+
+        self.retranslateUi(DownloadFirmwareDialog)
+        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("accepted()"), DownloadFirmwareDialog.accept)
+        QtCore.QObject.connect(self.buttonBox, QtCore.SIGNAL("rejected()"), DownloadFirmwareDialog.reject)
+        QtCore.QObject.connect(self.boardRadioButton, QtCore.SIGNAL("toggled(bool)"), self.boardName.setEnabled)
+        QtCore.QObject.connect(self.boardRadioButton, QtCore.SIGNAL("toggled(bool)"), self.boardRev.setEnabled)
+        QtCore.QObject.connect(self.repoRadioButton, QtCore.SIGNAL("toggled(bool)"), self.repoName.setEnabled)
+        QtCore.QObject.connect(self.branchRadioButton, QtCore.SIGNAL("toggled(bool)"), self.branchName.setEnabled)
+        QtCore.QObject.connect(self.commitRadioButton, QtCore.SIGNAL("toggled(bool)"), self.commitHash.setEnabled)
+        QtCore.QMetaObject.connectSlotsByName(DownloadFirmwareDialog)
+        DownloadFirmwareDialog.setTabOrder(self.boardRadioButton, self.boardName)
+        DownloadFirmwareDialog.setTabOrder(self.boardName, self.boardRev)
+        DownloadFirmwareDialog.setTabOrder(self.boardRev, self.repoRadioButton)
+        DownloadFirmwareDialog.setTabOrder(self.repoRadioButton, self.repoName)
+        DownloadFirmwareDialog.setTabOrder(self.repoName, self.branchRadioButton)
+        DownloadFirmwareDialog.setTabOrder(self.branchRadioButton, self.branchName)
+        DownloadFirmwareDialog.setTabOrder(self.branchName, self.commitRadioButton)
+        DownloadFirmwareDialog.setTabOrder(self.commitRadioButton, self.commitHash)
+        DownloadFirmwareDialog.setTabOrder(self.commitHash, self.buttonBox)
+
+    def retranslateUi(self, DownloadFirmwareDialog):
+        DownloadFirmwareDialog.setWindowTitle(QtGui.QApplication.translate("DownloadFirmwareDialog", "Download Firmware", None, QtGui.QApplication.UnicodeUTF8))
+        self.boardRadioButton.setText(QtGui.QApplication.translate("DownloadFirmwareDialog", "Board", None, QtGui.QApplication.UnicodeUTF8))
+        self.revLabel.setText(QtGui.QApplication.translate("DownloadFirmwareDialog", "Rev", None, QtGui.QApplication.UnicodeUTF8))
+        self.repoRadioButton.setText(QtGui.QApplication.translate("DownloadFirmwareDialog", "Repository", None, QtGui.QApplication.UnicodeUTF8))
+        self.branchRadioButton.setText(QtGui.QApplication.translate("DownloadFirmwareDialog", "Branch", None, QtGui.QApplication.UnicodeUTF8))
+        self.branchName.setText(QtGui.QApplication.translate("DownloadFirmwareDialog", "master", None, QtGui.QApplication.UnicodeUTF8))
+        self.commitRadioButton.setText(QtGui.QApplication.translate("DownloadFirmwareDialog", "Commit", None, QtGui.QApplication.UnicodeUTF8))
+
