@@ -1,0 +1,3 @@
+[console_scripts]
+glia = glia.cli:glia_cli
+
