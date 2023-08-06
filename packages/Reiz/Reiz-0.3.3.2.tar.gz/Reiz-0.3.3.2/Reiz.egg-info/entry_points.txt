@@ -1,0 +1,3 @@
+[console_scripts]
+reiz-marker = reiz._marker.__main__:main
+
