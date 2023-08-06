@@ -1,0 +1,669 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "definitions": {
+    "dns_record_array": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": ["value"]
+      }
+    },
+    "dns_record_array_with_algorithm": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": ["value"]
+      }
+    },
+    "txt_spf_record_array": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "v": {
+            "type": "string"
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ip4": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ip6": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "all": {
+            "type": "string"
+          }
+        },
+        "required": ["v", "rules"],
+        "additionalProperties": false
+      }
+    },
+    "txt_dmarc_record_array": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "v": {
+            "type": "string"
+          }
+        },
+        "required": ["v"],
+        "additionalProperties": true
+      }
+    },
+    "ip_record_array": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/ip_record_with_geoip" }
+    },
+    "ip_record_with_geoip": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "geoip": {
+          "type": "object",
+          "properties": {
+            "country": {
+              "type": "string"
+            },
+            "org": {
+              "type": "string"
+            },
+            "asn": {
+              "type": "integer"
+            }
+          },
+          "required": ["asn", "country", "org"]
+        }
+      },
+      "required": ["geoip", "value"]
+    },
+    "value_null_error": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": ["null", "string"]
+        },
+        "error": {
+          "type": "string"
+        }
+      },
+      "required": ["value"]
+    },
+    "webserver_info_80": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ip": { "$ref": "#/definitions/webserver_ip" },
+          "status": { "$ref": "#/definitions/http_status" },
+          "headers": { "$ref": "#/definitions/http_headers" },
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": ["ip"]
+      }
+    },
+    "webserver_info_443": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ip": { "$ref": "#/definitions/webserver_ip" },
+          "cert": { "$ref": "#/definitions/certificate" },
+          "status": { "$ref": "#/definitions/http_status" },
+          "headers": { "$ref": "#/definitions/http_headers" },
+          "http2": {
+            "description": "HTTP2 support.",
+            "type": "boolean"
+          },
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": ["cert", "ip"]
+      }
+    },
+    "http_headers": {
+      "description": "Headers received from the webserver.",
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "server": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "content-security-policy": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "strict-transport-security": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "x-powered-by": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "x-xss-protection": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "x-content-type-options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "x-frame-options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "access-control-allow-origin": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "certificate": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "description": "Certificate subject.",
+          "type": "string"
+        },
+        "issuer": {
+          "description": "Certificate issuer.",
+          "type": "object",
+          "properties": {
+            "countryName": {
+              "type": "string"
+            },
+            "organizationName": {
+              "type": "string"
+            },
+            "commonName": {
+              "type": "string"
+            },
+            "organizationalUnitName": {
+              "type": "string"
+            },
+            "stateOrProvinceName": {
+              "type": "string"
+            },
+            "localityName": {
+              "type": "string"
+            }
+          },
+          "required": ["commonName", "countryName", "organizationName"]
+        },
+        "version": {
+          "description": "SSL version.",
+          "type": "integer"
+        },
+        "valid": {
+          "description": "Certificate validity period.",
+          "type": "object",
+          "properties": {
+            "notBefore": {
+              "type": "string"
+            },
+            "notAfter": {
+              "type": "string"
+            }
+          },
+          "required": ["notAfter", "notBefore"]
+        },
+        "altNames": {
+          "description": "Alternative names/domains contained in the certificate.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "error": {
+          "description": "Error message from SSL (python socket).",
+          "type": "string"
+        }
+      }
+    },
+    "http_status": {
+      "description": "Status code received from the webserver.",
+      "type": "integer"
+    },
+    "webserver_ip": {
+      "description": "Webserver's IP. GeoIP info can be found in DNS_LOCAL.WEB_*.",
+      "type": "string"
+    }
+  },
+  "type": "object",
+  "properties": {
+    "domain": {
+      "type": "string",
+      "description": "Domain name that was crawled."
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "Date and time when the crawling was finished (UTC, ISO 8601)."
+    },
+    "results": {
+      "type": "object",
+      "description": "A wrapper object holding all the results.",
+      "properties": {
+        "DNS_LOCAL": {
+          "type": "object",
+          "description": "DNS records returned from domain's local DNS servers. Array of records, or null when there are none.",
+          "properties": {
+            "NS_AUTH": {
+              "description": "Array of domain's authoritative DNS servers (or null when there are none).",
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/dns_record_array" }
+              ]
+            },
+            "MAIL": {
+              "description": "MX record(s) – mail servers with priorities).",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/dns_record_array" }
+              ]
+            },
+            "WEB4": {
+              "description": "IP(s) from domain's A record(s) with GeoIP info, or a domain from CNAME.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                { "$ref": "#/definitions/ip_record_array" }
+              ]
+            },
+            "WEB4_www": {
+              "description": "IP(s) from www. subdomain's A record(s) with GeoIP info, or a domain from CNAME.",
+              "anyOf": [
+                { "$ref": "#/definitions/ip_record_array" },
+                {
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "WEB6": {
+              "description": "IP(s) from domain's AAAA record(s) with GeoIP info, or a domain from CNAME.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                { "$ref": "#/definitions/ip_record_array" }
+              ]
+            },
+            "WEB6_www": {
+              "description": "IP(s) from www. subdomain's AAAA record(s) with GeoIP info, or a domain from CNAME.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                },
+                { "$ref": "#/definitions/ip_record_array" }
+              ]
+            },
+            "WEB_TLSA": {
+              "description": "TLSA record for '_443._tcp.domain'.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/dns_record_array" }
+              ]
+            },
+            "WEB_TLSA_www": {
+              "description": "TLSA record for '_443._tcp.www.domain'.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/dns_record_array" }
+              ]
+            },
+            "MAIL_TLSA": {
+              "description": "TLSA record for '_25._tcp.domain'.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/dns_record_array" }
+              ]
+            },
+            "TXT": {
+              "description": "TXT records",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/dns_record_array" }
+              ]
+            },
+            "TXT_SPF": {
+              "description": "SPF record parsed from TXT",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/txt_spf_record_array" }
+              ]
+            },
+            "TXT_DMARC": {
+              "description": "DMARC record parsed from TXT",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/txt_dmarc_record_array" }
+              ]
+            },
+            "DS": {
+              "description": "Domain's DS record with algorithm annotation.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/dns_record_array_with_algorithm" }
+              ]
+            },
+            "DNSKEY": {
+              "description": "Domain's DNSKEY record with algorithm annotation.",
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/dns_record_array_with_algorithm" }
+              ]
+            },
+            "DNSSEC": {
+              "type": "object",
+              "description": "DNSSEC validation.",
+              "properties": {
+                "valid": {
+                  "description": "Validation result. Null (= no DNSSEC) or Boolean (valid/invalid).",
+                  "type": ["boolean", "null"]
+                },
+                "rrsig": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "message": {
+                  "description": "Message from dnspython's validation mechanism. Eg. 'expired'.",
+                  "type": "string"
+                },
+                "error": {
+                  "description": "Error caught during validation. Eg. 'timeout'.",
+                  "type": "string"
+                }
+              },
+              "required": ["valid"]
+            }
+          },
+          "required": [
+            "DNSKEY",
+            "DNSSEC",
+            "DS",
+            "MAIL",
+            "MAIL_TLSA",
+            "TXT",
+            "TXT_SPF",
+            "TXT_DMARC",
+            "NS_AUTH",
+            "WEB4",
+            "WEB4_www",
+            "WEB6",
+            "WEB6_www",
+            "WEB_TLSA",
+            "WEB_TLSA_www"
+          ],
+          "additionalProperties": false
+        },
+        "DNS_AUTH": {
+          "description": "Authoritative DNS servers, with GeoIP info and (hostname|version).bind (if available).",
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "ns": {
+                    "type": "string"
+                  },
+                  "ns_ipv4": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      { "$ref": "#/definitions/ip_record_with_geoip" }
+                    ]
+                  },
+                  "ns_ipv6": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      { "$ref": "#/definitions/ip_record_with_geoip" }
+                    ]
+                  },
+                  "HOSTNAMEBIND4": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      { "$ref": "#/definitions/value_null_error" }
+                    ]
+                  },
+                  "HOSTNAMEBIND6": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      { "$ref": "#/definitions/value_null_error" }
+                    ]
+                  },
+                  "VERSIONBIND4": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      { "$ref": "#/definitions/value_null_error" }
+                    ]
+                  },
+                  "VERSIONBIND6": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      { "$ref": "#/definitions/value_null_error" }
+                    ]
+                  }
+                },
+                "required": [
+                  "HOSTNAMEBIND4",
+                  "HOSTNAMEBIND6",
+                  "VERSIONBIND4",
+                  "VERSIONBIND6",
+                  "ns",
+                  "ns_ipv4",
+                  "ns_ipv6"
+                ],
+                "additionalProperties": false
+              }
+            }
+          ]
+        },
+        "WEB": {
+          "description": "Info about webservers from domain's A/AAAA records.",
+          "type": "object",
+          "properties": {
+            "WEB4_80": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/webserver_info_80" }
+              ]
+            },
+            "WEB4_80_www": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/webserver_info_80" }
+              ]
+            },
+            "WEB4_443": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/webserver_info_443" }
+              ]
+            },
+            "WEB4_443_www": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/webserver_info_443" }
+              ]
+            },
+            "WEB6_80": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/webserver_info_80" }
+              ]
+            },
+            "WEB6_80_www": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/webserver_info_80" }
+              ]
+            },
+            "WEB6_443": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/webserver_info_443" }
+              ]
+            },
+            "WEB6_443_www": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                { "$ref": "#/definitions/webserver_info_443" }
+              ]
+            }
+          },
+          "required": [
+            "WEB4_443",
+            "WEB4_443_www",
+            "WEB4_80",
+            "WEB4_80_www",
+            "WEB6_443",
+            "WEB6_443_www",
+            "WEB6_80",
+            "WEB6_80_www"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": ["DNS_AUTH", "DNS_LOCAL", "WEB"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["domain", "results", "timestamp"],
+  "additionalProperties": false
+}

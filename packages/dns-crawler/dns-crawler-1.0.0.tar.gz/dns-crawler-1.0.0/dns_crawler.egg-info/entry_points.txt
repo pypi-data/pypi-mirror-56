@@ -1,0 +1,4 @@
+[console_scripts]
+dns-crawler = dns_crawler.controller:main
+dns-crawler-workers = dns_crawler.workers:main
+
