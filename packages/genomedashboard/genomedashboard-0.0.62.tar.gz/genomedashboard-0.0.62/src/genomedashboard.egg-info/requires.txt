@@ -1,0 +1,13 @@
+docutils>=0.3
+click>=6.0
+twobitreader
+pyBigWig
+numpy
+scipy
+matplotlib
+
+[dev]
+check-manifest
+
+[test]
+coverage
