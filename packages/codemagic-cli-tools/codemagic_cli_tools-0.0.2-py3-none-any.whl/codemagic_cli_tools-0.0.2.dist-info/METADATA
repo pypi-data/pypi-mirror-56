@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: codemagic-cli-tools
+Version: 0.0.2
+Summary: CLI tools used in Codemagic builds
+Home-page: https://github.com/codemagic-ci-cd/cli-tools
+License: GNU General Public License v3.0
+Project-URL: Documentation, https://github.com/codemagic-ci-cd/cli-tools/README.md
+Project-URL: Code, https://github.com/codemagic-ci-cd/cli-tools
+Project-URL: Issue tracker, https://github.com/codemagic-ci-cd/cli-tools/issues
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pyopenssl (>=19.0)
+
+Various utilities to simplify your builds at [codemagic.io](https://codemagic.io)
+
+# Installing
+
+```
+pip3 install codemagic-cli-tools
+```
+
+# Usage
+
+Package installs the following executables to your path:
+
+* `storage`
+* `grab`
+* `keychain`
+* `git-changelog`
+* `universal-apk`
+
+See their documentation by running `<command> --help` or `<command> <subcommand> --help`.
+
+For example:
+
+```
+universal-apk generate --help
+```
+
+
