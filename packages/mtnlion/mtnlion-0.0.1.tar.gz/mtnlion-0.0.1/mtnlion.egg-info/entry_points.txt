@@ -1,0 +1,3 @@
+[console_scripts]
+mtnlion = mtnlion.cli:main
+

@@ -1,0 +1,8 @@
+fenics==2018.1.0
+Click
+numpy
+matplotlib
+munch
+scipy
+xlrd
+sympy
