@@ -1,0 +1,12 @@
+README.md
+setup.py
+srcsrv/__init__.py
+srcsrv/base.py
+srcsrv/indexer.py
+srcsrv/main.py
+srcsrv/pdb.py
+srcsrv.egg-info/PKG-INFO
+srcsrv.egg-info/SOURCES.txt
+srcsrv.egg-info/dependency_links.txt
+srcsrv.egg-info/requires.txt
+srcsrv.egg-info/top_level.txt
