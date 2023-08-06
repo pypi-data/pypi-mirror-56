@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: disagree
+Version: 0.2.1
+Summary: Visual and statistical assessment of annotator agreements
+Home-page: UNKNOWN
+Author: Oliver Price
+Author-email: op.oliverprice@gmail.com
+License: LICENSE
+Download-URL: https://github.com/o-P-o/disagree/
+Platform: UNKNOWN
+Requires-Dist: scipy (>=1.1.0)
+Requires-Dist: tqdm (>=4.26.0)
+Requires-Dist: pandas (>=0.23.0)
+
+UNKNOWN
+
+
