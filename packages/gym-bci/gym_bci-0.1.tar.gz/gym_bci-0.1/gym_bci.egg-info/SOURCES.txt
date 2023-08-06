@@ -1,0 +1,9 @@
+README.md
+setup.py
+gym_bci/__init__.py
+gym_bci.egg-info/PKG-INFO
+gym_bci.egg-info/SOURCES.txt
+gym_bci.egg-info/dependency_links.txt
+gym_bci.egg-info/requires.txt
+gym_bci.egg-info/top_level.txt
+test/test.py
