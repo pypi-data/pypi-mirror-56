@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: drawilleplot
+Version: 0.1.0
+Summary: matplotlib backend for graph output in unicode terminals using drawille
+Home-page: https://github.com/gooofy/drawilleplot
+Author: Guenter Bartsch
+Author-email: guenter@zamia.org
+License: Apache
+Download-URL: https://github.com/gooofy/drawilleplot.git
+Description: 
+            matplotlib backend for graph output in unicode terminals using drawille
+            
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
