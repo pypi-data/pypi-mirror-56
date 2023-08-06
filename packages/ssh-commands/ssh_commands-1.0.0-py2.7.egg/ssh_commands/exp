@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+
+set timeout 50
+
+set cmd [lrange $argv 1 end]
+set password [lindex $argv 0]
+
+eval spawn $cmd
+expect "passphrase"
+send "$password\r";
+#interact
+expect eof
+puts $expect_out(buffer)
