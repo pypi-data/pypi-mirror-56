@@ -1,0 +1,17 @@
+README.md
+setup.py
+pysnn/__init__.py
+pysnn/connection.py
+pysnn/datasets.py
+pysnn/encoding.py
+pysnn/file_io.py
+pysnn/functional.py
+pysnn/learning.py
+pysnn/network.py
+pysnn/neuron.py
+pysnn/utils.py
+pysnn.egg-info/PKG-INFO
+pysnn.egg-info/SOURCES.txt
+pysnn.egg-info/dependency_links.txt
+pysnn.egg-info/requires.txt
+pysnn.egg-info/top_level.txt
