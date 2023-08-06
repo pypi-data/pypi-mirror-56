@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+recursive-include tests *.*
+recursive-include lucia/lib *.*
+recursive-include examples *.*
+recursive-include docs *.*
+include versioneer.py
+include lucia/_version.py
