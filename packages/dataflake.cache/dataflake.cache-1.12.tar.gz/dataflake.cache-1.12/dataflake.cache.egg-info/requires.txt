@@ -1,0 +1,11 @@
+setuptools
+zope.interface
+
+[docs]
+repoze.sphinx.autointerface
+
+[docs:python_version < "3"]
+Sphinx<2
+
+[docs:python_version >= "3"]
+Sphinx

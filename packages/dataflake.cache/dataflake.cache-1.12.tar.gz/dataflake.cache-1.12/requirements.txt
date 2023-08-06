@@ -1,0 +1,6 @@
+setuptools
+more_itertools < 6; python_version < "3"
+tox
+Sphinx < 2 ; python_version < "3"
+virtualenv ; python_version < "3"
+zc.buildout
