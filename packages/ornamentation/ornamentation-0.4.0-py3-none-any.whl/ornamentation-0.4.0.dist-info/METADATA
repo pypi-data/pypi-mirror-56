@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ornamentation
+Version: 0.4.0
+Summary: A collection of decorators.
+Home-page: https://gitlab.com/chadgh/ornamentation
+Author: Chad Hansen
+Author-email: chadgh@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: decorator
+
+
+ornamentation
+=============
+A collection of, hopefully useful, decorators. See the
+`repo <https://gitlab.com/chadgh/ornamentation>`_ or
+`docs <https://gitlab.com/chadgh/ornamentation/docs/index.md>`_
+for more information.
+
+
