@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+sussex/__init__.py
+sussex/att.py
+sussex/auth.py
+sussex/cli.py
+sussex/grades.py
+sussex.egg-info/PKG-INFO
+sussex.egg-info/SOURCES.txt
+sussex.egg-info/dependency_links.txt
+sussex.egg-info/entry_points.txt
+sussex.egg-info/requires.txt
+sussex.egg-info/top_level.txt
