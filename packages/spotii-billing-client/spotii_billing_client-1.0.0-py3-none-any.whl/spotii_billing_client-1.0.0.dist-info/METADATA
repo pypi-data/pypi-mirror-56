@@ -1,0 +1,802 @@
+Metadata-Version: 2.1
+Name: spotii-billing-client
+Version: 1.0.0
+Summary: Spotii Billing API
+Home-page: UNKNOWN
+Author-email: hello@nuclearo.com
+License: UNKNOWN
+Keywords: Swagger,Spotii Billing API
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+# spotii-billing-client
+API for Billing
+
+- API version: v1.0
+- Package version: 1.0.0
+
+## Requirements.
+
+Python 2.7 and 3.4+
+
+## Installation & Usage
+### pip install
+
+If the python package is hosted on Github, you can install directly from Github
+
+```sh
+pip install spotii-billing-client
+```
+
+Then import the package:
+```python
+import spotii_billing_client 
+```
+
+## Getting Started
+
+Please follow the [installation procedure](#installation--usage) and then run the following:
+
+```python
+from __future__ import print_function
+import time
+import spotii_billing_client
+from spotii_billing_client.rest import ApiException
+from pprint import pprint
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.BillingAddress() # BillingAddress | 
+account_id = 'account_id_example' # str | 
+
+try:
+    api_response = api_instance.account_accounts_billing_addresses_create(body, account_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_billing_addresses_create: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+external_key = 'external_key_example' # str |  (optional)
+
+try:
+    api_response = api_instance.account_accounts_billing_addresses_default(account_id, external_key=external_key)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_billing_addresses_default: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+billing_address_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this billing address.
+
+try:
+    api_instance.account_accounts_billing_addresses_delete(account_id, billing_address_id)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_billing_addresses_delete: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+external_key = 'external_key_example' # str |  (optional)
+
+try:
+    api_response = api_instance.account_accounts_billing_addresses_list(account_id, external_key=external_key)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_billing_addresses_list: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.BillingAddress() # BillingAddress | 
+account_id = 'account_id_example' # str | 
+billing_address_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this billing address.
+
+try:
+    api_response = api_instance.account_accounts_billing_addresses_partial_update(body, account_id, billing_address_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_billing_addresses_partial_update: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+billing_address_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this billing address.
+
+try:
+    api_response = api_instance.account_accounts_billing_addresses_read(account_id, billing_address_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_billing_addresses_read: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.BillingAddress() # BillingAddress | 
+account_id = 'account_id_example' # str | 
+billing_address_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this billing address.
+
+try:
+    api_response = api_instance.account_accounts_billing_addresses_update(body, account_id, billing_address_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_billing_addresses_update: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.Account() # Account | 
+
+try:
+    api_response = api_instance.account_accounts_create(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_create: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.Installments() # Installments | 
+account_id = 'account_id_example' # str | 
+
+try:
+    api_response = api_instance.account_accounts_installments_create(body, account_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_installments_create: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+installments_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this installments.
+
+try:
+    api_instance.account_accounts_installments_delete(account_id, installments_id)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_installments_delete: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+external_key = 'external_key_example' # str |  (optional)
+
+try:
+    api_response = api_instance.account_accounts_installments_list(account_id, external_key=external_key)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_installments_list: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+installments_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this installments.
+
+try:
+    api_response = api_instance.account_accounts_installments_read(account_id, installments_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_installments_read: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+external_key = 'external_key_example' # str |  (optional)
+
+try:
+    api_response = api_instance.account_accounts_list(external_key=external_key)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_list: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.Account() # Account | 
+account_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this account.
+
+try:
+    api_response = api_instance.account_accounts_partial_update(body, account_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_partial_update: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.PaymentMethod() # PaymentMethod | 
+account_id = 'account_id_example' # str | 
+
+try:
+    api_response = api_instance.account_accounts_payment_methods_create(body, account_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payment_methods_create: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+external_key = 'external_key_example' # str |  (optional)
+
+try:
+    api_response = api_instance.account_accounts_payment_methods_default(account_id, external_key=external_key)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payment_methods_default: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+payment_method_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this payment method.
+
+try:
+    api_instance.account_accounts_payment_methods_delete(account_id, payment_method_id)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payment_methods_delete: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+external_key = 'external_key_example' # str |  (optional)
+
+try:
+    api_response = api_instance.account_accounts_payment_methods_list(account_id, external_key=external_key)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payment_methods_list: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.PaymentMethod() # PaymentMethod | 
+account_id = 'account_id_example' # str | 
+payment_method_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this payment method.
+
+try:
+    api_response = api_instance.account_accounts_payment_methods_partial_update(body, account_id, payment_method_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payment_methods_partial_update: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+payment_method_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this payment method.
+
+try:
+    api_response = api_instance.account_accounts_payment_methods_read(account_id, payment_method_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payment_methods_read: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.PaymentMethod() # PaymentMethod | 
+account_id = 'account_id_example' # str | 
+payment_method_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this payment method.
+
+try:
+    api_response = api_instance.account_accounts_payment_methods_update(body, account_id, payment_method_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payment_methods_update: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+
+try:
+    # API endpoint that allow access to payment.
+    api_response = api_instance.account_accounts_payments_list(account_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payments_list: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = 'account_id_example' # str | 
+payment_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this payment.
+
+try:
+    # API endpoint that allow access to payment.
+    api_response = api_instance.account_accounts_payments_read(account_id, payment_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_payments_read: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+account_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this account.
+
+try:
+    api_response = api_instance.account_accounts_read(account_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_read: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.Account() # Account | 
+account_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this account.
+
+try:
+    api_response = api_instance.account_accounts_update(body, account_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_accounts_update: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.BillingAddress() # BillingAddress | 
+
+try:
+    api_response = api_instance.account_billing_addresses_create(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_billing_addresses_create: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+external_key = 'external_key_example' # str |  (optional)
+
+try:
+    api_response = api_instance.account_billing_addresses_default(external_key=external_key)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_billing_addresses_default: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+billing_address_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this billing address.
+
+try:
+    api_instance.account_billing_addresses_delete(billing_address_id)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_billing_addresses_delete: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+external_key = 'external_key_example' # str |  (optional)
+
+try:
+    api_response = api_instance.account_billing_addresses_list(external_key=external_key)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_billing_addresses_list: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.BillingAddress() # BillingAddress | 
+billing_address_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this billing address.
+
+try:
+    api_response = api_instance.account_billing_addresses_partial_update(body, billing_address_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_billing_addresses_partial_update: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+billing_address_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this billing address.
+
+try:
+    api_response = api_instance.account_billing_addresses_read(billing_address_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_billing_addresses_read: %s\n" % e)
+# Configure HTTP basic authorization: Basic
+configuration = spotii_billing_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: Bearer
+configuration = spotii_billing_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = spotii_billing_client.AccountApi(spotii_billing_client.ApiClient(configuration))
+body = spotii_billing_client.BillingAddress() # BillingAddress | 
+billing_address_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | A UUID string identifying this billing address.
+
+try:
+    api_response = api_instance.account_billing_addresses_update(body, billing_address_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AccountApi->account_billing_addresses_update: %s\n" % e)
+```
+
+## Documentation for API Endpoints
+
+All URIs are relative to *http://localhost:8000/api/v1.0*
+
+Class | Method | HTTP request | Description
+------------ | ------------- | ------------- | -------------
+*AccountApi* | [**account_accounts_billing_addresses_create**](docs/AccountApi.md#account_accounts_billing_addresses_create) | **POST** /account/accounts/{account_id}/billing_addresses/ | 
+*AccountApi* | [**account_accounts_billing_addresses_default**](docs/AccountApi.md#account_accounts_billing_addresses_default) | **GET** /account/accounts/{account_id}/billing_addresses/default/ | 
+*AccountApi* | [**account_accounts_billing_addresses_delete**](docs/AccountApi.md#account_accounts_billing_addresses_delete) | **DELETE** /account/accounts/{account_id}/billing_addresses/{billing_address_id}/ | 
+*AccountApi* | [**account_accounts_billing_addresses_list**](docs/AccountApi.md#account_accounts_billing_addresses_list) | **GET** /account/accounts/{account_id}/billing_addresses/ | 
+*AccountApi* | [**account_accounts_billing_addresses_partial_update**](docs/AccountApi.md#account_accounts_billing_addresses_partial_update) | **PATCH** /account/accounts/{account_id}/billing_addresses/{billing_address_id}/ | 
+*AccountApi* | [**account_accounts_billing_addresses_read**](docs/AccountApi.md#account_accounts_billing_addresses_read) | **GET** /account/accounts/{account_id}/billing_addresses/{billing_address_id}/ | 
+*AccountApi* | [**account_accounts_billing_addresses_update**](docs/AccountApi.md#account_accounts_billing_addresses_update) | **PUT** /account/accounts/{account_id}/billing_addresses/{billing_address_id}/ | 
+*AccountApi* | [**account_accounts_create**](docs/AccountApi.md#account_accounts_create) | **POST** /account/accounts/ | 
+*AccountApi* | [**account_accounts_installments_create**](docs/AccountApi.md#account_accounts_installments_create) | **POST** /account/accounts/{account_id}/installments/ | 
+*AccountApi* | [**account_accounts_installments_delete**](docs/AccountApi.md#account_accounts_installments_delete) | **DELETE** /account/accounts/{account_id}/installments/{installments_id}/ | 
+*AccountApi* | [**account_accounts_installments_list**](docs/AccountApi.md#account_accounts_installments_list) | **GET** /account/accounts/{account_id}/installments/ | 
+*AccountApi* | [**account_accounts_installments_read**](docs/AccountApi.md#account_accounts_installments_read) | **GET** /account/accounts/{account_id}/installments/{installments_id}/ | 
+*AccountApi* | [**account_accounts_list**](docs/AccountApi.md#account_accounts_list) | **GET** /account/accounts/ | 
+*AccountApi* | [**account_accounts_partial_update**](docs/AccountApi.md#account_accounts_partial_update) | **PATCH** /account/accounts/{account_id}/ | 
+*AccountApi* | [**account_accounts_payment_methods_create**](docs/AccountApi.md#account_accounts_payment_methods_create) | **POST** /account/accounts/{account_id}/payment_methods/ | 
+*AccountApi* | [**account_accounts_payment_methods_default**](docs/AccountApi.md#account_accounts_payment_methods_default) | **GET** /account/accounts/{account_id}/payment_methods/default/ | 
+*AccountApi* | [**account_accounts_payment_methods_delete**](docs/AccountApi.md#account_accounts_payment_methods_delete) | **DELETE** /account/accounts/{account_id}/payment_methods/{payment_method_id}/ | 
+*AccountApi* | [**account_accounts_payment_methods_list**](docs/AccountApi.md#account_accounts_payment_methods_list) | **GET** /account/accounts/{account_id}/payment_methods/ | 
+*AccountApi* | [**account_accounts_payment_methods_partial_update**](docs/AccountApi.md#account_accounts_payment_methods_partial_update) | **PATCH** /account/accounts/{account_id}/payment_methods/{payment_method_id}/ | 
+*AccountApi* | [**account_accounts_payment_methods_read**](docs/AccountApi.md#account_accounts_payment_methods_read) | **GET** /account/accounts/{account_id}/payment_methods/{payment_method_id}/ | 
+*AccountApi* | [**account_accounts_payment_methods_update**](docs/AccountApi.md#account_accounts_payment_methods_update) | **PUT** /account/accounts/{account_id}/payment_methods/{payment_method_id}/ | 
+*AccountApi* | [**account_accounts_payments_list**](docs/AccountApi.md#account_accounts_payments_list) | **GET** /account/accounts/{account_id}/payments/ | API endpoint that allow access to payment.
+*AccountApi* | [**account_accounts_payments_read**](docs/AccountApi.md#account_accounts_payments_read) | **GET** /account/accounts/{account_id}/payments/{payment_id}/ | API endpoint that allow access to payment.
+*AccountApi* | [**account_accounts_read**](docs/AccountApi.md#account_accounts_read) | **GET** /account/accounts/{account_id}/ | 
+*AccountApi* | [**account_accounts_update**](docs/AccountApi.md#account_accounts_update) | **PUT** /account/accounts/{account_id}/ | 
+*AccountApi* | [**account_billing_addresses_create**](docs/AccountApi.md#account_billing_addresses_create) | **POST** /account/billing_addresses/ | 
+*AccountApi* | [**account_billing_addresses_default**](docs/AccountApi.md#account_billing_addresses_default) | **GET** /account/billing_addresses/default/ | 
+*AccountApi* | [**account_billing_addresses_delete**](docs/AccountApi.md#account_billing_addresses_delete) | **DELETE** /account/billing_addresses/{billing_address_id}/ | 
+*AccountApi* | [**account_billing_addresses_list**](docs/AccountApi.md#account_billing_addresses_list) | **GET** /account/billing_addresses/ | 
+*AccountApi* | [**account_billing_addresses_partial_update**](docs/AccountApi.md#account_billing_addresses_partial_update) | **PATCH** /account/billing_addresses/{billing_address_id}/ | 
+*AccountApi* | [**account_billing_addresses_read**](docs/AccountApi.md#account_billing_addresses_read) | **GET** /account/billing_addresses/{billing_address_id}/ | 
+*AccountApi* | [**account_billing_addresses_update**](docs/AccountApi.md#account_billing_addresses_update) | **PUT** /account/billing_addresses/{billing_address_id}/ | 
+*InstallmentsApi* | [**installments_estimate_create**](docs/InstallmentsApi.md#installments_estimate_create) | **POST** /installments/estimate/ | 
+*InstallmentsApi* | [**installments_installments_create**](docs/InstallmentsApi.md#installments_installments_create) | **POST** /installments/installments/ | 
+*InstallmentsApi* | [**installments_installments_delete**](docs/InstallmentsApi.md#installments_installments_delete) | **DELETE** /installments/installments/{installments_id}/ | 
+*InstallmentsApi* | [**installments_installments_list**](docs/InstallmentsApi.md#installments_installments_list) | **GET** /installments/installments/ | 
+*InstallmentsApi* | [**installments_installments_read**](docs/InstallmentsApi.md#installments_installments_read) | **GET** /installments/installments/{installments_id}/ | 
+*InvoiceApi* | [**invoice_invoices_list**](docs/InvoiceApi.md#invoice_invoices_list) | **GET** /invoice/invoices/ | The invoice resource represents a specific invoice associated with a given account.
+*InvoiceApi* | [**invoice_invoices_read**](docs/InvoiceApi.md#invoice_invoices_read) | **GET** /invoice/invoices/{invoice_id}/ | The invoice resource represents a specific invoice associated with a given account.
+*PaymentApi* | [**payment_payments_list**](docs/PaymentApi.md#payment_payments_list) | **GET** /payment/payments/ | API endpoint that allow access to payment.
+*PaymentApi* | [**payment_payments_read**](docs/PaymentApi.md#payment_payments_read) | **GET** /payment/payments/{payment_id}/ | API endpoint that allow access to payment.
+*PaymentApi* | [**payment_transactions_list**](docs/PaymentApi.md#payment_transactions_list) | **GET** /payment/transactions/ | API endpoint that allow access to payment transactions. Transaction belong to a Payment object.
+*PaymentApi* | [**payment_transactions_read**](docs/PaymentApi.md#payment_transactions_read) | **GET** /payment/transactions/{transaction_id}/ | API endpoint that allow access to payment transactions. Transaction belong to a Payment object.
+*PaymentMethodApi* | [**payment_method_payment_methods_create**](docs/PaymentMethodApi.md#payment_method_payment_methods_create) | **POST** /payment_method/payment_methods/ | 
+*PaymentMethodApi* | [**payment_method_payment_methods_default**](docs/PaymentMethodApi.md#payment_method_payment_methods_default) | **GET** /payment_method/payment_methods/default/ | 
+*PaymentMethodApi* | [**payment_method_payment_methods_delete**](docs/PaymentMethodApi.md#payment_method_payment_methods_delete) | **DELETE** /payment_method/payment_methods/{payment_method_id}/ | 
+*PaymentMethodApi* | [**payment_method_payment_methods_list**](docs/PaymentMethodApi.md#payment_method_payment_methods_list) | **GET** /payment_method/payment_methods/ | 
+*PaymentMethodApi* | [**payment_method_payment_methods_partial_update**](docs/PaymentMethodApi.md#payment_method_payment_methods_partial_update) | **PATCH** /payment_method/payment_methods/{payment_method_id}/ | 
+*PaymentMethodApi* | [**payment_method_payment_methods_read**](docs/PaymentMethodApi.md#payment_method_payment_methods_read) | **GET** /payment_method/payment_methods/{payment_method_id}/ | 
+*PaymentMethodApi* | [**payment_method_payment_methods_update**](docs/PaymentMethodApi.md#payment_method_payment_methods_update) | **PUT** /payment_method/payment_methods/{payment_method_id}/ | 
+*TenantApi* | [**tenant_configurations_create**](docs/TenantApi.md#tenant_configurations_create) | **POST** /tenant/configurations/ | Tenant configuration
+*TenantApi* | [**tenant_configurations_delete**](docs/TenantApi.md#tenant_configurations_delete) | **DELETE** /tenant/configurations/{key}/ | Tenant configuration
+*TenantApi* | [**tenant_configurations_list**](docs/TenantApi.md#tenant_configurations_list) | **GET** /tenant/configurations/ | Tenant configuration
+*TenantApi* | [**tenant_configurations_partial_update**](docs/TenantApi.md#tenant_configurations_partial_update) | **PATCH** /tenant/configurations/{key}/ | Tenant configuration
+*TenantApi* | [**tenant_configurations_read**](docs/TenantApi.md#tenant_configurations_read) | **GET** /tenant/configurations/{key}/ | Tenant configuration
+*TenantApi* | [**tenant_configurations_update**](docs/TenantApi.md#tenant_configurations_update) | **PUT** /tenant/configurations/{key}/ | Tenant configuration
+*TenantApi* | [**tenant_plugin_configurations_create**](docs/TenantApi.md#tenant_plugin_configurations_create) | **POST** /tenant/plugin_configurations/ | Plugin configuration
+*TenantApi* | [**tenant_plugin_configurations_delete**](docs/TenantApi.md#tenant_plugin_configurations_delete) | **DELETE** /tenant/plugin_configurations/{key}/ | Plugin configuration
+*TenantApi* | [**tenant_plugin_configurations_list**](docs/TenantApi.md#tenant_plugin_configurations_list) | **GET** /tenant/plugin_configurations/ | Plugin configuration
+*TenantApi* | [**tenant_plugin_configurations_partial_update**](docs/TenantApi.md#tenant_plugin_configurations_partial_update) | **PATCH** /tenant/plugin_configurations/{key}/ | Plugin configuration
+*TenantApi* | [**tenant_plugin_configurations_read**](docs/TenantApi.md#tenant_plugin_configurations_read) | **GET** /tenant/plugin_configurations/{key}/ | Plugin configuration
+*TenantApi* | [**tenant_plugin_configurations_update**](docs/TenantApi.md#tenant_plugin_configurations_update) | **PUT** /tenant/plugin_configurations/{key}/ | Plugin configuration
+*TenantApi* | [**tenant_push_notifications_create**](docs/TenantApi.md#tenant_push_notifications_create) | **POST** /tenant/push_notifications/ | 
+*TenantApi* | [**tenant_push_notifications_delete**](docs/TenantApi.md#tenant_push_notifications_delete) | **DELETE** /tenant/push_notifications/{push_notification_id}/ | 
+*TenantApi* | [**tenant_push_notifications_list**](docs/TenantApi.md#tenant_push_notifications_list) | **GET** /tenant/push_notifications/ | 
+*TenantApi* | [**tenant_push_notifications_read**](docs/TenantApi.md#tenant_push_notifications_read) | **GET** /tenant/push_notifications/{push_notification_id}/ | 
+*TenantApi* | [**tenant_tenants_create**](docs/TenantApi.md#tenant_tenants_create) | **POST** /tenant/tenants/ | 
+*TenantApi* | [**tenant_tenants_delete**](docs/TenantApi.md#tenant_tenants_delete) | **DELETE** /tenant/tenants/{tenant_id}/ | 
+*TenantApi* | [**tenant_tenants_list**](docs/TenantApi.md#tenant_tenants_list) | **GET** /tenant/tenants/ | 
+*TenantApi* | [**tenant_tenants_read**](docs/TenantApi.md#tenant_tenants_read) | **GET** /tenant/tenants/{tenant_id}/ | 
+
+## Documentation For Models
+
+ - [Account](docs/Account.md)
+ - [BillingAddress](docs/BillingAddress.md)
+ - [CalculatedPaymentsSerilizer](docs/CalculatedPaymentsSerilizer.md)
+ - [CardDetails](docs/CardDetails.md)
+ - [Configuration](docs/Configuration.md)
+ - [ConfigurationUpdate](docs/ConfigurationUpdate.md)
+ - [EsstimationPaymentSerilizer](docs/EsstimationPaymentSerilizer.md)
+ - [Estimation](docs/Estimation.md)
+ - [InstallmentSerilizer](docs/InstallmentSerilizer.md)
+ - [Installments](docs/Installments.md)
+ - [Invoice](docs/Invoice.md)
+ - [InvoiceItem](docs/InvoiceItem.md)
+ - [Payment](docs/Payment.md)
+ - [PaymentMethod](docs/PaymentMethod.md)
+ - [PluginConfiguration](docs/PluginConfiguration.md)
+ - [PluginConfigurationUpdate](docs/PluginConfigurationUpdate.md)
+ - [PushNotification](docs/PushNotification.md)
+ - [Tenant](docs/Tenant.md)
+ - [Transaction](docs/Transaction.md)
+
+## Documentation For Authorization
+
+
+## Basic
+
+- **Type**: HTTP basic authentication
+
+## Bearer
+
+- **Type**: API key
+- **API key parameter name**: Authorization
+- **Location**: HTTP header
+
+
+## Author
+
+hello@nuclearo.com
+
+
