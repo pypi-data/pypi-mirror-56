@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "jetblack-tomlutils"
+version = "1.0.0"
+description = "Utilities for working with toml files"
+authors = ["Rob Blackbourn <rblackbourn@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [
+    { include = "jetblack_tomlutils" }
+]
+repository = "https://github.com/rob-blackbourn/jetblack-tomlutils"
+
+[tool.poetry.scripts]
+toml2json="jetblack_tomlutils.toml_json:toml2json"
+json2toml="jetblack_tomlutils.toml_json:json2toml"
+jsonget="jetblack_tomlutils.toml_json:jsonget"
+jsonset="jetblack_tomlutils.toml_json:jsonset"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+qtoml = "^0.2.4"
+jsonpointer = "^2.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.4"
+mypy = "^0.740.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
