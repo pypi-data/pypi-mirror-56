@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: assetvaluation
+Version: 0.1.0.dev1
+Summary: Functions to support assets valuation (finance, accounting, and modelling)
+Home-page: https://kakila.wemod.info/assetvaluation
+Author: Juan Pablo Carbajal
+Author-email: ajuanpi+dev@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://gitlab.wemod.ch/kakila/assetvaluation
+Project-URL: Issues, https://gitlab.wemod.ch/kakila/assetvaluation/issues
+Description: ========================
+        Asset valuation overview
+        ========================
+        
+        Functions to support assets valuation for finance, accounting, and modelling.
+        
+        Acknowledgments
+        ===============
+        
+        The module was kick-started with the support of `Lipartner AG <https://www.lipartner.ch>`_.
+        
+        Installation
+        ============
+        
+        The module can be installed using ``pip`` either by downloading a `release <https://gitlab.wemod.ch/kakila/assetvaluation/-/releases>`_ or a `snapshot of the repository <https://gitlab.wemod.ch/kakila/assetvaluation/-/archive/master/assetvaluation-master.zip>`_, or by cloning the repository.
+        
+        To install run ``pip install <path-to-module>``, where `<path-to-module>` indicates the path to the module:
+        
+        `development <https://gitlab.wemod.ch/kakila/assetvaluation/tree/master>`_ :
+          `pip install https://gitlab.wemod.ch/kakila/assetvaluation/`
+        
+        `PyPI version <https://pypi.org/project/assetvaluation/>`_ :
+          `pip install assetvaluation`
+        
+        If you have cloned(downloaded) the repository ``<path-to-module>`` is the full path to the folder
+        where you have the clone(archived file).
+        
+        Documentation
+        =============
+        
+        The html documentation is hosted at https://kakila.wemod.info/assetvaluation
+        
+        Compiling the documentation
+        ***************************
+        
+        The sources can be found in the folder |docfolder|_ of the repository.
+        
+        .. |docfolder| replace:: ``doc``
+        .. _docfolder : https://gitlab.wemod.ch/kakila/assetvaluation/tree/master/doc>
+        
+        To compile the documentation you will need `sphinx <https://www.sphinx-doc.org>`_ in addition
+        to the runtime dependencies of the module.
+        See the |requirementsfile|_ file for details.
+        
+        .. |requirementsfile| replace:: ``requirements.txt``
+        .. _requirementsfile:  https://gitlab.wemod.ch/kakila/assetvaluation/raw/master/requirements.txt
+        
+        Once you have sphinx, you can compile the documentation by running the command ``make html``
+        in the ``doc`` folder.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: Financial
+Classifier: Topic :: Office/Business :: Financial :: Accounting
+Requires-Python: >=3
+Description-Content-Type: text/x-rst
