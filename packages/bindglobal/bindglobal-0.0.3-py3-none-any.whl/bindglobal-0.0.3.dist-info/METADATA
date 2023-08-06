@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: bindglobal
+Version: 0.0.3
+Summary: python-tkinter-bind alike, for global desktop enviroment
+Home-page: https://github.com/segalion/bindglobal
+Author: segalion
+Author-email: segalion@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pynput
+
+# bindglobal
+python-tkinter-bind alike, for global desktop enviroment (callbacks for mouse&amp;keystrokes events)
+
+
+
