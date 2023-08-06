@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: dnry_config
+Version: 0.1.4
+Summary: Multi-source config library
+Home-page: https://github.com/en0/dnry-config
+Author: Ian Laird
+Author-email: irlaird@gmail.com
+License: MIT
+Description: # DNRY-Config
+        
+        A multi-source configuration library. 
+        
+        The goal of DNRY-Config is to simplify configuration
+        loading and overriding.  With DNRY-Config you can 
+        easily specify several configuration sources and use them
+        from your application without dealing with the details.
+        
+        DNRY-Config resolve conflicts and provides namespaced
+        access to keys to support well organized configuration files.
+        
+        ## Quick Start
+        
+        Install DNRY-Config
+        
+        ```bash
+        pip install dnry_config
+        ```
+        
+        Read a Yaml file in your program.
+        
+        ```python
+        from dnry.config import ConfigFactory
+        from dnry.config.yaml import YamlSource
+        
+        conf = ConfigurationFactory([
+            YamlSource("./config1.yaml")
+        ]).build()
+        
+        config_value = conf.get("app:message")
+        ```
+        
+        There are many examples in the `samples/` directory.
+        
+Keywords: config,configuration,dnry
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
