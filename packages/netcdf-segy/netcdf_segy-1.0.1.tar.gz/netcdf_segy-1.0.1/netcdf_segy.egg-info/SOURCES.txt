@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+setup.py
+netcdf_segy/__init__.py
+netcdf_segy/segy2netcdf.py
+netcdf_segy.egg-info/PKG-INFO
+netcdf_segy.egg-info/SOURCES.txt
+netcdf_segy.egg-info/dependency_links.txt
+netcdf_segy.egg-info/entry_points.txt
+netcdf_segy.egg-info/not-zip-safe
+netcdf_segy.egg-info/requires.txt
+netcdf_segy.egg-info/top_level.txt
+tests/__init__.py
+tests/make_testbin1.py
+tests/make_testsegy1.sh
+tests/test_segy2netcdf.py
+tests/testsegy1.segy
