@@ -1,0 +1,4 @@
+[flake8.extension]
+r2c-requests-no-auth-over-http=flake8_requests.no_auth_over_http:NoAuthOverHttp
+r2c-requests-use-scheme=flake8_requests.use_scheme:UseScheme
+
