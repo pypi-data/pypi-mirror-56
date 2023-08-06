@@ -1,0 +1,9 @@
+README.rst
+setup.py
+dockager/__init__.py
+dockager/dockager_cli.py
+dockager.egg-info/PKG-INFO
+dockager.egg-info/SOURCES.txt
+dockager.egg-info/dependency_links.txt
+dockager.egg-info/entry_points.txt
+dockager.egg-info/top_level.txt
