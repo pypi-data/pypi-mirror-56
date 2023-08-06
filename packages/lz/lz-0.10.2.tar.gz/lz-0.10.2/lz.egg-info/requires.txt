@@ -1,0 +1,5 @@
+paradigm>=0.5.1
+reprit>=0.1.1
+
+[:python_version < "3.8"]
+typing_extensions>=3.7.4
