@@ -1,0 +1,17 @@
+import os
+
+os.environ["FLASK_CONFIG_FILENAME"] = "config.prod.yaml"
+
+from app import create_app
+{%- if socketio %}
+from app import socketio
+{%- endif %}
+
+app = create_app()
+
+if __name__ == "__main__":
+    {%- if socketio %}
+    socketio.run(app)
+    {%- else %}
+    app.run()
+    {%- endif %}

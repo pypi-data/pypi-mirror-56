@@ -1,0 +1,32 @@
+def capitalize_names(data):
+    lower_keys = ("first_name", "last_name")
+    try:
+        return {key: (value.lower().capitalize() if key in lower_keys else value)
+                for key, value in data.items()}
+    except Exception:
+        raise ValueError
+
+
+some_schema_i = {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "rest.some_schema.i",
+    "type": "object",
+    "properties": {
+        "first_name": {"type": "string", "maxLength": 64, "minLength": 2, "pattern": r"^[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśźż]*$"},
+        "last_name": {"type": "string",  "maxLength": 64, "minLength": 2, "pattern": r"^[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśźż]*$"},
+        "email_address": {"type": "string", "pattern": r"(^[a-zA-Z0-9_.+-]+)@([a-zA-Z0-9-]+)\.([a-zA-Z0-9-.]+$)"},
+        "cred": {"type": "string", "description": "Not required. Pass here a valid ADM_PASS and user will become Admin"}
+    },
+    "required": ["first_name", "last_name", "email_address"]
+}
+
+some_schema_o = {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "rest.some_schema.o",
+    "type": "object",
+    "properties": {
+        "id_token": {"type": "string", "description": "A JWT token."}
+    },
+    "required": ["id_token"],
+    "description": "When a valid request data is provided, user always will be authorized."
+}

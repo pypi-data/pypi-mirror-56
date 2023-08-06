@@ -1,0 +1,322 @@
+from functools import wraps
+from flask import request, g, Blueprint, make_response
+from flask import jsonify as flask_jsonify
+{%- if socketio %}
+from flask_socketio import SocketIO
+{%- endif %}
+import jsonschema
+import jinja2
+import json
+import os
+from enum import Enum
+
+
+class DataSource(Enum):
+    BODY = 1
+    ARGS = 2
+
+
+class DataContainer:
+    def __init__(self, data, data_source=DataSource.BODY):
+        jsonschema.validate(data, True)  # validate just for json standard compatibility
+        self._data = data
+        self._data_source = data_source
+
+    @property
+    def data(self):
+        return self._data
+
+    @data.setter
+    def data(self, value):
+        raise ValueError("data attribute is immutable")
+
+    @property
+    def source(self):
+        return self._data_source
+
+    @source.setter
+    def source(self, value):
+        raise ValueError("source attribute is immutable")
+
+
+def load_schema(name):
+    path = os.path.join(os.path.dirname(os.path.realpath(__file__)), name)
+    with open(path, "r") as f:
+        schema = json.load(f)
+
+    return schema
+
+
+class DocJinjaRenderer:
+    jinja_env = jinja2.Environment(
+        loader=jinja2.PackageLoader('app', 'templates')
+    )
+
+    @classmethod
+    def render_rst(cls, docstring, keyword_replacements):
+        return cls.jinja_env.from_string(docstring).render(**keyword_replacements)
+
+
+class ApiBlueprint(Blueprint):
+
+    # this is a decorator that buffs doc and g behaviour
+    def api_route(self, rule, request_schema, methods, response_schema=None, caster=lambda x: x, jsonify=True):
+        """
+        This method acts the same as .route method, but adds some additional behaviour such as data extraction and
+        validation, docstring rendering etc.
+        :param rule: same as rule for the .route() method
+        :param request_schema: jsonschema for incoming data validation
+        :param methods: list of methods (strings) that this view will handle
+        :param response_schema: jsonschema for outgoing data validation
+        :param caster: callable that will get body/args as a parameter and will return object that will be validated
+        by jsonschema. Raise ValueError to fail validation. Default to lambda x: x
+        :param jsonify: convert response body to json string
+        :return: decorator
+        """
+
+        def handler_decorator(function_handler):
+
+            @wraps(function_handler)
+            def wrapper(*args, **kwargs):
+                # ============================ #
+                # Ensure proper request method #
+
+                if request.method not in methods:
+                    raise ValueError('Request method does not match')
+
+                # ========================= #
+                # first of all, obtain data #
+
+                # get data from proper source
+                if request.method == "GET":
+                    # If caster fails (ValueError), return failure
+                    try:
+                        data = caster(request.args.to_dict())
+                    except ValueError:
+                        return "Invalid data: casting failed", 400
+
+                    # save data source
+                    source = DataSource.ARGS
+
+                elif request.method == "POST":
+                    # if caster fails, return failure
+                    try:
+                        data = caster(request.get_json(force=False, silent=True))
+
+                        # if failed to parse json data, return failure
+                        if data is None:
+                            return "Invalid data: non-json data or invalid mimetype", 400
+
+                    except ValueError:
+                        return "Invalid data: casting failed", 400
+
+                    # save data source
+                    source = DataSource.BODY
+
+                else:
+                    # wrong method name
+                    raise ValueError("Unknown method({}) to handle.".format(request.method))
+
+                # ================== #
+                # Then validate data #
+
+                try:
+                    jsonschema.validate(instance=data, schema=request_schema)
+                except jsonschema.exceptions.ValidationError:
+                    return "Invalid data: schema mismatch", 400
+
+                # ================================== #
+                # Build container and pass it into g #
+
+                g.data = DataContainer(data=data, data_source=source)
+
+                # ====================== #
+                # Let handler do the job #
+
+                handler_output = function_handler(*args, **kwargs)
+
+                # ================= #
+                # jsonify if needed #
+
+                if jsonify:
+                    handler_output = (flask_jsonify(handler_output[0]), *handler_output[1:]) \
+                                      if isinstance(handler_output, tuple) else flask_jsonify(handler_output) \
+                                      if isinstance(handler_output, str) else handler_output
+
+                # ====================== #
+                # wrap/validate response #
+
+                response = make_response(handler_output)
+
+                if response_schema is not None:
+                    jsonschema.validate(json.loads(response.get_data(as_text=True)), schema=response_schema)
+
+                return response
+
+            # if endpoint is decorated with login decorator, it will mark it by setting a ep_auth
+            auth = getattr(function_handler, "ep_auth", None)
+
+            # now we will boost docstring, trying to insert schemas etc
+            wrapper.__doc__ = DocJinjaRenderer.render_rst(wrapper.__doc__, {
+                "req_schema": json.dumps(request_schema, indent=2),
+                "resp_schema": json.dumps(response_schema, indent=2),
+                "methods": methods,
+                "auth": auth,
+                "rule": self.url_prefix + rule
+            })
+
+            # finally register route
+            self.add_url_rule(rule, wrapper.__name__, view_func=wrapper, methods=methods)
+
+            return wrapper
+
+        return handler_decorator
+
+{% if socketio %}
+class CustomSocketIo(SocketIO):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._before_callbacks = []
+        self._after_callbacks = []
+        self._session_getter = None
+        self._session_deleter = None
+
+    def register_session_getter(self, f):
+        """
+        This decorator registers db_session getter
+        """
+        self._session_getter = f
+        return f
+
+    def register_session_deleter(self, f):
+        """
+        This decorator registers db_session deleter
+        """
+        self._session_deleter = f
+        return f
+
+    def get_new_database_session(self):
+        if self._session_getter is None:
+            raise NotImplementedError
+        return self._session_getter()
+
+    def close_pending_database_session(self, db_session):
+        if self._session_deleter is None:
+            raise NotImplementedError
+        self._session_deleter(db_session)
+
+    def before_event(self, callable):
+        """
+        This decorator registers procedures to fire before handling event.
+        Callback prototype:
+        callable() -> None
+        """
+        self._before_callbacks.append(callable)
+        return callable
+
+    def after_event(self, callable):
+        """
+        This decorator registers procedures to fire before handling event.
+        Callback prototype:
+        callable(response) -> None
+        """
+        self._after_callbacks.append(callable)
+        return callable
+
+    # this is a decorator that buffs doc and g behaviour
+    def custom_on(self, event_name, schema, namespace=None, caster=lambda x: x):
+        """
+        This method acts the same as .route method, but adds some additional behaviour such as data extraction and
+        validation, docstring rendering etc.
+        :param event_name: same as "message" in SocketIO.on_event
+        :param schema: jsonschema for incoming data validation
+        :param namespace: namespace path
+        :param caster: callable that will get body/args as a parameter and will return object that will be validated
+        by jsonschema. Raise ValueError to fail validation. Default to lambda x: x
+        :return: decorator
+        """
+
+        def handler_decorator(function_handler):
+
+            @wraps(function_handler)
+            def wrapper(*args):
+                            
+
+                # ========================= #
+                # first of all, obtain data #
+
+                if event_name in ("connect", "disconnect"):
+                    # get data and format
+                    try:
+                        data = caster(request.args.to_dict())
+                    except ValueError:
+                        print("Invalid data: casting failed")
+                        return
+
+                    # save data source
+                    source = DataSource.ARGS
+
+                else:
+                    # get data and format
+                    try:
+                        data = caster(json.loads(args[0]))
+                    except ValueError:
+                        print("Invalid data: casting failed")
+                        return
+                    except (TypeError, json.decoder.JSONDecodeError):
+                        print("Invalid data: schema mismatch")
+                        return
+
+                    # save data source
+                    source = DataSource.BODY
+
+                # ================== #
+                # Then validate data #
+                try:
+                    jsonschema.validate(instance=data, schema=schema)
+                except jsonschema.exceptions.ValidationError:
+                    print("Invalid data: schema mismatch")
+                    return
+
+                # ================================== #
+                # Build container and pass it into g #
+
+                g.data = DataContainer(data=data, data_source=source)
+
+                # ===================================== #
+                # Do the job that before decorator did. #
+                # it is not invoked in socketio.        #
+
+                for callback in self._before_callbacks:
+                    callback()
+
+                # ====================== #
+                # Let handler do the job #
+
+                retval = function_handler(*args)
+
+                # ===================================== #
+                # Do the job that after decorator did.  #
+                # it is not invoked in socketio.        #
+
+                for callback in self._after_callbacks:
+                    callback(retval)
+
+                return retval                
+
+            # now we will boost docstring, trying to insert schemas etc
+            wrapper.__doc__ = DocJinjaRenderer.render_rst(wrapper.__doc__, {
+                "req_schema": json.dumps(schema, indent=2),
+                "namespace": "null" if namespace is None else namespace,
+                "event_name": event_name,
+                "proto": "{}({})".format(event_name, "" if event_name in ("connect", "disconnect") else "DATA")
+            })
+
+            # finally register event
+            self.on_event(event_name, wrapper, namespace=namespace)
+
+            return wrapper
+
+        return handler_decorator
+{% endif %}
