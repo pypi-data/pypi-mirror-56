@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: inner-class
+Version: 0.1
+Summary: Advanced inner classes for Python
+Home-page: https://github.com/sebkeim/inner-class
+Author: S.Keim
+Author-email: s.keim@free.fr
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
