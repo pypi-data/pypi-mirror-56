@@ -1,0 +1,12 @@
+mypy_boto3_cognito_idp/__init__.py,sha256=Yb9DlLb8Or6gkMJExGnWrbSgdwcTs3dsYd79nOVFLfo,186
+mypy_boto3_cognito_idp/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_cognito_idp/client.py,sha256=hdp4NmxuzVFZshurCRcywD3XzryW1qUlPtu28zpsEao,505442
+mypy_boto3_cognito_idp/helpers.py,sha256=hP4HSeCBUkPTwOiDZrGqytZyZAce2bwjqKREBMlnlaQ,4830
+mypy_boto3_cognito_idp/paginator.py,sha256=U2cumKKmaQ5TS4bEmd7_yYxezsQEJfHo6WxrKGlLXKs,44975
+mypy_boto3_cognito_idp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_cognito_idp/type_defs.py,sha256=RJyJes883xPUD26WhgyuRHSmR16or6-xfh2B4ibO9QY,605504
+mypy_boto3_cognito_idp/version.py,sha256=lRu-Uvjjz-PPGgHRclT-T9ITVTSV404nvU38906_7HU,53
+mypy_boto3_cognito_idp-0.2.9.dist-info/METADATA,sha256=pqpVtiFCxEAl6hs4hz181haCmU6N1Uc-OwnDG7bwDwc,1075
+mypy_boto3_cognito_idp-0.2.9.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mypy_boto3_cognito_idp-0.2.9.dist-info/top_level.txt,sha256=HL4C3-OcvSSZfpx1RvfKcgGBQhIh1peLAAcLQkH7gaM,23
+mypy_boto3_cognito_idp-0.2.9.dist-info/RECORD,,
