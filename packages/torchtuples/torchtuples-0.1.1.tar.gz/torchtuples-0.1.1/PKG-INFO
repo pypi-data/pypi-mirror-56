@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: torchtuples
+Version: 0.1.1
+Summary: Training neural networks in PyTorch
+Home-page: https://github.com/havakv/torchtuples
+Author: Haavard Kvamme
+Author-email: haavard.kvamme@gmail.com
+License: BSD license
+Description: UNKNOWN
+Keywords: torchtuples
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
