@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: genomedashboard
+Version: 0.0.66
+Summary: Genome Dashboard is the logic behind a web-based prototype of a genomics dashboard, specifically designed to integrate informatics and 4D material studies of chromatin. Genome Dashboard unites our Interactive Chromatin Modeling (ICM) tools with the Biodalliance genome browser and the JSMol molecular viewer to rapidly fold any DNA sequence into atomic or coarse-grained models of DNA, nucleosomes or chromatin.
+
+Home-page: http://dna.engr.latech.edu/~gdash/GDash-landing-page/
+Author: Zilong Li, Ran Sun, Thomas C. Bishop, John N. Gentle Jr
+Author-email: zli007@latech.edu, rsu007@latech.edu, bishop@latech.edu, taoteg@gmail.com
+License: MIT license
+Download-URL: https://pypi.org/project/genomedashboard/#files
+Project-URL: PyPI, https://pypi.org/project/genomedashboard/
+Project-URL: Documentation, https://genomedashboard.readthedocs.io/en/latest/readme.html
+Project-URL: Source Code, https://github.com/genomeDashboard/genomedashboard
+Project-URL: Issue Tracker, https://github.com/genome-dashboard/genome-dashboard-python/issues
+Project-URL: Demo, http://dna.engr.latech.edu/~gdash/
+Description: Genome Dashboard is the logic behind a web-based prototype of a genomics dashboard, specifically designed to integrate informatics and 4D material studies of chromatin. Genome Dashboard unites our Interactive Chromatin Modeling (ICM) tools with the Biodalliance genome browser and the JSMol molecular viewer to rapidly fold any DNA sequence into atomic or coarse-grained models of DNA, nucleosomes or chromatin.
+        
+Keywords: python biology genomics genome dashboard
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=2.7
+Description-Content-Type: text/x-rst
+Provides-Extra: dev
+Provides-Extra: test
