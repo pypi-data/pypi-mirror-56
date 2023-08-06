@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: exceltogdx
+Version: 0.0.1
+Summary: A simple python tool to extract sets and parameters from excel files by creating GDX files for GAMS
+Home-page: https://github.com/diw-berlin/exceltogdx
+Author: Carlos Gaete
+Author-email: cdgaete@gmail.com
+License: MIT License
+Requires-Dist: appdirs
+Requires-Dist: docopt
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: gdxpds
+Requires-Dist: openpyxl
+
+Copyright (c) 2019 Carlos Gaete-Morales
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Description: # excel to gdx
+        A simple python tool to extract sets and parameters from excel files by creating GDX files for GAMS
+        
+        See sheet name 'py' in the excel files that describes sets and parameters settings. Similar approach for https://www.gams.com/latest/docs/T_GDXXRW.html
+        
+        Particularly useful for linux and ios where GDXXRW.exe is not compatible, see here: https://forum.gamsworld.org/viewtopic.php?t=10418#p24019
+        
+        Required library:
+         - gdxpds
+         - pandas
+         - openpyxl
+         - GAMS API for python
+         
+        Installation
+         
+            pip install git+https://github.com/diw-berlin/exceltogdx.git
+         
+        Delete
+         
+             pip uninstall exceltogdx
+        
+        <font color='red'>If you find and error in the code, please raise an issue or solve it by pushing a commit.</font>
+        
+        See notebook example.ipynb
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Energy
