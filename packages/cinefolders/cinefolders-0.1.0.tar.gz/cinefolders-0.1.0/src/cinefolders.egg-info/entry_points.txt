@@ -1,0 +1,3 @@
+[console_scripts]
+cinefolders = cinefolders.__main__:main
+
