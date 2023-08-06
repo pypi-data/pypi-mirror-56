@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: RestClient4py
+Version: 1.0.10
+Summary: REST-API client for Python
+Home-page: https://github.com/parksjin01/REST_Client_4_pi
+Author: Damotorie
+License: UNKNOWN
+Download-URL: https://github.com/parksjin01/REST_Client_4_pi
+Keywords: REST,REST-client
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: requests
+
+UNKNOWN
+
+
