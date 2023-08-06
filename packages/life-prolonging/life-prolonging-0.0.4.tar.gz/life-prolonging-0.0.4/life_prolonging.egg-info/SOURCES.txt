@@ -1,0 +1,15 @@
+README.md
+lpl.py
+setup.cfg
+setup.py
+life_prolonging.egg-info/PKG-INFO
+life_prolonging.egg-info/SOURCES.txt
+life_prolonging.egg-info/dependency_links.txt
+life_prolonging.egg-info/entry_points.txt
+life_prolonging.egg-info/requires.txt
+life_prolonging.egg-info/top_level.txt
+lplib/__init__.py
+lplib/choice.py
+lplib/meal.py
+lplib/store.toml
+lplib/util.py
