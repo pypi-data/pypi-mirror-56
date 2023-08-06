@@ -1,0 +1,16 @@
+learnml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+learnml/linear_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+learnml/linear_model/linreg.py,sha256=UzEoCpf_qH2qujIgV7HvjGT8ta0RuDKT8cidBjVL95A,2093
+learnml/linear_model/logistic.py,sha256=IRyxdeMv7cD7SemS2hmhJ-zNU0Qz7KypmNO-VLJKKpM,1515
+learnml/linear_model/multilinreg.py,sha256=xe23qliESlAwTam13EewZDc47uHOsCv6ubTtI4czYco,2257
+learnml/linear_model/perceptron.py,sha256=3RpEqc9o-WWPaPl0DMvFmjO2WWznEbJ9obylY6T7zdU,2865
+learnml/nn/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+learnml/nn/nnkeras.py,sha256=wpV8RtyHwdKLvdr6rsrcASL8Yk94TtI7wf5dygPbeTg,1986
+learnml/nn/nnxor.py,sha256=zYmQjWugYt2wqwEeeuwT8mgA5Fu-CWTa9n48fphTjVg,4276
+learnml/tree/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+learnml/tree/dectree.py,sha256=vtPz_fmz0xS6wba3rJrOyMjiR8eVKbR3JdVZvzIZM0E,2506
+learnml-0.0.3.dist-info/LICENSE,sha256=fQXSHYTEcRsPpXAfzNtGAHbtL3M-_4UjFmOToc92pOk,1069
+learnml-0.0.3.dist-info/METADATA,sha256=4LKUZHgztLXfUc1yBmzp6Lqv0bs9TccvLYEbHtj-a6Q,972
+learnml-0.0.3.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+learnml-0.0.3.dist-info/top_level.txt,sha256=9tuBQka843h-C4p3Vm8tLS2HbLtrafUvD9mcqig8KsM,8
+learnml-0.0.3.dist-info/RECORD,,
