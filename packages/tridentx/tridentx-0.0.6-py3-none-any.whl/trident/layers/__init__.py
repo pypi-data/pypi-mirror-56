@@ -1,0 +1,8 @@
+from backend.load_backend import get_backend,get_image_backend
+
+if get_backend() == 'pytorch':
+    from .pytorch_activations import Sigmoid, Tanh, Relu, Relu6, LeakyRelu, LeakyRelu6, SmoothRelu, PRelu, Swish, Elu, HardSigmoid, HardSwish, Selu, LecunTanh, SoftSign, SoftPlus, HardTanh, Logit, LogLog, Mish, Softmax, sigmoid, tanh, relu, relu6, leaky_relu, leaky_relu6, smooth_relu, prelu, swish, elu, hard_sigmoid, hard_swish, selu, lecun_tanh, softsign, softplus, hard_tanh, logit, loglog, mish, softmax, get_activation
+elif get_backend() == 'cntk':
+    from .cntk_activations import Sigmoid, Tanh, Relu, Relu6, LeakyRelu, LeakyRelu6, SmoothRelu, PRelu, Swish, Elu, HardSigmoid, HardSwish, Selu, LecunTanh, SoftSign, SoftPlus, HardTanh, Logit, LogLog, Mish, Softmax, sigmoid, tanh, relu, relu6, leaky_relu, leaky_relu6, smooth_relu, prelu, swish, elu, hard_sigmoid, hard_swish, selu, lecun_tanh, softsign, softplus, hard_tanh, logit, loglog, mish, softmax, get_activation
+elif get_backend() == 'tensorflow':
+    from .cntk_activations import Sigmoid, Tanh, Relu, Relu6, LeakyRelu, LeakyRelu6, SmoothRelu, PRelu, Swish, Elu, HardSigmoid, HardSwish, Selu, LecunTanh, SoftSign, SoftPlus, HardTanh, Logit, LogLog, Mish, Softmax, sigmoid, tanh, relu, relu6, leaky_relu, leaky_relu6, smooth_relu, prelu, swish, elu, hard_sigmoid, hard_swish, selu, lecun_tanh, softsign, softplus, hard_tanh, logit, loglog, mish, softmax, get_activation
