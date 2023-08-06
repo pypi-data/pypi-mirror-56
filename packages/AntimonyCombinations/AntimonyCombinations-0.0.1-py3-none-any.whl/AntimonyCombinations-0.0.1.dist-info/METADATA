@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: AntimonyCombinations
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: https://github.com/CiaranWelsh/AntimonyCombinations
+Author: Ciaran Welsh
+Author-email: ciaran.welsh@newcastle.ac.uk
+License: MIT
+Keywords: SBML,antimony,tellurium,model selection,combinations,model merging
+Platform: UNKNOWN
+Requires-Dist: tellurium
+Requires-Dist: pycotools3
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+# AntimonyCombinations
+![Build Status](https://travis-ci.org/CiaranWelsh/AntimonyCombinations.svg?branch=master)
+![Coverage](coverage.svg)
+
+`AntimonyCombinations` is a package developed on top of 
+[tellurium](http://tellurium.analogmachine.org/) and 
+[antimony](http://antimony.sourceforge.net/) for building 
+[sbml](http://sbml.org/Main_Page) models in a combinatorial
+way. 
+
+The idea is that you have a core model which you 
+are more confident in regarding its structure and an arbitrary
+number of additional hypotheses, called hypothesis extensions.
+`AntimonyCombinations` provides a way of quickly building the
+comprehensive set of model topologies, given the core hypothesis
+and hypothesis extensions. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
