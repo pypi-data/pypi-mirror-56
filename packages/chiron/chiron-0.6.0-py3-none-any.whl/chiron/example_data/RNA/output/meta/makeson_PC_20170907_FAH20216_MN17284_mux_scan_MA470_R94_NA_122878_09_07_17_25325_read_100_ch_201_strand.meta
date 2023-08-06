@@ -1,0 +1,6 @@
+# Reading Basecalling assembly output total rate(bp/s)
+0.008 0.000 0.000 0.000 0.008 3173.804
+# read_len batch_size segment_len jump start_pos
+26 300 2000 1900 0
+# input_name model_name
+chiron/example_data/RNA/output/raw/ chiron/model/RNA_default/

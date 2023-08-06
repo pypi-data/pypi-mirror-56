@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: chiron
+Version: 0.6.0
+Summary: A deep neural network basecaller for nanopore sequencing.
+Home-page: https://github.com/haotianteng/chiron
+Author: Haotian Teng
+Author-email: havens.teng@gmail.com
+License: MPL 2.0
+Download-URL: https://github.com/haotianteng/Chiron/archive/0.6.tar.gz
+Keywords: basecaller,nanopore,sequencing,neural network
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Requires-Dist: h5py (>=2.7.0)
+Requires-Dist: mappy (>=2.10.0)
+Requires-Dist: numpy (>=1.13.3)
+Requires-Dist: statsmodels (>=0.8.0)
+Requires-Dist: tqdm (>=4.23.0)
+Requires-Dist: scipy (>=1.0.1)
+Requires-Dist: biopython (>=1.73)
+Requires-Dist: packaging (>=18.0)
+Provides-Extra: tf
+Requires-Dist: tensorflow (>=1.13.1) ; extra == 'tf'
+Provides-Extra: tf_gpu
+Requires-Dist: tensorflow-gpu (>=1.13.1) ; extra == 'tf_gpu'
+
+UNKNOWN
+
+
