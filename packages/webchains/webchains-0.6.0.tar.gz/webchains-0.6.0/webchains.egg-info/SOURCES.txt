@@ -1,0 +1,9 @@
+README.rst
+setup.py
+webchains/__init__.py
+webchains/core.py
+webchains.egg-info/PKG-INFO
+webchains.egg-info/SOURCES.txt
+webchains.egg-info/dependency_links.txt
+webchains.egg-info/requires.txt
+webchains.egg-info/top_level.txt
