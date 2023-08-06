@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: liburing
+Version: 0.0.1
+Summary: TODO
+Home-page: https://github.com/YoSTEALTH/Liburing
+Author: STEALTH
+License: UNKNOWN
+Description: Liburing
+        ========
+        
+        TODO
+        
+Platform: UNKNOWN
+Classifier: License :: Public Domain
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
