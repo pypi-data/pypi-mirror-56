@@ -1,0 +1,12 @@
+jsonty/__init__.py,sha256=jdLrCM8TpOFhOM73urQWcUuaADi2tG4jgEIn970aWnc,25
+jsonty/exceptions.py,sha256=Q0gTgAK4jrs-SLhZyv52S8gWY1hxg-t95xpeSXF6q3g,205
+jsonty/models.py,sha256=zacDhfJe9dPFpiE-TW5FoplS5WM5uP_ZZQAWva4P0Wc,2931
+tests/test_dumps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dumps/test_inheritance.py,sha256=lZjfbJLo-LbUCc6JAcpibOFiEcvD5YoiJEJ5XWNbsds,1634
+tests/test_dumps/test_iteration.py,sha256=TrIrgUVX8_sGpopC5xiXe1aTvTpp4ZCNfexic0B2ek0,5028
+tests/test_dumps/test_simple_types.py,sha256=zLaEFJ7HBGL1LOUtnLW80G2pnEimReA4NrGpXvB3Plc,2142
+jsonty-0.0.1.dist-info/LICENSE,sha256=IG0ck0HvTAvnFK-g3dQVxqgBVPO4meaZG9RaIBcs5fE,1342
+jsonty-0.0.1.dist-info/METADATA,sha256=Otvsu4o5N_kYSuc8MLezcn0TQ7asYoOTWTA_dRyhS_c,2361
+jsonty-0.0.1.dist-info/WHEEL,sha256=v8slff5hmCpvciQ3G55d2d1CnOBupjDFJHDE2dUb1Ao,97
+jsonty-0.0.1.dist-info/top_level.txt,sha256=Tyoa2UkH4mJJ-eBNHHOa5yLprSzEniQiZmNv8Z_AieA,13
+jsonty-0.0.1.dist-info/RECORD,,
