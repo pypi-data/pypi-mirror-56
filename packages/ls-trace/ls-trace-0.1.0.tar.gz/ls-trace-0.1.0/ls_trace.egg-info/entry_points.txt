@@ -1,0 +1,3 @@
+[console_scripts]
+ls-trace-run = ddtrace.commands.ddtrace_run:main
+
