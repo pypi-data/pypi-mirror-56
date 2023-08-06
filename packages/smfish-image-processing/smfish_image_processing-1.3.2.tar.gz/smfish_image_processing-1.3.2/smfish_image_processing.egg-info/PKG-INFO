@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: smfish-image-processing
+Version: 1.3.2
+Summary: SmFISH image processing library including image stitching, rotation, scaling tools
+Home-page: https://bitbucket.org/qzhu/smfish-image-processing
+Author: Qian Zhu
+Author-email: zqian@jimmy.harvard.edu
+License: UNKNOWN
+Description: Includes image processing that are commonly performed in spatial transcriptomics, such as image stitching, rotation, scaling operations, and read functions for Region-Of-Interest (ROI) files and Omero-TIFF image files
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
