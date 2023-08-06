@@ -1,0 +1,10 @@
+astroid
+
+[dev]
+bump2version
+pre-commit
+
+[test]
+pytest
+pylint
+elasticsearch-dsl
