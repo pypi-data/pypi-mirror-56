@@ -1,0 +1,4 @@
+[console_scripts]
+semanticTree = semantic_tree.semtree:run
+semanticTreeDemo = semantic_tree.semtree:demo
+

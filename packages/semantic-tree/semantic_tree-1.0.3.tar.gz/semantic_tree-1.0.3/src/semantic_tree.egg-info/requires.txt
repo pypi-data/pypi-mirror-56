@@ -1,0 +1,7 @@
+gensim
+networkx
+matplotlib
+
+[testing]
+pytest
+pytest-cov
