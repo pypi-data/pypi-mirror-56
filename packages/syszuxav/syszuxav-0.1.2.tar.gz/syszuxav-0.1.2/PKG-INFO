@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: syszuxav
+Version: 0.1.2
+Summary: python bindings for ffmpeg
+Home-page: https://github.com/CivilNet/SYSZUXav
+Author: Gemfield
+Author-email: gemfield@civilnet.cn
+License: UNKNOWN
+Download-URL: https://github.com/CivilNet/SYSZUXav/releases/download/v0.1/syszuxav-0.1.2.tar.gz
+Description: python bindings for ffmpeg
+Keywords: ffmpeg python
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries
