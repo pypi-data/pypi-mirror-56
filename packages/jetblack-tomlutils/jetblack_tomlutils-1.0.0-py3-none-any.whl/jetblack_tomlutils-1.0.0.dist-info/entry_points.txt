@@ -1,0 +1,6 @@
+[console_scripts]
+json2toml=jetblack_tomlutils.toml_json:json2toml
+jsonget=jetblack_tomlutils.toml_json:jsonget
+jsonset=jetblack_tomlutils.toml_json:jsonset
+toml2json=jetblack_tomlutils.toml_json:toml2json
+
