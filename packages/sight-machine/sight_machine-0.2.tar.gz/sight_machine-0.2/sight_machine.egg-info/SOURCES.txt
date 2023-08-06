@@ -1,0 +1,11 @@
+README.md
+setup.py
+sight_machine/__init__.py
+sight_machine/binary_loggable.py
+sight_machine/binary_logger.py
+sight_machine.egg-info/PKG-INFO
+sight_machine.egg-info/SOURCES.txt
+sight_machine.egg-info/dependency_links.txt
+sight_machine.egg-info/top_level.txt
+sight_machine/tests/__init__.py
+sight_machine/tests/test_binary_logger.py
