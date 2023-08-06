@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Reports</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+          <link rel="stylesheet" href="../_static/css/press_main.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/css/press_main.css" type="text/css" />
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Constraints reports" href="constraints_reports.html" />
+  <link rel="prev" title="Core Classes" href="core_classes.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <img class="logo" src="../_static/html_logo.png" alt="doit logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#more-biology-software"
+         class="nav-link  router-link-active">
+         Reference
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#more-biology-software"
+         class="nav-link ">
+         Using Genbanks
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#more-biology-software"
+         class="nav-link ">
+         Examples
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Edinburgh-Genome-Foundry/DnaChisel"
+        class="nav-link external">
+          Github <outboundlink/>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#more-biology-software"
+         class="nav-link  router-link-active">
+         Reference
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#more-biology-software"
+         class="nav-link ">
+         Using Genbanks
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#more-biology-software"
+         class="nav-link ">
+         Examples
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Edinburgh-Genome-Foundry/DnaChisel"
+        class="nav-link external">
+          Github <outboundlink/>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#more-biology-software">Reference</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="core_classes.html" class="reference internal ">Core Classes</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Reports</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#module-dnachisel.reports.optimization_reports" class="reference internal">Reports</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="constraints_reports.html" class="reference internal ">Constraints reports</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="biotools.html" class="reference internal ">Biotools</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="builtin_specifications.html" class="reference internal ">Built-in Specifications</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="cli.html" class="reference internal ">Command Line Interface</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../notes.html" class="reference internal ">Notes</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#more-biology-software">Using Genbanks</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../genbank/genbank_api.html" class="reference internal ">Genbank API</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../genbank/genbank_notes.html" class="reference internal ">Genbank usage notes</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#more-biology-software">Examples</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../examples.html" class="reference internal ">Examples</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Reports</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="core_classes.html"
+       title="previous chapter">← Core Classes</a>
+  </li>
+  <li class="next">
+    <a href="constraints_reports.html"
+       title="next chapter">Constraints reports →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="module-dnachisel.reports.optimization_reports">
+<span id="reports"></span><h1>Reports<a class="headerlink" href="#module-dnachisel.reports.optimization_reports" title="Permalink to this headline">¶</a></h1>
+<p>Methods to generate optimization reports.</p>
+<dl class="function">
+<dt id="dnachisel.reports.optimization_reports.write_no_solution_report">
+<code class="sig-prename descclassname">dnachisel.reports.optimization_reports.</code><code class="sig-name descname">write_no_solution_report</code><span class="sig-paren">(</span><em class="sig-param">target</em>, <em class="sig-param">problem</em>, <em class="sig-param">error</em>, <em class="sig-param">file_content=None</em>, <em class="sig-param">file_path=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/dnachisel/reports/optimization_reports.html#write_no_solution_report"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dnachisel.reports.optimization_reports.write_no_solution_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a report on incompatibility found in the problem’s constraints.</p>
+<p>The report comprises a PDF of plots of the sequence (global constraints,
+local constraints around the problem) and an annotated genbank.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong></p>
+<blockquote>
+<div><p>Either a path to a folder, or a path to a zip archive, or “&#64;memory” to
+return raw data of a zip archive containing the report.</p>
+</div></blockquote>
+<p><strong>problem</strong></p>
+<blockquote>
+<div><p>A DnaOptimizationProblem</p>
+</div></blockquote>
+<p><strong>error</strong></p>
+<blockquote>
+<div><p>A NoSolutionError (carries a message and a location)</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="dnachisel.reports.optimization_reports.write_optimization_report">
+<code class="sig-prename descclassname">dnachisel.reports.optimization_reports.</code><code class="sig-name descname">write_optimization_report</code><span class="sig-paren">(</span><em class="sig-param">target</em>, <em class="sig-param">problem</em>, <em class="sig-param">project_name='unnammed'</em>, <em class="sig-param">plot_figure=True</em>, <em class="sig-param">constraints_evaluations=None</em>, <em class="sig-param">objectives_evaluations=None</em>, <em class="sig-param">figure_width=20</em>, <em class="sig-param">max_features_in_plots=300</em>, <em class="sig-param">file_path=None</em>, <em class="sig-param">file_content=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/dnachisel/reports/optimization_reports.html#write_optimization_report"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dnachisel.reports.optimization_reports.write_optimization_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write an optimization report with a PDF summary, plots, and genbanks.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target</strong></p>
+<blockquote>
+<div><p>Path to a directory or zip file, or “&#64;memory” for returning raw data of
+a zip file created in-memory.</p>
+</div></blockquote>
+<p><strong>problem</strong></p>
+<blockquote>
+<div><p>A DnaOptimizationProblem to be solved and optimized</p>
+</div></blockquote>
+<p><strong>project_name</strong></p>
+<blockquote>
+<div><p>Name of the project that will appear on the PDF report</p>
+</div></blockquote>
+<p><strong>constraints_evaluations</strong></p>
+<blockquote>
+<div><p>Precomputed constraints evaluations. If None provided, they will be
+computed again from the problem.</p>
+</div></blockquote>
+<p><strong>objectives_evaluations</strong></p>
+<blockquote>
+<div><p>Precomputed objectives evaluations. If None provided, they will be
+computed again from the problem.</p>
+</div></blockquote>
+<p><strong>figure_width</strong></p>
+<blockquote>
+<div><p>Width of the report’s figure, in inches. The more annotations there will
+be in the figure, the wider it should be. The default should work for
+most cases.</p>
+</div></blockquote>
+<p><strong>max_features_in_plots</strong></p>
+<blockquote>
+<div><p>Limit to the number of features to plot (plots with thousands of features
+may take ages to plot)</p>
+</div></blockquote>
+<p><strong>file_path</strong></p>
+<blockquote>
+<div><p>Path to the file from which the problem was created</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="core_classes.html"
+       title="previous chapter">← Core Classes</a>
+  </li>
+  <li class="next">
+    <a href="constraints_reports.html"
+       title="next chapter">Constraints reports →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2019, Edinburgh Genome Foundry.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>
