@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock%}
+{% block head %}
+    {{ super() }}
+    {{mde.css}}
+{% endblock %}
+{%block navbar%}
+<form action="{{url_for('main.index')}}" method="POST">
+    <span class="form-inline">
+        {{filter_form.csrf_token}}
+        <div class="input-group">
+            {{filter_form.search(class_="form-control form-control-sm", placeholder="Search Text")}}
+            <div class="input-group-append">
+                    {{filter_form.btnsubmit(class_="btn btn-sm border")}}
+            </div>
+        </div>
+    </span>
+{%endblock%}
+{% block body%}
+<nav class="float-right mt-2">
+    <ul class="pagination pagination-sm">
+        {% if snippets.has_prev %}
+            <li class="page-item">
+                <a class="page-link" href="{{ url_for('main.index', page=snippets.prev_num) }}">
+                    <span aria-hidden="true">&laquo; Previous</span>
+                </a>
+            </li>
+        {% endif %}
+        {% if snippets.has_prev or snippets.has_next %}
+        <li class="page-item">
+            <a class="page-link pl-2" href="#">Page {{ request.args.get('page', 1) }}</a>
+        </li>
+        {% endif %}
+        {% if snippets.has_next %}
+            <li class="page-item">
+            <a class="page-link" href="{{ url_for('main.index', page=snippets.next_num) }}">
+                <span aria-hidden="true">Next &raquo;</span>
+            </a>
+        {% endif %}
+        </li>
+    </ul>
+</nav>
+<a class="btn btn-light btn-sm mt-2 mb-2 mr-2 border" href="{{url_for('main.new')}}">
+    New snippet
+</a>
+<span class="form-inline float-right mb-0 mt-2">
+<div class="form-group">
+    <div class="input-group input-group-sm">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Sort</span>
+        </div>
+        {{filter_form.sort(class_="custom-select custom-select-sm mr-1", onchange="this.form.submit()")}}
+    </div>
+</div>
+<div class="form-group">
+    <div class="input-group input-group-sm">
+        <div class="input-group-prepend input-group-prepend-sm">
+            <span class="input-group-text">Per Page</span>
+        </div>   
+        {{filter_form.limit(class_="custom-select custom-select-sm-sm mr-1",  onchange="this.form.submit()")}}
+    </div>
+</div>
+</span>
+</form>
+<span class="clearfix"></span>
+<div class="make-pretty snippetcontainer">
+{% for snippet in snippet_list%}
+<div class="card bg-light snippetbox mb-2">
+    <div class="card-header">
+        <a  class="card-title" href="{{url_for('main.view', id= snippet.id)}}">
+            {{snippet.title}}
+        </a>
+    </div>
+    <div class="card-body">
+    {{snippet.text | safe }}
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    {{ mde.js }}
+{% endblock %}
