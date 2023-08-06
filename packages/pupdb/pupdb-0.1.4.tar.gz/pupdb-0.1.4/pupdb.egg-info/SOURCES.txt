@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pupdb/__init__.py
+pupdb/core.py
+pupdb/rest.py
+pupdb/server.py
+pupdb/start_http_server
+pupdb.egg-info/PKG-INFO
+pupdb.egg-info/SOURCES.txt
+pupdb.egg-info/dependency_links.txt
+pupdb.egg-info/requires.txt
+pupdb.egg-info/top_level.txt
