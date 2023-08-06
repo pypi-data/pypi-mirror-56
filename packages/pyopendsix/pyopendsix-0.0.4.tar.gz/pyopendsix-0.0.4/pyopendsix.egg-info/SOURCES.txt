@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+OGL.txt
+README.md
+setup.cfg
+setup.py
+pyopendsix/__init__.py
+pyopendsix/__main__.py
+pyopendsix/schema.json
+pyopendsix.egg-info/PKG-INFO
+pyopendsix.egg-info/SOURCES.txt
+pyopendsix.egg-info/dependency_links.txt
+pyopendsix.egg-info/entry_points.txt
+pyopendsix.egg-info/not-zip-safe
+pyopendsix.egg-info/requires.txt
+pyopendsix.egg-info/top_level.txt

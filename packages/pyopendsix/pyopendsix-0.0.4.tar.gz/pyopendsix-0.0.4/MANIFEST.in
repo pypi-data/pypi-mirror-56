@@ -1,0 +1,4 @@
+recursive-include pyopendsix *.json
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+include OGL.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+pyopendsix = pyopendsix.__main__:create_api
+
