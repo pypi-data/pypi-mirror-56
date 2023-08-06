@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyaltt2
+Version: 0.0.4
+Summary: Misc tools
+Home-page: https://github.com/alttch/pyaltt2
+Author: Altertech
+Author-email: div@altertech.com
+License: MIT
+Description: # pyaltt2
+        
+        Common functions
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
