@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pco
+Version: 0.0.15
+Summary: This class provides basic methods for using pco cameras.
+Home-page: https://www.pco.de/
+Author: Andreas Ziegler
+Author-email: andreas.ziegler@pco.de
+License: MIT
+Keywords: pco,camera
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: numpy
+
+================
+PCO Camera Class
+================
+
+This class provides the methods for using pco cameras.
+
+
