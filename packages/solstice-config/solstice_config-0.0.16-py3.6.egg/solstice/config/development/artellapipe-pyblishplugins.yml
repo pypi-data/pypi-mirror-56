@@ -1,0 +1,12 @@
+# Base Configuration for Pyblish Plugins
+
+pyblish_modules:
+  - artellapipe.libs.pyblish
+
+plugins:
+  # Validators
+  ValidateHardEdges:
+    hosts: ['maya']
+    families: ['model']
+    must_pass: True
+
