@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: gwvet
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://github.com/gwpy/vet
+Author: Duncan Macleod, Alex Urban
+Author-email: alexander.urban@ligo.org
+License: GPL-3.0-or-later
+Project-URL: Bug Tracker, https://github.com/gwpy/vet/issues
+Project-URL: Discussion Forum, https://gwdetchar.slack.com
+Project-URL: Source Code, https://github.com/gwpy/vet
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Provides: gwvet
+Provides-Extra: doc
