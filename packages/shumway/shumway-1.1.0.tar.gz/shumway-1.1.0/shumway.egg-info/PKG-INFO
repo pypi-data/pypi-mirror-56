@@ -1,0 +1,29 @@
+Metadata-Version: 1.2
+Name: shumway
+Version: 1.1.0
+Summary: Micro metrics library for ffwd
+Home-page: https://github.com/spotify/shumway
+Author: Lynn Root
+Author-email: lynn@spotify.com
+Maintainer: Lynn Root
+Maintainer-email: lynn@spotify.com
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: metrics,ffwd,heroic
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
