@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: ebayoauthclient
+Version: 0.0.3
+Summary: Python OAuth SDK: Get OAuth tokens for eBay public APIs
+Home-page: https://github.com/hosseinamin/ebay-oauth-python-client
+Author: Hossein Amin
+Author-email: hossein@aminbros.com
+License: LICENSE
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
