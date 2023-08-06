@@ -1,0 +1,12 @@
+pyatmos/__init__.py,sha256=dpy6T6wBnroCGu06vgLtnuw0YzJ2jMZjWhmgcR1kzHk,168
+pyatmos/atmosclasses/__init__.py,sha256=_VDHvN2a4EpN2ysnWerYXRNwomUWIQ9WDrX9F--FQKM,213
+pyatmos/atmosclasses/coordinate.py,sha256=QyiDz7VaXtH0UnfdilBMW0wAbIt5LUXIoO5TlY3jQGY,5867
+pyatmos/msise/__init__.py,sha256=nx16bnxT1Scjo-Ci-Gfalf9Dm_SEq0-kRYb4aixDhE8,618
+pyatmos/msise/nrlmsise00.py,sha256=_hBxqWhxaM1rTzFEHYBRPJlfE7tXRqHOm_54L2qW6s4,38483
+pyatmos/msise/spaceweather.py,sha256=3J_1RF7waTJLJQnm1-yGdyzT2TAJQWe5LA4mbMLAKXc,4811
+pyatmos/msise/utils.py,sha256=UdxuP5Vx3YZCnEqhxiAmWF5EJuAXqUYhWKn2EdHrM7M,816
+pyatmos-1.0.dist-info/LICENSE.txt,sha256=DSVQYcH6W1MLyT5Noffs7vpyJkZFTnuFq0X2jfXanHA,1054
+pyatmos-1.0.dist-info/METADATA,sha256=YGZuG__AgxiyU90opQDKijN5VsypxFt1Lpt5gAkcmD4,4604
+pyatmos-1.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+pyatmos-1.0.dist-info/top_level.txt,sha256=yRh0k76AmSUdWbuMhp4pqCNtE9H3fSQkF2QU4WPl9_g,8
+pyatmos-1.0.dist-info/RECORD,,
