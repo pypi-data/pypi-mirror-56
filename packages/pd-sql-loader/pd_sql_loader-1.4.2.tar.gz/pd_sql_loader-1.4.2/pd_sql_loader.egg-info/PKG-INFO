@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: pd-sql-loader
+Version: 1.4.2
+Summary: To optimization load DataFrame from databases
+Home-page: UNKNOWN
+Author: Karev Vitaliy
+Author-email: Vitaliy.Karev@mvideo.ru
+License: MIT
+Description: # Pandas-sql-loader
+        Модуль, реализующий функцию **sql_load**, которая копирует функционал  
+        функции **pandas.read_sql()**, но оптимизирует потребление памяти. 
+        Пытается проставить минимально возможный тип данных для каждого столбца.  
+        (float64 -> float16, int64 -> uint8 и т.д)
+        
+        Интерфейс метода полностью совместим с pandas.read_sql(), 
+        однако присутствуют дополнительные опциональные параметры.
+        
+        
+        ## sql_load interface
+        ````python
+        sql_load(sql,
+                 con,
+                 index_col=None,
+                 coerce_float=True,
+                 params=None,
+                 parse_dates=None,
+                 columns=None,
+                 chunksize=None,
+                 need_downcast=False,
+                 column_types=None,
+                 iterator=True)
+        ````
+        Все стандартные параметры есть в документации, опишу только новые и
+        chunksize:
+        
+        
+        #### chunksize: int, default None
+        Если задан, то:
+        1) **если iterator=True**, тогда вернет вернет итератор
+        2) **если iterator=False**, тогда чанками загрузит датафреймы, 
+        объединит их в один и вернет его как результат.
+        
+        
+        #### need_downcast: bool, default False
+        Флаг, устанавливающий нужна оптимизация памяти или нет.
+        
+        
+        #### column_types: list, default None
+        Список numpy типов, к которым нужно привести столбцы.  
+        Если в столбце есть значение, превыщающее заданный тип, то тип будет проигнорирован.
+        Если длина списка меньше, чем кол-во столбцов, то список будет автоматически
+        расширен типами uint8.
+        Если не задан, то каждый столбец попытается привести к uint8.
+        
+        На самом дел довольно бесполезная штука. Изначально думал, что
+        даункаст будет сильно медленнее стандартного метода, но на деле 
+        плюс минус одинаково.
+        Возможно, в следующих версиях будет приводить к данным типам насильно?
+        
+        
+        #### iterator: bool, default True
+        Флаг, устанавливающий должен ли вернуться итератор или уже собранный из 
+        чанков DataFrame при установленном chunksize.
+        
+        
+        ## Рекомендация
+        Для датасетов, размер которых в полтора раза меньше чем доступная память и более, 
+        настоятельно рекомендуется использовать загрузку чанками, тк прежде чем сдаункастить 
+        типы, в память будет загружен DataFrame средствами самого пандас (т.е. с жирными типами)
+        
+        
+        ## Пример
+        Чтобы получить готовый оптимизированный DataFrame, но загруженный чанками:
+        
+        ````python
+        from pd_sql_loader import sql_load
+        
+        df = sql_load(query, con, chunksize=10000, need_downcast=True, iterator=False)
+        ````
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
