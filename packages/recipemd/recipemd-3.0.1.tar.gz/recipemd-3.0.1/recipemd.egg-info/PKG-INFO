@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: recipemd
+Version: 3.0.1
+Summary: Markdown recipe manager, reference implementation of RecipeMD
+Home-page: https://recipemd.org
+Author: Tilman Stehr
+Author-email: tilman@tilman.ninja
+License: UNKNOWN
+Description: # RecipeMD
+        
+        A [standard format](./specification.md) for recipes as [Markdown](https://commonmark.org) files and a python reference 
+        implementation. The reference implementation can be used as a CLI program and as a python library.
+        
+        More info on our website: [recipemd.org](https://recipemd.org)
+        
+        <p>&nbsp;</p>
+        
+        <a href="https://recipemd.org/"><img src="https://raw.githubusercontent.com/tstehr/RecipeMD/master/logo/recipemd-mark.png" style="float:right; margin-left:5em"></a>
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7,<4
+Description-Content-Type: text/markdown
+Provides-Extra: tests
+Provides-Extra: release
+Provides-Extra: dev
+Provides-Extra: docs
