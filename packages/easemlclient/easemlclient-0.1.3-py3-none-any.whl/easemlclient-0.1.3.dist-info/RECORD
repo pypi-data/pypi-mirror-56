@@ -1,0 +1,16 @@
+easemlclient/__init__.py,sha256=XEqb2aiIn8fzGE68Mph4ck1FtQqsR_am0wRWvrYPffQ,22
+easemlclient/model/__init__.py,sha256=jTQdTb_GnlbW2h98B4TXAtJPaE07dJdLNmT_Fo_ohhs,520
+easemlclient/model/common.py,sha256=nplwm-ZnL2nrFztI7a2-PzhxnNx8JNYfF-HtjBZNFJM,1305
+easemlclient/model/core.py,sha256=b87xbqhdjvoTghrfQKJTopoNhyomqg0J4rHrerP0lro,1576
+easemlclient/model/dataset.py,sha256=C9k95A5mVGDaZQTaYBRJwqX3mO_wN05BMv1cqjH9UgI,7182
+easemlclient/model/job.py,sha256=uzeBLOTb2JrpmA-8pk1sDX51N9uGbGyjtwcUvJxdNNs,8041
+easemlclient/model/module.py,sha256=_IDn7ADMX8HN4wpgxHlGqQO2P0s7dC9DUoC5tC26-i4,8108
+easemlclient/model/process.py,sha256=QAclFKzCkea1f27tSRFnq2hnIVeasrW-o_PDQlBSIqQ,4478
+easemlclient/model/task.py,sha256=t3ZBRj-8xXlrTTncLoaaym61P25fiOcRVeERAxyzEmI,10054
+easemlclient/model/type.py,sha256=5c00YQxj9pdtycDc3TBXD7ImzACGkAFKeXwBcWPxnjk,3166
+easemlclient/model/user.py,sha256=n-Zfe1TbHbqPs78FFr8tSK2OHGt4K3r_NvpCtrQyHo0,3905
+easemlclient-0.1.3.dist-info/LICENCE,sha256=2AWrdD3SqswXJrwdhjr2xHBfqKhaNraHP7yVclXVvPw,1051
+easemlclient-0.1.3.dist-info/METADATA,sha256=bK5JKaK0fcs8yCPO6AzGAAvs9UNvH9sj78Gmv-HfRkk,6045
+easemlclient-0.1.3.dist-info/WHEEL,sha256=S8S5VL-stOTSZDYxHyf0KP7eds0J72qrK0Evu3TfyAY,92
+easemlclient-0.1.3.dist-info/top_level.txt,sha256=ZHEt4kDAt3xiLspoZyktPCvTqqLQVi0pgX0wm8Wl3ik,13
+easemlclient-0.1.3.dist-info/RECORD,,
