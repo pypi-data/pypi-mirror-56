@@ -1,0 +1,4 @@
+#!python
+import dcdftbmd_tools.io.translate_xyz
+
+dcdftbmd_tools.io.translate_xyz.run()
