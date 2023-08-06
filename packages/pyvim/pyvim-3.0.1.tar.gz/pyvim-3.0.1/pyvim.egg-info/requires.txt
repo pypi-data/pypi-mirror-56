@@ -1,0 +1,4 @@
+prompt_toolkit<3.1.0,>=2.0.0
+pyflakes
+pygments
+docopt
