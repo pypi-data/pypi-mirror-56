@@ -1,0 +1,159 @@
+"""Errors - these are closely linked to what used to be called violations."""
+
+
+class SQLBaseError(ValueError):
+    """Base Error Class for all violations."""
+
+    def rule_code(self):
+        """Fetch the code of the rule which cause this error.
+
+        NB: This only returns a real code for some subclasses of
+        error, (the ones with a `rule` attribute), but otherwise
+        returns a placeholder value which can be used instead.
+        """
+        if hasattr(self, 'rule'):
+            return self.rule.code
+        else:
+            return '????'
+
+    def desc(self):
+        """Fetch a description of this violation.
+
+        NB: For violations which don't directly implement a rule
+        this attempts to return the error message linked to whatever
+        caused the violation.
+        """
+        if hasattr(self, 'rule'):
+            return self.rule.description
+        else:
+            # Return the first element - probably a string message
+            if len(self.args) > 1:
+                return self.args
+            elif len(self.args) == 1:
+                return self.args[0]
+            else:
+                return self.__class__.__name__
+
+    def line_no(self):
+        """Return the line number of the violation."""
+        pm = self.pos_marker()
+        if pm:
+            return pm.line_no
+        else:
+            return 0
+
+    def line_pos(self):
+        """Return the line postion of the violation."""
+        pm = self.pos_marker()
+        if pm:
+            return pm.line_pos
+        else:
+            return 0
+
+    def char_pos(self):
+        """Return the character position in file of the violation."""
+        pm = self.pos_marker()
+        if pm:
+            return pm.char_pos
+        else:
+            return 0
+
+    def pos_marker(self):
+        """Get the position marker of the violation.
+
+        Returns:
+            The :obj:`PosMarker` of the segments if the violation has a segment,
+            the :obj:`PosMarker` directly stored in a `pos` attribute or None
+            if neither a present.
+
+        """
+        if hasattr(self, 'segment'):
+            # Linting and Parsing Errors
+            return self.segment.pos_marker
+        elif hasattr(self, 'pos'):
+            # Lexing errors
+            return self.pos
+        else:
+            return None
+
+    def get_info_tuple(self):
+        """Get a tuple representation of this violation.
+
+        Returns:
+            A `tuple` of (code, line_no, line_pos, description)
+
+        """
+        return self.rule_code(), self.line_no(), self.line_pos(), self.desc()
+
+
+class SQLTemplaterError(SQLBaseError):
+    """An error which occured during templating.
+
+    Args:
+        pos (:obj:`PosMarker`, optional): The position which the error
+            occured at.
+
+    """
+
+    def __init__(self, *args, **kwargs):
+        self.pos = kwargs.pop('pos', None)
+        super(SQLTemplaterError, self).__init__(*args, **kwargs)
+
+
+class SQLLexError(SQLBaseError):
+    """An error which occured during lexing.
+
+    Args:
+        pos (:obj:`PosMarker`, optional): The position which the error
+            occured at.
+
+    """
+    def __init__(self, *args, **kwargs):
+        # Store the segment on creation - we might need it later
+        self.pos = kwargs.pop('pos', None)
+        super(SQLLexError, self).__init__(*args, **kwargs)
+
+
+class SQLParseError(SQLBaseError):
+    """An error which occured during parsing.
+
+    Args:
+        segment (:obj:`BaseSegment`, optional): The segment which is relevant
+            for the failure in parsing. This is likely to be a subclass of
+            `BaseSegment` rather than the parent class itself. This is mostly
+            used for logging and for referencing position.
+
+    """
+    def __init__(self, *args, **kwargs):
+        # Store the segment on creation - we might need it later
+        self.segment = kwargs.pop('segment', None)
+        super(SQLParseError, self).__init__(*args, **kwargs)
+
+
+class SQLLintError(SQLBaseError):
+    """An error which occured during linting.
+
+    In particular we reference the rule here to do extended logging based on
+    the rule in question which caused the fail.
+
+    Args:
+        segment (:obj:`BaseSegment`, optional): The segment which is relevant
+            for the failure in parsing. This is likely to be a subclass of
+            `BaseSegment` rather than the parent class itself. This is mostly
+            used for logging and for referencing position.
+
+    """
+    def __init__(self, *args, **kwargs):
+        # Something about position, message and fix?
+        self.segment = kwargs.pop('segment', None)
+        self.rule = kwargs.pop('rule', None)
+        self.fixes = kwargs.pop('fixes', [])
+        super(SQLLintError, self).__init__(*args, **kwargs)
+
+    def check_tuple(self):
+        """Get a tuple representing this error. Mostly for testing."""
+        return (self.rule.code, self.segment.pos_marker.line_no, self.segment.pos_marker.line_pos)
+
+    def __repr__(self):
+        return "<SQLLintError: rule {0} pos:{1!r}, #fixes: {2}>".format(
+            self.rule_code(), self.pos_marker(), len(self.fixes))
