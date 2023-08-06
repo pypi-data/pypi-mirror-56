@@ -1,0 +1,117 @@
+== PyAdbUninstall
+
+Thinker GUI for uninstall Android bloatware Apps via "adb" without root.
+
+ * activate "Developer Options"
+ * enable "USB Debugging"
+ * install Android Debug Bridge (e.g.: {{{sudo apt install adb}}})
+ * connect device via USB
+ * start {{{adb_uninstall}}}
+
+See also:
+
+ * de: https://www.kuketz-blog.de/android-system-apps-ohne-root-loeschen/
+ * en: https://forum.xda-developers.com/honor-6x/how-to/guide-list-bloat-software-emui-safe-to-t3700814
+
+
+created 2019 by Jens Diemer
+GNU General Public License v3 or later (GPLv3+)
+
+* https://github.com/jedie/PyAdbUninstall/
+* https://pypi.org/project/PyAdbUninstall/
+
+
+== PyAdbUninstall v0.2.0.png ==
+
+{{https://raw.githubusercontent.com/jedie/jedie.github.io/master/screenshots/PyAdbUninstaller/2019-03-03 PyAdbUninstall v0.2.0.png|2019-03-03 PyAdbUninstall v0.2.0.png}}
+
+
+== notes
+
+You can't just install all listed apps. Some of them are essential system app and deinstall will brick or damages the OS!
+
+There are two modes:
+
+ * {{{uninstall apps}}} - Will deinstall the package for the current user
+ * {{{deactivate apps}}} - Will only deactivate the package for the current user
+
+It's safer to just deactivate the apps ;)
+
+
+=== uninstall / locked apps
+
+There is a list of apk package names that are "locked" in PyAdbUninstall
+
+But this list is incomplete!
+
+The list is {{{LOCKED_APPS}}} in:
+
+ * [[https://github.com/jedie/PyAdbUninstall/blob/master/adb_uninstall/constants.py|adb_uninstall/constants.py]]
+
+Please help to complete this list by github pull request ;)
+
+
+== package actions by hand via adb
+
+Check / init adb connection:
+{{{
+# Just show version information:
+$ adb version
+Android Debug Bridge version 1.0.36
+Revision 1:7.0.0+r33-2
+
+# List of devices attached:
+$ adb devices -l
+
+# kill the adb server if it is running:
+$ adb kill-server
+
+# Kick current connection from host side and make it reconnect:
+$ adb reconnect
+}}}
+
+
+List all installed apk packages:
+
+{{{
+$ adb shell pm list packages
+}}}
+
+
+Deactivate one apk package:
+
+{{{
+$ adb shell pm disable-user <packagname>
+}}}
+
+
+Uninstall one apk package:
+
+{{{
+$ adb shell pm uninstall -k --user 0 <packagname>
+}}}
+
+* {{{-k}}} - keep the data and cache directories
+* {{{--user 0}}} - Deinstall only for current user
+
+
+== Startup
+
+{{{
+# clone repository from github:
+~$ git clone https://github.com/jedie/PyAdbUninstall.git
+
+~$ cd PyAdbUninstall
+~/PyAdbUninstall$ pipenv sync
+
+# Start GUI:
+~/PyAdbUninstall$ pipenv run adb_uninstall
+}}}
+
+
+
+== help wanted
+
+* Complete {{{LOCKED_APPS}}} list (see above)
+
+Pull Requests are welcome ;)
