@@ -1,0 +1,9 @@
+README.md
+setup.py
+dnipdf.egg-info/PKG-INFO
+dnipdf.egg-info/SOURCES.txt
+dnipdf.egg-info/dependency_links.txt
+dnipdf.egg-info/top_level.txt
+moshpdf/__init__.py
+moshpdf/pdf2image.py
+moshpdf/pdf2text.py
