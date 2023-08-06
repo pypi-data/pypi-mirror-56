@@ -1,0 +1,12 @@
+README.md
+setup.py
+flutter_logo_updater/__init__.py
+flutter_logo_updater/__main__.py
+flutter_logo_updater/android_finder.py
+flutter_logo_updater/ios_finder.py
+flutter_logo_updater.egg-info/PKG-INFO
+flutter_logo_updater.egg-info/SOURCES.txt
+flutter_logo_updater.egg-info/dependency_links.txt
+flutter_logo_updater.egg-info/entry_points.txt
+flutter_logo_updater.egg-info/requires.txt
+flutter_logo_updater.egg-info/top_level.txt
