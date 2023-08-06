@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+prepro/prepro.py
+prepro.egg-info/PKG-INFO
+prepro.egg-info/SOURCES.txt
+prepro.egg-info/dependency_links.txt
+prepro.egg-info/requires.txt
+prepro.egg-info/top_level.txt
