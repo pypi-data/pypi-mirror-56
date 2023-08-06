@@ -1,0 +1,15 @@
+GooseBib/__init__.py,sha256=15FOiCItfnQJ3tQPjgJ3Bcmf2xhuZvjYl6osz4c-0dc,23
+GooseBib/cli/GbibCheckAuthors.py,sha256=1BmSoKQt3-8ObCpSZZMIQpOGR1CYQ08ra1mqAZbGvOk,4356
+GooseBib/cli/GbibCheckLink.py,sha256=vUBudonXaSv3kfIHKNoItIQdieK9MpimCRx-lObIvWI,3720
+GooseBib/cli/GbibClean.py,sha256=0UgN01L2l1vSkC3sEzNAq4Ar99DWPhEkemwQP3VtD-w,11313
+GooseBib/cli/GbibList.py,sha256=cRe4UBhbDdyhyLAA5lpsJ-qxCVo41uQi8lbfgR46DQo,1966
+GooseBib/cli/GbibParse.py,sha256=ZiB1f5g7NH4vGO7VxaxFWWSkOvZ4tN1NPv-y-YqsVBc,2234
+GooseBib/cli/GbibSelect.py,sha256=AoDSpAoyTE8aun8gzQcjQ31DGz273yLA07rWlaeehvA,3957
+GooseBib/cli/GbibSelectAlias.py,sha256=FD2WVmEWXVVn1fTviEUdsUvwc1aMmjKRJCuaLsGIj_U,3391
+GooseBib/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+GooseBib-0.1.1.dist-info/LICENSE,sha256=soeK0OGYn9HuCCFM4gj9iFLZ7koHNf9srXMqOp5-j3w,1068
+GooseBib-0.1.1.dist-info/METADATA,sha256=QR-CBWQ4k0yOC47krk2We6NUODMzGEeuq_wqBJ_yJ3o,389
+GooseBib-0.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+GooseBib-0.1.1.dist-info/entry_points.txt,sha256=nlnvhfV5xprQ6KRR_gjd-QN9Qosk69gQ8ywNiWu5cwA,333
+GooseBib-0.1.1.dist-info/top_level.txt,sha256=i49JABve0l15jpgaTvG6qvTMFtAlo8Uct34JFnJoS-I,9
+GooseBib-0.1.1.dist-info/RECORD,,
