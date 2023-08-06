@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: ai6
+Version: 1.0.2
+Summary: Artificial Intelligence Examples
+Home-page: https://github.com/ccc-py/ai6
+Author: ccckmit
+Author-email: ccckmit@gmail.com
+License: MIT
+Download-URL: https://github.com/ccc-py/ai6/archive/v1.0.2.tar.gz
+Description: # ai6 -- Artificial Intelligence Examples
+        
+        ## Install
+        
+        ```
+        $ pip install ai6
+        ```
+        
+        ## Example
+        
+        ```py
+        import nn
+        
+        def f(p):
+        	[x,y] = p
+        	return x*x + y*y
+        
+        p = [1.0, 3.0]
+        nn.gradientDescendent(f, p)
+        ```
+        
+Keywords: ai,nn,neural
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
