@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: tiledb
+Version: 0.5.1
+Summary: Pythonic interface to the TileDB array storage manager
+Home-page: https://github.com/TileDB-Inc/TileDB-Py
+Author: TileDB, Inc.
+Author-email: help@tiledb.io
+Maintainer: TileDB, Inc.
+Maintainer-email: help@tiledb.io
+License: MIT
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: numpy (>=1.7)
+Requires-Dist: wheel (>=0.30)
+
+.. image:: https://github.com/TileDB-Inc/TileDB-Py/raw/dev/doc/source/_static/TileDB_Logo_BlueArtboard_1@1.5x.png
+    :target: https://tiledb.com
+    :alt: TileDB logo
+    :width: 400
+
+|
+
+.. image:: https://travis-ci.org/TileDB-Inc/TileDB-Py.svg?branch=dev
+    :target: https://travis-ci.org/TileDB-Inc/TileDB-Py
+    :alt: Travis status
+
+|
+
+TileDB-Py
+---------
+
+`TileDB-Py` is a `Python <https://python.org>`_ interface to the `TileDB Storage Engine <https://github.com/TileDB-Inc/TileDB>`_.
+
+Quick Links
+~~~~~~~~~~~
+
+* `Installation <https://docs.tiledb.com/developer/installation/quick-install>`_
+* `Quickstart <https://docs.tiledb.com/developer/quickstart>`_
+* `API reference <https://tiledb-inc-tiledb-py.readthedocs-hosted.com/en/stable>`_
+* `Full developer documentation for all APIs and integrations <https://docs.tiledb.com/developer>`_
+
+Quick Installation
+~~~~~~~~~~~~~~~~~~
+
+TileDB-Py can be installed with either `conda <https://conda.io/docs/>`_ (recommended)::
+
+    conda install -c conda-forge tiledb-py
+
+or ``pip``::
+
+    pip install tiledb
+
+
