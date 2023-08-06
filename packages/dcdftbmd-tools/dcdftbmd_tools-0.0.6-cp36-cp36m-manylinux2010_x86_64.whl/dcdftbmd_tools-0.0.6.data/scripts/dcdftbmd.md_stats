@@ -1,0 +1,6 @@
+#!python
+
+import dcdftbmd_tools.analysis.md_stats
+
+dcdftbmd_tools.analysis.md_stats.md_stats()
+
