@@ -1,0 +1,12 @@
+# OnlyShowIn specifies the desktop environments to show this in, can be used to for cross desktop-iness
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PoProofRead
+Comment=A proofreader program for .po and .podiff files
+Categories=Development;Translation;
+MimeType=text/x-poproofread
+# Global installation
+Exec=poproofread-gtk %f
+Icon=/usr/share/poproofread/64.png
+#Path=
