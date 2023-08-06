@@ -1,0 +1,15 @@
+LICENSE.rst
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+rubberband.egg-info/PKG-INFO
+rubberband.egg-info/SOURCES.txt
+rubberband.egg-info/dependency_links.txt
+rubberband.egg-info/top_level.txt
+rubberband.egg-info/zip-safe
+src/rubber.cpp
+src/stretch.cpp
+src/stretch.hpp
+tests/slugs.wav
+tests/test.py

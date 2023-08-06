@@ -1,0 +1,7 @@
+include *.rst
+recursive-include src *.hpp *.cpp
+recursive-include tests *.py *.wav
+include *.py
+include *.cfg
+
+
