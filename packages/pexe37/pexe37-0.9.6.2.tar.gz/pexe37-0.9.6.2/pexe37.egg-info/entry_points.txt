@@ -1,0 +1,3 @@
+[console_scripts]
+build_exe = pexe37.build_exe:main
+
