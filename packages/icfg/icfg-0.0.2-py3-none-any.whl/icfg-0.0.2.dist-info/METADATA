@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: icfg
+Version: 0.0.2
+Summary: encapsulation of profig and logzero
+Home-page: https://github.com/coghost/icfg
+Author: lihe
+Author-email: imanux@sina.com
+License: GPL
+Project-URL: Bug Reports, https://github.com/coghost/icfg/issues
+Project-URL: Source, https://github.com/coghost/icfg
+Keywords: icfg,izen,profig,logzero
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: logzero
+Requires-Dist: profig
+Requires-Dist: psutil
+
+# icfg
+profig config
+
+
