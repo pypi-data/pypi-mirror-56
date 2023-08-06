@@ -1,0 +1,162 @@
+Metadata-Version: 2.1
+Name: algo-timer
+Version: 0.0.3
+Summary: An easy-to-use algorithms timer.
+Home-page: https://github.com/shenxiangzhuang/algo-timer
+Author: Xiangzhuang Shen
+Author-email: datahonor@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Algorithm Timer
+
+## Overview
+
+An easy-to-use algorithm timer.
+
+## Mechanism
+We use a context-manager and `with` in Python to give an convinent way to test
+a specific block of code. Just see the following examples.
+
+Note that we design this plot function here to test some algorithms' runing time and you can use it to test(and plot) the time of any block of code with minor change in source code(the `TimerPloter` class, specifically)
+
+## Eaxmples
+
+### Fibnacci
+
+```python
+from algotimer import Timer, TimerPloter
+
+
+def fib(n):
+    if n <= 2:
+        return 1
+    return fib(n - 1) + fib(n - 2)
+
+def fibMemo(n):
+    cache = {1: 1, 2: 1}
+
+    def rec(n):
+        if n not in cache:
+            cache[n] = rec(n - 1) + rec(n - 2)
+        return cache[n]
+    return rec(n)
+
+
+if __name__ == '__main__':
+    with Timer('fib, 30') as t:
+        print('fib(30) = ', fib(30))
+
+    with Timer('fib, 35') as t:
+        print('fib(35) = ', fib(35))
+
+    with Timer('fibMemo, 30') as t:
+        print('fibMemo(30) = ', fibMemo(30))
+
+    with Timer('fibMemo, 35') as t:
+        print('fibMemo(35) = ', fibMemo(35))
+
+    ploter = TimerPloter()
+    ploter.plot()
+
+```
+The output:
+```
+fib(30) =  832040
+fib, 30 Spends 0.217 s
+fib(35) =  9227465
+fib, 35 Spends 2.434 s
+fibMemo(30) =  832040
+fibMemo, 30 Spends 0.0 s
+fibMemo(35) =  9227465
+fibMemo, 35 Spends 0.0 s
+```
+And we get two files:
+`logging,csv` is the time data.
+
+```
+fib, 30, 0.217
+fib, 35, 2.434
+fibMemo, 30, 0.0
+fibMemo, 35, 0.0
+```
+
+And `Timer.png`, a plot of the data.
+![](https://github.com/shenxiangzhuang/algo-timer/raw/master/examples/fibnacci/Timer.png)
+
+
+
+
+### Classification
+```python
+from algotimer import Timer, TimerPloter
+from sklearn import datasets
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+
+iris = datasets.load_iris()
+
+with Timer('GaussianNB, Train'):
+    gnb = GaussianNB()
+    clf = gnb.fit(iris.data, iris.target)
+
+with Timer('GaussianNB, Test'):
+    y_pred = clf.predict(iris.data)
+    print("Number of mislabeled points out of a total %d points : %d"
+        % (iris.data.shape[0], (iris.target != y_pred).sum()))
+
+with Timer('KNN(K=3), Train'):
+    neigh = KNeighborsClassifier(n_neighbors=3)
+    clf = neigh.fit(iris.data, iris.target) 
+
+with Timer('KNN(K=3), Test'):
+    y_pred = clf.predict(iris.data)
+    print("Number of mislabeled points out of a total %d points : %d"
+        % (iris.data.shape[0], (iris.target != y_pred).sum()))
+
+with Timer('KNN(K=5), Train'):
+    neigh = KNeighborsClassifier(n_neighbors=5)
+    clf = neigh.fit(iris.data, iris.target) 
+
+with Timer('KNN(K=5), Test'):
+    y_pred = clf.predict(iris.data)
+    print("Number of mislabeled points out of a total %d points : %d"
+        % (iris.data.shape[0], (iris.target != y_pred).sum()))
+
+# plot it
+ploter = TimerPloter()
+ploter.plot()
+```
+
+The output:
+```
+GaussianNB, Train Spends 0.001 s
+Number of mislabeled points out of a total 150 points : 6
+GaussianNB, Test Spends 0.001 s
+KNN(K=3), Train Spends 0.019 s
+Number of mislabeled points out of a total 150 points : 6
+KNN(K=3), Test Spends 0.019 s
+KNN(K=5), Train Spends 0.001 s
+Number of mislabeled points out of a total 150 points : 5
+KNN(K=5), Test Spends 0.01 
+```
+
+File `logging.csv`:
+```
+GaussianNB, Train, 0.001
+GaussianNB, Test, 0.001
+KNN(K=3), Train, 0.019
+KNN(K=3), Test, 0.019
+KNN(K=5), Train, 0.001
+KNN(K=5), Test, 0.01
+```
+
+File `Timer.png`
+![](https://github.com/shenxiangzhuang/algo-timer/raw/master/examples/classification/Timer.png)
+
+
