@@ -1,0 +1,12 @@
+discere/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+discere/discere.py,sha256=rYjlzN09PYDGcISoelig8xqXBIjzuDyPf5g9NkztaKo,703
+discere/features/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+discere/features/feature_extraction.py,sha256=N_J88jBalj3Xz2e68iqnhLulbGaHEPUXpkheY6Fc1iI,3110
+discere/features/config/attrib,sha256=bhl2Y305pZoZouFdnrAybpuIeIghQKxVpOkGjrMDFjc,630
+discere/preprocessing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+discere/preprocessing/process_fasta.py,sha256=fh1XmMh47ObG0vR-5tOmJvdVSjWmLoKEgecv5j852CI,1088
+discere-0.0.4.dist-info/LICENSE.txt,sha256=s59HPqW9X4Iy9EcfF4o3ZtySc03C-vgmh04P7FX1108,1071
+discere-0.0.4.dist-info/METADATA,sha256=RbAi4lWMgq7L2rtBN09bpDdePw2_35PHcsPF_Az9-mY,2575
+discere-0.0.4.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+discere-0.0.4.dist-info/top_level.txt,sha256=YOQyZS6S5dL2dnp7W_JZyEFeTvX2Aqz1WTbbBnrWwZA,8
+discere-0.0.4.dist-info/RECORD,,
