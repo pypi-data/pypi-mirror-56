@@ -1,0 +1,28 @@
+from setuptools import setup, find_packages
+
+with open('README.md', encoding = 'utf-8') as f:
+	readme = f.read()
+
+with open('LICENSE', encoding = 'utf-8') as f:
+	license = f.read()
+
+with open('requirements.txt', encoding = 'utf-8') as f:
+	req = f.read().strip().split("\n")
+
+setup(
+	name					= 'YChat',
+	version					= '0.1.0',
+	url 					= 'https://github.com/FFTYYY/YChat',
+	description				= '',
+	long_description		= readme ,
+	install_requires 		= req , 
+	license					= license,
+	author					= 'Yang Yongyi',
+	author_email 			= 'yongyiyang17@fudan.edu.cn',
+	python_requires			= '>=3.0',
+	packages				= ['YChat'],
+	entry_points			= {'console_scripts': [
+			'YChat-server=YChat.entry:run_server_cli' ,
+			'YChat-client=YChat.entry:run_client_gui' ,
+		]}
+)
