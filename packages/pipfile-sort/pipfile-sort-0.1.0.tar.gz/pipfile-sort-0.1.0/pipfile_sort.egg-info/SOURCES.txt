@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pipfile_sort/__init__.py
+pipfile_sort.egg-info/PKG-INFO
+pipfile_sort.egg-info/SOURCES.txt
+pipfile_sort.egg-info/dependency_links.txt
+pipfile_sort.egg-info/entry_points.txt
+pipfile_sort.egg-info/requires.txt
+pipfile_sort.egg-info/top_level.txt
