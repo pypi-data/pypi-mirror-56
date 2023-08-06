@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: make-to-batch
+Version: 0.1.2
+Summary: A Makefile to Batch converter.
+Home-page: https://github.com/espositoandrea/Make-to-Batch
+Author: Andrea Esposito
+Author-email: esposito_andrea99@hotmail.com
+License: MIT
+Download-URL: https://github.com/espositoandrea/Make-to-Batch/archive/v0.1.2.tar.gz
+Description: # Makefile to Batch
+        
+        [![License](https://img.shields.io/github/license/espositoandrea/Make-to-Batch?style=for-the-badge)](https://github.com/espositoandrea/Make-to-Batch/blob/master/LICENSE)
+        [![GitHub release (latest by
+        date)](https://img.shields.io/github/v/release/espositoandrea/Make-to-Batch?style=for-the-badge)](https://github.com/espositoandrea/Make-to-Batch/releases/latest)
+        
+        This is a simple tool to convert a GNU Makefile into a Windows Batch file.
+        
+        ## Usage
+        
+        Install the tool by using [PyPI](https://pypi.org/project/make-to-batch/) using
+        the following command:
+        
+        ```bash
+        pip install make-to-batch
+        ```
+        
+        You can also install by downloading the source code:
+        
+        ```bash
+        cd path/to/source/
+        python setup.py install
+        ```
+        
+        The tool provides only a command, `make-to-batch`, that converts a Makefile in
+        the current directory to a batch file in the same directory. The tool behaviour
+        can be customized using some options: here is the help of the tool.
+        
+        ```text
+        $ make-to-batch -h
+        usage: make-to-batch [-h] [-v] [-i INPUT] [-o OUTPUT]
+        
+        Convert a Makefile to a Batch (Windows) file.
+        
+        optional arguments:
+          -h, --help            show this help message and exit
+          -v, --version         show program's version number and exit
+          -i INPUT, --input INPUT
+                                set the makefile to be converted. Defaults is
+                                './Makefile'
+          -o OUTPUT, --output OUTPUT
+                                set he name of the output batch file. Defaults is
+                                './make.bat'
+        ```
+        
+        ## Contributing
+        
+        For more information on how to contribute, go to the file
+        [CONTRIBUTING.md](CONTRIBUTING.md)
+        
+Keywords: Makefile,Batch,Shell,Windows,Linux,Converter
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown

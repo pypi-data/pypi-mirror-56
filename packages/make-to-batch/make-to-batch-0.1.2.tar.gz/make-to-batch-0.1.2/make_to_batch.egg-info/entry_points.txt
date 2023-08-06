@@ -1,0 +1,3 @@
+[console_scripts]
+make-to-batch = make_to_batch.__main__:run
+
