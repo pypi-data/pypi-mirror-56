@@ -1,0 +1,83 @@
+# Base Configuration for Artella Assets for Solstice
+
+types:
+  Props:
+    class: solstice.assets.prop.SolsticeProp
+    files:
+      - textures
+      - model
+      - shading
+      - rig
+  BackgroundElements:
+    class: solstice.assets.backgroundelement.SolsticeBackgroundElement
+    files:
+      - textures
+      - model
+      - shading
+      - rig
+  Characters:
+    class: solstice.assets.character.SolsticeCharacter
+    files:
+      - textures
+      - model
+      - shading
+      - rig
+      - groom
+
+files:
+  textures:
+    class: solstice.files.texture.SolsticeTextureAssetFile
+    extensions:
+      - tx
+      - png
+      - jpg
+      - jpeg
+  model:
+    class: solstice.files.model.SolsticeModelAssetFile
+    extensions:
+      - ma
+  shading:
+    class: solstice.files.shading.SolsticeShadingAssetFile
+    extensions:
+      - ma
+  rig:
+    class: solstice.files.rig.SolsticeRigAssetFile
+    extensions:
+      - ma
+  groom:
+    class: solstice.files.groom.SolsticeGroomAssetFile
+    extensions:
+      - ma
+  alembic:
+    class: solstice.files.alembic.SolsticeAlembicAssetFile
+    extensions:
+      - abc
+  standin:
+    class: solstice.files.standin.SolsticeStandinAssetFile
+    extensions:
+      - ass
+
+must_files:
+  - textures
+  - model
+  - shading
+  - rig
+
+ignored_paths:
+  - "PIPELINE"
+  - "lighting"
+  - "Light Rigs"
+  - "S_CH_02_summer_scripts"
+
+reference_extension_functions:
+  ma:
+    reference_function: reference_rig_file
+    file_type: rig
+  abc:
+    reference_function: reference_alembic_file
+    file_type: alembic
+    reference_function_extra_params:
+      model_type: model
+  ass:
+    reference_function: reference_standin_file
+    file_type: standin

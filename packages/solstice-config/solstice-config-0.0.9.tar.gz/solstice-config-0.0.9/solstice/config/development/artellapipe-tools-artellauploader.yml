@@ -1,0 +1,7 @@
+# Base Configuration file for artellapipe-tools-artellauploader in Solstice
+
+# Defines icon of the tool
+icon: artellauploader
+
+# URL to tool documentation web page
+url: https://solstice-short-film.github.io/solstice-docs/pipeline/pipeline/tools/artellauploader/
