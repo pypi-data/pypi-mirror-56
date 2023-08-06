@@ -1,0 +1,15 @@
+README.md
+setup.py
+NCBImeta.egg-info/PKG-INFO
+NCBImeta.egg-info/SOURCES.txt
+NCBImeta.egg-info/dependency_links.txt
+NCBImeta.egg-info/requires.txt
+NCBImeta.egg-info/top_level.txt
+ncbimeta/NCBImeta.py
+ncbimeta/NCBImetaAnnotateConcatenate.py
+ncbimeta/NCBImetaAnnotateReplace.py
+ncbimeta/NCBImetaErrors.py
+ncbimeta/NCBImetaExport.py
+ncbimeta/NCBImetaJoin.py
+ncbimeta/NCBImetaUtilities.py
+ncbimeta/__init__.py
