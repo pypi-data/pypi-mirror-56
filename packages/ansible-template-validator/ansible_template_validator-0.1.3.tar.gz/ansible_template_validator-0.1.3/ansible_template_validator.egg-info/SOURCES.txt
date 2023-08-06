@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+ansible_template_validator.py
+setup.cfg
+setup.py
+ansible_template_validator.egg-info/PKG-INFO
+ansible_template_validator.egg-info/SOURCES.txt
+ansible_template_validator.egg-info/dependency_links.txt
+ansible_template_validator.egg-info/entry_points.txt
+ansible_template_validator.egg-info/top_level.txt
+tests/conftest.py
+tests/test_template_validator.py

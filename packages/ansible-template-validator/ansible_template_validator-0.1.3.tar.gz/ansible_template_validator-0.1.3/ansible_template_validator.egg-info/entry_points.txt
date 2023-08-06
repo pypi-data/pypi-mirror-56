@@ -1,0 +1,3 @@
+[console_scripts]
+ansible-template-validator = ansible_template_validator:main
+
