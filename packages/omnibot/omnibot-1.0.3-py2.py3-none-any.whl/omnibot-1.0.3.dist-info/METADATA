@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: omnibot
+Version: 1.0.3
+Summary: A slack proxy and framework.
+Home-page: https://github.com/lyft/omnibot
+Author: Ryan Lane
+Author-email: rlane@lyft.com
+License: apache2
+Platform: UNKNOWN
+Requires-Dist: gunicorn (<20.0.0,>=19.1.1)
+Requires-Dist: python-json-logger (==0.1.11)
+Requires-Dist: Flask (<2.0,>=1.0)
+Requires-Dist: Flask-Script (==2.0.5)
+Requires-Dist: blinker (==1.4)
+Requires-Dist: rainbow-saddle (>=0.4.0)
+Requires-Dist: statsd (==3.2.1)
+Requires-Dist: gevent (==1.2.1)
+Requires-Dist: greenlet (==0.4.12)
+Requires-Dist: PyYAML (==5.1)
+Requires-Dist: boto3 (==1.4.5)
+Requires-Dist: slackclient (==1.0.7)
+Requires-Dist: pytest (==3.1.1)
+Requires-Dist: pytest-mock (==1.1)
+Requires-Dist: pytest-cov (==2.5.1)
+Requires-Dist: redis (==2.10.6)
+Requires-Dist: python-redis-lock (==3.2.0)
+
+UNKNOWN
+
+
