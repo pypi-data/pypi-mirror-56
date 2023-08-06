@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: lactolyse
+Version: 0.9.0a14
+Summary: Django package for lactate threshold analyses
+Home-page: https://github.com/dblenkus/lactolyse
+Author: Domen Blenkuš
+Author-email: domen@blenkus.com
+License: Apache License (2.0)
+Keywords: ftp lactate threshold
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Other Audience
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6, <3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: asgiref (~=2.3.2)
+Requires-Dist: channels (~=2.1.6)
+Requires-Dist: channels-redis (~=2.3.3)
+Requires-Dist: daphne (~=2.2.0)
+Requires-Dist: Django (~=2.2.0)
+Requires-Dist: django-material (~=1.4.1)
+Requires-Dist: docker (~=3.7.0)
+Requires-Dist: Jinja2 (~=2.10)
+Requires-Dist: numpy (~=1.16.0)
+Requires-Dist: psycopg2-binary (~=2.7.0)
+Provides-Extra: package
+Requires-Dist: twine ; extra == 'package'
+Requires-Dist: wheel ; extra == 'package'
+Provides-Extra: test
+Requires-Dist: black ; extra == 'test'
+Requires-Dist: check-manifest ; extra == 'test'
+Requires-Dist: coverage (>=4.2) ; extra == 'test'
+Requires-Dist: readme-renderer ; extra == 'test'
+Requires-Dist: setuptools-scm ; extra == 'test'
+Requires-Dist: twine ; extra == 'test'
+
+=========
+Lactolyse
+=========
+
+|build| |pypi_version| |pypi_pyversions| |pypi_downloads| |code_style|
+
+.. |build| image:: https://travis-ci.org/dblenkus/lactolyse.svg?branch=master
+    :target: https://travis-ci.org/dblenkus/lactolyse
+    :alt: Build Status
+
+.. |pypi_version| image:: https://img.shields.io/pypi/v/lactolyse.svg
+    :target: https://pypi.org/project/lactolyse
+    :alt: Version on PyPI
+
+.. |pypi_pyversions| image:: https://img.shields.io/pypi/pyversions/lactolyse.svg
+    :target: https://pypi.org/project/lactolyse
+    :alt: Supported Python versions
+
+.. |pypi_downloads| image:: https://pepy.tech/badge/lactolyse
+    :target: https://pepy.tech/project/lactolyse
+    :alt: Number of downloads from PyPI
+
+.. |code_style| image:: https://img.shields.io/badge/code%20style-black-black.svg
+    :target: https://black.readthedocs.io/
+    :alt: Code style: black
+
+

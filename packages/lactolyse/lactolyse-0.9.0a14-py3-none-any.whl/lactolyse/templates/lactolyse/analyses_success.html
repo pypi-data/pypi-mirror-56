@@ -1,0 +1,24 @@
+{% extends '__base__.html' %}
+{% load i18n %}
+
+{% block meta_tags %}
+{% if 'download' in request.session %}
+<meta http-equiv="refresh" content="0; url={% url 'download_file' %}"/>
+{% endif %}
+{% endblock meta_tags %}
+
+{% block content %}
+  <h1 class="center-align">{% trans "Thank you!" %}</h1>
+{% endblock content %}
+
+{% block javascript %}
+  <script>
+    var protocol = location.protocol.match(/^https/) ? "wss" : "ws";
+    var chatSocket = new WebSocket(protocol + '://' + window.location.host + '/ws/');
+
+    chatSocket.onmessage = function(e) {
+        var data = JSON.parse(e.data);
+        location.href = data['download_url'];
+    };
+  </script>
+{% endblock javascript %}
