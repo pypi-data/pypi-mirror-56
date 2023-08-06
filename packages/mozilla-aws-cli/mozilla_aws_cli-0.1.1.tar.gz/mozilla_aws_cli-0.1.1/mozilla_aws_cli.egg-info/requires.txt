@@ -1,0 +1,14 @@
+Click>=6.0
+flask>=1.0.2
+requests>=2.20.1
+console-menu
+python-jose
+
+[test]
+pytest
+pytest-cov
+python-jose
+requests-mock
+
+[test:python_version < "3.3"]
+mock
