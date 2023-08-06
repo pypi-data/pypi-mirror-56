@@ -1,0 +1,11 @@
+termcolor
+decorator
+PyYAML
+python-dateutil
+oyaml
+numpy
+six
+future
+networkx>=2.2
+dataclasses
+zuper-ipce-z5
