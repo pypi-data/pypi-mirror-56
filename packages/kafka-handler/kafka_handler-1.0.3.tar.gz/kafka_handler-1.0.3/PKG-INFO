@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kafka_handler
+Version: 1.0.3
+Summary: A simple Kafka wrapper based on confluent_kafka python client.
+Home-page: https://github.com/harshitbudhraja/kafka_handler
+Author: Harshit Budhraja
+Author-email: harshitbudhraja1301@gmail.com
+License: UNKNOWN
+Description: # kafka_handler
+        A simple Kafka wrapper based on confluent_kafka python client.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
