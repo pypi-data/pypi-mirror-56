@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: vacumm
+Version: 3.6.4
+Summary: A library for ocean science
+Home-page: http://www.ifremer.fr/vacumm
+Author: Stephane Raynaud
+Author-email: stephane.raynaud@gmail.com
+License: CeCILL-2.1
+Description: A library and a collection of scripts for ocean science, mainly designed for data analysis and model validation
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)
+Classifier: Programming Language :: Python :: 2
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
