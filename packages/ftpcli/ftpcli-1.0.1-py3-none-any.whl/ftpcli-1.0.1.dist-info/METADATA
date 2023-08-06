@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ftpcli
+Version: 1.0.1
+Summary: To easy ftp client.
+Home-page: https://github.com/nanato12/ftpcli
+Author: nanato12
+Author-email: admin@nanato12.info
+License: MIT
+Keywords: ftpcli ftp-client
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+# ftpcli
+FTP Client with Python
+
+```python
+from ftpcli import FTP
+```
+
+
