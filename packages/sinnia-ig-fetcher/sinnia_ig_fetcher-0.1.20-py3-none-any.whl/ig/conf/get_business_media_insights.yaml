@@ -1,0 +1,52 @@
+
+log_file: "logs/get_media_insights.log"
+
+enable_commit: True
+
+graph_api:
+  # https://developers.facebook.com/docs/instagram-api/reference/media/insights
+  # Requesting metrics not available for a media type results in error
+  host: "https://graph.facebook.com"
+  request_image_path: '/v3.2/{media_id}/insights?metric=engagement,impressions,reach,saved'
+  request_video_path: '/v3.2/{media_id}/insights?metric=engagement,impressions,reach,saved,video_views'
+  request_carousel_album_path: '/v3.2/{media_id}/insights?metric=carousel_album_engagement,carousel_album_impressions,carousel_album_reach,carousel_album_saved,carousel_album_video_views'
+  request_story_path: '/v3.2/{media_id}/insights?metric=exits,impressions,reach,replies,taps_forward,taps_back'
+  
+  
+queries:
+  get_media: |
+    SELECT ua.instagram_id, m.id, m.type, ua.access_token
+    FROM UsersAuth ua join Media m on m.user_id=ua.instagram_id
+    WHERE valid_until > CURRENT_TIMESTAMP()
+    AND instagram_id IS NOT NULL AND TRIM(instagram_id) != '' 
+    AND access_token NOT LIKE 'IG%'
+    AND ua.active = 1
+    AND m.created_at >= '{date_from}' AND m.created_at <= '{date_to}'
+    AND m.is_story = 0    
+    UNION
+    SELECT ua.instagram_id, m.id, m.type, ua.access_token
+    FROM UsersAuth ua join Media m on m.user_id=ua.instagram_id
+    WHERE valid_until > CURRENT_TIMESTAMP()
+    AND instagram_id IS NOT NULL AND TRIM(instagram_id) != '' 
+    AND access_token NOT LIKE 'IG%'
+    AND ua.active = 1
+    AND m.created_at >= DATE_ADD(now(), INTERVAL -1 DAY)
+    AND m.is_story = 1
+
+    
+  insert_insights: |
+    INSERT INTO MediaInsights(user_id, media_id, end_time, fetched_time,
+    {metric_name})
+    VALUES ({user_id}, '{media_id}', '{end_time}', '{fetched_time}',
+    {metric_value})
+    ON DUPLICATE KEY UPDATE {metric_name}={metric_value}
+
+    
+db_config:
+  ig:    
+    host: 'sinnia-db-2-2.ce4bgmsedant.us-east-1.rds.amazonaws.com'
+    db: "vizgram"
+    user: "vizgram"
+    passwd: "vzig6-hanGR"
+    charset: "utf8mb4" 
+  
