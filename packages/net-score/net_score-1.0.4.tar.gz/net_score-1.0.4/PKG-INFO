@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: net_score
+Version: 1.0.4
+Summary: 网络人物画像
+Home-page: UNKNOWN
+Author: kyo
+Author-email: mytool2002@126.com
+Maintainer: kyo
+Maintainer-email: mytool2002@126.com
+License: BSD License
+Description: ## 网络人物画像
+        
+        用于网络人物画像
+        
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown
