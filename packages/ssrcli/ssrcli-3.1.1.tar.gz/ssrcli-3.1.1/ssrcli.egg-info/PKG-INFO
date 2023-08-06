@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: ssrcli
+Version: 3.1.1
+Summary: SSR client with shell interface and using Docker to deploy
+Home-page: https://github.com/myl7/ssrcli
+Author: myl
+Author-email: myl7@gmail.com
+License: MIT
+Description: # ssrcli
+        
+        [![Build Status](https://travis-ci.org/myl7/ssrcli.svg?branch=master)](https://travis-ci.org/myl7/ssrcli)
+        [![codecov.io Code Coverage](https://codecov.io/gh/myl7/ssrcli/branch/master/graph/badge.svg)](https://codecov.io/gh/myl7/ssrcli)
+        [![Known Vulnerabilities](https://snyk.io/test/github/myl7/ssrcli/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/myl7/ssrcli?targetFile=requirements.txt)
+        [![Maintainability](https://api.codeclimate.com/v1/badges/b3c6db1a25f3fd84d654/maintainability)](https://codeclimate.com/github/myl7/ssrcli/maintainability)
+        
+        SSR client on Linux with command line interface
+        
+        ## Features
+        
+        - Support Linux with Python
+        - With command line interface, which is friendly for headless environment
+        - All-in-one management for SSR application, configuration and subscription
+        - Support subscription update, configuration share URL and more useful function
+        
+        ## Get Started
+        
+        Under construction...
+        
+        ## Usage
+        
+        Under construction...
+        
+        ## Test
+        
+        Under construction...
+        
+        ## License
+        
+        MIT
+        
+Keywords: ssr,ssrcli
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Internet :: Proxy Servers
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
