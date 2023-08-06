@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: lyricsprocessor
+Version: 0.1.38
+Summary: Lyrics processing code
+Home-page: https://github.com/Mitchwatts93/lyrics_generator
+Author: https://github.com/Mitchwatts93
+Author-email: 
+License: MIT
+Description: Package to get and process lyrics from lyrics genius
+Keywords: lyricsgenius genius lyrics
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
