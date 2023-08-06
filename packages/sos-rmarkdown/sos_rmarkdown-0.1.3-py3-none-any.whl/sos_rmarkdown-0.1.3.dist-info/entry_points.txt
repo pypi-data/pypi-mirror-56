@@ -1,0 +1,4 @@
+
+[sos_converters]
+rmd-ipynb = sos_rmarkdown.converter:RmarkdownToNotebookConverter
+rmd-html = sos_rmarkdown.converter:RmarkdownToHTMLConverter
