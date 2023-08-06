@@ -1,0 +1,3 @@
+[console_scripts]
+ontogram = ontogram.cli:main
+
