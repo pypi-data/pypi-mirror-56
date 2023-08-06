@@ -1,0 +1,6 @@
+include README.rst
+include CONTRIBUTING.rst
+include LICENSE
+include openxc/generator/signals.cpp.footer
+include openxc/generator/signals.cpp.header
+include openxc/tools/templates/dashboard.html
