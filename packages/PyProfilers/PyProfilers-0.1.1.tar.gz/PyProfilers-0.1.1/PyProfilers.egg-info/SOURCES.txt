@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+PyProfilers.egg-info/PKG-INFO
+PyProfilers.egg-info/SOURCES.txt
+PyProfilers.egg-info/dependency_links.txt
+PyProfilers.egg-info/requires.txt
+PyProfilers.egg-info/top_level.txt
+pyprofilers/__about__.py
+pyprofilers/__init__.py
+pyprofilers/pyprofilers.py
