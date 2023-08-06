@@ -1,0 +1,15 @@
+include LICENSE
+include MANIFEST.in
+include versioneer.py
+
+graft sunback
+global-exclude *.py[cod] *.soinclude sunback/_version.py
+include sunback/_version.py
+
+prune sunback/data/images
+prune sunback/Images
+prune devtools
+prune sunback/.idea
+prune images
+prune data/images
+prune docs/_build
