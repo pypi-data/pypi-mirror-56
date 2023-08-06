@@ -1,0 +1,6 @@
+[console_scripts]
+pyvows = pyvows.cli:main
+
+[distutils.commands]
+vows = pyvows.commands:VowsCommand
+
