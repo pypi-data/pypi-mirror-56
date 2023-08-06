@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+python_skew_correction.egg-info/PKG-INFO
+python_skew_correction.egg-info/SOURCES.txt
+python_skew_correction.egg-info/dependency_links.txt
+python_skew_correction.egg-info/not-zip-safe
+python_skew_correction.egg-info/requires.txt
+python_skew_correction.egg-info/top_level.txt
+skew_correction/__init__.py
+skew_correction/data.py
+skew_correction/errors.py
+skew_correction/skewer.py
+skew_correction/utils.py
