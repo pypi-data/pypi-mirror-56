@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: netsdldv
+Version: 0.0.9
+Summary: a tools for ami
+Home-page: https://git.netsdl.com/dv/DvManager
+Author: codmowa
+Author-email: chenchu@netsdl.com
+License: MIT
+Keywords: ami dv python
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pyodbc (>=4.0.27)
+Requires-Dist: SQLAlchemy (>=1.3.11)
+
+# basic knowledge
+
+- 这是什么?
+```
+这是一个sql 执行中间件, 它可以从配置文件中读取,并加载配置按需生成相应的sql 并执行.
+```
+
+- 怎么配置
+```
+以 xmlFactory 举例.
+xml 的文件格式如下
+	<DV>
+		<ID>1</ID> #dv_id
+		<TableName>order_head</TableName>  # the table you will select from 
+		<TopRecord>500</TopRecord> # euqal to select top 
+		<Fields> # format will be {TrueField} as {DispField}, ${number} is a placeholder number will be replace by true table name
+			<Field>
+				<DispField>Order_date</DispField> 
+				<TrueField>dbo.Fn_DispDateTime($0.Order_date)</TrueField>
+				<WhereField>$0.Order_date</WhereField>
+			</Field>
+                </Fields>
+		<Tables>
+			<Table ID="88"> # $88
+				<Name>V_Type</Name> # true table name
+				<Alias>Tp_order</Alias> 
+				<Relation> # relations that about with this alias
+                                $0.Order_type=$88.Type_no    and  $88.Type_for='Order_type'  and   $88.Pj_id=$0.Pj_id and $88.Status&gt;=0
+
+</Relation>
+				<JoinType>left</JoinType>
+                        </Table>
+                </Tables>
+        </Dv>
+```
+
+# 1 how to use
+```
+        engine = create_engine(self.G2CN_str)
+        session = sessionmaker(bind=engine)
+
+        factory = XMLFactory("D:\\chenchu\\Python\\DvManager\\test.xml")
+        dvm = factory.Build()
+
+        dvm.addQueryField(['Cust_no', 'Order_type_name', 'Order_date'])
+        # dvm.filter= DvFilter('Order_date').Equal_to('2019-10-11') #'Order_date'
+        dvm.filter.field_name = 'Order_date'
+        dvm.filter.LESS_THAN('2019-10-11')
+
+        # add field
+        dvm.fields['Pj_id'] = DvField(id="",disp_name='Pj_id',true_name="$0.Pj_id",where_name="$0.Pj_id") 
+
+        pj_id  = DvFilter('Pj_id').Equal_to('82187')
+
+        dvm.filter.AND(pj_id)
+        dvm.top_record = 1000
+        dvm.temp_tablename = "#ls"
+
+        dvm.sql_adapter = sql_server(session()) # 或许可以设为 default
+        print(dvm.Build()) 
+        rows = dvm.Query()
+        for row in rows:
+            print(row)
+```
+
+# 2.how to load from xml
+
+```
+        factory = XMLFactory("./test.xml")
+        dvm = factory.Build()
+```
+
+# 3.how to generate a xml from a dvid
+
+```
+        # self.AmimanagerDB == connection string
+        tools = dv2xml.dv2xml(self.AmimanagerDB,1)
+        tools.run("./test.xml")
+```
+
+
