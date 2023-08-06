@@ -1,0 +1,15 @@
+LICENCE.txt
+MANIFEST.in
+README.rst
+requirements.txt
+setup.py
+useful_wsi/__init__.py
+useful_wsi/patch_sampling.py
+useful_wsi/tissue_segmentation.py
+useful_wsi/utils.py
+useful_wsi/version.py
+useful_wsi/visu_utils.py
+useful_wsi.egg-info/PKG-INFO
+useful_wsi.egg-info/SOURCES.txt
+useful_wsi.egg-info/dependency_links.txt
+useful_wsi.egg-info/top_level.txt
