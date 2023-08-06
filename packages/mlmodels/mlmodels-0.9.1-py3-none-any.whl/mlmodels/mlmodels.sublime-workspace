@@ -1,0 +1,569 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mis",
+				"miss_packages"
+			],
+			[
+				"cu",
+				"curr_os"
+			],
+			[
+				"con",
+				"conda_env"
+			],
+			[
+				"python",
+				"python_version"
+			],
+			[
+				"model",
+				"modelname"
+			],
+			[
+				"file",
+				"file_input"
+			],
+			[
+				"sto",
+				"stopwords_dict"
+			],
+			[
+				"col",
+				"colname"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "model_tf/1_lstm.py",
+			"settings":
+			{
+				"buffer_size": 13900,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# -*- coding: utf-8 -*-\n\"\"\"\n# json_api\n\n\nhttps://scikit-learn.org/stable/modules/classes.html\n\n\nhttps://stackoverflow.com/questions/38926078/meta-programming-to-parse-json-in-scala\n\nInput : JSON API file\nOuput: Exeution of Script and save model storage\n\n\nThis is generic mapper between JSON and Python code script.\nExecution is Asynchornous\n\n\n\n\n\n\"\"\"\nimport os, sys\n\n\n\n#from utils import test_json_sklearn\n\n\nmy_json ={\n  \"json.id\" : \"sdsfslkfsdkfkj\",\n  \"json.project_id\" :  \"MyProject1\",\n  \"json.category\" :  \"keras.fit\",\n  \"json.tags\" :  \"keras,mnist,pandas,fitting\",\n  \"json.comments\" :  \" my comments\",\n\n\n  ### Linux env\n  \"linux.ram\" : \"32\",\n  \"linux.core\" : \"2\",\n\n\n  ### Conda env\n  \"conda.env\" : \"py36\",\n\n  ### Generate python code\n  \"script.header\" : \"myfolder/myheader_script.py\",\n  \"model.package\": \"models\",\n  \"model.name_import\": \"cnn_keras\",\n  \"model.name\" : \"cnn_keras\" ,\n  \"model.method\" : \"predict\" ,\n  \"model.save\" : {\"folder\" : \"myfolder1\"},\n\n\n  # For the model, batch of parameters, one batch for each model\n  \"param_list\": [{\n      \"model_pars\": {\n        \"input_dim\": 6,\n        \"num_classes\": 4\n      },\n    \n      ####  Predict parameters\n      \"predict_pars\": {\n        \"X\": None,\n      }, \n    \n      ####  Fit Parameters\n      \"fit_pars\": {\n        #\"x\": None,\n        #\"y\": None,\n        \"batch_size\": 32,\n        \"epochs\": 1,\n        \"verbose\": 1,\n        \"callbacks\": None,\n        \"validation_split\": 0.0,\n        \"validation_data\": None,\n        \"shuffle\": True,\n        \"class_weight\": None,\n        \"sample_weight\": None,\n        \"initial_epoch\": 0,\n        \"steps_per_epoch\": None,\n        \"validation_steps\": None,\n        \"validation_freq\": 1,\n        \"max_queue_size\": 10,\n        \"workers\": 1,\n        \"use_multiprocessing\": False\n      },\n       #list of compile_pars\n      \"compile_pars\" : {\"loss\" : \"keras.losses.categorical_crossentropy\",\"optimizer\" : \"keras.optimizers.Adadelta()\",\"metrics\" : [\"accuracy\"]},   \n       ### Load data from DataReader  \n      \"input_data\" :  { \"uri_data\" : \"\", \n                         \"type\": \"numpy.load\",\n                         \"data_pars\": {\"test_size\":0.5, \"split\":\"Xy\",\n                                        \"X_filename\" : \"../mnist_x_data.npy\", \"y_filename\" : \"../mnist_y_data.npy\"}  \n\t\t\t}             \n\t  \t}\n\t],\n\n  ### Validation of Process\n  \"check\" : {  \"check_output\" : \"mylog_check/\" , \n               \"folder\" :  [\"/xfile\" ,  \"c*\" ]  }     \n}\n\n\n#########################################################################################################\ndef log(e) :\n   print(e)\n\n\ndef norm(x) :\n  try :\n    a = float(x)\n    return x\n  except :\n    return   \"'\" + str(x) + \"'\"\n\n\ndef dict_tostring(d) :\n   try :\n     return \",\".join( [\"{k}={v}\".format(k=k, v= norm(v))  for k,v in d.items() ] )\n   except :\n     return \"\"\n  \n#new function - gives accurate keyword arguments from a dictionary\ndef dict_tokwarg(d) :\n   try :\n     return \",\".join( [\"{k}={v}\".format(k=k, v=v)  for k,v in d.items() ] )\n   except :\n     return \"\"\n\ndef os_makedirs(folder) :\n  os.makedirs(folder)\n\n\n\ndef json_sanitizer(js) :\n    pass\n    # Clean JSON from sanitizer, security issues\n\n\n\n\n#########################################################################################################\n\ndef set_class(name, dict_pars) :\n   return f\"{name}( {dict_tostring(dict_pars)} )\" \n\n    \ndef save(x, folder, **options) :\n  filepath = f\"\"\"{folder}/{x}\"\"\"\n  return f\"\"\"#Saving Data\\nos.makedirs(os.path.dirname(\"{filepath}\"), exist_ok=True)\\nf = open(\"{filepath}\",'ab')\\n pickle.dump({x}, f)\\n f.close()\\n\"\"\"\n\n\ndef load(x, folder, **options):\n  filepath = f\"\"\"{folder}/{x}\"\"\"\n  return f\"\"\"#Loading Data\\nf = open(\"{filepath}\",'rb') \\n {x} = pickle.load(f) \\n f.close()\"\"\"\n\n\ndef script_header(txt=None):\n  ss = \"\"\"#utf-8\n    import pandas as pd\n    import sklearn as sk\n    import pickle\n    import operator\n    import keras\n    import numpy\n\n    import sys\n    import os.path\n    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))) \n  \"\"\"\n  return ss\n\n\ndef script_write(txt, ff,  indent=0, insertline = '', **args) :\n   if indent > -1 :\n     space = \" \" * indent\n     txt = \"\\n\".join( [ space + x.strip()  for x in  txt.split(\"\\n\")   ]  ) \n  \n   if insertline == \"after\" :    \n       txt = txt + \"\\n\"\n      \n   if txt.startswith(\"###\")   : \n       txt += \"\\n\"\n      \n   ff.write(txt + \"\\n\" )\n\n\n########################################################################################################\ndef script_validate(script_python):\n      import ast\n      try :\n        with open(script_python, \"r\") as source:\n           ast.parse(source.read())\n           return 1 \n      except Exception as e :\n        log(e)\n        return 0\n\n      \n      \ndef data_reader(target_var, data_uri, data_type, data_pars=None) :\n\n  if data_type == \"pandas.DataFrame.read_csv\" and data_pars.get('split') is None :\n    return f\"{target_var} = pd.read_csv('{data_uri}')\"       \n\n  if data_type == \"pandas.DataFrame.read_csv\" and data_pars.get('split') == \"Xy\" :\n    #we select 'coly' and everything else is considered 'colX' - need preprocessing for more accuracy\n    return f\"\"\"\n              df = pd.read_csv('{data_uri}',index_col=0)\n              {target_var} =  df.loc[:, df.columns != '{data_pars['coly']}'].values,  df['{data_pars['coly']}'].values              \n           \"\"\"          \n  if data_type == \"numpy.load\":\n    return f\"\"\"           \n              {target_var} =  numpy.load(\"{data_pars['X_filename']}\"),  numpy.load(\"{data_pars['y_filename']}\")              \n           \"\"\"    \n\n####################################################################################################\ndef script_generation_keras( js = None, script_python=\"ztmp/myscript_tmp.py\",\n                               script_bash=\"ztmp/main.sh\") :\n  def wl(txt, **args) :\n     script_write(txt, ff, **args)\n\n  #### Bash launcher  ####################################################\n  os.makedirs(os.path.dirname(script_python), exist_ok=True) #creates directory if it doesn't exist\n  with open(script_bash, mode=\"w\") as ff :\n      ss=  f\"\"\"\n        #!/bin/bash\n        conda activate {js[\"conda.env\"]}   \n        which python\n        pwd\n        python {script_python}\n      \"\"\"\n      wl(ss, indent=0)\n\n\n  #### Python Script   ##################################################\n  with open(script_python, mode=\"w\") as ff :\n      ###### Header code\n      wl(script_header())\n      wl( f'from {js[\"model.package\"]}.{js[\"model.name_import\"]} import {js[\"model.name\"]} '  )\n      wl(\"\")\n\n      ###### Main code\n      for ii in range(0,  len(js[\"param_list\"]) ) :\n        d = js[\"param_list\"][ii]\n        \n\n        wl(\"### Data #########################################################\")\n\n        di = d[\"input_data\"]\n        \n        wl( data_reader(\"X,y\", \n                          data_uri = di[\"uri_data\"], \n                          data_type = di[\"type\"],\n                          data_pars = di[\"data_pars\"] ))\n\n        wl(\"from sklearn.model_selection import train_test_split\")\n        wl( f\"\"\"x_train,x_test,y_train,y_test = train_test_split(X,y, \n              test_size={di['data_pars']['test_size']}, \n                          random_state=42)\n             \"\"\")  \n        \n\n        wl(\"### Start Model #################################################\")\n        model_ii = \"model_{ii}\".format(ii=ii)  \n        model_instance = f\"\"\"{js[\"model.name_import\"]}()\"\"\"\n        wl(f\"\"\" model_instance = {model_instance}\"\"\")\n        wl(f\"\"\" {model_ii}  = model_instance.model \"\"\") \n        wl(\"\")\n\n        wl(\"### Action #####################################################\")\n        folder = js[\"model.save\"][\"folder\"]\n        method = js[\"model.method\"]\n\n\n        if method  == \"fit\" : \n          #compile the model before fitting\n          wl( f\"\"\"{model_ii}.compile({dict_tokwarg(d['compile_pars'])})\"\"\" )\n          wl(\"\")\n          wl( f\"\"\"{model_ii}.{method}( x_train, y_train, {dict_tokwarg(d['fit_pars'])} )\"\"\" )\n          wl( f'ypred_{model_ii} = {model_ii}.predict(x_test)' )\n\n          wl( save(model_ii, folder  ) )\n          wl( save(\"ypred_\" + model_ii, folder  ) )\n\n        if method == \"predict\" :\n          wl( load(model_ii, folder  ) )\n          wl( f'ypred_{model_ii} = {model_ii}.predict(x_test)'  )\n          wl( save(\"ypred_\" + model_ii, folder  ) )\n\n\n  #### Valdiate Script :  #####################################################\n  flag = script_validate(script_python)\n  return flag\n  \n\n####################################################################################################\n####################################################################################################\nif __name__ == '__main__':\n   import subprocess\n   script_generation_keras( js = my_json ) \n   #cmd = \"./main.sh\"\n   #subprocess.popen([cmd])\n\n\n\n\n\n\n\n\n",
+			"file": "/D/_devs/Python01/gitdev/json_api/mapper_keras.py",
+			"file_size": 9188,
+			"file_write_time": 132180387186209743,
+			"settings":
+			{
+				"buffer_size": 8876,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Dropbox/___interview/nlp_related_topics.txt",
+			"settings":
+			{
+				"buffer_size": 6926,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Dropbox/___interview/Iterview_questions.txt",
+			"settings":
+			{
+				"buffer_size": 66811,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Dropbox/___interview/infos.txt",
+			"settings":
+			{
+				"buffer_size": 20262,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n\n\n\n•\tYou have 10 coins. You toss each coin 10 times (100 tosses in total) and observe results. Would you modify your approach to the the way you test the fairness of coins?\n\n•\tMLE vs MAP (a priori estimation)\n\n•\tConfidemce interval for linear regression ?\n\n•\tHow is the k-nearest neighbour(KNN) algorithm different from k-means clustering?\n  KNN is a supervised learning algorithm used for classification. \n  K-means is an unsupervised learning algorithm used for clustering.\n\n•\tWhy use feature selection? \n\n•\tWhat are the confidence intervals of the coefficients?\n\n•\tK- mean and Gaussian mixture model: what is the difference between K-means and EM?\n\n•\tWhen using Gaussian mixture model, how do you know it is applicable? (Normal distribution)\n\n•\tIf the labels are known in the clustering project, how to how to evaluate the performance of the model?\n\n•\tWhy not logistic regression, why GBM? Derive the equations for GMM.\n\n•\tSimulate a bivariate normal\n\n•\tHow do you build estimators for medians?\n    If each of the two coefficient estimates in a regression model is statistically significant, \n    do you expect the test of both together is still significant?\n\n•\tExplain P-Value? What is the importance for P-Value?\n\n•\tWrite function to return value samples from normal distribution using a random Bernoulli trial Generator\n\n•\tHow do you deal with missing value in a data set?\n\n•\tDescribe Precision and Recall.\n\n•\tWhat is specificity? What is sensitivity/recall?\n\n•\tWhat are the different techniques to remove outliers?\n\n•\tCompare “Frequentist probability” vs. “Bayesian probability”?\n\n•\tWhat are the conditions for independence and conditional independence of two random variables?\n\n•\tName two common examples of mixture of distributions? (Empirical and Gaussian Mixture)\n\n•\tNaive Bayes :\n\n•\tHow to decided k in Kmeqns\n\n•\tIf the labels are known in the clustering project, how to evaluate the performance of the model? \n   In my project, I use adjusted rank index? But I forgot how it is defined.  \n\n•\tDerive the Gaussian discrimination method under three different cases. Robust linear regression. Bayesian probability calculation. Random Markov Field. RNN.  \n\n•\tMake an unfair coin fair\n\n•\tTell me about a time when you had two deadlines at the same time. How did you manage the situation?\n\n•\tTell me about a time that you faced an obstacle just before a deadline. What did you do?  \n\n•\tWhat is over-fitting? How do you avoid it?\n\n•\tWhat types of regularization do we have? Which one is simpler to use? L1 or L2?\n\n•\tWhat is bagging?\n\n•\tCompare Lasso and Ridge Regression.\n\n•\tWhat’s the difference between MLE and MAP inference?\n\n•\tWhen users are navigating through the Amazon website, they are performing several actions. What is the best way to model if their next action would be a purchase?\n\n•\tHow does K-means work? What kind of distance metric would you choose? What if different features have different dynamic range?\n\n•\tWhat is boosting?\n\n•\tHow does K-means work? What kind of distance metric would you choose? What if different features have different dynamic range?\n\n•\tWhy use feature selection? If two predictors are highly correlated, what is the effect on the coefficients in the logistic regression? What are the confidence intervals of the coefficients?\n\n•\tK- mean and Gaussian mixture model: what is the difference between K-mean and EM?\n\n•\tHow to decided k?\n\n•\tWhen using Gaussian mixturemodel, how do you know it is applicable? (Normal distribution)\n\n•\tIf the labels are known in the clustering project, how to evaluate the performance of the model? In my project, I use adjusted rank index? But I forgot how it is defined.  \n\n•\tBinomial Distribution, do 50 coin tosses &amp; count heads &amp; tails. Compute P(x) &amp; if p value is less than 0.05, you can conclude that coin is biased.\n\n•\tEstimate the disease probability in one city given the probability is very low national wide. Randomly asked 1000 person in this city, with all negative response(NO disease). What is the probability of… \n\n•\tHow to do treat colinearity?\n•\tHow do you inspect missing data and when are they important?\n\n•\tWhen you have a time series data by monthly, it has large data records, how will you find out significant difference between this month and previous month\n\n•\tCompare “Frequentist probability” vs. “Bayesian probability”?\n\n•\tWhat are the conditions for independence and conditional independence of two random variables?\n\n•\tCompare covariance and independence.\n\n•\tWhat is a Bernoulli distribution? Calculate the expectation and variance of a random variable that follows Bernoulli distribution?\n\n•\tWhat is a multinoulli distribution?l\n\n•\tWhat is the central limit theorem?\n\n•\tWhat are exponential and Laplace distribution?\n\n•\tWhat are Dirac distribution and Empirical distribution?\n\n•\tName two common examples of mixture of distributions? (Empirical and Gaussian Mixture)\n\n•\tat are the different techniques to remove outliers?\n\n•\tDescribe a way to detect anomalies in a given dataset.\n\n•\tImplement a KNN classifier\n\n•\tHow do you split your data between training and validation?\n\n•\t Co-variate Shift and detect it :\n\n•\tGS : Anomaly detection + Search\n\n•\tROC : Receriver. TPR vs TPN ?\n\n•\t5 Fold Cross Validation\n\n•\tSample Median :\n\n•\tMutual information  ? X, Y are independant.\nGenerative Learning ?   P[ X / (y, theta) ]\nEstimation   P(theta / (y,x) )\nPrediction P(y / x,theta)\nPlanning : Integral( Cost(xt) \n\n\n•\tFor example, a pain-relief drug is tested on 1500 human subjects, and no adverse event is recorded. \nIn statistical analysis, the rule of three states that if a certain event did not occur in a sample with n subjects, the interval from 0 to 3/n is a 95% confidence interval for the rate of occurrences in the population. When n is greater than 30, this is a good approximation of results.\n\n\n\n\n\n",
+			"settings":
+			{
+				"buffer_size": 5819,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/_devs/Python01/gitdev/mlmodels"
+	],
+	"file_history":
+	[
+		"/D/_devs/Python01/gitdev/cli_code/cli_code/cli_github_search.py",
+		"/D/_devs/Python01/gitdev/cli_code/cli_code/cli_module_autoinstall.py",
+		"/D/_devs/Python01/gitdev/control/solver_new.py",
+		"/D/_devs/Python01/gitdev/_generator/models/Beta-VAE/solver.py",
+		"/C/tmp/scoped_dir12596_31728/ListaryTutorial/TextFile2.txt",
+		"/Y/tasks/t_github_mytask02/util_task.py",
+		"/E/My Drive/___from_windows/New File.txt",
+		"/Z/___interview/Iterview_questions.txt",
+		"/D/_devs/Python01/gitdev/_generator/models/wgan/constants.py",
+		"/D/_devs/Python01/gitdev/_generator/models/wgan/__init__.py",
+		"/D/Dropbox/__research_paper/a0_share_publication/aaaa_external.html",
+		"/D/Dropbox/__research_paper/latex_sample/thesis-text-master/Sootla_informaatika_2017.tex",
+		"/D/Dropbox/aaws/aagit/git_clone_all.sh",
+		"/D/_devs/Python01/gitdev/mlmodels/mlmodels/model_tf/deepar/README.md",
+		"/D/_devs/Python01/gitdev/mlmodels/mlmodels/model_tf/deepar/deepar/settings.py",
+		"/D/_devs/Python01/gitdev/mlmodels/mlmodels/model_tf/deepar/setup.py",
+		"/D/Dropbox/aJOB/__mcKinsey/file.py",
+		"/D/Dropbox/aJOB/__mcKinsey/quantdetails.txt",
+		"/D/Dropbox/aJOB/__mcKinsey/quizz_interview_DStopics.txt",
+		"/D/Dropbox/aaws/aagit/huseinzol05/Malaya-Dataset/political-landscape/political-landscape.json",
+		"/D/_devs/Python01/gitdev/_generator/models/chainer-disentanglement/evaluate.py",
+		"/D/_devs/Python01/gitdev/_generator/models/chainer-disentanglement/utils_chainer.py",
+		"/D/_devs/Python01/gitdev/_generator/models/wgan/README.md",
+		"/D/_devs/Python01/gitdev/_generator/models/chainer-disentanglement-lib-master/train.py",
+		"/D/_devs/Python01/gitdev/_generator/models/Beta-VAE/model.py",
+		"/D/_devs/Python01/gitdev/_generator/models/Beta-VAE/main.py",
+		"/D/_devs/Python01/gitdev/_generator/models/Beta-VAE/download_dsprites.sh",
+		"/D/_devs/Python01/gitdev/_generator/models/wgan/gan.py",
+		"/D/_devs/Python01/gitdev/_generator/models/wgan/gan_plots.py",
+		"/D/_devs/Python01/gitdev/_generator/models/wgan/rnn.py",
+		"/D/_devs/Python01/gitdev/mlmodels/mlmodels/json/model_tf-1_lstm.json",
+		"/D/_devs/Python01/gitdev/mlmodels/mlmodels/models_config.json",
+		"/D/_devs/Python01/gitdev/json_api/myscript_tmp (1).py",
+		"/D/_devs/Python01/gitdev/json_api/template/sklearn/myscript_tmp.py",
+		"/D/_devs/Python01/gitdev/mlmodels/readdocs.txt",
+		"/D/_devs/Python01/gitdev/mlmodels/mlmodels/distri_tch.py",
+		"/D/_devs/Python01/gitdev/json_api/utils.py",
+		"/D/Dropbox/aaws/aagit/premy/advanced-deep-learning-keras/s7/GAN MNIST.ipynb",
+		"/D/Dropbox/aaws/aagit/git_create_repo.sh",
+		"/Y/git/Renewables_Scenario_Gen_GAN/train.py",
+		"/D/Dropbox/aaws/aagit/n-beats-master/requirements.txt",
+		"/Y/git/Renewables_Scenario_Gen_GAN/util.py",
+		"/D/Dropbox/__research_part/_writing/SC_v12_u (Only two pages)/main.tex",
+		"/D/_devs/Python01/gitdev/da/da/zcode.py",
+		"/D/_devs/Python01/gitdev/zs3drive/test_3assets/backup=1/param_file.txt",
+		"/D/Dropbox/__research_part/_writing/equations latex.tex",
+		"/D/_devs/Python01/gitdev/dsa/setup.py",
+		"/D/Dropbox/__mcKinsey/quantdetails.txt",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/HungaBunga/example.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/featexp/featexp/base.py",
+		"/D/_devs/Python01/gitdev/dsa/README.md",
+		"/D/_devs/Python01/gitdev/autoscale_aws/pypi.py",
+		"/D/_devs/Python01/gitdev/cli_code/setup.cfg",
+		"/D/_devs/Python01/gitdev/aapackage/aapackage/control/zrequirement.txt",
+		"/D/Dropbox/aJOB/preparation.txt",
+		"/D/_devs/Python01/gitdev/json_api/ztmp/myscript_tmp.py",
+		"/Y/git/Renewables_Scenario_Gen_GAN/model.py",
+		"/D/_devs/Python01/gitdev/json_api/data/adress_pred.csv",
+		"/D/Box/New File.txt",
+		"/D/_devs/Python01/gitdev/dsa/docs/source/conf.py",
+		"/D/_devs/Python01/gitdev/dsa/requirements.txt",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/util_import.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/ztest.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/api/readme.md",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/util_autofeature.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/util_text_embedding.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/util_automl.py",
+		"/D/_devs/Python01/gitdev/dsa/docs/source/index.rst",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/encoder/cat_string_encoder/column_encoder.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/column_encoder.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/features/feature_selection/hybrid.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/zdocs/feature-engineering/feature_engineering/discretization.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/zdocs/feature-engineering/feature_engineering/encoding.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/zdocs/feature-engineering/feature_engineering/transformation.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/zdocs/feature-engineering/feature_selection/feature_shuffle.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/zdocs/feature-engineering/feature_selection/embedded_method.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/util_optim.py",
+		"/D/_devs/Python01/gitdev/dsa/TODO.txt",
+		"/D/_devs/Python01/gitdev/dsa/dsa/requirements.txt",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/util_pipeline_addons.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/featexp/base.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/test.txt",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/HungaBunga/hunga_bunga/classification.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/automl_train/encoders/age_encoder.json",
+		"/D/_devs/Python01/gitdev/dsa/dsa/automl_train/requirements.txt",
+		"/D/_devs/Python01/gitdev/dsa/dsa/automl_train/pipeline.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/automl_train/model.py",
+		"/D/_devs/Python01/gitdev/dsa/readdocs.txt",
+		"/D/_devs/Python01/gitdev/autoscale_aws/src/autoscale_aws/batch_daemon_autoscale_cli.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/util_feature.py",
+		"/D/_devs/Python01/gitdev/autoscale_aws/docs/source/index.rst",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/featexp/featexp_demo.ipynb",
+		"/D/_devs/Python01/gitdev/dsa/dsa/ztest.py",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/util_text.py",
+		"/D/_devs/Python01/gitdev/dsa/docs/Makefile",
+		"/D/Dropbox/__research_part/_writing/main.tex",
+		"/D/_devs/Python01/gitdev/cli_code/setup.py",
+		"/D/_devs/Python01/gitdev/cli_code/pypi.py",
+		"/D/_devs/Python01/gitdev/dsa/docs/build/html/search.html",
+		"/D/_devs/Python01/gitdev/dsa/dsa/da/model/keras_image_classifier.py",
+		"/D/_devs/Python01/gitdev/dsa/pyproject.toml",
+		"/D/_devs/Python01/gitdev/dsa/ztemp2.py",
+		"/D/_devs/Python01/gitdev/dsa/pypi.py",
+		"/D/_devs/Python01/gitdev/aapackage/aapackage/control/models/autoregress_ff.py",
+		"/D/_devs/Python01/gitdev/aapackage/aapackage/control/models/deepar/deepar/model/lstm.py",
+		"/D/_devs/Python01/gitdev/aapackage/aapackage/control/models/deepar/deepar/model/layers.py",
+		"/D/_devs/Python01/gitdev/dsa/ddd.py",
+		"/D/_devs/Python01/gitdev/dsa/zconda_win.yml",
+		"/D/_devs/Python01/gitdev/da/pypi.py",
+		"/D/_devs/Python01/gitdev/da/setup.py",
+		"/D/_devs/Python01/gitdev/da/pyproject.toml",
+		"/D/_devs/Python01/gitdev/da/da/zdocs.txt",
+		"/D/_devs/Python01/gitdev/aapackage/aapackage/control/zpy36d-20190515-env.yml",
+		"/D/_devs/Python01/gitdev/aapackage/aapackage/control/zcode.py",
+		"/E/ztasks/param_file.txt",
+		"/D/Dropbox/__research_part/_writing/homework_4.tex",
+		"/D/Dropbox/__research_part/_writing/table final.txt",
+		"/D/Dropbox/__research_part/_writing/sol.py",
+		"/D/_devs/Python01/gitdev/zs3drive/test_3assets/weight_sample_10000.txt",
+		"/D/_devs/Python01/gitdev/zs3drive/test_3assets/weight_sample_190000.txt",
+		"/D/_devs/Python01/gitdev/zs3drive/test_3assets/weight_sample_50000.txt",
+		"/D/_devs/Python01/gitdev/zs3drive/test_3assets/weight_sample_10k.txt",
+		"/D/_devs/Python01/gitdev/zs3drive/test_3assets/weight_sample_190k.txt",
+		"/D/_devs/Python01/gitdev/zs3drive/test_3assets/weight_sample_1000.txt",
+		"/D/_devs/Python01/gitdev/zs3drive/test_3assets/weight_conv.txt",
+		"/C/tmp/36402dc4-8c45-4c4e-a2b9-18de8cde6fa9/LICENSE_PYTHON.txt",
+		"/D/_devs/Python01/gitdev/da/da/news_multiclass.py",
+		"/D/_devs/Python01/gitdev/zs3drive/regime_est/weight_sample_190k.txt"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"my_parser",
+			"need_to_install_package_set",
+			"args"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"p",
+			"package_list",
+			"arg"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "model_tf/1_lstm.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 13900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/_devs/Python01/gitdev/json_api/mapper_keras.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8876,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1183,
+								1183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/Dropbox/___interview/nlp_related_topics.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6926,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6926,
+								6926
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/Dropbox/___interview/Iterview_questions.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 66811,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								66811
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 12464.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/Dropbox/___interview/infos.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20262,
+								20262
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 10845.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5819,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5815,
+								5815
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2523.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "mlmodels.sublime-project",
+	"replace":
+	{
+		"height": 73.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}
