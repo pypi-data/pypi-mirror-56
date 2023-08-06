@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: jdTranslationHelper
+Version: 2.1
+Summary: A simple API for translating your programs
+Home-page: https://gitlab.com/JakobDev/jdTranslationHelper
+Author: JakobDev
+Author-email: jakobdev@gmx.de
+License: BSD
+Description: # jdTranslationHelper
+        With jdTranslationHelper you can translate your programs. The translation files are .lang files which has ths format:
+        ```
+        key=Hello World
+        test=This is a test
+        ```
+        The files are in a folder named after the language code e.g. en_GB.lang
+        
+        Here is a example how to use this API:
+        ```python
+        from jdTranslationHelper import jdTranslationHelper
+        
+        translations = jdTranslationHelper()
+        translations.loadDirectory("/home/User/translations")
+        print(translatios.translate("test"))
+        ```
+        If we place the above en_GB.lang file in /home/User/translations, it will print This is a test. You can create files for any language.
+        
+        You can also call jdTranslationHelper with arguemnts:  
+        lang=The language which should be loaded. If not specified, it will use the system language.  
+        defaultLanguage=The language that will be usesd, if there is no file with the system language. Default is en_GB.  
+        
+        translate takes this argument:  
+        default: That will be returned, if the given key doesn't exists.
+        
+        You can get alls Strings with getStrings().
+Keywords: JakobDev,translation,localization
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Other Environment
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Description-Content-Type: text/markdown
