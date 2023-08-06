@@ -1,0 +1,13 @@
+ftvstt/__init__.py,sha256=gEGBBONtR9AKqKGQGvRcMX01fhFTVHhOE0Gae7B_Oog,358
+ftvstt/exceptions.py,sha256=cRKTkTCbT5By0WCkKCsFAcFzrtbJUy3tb0KQcJ-42dM,1204
+ftvstt/transcribers.py,sha256=HXm2MCerPcFbeEci4_i9BT9Y5a0mfnZ7y4bQxWiA4kQ,571
+ftvstt/transcripts.py,sha256=HmqwtnbYGAvlcGPJX3fByJqBGm20VAzpGgHy8ZtEyBA,2557
+ftvstt/providers/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ftvstt/providers/amazon.py,sha256=IkfR4VnUDfUV0lqE8jTpZeCMfohFPrBuUWVo0_A4P8Q,8960
+ftvstt/providers/bertin.py,sha256=46idrx6ykQgWhc9ga6J8_wFCNpQGigL8YF3ZDyogG0g,6577
+ftvstt/providers/google.py,sha256=5wzBLNpVO9qffF5UzsdDIALIURPVtpl28p9dLb4ZHV4,4205
+ftvstt/providers/vocapia.py,sha256=P-s-L9SJVEJ8gy_ILeq8v6hkcrAsZGYDvzsBElnuZ-o,4543
+ftvstt-1.2.2.dist-info/METADATA,sha256=23ccCUO_aJoTBb6eO3tkSs8hTui2Q8QUi82JRPzrD7s,5315
+ftvstt-1.2.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ftvstt-1.2.2.dist-info/top_level.txt,sha256=h8GRSq9vjtqzW9z7DySsOlR2TNx7EIQvW9nizCGfnyM,7
+ftvstt-1.2.2.dist-info/RECORD,,
