@@ -1,0 +1,16 @@
+README.md
+setup.py
+ftvstt/__init__.py
+ftvstt/exceptions.py
+ftvstt/transcribers.py
+ftvstt/transcripts.py
+ftvstt.egg-info/PKG-INFO
+ftvstt.egg-info/SOURCES.txt
+ftvstt.egg-info/dependency_links.txt
+ftvstt.egg-info/requires.txt
+ftvstt.egg-info/top_level.txt
+ftvstt/providers/__init__.py
+ftvstt/providers/amazon.py
+ftvstt/providers/bertin.py
+ftvstt/providers/google.py
+ftvstt/providers/vocapia.py
