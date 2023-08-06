@@ -1,0 +1,10 @@
+#!python
+
+import sys
+import yaml
+from bmonreporter import reporter
+
+config_file_path = sys.argv[1]
+
+args = yaml.load(open(config_file_path), Loader=yaml.SafeLoader)
+reporter.create_reports(**args)
