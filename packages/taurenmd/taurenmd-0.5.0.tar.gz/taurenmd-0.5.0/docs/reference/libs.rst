@@ -1,0 +1,7 @@
+Libraries
+=========
+
+.. toctree::
+    :glob:
+
+    lib*
