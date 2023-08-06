@@ -1,0 +1,17 @@
+MANIFEST.in
+requirements.txt
+setup.cfg
+setup.py
+ghidrapy/__init__.py
+ghidrapy/__main__.py
+ghidrapy/decompiler.py
+ghidrapy/dependencies.py
+ghidrapy.egg-info/PKG-INFO
+ghidrapy.egg-info/SOURCES.txt
+ghidrapy.egg-info/dependency_links.txt
+ghidrapy.egg-info/requires.txt
+ghidrapy.egg-info/top_level.txt
+ghidrapy/__pycache__/__init__.cpython-36.pyc
+ghidrapy/__pycache__/__main__.cpython-36.pyc
+ghidrapy/__pycache__/decompiler.cpython-36.pyc
+ghidrapy/__pycache__/dependencies.cpython-36.pyc
