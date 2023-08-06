@@ -1,0 +1,13 @@
+*.egg-info/
+env_docs/
+.vscode
+*.DS_Store
+__pycache__
+build
+dist
+*.pyc
+_build/
+.ipynb_checkpoints/
+*.c
+*.so
+.coverage*
