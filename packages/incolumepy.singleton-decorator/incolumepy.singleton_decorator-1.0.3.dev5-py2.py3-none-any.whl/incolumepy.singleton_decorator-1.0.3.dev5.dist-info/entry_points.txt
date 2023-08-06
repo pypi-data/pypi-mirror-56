@@ -1,0 +1,6 @@
+[console_scripts]
+interval = incolumepy.checkinterval.Check:Check.interval
+
+[gui_scripts]
+baz = my_package_gui:start_func
+
