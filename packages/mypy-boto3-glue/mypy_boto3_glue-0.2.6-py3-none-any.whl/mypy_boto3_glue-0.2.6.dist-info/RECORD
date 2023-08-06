@@ -1,0 +1,12 @@
+mypy_boto3_glue/__init__.py,sha256=QRdGiFEqh8KqolLb8xdeTbDLeB3sjM0MHFiEp5R311I,165
+mypy_boto3_glue/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_glue/client.py,sha256=G5pKl3uWbMgvpR97esbSKMuIoCY7ulyLv8Exn8IS4d0,811730
+mypy_boto3_glue/helpers.py,sha256=xs0J81amYsJkPM58wo9Qey_yKCCCrK3DIhoGiIxyOME,6334
+mypy_boto3_glue/paginator.py,sha256=sm1nYz_eEQJQ_8oNDvAo5M9m6JTW5zqM-_hTLuCUScA,134795
+mypy_boto3_glue/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_glue/type_defs.py,sha256=eAqxxD8SkEs3MEJaSBghd8EBdhXV0r6-1Fi9sxmZ_1Y,1771272
+mypy_boto3_glue/version.py,sha256=NvxboZCn4EcnF368xk65er-FGImetVlhR61tfjOT8gQ,53
+mypy_boto3_glue-0.2.6.dist-info/METADATA,sha256=R7aK4nGiR0Wtr5IGrtl5tCz4qohFYDwJStsUzRJA_SI,1061
+mypy_boto3_glue-0.2.6.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+mypy_boto3_glue-0.2.6.dist-info/top_level.txt,sha256=0UBLfF23wzS7Q65lvpkGBUYGqRQiAp2XxvAmSup_-Hs,16
+mypy_boto3_glue-0.2.6.dist-info/RECORD,,
