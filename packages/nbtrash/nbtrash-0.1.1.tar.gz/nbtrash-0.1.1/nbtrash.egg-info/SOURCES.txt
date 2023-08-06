@@ -1,0 +1,13 @@
+README.md
+setup.py
+nbtrash/__init__.py
+nbtrash.egg-info/PKG-INFO
+nbtrash.egg-info/SOURCES.txt
+nbtrash.egg-info/dependency_links.txt
+nbtrash.egg-info/not-zip-safe
+nbtrash.egg-info/requires.txt
+nbtrash.egg-info/top_level.txt
+nbtrash/etc/nbext_trash.json
+nbtrash/etc/server_trash.json
+nbtrash/static/main.js
+nbtrash/static/tree.css
