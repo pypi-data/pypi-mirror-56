@@ -1,0 +1,3 @@
+[console_scripts]
+git_code_counter = git_code_counter.cli:main
+
