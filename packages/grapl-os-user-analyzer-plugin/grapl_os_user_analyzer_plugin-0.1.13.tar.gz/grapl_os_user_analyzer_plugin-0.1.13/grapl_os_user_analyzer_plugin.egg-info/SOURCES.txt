@@ -1,0 +1,15 @@
+README.md
+setup.py
+grapl_os_user_analyzer_plugin/__init__.py
+grapl_os_user_analyzer_plugin/auid_assumption_node.py
+grapl_os_user_analyzer_plugin/auid_node.py
+grapl_os_user_analyzer_plugin/schemas.py
+grapl_os_user_analyzer_plugin/test.py
+grapl_os_user_analyzer_plugin/user_id_assumption_node.py
+grapl_os_user_analyzer_plugin/user_id_node.py
+grapl_os_user_analyzer_plugin.egg-info/PKG-INFO
+grapl_os_user_analyzer_plugin.egg-info/SOURCES.txt
+grapl_os_user_analyzer_plugin.egg-info/dependency_links.txt
+grapl_os_user_analyzer_plugin.egg-info/not-zip-safe
+grapl_os_user_analyzer_plugin.egg-info/requires.txt
+grapl_os_user_analyzer_plugin.egg-info/top_level.txt
