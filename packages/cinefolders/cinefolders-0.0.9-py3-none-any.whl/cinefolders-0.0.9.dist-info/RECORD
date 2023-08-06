@@ -1,0 +1,16 @@
+cinefolders/__init__.py,sha256=A7PZ97M7-JB_htFK42g1IeiAhpIIYUHemNRuFsnkziQ,337
+cinefolders/__main__.py,sha256=31mQpog7hPicpgjs0SjXZ9dRuw_huEYliYDZNTk_Wvs,4015
+cinefolders/cinefolders.py,sha256=u7xhwOQMlOmzBWkY8s1mYXzkIIKLaoZtcM0h0lGKx8s,6055
+cinefolders/organizer.py,sha256=usMVj9PRCjyabkmJDGvRfjvD_2S-vrQGszh9BF3WzG0,18319
+cinefolders/tmdb/__init__.py,sha256=_7b4wMnJiY_VXdx8w_7KoNWjMyZjG3i90ic-nj3lADY,75
+cinefolders/tmdb/episode.py,sha256=Gxct-0jmNJez6xZvd6LduRyM_XFEqzYGinuGFaeG1wg,5999
+cinefolders/tmdb/exceptions.py,sha256=DE07Izdu0D6Cjk9sOeC7hx20R59wmlHSWURX8Gl4ot0,42
+cinefolders/tmdb/item.py,sha256=QUONriKVsMITDIjY-FI1LczIFl0A7tHE-mTf7cSwZss,7158
+cinefolders/tmdb/movie.py,sha256=8Ei8IIQJHvXZRSyyy4xBOCEA-sppQoeojSg2jMgUXSY,5673
+cinefolders/tmdb/tmdb.py,sha256=IWFtXlVDXU_Zsa781nqSczWWBz69R27zK2uF7vzulYc,6070
+cinefolders-0.0.9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+cinefolders-0.0.9.dist-info/METADATA,sha256=iT0oyB23oR_I_1jx4Tf9mWzgIxAffpewUnMTsx7Sec8,2589
+cinefolders-0.0.9.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+cinefolders-0.0.9.dist-info/entry_points.txt,sha256=8E9KDzINPPCcdFycUwRnX_t_GmlYQOYwd1MBAOMHTxQ,59
+cinefolders-0.0.9.dist-info/top_level.txt,sha256=AKQgRDaA6r7QkvxquILSYh9yTkfukpTJ3w-Q7cbSPUE,12
+cinefolders-0.0.9.dist-info/RECORD,,
