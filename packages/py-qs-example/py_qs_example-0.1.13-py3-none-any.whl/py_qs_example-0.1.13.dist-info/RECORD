@@ -1,0 +1,17 @@
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/ex3.py,sha256=oAsfy6xbTqgzkjS_g07T402jqV2SsOxqIcNHkRRlOx8,1637
+examples/plot_ex1.py,sha256=81cq5SWI69Z_gQ5jBho2y_-Y14og2hIyccq7loMkRfo,1640
+examples/subsection/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/subsection/ex2.py,sha256=iqqVWFALn__ksZ4N9llaCEESzCf9ESpP8JXTVaSRkAs,1638
+py_qs_example/__init__.py,sha256=uY6WFXbl1XH7xp0MTyijoJkckIPD0gp66uXxIr9Io5M,154
+py_qs_example/mymodule.py,sha256=UZaYV5eXZY85LmsOn-QkZ6dVO-kIBZK4PFnOuaqQ1II,2192
+py_qs_example/mypackage/__init__.py,sha256=wi5HQbUi3RUJydcI4zLkHtLP0XIolPaXwZX_3AJUaIc,147
+py_qs_example/mypackage/module.py,sha256=m28T7nrDUrrucllvXQLRPKgmr7yneIzbP14unutzDrs,1096
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_mymodule.py,sha256=Kffj4ZlmTmJE3bUJ_wwcmdPhq867jNa8xSP1ZW5dMMo,655
+py_qs_example-0.1.13.dist-info/LICENSE.md,sha256=wi2QNL3hSLW7tkA4IyW-ZOIf5S9VuCKtZU1lBVnfwVw,1083
+py_qs_example-0.1.13.dist-info/METADATA,sha256=dVE3BBu2HdbgJNCAC36P0KMMeWogVdpj97XHO_tMCKE,968
+py_qs_example-0.1.13.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+py_qs_example-0.1.13.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+py_qs_example-0.1.13.dist-info/top_level.txt,sha256=eCKm3WO1Kc6EeTFch1kYq1-FlO_cgj2IJ-YKKSLNUIo,29
+py_qs_example-0.1.13.dist-info/RECORD,,
