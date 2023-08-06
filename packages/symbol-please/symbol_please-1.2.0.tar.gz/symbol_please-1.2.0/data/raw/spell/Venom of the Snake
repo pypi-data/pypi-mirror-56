@@ -1,0 +1,49 @@
+{{Spellpage|
+
+| spellname = Venom of the Snake
+| spellicon = N
+| description = Fills your target's blood with poison, causing 40 damage initially and 59 damage every six seconds for 42 seconds at level 34 (453 total damage, 2.83 DPM), increasing in duration to 48 seconds at level 36 (512 total damage, 3.2 DPM).
+
+| classes = 
+
+* [[Shaman]] - Level 39
+* [[Necromancer]] - Level 34
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Poison Counter by 7 }}
+{{SpellSlotRow | 2 | Decrease HP when cast by 40 }}
+{{SpellSlotRow | 3 | Decrease Hitpoints by 59 per tick }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 160
+| range = 200
+| casting_time = 4.60
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 7 ticks @L34 to 8 ticks @L36
+| target_type = Single
+| spell_type = Detrimental
+| resist = Poison (0)
+
+| msg_cast_on_you = You have been poisoned.
+| msg_cast_on_other = Someone  has been poisoned.
+| msg_wears_off = The poison has run its course.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-1)]] | Necromancer Guild | (2082,-410) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Ainla Yurimar]] | Underground | (-162,-270) }}
+{{SpellWhereRow  | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRowB | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Rizyra F'Lok]] | Necromancer Guild (F1) | (1335,-1213) }}
+{{SpellWhereRowB | [[Paineel]] | [[Leovre Kieqmarn]] | Necromancer Guild | (665,804) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Dallisen Xalladyr]] | Necromancer Guild | (402,-311) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Rott]] | Cubby near PvP Area | (-440,236) }}
+}}
+* This spell is also a random reward from the [[Xelha's Cyclops Eye| Xelha's Cyclops Eye quest]]
+
+}}

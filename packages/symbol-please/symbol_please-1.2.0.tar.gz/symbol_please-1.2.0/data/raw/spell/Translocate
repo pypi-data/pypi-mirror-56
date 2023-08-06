@@ -1,0 +1,37 @@
+{{Spellpage|
+
+| spellname = Translocate
+| spellicon = V
+| description = Opens an arcane portal that teleports your target to their bind point.
+
+| classes = 
+
+* [[Wizard]] - Level 50
+
+| slots = 
+
+{{SpellSlotRow | 1 | Translocate to 1,0,0 in }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 200
+| range = 100
+| casting_time = 8.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  fades away.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from Level 50+ Velious Mobs
+
+}}
+
+Note: The Translocate box Lasts 5 minutes.

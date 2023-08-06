@@ -1,0 +1,46 @@
+{{Spellpagesmart|
+
+| spellname = Wolf Form
+| spellicon = A
+| description = Fills you with the spirit of the wild, allowing you to take the form of a wolf for 1 hour @L20 to 1 hour(s) 12.0 mins @L24, increasing your movement speed, and attack rating. Can only cast this spell outdoors.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 49
+* [[Druid]] - Level 24
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Illusion: Wolf | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 2 | Increase Movement Speed by 42% (L24) to 55% (L50) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 3 | Increase ATK by 25 (L24) to 40 (L29) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 8.00
+| duration = 1 hour 12 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You are now a wolf.
+| msg_cast_on_other = Someone  turns into a wolf.
+| msg_wears_off = You are no longer a wolf.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Horth Evergreen]] | Kelethin Druid Guild | (-640,219) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Torth Largefoot]] | Druid Guild | (-32,-384) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Arrivae Valleren]] | Druid Guild | (-156,-300) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

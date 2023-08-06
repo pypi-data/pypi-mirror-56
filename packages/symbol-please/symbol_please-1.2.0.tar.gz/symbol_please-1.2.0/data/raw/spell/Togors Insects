@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Togor's Insects
+| spellicon = A
+| description = Engulfs your target in a swarm of insects, slowing their attack rate for 1.9 mins @L38 to 3.0 mins @L60.
+
+| classes = 
+
+* [[Shaman]] - Level 39
+
+| items_with_effect = 
+
+<ul><li> {{:Di`zok Oracle Shillelagh}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 2 | Decrease Attack Speed by 49% (L39) to 70% (L60) }}
+{{SpellSlotRow | 3 | Increase Disease Counter by 12 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 175
+| range = 200
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 5.00
+| duration = 1.9 minutes @L39 to 3.0 minutes @L60
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You feel drowsy.
+| msg_cast_on_other = Someone  yawns.
+| msg_wears_off = You feel less drowsy.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Gaxl the scribe]] | Temple of Terror (West Tower - Bottom +1) | (1025,-109) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Migron]] | Temple of Terror (First Floor) | (1031,-160) }}
+{{SpellWhereRowB | [[Grobb]] | [[Korff - Troll]] | Shaman Guild | (304,-438) }}
+{{SpellWhereRow  | [[Halas]] | [[Bolace]] | Shaman Guild | (326,478) }}
+{{SpellWhereRowB | [[Oggok]] | [[Korff - Ogre]] | Shaman Guild | (667,1066) }}
+}}
+
+}}

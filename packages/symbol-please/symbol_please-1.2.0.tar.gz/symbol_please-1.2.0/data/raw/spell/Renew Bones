@@ -1,0 +1,36 @@
+{{Spellpage|
+
+| spellname = Renew Bones
+| spellicon = J
+| description = Restores an undead servant, healing between 3 and @1 hit points and curing them of diseases, poisons, and curses.
+
+| classes = 
+
+* [[Necromancer]] - Level 29
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Hitpoints by 154 (L29) to 175 (L50) }}
+{{SpellSlotRow | 2 | Decrease Disease Counter by 10 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 125
+| range = 100
+| casting_time = 4.50
+| fizzle_time = 2.50
+| recast_time = 7.50
+| duration = Instant
+| target_type = Undead
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  begins to mend.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

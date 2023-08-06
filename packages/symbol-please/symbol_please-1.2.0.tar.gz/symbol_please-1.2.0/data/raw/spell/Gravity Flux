@@ -1,0 +1,46 @@
+{{Spellpage|
+
+| spellname = Gravity Flux
+| spellicon = C
+| description = Causes a sudden reversal in the gravity around your target, doing 214 damage. Only hits 4 mobs max. '''Please confirm damage at various levels.'''
+<br>
+<br>
+
+Quad-kiting Wizards are recommended to use the more mana efficient [[Circle of Force]] until level 51, then [[Pillar of Frost]].
+
+| classes = 
+
+* [[Wizard]] - Level 44
+* [[Enchanter]] - Level 39
+
+| items_with_effect = 
+
+<ul><li> {{:Earring of Displacement}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 214 (L44) }}
+{{SpellSlotRow | 2 | Toss Up(100) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 337
+| range = 200
+| casting_time = 5.90
+| fizzle_time = 2.50
+| recast_time = 10.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You experience chaotic weightlessness.
+| msg_cast_on_other = Someone  rises chaotically into the air.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

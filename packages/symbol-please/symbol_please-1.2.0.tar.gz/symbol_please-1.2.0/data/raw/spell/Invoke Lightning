@@ -1,0 +1,45 @@
+{{Spellpagesmart|
+
+| spellname = Invoke Lightning
+| spellicon = M
+| description = Calls down lightning from the sky, causing damage to your target and up to 3 others nearby.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 15
+* [[Druid]] - Level 5
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 21 @L5 to 25 @L9 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 32
+| range = 200
+| casting_time = 2.50
+| fizzle_time = 2.50
+| recast_time = 6.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = Lightning surges through your body.
+| msg_cast_on_other = Someone  has been struck by lightning.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Aleena Lightleaf]] | Kelethin Ranger Guild | (-400,490) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Raken]] | Ranger Guild | (106,-94) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Affliction
+| spellicon = E
+| description = Sickens your target with a fever, causing 30 damage initially and 6 damage every six seconds for 2.1 minutes for a total of 156 damage. 2.08 DPM.
+
+| classes = 
+
+* [[Shaman]] - Level 19
+
+| items_with_effect = 
+
+<ul><li> {{:Frozen Shard}}
+</li><li> {{:Woe}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Disease Counter by 4 }}
+{{SpellSlotRow | 2 | Decrease Hitpoints by 6 per tick }}
+{{SpellSlotRow | 3 | Decrease HP when cast by 30 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 75
+| range = 200
+| casting_time = 2.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 2.1 minutes
+| target_type = Single
+| spell_type = Detrimental
+| resist = Disease (0)
+
+| msg_cast_on_you = You feel feverish.
+| msg_cast_on_other = Someone  sweats and shivers, looking feverish.
+| msg_wears_off = Your fever has broken.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRowB | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRow  | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+}}
+
+}}

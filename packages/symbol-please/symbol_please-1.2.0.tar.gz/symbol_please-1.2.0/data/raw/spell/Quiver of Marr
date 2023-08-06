@@ -1,0 +1,43 @@
+{{Spellpage|
+
+| spellname = Quiver of Marr
+| spellicon = L
+| description = Focuses mana into the form of the quiver of Marr filled with magical arrows.
+
+| classes = 
+
+* [[Magician]] - Level 53
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Quiver of Marr (Item)|Quiver of Marr]] }}
+{{SpellSlotRow | 2 | Summon Item: [[Summoned: Arrow of Marr]] }}
+{{SpellSlotRow | 3 | Summon Item: [[Summoned: Arrow of Marr]] }}
+{{SpellSlotRow | 4 | Summon Item: [[Summoned: Arrow of Marr]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 60
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Kunark Level 50+ Mob Drop
+
+==Related Quests==
+
+* [[Magician Spells (Good)]]
+* [[Magician Spells (Evil)]]
+
+}}

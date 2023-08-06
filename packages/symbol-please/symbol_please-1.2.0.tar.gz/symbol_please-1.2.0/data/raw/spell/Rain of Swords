@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Rain of Swords
+| spellicon = L
+| description = Conjures a rain of swords that assaults all creatures in the vicinity of your target, causing three waves of between 324 and @1 damage.
+
+| classes = 
+
+* [[Magician]] - Level 49
+
+| items_with_effect = 
+
+<ul><li> {{:BladeStorm, Katana of Steel Sleet}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 324 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 375
+| range = 150
+| casting_time = 7.50
+| fizzle_time = 2.50
+| recast_time = 12.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = Your skin shreds as swords rain down from above.
+| msg_cast_on_other = Someone 's skin shreds as swords rain down from above.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-13)]] | Library | (1092,-1029) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Wistcona]] | Magician Guild (F4) | (706,948) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Ranza S'Ion]] | Caster Guild (Basement) | (123,-923) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Sinon Loarpe]] | Caster Guild | (297,-582) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Reff Truewood]] | Magician Guild | (693,-490) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Jonbe Kressi]] | Caster Guild (F3) | (136,-752) }}
+}}
+
+}}

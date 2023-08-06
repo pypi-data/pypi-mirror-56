@@ -1,0 +1,62 @@
+{{Spellpagesmart|
+
+| spellname = Dismiss Summoned
+| spellicon = C
+| description = A burst of holy power that inflicts between 140 and 162 damage against a summoned target (1.8 DPM).
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 39
+* [[Ranger]] - Level 39
+* [[Druid]] - Level 24
+* [[Magician]] - Level 29
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 140 (L24) to 162 (L35) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 90
+| range = 200
+| casting_time = 3.30
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Summoned
+| spell_type = Detrimental
+| resist = Magic (-50)
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  staggers.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-6)]] | Cleric Guild | (1197,-560) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (LG-16)]] | Library | (1101,-1028) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-14)]] | Necromancer Guild | (2111,-429) }}
+{{SpellWhereRow  | [[Erudin]] | [[Junice Weslent]] | Cleric Guild - Quellious (Outside) | (-697,-55) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Tuballi Stellari]] | Magician Guild (F2) | (729,918) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Terren Starwatcher]] | Cleric Guild | (13,-426) }}
+{{SpellWhereRowB | [[Northern Karana]] | [[Tak Whistler]] | Druid Ring | (-2732,-1466) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Lyniv S'Kor]] | Cleric Guild | (410,-858) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Pisna H'Rugla]] | Caster Guild (Basement) | (133,-911) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Nosspri Andrika]] | Cleric Guild (basement) | (102,391) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Ladia Qursii]] | Cleric Guild (Outside) | (-225,-238) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Senst Ereek]] | Cleric Guild | (340,-413) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Misty Valefriend]] | Cleric Guild | (-226,-374) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Gende Reldari]] | Caster Guild | (307,-579) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Osisa Goldenspear]] | Magician Guild | (666,-526) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Cronte Deloru]] | Caster Guild (F3) | (113,-722) }}
+}}
+| items_with_effect = 
+
+<ul><li>{{:Gold Plated Koshigatana}}
+</li></ul>
+| TableLocations = Vendors
+| TableEra = Classic
+}}

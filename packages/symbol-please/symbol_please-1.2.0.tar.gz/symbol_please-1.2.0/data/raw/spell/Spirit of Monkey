@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Spirit of Monkey
+| spellicon = R
+| description = Fills your target with the spirit of the monkey, increasing their dexterity for 36.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 24
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase DEX by 20 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 40
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 36 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel the spirit of monkey enter you.
+| msg_cast_on_other = Someone  is surrounded by a brief simian aura.
+| msg_wears_off = The spirit of monkey leaves.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRow  | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRowB | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRow  | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+}}
+
+}}

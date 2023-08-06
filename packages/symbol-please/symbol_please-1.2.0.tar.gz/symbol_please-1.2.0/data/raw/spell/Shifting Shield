@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Shifting Shield
+| spellicon = K
+| description = Places a shifting shield on your target, increasing their armor class for 45.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 34
+
+| items_with_effect = 
+
+<ul><li> Potion of Spirit Shield ([[Skill Alchemy|Alchemy]])
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 4 | Increase AC by 17 (L34) to 18 (L35) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 80
+| range = 100
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = 45 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = A shifting spirit shield surrounds you.
+| msg_cast_on_other = Someone  is surrounded by a shifting spirit shield.
+| msg_wears_off = You are no longer shielded.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+}}
+
+}}

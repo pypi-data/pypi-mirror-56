@@ -1,0 +1,42 @@
+{{Spellpage|
+
+| spellname = Cannibalize III
+| spellicon = H
+| description = Channels your body's energy to refresh your mind, trading hit points for mana. '''0.459(L54) to 0.513(L60) Mana per Hp'''
+<br>-'''Update'''- At level 54, Cannibalize II will generate 31 mana losing 67 health, and Cannibalize III will generate 34 mana losing 74 health. This is essentially efficiency vs speed.
+
+| classes = 
+
+* [[Shaman]] - Level 54
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 74 }}
+{{SpellSlotRow | 2 | Increase Mana by '''34''' (L54) to 38 (L60) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 0
+| range =  
+| casting_time = 1.25
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your body aches as your mind clears.
+| msg_cast_on_other = Someone  winces.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops off mobs.
+
+==Related Quests==
+
+* [[Shaman Spells (Good)]]
+* [[Shaman Spells (Evil)]]
+
+}}

@@ -1,0 +1,52 @@
+{{Spellpage|
+
+| spellname = Breath of the Dead
+| spellicon = F
+| description = Allows your metabolism to function without oxygen, allowing you to survive without air for 27.0 mins.  Consumes a [[Fish Scales]] to cast. This spell is nearly identical to [[Enduring Breath]] but is self-only.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 49
+* [[Necromancer]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Aqualung}}
+</li></ul>
+<ul><li> {{:Zombie Flesh Bracer}}
+</li></ul>
+| slots = 
+
+{{SpellSlotRow | 1 | Water Breathing(1) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 45
+| range =  
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 27 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Fish Scales
+
+| msg_cast_on_you = You feel your heart stop beating.
+| msg_cast_on_other = Someone  stops breathing.
+| msg_wears_off = You resume breathing.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Grobb]] | [[Crilt - Troll]] | Shadow Knight Guild | (518,-618) }}
+{{SpellWhereRow  | [[Oggok]] | [[Crilt - Ogre]] | Shadow Knight Guild | (276,-2) }}
+{{SpellWhereRowB | [[Paineel]] | [[Brettas Norval]] | Shadow Knight Guild | (888,468) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

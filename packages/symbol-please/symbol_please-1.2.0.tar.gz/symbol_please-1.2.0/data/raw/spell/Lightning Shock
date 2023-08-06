@@ -1,0 +1,38 @@
+{{Spellpage|
+
+| spellname = Lightning Shock
+| spellicon = M
+| description = Strikes your target with an arch of lightning, causing between 381 and 405 damage.
+
+| classes = 
+
+* [[Wizard]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 381 (L39) to 405 (L45) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 180
+| range = 200
+| casting_time = 4.80
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You feel your skin ignite.
+| msg_cast_on_other = Someone 's skin ignites.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Erudin]] | [[Sornita Eltern]] | Library (F3) | (-1108,-231) }}
+{{SpellWhereRowB | [[Skyshrine]] | [[Guardian Trekolz]] | Spell vendors | (324, -877) }}
+}}
+
+}}

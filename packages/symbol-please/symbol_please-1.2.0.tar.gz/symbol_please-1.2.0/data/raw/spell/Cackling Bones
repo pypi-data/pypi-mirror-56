@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Cackling Bones
+| spellicon = G
+| description = Animates an undead servant from the remnants of the fallen.  Consumes [[Bone Chips|bone chips]] when cast. Approx. level 37 skeleton warrior pet.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 58
+* [[Necromancer]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Skeleton Pet: skel_pet_37_ }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 450
+| range =  
+| casting_time = 15.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Bone Chips]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  animates an undead servant.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Lord Vizaroth]] | Temple of Terror (West Tower - Basement) | (1128,-98) }}
+{{SpellWhereRow  | [[The Overthere]] | [[Grubmar Hartblak]] | Outpost | (2748,2351) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

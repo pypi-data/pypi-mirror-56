@@ -1,0 +1,51 @@
+{{Spellpagesmart|
+
+| spellname = Ignite
+| spellicon = O
+| description = Ignites your target's skin, doing between 32 and 37 damage.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 22
+* [[Druid]] - Level 9
+
+| items_with_effect = 
+
+<ul><li> {{:Burning Rapier}}
+</li><li> {{:Firerune Brand}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 32 (L9) to 37 (L14) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 30
+| range = 200
+| casting_time = 2.10
+| fizzle_time = 2.50
+| recast_time = 2.50
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = You feel your skin ignite.
+| msg_cast_on_other = Someone 's skin ignites.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Verth Mistwielder]] | Kelethin Ranger Guild | (-414,494) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Durvinna Barkkis]] | Ranger Guild | (104,-111) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

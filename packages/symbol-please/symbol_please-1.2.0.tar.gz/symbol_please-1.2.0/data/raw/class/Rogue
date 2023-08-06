@@ -1,0 +1,387 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C rogue.gif|right]]
+Rogues are the stealthy thieves and vicious assassins that stalk the shadows of Norrath. Rogues are primarily a melee class, able to wear chain armor and use piercing, slashing and some blunt weapons.
+
+Rogues are sneaky fighters who always seek to take advantage of enemies by attacking from behind. Rogues can backstab enemies for extra damage, using poisoned weapons for added effect. Rogues can detect traps, pick locks and pockets, and fall safely from great heights.
+
+Rogues are known for their ability to sneak and hide. This allows them to move almost anywhere, exploring the dangers that lie ahead. Combined with rogue items that use illusions, rogues make excellent scouts.
+
+Rogues are a specialist class that works best with a group of friends. Rogues can add greatly to the killing power of a group. The rogue is a good choice for players who like to do heavy damage while walking the dangerous edge of dungeon exploration. Just keep in mind being the best damage dealer comes at the cost of being extremely group dependent.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Rogue || Rake || Blackguard || Assassin
+|}
+
+= Creation Guide =
+
+== Picking the Right Race ==
+
+The first thing you have to pick then is your race.   Which race you pick will determine the foundation of you character for the rest of your life in Norrath so it is kind of important you pick one you like.  Most of the rogue races are quite well suited to the class, but there are some differences to note.
+
+Wood Elves, Dark Elves and Gnomes all have low strength however which is a large hindrance to to the overall damage output of the class.  Barbarians and Dwarves on the other hand have quite high strength which is a definite bonus.
+
+Halflings level slightly faster than the other rogue races, whilst Barbarians level slightly slower.  Barbarians do however get the ability to slam their enemies both interrupting casting and giving a short stun.  They can also wear both large and medium armour, and use the large race throwing weapons.
+
+Barbarians and Humans are the only races with no night vision, however you can find items in the game which will remove this deficiency.  You should also note that Dark Elves are generally hated through most cities of Norrath.
+
+== Starting Statistics ==
+
+[[File:rogue-stats.png]]
+
+== Spending Your Bonus Points ==
+
+STR and STA are the primary stats of the rogue class. These stats enhance the ability to, respectively, deal damage and stay alive to deal more. <br />
+DEX and AGI, despite Everquest's suggestion of these being primary stats, are very insignificant to the rogue's non-tanking DPS role.
+
+Some combination of STR and STA is suggested for the allocation of your 30 bonus points at creation:
+
+'''25 STA / 5 STR''' - The typical min/max build for end game raiding. This is a difficult early game build for low STR races. Recommended for Barbarians and Dwarves. <br />
+'''25 STR / 5 STA''' - This build emphasizes early game damage dealing at the expense of 80 max HP end game. Well suited for low STR races.<br />
+'''15 STR / 15 STA''' - A balanced build that suits any race.
+
+== Experience Statistics ==
+
+*Barbarian Rogue: +4.55%
+*Dark Elf Rogue: +9%
+*Dwarf Rogue: +9%
+*Gnome Rogue: +9%
+*Half-Elf Rogue: +9%
+*Halfling Rogue: +14.55%
+*Human Rogue: +9%
+*Wood Elf Rogue: +9%
+
+'''What does it mean?'''
+
+Certain races and classes require differing amounts of experience points to attain the same level. For example, a Halfling Rogue requires 85.45% of the experience that a Human Cleric would require to be the same level.
+
+== Religion ==
+
+Generally speaking being agnostic is a fairly safe bet in Everquest.  Religion serves only to get you into trouble in many situations. Following a religion will at worst get you killed in some areas, but generally you can avoid these.  Following [[Innoruuk]] is probably the most dangerous religion as they have the most places in the game where they are Kill on Sight.
+
+The disadvantage of agnosticism is that some items and quests can only be done by followers of certain religions.  As you can see from the [[:Category:Bristlebane Worshiper Equipment|Bristlebane Equipment]] page, Bristlebane has only a few tradeskilled items, while the [[:Category:Brell Serilis Worshiper Equipment|Brell Serilis Equipment]] page similarly shows only tradeskill items plus one Rogue-usable item, {{:Stormguard Battle Hammer of Brell}}.  You can find other deities items from [[:Category:Deity Worshiper Equipment]]. 
+In the end it will not make an enormous difference to your character which Deity you choose.
+
+=Skills=
+
+==Combat Skills==
+
+{| class="eoTable2"
+! Skill Name
+! Level Obtained
+! Must Train
+! Max until 50
+! Max after 50
+|-
+| [[Skill_1H_Blunt|1H Blunt]]
+| 1
+| N
+| 200
+| 250
+|-
+| [[Skill 1H Slash|1H Slash]]
+| 1
+| N
+| 200
+| 250
+|-
+| [[Skill Piercing|Piercing]] ***
+| 1
+| N
+| 210
+| 250
+|-
+| [[Skill_Throwing|Throwing]] **
+| 1
+| N
+| 220
+| 250
+|-
+| [[Skill_Defense|Defense]]
+| 1
+| N
+| 200
+| 252
+|-
+| [[Skill_Hand_to_Hand|Hand to Hand]]
+| 1
+| N
+| 100
+| 
+|-
+| [[Skill_Offense|Offense]]
+| 1
+| N
+| 210
+| 252
+|-
+| [[Skill_Archery|Archery]]
+| 1
+| N
+| 200
+| 240
+|-
+| [[Skill_Dodge|Dodge]]
+| 4
+| N
+| 150
+| 210
+|-
+| [[Skill_Backstab|Backstab]]
+| 10
+| Y
+| 200
+| 225
+|-
+| [[Skill_Parry|Parry]]
+| 12
+| Y
+| 200
+| 230
+|-
+| [[Skill_Dual_Wield|Dual Wield]] *
+| 13
+| Y
+| 210
+| 245
+|-
+| [[Skill_Double_Attack|Double Attack]]
+| 16
+| Y
+| 200
+| 240
+|-
+| [[Skill_Instill_Doubt|Instill Doubt]]
+| 22
+| Y
+| 200
+| 200
+|-
+| [[Skill_Disarm|Disarm]]
+| 27
+| Y
+| 200
+| 200
+|-
+| [[Skill_Riposte|Riposte]]
+| 30
+| Y
+| 200
+| 225
+|}
+: * Dual Wield does '''not''' cap at (5 x level) + 5 like other combat skills and instead caps at (6 x level) + 5 - Thus, a level 20 rogue can hit 125 in the skill (as opposed to 105 in other combat skills) and will hit the cap of 210 pre 50, and begin to raise again starting at 51.
+: ** Rogues can score critical or deadly strikes (if thrown from behind the target) with throwing weapons starting at level 15.
+: *** Rogues have a higher skill cap on Piercing while leveling
+
+==Miscellaneous Skills==
+
+{| class="eoTable2"
+! Skill Name
+! Level Obtained
+! Must Train
+! Max until 50
+! Max after 50
+|-
+| [[Skill_Sneak|Sneak]]
+| 1
+| N
+| 200
+| 200
+|-
+| [[Skill_Hide|Hide]]
+| 3
+| N
+| 200
+| 200
+|-
+| [[Skill_Pick_Lock|Pick Lock]]
+| 6
+| N
+| 200
+| 210
+|-
+| [[Skill_Pick_Pocket|Pick Pocket]]
+| 7
+| Y
+| 200
+| 200
+|-
+| [[Skill_Sense_Traps|Sense Traps]]
+| 10
+| Y
+| 200
+| 200
+|-
+| [[Skill_Safe_Fall|Safe Fall]]
+| 12
+| Y
+| 94
+| 94
+|-
+| [[Skill_Apply_Poison|Apply Poison]]
+| 18
+| Y
+| 200
+| 200
+|-
+| [[Skill_Make_Poison|Make Poison]]
+| 20
+| Y
+| 200
+| >210
+|-
+| [[Skill_Disarm_Trap|Disarm Traps]]
+| 21
+| Y
+| 200
+| 200
+|-
+| [[Skill_Alcohol_Tolerance|Alcohol Tolerance]]
+| 1
+| N
+| 235
+| 235(?)
+|-
+| [[Skill_Begging|Begging]]
+| 1
+| N
+| 200
+| 200
+| 
+|-
+| [[Skill_Bind_Wound|Bind Wound]]
+| 1
+| N
+| 175
+| 210
+|-
+| [[Skill_Fishing|Fishing]]
+| 1
+| N
+| 200
+| 200
+| 
+|-
+| [[Skill_Sense_Heading|Sense Heading]]
+| 1
+| N
+| 200
+| 200
+| 
+|-
+| [[Skill_Swimming|Swimming]]
+| 1
+| N
+| 200
+| 200
+| 
+|}
+
+* Various [[Tradeskills]]
+* Picklocks goes up 1 point per level after 50
+
+==Level 50+ Rogue Traits==
+  
+*Level 53 - Minimum Backstab Damage  
+*Level 55 - Double Backstab Chance, Sneak Speed starts to increase   
+*Level 57 - Bind Wound Cap Increased to 70% health once 201+ skill attained.  
+*Level 60 - Chance to Assassinate level 46 and below Humanoids when using Backstab or Thrown, Sneak Speed maxed out
+
+= Disciplines (Alt-C to access) =
+
+{{#lsth:Disciplines|[[Rogue]]}}
+
+= Rogue-Specific Quests =
+
+{{#lsth:Class Race Quest List|Rogue}}
+
+
+== Armor/Weapons ==
+
+=== Pre-Planar ===
+
+{{#lsth:Players:Pre Planar Gear|[[Rogue]]}}
+
+=== Planar ===
+
+{{#lsth:Players:Planar Gear|[[Rogue]]}}
+
+=== Kunark ===
+
+{{#lsth:Players:Kunark Gear|[[Rogue]]}}
+
+=== Velious Pre-Raid/Group ===
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Rogue]]}}
+
+=== Velious Raiding ===
+
+{{#lsth:Players:Velious Raiding Gear|[[Rogue]]}}
+
+= FAQ =
+
+'''Q:	Which weapon-skills should I practice / train?'''
+
+A:	Piercing... Rogues can use a range of one-handed weapons and even a few two-handed ones, but piercing is the rogue's trademark weapon-skill because that's what you need to have in your primary hand if you want to back-stab. What a rogue holds in their off hand is a matter of personal preference, but every rogue should keep their piercing skill in practice. 
+
+
+'''Q:	What is the evade skill I've heard about and why can't I train it?'''
+
+A:	Evasion is not a skill in the normal sense of the word, it's a trick that rogues can manage by using hide to lower their aggro in combat. A rogue simply exits combat and presses their hot-key for the [[Skill Hide|Hide]] skill. Most rogues set up a hot-key macro to do this.
+
+Evade does not completely remove aggro, and it does not work when soloing (see [http://www.project1999.com/forums/showthread.php?p=1827512#post1827512 this thread]).
+
+
+'''Q:	How does stealth work?'''
+
+A:	The simple version? Stand very still, press [[hide]] to hide yourself from view and then press [[sneak]]. Unlike other classes, rogues are told if they succeeded or not. If both skills worked, you are now invisible to 99% of mobs on the server as though someone had cast [[Invisibility]] and [[Invisibility versus Undead]] on you. You'll also walk slowly, but that's a small price to pay for the most reliable and effective form of invisibility in the game (your strafe speed will not be affected). <br />
+Some creatures can see through the [[Skill Hide|Hide]] skill, most of them rogues, so you should still be careful, but many a low-level rogue has wandered into [[Lower Guk]] or [[Chardok]] unseen.
+
+
+'''Q:	What are these masks people keep talking about?'''
+
+A:	There are four masks in the game which allow a rogue or bard to disguise themselves as a member of another race; these masks give minor stat boosts and can be clicked from the inventory:
+<ul><li>  {{:Guise of the Coercer}} (High Elf)
+</li><li> {{:Mask of Deception}} (Dark Elf)
+</li><li> {{:Iksar Hide Mask}} (Iksar)
+</li><li> {{:Mask of Obtenebration}} (Erudite)
+</li></ul>
+
+There are also three masks which were added later in the Velious era or were available for only a brief period:
+<ul><li> {{:Flayed Barbarian Hide Mask}} (Barbarian)
+</li><li> {{:Desiccated Halfling Mask}} (Halfling)
+</li><li> {{:Mask of Tinkering}} (Gnome)
+</li></ul>
+
+
+'''Q:	Where do I buy poisons?'''
+
+A:	You can't. Some poisons are given as rewards for quests, others can be looted from a very small number of NPCs, but the normal way to acquire poisons (once you are level 18 and able to use them) is to make them yourself from a variety of rare and dangerous compounds. You'll want to take a look at the [[Skill Make Poison|Make Poison]] page for more information on that.
+
+
+'''Q:	Where do I buy poison-making supplies?'''
+
+A:	Unfortunately, unlike most normal tradeskills, the poison-making vendors do not frequent any of the starting cities. In fact, with the exception of a vendor named Toxdil in the tunnels under Freeport, there is no old-world city with a poison vendor. Here is the current list of every known vendor selling poison-making supplies.
+{{ItemWhereTable|
+{{ItemWhereRow   | [[Dagnor's Cauldron]]             | [[Conium Darkblade]]          |               | (-236, -826) }}
+{{ItemWhereRow   | [[Firiona Vie]]                   | [[Brak Daggermist]]           |               | (-3608, 2359) }}
+{{ItemWhereRow   | [[Freeport|West Freeport]]        | [[Toxdil]]                    |               | (623, 200) }}
+{{ItemWhereRow   | [[Lake of Ill Omen]]              | [[Nubs Blackgranite]]         |               | (-2517, -2920) }}
+{{ItemWhereRow   | [[Western Plains of Karana]]      | [[Gindlin Toxfodder]]         |               | (-2986, -13398) }}
+}}
+
+
+'''Q:	Are [[Poison Vial]]s and [[Suspension]]s meant to be that expensive?'''
+
+A:	Yes, you really will be spending over 2pp just on vials and suspensions. That's why so many rogues learn how to [[Unfired Poison Vial|make their own]].
+
+{{Template: Navbox Classes}}

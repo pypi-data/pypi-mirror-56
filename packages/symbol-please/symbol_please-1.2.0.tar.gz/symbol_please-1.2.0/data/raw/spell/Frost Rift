@@ -1,0 +1,42 @@
+{{Spellpage|
+
+| spellname = Frost Rift
+| spellicon = S
+| description = Creates a rift of bitter cold, causing between 12 and 15 damage to your target. 1.0 DPM.
+
+| classes = 
+
+* [[Shaman]] - Level 5
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 12 (L5) to 15 (L10) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 15
+| range = 200
+| casting_time = 1.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Cold (0)
+
+| other = 
+
+| msg_cast_on_you = You feel your skin numb as the frost rift strikes you.
+| msg_cast_on_other = Someone  is struck by the frost rift.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kabda]] | Temple of Terror (First Floor) | (1013,-218) }}
+{{SpellWhereRow  | [[Grobb]] | [[Tokun - Troll]] | Shaman Guild | (350,-400) }}
+{{SpellWhereRowB | [[Halas]] | [[Corak]] | Shaman Guild | (313,424) }}
+{{SpellWhereRow  | [[Oggok]] | [[Tokun - Ogre]] | Shaman Guild | (632,1091) }}
+}}
+
+}}

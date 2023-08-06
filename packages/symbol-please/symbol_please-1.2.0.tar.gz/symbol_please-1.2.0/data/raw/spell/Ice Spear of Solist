@@ -1,0 +1,35 @@
+{{Spellpage|
+
+| spellname = Ice Spear of Solist
+| spellicon = S
+| description = Creates a fierce spear of ice to strike your target, causing between 1076 and @1 damage. <br> This is the Wizard's largest cold DD, and the logical upgrade of [[Ice Comet]].
+
+| classes = 
+
+* [[Wizard]] - Level 60
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 1200 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 300
+| range = 150
+| casting_time = 4.00
+| fizzle_time = 2.50
+| recast_time = 13.00
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Cold (-10)
+
+| msg_cast_on_you = Solist's spear of ice strikes you down.
+| msg_cast_on_other = Someone  is struck down by Solist's spear of ice.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from Velious Level 60+ Mobs
+
+}}

@@ -1,0 +1,45 @@
+{{Spellpagesmart|
+
+| spellname = Calefaction
+| spellicon = O
+| description = Ignites your target's skin, doing between 444 and 450 damage. 1.8 damage per mana.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 59
+* [[Druid]] - Level 44
+
+| items_with_effect = 
+
+* None
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 444 (L44) to 450 (L50) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 250
+| range = 200
+| casting_time = 2.50
+| fizzle_time = 2.50
+| recast_time = 45.00
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = Debris smashes against your body.
+| msg_cast_on_other = Someone 's body is crushed by flying debris.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Firiona Vie]] | [[Raciel Sanherb]] | Outpost | (-3396,3310) }}
+}}
+| TableLocations = Firiona Vie
+| TableEra = {{{TableEra|Kunark}}}
+}}

@@ -1,0 +1,77 @@
+{{Spellpage|
+
+| spellname = Ward Undead
+| spellicon = C
+| description = A burst of holy power that inflicts between 35 and 41 damage to an undead target.
+
+| classes = 
+
+* [[Cleric]] - Level 5
+* [[Paladin]] - Level 15
+* [[Shadow Knight]] - Level 22
+* [[Necromancer]] - Level 8
+
+| items_with_effect = 
+
+<ul><li> {{:Bonethunder Staff}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 35 (L5) to 41 (L11) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 30
+| range = 200
+| casting_time = 2.10
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Undead
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow | [[Ak'Anon]] | [[Clockwork Merchant (CG-1)]] | Cleric Guild | (1238,-548) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-8)]] | Necromancer Guild | (2150,-357) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-4)]] | Necromancer Guild | (2099,-393) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Gristle]] | Temple of Terror (West Tower - Top) | (1005,-105) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Tagus Wunne]] | Underground | (-98,-257) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Peku Croxe]] | Underground | (-200,-244) }}
+{{SpellWhereRow  | [[Erudin]] | [[Syra Printell]] | Cleric Guild - Quellious (Outside) | (-735,-47) }}
+{{SpellWhereRowB | [[Erudin]] | [[Kathar Varselli]] | Cleric Guild - Prexus (F1) | (-1067,-417) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Wellin Brookleap]] | Cleric Guild | (24,-456) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Seleni Treekeeper]] | Paladin Guild | (-5,-256) }}
+{{SpellWhereRow  | [[Grobb]] | [[Trusk - Troll]] | Shadow Knight Guild | (512,-625) }}
+{{SpellWhereRow  | [[North Kaladim]] | [[Gralpa Axeheft]] | Cleric Guild | (765,119) }}
+{{SpellWhereRowB | [[Kaladim|North Kaladim]] | [[Tempia Lauley]] | Paladin Guild | (1310, 110) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Jys D'Bious]] | Necromancer Guild (F1) | (1312,-1266) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Misal S'Kor]] | Necromancer Guild (F1) | (1337,-1239) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Trik N'Tan]] | Cleric Guild | (413,-762) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Direlee Furme]] | Cleric Guild (F1) | (103,388) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Orex Nolus]] | Paladin Guild (F1) | (218,-119) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Kragie Rolana]] | Paladin Guild | (-141,-125) }}
+{{SpellWhereRow  | [[Oggok]] | [[Trusk - Ogre]] | Shadow Knight Guild | (392,3) }}
+{{SpellWhereRowB | [[Paineel]] | [[Oren Calferdo]] | Cleric Guild | (1125,427) }}
+{{SpellWhereRow  | [[Paineel]] | [[Kilevra Natasu]] | Necromancer Guild | (692,869) }}
+{{SpellWhereRowB | [[Paineel]] | [[Sheras Milaku]] | Shadow Knight Guild | (888,443) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gehnon Dejartes]] | Shadow Knight Guild | (421,-438) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gyrna Porrin]] | Necromancer Guild | (291,-322) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Likka Sowtsui]] | Cleric Guild | (371,-417) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Gilth Harvester]] | Cleric Guild | (-210,-351) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Fesse Bontex]] | Cleric Guild | (-257,-510) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Lisdon Trekka]] | Cleric Guild | (-236,-480) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Bogen Chazel]] | Cleric Guild | (-260,-516) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Zorik]] | Cleric Guild | (-182,770) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Keegan]] | Paladin Guild | (-210,543) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Plight]] | Cubby near PvP Area | (-391,234) }}
+}}
+
+}}

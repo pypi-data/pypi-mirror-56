@@ -1,0 +1,43 @@
+{{Spellpage|
+
+| spellname = Bristlebane`s Bundle
+| spellicon = L
+| description = Focuses mana into the form of a bundle of party favors.
+
+| classes = 
+
+* [[Magician]] - Level 52
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Summoned: Ale]] }}
+{{SpellSlotRow | 2 | Summon Item: [[Summoned: Cake]] }}
+{{SpellSlotRow | 3 | Summon Item: [[Summoned: Spinning Bottle]] }}
+{{SpellSlotRow | 4 | Summon Item: [[Summoned: A Firework]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 50
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Kunark Level 50+ Mob Drop
+
+==Related Quests==
+
+* [[Magician Spells (Good)]]
+* [[Magician Spells (Evil)]]
+
+}}

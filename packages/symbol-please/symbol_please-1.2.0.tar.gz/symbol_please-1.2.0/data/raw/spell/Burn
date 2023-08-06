@@ -1,0 +1,50 @@
+{{Spellpage|
+
+| spellname = Burn
+| spellicon = O
+| description = Burns your target's skin with fire, causing between 13 and 14 damage.
+
+| classes = 
+
+* [[Magician]] - Level 4
+
+| items_with_effect = 
+
+<ul><li> {{:Dark Ember}}
+</li><li> {{:Smoldering Brand}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 11 (L4) to 14 (L10) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 15
+| range = 200
+| casting_time = 1.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = You feel your skin blister and burn.
+| msg_cast_on_other = Someone 's skin blisters and burns.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-17)]] | Library | (1105,-1022) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Killi Frillep]] | Magician Guild (F2) | (695,919) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Cizzar J'Axx]] | Caster Guild (Basement) | (135,-921) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Tsuden Korinte]] | Caster Guild | (322,-595) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Neapha Vesturo]] | The Herb Jar | (317,-554) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Vellera Wintergreen]] | Magician Guild | (715,-526) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Trepo Merrop]] | Caster Guild (F3) | (133,-762) }}
+}}
+
+
+}}

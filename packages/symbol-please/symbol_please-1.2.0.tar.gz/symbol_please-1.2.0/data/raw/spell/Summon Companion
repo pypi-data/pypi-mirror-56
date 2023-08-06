@@ -1,0 +1,50 @@
+{{Spellpagesmart|
+
+| spellname = Summon Companion
+| spellicon = L
+| description = Summons your pet to your current location.  Seems to only work on summoned pets (not charmed pets).
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Enchanter]] - Level 44
+* [[Magician]] - Level 39
+* [[Necromancer]] - Level 44
+* [[Shadow Knight]] - Level 44
+* [[Shaman]] - Level 44
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Call Pet | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 50
+| range =  
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.50
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You summon your companion to your side.
+| msg_cast_on_other = Someone  summons a companion to their side.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[East Commonlands]]              | [[Rushka Deklamoor]]          |   East Commons Tunnel    | (-1669, -4) }}
+}}
+
+
+| TableLocations = East Commons Tunnel
+| TableEra = {{{TableEra|Classic}}}
+}}
+
+
+[[Category:Inventory Items]]
+[[Category:Vendor Sold]]

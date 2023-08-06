@@ -1,0 +1,51 @@
+<noinclude>{{Disambig3|[[Armor of Harmony]] in Plane of Hate}}</noinclude>
+{{Spellpagesmart|
+| spellname = Harmony
+| spellicon = D
+| description = Calms the savage spirit of almost any creature in an area around your target, making them less likely to attack.  This spell only works outdoors.
+
+Note: Cannot be cast in Veeshan's Peak on p99. [http://www.project1999.com/forums/showthread.php?t=124070]
+
+This spell can not be resisted by almost any NPC - however, it does not reduce the aggro/reaction radius as much as other lull spells so one must take into account how closely grouped your targets are. Despite that weaker reduction, this spell is much preferred over every other lull that comes with the risk of a critical resist and aggro. The power of an unresistable lull gives Druids/Rangers great utility to either pull themselves or aid monks/shadowknights in splitting pulls. A druid or ranger targeting a hidden/sneaking rogue can do some amazing work in areas like Plane of Hate's second floor where pulling tends to be uncontrolled at best; the rogue can position themselves in a specific spot where the harmony cast *on them* will only hit specific mobs in a room (like the Evangelist room) or area in order to allow pullers to more easily thin out larger packs of enemies.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 22
+* [[Druid]] - Level 5
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Frenzy Radius (15/40) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 2 | Reaction Radius (15/40) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 25
+| range = 200
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = 3 ticks @L5 to 2 minutes @L34
+| target_type = Targeted AE
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Verth Mistwielder]] | Kelethin Ranger Guild | (-414,494) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Durvinna Barkkis]] | Ranger Guild | (104,-111) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

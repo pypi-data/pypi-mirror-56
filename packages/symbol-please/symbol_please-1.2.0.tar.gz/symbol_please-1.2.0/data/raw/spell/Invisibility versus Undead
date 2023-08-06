@@ -1,0 +1,86 @@
+{{Spellpage|
+
+| spellname = Invisibility versus Undead
+| spellicon = B
+| description = Cloaks your target in a light aura, rendering them invisible to most undead creatures for up to 3.0 mins @L1 to 27.0 mins @L9. You have to be grouped with your target.
+
+| classes = 
+
+* [[Cleric]] - Level 14
+* [[Paladin]] - Level 22
+* [[Shadow Knight]] - Level 9
+* [[Necromancer]] - Level 1
+* [[Enchanter]] - Level 16
+
+| items_with_effect = 
+
+<ul><li> {{:10 Dose Potion of Unlife Awareness}}
+</li><li> {{:5 Dose Potion of Unlife Awareness}}
+</li><li> {{:Potion of Unlife Awareness}}
+</li><li> {{:Cloak of the Undead Eye}}
+</li><li> {{:Rat Bone Powder}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Invisibility versus Undead }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 40
+| range = 100
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 4.00
+| duration = 3 minutes @L1 to 27 minutes @L9
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = You feel your skin tingle.
+| msg_cast_on_other = Someone  fades a little.
+| msg_wears_off = Your skin stops tingling.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow | [[Ak'Anon]] | [[Clockwork Merchant (CG-2)]] | Cleric Guild | (1238,-539) }}
+{{SpellWhereRowB  | [[Ak'Anon]] | [[Clockwork Merchant (LG-4)]] | Library | (1106,-989) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-9)]] | Necromancer Guild | (2154,-366) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-2)]] | Necromancer Guild | (2096,-408) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Squire Rygle]] | Temple of Terror (East Tower - Top) | (1001,-266) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Mika Fugas]] | Underground | (-196,-264) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Sermio Capret]] | Underground | (-70,-259) }}
+{{SpellWhereRowB | [[Erudin]] | [[Mertitt Phentilly]] | Cleric Guild - Quellious (Outside) | (-741,-55) }}
+{{SpellWhereRow  | [[Erudin]] | [[Issibla Belstince]] | Cleric Guild - Prexus (F2) | (-1031,-375) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Estra Nancer]] | Enchanter Guild (F2) | (536,761) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Seria Woodwind]] | Paladin Guild | (-9,-197) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Celest Palestream]] | Cleric Guild | (24,-444) }}
+{{SpellWhereRow  | [[Grobb]] | [[Kramf - Troll]] | Shadow Knight Guild | (494,-628) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Camor V'Retta]] | Necromancer Guild (F1) | (1335,-1278) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Vissa D'Dbth]] | Necromancer Guild (F1) | (1319,-1236) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Issia H'Rugla]] | Cleric Guild | (405,-766) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Litz B`Doph]] | Caster Guild (F1) | (132,-955) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Amata D'Lavi]] | Cleric Guild (F1) | (103,311) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Donala Baris]] | Paladin Guild (F3) | (208,-130) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Mellisa Purgor]] | Paladin Guild | (-158,-130) }}
+{{SpellWhereRow  | [[Oggok]] | [[Kramf - Ogre]] | Shadow Knight Guild | (377,17) }}
+{{SpellWhereRowB | [[Paineel]] | [[Danus Kelmun]] | Necromancer Guild | (692,856) }}
+{{SpellWhereRow  | [[Paineel]] | [[Erelin Verisue]] | Cleric Guild | (1226,551) }}
+{{SpellWhereRowB | [[Paineel]] | [[Dovan Sires]] | Shadow Knight Guild | (901,443) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Jexun Elsorg]] | Shadow Knight Guild | (404,-415) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Leon Ereek]] | Cleric Guild | (373,-434) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Pakeg Aspet]] | Necromancer Guild | (310,-321) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Frappy Slimfinger]] | Cleric Guild | (-214,-359) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Oriyame Nelafre]] | Cleric Guild | (-259,-539) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Corrao Duperame]] | The Herb Jar | (302,-559) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Seren the Swift]] | Enchanter Guild | (509,-910) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Taben]] | Cleric Guild | (-227,809) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Keegan]] | Paladin Guild | (-210,543) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Bile]] | Cubby near PvP Area | (-380,255) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Lasiris Oncre]] | Caster Guild (F1) | (112,-768) }}
+}}
+
+}}

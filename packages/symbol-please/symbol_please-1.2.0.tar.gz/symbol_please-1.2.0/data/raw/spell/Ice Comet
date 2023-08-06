@@ -1,0 +1,36 @@
+{{Spellpage|
+
+| spellname = Ice Comet
+| spellicon = S
+| description = Summons a giant comet of ice from the sky. Mana efficiency of 2.8 and 176 DPS. <br><b>WARNING:</b> The research version of this spell is a NO TRADE ITEM. You cannot have someone else craft it for you.<br><br> During Vanilla (pre-kunark) this direct damage spell was the strongest a wizard could learn. Due to the high damage it causes it creates a high amount of agro. So be sure the puller or tank is prepared.
+
+| classes = 
+
+* [[Wizard]] - Level 49
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 1110 (L49) to 1120 (L50) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 400
+| range = 200
+| casting_time = 6.30
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Cold (-10)
+
+| msg_cast_on_you = You feel your skin freeze.
+| msg_cast_on_other = Someone 's skin freezes.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from [[Lady Vox]].
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

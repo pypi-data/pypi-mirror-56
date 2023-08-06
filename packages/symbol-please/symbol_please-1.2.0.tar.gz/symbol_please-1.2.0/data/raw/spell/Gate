@@ -1,0 +1,86 @@
+{{Spellpagesmart|
+
+| spellname = Gate
+| spellicon = V
+| description = Opens a magical portal that returns you to your bind point.
+
+NPC casters may also gate according to their class, if they are under 25% HP and located some distance from their spawn point. If they are successful, they will immediately receive a heal for about 20% of their health, and will retain their aggro table, unless they leash.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 5
+* [[Druid]] - Level 5
+* [[Shaman]] - Level 5
+* [[Necromancer]] - Level 4
+* [[Wizard]] - Level 4
+* [[Magician]] - Level 4
+* [[Enchanter]] - Level 4
+
+| items_with_effect = 
+
+<ul><li> {{:Vial of Swirling Smoke}}
+</li><li> {{:Glimmer Ring}} (GM Event Only)
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Gate | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 70
+| range =  
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 8.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  fades away.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-2)]] | Library | (1074,-1004) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-8)]] | Necromancer Guild | (2150,-357) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-6)]] | Necromancer Guild | (2085,-370) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-1)]] | Cleric Guild | (1238,-548) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kabda]] | Temple of Terror (First Floor) | (1013,-218) }}
+{{SpellWhereRow  | [[Erudin]] | [[Syra Printell]] | Cleric Guild - Quellious (Outside) | (-735,-47) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Telor Beteria]] | Magician Guild (Outside) | (703,806) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Wellin Brookleap]] | Cleric Guild | (24,-456) }}
+{{SpellWhereRowB | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRow  | [[Grobb]] | [[Tokun - Troll]] | Shaman Guild | (350,-400) }}
+{{SpellWhereRowB | [[Halas]] | [[Corak]] | Shaman Guild | (313,424) }}
+{{SpellWhereRow  | [[Kaladim|North Kaladim]] | [[Gralpa Axeheft]] | Cleric Guild | (771,118) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Trik N'Tan]] | Cleric Guild | (413,-762) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Tkaz H'Rugla]] | Caster Guild (F1) | (160,-968) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Direlee Furme]] | Cleric Guild (F1) | (103,388) }}
+{{SpellWhereRow  | [[Qeynos|North Qeynos]] | [[Kragie Rolana]] | Paladin Guild | (-141,-125) }}
+{{SpellWhereRowB | [[Oggok]] | [[Tokun - Ogre]] | Shaman Guild | (632,1091) }}
+{{SpellWhereRow  | [[Paineel]] | [[Oren Calferdo]] | Cleric Guild | (1125,427) }}
+{{SpellWhereRowB | [[Paineel]] | [[Nedorl Ipabrun]] | Necromancer Guild | (674,805) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Likka Sowtsui]] | Cleric Guild | (371,-417) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Gilth Harvester]] | Cleric Guild | (-210,-351) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Bogen Chazel]] | Cleric Guild | (-260,-516) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Pai Berenis]] | Caster Guild | (309,-608) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Neapha Vesturo]] | The Herb Jar | (317,-554) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Srell Tumblebrook]] | Building just inside zone | (450,-810) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Lorekeeper Zorik]] | Cleric Guild | (-182,770) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Suffering]] | Cubby near PvP Area | (-382,272) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Xinari Anara]] | Caster Guild (F2) | (138,-755) }}
+}}
+| TableLocations = Vendors
+| TableEra = Classic
+}}

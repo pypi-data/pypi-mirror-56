@@ -1,0 +1,50 @@
+{{Spellpagesmart|
+
+| spellname = Stinging Swarm
+| spellicon = T
+| description = Commands a swarm of insects to attack your target relentlessly, causing 8 (moving) or 13 (root, fear or engaged) damage every six seconds for 30 secs (5 ticks @L10 to 9 ticks @L18). Max total damage at L18 and on is 117 (1.8 DPM).
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 30
+* [[Druid]] - Level 14
+
+| items_with_effect = 
+
+<ul><li> {{:Tolan's Darkwood Vambraces}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 13 per tick | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 65
+| range = 250
+| casting_time = 2.45
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 7 ticks @L14 to 9 ticks @L18
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (-100)
+
+| msg_cast_on_you = You feel the pain of a thousand stings.
+| msg_cast_on_other = Someone  is engulfed in a swarm.
+| msg_wears_off = The swarm departs.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Verth Mistwielder]] | Kelethin Ranger Guild | (-414,494) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Durvinna Barkkis]] | Ranger Guild | (104,-111) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

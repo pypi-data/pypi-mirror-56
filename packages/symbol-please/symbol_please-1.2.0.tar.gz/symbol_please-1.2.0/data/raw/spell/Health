@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Health
+| spellicon = R
+| description = Fills your target with superior health, increasing their stamina for 54.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 34
+
+| items_with_effect = 
+
+<ul><li> {{:Jaundiced Bone Greaves}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase STA by 29 (L34) to 31 (L38) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 80
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 54 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel healthy.
+| msg_cast_on_other = Someone  looks healthy.
+| msg_wears_off = Your health fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+}}
+
+}}

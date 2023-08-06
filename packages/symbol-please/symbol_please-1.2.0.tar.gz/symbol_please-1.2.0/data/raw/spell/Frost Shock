@@ -1,0 +1,46 @@
+{{Spellpage|
+
+| spellname = Frost Shock
+| spellicon = S
+| description = Surrounds your target in frost, causing between 169 and 187 damage.
+
+| classes = 
+
+* [[Wizard]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Holgresh Mojo Stick (Water)}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 169 (L24) to 187 (L30) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 110
+| range = 200
+| casting_time = 3.15
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Cold (0)
+
+| msg_cast_on_you = You feel your skin freeze over.
+| msg_cast_on_other = Someone 's skin freezes over.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-10)]] | Library | (1052,-984) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Barstall Methinon]] | Wizard Guild (F2) | (914,757) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Kis K'Jartan]] | Caster Guild (Basement) | (171,-874) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Trisco Qental]] | Caster Guild | (302,-666) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Chardo Ahdelia]] | Caster Guild (top floor) | (144,-735) }}
+}}
+
+}}

@@ -1,0 +1,52 @@
+{{Spellpagesmart|
+
+| spellname = Flame Lick
+| spellicon = O
+| description = Surrounds your target in flickering flames, lowering their armor class, and damaging them.  Must have a {{:Fire Beetle Eye}} equipped, in your inventory, or in your bags when cast. 2.7 DPM
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 9
+* [[Druid]] - Level 1
+
+| slots = 
+
+{{SpellSlotRowSmart | 2 | Decrease Hitpoints by 1 @L1 to 3 @L4 per tick | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 10 | Decrease AC by 3 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 11 | Requires: [[Fire Beetle Eye]] | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} | HideFromMainPage = 1 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 10
+| range = 200
+| casting_time = 1.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 1 ticks @L1 to 9 ticks @L14
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| other = 
+
+* '''Focus:''' [[Fire Beetle Eye]]
+
+| msg_cast_on_you = You are surrounded by flickering flames.
+| msg_cast_on_other = Someone  is surrounded by flickering flames.
+| msg_wears_off = The flames are extinguished.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Aleena Lightleaf]] | Kelethin Ranger Guild | (-400,490) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Ilscent Tagglefoot]] | Druid Guild | (-31,-418) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Raken]] | Ranger Guild | (106,-94) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

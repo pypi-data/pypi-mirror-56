@@ -1,0 +1,47 @@
+{{Spellpagesmart|
+
+| spellname = Calm Animal
+| spellicon = H
+| description = Calms the ferocity of many animals, making them less likely to attack.  This spell works on creatures up to level 50.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 39
+* [[Druid]] - Level 19
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Frenzy Radius (5/50) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 2 | Reaction Radius (10/50) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 3 | Pacify | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 45
+| range = 200
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 5.00
+| duration = 7 ticks
+| target_type = Animal
+| spell_type = Beneficial
+| resist = Magic (0)
+
+| msg_cast_on_you = You feel your aggression subside.
+| msg_cast_on_other = Someone  looks less aggressive.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Horth Evergreen]] | Kelethin Druid Guild | (-640,219) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Torth Largefoot]] | Druid Guild | (-32,-384) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Arrivae Valleren]] | Druid Guild | (-156,-300) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Bukem Breewood]] | Ranger Guild | (105,-80) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

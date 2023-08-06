@@ -1,0 +1,84 @@
+{{Spellpagesmart|
+
+| spellname = Enduring Breath
+| spellicon = F
+| description = Magically fills your lungs with air, removing your need to breathe for 18.0 mins @L6 to 27.0 mins @L9.  Consumes a handful of fish scales to cast. Compare to the Necromancer's [[Breath of the Dead]].
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 22
+* [[Druid]] - Level 9
+* [[Shaman]] - Level 14
+* [[Enchanter]] - Level 12
+
+| items_with_effect = 
+
+<ul><li>  {{:Rebreather}}
+</li><li> {{:Moss Mask}}
+</li><li> {{:Staff of the Waterwalker}}
+</li><li> {{:Fishbone Earring}}
+</li><li> {{:Riptide Spear}}
+</li><li> {{:Net of the Deep Sea}}
+</li><li> {{:Singing Steel Gauntlets}}
+</li><li> {{:Ornately Runed Shell Necklace}}
+</li><li> {{:Ancient Fishing Pole}}
+</li><li> {{:Drums of the Beast}}
+</li><li> {{:Lodizal_Shell_Shield}}
+</li><li> {{:Knotted Turtlebone Ring}}
+</li><li> {{:Shield of Prexus}}
+</li><li> {{:Sleeves of the Kelpmaidens}}
+</li><li> {{:Lord of Pain's Khukri}}
+</li><li> {{:Imbued Shield of Paineel}}
+</li><li> {{:Summoned: Waterstone}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Water Breathing(1) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 4 | Consumes: [[Fish Scales]] | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} | HideFromMainPage = 1 }}
+
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 35
+| range = 100
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 27 minutes 6 seconds
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Fish Scales]]
+
+| msg_cast_on_you = You feel no need to breathe.
+| msg_cast_on_other = Someone  doesn't seem to be breathing anymore.
+| msg_wears_off = You resume breathing.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-6)]] | Library | (1100,-982) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Danilla Delucic]] | Enchanter Guild (F2) | (503,761) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRowB | [[Greater Faydark]] | [[Verth Mistwielder]] | Kelethin Ranger Guild | (-414,494) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Tal G'Noir]] | Caster Guild (Basement) | (156,-973) }}
+{{SpellWhereRowB | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Gero Yopetu]] | The Herb Jar | (311,-550) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Porra]] | Enchanter Guild | (577,-806) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Durvinna Barkkis]] | Ranger Guild | (104,-111) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Atvo Siro]] | Caster Guild (F1) | (109,-735) }}
+}}
+| TableLocations = Vendors
+| TableEra = Classic
+}}

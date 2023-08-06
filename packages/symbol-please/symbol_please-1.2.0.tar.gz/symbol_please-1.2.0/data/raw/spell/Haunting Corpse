@@ -1,0 +1,39 @@
+{{Spellpage|
+
+| spellname = Haunting Corpse
+| spellicon = G
+| description = Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast.
+
+| classes = 
+
+* [[Necromancer]] - Level 24
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Skeleton Pet: skel_pet_22_ }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 240
+| range =  
+| casting_time = 11.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Bone Chips
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  animates an undead servant.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

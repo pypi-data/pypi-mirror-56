@@ -1,0 +1,41 @@
+{{Spellpage|
+
+| spellname = Shock of Lightning
+| spellicon = M
+| description = Strikes your target with a bolt of lightning, causing between 74 and 82 damage and causing a small pushback(2). This spell becomes useful again at high level for generating a lot of push quickly, while accumulating little aggro, against mobs which are immune to stun.
+
+| classes = 
+
+* [[Wizard]] - Level 12
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 78 (L12) to 83 (L17) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 60
+| range = 200
+| casting_time = 2.20
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You convulse as the lightning arcs through you.
+| msg_cast_on_other = Someone  convulses as the lightning arcs through them.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-9)]] | Library | (1056,-981) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Effunic Korett]] | Wizard Guild (F2) | (921,726) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Dissa C'Luzz]] | Caster Guild (Basement) | (167,-896) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Dumisa D'Enetti]] | Caster Guild | (313,-679) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Charia Betou]] | Caster Guild (top floor) | (134,-740) }}
+}}
+
+}}

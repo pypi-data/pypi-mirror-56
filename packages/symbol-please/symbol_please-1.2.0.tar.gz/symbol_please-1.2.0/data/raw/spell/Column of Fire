@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Column of Fire
+| spellicon = O
+| description = Conjures a column of fire that burns several creatures in the vicinity of your target, causing between 49 and 51 damage.
+
+| classes = 
+
+* [[Magician]] - Level 12
+
+| items_with_effect = 
+
+<ul><li> {{:Blazing Helm of Fennin Ro}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 49 (L12) to 51 (L14) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 65
+| range = 200
+| casting_time = 3.25
+| fizzle_time = 2.50
+| recast_time = 6.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = You are immolated by flame.
+| msg_cast_on_other = Someone  is immolated by flame.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Rosdaria Sepria]] | Caster Guild | (327,-686) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+
+}}

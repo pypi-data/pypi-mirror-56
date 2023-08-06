@@ -1,0 +1,43 @@
+{{Spellpage|
+
+| spellname = Shield of Fire
+| spellicon = O
+| description = Surrounds your target in a shield of fire, damaging any creature that attacks them.
+
+| classes = 
+
+* [[Magician]] - Level 8
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Damage Shield by 5 (L8) to 6 (L12) }}
+{{SpellSlotRow | 2 | Increase Fire Resist by 10 }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 40
+| range = 100
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 8 ticks @L8 to 6.5 minutes @L65
+| target_type = Single
+| spell_type = Beneficial
+| resist = Fire (0)
+
+| msg_cast_on_you = You are enveloped by flame.
+| msg_cast_on_other = Someone  is enveloped by flame.
+| msg_wears_off = The flames die down.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+
+}}

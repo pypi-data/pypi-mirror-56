@@ -1,0 +1,54 @@
+{{Spellpage|
+
+| spellname = Leering Corpse
+| spellicon = G
+| description = Animates an undead servant from the remnants of the fallen.  Consumes two [[Bone Chips|bone chips]] when cast.  The level 3 pet max-hits for 8, the level 4 pet max-hits for 10 and the level 5 pet max-hits for 12.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 9
+* [[Necromancer]] - Level 4
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Skeleton Pet: skel_pet_5_ }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 40
+| range =  
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 9.50
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Bone Chips]] x2
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  animates an undead servant.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-2)]] | Necromancer Guild | (2096,-408) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Rygle]] | Temple of Terror (East Tower - Top) | (1001,-266) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Sermio Capret]] | Underground | (-70,-259) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Mika Fugas]] | Underground | (-196,-264) }}
+{{SpellWhereRow  | [[Grobb]] | [[Kramf - Troll]] | Shadow Knight Guild | (494,-628) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Camor V'Retta]] | Necromancer Guild (F1) | (1335,-1278) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Vissa D'Dbth]] | Necromancer Guild (F1) | (1319,-1236) }}
+{{SpellWhereRowB | [[Oggok]] | [[Kramf - Ogre]] | Shadow Knight Guild | (377,17) }}
+{{SpellWhereRow  | [[Paineel]] | [[Dovan Sires]] | Shadow Knight Guild | (901,443) }}
+{{SpellWhereRowB | [[Paineel]] | [[Danus Kelmun]] | Necromancer Guild | (692,856) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Pakeg Aspet]] | Necromancer Guild | (310,-321) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Jexun Elsorg]] | Shadow Knight Guild | (404,-415) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Bile]] | Cubby near PvP Area | (-380,255) }}
+}}
+
+}}

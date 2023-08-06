@@ -1,0 +1,62 @@
+{{Classic Era}}
+
+{{Spellpage|
+
+| spellname = Enstill
+| spellicon = Q
+| description = Causes the earth to adhere to your target's feet, preventing them from moving for up to 1.2 mins @L20 to 1.6 mins @L27. This spell is called Instill on merchants.
+
+| classes = 
+
+* [[Cleric]] - Level 29
+* [[Shaman]] - Level 34
+* [[Wizard]] - Level 20
+* [[Enchanter]] - Level 29
+* [[Necromancer]] - Level 53 {{Kunark Era Inline}}
+* [[Paladin]] - Level 54 {{Kunark Era Inline}}
+
+| slots = 
+
+{{SpellSlotRow | 2 | Root }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range = 200
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 1.2 minutes @L20 to 1.6 minutes @L27
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| other = 
+
+| msg_cast_on_you = Your feet adhere to the ground.
+| msg_cast_on_other = Someone 's feet adhere to the ground. 
+| msg_wears_off = Your feet come free.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-13)]] | Necromancer Guild | (2112,-438) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-4)]] | Cleric Guild | (1223,-547) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Erudin]] | [[Alysa Eltern]] | Cleric Guild - Quellious (Outside) | (-707,-57) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Terri Woodshape]] | Cleric Guild | (2,-456) }}
+{{SpellWhereRowB | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRow  | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Friz Punox]] | Cleric Guid | (412,-788) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Perep Chen]] | Cleric Guild (basement) | (106,311) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Enpero Mesog]] | Cleric Guild (Outside) | (-216,-230) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Naes Ereek]] | Cleric Guild | (340,-427) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Alice Sweetoven]] | Cleric Guild | (-232,-419) }}
+{{SpellWhereRowB | [[The Overthere]] | [[Finlay Kitoran]] | Outpost | (2770,2367) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Lithrise Frizen]] | Building SE of Necromancer Guild | (170,660) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Spirit of Snake
+| spellicon = K
+| description = Fills your target with the spirit of the snake, increasing their charisma for 30.0 mins @L10 to 36.0 mins @L12.
+
+| classes = 
+
+* [[Shaman]] - Level 14
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase CHA by 13 (L14) to 15 (L18) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 40
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 36 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel the spirit of snake enter you.
+| msg_cast_on_other = Someone  is surrounded by a brief serpentine aura.
+| msg_wears_off = The spirit of snake leaves you.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+}}
+
+}}

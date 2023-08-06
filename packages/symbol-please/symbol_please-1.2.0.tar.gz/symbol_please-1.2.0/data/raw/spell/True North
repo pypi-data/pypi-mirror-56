@@ -1,0 +1,77 @@
+{{Spellpage|
+
+| spellname = True North
+| spellicon = B
+| description = Provides a magical sense of direction, changing your heading to point directly North.
+
+| classes = 
+
+* [[Cleric]] - Level 1
+* [[Paladin]] - Level 9
+* [[Shaman]] - Level 1
+* [[Necromancer]] - Level 4
+* [[Wizard]] - Level 1
+* [[Magician]] - Level 1
+* [[Enchanter]] - Level 1
+
+| slots = 
+
+{{SpellSlotRow | 1 | True North }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 5
+| range =  
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 4.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = You spin to face north.
+| msg_cast_on_other =  
+| msg_wears_off = 
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-2)]] | Library | (1074,-1004) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-8)]] | Necromancer Guild | (2150,-357) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-6)]] | Necromancer Guild | (2085,-370) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-1)]] | Cleric Guild | (1238,-548) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kabda]] | Temple of Terror (First Floor) | (1013,-218) }}
+{{SpellWhereRow  | [[Erudin]] | [[Kathar Varselli]] | Cleric Guild - Prexus (F1) | (-1067,-417) }}
+{{SpellWhereRowB | [[Erudin]] | [[Syra Printell]] | Cleric Guild - Quellious (Outside) | (-735,-47) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Telor Beteria]] | Magician Guild (Outside) | (703,806) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Seleni Treekeeper]] | Paladin Guild | (-5,-256) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Wellin Brookleap]] | Cleric Guild | (24,-456) }}
+{{SpellWhereRow  | [[North Kaladim]] | [[Gralpa Axeheft]] | Cleric Guild | (765,119) }}
+{{SpellWhereRowB | [[Grobb]] | [[Tokun - Troll]] | Shaman Guild | (350,-400) }}
+{{SpellWhereRow  | [[Halas]] | [[Corak]] | Shaman Guild | (313,424) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Trik N'Tan]] | Cleric Guild | (413,-762) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Tkaz H'Rugla]] | Caster Guild (F1) | (160,-968) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Orex Nolus]] | Paladin Guild (F1) | (218,-119) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Direlee Furme]] | Cleric Guild (F1) | (103,388) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Kragie Rolana]] | Paladin Guild | (-141,-125) }}
+{{SpellWhereRow  | [[Oggok]] | [[Tokun - Ogre]] | Shaman Guild | (632,1091) }}
+{{SpellWhereRowB | [[Paineel]] | [[Nedorl Ipabrun]] | Necromancer Guild | (674,805) }}
+{{SpellWhereRow  | [[Paineel]] | [[Zarnlel Apridor]] | Cleric Guild | (1125,440) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Likka Sowtsui]] | Cleric Guild | (371,-417) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Gilth Harvester]] | Cleric Guild | (-210,-351) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Pai Berenis]] | Caster Guild | (309,-608) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Lisdon Trekka]] | Cleric Guild | (-236,-480) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Fesse Bontex]] | Cleric Guild | (-257,-510) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Bogen Chazel]] | Cleric Guild | (-260,-516) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Neapha Vesturo]] | The Herb Jar | (317,-554) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Srell Tumblebrook]] | Building just inside zone | (450,-810) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Derrin]] | Cleric Guild | (-205,773) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Keegan]] | Paladin Guild | (-210,543) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Suffering]] | Cubby near PvP Area | (-382,272) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Xinari Anara]] | Caster Guild (F2) | (138,-755) }}
+}}
+
+}}

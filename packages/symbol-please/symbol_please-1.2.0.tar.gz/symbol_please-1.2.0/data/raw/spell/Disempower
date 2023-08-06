@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Disempower
+| spellicon = I
+| description = Strips the willpower from your target, decreasing their strength, stamina, and armor class for 1.2 mins @L12 to 2.0 mins @L20.
+
+| classes = 
+
+* [[Shaman]] - Level 14
+* [[Enchanter]] - Level 16
+
+| slots = 
+
+{{SpellSlotRow | 2 | Decrease STA by 10 (L14) to 20 (L34) }}
+{{SpellSlotRow | 3 | Decrease STR by 14 (L14) to 15 (L16) }}
+{{SpellSlotRow | 4 | Decrease AC by 6 (L14) to 9 (L28) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 45
+| range = 200
+| casting_time = 2.25
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 1.4 minutes @L14 to 2 minutes @L20
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| other = 
+
+| msg_cast_on_you = You feel frail.
+| msg_cast_on_other = Someone  looks frail.
+| msg_wears_off = You feel your strength return.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+}}
+
+}}

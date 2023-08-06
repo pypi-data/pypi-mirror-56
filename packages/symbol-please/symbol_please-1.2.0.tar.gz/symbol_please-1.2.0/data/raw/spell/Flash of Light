@@ -1,0 +1,60 @@
+{{Spellpage|
+
+| spellname = Flash of Light
+| spellicon = B
+| description = Creates a bright flash of light, temporarily blinding your target.
+
+| classes = 
+
+* [[Cleric]] - Level 1
+* [[Paladin]] - Level 9
+* [[Shaman]] - Level 1
+
+| slots = 
+
+{{SpellSlotRow | 1 | Blindness(-1) }}
+{{SpellSlotRow | 2 | Decrease ATK by 5 }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 12
+| range = 200
+| casting_time = 1.50
+| fizzle_time = 2.25
+| recast_time = 3.00
+| duration = 2 ticks
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are blinded by a flash of light.
+| msg_cast_on_other = Someone  is blinded by a flash of light.
+| msg_wears_off = Your sight returns.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-8)]] | Necromancer Guild | (2150,-357) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-1)]] | Cleric Guild | (1238,-548) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRow  | [[Erudin]] | [[Syra Printell]] | Cleric Guild - Quellious (Outside) | (-735,-47) }}
+{{SpellWhereRowB | [[Erudin]] | [[Kathar Varselli]] | Cleric Guild - Prexus (F1) | (-1067,-417) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Wellin Brookleap]] | Cleric Guild | (24,-456) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Seleni Treekeeper]] | Paladin Guild | (-5,-256) }}
+{{SpellWhereRow  | [[North Kaladim]] | [[Gralpa Axeheft]] | Cleric Guild | (773,115) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Trik N'Tan]] | Cleric Guild | (413,-762) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Direlee Furme]] | Cleric Guild (F1) | (103,388) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Orex Nolus]] | Paladin Guild (F1) | (218,-119) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Kragie Rolana]] | Paladin Guild | (-141,-125) }}
+{{SpellWhereRow  | [[Oasis of Marr]] | [[Gadallion]] | Gypsy Camp | (495,0) }}
+{{SpellWhereRowB | [[Paineel]] | [[Zarnlel Apridor]] | Cleric Guild | (1125,440) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Likka Sowtsui]] | Cleric Guild | (371,-417) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Gilth Harvester]] | Cleric Guild | (-210,-351) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Fesse Bontex]] | Cleric Guild | (-257,-510) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Bogen Chazel]] | Cleric Guild | (-260,-516) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Lisdon Trekka]] | Cleric Guild | (-236,-480) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Derrin]] | Cleric Guild | (-205,773) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Keegan]] | Paladin Guild | (-210,543) }}
+}}
+
+}}

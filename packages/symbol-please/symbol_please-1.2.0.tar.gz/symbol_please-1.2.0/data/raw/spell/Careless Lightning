@@ -1,0 +1,50 @@
+{{Spellpagesmart|
+
+| spellname = Careless Lightning
+| spellicon = M
+| description = Calls down lightning from the sky, causing between 94 and 99 damage to your target. Max 1.4 DPM.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 39
+* [[Druid]] - Level 19
+
+| items_with_effect = 
+
+<ul><li> {{:Windetched Staff}}
+</li><li> {{:Windruned Dagger}}
+</li><li> {{:Thunderforged Earring}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 94 (L19) to 99 (L24) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 70
+| range = 200
+| casting_time = 2.75
+| fizzle_time = 2.50
+| recast_time = 2.50
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = Lightning surges through your body.
+| msg_cast_on_other = Someone  has been struck by lightning.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRow  | [[Northern Karana]] | [[Tak Whistler]] | Druid Ring | (-2732,-1466) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Bukem Breewood]] | Ranger Guild | (105,-80) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

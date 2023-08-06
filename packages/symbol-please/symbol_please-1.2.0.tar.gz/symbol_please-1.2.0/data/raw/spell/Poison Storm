@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Poison Storm
+| spellicon = N
+| description = Creates a rain of poison, causing three waves of 60 damage to everything in a small radius around your target.
+
+| classes = 
+
+* [[Shaman]] - Level 24
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 60 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 125
+| range = 150
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 12.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Poison (0)
+
+| msg_cast_on_you = Your skin blisters as poison rains down on you.
+| msg_cast_on_other = Someone 's skin blisters.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRowB | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRow  | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+}}
+
+}}

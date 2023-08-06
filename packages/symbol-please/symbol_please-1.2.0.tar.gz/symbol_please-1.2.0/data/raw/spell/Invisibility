@@ -1,0 +1,64 @@
+{{Spellpage|
+
+| spellname = Invisibility
+| spellicon = B
+| description = ''Cloaks your target in a mystic veil, making them invisible to many creatures.''
+
+<br>
+
+* Must grouped with your target.<br>
+* This spell is comparable to the Druid's [[Superior Camouflage]] or the Necromancer's self-only [[Gather Shadows]].
+* Players may see invisible players and NPCs with [[See Invisible]] and similar spells.
+* All forms of invisibility are incompatible with pet ownership, summoned pets will be dismissed and charmed pet will break their charm spell.
+* All un-improved invisibility spells can randomly break early, sometimes mere seconds after casting. As such, invisibility should be treated as a method for mitigating risk of aggro, not eliminating it completely.
+| classes = 
+
+* [[Shaman]] - Level 29
+* [[Wizard]] - Level 16
+* [[Magician]] - Level 8
+* [[Enchanter]] - Level 4
+
+| items_with_effect = 
+
+<ul><li> {{:Cloudy Potion}}
+</li><li> {{:Beguiler's Slippers}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Invisibility(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 30
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 12 minutes @L4 to 20 minutes @L7
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = You vanish.
+| msg_cast_on_other = Someone  fades away.
+| msg_wears_off = You appear.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-2)]] | Library | (1074,-1004) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-6)]] | Necromancer Guild | (2085,-370) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Telor Beteria]] | Magician Guild (Outside) | (703,806) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Tkaz H'Rugla]] | Caster Guild (F1) | (160,-968) }}
+{{SpellWhereRow  | [[Oasis of Marr]] | [[Gadallion]] | Gypsy Camp | (495,0) }}
+{{SpellWhereRowB | [[Paineel]] | [[Nedorl Ipabrun]] | Necromancer Guild | (674,805) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Pai Berenis]] | Caster Guild | (309,-608) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Srell Tumblebrook]] | Building just inside zone | (450,-810) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Xinari Anara]] | Caster Guild (F2) | (138,-755) }}
+}}
+
+}}

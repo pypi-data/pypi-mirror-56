@@ -1,0 +1,41 @@
+{{Velious Era}}
+{{Spellpage|
+
+| spellname = Elemental Maelstrom
+| spellicon = M
+| description = Surrounds your target in an elemental maelstrom, causing 250 damage initially, and 70 damage every six seconds for 36 secs (6 ticks).
+
+| classes = 
+
+* [[Magician]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease HP when cast by 250 }}
+{{SpellSlotRow | 2 | Decrease Hitpoints by 70 per tick }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 240
+| range = 200
+| casting_time = 7.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 6 ticks
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = Your skin tears as bolts of elemental power strike you.
+| msg_cast_on_other = Someone 's skin shreds and tears as bolts of elemental power strike.
+| msg_wears_off = The elemental storm departs.
+
+| where_to_obtain = 
+
+* Drops from Velious Level 30+ Mobs
+
+[[Cobalt Scar]]
+
+* [[a cobalt drake]]
+
+}}

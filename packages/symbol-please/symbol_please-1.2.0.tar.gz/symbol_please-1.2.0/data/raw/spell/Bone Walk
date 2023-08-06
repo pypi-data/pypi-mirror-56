@@ -1,0 +1,54 @@
+{{Spellpage|
+
+| spellname = Bone Walk
+| spellicon = G
+| description = Animates an undead servant from the remnants of the fallen.  Consumes two [[Bone Chips|bone chips]] when cast. The level 6-7 pet max-hits for 10, the level 8 pet max-hits for 12 and the level 9 pet max-hits for 14. Attacks are non-magical.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 15
+* [[Necromancer]] - Level 8
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Skeleton Pet: skel_pet_9_ (Lvl 6-9)}}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 80
+| range =  
+| casting_time = 7.00
+| fizzle_time = 2.25
+| recast_time = 9.50
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Bone Chips]] x2
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  animates an undead servant.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-4)]] | Necromancer Guild | (2099,-393) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Rygle]] | Temple of Terror (East Tower - Top) | (1001,-266) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Sermio Capret]] | Underground | (-70,-259) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Peku Croxe]] | Underground | (-200,-244) }}
+{{SpellWhereRow  | [[Grobb]] | [[Kramf - Troll]] | Shadow Knight Guild | (494,-628) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Camor V'Retta]] | Necromancer Guild (F1) | (1335,-1278) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Misal S'Kor]] | Necromancer Guild (F1) | (1337,-1239) }}
+{{SpellWhereRowB | [[Oggok]] | [[Kramf - Ogre]] | Shadow Knight Guild | (377,17) }}
+{{SpellWhereRow  | [[Paineel]] | [[Dovan Sires]] | Shadow Knight Guild | (901,443) }}
+{{SpellWhereRowB | [[Paineel]] | [[Kilevra Natasu]] | Necromancer Guild | (692,869) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gyrna Porrin]] | Necromancer Guild | (291,-322) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Jexun Elsorg]] | Shadow Knight Guild | (404,-415) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Plight]] | Cubby near PvP Area | (-391,234) }}
+}}
+
+}}

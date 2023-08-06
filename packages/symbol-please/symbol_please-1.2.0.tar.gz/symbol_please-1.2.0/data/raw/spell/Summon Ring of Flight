@@ -1,0 +1,41 @@
+{{Spellpage|
+
+| spellname = Summon Ring of Flight
+| spellicon = L
+| description = Focuses mana into the form of a ring of flight, providing the user with the benefits of levitation.
+
+| classes = 
+
+* [[Magician]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Summoned: Ring of Levitation]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 100
+| range =  
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-12)]] | Library | (1074,-1036) }}
+{{SpellWhereRow  | [[Erudin]] | [[Chembla Ellent]] | Library (F3) | (-1045,-243) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Ash C'Luzz]] | Library (F2) | (917,-1328) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

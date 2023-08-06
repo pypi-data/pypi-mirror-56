@@ -1,0 +1,46 @@
+{{Spellpage|
+
+| spellname = Pouch of Quellious
+| spellicon = L
+| description = Focuses mana into the form of a pouch of Quellious, filled with magical shurikens.
+
+| classes = 
+
+* [[Magician]] - Level 55
+
+| items_with_effect = 
+
+<ul><li> {{:Golden Star Wrist Wraps}}
+</li><li> {{:Grand Master's Wrist Wraps}}
+</li><li> {{:Silver Moon Wrist Wraps}}
+</li><li> {{:White Lotus Wrist Wraps}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Pouch of Quellious (Item)|Pouch of Quellious]]}}
+{{SpellSlotRow | 2 | Summon Item: [[Summoned: Shuriken of Quellious]] }}
+{{SpellSlotRow | 3 | Summon Item: [[Summoned: Shuriken of Quellious]] }}
+{{SpellSlotRow | 4 | Summon Item: [[Summoned: Shuriken of Quellious]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 60
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Kunark Level 50+ Mob Drop
+
+}}

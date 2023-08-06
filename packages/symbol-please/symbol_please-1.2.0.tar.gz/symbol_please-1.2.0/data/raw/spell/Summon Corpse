@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Summon Corpse
+| spellicon = U
+| description = Summons your target's corpse to you. Consumes a [[Jade Inlaid Coffin]] when cast.
+
+| classes = 
+
+* [[Necromancer]] - Level 39
+* [[Shadow Knight]] - Level 51
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Corpse }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 700
+| range =  
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Jade Inlaid Coffin]] 
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from [[The Ishva Mal]] in [[Splitpaw Lair]].
+
+}}
+<onlyinclude><includeonly><div class="hbdiv">[[Summon Corpse]]<span class="hb">{{Itembox
+|itemname    = Spell: Summon Corpse
+|lucy_img_ID = 504
+|statsblock  = 
+}}</span></div></includeonly></onlyinclude>

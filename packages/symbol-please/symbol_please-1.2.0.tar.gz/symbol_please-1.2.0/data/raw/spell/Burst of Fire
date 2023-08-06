@@ -1,0 +1,45 @@
+{{Spellpagesmart|
+
+| spellname = Burst of Fire
+| spellicon = O
+| description = Creates a ball of fire that burns your target.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 15
+* [[Druid]] - Level 5
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 12 @L5 to 15 @L10 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 15
+| range = 200
+| casting_time = 1.75
+| fizzle_time = 2.50
+| recast_time = 2.50
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = You feel your skin singe as the Burst of Fire hits you.
+| msg_cast_on_other = Someone  singes as the Burst of Fire hits them.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Aleena Lightleaf]] | Kelethin Ranger Guild | (-400,490) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Raken]] | Ranger Guild | (106,-94) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

@@ -1,0 +1,46 @@
+{{Spellpage|
+
+| spellname = Invoke Shadow
+| spellicon = G
+| description = Animates an undead servant from the remnants of the fallen.  Consumes bone chips when cast.
+
+| classes = 
+
+* [[Necromancer]] - Level 34
+
+| items_with_effect = 
+
+<ul><li> {{:Wand of Shadow}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Skeleton Pet: skel_pet_29_ }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 340
+| range =  
+| casting_time = 13.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Bone Chips
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  animates an undead servant.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+* This spell is also a random reward from the [[Xelha's Cyclops Eye| Xelha's Cyclops Eye quest]]
+
+
+}}

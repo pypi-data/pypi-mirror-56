@@ -1,0 +1,35 @@
+{{Spellpage|
+
+| spellname = Lure of Ice
+| spellicon = S
+| description = Shards of piercing ice consume your target, causing 825 damage. This damage is much more difficult to resist than most spells.
+
+| classes = 
+
+* [[Wizard]] - Level 60
+
+| slots = 
+
+{{SpellSlotRow | 2 | Decrease Hitpoints by 825 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 320
+| range = 200
+| casting_time = 4.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Cold (-300)
+
+| msg_cast_on_you = You succumb to the lure of ice.
+| msg_cast_on_other = Someone  succumbs to the lure of ice.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from Kunark Level 60+ Mobs
+
+}}

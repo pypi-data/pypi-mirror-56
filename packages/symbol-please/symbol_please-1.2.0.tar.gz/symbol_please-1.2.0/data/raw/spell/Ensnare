@@ -1,0 +1,49 @@
+{{Spellpagesmart|
+
+| spellname = Ensnare
+| spellicon = A
+| description = Entangles your target's feet with magical roots, slowing their movement speed.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 51
+* [[Druid]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Tanglewood Shield}}
+</li><li> {{:Sap Encrusted Branch}}
+</li><li> {{:Spear of Constriction}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 2 | Decrease Movement Speed by 56% | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 35
+| range = 200
+| casting_time = 1.75
+| fizzle_time = 2.25
+| recast_time = 4.00
+| duration = 6.8 minutes @L29 to 13 minutes 6 seconds @L60
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are ensnared.
+| msg_cast_on_other = Someone  has been ensnared.
+| msg_wears_off = You are no longer ensnared.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Firiona Vie]] | [[Raciel Sanherb]] | Outpost | (-3396,3310) }}
+{{SpellWhereRow  | [[Steamfont Mountains]] | [[Crisyn]] | Druid Ring | (-1750,1657) }}
+}}
+| TableLocations = Firiona Vie<br/>Steamfont Mnt
+| TableEra = {{{TableEra|Classic}}}
+}}

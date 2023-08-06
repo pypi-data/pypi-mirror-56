@@ -1,0 +1,35 @@
+{{Spellpage|
+
+| spellname = Abscond
+| spellicon = V
+| description = Teleports you to a relatively safe location in the current zone. See [[Travel Guide#Evacuate_Locations|the travel guide]] for locations.
+
+| classes = 
+
+* [[Wizard]] - Level 52
+
+| slots = 
+
+{{SpellSlotRow | 1 | Evacuate to -1,-1,-1 in same }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 600
+| range =  
+| casting_time = 7.00
+| fizzle_time = 2.25
+| recast_time = 10.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  fades away.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is obtained via quests: [[Wizard Spells (Evil)]] and [[Wizard Spells (Good)]].
+
+}}

@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Harvest
+| spellicon = H
+| description = Gathers ambient mana from your surroundings, replenishing your mana pool. <br> Most wizards give this spell a permanent spot on their spellbars for additional mana recovery during meditation breaks. The long cast time and stun discourage use during battle or kiting.
+
+| classes = 
+
+* [[Wizard]] - Level 34
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Mana by 171 (L34) to 326 (L65) }}
+{{SpellSlotRow | 2 | Stun for 10.0 seconds }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 1
+| range =  
+| casting_time = 10.00
+| fizzle_time = 2.25
+| recast_time = 600.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You gather mana from your surroundings.
+| msg_cast_on_other = Someone  gathers glowing blue strands of mana.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Erudin]] | [[Weltria Ostriss]] | Library (F3) | (-1111,-242) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Jusar V'Lask]] | Library (F1) | (914,-1279) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Serri Moonwatcher]] | Wizard Guild | (441,-450) }}
+}}
+
+}}

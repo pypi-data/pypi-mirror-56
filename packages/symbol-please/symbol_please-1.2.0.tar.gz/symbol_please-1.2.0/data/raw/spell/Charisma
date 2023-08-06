@@ -1,0 +1,41 @@
+:''For the statistic, see [[Statistics#Charisma (CHA)]].''
+{{Spellpage|
+
+| spellname = Charisma
+| spellicon = K
+| description = Fills your target with an alluring aura, increasing their charisma for 1 hour(s) 3.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 49
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase CHA by 40 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 100
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 1 hour 3 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel charismatic.
+| msg_cast_on_other = Someone  looks charismatic.
+| msg_wears_off = Your charisma fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Drekk]] | Temple of Terror (First Floor) | (1026,-214) }}
+{{SpellWhereRow  | [[Halas]] | [[Toralia]] | Shaman Guild | (339,476) }}
+{{SpellWhereRowB | [[Oggok]] | [[Chamt]] | Shaman Guild | (614,1079) }}
+{{SpellWhereRow  | [[Grobb]] | [[Chamt]] | Shaman Guild | (15,-428) }}
+}}
+
+}}

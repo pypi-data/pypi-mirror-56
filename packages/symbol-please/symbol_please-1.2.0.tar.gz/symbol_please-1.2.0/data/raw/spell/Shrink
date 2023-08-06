@@ -1,0 +1,46 @@
+{{Classic Era}}
+{{Spellpage|
+
+| spellname = Shrink
+| spellicon = U
+| description = Shrinks your target, allowing them greater mobility in tight quarters.
+
+| classes = 
+
+* [[Shaman]] - Level 19
+
+| items_with_effect = 
+
+<ul><li> {{:Cobalt Bracer}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Player Size by 34% }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 50
+| range = 200
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel smaller.
+| msg_cast_on_other = Someone  shrinks.
+| msg_wears_off = You return to normal height.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+}}
+
+}}

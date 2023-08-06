@@ -1,0 +1,36 @@
+{{Velious Era}}
+{{Spellpage|
+
+| spellname = Blast of Poison
+| spellicon = N
+| description = Strikes your target with a jet of poisonous acid, causing between 346 and 360 damage.
+
+| classes = 
+
+* [[Shaman]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 372 (L44) to 400 (L54) }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 200
+| range = 200
+| casting_time = 4.50
+| fizzle_time = 2.50
+| recast_time = 4.00
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Poison (0)
+
+| msg_cast_on_you = Your body is wracked by shocks of poison.
+| msg_cast_on_other = Someone  screams in pain.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from Velious Level 30+ Mobs
+
+}}

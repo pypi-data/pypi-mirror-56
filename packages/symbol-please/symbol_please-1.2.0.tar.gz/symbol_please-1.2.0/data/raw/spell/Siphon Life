@@ -1,0 +1,50 @@
+{{Spellpage|
+
+| spellname = Siphon Life
+| spellicon = G
+| description = Drains your target of life energy, siphoning between 65 and 75 hit points. 1.04 health per point of mana (at max effectiveness).
+
+| classes = 
+
+* [[Shadow Knight]] - Level 51
+* [[Necromancer]] - Level 20
+
+| items_with_effect = 
+
+<ul><li> {{:Bone Ring of Condemnation}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 65 (L20) to 75 (L25) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 72
+| range = 200
+| casting_time = 3.10
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Lifetap
+| spell_type = Detrimental
+| resist = Magic (-200)
+
+| msg_cast_on_you = You feel your life force drain away.
+| msg_cast_on_other = Someone  staggers.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-3)]] | Necromancer Guild | (2100,-398) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Lord Vizaroth]] | Temple of Terror (West Tower - Basement) | (1128,-98) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Hundle Quatvel]] | Underground | (-186,-234) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Olak N'Mar]] | Necromancer Guild (F1) | (1337,-1226) }}
+{{SpellWhereRowB | [[Paineel]] | [[Devinious Natasu]] | Necromancer Guild | (675,887) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Vidurlyn Aeminee]] | Necromancer Guild | (308,-306) }}
+{{SpellWhereRowB | [[The Overthere]] | [[Grubmar Hartblak]] | Outpost | (2748,2351) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Pestilence]] | Cubby near PvP Area | (-410,231) }}
+}}
+
+}}

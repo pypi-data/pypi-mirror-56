@@ -1,0 +1,1226 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C ranger.gif|right]]
+The ranger is a hybrid class combining the combat skills of the Warrior, with the magical abilities of a Druid.  
+
+Like a Rogue, Rangers are a lightly armoured offensive class which focuses more on delivering damage than tanking.  In terms of combat skills they can use all types of weapons and get dual wield, double attack, and kick.  They also get a number of defensive skills including dodge, parry, riposte and disarm.  However, because they are Hybrids Rangers learn most of these combat skills a few levels later than pure melee classes.   
+
+Rangers have higher offensive skill caps than any other hybrid class.  However, they are significantly lower in a number of defensive skill areas.  They have a much lower taunt, riposte, disarm, dodge and parry.  Because of this Rangers get hit a lot more, and should not be left to tank for significant periods.  Unlike the Rogue they have no skill to reduce the monsters hate for them and must rely on their magical abilities or their party to reduce the damage inflicted on them.
+
+Rangers get the highest tracking skill in the game, which helps to find people or enemies within the area.  This is particularly useful in the large outdoor zones of Kunark.  
+
+Rangers are one of only two classes that can do critical blows with archery starting at level 17.  However, this skill is only useful in very limited circumstances, and by no means the primary damage dealer for the class.
+
+In terms of magic Rangers get a range of nice utility spells.  They receive both Spirit of Wolf and later Wolf Form itself.  They also get spells to reduce monster frenzy ranges, and this enables them to single pull out of a group.  They have both healing spells and damage shields (the latter of which inflicts unresistable damage).  This is coupled with a solid series of HP and AC increasing buffs, as well as some minor stat buffs.  Damage wise they receive both direct damage and damage over time spells.  They can also snare and root mobs.  You can view the full ranger spell list [http://wiki.project1999.com/Ranger#Spells here].
+
+The major challenge in the ranger class is staying alive.  Rangers can die very easily because of their high damage output and low armour class, hitpoints and defense capabilities. The limited variety in armour can also be frustrating.  Also, despite their magical power they do not have the ability to bind or gate.  This means that Rangers, like any other melee, may have long runs back to their corpses if they die.
+
+If you are looking for a class with decent damage output, the best tracking in the game, and a little bit of magic to spice things up this class could be the one for you.  Just be warned that you will need a lot of patience before you reach Level 60. Also note that rangers have low priority on group invites due to getting overshadowed by other classes. This class is not for the faint of heart but still fun nonetheless.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Ranger || Pathfinder || Outrider || Warder
+|}
+
+=Creation Guide=
+
+==Picking the Right Race==
+
+The first thing you have to pick then is your race.   Which race you pick will determine the foundation of you character for the rest of your life in Norrath so it is kind of important you pick one you like.  
+
+Wood Elves are quite a good race for rangers. They have naturally high agility, and can wear both small and medium armour. They also start with the ability to forage, which can help save a lot of funds at low levels, although all rangers get this skill later in life. Wood Elves also have natural infravision, and start in the tree city of Kelethin. 
+
+Half-Elves are limited to medium sized armour. They are very well balanced, and have slightly better starting stats than the wood elf, though they lack some of the natural abilities. They have the highest natural dexterity of any ranger race, and also have infravision. However, the druid part of a ranger is let down with a low natural wisdom.  Half Elves start in Surefall Glade near Qeynos. 
+
+Human rangers have very balanced stats, across the board. They have the highest natural strength of any ranger race, and all other stats are certainly in an acceptable range. However their natural agility is quite low compared to the other classes.  Humans have no night vision, which is perhaps the largest reason that many people decide against playing a Human Ranger. Rangers do however receive an infravision spell at level 30, and an ultravision spell at level 56.  Human rangers start in Qeynos.
+
+All of the ranger races level at the same rate, and faction wise are all well received in any town with a neutral or good alignment.
+
+[[File:ranger-stats.png]]
+
+==Spending Your Bonus Points==
+
+Rangers have to keep in mind that even though Stamina gives more hit points it is not a huge amount.  It is certainly not going to be enough to make any significant difference between life and death; even at higher levels 10 extra points in Stamina only give 20-30 extra hit points.  Also, while Agility increases armour class, the amount is very minimal (for reference - at level 38 with 190 points in the Defense skill, a +18 Agility buff raises AC by four points).  Rangers are very different to the Shadowknight and Paladin hybrids.  Like a Rogue, they are a lightly armoured offensive class, and may wish to focus on this offensive side rather than attempting to buffer a defensive ability they will never match the other hybrids in.  With this in mind here are some suggested starting statistics:
+
+* Half Elf: Add 20 Strength.
+* Human: Add 15 Strength, 5 Dexterity
+* Wood Elf: Add 20 Strength.
+
+Keep in mind that there is not a total consensus on these numbers. If in doubt, find other rangers and ask them what their suggestions are.
+
+''(This section needs a realistic/modern update for p1999.)''
+
+== Experience Statistics ==
+
+Class experience penalties are no longer in effect on P99 as of [https://www.project1999.com/forums/showthread.php?t=211758 9/21/15]. And since none of the races with an experience penalty can play a Ranger, no matter what race you pick, your ranger will not have an experience penalty no matter what.
+
+==Religion==
+
+Religion does not have a large impact upon the Ranger class.  The two choices are Karana or Tunare (except for Wood Elves who must choose Tunare).  Picking one will not alienate you from another, although only followers of Tunare can equip the [[Helm of the Tracker]].  Choose whichever appeals to you more.
+
+=Spells=
+[[Ranger/Spells|Alternative Spell List]]
+==Level 9==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Endure Fire
+|description=Fire Resist Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Flame Lick
+|description=Fire Based DoT Spell with AC Debuff
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Glimpse
+|description=Zoom Vision
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Lull Animal
+|description=Aggression Range Debuff vs Animals
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Minor Healing
+|description=Healing Spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Skin Like Wood
+|description=AC and Max HP Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Snare
+|description=Movement Speed Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=15
+}}
+</table>
+
+==Level 15==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Burst of Fire
+|description=Single Target Fire Damage (Max: 15)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Camouflage
+|description=Invisibility Buff (works outdoor only)
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Cure Poison
+|description=Cures Poison
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Dance of the Fireflies
+|description=Summon Temporary Item "Firefly Globe"
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Feet like Cat
+|description=Agility Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Grasping Roots
+|description=Root with Magic Based DD Spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Invoke Lightning
+|description=AOE Magic Damage (Max: 25)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=32
+}}
+{{SpellRow
+|name=Thistlecoat
+|description=AC and Damage Shield Buff (self only)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=25
+}}
+</table>
+
+==Level 22==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bind Sight
+|description=Bind Vision with Target
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Endure Cold
+|description=Cold Resist Buff
+|era=Vel.
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Enduring Breath
+|description=Underwater Breathing Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Firefist
+|description=ATK Buff (self only)
+|era=Vel.
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Harmony
+|description=AoE Aggression Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Ignite
+|description=Single Target Fire Damage (Max: 37)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Light Healing
+|description=Healing Spell (Max: 33)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Panic Animal
+|description=Fear Debuff vs Animals
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Skin Like Rock
+|description=AC and Max HP Buff with Healing Spell
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Ward Summoned
+|description=Single Target Magic Damage vs Summoned (Max: 41)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+</table>
+
+==Level 30==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Barbcoat
+|description=AC and Damage Shield Buff (self only)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Cancel Magic
+|description=Buff Removal Spell
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Eyes of the Cat
+|description=Infravision Buff (self only)
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Invigor
+|description=Short Duration Endurance Regen Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Shield of Thistles
+|description=Damage Shield Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Stinging Swarm
+|description=Magic Based DoT Spell
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=65
+}}
+{{SpellRow
+|name=Strength of Earth
+|description=Strength Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Spirit of Wolf
+|description=Movement Speed Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+</table>
+
+==Level 39==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bramblecoat
+|description=AC and Damage Shield Buff (self only)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Call of Sky
+|description=Enchant Weapon with Stun and Damage proc (self only)
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Calm Animal
+|description=Aggression Range Debuff vs Animals
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=45
+}}
+{{SpellRow
+|name=Careless Lightning
+|description=Magic Based DD Spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Dismiss Summoned
+|description=Magic Based DD Spell vs Summoned
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Healing
+|description=Healing Spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Levitate
+|description=Levitate Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=See Invisible
+|description=See invisible players/creatures
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=?
+}}
+{{SpellRow
+|name=Skin Like Steel
+|description=AC and Max HP Buff with Healing Spell
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=100
+}}
+</table>
+
+==Level 49==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Call of Flame
+|description=Fire Based DD Spell
+|era=&nbsp;
+|school=Evo.
+|location=Quest.
+|mana=125
+}}
+{{SpellRow
+|name=Ensnaring Roots
+|description=Root with Magic Based DD Spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Immolate
+|description=Fire Based DoT Spell with AC Debuff
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Resist Fire
+|description=Fire Resist Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Shield of Brambles
+|description=Damage Shield Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Spikecoat
+|description=Self Only AC and Damage shield
+|era=&nbsp;
+|school=Abj.
+|location=Butcher.
+|mana=110
+}}
+{{SpellRow
+|name=Superior Camouflage
+|description=Invisibility Buff (works both outdoor and indoor)
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Wolf Form
+|description=Turn into a wolf with Movement Speed and ATK Buff (self only)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+</table>
+
+==Level 50==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Call of Earth
+|description=Long Duration AC and Damage Shield Buff
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=50
+}}
+</table>
+
+==Level 51==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Ensnare
+|description=Movement Speed Debuff
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Jolt
+|description=Magic Based Hate Reducer
+|era=Kun.
+|school=Alt.
+|location=Firiona Vie.
+|mana=60
+}}
+{{SpellRow
+|name=Strength of Nature
+|description=ATK and Max HP Buff
+|era=Vel.
+|school=Abj.
+|location=Kelethin.
+|mana=125
+}}
+</table>
+
+==Level 52==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Extinguish Fatigue
+|description=Restore Endurance
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Firestrike
+|description=Fire Based DD Spell
+|era=Kun.
+|school=Evo.
+|location=Vendor.
+|mana=155
+}}
+</table>
+
+==Level 53==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Storm Strength
+|description=STR Buff
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=85
+}}
+</table>
+
+==Level 54==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Drones of Doom
+|description=Magic Based DoT Spell
+|era=Kun.
+|school=Con.
+|location=Vendor.
+|mana=141
+}}
+{{SpellRow
+|name=Skin Like Diamond
+|description=AC and Max HP Buff with Healing Spell
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=200
+}}
+</table>
+
+==Level 55==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Call of Fire
+|description=Enchant Weapon with Damage proc (self only)
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=50
+}}
+{{SpellRow
+|name=Chloroplast
+|description=HP Regen Buff
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Cinder Jolt
+|description=Fire Based Hate Reducer
+|era=Vel.
+|school=Alt.
+|location=E. Com.
+|mana=60
+}}
+{{SpellRow
+|name=Resist Cold
+|description=Cold Resist Buff
+|era=Vel.
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+</table>
+
+==Level 56==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Chill Sight
+|description=Ultravision Buff (self only)
+|era=Kun.
+|school=Div.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Greater Wolf Form
+|description=Turn into a wolf With Movement Speed and ATK Buff (self only)
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=90
+}}
+</table>
+
+==Level 57==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Greater Healing
+|description=Healing Spell
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+</table>
+
+==Level 58==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Nullify Magic
+|description=Buff Removal Spell
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Shield of Spikes
+|description=Damage Shield Buff
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=100
+}}
+</table>
+
+==Level 59==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Calefaction
+|description=Fire Based DD Spell
+|era=Kun.
+|school=Evo.
+|location=Firiona Vie.
+|mana=250
+}}
+{{SpellRow
+|name=Skin Like Nature
+|description=AC and Max HP and HP Regen Buff with Healing Spell
+|era=Kun.
+|school=Evo.
+|location=Lavastorm.
+|mana=300
+}}
+</table>
+
+==Level 60==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+<tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Call of the Predator
+|description=Group ATK Buff
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=200
+}}
+{{SpellRow
+|name=Enveloping Roots
+|description=Root with Magic Based DD Spell
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Thorncoat
+|description=AC and Damage Shield Buff (self only)
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=175
+}}
+</table>
+
+=Skills=
+
+==Combat Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[1 Hand Blunt]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">250</td>
+	</tr>
+
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[1 Hand Slashing]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">250</td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[2 Hand Blunt]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">245</td>
+	</tr>
+
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[2 Hand Slashing]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">240</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Archery]]</td>
+		<td align="center" width="20%">210</td>
+		<td align="center" width="25%">240</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Bind Wound]]</td>
+		<td align="center" width="20%">100</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Defense]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Hand to Hand]]</td>
+		<td align="center" width="20%">100</td>
+		<td align="center" width="25%">100</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Offense]]</td>
+		<td align="center" width="20%">210</td>
+		<td align="center" width="25%">240</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>[[Piercing]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">240</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Taunt]]</td>
+		<td align="center" width="20%">150</td>
+		<td align="center" width="25%">150</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>[[Throwing]]</td>
+		<td align="center" width="20%">113</td>
+		<td align="center" width="25%">113</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">5</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Kick]]</td>
+		<td align="center" width="20%">149</td>
+		<td align="center" width="25%">205</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">8</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Dodge]]</td>
+		<td align="center" width="20%">137</td>
+		<td align="center" width="25%">170 [http://www.project1999.org/forums/showthread.php?t=84308]</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">17</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Dual Wield]]</td>
+		<td align="center" width="20%">210</td>
+		<td align="center" width="25%">240</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">18</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Parry]]</td>
+		<td align="center" width="20%">185</td>
+		<td align="center" width="25%">220 [http://www.project1999.org/forums/showthread.php?t=84308]</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">20</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Double Attack]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">35</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Disarm]]</td>
+		<td align="center" width="20%">55</td>
+		<td align="center" width="25%">55</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">35</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Riposte]]</td>
+		<td align="center" width="20%">150</td>
+		<td align="center" width="25%">150</td>
+	</tr>
+</table>
+
+==Casting Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">9</td>
+		<td align="center" width="10%">Yes</td>
+		<td>[[Abjuration]]</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">9</td>
+		<td align="center" width="10%">Yes</td>
+		<td>[[Alteration]]</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr><td align="center" width="10%">9</td>
+		<td align="center" width="10%">Yes</td>
+		<td>[[Channelling]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">215</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">9</td>
+		<td align="center" width="10%">Yes</td>
+		<td>[[Conjuration]]</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">9</td>
+		<td align="center" width="10%">Yes</td>
+		<td>[[Divination]]</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">9</td>
+		<td align="center" width="10%">Yes</td>
+		<td>[[Evocation]]</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">11</td>
+		<td align="center" width="10%">Yes</td>
+		<td>[[Meditate]]</td>
+		<td align="center" width="20%">185</td>
+		<td align="center" width="25%">226</td>
+	</tr>	
+</table>
+
+==Miscellaneous Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Alcohol Tolerance]]</td>
+		<td align="center" width="20%">255</td>
+		<td align="center" width="25%">255</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Beg]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Fishing]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Sense Heading]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Swimming]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>[[Track]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">3</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Forage]]</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">10</td>
+		<td align="center" width="10%">Yes</td>
+		<td>[[Sneak]]</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">25</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>[[Hide]]</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+</table>
+
+= Disciplines =
+Ranger disciplines were introduced with the Velious expansion; they offer short term advantages with a long re-use: These are most useful in dragon/boss encounters.
+
+{{#lsth:Disciplines|[[Ranger]]}}
+
+= Ranger-Specific Quests =
+
+{{#lsth:Class Race Quest List|Ranger}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+Check [[:Category:Ranger Equipment | Ranger Equipment]] for the full list of gear usable by rangers.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Ranger]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Ranger]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Ranger]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Ranger]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Ranger]]}}
+
+=FAQ=
+'''Q:	Does a ranger ever get to critical hit? I am able to critcal with the bow occasionally, but never with my 1hs/2hs.'''
+
+A:	Ranger's can only get critical hits with a bow. A higher DEX will increase the chance of getting a critical hit and increase the damage dealt with a ranged attack.
+ 
+
+'''Q:	What level do you suggest doing the ivy etched armor quest? And how difficult is it?'''
+
+A:	There are different Ivy Etched armor quests, each with different level NPC's you have to fight in order to obtain the items needed. The easiest and lowest level Ivy quest being the bracers, (which you can be complete easily in your 20's in a group), and hardest being the tunic/leggings, (which can be done solo in your 40's).
+
+
+'''Q:   I cant scribe low level Velious spells! Halp!'''
+
+A:      A lot of spells were added later on in Velious during live such as Panic Animal and Firefist, and as such might be unlocked later in Velious in p99
+ 
+
+'''Q:	Do Rangers get the ability to summon animals?'''
+
+A:	Unless you have an item that has the effect of summoning an animal, nope.
+ 
+
+'''Q:	What does increasing your level in tracking do?'''
+
+A:	It increases the range of your tracking.
+ 
+
+'''Q:	I forgot what is needed for the trueshot longbow quest, I thought it was a spiderling eye, something from a robot spider, and I had to talk to 2 other people for something. Could you please tell me who/what to get what items from?'''
+
+A:	<ol><li>Spiderling silk from Spiderlings.</li>
+<li>A Micro Servo, which can be obtained from rogue Clockworks in Steamfont.</li>
+<li>Dwarven wire from Tratnor Everhot, who gives you a quest to get some Tumpy Tonics.</li>
+<li>Treant wood. Jyle Windshot in west freeport in the bar gives it out in exchange for small lanterns, which can be bought in east freeport.</li>
+</ol>
+
+Combine the items in the container Maesyn gave you and return it to him. In return, he will give a Treantwood Bowstave. Ask him how to assemble the bow. You'll need a high Fletching skill to make the Trueshot.
+ 
+
+'''Q:	Do rangers ever learn to track their corpse or the corpse of other player characters?'''
+
+A:	You can track other character corpses only if they are in your group, and they have died while your in the same zone. Their corpse will stay on your tracking until they zone back in.
+ 
+
+'''Q:	What cities are the ranger guilds located? Are the guilds the only place a ranger can go to practice and buy spells?'''
+
+A:	Surefall Glade, Kelethin and FV are the only cities a ranger can practice with their guilds. A single trainer named [[Morin Shadowbane]] is also available in Kithicor Woods.  A large portion of ranger spells are also druid spells, which are available throughout Norrath at druid guilds and rings.
+
+
+'''Q:	How does a ranger make arrows and at what level are they effective?'''
+
+A:	You first need a fletching kit, a point, shaft, nock, and fletch. Fletching uses... the fletching skill. Put one of each component into the fletching kit and hit combine and hope that it works. It's good to practice your archery skill so you can pull effectively with it.
+ 
+
+'''Q:	Would a Ranger get less experience if they are in Wolf Form?'''
+
+A:	Nope, experience stays the same.
+
+=Ranger Song Parodies=
+
+Sung to the tune of "Staying Alive"
+
+
+Well, you can tell by the way my hitpoints go,
+
+I'm a ranger man: AC's too low.
+
+My blades are sharp and shields are scorned,
+
+I've been tankin' mobs since I was born.
+
+
+And now it's all right - it's okay.
+
+And I may snare and run away.
+
+You can try - to understand -
+
+why mobs only hit a ranger man.
+
+
+If you are in danger and if you're not a ranger,
+
+You're stayin alive, stayin' alive.
+
+Feel my bones a-breakin'
+
+and my ivy helm a-shakin'
+
+and you're stayin' alive, stayin' alive.
+
+
+Ah, ha, ha, ha, stayin' alive, stayin alive.
+
+Ah, ha, ha, ha, stayin' alive, stayin alive.
+
+STAYIN ALIIIIIIIIIVE... yeah!
+
+
+Well now, I get spanked or I get beat
+
+But if I don't get either it's really neat.
+
+Got low delay blades in each fist
+
+I'm a dual-wield man - and I get mobs pissed.
+
+
+You know it's all right, it's okay.
+
+I'll get my corpse another day.
+
+You can try - to understand -
+
+why you chain-heal a ranger man.
+
+
+If you are in danger and if you're not a ranger,
+
+You're stayin alive, stayin' alive.
+
+Feel my bones a-breakin' and my ivy helm a-shakin'
+
+and you're stayin' alive, stayin' alive.
+
+
+Ah, ha, ha, ha, stayin' alive, stayin alive.
+
+Ah, ha, ha, ha, stayin' alive, stayin alive.
+
+
+STAYIN ALIIIIIIIIIVE... yeah!
+
+
+Life goin' quickly. Somebody heal me.
+
+Somebody heal me, yeah.
+
+Life goin' quickly. Somebody heal me, yeah.
+
+
+Stayin' Alive --- (to beginning and fade... Well, you can tell.... )
+
+{{Template: Navbox Classes}}

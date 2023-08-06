@@ -1,0 +1,1962 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C wizard.gif|right]]
+Wizards dedicate their lives to learning the powers of fire, ice, and magic; channeling their knowledge into ever more destructive spells to unleash upon their enemies. Wizards are primarily a magic-using class, with the ability to wear cloth armor and wield blunt weapons and daggers.
+
+Wizards are the most single-minded of spell casters, with the majority of their spells dedicated to delivering massive amounts of damage as rapidly as possible. To aid in their constant search for power, wizard have also perfected the art of teleportation - allowing them to instantly transport themselves and their allies to the most remote corners of Norrath and beyond.
+
+Wizards are a tightly focused class, gaining the greatest ability to deal magical damage in exchange for limited variety in their spell selection. Wizards are capable adventurers solo once they are able to quad kite at level 29. Wizard generally get left out of groups among min maxers due to Wizards suffering mana issues with fast killing groups. Ironically the worse a group is the more a Wizard excels, since they are able to meditate more often and therefore contribute. Play Wizard if you value burst damage and prefer to solo and/or raid.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Wizard || Channeler || Evoker|| Sorcerer
+|}
+
+= Creation Guide =
+ 
+== Statistics ==
+
+'''Strength:''' Strength determines how much you can carry.  It influences maximum and average damage and how quickly you learn many offensive skills.  Wizards do not get any strength increasing spells, and generally do not get weight decreasing containers for some time either.  It may be worth putting a few small bonus points into strength if you do not wish to visit vendors and banks on a regular basis to offload heavy items and coin.
+
+'''Stamina:''' Stamina affects how many hit points you have, and how long you can hold your breath.  It also affects how long you can swing weapons before tiring, and how often you can jump before becoming exhausted.  Wizards do not benefit from stamina as much as melee or priest classes do, and points put into stamina will amount to only a small hitpoints boost at high levels (see [[Game_Mechanics#Hitpoints_Calculation_from_STA_and_Level]]).
+
+'''Agility:''' Agility affects how quickly you can learn some defensive skills, how difficult it is to hit you as well as how much damage you take when you are hit.  The true effect of Agility is often debated.  Wizards do not have many hitpoints, or a high AC.  If they get hit it is usually for maximum damage.  Agility may help in defraying this, but it is a secondary stat.  Generally you want to avoid even the possibility of being hit, at which point Agility would have no use whatsoever. Unless you know what you are doing, do not put bonus points into Agility (an exception being the Erudite wizard, who may wish to put in 5 points to get agility to 75).
+
+'''Dexterity:''' Dexterity affects how quickly you learn weapon skills, how often weapons will process their special effects.  Since you won't rely on melee after your first few levels, you should not put points into this skill at creation.  
+
+'''Wisdom:''' Wisdom affects the amount of mana the priest classes have, also rangers and paladins.   It also affects how quickly you can learn many skills if your wisdom is higher than your Intelligence.  This skill has absolutely no relevance for the Wizard class and bonus points should not be put into it.
+
+'''Intelligence:''' Intelligence directly affects how quickly you can learn most skills.  It affects the amount of mana for bards and all pure casters, as well as shadow knights.  It is the core statistic for Wizards and most of your bonus points should be allocated here.  Whilst some people may say it is easy to reach the soft cap of 200 intelligence through the many bonus items in the game, this is one stat which you can never have enough of.  Once you reach 200 intelligence you can then free up slots for other stat enhancers such as for hitpoints, direct mana, AC, or charisma.
+
+'''Charisma:''' This affects the amount you will be charged for goods by NPC merchants, and how much they will pay you.  It also affects the saving throw on certain Bard and Enchanter spells (charms in particular).  This will impact upon the costs incurred when purchasing expensive travelling or shielding components , but often you can get a Charisma buff from a friend to help with this.  It is not advised to put points in this statistic at creation.
+
+== Picking the Right Race ==
+
+The first thing you have to pick then is your race.   Which race you pick will determine the foundation of you character for the rest of your life in Norrath so it is kind of important you pick one you like.  
+
+Wizards must choose one of five races, and a wizard's main stat is intelligence. [[Erudite|Erudites]] have the highest base intelligence, but suffer from night-blindness (a minor consideration with the Titanium EQ client).  [[Gnome|Gnomes]] and [[Dark Elf|Dark Elves]] are roughly tied for the second highest base intelligence. [[Dark Elf|Dark Elves]] are often killed on sight, but benefit from ultravision and the ability to hide, which is the only unique skill among wizard races.  [[High Elf|High Elves]] have reasonably high intelligence and the highest base charisma which can help slightly with vendor pricing. [[Human|Humans]] have the lowest intelligence and night-blindness, but have the most rounded stats and the highest strength, which can help you carry extra loot early in the game.
+
+Ultimately, however, a wizard's effectiveness is determined by total mana (for maximum burst damage and useful for quadding) and mana regen rate (for long-term sustained dps). Because intelligence gear is easily obtained and because all races regenerate mana at the same rate, no one race is substantially superior to another. Choosing the race you enjoy the look of most should be your primary concern.
+
+{| class="eoTable3" style="white-space: nowrap;"
+|-
+! Race
+! Alignment
+! Starting City
+! Racial(s)
+! Size
+! Deity Choices
+|-
+| [[Dark_Elf|Dark Elves]] || Evil    || [[Neriak]]               || [[Hide]], [[#Ultravision|Ultravision]]                      || Medium, Small || [[Agnostic]], [[Innoruuk]], [[Solusek Ro]]
+|-
+| [[Erudite]]s            || Neutral || [[Erudin]], [[Paineel]]  || -5 Disease Resist, +5 Magic Resist                          || Medium        || [[Agnostic]], [[Prexus]], [[Quellious]], [[Solusek Ro]]
+|-
+| [[Gnome]]s              || Neutral || [[Ak'Anon]]              || [[Skill Tinkering|Tinkering]], [[#Infravision|Infravision]] || Small         || [[Agnostic]], [[Bertoxxulous]], [[Brell Serilis]], [[Solusek Ro]]
+|-
+| [[High_Elf|High Elves]] || Good    || [[Felwithe]]             || [[#Infravision|Infravision]]                                || Medium, Small || [[Agnostic]], [[Erollisi Marr]], [[Karana]], [[Mithaniel Marr]], [[Solusek Ro]], [[Tunare]]
+|-
+| [[Human]]s              || Neutral || [[Freeport]], [[Qeynos]] || +5 Fire Resist                                              || Medium        || [[Agnostic]], [[Bertoxxulous]], [[Erollisi Marr]], [[Innoruuk]], [[Karana]], [[Mithaniel Marr]], [[Rodcet Nife]], [[Solusek Ro]]
+|}
+
+
+== Starting Statistics ==
+
+[[File:wizard-stats.png]]
+
+== Suggested Starting Statistics ==
+
+It is very easy to assign yourself the wrong statistics and regret it for the rest of you characters career.  Wizards are primarily about mana, and our suggested allocation of bonus points reflects this:
+
+* For Dark Elves add 25 Intelligence and 5 Strength.
+* For Erudites add 25 Intelligence and 5 Strength or 5 Agility.
+* For Gnomes add 25 Intelligence and 5 Strength.
+* For High Elves add 25 Intelligence and 5 Strength.
+* For Humans add 25 Intelligence and 5 Strength.
+
+== Experience Statistics ==
+
+'''Update:''' As of the January 2001 timeline patch, the -10% class Experience Mod was removed (September 21, 2015).
+
+== Religion ==
+
+Generally speaking being agnostic is a fairly safe bet in Everquest.  Religion serves only to get you into trouble in many situations.  The disadvantage to doing this is that some items and some quests can only be done by followers of certain religions.  Following a religion will at worst get you killed in some areas, but generally you can avoid these.  Following [[Innoruuk]] is probably the most dangerous religion as they have the most places in the game where they are Kill on Sight.  In the end it will not make an enormous difference to your character which Deity you choose.
+
+<table border="0" cellpadding="0" cellspacing="15">
+<tr><td style="vertical-align:top;">
+
+<big>'''Solusek Ro'''</big>
+<ul><li>{{:Idol of Solusek Ro}}
+</li><li>{{:Imbued Silver Fire Ring}}
+</li><li>{{:Imbued Electrum Fire Ring}}
+</li><li>{{:Imbued Golden Fire Ring}}
+</li><li>{{:Imbued Platinum Fire Ring}}
+</li></ul>
+
+</td><td style="vertical-align:top;">
+
+<big>'''Bertoxxulous'''</big>
+<ul><li>{{:Idol of Bertoxxulous}}
+</li><li>{{:Imbued Black Sapphire Silvered Necklace}}
+</li><li>{{:Imbued Black Sapphire Electrum Earring}}
+</li><li>{{:Imbued Golden Black Sapphire Earring}}
+</li><li>{{:Imbued Black Sapphire Platinum Necklace}}
+</li></ul>
+
+</td><td style="vertical-align:top;">
+
+<big>'''Innoruuk'''</big>
+<ul><li>{{:Idol of Innoruuk}}
+</li><li>{{:Imbued Silvered Sapphire Necklace}}
+</li><li>{{:Imbued Sapphire Electrum Earring}}
+</li><li>{{:Imbued Golden Sapphire Earring}}
+</li><li>{{:Imbued Sapphire Platinum Necklace}}
+</li></ul>
+
+</td><td style="vertical-align:top;">
+
+<big>'''Tunare'''</big>
+<ul><li>{{:Visage of Life}}
+</li></ul>
+
+</td></tr></table>
+
+=Spells=
+
+	
+==Level 1==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Frost Bolt
+|description=Cold Projectile Direct Damage (Max: 7; 0.7 DPM)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Minor Shielding
+|description=Self Only HP and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Numbing Cold
+|description=Point Blank Area Effect Cold Direct Damage (Max: 7)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=13
+}}
+{{SpellRow
+|name=Shock of Frost
+|description=Cold Based Direct Damage Spell (Max: 6; 0.75 DPM)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=8
+}}
+{{SpellRow
+|name=Sphere of Light
+|description=Summons a lightstone that illuminates at about the same as a fire beetle eye.
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=True North
+|description=Self Only Navigation Spell
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+</table>
+
+==Level 4==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Fade
+|description=Self Only Short Distance Teleport
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Gate
+|description=Return to Your Bind Point
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Glimpse
+|description=Self Only Vision Magnification (Max: 55%)
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Icestrike
+|description=Area Effect Ice Rain Damage (Max: 10)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=O'Keils Radiation
+|description=A fire based damage shield, cast it on your friends to damage foes that hit them.
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Root
+|description=Single Target Fast Root Spell (Max: 48 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=See Invisible
+|description=Single Target Vision Enhancer
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Shock of Fire
+|description=Fire based direct damage spell. (13-16 damage; 0.87-1.07 DPM) 
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=15
+}}
+</table>
+
+==Level 8==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Column of Frost
+|description=First Quad kiting spell. Area Effect Cold Based Direct Damage (Max: 31 per mob)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=39
+}} 
+{{SpellRow
+|name=Eye of Zomm
+|description=Summon an Eye for Scouting
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Fingers of Fire
+|description=Point Blank Area Effect Fire Direct Damage (Max: 28)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=47
+}}
+{{SpellRow
+|name=Fire Bolt
+|description=Fire Projectile Direct Damage (Max: 51)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Lesser Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Sense Summoned
+|description=Will target the nearest summoned creature around you
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Shadow Step
+|description=Self Only Random Teleport
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Shock of Ice
+|description=Cold based Direct Damage spell. (34@8-38@12 damage; 1.13-1.26 DPM) 
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+</table>
+
+==Level 12==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bind Affinity
+|description=Set a New Home Point for Target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Cancel Magic
+|description=Single Target Magic Effect Debuffer
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Firestorm
+|description=Area Effect Fire Rain Damage (Max: 28)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=62
+}}
+{{SpellRow
+|name=Frost Spiral of Al'Kabor
+|description=Area Effect Cold Based Direct Damage - Usable to quad (Max: 44)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Gaze
+|description=Self Only Vision Magnification (Max: 50%)
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Halo of Light
+|description=Self Only Headband Lightsource
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Resistant Skin
+|description=Increase Poison and Disease Resistance by 15 each
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Shock of Lightning
+|description=Single Target Magic based Direct Damage spell (Max: 83) and small pushback
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=60
+}}
+</table>
+
+==Level 16==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bind Sight
+|description=See through the targets eyes
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Flame Shock
+|description=Single Target Fire Direct Damage (Max: 110)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Heat Sight
+|description=Self Only Infravision
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Identify
+|description=Identifies a Lore Item
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Invisibility
+|description=Single Target Invisibility
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Lightning Bolt
+|description=Single Target Magic Based Bolt (Max: 125)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=85
+}}
+{{SpellRow
+|name=Pillar of Fire
+|description=Quad kiting spell. Targeted Area effect fire based direct damage spell.
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=84
+}}
+{{SpellRow
+|name=Project Lightning
+|description=Area Effect Magic Based Point Blank Direct Damage Spell.
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=85
+}}
+{{SpellRow
+|name=Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Shieldskin
+|description=Self Buff Damage Absorber (Max: 55)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=41
+}}
+</table>
+
+==Level 20==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Elemental Shield
+|description=Self Only Fire and Cold Resistance Buff (Max: 15)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Enstill
+|description=Single Target Root Spell (Max: 96 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Fay Gate
+|description=Teleports you to [[Greater Faydark]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Fire Spiral of Al'Kabor
+|description=Ranged Area Effect Fire Based Direct Damage (Max: 76)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=150
+}}
+{{SpellRow
+|name=Force Shock
+|description=Single Target Magical Direct Damage (Max: 179) and interrupt stun
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=North Gate
+|description=Teleports you to [[Northern Plains of Karana]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Sight
+|description=Magnifies your view.
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Tishan's Clash
+|description=Small Single Target Magical Direct Damage (Max: 50) and 5 second stun.
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=65
+}}
+{{SpellRow
+|name=Tox Gate
+|description=Teleports you to [[Toxxulia Forest]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+</table>
+
+==Level 24==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cast Force
+|description=Point Blank Area Effect Magic Direct Damage (Max: 101)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=123
+}}
+{{SpellRow
+|name=Cazic Gate
+|description=Self Only gate to the [[Temple of Cazic Thule|Cazic Thule (Zone)]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Column of Lightning
+|description=Quad Kiting Area Effect Fire Based Direct Damage (Max: 136)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=130
+}}
+{{SpellRow
+|name=Combine Gate
+|description=Self only gate to [[Dreadlands]]
+|era=Kun.
+|school=Alt.
+|location=Sol. Ro.
+|mana=150
+}}
+{{SpellRow
+|name=Common Gate
+|description=Teleports you to [[West Commonlands]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Frost Shock
+|description=Single Target Cold Direct Damage (Max: 187)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=110
+}}
+{{SpellRow
+|name=Leatherskin
+|description=Self Only Damage Absorption (Max: 118)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=83
+}}
+{{SpellRow
+|name=Levitate
+|description=Single Target Levitation Spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Lightning Storm
+|description=Area Effect Magic Rain Damage (Max: 75)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=137
+}}
+{{SpellRow
+|name=Major Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Nek Gate
+|description=Self Only Teleport to [[Nektulos Forest]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Ro Gate
+|description=Teleports you to [[North Ro]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=West Gate
+|description=Teleports you to [[Western Karana]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+</table>
+
+==Level 29==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bonds of Force
+|description=Area Effect Snare Spell. Hits 4 mobs max.
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Energy Storm
+|description=Area Effect Magical Rain Damage (Max: 96)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=162
+}}
+{{SpellRow
+|name=Evacuate: North
+|description=Evacuates the Group to [[North Karana]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Fay Portal
+|description=Teleports the Group to [[Greater Faydark]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Imbue Fire Opal
+|description=Create an Imbued Fire Opal
+|era=&nbsp;
+|school=Alt.
+|location=Nagafen's Lair.
+|mana=200
+}}
+{{SpellRow
+|name=Inferno Shock
+|description=Single Target Fire Based Direct Damage (Max: 250)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=135
+}}
+{{SpellRow
+|name=Magnify
+|description=Self Only Zoom and Ultravision
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=North Portal
+|description=Teleports group to [[North Karana]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Shock Spiral of Al'Kabor
+|description=Magic based Area effect Direct damage spell (Max: 118)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Thunder Strike
+|description=Single target Electrical Attack (Max: 263) and interrupt stun
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Tox Portal
+|description=Teleports the group to [[Toxxulia Forest]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Yonder
+|description=Personal short distance teleport
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=15
+}}
+</table>
+
+==Level 34==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cazic Portal
+|description=Teleports the group to [[Temple of Cazic Thule|Cazic Thule (Zone)]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Force
+|description=Quad kiting spell. Targeted Area Effect Fire Based Direct Damage (Max: 216)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=175
+}}
+{{SpellRow
+|name=Combine Portal
+|description=Teleports the group to [[Dreadlands]]
+|era=Kun.
+|school=Alt.
+|location=N.Karana.
+|mana=300
+}}
+{{SpellRow
+|name=Evacuate: Fay
+|description=Evacuates the Group to [[Greater Faydark]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Greater Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Harvest
+|description=Self Only Mana Boost (Max: 301)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=1
+}}
+{{SpellRow
+|name=Ice Shock
+|description=Single Target Cold Direct Damage (Max: 320)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=160
+}}
+{{SpellRow
+|name=Iceclad Gate
+|description=Self Only Gate to [[Iceclad Ocean]]
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Iceclad Portal
+|description=Group Gate to [[Iceclad Ocean]]
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Lava Storm
+|description=Area Effect Fire Rain Damage (Max: 128)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Nek Portal
+|description=Teleports the group to [[Nektulos Forest]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Nullify Magic
+|description=Single Target Magic Effect Debuffer
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=O'Keils Flickering Flame
+|description=Single Target Fire Based Damage Shield (Max: 5)
+|era=Vel.
+|school=Abj.
+|location=Vendor.
+|mana=115
+}}
+{{SpellRow
+|name=Steelskin
+|description=Protects self from damage(230hp max)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=130
+}}
+{{SpellRow
+|name=Thunderclap
+|description=Point Blank Area Effect Lightning attack and stun
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=175
+}}
+</table>
+
+==Level 39==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Chill Sight
+|description=Self Only Ultravision
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Common Portal
+|description=Teleports the Group to [[West Commonlands]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Concussion
+|description=Single Target Hate Reducer
+|era=Kun.&nbsp;
+|school=Alt.
+|location=Quest.
+|mana=25
+}}
+{{SpellRow
+|name=Evacuate: Ro
+|description=Teleports the Group to [[South Ro]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Force Spiral of Al'Kabor
+|description=Area Effect Magical Based Direct Damage (Max: 172)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=250
+}}
+{{SpellRow
+|name=Great Divide Portal
+|description=Group Gate to Great Divide on Velious.
+|era=Vel.
+|school=Alt.
+|location=[[Skyshrine]]
+|mana=300
+}}
+{{SpellRow
+|name=Immobilize
+|description=Single Target Root Spell (Max: 60 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Invisibility to Undead
+|description=Self Only Invisibility Against Undead NPC's.
+|era=Vel.
+|school=Div.
+|location=NPC Drop.
+|mana=100
+}}
+{{SpellRow
+|name=Lightning Shock
+|description=Single Target Magic Based DD (Max: 405)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=180
+}}
+{{SpellRow
+|name=Markar's Relocation
+|description=Evac to [[Emerald Jungle]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Ro Portal
+|description=Teleports the group to [[North Ro]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Shifting Sight
+|description=See through the targets eyes with Infravision.
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Tishan's Relocation
+|description=Evac to [[Skyfire Mountains]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Translocate: Combine
+|description=Single Target teleport to the [[Dreadlands]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+{{SpellRow
+|name=Translocate: Fay
+|description=Single Target teleport to [[Greater Faydark]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+{{SpellRow
+|name=Translocate: North
+|description=Single Target teleport to [[North Karana]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+{{SpellRow
+|name=Translocate: Tox
+|description=Single Target teleport to [[Toxxulia Forest]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+
+{{SpellRow
+|name=West Portal
+|description=Teleports the group to [[Western Karana]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+</table>
+
+==Level 44==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Arch Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Cobalt Scar Portal
+|description=Group Gate to [[Cobalt Scar]]
+|era=Vel.
+|school=Alt.
+|location=[[Skyshrine]]
+|mana=300
+}}
+{{SpellRow
+|name=Conflagration
+|description=Single Target Fire Based Direct Damage (Max: 625)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=250
+}}
+{{SpellRow
+|name=Diamondskin
+|description=Self Only Damage Absorption (Max: 394)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=236
+}}
+{{SpellRow
+|name=Elemental Armor
+|description=Self Only Fire and Cold Resistance Buff (Max: 30)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Enticement of Flame
+|description=Single Target Low Resistance Fire Direct Damage (Max: 360)
+|era=Vel.
+|school=Evo.
+|location=NPC Drop.
+|mana=240
+}}
+{{SpellRow
+|name=Evacuate: Nek
+|description=Evacuates Group to [[Nektulos Forest]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Force Strike
+|description=Magical Direct Damage (Max: 625) and interrupt stun
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=250
+}}
+{{SpellRow
+|name=Frost Storm
+|description=Area Effect Cold Rain Damage (Max: 250)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=312
+}}
+{{SpellRow
+|name=Gravity Flux
+|description=Ranged Area Effect Direct Damage and Vertical Launch (Max: 330)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=337
+}}
+{{SpellRow
+|name=Translocate: Cazic
+|description=Single Target Teleport to [[Temple of Cazic Thule|Cazic Thule (Zone)]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+{{SpellRow
+|name=Translocate: Common
+|description=Single Target Teleport to [[West Commonlands]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+{{SpellRow
+|name=Translocate: West
+|description=Single Target Teleport to [[Western Karana]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+{{SpellRow
+|name=Translocate: Nek
+|description=Single Target Teleport to [[Nektulos Forest]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+{{SpellRow
+|name=Translocate: Ro
+|description=Single Target Teleport to [[North Ro|Northern Desert of Ro]]
+|era=Vel.
+|school=Alt.
+|location=Sol. Ro.
+|mana=225
+}}
+{{SpellRow
+|name=Wakening Lands Portal
+|description=Group Gate to Wakening Lands
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+</table>
+
+==Level 46==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Alter Plane: Hate
+|description=Group Teleport to the [[Plane of Hate]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Alter Plane: Sky
+|description=Group Teleport to [[Plane of Sky]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+</table>
+
+==Level 49==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Evacuate: West
+|description=Quickly Teleports the Group to [[Western Karana]]
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Ice Comet
+|description=Single Target Cold Direct Damage (Max: 1120)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=400
+}}
+{{SpellRow
+|name=Markar's Clash
+|description=Stuns target for a long period of time and does damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Paralyzing Earth
+|description=Single Target Root Spell (Max: 3 Mins)
+|era=&nbsp;
+|school=Alt.
+|location=[[Research]]
+|mana=100
+}}
+{{SpellRow
+|name=Rend
+|description=Magic Based Direct Damage Spell (Max: 784)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=280
+}}
+{{SpellRow
+|name=Supernova
+|description=Area Effect Point Blank Fire Based Direct Damage spell.
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=875
+}}
+{{SpellRow
+|name=Wrath of Al'Kabor
+|description=Area Effect Radius cold attack (max 448 per mob, hits 5 mobs)
+|era=&nbsp;
+|school=Evo.
+|location=[[Research]]
+|mana=500
+}}
+</table>
+
+==Level 50==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='5%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td>
+{{SpellRow
+|name=Translocate
+|description=Single Target Return to Bind Point.
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=200
+}}
+</table>
+
+==Level 51==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Atol's Spectral Shackles
+|description=Area Effect Snare Spell. Hits a max of 4 mobs.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=125
+}}
+{{SpellRow
+|name=Draught of Fire
+|description=Single Target Fire Based Direct Damage (Max: 688)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=215
+}}
+{{SpellRow
+|name=Pillar of Frost
+|description=Quad kiting spell. Targeted Area Effect Cold Direct Damage (Max: 800)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=325
+}}
+{{SpellRow
+|name=Tishan's Discord
+|description=Magic Based Stun and DD(max 260)
+|era=Kun.
+|school=Evo.
+|location=Quest.
+|mana=130
+}}
+</table>
+
+==Level 52==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Abscond
+|description=Self Only Teleport to Zone Safe-Point
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=600
+}}
+{{SpellRow
+|name=Lure of Frost
+|description=Low Resist Cold Based DD (Max: 640)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=320
+}}
+{{SpellRow
+|name=Manaskin
+|description=Protective Skin with Mana Regeneration (600hp)
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=330
+}}
+{{SpellRow
+|name=Tears of Druzzil
+|description=Magic Based Rain Attack (max: 698 per mob per wave)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=380
+}}
+{{SpellRow
+|name=Translocate: Group
+|description=Return Party Members to Bind Points
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=600
+}}
+</table>
+
+==Level 53==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Annul Magic
+|description=Single Target Magical Debuffer
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=75
+}}
+{{SpellRow
+|name=Inferno of Al'Kabor
+|description=Area Effect Fire Based Direct Damage (Max: 800)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=625
+}}
+{{SpellRow
+|name=Jyll's Static Pulse
+|description=Point Blank Magical Direct Damage (Max: 495)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=285
+}}
+</table>
+
+==Level 54==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Pillar of Lightning
+|description=Quad kiting spell. Area Effect Magic Based Direct Damage (848 max per mob)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=344
+}}
+{{SpellRow
+|name=Shield of the Magi
+|description=Self Only HP, MR, and AC Buff
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=300
+}}
+{{SpellRow
+|name=Thunderbold
+|description=Magic Based Area Effect Stun and Direct Damage(600 max per mob)
+|era=Kun.
+|school=Evo.
+|location=Quest.
+|mana=300
+}}
+{{SpellRow
+|name=Voltaic Draught
+|description=Magic Based Direct Damage Spell (688 max)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=215
+}}
+</table>
+
+==Level 55==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Draught of Jiva
+|description=Magic Based Direct Damage (Max: 688) and interrupt stun
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=215
+}}
+{{SpellRow
+|name=Improved Invisibility
+|description=Self Only Fixed Duration Invisibility
+|era=Vel.
+|school=Div.
+|location=NPC Drop.
+|mana=75
+}}
+{{SpellRow
+|name=Lure of Flame
+|description=Low Resist Fire Direct Damage (Max: 640)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=320
+}}
+{{SpellRow
+|name=Plainsight
+|description=See Invisible, Ultravision
+|era=Kun.
+|school=Div.
+|location=NPC Drop.
+|mana=100
+}}
+{{SpellRow
+|name=Tears of Solusek
+|description=Fire Based Rain Damage Spell
+|era=Kun.
+|school=Evo.
+|location=Quest.
+|mana=408
+}}
+</table>
+
+==Level 56==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Jyll's Zephyr of Ice
+|description=Point Blank Area Effect Cold Direct Damage (Max: 594)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=313
+}}
+{{SpellRow
+|name=Markar's Discord
+|description=Magic Based Stun and Direct Damage (max 750)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=300
+}}
+{{SpellRow
+|name=Retribution of Al'Kabor
+|description=Area Effect Cold Based Direct Damage
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=662
+}}
+</table>
+
+==Level 57==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Draught of Ice
+|description=Single Target Cold Based Direct Damage (Max: 731)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=215
+}}
+{{SpellRow
+|name=Evacuate
+|description=Group Intra-Zone Teleport
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=300
+}}
+{{SpellRow
+|name=Eye of Tallon
+|description=Summon an Eye for Scouting
+|era=Kun.
+|school=Con.
+|location=NPC Drop.
+|mana=65
+}}
+{{SpellRow
+|name=Pillar of Flame
+|description=Fire Based Area Effect Direct Damage (952 max)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=364
+}}
+</table>
+
+==Level 58==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Fetter
+|description=Single Target Root Spell (Max: 180 Secs)
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=75
+}}
+{{SpellRow
+|name=Lure of Lightning
+|description=Low Resist Magic Based DD (Max: 680)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=320
+}}
+{{SpellRow
+|name=Manasink
+|description=Self Only Magic Absorbing Skin (Max:250hp)
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=200
+}}
+{{SpellRow
+|name=Spell:Tears of Prexus|Tears of Prexus
+|description=Cold Based Rain Damage Spell
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=437
+}}
+</table>
+
+==Level 59==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Flaming Sword of Xuzl
+|description=Summon a Flaming Sword Defender
+|era=Kun.
+|school=Con.
+|location=NPC Drop.
+|mana=700
+}}
+{{SpellRow
+|name=Invert Gravity
+|description=Area Effect Grafity Flux Upgrade (Max: 470)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=500
+}}
+{{SpellRow
+|name=Jyll's Wave of Heat
+|description=Point Blank Fire Area Effect Direct Damage (Max: 648)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=342
+}}
+{{SpellRow
+|name=Vengeance of Al'Kabor
+|description=Magic Based Area Effect Direct Damage Spell (952 max)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=700
+}}
+</table>
+
+==Level 60==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Disintegrate
+|description=Single Target Instant Kill (Max: Level 46)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=650
+}}
+{{SpellRow
+|name=Hsagra's Wrath
+|description=Giant Only Unresistable Direct Damage (Max: 2000)
+|era=Vel.
+|school=Evo.
+|location=Quest
+|mana=450
+}}
+{{SpellRow
+|name=Ice Spear of Solist
+|description=Single Target Ice Based Direct Damage (Max: 1200)
+|era=Vel.
+|school=Evo.
+|location=NPC Drop.
+|mana=300
+}}
+{{SpellRow
+|name=Lure of Ice
+|description=Low Resist Cold Based DD (Max: 825)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=320
+}}
+{{SpellRow
+|name=Porlos' Fury
+|description=Dragon Only Unresistable Direct Damage (Max: 2000)
+|era=Vel.
+|school=Evo.
+|location=Quest
+|mana=450
+}}
+{{SpellRow
+|name=Sunstrike
+|description=The Ultimate Fire Based Single Target DD (1615 max)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=450
+}}
+{{SpellRow
+|name=Winds of Gelid
+|description=Point Blank Cold Based Area Effect Direct Damage (1260 per mob)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=875
+}}
+</table>
+
+=Skills=
+
+==Specialization==
+
+{{#lsth:Skill Specialization|Wizard}}
+
+==Casting Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Abjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alteration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Channelling</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Conjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Divination</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Evocation</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">4</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Meditate</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">252</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">16</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Research</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">20</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Specialization</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+==Combat Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>1 Hand Blunt</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>2 Hand Blunt</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Bind Wound</td>
+		<td align="center" width="20%">100</td>
+		<td align="center" width="25%">100</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Defense</td>
+		<td align="center" width="20%">145</td>
+		<td align="center" width="25%">145</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Hand to Hand</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Offense</td>
+		<td align="center" width="20%">140</td>
+		<td align="center" width="25%">140</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Piercing</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Throwing</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">22</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Dodge</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+</table>
+
+==Miscellaneous Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alcohol Tolerance</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">252</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Begging</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Fishing</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Sense Heading</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Swimming</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+= Wizard-Specific Quests =
+
+{{#lsth:Class Race Quest List|Wizard}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+For better or worse, wizards just don't benefit from gear as much as melee dps classes. While melee toons can easily boost their dps by equipping an improved ratio weapon or a worn haste item, wizards cannot boost their spell damage. The best we can usually hope for is improving total mana (for total burst damage), total hitpoints (for raw survivability) and total resists (for resisting aoes in raid situations and nukes/debuffs while leveling). There are a few exceptions to this rule, however, in the form of mana-free nuke clickies and items that improve mana regen.
+
+Mana-free nuke clickies will make the single largest difference in a wizard's effectiveness. These items come in three tiers:
+
+Tier 1 includes [[Solist's Robe of Invocation]], [[Vermilion Robe of Torrefaction]] and [[Shissar Elementalist's Staff]]. These are high-end raid drops that can dramatically improve a wizard's long-term sustained dps.
+
+Tier 2 includes Velious armor quest robes (such as [[Sage's Robe]]) and the [[Vermilion Orb of Torrefaction]]. While these are less useful than the Tier 1 clickies, they are still useful for finishing off fleeing mobs. The [[Sage's Robe]] has a very long cast time, but is very hard to resist. It can also be clicked as early as level 1 and makes for a very strong power-leveling item.
+
+Tier 3 includes [[Solist's Icy Wand]]. This item is particularly useful before level 20 and can be used to conserve mana on fleeing mobs for many levels afterward. However, this item will not see much usage at higher levels.
+
+=== Mana Free Nuke Clickies ===
+{| class="eoTable2"
+! Item 
+! Damage/Cast Time
+! DPS
+|-
+| [[Solist's Robe of Invocation]]
+| 784dmg/14s
+| 56 DPS
+|-
+| [[Vermilion Robe of Torrefaction]]
+| 625dmg/15s
+| 41.5 DPS
+|-
+| [[Shissar Elementalist's Staff]]
+| 400dmg/13.5s
+| 30 DPS
+|-
+| [[Vermilion Orb of Torrefaction]]
+| 250dmg/10s
+| 25 DPS
+|-
+| [[Sage's Robe]]
+| 360dmg/28s
+| 12.9 DPS
+|-
+| [[Solist's Icy Wand]]
+| 38dmg/5s
+| 7.6 DPS
+|}
+
+Mana regen improvement items include items with a worn Flowing Thought (FT) effect that increases passive mana regen (such as [[White Dragonscale Boots]]) and hitpoint to mana conversion clickies. 
+
+Generally, FT items come from cutting-edge raid encounters and will be among a wizard's final best-in-slot upgrades. Because FT items of the same tier do not stack on P99, the best a wizard can obtain is +8 mana regen from a combination of [[Essence of Nature]] (+5), [[White Dragonscale Boots]] (+2), and one of the several +1 FT items currently available. 
+
+Hitpoint to mana conversion items (specifically the [[Manastone]] and [[Manna Robe]]) can provide 20 mana in exchange for 60 hps. Because wizards cannot heal themselves and generally don't have many hps, the mana conversion effect isn't very useful on its own. However, because mana conversion will eat away at a rune before damaging hps, these items pair very well with the 800 hp rune from the wizard epic [[Staff of the Four]]. As long as the epic rune is intact, a wizard can gain "free" mana from these items. 
+
+The [[Manastone]] is instant-cast, but can only be used in classic zones. Because it no longer drops, it is also very rare and very expensive to buy from another player. The [[Manna Robe]] can be used anywhere, but has a 3-second cast time. It still drops rarely from [[Trakanon]], and is a very useful item for a wizard who doesn't mind lots of clicking.
+
+It is worth noting that the [[Staff of the Four]] clicky effect also provides +3 mana regen that stacks with enchanter and druid mana regen spells.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Wizard]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Wizard]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Wizard]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Wizard]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Wizard]]}}
+
+= FAQ =
+
+{{Template: Navbox Classes}}

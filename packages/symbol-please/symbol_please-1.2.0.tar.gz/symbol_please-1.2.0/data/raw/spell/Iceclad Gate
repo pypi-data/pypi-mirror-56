@@ -1,0 +1,39 @@
+{{Spellpage|
+
+| spellname = Iceclad Gate
+| spellicon = V
+| description = Opens an arcane portal that teleports you to Iceclad Ocean.
+
+| classes = 
+
+* [[Wizard]] - Level 34
+
+| slots = 
+
+{{SpellSlotRow | 1 | Teleport to -630,4925,113 in iceclad }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 150
+| range =  
+| casting_time = 7.00
+| fizzle_time = 2.25
+| recast_time = 10.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  fades away.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow | [[Northern Karana|Northern Plains of Karana]] | [[Roule]] | Gypsy Camp | (-644,-218) }}
+{{SpellWhereRowB  | [[Oasis of Marr]] | [[Transan]] | Gypsy Camp | (611,50) }}
+{{SpellWhereRow | [[Rathe Mountains]] | [[Tarikh Korula]] | Gypsy Camp | (3974,1422) }}
+}}
+
+}}

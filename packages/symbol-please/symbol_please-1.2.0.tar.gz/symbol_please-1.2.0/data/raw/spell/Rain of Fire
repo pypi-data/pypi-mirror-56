@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Rain of Fire
+| spellicon = O
+| description = Conjures a rain of fire that assaults all creatures in the vicinity of your target, causing three waves of between 75 and @1 damage.
+
+| classes = 
+
+* [[Magician]] - Level 20
+
+| items_with_effect = 
+
+<ul><li> {{:Sword of Skyfire}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 56 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 125
+| range = 150
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 12.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = Your skin blisters as fire rains down from above.
+| msg_cast_on_other = Someone 's skin blisters as fire rains down from above.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+}}

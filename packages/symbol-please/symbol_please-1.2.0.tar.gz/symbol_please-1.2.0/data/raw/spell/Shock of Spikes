@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Shock of Spikes
+| spellicon = L
+| description = Conjures a shock of spikes that assaults your target, causing between 196 and 226 damage.
+
+| classes = 
+
+* [[Magician]] - Level 24
+
+| items_with_effect =
+	 
+<ul><li> {{:Holgresh Mojo Stick (Earth)}}
+</li><li> {{:Runebladed Sword of Night}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 158 (L24) to 176 (L30) }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 110
+| range = 200
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You have been lacerated.
+| msg_cast_on_other = Someone  is lacerated by steel.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+}}

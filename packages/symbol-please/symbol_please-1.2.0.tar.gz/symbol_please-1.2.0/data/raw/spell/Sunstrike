@@ -1,0 +1,35 @@
+{{Spellpage|
+
+| spellname = Sunstrike
+| spellicon = O
+| description = Consumes your target in the burning flames of the sun, causing 1615 damage. 3.59 Damage per mana.
+
+| classes = 
+
+* [[Wizard]] - Level 60
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 1615 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 450
+| range = 200
+| casting_time = 7.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (-10)
+
+| msg_cast_on_you = Your body is consumed by the flames of the sun.
+| msg_cast_on_other = Someone  is consumed by the flames of the sun.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from Kunark, Velious Level 60+ Mobs
+
+}}

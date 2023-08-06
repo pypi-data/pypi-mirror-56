@@ -1,0 +1,43 @@
+{{Spellpage|
+
+| spellname = Dazzle
+| spellicon = D
+| description = Causes your opponent to fall into an enchanted sleep for up to 1.6 mins (96 seconds).  This spell works on creatures up to level 55. (1.30 mana per second)
+
+| classes = 
+
+* [[Enchanter]] - Level 49
+
+| slots = 
+
+{{SpellSlotRow | 1 | Mesmerize (2/55) }}
+{{SpellSlotRow | 2 | Memblur(1%) }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 125
+| range = 200
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 5.00
+| duration = 1.6 minutes
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are mesmerized.
+| msg_cast_on_other = Someone  has been mesmerized.
+| msg_wears_off = You are no longer mesmerized.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-5)]] | Library | (1104,-985) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Elentar Bealtarik]] | Enchanter Guild (F4) | (507,746) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Tizzy C'Luzz]] | Caster Guild (Basement) | (172,-912) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Moreo O'Meek]] | Caster Guild (Outside) | (301,-637) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Nestess Branchtop]] | Enchanter Guild | (497,-926) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Jarel Ranin]] | Caster Guild (F1) | (157,-735) }}
+}}
+
+}}

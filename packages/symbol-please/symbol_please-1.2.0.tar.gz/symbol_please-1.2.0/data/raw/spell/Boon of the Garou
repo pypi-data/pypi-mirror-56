@@ -1,0 +1,56 @@
+{{Velious Era}}
+{{Spellpage|
+
+| spellname = Boon of the Garou
+| spellicon = U
+| description = Transforms your target into a feral werewolf, increasing their attack rating, dexterity, and allowing a chance to perform a life draining attack.
+<br>
+
+ Lifetap Proc Damage(Based on level of the person it is cast on):<br>
+  5 HP @ level 1<br>
+  30 HP @ level 50<br>
+  35 HP @ level 60 <br>
+<br>
+
+This spell stacks with shaman dexterity buffs such as [[Mortal Deftness]]. It does not stack with other illusions.
+
+| classes = 
+
+* [[Enchanter]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 1 | Illusion: 14 }}
+{{SpellSlotRow | 2 | Add Proc: LifetapEffectNormal }}
+{{SpellSlotRow | 3 | Increase ATK by 30 }}
+{{SpellSlotRow | 4 | Increase DEX by 100 }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 100
+| range = 100
+| casting_time = 1.50
+| fizzle_time = 2.25
+| recast_time = 180.00
+| duration = 4.4 minutes @L44 to 6.0 minutes @L60
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel... strange.
+| msg_cast_on_other = Someone 's face contorts and stretches, the skin breaking and peeling.
+| msg_wears_off = Your illusion fades.
+
+| where_to_obtain = 
+
+[[Great Divide]]
+
+* [[An ancient shardwurm]]
+* [[A guardian shardwurm]]
+
+[[Cobalt Scar]]
+
+* [[A Cobalt Drake]]
+There are other mobs too, but I can guarantee the ones above. Please add more as you find them.
+
+}}

@@ -1,0 +1,41 @@
+:''For the statistic, see [[Statistics#Strength (STR)]].''
+{{Spellpage|
+
+| spellname = Strength
+| spellicon = R
+| description = Fills your target's body with pure power, increasing their strength for 1 hour(s) 3.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 49
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase STR by 66 (L49) to 67 (L50) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 100
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 1 hour 3 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel strong.
+| msg_cast_on_other = Someone  looks strong.
+| msg_wears_off = Your strength fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Drekk]] | Temple of Terror (First Floor) | (1026,-214) }}
+{{SpellWhereRow  | [[Halas]] | [[Toralia]] | Shaman Guild | (339,476) }}
+{{SpellWhereRowB | [[Oggok]] | [[Chamt]] | Shaman Guild | (614,1079) }}
+{{SpellWhereRow  | [[Grobb]] | [[Chamt]] | Shaman Guild | (15,-428) }}
+}}
+
+}}

@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Wake of Tranquility
+| spellicon = H
+| description = Covers all creatures near your target in tranquility, lowering their aggressiveness for 42 secs (7 ticks). Affects creatures up to level 60.
+
+| classes = 
+
+* [[Cleric]] - Level 55
+* [[Enchanter]] - Level 51
+
+| slots = 
+
+{{SpellSlotRow | 1 | Frenzy Radius (1/60) }}
+{{SpellSlotRow | 2 | Reaction Radius (1/60) }}
+{{SpellSlotRow | 3 | Pacify }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 300
+| range = 200
+| casting_time = 4.50
+| fizzle_time = 2.25
+| recast_time = 18.00
+| duration = 7 ticks
+| target_type = Targeted AE
+| spell_type = Beneficial
+| resist = Magic (0)
+
+| msg_cast_on_you = You feel your aggression subside.
+| msg_cast_on_other = Someone  looks less aggressive.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is obtained via a quest - [[Enchanter Spells (Good)]] or [[Enchanter Spells (Evil)]].
+
+(Drops from a forest giant ancient in giant fort in the Burning Woods as of 6/7/19)
+
+}}

@@ -1,0 +1,50 @@
+{{Spellpage|
+
+| spellname = Dark Empathy
+| spellicon = J
+| description = Creates a dark pact that transfers 30 of your hit points to your target.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 22
+* [[Necromancer]] - Level 8
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Hitpoints by 30 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 20
+| range = 100
+| casting_time = 4.00
+| fizzle_time = 2.50
+| recast_time = 7.50
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your wounds disappear.
+| msg_cast_on_other = Someone 's wounds disappear.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-4)]] | Necromancer Guild | (2099,-393) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Squire Gristle]] | Temple of Terror (West Tower - Floor 2) | (1005,-105) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Tagus Wunne]] | Underground | (-98,-257) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Peku Croxe]] | Underground | (-200,-244) }}
+{{SpellWhereRowB | [[Grobb]] | [[Trusk - Troll]] | Shadow Knight Guild | (512,-625) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Misal S'Kor]] | Necromancer Guild (F1) | (1337,-1239) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Jys D'Bious]] | Necromancer Guild (F1) | (1312,-1266) }}
+{{SpellWhereRow  | [[Oggok]] | [[Trusk - Ogre]] | Shadow Knight Guild | (392,3) }}
+{{SpellWhereRowB | [[Paineel]] | [[Sheras Milaku]] | Shadow Knight Guild | (888,443) }}
+{{SpellWhereRow  | [[Paineel]] | [[Kilevra Natasu]] | Necromancer Guild | (692,869) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gehnon Dejartes]] | Shadow Knight Guild | (421,-438) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gyrna Porrin]] | Necromancer Guild | (291,-322) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Plight]] | Cubby near PvP Area | (-391,234) }}
+}}
+
+}}

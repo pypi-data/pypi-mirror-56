@@ -1,0 +1,44 @@
+{{Spellpagesmart|
+
+| spellname = Beguile Plants
+| spellicon = T
+| description = Beckons to the plants of the wild, allowing you to control them.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+| classes = 
+
+* [[Druid]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Dark Oak Shillelagh}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Charm up to level 25 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 170
+| range = 200
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = 9.7 minutes @L29 to 20.5 minutes @L65
+| target_type = Plant
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  blinks.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is obtained via a quest: [[Beguile Plants Quest]].
+| TableLocations = Quest
+| TableEra = {{{TableEra|Classic}}}
+
+}}

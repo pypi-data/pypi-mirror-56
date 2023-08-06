@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Retribution
+| spellicon = C
+| description = Calls upon the retribution of the gods to strike your target, causing between 496 and 516 damage. 2.15 DPM
+
+| classes = 
+
+* [[Cleric]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 496 (L44) to 516 (L48) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 240
+| range = 200
+| casting_time = 6.10
+| fizzle_time = 2.50
+| recast_time = 7.50
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You have been struck by the wrath of the gods.
+| msg_cast_on_other = Someone  has been struck by the wrath of the gods.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-6)]] | Cleric Guild | (1197,-560) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-14)]] | Necromancer Guild | (2111,-429) }}
+{{SpellWhereRowB | [[Erudin]] | [[Junice Weslent]] | Cleric Guild - Quellious (Outside) | (-697,-55) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Terren Starwatcher]] | Cleric Guild | (13,-426) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Lyniv S'Kor]] | Cleric Guild | (410,-858) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Nosspri Andrika]] | Cleric Guild (basement) | (102,391) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Ladia Qursii]] | Cleric Guild (Outside) | (-225,-238) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Senst Ereek]] | Cleric Guild | (340,-413) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Misty Valefriend]] | Cleric Guild | (-226,-374) }}
+}}
+
+}}

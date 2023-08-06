@@ -1,0 +1,50 @@
+{{Spellpagesmart|
+
+| spellname = Panic Animal
+| spellicon = G
+| description = Incites fear in most animals, causing them to flee.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 22
+* [[Druid]] - Level 1
+
+| items_with_effect = 
+
+<ul><li> {{:Disciple Symbol of Cazic Thule}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Fear(1)| simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 99 | Duration: 18 seconds | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} | HideFromMainPage = 1 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 10
+| range = 200
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 4.00
+| duration = 3 ticks
+| target_type = Animal
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  flees in a state of total panic!
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Horth Evergreen]] | Kelethin Druid Guild | (-640,219) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Ilscent Tagglefoot]] | Druid Guild | (-31,-418) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Torth Largefoot]] | Druid Guild | (-32,-384) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Arrivae Valleren]] | Druid Guild | (-156,-300) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = {{{TableEra|Classic}}}
+}}

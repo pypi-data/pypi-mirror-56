@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Nimble
+| spellicon = A
+| description = Fills your target with a sense of nimbleness, increasing their agility for 54.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 34
+
+| items_with_effect = 
+
+<ul><li> {{:Jaundiced Bone Boots}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase AGI by 33 (L34) to 36 (L40) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 80
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 54 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel nimble.
+| msg_cast_on_other = Someone  looks nimble.
+| msg_wears_off = Your agility fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+}}
+
+}}

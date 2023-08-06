@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Wandering Mind
+| spellicon = D
+| description = Draws the energy from your target's mind, draining their mana and giving it to you.
+
+| classes = 
+
+* [[Enchanter]] - Level 39
+
+| items_with_effect = 
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Target Mana by 6 per tick }}
+{{SpellSlotRow | 2 | Recourse Effect: Increase Caster Mana by 6 per tick }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 5
+| range = 125
+| casting_time = 4.50
+| fizzle_time = 2.50
+| recast_time = 150.00
+| duration = 2 minutes
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (-100)
+
+| msg_cast_on_you = You forget what you were supposed to be.
+| msg_cast_on_other = Someone  stares off into space.
+| msg_wears_off = You remember where you are.
+
+| where_to_obtain = 
+
+<ul><li> Confirmed dropped in [[Tower of Frozen Shadow]] off of an ancient mummy on the 4th floor (lvl 35-42) 2/11/2019
+</li><li> Siren Seductress in Cobalt scar
+</li></ul>
+
+}}

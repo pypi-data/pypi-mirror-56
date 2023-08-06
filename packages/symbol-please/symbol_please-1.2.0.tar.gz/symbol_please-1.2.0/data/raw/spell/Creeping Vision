@@ -1,0 +1,43 @@
+{{Classic Era}}
+{{Spellpage|
+
+| spellname = Creeping Vision
+| spellicon = B
+| description = Improves your visual range, allowing you to see farther for  1 min.
+
+| classes = 
+
+* [[Shaman]] - Level 24 (This spell is not available to scribe in your spellbook.)
+
+| items_with_effect = 
+
+<ul><li>  {{:Eye of Narandi}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Magnification by 88% (L24) to 101% (L65) (effect decreases over time) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 20
+| range =  
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 30.00
+| duration = 1 minute
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your eyes begin to focus.
+| msg_cast_on_other = Someone 's eyes shimmer and gleam.
+| msg_wears_off = Your focus fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Oasis of Marr]] | [[Gadallion]] | Gypsy Camp | (495,0) }}
+}}
+
+}}

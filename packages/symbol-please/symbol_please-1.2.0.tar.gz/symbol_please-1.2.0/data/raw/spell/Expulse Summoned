@@ -1,0 +1,55 @@
+{{Spellpagesmart|
+
+| spellname = Expulse Summoned
+| spellicon = C
+| description = A burst of holy light that inflicts between 88 and 94 damage to a summoned target.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 29
+* [[Druid]] - Level 14
+* [[Magician]] - Level 20
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 88 (L14) to 94 (L20) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 60
+| range = 200
+| casting_time = 2.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Summoned
+| spell_type = Detrimental
+| resist = Magic (-50)
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-13)]] | Necromancer Guild | (2112,-438) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-4)]] | Cleric Guild | (1223,-547) }}
+{{SpellWhereRowB | [[Erudin]] | [[Alysa Eltern]] | Cleric Guild - Quellious (Outside) | (-707,-57) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Terri Woodshape]] | Cleric Guild | (2,-456) }}
+{{SpellWhereRowB | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Friz Punox]] | Cleric Guid | (412,-788) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Perep Chen]] | Cleric Guild (basement) | (106,311) }}
+{{SpellWhereRow  | [[Qeynos|North Qeynos]] | [[Enpero Mesog]] | Cleric Guild (Outside) | (-216,-230) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Naes Ereek]] | Cleric Guild | (340,-427) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Alice Sweetoven]] | Cleric Guild | (-232,-419) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+}}
+
+| TableLocations = Vendors
+| TableEra = Classic
+}}

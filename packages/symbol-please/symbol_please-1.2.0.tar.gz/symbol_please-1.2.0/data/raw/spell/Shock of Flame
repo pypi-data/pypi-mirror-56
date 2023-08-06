@@ -1,0 +1,50 @@
+{{Spellpage|
+
+| spellname = Shock of Flame
+| spellicon = O
+| description = Burns your target's skin with flames, causing between 115 and 122 damage.
+
+| classes = 
+
+* [[Magician]] - Level 16
+
+| items_with_effect = 
+
+<ul><li> {{:Stormwood Battle Staff}}
+</li></ul>
+
+
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 91 (L16) to 96 (L21) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 70
+| range = 200
+| casting_time = 2.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = You feel your skin ignite.
+| msg_cast_on_other = Someone 's skin ignites.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRow  | [[Ocean of Tears]] | [[Elesseryl Terussar]] | AC Island | (1309,-7875) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+}}

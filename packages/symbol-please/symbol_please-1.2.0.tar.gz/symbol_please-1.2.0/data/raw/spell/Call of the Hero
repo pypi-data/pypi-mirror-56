@@ -1,0 +1,77 @@
+{{Spellpage|
+
+| spellname = Call of the Hero
+| spellicon = U
+| description = Conjures a mystical portal that summons one of your allies to your side.  The target must be in your group to be summoned.  Consumes a pearl when cast.
+
+| classes = 
+
+* [[Magician]] - Level 55
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon PC }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 500
+| range = 20000
+| casting_time = 12.00
+| fizzle_time = 4.00
+| recast_time = 15.00
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Pearl
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  steps into a mystic portal.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Kunark Level 50+ Mob Drop
+
+[[Burning Woods]]
+
+* [[Gullerback]]
+
+[[Chardok]]
+
+* [[a Reanimated Berserker]]
+* [[Captain Di`ouz]]
+* [[Overseer Dal`guur]]
+
+[[City of Mist]]
+
+* [[a black reaver]]
+* [[Neh`Ashiir]]
+
+[[Howling Stones]]
+
+* [[an undertaker skeleton]]
+
+[[Old Sebilis]]
+
+* [[frenzied pox scarab]]
+* [[froglok commander]]
+* [[froglok ilis shaman]]
+* [[myconid spore king]]
+* [[sebilite guardian]]
+
+[[Skyfire Mountains]]
+
+* [[a mature wurm]]
+* [[a shadow drake]]
+* [[a wandering wurm]]
+* [[a wurm spirit]]
+* [[an elder wyvern]]
+* [[Eldrig the Old]]
+* [[Faerie of Dismay]]
+* [[Felia Goldenwing]]
+
+}}

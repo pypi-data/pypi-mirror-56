@@ -1,0 +1,44 @@
+{{Spellpage|
+
+| spellname = Enchant Clay
+| spellicon = U
+| description = Enchants a large block of clay with magical energy. Consumes a large block of clay when cast.
+
+| classes = 
+
+* [[Enchanter]] - Level 8
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Large Block of Magic Clay]] }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range =  
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Large Block of Clay]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+'''Note: [[Mizr N'Mar]] Does not currently sell Spell:Enchant Clay (May 17th, 2012) - is it a Velious era spell?.'''
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Mizr N'Mar]] | Library (F1) | (911,-1314) }}
+{{SpellWhereRowB | [[Felwithe|South Felwithe]] | [[Alicia Starshimmer]] | Enchanter Guild | (606,-935) }}
+}}
+
+}}

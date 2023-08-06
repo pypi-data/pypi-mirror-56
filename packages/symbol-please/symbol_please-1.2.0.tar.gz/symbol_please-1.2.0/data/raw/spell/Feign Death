@@ -1,0 +1,53 @@
+{{Disambig3|[[Skill Feign Death]]}}
+{{Spellpage|
+
+| spellname = Feign Death
+| spellicon = G
+| description = Causes you to stop breathing and appear dead to most creatures.
+This is the spell used by necromancers and shadowknights. [[Monk]]s have a similar combat ability with the same name.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 30
+* [[Necromancer]] - Level 16
+
+| items_with_effect = 
+
+<ul><li> {{:Blood Ember Greaves}}
+</li><li> {{:Crimson Ring of Desinence}}
+</li><li> {{:Vermilion Sky Ring}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Feign Death }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 60
+| range =  
+| casting_time = 1.50
+| fizzle_time = 2.25
+| recast_time = 15.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  dies.
+| msg_wears_off = You no longer appear dead.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Gristle]] | Temple of Terror (West Tower - Floor 2) | (1005,-105) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Tagus Wunne]] | Underground | (-98,-257) }}
+{{SpellWhereRowB | [[Grobb]] | [[Trusk - Troll]] | Shadow Knight Guild | (512,-625) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Jys D'Bious]] | Necromancer Guild (F1) | (1312,-1266) }}
+{{SpellWhereRowB | [[Oggok]] | [[Trusk - Ogre]] | Shadow Knight Guild | (392,3) }}
+{{SpellWhereRow  | [[Paineel]] | [[Sheras Milaku]] | Shadow Knight Guild | (888,443) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gehnon Dejartes]] | Shadow Knight Guild | (421,-438) }}
+}}
+
+}}

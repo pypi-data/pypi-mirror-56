@@ -1,0 +1,42 @@
+{{Spellpage|
+
+| spellname = Sight
+| spellicon = B
+| description = Strengthens your vision, allowing you to see much farther.
+
+| classes = 
+
+* [[Wizard]] - Level 20
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Magnification by 40% }}
+{{SpellSlotRow | 2 | Infravision(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 20
+| range =  
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = 1 minute @L20 to 3.2 minutes @L65
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your eyes feel stronger.
+| msg_cast_on_other = Someone 's eyes gleam.
+| msg_wears_off = Your vision fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Erudin]] | [[Weltria Ostriss]] | Library (F3) | (-1111,-242) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Jusar V'Lask]] | Library (F1) | (914,-1279) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Serri Moonwatcher]] | Wizard Guild | (441,-450) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

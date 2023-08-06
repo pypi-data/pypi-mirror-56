@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Flame Arc
+| spellicon = O
+| description = Creates a circle of fire around you, causing between 171 and 181 damage to all nearby creatures.
+
+| classes = 
+
+* [[Magician]] - Level 39
+
+| items_with_effect = 
+
+<ul><li> {{:Oil of Fennin Ro}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 171 (L39) to 181 (L44) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 199
+| range =  
+| casting_time = 5.30
+| fizzle_time = 2.50
+| recast_time = 7.00
+| duration = Instant
+| target_type = PB AE
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = Flames race across your body.
+| msg_cast_on_other = Someone  is covered in flames.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-16)]] | Library | (1101,-1028) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Tuballi Stellari]] | Magician Guild (F2) | (729,918) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Pisna H'Rugla]] | Caster Guild (Basement) | (133,-911) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Gende Reldari]] | Caster Guild | (307,-579) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Osisa Goldenspear]] | Magician Guild | (666,-526) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Cronte Deloru]] | Caster Guild (F3) | (113,-722) }}
+}}
+
+}}

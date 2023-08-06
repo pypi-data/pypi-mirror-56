@@ -1,0 +1,63 @@
+{{Classic Era}}
+{{Spellpagesmart|
+
+| spellname = Superior Healing
+| spellicon = J
+| description = Mends severe wounds, healing between 565 and 583 hit points. 2.33 HP/mana; 129.5 HP/sec. 
+
+Paladins get this spell at 57 during Velious. Moved to level 51 for Druids and Shamans a few months after Velious launch [http://www.project1999.com/forums/showpost.php?p=1176734&postcount=8]. {{Velious Era Inline}}
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 34
+* [[Druid]] - Level 51 {{Velious Era Inline}}
+* [[Shaman]] - Level 51 {{Velious Era Inline}}
+* [[Paladin]] - Level 57 {{Velious Era Inline}}
+
+| items_with_effect = 
+
+<ul><li> {{:Aegis of Life}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Hitpoints by 565 (L34) to 583 (L40) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 250
+| range = 100
+| casting_time = 4.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel much better.
+| msg_cast_on_other = Someone  feels much better.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-5)]] | Cleric Guild | (1184,-560) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-11)]] | Necromancer Guild | (2041,-410) }}
+{{SpellWhereRowB | [[Erudin]] | [[Lissa Respelti]] | Cleric Guild - Quellious | (-650,-45) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Assa Leafwind]] | Cleric Guild | (24,-466) }}
+{{SpellWhereRowB | [[Firiona Vie]] | [[Shelae Wolfkin]] | Outpost | (-3818,1640) }}
+{{SpellWhereRow  | [[Firiona Vie]] | [[Arial Fern]] | Outpost | (-3238,2257) }}
+{{SpellWhereRowB | [[Firiona Vie]] | [[Drizel Maxton]] | Outpost | (-3864,2927) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Sol Punox]] | Cleric Guild | (400,-838) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Geep Tresoj]] | Cleric Guild (F1) | (93,427) }}
+{{SpellWhereRow  | [[Qeynos|North Qeynos]] | [[Henlom Visrek]] | Paladin Guild | (-135,-122) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Altha Shadowjumper]] | Cleric Guild | (-243,-358) }}
+{{SpellWhereRow  | [[The Overthere]] | [[Kuglaz Grot]] | Outpost | (2757,2422) }}
+}}
+| TableLocations = Vendors
+| TableEra = {{{TableEra|Classic}}}
+}}

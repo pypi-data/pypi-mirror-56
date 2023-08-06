@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Elementalkin: Earth
+| spellicon = L
+| description = Summons an earth elemental to aid you in battle.
+
+| classes = 
+
+* [[Magician]] - Level 4
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Pet: SumEarthR2 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 40
+| range =  
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Malachite
+* '''Focus:''' [[Shovel of Ponz]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-17)]] | Library | (1105,-1022) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Killi Frillep]] | Magician Guild (F2) | (695,919) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Cizzar J'Axx]] | Caster Guild (Basement) | (135,-921) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Tsuden Korinte]] | Caster Guild | (322,-595) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Neapha Vesturo]] | The Herb Jar | (317,-554) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Vellera Wintergreen]] | Magician Guild | (715,-526) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Trepo Merrop]] | Caster Guild (F3) | (133,-762) }}
+}}
+
+}}

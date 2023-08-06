@@ -1,0 +1,63 @@
+{{Classic Era}}
+
+{{Spellpagesmart|
+
+| spellname = Counteract Disease
+| spellicon = J
+| description = Cleanses your target's immune system, curing them of moderate diseases.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+| classes = 
+
+* [[Shaman]] - Level 24
+* [[Cleric]] - Level 29
+* [[Druid]] - Level 29
+* [[Necromancer]] - Level 39
+* [[Paladin]] - Level 56 {{Kunark Era Inline}}
+
+| items_with_effect = 
+
+<ul><li> {{:Kithar's Disease Treatment}} ([[Skill Alchemy|Potion]])
+</li><li> {{:Earring of Purity}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Disease Counter by 8 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 50
+| range = 100
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-1)]] | Necromancer Guild | (2082,-410) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Ainla Yurimar]] | Underground | (-162,-270) }}
+{{SpellWhereRowB | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRow  | [[Firiona Vie]] | [[Drizel Maxton]] | Outpost | (-3864,2927) }}
+{{SpellWhereRowB | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Rizyra F'Lok]] | Necromancer Guild (F1) | (1335,-1213) }}
+{{SpellWhereRowB | [[Paineel]] | [[Leovre Kieqmarn]] | Necromancer Guild | (665,804) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Dallisen Xalladyr]] | Necromancer Guild | (402,-311) }}
+{{SpellWhereRowB | [[Steamfont Mountains]] | [[Crisyn]] | Druid Ring | (-1750,1657) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Rott]] | Cubby near PvP Area | (-440,236) }}
+}}
+| TableLocations = Ak'Anon/Cabilis<br/>Freeport/Everfrost<br/>Qeynos/Steamfont
+| TableEra = {{{TableEra|Classic}}}
+}}

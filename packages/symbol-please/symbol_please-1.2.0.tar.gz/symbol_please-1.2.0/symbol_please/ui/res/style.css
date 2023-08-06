@@ -1,0 +1,8 @@
+progressbar {
+    color: #000000;
+}
+
+button.remove {
+    padding: 0px;
+    min-height: 0px;
+}

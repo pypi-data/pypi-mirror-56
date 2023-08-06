@@ -1,0 +1,41 @@
+{{Spellpage|
+
+| spellname = Lightning Bolt
+| spellicon = M
+| description = Hurls a bolt of lightning at your target, causing between 117 and 125 damage (1.42 Damage per Mana)
+
+| classes = 
+
+* [[Wizard]] - Level 16
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 117 (L16) to 125 (L20) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 85
+| range = 300
+| casting_time = 2.70
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Line of Sight
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = Your body spasms as the lightning bolt arcs through you.
+| msg_cast_on_other = Someone 's body spasms as the lightning bolt arcs through them.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-9)]] | Library | (1056,-981) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Effunic Korett]] | Wizard Guild (F2) | (921,726) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Dissa C'Luzz]] | Caster Guild (Basement) | (167,-896) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Dumisa D'Enetti]] | Caster Guild | (313,-679) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Charia Betou]] | Caster Guild (top floor) | (134,-740) }}
+}}
+Possible (20% chance?) reward from [[Rathmana's Traveling Offer]]
+}}

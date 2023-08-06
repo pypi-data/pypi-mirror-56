@@ -1,0 +1,66 @@
+{{Spellpagesmart|
+
+| spellname = Endure Poison
+| spellicon = K
+| description = Surrounds your target with an aura of protection, warding away poison.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 9
+* [[Paladin]] - Level 22
+* [[Druid]] - Level 19
+* [[Shaman]] - Level 14
+
+| slots = 
+
+{{SpellSlotRowSmart | 2 | Increase Poison Resist by 19 (L9) to 20 (L10) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 20
+| range = 100
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 27 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel protected from poison.
+| msg_cast_on_other = Someone  is protected from poison.
+| msg_wears_off = Your endurance to poison fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-2)]] | Cleric Guild | (1238,-539) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-9)]] | Necromancer Guild | (2154,-366) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRowB | [[Erudin]] | [[Mertitt Phentilly]] | Cleric Guild - Quellious (Outside) | (-741,-55) }}
+{{SpellWhereRow  | [[Erudin]] | [[Issibla Belstince]] | Cleric Guild - Prexus (F2) | (-1031,-375) }}
+{{SpellWhereRowB | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Celest Palestream]] | Cleric Guild | (24,-444) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Seria Woodwind]] | Paladin Guild | (-9,-197) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Allia Moondancer]] | Cleric Guild | (2,-444) }}
+{{SpellWhereRowB | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Issia H'Rugla]] | Cleric Guild | (405,-766) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Amata D'Lavi]] | Cleric Guild (F1) | (103,311) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Donala Baris]] | Paladin Guild (F3) | (208,-130) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Mellisa Purgor]] | Paladin Guild | (-158,-130) }}
+{{SpellWhereRow  | [[Northern Karana]] | [[Tak Whistler]] | Druid Ring | (-2732,-1466) }}
+{{SpellWhereRowB | [[Paineel]] | [[Lillean Han Oni]] | Cleric Guild | (1212,551) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Leon Ereek]] | Cleric Guild | (373,-434) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Frappy Slimfinger]] | Cleric Guild | (-214,-359) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Oriyame Nelafre]] | Cleric Guild | (-259,-539) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Brita]] | Cleric Guild | (-184,812) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Keegan]] | Paladin Guild | (-210,543) }}
+}}
+
+| TableLocations = Vendors
+| TableEra = Classic
+}}

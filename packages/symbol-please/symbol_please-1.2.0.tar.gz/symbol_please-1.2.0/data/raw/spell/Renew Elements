@@ -1,0 +1,43 @@
+{{Kunark Era}}
+{{Spellpage|
+| spellname = Renew Elements
+| spellicon = J
+| description = Renews the health of your elemental pet, healing between 33 and 50 damage, and curing their diseases, poisons, and curses.
+
+| classes = 
+
+* [[Magician]] - Level 8
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Hitpoints by 33 (L8) to 50 (L25) }}
+{{SpellSlotRow | 2 | Decrease Disease Counter by 10 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 25
+| range = 100
+| casting_time = 3.00
+| fizzle_time = 2.50
+| recast_time = 6.50
+| duration = Instant
+| target_type = Pet
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone 's form pulses red.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+
+}}

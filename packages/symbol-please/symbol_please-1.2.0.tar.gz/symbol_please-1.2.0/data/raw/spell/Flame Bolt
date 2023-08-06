@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Flame Bolt
+| spellicon = O
+| description = Burns your target's skin with a bolt of fire, causing between 45 and 55 damage.
+
+| classes = 
+
+* [[Magician]] - Level 8
+
+| items_with_effect = 
+
+<ul><li> {{:Wand of the Burning Dead}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 41 (L8) to 47 (L14) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 40
+| range = 300
+| casting_time = 2.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Line of Sight
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = A stream of fire washes over you.
+| msg_cast_on_other = Someone  is bathed in fire.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+
+}}

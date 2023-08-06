@@ -1,0 +1,2325 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C necromancer.gif|right]]
+'''Necromancers''' are masters of life and death, utilizing fire, magic, poison, and disease based spells to overwhelm their foes and assist their allies. Their choice to descend into necromancy has alienated them from most old-world civilizations, being killed on sight by most guards and shunned by many merchants. As such, the necromancer is very independent; few support classes are able to offer anything that the necromancer does not already have, and items and gear do not carry the same weight as they do for other classes.
+
+The necromancer's power comes from a deep understanding of the powers of life and death. This grants them a number of abilities, including the ability to mezmerize, snare, and fear their enemies, to transfer mana and health to their allies, and lastly to assert their dominance over the undead with a number of efficient direct damage, charm, root and lull spells. The necromancer is classified as anti-natural and has some unique spells to attack animals and plant based mobs.
+
+A highlight of the necromancer is their DoT (Damage over Time) spells, where they are one of the premier classes in the game. These abilities tick (one tick = 6 seconds) for exceptional damage over time, at a relatively cheap cost to mana. The efficiency of these spells, as it will be discussed later, declines when the enemy dies before the DoT runs its course. This lends itself well, however, to soloing, where necromancers can see the full potential of their DoTs, as well as utilizing their ability to snare, fear, and root their enemies, as well as charm them, if they are undead. Furthermore, combining the spells Screaming Terror (mezmerize) and Feign Death, necromancers can split mobs with the best of classes, and so have great survivability when played at their full potential.
+
+In addition to these, the Necromancer has access to one of the most powerful mana regenerating abilities in the game, commonly referred to as lich (after the level 49 spell). The Lich line of spells grant a buff that passively removes health in exchange for giving the Necromancer mana. Beginning with Dark Pact, and Allure of Death, these spells merely change health into mana, however with Call of Bones, Lich, and even Demi-Lich, the caster's flesh melts away, leaving a skeleton form for the Necromancer. This increased mana generation allows the Necromancer to have more mana, which translate into more spells in a period of time.
+
+Necromancers are sought after in raids & groups for a number of reasons, including but not limited to their damage, ability to transfer health, and to generate mana which can be granted to party members in times of need.
+
+<ul>
+<li type=disc>As mentioned, there are many reasons to seek out a necromancer. They deliver incredible damage by stacking different, numerous DoTs, and can do this without fear of taking aggro through the use of feign death, which removes the hate the enemy has for the necromancer. However, the primary way that a necromancer deals damage is through damage over time abilities, creating a tension between a necromancer and his or her group. The better the group, the faster, higher damaging abilities that a necromancer must use, but these spells become less efficient in mana due to their high burst. This means that the mana efficiency of a necromancer is inversely proportional to the damage output of a group. As the group is doing less damage, the necromancer can use more mana efficient, but slow spells, but the faster the group is, the more the necromancer must use less mana efficient spells, to the point of not using DoTs and using Direct Damage spells. For long duration events, the ability for a necromancer to continue destruction is unsurpassed.
+</ul>
+
+Necromancer have hands-down the most efficient detrimental spells in the game from a pure Damage per Mana (DPM) standpoint... but in practical application in the fast-paced group or raid atmosphere, the necromancer can be relegated to being a failure as a DPS in terms of DPM. As a group becomes more effective, the Necromancer will end up using less mana efficient, but faster spells, sacrificing DPM for the sake of getting the DPS out before the enemy dies. Only during solo activities and the more lengthier (raid) fights can the necromancer generally get their efficiency as advertised. However, the high mana regeneration capability compensates for this.
+
+Another unique attribute of DoT spells is that they are either applied fully or resisted fully, unlike instant damage spells (nukes) which can be partially resisted. Because of this, some necromancer spells, specifically the lifetap and blood boil spell line have resistance modifiers that help them land on highly resistant enemies.
+
+<ul>
+<li type=disc>Their ability to pull is minor in the group or raid game due to the difficulty surviving taking hits as a cloth wearer, netting a necromancer extremely low AC caps and HP, as well as a cast/recast timer on Feign Death. From a pure pulling efficiency standpoint, necromancers are inferior to bards and monks. From a survivability standpoint are surpassed by Shadowknights. Because of this, necromancers generally don't play the role of puller in a large raid environment or against difficult group content. However, the necromancer can generally split off mobs quite well as long as they are not immune to changes in run-speed or linked. One of the primary reasons that necromancers are considered to be inefficient pullers is due to the long reuse timer on feign death, resulting in necromancers taking a considerable amount of time to split a pull.
+
+<li type=disc> Necromancers also utilize abilities to root, nuke, lull, and charm the undead. These abilities are somewhat limited, but tend to be more mana efficient and tools for certain leveling strategies. In raids, you can end up using charm on certain undead enemies for a greater damage output than your summoned pet could put out. However, there is a maximum level on these, as with all charms, so these do not grant total dominance over the undead.
+
+<li type=disc>Necromancers are also considered one of the pet classes, as they have undead pets to do their bidding from the very first level, and receive benefit from a single pet focus item. Compared to the main pet class, the magician, necromancer pets are moderately weak (due in part the inability to support them as well as magicians). The Necromancer's pet can be equipped with regular, or magician-summoned gear to dramatically improve their survivability & damage output. The Necromancer has three pet varieties, the first and most common being a warrior, which is along side a monk and a rogue at later levels. The warrior has better survivability but reduced damage when compared to the rogue (which requires proper positioning at the rear of targets to allow backstabbing for any significant damage increase). The monk has slightly more health than the rogue, and can survive better than it, but instead of bash or backstab, it has access to a flying kick.
+
+<li type=disc>Necromancers also have access to a useful spell-line commonly referred to as twitch. These spells include Rapacious Subvention, Covetous Subversion, and Sedulous Subversion. These spells are cast to give mana to another player, in essence transferring your mana to that player. This can often be useful on fights in which Necromancers are getting resisted too much, or in which their DPS is not necessarily desired. This allows the Necromancer to act as something of a mana generator for buffers and clerics during raid recovery. As a Necromancer, you have among the fastest mana return in the game, and twitch allows you to share some in a pinch.
+
+<li type=disc>Lastly, the necromancer class is very fun and rewarding as long as you are not determined to be the best in all situations. Necromancers are arguably the most independent of all classes, being designed with a number of self-only spells that certain other casters can cast on others (Self-only invis, self-only succor), making it a prime choice for those that plan to solo the majority of their careers. In addition to this, the necromancer offers a player wanting an alt to solo when they are bored (or frustrated) with their main a chance for a solitary reprieve. However, necromancers are also outstanding additions to raiding guilds because of the extreme DPS potential over the long run, their ability to twitch and help a cleric save lives, or to even patch heal others as needed. A successful necromancer must learn a variety of different strategies that change as a necromancer levels and gains new abilities. These different strategies allow the Necromancer to solo that which would otherwise require a group.
+</ul>
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Necromancer || Heretic || Defiler || Warlock
+|}
+
+= Creation Guide =
+
+== Picking the right race ==
+
+The first thing you have to pick then is your race. Which race you pick will determine the foundation of you character for the rest of your life in Norrath, so it is kind of important you pick one you like and that you will be happy with.
+
+Now in terms of faction, Necromancers are generally hated everywhere, some races are hated more then others, Gnomes and Humans and Erudites are neutral races and will have an easier time building faction (especially gnomes being the least evil of all the necromancer race choices) vs a Dark Elf or Iksar so there is some difference in the races in that respect.
+
+[[Human]]
+* Well rounded statistics
+* No low-light vision
+* Low starting Intelligence 
+
+
+[[Erudite]] 
+* A number of quests available to them that no other race can do with some decent items
+** [[Paineel#What.27s_in_this_zone.3F | Paineel Quests]] for a list to get you started ([[Noclin's Femur]] being of particular note)
+* Like humans, no low-light vision
+* Highest starting intelligence 
+
+
+[[Dark Elf]] 
+* Hated everywhere but a couple of other evil towns
+* Harder time building up faction in comparison to the neutral race choices
+* Access to the [[Thex Mallet]] and [[Reaper of the Dead]] questline (which is believed to be possible to do if you are not a Dark Elf, but requires incredibly high faction)
+* Only necromancer race that can use "hide." If you combine a successful hide while you feign death then you can clear your aggro list safely
+** Keep in mind some enemies can see through hide. But, this is a very useful combination of spell + ability and it shouldn't be overlooked.
+* High starting Intelligence. 
+
+
+[[Gnome]]
+* Least hated Necromancer/race combination
+* Easier to build faction with good races to access their areas faster and more efficiently
+* Generally have more access to cities/hubs/zones than other necromancer races
+* Access to the [[Tinkering]] skill which can offer some interesting crafting options
+* High Starting Intelligence.
+
+
+[[Iksar]]
+* Hated in all cities besides their own, even those of other evil races.
+* An experience penalty of 20% other races have no penalty.
+* Health regeneration bonus (chart below)
+* A natural AC bonus
+* Access to [[Forage]] for food and water
+* Low Starting Intelligence
+
+
+If you are concerned with min/maxing, [[Iksar]] regeneration should not be underestimated. As the chart below shows, the Iksar Necromancer will lose health slower, which ultimately means that an Iksar Necromancer can kill more things, faster. This will mean increased experience gain so long as the Iksar Necromancer levels up in places with plenty of enemies to kill (which helps to mitigate the 20% penalty). The chart shows the differences between Iksar and Non-Iksar, for each spell under the Lich spell line in the rows, while across the top of the chart in columns, it offers the different positions that effect the rate of health regeneration. 
+
+===Iksar vs Non-Iksar: Pre-Lich===
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#a5a5a5"><td width='32%'>Race + Lich</td><td width='17%'>Levels</td><td width='17%'>Standing</td><td width='17%'>Feigned</td><td width='17%'>Sitting</td></tr>
+
+     <tr bgcolor="#93deac"><td width='32%'>Non-Iksar with Death Pact</td><td width='17%'>1-19</td><td width='17%'>-1</td><td width='17%'>-1</td><td width='17%'>0</td></tr>
+     <tr bgcolor="#6ebc77"><td width='32%'>Iksar with Death Pact</td><td width='17%'>1-19</td><td width='17%'>0</td><td width='17%'>0</td><td width='17%'>+2</td></tr>
+
+    <tr bgcolor="#9cced1"><td width='32%'>Non-Iksar with Allure of Death</td><td width='17%'>20-49</td><td width='17%'>-3</td><td width='17%'>-3</td><td width='17%'>-1</td></tr>
+    <tr bgcolor="#55abaf"><td width='32%'>Iksar with Allure of Death</td><td width='17%'>20-49</td><td width='17%'>-2</td><td width='17%'>-2</td><td width='17%'>+2</td></tr>
+
+    <tr bgcolor="#c3a2d6"><td width='32%'>Non-Iksar with Call of Bones</td><td width='17%'>20-49</td><td width='17%'>-10</td><td width='17%'>-10</td><td width='17%'>-8</td></tr>
+    <tr bgcolor="#896db4"><td width='32%'>Iksar with Call of Bones</td><td width='17%'>20-49</td><td width='17%'>-9</td><td width='17%'>-9</td><td width='17%'>-5</td></tr>
+</table>
+
+===Iksar vs Non-Iksar: Lich & Demi-Lich===
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#e8abbc"><td width='32%'>Non-Iksar with Lich</td><td width='17%'>49</td><td width='17%'>-21</td><td width='17%'>-21</td><td width='17%'>-19</td></tr>
+    <tr bgcolor="#b5738b"><td width='32%'>Iksar with Lich</td><td width='17%'>49</td><td width='17%'>-20</td><td width='17%'>-20</td><td width='17%'>-16</td></tr>
+
+    <tr bgcolor="#feeab1"><td width='32%'>Non-Iksar with Lich</td><td width='17%'>50</td><td width='17%'>-21</td><td width='17%'>-21</td><td width='17%'>-18</td></tr>
+    <tr bgcolor="#cbc173"><td width='32%'>Iksar with Lich</td><td width='17%'>50</td><td width='17%'>-20</td><td width='17%'>-20</td><td width='17%'>-14</td></tr>
+
+    <tr bgcolor="#feb3b1"><td width='32%'>Non-Iksar with Lich</td><td width='17%'>51-55</td><td width='17%'>-20</td><td width='17%'>-19</td><td width='17%'>-17</td></tr>
+    <tr bgcolor="#cb7673"><td width='32%'>Iksar with Lich</td><td width='17%'>51-55</td><td width='17%'>-16</td><td width='17%'>-14</td><td width='17%'>-10</td></tr>
+
+    <tr bgcolor="#fee3b2"><td width='32%'>Non-Iksar with Lich</td><td width='17%'>56-59</td><td width='17%'>-19</td><td width='17%'>-18</td><td width='17%'>-16</td></tr>
+    <tr bgcolor="#cbb773"><td width='32%'>Iksar with Lich</td><td width='17%'>56-59</td><td width='17%'>-12</td><td width='17%'>-10</td><td width='17%'>-6</td></tr>
+
+    <tr bgcolor="#ed9895"><td width='32%'>Non-Iksar with Lich</td><td width='17%'>60</td><td width='17%'>-18</td><td width='17%'>-17</td><td width='17%'>-15</td></tr>
+    <tr bgcolor="#cb7673"><td width='32%'>Iksar with Lich</td><td width='17%'>60</td><td width='17%'>-10</td><td width='17%'>-8</td><td width='17%'>-4</td></tr>
+    <tr><td width='32%'></td><td width='17%'></td><td width='17%'></td><td width='17%'></td><td width='17%'></td>
+    <tr bgcolor="#f86d62"><td width='32%'>Non-Iksar with Demi-Lich</td><td width='17%'>60</td><td width='17%'>-28</td><td width='17%'>-27</td><td width='17%'>-25</td></tr>
+    <tr bgcolor="#cc1506"><td width='32%'>Iksar with Demi-Lich</td><td width='17%'>60</td><td width='17%'>-20</td><td width='17%'>-18</td><td width='17%'>-14</td></tr>
+</table>
+
+== Starting Statistics ==
+
+[[File:necro-stats.png]]
+
+== Spending Your Bonus Points ==
+The races capable of becoming Necromancers are naturally intelligent and make good use of their considerable intellect when researching new spells and developing their magical abilities. The Necromancer has access to two main attributes which influence either their health and mana pool, both of which are integral to a good necromancer.
+
+Necromancers have a line of spells that convert health into mana, and because of the aggression Necromancers generate in combat, these spells work most effectively if they have a fair amount of wiggle room when it comes to a health total. Since health will be dumped into mana for a near 1:1 ratio (not counting health regeneration), health can translate to mana over the long run. 
+
+1. The intelligence attribute is crucial to a Necromancer. It directly relates to the amount of mana the necromancer has available. At maximum level, a necromancer will gain about 10 mana per 1 intelligence until hitting the soft-cap of 200, at which point a necromancer will gain around 5 mana per 1 intelligence. A necromancer needs enough intelligence to have enough mana to be able to cast all spells he or she must in a brief period of time.
+
+2. The stamina attribute is crucial as well to a necromancer. It directly relates to the amount of health the necromancer has available. At maximum level, a necromancer will gain about 2 health per 1 stamina. A necromancer needs enough health so that their lifetaps and life draining spells do not push health to 100%, as that excess health is effectively wasted mana over the long run.
+
+3. There are very few items that can increase the natural health regeneration of the Necromancer besides the Iksar race. It is suggested that buffs that grant health regeneration should be a high priority in group settings, to mitigate the health loss of the Lich spell line.
+
+4. Necromancers are one of the most hated classes on Norrath, this is often countered by employing others to help buy your spells and supplies for a small fee, try to keep stocked up on all the essentials as the fee you'll pay will probably be more then you would buying supplies from a friendly merchant. For this reason, charisma is not a focused attribute for necromancers, and many items tend to reduce this attribute to emphasize this point.
+
+It is fairly common for necromancers to begin with 25 Intelligence, 5 Stamina, but it is not unheard of for a necromancer to begin with 25 Stamina, 5 Intelligence, or some mix in between, especially for races that are not Iksar/Human, and begin with a hefty amount of intelligence.
+
+==Health vs. Mana==
+Due to the mechanics of Lich, passively reducing our health every tick in exchange for a boost in mana per tick, necromancers are put into a position of having, in effect, two pools of mana. From their mana, they directly draw for spells, but their health pool acts as a mana battery, constantly being drained to provide more mana for the necromancer's use. So how much health and how much mana should you have?
+
+We should begin by understanding that each of these two have a certain advantage. A sizable mana pool means that when you are coming out of an extended rest (by which it is meant that you will be at full mana and health), you will be able to cast more spells in a small period of time. A sizable health pool means that while you are fighting and engaged in combat, the negative effects of Lich will not be as pressing, and you will have more wiggle room in which to use lifetaps to restore your health.
+
+A great deal of this comes down to feeling, and your own playstyle. Following is a series of considerations that one should keep in mind when finding their "sweet spot" for mana/health ratio. Just remember that both health and mana are effectively power to fuel your spells, but that each of them works differently: Mana is readily available, immediately exploitable resource to cast your spells, while Health is not immediately available, but makes your life much easier and safer.
+
+===When to go for Health===
+1) When your lifetaps/life drains are making you reach 100% health, and excess healing is lost. That excess healing is lost potential mana.
+
+2) When you're engaged in reasonably paced pulls, since you will have time for Lich to burn you more mana.
+
+3) When you are soloing and are simply too squishy, since a greater health total means more health an enemy must cut through to kill you.
+
+4) When you have an overabundance of mana.
+
+===When to go for Mana===
+1) When you are reaching 100% mana before your next pull. If you sit at 100% mana, every tick is wasted mana.
+
+2) When you do not have enough mana to cast all the spells you need in a brief period of time for pulls that are in bursts, since Lich wont have much time to burn your health into mana.
+
+3) When you feel you are not squishy, since excessive padding of health likely comes to the detriment of your mana pool.
+
+4) When you have an overabundance of health.
+
+== Religion ==
+
+Religion is not of a huge concern to Necromancers as they are already hated.  Most choose to worship either Cazic-Thule, or Innoruuk the Prince of Hate, as it ties in well their role.  The other choice is Bertoxxulous. Necromancers cannot be agnostic, as their dark powers are directly linked to their worship of their god.
+
+= Spells =
+
+==Level 1==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=true}}
+
+{{SpellRow
+|name=Cavorting Bones
+|type=Summon
+|description=Skeleton Warrior, Level 1.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=15
+}}
+
+{{SpellRow
+|name=Coldlight
+|type=Utility
+|description=Summon an item that gives off light
+|era=
+|school=Con.
+|location=Vendor.
+|mana=15
+}}
+
+{{SpellRow
+|name=Disease Cloud
+|type=DoT (Disease)
+|description=Deals 5 direct damage + 1 damage per tick for 30 to 60 ticks.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=10
+}}
+
+{{SpellRow
+|name=Invisibility versus Undead
+|type=Buff (Target)
+|description=Single Target Invisibility versus Undead
+|era=
+|school=Div.
+|location=Vendor.
+|mana=40
+}}
+
+{{SpellRow
+|name=Lifetap
+|type=Lifetap
+|description=Drains 3 to 5 health from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=9
+}}
+
+{{SpellRow
+|name=Locate Corpse
+|type=Utility
+|description=Turns the caster in the direction of the corpse of the target.
+|era=
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+
+{{SpellRow
+|name=Minor Shielding
+|type=Buff (Self)
+|description=Grants the caster +6 to +10 HP & +3 to +4 AC
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=10
+}}
+
+{{SpellRow
+|name=Reclaim Energy
+|type=Utility
+|description=Sacrifice your summoned pet for mana based on the pet's health
+|era=
+|school=Con.
+|location=Vendor.
+|mana=5
+}}
+
+{{SpellRow
+|name=Sense the Dead
+|type=Utility
+|description=Detects nearby undead
+|era=
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+
+{{SpellRow
+|name=Siphon Strength
+|type=Debuff (Target)
+|description=Drain 5 to 10 STR from target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=5
+}}
+</table>
+
+==Level 4==
+
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Clinging Darkness
+|type=DoT (Snare)
+|description=Deals 5 damage per tick for 2 to 8 ticks. Reduces movement speed by 24% to 30%.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+
+
+{{SpellRow
+|name=Endure Cold
+|type=Buff (Target)
+|description=Increase cold resistance by 11 to 20.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+
+{{SpellRow
+|name=Fear
+|type=Debuff (Target)
+|description=Single Target Fear for 3 ticks
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+
+
+{{SpellRow
+|name=Gate
+|type=Utility
+|description=Teleport to your bind point
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=70
+}}
+
+{{SpellRow
+|name=Grim Aura
+|type=Buff (Self)
+|description=Increase caster's attack by 7 to 10.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=25
+}}
+
+{{SpellRow
+|name=Leering Corpse
+|type=Summon
+|description=Skeleton Warrior, Level 3-5.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=40
+}}
+
+{{SpellRow
+|name=Lifespike
+|type=Lifetap
+|description=Drains 9 to 11 health from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=18
+}}
+
+{{SpellRow
+|name=Numb the Dead
+|type=Debuff (Target)
+|description=Lulls undead to reduce aggression.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+
+{{SpellRow
+|name=Poison Bolt
+|type=DoT (Poison)
+|description=Deals 6 direct damage + 5 per tick for 2 to 7 ticks.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=True North
+|type=Utility
+|description=Turns caster to face North.
+|era=
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+</table>
+
+==Level 8==
+
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Bone Walk
+|type=Summon
+|description=Skeleton Warrior, Level 7-9.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=80
+}}
+
+{{SpellRow
+|name=Dark Empathy
+|type=Buff (Target)
+|description=Caster loses 30 health, and target gains 30 health.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+
+{{SpellRow
+|name=Dark Pact
+|type=Buff (Self)
+|description=Lich. The caster loses 2 health per tick, and restores 2 mana per tick.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=5
+}}
+
+{{SpellRow
+|name=Deadeye
+|type=Buff (Self)
+|description=See Invisibility and Infravision.
+|era=
+|school=Div.
+|location=Vendor.
+|mana=35
+}}
+
+{{SpellRow
+|name=Gather Shadows
+|type=Buff (Self)
+|description=Invisibility.
+|era=
+|school=Div.
+|location=Vendor.
+|mana=35
+}}
+
+
+{{SpellRow
+|name=Impart Strength
+|type=Buff (Target)
+|description=Caster loses 10 STR, and target gains 10 STR for 6 minutes.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=15
+}}
+
+
+{{SpellRow
+|name=Lesser Shielding
+|type=Buff (Self)
+|description=Grants the caster +20 to +30 HP, and +6 to +9 AC.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Mend Bones
+|type=Buff (Pet)
+|description=Heals the caster's pet for 33 to 50 HP.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=25
+}}
+
+
+{{SpellRow
+|name=Shadow Step
+|type=Utility
+|description=Short range, random direction teleportation.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+
+{{SpellRow
+|name=Vampiric Embrace
+|type=Buff (Self)
+|description=Caster's melee attacks gain a chance to proc a lifetap.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Ward Undead
+|type=DD (Undead)
+|description=Deals 35 to 41 damage to an undead target.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+
+</table>
+
+==Level 12==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Bind Affinity
+|type=Utility (Self, Target)
+|description=Sets the caster's bind point to most locations, or the target's bind point in cities.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+
+{{SpellRow
+|name=Convoke Shadow
+|type=Summon
+|description=Skeleton Warrior, Level 9-11.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=120
+}}
+
+
+{{SpellRow
+|name=Endure Disease
+|type=Buff (Target)
+|description=Increases the target's disease resistance by 19 to 20.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+
+{{SpellRow
+|name=Engulfing Darkness
+|type=DoT (Snare)
+|description=Deals 11 damage per tick for 10 ticks. Snares movement speed by 40%.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=60
+}}
+
+{{SpellRow
+|name=Heat Blood
+|type=DoT (Fire)
+|description=Deals 17 per tick for 6 to 10 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=72
+}}
+
+{{SpellRow
+|name=Leach
+|type=DoT (Drain)
+|description=Deals 8 per tick for 6 to 9 ticks. Heals the caster for 8 per tick for 6 to 9 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=72
+}}
+
+{{SpellRow
+|name=Lifedraw
+|type=Lifetap
+|description=Drains 39 to 45 health from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=63
+}}
+{{SpellRow
+|name=Scent of Dusk
+|type=Debuff (Target)
+|description=Decreases fire, poison and disease resist by 7 to 9.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+
+{{SpellRow
+|name=Sight Graft
+|type=Utility
+|description=Makes the caster view through the eyes of their summoned minion.
+|era=
+|school=Div.
+|location=Vendor.
+|mana=10
+}}
+
+{{SpellRow
+|name=Spook the Dead
+|type=Debuff (Target, Undead)
+|description=Single target Fear for 1 to 3 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+
+{{SpellRow
+|name=Wave of Enfeeblement
+|type=Debuff (AoE)
+|description=Decreases STR of targets in range by 11 to 15 for 12 to 20 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+</table>
+
+==Level 16==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Banshee Aura
+|type=Buff (Self)
+|description=Shield on the caster that deals 9 to 12 damage to attackers.  Requires a [[Pearl]]
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=60
+}}
+
+{{SpellRow
+|name=Cancel Magic
+|type=Utility (Target)
+|description=Dispels magic effects from the target.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=30
+}}
+
+{{SpellRow
+|name=Cure Disease
+|type=Heal (Target)
+|description=Cures a disease, removing 1 disease counter from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+
+{{SpellRow
+|name=Feign Death
+|type=Utility
+|description=The caster appears dead to enemies, removing the necromancer from the enemy's hate list.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=60
+}}
+
+{{SpellRow
+|name=Heart Flutter
+|type=DoT (Muscle Disease)
+|description=Deals 12 damage per tick for 8 to 12 ticks, also debuffs AC and Str
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=80
+}}
+
+{{SpellRow
+|name=Hungry Earth
+|type=Debuff (Target, Undead)
+|description=Roots target undead to the ground, dealing between 26 and 75 damage, and lasts 8 ticks.
+|era=
+|school=Alt.
+|location=[[Research]]
+|mana=30
+}}
+
+{{SpellRow
+|name=Infectious Cloud
+|type=DoT (AoE)
+|description=Deals 20 direct damage + 5 damage per tick for 21 ticks.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=78
+}}
+
+{{SpellRow
+|name=Restless Bones
+|type=Summon
+|description=Skeleton Warrior, Level 14-16.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=160
+}}
+{{SpellRow
+|name=Shielding
+|type=Buff (Self)
+|description=Grants the caster +46 to +50 HP, +12 to +13 AC, and +13 Magic Resist.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+
+{{SpellRow
+|name=Shieldskin
+|type=Buff (Self)
+|description=Absorbs 27 to 55 damage. Consumes a [[Cat's Eye Agate]].
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=41
+}}
+
+{{SpellRow
+|name=Spirit Armor
+|type=Buff (Target)
+|description=Increases the target's armor by 11 to 13.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=75
+}}
+
+
+
+
+{{SpellRow
+|name=Voice Graft
+|type=Utility
+|description=Allows the caster to speak through their summoned minion.
+|era=
+|school=Div.
+|location=[[Research]]
+|mana=10
+}}
+
+</table>
+
+==Level 20==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Animate Dead
+|type=Summon
+|description=Skeleton Warrior, Level 15-19.
+|era=
+|school=Con.
+|location=Oggok.
+|mana=200
+}}
+
+{{SpellRow
+|name=Siphon Life
+|type=Lifetap
+|description=Drains 65 to 75 health from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=72
+}}
+
+{{SpellRow
+|name=Expulse Undead
+|type=DD (Undead)
+|description=Deals 88 to 94 damage to an undead target.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=60
+}}
+
+{{SpellRow
+|name=Word of Shadow
+|type=DD (AoE)
+|description=Deals 52 to 58 damage to all targets around the caster.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=85
+}}
+
+{{SpellRow
+|name=Allure of Death
+|type=Buff (Self)
+|description=Lich. The caster loses 6 health per tick, and restores 4 mana per tick.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=5
+}}
+
+{{SpellRow
+|name=Harmshield
+|type=Buff (Self)
+|description=Grants the caster immunity to damage for 18 seconds. Cannot attack or cast spells while immune.
+|era=
+|school=Abj.
+|location=[[Research]]
+|mana=85
+}}
+
+{{SpellRow
+|name=Shadow Compact
+|type=Heal (Target)
+|description=The caster loses 20 health per tick, and the target is healed for 20 damage per tick for 4 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+
+{{SpellRow
+|name=Dominate Undead
+|type=Debuff (Target, Undead)
+|description=Charms target undead creature to act as the caster's minion for 7 to 20 minutes. Breaks randomly.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+
+{{SpellRow
+|name=Shadow Vortex
+|type=Debuff (Target)
+|description=Drains 9 to 12 AC from the target and gives it to the caster.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+
+{{SpellRow
+|name=Track Corpse
+|type=Utility
+|description=Turns the caster toward the corpse of the target every tick.
+|era=
+|school=Div.
+|location=Vendor.
+|mana=15
+}}
+
+{{SpellRow
+|name=Identify
+|type=Utility (Target Item)
+|description=Obtain item lore information
+|era=
+|school=Div.
+|location=Vendor.
+|mana=50
+}}
+</table>
+
+==Level 24==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Haunting Corpse
+|type=Summon
+|description=Skeleton Warrior, Level 18-22.
+|era=
+|school=Con.
+|location=[[Research]]
+|mana=240
+}}
+
+{{SpellRow
+|name=Shock of Poison
+|type=DD (Target)
+|description=Deals 146 to 160 damage to the target.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=100
+}}
+
+{{SpellRow
+|name=Resist Cold
+|type=Buff (Target)
+|description=Increase cold resistance by 39 to 40.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+
+{{SpellRow
+|name=Leatherskin
+|type=Buff (Self)
+|description=Absorbs 71 to 118 damage. Consumes a [[bloodstone]].
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=83
+}}
+
+{{SpellRow
+|name=Major Shielding
+|type=Buff (Self)
+|description=+69 to +75 HP, +16 to +18 AC, and +14 Magic Resist.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=80
+}}
+
+{{SpellRow
+|name=Breath of the Dead
+|type=Buff (Self)
+|description=Allows the caster to breathe underwater.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=45
+}}
+
+{{SpellRow
+|name=Shadow Sight
+|type=Buff (Self)
+|description=The caster gains ultravision.
+|era=
+|school=Div.
+|location=Vendor.
+|mana=50
+}}
+
+{{SpellRow
+|name=Intensify Death
+|type=Buff (Pet)
+|description=Increases the caster's minion's attack speed by 22% to 30%, STR by 26 to 33, and AC by 6 to 8.
+|era=
+|school=Alt.
+|location=[[Research]]
+|mana=50
+}}
+
+{{SpellRow
+|name=Rest the Dead
+|type=Debuff (Target, Undead)
+|description=Lulls undead to reduce aggression.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=75
+}}
+
+{{SpellRow
+|name=Scent of Shadow
+|type=Debuff (Target)
+|description=Decreases fire, poison and disease resist by 14 to 18.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+
+{{SpellRow
+|name=Screaming Terror
+|type=Debuff (Target)
+|description=Mesmerizes the target with a chance to memory blur, for 3 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+
+{{SpellRow
+|name=Rapacious Subversion
+|type=Utility (Target)
+|description=Twitch. Restores 60 mana to the target's mana pool.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=200
+}}
+</table>
+
+==Level 29==
+
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Summon Dead
+|type=Summon
+|description=Skeleton Warrior, Level 22-25.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=290
+}}
+
+{{SpellRow
+|name=Spirit Tap
+|type=Lifetap
+|description=Drains 132 to 150 health from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=144
+}}
+
+{{SpellRow
+|name=Dooming Darkness
+|type=DoT (Snare)
+|description=Deals 20 damage per tick for 15 to 16 ticks. Snares movement speed by 49% to 60%. (3.3 DPS; 2.5 DPM)
+|era=
+|school=Con.
+|location=Vendor.
+|mana=120
+}}
+
+{{SpellRow
+|name=Boil Blood
+|type=DoT (Fire)
+|description=Deals 24 per tick for 16 to 21 ticks. (4 DPS; 2.6-3.4 DPM)
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+
+{{SpellRow
+|name=Vampiric Curse
+|type=DoT (Drain)
+|description=Deals 21 per tick for 9 ticks. Heals the caster for 21 per tick for 9 ticks. (3.5 DPS; 1.3 DPM)
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=144
+}}
+
+{{SpellRow
+|name=Dismiss Undead
+|type=DD (Undead)
+|description=Deals 140 to 162 damage to an undead target.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=90
+}}
+
+{{SpellRow
+|name=Word of Spirit
+|type=DD (AoE)
+|description=Deals 97 to 104 damage to all targets around the caster.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=133
+}}
+
+{{SpellRow
+|name=Renew Bones
+|type=Heal (Pet)
+|description=Heals the target minion for 154 to 175 health.
+|era=
+|school=Alt.
+|location=[[Research]]
+|mana=125
+}}
+
+{{SpellRow
+|name=Panic the Dead
+|type=Debuff (Target, Undead)
+|description=Single target Fear for 9 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+</table>
+
+==Level 34==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Invoke Shadow
+|type=Summon
+|description=Skeleton Warrior, Level 25-29.
+|era=
+|school=Con.
+|location=[[Research]]
+|mana=340
+}}
+
+{{SpellRow
+|name=Venom of the Snake
+|type=DoT (Poison)
+|description=Deals 40 Direct + 59 damage per tick for 8 ticks. (10.7 DPS; 3.2 DPM)
+|era=
+|school=Con.
+|location=Vendor.
+|mana=160
+}}
+
+{{SpellRow
+|name=Torbas' Acid Blast
+|type=DD (Target)
+|description=Deals 220 poison damage to the target.
+|era=Vel.
+|school=Con.
+|location=Vendor
+|mana=130
+}}
+
+{{SpellRow
+|name=Call of Bones
+|type=Buff (Self)
+|description=Lich. The caster loses 10 health per tick, and restores 8 mana per tick. Bleached Skeleton Illusion.
+|era=
+|school=Alt.
+|location=[[Research]]
+|mana=5
+}}
+
+{{SpellRow
+|name=Greater Shielding
+|type=Buff (Self)
+|description=Grants the caster +94 to +100 HP, +21 to +30 AC, and +16 Magic Resist.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=120
+}}
+
+{{SpellRow
+|name=Steelskin
+|type=Buff (Self)
+|description=Absorbs 168 to 230 damage. Consumes a [[jasper]].
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=149
+}}
+
+{{SpellRow
+|name=Resist Disease
+|type=Buff (Target)
+|description=Increases the target's disease resistance by 40.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+
+{{SpellRow
+|name=Beguile Undead
+|type=Debuff (Target, Undead)
+|description=Charms target undead creature to act as the caster's minion for 11 to 20 minutes. Breaks randomly.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=170
+}}
+
+{{SpellRow
+|name=Invoke Fear
+|type=Debuff (Target)
+|description=Single Target Fear for 7 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+
+{{SpellRow
+|name=Root
+|type=Debuff (Target)
+|description=Root. Adheres the target's feet to the ground, preventing movement. Lasts 8 ticks. Breaks randomly, and on direct damage.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+
+{{SpellRow
+|name=Surge of Enfeeblement
+|type=Debuff (AoE)
+|description=Decreases STR of targets in range by 22 to 30 for 100 ticks.
+|era=
+|school=Alt.
+|location=[[Research]]
+|mana=100
+}}
+</table>
+
+==Level 39==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Malignant Dead
+|type=Summon
+|description=Skeleton Warrior, Level 29-33.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=390
+}}
+
+{{SpellRow
+|name=Drain Spirit
+|type=Lifetap
+|description=Drains 207 to 226 health from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=189
+}}
+
+{{SpellRow
+|name=Chilling Embrace
+|type=DoT (Poison)
+|description=40 damage per tick for 16 ticks. (6.7 DPS; 3.2 DPM)
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=200
+}}
+{{SpellRow
+|name=Scourge
+|type=DoT (Disease)
+|description=40 Direct + 24 per tick for 21 ticks. (4.3 DPS; 3.2 DPM)
+|era=
+|school=Con.
+|location=Vendor.
+|mana=170
+}}
+
+{{SpellRow
+|name=Expel Undead
+|type=DD (Undead)
+|description=261 to 273 damage to an undead target.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=130
+}}
+
+{{SpellRow
+|name=Word of Souls
+|type=DD (AoE)
+|description=147 to 155 damage to all targets around the caster.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=171
+}}
+
+{{SpellRow
+|name=Augment Death
+|type=Buff (Pet)
+|description=Increases the caster's minion's attack speed by 49% to 55%, STR by 39 to 45, and AC by 10 to 12.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=200
+}}
+
+{{SpellRow
+|name=Counteract Disease
+|type=Heal (Target)
+|description=Cures a target's disease, removing 8 disease counters from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+
+{{SpellRow
+|name=Scent of Darkness
+|type=Debuff (Target)
+|description=Decreases fire, poison and disease resist by 24 to 27.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+
+{{SpellRow
+|name=Nullify Magic
+|type=Utility (Target)
+|description=Dispels magic effects from the target.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+
+{{SpellRow
+|name=Summon Corpse
+|type=Utility (Target Player)
+|description=Summons the target's corpse to your location. Must be in the same zone as the corpse. Consumes a [[Jade Inlaid Coffin]].
+|era=
+|school=Abj.
+|location=Paw.
+|mana=700
+}}
+</table>
+
+==Level 44==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Cackling Bones
+|type=Summon
+|description=Skeleton Warrior, Level 33-37.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=450
+}}
+
+{{SpellRow
+|name=Asystole
+|type=DoT (Muscle Disease)
+|description=Ticks for 69 damage for 10 ticks. Reduces the target's STR by 37 to 40, and the target's AC by 16 to 18.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=210
+}}
+
+{{SpellRow
+|name=Ignite Bones
+|type=DD (Target)
+|description=Deals 494 to 500 damage to the target. Applies a skeleton illusion to the target.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=210
+}}
+
+{{SpellRow
+|name=Incinerate Bones
+|type=DD (Target)
+|description=Deals 494 to 500 damage to the target. (Chardok revamp drop)
+|era=Vel.
+|school=Evo.
+|location=NPC Drop.
+|mana=210
+}}
+{{SpellRow
+|name=Dead Man Floating
+|type=Buff (Target)
+|description=Grants the following undead traits to the target. Levitation. See Invisible. Water Breathing. Increases poison resist by 64 to 70.
+|era=
+|school=Abj.
+|location=[[Research]]
+|mana=150
+}}
+
+{{SpellRow
+|name=Arch Shielding
+|type=Buff (Self)
+|description=+144 to +150 HP, +25 to +36 AC, and +20 Magic Resist.
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=200
+}}
+
+{{SpellRow
+|name=Diamondskin
+|type=Buff (Self)
+|description=Absorbs 245 to 394 damage. Consumes a [[peridot]].
+|era=
+|school=Abj.
+|location=Vendor.
+|mana=236
+}}
+
+{{SpellRow
+|name=Pact of Shadow
+|type=Heal (Target)
+|description=The caster loses 45 health per tick, and the target is healed for 81 health per tick for 4 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+
+{{SpellRow
+|name=Corporeal Empathy
+|type=Heal (Target)
+|description=The caster loses 215 health to heal the target for 215 instantly.
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=200
+}}
+{{SpellRow
+|name=Covetous Subversion
+|type=Utility (Target)
+|description=Twitch. Increases targets mana by 100? at the cost of 300 mana.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+
+{{SpellRow
+|name=Summon Companion
+|type=Utility (Pet)
+|description=Summons your pet to your location.
+|era=Vel.
+|school=Con.
+|location=E. Com.
+|mana=50
+}}
+</table>
+
+==Level 49==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Invoke Death
+|type=Summon
+|description=Skeleton Warrior, Level 37-41.
+|era=
+|school=Con.
+|location=[[Research]]
+|mana=490
+}}
+
+{{SpellRow
+|name=Drain Soul
+|type=Lifetap
+|description=Drains 332 to 338 health from the target.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=225
+}}
+
+{{SpellRow
+|name=Cascading Darkness
+|type=DoT (Snare)
+|description=Deals 72 damage per tick for 16 ticks. Reduces movement speed by 60%.
+|era=
+|school=Con.
+|location=Vendor.
+|mana=300
+}}
+
+{{SpellRow
+|name=Ignite Blood
+|type=DoT (Fire)
+|description=Deals 56 per tick for 21 ticks.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=250
+}}
+
+{{SpellRow
+|name=Bond of Death
+|type=DoT (Drain)
+|description=Deals 80 per tick for 9 ticks. Heals the caster for 80 per tick for 9 ticks.
+|era=
+|school=Alt.
+|location=[[Research]]
+|mana=360
+}}
+
+{{SpellRow
+|name=Banish Undead
+|type=DD (Undead)
+|description=Deals 585 damage to an undead target.
+|era=
+|school=Evo.
+|location=Vendor.
+|mana=225
+}}
+
+{{SpellRow
+|name=Lich
+|type=Buff (Self)
+|description=Lich. The caster loses 22 health per tick, and restores 20 mana per tick. Bloody Skeleton Illusion.
+|era=
+|school=Alt.
+|location=[[Research]]
+|mana=5
+}}
+
+{{SpellRow
+|name=Dead Men Floating
+|type=Buff (Group)
+|description=Applies [[Dead Man Floating]] to the caster's entire group.
+|era=Vel.
+|school=Abj.
+|location=NPC Drop.
+|mana=375
+}}
+{{SpellRow
+|name=Cajole Undead
+|type=Debuff (Target, Undead)
+|description=Charms target undead creature to act as the caster's minion for 11 to 20 minutes. Breaks randomly.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=245
+}}
+
+{{SpellRow
+|name=Paralyzing Earth
+|type=Debuff (Target)
+|description=Root. Adheres the target's feet to the ground, preventing movement. Lasts 30 ticks. Breaks on direct damage.
+|era=
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+</table>
+
+==Level 50==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Improved Invis to Undead
+|type=Buff (Target)
+|description=Single Target Invisibility versus Undead.
+|era=Vel.
+|school=Div.
+|location=NPC Drop.
+|mana=75
+}}
+</table>
+
+==Level 51==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Splurt
+|type=DoT (Magical)
+|description=Deals 11 damage on the first tick, and damage increases by 12 per tick for 17 ticks to a final tick of 203 damage.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=240
+}}
+
+{{SpellRow
+|name=Envenomed Bolt
+|type=DoT (Poison)
+|description=Deals 110 direct damage, and then 146 damage per tick for 8 ticks.
+|era=Kun.
+|school=Con.
+|location=Vendor.
+|mana=320
+}}
+
+{{SpellRow
+|name=Dread of Night
+|type=Debuff (Target, Undead)
+|description=Single target Fear for 8 ticks.
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+
+{{SpellRow
+|name=Sacrifice
+|type=Utility (Player Target)
+|description=Kills target player to create an [[Essence Emerald]]. The player target must consent, will lose experience, and cannot be resurrected to regain experience. Consumes an [[emerald]] when cast.
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=100
+}}
+</table>
+
+==Level 52==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Plague
+|type=DoT (Disease)
+|description=Deals 60 direct damage and then 55 per tick for 22 ticks.
+|era=Kun.
+|school=Con.
+|location=Vendor.
+|mana=300
+}}
+
+{{SpellRow
+|name=Defoliation
+|type=DD (Plant)
+|description=Deals 645 to 725 damage to target plant.
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=250
+}}
+
+{{SpellRow
+|name=Manaskin
+|type=Buff (Self)
+|description=Absorbs 521 to 600 damage. Increases mana regeneration by 1. Consumes a [[peridot]].
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=330
+}}
+
+{{SpellRow
+|name=Scent of Terris
+|type=Debuff (Target)
+|description=Decreases fire, poison and disease resist by 33 to 36.
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=200
+}}
+</table>
+
+==Level 53==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Minion of Shadows
+|type=Summon
+|description=Skeleton Rogue, Level 40-44.
+|era=Kun.
+|school=Con.
+|location=Quest.
+|mana=525
+}}
+
+{{SpellRow
+|name=Convergence
+|type=Heal (Player Corpse)
+|description=Returns target player to life, restoring 93% experience. Consumes an [[Essence Emerald]] when cast.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=700
+}}
+
+{{SpellRow
+|name=Enstill
+|type=Debuff (Target)
+|description=Root. Adheres the target's feet to the ground, preventing movement. Lasts 16 ticks. Breaks randomly, and on direct damage.
+|era=Kun.
+|school=Alt.
+|location=Overthere.
+|mana=60
+}}
+
+{{SpellRow
+|name=Annul Magic
+|type=Utility (Target)
+|description=Dispels magic effects from the target.
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=75
+}}
+</table>
+
+==Level 54==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Deflux
+|type=Lifetap
+|description=Drains 310 to 330 health from the target. Fast cast.
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=198
+}}
+
+{{SpellRow
+|name=Shield of the Magi
+|type=Buff (Self)
+|description=Grants the caster +232 to +250 HP, +29 to +31 AC, and +22 to +24 Magic Resist.
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=300
+}}
+
+{{SpellRow
+|name=Shadowbond
+|type=Heal (Target)
+|description=The caster loses 125(?) health per tick, and the target is healed for 125 health per tick for 4 ticks.
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=10
+}}
+
+{{SpellRow
+|name=Thrall of Bones
+|type=Debuff (Target, Undead)
+|description=Charms target undead creature to act as the caster's minion for 17 to 20 minutes. Breaks randomly.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=300
+}}
+</table>
+
+==Level 55==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Augmentation of Death
+|type=Buff (Pet)
+|description=Increases the caster's minion's attack speed by 65%, STR by 52 to 55, and AC by 14 to 15.
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=250
+}}
+{{SpellRow
+|name=Chill Bones
+|type=DD (Target)
+|description=Deals 505 to 540 cold damage to the target. Applies a skeleton illusion to the target.
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=210
+}}
+
+{{SpellRow
+|name=Conglaciation of Bone
+|type=DD (Target)
+|description=Deals 505 to 540 cold damage to the target. (Chardok revamp drop)
+|era=Vel.
+|school=Evo.
+|location=NPC Drop.
+|mana=210
+}}
+{{SpellRow
+|name=Levant
+|type=Utility (Self)
+|description=Teleports the caster to a relatively safe spot in zone. Self-only evacuation. Only works at night.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=500
+}}
+
+{{SpellRow
+|name=Infusion
+|type=Utility (Self)
+|description=Restores 1000 mana to the caster's mana pool. Consumes an [[Essence Emerald]] when cast.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=1
+}}
+
+{{SpellRow
+|name=Skin of the Shadow
+|type=Utility (Self)
+|description=Grants the caster invisibility, ultravision, and increases area of sight by 115%. Only works at night.
+|era=Kun.
+|school=Alt.
+|location=Overthere.
+|mana=85
+}}
+</table>
+
+==Level 56==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Servant of Bones
+|type=Summon
+|description=Skeleton Monk, Level 41-43.
+|era=Kun.
+|school=Con.
+|location=NPC Drop.
+|mana=525
+}}
+
+{{SpellRow
+|name=Cessation of Cor
+|type=DoT (Muscular Disease)
+|description=Deals for 100 damage per tick for 11 ticks. Reduces the target's STR by 50, and the target's AC by 19 to 21.
+|era=Kun.
+|school=Alt.
+|location=Overthere.
+|mana=250
+}}
+
+{{SpellRow
+|name=Trepidation
+|type=Debuff (Target)
+|description=Single Target Fear for 6 ticks.
+|era=Kun.
+|school=Alt.
+|location=Overthere.
+|mana=200
+}}
+
+{{SpellRow
+|name=Sedulous Subversion
+|type=Utility (Target)
+|description=Twitch. Restores 150 mana to the target's mana pool.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=400
+}}
+</table>
+
+==Level 57==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Vexing Mordinia
+|type=DoT (Drain)
+|description=Deals 111 per tick for 10 ticks. Heals the caster for 111 per tick for 9 ticks (Possible Bug).
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=495
+}}
+
+{{SpellRow
+|name=Exile Undead
+|type=DD (Undead)
+|description=Deals 675 to 725 damage to an undead target.
+|era=Kun.
+|school=Evo.
+|location=Vendor.
+|mana=250
+}}
+
+{{SpellRow
+|name=Conjure Corpse
+|type=Utility (Target Player)
+|description=Summons the target's corpse to the caster's location. Must be in the same zone as the corpse. Consumes a [[Tiny Jade Inlaid Coffin]].
+|era=Kun.
+|school=Con.
+|location=NPC Drop.
+|mana=700
+}}
+</table>
+
+==Level 58==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Pyrocruor
+|type=DoT (Fire)
+|description=Deals 111 per tick for 19 ticks.
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=400
+}}
+
+{{SpellRow
+|name=Quivering Veil of Xarn
+|type=Buff (Self)
+|description=Heals the caster for 150. Grants the caster immunity to damage for 18 seconds. Cannot attack or cast spells while immune. Only works at night.
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=135
+}}
+
+{{SpellRow
+|name=Immobilize
+|type=Debuff (Target)
+|description=Root. Adheres the target's feet to the ground, preventing movement. Lasts 10 ticks. Breaks on direct damage.
+|era=Kun.
+|school=Alt.
+|location=Overthere.
+|mana=80
+}}
+</table>
+
+==Level 59==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Emissary of Thule
+|type=Summon
+|description=Spectre Warrior, Level 43-47.
+|era=Kun.
+|school=Con.
+|location=NPC Drop.
+|mana=650
+}}
+
+{{SpellRow
+|name=Touch of Night
+|type=Lifetap
+|description=Drains 720 health from the target.
+|era=Kun.
+|school=Alt.
+|location=Overthere.
+|mana=405
+}}
+
+{{SpellRow
+|name=Devouring Darkness
+|type=DoT (Snare)
+|description=Deals 107 damage per tick for 13 ticks. Reduces movement speed by 69% to 70%.
+|era=Kun.
+|school=Con.
+|location=NPC Drop.
+|mana=400
+}}
+</table>
+
+==Level 60==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow |hasType=yes}}
+
+{{SpellRow
+|name=Trucidation
+|type=DD (Target)
+|description=Drains 1100 health from the target. Consumes an [[Essence Emerald]] when cast.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=375
+}}
+
+{{SpellRow
+|name=Banishment of Shadows
+|type=DD (Undead)
+|description=Destroys target undead creature up to level 51. Consumes a [[Star Ruby]] when cast.
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=750
+}}
+
+{{SpellRow
+|name=Demi Lich
+|type=Buff (Self)
+|description=Lich. The caster loses 48 health per tick, and restores 31 mana per tick. Bloody Skeleton Illusion.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=1
+}}
+
+{{SpellRow
+|name=Arch Lich
+|type=Buff (Self)
+|description=Lich. The caster loses 20 health per tick, and restores 20 mana per tick. Spectre Illusion.
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=1
+}}
+{{SpellRow
+|name=Enslave Death
+|type=Debuff (Target, Undead)
+|description=Charms target undead creature to act as the caster's minion for 5 ticks. Very difficult to resist.
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=500
+}}
+</table>
+
+=Skills=
+
+== Pet Information ==
+
+{{#lsth:Pet Guide|[[Necromancer]] Pets}}
+
+== Specialization ==
+
+{{#lsth:Skill Specialization|Necromancer}}
+
+==Casting Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Abjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alteration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Channelling</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Conjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Divination</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Evocation</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">4</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Meditate</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">252</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">16</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Research</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">20</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Specialization</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+==Combat Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>1 Hand Blunt</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>2 Hand Blunt</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Bind Wound</td>
+		<td align="center" width="20%">100</td>
+		<td align="center" width="25%">100</td>
+	</tr>	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Defense</td>
+		<td align="center" width="20%">145</td>
+		<td align="center" width="25%">145</td>
+	</tr>	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Hand to Hand</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Offense</td>
+		<td align="center" width="20%">140</td>
+		<td align="center" width="25%">140</td>
+	</tr>	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Piercing</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Throwing</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>	
+	<tr>
+		<td align="center" width="10%">22</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Dodge</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+</table>
+
+==Miscellaneous Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alcohol Tolerance</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Beg</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Fishing</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Forage (Iksar Only)</td>
+		<td align="center" width="20%">50</td>
+		<td align="center" width="25%">50</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Sense Heading</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Swimming</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+= Necromancer-Specific Quests =
+
+{{#lsth:Class Race Quest List|Necromancer}}
+
+= Gearing =
+
+Please keep in mind that gear listed here may not be exhaustive, but they do tend to include the most useful of each category. Also keep in mind that you want to strike a balance between HP and Mana to maximize your effectiveness. Remember that 1 int = 10 mana (and it drops significantly after 200), and 1 sta = 2 health, and that the items listed are droppable only.
+
+'''NOTE''': Gear listed here is not listed as "Best In Slot". Due to the way HP and Mana play off of each other, the items you wear influence the value of other items you wear. In other words, Pre-Planar gear is not necessarily less good than an item that is Planar, or Planar relative to Kunark. Pre-Planar Gear refers to items that one can acquire before reaching planar raiding. These are by and large your BoEs. Planar Gear refers to items that are earned from raiding, and for the most part (with the exception of some Sky items and a few raid boss drops) are BoP. Kunark is about Kunark era changes to gearing, and items that are found in Kunark content.
+
+Check [[:Category:Necromancer Equipment | Necromancer Equipment]] for the full list of gear usable by necromancers.
+
+== Pre-Planar ==
+
+<ul><li>  Ears - {{:Earring of Essence}}, {{:Black Sapphire Electrum Earring}}, {{:Batskull Earring}}, {{:Golden Sapphire Earring}}, {{:Ivandyr's Hoop}}
+</li><li> Fingers - {{:Platinum Fire Wedding Ring}}, {{:Adamantite Band}}, {{:Platinum Skull Ring}}, {{:Rose Platinum Engagement Ring}}
+</li><li> Neck - {{:Black Sapphire Platinum Necklace}}, {{:Sarnak Arcane Fetish}}, {{:Sapphire Platinum Necklace}}
+</li><li> Head - {{:Runed Cowl}}, {{:Runed Circlet}}, {{:Circlet of Shadow}}, {{:Dark Circlet}}
+</li><li> Face - {{:Enshrouded Veil}}, {{:Mask of Wurms}}, {{:Sheer Bone Mask}}
+</li><li> Chest - {{:Tolapumj's Robe}}, {{:Loam Encrusted Robe}}, {{:Froglok Bonecaster's Robe}}, {{:Tattered Tomb Shroud}}, {{:Advisor Robe}}, {{:Robe of the Oracle}}, {{:Shining Metallic Robes}}
+</li><li> Arms - {{:Gatorscale Sleeves}}
+</li><li> Back - {{:Hooded Black Cloak}}, {{:Molten Cloak}}, {{:Festering Cloak}}, {{:Kunzar Cloak}}.
+</li><li> Waist - {{:Braided Cinch Cord}} {{:Brell's Girdle}}
+</li><li> Shoulders - {{:Embroidered Black Cape}}, {{:Loam Encrusted Amice}}
+</li><li> Wrists - {{:Bracelet of Woven Grass}}, {{:Golden Chitin Bracer}}
+</li><li> Legs - {{:Loam Encrusted Pantaloons}}, {{:Feathered Leggings}}, {{:Black Chitin Leggings}}, Dark Elf: {{:Imbued Teir`Dal Chain Leggings}}
+</li><li> Hands - {{:Impskin Gloves}}, {{:ShadowBound Gloves}}
+</li><li> Feet - Iksar: {{:ShadowBound Boots}}, Non-Iksar and under 200 int: {{:Golden Efreeti Boots}} 
+</li><li> Primary (2h) - {{:Staff of the Waterwalker}}, {{:Staff of the Dreaded Gaze}}
+</li><li> Primary (1h) - {{:Tome of Miragul}}, {{:Stein of Moggok}}, {{:Cone of the Mystics}}, {{:Gnoll Hide Tome}}, {{:Glowing Black Stone}}, {{:Black Tome with Silver Runes}}
+</li><li> Secondary (1h) - {{:Rokyls Channelling Crystal}}, {{:Stein of Moggok}}, {{:Book of Obulus}}, {{:Glowing Black Stone}}, {{:Hand of the Reaper}}
+</li><li> Range - {{:Dagger of Marnek}}, {{:Idol of the Underking}}
+</li></ul>
+
+See also the [[Detailed Necromancer Gear Guide]].
+
+See also the [[Players:Pre Planar Gear]].
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Necromancer]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Necromancer]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Necromancer]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Necromancer]]}}
+
+== Clickies and Utility Items ==
+
+
+<ul><li> {{:Circlet of Shadow}} (or its slower, post-nerf version: {{:Circlet of Shadows}})
+</li><li> {{:Chestplate of Fiery Might}} (Clicky by any class from inventory = +5 regen)
+</li><li> {{:Journeyman's Boots}}
+</li><li> {{:Ring of Dain Frostreaver IV}}
+</li><li> {{:Words of Darkness}}
+</li><li> {{:Bone Bracelet of Condemnation}}
+</li><li> {{:Shissar Deathspeaker Staff}}
+</li><li> {{:Shissar Seance Staff}}
+</li></ul>
+
+= An Agenda for Future Research =
+
+The purpose of this section is to point out the shortcomings of this guide, and what details we still need more detailed information on.
+
+1) Pet Levels. Anyone who has summoned a number of pets will know that they can con differently, often leading to necromancers to resummoning until they get a dark blue conning pet, since that one is a higher level. Many of the pet levels listed on the main spell pages, and on this guide, are single static numbers (i.e., a level 29 pet), even though for there to be a Light Blue con, and a Dark Blue con, it must be Level 28-30. This could be researched if one were to gather a few people of approximate level to the pet spell, and summon it, and find who it cons white to, and do this a number of times to determine the low and high ranges of the pet level.
+
+2) Magic Resistance variance on the Shielding spell line. The original page for the early Shielding spells do not have a MR buff listed, but when a level 60 casts these spells, a static number is given. Presumably, a lower level Necromancer who first gets the spell is going to have a different number. A Necromancer that just got each level of Shielding would need to measure how much MR they get, to give us the minimum increase to MR that spell gives. The listed MR is the maximum, as cast by a 60 Necromancer.
+
+''Necromancy''
+
+It came to pass some years later that a small group of Erudites discovered the lost art of Necromancy. They were branded heretics and great conflict arose. For the first time in several hundred years, the Erudites fought. They engaged in a civil war not entirely dissimilar to that which they had loathed and fled back on the mainland.
+But there was one very significant difference - they did not use swords and bows, but rather magic, and the result was terrible.
+Lives by the hundreds were lost, great buildings and structures destroyed, and eventually the heretics were forced to flee Erudin, to hide and regroup in the southern regions of Odus. In one final battle, great mystic energies were released and an immense hole leading to unknown depths beneath the earth was created. Into the sides of this chasm the heretics built their own city which they called Paineel.  And while both sides still seethed with anger and hatred toward one another, their fear of what the last battle had wrought has kept any further conflict at bay.
+
+Thus began the Age of Turmoil.
+
+{{Template: Navbox Classes}}

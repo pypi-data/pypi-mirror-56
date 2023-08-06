@@ -1,0 +1,39 @@
+{{Spellpage|
+
+| spellname = Assiduous Vision
+| spellicon = B
+| description = Shifts your vision to your target's eyes, as well as increasing vision range and offering vastly improved night vision.
+
+| classes = 
+
+* [[Shaman]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Bind Sight(1) }}
+{{SpellSlotRow | 2 | Increase Magnification by 130% }}
+{{SpellSlotRow | 3 | Ultravision(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 50
+| range = 10000
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = 1 hour 57 minutes @L39 to 3 hours 15 minutes @L65
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your spirit drifts from your body.
+| msg_cast_on_other = Someone 's eyes shimmer.
+| msg_wears_off = You return to your body.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Oasis of Marr]] | [[Gadallion]] | Gypsy Camp | (495,0) }}
+}}
+
+}}

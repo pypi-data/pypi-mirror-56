@@ -1,0 +1,36 @@
+{{Spellpage|
+
+| spellname = Wrath of the Elements
+| spellicon = M
+| description = Surrounds your target in an elemental maelstrom, causing 350 damage initially, and between 122 and 132 damage every 6 seconds for 30 secs (5 ticks).
+
+| classes = 
+
+* [[Magician]] - Level 55
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease HP when cast by 350 }}
+{{SpellSlotRow | 2 | Decrease Hitpoints by 90 per tick }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 265
+| range = 200
+| casting_time = 7.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 5 ticks
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = Your body is consumed by the wrath of the elements.
+| msg_cast_on_other = Someone  is assaulted by the wrath of the elements.
+| msg_wears_off = The elemental assault departs.
+
+| where_to_obtain = 
+
+* Velious Level 50+ Mob Drop
+
+}}

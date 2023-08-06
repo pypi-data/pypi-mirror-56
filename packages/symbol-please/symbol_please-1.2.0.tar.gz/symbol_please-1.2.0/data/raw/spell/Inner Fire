@@ -1,0 +1,42 @@
+{{Spellpage|
+
+| spellname = Inner Fire
+| spellicon = K
+| description = Increases your target's inner strength, providing increased hit points and armor class for 27.0 mins. Among the most efficient direct heals available to shamans on a per mana basis. Consider using this as your primary heal until at least lvl 19 when Shaman's can learn "Healing"
+
+| classes = 
+
+* [[Shaman]] - Level 1
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase AC by 1 (L1) to 3 (L10) }}
+{{SpellSlotRow | 2 | Increase Max Hitpoints by 11 (L1) to 20 (L10) }}
+{{SpellSlotRow | 3 | Increase HP when cast by 11 (L1) to 20 (L10) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 10
+| range = 100
+| casting_time = 3.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 27 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel your body pulse with energy.
+| msg_cast_on_other = Someone 's body pulses with energy.
+| msg_wears_off = The inner fire fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kabda]] | Temple of Terror (First Floor) | (1013,-218) }}
+{{SpellWhereRow  | [[Grobb]] | [[Tokun - Troll]] | Shaman Guild | (350,-400) }}
+{{SpellWhereRowB | [[Halas]] | [[Corak]] | Shaman Guild | (313,424) }}
+{{SpellWhereRow  | [[Oggok]] | [[Tokun - Ogre]] | Shaman Guild | (632,1091) }}
+}}
+
+}}

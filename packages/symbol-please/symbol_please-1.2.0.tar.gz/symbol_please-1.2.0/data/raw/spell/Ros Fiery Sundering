@@ -1,0 +1,52 @@
+<noinclude>{{Velious Era}}</noinclude>
+{{Spellpagesmart|
+
+| spellname = Ro's Fiery Sundering
+| spellicon = O
+| description = Surrounds your target in dancing flames, lowering their fire resistance and armor class.
+
+Note: Didn't have a Fire (-200) resist modifier until 2002. [[http://lucy.allakhazam.com/spellhistory.html?id=1437&source=Live]]
+ 
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Druid]] - Level 39
+
+| slots = 
+
+{{SpellSlotRowSmart | 2 | Decrease Fire Resist by 37 (L39) to 43 (L65) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 3 | Decrease AC by 5 (L39) to 7 (L65) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 50
+| range = 200
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 6.00
+| duration = 1.9 minutes @L39 to 3.2 minutes @L65
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| other = 
+
+* '''Focus:''' [[Fire Beetle Eye]]
+
+| msg_cast_on_you = You are immolated by blazing flames.
+| msg_cast_on_other = Someone  is immolated by blazing flames.
+| msg_wears_off = The flames die down.
+
+| where_to_obtain = 
+
+* [[a Sifaye Thane]]
+* [[A Golem Usher]]
+* [[Eugie]]
+Drop from various 30+ Velious mobs.
+
+| TableLocations = Dropped
+| TableEra = {{{TableEra|Classic}}}
+
+}}

@@ -1,0 +1,56 @@
+{{Spellpage|
+
+| spellname = Vampiric Embrace
+| spellicon = G
+| description = Gives your attacks a vampiric property for 1.7 mins @L7 to 7.5 mins @L65, allowing a chance to steal life from your target (72 points per proc @L60).
+
+| classes = 
+
+* [[Shadow Knight]] - Level 22
+* [[Necromancer]] - Level 8
+
+| items_with_effect = 
+
+<ul><li> {{:Blood Ember Vambraces}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Add Proc: VampEmbraceNecro }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 30
+| range =  
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = 1.8 minutes @L8 to 7.5 minutes @L65
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your hand begins to glow.
+| msg_cast_on_other = Someone 's hands begin to glow.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-4)]] | Necromancer Guild | (2099,-393) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Gristle]] | Temple of Terror (West Tower - Top) | (1005,-105) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Peku Croxe]] | Underground | (-200,-244) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Tagus Wunne]] | Underground | (-98,-257) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Peku Croxe]] | Underground | (-200,-244) }}
+{{SpellWhereRowB | [[Grobb]] | [[Trusk - Troll]] | Shadow Knight Guild | (512,-625) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Jys D'Bious]] | Necromancer Guild (F1) | (1312,-1266) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Misal S'Kor]] | Necromancer Guild (F1) | (1337,-1239) }}
+{{SpellWhereRow  | [[Oggok]] | [[Trusk - Ogre]] | Shadow Knight Guild | (392,3) }}
+{{SpellWhereRowB | [[Paineel]] | [[Sheras Milaku]] | Shadow Knight Guild | (888,443) }}
+{{SpellWhereRow  | [[Paineel]] | [[Kilevra Natasu]] | Necromancer Guild | (692,869) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gyrna Porrin]] | Necromancer Guild | (291,-322) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gehnon Dejartes]] | Shadow Knight Guild | (421,-438) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Plight]] | Cubby near PvP Area | (-391,234) }}
+}}
+
+}}

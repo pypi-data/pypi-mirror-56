@@ -1,0 +1,53 @@
+{{Spellpage|
+
+| spellname = Grim Aura
+| spellicon = I
+| description = Surrounds you in a dark aura, increasing your attack rating for 9.0 mins @L3 to 27.0 mins @L9.
+
+Doesn't stack with some other ATK buffs such as [[Firefist]], [[Strength of Nature]], and [[Celestial Tranquility]].
+
+| classes = 
+
+* [[Shadow Knight]] - Level 22
+* [[Necromancer]] - Level 4
+
+| items_with_effect = 
+
+<ul><li> {{:Shrunken Goblin Skull Earring}}
+</li><li> {{:Hand of Shadow}}
+</li><li> {{:Reaper's Ring}}
+</li><li> {{:Sword of Pain}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase ATK by 7 (L4) to 10 (L10) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 25
+| range =  
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 12 minutes @L4 to 27 minutes @L9
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = A dull aura covers your hand.
+| msg_cast_on_other = Someone 's hand is covered with a dull aura.
+| msg_wears_off = The grim aura fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-2)]] | Necromancer Guild | (2096,-408) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Mika Fugas]] | Underground | (-196,-264) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Vissa D'Dbth]] | Necromancer Guild (F1) | (1319,-1236) }}
+{{SpellWhereRow  | [[Paineel]] | [[Danus Kelmun]] | Necromancer Guild | (692,856) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Pakeg Aspet]] | Necromancer Guild | (310,-321) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Bile]] | Cubby near PvP Area | (-380,255) }}
+}}
+
+}}

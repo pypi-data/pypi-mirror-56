@@ -1,0 +1,487 @@
+<div style="float:left;margin-right:20px;">__TOC__</div>
+
+=Description=
+[[File:C Monk.gif|right]]
+Monks devote their energies to the pursuit of physical perfection, shaping their very bodies into deadly machines. Monks are a melee class with the ability to wear leather armor, wield blunt weapons, and use unarmed combat styles.
+
+Monks forego heavy armor and almost all weapons in order to hone themselves into masters of combat, using their fists and a stout staff to make their mark upon Norrath. Monks learn many special attacks to enhance their damage dealing abilities, including the dragon punch and the legendary flying kick.
+
+In their martial studies monks also learn other useful skills, including the ability to move silently and fall safely from great heights. Experienced monks also learn to feign death, slowing their body's functions enough to fool most observers into believing them dead - this trick often allows the monk to escape dangerous situations as monsters wander off, thinking the monk defeated.
+
+Monks are a specialist class, focusing on physical combat to the exclusion of all else. Monks provide a powerful ally in a group, though it's not unusual to see a monk adventuring alone. The monk is a good choice for players who enjoy a strong offensive role in combat and leading groups in their dungeon adventures.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Monk || Disciple || Master || Grandmaster
+|}
+
+= Creation Guide =
+
+== Picking the Right Race ==
+
+The first thing you have to pick then is your race.   Which race you pick will determine the foundation of you character for the rest of your life in Norrath so it is kind of important you pick one you like.
+
+[[Human]]s level 20% faster than Iksar Monks, and have slightly more base hitpoints.  They can enter all good cities in Norrath, but they have no night vision and lower dexterity and agility than the Iksar.  Humans can do slightly more damage than Iksars at their full power, though this is only true when using Hand to Hand (without [[Celestial Fists]]).
+
+[[Iksar]]s have an innate boost to their armor class (AC) which stacks with the natural Monk AC boost.  They also have faster health regeneration, infravision, and the ability to forage (although this ability is capped). They also start with 100 skill in swimming.  Because of all these bonus abilities they do slightly less damage than Humans at their full power, though this is only true when using Hand to Hand (without Celestial Fists).  They are generally killed on sight in all cities but [[Cabilis]], and level 20% slower than Humans. If you're min-maxing, Iksar is the clear choice, as regeneration is very important for soloing, pulling and living with FD up.
+
+== Starting Statistics ==
+
+[[File:monk-stats.png]]
+
+== Spending Your Bonus Points ==
+
+The normal allocation is '''+20 Stamina'''.  Stamina keeps you alive while pulling, which is a monk's primary role, and with good gear it's relatively easy to cap Strength, Dexterity, and Agility even without much gear.  A shaman can stack [[Maniacal Strength]] and [[Focus of Spirit]] for about +120 STR/DEX and [[Avatar]] is +100 STR/DEX/AGI if you neckbeard hard enough to get a [[Sleeper's Tomb]] key.  In contrast, Shamans can only raise Stamina by 50.
+
+The pure leveling choice is '''+20 Strength''', which is probably good for about +4% damage while leveling up and very marginally better than stamina.  But Project 1999 Blue is so mudflated at this point that everyone levels pretty easily regardless.  20 STR really only makes sense for human monks on a fresh server where gear is rare, leveling is hard, and Kunark/Velious gear is far on the horizon.
+
+The super end game choice is '''+20 charisma''' to help with [[Divine Intervention]] as with enough BIS gear you'll cap everything without any starting points.  In general, end game Velious gear makes stat allocation pretty irrelevant for all classes.  The only important thing is rolling Human! or Iksar.
+- No one is ever going to cast DI on a monk, just put your starting points into stamina.
+== Experience Statistics ==
+
+*Human Monk: No modifier
+*Iksar Monk: -20%
+
+'''What does it mean?'''
+
+Certain races and classes require differing amounts of experience points to attain the same level. For example, an Iksar Monk requires 120% of the experience that a Human Monk would require to be the same level.
+
+== Religion ==
+
+Monks get little choice religion wise. Iksars must choose Cazic-Thule.  Humans have the ability to be agnostic or to follow Quellious.  There are not any good cities which would ever kill them for following this religion, and they will always be killed on sight in the evil ones.  Your choice of religion will determine your starting city: agnostic Monks begin in Qeynos, while Monks who follow Quellious will start in Freeport.
+
+=Skills=
+
+==Combat Skills==
+
+{| class="eoTable2"
+! Skill Name
+! Level Obtained
+! Max until 50
+! Max after 50
+|-
+| [[Skill_1H_Blunt|1H Blunt]]
+| 1
+| 240
+| 252
+|-
+| [[Skill_2H_Blunt|2H Blunt]]
+| 1
+| 240
+| 252
+|-
+| [[Skill_Defense|Defense]]
+| 1
+| 230
+| 252
+|-
+| [[Skill_Hand_to_Hand|Hand to Hand]]
+| 1
+| 225
+| 252
+|-
+| [[Skill_Offense|Offense]]
+| 1
+| 230
+| 252
+|-
+| [[Skill_Dodge|Dodge]]
+| 1
+| 200
+| 230
+|-
+| [[Skill_Dual_Wield|Dual Wield]]
+| 1
+| 252
+| 252
+|-
+| [[Skill_Kick|Kick]]
+| 1
+| 200
+| 250
+|-
+| [[Skill_Mend|Mend]]
+| 1
+| 200
+| 200
+|-
+| [[Skill_Throwing|Throwing]]
+| 1
+| 113
+| 200
+|-
+| [[Skill_Round_Kick|Round Kick]]
+| 5
+| 200
+| 225
+|-
+| [[Skill_Tiger_Claw|Tiger Claw]]
+| 10
+| 200
+| 225
+|-
+| [[Skill_Block|Block]] 
+| 12
+| 200
+| 225
+|-
+| [[Skill_Double_Attack|Double Attack]]
+| 15
+| 210
+| 250
+|-
+| [[Skill_Feign_Death|Feign Death]]
+| 17
+| 200
+| 200
+|-
+| [[Skill_Intimidation|Intimidation]]
+| 18
+| 200
+| 200
+|-
+| [[Skill_Eagle_Strike|Eagle Strike]]
+| 20
+| 200
+| 225
+|-
+| [[Skill_Dragon_Punch|Dragon Punch]] / [[Skill_Tail_Rake|Tail Rake]]
+| 25
+| 200
+| 225
+|-
+| [[Skill_Disarm|Disarm]]
+| 27
+| 200
+| 200
+|-
+| [[Skill_Flying_Kick|Flying Kick]]
+| 30
+| 200
+| 225
+|-
+| [[Skill_Riposte|Riposte]]
+| 35
+| 200
+| 225
+|}
+
+* Note: For double attack, checks apply to off-hand attacks at 150 skill.
+* Note: Dual Wield skill level maximum is equal to (Level+1)*7. Dual Wield maxes out at level 35.
+
+== Miscellaneous Skills ==
+
+{| class="eoTable2"
+! Skill Name
+! Level Obtained
+! Max
+|-
+| [[Skill_Alcohol_Tolerance|Alcohol Tolerance]]
+| 1
+| 200
+|-
+| [[Skill_Begging|Begging]]
+| 1
+| 200
+|-
+| [[Skill_Bind_Wound|Bind Wound]]
+| 1
+| 210
+|-
+| [[Skill_Fishing|Fishing]]
+| 1
+| 200
+|-
+| [[Skill_Forage|Forage]] (Iksar Only)
+| 1
+| 50
+|-
+| [[Skill_Safe_Fall|Safe Fall]]
+| 3
+| 200
+|-
+| [[Skill_Sense_Heading|Sense Heading]]
+| 1
+| 200
+|-
+| [[Skill_Sneak|Sneak]]
+| 8
+| 113
+|-
+| [[Skill_Swimming|Swimming]]
+| 1
+| 200
+|}
+
+* Bind Wound caps at 200 until level 51.  Once you gain 201 skill at level 51, you can Bind Wound up to 70%.
+* Forage caps at 50.  Human Monks do not get this skill.
+* Various [[Tradeskills]]
+
+== Disciplines ==
+
+''See also: [[Disciplines]]''
+
+* Disciplines all run off the same timer currently.  They were not changed to separate timers until many expansions later on live.  What this means is if you use Stonestance Discipline (12 min timer), all Disciplines will be unavailable until that 12 minutes are up.
+
+{| class="eoTable2"
+! Discipline Name
+! Level Obtained
+! Description
+! Duration
+! Reuse Time
+|- 
+| Resistant Discipline
+| 30
+| Grants +3 to all Resistances increasing to +10 at 50th level
+| 1 Min
+| 60 Min
+|- 
+| Fearless Discipline
+| 40
+| Immunity to "Fear" and all spells that cause "fear"
+| 11 Sec
+| 60 Min
+|-
+| Stonestance Discipline
+| 51
+| Joins your body with the strength of the earth, causing you to take greatly decreased melee damage. [60% reduction] Use this skill routinely while tanking or pulling.
+| 12 Sec
+| 12 Min
+|-
+| Thunderkick Discipline
+| 52
+| Focuses energy into your feet, allowing you to perform an especially powerful [[Flying Kick]].
+| Next Flying Kick
+| 9 Min
+|-
+| Whirlwind Discipline
+| 53
+| Heightens your combat instincts, allowing you to [[Riposte]] every attack made on you from the front. Use this skill in dire situations while tanking.
+| 9 Sec
+| 60 Min
+|-
+| Voiddance Discipline
+| 54
+| Focuses your combat reflexes, allowing you to avoid all melee attacks made on you from any angle. Use this skill in dire situations while pulling or escaping.
+| 8 Sec
+| 55 Min
+|-
+| Inner Flame Discipline
+| 56
+| Fills your body with energy, causing your attacks to do greatly improved damage. [100% increase] Use this skill in dire situations while DPSing.
+| 12 Sec
+| 30 Min
+|-
+| Hundred Fists Discipline
+| 57
+| Increases your hands speed, allowing you an increased attack rate and damage. Never use this skill, use the superior Inner Flame instead.
+| 15 Sec
+| 30 Min
+|-
+| Silentfist Discipline
+| 59
+| Focuses your rage into your hands, allowing you to perform an especially powerful [[Dragon Punch]].
+| Next Dragon Punch
+| 9 Min
+|-
+| Ashenhand Discipline
+| 60
+| Focuses energy into your hands, allowing you to perform an especially powerful [[Eagle Strike]].
+| Next Eagle Strike
+| 72 Min
+|-
+|}
+
+= Regeneration Rates =
+
+Your monk will gain the following amount of HP every 6 seconds at various levels depending on whether you are sitting, feigning death, or standing.
+{| class="eoTable2"
+! Level Range
+! Human Regen
+! Iksar Regen
+|-
+| Level 1-19
+| 2 sitting, 1 FD, 1 standing
+| 4 sitting, 2 FD, 2 standing
+|-
+| Level 20-49
+| 3 sitting, 1 FD, 1 standing
+| 6 sitting, 2 FD, 2 standing
+|-
+| Level 50
+| 4 sitting, 1 FD, 1 standing
+| 8 sitting, 2 FD, 2 standing
+|-
+| Level 51-55
+| 5 sitting, 3 FD, 2 standing
+| 12 sitting, 8 FD, 6 standing
+|-
+| Level 56-59
+| 6 sitting, 4 FD, 3 standing
+| 16 sitting, 12 FD, 10 standing
+|-
+| Level 60
+| 7 sitting, 5 FD, 4 standing
+| 18 sitting, 14 FD, 12 standing
+|-
+|}
+
+= Hand to Hand Damage/Delay =
+
+Your fists progress with level as ''weapons'' with increasingly better damage/delay ratios.
+{| class="eoTable2"
+! Level Range
+! Human Ratio
+! Iksar Ratio
+|-
+| Level 1-4
+| 4/36
+| 4/36
+|-
+| Level 5-9
+| 5/36
+| 5/36
+|-
+| Level 10-14
+| 6/36
+| 6/36
+|-
+| Level 15-19
+| 7/36
+| 7/36
+|-
+| Level 20-24
+| 8/36
+| 8/36
+|-
+| Level 25-29
+| 9/35
+| 9/36
+|-
+| Level 30-34
+| 10/34
+| 10/35
+|-
+| Level 35-39
+| 11/33
+| 11/34
+|-
+| Level 40-44
+| 12/32
+| 12/33
+|-
+| Level 45-49
+| 13/31
+| 13/32
+|-
+| Level 50-52
+| 14/30
+| 14/31
+|-
+| Level 53-55
+| 14/29
+| 14/30
+|-
+| Level 56-58
+| 14/28
+| 14/29
+|-
+| Level 59
+| 14/27
+| 14/28
+|-
+| Level 60
+| 14/26
+| 14/27
+|-
+|}
+Note: Fists become magical at level 30.
+
+== Primary Hand Damage Bonuses ==
+
+This is the same for all melee classes, but listed here for reference. See the Combat section of [[Game Mechanics]] for more information.
+
+* Level 28: 1
+* Level 31: 2
+* Level 34: 3
+* Level 37: 4
+* Level 40: 5
+* Level 43: 6
+* Level 46: 7
+* Level 49: 8
+* Level 52: 9
+* Level 55: 10
+* Level 58: 11
+
+= Weight Penalty Guide =
+As of the January 31, 2016 patch [http://www.project1999.com/forums/showthread.php?s=2322986a02d5d9b01b1a0956526cd819&t=227019], the weight limits are the same as on live.  Before this patch, the client was inaccurate.  Now, the AC shown by the client is misleading due to mitigation and avoidance being conflated into one number, but it should be accurate for determining the limits.  They are now as follows:
+
+{| class="eoTable2"
+! Level Range
+! Weight Limit
+|-
+| Level 1–14
+| 14.9
+|-
+| Level 15–29
+| 15.9
+|-
+| Level 30–44
+| 16.9
+|-
+| Level 45–50
+| 17.9
+|-
+| Level 51–54
+| 18.9
+|-
+| Level 55–59
+| 20.9
+|-
+| Level 60
+| 24.9
+|-
+|}
+
+= Monk-Specific Quests =
+
+{{#lsth:Class Race Quest List|Monk}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+Check [[:Category:Monk Equipment | Monk Equipment]] for the full list of gear usable by monks.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Monk]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Monk]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Monk]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Monk]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Monk]]}}
+
+= FAQ =
+
+'''Q: My Feign Death isn't giving me an error message (Soandso has fallen to the ground), but the agro isn't dropping.'''
+
+A: You need to make sure you stop auto attacking before using FD. A macro with "/attack off" in the first line and your Feign Death with "/doability #" in the second line will do this for you!
+
+{{Template: Navbox Classes}}

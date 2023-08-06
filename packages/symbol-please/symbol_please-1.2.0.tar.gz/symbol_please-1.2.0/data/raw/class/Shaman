@@ -1,0 +1,1922 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C shaman.gif|right]]
+The Shaman is one of the most understated classes in Norrath.  They are very well rounded offering powerful offense, defense, and buffs.  
+
+With the exceptions of the Iksar, Shamans can wear two types of plate armours in the world of Norrath.  Iksars can't since it chafes their scales, and must resort to chain-mail or the special Iksar armours they have crafted over time.  This affords them a high amount of protection, which helps greatly when soloing.
+
+Shamans have two forms of offense.  Their most powerful damage lies through the damage over time spells (DOT's).  Shamans get two powerful lines of these spells.  One poison based, and the other disease based.  They can stack these spells to achieve a very efficient damage output.  Alternatively they can also use their cold damage based direct damage spells.  These are good for adding in a little extra punch, or for fights of short durations.
+
+In terms of defense and debuffs, Shamans have the most powerful Slowing Spells and Resistance debuffs in the game.  This greatly reduces the damage output of the enemy and also assists the entire party in succeeding on magical attacks.
+
+Shamans also have the best buffs in the game, able to increase all statistics except for Wisdom and Intelligence by over 50 points at higher levels.  This not only makes them highly sought after in groups, but means that the shamans can be a lot more selective in what equipment they choose to wear.  They also have spells to increase running speed and attack rate, as well as increasing hitpoints and AC.  
+
+Shamans can use almost any one or two handed blunt weapon in the game, and have a limited selection of piercing weapons at their disposal also.  Shamans can melee reasonably well with their buffs up, and with a pet at their side are capable of doing some serious damage.  Downtime is also minimised with Shamans with both a health regeneration spell, direct healing spells, and a hitpoint to mana conversion spell.
+
+Shamans are the only class which can do [[Alchemy]], a trade skill which can help in funding the purchase of spells or equipment as your character progresses.
+
+The downside to Shaman's is that they can get very repetitive.  With so many awesome buffs at their disposal they are always getting begged for spells.  In dungeon raids their main purposes are buffing and debuffing, with very little mana left to actually get into the nitty gritty of the fights.  Also most of the Shaman races are evil, and are forced to travel lengthy distances to bank and resupply.  
+
+Also in order to be mana efficient Shamans normally have to use Damage Over Time spells.  This normally results in kiting or a drawn out process of rooting and DOT'ing.  This can be particularly difficult on caster mobs which will still have offensive capability even though rooted.
+
+Shaman's can only charm animals up to mid levels, and they only get a few pet upgrades.
+
+The shaman class is a very enjoyable one to play, particularly for those who enjoy role-playing.  It is a very self-sufficient class, which functions excellently both as a soloist or in a group.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Shaman || Mystic || Luminary || Oracle
+|}
+
+= Creation Guide =
+
+==Picking the Right Race==
+
+The first thing you have to pick then is your race.  Which race you pick will determine the foundation of you character for the rest of your life in Norrath so it is kind of important you pick one you like.  Fortunately there is no truly "bad" Shaman race, so you can't pick wrong.
+
+=== Races ===
+
+'''[[Barbarian]]s''' are the only shaman race which is not evil.  All the other races are killed on sight in the old world (ie. in almost all non-Kunark/Velious cities, and by guards in nearby zones).  Barbarians level the fastest of the races.  Barbarians have no night vision, but can wear both medium and large sized armour.
+
+'''[[Ogre]]s''' level slightly slower than the Barbarians, but have the advantage of not being able to be stunned from blows delivered to their front.  They can still be stunned if attacked from behind.  Ogres also have some basic night vision and very high Strength and Stamina.
+
+'''[[Troll]]s''' level considerably slower than the Ogre.  They have the added bonus of an increased health regeneration rate.  This amount increases as their level increases.  
+
+'''[[Iksar]]''' share the same regenerative abilities as trolls, can forage, have an innate AC bonus, but they cannot wear plate armor - including Planar and Kunark sets. Things even out in Velious, but think carefully before choosing an Iksar. Iksar are hated in almost every city, good or evil.
+
+=== Differentiating Factors ===
+* '''Faction:''' Only Barbarians can travel freely to all good cities in the old world; every other race is killed on sight.  Iksar have it even worse, as they are killed on sight everywhere except Cabilis and Velious.
+* '''[[Jaundiced Bone Bracer]]:''' If you can afford this (roughly 10k) item at level 45 it will help you level significantly faster, as it lets you cast a mana-free direct damage spell.  Every Shaman race except Iksar can use this item (Iksar actually can't wear any plate armor before Velious, but the JBB is by far the most relevant plate item).
+* '''XP Penalty:''' Barbarians have the lowest penalty (5%), Ogres have the second lowest (15%), and Trolls/Iksar have the highest (20%)
+* '''Frontal Stun Immunity:''' Only Ogres get this racial ability, which prevents them from being stunned by mobs in front of them.  This ability is of limited use while leveling up, but can be more useful (though certainly not necessary) for soloing high-end content.
+* '''Regeneration:''' Both Trolls and Iksar get faster regeneration than other races.  This varies by level, being roughly twice as fast at level 1 and almost three times as fast by level 60.  Racial regeneration is particularly useful as a Shaman levels up, but less so at higher levels.  Once they acquires the spell [[Torpor]] at level 60 regeneration becomes almost completely irrelevant.
+* '''Iksar Abilities:''' Iksar get several minor abilities that other races don't, including [[Forage]], additional AC, and a starting Swimming skill of 100.  Iksar also get a unique quest line [[Shaman Skull Quests]], but because that line wasn't completed in the classic era it's reward isn't very good.
+* '''Deity Symbol Quests:''' All Shaman can complete a quest at low levels to get an item with a right-click effect.  The Barbarian [[Initiate Symbol of the Tribunal]] is the least useful (it summons a magic hammer which quickly becomes inferior to normal weapons).  The Ogre [[Initiate Symbol of Rallos Zek]] is also less useful (it casts a level 1 Cleric short duration melee self-buff, [[Yaulp]]).  Trolls get a choice between [[Cazic Thule (God)]] and [[Innoruuk (God)]], while Iksar must pick Cazic Thule (and may have a harder time doing the quest because of their faction).  The [[Initiate Symbol of Cazic Thule]] and [[Disciple Symbol of Cazic Thule]] let Cazic Thule Shaman cast low-level fear spells on undead and animals, which can be useful when soloing.  Finally there is the (Innoruuk-worshipping) Troll-only [[Regent Symbol of Innoruuk]],  which let's the Shaman cast the level 1 Necromancer snare spell [[Clinging Darkness]].  Since Shaman never get a snare spell, and since such spells can prevent mobs from running away and getting help from other mobs, this is probably the most useful item.
+* '''Infravision:''' All Shaman races except Barbarians get [[Infravision]].  However, due to the Project 1999 Titanium client's ability to raise Alphas levels, this is much less of an issue than it was on live.
+* '''Statistics:''' Combining the two main Shaman statistics (Stamina and Wisdom) you get: Ogre 204, Troll 184, Barbarian 180, Iksar 165.  However, if you plan to reach level 60 and raid, eventually you can acquire gear that lets you reach maximum stat values, so statistics should not be a primary concern for a starting shaman who expects to play that far.
+* '''Starting Area:''' Because Kunark (the Iksar home continent) was developed after Antonica (the home continent of the other three races), most players would agree that its zones were better designed and are more friendly to new characters.  For instance, the Barbarian starting area has the high-level Vengeful NPCs who kill low level characters, while the Iksar starting zones like [[Field of Bone]] don't have such higher-level monsters wandering through low-level areas.
+* '''Appearance:''' Arguably this is more important than any of the above factors.  Your character's basic appearance will never change, and if you don't like looking at your character it won't matter what in-game benefits their race offers, so be sure to pick a race that you personally are attracted to (for more than just in-game benefits).
+* '''Bear Form Appearance:''' When Shaman reach level 55 they get the spell [[Form of the Great Bear]].  Barbarians using this spell appear as polar bears, Ogres as grizzly bears, and Trolls and Iksar as black bears.
+
+===Starting Statistics ===
+The following table lists the starting stats and XP penalty of each Shaman race.  The colors describe the stat's importance to Shaman: <span style="color: green">Green</span> stats are very important, while <span style="color: Goldenrod">Yellow</span> ones are only moderately helpful, and <span style="color: red">Red</span> ones have almost no value.  XP penalty describes how much additional experience the race requires.  For instance, a Barbarian Shaman would require 105% of the experience that a character with no penalty (eg. a Human Cleric) would require to be the same level.
+
+NOTE: All races get 30 additional stat points at character creation.
+
+{| class="eoTable3 wikitable" style="text-align:center"
+|-
+! Race !! style="color: Goldenrod"| Str !! style="color:Green"| Sta !! style="color: Goldenrod"| Agi !! style="color:Red"| Dex !! style="color:Green"| Wis !! style="color:Red"| Int !! style="color:Goldenrod"| Cha !! Total !! XP Penalty
+|-
+| style="text-align: left"| '''Barbarian''' || 103 || 100 || 82 ||70 || 80 || 60 || 60 || 555 || 5%
+|-
+| style="text-align: left"| '''Iksar''' || 70 || 75 || 90 || 85 || 90 || 75 || 60 || 545 || 20%
+|-
+| style="text-align: left"| '''Ogre''' || 130 || 127 || 70 || 70 || 77 || 60 || 42 || 576 || 15%
+|-
+| style="text-align: left"| '''Troll''' || 108 || 114 || 83 || 75 || 70 || 52 || 45 ||  547 || 20%
+|}
+
+=== Regeneration ===
+{| class="eoTable3 wikitable" style="text-align: center; width: 0%"
+|-
+! Standing<p>Barbarian/Ogre</p> !! Sitting<p>Barbarian/Ogre</p> !! Level Range !!Standing<p>Iksar/Troll</p> !! Sitting<p>Iksar/Troll</p>
+|-
+|  1 || 2 || 1-19 ||  2 || 4
+|-
+| 1 || 3 || 20-49 || 2 || 6
+|-
+| 1 || 4 || 50 || 2 || 8
+|-
+| 2 || 5 || 51-55 || 6 || 12
+|-
+| 3 || 6 || 56-59 || 10 || 16
+|-
+| 3 || 6 || 60 || 12 || 18
+|-
+|}
+
+== Suggested Starting Statistics ==
+
+There are different play styles for a shaman, but the two most important stats for all Shaman will be Stamina and Wisdom.  However, it is also important for any class to have at least 75 agility to avoid a major AC penalty.
+
+Whether a shaman should focus on Stamina or Wisdom more is a matter of some debate.  Stamina adds to HP, and since Shaman can convert HP to Mana with their Cannibalize spell line it also (in some sense) adds to Mana.  However, while Wisdom only adds to Mana, it adds far more (point for point) than Stamina.  For a more detailed exploration of the issue the [[Shaman: Stamina vs. Wisdom]] page has an excellent breakdown of the math involved.
+
+
+'''Wisdom Focused-Build'''
+* Barbarian: 5 points to Stamina, 25 points to Wisdom for equal starting STA & WIS.
+* Troll: 5 points to Stamina, 25 points to Wisdom
+* Ogre: 5 points to Agility, 25 points to Wisdom
+* Iksar: 5 points to Stamina, 25 points to Wisdom
+
+'''Stamina Focused-Build'''
+* Barbarian: 25 points to Stamina, 5 points to Wisdom
+* Troll: 25 points to Stamina, 5 points to Wisdom
+* Ogre: 5 points to Agility, 25 points to Stamina
+* Iksar: 25 points to Stamina, 5 points to Wisdom
+
+==Religion==
+
+Regardless of their religion, every Shaman race except Barbarian (who must pick The Tribunal as their religion) will be hated by "good" NPCs.  Since a shaman's religion won't make him ''more'' hated, which one you choose won't matter much.  Unfortunately since all evil religion choices are hated, even if you work to improve your "good" factions (by killing enemies of good factions), you will still never be able to trade in many "good" zones because of your race and religion.
+
+Troll Shaman that choose to worship Innoruuk have the benefit of being able to quest for http://wiki.project1999.com/Regent_Symbol_of_Innoruuk which gives them a low level snare effect (slowing a monsters movement speed) not available to other race/religion combinations.
+
+= Spells =
+Some of the spells available to Shaman are not particularly useful, while others are essential.  Wisewolf has compiled an excellent [[Wisewolf's Spell Purchasing Guide| Shaman Spell Purchasing Guide]] which offers advice on which spells to purchase while leveling your shaman.
+==Level 1==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Burst of Flame
+|description=Single Target Fire Direct Damage (Max: 5)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=7
+}}
+{{SpellRow
+|name=Cure Disease
+|description=Cures the target of disease effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Dexterous Aura
+|description=Increase Dexterity
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=Endure Cold
+|description=Adds to cold resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Flash of Light
+|description=Blind target and lower their ATK
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=12
+}}
+{{SpellRow
+|name=Inner Fire
+|description=Increase AC and Hitpoints
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=Minor Healing
+|description=Small Healing Spell (Max: 10)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=Strengthen
+|description=Increase Strength
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=True North
+|description=Self Only Navigation Spell
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=5
+}}
+</table>
+
+==Level 5==	
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cure Poison
+|description=Cures target of poison effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Drowsy
+|description=Lower target's attack speed
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Endure Fire
+|description=Adds to fire resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Feet like Cat
+|description=Increase Agility
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Fleeting Fury
+|description=Short Duration Stat Increase
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=Frost Rift
+|description=Cold Based Direct Damage Spell (Max: 15)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=15
+}}
+{{SpellRow
+|name=Gate
+|description=Return to Your Bind Point
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=70
+}}
+{{SpellRow
+|name=Scale Skin
+|description=Increase AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=25
+}}
+{{SpellRow
+|name=Sicken
+|description=Single Target Disease DoT (Max: 50)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Spirit Pouch
+|description=Summon no-rent pouch
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Summon Drink
+|description=Summon no-rent drink
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=10
+}}
+	</table>
+
+==Level 9==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cure Blindness
+|description=Cures the target of blindness effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Endure Disease
+|description=Adds to disease resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Light Healing
+|description=Healing spell (Max: 33)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=25
+}}
+{{SpellRow
+|name=Sense Animals
+|description=Makes the caster face the closest Animal
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=5
+}}
+{{SpellRow
+|name=Serpent Sight
+|description=Target Infravision
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Spirit of Bear
+|description=Increase Stamina
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Spirit of Wolf
+|description=Increase movement rate of the target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Spirit Sight
+|description=See invisible
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Summon Food
+|description=Summon no-rent food
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=Tainted Breath
+|description=Single Target Poison DoT
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+	</table>
+
+==Level 14==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bind Affinity
+|description=Set a New Home Point for Target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Burst of Strength
+|description=Target short duration battle buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=15
+}}
+{{SpellRow
+|name=Disempower
+|description=Single Target Melee Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=45
+}}
+{{SpellRow
+|name=Endure Poison
+|description=Increase Poison Resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Enduring Breath
+|description=Breathe underwater
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=35
+}}
+{{SpellRow
+|name=Invisibility versus Animals
+|description=Target becomes invisible to Animals
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Levitate
+|description=Single Target Levitation Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Root
+|description=Hold your target in one spot (Max: 48 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Spirit of Snake
+|description=Increase Charisma
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Spirit Strike
+|description=Single Target Cold Direct Damage (Max: 81)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=75
+}}
+{{SpellRow
+|name=Turtle Skin
+|description=Increase AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Walking Sleep
+|description=Lower target's attack speed 23% (L14) to 35% (L60)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+</table>
+
+==Level 19==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Affliction
+|description=Disease based DoT (Max: 156)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=75
+}}
+{{SpellRow
+|name=Cancel Magic
+|description=Single Target Magic Effect Debuffer
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Endure Magic
+|description=Increase Magic Resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Frenzy
+|description=Self Only Melee Stat Buff that slowly drains mana
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=25
+}}
+{{SpellRow
+|name=Healing
+|description=Healing Spell (Max: 100)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Infectious Cloud
+|description=Area Effect Disease DoT (Max: 125/target)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=78
+}}
+{{SpellRow
+|name=Insidious Fever
+|description=Decrease Disease Protection
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Malaise
+|description=Target Decrease Fire, Cold, Magic, and Poison Resists (Max: 20)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Shrink
+|description=Make target smaller in dungeons
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Spirit of Cat
+|description=Increase Agility
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Spirit Strength
+|description=Increase Strength
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Vision
+|description=See through target's eyes
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=10
+}}
+</table>
+
+==Level 24==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cannibalize
+|description=Self Convert Health to Mana
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=0
+}}
+{{SpellRow
+|name=Counteract Disease
+|description=Remove stronger disease
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Creeping Vision
+|description=Telescope effect (zoom in)
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Envenomed Breath
+|description=Poison Damage Over Time
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Frost Strike
+|description=Single Target Cold Direct Damage (Max: 149)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Invigor
+|description=Single Target Stamina Regeneration Spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Poison Storm
+|description=Poison Rain Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=125
+}}
+{{SpellRow
+|name=Protect
+|description=Increase AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=75
+}}
+{{SpellRow
+|name=Regeneration
+|description=Increases regeneration of the target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Resist Cold
+|description=Increase cold resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Spirit of Cheetah
+|description=Short Duration Extreme Movement Speed Increase
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=20
+}}
+{{SpellRow
+|name=Spirit of Monkey
+|description=Increase Dexterity
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Spirit of Ox
+|description=Increase Stamina
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Scale of Wolf
+|description=Movement increase
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+</table>
+
+==Level 29==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Alluring Aura
+|description=Increase Charisma
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Befriend Animal
+|description=Charm Animals
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=70
+}}
+{{SpellRow
+|name=Counteract Poison
+|description=Cures target of poison effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Greater Healing
+|description=This spell is an upgrade to Healing
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Imbue Amber
+|description=Create a Holy Amber Stone (Cazic Thule)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Ivory
+|description=Create a Holy Ivory Stone (The Tribunal)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=225
+}}
+{{SpellRow
+|name=Imbue Jade
+|description=Create a Holy Jade Stone (Rallos Zek)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Sapphire
+|description=Create a Holy Sapphire Stone (Innoruuk)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Invisibility
+|description=Single Target Invisibility Spell
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Listless Power
+|description=Melee stat debuffer
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=90
+}}
+{{SpellRow
+|name=Quickness
+|description=Increase Attack Speed (Max 30%)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Raging Strength
+|description=Increase Strength
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Resist Fire
+|description=Increase Fire Resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Rising Dexterity
+|description=Increase Dexterity
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Tagar's Insects
+|description=Slow target's attack speed 34% (L29) to 50% (L60)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=125
+}}
+{{SpellRow
+|name=Ultravision
+|description=Single Target Ultravision
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=55
+}}
+</table>
+
+==Level 34==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Charm Animals
+|description=Make an Animal Your Pet
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=120
+}}
+{{SpellRow
+|name=Companion Spirit
+|description=Summons a pet to protect you
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=350
+}}
+{{SpellRow
+|name=Enstill
+|description=Single Target Root Spell (Max: 96 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Fury
+|description=Self Only Melee Stat Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Health
+|description=Increase Stamina
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Malaisement
+|description=Target Decrease Fire, Cold, Magic, and Poison Resists (Max: 40)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Nimble
+|description=Increase Agility
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Resist Disease
+|description=Increase Disease Resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Scourge
+|description=Disease based DoT
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=170
+}}
+{{SpellRow
+|name=Shifting Shield
+|description=Increase AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Shock of the Tainted
+|description=Single Target Poison Based Direct Damage (Max: 230)
+|era=Vel.
+|school=Con.
+|location=Vendor
+|mana=130
+}}
+{{SpellRow
+|name=Talisman of Tnarg
+|description=Increase Hitpoints
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=125
+}}
+{{SpellRow
+|name=Winter's Roar
+|description=Cold Based Attack Spell Max: 263
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=150
+}}
+</table>
+
+==Level 39==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Assiduous Vision
+|description=Binds sight to target, increases vision magnification, gives caster ultravision
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Blinding Luminance
+|description=Blind Spell
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Cannibalize II
+|description=Self Convert Health to Mana
+|era=&nbsp;
+|school=Alt.
+|location=Quest
+|mana=0
+}}
+{{SpellRow
+|name=Chloroplast
+|description=Increase targets hitpoint Regeneration
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Deftness
+|description=Increase Dexterity
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Extinguish Fatigue
+|description=Single Target Full Stamina Refresh
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=35
+}}
+{{SpellRow
+|name=Furious Strength
+|description=Increase Strength
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Gale of Poison
+|description=Poison Based Rain Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Glamour
+|description=Increase Charisma
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Insidious Malady
+|description=Decrease Disease Resistance
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Resist Poison
+|description=Increase Poison Resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Togor's Insects
+|description=Slow target's attack speed 49% (L39) to 70% (L60)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=175
+}}
+{{SpellRow
+|name=Tumultuous Strength
+|description=Group Strength Buff (Max: 27)
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=150
+}}
+{{SpellRow
+|name=Venom of the Snake
+|description=Poison based DoT 453 damage over 42 sec
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=160
+}}
+{{SpellRow
+|name=Vigilant Spirit
+|description=Summon a pet to protect you
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=400
+}}
+</table>
+
+==Level 44==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Agility
+|description=Increase Agility
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Alacrity
+|description=Single Target Haste Spell (Max: 40%)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=115
+}}
+{{SpellRow
+|name=Blast of Poison
+|description=Single Target Poison Direct Damage (Max: 400)
+|era=Vel.
+|school=Con.
+|location=NPC Drop
+|mana=200
+}}
+{{SpellRow
+|name=Blizzard Blast
+|description=Single Target Cold Direct Damage (Max: 430)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Guardian
+|description=Increase Armor Class (Max: 24)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Guardian Spirit
+|description=Summon a pet to protect you
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=450
+}}
+{{SpellRow
+|name=Incapacitate
+|description=Single Target Melee Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Nullify Magic
+|description=Single Target Magic Effect Debuffer
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Resist Magic
+|description=Increase Magic Resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=85
+}}
+{{SpellRow
+|name=Stamina
+|description=Increase Stamina
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Summon Companion
+|description=Summon Your Pet to Your Location
+|era=Vel.
+|school=Con.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Talisman of Altuna
+|description=Increase Hitpoints
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=250
+}}
+</table>
+
+==Level 49==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Abolish Disease
+|description=Attempts to remove any disease based effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Charisma
+|description=Increase Charisma
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Dexterity
+|description=Increase Dexterity
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Envenomed Bolt
+|description=Poison Damage Over Time (Max: 1278)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=320
+}}
+{{SpellRow
+|name=Frenzied Spirit
+|description=Summon a pet to protect you
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=500
+}}
+{{SpellRow
+|name=Malosi
+|description=Target Decrease Fire, Cold, Magic, and Poison Resists (Max: 60)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=175
+}}
+{{SpellRow
+|name=Plague
+|description=Disease based DoT (Max: -1245)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=300
+}}
+{{SpellRow
+|name=Rage
+|description=Self Only Melee Stat Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Strength
+|description=Increase Strength
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+</table>
+
+==Level 50==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Spirit Quickening
+|description=Pet Only AC, Strength & Haste Buff
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=50
+}}
+</table>
+
+==Level 51==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr> 
+{{SpellRow
+|name=Superior Healing
+|description=Heal Spell
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=250
+}}  
+{{SpellRow
+|name=Immobilize
+|description=Single Target Fast Root Spell (Max: 60 Secs)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Talisman of Jasinth
+|description=Group Resist Disease
+|era=Kun.
+|school=Abj.
+|location=NPC Drop
+|mana=150
+}}
+{{SpellRow
+|name=Turgur's Insects
+|description=Slow Attack Speed (Max: 75%)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=250
+}}
+</table>
+
+==Level 52==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Insidious Decay
+|description=Unresistable Disease Debuffer
+|era=Kun.
+|school=Alt.
+|location=[[Shaman_Spells_(Quest)|Quest]]
+|mana=100
+}}
+{{SpellRow
+|name=Regrowth
+|description=Increase regeneration of the target
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=300
+}}
+{{SpellRow
+|name=Spirit of Scale
+|description=Group Movement Speed Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=150
+}}
+</table>
+
+==Level 53==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cripple
+|description=Single Target Melee Debuff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=225
+}}
+{{SpellRow
+|name=Deliriously Nimble
+|description=Agility Buff
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Talisman of Shadoo
+|description=Group Resist Poison
+|era=Kun.
+|school=Abj.
+|location=[[Shaman_Spells_(Quest)|Quest]]
+|mana=150
+}}
+</table>
+
+==Level 54==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cannibalize III
+|description=Self Convert Health to Mana
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=0
+}}
+{{SpellRow
+|name=Ice Strike
+|description=Cold Based Direct Damage Spell (Max: 675)
+|era=Kun.
+|school=Evo.
+|location=Vendor
+|mana=250
+}}
+{{SpellRow
+|name=Riotous Health
+|description=Stamina Buff
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Shroud of the Spirits
+|description=AC Buff Spell
+|era=Kun.
+|school=Abj.
+|location=[[Shaman_Spells_(Quest)|Quest]]
+|mana=200
+}}
+</table>
+
+==Level 55==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Annul Magic
+|description=Single Target Magical Debuffer
+|era=Kun.
+|school=Abj.
+|location=Vendor
+|mana=75
+}}
+{{SpellRow
+|name=Chloroblast
+|description=Single Target Heal Spell (Max: 428)
+|era=Vel.
+|school=Alt.
+|location=Vendor
+|mana=175
+}}
+{{SpellRow
+|name=Form of the Great Bear
+|description=Illusion Bear (Regen and Wisdom Buff)
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=135
+}}
+{{SpellRow
+|name=Spirit of the Howler
+|description=Summon a Wolf Pet
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=850
+}}
+{{SpellRow
+|name=Talisman of Kragg
+|description=Hitpoint Buff
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=375
+}}
+{{SpellRow
+|name=Torrent of Poison
+|description=Poison Based Rain Direct Damage
+|era=Kun.
+|school=Evo.
+|location=[[Shaman_Spells_(Quest)|Quest]]
+|mana=380
+}}
+</table>
+
+==Level 56==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Acumen
+|description=Stamina and Vision Buff
+|era=Kun.
+|school=Div.
+|location=NPC Drop
+|mana=75
+}}
+{{SpellRow
+|name=Bane of Nife
+|description=Poison Based DoT (Max: 1862)
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=425
+}}
+{{SpellRow
+|name=Celerity
+|description=Single Target Haste Spell (Max: 50%)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=185
+}}
+{{SpellRow
+|name=Paralyzing Earth
+|description=Single Target Root Spell (Max: 3 Mins)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+</table>
+
+==Level 57==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Malosini
+|description=Target Decrease Fire, Cold, Magic, and Poison Resists (Max: 60)
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Maniacal Strength
+|description=Strength Buff
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Talisman of the Brute
+|description=Group Stamina Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=350
+}}
+{{SpellRow
+|name=Talisman of the Cat
+|description=Group Agility Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=350
+}}
+</table>
+
+==Level 58==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cannibalize IV
+|description=Self Only HP to Mana Conversion
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=0
+}}
+{{SpellRow
+|name=Mortal Deftness
+|description=Dexterity Buff
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Talisman of the Rhino
+|description=Group Strength Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=350
+}}
+{{SpellRow
+|name=Talisman of the Serpent
+|description=Group Charisma Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=350
+}}
+{{SpellRow
+|name=Tigir's Insects
+|description=Area Effect Slow Spell
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=350
+}}
+</table>
+
+==Level 59==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Pox of Bertoxxulous
+|description=Massive Disease Based DoT (Max: 2088)
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=430
+}}
+{{SpellRow
+|name=Talisman of the Raptor
+|description=Group Dexterity Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=350
+}}
+{{SpellRow
+|name=Unfailing Reverence
+|description=Charisma Buff
+|era=Kun.
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Voice of the Berserker
+|description=Self Only Meleeing Buff
+|era=Kun.
+|school=Abj.
+|location=NPC Drop
+|mana=1
+}}
+</table>
+
+==Level 60==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Avatar
+|description=The Ultimate Melee Stat Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=325
+}}
+{{SpellRow
+|name=Focus of Spirit
+|description=Single Target Health, Strength and Dexterity Buff
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=500
+}}
+{{SpellRow
+|name=Malo
+|description=Target Decrease Fire, Cold, Magic, and Poison Resists (Max: 45)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=350
+}}
+{{SpellRow
+|name=Primal Avatar
+|description=The Ultimate Melee Stat Buff (No Component)
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=325
+}}
+{{SpellRow
+|name=Torpor
+|description=Enormous Health Recovery
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=200
+}}
+</table>
+
+==Item-Based==
+
+===Reclaim Energy===
+Although the spell [[Reclaim Energy]] is not technically on the Shaman spell list, it is very useful for Shaman, as it allows them to despawn their pet to get back the mana they spent on casting it.  This allows much faster "pet cycling" (ie. repeatedly summoning a pet until you get one of maximum level) and lets them use their pet as a backup mana battery in emergencies when mana runs out.
+
+Fortunately Shaman can effectively gain this spell by completing one of the four [[Magician Focus Items]] quests.  Although Shaman can't equip the focus item, they can still right-click it from inventory, allowing them to use [[Reclaim Energy]] (mana-free) as if it was a part of their spell list.
+
+=Skills=
+
+== Pet Information ==
+
+{{#lsth:Pet Guide|[[Shaman]] Pets}}
+
+==Specialization==
+
+{{#lsth:Skill Specialization|Shaman}}
+
+==Casting Skills==
+
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Abjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alteration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Conjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Divination</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Evocation</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Channelling</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">220</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">8</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Meditate</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">252</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">30</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Specialisation</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+</table>
+
+==Combat Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>1 Hand Blunt</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>2 Hand Blunt</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Bind Wound</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="15%">No</td>
+		<td>Defense</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Hand to Hand</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Offense</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Piercing</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">15</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Dodge</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+</table>
+==Miscellaneous Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alcohol Tolerance</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Beg</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Fishing</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Forage (Iksar Only)</td>
+		<td align="center" width="20%">50</td>
+		<td align="center" width="25%">50</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Sense Heading</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Swimming</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+= Shaman-Specific Quests =
+
+{{#lsth:Class Race Quest List|Shaman}}
+
+= All Shaman Gear =
+* [[:Category:Shaman_Equipment | All Slots]]
+* [[Special:ClassSlotEquip/Shaman/Ear/AllItems |Ears]]
+* [[Special:ClassSlotEquip/Shaman/Fingers/AllItems |Fingers]]
+* [[Special:ClassSlotEquip/Shaman/Neck/AllItems |Neck]]
+* [[Special:ClassSlotEquip/Shaman/Head/AllItems |Head]]
+* [[Special:ClassSlotEquip/Shaman/Face/AllItems |Face]]
+* [[Special:ClassSlotEquip/Shaman/Chest/AllItems |Chest]]
+* [[Special:ClassSlotEquip/Shaman/Arms/AllItems |Arms]]
+* [[Special:ClassSlotEquip/Shaman/Back/AllItems |Back]]
+* [[Special:ClassSlotEquip/Shaman/Waist/AllItems |Waist]]
+* [[Special:ClassSlotEquip/Shaman/Shoulders/AllItems |Shoulders]]
+* [[Special:ClassSlotEquip/Shaman/Wrists/AllItems |Wrists]]
+* [[Special:ClassSlotEquip/Shaman/Legs/AllItems |Legs]]
+* [[Special:ClassSlotEquip/Shaman/Hands/AllItems |Hands]]
+* [[Special:ClassSlotEquip/Shaman/Feet/AllItems |Feet]]
+* [[Special:ClassSlotEquip/Shaman/Primary/AllItems |Primary]]
+* [[Special:ClassSlotEquip/Shaman/Secondary/AllItems |Secondary]]
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Shaman]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Shaman]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Shaman]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Shaman]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Shaman]]}}
+
+= FAQ =
+
+{{Template: Navbox Classes}}

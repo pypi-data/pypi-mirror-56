@@ -1,0 +1,40 @@
+{{Classic Era}}
+{{Spellpage|
+
+| spellname = Summon Waterstone
+| spellicon = A
+| description = Focuses mana into the form of a waterstone, allowing the user to breathe underwater for extended periods of time.
+
+| classes = 
+
+* [[Magician]] - Level 20
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Summoned: Waterstone]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 40
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-12)]] | Library | (1074,-1036) }}
+{{SpellWhereRow  | [[Erudin]] | [[Chembla Ellent]] | Library (F3) | (-1045,-243) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Ash C'Luzz]] | Library (F2) | (917,-1328) }}
+}}
+
+}}

@@ -1,0 +1,48 @@
+{{Velious_Era}}
+{{Spellpage|
+
+| spellname = Enticement of Flame
+| spellicon = O
+| description = Covers your target in blistering flames, causing 360 damage.  This damage is more difficult to resist than most spells.  This would be considered the first "Lure" type spell for wizards, even though it doesn't have Lure in it's name.
+
+| classes = 
+
+* [[Wizard]] - Level 44
+
+| items_with_effect = 
+
+<ul><li> {{:Sorcerer's Robe}}
+</li><li> {{:Robe of Icicles}}
+</li><li> {{:Robe of the Invoker}}
+</li><li> {{:Sage's Robe}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 2 | Decrease Hitpoints by 360 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 240
+| range = 200
+| casting_time = 6.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (-100)
+
+| msg_cast_on_you = You succumb to the enticement of flame.
+| msg_cast_on_other = Someone  succumbs to the enticement of flame.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from Velious Mobs
+
+[[Cobalt Scar]]
+
+* [[a cobalt drake]]
+
+}}

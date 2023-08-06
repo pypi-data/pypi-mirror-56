@@ -1,0 +1,59 @@
+{{Spellpagesmart|
+
+| spellname = Expel Summoned
+| spellicon = C
+| description = A burst of holy power that inflicts between 243 and 385 damage to a summoned target (2.96 DPM).
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 49
+* [[Druid]] - Level 34
+* [[Magician]] - Level 39
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 261 (L34) to 273 (L38) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 130
+| range = 200
+| casting_time = 4.30
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Summoned
+| spell_type = Detrimental
+| resist = Magic (-50)
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-16)]] | Library | (1101,-1028) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-10)]] | Necromancer Guild | (2148,-371) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant]] | Cleric Guild | (1197, -553) }}
+{{SpellWhereRowB | [[Erudin]] | [[Selint Chency]] | Cleric Guild - Quellious | (-637,-47) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Tuballi Stellari]] | Magician Guild (F2) | (729,918) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Myris N'Tan]] | Cleric Guild | (401,-853) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Pisna H'Rugla]] | Caster Guild (Basement) | (133,-911) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Balhallia]] | Cleric Guild | (-133,-746) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Egasia Reenix]] | Cleric Guild (Top Floor) | (116, 302) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Alice Sweetoven]] | Cleric Guild | (-232,-419) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Slim Waterman]] | Cleric Guild | (-229,-386) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Gende Reldari]] | Caster Guild | (307,-579) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Osisa Goldenspear]] | Magician Guild | (666,-526) }}
+{{SpellWhereRowB | [[Steamfont Mountains]] | [[Crisyn]] | Druid Ring | (-1750,1657) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Cronte Deloru]] | Caster Guild (F3) | (113,-722) }}
+}}
+
+| TableLocations = Vendors
+| TableEra = {{{TableEra|Classic}}}
+
+}}

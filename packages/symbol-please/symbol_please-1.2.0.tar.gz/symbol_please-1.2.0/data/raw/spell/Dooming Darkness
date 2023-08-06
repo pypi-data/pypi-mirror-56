@@ -1,0 +1,54 @@
+{{Spellpage|
+
+| spellname = Dooming Darkness
+| spellicon = G
+| description = Summons a dooming darkness that binds your target's feet, decreasing their movement rate, and doing 20 damage every 6 seconds for 1.5 mins @L27 to 1.6 mins @L30 for a total of 320 damage. 2.66 DPM; 3.33 DPS.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 49
+* [[Necromancer]] - Level 29
+
+| items_with_effect = 
+
+
+<ul><li> {{:Nightfall}}
+</li><li> {{:Obtenebrate Short Sword}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 20 per tick }}
+{{SpellSlotRow | 2 | Decrease Movement Speed by 49% (L29) to 60% (L50) }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 120
+| range = 200
+| casting_time = 4.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 1.5 minutes @L29 to 1.6 minutes @L30
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are engulfed in darkness.
+| msg_cast_on_other = Someone  is engulfed in darkness.
+| msg_wears_off = The darkness fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-1)]] | Necromancer Guild | (2082,-410) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Ainla Yurimar]] | Underground | (-162,-270) }}
+{{SpellWhereRowB | [[Grobb]] | [[Crilt - Troll]] | Shadow Knight Guild | (518,-618) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Rizyra F'Lok]] | Necromancer Guild (F1) | (1335,-1213) }}
+{{SpellWhereRowB | [[Oggok]] | [[Crilt - Ogre]] | Shadow Knight Guild | (276,-2) }}
+{{SpellWhereRow  | [[Paineel]] | [[Brettas Norval]] | Shadow Knight Guild | (888,468) }}
+{{SpellWhereRowB | [[Paineel]] | [[Leovre Kieqmarn]] | Necromancer Guild | (665,804) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Dallisen Xalladyr]] | Necromancer Guild | (402,-311) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Rott]] | Cubby near PvP Area | (-440,236) }}
+}}
+
+}}

@@ -1,0 +1,62 @@
+{{Spellpage|
+
+| spellname = Expulse Undead
+| spellicon = C
+| description = A burst of holy power that inflicts between 88 and 94 damage to an undead target. (1.56 DPM @ L20)
+
+| classes = 
+
+* [[Cleric]] - Level 14
+* [[Paladin]] - Level 30
+* [[Shadow Knight]] - Level 39
+* [[Necromancer]] - Level 20
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 88 (L14) to 94 (L20) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 60
+| range = 200
+| casting_time = 2.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Undead
+| spell_type = Detrimental
+| resist = Magic (-50)
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-2)]] | Cleric Guild | (1238,-539) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-9)]] | Necromancer Guild | (2154,-366) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-3)]] | Necromancer Guild | (2100,-398) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Hundle Quatvel]] | Underground | (-186,-234) }}
+{{SpellWhereRowB | [[Erudin]] | [[Mertitt Phentilly]] | Cleric Guild - Quellious (Outside) | (-741,-55) }}
+{{SpellWhereRow  | [[Erudin]] | [[Issibla Belstince]] | Cleric Guild - Prexus (F2) | (-1031,-375) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Seria Woodwind]] | Paladin Guild | (-9,-197) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Celest Palestream]] | Cleric Guild | (24,-444) }}
+{{SpellWhereRowB | [[Grobb]] | [[Crilt - Troll]] | Shadow Knight Guild | (518,-618) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Olak N'Mar]] | Necromancer Guild (F1) | (1337,-1226) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Issia H'Rugla]] | Cleric Guid | (403,-766) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Amata D'Lavi]] | Cleric Guild (F1) | (103,311) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Donala Baris]] | Paladin Guild (F3) | (208,-130) }}
+{{SpellWhereRow  | [[Qeynos|North Qeynos]] | [[Mellisa Purgor]] | Paladin Guild | (-158,-130) }}
+{{SpellWhereRowB | [[Oggok]] | [[Crilt - Ogre]] | Shadow Knight Guild | (276,-2) }}
+{{SpellWhereRow  | [[Paineel]] | [[Brettas Norval]] | Shadow Knight Guild | (888,468) }}
+{{SpellWhereRowB | [[Paineel]] | [[Devinious Natasu]] | Necromancer Guild | (675,887) }}
+{{SpellWhereRow  | [[Paineel]] | [[Erelin Verisue]] | Cleric Guild | (1226,551) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Leon Ereek]] | Cleric Guild | (373,-434) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Vidurlyn Aeminee]] | Necromancer Guild | (308,-306) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Frappy Slimfinger]] | Cleric Guild | (-214,-359) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Oriyame Nelafre]] | Cleric Guild | (-259,-539) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Pestilence]] | Cubby near PvP Area | (-410,231) }}
+}}
+
+}}

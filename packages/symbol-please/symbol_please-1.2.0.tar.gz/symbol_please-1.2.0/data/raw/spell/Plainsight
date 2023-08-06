@@ -1,0 +1,36 @@
+{{Spellpage|
+
+| spellname = Plainsight
+| spellicon = B
+| description = Focuses your vision, allowing you to see otherwise invisible creatures, and allowing greatly improved night vision.
+
+| classes = 
+
+* [[Wizard]] - Level 55
+
+| slots = 
+
+{{SpellSlotRow | 1 | See Invisible(2) }}
+{{SpellSlotRow | 2 | Ultravision(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 100
+| range =  
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 1 hour 12 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your eyes tingle.
+| msg_cast_on_other = Someone 's eyes glow violet.
+| msg_wears_off = Your plainsight fades.
+
+| where_to_obtain = 
+
+* Drops from Level 50+ Kunark Mobs
+
+}}

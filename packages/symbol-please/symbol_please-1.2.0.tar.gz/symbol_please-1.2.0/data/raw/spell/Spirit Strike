@@ -1,0 +1,49 @@
+{{Spellpage|
+
+| spellname = Spirit Strike
+| spellicon = S
+| description = Creates a rift of bitter cold, causing between 74 and 81 damage to your target. 1.08 DPM.
+
+| classes = 
+
+* [[Shaman]] - Level 14
+
+| items_with_effect = 
+
+<ul><li> {{:Bow of the Huntsman}}
+</li><li> {{:Rune Etched Icewurm Fang}}
+</li><li> {{:Sarnak Liberator}}
+</li><li> {{:Spear of Winter}}
+</li><li> {{:Wakizashi of the Frozen Skies}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 74 (L14) to 81 (L21) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 75
+| range = 200
+| casting_time = 2.45
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Cold (0)
+
+| msg_cast_on_you = You stagger as spirits of frost slam against you.
+| msg_cast_on_other = Someone  staggers as spirits of frost slam against them.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+}}
+
+}}

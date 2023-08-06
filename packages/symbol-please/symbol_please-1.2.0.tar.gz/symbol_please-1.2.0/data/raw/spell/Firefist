@@ -1,0 +1,56 @@
+{{Spellpagesmart|
+
+| spellname = Firefist
+| spellicon = O
+| description = Fills your hands with the force of flame, increasing your attack rating for 12.0 mins.
+
+Doesn't stack with some other ATK buffs such as [[Grim Aura]], [[Strength of Nature]], and [[Celestial Tranquility]].
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 22
+* [[Druid]] - Level 9
+
+| items_with_effect = 
+
+<ul><li> {{:Berserkers Ring}}
+</li><li> {{:Golden Star Slippers}}
+</li><li> {{:Grand Master's Slippers}}
+</li><li> {{:Silver Moon Slippers}}
+</li><li> {{:White Lotus Slippers}}
+</li><li> {{:Blazing Gauntlets of Fennin Ro}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase ATK by 5 (L9) to 14 (L29)| simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 30
+| range =  
+| casting_time = 3.50
+| fizzle_time = 2.25
+| recast_time = 7.00
+| duration = 12 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your fist bursts into flame.
+| msg_cast_on_other = Someone 's fist bursts into flame.
+| msg_wears_off = Your hand extinguishes.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = {{{TableEra|Classic}}}
+}}

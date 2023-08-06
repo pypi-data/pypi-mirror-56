@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Sicken
+| spellicon = E
+| description = Sickens your target with a fever, causing 8 damage initially and 2 damage every six seconds for 2.1 mins (Max Damage: 50). 1.67 DPM.
+
+| classes = 
+
+* [[Shaman]] - Level 5
+
+| items_with_effect = 
+
+<ul><li> {{:Dark Spear of Venom}}
+</li><li> {{:Noclin's Femur}}
+</li><li> {{:Slime Crystal Staff}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Disease Counter by 1 }}
+{{SpellSlotRow | 2 | Decrease Hitpoints by 2 per tick }}
+{{SpellSlotRow | 3 | Decrease HP when cast by 8 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 30
+| range = 200
+| casting_time = 1.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 1.5 minutes @L5 to 2.1 minutes @L11
+| target_type = Single
+| spell_type = Detrimental
+| resist = Disease (0)
+
+| msg_cast_on_you = You feel feverish.
+| msg_cast_on_other = Someone  sweats and shivers, looking feverish.
+| msg_wears_off = Your fever has broken.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRowB | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+}}
+
+}}

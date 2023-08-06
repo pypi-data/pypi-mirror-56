@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Jyll`s Static Pulse
+| spellicon = C
+| description = Creates a circle of static energy around you, causing 495 damage and and a short duration stun to all nearby creatures. 
+<br>Single target mana efficiency of 1.63.
+
+| classes = 
+
+* [[Wizard]] - Level 53
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 495 }}
+{{SpellSlotRow | 2 | Stun for 0.0 seconds }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 285
+| range =  
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = Instant
+| target_type = PB AE
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = A pulse of static energy slams through you.
+| msg_cast_on_other = Someone  is slammed by a pulse of static energy.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Firiona Vie]] | [[Selien Nartoise]] | Outpost | (-3980,2626) }}
+{{SpellWhereRow  | [[The Overthere]] | [[Tyrin F'Linz]] | Outpost | (2812,2405) }}
+}}
+
+}}

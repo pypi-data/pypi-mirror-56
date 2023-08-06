@@ -1,0 +1,44 @@
+{{Spellpage|
+
+| spellname = Plague
+| spellicon = E
+| description = Sickens your target with a fever, causing 60 damage initially and 55 damage every six seconds for 2.2 mins (22 tick) for a total of 1270 damage. 4.23 DPM.
+
+| classes = 
+
+* [[Shaman]] - Level 49
+* [[Necromancer]] - Level 52
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Disease Counter by 9 }}
+{{SpellSlotRow | 2 | Decrease Hitpoints by 55 per tick }}
+{{SpellSlotRow | 3 | Decrease HP when cast by 60 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 300
+| range = 200
+| casting_time = 6.10
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 2.2 minutes
+| target_type = Single
+| spell_type = Detrimental
+| resist = Disease (0)
+
+| msg_cast_on_you = You feel feverish.
+| msg_cast_on_other = Someone  sweats and shivers, looking feverish.
+| msg_wears_off = Your fever has broken.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRowB | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+{{SpellWhereRow  | [[The Overthere]] | [[Finlay Kitoran]] | Outpost | (2770,2367) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Lithrise Frizen]] | Building SE of Necromancer Guild | (170,660) }}
+}}
+
+}}

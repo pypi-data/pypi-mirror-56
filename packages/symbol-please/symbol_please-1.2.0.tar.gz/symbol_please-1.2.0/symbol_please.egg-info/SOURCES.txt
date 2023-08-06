@@ -1,0 +1,1096 @@
+.editorconfig
+.gitignore
+.travis.yml
+CONTRIBUTING.rst
+LICENSE
+MANIFEST.in
+README.rst
+requirements_dev.txt
+setup.py
+tox.ini
+data/info.armills.SymbolPlease.desktop
+data/symbol_please.png
+data/raw/all_spells.json
+data/raw/class/Bard
+data/raw/class/Cleric
+data/raw/class/Druid
+data/raw/class/Enchanter
+data/raw/class/Magician
+data/raw/class/Monk
+data/raw/class/Necromancer
+data/raw/class/Paladin
+data/raw/class/Ranger
+data/raw/class/Rogue
+data/raw/class/Shadow_Knight
+data/raw/class/Shaman
+data/raw/class/Warrior
+data/raw/class/Wizard
+data/raw/spell/Aanyas Animation
+data/raw/spell/Aanyas Quickening
+data/raw/spell/Abolish Disease
+data/raw/spell/Abolish Poison
+data/raw/spell/Abscond
+data/raw/spell/Abundant Drink
+data/raw/spell/Abundant Food
+data/raw/spell/Acumen
+data/raw/spell/Adorning Grace
+data/raw/spell/Aegis
+data/raw/spell/Aegis of Ro
+data/raw/spell/Aegolism
+data/raw/spell/Affliction
+data/raw/spell/Agility
+data/raw/spell/Alacrity
+data/raw/spell/Alliance
+data/raw/spell/Allure
+data/raw/spell/Allure of Death
+data/raw/spell/Allure of the Wild
+data/raw/spell/Alluring Aura
+data/raw/spell/Alter Plane Hate
+data/raw/spell/Alter Plane Sky
+data/raw/spell/Anarchy
+data/raw/spell/Animate Dead
+data/raw/spell/Annul Magic
+data/raw/spell/Antidote
+data/raw/spell/Arch Lich
+data/raw/spell/Arch Shielding
+data/raw/spell/Armor of Faith
+data/raw/spell/Armor of Protection
+data/raw/spell/Asphyxiate
+data/raw/spell/Assiduous Vision
+data/raw/spell/Asystole
+data/raw/spell/Atols Spectral Shackles
+data/raw/spell/Atone
+data/raw/spell/Augment
+data/raw/spell/Augment Death
+data/raw/spell/Augmentation
+data/raw/spell/Augmentation of Death
+data/raw/spell/Avalanche
+data/raw/spell/Avatar
+data/raw/spell/Bandoleer of Luclin
+data/raw/spell/Bane of Nife
+data/raw/spell/Banish Summoned
+data/raw/spell/Banish Undead
+data/raw/spell/Banishment
+data/raw/spell/Banishment of Shadows
+data/raw/spell/Banshee Aura
+data/raw/spell/Barbcoat
+data/raw/spell/Barrier of Combustion
+data/raw/spell/Bedlam
+data/raw/spell/Befriend Animal
+data/raw/spell/Beguile
+data/raw/spell/Beguile Animals
+data/raw/spell/Beguile Plants
+data/raw/spell/Beguile Undead
+data/raw/spell/Benevolence
+data/raw/spell/Berserker Spirit
+data/raw/spell/Berserker Strength
+data/raw/spell/Bind Affinity
+data/raw/spell/Bind Sight
+data/raw/spell/Bladecoat
+data/raw/spell/Blanket of Forgetfulness
+data/raw/spell/Blast of Poison
+data/raw/spell/Blaze
+data/raw/spell/Blinding Luminance
+data/raw/spell/Blizzard
+data/raw/spell/Blizzard Blast
+data/raw/spell/Bobbing Corpse
+data/raw/spell/Boil Blood
+data/raw/spell/Bolt of Flame
+data/raw/spell/Boltrans Agacerie
+data/raw/spell/Boltrans Animation
+data/raw/spell/Bond of Death
+data/raw/spell/Bonds of Force
+data/raw/spell/Bonds of Tunare
+data/raw/spell/Bone Walk
+data/raw/spell/Boon of Immolation
+data/raw/spell/Boon of the Clear Mind
+data/raw/spell/Boon of the Garou
+data/raw/spell/Bramblecoat
+data/raw/spell/Bravery
+data/raw/spell/Breath of Karana
+data/raw/spell/Breath of Ro
+data/raw/spell/Breath of the Dead
+data/raw/spell/Breeze
+data/raw/spell/Brilliance
+data/raw/spell/Bristlebanes Bundle
+data/raw/spell/Bulwark of Faith
+data/raw/spell/Burn
+data/raw/spell/Burnout
+data/raw/spell/Burnout II
+data/raw/spell/Burnout III
+data/raw/spell/Burnout IV
+data/raw/spell/Burst of Fire
+data/raw/spell/Burst of Flame
+data/raw/spell/Burst of Strength
+data/raw/spell/Cackling Bones
+data/raw/spell/Cadeau of Flame
+data/raw/spell/Cajole Undead
+data/raw/spell/Cajoling Whispers
+data/raw/spell/Calefaction
+data/raw/spell/Call of Bones
+data/raw/spell/Call of Earth
+data/raw/spell/Call of Fire
+data/raw/spell/Call of Flame
+data/raw/spell/Call of Karana
+data/raw/spell/Call of Sky
+data/raw/spell/Call of the Hero
+data/raw/spell/Call of the Predator
+data/raw/spell/Calm
+data/raw/spell/Calm Animal
+data/raw/spell/Camouflage
+data/raw/spell/Cancel Magic
+data/raw/spell/Cannibalize
+data/raw/spell/Cannibalize II
+data/raw/spell/Cannibalize III
+data/raw/spell/Cannibalize IV
+data/raw/spell/Careless Lightning
+data/raw/spell/Cascade of Hail
+data/raw/spell/Cascading Darkness
+data/raw/spell/Cast Force
+data/raw/spell/Cast Sight
+data/raw/spell/Cavorting Bones
+data/raw/spell/Cazic Gate
+data/raw/spell/Cazic Portal
+data/raw/spell/Celerity
+data/raw/spell/Celestial Cleansing
+data/raw/spell/Celestial Elixir
+data/raw/spell/Celestial Healing
+data/raw/spell/Center
+data/raw/spell/Cessation of Cor
+data/raw/spell/Chaos Flux
+data/raw/spell/Chaotic Feedback
+data/raw/spell/Char
+data/raw/spell/Charisma
+data/raw/spell/Charm
+data/raw/spell/Charm Animals
+data/raw/spell/Chase the Moon
+data/raw/spell/Chill Bones
+data/raw/spell/Chill Sight
+data/raw/spell/Chilling Embrace
+data/raw/spell/Chloroblast
+data/raw/spell/Chloroplast
+data/raw/spell/Choke
+data/raw/spell/Cinder Bolt
+data/raw/spell/Cinder Jolt
+data/raw/spell/Circle of Butcher
+data/raw/spell/Circle of Cobalt Scar
+data/raw/spell/Circle of Commons
+data/raw/spell/Circle of Feerrott
+data/raw/spell/Circle of Force
+data/raw/spell/Circle of Great Divide
+data/raw/spell/Circle of Iceclad
+data/raw/spell/Circle of Karana
+data/raw/spell/Circle of Lavastorm
+data/raw/spell/Circle of Misty
+data/raw/spell/Circle of Ro
+data/raw/spell/Circle of Steamfont
+data/raw/spell/Circle of Summer
+data/raw/spell/Circle of Toxxulia
+data/raw/spell/Circle of Wakening Lands
+data/raw/spell/Circle of Winter
+data/raw/spell/Circle of the Combines
+data/raw/spell/Clarify Mana
+data/raw/spell/Clarity
+data/raw/spell/Clarity II
+data/raw/spell/Clinging Darkness
+data/raw/spell/Cloud
+data/raw/spell/Cobalt Scar Portal
+data/raw/spell/Coldlight
+data/raw/spell/Collaboration
+data/raw/spell/Color Flux
+data/raw/spell/Color Shift
+data/raw/spell/Color Skew
+data/raw/spell/Color Slant
+data/raw/spell/Column of Fire
+data/raw/spell/Column of Frost
+data/raw/spell/Column of Lightning
+data/raw/spell/Combine Gate
+data/raw/spell/Combine Portal
+data/raw/spell/Combust
+data/raw/spell/Common Gate
+data/raw/spell/Common Portal
+data/raw/spell/Companion Spirit
+data/raw/spell/Complete Healing
+data/raw/spell/Concussion
+data/raw/spell/Conflagration
+data/raw/spell/Conglaciation of Bone
+data/raw/spell/Conjuration Air
+data/raw/spell/Conjuration Earth
+data/raw/spell/Conjuration Fire
+data/raw/spell/Conjuration Water
+data/raw/spell/Conjure Corpse
+data/raw/spell/Convergence
+data/raw/spell/Convoke Shadow
+data/raw/spell/Cornucopia
+data/raw/spell/Corporeal Empathy
+data/raw/spell/Counteract Disease
+data/raw/spell/Counteract Poison
+data/raw/spell/Courage
+data/raw/spell/Covetous Subversion
+data/raw/spell/Creeping Crud
+data/raw/spell/Creeping Vision
+data/raw/spell/Cripple
+data/raw/spell/Crystallize Mana
+data/raw/spell/Cure Blindness
+data/raw/spell/Cure Disease
+data/raw/spell/Cure Poison
+data/raw/spell/Curse of the Simple Mind
+data/raw/spell/Dagger of Symbols
+data/raw/spell/Dance of the Fireflies
+data/raw/spell/Daring
+data/raw/spell/Dark Empathy
+data/raw/spell/Dark Pact
+data/raw/spell/Dazzle
+data/raw/spell/Dead Man Floating
+data/raw/spell/Dead Men Floating
+data/raw/spell/Deadeye
+data/raw/spell/Death Pact
+data/raw/spell/Death Peace
+data/raw/spell/Deflux
+data/raw/spell/Defoliation
+data/raw/spell/Deftness
+data/raw/spell/Deliriously Nimble
+data/raw/spell/Dementia
+data/raw/spell/Demi Lich
+data/raw/spell/Devouring Darkness
+data/raw/spell/Dexterity
+data/raw/spell/Dexterous Aura
+data/raw/spell/Diamondskin
+data/raw/spell/Dictate
+data/raw/spell/Dimensional Hole
+data/raw/spell/Dimensional Pocket
+data/raw/spell/Discordant Mind
+data/raw/spell/Disease Cloud
+data/raw/spell/Disempower
+data/raw/spell/Disintegrate
+data/raw/spell/Dismiss Summoned
+data/raw/spell/Dismiss Undead
+data/raw/spell/Distill Mana
+data/raw/spell/Divine Aura
+data/raw/spell/Divine Barrier
+data/raw/spell/Divine Favor
+data/raw/spell/Divine Intervention
+data/raw/spell/Divine Light
+data/raw/spell/Divine Might
+data/raw/spell/Divine Purpose
+data/raw/spell/Divine Strength
+data/raw/spell/Dizzying Wind
+data/raw/spell/Dominate Undead
+data/raw/spell/Dooming Darkness
+data/raw/spell/Drain Soul
+data/raw/spell/Drain Spirit
+data/raw/spell/Draught of Fire
+data/raw/spell/Draught of Ice
+data/raw/spell/Draught of Jiva
+data/raw/spell/Dread of Night
+data/raw/spell/Drifting Death
+data/raw/spell/Drones of Doom
+data/raw/spell/Drowsy
+data/raw/spell/Dyns Dizzying Draught
+data/raw/spell/Dyzils Deafening Decoy
+data/raw/spell/Earthquake
+data/raw/spell/Ebbing Strength
+data/raw/spell/Egress
+data/raw/spell/Elemental Air
+data/raw/spell/Elemental Armor
+data/raw/spell/Elemental Earth
+data/raw/spell/Elemental Fire
+data/raw/spell/Elemental Maelstrom
+data/raw/spell/Elemental Shield
+data/raw/spell/Elemental Water
+data/raw/spell/Elementaling Air
+data/raw/spell/Elementaling Earth
+data/raw/spell/Elementaling Fire
+data/raw/spell/Elementaling Water
+data/raw/spell/Elementalkin Air
+data/raw/spell/Elementalkin Earth
+data/raw/spell/Elementalkin Fire
+data/raw/spell/Elementalkin Water
+data/raw/spell/Emissary of Thule
+data/raw/spell/Enchant Adamantite
+data/raw/spell/Enchant Brellium
+data/raw/spell/Enchant Clay
+data/raw/spell/Enchant Electrum
+data/raw/spell/Enchant Gold
+data/raw/spell/Enchant Mithril
+data/raw/spell/Enchant Platinum
+data/raw/spell/Enchant Silver
+data/raw/spell/Enchant Steel
+data/raw/spell/Enchant Velium
+data/raw/spell/Endure Cold
+data/raw/spell/Endure Disease
+data/raw/spell/Endure Fire
+data/raw/spell/Endure Magic
+data/raw/spell/Endure Poison
+data/raw/spell/Enduring Breath
+data/raw/spell/Energy Storm
+data/raw/spell/Enfeeblement
+data/raw/spell/Enforced Reverence
+data/raw/spell/Engorging Roots
+data/raw/spell/Engulfing Darkness
+data/raw/spell/Engulfing Roots
+data/raw/spell/Enlightenment
+data/raw/spell/Enslave Death
+data/raw/spell/Ensnare
+data/raw/spell/Ensnaring Roots
+data/raw/spell/Enstill
+data/raw/spell/Enthrall
+data/raw/spell/Enticement of Flame
+data/raw/spell/Entrance
+data/raw/spell/Entrapping Roots
+data/raw/spell/Enveloping Roots
+data/raw/spell/Envenomed Bolt
+data/raw/spell/Envenomed Breath
+data/raw/spell/Evacuate
+data/raw/spell/Evacuate Fay
+data/raw/spell/Evacuate Nek
+data/raw/spell/Evacuate North
+data/raw/spell/Evacuate Ro
+data/raw/spell/Evacuate West
+data/raw/spell/Everfount
+data/raw/spell/Exile Summoned
+data/raw/spell/Exile Undead
+data/raw/spell/Expedience
+data/raw/spell/Expel Summoned
+data/raw/spell/Expel Undead
+data/raw/spell/Expulse Summoned
+data/raw/spell/Expulse Undead
+data/raw/spell/Extinguish Fatigue
+data/raw/spell/Eye of Confusion
+data/raw/spell/Eye of Tallon
+data/raw/spell/Eye of Zomm
+data/raw/spell/Eyes of the Cat
+data/raw/spell/Fade
+data/raw/spell/Fascination
+data/raw/spell/Fay Gate
+data/raw/spell/Fay Portal
+data/raw/spell/Fear
+data/raw/spell/Feckless Might
+data/raw/spell/Feedback
+data/raw/spell/Feet like Cat
+data/raw/spell/Feign Death
+data/raw/spell/Feral Spirit
+data/raw/spell/Fetter
+data/raw/spell/Fingers of Fire
+data/raw/spell/Fire
+data/raw/spell/Fire Bolt
+data/raw/spell/Fire Flux
+data/raw/spell/Fire Spiral of AlKabor
+data/raw/spell/Firefist
+data/raw/spell/Firestorm
+data/raw/spell/Firestrike
+data/raw/spell/Fist of Karana
+data/raw/spell/Fixation of Ro
+data/raw/spell/Flame Arc
+data/raw/spell/Flame Bolt
+data/raw/spell/Flame Flux
+data/raw/spell/Flame Lick
+data/raw/spell/Flame Shock
+data/raw/spell/Flaming Sword of Xuzl
+data/raw/spell/Flare
+data/raw/spell/Flash of Light
+data/raw/spell/Fleeting Fury
+data/raw/spell/Focus of Spirit
+data/raw/spell/Force
+data/raw/spell/Force Shock
+data/raw/spell/Force Spiral of AlKabor
+data/raw/spell/Force Strike
+data/raw/spell/Forlorn Deeds
+data/raw/spell/Form of the Great Bear
+data/raw/spell/Form of the Great Wolf
+data/raw/spell/Form of the Howler
+data/raw/spell/Form of the Hunter
+data/raw/spell/Fortitude
+data/raw/spell/Frenzied Spirit
+data/raw/spell/Frenzied Strength
+data/raw/spell/Frenzy
+data/raw/spell/Frost
+data/raw/spell/Frost Bolt
+data/raw/spell/Frost Rift
+data/raw/spell/Frost Shock
+data/raw/spell/Frost Spiral of AlKabor
+data/raw/spell/Frost Storm
+data/raw/spell/Frost Strike
+data/raw/spell/Furious Strength
+data/raw/spell/Furor
+data/raw/spell/Fury
+data/raw/spell/Fury of Air
+data/raw/spell/Gale of Poison
+data/raw/spell/Gasping Embrace
+data/raw/spell/Gate
+data/raw/spell/Gather Shadows
+data/raw/spell/Gaze
+data/raw/spell/Gift of Brilliance
+data/raw/spell/Gift of Insight
+data/raw/spell/Gift of Magic
+data/raw/spell/Gift of Pure Thought
+data/raw/spell/Gift of Xev
+data/raw/spell/Girdle of Karana
+data/raw/spell/Glamour
+data/raw/spell/Glamour of Kintaz
+data/raw/spell/Glamour of Tunare
+data/raw/spell/Glimpse
+data/raw/spell/Grasping Roots
+data/raw/spell/Gravity Flux
+data/raw/spell/Great Divide Portal
+data/raw/spell/Greater Conjuration Air
+data/raw/spell/Greater Conjuration Earth
+data/raw/spell/Greater Conjuration Fire
+data/raw/spell/Greater Conjuration Water
+data/raw/spell/Greater Healing
+data/raw/spell/Greater Shielding
+data/raw/spell/Greater Summoning Air
+data/raw/spell/Greater Summoning Earth
+data/raw/spell/Greater Summoning Fire
+data/raw/spell/Greater Summoning Water
+data/raw/spell/Greater Vocaration Air
+data/raw/spell/Greater Vocaration Earth
+data/raw/spell/Greater Vocaration Fire
+data/raw/spell/Greater Vocaration Water
+data/raw/spell/Greater Wolf Form
+data/raw/spell/Grim Aura
+data/raw/spell/Group Resist Magic
+data/raw/spell/Guard
+data/raw/spell/Guardian
+data/raw/spell/Guardian Spirit
+data/raw/spell/Halo of Light
+data/raw/spell/Hammer of Requital
+data/raw/spell/Hammer of Striking
+data/raw/spell/Hammer of Wrath
+data/raw/spell/Harmony
+data/raw/spell/Harmshield
+data/raw/spell/Harvest
+data/raw/spell/Haunting Corpse
+data/raw/spell/Haze
+data/raw/spell/Healing
+data/raw/spell/Health
+data/raw/spell/Heart Flutter
+data/raw/spell/Heat Blood
+data/raw/spell/Heat Sight
+data/raw/spell/Heroic Bond
+data/raw/spell/Heroism
+data/raw/spell/Holy Armor
+data/raw/spell/Holy Might
+data/raw/spell/Hsagras Wrath
+data/raw/spell/Hungry Earth
+data/raw/spell/Ice
+data/raw/spell/Ice Comet
+data/raw/spell/Ice Shock
+data/raw/spell/Ice Spear of Solist
+data/raw/spell/Ice Strike
+data/raw/spell/Iceclad Gate
+data/raw/spell/Iceclad Portal
+data/raw/spell/Icestrike
+data/raw/spell/Identify
+data/raw/spell/Ignite
+data/raw/spell/Ignite Blood
+data/raw/spell/Ignite Bones
+data/raw/spell/Illusion Air Elemental
+data/raw/spell/Illusion Barbarian
+data/raw/spell/Illusion Dark Elf
+data/raw/spell/Illusion Drybone
+data/raw/spell/Illusion Dwarf
+data/raw/spell/Illusion Earth Elemental
+data/raw/spell/Illusion Erudite
+data/raw/spell/Illusion Fire Elemental
+data/raw/spell/Illusion Gnome
+data/raw/spell/Illusion Half-Elf
+data/raw/spell/Illusion Halfling
+data/raw/spell/Illusion High Elf
+data/raw/spell/Illusion Human
+data/raw/spell/Illusion Iksar
+data/raw/spell/Illusion Ogre
+data/raw/spell/Illusion Skeleton
+data/raw/spell/Illusion Spirit Wolf
+data/raw/spell/Illusion Tree
+data/raw/spell/Illusion Troll
+data/raw/spell/Illusion Water Elemental
+data/raw/spell/Illusion Werewolf
+data/raw/spell/Illusion Wood Elf
+data/raw/spell/Imbue Amber
+data/raw/spell/Imbue Black Pearl
+data/raw/spell/Imbue Black Sapphire
+data/raw/spell/Imbue Diamond
+data/raw/spell/Imbue Emerald
+data/raw/spell/Imbue Fire Opal
+data/raw/spell/Imbue Ivory
+data/raw/spell/Imbue Jade
+data/raw/spell/Imbue Opal
+data/raw/spell/Imbue Peridot
+data/raw/spell/Imbue Plains Pebble
+data/raw/spell/Imbue Rose Quartz
+data/raw/spell/Imbue Ruby
+data/raw/spell/Imbue Sapphire
+data/raw/spell/Imbue Topaz
+data/raw/spell/Immobilize
+data/raw/spell/Immolate
+data/raw/spell/Impart Strength
+data/raw/spell/Improved Invis to Undead
+data/raw/spell/Improved Invisibility
+data/raw/spell/Improved Superior Camouflage
+data/raw/spell/Incapacitate
+data/raw/spell/Incinerate Bones
+data/raw/spell/Infectious Cloud
+data/raw/spell/Inferno Shield
+data/raw/spell/Inferno Shock
+data/raw/spell/Inferno of AlKabor
+data/raw/spell/Infusion
+data/raw/spell/Inner Fire
+data/raw/spell/Insidious Decay
+data/raw/spell/Insidious Fever
+data/raw/spell/Insidious Malady
+data/raw/spell/Insight
+data/raw/spell/Insipid Weakness
+data/raw/spell/Inspire Fear
+data/raw/spell/Intensify Death
+data/raw/spell/Invert Gravity
+data/raw/spell/Invigor
+data/raw/spell/Invisibility
+data/raw/spell/Invisibility to Undead
+data/raw/spell/Invisibility versus Animals
+data/raw/spell/Invisibility versus Undead
+data/raw/spell/Invoke Death
+data/raw/spell/Invoke Fear
+data/raw/spell/Invoke Lightning
+data/raw/spell/Invoke Shadow
+data/raw/spell/Jolt
+data/raw/spell/Julis Animation
+data/raw/spell/Jylls Static Pulse
+data/raw/spell/Jylls Wave of Heat
+data/raw/spell/Jylls Zephyr of Ice
+data/raw/spell/Kilans Animation
+data/raw/spell/Kintazs Animation
+data/raw/spell/Languid Pace
+data/raw/spell/Largarns Lamentation
+data/raw/spell/Lava Bolt
+data/raw/spell/Lava Storm
+data/raw/spell/Leach
+data/raw/spell/Leatherskin
+data/raw/spell/Leering Corpse
+data/raw/spell/Legacy of Spike
+data/raw/spell/Legacy of Thorn
+data/raw/spell/Lesser Conjuration Air
+data/raw/spell/Lesser Conjuration Earth
+data/raw/spell/Lesser Conjuration Fire
+data/raw/spell/Lesser Conjuration Water
+data/raw/spell/Lesser Shielding
+data/raw/spell/Lesser Summoning Air
+data/raw/spell/Lesser Summoning Earth
+data/raw/spell/Lesser Summoning Fire
+data/raw/spell/Lesser Summoning Water
+data/raw/spell/Levant
+data/raw/spell/Levitate
+data/raw/spell/Lich
+data/raw/spell/Life Leech
+data/raw/spell/Lifedraw
+data/raw/spell/Lifespike
+data/raw/spell/Lifetap
+data/raw/spell/Light Healing
+data/raw/spell/Lightning Blast
+data/raw/spell/Lightning Bolt
+data/raw/spell/Lightning Shock
+data/raw/spell/Lightning Storm
+data/raw/spell/Lightning Strike
+data/raw/spell/Listless Power
+data/raw/spell/Locate Corpse
+data/raw/spell/Lull
+data/raw/spell/Lull Animal
+data/raw/spell/Lure of Flame
+data/raw/spell/Lure of Frost
+data/raw/spell/Lure of Ice
+data/raw/spell/Lure of Lightning
+data/raw/spell/Magnify
+data/raw/spell/Major Shielding
+data/raw/spell/Mala
+data/raw/spell/Malaise
+data/raw/spell/Malaisement
+data/raw/spell/Malignant Dead
+data/raw/spell/Malo
+data/raw/spell/Malosi
+data/raw/spell/Malosini
+data/raw/spell/Mana Sieve
+data/raw/spell/Manasink
+data/raw/spell/Manaskin
+data/raw/spell/Manastorm
+data/raw/spell/Maniacal Strength
+data/raw/spell/Mark of Karn
+data/raw/spell/Markars Clash
+data/raw/spell/Markars Discord
+data/raw/spell/Markars Relocation
+data/raw/spell/Mask of the Hunter
+data/raw/spell/Memory Blur
+data/raw/spell/Memory Flux
+data/raw/spell/Mend Bones
+data/raw/spell/Mesmerization
+data/raw/spell/Mesmerize
+data/raw/spell/Mind Wipe
+data/raw/spell/Minion of Shadows
+data/raw/spell/Minor Conjuration Air
+data/raw/spell/Minor Conjuration Earth
+data/raw/spell/Minor Conjuration Fire
+data/raw/spell/Minor Conjuration Water
+data/raw/spell/Minor Healing
+data/raw/spell/Minor Illusion
+data/raw/spell/Minor Shielding
+data/raw/spell/Minor Summoning Air
+data/raw/spell/Minor Summoning Earth
+data/raw/spell/Minor Summoning Fire
+data/raw/spell/Minor Summoning Water
+data/raw/spell/Mircyls Animation
+data/raw/spell/Mist
+data/raw/spell/Modulating Rod
+data/raw/spell/Monster Summoning I
+data/raw/spell/Monster Summoning II
+data/raw/spell/Monster Summoning III
+data/raw/spell/Mortal Deftness
+data/raw/spell/Muzzle of Mardu
+data/raw/spell/Naltrons Mark
+data/raw/spell/Nature Walkers Behest
+data/raw/spell/Natureskin
+data/raw/spell/Nek Gate
+data/raw/spell/Nek Portal
+data/raw/spell/Nimble
+data/raw/spell/North Gate
+data/raw/spell/North Portal
+data/raw/spell/Nullify Magic
+data/raw/spell/Numb the Dead
+data/raw/spell/Numbing Cold
+data/raw/spell/OKeils Flickering Flame
+data/raw/spell/OKeils Radiation
+data/raw/spell/Obscure
+data/raw/spell/Overwhelming Splendor
+data/raw/spell/Pacify
+data/raw/spell/Pack Chloroplast
+data/raw/spell/Pack Regeneration
+data/raw/spell/Pack Spirit
+data/raw/spell/Pact of Shadow
+data/raw/spell/Panic Animal
+data/raw/spell/Panic the Dead
+data/raw/spell/Paralyzing Earth
+data/raw/spell/Pendrils Animation
+data/raw/spell/Phantom Armor
+data/raw/spell/Phantom Chain
+data/raw/spell/Phantom Leather
+data/raw/spell/Phantom Plate
+data/raw/spell/Pillage Enchantment
+data/raw/spell/Pillar of Fire
+data/raw/spell/Pillar of Flame
+data/raw/spell/Pillar of Frost
+data/raw/spell/Pillar of Lightning
+data/raw/spell/Plague
+data/raw/spell/Plainsight
+data/raw/spell/Pogonip
+data/raw/spell/Poison Bolt
+data/raw/spell/Poison Storm
+data/raw/spell/Porlos Fury
+data/raw/spell/Pouch of Quellious
+data/raw/spell/Pox of Bertoxxulous
+data/raw/spell/Primal Avatar
+data/raw/spell/Project Lightning
+data/raw/spell/Protect
+data/raw/spell/Protection of the Glades
+data/raw/spell/Purify Mana
+data/raw/spell/Pyrocruor
+data/raw/spell/Quickness
+data/raw/spell/Quiver of Marr
+data/raw/spell/Quivering Veil of Xarn
+data/raw/spell/Radiant Visage
+data/raw/spell/Rage
+data/raw/spell/Rage of Zomm
+data/raw/spell/Raging Strength
+data/raw/spell/Rain of Blades
+data/raw/spell/Rain of Fire
+data/raw/spell/Rain of Lava
+data/raw/spell/Rain of Spikes
+data/raw/spell/Rain of Swords
+data/raw/spell/Rampage
+data/raw/spell/Rapacious Subversion
+data/raw/spell/Rapture
+data/raw/spell/Recant Magic
+data/raw/spell/Reckless Strength
+data/raw/spell/Reckoning
+data/raw/spell/Reclaim Energy
+data/raw/spell/Regeneration
+data/raw/spell/Regrowth
+data/raw/spell/Regrowth of the Grove
+data/raw/spell/Remedy
+data/raw/spell/Rend
+data/raw/spell/Renew Bones
+data/raw/spell/Renew Elements
+data/raw/spell/Renew Summoning
+data/raw/spell/Reoccurring Amnesia
+data/raw/spell/Repulse Animal
+data/raw/spell/Resist Cold
+data/raw/spell/Resist Disease
+data/raw/spell/Resist Fire
+data/raw/spell/Resist Magic
+data/raw/spell/Resist Poison
+data/raw/spell/Resistant Skin
+data/raw/spell/Resolution
+data/raw/spell/Rest the Dead
+data/raw/spell/Restless Bones
+data/raw/spell/Resurrection
+data/raw/spell/Resuscitate
+data/raw/spell/Retribution
+data/raw/spell/Retribution of AlKabor
+data/raw/spell/Revive
+data/raw/spell/Reviviscence
+data/raw/spell/Ring of Butcher
+data/raw/spell/Ring of Commons
+data/raw/spell/Ring of Feerrott
+data/raw/spell/Ring of Great Divide
+data/raw/spell/Ring of Iceclad
+data/raw/spell/Ring of Karana
+data/raw/spell/Ring of Lavastorm
+data/raw/spell/Ring of Misty
+data/raw/spell/Ring of Ro
+data/raw/spell/Ring of Steamfont
+data/raw/spell/Ring of Toxxulia
+data/raw/spell/Ring of the Combines
+data/raw/spell/Riotous Health
+data/raw/spell/Rising Dexterity
+data/raw/spell/Ro Gate
+data/raw/spell/Ro Portal
+data/raw/spell/Root
+data/raw/spell/Ros Fiery Sundering
+data/raw/spell/Rune I
+data/raw/spell/Rune II
+data/raw/spell/Rune III
+data/raw/spell/Rune IV
+data/raw/spell/Rune V
+data/raw/spell/Sacrifice
+data/raw/spell/Sagars Animation
+data/raw/spell/Sanity Warp
+data/raw/spell/Savage Spirit
+data/raw/spell/Scale Skin
+data/raw/spell/Scale of Wolf
+data/raw/spell/Scars of Sigil
+data/raw/spell/Scent of Darkness
+data/raw/spell/Scent of Dusk
+data/raw/spell/Scent of Shadow
+data/raw/spell/Scent of Terris
+data/raw/spell/Scintillation
+data/raw/spell/Scoriae
+data/raw/spell/Scourge
+data/raw/spell/Screaming Terror
+data/raw/spell/Sedulous Subversion
+data/raw/spell/See Invisible
+data/raw/spell/Seeking Flame of Seukor
+data/raw/spell/Sense Animals
+data/raw/spell/Sense Summoned
+data/raw/spell/Sense the Dead
+data/raw/spell/Sentinel
+data/raw/spell/Serpent Sight
+data/raw/spell/Servant of Bones
+data/raw/spell/Shade
+data/raw/spell/Shadow
+data/raw/spell/Shadow Compact
+data/raw/spell/Shadow Sight
+data/raw/spell/Shadow Step
+data/raw/spell/Shadow Vortex
+data/raw/spell/Shadowbond
+data/raw/spell/Shalees Animation
+data/raw/spell/Shallow Breath
+data/raw/spell/Share Wolf Form
+data/raw/spell/Shield of Barbs
+data/raw/spell/Shield of Blades
+data/raw/spell/Shield of Brambles
+data/raw/spell/Shield of Fire
+data/raw/spell/Shield of Flame
+data/raw/spell/Shield of Lava
+data/raw/spell/Shield of Spikes
+data/raw/spell/Shield of Thistles
+data/raw/spell/Shield of Thorns
+data/raw/spell/Shield of Words
+data/raw/spell/Shield of the Magi
+data/raw/spell/Shielding
+data/raw/spell/Shieldskin
+data/raw/spell/Shifting Shield
+data/raw/spell/Shifting Sight
+data/raw/spell/Shiftless Deeds
+data/raw/spell/Shock Spiral of AlKabor
+data/raw/spell/Shock of Blades
+data/raw/spell/Shock of Fire
+data/raw/spell/Shock of Flame
+data/raw/spell/Shock of Frost
+data/raw/spell/Shock of Ice
+data/raw/spell/Shock of Lightning
+data/raw/spell/Shock of Poison
+data/raw/spell/Shock of Spikes
+data/raw/spell/Shock of Steel
+data/raw/spell/Shock of Swords
+data/raw/spell/Shock of the Tainted
+data/raw/spell/Shrink
+data/raw/spell/Shroud of Death
+data/raw/spell/Shroud of Hate
+data/raw/spell/Shroud of Pain
+data/raw/spell/Shroud of Undeath
+data/raw/spell/Shroud of the Spirits
+data/raw/spell/Sicken
+data/raw/spell/Sight
+data/raw/spell/Sight Graft
+data/raw/spell/Siphon Life
+data/raw/spell/Siphon Strength
+data/raw/spell/Sirocco
+data/raw/spell/Sisnas Animation
+data/raw/spell/Skin Like Diamond
+data/raw/spell/Skin Like Nature
+data/raw/spell/Skin Like Rock
+data/raw/spell/Skin Like Steel
+data/raw/spell/Skin Like Wood
+data/raw/spell/Skin of the Shadow
+data/raw/spell/Smite
+data/raw/spell/Snare
+data/raw/spell/Soothe
+data/raw/spell/Sound of Force
+data/raw/spell/Spear of Warding
+data/raw/spell/SpellTears of Prexus
+data/raw/spell/Sphere of Light
+data/raw/spell/Spikecoat
+data/raw/spell/Spirit Armor
+data/raw/spell/Spirit Pouch
+data/raw/spell/Spirit Quickening
+data/raw/spell/Spirit Sight
+data/raw/spell/Spirit Strength
+data/raw/spell/Spirit Strike
+data/raw/spell/Spirit Tap
+data/raw/spell/Spirit of Bear
+data/raw/spell/Spirit of Cat
+data/raw/spell/Spirit of Cheetah
+data/raw/spell/Spirit of Monkey
+data/raw/spell/Spirit of Oak
+data/raw/spell/Spirit of Ox
+data/raw/spell/Spirit of Scale
+data/raw/spell/Spirit of Snake
+data/raw/spell/Spirit of Wolf
+data/raw/spell/Spirit of the Howler
+data/raw/spell/Splurt
+data/raw/spell/Spook the Dead
+data/raw/spell/Staff of Runes
+data/raw/spell/Staff of Symbols
+data/raw/spell/Staff of Tracing
+data/raw/spell/Staff of Warding
+data/raw/spell/Stamina
+data/raw/spell/Starfire
+data/raw/spell/Starshine
+data/raw/spell/Steelskin
+data/raw/spell/Stinging Swarm
+data/raw/spell/Storm Strength
+data/raw/spell/Strength
+data/raw/spell/Strength of Earth
+data/raw/spell/Strength of Nature
+data/raw/spell/Strength of Stone
+data/raw/spell/Strengthen
+data/raw/spell/Strengthen Death
+data/raw/spell/Strike
+data/raw/spell/Strip Enchantment
+data/raw/spell/Stun
+data/raw/spell/Stun Command
+data/raw/spell/Succor
+data/raw/spell/Succor Butcher
+data/raw/spell/Succor East
+data/raw/spell/Succor Lavastorm
+data/raw/spell/Succor North
+data/raw/spell/Succor Ro
+data/raw/spell/Suffocate
+data/raw/spell/Suffocating Sphere
+data/raw/spell/Summon Arrows
+data/raw/spell/Summon Bandages
+data/raw/spell/Summon Coldstone
+data/raw/spell/Summon Companion
+data/raw/spell/Summon Corpse
+data/raw/spell/Summon Dagger
+data/raw/spell/Summon Dead
+data/raw/spell/Summon Drink
+data/raw/spell/Summon Fang
+data/raw/spell/Summon Food
+data/raw/spell/Summon Heatstone
+data/raw/spell/Summon Orb
+data/raw/spell/Summon Ring of Flight
+data/raw/spell/Summon Shard of the Core
+data/raw/spell/Summon Throwing Dagger
+data/raw/spell/Summon Waterstone
+data/raw/spell/Summon Wisp
+data/raw/spell/Summoning Air
+data/raw/spell/Summoning Earth
+data/raw/spell/Summoning Fire
+data/raw/spell/Summoning Water
+data/raw/spell/Sunbeam
+data/raw/spell/Sunskin
+data/raw/spell/Sunstrike
+data/raw/spell/Superior Camouflage
+data/raw/spell/Superior Healing
+data/raw/spell/Supernova
+data/raw/spell/Surge of Enfeeblement
+data/raw/spell/Swift Like The Wind
+data/raw/spell/Sword of Runes
+data/raw/spell/Symbol of Marzin
+data/raw/spell/Symbol of Naltron
+data/raw/spell/Symbol of Pinzarn
+data/raw/spell/Symbol of Ryltan
+data/raw/spell/Symbol of Transal
+data/raw/spell/Sympathetic Aura
+data/raw/spell/Tagars Insects
+data/raw/spell/Tainted Breath
+data/raw/spell/Talisman of Altuna
+data/raw/spell/Talisman of Jasinth
+data/raw/spell/Talisman of Kragg
+data/raw/spell/Talisman of Shadoo
+data/raw/spell/Talisman of Tnarg
+data/raw/spell/Talisman of the Brute
+data/raw/spell/Talisman of the Cat
+data/raw/spell/Talisman of the Raptor
+data/raw/spell/Talisman of the Rhino
+data/raw/spell/Talisman of the Serpent
+data/raw/spell/Taper Enchantment
+data/raw/spell/Tashan
+data/raw/spell/Tashani
+data/raw/spell/Tashania
+data/raw/spell/Tashanian
+data/raw/spell/Tears of Druzzil
+data/raw/spell/Tears of Solusek
+data/raw/spell/Tepid Deeds
+data/raw/spell/Terrorize Animal
+data/raw/spell/The Unspoken Word
+data/raw/spell/Theft of Thought
+data/raw/spell/Thicken Mana
+data/raw/spell/Thistlecoat
+data/raw/spell/Thorncoat
+data/raw/spell/Thrall of Bones
+data/raw/spell/Thunder Strike
+data/raw/spell/Thunderbold
+data/raw/spell/Thunderclap
+data/raw/spell/Tigirs Insects
+data/raw/spell/Tishans Clash
+data/raw/spell/Tishans Discord
+data/raw/spell/Tishans Relocation
+data/raw/spell/Togors Insects
+data/raw/spell/Torbas Acid Blast
+data/raw/spell/Torment of Argli
+data/raw/spell/Torpor
+data/raw/spell/Torrent of Poison
+data/raw/spell/Touch of Night
+data/raw/spell/Tox Gate
+data/raw/spell/Tox Portal
+data/raw/spell/Track Corpse
+data/raw/spell/Translocate
+data/raw/spell/Translocate Cazic
+data/raw/spell/Translocate Combine
+data/raw/spell/Translocate Common
+data/raw/spell/Translocate Fay
+data/raw/spell/Translocate Group
+data/raw/spell/Translocate Nek
+data/raw/spell/Translocate North
+data/raw/spell/Translocate Ro
+data/raw/spell/Translocate Tox
+data/raw/spell/Translocate West
+data/raw/spell/Treeform
+data/raw/spell/Tremor
+data/raw/spell/Trepidation
+data/raw/spell/Trucidation
+data/raw/spell/True North
+data/raw/spell/Tumultuous Strength
+data/raw/spell/Tunares Request
+data/raw/spell/Turgurs Insects
+data/raw/spell/Turning of the Unnatural
+data/raw/spell/Turtle Skin
+data/raw/spell/Uleens Animation
+data/raw/spell/Ultravision
+data/raw/spell/Umbra
+data/raw/spell/Unfailing Reverence
+data/raw/spell/Unswerving Hammer
+data/raw/spell/Upheaval
+data/raw/spell/Valiant Companion
+data/raw/spell/Valor
+data/raw/spell/Vampiric Curse
+data/raw/spell/Vampiric Embrace
+data/raw/spell/Velocity
+data/raw/spell/Vengeance of AlKabor
+data/raw/spell/Venom of the Snake
+data/raw/spell/Vexing Mordinia
+data/raw/spell/Vigilant Spirit
+data/raw/spell/Vision
+data/raw/spell/Visions of Grandeur
+data/raw/spell/Vocarate Air
+data/raw/spell/Vocarate Earth
+data/raw/spell/Vocarate Fire
+data/raw/spell/Vocarate Water
+data/raw/spell/Voice Graft
+data/raw/spell/Voice of the Berserker
+data/raw/spell/Voltaic Draught
+data/raw/spell/Wake of Karana
+data/raw/spell/Wake of Tranquility
+data/raw/spell/Wakening Lands Portal
+data/raw/spell/Walking Sleep
+data/raw/spell/Wandering Mind
+data/raw/spell/Ward Summoned
+data/raw/spell/Ward Undead
+data/raw/spell/Wave of Enfeeblement
+data/raw/spell/Wave of Fear
+data/raw/spell/Wave of Healing
+data/raw/spell/Weaken
+data/raw/spell/Weakness
+data/raw/spell/West Gate
+data/raw/spell/West Portal
+data/raw/spell/Whirl Till You Hurl
+data/raw/spell/Whirling Wind
+data/raw/spell/Wildfire
+data/raw/spell/Wind of Tishani
+data/raw/spell/Wind of Tishanian
+data/raw/spell/Wind of the North
+data/raw/spell/Wind of the South
+data/raw/spell/Winds of Gelid
+data/raw/spell/Winged Death
+data/raw/spell/Winters Roar
+data/raw/spell/Wolf Form
+data/raw/spell/Wonderous Rapidity
+data/raw/spell/Word Divine
+data/raw/spell/Word of Healing
+data/raw/spell/Word of Health
+data/raw/spell/Word of Pain
+data/raw/spell/Word of Redemption
+data/raw/spell/Word of Restoration
+data/raw/spell/Word of Shadow
+data/raw/spell/Word of Souls
+data/raw/spell/Word of Spirit
+data/raw/spell/Word of Vigor
+data/raw/spell/Wrath
+data/raw/spell/Wrath of AlKabor
+data/raw/spell/Wrath of the Elements
+data/raw/spell/Yaulp
+data/raw/spell/Yaulp II
+data/raw/spell/Yaulp III
+data/raw/spell/Yaulp IV
+data/raw/spell/Yegoreffs Animation
+data/raw/spell/Yonder
+data/raw/spell/Zumaiks Animation
+script/download_classes.py
+script/download_spells.py
+script/parse_classes.py
+script/parse_spells.py
+symbol_please/__init__.py
+symbol_please/cli.py
+symbol_please/config.py
+symbol_please/symbol_please.py
+symbol_please.egg-info/PKG-INFO
+symbol_please.egg-info/SOURCES.txt
+symbol_please.egg-info/dependency_links.txt
+symbol_please.egg-info/entry_points.txt
+symbol_please.egg-info/not-zip-safe
+symbol_please.egg-info/requires.txt
+symbol_please.egg-info/top_level.txt
+symbol_please/data/__init__.py
+symbol_please/data/spell_data.json
+symbol_please/parser/__init__.py
+symbol_please/parser/client.py
+symbol_please/parser/level.py
+symbol_please/parser/line.py
+symbol_please/parser/spell.py
+symbol_please/parser/thread.py
+symbol_please/ui/__init__.py
+symbol_please/ui/overlay_window.py
+symbol_please/ui/profile_edit_window.py
+symbol_please/ui/profile_select_window.py
+symbol_please/ui/res/style.css
+tests/test_symbol_please.py
+tests/parser/test_line.py

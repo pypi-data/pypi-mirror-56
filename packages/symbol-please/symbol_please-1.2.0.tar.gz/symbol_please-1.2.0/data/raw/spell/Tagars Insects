@@ -1,0 +1,46 @@
+{{Spellpage|
+
+| spellname = Tagar's Insects
+| spellicon = A
+| description = Engulfs your target in a swarm of insects, slowing their attack rate for 1.5 mins @L29 to 3.0 mins @L60.
+| classes = 
+
+* [[Shaman]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Garduk}}
+</li><li> {{:Swarmcaller}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 2 | Decrease Attack Speed by 34% (L29) to 50% (L60) }}
+{{SpellSlotRow | 3 | Increase Disease Counter by 9 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 125
+| range = 200
+| casting_time = 4.25
+| fizzle_time = 2.25
+| recast_time = 5.00
+| duration = 1.4 minutes @L29 to 3.0 minutes @L60
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic
+
+| msg_cast_on_you = You feel drowsy.
+| msg_cast_on_other = Someone  yawns.
+| msg_wears_off = You feel less drowsy.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+}}
+
+}}

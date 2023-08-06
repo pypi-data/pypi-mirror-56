@@ -1,0 +1,58 @@
+{{Spellpage|
+
+| spellname = Eye of Zomm
+| spellicon = B
+| description = Conjures a magical eye that allows you to scout dangerous areas. <br> While under the effect of this spell, a new low level NPC is spawned that looks like a spinning eye. After a short delay, the camera switches to follow this eye and the caster can control it with most normal movement commands. The eye has the same faction as the player, and if the player is not under [[Feign Death]], they will gain any aggro which the eye has. Thus, it is useful as a long-range pulling method. <br> Like other NPCs, players can attack the eye and cannot buff it. It's possible to summon the eye and hit it with weapons such as the [[Worker Sledgemallet]] just to gain a proc effect. It has good swimming speed but cannot jump and may have difficulty getting out of the water.
+<br>
+<br>
+Can not be cast in [[Plane of Sky]] or [[Kedge Keep]].
+
+| classes = 
+
+* [[Wizard]] - Level 8
+* [[Magician]] - Level 8
+
+| items_with_effect = 
+
+<ul><li> {{:Batling Eye}}
+</li><li> {{:Clay Bracelet}}
+</li><li> {{:Crystalline Orb}}
+</li><li> {{:Singing Steel Helm}}
+</li><li> {{:Holgresh Elder Beads}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Eye of Zomm }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 30
+| range =  
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 10.00
+| duration = 5 ticks
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off = Your extra eye departs.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRowB | [[Erudin]] | [[Weltria Ostriss]] | Library (F3) | (-1111,-242) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Jusar V'Lask]] | Library (F1) | (914,-1279) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Serri Moonwatcher]] | Wizard Guild | (441,-450) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+
+}}

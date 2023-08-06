@@ -1,0 +1,80 @@
+{{Classic Era}}
+
+{{Spellpagesmart|
+
+| spellname = Nullify Magic
+| spellicon = U
+| description = Cancels magical enchantments affecting your target.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 39
+* [[Paladin]] - Level 58 {{Velious Era Inline}}
+* [[Ranger]] - Level 58 {{Velious Era Inline}}
+* [[Shadow Knight]] - Level 58 {{Velious Era Inline}}
+* [[Druid]] - Level 44
+* [[Shaman]] - Level 44
+* [[Necromancer]] - Level 39
+* [[Wizard]] - Level 34
+* [[Magician]] - Level 34
+* [[Enchanter]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:10 Dose Greater Potion of Negation}}
+</li><li> {{:Greater Potion of Negation}}
+</li><li> {{:Crystallized Pumice}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Cancel Magic(4) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 2 | Cancel Magic(4) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 50
+| range = 200
+| casting_time = 4.50
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Magic (0)
+
+| other = 
+
+| msg_cast_on_you = You feel dispelled.
+| msg_cast_on_other = Someone  feels dispelled.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Butcherblock Mountains]] | [[Ellona]] | Druid Ring | (-2085,2016) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Migron]] | Temple of Terror (First Floor) | (1031,-160) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Gaxl the scribe]] | Temple of Terror (West Tower - Bottom +1) | (1025,-109) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Lord Vizaroth]] | Temple of Terror (West Tower - Basement) | (1128,-98) }}
+{{SpellWhereRowB | [[Erudin]] | [[Junice Weslent]] | Paladin Guild - Quellious (Outside) | (-697,-55) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Terren Starwatcher]] | Cleric Guild | (13,-426) }}
+{{SpellWhereRowB | [[Firiona Vie]] | [[Raciel Sanherb]] | Outpost | (-3396,3310) }}
+{{SpellWhereRow  | [[Firiona Vie]] | [[Drizel Maxton]] | Outpost | (-3864,2927) }}
+{{SpellWhereRowB | [[Grobb]] | [[Korff - Troll]] | Shaman Guild | (304,-438) }}
+{{SpellWhereRow  | [[Halas]] | [[Bolace]] | Shaman Guild | (326,478) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Lyniv S'Kor]] | Cleric Guild | (410,-858) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Nosspri Andrika]] | Cleric Guild (basement) | (102,391) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Ladia Qursii]] | Cleric Guild (Outside) | (-225,-238) }}
+{{SpellWhereRow  | [[Oggok]] | [[Korff - Ogre]] | Shaman Guild | (667,1066) }}
+{{SpellWhereRowB | [[Paineel]] | [[Nedorl Ipabrun]] | Necromancer Guild | (674,805) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Senst Ereek]] | Cleric Guild | (340,-413) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Misty Valefriend]] | Cleric Guild | (-226,-374) }}
+{{SpellWhereRow  | [[The Overthere]] | [[Grubmar Hartblak]] | Outpost | (2748,2351) }}
+{{SpellWhereRowB | [[The Wakening Land]] | [[Weinna Oakchild]] | ? | (521,-1038) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Suffering]] | Cubby near PvP Area | (-382,272) }}
+}}
+| TableLocations = Vendors
+| TableEra = {{{TableEra|Classic}}}
+}}

@@ -1,0 +1,54 @@
+{{Spellpage|
+
+| spellname = Convoke Shadow
+| spellicon = G
+| description = Animates an undead servant from the remnants of the fallen.  Consumes two [[Bone Chips|bone chips]] when cast. The level 9 pet max-hits for 12, the level 10 pet max-hits for 14, the level 11 pet max-hits for 16. 
+
+| classes = 
+
+* [[Shadow Knight]] - Level 22
+* [[Necromancer]] - Level 12
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Skeleton Pet: skel_pet_11_ }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 120
+| range =  
+| casting_time = 8.00
+| fizzle_time = 2.25
+| recast_time = 11.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Bone Chips]] x2
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  animates an undead servant.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-4)]] | Necromancer Guild | (2099,-393) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Gristle]] | Temple of Terror (West Tower - Top) | (1005,-105) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Tagus Wunne]] | Underground | (-98,-257) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Peku Croxe]] | Underground | (-200,-244) }}
+{{SpellWhereRow  | [[Grobb]] | [[Trusk - Troll]] | Shadow Knight Guild | (512,-625) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Jys D'Bious]] | Necromancer Guild (F1) | (1312,-1266) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Misal S'Kor]] | Necromancer Guild (F1) | (1337,-1239) }}
+{{SpellWhereRowB | [[Oggok]] | [[Trusk - Ogre]] | Shadow Knight Guild | (392,3) }}
+{{SpellWhereRow  | [[Paineel]] | [[Sheras Milaku]] | Shadow Knight Guild | (888,443) }}
+{{SpellWhereRowB | [[Paineel]] | [[Kilevra Natasu]] | Necromancer Guild | (692,869) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gyrna Porrin]] | Necromancer Guild | (291,-322) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gehnon Dejartes]] | Shadow Knight Guild | (421,-438) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Plight]] | Cubby near PvP Area | (-391,234) }}
+}}
+
+}}

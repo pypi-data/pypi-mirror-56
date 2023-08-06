@@ -1,0 +1,74 @@
+{{Spellpagesmart|
+
+| spellname = Light Healing
+| spellicon = J
+| description = Mends light wounds, healing between 26 and 33 hit points.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 5
+* [[Paladin]] - Level 15
+* [[Ranger]] - Level 22
+* [[Druid]] - Level 9
+* [[Shaman]] - Level 9
+
+| items_with_effect = 
+
+<ul><li> {{:Stein of Moggok}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Hitpoints by 26 (L5) to 33 (L18) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 25
+| range = 100
+| casting_time = 2.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel better.
+| msg_cast_on_other = Someone  feels better.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-11)]] | Necromancer Guild | (2041,-410) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-5)]] | Cleric Guild | (1184,-560) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Erudin]] | [[Lissa Respelti]] | Cleric Guild - Quellious | (-650,-45) }}
+{{SpellWhereRowB | [[Erudin]] | [[Kathar Varselli]] | Cleric Guild - Prexus (F1) | (-1067,-417) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Seleni Treekeeper]] | Paladin Guild | (-5,-256) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Assa Leafwind]] | Cleric Guild | (24,-466) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Geep Tresoj]] | Temple of Marr (F1) | (93,427) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Orex Nolus]] | Hall of Truth (F1) | (218,-119) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRowB | [[Greater Faydark]] | [[Verth Mistwielder]] | Kelethin Ranger Guild | (-414,494) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[North Kaladim]] | [[Krako Stonesplitter]] | Cleric Guild | (778,155) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Sol Punox]] | Cleric Guild | (400,-838) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+{{SpellWhereRowB | [[Paineel]] | [[Oren Calferdo]] | Cleric Guild | (1125,427) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Henlom Visrek]] | Paladin Guild | (-135,-122) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Lisdon Trekka]] | Cleric Guild | (-236,-480) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Fesse Bontex]] | Cleric Guild | (-257,-510) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Altha Shadowjumper]] | Cleric Guild | (-243,-358) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Durvinna Barkkis]] | Ranger Guild | (104,-111) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Lorekeeper Zorik]] | Cleric Guild | (-182,770) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Keegan]] | Paladin Guild | (-210,543) }}
+}}
+| TableLocations = Vendors
+| TableEra = Classic
+}}

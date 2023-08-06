@@ -1,0 +1,38 @@
+{{Spellpagesmart|
+
+| spellname = Call of Flame
+| spellicon = O
+| description = Hurls a magically burning arrow at your target, causing 206 damage.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 49
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 206 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 125
+| range = 200
+| casting_time = 2.00
+| fizzle_time = 2.50
+| recast_time = 18.00
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = You feel your skin ignite.
+| msg_cast_on_other = Someone 's skin ignites.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is obtained via the [[Call of Flame Quest]].
+| TableLocations = [[Call of Flame Quest]]
+| TableEra = Classic
+}}

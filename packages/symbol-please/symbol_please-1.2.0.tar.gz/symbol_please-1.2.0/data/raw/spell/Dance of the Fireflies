@@ -1,0 +1,50 @@
+<noinclude>{{Classic Era}}</noinclude>
+{{Spellpagesmart|
+
+| spellname = Dance of the Fireflies
+| spellicon = B
+| description = Summons a swarm of mystic fireflies to your hands, providing light in dark areas. [[Summoned: Firefly Globe]], a light source. Can only be cast at night.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 15
+* [[Druid]] - Level 1
+
+| items_with_effect = 
+
+<ul><li> {{:Split Paw}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Summon Item: [[Summoned: Firefly Globe]] | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 10
+| range =  
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = A swarm of fireflies shimmers around your hand.
+| msg_cast_on_other = Someone 's hands flicker.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Ilscent Tagglefoot]] | Druid Guild | (-31,-418) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

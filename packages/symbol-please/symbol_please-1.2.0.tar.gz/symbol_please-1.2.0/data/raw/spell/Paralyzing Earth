@@ -1,0 +1,54 @@
+{{Spellpage|
+
+| spellname = Paralyzing Earth
+| spellicon = Q
+| description = Causes the earth to adhere to your target's feet, preventing them from moving for up to 3.0 mins.
+
+| classes = 
+
+* [[Cleric]] - Level 56
+* [[Shaman]] - Level 56
+* [[Necromancer]] - Level 49
+* [[Wizard]] - Level 49
+* [[Enchanter]] - Level 49
+
+| items_with_effect = 
+
+<ul><li> {{:Herbalist's Spade}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 2 | Root }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 100
+| range = 200
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 2.50
+| duration = 3 minutes
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = Your feet adhere to the ground.
+| msg_cast_on_other = Someone 's feet adhere to the ground.
+| msg_wears_off = Your feet come free.
+
+| where_to_obtain = 
+
+* Kunark Level 50+ Mob Drop
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+* This spell CAN be purchased through Overthere and Firiona Vie outposts.
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Firiona Vie]] | [[Shelae Wolfkin]] | Shaman Spell Shop | (-3816,1651) }}
+{{SpellWhereRowB | [[Overthere]] | [[Kuglaz Grot]] | Evil Outpost | (2760, 2425) }}
+
+}}
+
+}}

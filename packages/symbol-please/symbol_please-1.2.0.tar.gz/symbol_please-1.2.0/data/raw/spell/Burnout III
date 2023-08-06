@@ -1,0 +1,53 @@
+{{Spellpage|
+
+| spellname = Burnout III
+| spellicon = O
+| description = Infuses your elemental companion with energy, increasing their attack speed, armor class, and strength.
+
+| classes = 
+
+* [[Magician]] - Level 49
+
+| items_with_effect = 
+
+<ul><li> {{:Arch Mage's Pantaloons}}
+</li><li> {{:Mask of Empowerment}}
+</li><li> {{:Pantaloons of Conjuration}}
+</li><li> {{:Prestidigitator's Trousers}}
+</li><li> {{:Robe of Burning Rage}}
+</li><li> {{:Summoner's Pantaloons}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 3 | Increase STR by 50 }}
+{{SpellSlotRow | 4 | Increase Attack Speed by 60% }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 150
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.50
+| recast_time = 12.00
+| duration = 15 minutes
+| target_type = Pet
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  goes berserk.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-13)]] | Library | (1092,-1029) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Wistcona]] | Magician Guild (F4) | (706,948) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Ranza S'Ion]] | Caster Guild (Basement) | (123,-923) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Sinon Loarpe]] | Caster Guild | (297,-582) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Reff Truewood]] | Magician Guild | (693,-490) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Jonbe Kressi]] | Caster Guild (F3) | (136,-752) }}
+}}
+
+}}

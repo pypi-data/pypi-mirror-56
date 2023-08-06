@@ -1,0 +1,69 @@
+{{Spellpagesmart|
+
+| spellname = Ward Summoned
+| spellicon = C
+| description = A burst of holy power that inflicts between 35 and 41 damage to a [[:Category:Summoned|summoned]] target.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 19
+* [[Ranger]] - Level 22
+* [[Druid]] - Level 5
+* [[Magician]] - Level 12
+
+| items_with_effect = 
+
+<ul><li> Sword of Runes (Summoned)
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 35 (L5) to 41 (L11) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 30
+| range = 200
+| casting_time = 2.10
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Summoned
+| spell_type = Detrimental
+| resist = Magic (-50)
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  staggers.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-7)]] | Necromancer Guild | (2139,-359) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-3)]] | Cleric Guild | (1223,-538) }}
+{{SpellWhereRow  | [[Erudin]] | [[Stolace Printell]] | Cleric Guild - Quellious (Outside) | (-720,-58) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRowB | [[Greater Faydark]] | [[Verth Mistwielder]] | Kelethin Ranger Guild | (-414,494) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Svlia C'Luzz]] | Cleric Guild | (402,-783) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Locarme Zennix]] | Cleric Guild (F1) | (103,286) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Berane Constarg]] | Paladin Guild | (-158,-160) }}
+{{SpellWhereRow  | [[Ocean of Tears]] | [[Elesseryl Terussar]] | AC Island | (1309,-7875) }}
+{{SpellWhereRowB | [[Paineel]] | [[Erelin Verisue]] | Cleric Guild | (1226,551) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Tessia Sowtsui]] | Cleric Guild | (340,-434) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Blippo Stumbletoe]] | Cleric Guild | (-208,-417) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Durvinna Barkkis]] | Ranger Guild | (104,-111) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Taben]] | Cleric Guild | (-227,809) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+| TableLocations = Vendors
+| TableEra = Classic
+}}

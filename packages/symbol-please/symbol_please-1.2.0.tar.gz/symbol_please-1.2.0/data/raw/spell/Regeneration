@@ -1,0 +1,56 @@
+<noinclude>:''For the statistic, see [[Statistics#Regeneration]].''</noinclude>
+{{Spellpagesmart|
+
+| spellname = Regeneration
+| spellicon = J
+| description = Hastens your target's natural healing, regenerating 5 hit points every tick (~6 seconds).
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Druid]] - Level 34
+* [[Shaman]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Pliable Goo}}
+</li><li> {{:Spiroc Healer's Cloak}}
+</li><li> {{:Zlandicar's Heart}}
+</li><li> {{:Ceremonial Iksar Chestplate}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Hitpoints by 5 per tick | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 100
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 8.2 minutes @L24 to 20.5 minutes @L65
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You begin to regenerate.
+| msg_cast_on_other = Someone  begins to regenerate.
+| msg_wears_off = You have stopped regenerating.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRow  | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRowB | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRow  | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+{{SpellWhereRowB | [[Steamfont Mountains]] | [[Crisyn]] | Druid Ring | (-1750,1657) }}
+}}
+
+| TableLocations = Cabilis/Oggok<br/>Grobb/Halas<br/>Steamfont Mntns
+| TableEra = {{{TableEra|Classic}}}
+}}

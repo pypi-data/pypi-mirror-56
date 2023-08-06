@@ -1,0 +1,35 @@
+{{Spellpage|
+
+| spellname = Unswerving Hammer
+| spellicon = L
+| description = Summons a magical hammer that attacks your target relentlessly until either the hammer or the target dies.  This spell is called Unswerving Hammer of Faith once scribed.
+
+| classes = 
+
+* [[Cleric]] - Level 54
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Pet: SumHammer }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 600
+| range =  
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is obtained via the quests: [[Cleric Spells (Good)]] or [[Cleric Spells (Evil)]].
+
+}}

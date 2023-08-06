@@ -1,0 +1,36 @@
+{{Spellpage|
+
+| spellname = Summon Shard of the Core
+| spellicon = L
+| description = Focuses mana into the form of a shard of the core of Norrath.
+
+| classes = 
+
+* [[Magician]] - Level 34
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Summoned: Shard of the Core]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 50
+| range =  
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+* [[Pelpa]]
+* [[A Golem Usher]]
+* Drops from Velious Level 50+ Mobs
+
+}}

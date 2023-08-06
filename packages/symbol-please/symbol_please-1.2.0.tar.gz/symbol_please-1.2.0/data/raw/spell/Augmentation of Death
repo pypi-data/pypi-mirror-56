@@ -1,0 +1,37 @@
+{{Spellpage|
+
+| spellname = Augmentation of Death
+| spellicon = G
+| description = Fills your pet with rage, giving it increased attack speed, armor class, and strength for 17 minutes.
+
+| classes = 
+
+* [[Necromancer]] - Level 55
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Attack Speed by 65% }}
+{{SpellSlotRow | 2 | Increase STR by 52 (L55) to 55 (L60) }}
+{{SpellSlotRow | 3 | Increase AC by 14 (L55) to 15 (L60) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 250
+| range = 100
+| casting_time = 6.50
+| fizzle_time = 2.25
+| recast_time = 30.00
+| duration = 17.5 minutes
+| target_type = Pet
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone 's eyes gleam with madness.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Velious Level 50+ Mob Drop
+
+}}

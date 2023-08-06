@@ -1,0 +1,49 @@
+{{Spellpage|
+
+| spellname = Elemental: Water
+| spellicon = L
+| description = Summons a water elemental to aid you in battle.
+
+| classes = 
+
+* [[Magician]] - Level 12
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Pet: SumWaterR4 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 120
+| range =  
+| casting_time = 8.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Malachite]] (Confirmed 3/23/17)
+* '''Focus:''' [[Stein of Ulissa]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

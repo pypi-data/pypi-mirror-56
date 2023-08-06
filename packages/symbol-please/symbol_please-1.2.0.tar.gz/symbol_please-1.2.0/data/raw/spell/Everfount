@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Everfount
+| spellicon = L
+| description = Focuses mana into the form of watery globes suitable for drinking.
+
+| classes = 
+
+* [[Magician]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Earring of Everfount}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Summoned: Globe of Water]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 25
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

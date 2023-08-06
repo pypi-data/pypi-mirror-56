@@ -1,0 +1,56 @@
+{{Spellpage|
+
+| spellname = Word of Spirit
+| spellicon = C
+| description = A forbidden word that causes between 91 and 103 damage to all nearby enemies.
+
+| classes = 
+
+* [[Cleric]] - Level 29
+* [[Shadow Knight]] - Level 49
+* [[Necromancer]] - Level 29
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 97 (L29) to 104 (L33) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 133
+| range =  
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 9.00
+| duration = Instant
+| target_type = PB AE
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are wracked with pain.
+| msg_cast_on_other = Someone  writhes in pain.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-4)]] | Cleric Guild | (1223,-547) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-13)]] | Necromancer Guild | (2112,-438) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-1)]] | Necromancer Guild | (2082,-410) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Ainla Yurimar]] | Underground | (-162,-270) }}
+{{SpellWhereRowB | [[Erudin]] | [[Alysa Eltern]] | Cleric Guild - Quellious (Outside) | (-707,-57) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Terri Woodshape]] | Cleric Guild | (2,-456) }}
+{{SpellWhereRowB | [[Grobb]] | [[Crilt - Troll]] | Shadow Knight Guild | (518,-618) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Friz Punox]] | Cleric Guid | (412,-788) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Rizyra F'Lok]] | Necromancer Guild (F1) | (1335,-1213) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Perep Chen]] | Cleric Guild (basement) | (106,311) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Enpero Mesog]] | Cleric Guild (Outside) | (-216,-230) }}
+{{SpellWhereRow  | [[Oggok]] | [[Crilt - Ogre]] | Shadow Knight Guild | (276,-2) }}
+{{SpellWhereRowB | [[Paineel]] | [[Brettas Norval]] | Shadow Knight Guild | (888,468) }}
+{{SpellWhereRow  | [[Paineel]] | [[Leovre Kieqmarn]] | Necromancer Guild | (665,804) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Naes Ereek]] | Cleric Guild | (340,-427) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Dallisen Xalladyr]] | Necromancer Guild | (402,-311) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Alice Sweetoven]] | Cleric Guild | (-232,-419) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Rott]] | Cubby near PvP Area | (-440,236) }}
+}}
+
+}}

@@ -1,0 +1,50 @@
+{{Spellpage|
+
+| spellname = Elemental Shield
+| spellicon = K
+| description = Covers your skin in an elemental shield, protecting you from fire and cold.
+
+| classes = 
+
+* [[Wizard]] - Level 20
+* [[Magician]] - Level 20
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Fire Resist by 15 }}
+{{SpellSlotRow | 2 | Increase Cold Resist by 15 }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 50
+| range =  
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 27 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel protected from fire and ice.
+| msg_cast_on_other = Someone  feels protected from fire and ice.
+| msg_wears_off = Your elemental shield fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (LG-9)]] | Library | (1056,-981) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Effunic Korett]] | Wizard Guild (F2) | (921,726) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Dissa C'Luzz]] | Caster Guild (Basement) | (167,-896) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRowB | [[Ocean of Tears]] | [[Elesseryl Terussar]] | AC Island | (1309,-7875) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Dumisa D'Enetti]] | Caster Guild | (313,-679) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Charia Betou]] | Caster Guild (top floor) | (134,-740) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+}}

@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Force Spiral of Al'Kabor
+| spellicon = C
+| description = Creates an energy spiral that causes between 162 and 172 damage to all creatures in the vicinity of your target.
+
+| classes = 
+
+* [[Wizard]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 166 (L39) to 172 (L45) }}
+{{SpellSlotRow | 2 | Stun for 0.0 seconds }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 250
+| range = 200
+| casting_time = 5.00
+| fizzle_time = 2.50
+| recast_time = 9.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are blasted by energy laden winds.
+| msg_cast_on_other = Someone  is blasted by energy laden winds.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+** [[Rune of Al'Kabor]]
+** [[Rune of The Helix]]
+** [[Rune of Infraction]]
+
+
+}}

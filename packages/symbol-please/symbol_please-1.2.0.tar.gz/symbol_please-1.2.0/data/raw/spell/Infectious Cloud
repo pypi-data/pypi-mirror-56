@@ -1,0 +1,54 @@
+{{Spellpage|
+
+| spellname = Infectious Cloud
+| spellicon = E
+| description = Creates an infectious cloud, causing 20 damage initially and 5 damage every six seconds for 2.1 mins (125 damage) to all beings in a small area around your target. 1.60 DPM.
+
+| classes = 
+
+* [[Shaman]] - Level 19
+* [[Necromancer]] - Level 16
+
+| items_with_effect = 
+
+<ul><li> {{:Rotted Staff}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Disease Counter by 1 }}
+{{SpellSlotRow | 2 | Decrease Hitpoints by 5 per tick }}
+{{SpellSlotRow | 3 | Decrease HP when cast by 20 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 78
+| range = 200
+| casting_time = 2.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 2.1 minutes
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Disease (0)
+
+| msg_cast_on_you = The bile wells up in your throat.
+| msg_cast_on_other = Someone  starts to retch.
+| msg_wears_off = You feel better.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-3)]] | Necromancer Guild | (2100,-398) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Hundle Quatvel]] | Underground | (-186,-234) }}
+{{SpellWhereRowB | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRow  | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Olak N'Mar]] | Necromancer Guild (F1) | (1337,-1226) }}
+{{SpellWhereRow  | [[Paineel]] | [[Devinious Natasu]] | Necromancer Guild | (675,887) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Vidurlyn Aeminee]] | Necromancer Guild | (308,-306) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Pestilence]] | Cubby near PvP Area | (-410,231) }}
+}}
+
+}}

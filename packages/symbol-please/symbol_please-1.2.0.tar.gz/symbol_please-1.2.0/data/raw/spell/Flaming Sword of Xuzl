@@ -1,0 +1,35 @@
+{{Spellpage|
+
+| spellname = Flaming Sword of Xuzl
+| spellicon = L
+| description = Conjures a flaming sword that attacks your target until either it, or the target, is dead. Sounds impressive, but when you consider the fact that the flaming sword has 1 hp you begin to realize how much this spell sucks. Sword does 22 damage max per round and somehow is an aggro magnet. Don't expect to get much out of this 700 mana sinkhole.
+
+| classes = 
+
+* [[Wizard]] - Level 59
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Pet: SumSword }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 700
+| range =  
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Drops from Kunark Level 50+ Mobs
+
+}}

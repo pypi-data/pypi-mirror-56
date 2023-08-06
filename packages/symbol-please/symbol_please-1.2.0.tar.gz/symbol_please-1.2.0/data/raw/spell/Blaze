@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Blaze
+| spellicon = O
+| description = Burns your target's skin with blazing flame, causing between 418 and @1 damage.
+
+| classes = 
+
+* [[Magician]] - Level 34
+
+| items_with_effect = 
+
+<ul><li> {{:Blazing Wand}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 276 (L34) to 295 (L39) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 155
+| range = 200
+| casting_time = 4.60
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = You feel your skin ignite.
+| msg_cast_on_other = Someone 's skin ignites.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-16)]] | Library | (1101,-1028) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Tuballi Stellari]] | Magician Guild (F2) | (729,918) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Pisna H'Rugla]] | Caster Guild (Basement) | (133,-911) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Gende Reldari]] | Caster Guild | (307,-579) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Osisa Goldenspear]] | Magician Guild | (666,-526) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Cronte Deloru]] | Caster Guild (F3) | (113,-722) }}
+}}
+
+}}

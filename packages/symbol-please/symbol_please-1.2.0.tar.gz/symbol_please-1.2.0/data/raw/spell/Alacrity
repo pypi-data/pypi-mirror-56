@@ -1,0 +1,57 @@
+{{Spellpage|
+
+| spellname = Alacrity
+| spellicon = R
+| description = Grants your target quickened movement, increasing their attack speed for 5.2 mins @L21 to 11.0 mins @L50.
+
+| classes = 
+
+* [[Shaman]] - Level 44
+* [[Enchanter]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Bracelet of the Spirits}}
+</li><li> {{:Elder Shaman's Ceremonial Bracelet}}
+</li><li> {{:Sandals of Alacrity}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Attack Speed by 34% (L24) to 40% (L36) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 115
+| range = 100
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 5.8 minutes @L24 to 11 minutes @L50
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = You feel much faster.
+| msg_cast_on_other = Someone  feels much faster.
+| msg_wears_off = Your speed returns to normal.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-4)]] | Library | (1106,-989) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Gaxl the scribe]] | Temple of Terror (West Tower - Bottom +1) | (1025,-109) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Migron]] | Temple of Terror (First Floor) | (1031,-160) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Estra Nancer]] | Enchanter Guild (F2) | (536,761) }}
+{{SpellWhereRowB | [[Grobb]] | [[Korff - Troll]] | Shaman Guild | (304,-438) }}
+{{SpellWhereRow  | [[Halas]] | [[Bolace]] | Shaman Guild | (326,478) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Litz B`Doph]] | Caster Guild (F1) | (132,-955) }}
+{{SpellWhereRow  | [[Oggok]] | [[Korff - Ogre]] | Shaman Guild | (667,1066) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Corrao Duperame]] | The Herb Jar | (302,-559) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Seren the Swift]] | Enchanter Guild | (509,-910) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Lasiris Oncre]] | Caster Guild (F1) | (112,-768) }}
+}}
+
+}}

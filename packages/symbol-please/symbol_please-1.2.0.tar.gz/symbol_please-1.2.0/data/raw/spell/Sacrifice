@@ -1,0 +1,43 @@
+{{Kunark Era}}
+{{Disambig3|[[Sacrifice (item)]]}}
+{{Spellpage|
+
+| spellname = Sacrifice
+| spellicon = G
+| description = Consumes a willing target's soul and binds it within an [[Essence Emerald]].  Players (Level 46-59) killed in this manner cannot be resurrected.  Consumes an [[emerald]] when cast.
+
+| classes = 
+
+* [[Necromancer]] - Level 51
+
+| slots = 
+
+{{SpellSlotRow | 1 | Sacrifice }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 100
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 0.00
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Emerald]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is obtained via the quests:
+** [[Necromancer Spells|Necromancer Spells (The Overthere)]]
+** [[Necromancer Spells (Cabilis)]]
+
+}}

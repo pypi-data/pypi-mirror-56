@@ -1,0 +1,2114 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C druid.gif|right]]
+Druids are disciples of the wilds, following the teachings of the Norrathian gods of nature. Druids are primarily a magic-using class, with the ability to wear leather armor and wield blunt weapons and scimitars.
+
+Druidic magic takes many forms, allowing the druid to fill a wide variety of roles when in a group or adventuring alone. Druids possess fair healing abilities, powerful health regenerative spells, valuable enhancements that improve the health and armor of their group, and at max level considerable mana regenerative spells.
+
+Offensively, druids are versatile. They have access to fire and cold-based damage spells, a selection of disease and swarm spells that damage their enemies over time, powerful banishment spells focused upon unnaturally summoned creatures, and spells to charm animals. Druids also gain some of the best travel spells, including the ability to speed up their group's movement and teleport their group to distant regions.
+
+Druids are a well-rounded class, prospering in both solo and grouped situations. An experienced druid is able to adventure alone, but is equally at home in a group. The druid is an excellent class for players who enjoy a variety of play styles and options. Druids make one of the best starting characters in EQ due to their amazing ability to make money via teleports, item farming, versatility, ease of travel, and quad killing giants.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Druid || Wanderer || Preserver || Hierophant
+|}
+
+= Creation Guide =
+
+== Picking the Right Race ==
+
+[[Wood Elf|Wood Elves]] are one of the two best races for druids.  They lean towards being heavily mana based with good starting wisdom, and the best agility of all the races.  They get infravision, and also a native ability to forage.  Wood elves also have the ability to hide, though it doesn't raise beyond a minimal level in skill. 
+
+[[Half Elf|Half-Elves]] are more melee based.  They aren't strong stat wise and are probably the weakest race overall in the druid class.  Half-Elves also get infravision.
+
+[[Halfling]]s are the most popular druid race.  Halflings trade some intelligence and charisma for higher strength and stamina.  Halflings consume more food and drink, but that's less of an issue for druids thanks to [[forage]].  In return however they get infravision, basic hiding and sneak skills, and level slightly faster with their +5% exp bonus.  They also have the added bonus of hairy feet.
+
+[[Human]] is the most well rounded druid race.   Human druids can be quite a competent and balanced character.  Their low agility and lack of night-sight however makes them a more burdensome character to play compared to other races. (NOTE: Project 1999 uses the Titanium client, which has brighter lighting than the classic client, making human vision less of a problem).
+
+== Starting Statistics ==
+
+[[File:druid-stats.png]]
+
+== Spending Your Bonus Points ==
+
+Here are our suggested allocations of your bonus points at creation:
+
+* Wood Elf: Add 25 to Wisdom, 5 to Stamina.
+* Half Elf:  Add 25 to Wisdom, 5 to Stamina.
+* Halfling: Add 25 to Wisdom, 5 to Stamina.
+* Human: Add 25 to Wisdom, 5 to Stamina.
+
+Also you can spent those 5 points into STR if you wish to carry more loot, but in general Stamina = More hitpoints, important for low lvls (Where druids do melee decently). Also a lot of the druid Equipment does not grant Stamina.
+Also note that druids can buff STR considerably, as well as port to bank very easily, so being encumbered is usually not an issue.
+
+== Religion ==
+
+Religion does not play an overly important role to Druids, but they do affect whether the druid can use certain deity-specific items. All Wood Elf druids must worship Tunare, while all Halflings must worship Karana.  Half-Elves and Humans can choose between the two.
+
+<table>
+<tr><th>[[Karana]]</th><th>[[Tunare]]</th></tr>
+<tr>
+<td>
+<ul>
+<li>Human-only: Imbued Field Plate ([[Cultural Tradeskills: Human]])
+<li>Halfling-only: Imbued Vale Armor ([[Cultural Tradeskills: Halfling]])
+<li>All races: {{:Idol of Karana}}
+</ul>
+</td>
+<td>
+<ul>
+<li>Elven ([[High Elf| High]]/[[Wood Elf| Wood]]/[[Half Elf| Half]]): Imbued Elven Chain ([[Cultural Tradeskills: High Elf]])
+<li>Elven ([[High Elf| High]]/[[Wood Elf| Wood]]/[[Half Elf| Half]]): Imbued Koada`Dal Mithril Armor ([[Cultural Tradeskills: High Elf]])
+<li>All races: {{:Gloves of Earthcrafting}}, {{:Idol of Tunare}}, and {{:Warden Symbol of Tunare}}
+</ul>
+</td>
+</table>
+
+=Spells=
+
+==Alternative Spell List==
+(work in progress)
+
+[[Druid/Spells|Levels 1 to 29]] || [[Druid/Spells/34|Levels 34 to 49]] || [[Druid/Spells/50|Levels 50 to 60]]
+
+==Level 1==
+{{Template:SpellTableStart}}
+{{SpellRow
+|name=Burst of Flame
+|description=Fire based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=7
+}}
+{{SpellRow
+|name=Dance of the Fireflies
+|description=Summons a globe of light
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Endure Fire
+|description=Increase resistance to Fire
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Flame Lick
+|description=Damage over Time with Armor Class Debuff
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Lull Animal
+|description=Decreases an animal's aggro range
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Minor Healing
+|description=Heals damage done to the target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Panic Animal
+|description=Forces an animal to run away in terror
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Sense Animals
+|description=Makes the caster face the closest Animal
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Skin Like Wood
+|description=Increase targets hitpoints and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Snare
+|description=Slows the movement rate of target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=15
+}}
+</table>
+
+==Level 5==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Burst of Fire
+|description=Fire based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Camouflage
+|description=Turns target player invisible
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Cure Disease
+|description=Cures Disease
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Cure Poison
+|description=Cures poison
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Gate
+|description=Teleports caster to their bind point
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Grasping Roots
+|description=Direct Damage with Root
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Harmony
+|description=Area effect Calm spell
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Invoke Lightning
+|description=Area Effect Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=32
+}}
+{{SpellRow
+|name=Ward Summoned
+|description=Direct Damage vs Summoned
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Whirling Wind
+|description=Direct Damage with Stun
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=24
+}}
+</table>
+
+==Level 9==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Endure Cold
+|description=Increase resistance to Cold
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Enduring Breath
+|description=Allows breathing underwater
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Firefist
+|description=Increases caster's ATK by up to 14
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Ignite
+|description=Up to 37 fire-based direct damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Invisibility versus Animals
+|description=Target becomes invisible to Animals
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Light Healing
+|description=Heals up to 33 damage
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Shield of Thistles
+|description=Gives target an up to 6 point damage shield
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Starshine
+|description=Summons a globe of light
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Strength of Earth
+|description=Increase strength (max: 15) of the target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Thistlecoat
+|description=Self-only 1 point damage shield and up to 6 AC buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Treeform
+|description=Turns the caster into a tree, rooting them and giving up to 5 HP/tick
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+</table>
+
+==Level 14==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Befriend Animal
+|description=Charm animal into pet (Temporary)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Bind Affinity
+|description=Binds target player character
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Cascade of Hail
+|description=Cold based Area Rain Spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=62
+}}
+{{SpellRow
+|name=Expulse Summoned
+|description=Direct Damage vs. Summoned
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Halo of Light
+|description=Summons a Headband lightsource
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Invigor
+|description=Replenishes target's stamina
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Levitate
+|description=Levitates the target above the ground
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=See Invisible
+|description=Allows the target to see invisible
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Skin Like Rock
+|description=Increases target's hitpoints and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Spirit of Wolf
+|description=Increases movement rate of the target.
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Stinging Swarm
+|description=Magic-based Damage over Time
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=65
+}}
+{{SpellRow
+|name=Summon Drink
+|description=Summons a flask of water
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Summon Food
+|description=Summons a loaf of bread
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=10
+}}
+</table>
+
+==Level 19==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Barbcoat
+|description=Self Only AC and Damage shield
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Calm Animal
+|description=Decreases an animal's aggro range
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=45
+}}
+{{SpellRow
+|name=Cancel Magic
+|description=Attempts to remove a buff or effect
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Careless Lightning
+|description=Magic based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Dizzying Wind
+|description=Direct Damage with Stun
+|era=&nbsp;
+|school=Con.
+|location=N.Karana.
+|mana=80
+}}
+{{SpellRow
+|name=Endure Disease
+|description=Increase resistance to Disease
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Endure Poison
+|description=Increase resistance to Poison
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Feral Spirit
+|description=Increase pets attack speed and stats
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Healing
+|description=Heals damage done to the target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Ring of Butcher
+|description=Teleports you to Butcher Block
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Ring of Commons
+|description=Teleports you to West Commonlands
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Ring of Karana
+|description=Teleports you to North Karana
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Ring of Toxxulia
+|description=Teleports you to Toxxulia Forest
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Shield of Barbs
+|description=Gives the target a damage shield
+|era=&nbsp;
+|school=Abj.
+|location=N.Karana.
+|mana=60
+}}
+{{SpellRow
+|name=Superior Camouflage
+|description=Removes the target from visible sight.
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Terrorize Animal
+|description=Makes an animal run away in terror
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+</table>
+
+==Level 24==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Charm Animals
+|description=Charm animal into pet (Temporary)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Creeping Crud
+|description=Magic based Damage over Time
+|era=&nbsp;
+|school=Con.
+|location=N.Karana.
+|mana=100
+}}
+{{SpellRow
+|name=Dismiss Summoned
+|description=Direct Damage vs Summoned
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Ensnaring Roots
+|description=Direct Damage with Root
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Pogonip
+|description=Area Effect Cold based Rain spell
+|era=&nbsp;
+|school=Evo.
+|location=N.Karana.
+|mana=125
+}}
+{{SpellRow
+|name=Resist Fire
+|description=Increases resistance to Fire
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Ring of Feerrott
+|description=Teleports you to the Feerott
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Ring of Lavastorm
+|description=Teleports you to Lavastorm
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Ring of Ro
+|description=Teleports you to South Ro
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Ring of Steamfont
+|description=Teleports you to Steamfont
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Ring of the Combines
+|description=Self only gate to Dreadlands.
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+ {{SpellRow
+|name=Scale of Wolf
+|description=Increases movement rate of the target
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Skin Like Steel
+|description=Increase targets hitpoints and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Spirit of Cheetah
+|description=Increases the casters movement rate
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Sunbeam
+|description=Area Effect Blindness
+|era=&nbsp;
+|school=Div.
+|location=N.Karana.
+|mana=40
+}}
+{{SpellRow
+|name=Tremor
+|description=Area effect Point blank Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Wolf Form
+|description=Turns the caster into a wolf
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+</table>
+
+==Level 29==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Beguile Plants
+|description=Charm a Plant
+|era=&nbsp;
+|school=Alt.
+|location=[[Beguile Plants Quest|Quest]].
+|mana=170
+}}
+{{SpellRow
+|name=Bramblecoat
+|description=Self Only AC and Damage shield
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Circle of Butcher
+|description=Teleports your group to Butcher Block
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Commons
+|description=Teleports your group to West Commonlands
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Karana
+|description=Teleports your group to North Karana
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Toxxulia
+|description=Teleports your group to Toxxulia Forest
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Combust
+|description=Fire based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Steamfont.
+|mana=110
+}}
+{{SpellRow
+|name=Counteract Disease
+|description=Upgraded Cure Disease
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Counteract Poison
+|description=Upgraded Poison Cure
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Ensnare
+|description=Reduces movement rate of the target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Extinguish Fatigue
+|description=Full stamina restoration
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Greater Healing
+|description=Heals damage to the target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Imbue Emerald
+|description=Imbue an Emerald (Deity: [[Tunare]])
+|era=&nbsp;
+|school=Abj.
+|location=Felwithe.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Plains Pebble
+|description=Imbue a Foraged Plains Pebble (Deity: [[Karana]])
+|era=&nbsp;
+|school=Abj.
+|location=N.Karana.
+|mana=200
+}}
+{{SpellRow
+|name=Immolate
+|description=Damage over Time with Debuff (2.0 DPM)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Ring of Misty
+|description=Teleports you to Misty Thicket
+|era=&nbsp;
+|school=Alt.
+|location=W.Commons.
+|mana=150
+}}
+{{SpellRow
+|name=Shield of Brambles
+|description=Gives the target a damage shield
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Succor: East
+|description=Evacuates the group to East Karana
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+
+</table>
+
+==Level 34==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Beguile Animals
+|description=Charm animal into pet (Temporary)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=170
+}}
+{{SpellRow
+|name=Circle of Feerrott
+|description=Teleports your group to the Feerott
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Iceclad
+|description=Group Gate to Iceclad on Velious
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Lavastorm
+|description=Teleports your group to Lavastorm
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Ro
+|description=Teleports your group to South Ro
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Steamfont
+|description=Teleports your group to Steamfont
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of the Combines
+|description=Teleports your group to the Dreadlands
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Drones of Doom
+|description=Magic based Damage over Time
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=141
+}}
+{{SpellRow
+|name=Earthquake
+|description=Area Effect Point Blank Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=375
+}}
+{{SpellRow
+|name=Endure Magic
+|description=Increase resistance to Magic
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Expel Summoned
+|description=Direct Damage vs Summoned
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=130
+}}
+{{SpellRow
+|name=Fury of Air
+|description=Single Target Magic Based Direct Damage & Stun (Max: 250)
+|era=Vel.
+|school=Evo.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Greater Wolf Form
+|description=Turns the caster into a wolf
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Lightning Strike
+|description=Area effect Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Steamfont.
+|mana=149
+}}
+{{SpellRow
+|name=Regeneration
+|description=Increases regeneration of the target
+|era=&nbsp;
+|school=Alt.
+|location=Steamfont.
+|mana=100
+}}
+{{SpellRow
+|name=Resist Cold
+|description=Increase resistance to Cold
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Ring of Great Divide
+|description=Self Only Gate to Great Divide (Spell unavailable on P99).
+|era=Vel.
+|school=Alt.
+|location=Wak. Lands
+|mana=150
+}}
+{{SpellRow
+|name=Ring of Iceclad
+|description=Self Only Gate to Iceclad on Velious
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Strength of Stone
+|description=Increase strength of the target
+|era=&nbsp;
+|school=Alt.
+|location=Steamfont.
+|mana=65
+}}
+{{SpellRow
+|name=Succor: Butcher
+|description=Evacuates your group to Butcherblock
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+</table>
+
+==Level 39==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Avalanche
+|description=Cold based Area 'Rain' spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Circle of Great Divide
+|description=Group Gate to Great Divide on Velious
+|era=Vel.
+|school=Alt.
+|location=Wak. Lands.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Misty
+|description=Teleports your group to Misty Thicket
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Enveloping Roots
+|description=Direct Damage with Root
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Firestrike
+|description=Fire based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=155
+}}
+{{SpellRow
+|name=Pack Regeneration
+|description=Increase regeneration of the group
+|era=&nbsp;
+|school=Alt.
+|location=Butcher.
+|mana=200
+}}
+{{SpellRow
+|name=Pack Spirit
+|description=Increases movement rate of the group
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Ro's Fiery Sundering
+|description=Single Target AC &amp; Fire Resistance Debuff
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=50
+}}
+{{SpellRow
+|name=Share Wolf Form
+|description=Turns your group into a pack of wolves
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Shield of Spikes
+|description=Gives the target a damage shield
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Skin Like Diamond
+|description=Increases targets hitpoints and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Spikecoat
+|description=Self Only AC and Damage shield
+|era=&nbsp;
+|school=Abj.
+|location=Butcher.
+|mana=110
+}}
+{{SpellRow
+|name=Succor: Ro
+|description=Evacuates the group to South Ro
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Wind of the North
+|description=Evacuates the group to Skyfire Mountains
+|era=Kun.
+|school=Alt.
+|location=Firiona Vie.
+|mana=300
+}}
+{{SpellRow
+|name=Wind of the South
+|description=Evacuates the group to the Emerald Jungle
+|era=Kun.
+|school=Alt.
+|location=Firiona Vie.
+|mana=300
+}}
+</table>
+
+==Level 44==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Allure of the Wild
+|description=Charm animal into pet (Temporary)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=220
+}}
+{{SpellRow
+|name=Banish Summoned
+|description=Direct Damage vs Summoned
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=225
+}}
+  {{SpellRow
+|name=Calefaction
+|description=Fire Based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=250
+}}
+{{SpellRow
+|name=Chloroplast
+|description=Increase targets hitpoint Regeneration
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Circle of Cobalt Scar
+|description=Group Gate to Cobalt Scar on Velious
+|era=Vel.
+|school=Alt.
+|location=Wak. Lands.
+|mana=300
+}}
+{{SpellRow
+|name=Circle of Wakening Lands
+|description=Group Gate to Wakening Lands.
+|era=Vel.
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Drifting Death
+|description=Magic based Damage over Time (3.25 DPM)
+|era=&nbsp;
+|school=Con.
+|location=Butcher.
+|mana=200
+}}
+{{SpellRow
+|name=Fixation of Ro
+|description=Single Target AC & ATK Debuff
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=100
+}}
+{{SpellRow
+|name=Form of the Great Wolf
+|description=Turns the caster into a wolf
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=135
+}}
+{{SpellRow
+|name=Nullify Magic
+|description=Single Target Magic Effect Debuffer
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Resist Disease
+|description=Increases resistance to disease
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Resist Poison
+|description=Increases resistance to Poison
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Savage Spirit
+|description=Increases pets attack speed and stats
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Storm Strength
+|description=Increases strength of the target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=85
+}}
+{{SpellRow
+|name=Succor: Lavastorm
+|description=Evacuates the group to Lavastorm
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+</table>
+
+==Level 49==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Engulfing Roots
+|description=Direct Damage with Root
+|era=&nbsp;
+|school=Alt.
+|location=Lavastorm.
+|mana=100
+}}
+{{SpellRow
+|name=Fire
+|description=Area Fire based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Lavastorm.
+|mana=260
+}}
+{{SpellRow
+|name=Ice
+|description=Cold based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Lavastorm.
+|mana=250
+}}
+{{SpellRow
+|name=Lightning Blast
+|description=Area effect Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Lavastorm.
+|mana=234
+}}
+{{SpellRow
+|name=Pack Chloroplast
+|description=Increase regeneration of the group
+|era=&nbsp;
+|school=Alt.
+|location=Lavastorm.
+|mana=400
+}}
+{{SpellRow
+|name=Resist Magic
+|description=Increases resistance to Magic
+|era=&nbsp;
+|school=Abj.
+|location=Lavastorm.
+|mana=85
+}}
+{{SpellRow
+|name=Shield of Thorns
+|wikiName=Shield of Thorns (Spell)
+|description=Gives the target a damage shield.
+|era=&nbsp;
+|school=Abj.
+|location=Lavastorm.
+|mana=120
+}}
+{{SpellRow
+|name=Skin Like Nature
+|description=Increases targets hitpoints, AC and Regen
+|era=&nbsp;
+|school=Abj.
+|location=Lavastorm.
+|mana=300
+}}
+{{SpellRow
+|name=Starfire
+|description=Fire based Direct Damage
+|era=&nbsp;
+|school=Evo.
+|location=Lavastorm.
+|mana=250
+}}
+{{SpellRow
+|name=Succor: North
+|description=Evacuates the group to North Karana
+|era=&nbsp;
+|school=Alt.
+|location=Toxxulia.
+|mana=300
+}}
+{{SpellRow
+|name=Thorncoat
+|description=Self only Damage shield and AC
+|era=&nbsp;
+|school=Abj.
+|location=Lavastorm.
+|mana=175
+}}
+</table>
+
+==Level 50==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Improved Superior Camouflage
+|description=Self Only Fixed Duration Invisibility
+|era=Vel.
+|school=Div.
+|location=NPC Drop.
+|mana=75
+}}
+</table>
+
+==Level 51==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Circle of Winter
+|description=Group Resist Fire
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=150
+}}
+{{SpellRow
+|name=Legacy of Spike
+|description=Group Damage Shield
+|era=Kun.
+|school=Abj.
+|location=Firiona Vie.
+|mana=300
+}}
+{{SpellRow
+|name=Repulse Animal
+|description=Makes an animal run away in terror
+|era=Kun.
+|school=Alt.
+|location=Firiona Vie.
+|mana=100
+}}
+{{SpellRow
+|name=Superior Healing
+|description=Heals damage inflicted on the target (Max: 583 HP)
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=250
+}}
+{{SpellRow
+|name=Upheaval
+|description=Area effect Point blank Direct Damage
+|era=Kun.
+|school=Evo.
+|location=Quest.
+|mana=625
+}}
+</table>
+
+==Level 52==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Breath of Ro
+|description=Damage over Time with Debuff
+|era=Kun.
+|school=Evo.
+|location=Firiona Vie.
+|mana=225
+}}
+{{SpellRow
+|name=Call of Karana
+|description=Charm animal into pet (Temporary)
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=220
+}}
+{{SpellRow
+|name=Circle of Summer
+|description=Group Resist Cold
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=150
+}}
+{{SpellRow
+|name=Egress
+|description=Intra-Zone Teleport
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=500
+}}
+</table>
+
+==Level 53==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Glamour of Tunare
+|description=Decrease Magic resistance of Animals
+|era=Kun.
+|school=Abj.
+|location=Quest.
+|mana=10
+}}
+{{SpellRow
+|name=Spirit of Scale
+|description=Increase movement rate of the group
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=150
+}}
+{{SpellRow
+|name=Winged Death
+|description=Magic based Damage over Time
+|era=Kun.
+|school=Con.
+|location=Firiona Vie.
+|mana=300
+}}
+</table>
+
+==Level 54==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Blizzard
+|description=Cold Based Area Rain Damage
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=332
+}}
+{{SpellRow
+|name=Form of the Howler
+|description=Turns the caster into a wolf
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=100
+}}
+{{SpellRow
+|name=Regrowth
+|description=Increase regeneration of the target
+|era=Kun.
+|school=Alt.
+|location=Firiona Vie.
+|mana=300
+}}
+{{SpellRow
+|name=Scoriae
+|description=Fire based Direct Damage
+|era=Kun.
+|school=Evo.
+|location=Firiona Vie.
+|mana=250
+}}
+</table>
+
+==Level 55==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+  <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+
+{{SpellRow
+|name=Annul Magic
+|description=Upgrade to Nullify Magic
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Chloroblast
+|description=Single Target Heal Spell (Max: 428)
+|era=Vel.
+|school=Alt.
+|location=E. Com
+|mana=175
+}}
+{{SpellRow
+|name=Exile Summoned
+|description=Direct Damage vs Summoned
+|era=Kun.
+|school=Evo.
+|location=Firiona Vie.
+|mana=250
+}}
+{{SpellRow
+|name=Girdle of Karana
+|description=Increase Strength
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=105
+}}
+{{SpellRow
+|name=Nature Walkers Behest
+|description=Summon Bear Pet
+|era=Vel.
+|school=Con.
+|location=NPC Drop.
+|mana=600
+}}
+{{SpellRow
+|name=Tunare's Request
+|description=Charm animal into pet (Temporary)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=350
+}}
+</table>
+
+==Level 56==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bladecoat
+|description=Self Only AC and Damage Shield
+|era=Kun.
+|school=Abj.
+|location=Firiona Vie.
+|mana=235
+}}
+{{SpellRow
+|name=Breath of Karana
+|description=Direct Damage with Stun
+|era=Kun.
+|school=Con.
+|location=NPC Drop.
+|mana=250
+}}
+{{SpellRow
+|name=Engorging Roots
+|description=Direct Damage with Root
+|era=Kun.
+|school=Alt.
+|location=Firiona Vie.
+|mana=75
+}}
+{{SpellRow
+|name=Wake of Karana
+|description=Stop Rain in Zone
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=400
+}}
+</table>
+
+==Level 57==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bonds of Tunare
+|description=Area Effect Snare
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=115
+}}
+{{SpellRow
+|name=Frost
+|description=Cold based Direct Damage
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=250
+}}
+{{SpellRow
+|name=Natureskin
+|description=Increase target Hitpoint, AC and Regen
+|era=Kun.
+|school=Abj.
+|location=Firiona Vie.
+|mana=400
+}}
+{{SpellRow
+|name=Succor
+|description=Group Intra-Zone Evacuation
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=300
+}}
+</table>
+
+==Level 58==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Fist of Karana
+|description=Area Effect Direct Damage
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=357
+}}
+{{SpellRow
+|name=Regrowth of the Grove
+|description=Increase regeneration of the group
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=600
+}}
+{{SpellRow
+|name=Shield of Blades
+|description=Gives the target a damage shield
+|era=Kun.
+|school=Abj.
+|location=Firiona Vie.
+|mana=150
+}}
+</table>
+
+==Level 59==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Legacy of Thorn
+|description=Group Damage Shield
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=350
+}}
+{{SpellRow
+|name=Spirit of Oak
+|description=Turns the caster into a tree
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=25
+}}
+{{SpellRow
+|name=Wildfire
+|description=Fire based Direct Damage
+|era=Kun.
+|school=Evo.
+|location=Firiona Vie.
+|mana=320
+}}
+</table>
+
+==Level 60==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+   <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Banishment
+|description=Instant kill vs Summoned, destroys loot, uses [[Star Ruby]]
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=500
+}}
+{{SpellRow
+|name=Entrapping Roots
+|description=Area Direct Damage with Root
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=200
+}}
+{{SpellRow
+|name=Form of the Hunter
+|description=Turns the caster into a wolf
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=150
+}}
+{{SpellRow
+|name=Mask of the Hunter
+|description=Improves vision and mana regeneration of the caster
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=100
+}}
+<tr bgcolor="#efefef"><td width='22%'>[[Nature's Touch]]</td><td width='52%'>Single Target Healing Spell (Max: 978)</td><td width='5%'>Vel.</td><td width='5%'>Alt.</td><td width='8%'>E. Com.</td><td width='5%'>400</td>
+{{SpellRow
+|name=Protection of the Glades
+|description=Group AC, HP, Mana Regeneration Buff
+|era=Vel.
+|school=Abj.
+|location=NPC Drop.
+|mana=1200
+}}
+</table>
+
+= Pet Guide =
+
+== Pet Information ==
+
+{{#lsth:Pet Guide|[[Druid]] Pets}}
+
+= Skills =
+
+== Specialization ==
+
+{{#lsth:Skill Specialization|Druid}}
+
+==Casting Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Abjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alteration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Conjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Divination</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Evocation</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">4</td>
+		<td align="center" width="10%">No</td>
+		<td>Channelling</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">220</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">8</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Meditate</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">252</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">30</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Specialization</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+==Combat Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>1 Hand Blunt</td>
+		<td align="center" width="20%">175</td>
+		<td align="center" width="25%">175</td>
+	</tr>
+
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>1 Hand Slashing</td>
+		<td align="center" width="20%">175</td>
+		<td align="center" width="25%">175</td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>2 Hand Blunt</td>
+		<td align="center" width="20%">175</td>
+		<td align="center" width="25%">175</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Bind Wound</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Defense</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Hand to Hand</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">100</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Offense</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">15</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Dodge</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+</table>
+
+==Miscellaneous Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alcohol Tolerance</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Beg</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Fishing</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Sense Heading</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Swimming</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">5</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Forage</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">20</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Tracking</td>
+		<td align="center" width="20%">125</td>
+		<td align="center" width="25%">125</td>
+	</tr>
+</table>
+
+= Druid-Specific Quests =
+
+{{#lsth:Class Race Quest List|Druid}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Druid]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Druid]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Druid]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Druid]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Druid]]}}
+
+= FAQ =
+
+'''Q:	What should I use at lower levels for a weapon? 1HS, 1HB or 2HB?'''
+
+A:	1H* is definitely the way to go. Slash or blunt is a preference,(I use blunt personally), but you generally want to stick with the 1H weapons, to keep your other hand free for a +WIS held item, such as; [[Testament of Vanear]] [+10WIS], [[Charred Guardian Shield]] [+9WIS], or [[Paw of Opolla]] [+9WIS].
+ 
+
+'''Q:	At what level do druids learn their teleporting spells?'''
+
+A:	The Self-Only teleport spells, or "rings", Are first gained at level 19. The first set allow you to port to : North Karana, West Commonlands, Tox. Forest, Butcherblock Mountains. At level 24, you recieve self only ports to: Steamfont Mountains, Lavastorm Mountains, The Feerrott, South Ro Desert. At Level 29, you recieve the last self only port, to Misty Thicket. The group teleport spells, or "circles", are first gained at level 29. You recieve them in the same order as the self only ports,
+with the addition of Circle of the Combines, (Dreadlands) at 34, and Wind of the North(Skyfire Mountains) at 39, along with Wind of the South(Emerald Jungle), also at 39.
+ 
+
+'''Q:	What am I? What role do I play? I don't know if we are casters with good ATK and AC or casting tanks with low AC and poor attack, and no disciplines.'''
+
+A:	A druid is a caster who at low level (under 20) can melee decently.
+
+The AC is good but the ATK power never gets anywhere near a Tank/Hybrid's. All the melee types get double attack and/or dual wield, whereas we, don't. After level 20 you are a caster. Use your Damage over Time spells, Direct Damage spells, Healing, Snare, and Damage Shields. You are a utility caster who can do almost anything average but nothing very well; That is the bane of the druid but hey, druids get teleports too.
+ 
+
+'''Q:	How do I know how much Mana Wisdom gives me? 
+
+A:	As a druid you gain .21 more Mana per Wisdom(MpW for short) for every level you have when at or below 200 wisdom. This means that when you are level 10 you get 2.1 MpW and it continues on in a similar pattern for Wisdom totals of 200 or less: 4.2 MpW @ lvl 20, 6.3 MpW @ lvl 30, 8.4 MpW @ lvl 40, 10.5 MpW @ lvl 50, 12.6 MpW @ lvl 60. The exact formula for wisdom of 200 or less is (WIS+10)*level/5. The formula for calculating above Mana at more than 200 wisdom is ( [ 11250 * level ] + [ 33 * WIS * level ] ) / 425.
+
+
+'''Q:	What is better for my level, + Mana or + Wisdom?
+
+A:	Basically, using the above math as a basis, below lvl 25 +Mana will give you stronger returns and have the benefit of being less expensive generally. Once you start leveling into your mid to late 20's the scaling factor of Wisdom will give you much stronger returns. This of course continues until lvl 60, but anything with +Mana in an empty/non-magic equipped slot is definitely a gain.
+
+
+'''Q:	Druids get Meditate right? What level?'''
+
+A:	Druids learn the meditate skill at level 8, along with all the other priest classes.
+
+
+'''Q:	In the guide you state that most of a druids best spells are restricted to outdoor areas. Does this mean druids are not wanted in high level dungeon groups? or are worthless in any indoor area?'''
+
+A:	Not at all! Druids can be, and are a valuable part of any dungeon group, especially at higher levels.
+
+At level 39, you really come into your own, as you get your first "pack" spells.(Regen, SoW, Wolf Form). You also get a great damage shield, which hits for 15 points to start, and Skin like Diamond, a great HP/AC buff. While, it is true that our powers are somewhat watered down indoors, we still play a valuable backup healer, buffer, and have those nifty Evac spells everyone just loves.
+ 
+
+'''Q:	Do druids begin the game with any spells? If so, which?'''
+
+A:	Druids begin the game with a club and two spells; Skin like Wood and Minor Healing. There are several other level 1 spells which can be bought seperately, and are viewable here.
+ 
+'''Q:	What do I do with no drop items that I forage or items that appear not to be edible that I forage?'''
+
+A:	Not all nodrop foraged items have quests etc related to them at this point, although there are many that are said to belong to quests. You can save them in case a quest is discovered or destroy them.
+ 
+'''Q:	Is druid a pure caster?'''
+
+A:	No. A druid is part of the "Priest" line of classes. Our brethren are Shaman and Clerics. We use WIS as our mana base, are able to don better armor. The only downfall to this, is that we learn skills at a later level than the pure casters, and our magic is generally more of a "utility" base.
+
+
+'''Q:	Where are the druid guild halls located?'''
+
+A:	We have 3 guild halls availible to us. They are located in : [[Surefall Glade]], [[Kelethin]], and [[Rivervale]].
+
+'''Q:   Which Druid Rings are guarded?'''
+
+A:      It is useful to know when teleporting evil races and very low level characters, add a [[Superior Camouflage]] to the mix before departure.
+
+* [[Ring of Toxxulia]] -		Empty
+* [[Ring of Commons]] -		Two lvl 35-40 Druid Guards
+* [[Ring of Karana]] -		Bunch of lvl 25-30 Druid Guards and Treants
+* [[Succor: East]] ([[East Karana]]) -	Succor spell. lvl 23-30 druids with animal mobs pathing by that are hostile to *everyone*. Don't sit down near them, even if you're a druid or a ranger, or the druids will assist the animals.
+* [[Ring of Butcher]] -		Empty
+* [[Ring of Feerrott]] -		Empty
+* [[Ring of Misty]] -		Empty of immediate port in aggro, but Ella Foodcrafter roams nearby and there are two level 30ish druid NPCs on the opposite side of the stone ring from where you port in.
+* [[Ring of Ro]] -		Empty
+* [[Ring of Steamfont]] -	Empty
+* [[Ring of Lavastorm]]	-	Empty
+* [[Ring of the Combines]] - Empty
+* [[Wind of the North]] ([[Skyfire Mountains]]) - Various mobs path through the port location periodically, so it is sometimes guarded
+* [[Wind of the South]] ([[Emerald Jungle]]) - Various mobs (rarely) path through the port location periodically, so it is sometimes guarded
+* [[Ring of Iceclad]] - Empty
+* [[Circle of Great Divide]] - Empty, requires tooth
+* [[Circle of Wakening Lands]] - [[Wuoshi]] (on Velious Dragon Faction), requires tooth
+* [[Circle of Cobalt Scar]] - Empty, requires tooth
+{{Template: Navbox Classes}}

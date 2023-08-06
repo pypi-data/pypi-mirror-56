@@ -1,0 +1,67 @@
+{{Spellpage|
+
+| spellname = Reclaim Energy
+| spellicon = L
+| description = Reclaims the energy needed to maintain your pet, causing the pet to dissipate and restore some of your mana (restores more mana if the pet has more health remaining).
+
+| classes = 
+
+* [[Necromancer]] - Level 1
+* [[Magician]] - Level 1
+* [[Enchanter]] - Level 1
+
+| items_with_effect = 
+
+<ul><li> {{:Torch of Alna}}
+</li><li> {{:Broom of Trilon}}
+</li><li> {{:Encyclopedia Necrotheurgia}}
+</li><li> {{:Shovel of Ponz}}
+</li><li> {{:Staff of Elemental Mastery: Air}}
+</li><li> {{:Staff of Elemental Mastery: Earth}}
+</li><li> {{:Staff of Elemental Mastery: Fire}}
+</li><li> {{:Staff of Elemental Mastery: Water}}
+</li><li> {{:Stein of Ulissa}}
+</li><li> {{:Helm of Ridossan}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Reclaim Energy }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 5
+| range = 100
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Pet
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  disperses.
+| msg_wears_off = 
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-2)]] | Necromancer Guild | (2096,-408) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-17)]] | Library | (1105,-1022) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Mika Fugas]] | Underground | (-196,-264) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Killi Frillep]] | Magician Guild (F2) | (695,919) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Vissa D'Dbth]] | Necromancer Guild (F1) | (1319,-1236) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Cizzar J'Axx]] | Caster Guild (Basement) | (135,-921) }}
+{{SpellWhereRow  | [[Paineel]] | [[Danus Kelmun]] | Necromancer Guild | (692,856) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Pakeg Aspet]] | Necromancer Guild | (310,-321) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Tsuden Korinte]] | Caster Guild | (322,-595) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Neapha Vesturo]] | The Herb Jar | (317,-554) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Vellera Wintergreen]] | Magician Guild | (715,-526) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Bile]] | Cubby near PvP Area | (-380,255) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Trepo Merrop]] | Caster Guild (F3) | (133,-762) }}
+}}
+
+}}

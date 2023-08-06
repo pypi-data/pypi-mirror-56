@@ -1,0 +1,57 @@
+{{Spellpagesmart|
+
+| spellname = Snare
+| spellicon = A
+| description = Entangles your target's feet with magical roots, slowing their movement speed.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 9
+* [[Druid]] - Level 1
+
+| items_with_effect = 
+
+<ul><li> {{:Anklesmasher}}
+</li><li> {{:Ball of Burlap Yarn}}
+</li><li> {{:Earring of Woven Bark}}
+</li><li> {{:Elder Spiritist's Gauntlets}}
+</li><li> {{:Glaive of Marltek}}
+</li><li> {{:Silken Whip of Ensnaring}}
+</li><li> {{:Tolan's Darkwood Gauntlets}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 2 | Decrease Movement Speed by 41% @L1 to 55% @L15 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 15
+| range = 200
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 4.00
+| duration = 6 seconds @L1 to 3 minutes 54 seconds @L60
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are ensnared.
+| msg_cast_on_other = Someone  has been ensnared.
+| msg_wears_off = You are no longer ensnared.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Aleena Lightleaf]] | Kelethin Ranger Guild | (-400,490) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Ilscent Tagglefoot]] | Druid Guild | (-31,-418) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Raken]] | Ranger Guild | (106,-94) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

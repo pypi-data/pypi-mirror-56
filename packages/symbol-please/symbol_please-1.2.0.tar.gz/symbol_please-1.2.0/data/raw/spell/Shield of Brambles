@@ -1,0 +1,49 @@
+{{Spellpagesmart|
+
+| spellname = Shield of Brambles
+| spellicon = P
+| description = Surrounds your target in a shield of brambles that cause damage to anything that strikes them.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 49
+* [[Druid]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Arydryidriyorn}}
+</li><li> {{:Yannikil}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Damage Shield by 11 (L29) to 12 (L32) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 80
+| range = 100
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 2.9 minutes @L29 to 6.5 minutes @L65
+| target_type = Single
+| spell_type = Beneficial
+| resist = Magic (0)
+
+| msg_cast_on_you = You are surrounded by a thorny barrier.
+| msg_cast_on_other = Someone  is surrounded by a thorny barrier.
+| msg_wears_off = The brambles fall away.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRow  | [[Steamfont Mountains]] | [[Crisyn]] | Druid Ring | (-1750,1657) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Bukem Breewood]] | Ranger Guild | (105,-80) }}
+}}
+| TableLocations = Kelethin<br/>Steamfont Mnt<br/>Surefall Glade
+| TableEra = Classic
+}}

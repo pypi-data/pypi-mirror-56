@@ -1,0 +1,41 @@
+{{Spellpage|
+
+| spellname = Guardian
+| spellicon = K
+| description = Places a spiritual guardian on your target, increasing their armor class for 1 hour(s) 3.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 4 | Increase AC by 23 (L44) to 24 (L45) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 150
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = 1 hour 3 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = The protective presence of a guardian spirit reassures you.
+| msg_cast_on_other = Someone  is surrounded by a spirit aura.
+| msg_wears_off = You are no longer guarded.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Gaxl the scribe]] | Temple of Terror (West Tower - Bottom +1) | (1025,-109) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Migron]] | Temple of Terror (First Floor) | (1031,-160) }}
+{{SpellWhereRowB | [[Grobb]] | [[Korff - Troll]] | Shaman Guild | (304,-438) }}
+{{SpellWhereRow  | [[Halas]] | [[Bolace]] | Shaman Guild | (326,478) }}
+{{SpellWhereRowB | [[Oggok]] | [[Korff - Ogre]] | Shaman Guild | (667,1066) }}
+}}
+
+}}

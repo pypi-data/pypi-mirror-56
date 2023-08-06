@@ -1,0 +1,44 @@
+{{Spellpage|
+
+| spellname = Great Divide Portal
+| spellicon = V
+| description = Opens an arcane portal that teleports your entire group to the Great Divide.
+
+| classes = 
+
+* [[Wizard]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Teleport to -3766,3651,-237 in greatdivide }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 300
+| range = 0
+| casting_time = 16.00
+| fizzle_time = 2.25
+| recast_time = 10.00
+| duration = Instant
+| target_type = Group v1
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Tooth of the Great Divide]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  creates a shimmering portal.
+| msg_wears_off = The portal shimmers and fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow | [[Skyshrine]] | [[Guardian Trekolz]] | Spell vendors (see description) | (323,-874) }}
+}}
+
+* Drops from Velious Mobs
+* Drops from [[Shardwurm Matriarch]] in [[Great Divide]]
+
+}}

@@ -1,0 +1,80 @@
+{{Spellpagesmart|
+
+| spellname = Summon Drink
+| spellicon = L
+| description = Focuses mana into a globe of pure drinking water.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 5
+* [[Druid]] - Level 14
+* [[Shaman]] - Level 5
+* [[Magician]] - Level 1
+
+| items_with_effect = 
+
+<ul><li> {{:Belt of the River}}
+</li><li> {{:Spring Crystal}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Summon Item: [[Summoned: Globe of Water]] | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 10
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-17)]] | Library | (1105,-1022) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-8)]] | Necromancer Guild | (2150,-357) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-1)]] | Cleric Guild | (1238,-548) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Kabda]] | Temple of Terror (First Floor) | (1013,-218) }}
+{{SpellWhereRowB | [[Erudin]] | [[Syra Printell]] | Cleric Guild - Quellious (Outside) | (-735,-47) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Killi Frillep]] | Magician Guild (F2) | (695,919) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Wellin Brookleap]] | Cleric Guild | (24,-456) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRowB | [[Grobb]] | [[Tokun - Troll]] | Shaman Guild | (350,-400) }}
+{{SpellWhereRow  | [[Halas]] | [[Corak]] | Shaman Guild | (313,424) }}
+{{SpellWhereRowB | [[North Kaladim]] | [[Gralpa Axeheft]] | Cleric Guild | (773,115) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Trik N'Tan]] | Cleric Guild | (413,-762) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Cizzar J'Axx]] | Caster Guild (Basement) | (135,-921) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Direlee Furme]] | Cleric Guild (F1) | (103,388) }}
+{{SpellWhereRow  | [[Qeynos|North Qeynos]] | [[Kragie Rolana]] | Paladin Guild | (-141,-125) }}
+{{SpellWhereRowB | [[Oggok]] | [[Tokun - Ogre]] | Shaman Guild | (632,1091) }}
+{{SpellWhereRow  | [[Paineel]] | [[Oren Calferdo]] | Cleric Guild | (1125,427) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Likka Sowtsui]] | Cleric Guild | (371,-417) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Gilth Harvester]] | Cleric Guild | (-210,-351) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Tsuden Korinte]] | Caster Guild | (322,-595) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Neapha Vesturo]] | The Herb Jar | (317,-554) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Bogen Chazel]] | Cleric Guild | (-260,-516) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Vellera Wintergreen]] | Magician Guild | (715,-526) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Zorik]] | Cleric Guild | (-182,770) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Trepo Merrop]] | Caster Guild (F3) | (133,-762) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+| TableLocations = Vendors
+| TableEra = Classic
+
+}}

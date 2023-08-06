@@ -1,0 +1,1814 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C cleric.gif|right]]
+Clerics dedicate their lives to the gods of Norrath, gaining magical powers in exchange for their faith and service. Clerics are primarily a magic-using class, with the ability to wear plate armor and wield blunt weapons.
+
+Clerics gain powerful healing and enhancement spells, greatly increasing the health and defenses of their group, while keeping them healed in the most dangerous battles. While other priest classes have healing spells, no one can match up with the power and efficiency of clerical healing.
+
+Clerics are potent enemies of the undead, able to channel their holy fervor into highly destructive banishment spells. Resurrection is also the domain of the cleric, allowing them to bring their fallen companions back from the dead without the normal penalties for death.
+
+With a few exceptions, clerics are dependent on being part of a group. But they are highly desirable group members. An experienced cleric is a great benefit to any group and is an excellent choice for the social player.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Cleric || Vicar || Templar || High Priest
+|}
+
+<div style="clear:both"></div>
+=Creation Guide=
+
+==Picking the Right Race==
+
+The first thing you have to pick then is your race.  Which race you pick will determine the foundation of you character for the rest of your life in Norrath, so it is kind of important you pick one you like.
+
+While every Cleric race is a viable choice, [[Gnome|Gnomes]] and [[Human|Humans]] are probably the weakest options because of their low Wisdom and lack of abilities, while all of the rest make strong options.
+
+=== Notable Racial Distinctions ===
+
+<ul>
+<li>'''Dark Elves:''' [[Dark Elf|Dark Elves]] tie for second-best wisdom and can [[hide]], which is useful since Clerics can't cast [[Invisibility]].  However, because all good races start out hating them they can only use evil-aligned vendors until they improve their faction with each good city they visit.
+<ul>
+<li>[[Dark Elf|Dark Elves]] can only worship [[Innoruuk]], and can get the {{:Regent Symbol of Innoruuk}} and other [http://wiki.project1999.com/index.php?title=Special:MultiCategorySearch&limit=500&wpInCategory1=Innoruuk+Worshiper+Equipment&wpInCategory2=Cleric+Equipment Innoruuk-worshiping Cleric items]</li>
+</ul>
+</li>
+<li>'''Dwarves:''' [[Dwarf|Dwarves]] are tied for second-best wisdom and have a unique "barrel roll" animation (with no in-game benefit), but also have armor restrictions at lower levels
+<ul>
+<li>[[Dwarf|Dwarves]] can only worship [[Brell Serilis]], and can get the {{:Disciple Symbol of Brell Serilis}} and other [http://wiki.project1999.com/index.php?title=Special:MultiCategorySearch&limit=500&offset=0&wpInCategory1=Brell+Serilis+Worshiper+Equipment&wpInCategory2=Cleric+Equipment Brell Serilis-worshiping Cleric items]
+</li>
+</ul>
+</li>
+<li>'''Erudite:''' [[Erudite|Erudites]] are tied for second-best wisdom and have poor night vision (which is of less concern because of Project 1999's brighter-than-classic Titanium client)
+<ul>
+<li>[[Cazic-Thule]] Worshipers can get the {{:Disciple Symbol of Cazic Thule}} and other [http://wiki.project1999.com/index.php?title=Special:MultiCategorySearch&limit=500&wpInCategory1=Cazic+Thule+Worshiper+Equipment&wpInCategory2=Cleric+Equipment Cazic-Thule-worshiping Cleric items]
+<li>[[Prexus]] Worshipers do not get a symbol quest but can wear a few [http://wiki.project1999.com/index.php?title=Special:MultiCategorySearch&limit=500&wpInCategory1=Prexus+Worshiper+Equipment&wpInCategory2=Cleric+Equipment Prexus-worshiping Cleric items]
+</li>
+<li>[[Quellious]] Worshipers can get the {{:Regent Symbol of Quellious}} and other Quellious-worshiping Cleric items</li>
+</ul>
+</li>
+<li>
+  '''Gnomes:''' [[Gnome]]s have the lowest wisdom and has armor restrictions at lower levels, but can learn [[Tinkering]] and, because of their small size, they are often able to see through walls in dungeons.  Also [[Gnome]] Clerics can wear Robes, while most other Cleric races cant'.
+  <ul>
+    <li>[[Brell Serilis]]-worshipers can get the {{:Disciple Symbol of Brell Serilis}} and other Brell Serilis-worshiping Cleric items</li>
+    <li>[[Bertoxxulous]]-worshipers can get the {{:Initiate Symbol of Bertoxxulous}} and other Bertoxxulous-worshiping Cleric items</li>
+  </ul>
+</li>
+<li>'''Halflings:''' [[Halfling]]s get a 5% experience bonus, and can both [[hide]] and [[sneak]] (very useful since Clerics can't cast [[Invisibility]]), but consume food faster and has armor restrictions at lower levels
+  <ul>
+    <li>[[Halfling]]s can only worship [[Bristlebane]] and don't get a symbol quest</li>
+  </ul>
+</li>
+<li>'''High Elves:''' [[High Elf|High Elves]] have the highest wisdom 
+<ul><li>[[High Elf|High Elves]] can only woship [[Tunare]], and can get the {{:Warden Symbol of Tunare}}, {{:Symbol of Tunarian Worship}} and other [http://wiki.project1999.com/index.php?title=Special:MultiCategorySearch&limit=500&wpInCategory1=Tunare+Worshiper+Equipment&wpInCategory2=Cleric+Equipment Tunare-worshiping Cleric items]</li></ul>
+</li>
+<li>'''Humans:''' [[Human]]s have lower wisdom and poor night vision (which is of less concern because of Project 1999's brighter-than-classic Titanium client ... also [[Innoruuk]]-worshippers can obtain the {{:Fright Forged Helm}} which grants infravision).  Also [[Human]] Clerics can wear Robes, while most other Cleric races cant'.
+<ul>
+<li>[[Bertoxxulous]]-worshipers can get the {{:Initiate Symbol of Bertoxxulous}} and other [http://wiki.project1999.com/index.php?title=Special:MultiCategorySearch&limit=500&wpInCategory1=Bertoxxulous+Worshiper+Equipment&wpInCategory2=Cleric+Equipment Bertoxxulous-worshiping Cleric items].
+</li>
+<li>[[Innoruuk]]-worshipers can get the {{:Regent Symbol of Innoruuk}} and other [http://wiki.project1999.com/index.php?title=Special:MultiCategorySearch&limit=500&wpInCategory1=Innoruuk+Worshiper+Equipment&wpInCategory2=Cleric+Equipment Innoruuk-worshiping Cleric items].  Also their faction lets them complete quests for {{:Dread Forged Shield}}, {{:Fright Forged Helm}} (an [[Advanced_Techniques_Guide#Resetting_Spell_Refresh_Timers_With_Instant-Click_Items|instant-clickie]] that gives [[See Invisible|See Invis]] and [[Infravision]]), and {{:Terror Forged Mask}}, which are difficult for other religions.
+</li>
+<li>[[Human]]s can also worship [[Karana]], [[Erollisi Marr]], [[Mithaniel Marr]], and [[Rodcet Nife]], but none of them have symbol quests, just different cultural armor.</li>
+</ul>
+</li>
+</ul>
+
+====Statistics====
+Below are the starting ability scores for each race.  Since Wisdom, while very important, is not the only ability score that matters to a Cleric, the "Formula #1" column provides an '''extremely''' rough overall assessment by combining each race's Charisma, Stamina, and Strength scores, as well as double double their Wisdom score.  If you think a different formula would be more appropriate, feel free to edit this page and add it as a "Formula #2" column.
+
+<u>'''Min/Max Statistics'''</u>
+
+In order to understand the best race statistically, I would refer you to Formula #2. The forumla is STR+STA+WIS+2CHA. I will explain more in depth further below.
+
+<table class="eoTable2 sortable" style="text-align: center">
+  <tr>
+    <th style="text-align: center">RACE</th>
+    <th style="text-align: center">STR</th>
+    <th style="text-align: center">STA</th>
+    <th style="text-align: center">AGI</th>
+    <th style="text-align: center">DEX</th>
+    <th style="text-align: center">WIS</th>
+    <th style="text-align: center">INT</th>
+    <th style="text-align: center">CHA</th>
+    <th style="text-align: center">Formula #1</th>
+    <th style="text-align: center">Formula #2</th>
+  </tr>
+  <tr>
+    <th>Dark Elf</th><td>65</td><td>70</td><td>90</td><td>75</td><td>93</td><td>99</td><td>60</td><td title="65+70+93+93+60">381</td><td title="65+70+93+60+60">348</td>
+  </tr>
+  <tr>
+    <th>Dwarf</th><td>95</td><td>95</td><td>70</td><td>90</td><td>93</td><td>60</td><td>45</td><td title="95+95+93+93+45">421</td><td title="95+95+93+45+45">373</td>
+  </tr>
+  <tr>
+    <th>Erudite</th><td>65</td><td>75</td><td>70</td><td>70</td><td>93</td><td>107</td><td>70</td><td title="65+75+93+93+70">396</td><td title="65+75+93+70+70">373</td>
+  </tr>
+  <tr>
+    <th>Gnome</th><td>65</td><td>75</td><td>85</td><td>85</td><td>77</td><td>98</td><td>60</td><td title="65+75+77+77+60">354</td><td title="65+75+77+60+60">337</td>
+  </tr>
+  <tr>
+    <th>Halfling</th><td>75</td><td>80</td><td>95</td><td>90</td><td>90</td><td>67</td><td>50</td><td title=75+80+90+90+50"">385</td><td title="75+80+90+50+50">345</td>
+  </tr>
+  <tr>
+    <th>High Elf</th><td>60</td><td>70</td><td>85</td><td>70</td><td>105</td><td>92</td><td>80</td><td title="60+70+105+105+80">420</td><td title="60+70+105+80+80">395</td>
+  </tr>
+  <tr>
+    <th>Human</th><td>80</td><td>80</td><td>75</td><td>75</td><td>85</td><td>75</td><td>75</td><td title="80+80+85+85+75">405</td><td title="80+80+85+75+75">395</td>
+  </tr>
+</table>
+
+==Spending Your Bonus Points==
+
+Wisdom is the primary ability score for Clerics because it provides extra mana, and mana controls how many heals a Ceric can cast before needing to meditate.  [[Charisma]], [[Stamina]], and [[Strength]] are also important to a much lesser degree: [[Strength]] helps Clerics carry their heavy plate armor, [[Stamina]] helps them survive by giving them extra hit points, and [[Charisma]] affects the success of their [[Lull]] spell line.
+
+While [[Agility]] is not especially helpful for Clerics, any character with less than 75 [[Agility]] suffer penalties, so [[Dwarf|Dwarven]] and [[Erudite]] Clerics should spend 5 points on [[Agility]] to get up to 75.
+
+Here are our suggested allocations of your bonus points at creation:
+
+* For Dark Elves add 25 Wisdom, 5 Strength.
+* For Erudites add 25 Wisdom, 5 Agility.
+* For Gnomes add 25 Wisdom, 5 Strength.
+* For Humans add 25 Wisdom, 5 Strength.
+* For Halflings add 25 Wisdom, 5 Strength.
+* For High Elves add 25 Wisdom, 5 Strength.
+* For Dwarves add 25 Wisdom, 5 Agility.
+
+<u>'''Min/Max Allocation of Points'''</u>
+
+Before we can understand what points we need at creation, we need to understand what statistics are most important to a cleric.
+
+To a Cleric, the most important stat is Mana. If we take a look at this [https://wiki.project1999.com/Magelo_Blue:MinMaxHumanCleric Min/Max Human Cleric build], we see that by focusing mainly on +Mana, our Wisdom still reaches the cap of 255. In fact, with this end-game gear, we receive in total: +143 STR, +165 STA, +191 WIS, and +18 CHA. This means that in order to have 255 STR/STA/WIS/CHA with no buffs, we would need: 112 STR, 90 STA, 64 WIS, and 237 CHA at character creation. With this in mind, we can see that Wisdom isn't as important as you would think. Some will say that ultimately, Charisma is a useless stat for a Cleric and shouldn't be taken into consideration. If that is your belief, then feel free to pick Dwarf, and have 255 STR/STA/WIS with no buffs. However, Humans have the ability to make up for their lower strength with the {{:Disciple Symbol of Innoruuk}}, making the difference between Humans and Dwarves (strength wise) only 7[confirmation?] if the Siphon Strength spell is used (12 if not), while charisma wise, Humans beat Dwarves by a large 22 points (with optimal allocation of stats), and High Elves beat Dwarves by a giant 27 points. In addition to the Lull spell line being more effective on a Human/High Elf over a Dwarf, they're able to sell/buy items at a vendor at a much better price - from level 1 onwards.
+
+With this gear[https://wiki.project1999.com/Magelo_Blue:MinMaxHumanCleric], this is the allocation of points I would suggest:
+
+* For Dark Elves add 20 Stamina, 10 Strength.
+* For Dwarves add 17 Strengh, 8 Charisma, 5 Agility
+* For Erudites add 15 Stamina, 10 Strength, 5 Agility
+* For Gnomes add 15 Strength, 15 Stamina.
+* For Halflings add 20 Strength, 10 Stamina.
+* For High Elves add 20 Stamina, 10 Strength.
+* For Humans add 20 Strength, 10 Stamina.
+
+The goal here being to hit 75 agility, 90 Stamina, 112 Strength, and then dumping remaining points into Charisma (in that order).
+
+:<u>Disclaimer</u>: There are very valid points for switching out some pieces of gear. When some pieces of gear are swapped out, it's inevitable that your stats (STR/STA) will end up not being 255 with no buffs. However, with this said, there are many end game buffs that can easily give you 50+ in STR/STA (since your WIS is pretty much going to be max no matter what gear you have), so a difference of up to 50 points is (more or less) neglible.
+
+==Religion==
+
+Clerics cannot be agnostic and are forced to choose a religion.  This does not create too many difficulties, except for Dark Elves.  The worship of evil gods can lead to some problems in some zones, but these can easily be avoided.   Choose a god which you think will tie in well with the nature of your character.
+
+The benefits of each religion are summarized above, and you may also want to consider looking at the [http://wiki.project1999.com/index.php/Class_Race_Quest_List#Deity_Specific_Quests deity-specific quests] before picking a deity.
+
+<u>'''Min/Max Religion'''</u>
+
+Beyond a shadow of a doubt, [[Innoruuk]] is the best religion - especially when a Human picks him. [[Tunare]] comes in a close second, and an Erudite Cleric picking [[Quellious]] would also have its uses as well.
+In general, the other religions don't offer anything unique or useful.
+
+=Spells=
+==Level 1==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Courage
+|description=Increases HP and AC
+|school=Abj.
+|location=Vendor
+|mana=12
+}}
+{{SpellRow
+|name=Cure Poison
+|description=Cures target of poison effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Divine Aura
+|description=Self-only 18-second invulnerability
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Flash of Light
+|description=Blinds target
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=12
+}}
+{{SpellRow
+|name=Lull
+|description=Reduces target's aggression
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Minor Healing
+|description=Healing spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Spook the Dead
+|description=Undead fear spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Strike
+|description=Direct damage spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=12
+}}
+{{SpellRow
+|name=True North
+|description=Faces you to the north
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Yaulp
+|description=Self-only combat buff spell
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=5
+}}
+</table>
+
+==Level 5==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Cure Blindness
+|description=Cures target of blindness effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Cure Disease
+|description=Cures target of disease effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Furor
+|description=Direct damage spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Gate
+|description=Returns you to your bind point
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Holy Armor
+|description=Increases AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Light Healing
+|description=Healing spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Reckless Strength
+|description=Temporarily increases strength
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Stun
+|description=Stuns target (4.0 seconds)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Summon Drink
+|description=Summons a water source
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Ward Undead
+|description=DD to undead creatures
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+</table>
+==Level 9==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Center
+|description=Increases HP and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Endure Fire
+|description=Increases fire resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Endure Poison
+|description=Increases poison resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Fear
+|description=Causes target to flee
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Hammer of Wrath
+|description=Summons a [[Summoned: Hammer of Wrath]]
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Invigor
+|description=Restores endurance
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Root
+|description=Stops target's movement
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Sense the Dead
+|description=Detects undead creatures
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Soothe
+|description=Reduces target's aggression
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Summon Food
+|description=Summons a food source
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Word of Pain
+|description=Point blank AE DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=47
+}}
+</table>
+==Level 14==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Bind Affinity
+|description=Sets bind point
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Cancel Magic
+|description=Removes a magical effect
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Endure Cold
+|description=Increases cold resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Endure Disease
+|description=Increases disease resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Expulse Undead
+|description=DD to undead creatures
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Halo of Light
+|description=Summons a [[Summoned: Halo of Light]]
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Healing
+|description=Healing spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Invisibility versus Undead
+|description=Invisibility to undead creatures
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Sense Summoned
+|description=Targets nearest summoned creature
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Smite
+|description=Direct damage spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Symbol of Transal
+|description=Increases HP
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=55
+}}
+</table>
+
+==Level 19==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Calm
+|description=Reduces target's aggression
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Daring
+|description=Increases HP and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Endure Magic
+|description=Increases magic resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Extinguish Fatigue
+|description=Restores endurance
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Holy Might
+|description=Stun (6.0 seconds) and DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Spirit Armor
+|description=Increases AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Ward Summoned
+|description=DD to summoned creatures
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Word of Shadow
+|description=Point blank AE DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=85
+}}
+{{SpellRow
+|name=Yaulp II
+|description=Self-only combat spell
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=15
+}}
+</table>
+
+==Level 24==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Bravery
+|description=Increases HP and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Counteract Poison
+|description=Cures target of poison effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Dismiss Undead
+|description=DD to undead creatures
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Greater Healing
+|description=Healing spell (1.8 HPM)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Hammer of Striking
+|description=Summons a [[Summoned: Hammer of Striking]]
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Inspire Fear
+|description=Causes target to flee
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Symbol of Ryltan
+|description=Increases HP
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=111
+}}
+{{SpellRow
+|name=Wave of Fear
+|description=Point blank AE fear spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=90
+}}
+</table>
+
+==Level 29==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Abundant Drink
+|description=Summons 4 water sources
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Counteract Disease
+|description=Cures target of disease effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Divine Barrier
+|description=Self-only 18-second invulnerability and HP regen
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Enstill
+|description=Stops target's movement
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Expulse Summoned
+|description=DD to summoned creatures
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Guard
+|description=Increases AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Imbue Black Pearl
+|description=Creates an [[Imbued Black Pearl]]
+|era=Kun.
+|school=Alt.
+|location=Erudin.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Black Sapphire
+|description=Creates an [[Imbued Black Sapphire]]
+|era=Kun.
+|school=Alt.
+|location=Q.Cats.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Diamond
+|description=Creates an [[Imbued Diamond]]
+|era=Kun.
+|school=Alt.
+|location=Freeport.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Emerald
+|description=Creates an [[Imbued Emerald]]
+|era=Kun.
+|school=Alt.
+|location=Felwithe.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Opal
+|description=Creates an [[Imbued Opal]]
+|era=Kun.
+|school=Alt.
+|location=Qeynos.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Peridot
+|description=Creates an [[Imbued Peridot]]
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Plains Pebble
+|description=Creates an [[Imbued Plains Pebble]]
+|era=Kun.
+|school=Alt.
+|location=Unknown.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Rose Quartz
+|description=Creates an [[Imbued Star Rose Quartz]]
+|era=Kun.
+|school=Alt.
+|location=Freeport.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Ruby
+|description=Creates an [[Imbued Ruby]]
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Sapphire
+|description=Creates an [[Imbued Sapphire]]
+|era=Kun.
+|school=Alt.
+|location=Neriak.
+|mana=200
+}}
+{{SpellRow
+|name=Imbue Topaz
+|description=Creates an [[Imbued Topaz]]
+|era=Kun.
+|school=Alt.
+|location=Erudin.
+|mana=200
+}}
+{{SpellRow
+|name=Panic the Dead
+|description=Undead fear spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Revive
+|description=Resurrects a player (restores 0% experience)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Word of Spirit
+|description=Point blank AE DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=133
+}}
+{{SpellRow
+|name=Wrath
+|description=Direct damage spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=145
+}}
+</table>
+==Level 34==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Abundant Food
+|description=Summons 4 food sources
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Armor of Protection
+|description=Increases own HP and AC
+|era=Vel.
+|school=Abj.
+|location=Vendor.
+|mana=110
+}}
+{{SpellRow
+|name=Atone
+|description=Wipes target's hate list
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Blinding Luminance
+|description=Blinds target
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Expel Undead
+|description=Undead DD spell (2.1 DPM)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=130
+}}
+{{SpellRow
+|name=Force
+|description=Stun (6.0 seconds) and DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Frenzied Strength
+|description=Temporarily increases strength
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Resist Fire
+|description=Increases fire resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Resist Poison
+|description=Increases poison resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Superior Healing
+|description=Healing spell (2.33 HPM)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=250
+}}
+{{SpellRow
+|name=Symbol of Pinzarn
+|description=Increases HP
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Tremor
+|description=AE DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Valor
+|description=Increases HP and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Word of Health
+|description=AE healing spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=180
+}}
+</table>
+
+==Level 39==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Armor of Faith
+|description=Increases AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Complete Healing
+|description=Completely restores HP
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=400
+}}
+{{SpellRow
+|name=Dismiss Summoned
+|description=DD to summoned creatures (1.8 DPM)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Invoke Fear
+|description=Causes target to flee
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Nullify Magic
+|description=Removes magical effects
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Pacify
+|description=Reduces target's aggression
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Resist Cold
+|description=Increases cold resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Resist Disease
+|description=Increases disease resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Resuscitate
+|description=Resurrects a player (restores 50% experience)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=500
+}}
+{{SpellRow
+|name=Turning of the Unnatural
+|description=Damage over time to undead creatures (400 HP over 1.6 minutes; 2.5 DPM)
+|era=Vel.
+|school=Evo.
+|location=NPC Drop.
+|mana=160
+}}
+{{SpellRow
+|name=Word of Souls
+|description=Point blank AE DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=171
+}}
+</table>
+
+==Level 44==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Banish Undead
+|description=Undead DD spell (585 damage; 2.6 DPM)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=225
+}}
+{{SpellRow
+|name=Celestial Healing
+|description=Heal over time (720 HP over 24 seconds; 3.2 HPM)
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=225
+}}
+{{SpellRow
+|name=Earthquake
+|description=AE DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=375
+}}
+{{SpellRow
+|name=Hammer of Requital
+|description=Summons a [[Summoned: Hammer of Requital]]
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Resist Magic
+|description=Increases magic resistance
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=95
+}}
+{{SpellRow
+|name=Resolution
+|description=Increases HP and AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=110
+}}
+{{SpellRow
+|name=Retribution
+|description=Direct damage spell (516 damage; 2.15 DPM)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=240
+}}
+{{SpellRow
+|name=Symbol of Naltron
+|description=Increases HP
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=315
+}}
+{{SpellRow
+|name=Yaulp III
+|description=Self-only combat buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=25
+}}
+</table>
+
+==Level 49==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Abolish Poison
+|description=Removes poison effects
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Expel Summoned
+|description=DD to summoned creatures (2.96 DPM)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=130
+}}
+{{SpellRow
+|name=Immobilize
+|description=Stops target's movement
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Resurrection
+|description=Resurrects a player (restores 90% experience)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=700
+}}
+{{SpellRow
+|name=Shield of Words
+|description=Increases AC
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Sound of Force
+|description=Stun and DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Word Divine
+|description=Point blank AE DD spell
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=304
+}}
+{{SpellRow
+|name=Word of Healing
+|description=AE healing spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=600
+}}
+</table>
+
+==Level 50==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Improved Invis to Undead
+|description=Self-only invisibility to undead (fixed duration)
+|era=Vel.
+|school=Abj.
+|location=NPC Drop.
+|mana=75
+}}
+</table>
+==Level 51==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Death Pact
+|description=Heals a player upon death
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=100
+}}
+{{SpellRow
+|name=Dread of Night
+|description=Undead fear spell
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Remedy
+|description=Healing spell (2.5 HPM)
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=175
+}}
+{{SpellRow
+|name=Sunskin
+|description=Group invisibility to undead
+|era=Kun.
+|school=Div.
+|location=Quest.
+|mana=120
+}}
+</table>
+
+==Level 52==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Heroic Bond
+|description=Increases group's HP and AC
+|era=Kun.
+|school=Abj.
+|location=Quest.
+|mana=420
+}}
+{{SpellRow
+|name=Heroism
+|description=Increases HP and AC
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=140
+}}
+{{SpellRow
+|name=Upheaval
+|description=AE DD spell
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=625
+}}
+{{SpellRow
+|name=Word of Vigor
+|description=AE healing spell
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=750
+}}
+</table>
+
+==Level 53==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Annul Magic
+|description=Removes magical effects
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Divine Light
+|description=Healing spell (2.6 HPM)
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=350
+}}
+{{SpellRow
+|name=Yaulp IV
+|description=Self-only combat buff
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=1
+}}
+</table>
+
+==Level 54==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Reckoning
+|description=Direct damage spell
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=250
+}}
+{{SpellRow
+|name=Symbol of Marzin
+|description=Increases HP
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=350
+}}
+{{SpellRow
+|name=Unswerving Hammer
+|description=Summons an animated hammer.  Unswerving Hammer of Faith once scribed.
+|era=Kun.
+|school=Con.
+|location=Quest.
+|mana=600
+}}
+</table>
+
+==Level 55==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Exile Undead
+|description=DD to undead creatures (2.7-2.9 DPM)
+|era=Kun.
+|school=Evo.
+|location=Vendor.
+|mana=250
+}}
+{{SpellRow
+|name=Fortitude
+|description=Increases HP and AC
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=175
+}}
+{{SpellRow
+|name=Stun Command
+|description=AE stun spell
+|era=Vel.
+|school=Evo.
+|location=NPC Drop.
+|mana=150
+}}
+{{SpellRow
+|name=Wake of Tranquility
+|description=Reduces target's aggression
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+</table>
+
+==Level 56==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Banish Summoned
+|description=DD to summoned creatures
+|era=Kun.
+|school=Evo.
+|location=Vendor.
+|mana=225
+}}
+{{SpellRow
+|name=Mark of Karn
+|description=Healing damage shield (restores 6 HP per hit)
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=125
+}}
+{{SpellRow
+|name=Paralyzing Earth
+|description=Stops target's movement
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Reviviscence
+|description=Resurrects a player (restores 96% experience)
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=600
+}}
+</table>
+
+==Level 57==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Aegis
+|description=Increases AC (long duration)
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=450
+}}
+{{SpellRow
+|name=Bulwark of Faith
+|description=Increases AC
+|era=Kun.
+|school=Abj.
+|location=Vendor.
+|mana=350
+}}
+{{SpellRow
+|name=Trepidation
+|description=Causes target to flee
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Word of Restoration
+|description=Group heal and cure spell
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=900
+}}
+</table>
+==Level 58==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Antidote
+|description=Removes poison effects
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Enforced Reverence
+|description=Stun and DD spell
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=200
+}}
+{{SpellRow
+|name=Naltron's Mark
+|description=Increases group's HP
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=500
+}}
+</table>
+
+==Level 59==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Celestial Elixir
+|description=Heal over time (1200 HP over 24 seconds)
+|era=Kun.
+|school=Alt.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=The Unspoken Word
+|description=Point blank AE DD spell
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=427
+}}
+</table>
+
+==Level 60==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow
+|name=Aegolism
+|description=Increases HP and AC (long duration)
+|era=Vel.
+|school=Abj.
+|location=NPC Drop.
+|mana=750
+}}
+{{SpellRow
+|name=Banishment of Shadows
+|description=DD to undead creatures
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=750
+}}
+{{SpellRow
+|name=Divine Intervention
+|description=Completely heals a player upon death
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=500
+}}
+{{SpellRow
+|name=Word of Redemption
+|description=Group complete healing spell
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=1100
+}}
+</table>
+
+=Skills=
+
+==Specialization==
+
+{{#lsth:Skill Specialization|Cleric}}
+
+==Casting Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Abjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alteration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Conjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Divination</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Evocation</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Channeling</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">8</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Meditate</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">252</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">30</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Specialisation</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+==Combat Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>1 Hand Blunt</td>
+		<td align="center" width="20%">175</td>
+		<td align="center" width="25%">175</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>2 Hand Blunt</td>
+		<td align="center" width="20%">175</td>
+		<td align="center" width="25%">175</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Bind Wound</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Defense</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Hand to Hand</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Offense</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">15</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Dodge</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+</table>
+==Miscellaneous Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alcohol Tolerance</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Beg</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Fishing</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Sense Heading</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Swimming</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+= Cleric-Specific Quests =
+
+{{#lsth:Class Race Quest List|Cleric}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+Check [[:Category:Cleric Equipment | Cleric Equipment]] for the full list of gear usable by clerics.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Cleric]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Cleric]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Cleric]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Cleric]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Cleric]]}}
+
+=FAQ=
+'''Q:	Upon reaching a pre-designated level caster classes gain the research ability. What do clerics use for research to create their spells?'''
+
+A:	The cleric although a caster is consider a priest class. That being stated, no priest classes (Druid, Cleric, Shaman) are required to research components for higher level spells. All priest spells are availabe at vendors or 50+ as a dropped spell from a monster.
+
+'''Q:	What do you specialize in if you are a Cleric?'''
+
+A:	Depends greatly on the cleric, however the cleric is generally the primary healer in groups and since healing uses the alteration skill, this is the most common specialization.
+
+'''Q:	What are the timelimits for a corpse to stay online before it disappears, and is there a differant time length between whether you are logged on or off?'''
+
+A:	Corpses will last one week, regardless of if the player is online or not. Resurrections cannot be performed after 3 hours online gameplay.
+
+'''Q:	When does a cleric get to meditate?'''
+
+A:	Clerics can begin meditating at level eight. The character needs to put a practice point in at their guild for it to go into effect.
+
+'''Q:	I just memmed my Level 1 Divine Aura spell but it's still greyed out. What gives? Am I doing something wrong?'''
+
+A:	Divine Aura can only be used once every fifteen minutes. Once you have memmed the spell you must wait 15 minutes before you can use it. When the gem appears normally it can be cast.
+
+'''Q:	Do the symbol buffs increase in effect when levels are gained and does level effect duration?'''
+
+A:	Yes, on both questions.
+
+'''Q:	Why does a cleric who is a priest to a deity/god not get any special 'ability' or even looks depending on thier deity/God?'''
+
+A:	Religion serves only a few small purposes in EverQuest. For Clerics it can effect if they are like or dislike by other temple factions. It can also affect which imbue spells they can use.
+
+'''Q:	If the cleric is considered "The Primary Healer" why don't they get the summon bandages spell. They can summon water, food, and hammers, why not bandages.'''
+
+A:	Good Question. Their God's must only believe in pure healing as opposed to rudimentary measures like band-aids.
+
+'''Q:	Why are Clerics robbed of any type of an invisibility spell? We seem to be the only caster type, whether pure or hybrid, that lack this ability.'''
+
+A:	Your priestly abilities only allows you to cloak yourselves from the undead. It's simply the way it is.
+
+'''Q:	Why is it when I cast divine barrier I can still be stunned? Apparently my god is powerful enough to protect my from any amount of damage. Yet isn't quite strong enough to keep me from being knocked loopy. Is there a actual reason for this or just an oversight in the programing?'''
+
+A:	Being stunned is just something which is not protected by the divine barrier. There is no other explanation except that it is just the way things are. (Divine Barrier also does not protect you from DoT's)
+
+'''Q:	What are the imbued line of spells used for? What trade skill are they used for?'''
+
+A:	The imbued line of spells is for enchanting items made through tradeskills. Only one spell can be used for each deity however. Currently [[Blacksmithing]], [[Jewelcrafting]], and [[Pottery#Deity_Idols|Pottery Idols]] utilize the imbued stones created with the spells.
+
+'''Q:	I heard something about clerics getting more efficient heals or +% to the amount they heal compared to other classes, is this true or are all heals equivalent whether cast by a cleric/druid/shaman/etc?'''
+
+A: Clerics gain additional healing spells that are more efficient for the dmg healed to mana spent ratio. Also, a cleric's specialization will help cut down on the amount of mana used for various healing spells.  Finally, Clerics appear to have more powerful versions of heals that they share with other classes - a Greater Healing spell cast by a Druid or Shaman, for example, will max out at 270 HP, but cast by a Cleric this same spell will heal up to 300 HP. 
+
+{{Template: Navbox Classes}}

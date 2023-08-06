@@ -1,0 +1,84 @@
+{{Spellpagesmart|
+
+| spellname = Bind Affinity
+| spellicon = U
+| description = Binds the soul of your target to their current location. Casters with this spell can bind themselves virtually anywhere, while casting this spell on another character is limited to allowable [[Bind Locations|bind locations]].
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 14
+* [[Druid]] - Level 14
+* [[Shaman]] - Level 14
+* [[Necromancer]] - Level 12
+* [[Wizard]] - Level 12
+* [[Magician]] - Level 12
+* [[Enchanter]] - Level 12
+
+| items_with_effect = 
+
+<ul><li> {{:Locket of Escape}}
+</li><li> {{:Ring of the Dead}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Bind Affinity | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 100
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = You feel yourself bind to the area.
+| msg_cast_on_other = Someone  is bound to the area.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-2)]] | Library | (1074,-1004) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-9)]] | Necromancer Guild | (2154,-366) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-6)]] | Necromancer Guild | (2085,-370) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-2)]] | Cleric Guild | (1238,-539) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Erudin]] | [[Mertitt Phentilly]] | Cleric Guild - Quellious (Outside) | (-741,-55) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Telor Beteria]] | Magician Guild (Outside) | (703,806) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Celest Palestream]] | Cleric Guild | (24,-444) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Srell Tumblebrook]] | Building just inside zone | (450,-810) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Amata D'Lavi]] | Cleric Guild (F1) | (103,311) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Xinari Anara]] | Caster Guild (F2) | (138,-755) }}
+{{SpellWhereRowB | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRowB | [[Kaladim|North Kaladim]] | [[Zeffan Holdsman]] | Cleric Guild | (746, 126) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Issia H'Rugla]] | Cleric Guild | (405,-766) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Tkaz H'Rugla]] | Caster Guild (F1) | (160,-968) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+{{SpellWhereRowB | [[Paineel]] | [[Erelin Verisue]] | Cleric Guild | (1226,551) }}
+{{SpellWhereRow  | [[Paineel]] | [[Nedorl Ipabrun]] | Necromancer Guild | (674,805) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Leon Ereek]] | Cleric Guild | (373,-434) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Mellisa Purgor]] | Paladin Guild | (-158,-130) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Pai Berenis]] | Caster Guild | (309,-608) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Frappy Slimfinger]] | Cleric Guild | (-214,-359) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Taben]] | Cleric Guild | (-227,809) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Suffering]] | Cubby near PvP Area | (-382,272) }}
+}}
+
+| TableLocations = Vendors
+| TableEra = Classic
+
+}}

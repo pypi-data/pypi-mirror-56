@@ -1,0 +1,44 @@
+{{Spellpagesmart|
+
+| spellname = Barbcoat
+| spellicon = K
+| description = Surrounds your body in a coat of barbs that increases your armor class, as well as harming those that strike you.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 30
+* [[Druid]] - Level 19
+
+| slots = 
+
+{{SpellSlotRowSmart | 2 | Increase AC by 11 (L19) to 12 (L24) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 3 | Increase Damage Shield by 2 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 50
+| range =  
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 57 minutes @L19 to 3 hours 15 minutes @L65
+| target_type = Self
+| spell_type = Beneficial
+| resist = Magic (0)
+
+| msg_cast_on_you = Barbs spring from your skin.
+| msg_cast_on_other = Someone 's skin sprouts barbs.
+| msg_wears_off = Your skin returns to normal.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Verth Mistwielder]] | Kelethin Ranger Guild | (-414,494) }}
+{{SpellWhereRow  | [[Northern Karana]] | [[Tak Whistler]] | Druid Ring | (-2732,-1466) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Durvinna Barkkis]] | Ranger Guild | (104,-111) }}
+}}
+| TableLocations = Kelethin<br/>N.Karana<br/>Surefall Glade
+| TableEra = Classic
+}}

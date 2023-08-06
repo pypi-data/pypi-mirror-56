@@ -1,0 +1,66 @@
+{{Spellpagesmart|
+
+| spellname = Levitate
+| spellicon = M
+| description = Forms a cloud of dense air around your feet, allowing you to float slightly off the ground for up to 4.0 mins @L10 to 19 mins @L60. Consumes a [[Bat Wing]] when cast. Compare to the Necromancer spell [[Dead Man Floating]].
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 39
+* [[Druid]] - Level 14
+* [[Shaman]] - Level 14
+* [[Wizard]] - Level 24
+* [[Enchanter]] - Level 16
+
+| items_with_effect = 
+
+<ul><li> {{:Elder Spiritist's Boots}}
+</li><li> {{:Bloody Griffon-Hide Wrist Guard}}
+</li><li> {{:Rotted Griffon-Hide Wrist Guard}}
+</li><li> {{:Griffon Wing Spauldors}}
+</li><li> {{:Pegasus Feather Cloak}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 3 | Levitate(1) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 4 | Consumes: [[Bat Wing]] | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} | HideFromMainPage = 1 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 30
+| range = 100
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 5.00
+| duration = 5.2 minutes @L14 to 19 minutes @L60
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+* '''Reagent:''' [[Bat Wing]]
+
+
+| msg_cast_on_you = Your feet leave the ground.
+| msg_cast_on_other = Someone's feet leave the ground.
+| msg_wears_off = You can no longer levitate.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRowB | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Bukem Breewood]] | Ranger Guild | (105,-80) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+}}
+| TableLocations = Cabilis/Kelethin<br/>Grobb/Halas<br/>Oggok/Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

@@ -1,0 +1,43 @@
+{{Spellpage|
+
+| spellname = Minor Summoning: Fire
+| spellicon = L
+| description = Summons a fire elemental to aid you in battle.
+
+| classes = 
+
+* [[Magician]] - Level 16
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Pet: SumFireR5 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 160
+| range =  
+| casting_time = 9.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other =       
+* '''Reagent:''' Malachite
+* '''Focus:''' [[Torch of Alna]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ocean of Tears]] | [[Elesseryl Terussar]] | AC Island | (1309,-7875) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

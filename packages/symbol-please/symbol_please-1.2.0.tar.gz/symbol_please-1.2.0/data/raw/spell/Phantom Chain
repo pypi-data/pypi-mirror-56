@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Phantom Chain
+| spellicon = K
+| description = Covers you in phantom chain armor, increasing your hit point regeneration and armor class. Consumes two cat's eye agates when cast.
+
+| classes = 
+
+* [[Magician]] - Level 29
+
+| slots = 
+
+{{SpellSlotRow | 2 | Increase Hitpoints by 2 per tick }}
+{{SpellSlotRow | 4 | Increase AC by 12 (L29) to 13 (L34) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 100
+| range =  
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 55 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Cat's Eye Agate x2
+
+| msg_cast_on_you = You are covered in illusionary chainmail armor.
+| msg_cast_on_other = Someone  dons chainmail armor.
+| msg_wears_off = Your illusionary armor fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-16)]] | Library | (1101,-1028) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Tuballi Stellari]] | Magician Guild (F2) | (729,918) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Pisna H'Rugla]] | Caster Guild (Basement) | (133,-911) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Gende Reldari]] | Caster Guild | (307,-579) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Osisa Goldenspear]] | Magician Guild | (666,-526) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Cronte Deloru]] | Caster Guild (F3) | (113,-722) }}
+}}
+
+}}

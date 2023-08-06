@@ -1,0 +1,44 @@
+{{Spellpage|
+
+| spellname = Talisman of Altuna
+| spellicon = K
+| description = Imbues your target with the talisman of Altuna, providing increased hit points for 1 hour(s) 12.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Max Hitpoints by 238 (L44) to 250 (L50) }}
+{{SpellSlotRow | 2 | Increase HP when cast by 238 (L44) to 250 (L50) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 250
+| range = 100
+| casting_time = 8.00
+| fizzle_time = 2.50
+| recast_time = 7.50
+| duration = 1 hour 12 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel tough.
+| msg_cast_on_other = Someone  looks tougher.
+| msg_wears_off = Your hit points fade.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Gaxl the scribe]] | Temple of Terror (West Tower - Bottom +1) | (1025,-109) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Migron]] | Temple of Terror (First Floor) | (1031,-160) }}
+{{SpellWhereRowB | [[Grobb]] | [[Korff - Troll]] | Shaman Guild | (304,-438) }}
+{{SpellWhereRow  | [[Halas]] | [[Bolace]] | Shaman Guild | (326,478) }}
+{{SpellWhereRowB | [[Oggok]] | [[Korff - Ogre]] | Shaman Guild | (667,1066) }}
+}}
+
+}}
+
+[[Category:Talisman line]]

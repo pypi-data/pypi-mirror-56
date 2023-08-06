@@ -1,0 +1,331 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C paladin.gif|right]]
+
+Paladins are holy warriors who use blessed spells and strength of arms to fight the evil and undead of Norrath. Paladins are primarily a melee class, able to wear plate armor and wield many kinds of weapons.
+
+Paladins are able fighters and battlefield healers whose combat spells focus on stunning enemies and smiting undead. They also have several spells that increase the health and armor of their allies. Every so often, paladins can lay hands on themselves or their friends to instantly grant a powerful heal.
+
+Paladins are the greatest force against undead. At higher levels they gain special abilities to smite these foes. Paladins also gain a limited ability to resurrect their fallen friends with lessened penalties for death.
+
+Paladins can sometimes work alone, healing themselves with magic, but in a group a paladin really shines, going head to head with his enemies and occasionally falling back to heal. Players who like to engage in melee fights but want the options spells provide will find paladins a great class to play.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Paladin || Cavalier || Knight || Crusader
+|}
+
+= Creation Guide =
+
+== Choosing Your Race ==
+
+The first thing you have to pick then is your race.   Which race you pick will determine the foundation of you character for the rest of your life in Norrath so it is kind of important you pick one you like.  With Paladins, the different races offer some large choices statistically which must be taken into account.
+
+[[Dwarf|Dwarves]], [[Half Elf|Half Elves]] and [[Human]]s offer the best melee stats.  Dwarves particularly have the most hitpoints over other races, as well as superior strength.  [[High Elf|High Elves]] offer the most wisdom, and can still hold reasonable melee stats.  This gives them more mana for casting spells over the other races.  The [[Erudite]] Paladin unfortunately has very mediocre stats, but there are a number of good Erudite only Paladin items in the game to compensate for this, (ex. [[Shield of the Stalwart Seas]]) but for most of your life you will be less efficient than other Paladins if you choose this race.  
+
+Humans and Erudites have no night vision whatsoever.  This can be a problem if you are unfamiliar with your territory, but you can easily acquire light sources to help you see better at night, or ask around for a vision enhancing spell. Besides some races having infravision there are no other special abilities any one race has over the other. 
+
+All of the Paladin races level at the same rate, and there are no experience penalties imposed for any specific race/class combination.  Faction wise, all of the Paladin races are welcome in any other neutral or good-aligned city, however Erudite Paladins have an advantage since the faction associated with their guild is somewhat difficult for non Erudites to increase.  Erudites have high faction with this guild automatically.
+
+The true choice you have in selecting your race is what race you prefer, the look of your class (some people just hate being short dwarves), and where you start.  Besides the variance in starting stats, all of the races are otherwise fairly equal.
+
+== Starting Statistics ==
+
+[[File:paladin-stats.png]]
+
+== Spending Your Bonus Points ==
+
+Paladins are a tanking support class with great defensive skills and a powerful spells set to help you keep your group alive. As a paladin you are expected to have a high amount of hit points and AC to perform your main role as a tank and a decent mana pool to cast your aggro spells (flash of light and stun). With that in mind the most agreed upon is your agility should be 75 (erudites and dwarves must increase this), and you should dump as much as you can after that into stamina. After those two, weigh your options:
+
+* '''Wisdom''':  Will increase your manapool
+* '''Strength''':  Will increase your damage output (albeit slightly)
+* '''Dexterity''': Will increase the likelihood of procs (Ghoulbane, Fiery Avenger, and Fiery Defender come to mind)
+* '''Charisma''': Will increase the success rate of the [[Lull]] line of spells
+
+Realistic/Modern statistic allocation:
+
+* [[Dwarf]]: Add 15 to Stamina and 5 to Agility.
+* [[Erudite]]: Add 15 to Stamina and 5 to Agility.
+* [[Half Elf]]: Add 20 to Stamina.
+* [[High Elf]]: Add 20 to Stamina.
+* [[Human]]: Add 20 to Stamina.
+
+== Religion ==
+
+Paladins must choose a religion, as their magic powers flow from their devotion to their chosen god.    There is only one significant item for paladins which your deity will affect, and that is the [[Natures Defender]] (Tunare only).  Your religion will also impact on where your character can start.  Selections include [[Karana]], [[Rodcet Nife]], [[Erollisi Marr]], [[Brell Serilis]], [[Mithaniel Marr]], [[Prexus]], [[Tunare]], and [[Quellious]].  Depending on your race you will be given a different number of these deities to choose from.
+
+=Spells=
+
+
+==Level 9==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Courage|description=HP and AC buff|era=&nbsp;|school=Abj.|location=Vendor.|mana=12}}
+{{SpellRow|name=Cure Poison|description=Cures target of poison effects|era=&nbsp;|school=Alt.|location=Vendor.|mana=20}}
+{{SpellRow|name=Flash of Light|description=Blinds target|era=&nbsp;|school=Div.|location=Vendor.|mana=12}}
+{{SpellRow|name=Minor Healing|description=Healing spell|era=&nbsp;|school=Alt.|location=Vendor.|mana=10}}
+{{SpellRow|name=Spook the Dead|description=Undead only fear|era=&nbsp;|school=Alt.|location=Vendor.|mana=10}}
+{{SpellRow|name=True North|description=Face to the north.|era=&nbsp;|school=Div.|location=Vendor.|mana=5}}
+{{SpellRow|name=Yaulp|description=Self only combat buff spell|era=&nbsp;|school=Abj.|location=Vendor.|mana=5}}
+</table>
+==Level 15==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Cure Disease|description=Cures the target of disease effects|era=&nbsp;|school=Alt.|location=Vendor.|mana=20}}
+{{SpellRow|name=Hammer of Wrath|description=Summons a magical hammer|era=&nbsp;|school=Con.|location=Vendor.|mana=50}}
+{{SpellRow|name=Holy Armor|description=AC buff|era=&nbsp;|school=Abj.|location=Vendor.|mana=20}}
+{{SpellRow|name=Light Healing|description=Healing spell|era=&nbsp;|school=Alt.|location=Vendor.|mana=25}}
+{{SpellRow|name=Lull|description=Reduce the target's aggression|era=&nbsp;|school=Alt.|location=Vendor.|mana=10}}
+{{SpellRow|name=Sense the Dead|description=Detects undead creatures|era=&nbsp;|school=Div.|location=Vendor.|mana=5}}
+{{SpellRow|name=Ward Undead|description=Undead DD line of spells|era=&nbsp;|school=Evo.|location=Vendor.|mana=30}}
+</table>
+==Level 22==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Center|description=HP and AC buff|era=&nbsp;|school=Abj.|location=Vendor.|mana=40}}
+{{SpellRow|name=Endure Poison|description=Adds to poison resist|era=&nbsp;|school=Abj.|location=Vendor.|mana=20}}
+{{SpellRow|name=Halo of Light|description=Summons a Halo of Light|era=&nbsp;|school=Con.|location=Vendor.|mana=40}}
+{{SpellRow|name=Invigor|description=Restores stamina|era=&nbsp;|school=Alt.|location=Vendor.|mana=20}}
+{{SpellRow|name=Invisibility versus Undead|description=Makes target invisible vs undead creatures|era=&nbsp;|school=Div.|location=Vendor.|mana=40}}
+{{SpellRow|name=Reckless Strength|description=Temporary strength buff|era=&nbsp;|school=Alt.|location=Vendor.|mana=30}}
+{{SpellRow|name=Root|description=Stops target's movement|era=&nbsp;|school=Alt.|location=Vendor.|mana=30}}
+</table>
+==Level 30==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Endure Magic|description=Increases magic resistance|era=&nbsp;|school=Abj.|location=Vendor.|mana=40}}
+{{SpellRow|name=Expulse Undead|description=Undead DD spell|era=&nbsp;|school=Evo.|location=Vendor.|mana=60}}
+{{SpellRow|name=Hammer of Striking|description=Summons a magical hammer|era=&nbsp;|school=Con.|location=Vendor.|mana=100}}
+{{SpellRow|name=Healing|description=Single Target Healing Spell (Max: 100)|era=&nbsp;|school=Alt.|location=Vendor.|mana=60}}
+{{SpellRow|name=Soothe|description=Reduces the target's aggression|era=&nbsp;|school=Alt.|location=Vendor.|mana=30}}
+{{SpellRow|name=Spirit Armor|description=Single Target AC Buff (Max: 14)|era=&nbsp;|school=Abj.|location=Vendor.|mana=75}}
+{{SpellRow|name=Stun|description=Stuns the target|era=&nbsp;|school=Evo.|location=Vendor.|mana=35}}
+{{SpellRow|name=Symbol of Transal|description=HP buff|era=&nbsp;|school=Abj.|location=Vendor.|mana=55}}
+</table>
+
+==Level 39==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Cancel Magic|description=Removes a magical effect|era=&nbsp;|school=Abj.|location=Vendor.|mana=30}}
+{{SpellRow|name=Counteract Poison|description=Cures target of poison effects|era=&nbsp;|school=Alt.|location=Vendor.|mana=50}}
+{{SpellRow|name=Daring|description=HP and AC buff|era=&nbsp;|school=Abj.|location=Vendor.|mana=60}}
+{{SpellRow|name=Divine Purpose|description=Self Only Health Regneration Spell|era=Vel.|school=Alt.|location=Vendor.|mana=1}}
+{{SpellRow|name=Endure Disease|description=Adds to disease resistance|era=&nbsp;|school=Abj.|location=Vendor.|mana=20}}
+{{SpellRow|name=Greater Healing|description=Healing spell|era=&nbsp;|school=Alt.|location=Vendor.|mana=150}}
+{{SpellRow|name=Symbol of Ryltan|description=HP Buff|era=&nbsp;|school=Alt.|location=Vendor.|mana=111}}
+{{SpellRow|name=Yaulp II|description=Self only combat buff spell|era=&nbsp;|school=Abj.|location=Vendor.|mana=15}}
+<tr><td width='22%'>[[Guard]]</td><td width='52%'>Single Target AC Buff</td><td width='5%'>&nbsp;</td><td width='5%'>Abj.</td><td width='8%'>Vendor.</td><td width='5%'>80</td></tr>
+</table>
+
+==Level 49==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Dismiss Undead|description=Undead Only Direct Damage|era=&nbsp;|school=Evo.|location=Vendor.|mana=90}}
+{{SpellRow|name=Calm|description=Calms the mind of your target, lowering its aggressiveness|era=&nbsp;|school=Alt.|location=Vendor.|mana=50}}
+{{SpellRow|name=Divine Might|description=Self Only Weapon Proc Enchantment|era=Kun.|school=Alt.|location=Quest.|mana=100}}
+{{SpellRow|name=Holy Might|description=Stuns target with a small amount of damage|era=&nbsp;|school=Evo.|location=Vendor.|mana=60}}
+{{SpellRow|name=Revive|description=Summons a player to their corpse with 0% experience|era=&nbsp;|school=Alt.|location=Vendor.|mana=300}}
+{{SpellRow|name=Symbol of Pinzarn|description=HP buff|era=&nbsp;|school=Abj.|location=Vendor.|mana=200}}
+{{SpellRow|name=Valor|description=HP and AC buff|era=&nbsp;|school=Abj.|location=Vendor.|mana=90}}
+{{SpellRow|name=Armor of Faith|description=AC Buff|era=Kun.|school=Abj.|location=Vendor.|mana=150}}
+
+</table>
+
+==Level 50==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+<tr ><td width='22%'>[[Flame of Light]]</td><td width='52%'>Single Target Fire Based Direct Damage (Max: 125hp)</td><td width='5%'>Vel.</td><td width='5%'>Evo.</td><td width='8%'>NPC Drop.</td><td width='5%'>85</td></tr>
+</table>
+
+==Level 51==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Pacify|description=Reduces the target's aggression|era=Kun.|school=Alt.|location=Vendor.|mana=100}}
+<tr bgcolor="#efefef"><td width='22%'>[[Resist Disease]]</td><td width='52%'>Increases disease resistance</td><td width='5%'>Kun.</td><td width='5%'>Abj.</td><td width='8%'>Vendor.</td><td width='5%'>50</td></tr>
+</table>
+
+==Level 52==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Force|description=Stuns target with a small amount of damage|era=Kun.|school=Evo.|location=Vendor.|mana=90}}
+{{SpellRow|name=Frenzied Strength|description=Temporary strength buff|era=Kun.|school=Alt.|location=Vendor.|mana=90}}
+</table>
+==Level 53==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+
+<tr><td width='22%'>[[Divine Glory]]</td><td width='52%'>Single Target 150 HP Buff</td><td width='5%'>Vel.</td><td width='5%'>Abj.</td><td width='8%'>E. Com.</td><td width='5%'>60</td></tr>
+</table>
+
+==Level 54==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Enstill|description=Stops target's movement|era=Kun.|school=Alt.|location=Vendor.|mana=60}}
+{{SpellRow|name=Expel Undead|description=Undead DD spell|era=Kun.|school=Evo.|location=Vendor.|mana=130}}
+</table>
+==Level 55==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Divine Favor|description=Emergency Damage Absorbing Shield|era=Kun.|school=Abj.|location=Firiona Vie.|mana=150}}
+{{SpellRow|name=Divine Aura|description=Self-only 18-second invulnerability|era=Kun.|school=Abj.|location=Vendor.|mana=10}}
+{{SpellRow|name=Resist Magic|description=Increases magic resistance|era=Vel.|school=Abj.|location=Vendor.|mana=95}}
+{{SpellRow|name=Wave of Healing|description=Group Heal Spell (270 to 285 hp)|era=Vel.|school=Alt.|location=NPC Drop.|mana=450}}
+</table>
+
+==Level 56==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Counteract Disease|description=Cures target of disease effects|era=Kun.|school=Alt.|location=Vendor.|mana=50}}
+{{SpellRow|name=Yaulp III|description=Self only Strength and AC Buff|era=Kun.|school=Abj.|location=Vendor.|mana=25}}
+</table>
+==Level 57==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Superior Healing|description=Healing spell|era=Kun.|school=Alt.|location=Vendor.|mana=250}}
+</table>
+==Level 58==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Nullify Magic|description=Removes magical effects|era=Kun.|school=Abj.|location=Vendor.|mana=50}}
+{{SpellRow|name=Symbol of Naltron|description=Increase Hitpoints|era=Kun.|school=Abj.|location=Vendor.|mana=315}}
+</table>
+==Level 59==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Celestial Cleansing|description=Single Target Heal Over Time|era=Vel.|school=Alt.|location=E. Com.|mana=225}}
+{{SpellRow|name=Resurrection|description=Summons a player to their corpse with 90% experience restored|era=Kun.|school=Alt.|location=Vendor.|mana=700}}
+</table>
+
+==Level 60==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+{{SpellHeaderRow}}
+{{SpellRow|name=Divine Strength|description=Single Target Hitpoint Buff (Max: 200)|era=Vel.|school=Alt.|location=NPC Drop.|mana=100}}
+{{SpellRow|name=Resolution|description=HP and AC buff|era=Kun.|school=Abj.|location=Vendor.|mana=110}}
+{{SpellRow|name=Shield of Words|description=AC buff|era=Kun.|school=Abj.|location=Vendor.|mana=300}}
+{{SpellRow|name=Yaulp IV|description=Self Only Combat Buff|era=Kun.|school=Abj.|location=NPC Drop.|mana=1}}
+</table>
+
+=Skills=
+
+==Combat Skills==
+
+{| class="eoTable2"
+! Level || Trained || Skill || Cap Until 50 || Cap Above 50
+|-
+|1 || No || 1 Hand Blunt || 200 || 225
+|-
+|1 || No || 1 Hand Slashing || 200 || 225
+|-
+|1 || No || 2 Hand Blunt || 200 || 225
+|-
+|1 || No || 2 Hand Slashing || 200 || 225
+|-
+|1 || No || Archery || 75 || 75
+|-
+|1 || No || Bind Wound || 100 || 210
+|-
+|1 || No || Defense || 200 || 252
+|-
+|1 || No || Hand to Hand || 100 || 100
+|-
+|1 || No || Lay Hands || 200 || 200
+|-
+|1 || No || Offense || 200 || 225
+|-
+|1 || No || Piercing || 200 || 225
+|-
+|1 || Yes || Taunt || 180 || 180
+|-
+|6 || Yes || Bash || 175 || 200
+|-
+|10 || Yes || Dodge || 125 || 155
+|-
+|17 || Yes || Parry || 175 || 200?
+|-
+|20 || Yes || Double Attack || 200 || 235
+|-
+|30 || Yes || Riposte || 175 || 200
+|-
+|40 || Yes || Disarm || 70 || 70
+|}
+
+==Casting Skills==
+
+{| class="eoTable2"
+! Level || Trained || Skill || Cap Until 50 || Cap Above 50
+|-
+|9 || No || Abjuration || 235 || 235
+|-
+|9 || No || Alteration || 235 || 235
+|-
+|9 || No || Channelling || 200 || 220
+|-
+|9 || No || Conjuration || 235 || 235
+|-
+|9 || No || Divination || 235 || 235
+|-
+|9 || No || Evocation || 235 || 235
+|-
+|12 || Yes || Meditate || 185 || 235
+|}
+
+==Miscellaneous Skills==
+
+{| class="eoTable2"
+! Level || Trained || Skill || Cap Until 50 || Cap Above 50
+|-
+|1 || No || Alcohol Tolerance || 200 || 255
+|-
+|1 || No || Beg || 200 || 200
+|-
+|1 || No || Fishing || 200 || 200
+|-
+|1 || No || Sense Heading || 200 || 200
+|-
+|1 || Yes || Swimming || 200 || 200
+|}
+
+= Disciplines =
+Paladin disciplines were introduced with the Velious expansion; they offer short term advantages with a long re-use: These are most useful in dragon/boss encounters.
+
+{{#lsth:Disciplines|[[Paladin]]}}
+
+= Paladin-Specific Quests =
+
+{{#lsth:Class Race Quest List|Paladin}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.  For a full list, view the [[:Category:Paladin_Equipment|Paladin Equipment]] category.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Paladin]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Paladin]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Paladin]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Paladin]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Paladin]]}}
+
+= FAQ =
+
+{{Template: Navbox Classes}}

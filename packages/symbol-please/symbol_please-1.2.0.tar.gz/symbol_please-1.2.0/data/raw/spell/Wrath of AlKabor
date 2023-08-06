@@ -1,0 +1,36 @@
+{{Spellpage|
+
+| spellname = Wrath of Al'Kabor
+| spellicon = S
+| description = Creates a freezing ice storm that causes 448 damage to several creatures in the vicinity of your target. <br> Single target mana efficiency of 0.9. <br> For some unknown reason, this spell in its scroll form reads Wrath of Ap'Sagor. It scribes as Wrath of Al'Kabor.
+
+| classes = 
+
+* [[Wizard]] - Level 49
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 448 }}
+{{SpellSlotRow | 2 | Stun for 0.0 seconds }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 500
+| range = 200
+| casting_time = 6.30
+| fizzle_time = 2.50
+| recast_time = 9.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Cold (-10)
+
+| msg_cast_on_you = You are blasted by freezing winds.
+| msg_cast_on_other = Someone  is blasted by freezing winds.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

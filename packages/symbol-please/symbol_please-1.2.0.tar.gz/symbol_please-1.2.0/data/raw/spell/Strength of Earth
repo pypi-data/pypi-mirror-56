@@ -1,0 +1,50 @@
+{{Spellpagesmart|
+
+| spellname = Strength of Earth
+| spellicon = R
+| description = Fills your target with the power of the earth, increasing their strength for 21.0 mins @L7 to 27.0 mins @L9.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 30
+* [[Druid]] - Level 9
+
+| items_with_effect = 
+
+<ul><li> {{:Mrylokar's Vambraces}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase STR by 9 (L9) to 15 (L20) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 40
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.50
+| duration = 27 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel stronger.
+| msg_cast_on_other = Someone  looks stronger.
+| msg_wears_off = Your strength fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Verth Mistwielder]] | Kelethin Ranger Guild | (-414,494) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Durvinna Barkkis]] | Ranger Guild | (104,-111) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

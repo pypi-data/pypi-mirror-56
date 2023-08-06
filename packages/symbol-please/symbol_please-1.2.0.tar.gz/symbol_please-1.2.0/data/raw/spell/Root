@@ -1,0 +1,82 @@
+{{Spellpage|
+
+| spellname = Root
+| spellicon = Q
+| description = Causes the earth to adhere to your target's feet, preventing them from moving for up to 48 secs (2 ticks @L3 to 8 ticks @L14).
+
+| classes = 
+
+* [[Cleric]] - Level 9
+* [[Paladin]] - Level 22
+* [[Shaman]] - Level 14
+* [[Necromancer]] - Level 34
+* [[Wizard]] - Level 4
+* [[Enchanter]] - Level 8
+
+| items_with_effect = 
+
+<ul><li> {{:Blade of the Earthcaller}}
+</li><li> {{:Sap Sheen Staff}}
+</li><li> {{:Treant Staff}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 2 | Root }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 30
+| range = 200
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 2 ticks @L4 to 8 ticks @L14
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| other = 
+
+| msg_cast_on_you = Your feet adhere to the ground.
+| msg_cast_on_other = Someone 's feet adhere to the ground.
+| msg_wears_off = Your feet come free.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-2)]] | Library | (1074,-1004) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-9)]] | Necromancer Guild | (2154,-366) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-6)]] | Necromancer Guild | (2085,-370) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-2)]] | Cleric Guild | (1238,-539) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Erudin]] | [[Mertitt Phentilly]] | Cleric Guild - Quellious (Outside) | (-741,-55) }}
+{{SpellWhereRowB | [[Erudin]] | [[Issibla Belstince]] | Cleric Guild - Prexus (F2) | (-1031,-375) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Telor Beteria]] | Magician Guild (Outside) | (703,806) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Celest Palestream]] | Cleric Guild | (24,-444) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Seria Woodwind]] | Paladin Guild | (-9,-197) }}
+{{SpellWhereRowB | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRow  | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Issia H'Rugla]] | Cleric Guild | (405,-766) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Tkaz H'Rugla]] | Caster Guild (F1) | (160,-968) }}
+{{SpellWhereRowB |  |  |  |  }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Xinari Anara]] | Caster Guild (F1) | (208,-130) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Amata D'Lavi]] | Cleric Guild (F1) | (103,311) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Donala Baris]] | Paladin Guild (F3) | (208,-130) }}
+{{SpellWhereRowB | [[Kaladim|North Kaladim]] | [[Zeffan Holdsman]] | Cleric Guild | (746, 126) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Mellisa Purgor]] | Paladin Guild | (-158,-130) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+{{SpellWhereRowB | [[Paineel]] | [[Nedorl Ipabrun]] | Necromancer Guild | (674,805) }}
+{{SpellWhereRow  | [[Paineel]] | [[Lillean Han Oni]] | Cleric Guild | (1212,551) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Leon Ereek]] | Cleric Guild | (373,-434) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Frappy Slimfinger]] | Cleric Guild | (-214,-359) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Pai Berenis]] | Caster Guild | (309,-608) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Oriyame Nelafre]] | Cleric Guild | (-259,-539) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Srell Tumblebrook]] | Building just inside zone | (450,-810) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Keegan]] | Paladin Guild | (-210,543) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Brita]] | Cleric Guild | (-184,812) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Suffering]] | Cubby near PvP Area | (-382,272) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Xinari Anara]] | Caster Guild (F2) | (138,-755) }}
+}}
+
+}}

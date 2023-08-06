@@ -1,0 +1,38 @@
+{{Spellpage|
+
+| spellname = Vigilant Spirit
+| spellicon = L
+| description = Summons a companion from the spirit world in the form of a great wolf.
+
+| classes = 
+
+* [[Shaman]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Pet: SpiritWolf227 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 400
+| range =  
+| casting_time = 11.00
+| fizzle_time = 2.25
+| recast_time = 22.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You summon a vigilant spirit.
+| msg_cast_on_other = Someone  summons a companion spirit.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Spirit Companion]] | Temple of Terror (East Tower - Basement) | (1147,-293) }}
+{{SpellWhereRow | [[Western Karana]] | [[Analya]] | Western Karana | (-4030, -2494) }}
+}}
+
+}}

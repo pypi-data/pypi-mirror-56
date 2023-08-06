@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Shock of Swords
+| spellicon = L
+| description = Conjures a shock of swords that assaults your target, causing between 584 and 580 damage.
+
+| classes = 
+
+* [[Magician]] - Level 44
+
+| items_with_effect = 
+
+<ul><li> {{:Boots of Bladecalling}}
+</li><li> {{:Wand of Swords}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 580 (L44) to 600 (L48) }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 250
+| range = 200
+| casting_time = 6.10
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You have been lacerated.
+| msg_cast_on_other = Someone  is lacerated by steel.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-13)]] | Library | (1092,-1029) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Wistcona]] | Magician Guild (F4) | (706,948) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Ranza S'Ion]] | Caster Guild (Basement) | (123,-923) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Sinon Loarpe]] | Caster Guild | (297,-582) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Reff Truewood]] | Magician Guild | (693,-490) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Jonbe Kressi]] | Caster Guild (F3) | (136,-752) }}
+}}
+
+}}

@@ -1,0 +1,38 @@
+{{Spellpage|
+
+| spellname = Mala
+| spellicon = I
+| description = Strips magical protection from your target, lowering their magic, fire, cold and poison resistances.
+
+| classes = 
+
+* [[Magician]] - Level 60
+
+| slots = 
+
+{{SpellSlotRow | 2 | Decrease Cold Resist by 35 }}
+{{SpellSlotRow | 3 | Decrease Magic Resist by 35 }}
+{{SpellSlotRow | 4 | Decrease Poison Resist by 35 }}
+{{SpellSlotRow | 5 | Decrease Fire Resist by 35 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 350
+| range = 200
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 10.00
+| duration = 13 minutes @L60
+| target_type = Single
+| spell_type = Detrimental
+| resist = Unresistable
+
+| msg_cast_on_you = You feel very vulnerable.
+| msg_cast_on_other = Someone  looks very uncomfortable.
+| msg_wears_off = Your vulnerability fades.
+
+| where_to_obtain = 
+
+* Kunark Level 50+ Mob Drop
+
+}}

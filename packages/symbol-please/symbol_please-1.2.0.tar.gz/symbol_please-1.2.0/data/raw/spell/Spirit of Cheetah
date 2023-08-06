@@ -1,0 +1,53 @@
+{{Spellpagesmart|
+
+| spellname = Spirit of Cheetah
+| spellicon = A
+| description = Imbues you with the spirit of the cheetah, greatly increasing your movement speed for 48 secs (8 ticks).
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Druid]] - Level 24
+* [[Shaman]] - Level 24
+
+| items_with_effect = 
+
+<ul><li>  {{:Pauldrons of the Blue Sky}}
+</li><li> {{:Aerated Pauldrons}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 2 | Increase Movement Speed by 99% (L24) to 115% (L40) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 20
+| range =  
+| casting_time = 0.50
+| fizzle_time = 2.25
+| recast_time = 600.00
+| duration = 8 ticks
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel the spirit of cheetah enter you.
+| msg_cast_on_other = Someone  is surrounded by a brief feline aura.
+| msg_wears_off = The spirit of cheetah fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Horth Evergreen]] | Kelethin Druid Guild | (-640,219) }}
+{{SpellWhereRowB | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRow  | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRowB | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Torth Largefoot]] | Druid Guild | (-32,-384) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Arrivae Valleren]] | Druid Guild | (-156,-300) }}
+}}
+| TableLocations = Cabilis/Kelethin<br/>Grobb/Oggok<br/>Rivervale/Surefall
+| TableEra = {{{TableEra|Classic}}}
+}}

@@ -1,0 +1,43 @@
+{{Spellpage|
+
+| spellname = Burnout
+| spellicon = O
+| description = Infuses your elemental companion with energy, increasing their attack speed, armor class, and strength.
+
+| classes = 
+
+* [[Magician]] - Level 12
+
+| slots = 
+
+{{SpellSlotRow | 3 | Increase STR by 15 }}
+{{SpellSlotRow | 4 | Increase Attack Speed by 13% (L12) to 15% (L18) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 35
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.50
+| recast_time = 10.00
+| duration = 15 minutes
+| target_type = Pet
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  goes berserk.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+
+}}

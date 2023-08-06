@@ -1,0 +1,74 @@
+{{Spellpagesmart|
+
+| spellname = See Invisible
+| spellicon = B
+| description = Places a magical enchantment upon your target's eyes, allowing them to see otherwise invisible creatures for 27.0 mins.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Druid]] - Level 14
+* [[Wizard]] - Level 4
+* [[Magician]] - Level 16
+* [[Enchanter]] - Level 8
+* [[Ranger]] - Level 39
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | See Invisible(1) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 25
+| range = 100
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 27 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = Your eyes tingle.
+| msg_cast_on_other =  
+| msg_wears_off = Your eyes stop tingling.
+
+| where_to_obtain = 
+
+| items_with_effect = 
+
+<ul><li>{{:Bile Etched Obsidian Choker}}
+</li><li>{{:Bracer of the Hidden}}
+</li><li>{{:Choker of Majdd}}
+</li><li>{{:Fingerbone Hoop}}
+</li><li>{{:Halo of the Enlightened}} (fear-revamp)
+</li><li>{{:Living Thunder Earring}}
+</li><li>{{:Ravenscale Mask}}
+</li><li>{{:Sabertooth Amulet}}
+</li><li>{{:Summoned: Staff of Symbols}}
+</li><li>{{:Tobrin's Mystical Eyepatch}}
+</li><li>{{:Ton Po's Eye Patch}}
+</li><li>{{:Qeynos Badge of Honor}}
+</li></ul>
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-2)]] | Library | (1074,-1004) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-6)]] | Necromancer Guild | (2085,-370) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Telor Beteria]] | Magician Guild (Outside) | (703,806) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Tkaz H'Rugla]] | Caster Guild (F1) | (160,-968) }}
+{{SpellWhereRow  | [[Paineel]] | [[Nedorl Ipabrun]] | Necromancer Guild | (674,805) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Pai Berenis]] | Caster Guild | (309,-608) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Srell Tumblebrook]] | Building just inside zone | (450,-810) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Xinari Anara]] | Caster Guild (F2) | (138,-755) }}
+}}
+
+| TableLocations = Vendors
+| TableEra = Classic
+}}

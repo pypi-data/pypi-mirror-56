@@ -1,0 +1,41 @@
+{{Spellpage|
+
+| spellname = Supernova
+| spellicon = O
+| description = Creates a ring of chaotic flames, causing 854 damage to all nearby creatures.
+<BR>Single target mana efficiency of .98.  This spell is useful for farming large groups of lower level mobs.
+| classes = 
+
+* [[Wizard]] - Level 49
+
+| items_with_effect = 
+
+<ul><li> {{:Circlet of Fire}}
+</li><li> {{:Iron Scroll of War}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 854 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 875
+| range =  
+| casting_time = 6.30
+| fizzle_time = 6.00
+| recast_time = 12.00
+| duration = Instant
+| target_type = PB AE
+| spell_type = Detrimental
+| resist = Fire (-10)
+
+| msg_cast_on_you = You are immolated by flame.
+| msg_cast_on_other = Someone  is immolated by flame.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

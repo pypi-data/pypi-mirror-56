@@ -1,0 +1,79 @@
+{{Spellpagesmart|
+
+| spellname = Summon Food
+| spellicon = L
+| description = Focuses mana into an edible loaf of black bread.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 9
+* [[Druid]] - Level 14
+* [[Shaman]] - Level 9
+* [[Magician]] - Level 1
+
+| items_with_effect = 
+
+<ul><li> {{:Harvest Crystal}}
+</li><li> {{:Shovel of the Harvest}}
+</li><li> {{:Wee Harvester}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Summon Item: [[Summoned: Black Bread]] | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 10
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-17)]] | Library | (1105,-1022) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-9)]] | Necromancer Guild | (2154,-366) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-2)]] | Cleric Guild | (1238,-539) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRowB | [[Erudin]] | [[Mertitt Phentilly]] | Cleric Guild - Quellious (Outside) | (-741,-55) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Killi Frillep]] | Magician Guild (F2) | (695,919) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Celest Palestream]] | Cleric Guild | (24,-444) }}
+{{SpellWhereRowB | [[Greater Faydark]] | [[Zelli Starsfire]] | Kelethin Druid Guild | (-622,243) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Issia H'Rugla]] | Cleric Guild | (405,-766) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Cizzar J'Axx]] | Caster Guild (Basement) | (135,-921) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Amata D'Lavi]] | Cleric Guild (F1) | (103,311) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Mellisa Purgor]] | Paladin Guild | (-158,-130) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+{{SpellWhereRowB | [[Paineel]] | [[Lillean Han Oni]] | Cleric Guild | (1212,551) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Leon Ereek]] | Cleric Guild | (373,-434) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Frappy Slimfinger]] | Cleric Guild | (-214,-359) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Staria Longhair]] | Druid Guild | (-62,-403) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Tsuden Korinte]] | Caster Guild | (322,-595) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Neapha Vesturo]] | The Herb Jar | (317,-554) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Vellera Wintergreen]] | Magician Guild | (715,-526) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Sallah]] | Druid Guild | (-153,-286) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Brita]] | Cleric Guild | (-184,812) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Trepo Merrop]] | Caster Guild (F3) | (133,-762) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+| TableLocations = Vendors
+| TableEra = Classic
+
+}}

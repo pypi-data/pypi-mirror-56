@@ -1,0 +1,44 @@
+{{Spellpage|
+
+| spellname = Envenomed Bolt
+| spellicon = N
+| description = Fills your target's blood with poison, causing 110 damage initially and 146 damage every tick for 8 ticks for a total of 1278 damage. 3.994 DPM.
+
+| classes = 
+
+* [[Shaman]] - Level 49
+* [[Necromancer]] - Level 51
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Poison Counter by 10 }}
+{{SpellSlotRow | 2 | Decrease HP when cast by 110 }}
+{{SpellSlotRow | 3 | Decrease Hitpoints by 146 per tick }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 320
+| range = 200
+| casting_time = 6.10
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 8 ticks
+| target_type = Single
+| spell_type = Detrimental
+| resist = Poison (0)
+
+| msg_cast_on_you = You have been poisoned.
+| msg_cast_on_other = Someone  has been poisoned.
+| msg_wears_off = The poison has run its course.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRowB | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+{{SpellWhereRow  | [[The Overthere]] | [[Finlay Kitoran]] | Outpost | (2770,2367) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Lithrise Frizen]] | Building SE of Necromancer Guild | (170,660) }}
+}}
+
+}}

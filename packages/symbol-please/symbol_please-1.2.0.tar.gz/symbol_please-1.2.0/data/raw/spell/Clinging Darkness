@@ -1,0 +1,56 @@
+{{Spellpage|
+
+| spellname = Clinging Darkness
+| spellicon = G
+| description = Summons a clinging darkness that binds your target's feet, decreasing their movement rate, and does 5 damage every 6 seconds for 12 secs (2 ticks @L4 to 8 ticks @L16). <br> Though cheaper in mana, this spell should generally be replaced by the superior [[Engulfing Darkness]].
+
+| classes = 
+
+* [[Shadow Knight]] - Level 15
+* [[Necromancer]] - Level 4
+
+| items_with_effect = 
+
+<ul><li> {{:Regent Symbol of Innoruuk}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 5 per tick }}
+{{SpellSlotRow | 2 | Decrease Movement Speed by 24% (L4) to 30% (L10) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 20
+| range = 200
+| casting_time = 1.75
+| fizzle_time = 2.50
+| recast_time = 4.00
+| duration = 2 ticks @L4 to 6 ticks @L12
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are in the grip of darkness.
+| msg_cast_on_other = Someone  is surrounded by darkness.
+| msg_wears_off = The darkness fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-2)]] | Necromancer Guild | (2096,-408) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Rygle]] | Temple of Terror (East Tower - Top) | (1001,-266) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Sermio Capret]] | Underground | (-70,-259) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Mika Fugas]] | Underground | (-196,-264) }}
+{{SpellWhereRow  | [[Grobb]] | [[Kramf - Troll]] | Shadow Knight Guild | (494,-628) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Camor V'Retta]] | Necromancer Guild (F1) | (1335,-1278) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Vissa D'Dbth]] | Necromancer Guild (F1) | (1319,-1236) }}
+{{SpellWhereRowB | [[Oggok]] | [[Kramf - Ogre]] | Shadow Knight Guild | (377,17) }}
+{{SpellWhereRow  | [[Paineel]] | [[Dovan Sires]] | Shadow Knight Guild | (901,443) }}
+{{SpellWhereRowB | [[Paineel]] | [[Danus Kelmun]] | Necromancer Guild | (692,856) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Pakeg Aspet]] | Necromancer Guild | (310,-321) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Jexun Elsorg]] | Shadow Knight Guild | (404,-415) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Bile]] | Cubby near PvP Area | (-380,255) }}
+}}
+
+}}

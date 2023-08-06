@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Summon Coldstone
+| spellicon = L
+| description = Focuses mana into the form of a cold stone that provides greatly improved night vision to the wielder.
+
+| classes = 
+
+* [[Magician]] - Level 29
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Summoned: Coldstone]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 40
+| range =  
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Erudin]] | [[Chembla Ellent]] | Library (F3) | (-1045,-243) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Ash C'Luzz]] | Library (F2) | (917,-1328) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

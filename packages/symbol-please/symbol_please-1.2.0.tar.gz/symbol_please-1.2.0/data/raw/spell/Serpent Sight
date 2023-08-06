@@ -1,0 +1,57 @@
+{{Classic Era}}
+{{Spellpage|
+
+| spellname = Serpent Sight
+| spellicon = B
+| description = Fills your target's eyes with the sight of the serpent, granting them improved night vision.
+
+| classes = 
+
+* [[Shaman]] - Level 9
+* [[Enchanter]] - Level 12
+
+| items_with_effect = 
+
+<ul><li>  {{:Crown of King Tranix}}
+</li><li> {{:Glowing Stone Band}}
+</li><li> {{:Pearlescent Mask}}
+</li><li> {{:Razing Sword of Skarlon}}
+</li><li> {{:Silvery Two Handed Axe}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Infravision(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 30
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 27 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = Your eyes tingle.
+| msg_cast_on_other = Someone 's eyes glow red.
+| msg_wears_off = Your infravision fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-6)]] | Library | (1100,-982) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Danilla Delucic]] | Enchanter Guild (F2) | (503,761) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Tal G'Noir]] | Caster Guild (Basement) | (156,-973) }}
+{{SpellWhereRowB | [[Oasis of Marr]] | [[Gadallion]] | Gypsy Camp | (495,0) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Gero Yopetu]] | The Herb Jar | (311,-550) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Porra]] | Enchanter Guild | (577,-806) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Atvo Siro]] | Caster Guild (F1) | (109,-735) }}
+}}
+
+}}

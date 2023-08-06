@@ -1,0 +1,44 @@
+{{Spellpagesmart|
+
+| spellname = Pack Chloroplast
+| spellicon = J
+| description = Hastens your groups natural healing, allowing them to recover hit points faster.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Druid]] - Level 49
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Hitpoints by 10 per tick | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 400
+| range = 100
+| casting_time = 9.00
+| fizzle_time = 2.50
+| recast_time = 12.00
+| duration = 10.8 minutes @L49 to 14 minutes @L65
+| target_type = Group v2
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You begin to regenerate.
+| msg_cast_on_other = Someone  begins to regenerate.
+| msg_wears_off = You have stopped regenerating.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Lavastorm Mountains]] | [[Tisiana]] | Druid Ring | (982,1369) }}
+{{SpellWhereRow  | [[The Wakening Land]] | [[Phillip Aghllsews]] | � | (519,-1028) }}
+}}
+
+| TableLocations = Lavastorm<br/>Wakening
+| TableEra = Classic
+
+}}

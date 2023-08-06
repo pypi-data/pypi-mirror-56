@@ -1,0 +1,41 @@
+{{Spellpage|
+
+| spellname = Evacuate
+| spellicon = V
+| description = Opens an arcane portal that teleports your entire group to a relatively safe location in the current zone. See [[Travel Guide#Evacuate_Locations|the travel guide]] for locations. <br> Compare to the Druid's [[Succor]].  There is a small chance of leaving someone (including the wizard casting the spell) behind.
+
+| classes = 
+
+* [[Wizard]] - Level 57
+
+| items_with_effect = 
+
+<ul><li> {{:Di`zok Escape Staff}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Mana by 750 }}
+{{SpellSlotRow | 2 | Evacuate to -150,-1,-1 in same }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 300
+| range = 0
+| casting_time = 9.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Group v2
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  creates a mystic portal.
+| msg_wears_off = The portal shimmers and fades.
+
+| where_to_obtain = 
+
+* Drops from Level 50+ Kunark Mobs
+
+}}

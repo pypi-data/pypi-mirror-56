@@ -1,0 +1,36 @@
+{{Spellpage|
+
+| spellname = Chilling Embrace
+| spellicon = N
+| description = Fills your target's blood with poison, causing 40 damage every six seconds for 1.6 minutes (16 ticks) for a total of 640 damage. 3.2 damage per mana
+
+| classes = 
+
+* [[Necromancer]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Poison Counter by 3 }}
+{{SpellSlotRow | 2 | Decrease Hitpoints by 40 per tick }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 200
+| range = 200
+| casting_time = 5.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 16 ticks
+| target_type = Single
+| spell_type = Detrimental
+| resist = Poison (0)
+
+| msg_cast_on_you = You are wracked by chilling poison.
+| msg_cast_on_other = Someone  is wracked by chilling poison.
+| msg_wears_off = The poison leaves.
+
+| where_to_obtain = 
+
+* Drops from Velious Level 30+ Mobs
+
+}}

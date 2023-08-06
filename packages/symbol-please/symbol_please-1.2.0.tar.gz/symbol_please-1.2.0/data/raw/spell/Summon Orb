@@ -1,0 +1,35 @@
+{{Spellpage|
+
+| spellname = Summon Orb
+| spellicon = L
+| description = Focuses mana into the form of an orb of elemental mastery.
+
+| classes = 
+
+* [[Magician]] - Level 46
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Item: [[Orb of Mastery]] }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 500
+| range =  
+| casting_time = 5.00
+| fizzle_time = 3.00
+| recast_time = 300.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = A swirling orb of elements forms in your hand.
+| msg_cast_on_other = Someone  summons a swirling orb of elements.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* [[Magician Epic Quest]]
+
+}}

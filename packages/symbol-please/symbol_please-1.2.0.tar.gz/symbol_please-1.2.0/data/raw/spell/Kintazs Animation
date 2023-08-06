@@ -1,0 +1,41 @@
+{{Spellpage|
+
+| spellname = Kintaz's Animation
+| spellicon = L
+| description = Animates a weapon and shield to attack your enemies.  Consumes a tiny dagger when cast.
+
+| classes = 
+
+* [[Enchanter]] - Level 49
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Pet: Animation12 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 300
+| range =  
+| casting_time = 12.00
+| fizzle_time = 2.25
+| recast_time = 24.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Tiny Dagger
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Highpass Keep|High Keep]] | [[Tarn Visilin]] | First Floor | (68,-223) }}
+}}
+
+}}

@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Spirit of Cat
+| spellicon = A
+| description = Fills your target with the spirit of the cat, increasing their agility for 45.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 19
+
+| items_with_effect = 
+
+<ul><li> {{:Kejaar Totem}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase AGI by 23 (L19) to 27 (L23) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 45 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel the spirit of cat enter you.
+| msg_cast_on_other = Someone  is surrounded by a brief feline aura.
+| msg_wears_off = The spirit of cat leaves you.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRow  | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRowB | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRow  | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+}}
+
+}}

@@ -1,0 +1,51 @@
+{{Spellpage|
+
+| spellname = Spirit Tap
+| spellicon = G
+| description = Drains your target of life energy, siphoning between 132 and 150 hit points.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 56
+* [[Necromancer]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Ivandyr's Hoop}}
+</li><li>{{:The Scimitar of Lifestealing}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 132 (L29) to 150 (L35) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 144
+| range = 200
+| casting_time = 4.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Lifetap
+| spell_type = Detrimental
+| resist = Magic (-200)
+
+| msg_cast_on_you = You feel your life force drain away.
+| msg_cast_on_other = Someone  staggers.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-1)]] | Necromancer Guild | (2082,-410) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Lord Vizaroth]] | Temple of Terror (West Tower - Basement) | (1128,-98) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Ainla Yurimar]] | Underground | (-162,-270) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Rizyra F'Lok]] | Necromancer Guild (F1) | (1335,-1213) }}
+{{SpellWhereRowB | [[Paineel]] | [[Leovre Kieqmarn]] | Necromancer Guild | (665,804) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Dallisen Xalladyr]] | Necromancer Guild | (402,-311) }}
+{{SpellWhereRowB | [[The Overthere]] | [[Grubmar Hartblak]] | Outpost | (2748,2351) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Rott]] | Cubby near PvP Area | (-440,236) }}
+}}
+
+}}

@@ -1,0 +1,44 @@
+{{Spellpagesmart|
+
+| spellname = Whirling Wind
+| spellicon = M
+| description = Summons a whirling wind to stun your target, also doing between 22 and 25 damage. Reputed to be only usable in outdoor zones. 
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Druid]] - Level 5
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Hitpoints by 22 (L5) to 25 (L10) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 2 | Stun for 0.0 seconds | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 24
+| range = 200
+| casting_time = 1.75
+| fizzle_time = 2.50
+| recast_time = 12.00
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You are slammed by an intense gust of wind.
+| msg_cast_on_other = Someone  is slammed by an intense gust of wind.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+}}
+| TableLocations = Kelethin<br/>Rivervale<br/>Surefall Glade
+| TableEra = Classic
+}}

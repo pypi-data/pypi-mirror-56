@@ -1,0 +1,37 @@
+{{Spellpage|
+
+| spellname = Tumultuous Strength
+| spellicon = R
+| description = Fills your group with tumultuous power, increasing their strength for 46.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase STR by 34 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 150
+| range = 200
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = 46 minutes
+| target_type = Group v2
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel stronger.
+| msg_cast_on_other = Someone  looks stronger.
+| msg_wears_off = Your strength fades.
+
+| where_to_obtain = 
+
+* [[a Sifaye Thane]]
+* [[A Golem Usher]]
+* Drops from Velious Level 30+ Mobs
+
+}}

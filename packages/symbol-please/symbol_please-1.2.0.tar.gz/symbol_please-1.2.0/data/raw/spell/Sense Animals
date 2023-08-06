@@ -1,0 +1,47 @@
+{{Spellpagesmart|
+
+| spellname = Sense Animals
+| spellicon = B
+| description = Provides you with a mystical sense, pointing you towards the nearest animal.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Druid]] - Level 1
+* [[Shaman]] - Level 9
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Sense Animals | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 5
+| range =  
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 4.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Horth Evergreen]] | Kelethin Druid Guild | (-640,219) }}
+{{SpellWhereRowB | [[Oasis of Marr]] | [[Gadallion]] | Gypsy Camp | (495,0) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Ilscent Tagglefoot]] | Druid Guild | (-31,-418) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Torth Largefoot]] | Druid Guild | (-32,-384) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Arrivae Valleren]] | Druid Guild | (-156,-300) }}
+}}
+| TableLocations = Cabilis/Kelethin<br/>Oasis of Marr<br/>Rivervale/Surefall
+| TableEra = {{{TableEra|Classic}}}
+}}

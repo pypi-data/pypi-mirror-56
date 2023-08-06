@@ -1,0 +1,38 @@
+{{Spellpage|
+
+| spellname = Shock of the Tainted
+| spellicon = N
+| description = Strikes your target with a jet of poisonous acid, causing between 248 and 254 damage.  1.78 DPM at lv. 40.
+
+| classes = 
+
+* [[Shaman]] - Level 34
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 218 (L34) to 230 (L40) }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 130
+| range = 200
+| casting_time = 3.90
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Poison (0)
+
+| msg_cast_on_you = Your body is wracked by shocks of poison.
+| msg_cast_on_other = Someone  screams in pain.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Iceclad Ocean]] | [[Xorbinasticalus Zimralicus]] | Pirate Outpost | (4636,1312) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Loremaster Dorinan]] | Cleric Guild | (-334,813) }}
+}}
+
+}}

@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Vision
+| spellicon = B
+| description = Shifts your vision to your target's eyes, as well as increasing vision range and offering vastly improved night vision.
+
+| classes = 
+
+* [[Shaman]] - Level 19
+
+| slots = 
+
+{{SpellSlotRow | 1 | Bind Sight(1) }}
+{{SpellSlotRow | 2 | Increase Magnification by 130% }}
+{{SpellSlotRow | 3 | Ultravision(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 10
+| range = 10000
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 10.00
+| duration = 4.8 minutes @L19 to 14 minutes @L65
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your spirit drifts from your body.
+| msg_cast_on_other = Someone 's eyes shimmer.
+| msg_wears_off = You return to your body.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRow  | [[Oasis of Marr]] | [[Gadallion]] | Gypsy Camp | (495,0) }}
+}}
+
+}}

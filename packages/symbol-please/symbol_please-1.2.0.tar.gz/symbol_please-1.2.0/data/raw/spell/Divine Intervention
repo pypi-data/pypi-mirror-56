@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Divine Intervention
+| spellicon = B
+| description = Bestows the favor of the gods upon your target, granting them a second chance at life should they fall in battle.  Consumes a pair of emeralds when cast. The chance for this to succeed is affected by the target's charisma.
+
+| classes = 
+
+* [[Cleric]] - Level 60
+
+| slots = 
+
+{{SpellSlotRow | 1 | Death Save - Restore Full Health }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 500
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 90.00
+| duration = 6 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Emerald x2
+
+| msg_cast_on_you = You feel the watchful eyes of the gods upon you.
+| msg_cast_on_other = Someone  feels the watchful eyes of the gods upon them.
+| msg_wears_off = You are no longer watched.
+
+| where_to_obtain = 
+
+==Drops From== 
+
+[[Old Sebilis]]
+
+* [[Emperor Chottal]]
+
+* Kunark Level 50+ Mob Drop
+
+}}

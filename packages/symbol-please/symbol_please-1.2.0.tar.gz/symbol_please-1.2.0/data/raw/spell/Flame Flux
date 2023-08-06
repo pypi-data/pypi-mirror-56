@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Flame Flux
+| spellicon = O
+| description = Creates a circle of fire around you, causing between 89 and 96 damage to all nearby creatures.
+
+| classes = 
+
+* [[Magician]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Holgresh Mojo Stick (Fire)}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 91 (L24) to 96 (L29) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 123
+| range =  
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 6.00
+| duration = Instant
+| target_type = PB AE
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = Flames race across your body.
+| msg_cast_on_other = Someone  is covered in flames.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+}}

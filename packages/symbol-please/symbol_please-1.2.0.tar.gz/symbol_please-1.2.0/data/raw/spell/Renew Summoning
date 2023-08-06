@@ -1,0 +1,43 @@
+{{Spellpage|
+
+| spellname = Renew Summoning
+| spellicon = J
+| description = Renews the health of your elemental pet, healing between 75 and 87 damage, and curing their diseases, poisons, and curses.
+
+| classes = 
+
+* [[Magician]] - Level 20
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Hitpoints by 140 (L20) to 230 (L65) }}
+{{SpellSlotRow | 2 | Decrease Disease Counter by 10 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 100
+| range = 100
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 7.50
+| duration = Instant
+| target_type = Pet
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone 's form shimmers red.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+}}

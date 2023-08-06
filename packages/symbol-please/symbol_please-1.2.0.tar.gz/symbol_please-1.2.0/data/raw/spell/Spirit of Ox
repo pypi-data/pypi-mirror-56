@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Spirit of Ox
+| spellicon = R
+| description = Fills your target with the sprit of the ox, increasing their stamina for 45.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Golden Star Pants}}
+</li><li> {{:Grand Master's Leg Wraps}}
+</li><li> {{:Silver Moon Pants}}
+</li><li> {{:White Lotus Pants}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase STA by 21 (L24) to 23 (L28) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 45 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel the spirit of ox enter you.
+| msg_cast_on_other = Someone  is surrounded by a brief bovine aura.
+| msg_wears_off = The spirit of ox leaves you.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRow  | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRowB | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRow  | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+}}
+
+}}

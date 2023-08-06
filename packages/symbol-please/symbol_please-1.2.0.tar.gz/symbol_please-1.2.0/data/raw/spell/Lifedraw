@@ -1,0 +1,56 @@
+{{Spellpage|
+
+| spellname = Lifedraw
+| spellicon = G
+| description = Drains your target of life energy, siphoning between 39 and 45 hit points. 0.71 damage per mana, 0.71 healing per mana.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 30
+* [[Necromancer]] - Level 12
+
+| items_with_effect = 
+
+<ul><li> {{:Deadwood Stave}}
+</li><li> {{:Blood Runed Scimitar}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 39 (L12) to 45 (L18) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 63
+| range = 200
+| casting_time = 2.45
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Lifetap
+| spell_type = Detrimental
+| resist = Magic (-200)
+
+| msg_cast_on_you = You feel your lifeforce drain away.
+| msg_cast_on_other = Someone  staggers.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-4)]] | Necromancer Guild | (2099,-393) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Squire Gristle]] | Temple of Terror (West Tower - Top) | (1005,-105) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Tagus Wunne]] | Underground | (-98,-257) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Peku Croxe]] | Underground | (-200,-244) }}
+{{SpellWhereRowB | [[Grobb]] | [[Trusk - Troll]] | Shadow Knight Guild | (512,-625) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Misal S'Kor]] | Necromancer Guild (F1) | (1337,-1239) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Jys D'Bious]] | Necromancer Guild (F1) | (1312,-1266) }}
+{{SpellWhereRow  | [[Oggok]] | [[Trusk - Ogre]] | Shadow Knight Guild | (392,3) }}
+{{SpellWhereRowB | [[Paineel]] | [[Sheras Milaku]] | Shadow Knight Guild | (888,443) }}
+{{SpellWhereRow  | [[Paineel]] | [[Kilevra Natasu]] | Necromancer Guild | (692,869) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gehnon Dejartes]] | Shadow Knight Guild | (421,-438) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gyrna Porrin]] | Necromancer Guild | (291,-322) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Plight]] | Cubby near PvP Area | (-391,234) }}
+}}
+
+}}

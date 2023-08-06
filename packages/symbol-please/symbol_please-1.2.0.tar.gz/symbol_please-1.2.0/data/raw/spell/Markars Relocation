@@ -1,0 +1,41 @@
+{{Spellpage|
+
+| spellname = Markar's Relocation
+| spellicon = V
+| description = Opens an arcane portal that teleports your entire group to the [[Emerald Jungle]].  This spell no longer has a Kunark dungeon requirement; it can currently be cast from anywhere in the world.
+
+| classes = 
+
+* [[Wizard]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Evacuate to -1259,3504,-341 in emeraldjungle }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 300
+| range = 0
+| casting_time = 9.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Group v1
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  creates a shimmering portal.
+| msg_wears_off = The portal shimmers and fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Firiona Vie]] | [[Selien Nartoise]] | Outpost | (-3980,2626) }}
+{{SpellWhereRow  | [[The Overthere]] | [[Tyrin F'Linz]] | Outpost | (2812,2405) }}
+}}
+
+}}
+
+==See also==
+*[[Wind of the South]]

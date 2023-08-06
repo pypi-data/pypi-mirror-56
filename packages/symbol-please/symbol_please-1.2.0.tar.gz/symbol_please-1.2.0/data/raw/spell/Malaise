@@ -1,0 +1,55 @@
+{{Spellpage|
+
+| spellname = Malise
+| spellicon = G
+| description = Decreases your target's resistance to cold, fire, magic, and poison. Prints out as Malise in log files "You resist the Malise spell!".
+
+| classes = 
+
+* [[Shaman]] - Level 19
+* [[Magician]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Drake-Hide Amice}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 2 | Decrease Cold Resist by 15 (L19) to 20 (L28) }}
+{{SpellSlotRow | 3 | Decrease Magic Resist by 15 (L19) to 20 (L28) }}
+{{SpellSlotRow | 4 | Decrease Poison Resist by 15 (L19) to 20 (L28) }}
+{{SpellSlotRow | 5 | Decrease Fire Resist by 15 (L19) to 20 (L28) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range = 200
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = 4.8 minutes @L19 to 14 minutes @L65
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You feel somewhat vulnerable.
+| msg_cast_on_other = Someone  looks somewhat uncomfortable.
+| msg_wears_off = Your vulnerability fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRow  | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRowB | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRowB | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+}}

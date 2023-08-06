@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Conflagration
+| spellicon = O
+| description = Consumes your target in flames, causing between 606 and 625 damage.
+
+| classes = 
+
+* [[Wizard]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 606 (L44) to 625 (L49) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 250
+| range = 200
+| casting_time = 5.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (-10)
+
+| msg_cast_on_you = You feel your skin combust.
+| msg_cast_on_other = Someone  combusts.
+| msg_wears_off =  
+
+| items_with_effect = 
+
+<ul><li> {{:Steel Hilted Flint Dagger}}
+</li><li>{{:Vermilion Robe of Torrefaction}}
+</li><li>{{:Wand of Conflagration}}
+</li></ul>
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Erudin]] | [[Sornita Eltern]] | Library (F3) | (-1108,-231) }}
+{{SpellWhereRowB | [[Skyshrine]] | [[Guardian Trekolz]] | Spell vendors | (324, -877) }}
+}}
+
+}}

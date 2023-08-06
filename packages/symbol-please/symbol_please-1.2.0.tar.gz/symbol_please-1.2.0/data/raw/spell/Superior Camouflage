@@ -1,0 +1,51 @@
+{{Spellpagesmart|
+
+| spellname = Superior Camouflage
+| spellicon = B
+| description = Covers your target's body in a mystic cloak, allowing them to blend in with their surroundings. Unlike [[Camouflage]] this spell works both outdoors and indoors. <br> The effect of this spell is the same as that of [[Invisibility]].
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 49
+* [[Druid]] - Level 19
+
+| items_with_effect = 
+
+<ul><li> {{:Elder Spiritist's Helm}}
+</li><li> {{:Larrikan's Mask}}
+</li><li> {{:Tolan's Darkwood Helm}}
+</li><li> {{:Velium Studded Cloak}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Invisibility(1) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 40
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 24 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You vanish.
+| msg_cast_on_other = Someone  fades away.
+| msg_wears_off = You appear.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRow  | [[Northern Karana]] | [[Tak Whistler]] | Druid Ring | (-2732,-1466) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Bukem Breewood]] | Ranger Guild | (105,-80) }}
+}}
+| TableLocations = Kelethin<br/>N.Karana<br/>Surefall Glade
+| TableEra = Classic
+}}

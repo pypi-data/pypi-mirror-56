@@ -1,0 +1,50 @@
+{{Spellpage|
+
+| spellname = Shield of Flame
+| spellicon = O
+| description = Surrounds your target in a shield of flame, damaging any creature that attacks them.
+
+| classes = 
+
+* [[Magician]] - Level 20
+
+| items_with_effect = 
+
+<ul><li> {{:Blazing Vambraces}}
+</li><li> {{:Singing Steel Bracer}}
+</li><li> {{:Charred Black Staff}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Damage Shield by 8 (L20) to 9 (L24) }}
+{{SpellSlotRow | 2 | Increase Fire Resist by 15 }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 60
+| range = 100
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 2 minutes @L20 to 6.5 minutes @L65
+| target_type = Single
+| spell_type = Beneficial
+| resist = Fire (0)
+
+| msg_cast_on_you = You are enveloped by flame.
+| msg_cast_on_other = Someone  is enveloped by flame.
+| msg_wears_off = The flames die down.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+}}

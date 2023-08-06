@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Protect
+| spellicon = K
+| description = Places a spiritual protection on your target, increasing their armor class for 36.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 24
+
+| slots = 
+
+{{SpellSlotRow | 4 | Increase AC by 12 (L24) to 13 (L28) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 75
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = 36 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = A protective aura settles over you.
+| msg_cast_on_other = Someone  is covered in a protective aura.
+| msg_wears_off = Your protection fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRow  | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRowB | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRow  | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+}}
+
+}}

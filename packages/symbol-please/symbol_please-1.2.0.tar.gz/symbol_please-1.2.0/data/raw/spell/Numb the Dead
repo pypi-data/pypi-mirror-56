@@ -1,0 +1,56 @@
+{{Spellpage|
+
+| spellname = Numb the Dead
+| spellicon = D
+| description = Numbs the awareness of the undead, making them less likely to attack.  This spell works on creatures up to level @1.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 15
+* [[Necromancer]] - Level 4
+
+| slots = 
+
+{{SpellSlotRow | 1 | Frenzy Radius (15/30) }}
+{{SpellSlotRow | 2 | Reaction Radius (25/30) }}
+{{SpellSlotRow | 3 | Pacify }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 20
+| range = 200
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 3.00
+| duration = 1.4 minutes @L4 to 2 minutes @L10
+| target_type = Undead
+| spell_type = Beneficial
+| resist = Magic (0)
+
+| other = 
+
+* '''Reagent:''' [[Bone Chips]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  looks ambivalent.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-2)]] | Necromancer Guild | (2096,-408) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Rygle]] | Temple of Terror (East Tower - Top) | (1001,-266) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Sermio Capret]] | Underground | (-70,-259) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Mika Fugas]] | Underground | (-196,-264) }}
+{{SpellWhereRow  | [[Grobb]] | [[Kramf - Troll]] | Shadow Knight Guild | (494,-628) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Camor V'Retta]] | Necromancer Guild (F1) | (1335,-1278) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Vissa D'Dbth]] | Necromancer Guild (F1) | (1319,-1236) }}
+{{SpellWhereRowB | [[Oggok]] | [[Kramf - Ogre]] | Shadow Knight Guild | (377,17) }}
+{{SpellWhereRow  | [[Paineel]] | [[Dovan Sires]] | Shadow Knight Guild | (901,443) }}
+{{SpellWhereRowB | [[Paineel]] | [[Danus Kelmun]] | Necromancer Guild | (692,856) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Pakeg Aspet]] | Necromancer Guild | (310,-321) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Jexun Elsorg]] | Shadow Knight Guild | (404,-415) }}
+{{SpellWhereRow  | [[Cabilis|West Cabilis]] | [[Keeper Bile]] | Cubby near PvP Area | (-380,255) }}
+}}
+
+}}

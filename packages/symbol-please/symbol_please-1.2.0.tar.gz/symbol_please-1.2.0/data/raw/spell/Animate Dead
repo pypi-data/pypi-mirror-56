@@ -1,0 +1,46 @@
+{{Spellpage|
+
+| spellname = Animate Dead
+| spellicon = G
+| description = Animates an undead servant from the remnants of the fallen.  Consumes [[Bone Chips|bone chips]] when cast.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 39
+* [[Necromancer]] - Level 20
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Skeleton Pet: skel_pet_19_ }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 200
+| range =  
+| casting_time = 10.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Bone Chips]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  animates an undead servant.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Grobb]] | [[Crilt - Troll]] | Shadow Knight Guild | (518,-618) }}
+{{SpellWhereRow  | [[Oggok]] | [[Crilt - Ogre]] | Shadow Knight Guild | (276,-2) }}
+{{SpellWhereRowB | [[Paineel]] | [[Brettas Norval]] | Shadow Knight Guild | (888,468) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

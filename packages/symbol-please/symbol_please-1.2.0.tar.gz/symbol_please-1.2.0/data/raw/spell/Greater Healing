@@ -1,0 +1,67 @@
+{{Spellpagesmart|
+
+| spellname = Greater Healing
+| spellicon = J
+| description = Mends major wounds, healing between 244 and 270 hit points. 1.8 HP/mana; 45 HP/sec.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 24
+* [[Paladin]] - Level 39
+* [[Ranger]] - Level 57
+* [[Druid]] - Level 29
+* [[Shaman]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Bloodshrine Necklace}}
+</li><li> {{:Shissar Apothic Staff}}
+</li><li> {{:Slime filled potion}}
+</li><li> {{:Thick Amber Potion}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Hitpoints by 244 (L24) to 270 (L30) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 150
+| range = 100
+| casting_time = 3.75
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel much better.
+| msg_cast_on_other = Someone  feels much better.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-11)]] | Necromancer Guild | (2041,-410) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (CG-5)]] | Cleric Guild | (1184,-560) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Erudin]] | [[Lissa Respelti]] | Cleric Guild - Quellious | (-650,-45) }}
+{{SpellWhereRowB | [[Erudin]] | [[Tollari Mistell]] | Library (F1) | (-1067,-255) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Assa Leafwind]] | Cleric Guild | (24,-466) }}
+{{SpellWhereRowB | [[Firiona Vie]] | [[Raciel Sanherb]] | Outpost | (-3396,3310) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Geep Tresoj]] | Cleric Guild (F1) | (93,427) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[North Kaladim]] | [[Krako Stonesplitter]] | Cleric Guild | (778,155) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Sol Punox]] | Cleric Guild | (400,-838) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Henlom Visrek]] | Paladin Guild | (-135,-122) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Altha Shadowjumper]] | Cleric Guild | (-243,-358) }}
+{{SpellWhereRow  | [[Steamfont Mountains]] | [[Crisyn]] | Druid Ring | (-1750,1657) }}
+}}
+| TableLocations = Vendors
+| TableEra = {{{TableEra|Classic}}}
+}}

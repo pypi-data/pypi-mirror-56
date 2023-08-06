@@ -1,0 +1,39 @@
+{{Spellpage|
+
+| spellname = Turning of the Unnatural
+| spellicon = C
+| description = Strikes your target with holy light, causing 25 damage to undead every 6 seconds for 1.6 minutes (400 damage; 2.5 DPM).
+
+| classes = 
+
+* [[Cleric]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 25 per tick }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 160
+| range = 200
+| casting_time = 4.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 1.6 minutes
+| target_type = Undead
+| spell_type = Detrimental
+| resist = Magic (-100)
+
+| msg_cast_on_you = You stagger as the light of divine words enter your mind.
+| msg_cast_on_other = Someone  staggers under the weight of divine words.
+| msg_wears_off = The words soften.
+
+| where_to_obtain = 
+
+* Velious Mob Drop (where?)
+* [[Garou]]
+* [[a shadow beast guard]] in Tower of Frozen Shadow
+* [[a shadow]] in Tower of Frozen Shadow
+
+
+}}

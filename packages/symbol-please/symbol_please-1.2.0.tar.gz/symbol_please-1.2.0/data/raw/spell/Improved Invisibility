@@ -1,0 +1,42 @@
+{{Velious_Era}}
+{{Spellpage|
+
+| spellname = Improved Invisibility
+| spellicon = B
+| description = Cloaks you in a mystic veil, rendering you invisible to many creatures for 10.0 mins. Unlike [[Invisibility]], this effect does not randomly break early.
+
+| classes = 
+
+* [[Wizard]] - Level 55
+* [[Enchanter]] - Level 50
+
+| items_with_effect = 
+
+<ul><li> {{:Phase Spider Blood}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Invisibility(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 75
+| range =  
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 10 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You vanish.
+| msg_cast_on_other = Someone  fades away.
+| msg_wears_off = You appear.
+
+| where_to_obtain = 
+
+* Velious Level 50+ Mobs
+
+}}

@@ -1,0 +1,321 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C warrior.gif|right]]
+Warriors are the masters of armed combat and defense, taking the point in battles and going head-to-head with the most dangerous creatures of Norrath. Warriors are a melee class with the ability to wear plate armor and wield all types of weapons.
+
+Warriors build their strength and stamina to unheard of levels, making them far hardier than any other class. When combined with their heavy armor and excellent defensive skills, warriors are unmatched in their ability to survive the most brutal battles. Warriors train themselves in the skills of combat, mastering the use of all weapons and tactics. Warriors also learn to taunt their opponents, making themselves the focus of all their enemies' attacks, allowing the less resilient members of their group to remain safe from harm.
+
+Warriors are often the cornerstone of a good group, providing a strong defense while also dealing heavy damage to their enemies. Warriors fare poorly when adventuring alone, and are an excellent choice for those who enjoy grouping and taking the front line in battle.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Warrior || Champion || Myrmidon || Warlord
+|}
+
+= Creation Guide =
+
+== Picking the Right Race ==
+
+The first thing you have to pick then is your race.   Which race you pick will determine the foundation of your character for the rest of your life in Norrath, so it is important you pick one you like.  Warriors need to take into account a number of things.  Some armours only fit certain sizes of races.  As you increase in level, this becomes ''less of an issue'', but it is something to be aware of.  Also keep in mind that as a Warrior you have no spells, so races with poor night-vision ([[Barbarian]]s, [[Human]]s) might want to be avoided if you are a first-time player or do not know your way around the world too well.  
+
+Out of the possible races for warriors, [[Halfling]]s, levels slightly faster than other races, however, this is not their only benefit. Their small size is frequently beneficial in dungeons, and their racial abilities give the warrior a ghetto-invis (Hide). Additionally, the Sneak ability is invaluable, and can be used to vendor at KoS merchants, and slip past opponents. This latter ability, combined with exp bonus, makes a halfling warrior arguably the best grouping warrior. [[Barbarian]]s level slightly slower, [[Ogre]]s significantly slower, [[Troll]]s and [[Iksar]]s slower still.  Some of the high level throwing weapons can only be used by Barbarians, Trolls and Ogres who also have the highest base strength. Iksars heal faster and get a natural AC bonus, but they cannot wear most plate armours and are hated by nearly every other race of Norrath. Trolls also have a natural healing boost but are hated in most places. Ogres are also disliked in many towns and even though they do not get a health recovery bonus, ''they get a lot more hit points from their higher stamina and cannot be stunned by enemy bashes when attacked from the front.'' All of the large races also have the ability to Slam, which is similar to Bash but requires no shield.
+
+== Starting Statistics ==
+
+[[File:warrior-stats.png]]
+
+== Suggested Starting Statistics ==
+
+The main focus of warriors is to sustain as much damage as possible.  Here are our suggestions:
+
+*Barbarian: Add 25 to Stamina.
+*Dark Elf: Add 25 to Stamina.
+*Dwarf: Add 25 to Stamina.
+*Gnome: Add 25 to Stamina.
+*Half Elf: Add 25 to Stamina.
+*Halfling: Add 25 to Stamina.
+*Human: Add 25 to Stamina.
+*Iksar: Add 25 to Stamina.
+*Ogre: Add 25 to Dexterity.
+*Troll: Add 25 to Stamina.
+*Wood Elf: Add 25 to Stamina.
+
+=== Min-maxing Starting Stats ===
+Aside from Stamina, stats are relatively easy to max at end-game Velious, so it is recommended to dump as many points into Stamina as possible.  A Shaman can only buff one spell to increase Stamina (Riotous Health 50 STA) while both Focus of Spirit (HP 405, STR 67, DEX 60) and Avatar (STR, AGI, DEX and ATK by 100) stack capping your Strength & Dexterity. Agility can easily be raised above the soft-cap of 75, additional agility provides only incremental AC bonuses.
+
+== Experience Statistics ==
+
+*Barbarian Warrior: +5.5%
+*Dark Elf Warrior: +10%
+*Dwarf Warrior: +10%
+*Gnome Warrior: +10%
+*Half-Elf Warrior: +10%
+*Halfling Warrior: +14.5%
+*Human Warrior: +10%
+*Iksar Warrior: -8%
+*Ogre Warrior: -3.5%
+*Troll Warrior: -8%
+*Wood Elf Warrior: +10%
+
+'''What does it mean?'''
+
+Certain races and classes require differing amounts of experience points to attain the same level. For example, a Halfling Warrior requires 85.5% of the experience that a Human Cleric would require to be the same level. An Ogre Warrior would require 103.5% of the experience that the Human Cleric would.
+
+== Religion ==
+
+Generally speaking being Agnostic is a fairly safe bet in Everquest.  Religion serves only to get you into trouble in many situations.  The disadvantage to doing this is that some items, '''such as deity-specific Cultural armor sets''', and some quests can only be done by followers of certain religions.  Following a religion will at worst get you killed in some areas, but generally you can avoid these.  Following [[Innoruuk]] is probably the most dangerous religion as they have the most places in the game where they are Kill on Sight.  In the end it will not make an enormous difference to your character which Deity you choose.
+
+=Skills=
+
+==Berserker Frenzy (Warrior Ability)==
+
+Going into a berserker frenzy is an innate, passive ability of the warrior class that is present from level 1 onward.  Anytime a player character warrior's health falls too low, he or she enters a berserker frenzy, converting all of his or her critical hits into more powerful crippling blows. 
+
+A warrior will go berserk when falling below 40% health and will remain berserk permanently until his or her health reaches 45%.
+
+While berserk, the warrior will score a crippling blow whenever they would normally have scored a critical hit.  The run speed penalty for low health characters is also mitigated for berserk warriors [This doesn't seem to work on P99. You will still have significantly reduced run speed when health drops to low percentage].
+
+Going berserk is accompanied by the message, "Soandso goes into a berserker frenzy!" which will appear in the chat boxes of both the warrior and another other nearby players.  "Soandso is no longer berserk" signals the end of the effect.
+
+Berserking is a hard-coded mechanic of the class and stacks with all buffs, disciplines, etc.
+
+==Magic Resistance==
+
+Warriors will gain a progressively stronger resistance to magic as they level, at a rate of +1 MR every 2 levels.
+
+==Primary Hand Damage Bonuses==
+
+This is the same for all melee classes, but listed here for reference. See the Combat section of [[Game Mechanics]] for more information.
+
+Level 28: 1
+
+Level 31: 2
+
+Level 34: 3
+
+Level 37: 4
+
+Level 40: 5
+
+Level 43: 6
+
+Level 46: 7
+
+Level 49: 8
+
+Level 52: 9
+
+Level 55: 10
+
+Level 58: 11
+
+==Combat Skills==
+
+{| class="eoTable2"
+! scope="col" | '''Level'''
+! scope="col" | '''Skill'''
+! scope="col" | '''Pre 50 Cap'''
+! scope="col" | '''Post 50 Cap'''
+|-
+|1
+
+|[[1 Hand Blunt]]
+|200
+|250
+|-
+|1
+
+|[[1 Hand Slashing]]
+|200
+|250
+|-
+|1
+
+|[[2 Hand Blunt]]
+|200
+|250
+|-
+|1
+
+|[[2 Hand Slashing]]
+|200
+|250
+|-
+|1
+
+|[[Archery]]
+|200
+|240
+|-
+|1
+
+|[[Bind Wound]]
+|175
+|210
+|-
+|1
+
+|[[Defense]]
+|210
+|252
+|-
+|1
+
+|[[Hand to Hand]]
+|100
+|100
+|-
+|1
+
+|[[Kick]]
+|149
+|210
+|-
+|1
+
+|[[Offense]]
+|210
+|252
+|-
+|1
+
+|[[Piercing]]
+|200
+|240
+|-
+|1
+
+|[[Slam]]
+|220
+|240
+|-
+|1
+
+|[[Taunt]]
+|200
+|200
+|-
+|1
+
+|[[Throwing]]
+|113
+|200
+|-
+|6
+
+|[[Bash]]
+|200
+|240
+|-
+|6
+
+|[[Dodge]]
+|140
+|175
+|-
+|10
+
+|[[Parry]]
+|200
+|230
+|-
+|13
+
+|[[Dual Wield]]
+|210
+|240
+|-
+|15
+
+|[[Double Attack]]
+|205
+|245
+|-
+|25
+
+|[[Riposte]]
+|200
+|225
+|-
+|35
+
+|[[Disarm]]
+|200
+|200
+|}
+At level 12 a warrior gains the ability to land critical strikes, or crippling blows while in a berserker frenzy.
+
+==Miscellaneous Skills==
+
+{| class="eoTable2"
+! Skill Name
+! Level Obtained
+! Max
+|-
+| [[Skill_Alcohol_Tolerance|Alcohol Tolerance]]
+| 1
+| 252
+|-
+| [[Skill_Begging|Begging]]
+| 1
+| 200
+|-
+| [[Skill_Bind_Wound|Bind Wound]]
+| 1
+| 210
+|-
+| [[Skill_Sense_Heading|Sense Heading]]
+| 1
+| 200
+|-
+| [[Skill_Swimming|Swimming]]
+| 1
+| 200
+|}
+
+== Disciplines ==
+
+{{#lsth:Disciplines|[[Warrior]]}}
+
+= Warrior-Specific Quests =
+
+{{#lsth:Class Race Quest List|Warrior}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Warrior]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Warrior]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Warrior]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Warrior]]}}
+
+== Velious Raiding ==
+
+
+{{#lsth:Players:Velious Raiding Gear|[[Warrior]]}}
+
+
+= FAQ =
+
+
+{{Navbox Classes}}

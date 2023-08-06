@@ -1,0 +1,72 @@
+{{Spellpagesmart|
+
+| spellname = Resist Cold
+| spellicon = K
+| description = Surrounds your target with an aura of protection, warding away cold for 36.0 mins.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 39
+* [[Ranger]] - Level 55 {{Velious Era Inline}}
+* [[Shadow Knight]] - Level 39
+* [[Druid]] - Level 34
+* [[Shaman]] - Level 24
+* [[Necromancer]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Frozen Turban}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Cold Resist by 39 (L24) to 40 (L25) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 50
+| range = 100
+| casting_time = 4.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 36 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel resistant from cold.
+| msg_cast_on_other = Someone  is resistant to cold.
+| msg_wears_off = Your cold resistance fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-6)]] | Cleric Guild | (1197,-560) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-14)]] | Necromancer Guild | (2111,-429) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-3)]] | Necromancer Guild | (2100,-398) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Hundle Quatvel]] | Underground | (-186,-234) }}
+{{SpellWhereRow  | [[Erudin]] | [[Junice Weslent]] | Cleric Guild - Quellious (Outside) | (-697,-55) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Terren Starwatcher]] | Cleric Guild | (13,-426) }}
+{{SpellWhereRow  | [[Grobb]] | [[Crilt - Troll]] | Shadow Knight Guild | (518,-618) }}
+{{SpellWhereRowB | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRow  | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Lyniv S'Kor]] | Cleric Guild | (410,-858) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Olak N'Mar]] | Necromancer Guild (F1) | (1337,-1226) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Nosspri Andrika]] | Cleric Guild (basement) | (102,391) }}
+{{SpellWhereRow  | [[Qeynos|North Qeynos]] | [[Ladia Qursii]] | Cleric Guild (Outside) | (-225,-238) }}
+{{SpellWhereRowB | [[Oggok]] | [[Crilt - Ogre]] | Shadow Knight Guild | (276,-2) }}
+{{SpellWhereRow  | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+{{SpellWhereRowB | [[Paineel]] | [[Brettas Norval]] | Shadow Knight Guild | (888,468) }}
+{{SpellWhereRow  | [[Paineel]] | [[Devinious Natasu]] | Necromancer Guild | (675,887) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Vidurlyn Aeminee]] | Necromancer Guild | (308,-306) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Senst Ereek]] | Cleric Guild | (340,-413) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Misty Valefriend]] | Cleric Guild | (-226,-374) }}
+{{SpellWhereRow  | [[Steamfont Mountains]] | [[Crisyn]] | Druid Ring | (-1750,1657) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Pestilence]] | Cubby near PvP Area | (-410,231) }}
+}}
+| TableLocations = Vendors
+| TableEra = {{{TableEra|Kunark}}}
+}}

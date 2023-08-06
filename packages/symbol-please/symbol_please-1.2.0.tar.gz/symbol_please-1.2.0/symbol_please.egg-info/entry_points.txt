@@ -1,0 +1,3 @@
+[console_scripts]
+symbol_please = symbol_please.cli:main
+

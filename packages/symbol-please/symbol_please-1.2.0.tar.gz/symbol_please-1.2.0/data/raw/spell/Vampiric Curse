@@ -1,0 +1,46 @@
+{{Spellpage|
+
+| spellname = Vampiric Curse
+| spellicon = G
+| description = Drains 21 of your target's life energy and transfers it to you every 6 seconds for 54 secs (9 ticks) for a total of 189 health. 1.3 health per point of mana. Though somewhat efficient for mid-level necromancers, this spell is usually a waste of time for shadowknights, especially when they attain [[Drain Soul]].
+
+| classes = 
+
+* [[Shadow Knight]] - Level 57
+* [[Necromancer]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Pestilence Scythe}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 3 | Decrease Hitpoints by 21 per tick }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 144
+| range = 200
+| casting_time = 4.00
+| fizzle_time = 2.50
+| recast_time = 10.00
+| duration = 9 ticks
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (-200)
+
+| msg_cast_on_you = You feel your blood being drained away.
+| msg_cast_on_other = Someone  pales.
+| msg_wears_off = The curse fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Lord Vizaroth]] | Temple of Terror (West Tower - Basement) | (1128,-98) }}
+{{SpellWhereRowB | [[The Overthere]] | [[Grubmar Hartblak]] | Outpost | (2748,2351) }} 
+}}
+* OT vendor sells for 64pp
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

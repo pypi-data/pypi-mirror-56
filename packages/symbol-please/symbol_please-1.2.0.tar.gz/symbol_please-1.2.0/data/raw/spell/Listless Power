@@ -1,0 +1,51 @@
+{{Spellpage|
+
+| spellname = Listless Power
+| spellicon = I
+| description = Saps your target's power, decreasing their agility, strength, and armor class for 2.5 mins @L25 to 6.5 mins @L65.
+
+| classes = 
+
+* [[Shaman]] - Level 29
+* [[Enchanter]] - Level 29
+
+| slots = 
+
+{{SpellSlotRow | 2 | Decrease AGI by 24 (L29) to 35 (L50) }}
+{{SpellSlotRow | 3 | Decrease STR by 24 (L29) to 35 (L50) }}
+{{SpellSlotRow | 4 | Decrease AC by 11 (L29) to 18 (L50) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 90
+| range = 200
+| casting_time = 2.75
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 2.9 minutes @L29 to 6.5 minutes @L65
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| other = 
+
+| msg_cast_on_you = You feel frail.
+| msg_cast_on_other = Someone  looks frail.
+| msg_wears_off = You feel your strength return.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-3)]] | Library | (1104,-992) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Horacia Garnellia]] | Enchanter Guild (F2) | (533,729) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Kizya D'Dbth]] | Caster Guild (Basement) | (175,-923) }}
+{{SpellWhereRowB | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Isobelle Losiwoo]] | Caster Guild (Outside) | (328,-634) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Est Treewalker]] | Enchanter Guild | (595,-910) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Yarina Zarampo]] | Caster Guild (F1) | (131,-761) }}
+}}
+
+}}

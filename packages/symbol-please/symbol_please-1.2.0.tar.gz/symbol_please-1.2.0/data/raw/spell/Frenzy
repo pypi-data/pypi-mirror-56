@@ -1,0 +1,44 @@
+{{Classic Era}}
+{{Spellpage|
+
+| spellname = Frenzy
+| spellicon = R
+| description = Sends you into a frenzy, increasing your strength, dexterity, and armor class for up to 5.8 mins @L16 to 20.5 mins @L65. BUT DRAINS YOUR MANA!
+
+| classes = 
+
+* [[Shaman]] - Level 19
+
+| slots = 
+
+{{SpellSlotRow | 3 | Increase AC by 7 (L19) to 10 (L40) }}
+{{SpellSlotRow | 5 | Increase AGI by 19 (L19) to 25 (L30) }}
+{{SpellSlotRow | 6 | Increase STR by 19 (L19) to 28 (L52) }}
+{{SpellSlotRow | 7 | Increase DEX by 25 }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 35
+| range =  
+| casting_time = 2.00
+| fizzle_time = 30.00
+| recast_time = 2.25
+| duration = 6.7 minutes @L19 to 20.5 minutes @L65
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You go berserk.
+| msg_cast_on_other = Someone  goes berserk.
+| msg_wears_off = Your frenzy fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRow  | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRowB | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRow  | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+}}
+
+}}

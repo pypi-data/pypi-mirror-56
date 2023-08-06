@@ -1,0 +1,50 @@
+{{Spellpage|
+
+| spellname = Shifting Sight
+| spellicon = B
+| description = Shifts your vision to your target's eyes, increasing vision range, as well as vastly improving night vision.
+
+| classes = 
+
+* [[Wizard]] - Level 39
+* [[Enchanter]] - Level 20
+
+| slots = 
+
+{{SpellSlotRow | 1 | Bind Sight(1) }}
+{{SpellSlotRow | 2 | Increase Stamina Loss by 2 }}
+{{SpellSlotRow | 3 | Infravision(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 30
+| range = 10000
+| casting_time = 4.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 7 minutes @L20 to 19 minutes @L60
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = You shift your sight.
+| msg_cast_on_other = Someone 's eyes gleam and then go dark.
+| msg_wears_off = Your shifting sight ends.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (LG-4)]] | Library | (1106,-989) }}
+{{SpellWhereRowB | [[Erudin]] | [[Weltria Ostriss]] | Library (F3) | (-1111,-242) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Estra Nancer]] | Enchanter Guild (F2) | (536,761) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Jusar V'Lask]] | Library (F1) | (914,-1279) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Litz B`Doph]] | Caster Guild (F1) | (132,-955) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Corrao Duperame]] | The Herb Jar | (302,-559) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Seren the Swift]] | Enchanter Guild | (509,-910) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Serri Moonwatcher]] | Wizard Guild | (441,-450) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Lasiris Oncre]] | Caster Guild (F1) | (112,-768) }}
+}}
+
+}}

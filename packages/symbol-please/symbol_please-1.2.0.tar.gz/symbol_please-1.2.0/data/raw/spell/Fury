@@ -1,0 +1,46 @@
+{{Spellpage|
+
+| spellname = Fury
+| spellicon = R
+| description = Fills you with a burning fury, increasing your strength, dexterity, agility, and armor class while draining your mana for 10.0 mins @L30 to 20.5 mins @L65.
+
+| classes = 
+
+* [[Shaman]] - Level 34
+
+| items_with_effect = 
+
+<ul><li> {{:Mantle of the Songweaver}}
+</li><li> {{:Songweaver's Mantle}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 3 | Increase AC by 12 (L34) to 15 (L50) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 50
+| range =  
+| casting_time = 2.00
+| fizzle_time = 30.00
+| recast_time = 2.25
+| duration = 11.2 minutes @L34 to 20.5 minutes @L65
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You go berserk.
+| msg_cast_on_other = Someone  goes berserk.
+| msg_wears_off = Your frenzy fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+}}
+
+}}

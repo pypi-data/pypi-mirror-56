@@ -1,0 +1,38 @@
+{{Spellpage|
+
+| spellname = Seeking Flame of Seukor
+| spellicon = O
+| description = Burns your target's skin with the seeking flame of Seukor.
+
+| classes = 
+
+* [[Magician]] - Level 59
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 1024 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 320
+| range = 300
+| casting_time = 7.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Line of Sight
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = You are seared by the Seeking Flame of Seukor.
+| msg_cast_on_other = Someone  is burnt by the Seeking Flame of Seukor.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Firiona Vie]] | [[Brackin Nartoise]] | Outpost | (-3979,2612) }}
+{{SpellWhereRow  | [[The Overthere]] | [[Vizra L'Nizlon]] | Outpost | (2788,2427) }}
+}}
+
+}}

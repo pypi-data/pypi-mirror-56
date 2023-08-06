@@ -1,0 +1,75 @@
+{{Spellpagesmart|
+
+| spellname = Healing
+| spellicon = J
+| description = Mends moderate wounds, Increase Hitpoints by 84 (L14) to 100 (L30). 1.66 HPM at lvl 30.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 14
+* [[Paladin]] - Level 30
+* [[Ranger]] - Level 39
+* [[Druid]] - Level 19
+* [[Shaman]] - Level 19
+
+| items_with_effect = 
+
+<ul><li> {{:Bottle of Drake Breath}}
+</li><li> {{:Carrion Queen Liver}}
+</li><li> {{:Fae Amulet}}
+</li><li> {{:Amulet of the Fae}}
+</li><li> {{:Prayer Beads}}
+</li><li> {{:Squad Ring}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Hitpoints by 84 (L14) to 100 (L30) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range = 100
+| casting_time = 3.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel much better.
+| msg_cast_on_other = Someone  feels much better.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-5)]] | Cleric Guild | (1184,-560) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-11)]] | Necromancer Guild | (2041,-410) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grymm]] | Temple of Terror (First Floor) | (1018,-163) }}
+{{SpellWhereRow  | [[Erudin]] | [[Lissa Respelti]] | Cleric Guild - Quellious | (-650,-45) }}
+{{SpellWhereRowB | [[Erudin]] | [[Issibla Belstince]] | Cleric Guild - Prexus (F2) | (-1031,-375) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Seria Woodwind]] | Paladin Guild | (-9,-197) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Assa Leafwind]] | Cleric Guild | (24,-466) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Geep Tresoj]] | Cleric Guild (F1) | (93,427) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Donala Baris]] | Paladin Guild (F3) | (208,-130) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRowB | [[Grobb]] | [[Barsk - Troll]] | Shaman Guild | (303,-417) }}
+{{SpellWhereRow  | [[Halas]] | [[Boraskor]] | Shaman Guild | (352,448) }}
+{{SpellWhereRow  | [[North Kaladim]] | [[Krako Stonesplitter]] | Cleric Guild | (778,155) }}
+{{SpellWhereRowB | [[Northern Karana]] | [[Tak Whistler]] | Druid Ring | (-2732,-1466) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Sol Punox]] | Cleric Guild | (400,-838) }}
+{{SpellWhereRow  | [[Oggok]] | [[Barsk - Ogre]] | Shaman Guild | (665,1051) }}
+{{SpellWhereRowB | [[Paineel]] | [[Erelin Verisue]] | Cleric Guild | (1226,551) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Oriyame Nelafre]] | Cleric Guild | (-259,-539) }}
+{{SpellWhereRow  | [[Qeynos|North Qeynos]] | [[Henlom Visrek]] | Paladin Guild | (-135,-122) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Altha Shadowjumper]] | Cleric Guild | (-243,-358) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Bukem Breewood]] | Ranger Guild | (105,-80) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Taben]] | Cleric Guild | (-227,809) }}
+}}
+| TableLocations = Vendors
+| TableEra = Classic
+}}

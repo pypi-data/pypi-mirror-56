@@ -1,0 +1,42 @@
+{{Spellpage|
+
+| spellname = Shadow Sight
+| spellicon = B
+| description = Allows your eyes the vision of shadows, providing night vision for 27.0 mins.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 49
+* [[Necromancer]] - Level 24
+
+| slots = 
+
+{{SpellSlotRow | 1 | Ultravision(1) }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 50
+| range =  
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 27 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = The shadows fade.
+| msg_cast_on_other = Someone 's eyes glow violet.
+| msg_wears_off = Your shadow sight fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Grobb]] | [[Crilt - Troll]] | Shadow Knight Guild | (518,-618) }}
+{{SpellWhereRow  | [[Oggok]] | [[Crilt - Ogre]] | Shadow Knight Guild | (276,-2) }}
+{{SpellWhereRowB | [[Paineel]] | [[Brettas Norval]] | Shadow Knight Guild | (888,468) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

@@ -1,0 +1,52 @@
+{{Spellpage|
+
+| spellname = Restless Bones
+| spellicon = G
+| description = Animates an undead servant from the remnants of the fallen.  Consumes [[Bone Chips|bone chips]] when cast.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 30
+* [[Necromancer]] - Level 16
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Skeleton Pet: skel_pet_15_ }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 160
+| range =  
+| casting_time = 9.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Bone Chips]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  animates an undead servant.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Research: Words of Reviviscence , Words of the Sentient (Azia)
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Squire Gristle]] | Temple of Terror (West Tower - Floor 2) | (1005,-105) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Tagus Wunne]] | Underground | (-98,-257) }}
+{{SpellWhereRowB | [[Grobb]] | [[Trusk - Troll]] | Shadow Knight Guild | (512,-625) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Jys D'Bious]] | Necromancer Guild (F1) | (1312,-1266) }}
+{{SpellWhereRowB | [[Oggok]] | [[Trusk - Ogre]] | Shadow Knight Guild | (392,3) }}
+{{SpellWhereRow  | [[Paineel]] | [[Sheras Milaku]] | Shadow Knight Guild | (888,443) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gehnon Dejartes]] | Shadow Knight Guild | (421,-438) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

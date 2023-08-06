@@ -1,0 +1,48 @@
+{{Spellpagesmart|
+
+| spellname = Immolate
+| spellicon = O
+| description = Inflicts burns on your target, causing 24 damage every 6 seconds for 66 secs (11 ticks). Requires a fire beetle eye to cast. Max 2.2 DPM.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 49
+* [[Druid]] - Level 29
+
+| slots = 
+
+{{SpellSlotRowSmart | 2 | Decrease Hitpoints by 24 per tick | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 10 | Decrease AC by 10 (L29) to 18 (L50) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 120
+| range = 200
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 1 minute 6 seconds
+| target_type = Single
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| other = 
+
+* '''Focus:''' [[Fire Beetle Eye]]
+
+| msg_cast_on_you = You are surrounded by blazing flames.
+| msg_cast_on_other = Someone  is surrounded by blazing flames.
+| msg_wears_off = The flames are extinguished.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRow  | [[Steamfont Mountains]] | [[Crisyn]] | Druid Ring | (-1750,1657) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Bukem Breewood]] | Ranger Guild | (105,-80) }}
+}}
+| TableLocations = Kelethin<br/>Steamfont Mnt<br/>Surefall Glade
+| TableEra = Classic
+}}

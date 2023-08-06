@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Insidious Malady
+| spellicon = E
+| description = Infects your target with a fever, causing them to become more susceptible to other diseases.
+
+| classes = 
+
+* [[Shaman]] - Level 39
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Disease Counter by 9 }}
+{{SpellSlotRow | 2 | Decrease Disease Resist by 49 (L39) to 60 (L50) }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 60
+| range = 200
+| casting_time = 1.00
+| fizzle_time = 2.50
+| recast_time = 5.00
+| duration = 8.8 minutes @L39 to 14 minutes @L65
+| target_type = Single
+| spell_type = Detrimental
+| resist = Disease (0)
+
+| msg_cast_on_you = You feel a fever settle upon you.
+| msg_cast_on_other = Someone  sweats and shivers, looking feverish.
+| msg_wears_off = Your fever has broken.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRowB | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+}}
+
+}}

@@ -1,0 +1,56 @@
+{{Spellpage|
+
+| spellname = Elemental Armor
+| spellicon = K
+| description = Covers your skin in elemental armor, protecting you from fire and cold.
+
+| classes = 
+
+* [[Wizard]] - Level 44
+* [[Magician]] - Level 44
+
+| items_with_effect = 
+
+<ul><li> {{:Icicle Pantaloons}}
+</li><li> {{:Pants of the Invoker}}
+</li><li> {{:Diamond Encrusted Staff}}
+</li><li> {{:Sage's Pantaloons}}
+</li><li> {{:Sorcerer's Pantaloons}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 2 | Increase Cold Resist by 30 }}
+{{SpellSlotRow | 4 | Increase Fire Resist by 30 }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 100
+| range =  
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 36 minutes
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel protected from fire and ice.
+| msg_cast_on_other = Someone  feels protected from fire and ice.
+| msg_wears_off = Your elemental armor fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-13)]] | Library | (1092,-1029) }}
+{{SpellWhereRow  | [[Erudin]] | [[Sornita Eltern]] | Library (F3) | (-1108,-231) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Wistcona]] | Magician Guild (F4) | (706,948) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Ranza S'Ion]] | Caster Guild (Basement) | (123,-923) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Sinon Loarpe]] | Caster Guild | (297,-582) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Reff Truewood]] | Magician Guild | (693,-490) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Jonbe Kressi]] | Caster Guild (F3) | (136,-752) }}
+}}
+
+* This spell is used with the Magician [[Skill Research|Research Skill]] [[Summon Heatstone]].
+
+}}

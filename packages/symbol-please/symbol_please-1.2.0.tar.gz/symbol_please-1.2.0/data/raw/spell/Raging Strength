@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Raging Strength
+| spellicon = R
+| description = Fills your target's body with raging power, increasing their strength for 45.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 29
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase STR by 23 (L29) to 26 (L34) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range = 100
+| casting_time = 3.50
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 45 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel stronger.
+| msg_cast_on_other = Someone  looks stronger.
+| msg_wears_off = Your strength fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+}}
+
+}}

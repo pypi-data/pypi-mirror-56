@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Fire Bolt
+| spellicon = O
+| description = Creates a bolt of fire that burns your target, causing between 45 and 65 damage.
+
+| classes = 
+
+* [[Wizard]] - Level 8
+
+| items_with_effect = 
+
+<ul><li> {{:Blazing Bracer of Fennin Ro}}
+</li><li> {{:Dagarn's Tail}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 45 (L8) to 51 (L14) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 40
+| range = 300
+| casting_time = 2.25
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Line of Sight
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = A stream of fire washes over you.
+| msg_cast_on_other = Someone  is bathed in fire.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-8)]] | Library | (1060,-977) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Gissa Brist]] | Wizard Guild (F2) | (894,742) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mak Ixtaz]] | Caster Guild (Basement) | (171,-893) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Rosdaria Sepria]] | Caster Guild | (327,-686) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Celent Newmist]] | Wizard Guild | (449,-341) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Mirpa Arana]] | Caster Guild (top floor) | (140,-79) }}
+}}
+
+}}

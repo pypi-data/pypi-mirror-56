@@ -1,0 +1,49 @@
+{{Spellpage|
+
+| spellname = Summoning: Earth
+| spellicon = L
+| description = Summons an earth elemental to aid you in battle.
+
+| classes = 
+
+* [[Magician]] - Level 24
+
+| slots = 
+
+{{SpellSlotRow | 1 | Summon Pet: SumEarthR7 }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 240
+| range =  
+| casting_time = 12.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' Malachite
+* '''Focus:''' [[Shovel of Ponz]]
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-15)]] | Library | (1098,-1030) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Kestall Tulenci]] | Magician Guild (F2) | (726,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mys S'Tai]] | Caster Guild (F1) | (163,-955) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Headara Ponido]] | Caster Guild | (319,-580) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Elle Leafdancer]] | Magician Guild | (665,-515) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Odemi Partun]] | Caster Guild (F3) | (107,-737) }}
+}}
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

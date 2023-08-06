@@ -1,0 +1,51 @@
+{{Spellpagesmart|
+
+| spellname = Feet like Cat
+| spellicon = A
+| description = Infuses your target with a feline spirit, increasing their agility.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 15
+* [[Shaman]] - Level 5
+
+| items_with_effect = 
+
+<ul><li> {{:Cat o' Nine Tails}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase AGI by 14 @L5 to 18 @L9 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 40
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 36 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel more agile.
+| msg_cast_on_other = Someone  looks more agile.
+| msg_wears_off = Your agility fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kabda]] | Temple of Terror (First Floor) | (1013,-218) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Aleena Lightleaf]] | Kelethin Ranger Guild | (-400,490) }}
+{{SpellWhereRowB | [[Grobb]] | [[Tokun - Troll]] | Shaman Guild | (350,-400) }}
+{{SpellWhereRow  | [[Halas]] | [[Corak]] | Shaman Guild | (313,424) }}
+{{SpellWhereRowB | [[Oggok]] | [[Tokun - Ogre]] | Shaman Guild | (632,1091) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Raken]] | Ranger Guild | (106,-94) }}
+}}
+| TableLocations = Cabilis/Kelethin<br/>Grobb/Halas<br/>Oggok/Surefall
+| TableEra = Classic
+}}

@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Call of Bones
+| spellicon = G
+| description = Grips your body in an unholy darkness, slowly draining your hit points while regenerating your mana.'''3rd of the "Lich" Spell line'''
+
+| classes = 
+
+* [[Necromancer]] - Level 34
+
+| items_with_effect = 
+
+<ul><li> {{:Soul Defiler}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Illusion: 60 }}
+{{SpellSlotRow | 2 | Increase Mana by 8 per tick }}
+{{SpellSlotRow | 4 | Ultravision(1) }}
+{{SpellSlotRow | 7 | Decrease Hitpoints by 11 per tick }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 5
+| range =  
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 6.00
+| duration = 11.2 minutes @L34 to 20.5 minutes @L65
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel the skin peel from your bones.
+| msg_cast_on_other = Someone 's skin peels away.
+| msg_wears_off = Your flesh returns.
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+* This spell is a random reward from the [[Xelha's Cyclops Eye| Xelha's Cyclops Eye quest]]
+
+
+}}

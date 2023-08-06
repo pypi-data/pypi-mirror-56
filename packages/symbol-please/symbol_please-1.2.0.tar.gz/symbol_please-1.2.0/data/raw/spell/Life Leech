@@ -1,0 +1,35 @@
+{{Spellpage|
+
+| spellname = Life Leech
+| spellicon = G
+| description = Drains your target of life energy, siphoning between 228 and @1 hit points. This lifetap is unusually fast to cast at 2.5 seconds, though it is far less mana efficient and has a 2 minute cooldown.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 49
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 280 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 315
+| range = 200
+| casting_time = 2.50
+| fizzle_time = 5.00
+| recast_time = 120.00
+| duration = Instant
+| target_type = Lifetap
+| spell_type = Detrimental
+| resist = Magic (-200)
+
+| msg_cast_on_you = You feel your life force drain away.
+| msg_cast_on_other = Someone  looks pale.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Obtained via [[The Etched Stone]] quest.
+
+}}

@@ -1,0 +1,65 @@
+{{Spellpage|
+
+| spellname = Dismiss Undead
+| spellicon = C
+| description = A burst of holy power that inflicts between 140 and 162 damage to an undead target. (1.8 DPM)
+
+| classes = 
+
+* [[Cleric]] - Level 24
+* [[Paladin]] - Level 49
+* [[Shadow Knight]] - Level 49
+* [[Necromancer]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Ghoulbane}}
+</li><li> {{:Truvinan}}
+</li><li> {{:Craslith}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 140 (L24) to 162 (L35) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 90
+| range = 200
+| casting_time = 3.30
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Undead
+| spell_type = Detrimental
+| resist = Magic (-50)
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  staggers.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-3)]] | Cleric Guild | (1223,-538) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-7)]] | Necromancer Guild | (2139,-359) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-1)]] | Necromancer Guild | (2082,-410) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Ainla Yurimar]] | Underground | (-162,-270) }}
+{{SpellWhereRowB | [[Erudin]] | [[Stolace Printell]] | Cleric Guild - Quellious (Outside) | (-720,-58) }}
+{{SpellWhereRow  | [[Erudin]] | [[Tollari Mistell]] | Library (F1) | (-1067,-255) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Allia Moondancer]] | Cleric Guild | (2,-444) }}
+{{SpellWhereRow  | [[Grobb]] | [[Crilt - Troll]] | Shadow Knight Guild | (518,-618) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Rizyra F'Lok]] | Necromancer Guild (F1) | (1335,-1213) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Svlia C'Luzz]] | Cleric Guild | (402,-783) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Locarme Zennix]] | Cleric Guild (F1) | (103,286) }}
+{{SpellWhereRow  | [[Qeynos|North Qeynos]] | [[Berane Constarg]] | Paladin Guild | (-158,-160) }}
+{{SpellWhereRowB | [[Oggok]] | [[Crilt - Ogre]] | Shadow Knight Guild | (276,-2) }}
+{{SpellWhereRow  | [[Paineel]] | [[Brettas Norval]] | Shadow Knight Guild | (888,468) }}
+{{SpellWhereRowB | [[Paineel]] | [[Leovre Kieqmarn]] | Necromancer Guild | (665,804) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Dallisen Xalladyr]] | Necromancer Guild | (402,-311) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Tessia Sowtsui]] | Cleric Guild | (340,-434) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Blippo Stumbletoe]] | Cleric Guild | (-208,-417) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Rott]] | Cubby near PvP Area | (-440,236) }}
+}}
+
+}}

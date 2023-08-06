@@ -1,0 +1,38 @@
+{{Spellpagesmart|
+
+| spellname = Blizzard
+| spellicon = S
+| description = Calls down a hailstorm from the sky, causing three waves of 490 damage to all creatures near your target. This spell has a purple background which means it '''will damage you if you are in range of your target(s).'''
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Druid]] - Level 54
+
+| slots = 
+
+{{SpellSlotRowSmart  | 1 | Decrease Hitpoints by 490 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 332
+| range = 150
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 12.00
+| duration = Instant
+| target_type = Targeted AE
+| spell_type = Detrimental
+| resist = Cold (0)
+
+| msg_cast_on_you = You are caught in a raging blizzard.
+| msg_cast_on_other = Someone  is caught in a raging blizzard.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* Kunark Level 50+ Mob Drop
+| TableLocations = 50+ Mobs
+| TableEra = {{{TableEra|Kunark}}}
+}}

@@ -1,0 +1,47 @@
+{{Spellpage|
+
+| spellname = Cinder Bolt
+| spellicon = O
+| description = Burns your target's skin with a cinder bolt, causing between 319 and 333 damage.
+
+| classes = 
+
+* [[Magician]] - Level 34
+
+| items_with_effect = 
+
+<ul><li> {{:Burnt Wood Staff}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 319 (L34) to 333 (L39) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 175
+| range = 300
+| casting_time = 5.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Line of Sight
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = A stream of fire washes over you.
+| msg_cast_on_other = Someone  is bathed in fire.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-16)]] | Library | (1101,-1028) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Tuballi Stellari]] | Magician Guild (F2) | (729,918) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Pisna H'Rugla]] | Caster Guild (Basement) | (133,-911) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Gende Reldari]] | Caster Guild | (307,-579) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Osisa Goldenspear]] | Magician Guild | (666,-526) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Cronte Deloru]] | Caster Guild (F3) | (113,-722) }}
+}}
+
+}}

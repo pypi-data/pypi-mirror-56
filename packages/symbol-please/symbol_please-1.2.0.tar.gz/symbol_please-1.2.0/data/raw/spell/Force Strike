@@ -1,0 +1,39 @@
+{{Spellpage|
+
+| spellname = Force Strike
+| spellicon = C
+| description = Strikes your target with a pure force, causing between 530 and 625 damage.
+
+| classes = 
+
+* [[Wizard]] - Level 44
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 545 (L44) to 625 (L60) }}
+{{SpellSlotRow | 2 | Stun for 0.0 seconds }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 250
+| range = 200
+| casting_time = 5.50
+| fizzle_time = 2.50
+| recast_time = 12.00
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You have been force struck.
+| msg_cast_on_other = Someone  has been force struck.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Erudin]] | [[Sornita Eltern]] | Library (F3) | (-1108,-231) }}
+{{SpellWhereRowB | [[Skyshrine]] | [[Guardian Trekolz]] | Spell vendors | (324, -877) }}
+}}
+
+}}

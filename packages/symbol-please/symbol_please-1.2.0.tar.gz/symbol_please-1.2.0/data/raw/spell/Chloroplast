@@ -1,0 +1,56 @@
+{{Spellpagesmart|
+
+| spellname = Chloroplast
+| spellicon = J
+| description = Hastens your target's natural healing, regenerating 10 hit points every 6 seconds. 9.55 HP/mana; 1.67 HP/sec
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 55
+* [[Druid]] - Level 44
+* [[Shaman]] - Level 39
+
+| items_with_effect = 
+
+<ul><li> {{:Belt of the Primalist}}
+</li><li> {{:Elder Spiritist's Breastplate}}
+</li><li> {{:Skull-engraved Coin}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Increase Hitpoints by 10 per tick | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 200
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 12 minutes 42 seconds @L39 to 19 minutes 6 seconds @L60
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You begin to regenerate.
+| msg_cast_on_other = Someone  begins to regenerate.
+| msg_wears_off = You have stopped regenerating.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Butcherblock Mountains]] | [[Ellona]] | Druid Ring | (-2085,2016) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Gaxl the scribe]] | Temple of Terror (West Tower - Bottom +1) | (1025,-109) }}
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Migron]] | Temple of Terror (First Floor) | (1031,-160) }}
+{{SpellWhereRow  | [[Firiona Vie]] | [[Raciel Sanherb]] | Outpost | (-3396,3310) }}
+{{SpellWhereRowB | [[Grobb]] | [[Korff - Troll]] | Shaman Guild | (304,-438) }}
+{{SpellWhereRow  | [[Halas]] | [[Bolace]] | Shaman Guild | (326,478) }}
+{{SpellWhereRowB | [[Oggok]] | [[Korff - Ogre]] | Shaman Guild | (667,1066) }}
+{{SpellWhereRow  | [[The Wakening Land]] | [[Weinna Oakchild]] | ? | (521,-1038) }}
+}}
+| TableLocations = Butcherblock Mnt<br/>Cabilis/Grobb<br/>Halas/Oggok<br/>Wakening Land<br/>Firiona Vie
+| TableEra = {{{TableEra|Classic}}}
+}}

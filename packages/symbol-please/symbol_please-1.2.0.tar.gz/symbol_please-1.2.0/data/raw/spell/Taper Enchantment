@@ -1,0 +1,48 @@
+{{Spellpage|
+
+| spellname = Taper Enchantment
+| spellicon = U
+| description = Tears the magic from your target, causing their enchantments to fade.
+
+As of 7/14/2017 patch, Taper Enchantment will no longer completely remove an effect, it only reduces time remaining of an effect.
+
+"Rather than remove an effect, it reduces its time remaining." - Haynar [https://www.project1999.com/forums/showthread.php?p=2557629#post2557629]
+
+| classes = 
+
+* [[Enchanter]] - Level 1
+
+| slots = 
+
+{{SpellSlotRow | 1 | Cancel Magic(0) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 5
+| range = 200
+| casting_time = 3.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = The air crackles around you.
+| msg_cast_on_other = Someone  is surrounded by a crackling static energy.
+| msg_wears_off = 
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-7)]] | Library | (1093,-977) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Vellenon Harrance]] | Enchanter Guild (F2) | (507,727) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Lizza D'Unnar]] | Caster Guild (Basement) | (165,-192) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Chalios Bensted]] | Caster Guild | (324,-618) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Remon Zarga]] | Caster Guild (F1) | (138,-712) }}
+{{SpellWhereRowB | [[Felwithe|North Felwithe]] | [[Merchant Silspin]] | Outside Fish House | (236,-614) }}
+}}
+
+}}

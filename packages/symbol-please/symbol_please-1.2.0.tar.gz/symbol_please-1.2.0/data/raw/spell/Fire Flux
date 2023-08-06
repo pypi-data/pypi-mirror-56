@@ -1,0 +1,46 @@
+{{Classic Era}}
+{{Spellpage|
+
+| spellname = Fire Flux
+| spellicon = O
+| description = Creates a circle of fire around you, causing between 8 and 12 damage to all nearby creatures.
+
+| classes = 
+
+* [[Magician]] - Level 4
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 10 (L4) to 12 (L8) }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 23
+| range =  
+| casting_time = 1.75
+| fizzle_time = 2.50
+| recast_time = 6.00
+| duration = Instant
+| target_type = PB AE
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = Flames race across your body.
+| msg_cast_on_other = Someone  is covered in flames.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell can be obtained via quest: [[Rungupp (Quest)]].
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-17)]] | Library | (1105,-1022) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Killi Frillep]] | Magician Guild (F2) | (695,919) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Cizzar J'Axx]] | Caster Guild (Basement) | (135,-921) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Tsuden Korinte]] | Caster Guild | (322,-595) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Neapha Vesturo]] | The Herb Jar | (317,-554) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Vellera Wintergreen]] | Magician Guild | (715,-526) }}
+{{SpellWhereRowB | [[Freeport|West Freeport]] | [[Trepo Merrop]] | Caster Guild (F3) | (133,-762) }}
+}}
+
+}}

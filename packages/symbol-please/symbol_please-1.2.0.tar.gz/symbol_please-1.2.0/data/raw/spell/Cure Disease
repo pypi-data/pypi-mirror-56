@@ -1,0 +1,80 @@
+{{Spellpagesmart|
+
+| spellname = Cure Disease
+| spellicon = J
+| description = Cleanses your target's immune system, curing minor diseases.
+
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Cleric]] - Level 5
+* [[Paladin]] - Level 15
+* [[Druid]] - Level 5
+* [[Shaman]] - Level 1
+* [[Necromancer]] - Level 16
+
+| items_with_effect = 
+
+<ul><li>  {{:Shield of the Immaculate}}
+</li></ul>
+
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease Disease Counter by 1 | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 20
+| range = 100
+| casting_time = 2.00
+| fizzle_time = 2.25
+| recast_time = 3.00
+| duration = Instant
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other =  
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-11)]] | Necromancer Guild | (2041,-410) }}
+{{SpellWhereRow  | [[Ak'Anon]] | [[Clockwork Merchant (NG-3)]] | Necromancer Guild | (2100,-398) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (CG-5)]] | Cleric Guild | (1184,-560) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Kabda]] | Temple of Terror (First Floor) | (1013,-218) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Hundle Quatvel]] | Underground | (-186,-234) }}
+{{SpellWhereRow  | [[Erudin]] | [[Kathar Varselli]] | Cleric Guild - Prexus (F1) | (-1067,-417) }}
+{{SpellWhereRowB | [[Erudin]] | [[Lissa Respelti]] | Cleric Guild - Quellious | (-650,-45) }}
+{{SpellWhereRow  | [[Felwithe]] | [[Seleni Treekeeper]] | Paladin Guild | (-5,-256) }}
+{{SpellWhereRowB | [[Felwithe]] | [[Assa Leafwind]] | Cleric Guild | (24,-466) }}
+{{SpellWhereRow  | [[Greater Faydark]] | [[Uleen Laughingwater]] | Kelethin Druid Guild | (-639,237) }}
+{{SpellWhereRowB | [[Grobb]] | [[Tokun - Troll]] | Shaman Guild | (350,-400) }}
+{{SpellWhereRow  | [[Halas]] | [[Corak]] | Shaman Guild | (313,424) }}
+{{SpellWhereRow  | [[North Kaladim]] | [[Krako Stonesplitter]] | Cleric Guild | (778,155) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Olak N'Mar]] | Necromancer Guild (F1) | (1337,-1226) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Sol Punox]] | Cleric Guild | (400,-838) }}
+{{SpellWhereRowB | [[Freeport|North Freeport]] | [[Orex Nolus]] | Paladin Guild (F1) | (218,-119) }}
+{{SpellWhereRow  | [[Freeport|North Freeport]] | [[Geep Tresoj]] | Cleric Guild (F1) | (93,427) }}
+{{SpellWhereRowB | [[Qeynos|North Qeynos]] | [[Henlom Visrek]] | Paladin Guild | (-135,-122) }}
+{{SpellWhereRow  | [[Oggok]] | [[Tokun - Ogre]] | Shaman Guild | (632,1091) }}
+{{SpellWhereRowB | [[Paineel]] | [[Oren Calferdo]] | Cleric Guild | (1125,427) }}
+{{SpellWhereRow  | [[Paineel]] | [[Devinious Natasu]] | Necromancer Guild | (675,887) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Vidurlyn Aeminee]] | Necromancer Guild | (308,-306) }}
+{{SpellWhereRow  | [[Rivervale]] | [[Altha Shadowjumper]] | Cleric Guild | (-243,-358) }}
+{{SpellWhereRowB | [[Rivervale]] | [[Bumpy Quickfinger]] | Druid Guild | (-74,-403) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Lisdon Trekka]] | Cleric Guild | (-236,-480) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Fesse Bontex]] | Cleric Guild | (-257,-510) }}
+{{SpellWhereRow  | [[Surefall Glade]] | [[Qomber Roblen]] | Druid Guild | (-106,-260) }}
+{{SpellWhereRowB | [[Thurgadin]] | [[Lorekeeper Zorik]] | Cleric Guild | (-182,770) }}
+{{SpellWhereRow  | [[Thurgadin]] | [[Keegan]] | Paladin Guild | (-210,543) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Pestilence]] | Cubby near PvP Area | (-410,231) }}
+}}
+| TableLocations = Vendors
+| TableEra = Classic
+}}

@@ -1,0 +1,44 @@
+{{Spellpage|
+
+| spellname = Scale Skin
+| spellicon = K
+| description = Causes your target to grow hard scales around their body, increasing their armor class for 9.0 mins @L3 to 27.0 mins @L9.  Consumes [[Snake Scales]] when cast.
+
+| classes = 
+
+* [[Shaman]] - Level 5
+
+| slots = 
+
+{{SpellSlotRow | 4 | Increase AC by 4 (L5) to 6 (L9) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 25
+| range = 100
+| casting_time = 2.50
+| fizzle_time = 2.25
+| recast_time = 4.50
+| duration = 15 minutes @L5 to 27 minutes @L9
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+* '''Reagent:''' [[Snake Scales]]
+
+| msg_cast_on_you = You grow scales.
+| msg_cast_on_other = Someone  grows scales.
+| msg_wears_off = You shed your scales.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Kabda]] | Temple of Terror (First Floor) | (1013,-218) }}
+{{SpellWhereRow  | [[Grobb]] | [[Tokun - Troll]] | Shaman Guild | (350,-400) }}
+{{SpellWhereRowB | [[Halas]] | [[Corak]] | Shaman Guild | (313,424) }}
+{{SpellWhereRow  | [[Oggok]] | [[Tokun - Ogre]] | Shaman Guild | (632,1091) }}
+}}
+
+}}

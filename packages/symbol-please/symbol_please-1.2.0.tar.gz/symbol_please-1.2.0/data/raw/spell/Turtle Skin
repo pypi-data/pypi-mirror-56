@@ -1,0 +1,45 @@
+{{Spellpage|
+
+| spellname = Turtle Skin
+| spellicon = K
+| description = Causes your target's skin to grow as hard as a turtle's shell, increasing their armor class for 33.0 mins @L11 to 36.0 mins @L12.
+
+| classes = 
+
+* [[Shaman]] - Level 14
+
+| slots = 
+
+{{SpellSlotRow | 4 | Increase AC by 9 (L14) to 10 (L18) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 50
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 7.50
+| duration = 36 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = Your skin becomes as hard as turtle shell.
+| msg_cast_on_other = Someone 's skin looks greener.
+| msg_wears_off = Your skin returns to normal.
+
+| items_with_effect = 
+
+<ul><li> {{:Lodizal Shell Boots}}
+</li></ul>
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Grott]] | Temple of Terror (First Floor) | (1050,-213) }}
+{{SpellWhereRow  | [[Grobb]] | [[Hoart - Troll]] | Shaman Guild | (329,-408) }}
+{{SpellWhereRowB | [[Halas]] | [[Tukanta]] | Shaman Guild | (352,423) }}
+{{SpellWhereRow  | [[Oggok]] | [[Hoart - Ogre]] | Shaman Guild | (666,1087) }}
+}}
+
+}}

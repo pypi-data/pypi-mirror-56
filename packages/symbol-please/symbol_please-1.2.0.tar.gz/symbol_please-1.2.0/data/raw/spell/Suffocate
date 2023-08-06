@@ -1,0 +1,54 @@
+{{Spellpage|
+
+| spellname = Suffocate
+| spellicon = M
+| description = Constricts your target's throat, causing between 34 to 65 damage initially and 11 damage every six seconds for 1.5 mins @L29 to 1.8 mins @L36, as well as lowering their strength and agility.  Damage per mana: 1.99 (L29) - 2.63 (L60).
+
+Stacks with [[Cripple]].
+
+| classes = 
+
+* [[Enchanter]] - Level 29
+
+| items_with_effect = 
+
+<ul><li> {{:Nevederia's Horn}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease HP when cast by 34 (L29) to 65 (L60) }}
+{{SpellSlotRow | 2 | Decrease STR by 15 (L29) to 20 (L38) }}
+{{SpellSlotRow | 3 | Decrease AGI by 15 (L29) to 20 (L38) }}
+{{SpellSlotRow | 4 | Decrease Hitpoints by 11 per tick }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 100
+| range = 200
+| casting_time = 3.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 1.4 minutes @L29 to 1.8 minutes @L36
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| other = 
+
+| msg_cast_on_you = You feel a shortness of breath.
+| msg_cast_on_other = Someone  begins to choke.
+| msg_wears_off = You can breathe again.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-3)]] | Library | (1104,-992) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Horacia Garnellia]] | Enchanter Guild (F2) | (533,729) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Kizya D'Dbth]] | Caster Guild (Basement) | (175,-923) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Isobelle Losiwoo]] | Caster Guild (Outside) | (328,-634) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Est Treewalker]] | Enchanter Guild | (595,-910) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Yarina Zarampo]] | Caster Guild (F1) | (131,-761) }}
+}}
+
+}}

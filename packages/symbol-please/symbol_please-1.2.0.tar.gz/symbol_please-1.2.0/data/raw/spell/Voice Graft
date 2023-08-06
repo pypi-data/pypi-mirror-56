@@ -1,0 +1,47 @@
+{{bug}}
+{{Spellpage|
+
+| spellname = Voice Graft
+| spellicon = U
+| description = Allows you to speak through your undead servant.
+
+Currently bugged on P99. 
+1) You will see both you and your pet say what you type, but your echo will not be visible to other players. 
+2) Even if you don't have your pet targeted you will always talk through your pet. 
+3) The spell can't be clicked off since it's a buff on the pet, so the only way to talk through your player until the 27 minute duration runs out is for you to either dismiss your pet or park it and run a certain distance away. (confirm the third one with a spectator. It's possible I was just out of range of the pet's /say and didn't see it.)
+
+| classes = 
+
+* [[Necromancer]] - Level 16
+
+| items_with_effect = 
+
+<ul><li> {{:Preserved Chokidai Vocal Cords}}
+</li><li> {{:Sentient Two-Handed Axe}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Voice Graft }}
+
+| skill = [[Skill Divination | Divination]]
+
+| mana = 10
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.25
+| recast_time = 12.00
+| duration = 27 minutes
+| target_type = Pet
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone 's head shimmers.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

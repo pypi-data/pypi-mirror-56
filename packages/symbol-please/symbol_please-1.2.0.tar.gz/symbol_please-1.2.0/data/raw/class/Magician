@@ -1,0 +1,1880 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+= Description =
+[[File:C magician.gif|right]]
+Magicians are master summoners, able to call elemental pets to do their bidding and to conjure useful items from thin air. Magicians are primarily a magic-using class, with the ability to wear cloth armor and wield blunt weapons and daggers.
+
+Elemental pets are at the heart of a magician's offensive strategy, and typically accompany a magician in all his adventures. This pet provides protection for its master, along with powerful attacks and special abilities. Magicians have a large selection of fire and magic-based damage spells, allowing them to mount a damaging magical assault in support of their elemental pet.
+
+Magicians have a wide range of summoning spells, allowing them to conjure such diverse items as food, weapons, armor, and magical jewelry. In battle, the magician can encase his entire group in a shield of fire, damaging any opponent that strikes them. Magicians also have spells that lower a monster's resistance to magic, allowing spells to damage them more easily.
+
+Magicians are a very focused class, sacrificing some diversity for power in their area of expertise. Magicians are able to adventure solo, but also provide value in a group situation. The magician is a good choice for players who enjoy managing a powerful pet and using a tightly focused spell selection.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Magician || Elementalist || Conjurer || Arch Mage
+|}
+
+= Creation Guide =
+
+== Picking the Right Race ==
+
+Magicians must take into account a number of things.  None of the pure caster class races have any experience penalties associated with them.  A lot of Magicians choose the [[Erudite]] race since it has the highest base intelligence.  [[Human]]s are popular for their rounded stats, and [[Dark Elf|Dark Elves]] for their high agility and racial ability to Hide, though they are often killed on sight in many places.  Conversely, [[Gnome]]s are generally well liked in most places.
+
+== Starting Statistics ==
+
+[[File:magician-stats.png]]
+
+== Suggested Starting Statistics ==
+
+It is very easy to assign yourself the wrong statistics and regret it for the rest of you characters career.  Magicians are primarily about mana, and our suggested allocation of bonus points reflects this:
+
+* For Dark Elves add 25 Intelligence and 5 Stamina.
+* For Erudites add 25 Intelligence and 5 Agility. This will keep you from taking the <75 AGI massive AC hit.
+* For Gnomes add 25 Intelligence and 5 Stamina.
+* For High Elves add 25 Intelligence and 5 Stamina.
+* For Humans add 25 Intelligence and 5 Stamina.
+
+''(This section needs a realistic/modern update for p1999.)''
+
+== Experience Statistics ==
+
+As of the January 2001 timeline patch, the class penalty was removed ([https://www.project1999.com/forums/showthread.php?t=211758 September 21, 2015]).
+
+'''What does it mean?'''
+
+Certain races and classes require differing amounts of experience points to attain the same level. For example, a Human Magician requires 110% of the experience that a Human Cleric would require to be the same level.
+
+
+== Religion ==
+
+Generally speaking being agnostic is a fairly safe bet in Everquest. Follower of [[Tunare]] can quest for [[Chord of Vines]].
+
+
+=Spells=
+
+	
+==Level 1==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Burst of Flame
+|description=Single Target Fire-based Direct Damage (DD) (Max: 5)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=7
+}}
+{{SpellRow
+|name=Flare
+|description=Casts a flame that will travel directly ahead of you
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=3
+}}
+{{SpellRow
+|name=Minor Shielding
+|description=Self Only Hit Points (HP) and Armor Class (AC) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=Reclaim Energy
+|description=Kills pet and gives you mana
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=5
+}}
+{{SpellRow
+|name=Summon Dagger
+|description=Summons 1 {{:Summoned: Dagger}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=Summon Drink
+|description=Summons 1 {{:Summoned: Globe of Water}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=Summon Food
+|description=Summons 1 {{:Summoned: Black Bread}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=10
+}}
+{{SpellRow
+|name=True North
+|description=Turns player to the North
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=5
+}}
+</table>
+
+==Level 4==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Burn
+|description=Single Target Fire-based Direct Damage (DD) (Max: 14)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=15
+}}
+{{SpellRow
+|name=Elementalkin: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Elementalkin: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Elementalkin: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Elementalkin: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Fire Flux
+|description=Area of Effect (AE) Fire-based Point Blank (PB) Direct Damage (DD) (Max: 12)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=23
+}}
+{{SpellRow
+|name=Gate
+|description=Returns you to your Bind Point
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=70
+}}
+{{SpellRow
+|name=Sense Summoned
+|description=Points you in the direction of  the nearest summoned creature in the zone
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=5
+}}
+{{SpellRow
+|name=Summon Bandages
+|description=Summons 20 {{:Summoned: Bandages}} for binding wounds
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=15
+}}
+{{SpellRow
+|name=Summon Wisp
+|description=Summons 1 {{:Summoned: Wisp Stone}} as a light source
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=30
+}}
+</table>
+
+==Level 8==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Dimensional Pocket
+|description=Summons 1 {{:Summoned: Dimensional Pocket}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Elementaling: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Elementaling: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Elementaling: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Elementaling: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Eye of Zomm
+|description=Summons a small eye you can control and see with
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Flame Bolt
+|description=Single Target Fire-based Projectile Direct Damage (Fire DD) (Max: 47)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Invisibility
+|description=Single Target Invisibility
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Lesser Shielding
+|description=Self Only Hit Point (HP), Magic Resist (MR), and Armor Class (AC) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=25
+}}
+{{SpellRow
+|name=Renew Elements
+|description=Pet Only Heal (Max: 50)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=25
+}}
+{{SpellRow
+|name=Shield of Fire
+|description=Single Target Damage Shield (DS) and Fire Resist (FR) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Shock of Blades
+|description=Single Target Magical Direct Damage (DD) (Max: 35)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Staff of Tracing
+|description=Summons 1 {{:Summoned: Staff of Tracing}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=20
+}}
+</table>
+
+==Level 12==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bind Affinity
+|description=Single Target new Bind Point
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Burnout
+|description=Pet Only Strength (STR) and Haste buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=35
+}}
+{{SpellRow
+|name=Cancel Magic
+|description=Removes a magical effect from your target
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Column of Fire
+|description=Area of Effect (AE) Fire-based Direct Damage (DD) around target
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=65
+}}
+{{SpellRow
+|name=Elemental: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=120
+}}
+{{SpellRow
+|name=Elemental: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=120
+}}
+{{SpellRow
+|name=Elemental: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=120
+}}
+{{SpellRow
+|name=Elemental: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=120
+}}
+{{SpellRow
+|name=Rain of Blades
+|description=Area of Effect (AE) spell that hits your target(s) with 3 waves (Max: 26)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=62
+}}
+{{SpellRow
+|name=Summon Fang
+|description=Summons 1 {{:Summoned: Snake Fang}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Ward Summoned
+|description=Single Target Direct Damage (DD) vs Summoned (Max: 41)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=30
+}}
+</table>
+
+==Level 16==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Identify
+|description=Obtain Item Lore Information
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Minor Summoning: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor (OoT)
+|mana=160
+}}
+{{SpellRow
+|name=Minor Summoning: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor (OoT)
+|mana=160
+}}
+{{SpellRow
+|name=Minor Summoning: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor (OoT)
+|mana=160
+}}
+{{SpellRow
+|name=Minor Summoning: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=160
+}}
+{{SpellRow
+|name=Phantom Leather
+|description=Self Only Armor Class (AC) and Hit Point (HP) Regeneration Buff (+1/tick) (Consumes [[Cat's Eye Agate]] when cast)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=See Invisible
+|description=Single Target Vision Enhancer
+|era=&nbsp;
+|school=Div.
+|location=Vendor
+|mana=25
+}}
+{{SpellRow
+|name=Shielding
+|description=Self Only Hit Point (HP), Magic Resist (MR), and Armor Class (AC) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Shock of Flame
+|description=Single Target Fire-based Direct Damage (DD) (Max: 97)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=70
+}}
+{{SpellRow
+|name=Staff of Warding
+|description=Summons 1 {{:Summoned: Staff of Warding}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Summon Heatstone
+|description=Summons 1 {{:Summoned: Heatstone}} for light and Infravision
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+{{SpellRow
+|name=Summon Throwing Dagger
+|description=Summons 20 {{:Summoned: Throwing Dagger}}s
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=20
+}}
+</table>
+
+==Level 20==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bolt of Flame
+|description=Single Target Fire-based Projectile Direct Damage (DD) (Max: 156)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=105
+}}
+{{SpellRow
+|name=Elemental Shield
+|description=Self Only Fire Resist (FR) and Cold Resist (CR) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Expulse Summoned
+|description=Single Target Direct Damage (DD) vs Summoned (Max: 94)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Lesser Summoning: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Lesser Summoning: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor (OoT)
+|mana=200
+}}
+{{SpellRow
+|name=Lesser Summoning: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor (OoT)
+|mana=200
+}}
+{{SpellRow
+|name=Lesser Summoning: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor (OoT)
+|mana=200
+}}
+{{SpellRow
+|name=Rain of Fire
+|description=Area of Effect (AE) Fire-based spell that hits your target with 3 waves (Max: 56)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=125
+}}
+{{SpellRow
+|name=Renew Summoning
+|description=Pet Only Heal (Max: 220)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Shield of Flame
+|description=Single Target Fire-based Damage Shield (DS) (Max: 9)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Spear of Warding
+|description=Summons 1 {{:Summoned: Spear of Warding}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Summon Arrows
+|description=Summons 20 {{:Summoned: Arrow}}s
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=30
+}}
+{{SpellRow
+|name=Summon Waterstone
+|description=Summons 1 {{:Summoned: Waterstone}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=40
+}}
+</table>
+
+==Level 24==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cornucopia
+|description=Summons 20 {{:Summoned: Black Bread}}
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Cornucopia|Research]]
+|mana=25
+}}
+{{SpellRow
+|name=Everfount
+|description=Summons 20 {{:Summoned: Globe of Water}}
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Everfount|Research]]
+|mana=25
+}}
+{{SpellRow
+|name=Flame Flux
+|description=Area of Effect (AE) Fire-based Point Blank (PB) Direct Damage (DD) (Max: 96)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=123
+}}
+{{SpellRow
+|name=Major Shielding
+|description= Self Only Hit Point (HP), Armor Class (AC), and Magic Resist (MR) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Malaise
+|description=Single Target Fire Resist (FR), Magic Resist (MR), Cold Resist (CR), and Poison Resist (PR) Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Shock of Spikes
+|description=Magic-based Direct Damage (DD) (Max: 176)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=110
+}}
+{{SpellRow
+|name=Staff of Runes
+|description=Summons 1 {{:Summoned: Staff of Runes}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Summoning: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Summoning_Air|Research]]
+|mana=240
+}}
+{{SpellRow
+|name=Summoning: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=240
+}}
+{{SpellRow
+|name=Summoning: Fire
+|description=Summons a Fire Elemental
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Summoning_Fire|Research]]
+|mana=240
+}}
+{{SpellRow
+|name=Summoning: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Summoning_Water|Research]]
+|mana=240
+}}
+</table>
+
+==Level 29==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Burnout II
+|description=Pet only Strength (STR) and Haste Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=75
+}}
+{{SpellRow
+|name=Dismiss Summoned
+|description=Single Target Direct Damage (DD) vs Summoned (Max: 162)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=90
+}}
+{{SpellRow
+|name=Expedience
+|description=Outdoor Only Pet Movement Speed Buff
+|era=Vel.
+|school=Alt.
+|location=E. Com.
+|mana=45
+}}
+{{SpellRow
+|name=Greater Summoning: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Greater Summoning: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Greater_Summoning_Earth|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Greater Summoning: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Greater Summoning: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Greater_Summoning_Water|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Inferno Shield
+|description=Single Target Damage Shield (DS) & Fire Resist (FR) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Phantom Chain
+|description=Self Only Armor Class (AC) and Hit Point (HP) Regeneration (+2/tick)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Rain of Spikes
+|description=Area of Effect (AE) spell hits your target with 3 waves (Max: 91)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=162
+}}
+{{SpellRow
+|name=Summon Coldstone
+|description=Summons 1 {{:Summoned: Coldstone}} that gives Ultravision and 5 Armor Class (AC)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=75
+}}
+{{SpellRow
+|name=Sword of Runes
+|description=Summons {{:Summoned: Sword of Runes}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=75
+}}
+</table>
+
+==Level 34==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Blaze
+|description=Single Target Fire-based Direct Damage (DD) (Max: 295)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=155
+}}
+{{SpellRow
+|name=Cinder Bolt
+|description=Fire Projectile Direct Damage (DD) (Max: 333)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=175
+}}
+{{SpellRow
+|name=Dimensional Hole
+|description=Summons 1 {{:Dimensional Hole (Item)}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=60
+}}
+{{SpellRow
+|name=Greater Shielding
+|description=Self Only Hit Point (HP), Magic Resist (MR), and Armor Class (AC) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=120
+}}
+{{SpellRow
+|name=Minor Conjuration: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Minor_Conjuration_Air|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Minor Conjuration: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Minor Conjuration: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Minor_Conjuration_Fire|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Minor Conjuration: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Monster Summoning I
+|description=Summon a Monster Pet
+|era=Vel.
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Nullify Magic
+|description=Removes a magical effect from your target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=50
+}}
+{{SpellRow
+|name=Staff of Symbols
+|description=Summons 1 {{:Summoned: Staff of Symbols}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=80
+}}
+{{SpellRow
+|name=Summon Shard of the Core
+|description=Summons 1 {{:Summoned: Shard of the Core}}
+|era=Vel.
+|school=Con.
+|location=NCP Drop
+|mana=50
+}}
+</table>
+
+==Level 39==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Barrier of Combustion
+|description=Single Target Damage Shield (DS) & Fire Resist (FR) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Dagger of Symbols
+|description=Summons 1 {{:Summoned: Dagger of Symbols}}
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Expel Summoned
+|description=Single Target Direct Damage (DD) vs Summoned (Max: 273)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=130
+}}
+{{SpellRow
+|name=Flame Arc
+|description=Area of Effect (AE) Point Blank (PB) Fire Direct Damage (DD) (Max: 181)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=199
+}}
+{{SpellRow
+|name=Lesser Conjuration: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Lesser Conjuration: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Lesser_Conjuration_Earth|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Lesser Conjuration: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Lesser Conjuration: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Lesser_Conjuration_Water|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Rain of Lava
+|description=Area of Effect Fire-based spell that hits your target with 3 waves
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=250
+}}
+{{SpellRow
+|name=Summon Companion
+|description=Summon your Pet to Your Location
+|era=&nbsp;
+|school=Con.
+|location=E. Com.
+|mana=50
+}}
+{{SpellRow
+|name=Summon Ring of Flight
+|description=Summons 1 {{:Summoned: Ring of Levitation}} that gives levitation
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=100
+}}
+</table>
+
+==Level 44==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Arch Shielding
+|description=Self Only Hit Point (HP), Magic Resist (MR), and Armor Class (AC) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Conjuration: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Conjuration_Air|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Conjuration: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Conjuration_Earth|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Conjuration: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Conjuration: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Conjuration_Water|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Elemental Armor
+|description=Single Target Cold Resist (CR) and Fire Resist (FR) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=100
+}}
+{{SpellRow
+|name=Elemental Maelstrom
+|description=Single Target Magic-based Damage over Time (DoT) (Max: 600)
+|era=Vel.
+|school=Evo.
+|location=NPC Drop
+|mana=240
+}}
+{{SpellRow
+|name=Malaisement
+|description=Single Target Fire Resist (FR), Cold Resist (CR), Magic Resist (MR), and Poison Resist (PR) Debuff (Max: 40)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Modulating Rod
+|description=Summons 1 {{:Summoned: Modulating Rod}} that can convert Hit Points (HP) to Mana (225 HP to 150 Mana)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Phantom Plate
+|description=Self Only Hit Point Regeneration (+3/tick) and Armor Class (AC) Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Shock of Swords
+|description=Single Target Magic-based Direct Damage (DD) (Max: 600)
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=250
+}}
+</table>
+
+==Level 46==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Summon Orb
+|description=Summons 1 {{:Orb of Mastery}} that can summon a pet at level 46
+|era=&nbsp;
+|school=Con.
+|location=Quest
+|mana=500
+}}
+</table>
+
+==Level 49==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Banish Summoned
+|description=Single Target Direct Damage (DD) vs Summoned (Max: 585)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor
+|mana=225
+}}
+{{SpellRow
+|name=Burnout III
+|description=Pet Only Armor Class (AC) and Strength (STR) Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor
+|mana=150
+}}
+{{SpellRow
+|name=Greater Conjuration: Air
+|description=Summons an Air Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Greater_Conjuration_Air|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Greater Conjuration: Earth
+|description=Summons an Earth Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=Vendor
+|mana=200
+}}
+{{SpellRow
+|name=Greater Conjuration: Fire
+|description=Summons a Fire Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Greater_Conjuration_Fire|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Greater Conjuration: Water
+|description=Summons a Water Elemental Pet
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Greater_Conjuration_Water|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Lava Bolt
+|description=Single Target Fire-based Projectile Direct Damage (DD) (Max: 810)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=300
+}}
+{{SpellRow
+|name=Rain of Swords
+|description=Area of Effect (AE) Magic-based Direct Damage (DD) that hits your target(s) with 3 waves (Max: 324 per Wave)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=375
+}}
+{{SpellRow
+|name=Shield of Lava
+|description=Single Target Damage Shield (DS) & Fire Resist (FR) Buff (Max: 25)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor
+|mana=120
+}}
+</table>
+
+==Level 50==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Monster Summoning II
+|description=Summons a Monster Pet
+|era=Vel.
+|school=Con.
+|location=NPC Drop
+|mana=200
+}}
+</table>
+
+==Level 51==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Gift of Xev
+|description=Summons {{:Glowing Backpack}}, {{:Summoned: Black Bread}}, {{:Summoned: Globe of Water}}, and {{:Summoned: Bandages}}
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=60
+}}
+{{SpellRow
+|name=Malosi
+|description=Single Target Fire Resist (FR), Cold Resist (CR), Magic Resist (MR), and Poison Resist (PR) Debuff (Max: 60)
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=175
+}}
+{{SpellRow
+|name=Scintillation
+|description=Area of Effect (AE) Fire-based Point Blank (PB) Direct Damage (DD)
+|era=Kun.
+|school=Evo.
+|location=Quest
+|mana=361
+}}
+{{SpellRow
+|name=Vocarate: Earth
+|description=Summons an Earth Elemental Pet
+|era=Kun.
+|school=Con.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=300
+}}
+</table>
+
+==Level 52==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bristlebane's Bundle
+|description=Summons {{:Summoned: Ale}}, {{:Summoned: Cake}}, {{:Summoned: Spinning Bottle}}, and {{:Summoned: A Firework}}
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=50
+}}
+{{SpellRow
+|name=Char
+|description=Single Target Fire-based Direct Damage (DD) (max: 702)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=260
+}}
+{{SpellRow
+|name=Phantom Armor
+|description=Personal Armor Class (AC) and Hit Point (HP) Regeneration Buff
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=225
+}}
+{{SpellRow
+|name=Vocarate: Fire
+|description=Summons a Fire Elemental Pet (Wizard class)
+|era=Kun.
+|school=Con.
+|location=Quest
+|mana=300
+}}
+</table>
+
+==Level 53==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Annul Magic
+|description=Removes a magical effect from your target
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=75
+}}
+{{SpellRow
+|name=Boon of Immolation
+|description=Group Damage Shield (DS) & Fire Resist (FR) Buff (Max: 25)
+|era=Kun.
+|school=Abj.
+|location=Quest
+|mana=360
+}}
+{{SpellRow
+|name=Quiver of Marr
+|description=Summons 1 [[Quiver of Marr (Item) | Quiver of Marr]] with 60 [[Summoned: Arrow of Marr]]
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=60
+}}
+{{SpellRow
+|name=Vocarate: Air
+|description=Summon an Air Elemental Pet (Monk class)
+|era=Kun.
+|school=Con.
+|location=Quest
+|mana=300
+}}
+</table>
+
+==Level 54==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bandoleer of Luclin
+|description=Summons 1 [[Bandoleer of Luclin]] and 60 [[Summoned: Knife of Luclin]]
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=60
+}}
+{{SpellRow
+|name=Scars of Sigil
+|description=Single Target Fire-based Projectile Direct Damage (DD) (Max: 450)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop
+|mana=175
+}}
+{{SpellRow
+|name=Shield of the Magi
+|description=Self Only Hit Point (HP), Magic Resist (MR), and Armor Class (AC) Buff
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=300
+}}
+{{SpellRow
+|name=Vocarate: Water
+|description=Summons a Water Elemental Pet (Rogue class)
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=300
+}}
+</table>
+
+==Level 55==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Burnout IV
+|description=Pet Only Armor Class (AC), Strength (STR) and Haste Buff
+|era=Vel.
+|school=Alt.
+|location=NPC Drop
+|mana=150
+}}
+{{SpellRow
+|name=Call of the Hero
+|description=Summons Target Group Member to the Caster and erases aggro on (Consumes 1 [[Pearl]])
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=500
+}}
+{{SpellRow
+|name=Pouch of Quellious
+|description=Summons [[Pouch of Quellious]] and 60 [[Summoned: Shuriken of Quellious]]
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=60
+}}
+{{SpellRow
+|name=Rage of Zomm
+|description=Summon a Suicidal Eye
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=200
+}}
+{{SpellRow
+|name=Sirocco
+|description=Area of Effect (AE) Fire-based spell that hits your target(s) with 3 waves (max: 1890)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=399
+}}
+{{SpellRow
+|name=Wrath of the Elements
+|description=Short Duration Damage over Time (DoT) (Max: 800)
+|era=Vel.
+|school=Evo.
+|location=NPC Drop
+|mana=265
+}}
+</table>
+
+==Level 56==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Cadeau of Flame
+|description=Single Target Damage Shield (DS) & Fire Resist (FR) Buff (Max: 33)
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=155
+}}
+{{SpellRow
+|name=Dyzil's Deafening Decoy
+|description=Summons a Fire Element Pet with a Damage Shield (DS)
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=350
+}}
+{{SpellRow
+|name=Exile Summoned
+|description=Single Target Direct Damage (DD) vs Summoned (Max: 725)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=250
+}}
+{{SpellRow
+|name=Muzzle of Mardu
+|description=Summons {{:Summoned: Muzzle of Mardu}} that gives Haste (11%)
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=100
+}}
+</table>
+
+==Level 57==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Eye of Tallon
+|description=Summons Eye of Tallon that has Invisibility and See Invisible
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=65
+}}
+{{SpellRow
+|name=Greater Vocaration: Earth
+|description=Summons an Earth Elemental Pet
+|era=Kun.
+|school=Con.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=400
+}}
+{{SpellRow
+|name=Shock of Steel
+|description=Single Target Magic-based Direct Damage (DD) (Max: 825)
+|era=Kun.
+|school=Con.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=275
+}}
+</table>
+
+==Level 58==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Greater Vocaration: Fire
+|description=Summons a Fire Elemental Pet
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=400
+}}
+{{SpellRow
+|name=Malosini
+|description=Single Target Fire Resist (FR), Cold Resist (CR), Magic Resist (MR), and Poison Resist (PR) Debuff (Max: 60)
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=200
+}}
+{{SpellRow
+|name=Velocity
+|description=Pet Only Movement Speed Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=60
+}}
+</table>
+
+==Level 59==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Greater Vocaration: Air
+|description=Summons an Air Elemental Pet
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=400
+}}
+{{SpellRow
+|name=Manastorm
+|description=Area of Effect (AE) Magic-based Rain Damage and Mana Drain Spell that hits your target(s) with 3 waves (Max: 675 HP and 50 Mana per Wave)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop
+|mana=427
+}}
+{{SpellRow
+|name=Seeking Flame of Seukor
+|description=Single Target Fire-based Projectile Direct Damage (DD) (Max: 1024)
+|era=Kun.
+|school=Evo.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=330
+}}
+{{SpellRow
+|name=Valiant Companion
+|description=Pet Only Fear Immunity
+|era=Vel.
+|school=Alt.
+|location=E. Com.
+|mana=200
+}}
+</table>
+
+==Level 60==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>	
+     <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Aegis of Ro
+|description=Group Damage Shield (DS) & Fire Resist (FR) Buff (Max: 33)
+|era=Kun.
+|school=Abj.
+|location=NPC Drop
+|mana=450
+}}
+{{SpellRow
+|name=Banishment
+|description=Direct Damage vs Summoned (Destroys target & consumes 1 [[Star Ruby]])
+|era=Kun.
+|school=Evo.
+|location=NPC Drop
+|mana=500
+}}
+{{SpellRow
+|name=Greater Vocaration: Water
+|description=Summons a Water Elemental Pet
+|era=Kun.
+|school=Con.
+|location=NPC Drop
+|mana=400
+}}
+{{SpellRow
+|name=Mala
+|description=Single Target Fire Resist (FR), Cold Resist (CR), Magic Resist (MR), and Poison Resist (PR) Debuff (Max: 35)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop
+|mana=350
+}}
+{{SpellRow
+|name=Monster Summoning III
+|description=Summons a Monster Pet
+|era=Vel.
+|school=Con.
+|location=NPC Drop
+|mana=400
+}}
+</table>
+
+=Skills=
+
+== Pet Information ==
+
+{{#lsth:Pet Guide|[[Magician]] Pets}}
+
+==Specialization==
+
+{{#lsth:Skill Specialization|Magician}}
+
+==Casting Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Abjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alteration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Channelling</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Conjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Divination</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Evocation</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">4</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Meditate</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">252</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">16</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Research</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">20</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Specialization</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+</table>
+
+==Combat Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>1 Hand Blunt</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>2 Hand Blunt</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Bind Wound</td>
+		<td align="center" width="20%">100</td>
+		<td align="center" width="25%">100</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Defense</td>
+		<td align="center" width="20%">145</td>
+		<td align="center" width="25%">145</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Hand to Hand</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Offense</td>
+		<td align="center" width="20%">140</td>
+		<td align="center" width="25%">140</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Piercing</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Throwing</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">22</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Dodge</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+</table>
+
+
+
+==Miscellaneous Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alcohol Tolerance</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Beg</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Fishing</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Sense Heading</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Swimming</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+= Magician-Specific Quests =
+
+{{#lsth:Class Race Quest List|Magician}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Magician]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Magician]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Magician]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Magician]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Magician]]}}
+
+
+                                                          Magician Armor Comparison (Velious Quest Armor)
+
+
+''' Magician Armor Comparison (Velious Quest Armor) ''' <span id="magician_armor_comparison"></span>
+
+{| class="eoTable2"
+!
+! AC
+! STR
+! STA
+! AGI
+! DEX
+! WIS
+! INT
+! CHA
+! HP
+! Mana
+! SvM
+! SvF
+! SvC
+! SvP
+! SvD
+|-
+| Thurgadin
+| 45 || 0 || 26 || 14 || 0 || 0 || 42 || 0 || 110 || 160 || 19 || 15 || 13 || 13 || 11
+|-
+| Kael
+| 58 || 0 || 27 || 15 || 0 || 0 || 53 || 0 || 140 || 210 || 29 || 23 || 16 || 18 || 23
+|-
+| Skyshrine
+| 45 || 4 || 36 || 16 || 1 || 1 || 49 || 1 || 265 || 285 || 28 || 20 || 27 || 21 || 24
+|}
+
+= FAQ =
+
+{{Template: Navbox Classes}}

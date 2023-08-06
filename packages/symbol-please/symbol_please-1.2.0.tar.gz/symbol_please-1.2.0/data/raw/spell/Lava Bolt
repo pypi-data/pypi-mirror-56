@@ -1,0 +1,42 @@
+{{Spellpage|
+
+| spellname = Lava Bolt
+| spellicon = O
+| description = Burns your target's skin with a bolt of lava, causing between 817 and 815 damage.
+
+| classes = 
+
+* [[Magician]] - Level 49
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 810 }}
+
+| skill = [[Skill Evocation | Evocation]]
+
+| mana = 300
+| range = 300
+| casting_time = 7.00
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Line of Sight
+| spell_type = Detrimental
+| resist = Fire (0)
+
+| msg_cast_on_you = A stream of fire washes over you.
+| msg_cast_on_other = Someone  is bathed in fire.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-13)]] | Library | (1092,-1029) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Wistcona]] | Magician Guild (F4) | (706,948) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Ranza S'Ion]] | Caster Guild (Basement) | (123,-923) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Sinon Loarpe]] | Caster Guild | (297,-582) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Reff Truewood]] | Magician Guild | (693,-490) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Jonbe Kressi]] | Caster Guild (F3) | (136,-752) }}
+}}
+
+}}

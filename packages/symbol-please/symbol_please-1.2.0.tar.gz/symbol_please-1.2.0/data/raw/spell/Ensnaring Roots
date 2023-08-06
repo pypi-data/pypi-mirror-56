@@ -1,0 +1,51 @@
+{{Spellpagesmart|
+
+| spellname = Ensnaring Roots
+| spellicon = P
+| description = Commands roots to take hold of your target, doing between 34 and 60 damage, and preventing their movement for 1.4 mins @L24 to 1.6 mins @L27.
+| Table = {{{Table|0}}}
+| TableLevel = {{{TableLevel|}}}
+
+| classes = 
+
+* [[Ranger]] - Level 49
+* [[Druid]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Crystalline Silk Net}}
+</li><li> {{:Wooly Spider Silk Net}}
+</li><li> {{:Ebony Bladed Sword}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRowSmart | 1 | Decrease HP when cast by 34 (L24) to 60 (L50) | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+{{SpellSlotRowSmart | 2 | Root | simple = {{#ifeq:{{{Table|0}}}|0|0|1}} }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range = 200
+| casting_time = 2.50
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 1.4 minutes @L24 to 1.6 minutes @L27
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = Your feet become entwined.
+| msg_cast_on_other = Someone  is entwined by roots.
+| msg_wears_off = The roots fall from your feet.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Greater Faydark]] | [[Cerila Windrider]] | Kelethin Ranger Guild | (-428,476) }}
+{{SpellWhereRow  | [[Northern Karana]] | [[Tak Whistler]] | Druid Ring | (-2732,-1466) }}
+{{SpellWhereRowB | [[Surefall Glade]] | [[Bukem Breewood]] | Ranger Guild | (105,-80) }}
+}}
+| TableLocations = Kelethin<br/>N.Karana<br/>Surefall Glade
+| TableEra = Classic
+}}

@@ -1,0 +1,51 @@
+{{Spellpage|
+
+| spellname = Quickness
+| spellicon = R
+| description = Grants your target quickened movement, increasing their attack speed for 4.0 mins @L15 to 11.0 mins @L50.
+
+| classes = 
+
+* [[Shaman]] - Level 29
+* [[Enchanter]] - Level 16
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Attack Speed by 28% (L16) to 30% (L20) }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 80
+| range = 100
+| casting_time = 3.10
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 4.2 minutes @L16 to 11 minutes @L50
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| other = 
+
+| msg_cast_on_you = You feel much faster.
+| msg_cast_on_other = Someone  feels much faster.
+| msg_wears_off = Your speed returns to normal.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-4)]] | Library | (1106,-989) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Estra Nancer]] | Enchanter Guild (F2) | (536,761) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Neriak|Neriak - Commons]] | [[Litz B`Doph]] | Caster Guild (F1) | (132,-955) }}
+{{SpellWhereRowB | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Corrao Duperame]] | The Herb Jar | (302,-559) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Seren the Swift]] | Enchanter Guild | (509,-910) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Lasiris Oncre]] | Caster Guild (F1) | (112,-768) }}
+}}
+
+Possible (20% chance?) reward from [[Rathmana's Traveling Offer]]
+
+}}

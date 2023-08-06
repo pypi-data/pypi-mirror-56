@@ -1,0 +1,49 @@
+{{Spellpage|
+
+| spellname = Envenomed Breath
+| spellicon = N
+| description = Fills your target's blood with poison, causing 30 damage initially and 27 damage every six seconds for 42 seconds for a total of 219 damage. 2.19 DPM
+
+| classes = 
+
+* [[Shaman]] - Level 24
+
+| items_with_effect = 
+
+<ul><li> {{:Blade of the Black Dragon Eye}}
+</li><li> {{:Sword of the Shissar}}
+</li><li> {{:Wand of the Black Dragon Eye}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase Poison Counter by 3 }}
+{{SpellSlotRow | 2 | Decrease HP when cast by 30 }}
+{{SpellSlotRow | 3 | Decrease Hitpoints by 27 per tick }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 100
+| range = 200
+| casting_time = 3.10
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = 7 ticks
+| target_type = Single
+| spell_type = Detrimental
+| resist = Poison (0)
+
+| msg_cast_on_you = You have been poisoned.
+| msg_cast_on_other = Someone  has been poisoned.
+| msg_wears_off = The poison has run its course.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Grazik Plaguebringer]] | Temple of Terror (East Tower - Basement) | (1126,-263) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Vessel Kirtokk]] | Temple of Terror (First Floor) | (1039,-213) }}
+{{SpellWhereRowB | [[Everfrost Peaks]] | [[Starn Bearjumper]] | Ruined Temple | (2870,-36) }}
+{{SpellWhereRow  | [[Innothule Swamp]] | [[Stragak]] | Northern Hand | (1170,539) }}
+}}
+
+}}

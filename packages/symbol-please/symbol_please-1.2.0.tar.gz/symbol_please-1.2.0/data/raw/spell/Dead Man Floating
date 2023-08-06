@@ -1,0 +1,49 @@
+{{Spellpage|
+
+| spellname = Dead Man Floating
+| spellicon = G
+| description = Grants your target the power of the dead, including [[levitate|levitation]], increased poison resistance, [[Enduring Breath|water breathing]], and the ability to [[See Invisible|see invisible]] creatures.
+
+This buff stacks with many other buffs, including [[Resist Poison]].
+
+A self-only version is available to Shadow Knights called [[Bobbing Corpse]].
+
+| classes = 
+
+* [[Necromancer]] - Level 44
+
+| items_with_effect = 
+
+<ul><li> {{:Broken Sacrificial Blade}}
+</li><li> {{:Robe of Adversity}}
+</li><li> {{:Robe of Decay}}
+</li></ul>
+
+| slots = 
+
+{{SpellSlotRow | 1 | Water Breathing(2) }}
+{{SpellSlotRow | 2 | See Invisible(1) }}
+{{SpellSlotRow | 3 | Levitate(2) }}
+{{SpellSlotRow | 4 | Increase Poison Resist by 64 (L44) to 70 (L50) }}
+
+| skill = [[Skill Abjuration | Abjuration]]
+
+| mana = 150
+| range = 100
+| casting_time = 6.00
+| fizzle_time = 2.50
+| recast_time = 6.00
+| duration = 1 hour 12 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You become like the dead.
+| msg_cast_on_other = Someone  looks dead.
+| msg_wears_off = You return to life.
+
+| where_to_obtain = 
+
+* This spell is crafted with the [[Skill Research|Research Skill]].
+
+}}

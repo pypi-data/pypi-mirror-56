@@ -1,0 +1,2167 @@
+<div style="float:left;margin-right:20px;">
+__TOC__
+</div>
+
+=Description=
+[[File:C enchanter.gif|right]]
+Enchanters are the most subtle of spell casters, with little focus on doing damage directly but tremendous impact on the world around them. Enchanters are primarily a magic-using class, with the ability to wear cloth armor and wield blunt weapons and daggers.
+
+Enchanters specialize on improving the minds of their allies, with unmatched mana regeneration spells and mental enhancements. Haste spells are also the domain of the enchanter, providing incredible boosts in attack speed for members of their group. Enchanters have many powers of illusion as well, allowing them to take the form of many different creatures and races.
+
+In battle, enchanters are able to bring order to chaotic situations, often saving their group in a fight that would otherwise be lost. Enchanters possess the ability to mesmerize their enemies, temporarily removing them from a battle. Attack slowing spells are also a specialty, dramatically lowering the speed of a monster's attacks for a period of time. In many situations, enchanters can call upon powerful charm spells to subjugate the mind of a monster and command it to do the enchanter's bidding.
+
+Enchanters are a powerful class, but often rely upon a group to reach their full potential. Experienced enchanters thrive in chaotic situations where they can make the most of their offensive abilities. The enchanter is a good choice for players who enjoy playing in groups and like to take charge of challenging situations.
+
+=== Class Titles ===
+{| class="eoTable1" style="width:30%;"
+! Level 1-50
+! Level 51-54
+! Level 55-59
+! Level 60
+|- style="text-align: center;"
+| Enchanter || Illusionist || Beguiler || Phantasmist
+|}
+
+=Creation Guide=
+
+==Picking the right race for your statistics==
+
+The first thing you have to pick then is your race.   Which race you pick will determine the foundation of you character for the rest of your life in Norrath so it is kind of important you pick one you like.  Now in terms of faction, races are generally meaningless to Enchanters.  Religion plays a much larger role.  Enchanters can become any race they want through their illusion spells, and also have direct faction increasing abilities.  So when picking a race you are deciding on one of two reasons: statistics or looks.  Personally I think statistics are more important than looks, but looks can go a long way in a game you are going to be playing for a long time.
+
+[[File:enchanter-stats.png]]
+
+==Spending Your Bonus Points==
+Enchanters can be a great character with any race, although the most popular two are High Elves and Dark Elves. All Enchanter races level at the same rate.  
+
+The subject of where to distribute bonus points is heavily debated among Project 1999 enchanters. The two recommended distributions are either 25 Intelligence, 5 Charisma or 5 Intelligence, 25 Charisma. Those who intend to charm frequently as a solo tactic are advised to distribute their points into Charisma. Enchanters who do not intend to charm will probably see a greater benefit from an increased mana pool. However, enchanters who reach the highest levels will find that gear can easily raise a small mana pool, or boost a low Charisma if they later decide to take up charming.
+At the lower levels, it is usually easier and cheaper to find items that boost charisma than items that boost intelligence. 
+
+Intelligence raises the mana pool of a caster class. The approximate formula for overall mana is [(Level x Intelligence)/5 + gear] for an Intelligence under 200.
+Charisma primarily impacts Charm duration and the chance to gain aggro on a resisted Lull spell,, with a small benefit to Mez resists and the success rate of Mem blurs.
+
+===Velious Era Starting Points===
+
+
+====The Quick Version====
+
+Practical advice, '''25 points into CHARISMA every time, every race''' 
+
+Velious raid gear has a lot of INT. CHA and HP are an enchanters two most important stats at all stages of the game. Stamina has low conversion rate to HP for casters.This means maxing out on CHA is always the right call. 
+
+Min/Max: 25 point into CHA, 5 into STA<br>
+Casual:  25 point into CHA, 5 into INT
+
+====The Long version====
+
+The only real decision is whether to put 5 points into intelligence or 5 points into stamina. How to decide comes down to whether you'd classify yourself as a "neck beard" ("leg beard" if you're a woman) or "casual scum". Both are terms of endearment here on P99 and the difference between the two groups is self-explanatory. As a hardcore enchanter during the Velious era, you will have 255 intelligence eventually without ever having put any points into it. At which point you'll gripe about it constantly, much to the consternation of your guild-mates who have lives. Don't be that guy/gal. If you look in the mirror and you haven't shaved in a week because you were too busy playing online games, go ahead and put the 5 extra starting points into stamina. Alternatively, if you will almost always have something better to do than sign into Project 1999, you will probably never see any appreciable benefit from 5 extra points of stamina but 5 intelligence will give your mana pool a small boost. 
+
+For those still considering not putting 25 points into CHA, let me share a story. This server has been around for years and will probably continue to be for years to come. I started my enchanter casually over 6 years ago. I'm pretty sure I read this exact page when deciding how to spend my starting points. I ended up making a high elf and spending my points 25 INT 5 CHA. Fast forward six years later, my enchanter now has 255 INT unbuffed and I'm so annoyed about not having that extra 20 CHA, I'm editing the wiki page to try and stop others from making the same mistake. I can only hope you won't be in the same situation, because whoever you are, you will do the right thing and spend 25 points into CHA and be grateful that you did... during all stages of the game. Casual scum can stop reading at the end of this paragraph. Go put 25 points into CHA and 5 points into INT. Have fun! 
+
+Oh, which enchanter races do I think are best...Order them decsending by charisma. In the event of a tie, compare stamina. 
+
+=====MIN/MAX=====
+
+Attention beards of the neck and leg, at level 60 your investment of 5 starting points into stamina will be worth 12hp. To reiterate, for enchanters, stamina is worth 2.4 HP per point at level 60. You may be saying "WHAT?!?!?!" right now but let me explain. All stats you can spend starting points on other than Charisma, Intelligence and Stamina aren't worth worrying about as an enchanter. Strength may let you carry more at lower levels but you will eventually have 100% weight reduction bags and high-end items will give you more strength, you will have max intelligence whether you want it or not if you raid long enough and any AC you gain from agility probably doesn't do anything anyway. 
+
+
+Here is a magelo profile for a min-max high elf with 25cha and 5sta. At the very least it shows why spending points in intelligence is 100% not the min/max approach. 
+
+[[Magelo Blue:Enchanter Min Max]]
+
+Here is a magelo profile for a min-max human with 25cha and 5sta 
+
+[[Magelo Blue:EnchanterHumanMinMax]]
+
+If you experiment you will notice you really can't get HP much higher and the sets of gear linked above allow for max self-buffed magic resistance and charisma...as well as having max int unbuffed... 
+Notice the human profile is 223 sta unbuffed ...an argument can be made for putting the 5 points into AGI and calling it min-max (but I wouldn't for solo reasons) ....An argument can also be made for putting 5 less points into charisma 
+for each configuration. That is, if you will always have a shaman on hand to give you +55CHA (but once again I wouldn't for solo reasons)...
+
+Note spirit wracked cord isn't in the game as of 8/5/2016
+
+== Experience Statistics ==
+
+*Dark Elf Enchanter: -10%
+*Erudite Enchanter: -10%
+*Gnome Enchanter: -10%
+*High Elf Enchanter: -10%
+*Human Enchanter: -10%
+
+
+'''What does it mean?'''
+
+Certain races and classes require differing amounts of experience points to attain the same level. For example, a Human Enchanter requires 110% of the experience that a Human Cleric would require to be the same level. An Ogre Warrior would require 103.5% of the experience that the Human Cleric would.
+
+==Religion==
+Enchanters should, unless they are role-playing, always choose to be agnostic.  In some areas your illusion will not be enough to keep you alive.  In some areas you will still be Kill on Sight for any number of reasons, though these are very few indeed.  If you choose to be agnostic you virtually eliminate the risk of being murdered on a religious background.  It may however exclude you from partaking in certain quests at stages during the game ([[The Ancient Tomes]]) or from using some items if you have no religion.  In many ways the religion system in Everquest is unfathomed, serving only as an overriding faction system.
+
+=Spells=
+==Level 1==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Lull
+|description=Single Target Frenzy Range Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Minor Illusion
+|description=Self Only Morph to Object
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Minor Shielding
+|description=Self Only HP and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Pendril's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=12
+}}
+{{SpellRow
+|name=Reclaim Energy
+|description=Regain Mana From Your Animation
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Shallow Breath
+|description=Single Target Magical Direct Damage with Debuff (Max: 5)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=7
+}}
+{{SpellRow
+|name=Strengthen
+|description=Single Target Strength Buff (Max: 10)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Taper Enchantment
+|description=Single Target Magic Effect Duration Debuffer
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=True North
+|description=Self Only Navigation Spell
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=5
+}}
+{{SpellRow
+|name=Weaken
+|description=Single Target Strength Debuff (Max: 15)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=8
+}}
+
+</table>
+
+==Level 4==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Color Flux
+|description=Stuns all Targets Around Caster (4 Secs)
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Enfeeblement
+|description=Single Target Melee Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Fear
+|description=Single Target Fear Spell (18 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Gate
+|description=Return to Your Bind Point
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Haze
+|description=Single Target AC Buff (Max: 5)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Illusion: Half-Elf
+|description=Self Only Morph to Half Elf
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Illusion: Human
+|description=Self Only Morph to Human
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Invisibility
+|description=Single Target Invisibility Spell
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Juli's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=24
+}}
+{{SpellRow
+|name=Mesmerize
+|description=Single Target Mesmerize Spell (24 Secs)
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Suffocating Sphere
+|description=Single Target Magical Damage over Time with Debuff (34 damage total)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Tashan
+|description=Single Target Unresistable Magic Resistance Debuffer (Max: 13)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=10
+}}
+
+</table>
+
+==Level 8==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Alliance
+|description=Self Only NPC Faction Boost
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Bind Sight
+|description=See through the targets eyes
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=15
+}}
+{{SpellRow
+|name=Cancel Magic
+|description=Single Target Magic Effect Debuffer
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Chaotic Feedback
+|description=Single Target Magical Direct Damage (Max: 48)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=45
+}}
+
+{{SpellRow
+|name=Enchant Clay
+|description=Enchant Clay for Pottery
+|era=&nbsp;
+|school=Alt.
+|location=Felwithe.
+|mana=60
+}}
+
+{{SpellRow
+|name=Enchant: Silver
+|description=Enchant Silver Bar for Jewellery
+|era=&nbsp;
+|school=Alt.
+|location=Neriak/Felwithe.
+|mana=60
+}}
+{{SpellRow
+|name=Eye of Confusion
+|description=Single Target Blind Spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Illusion: Gnome
+|description=Self Only Morph to Gnome
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Illusion: Wood Elf
+|description=Self Only Morph to Wood Elf
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=10
+}}
+{{SpellRow
+|name=Lesser Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Mircyl's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=45
+}}
+{{SpellRow
+|name=Root
+|description=Single Target Fast Root Spell (Max: 48 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=See Invisible
+|description=Single Target Vision Enhancer
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Sentinel
+|description=Area Surveillance Spell
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=25
+}}
+{{SpellRow
+|name=Soothe
+|description=Single Target Frenzy Range Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+</table>
+
+==Level 12==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bind Affinity
+|description=Set a New Home Point for Target
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Charm
+|description=Single Target Random Duration Charm Spell (Level 25 Cap)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Choke
+|description=Single Target Magical Debuff DoT (Max: 80)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Ebbing Strength
+|description=Single Target Strength Debuff (Max: 25)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Enduring Breath
+|description=Allows Breathing Underwater.
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Illusion: Dark Elf
+|description=Self Only Morph to Dark Elf
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Illusion: Erudite
+|description=Self Only Morph to Erudite
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Illusion: Halfling
+|description=Self Only Morph to Halfling
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=30
+}}
+{{SpellRow
+|name=Illusion: High Elf
+|description=Self Only Morph to High Elf
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Kilan's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=65
+}}
+{{SpellRow
+|name=Languid Pace
+|description=Single Target Slowing Spell (Max: 30%)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Memory Blur
+|description=Single Target Memory Blur
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Mist
+|description=Single Target AC Buff (Max: 8)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Serpent Sight
+|description=Single Target Infravision
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Thicken Mana
+|description=Summons a Vial of Viscous Mana
+|era=&nbsp;
+|school=Div.
+|location=L.Faydark.
+|mana=200
+}}
+{{SpellRow
+|name=Whirl Till You Hurl
+|description=Single Target Distance Stun (Max: 12 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=55
+}}
+</table>
+
+==Level 16==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Breeze
+|description=Single Target Mana Regeneration Increase (2pts/tick)
+|era=Kun.
+|school=Alt.
+|location=Firiona Vie.<br>The Overthere.
+|mana=35
+}}
+{{SpellRow
+|name=Chase the Moon
+|description=Single Target Fear Spell (36 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Disempower
+|description=Single Target Melee Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=45
+}}
+{{SpellRow
+|name=Enchant: Electrum
+|description=Enchant [[Electrum Bar]] for [[Jewelcrafting]]
+|era=&nbsp;
+|school=Alt.
+|location=Neriak.
+|mana=75
+}}
+{{SpellRow
+|name=Enthrall
+|description=Single Target Mesmerize Spell (48 Secs)
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Identify
+|description=Obtain Item Lore Information
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Illusion: Barbarian
+|description=Self Only Morph to Barbarian
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Illusion: Dwarf
+|description=Self Only Morph to Dwarf
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Illusion: Tree
+|description=Self Only Morph to Tree
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Invisibility versus Undead
+|description=Single Target Undead Invisibility Buff
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Levitate
+|description=Single Target Levitation Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Mesmerization
+|description=Area Effect Mesmerize(24 Secs)
+|era=&nbsp;
+|school=Con.
+|location=[[Skill_Research#Mesmerisation|Research]]
+|mana=70
+}}
+{{SpellRow
+|name=Quickness
+|description=Single Target Haste Spell (Max: 30%)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Rune I
+|description=Single Target Damage Absorber (Max: 55)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=41
+}}
+{{SpellRow
+|name=Sanity Warp
+|description=Single Target Magical Direct Damage (Max: 95)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Shalee's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=85
+}}
+{{SpellRow
+|name=Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+</table>
+
+==Level 20==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Benevolence
+|description=Self Only NPC Faction Boost
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Berserker Strength
+|description=Single Target Melee Buff with Damage Absorb (Max: 50)
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Berserker_Strength|Research]]
+|mana=45
+}}
+{{SpellRow
+|name=Calm
+|description=Single Target Frenzy Reduction
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Cloud
+|description=Single Target AC Buff (Max: 11)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Color Shift
+|description=Stuns all Targets Around Caster (6 Secs)
+|era=&nbsp;
+|school=Div.
+|location=[[Skill_Research#Color_Shift|Research]]
+|mana=40
+}}
+{{SpellRow
+|name=Crystallize Mana
+|description=Summon a Vial of Cloudy Mana
+|era=&nbsp;
+|school=Div.
+|location=L.Faydark.
+|mana=400
+}}
+{{SpellRow
+|name=Endure Magic
+|description=Single Target Magic Resist Buff (Max: 20)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Feckless Might
+|description=Single Target Strength Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=45
+}}
+{{SpellRow
+|name=Illusion: Iksar
+|description=Self Only Morph to Iksar
+|era=Kun.
+|school=Div.
+|location=[[Firiona Vie]] Quest.
+|mana=50
+}}
+{{SpellRow
+|name=Illusion: Ogre
+|description=Self Only Morph to Ogre
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Illusion: Troll
+|description=Self Only Morph to Troll & HP Regen Buff (1hp/tick)
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Shifting Sight
+|description=See through the targets eyes with Infravision.
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=30
+}}
+{{SpellRow
+|name=Sisna's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=105
+}}
+{{SpellRow
+|name=Sympathetic Aura
+|description=Single Target Charisma Buff (Max: 18)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=40
+}}
+{{SpellRow
+|name=Tashani
+|description=Single Target Unresistable Magic Resistance Debuffer (Max: 23)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=20
+}}
+</table>
+
+==Level 24==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Alacrity
+|description=Single Target Haste Spell (Max: 40%)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=115
+}}
+{{SpellRow
+|name=Beguile
+|description=Single Target Random Duration Charm Spell (Level 37 Cap)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Chaos Flux
+|description=Single Target Magical Direct Damage (Max: 150)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Enchant: Gold
+|description=Enchant Gold Bar for Jewellery
+|era=&nbsp;
+|school=Alt.
+|location=Neriak.
+|mana=150
+}}
+{{SpellRow
+|name=Illusion: Earth Elemental
+|description=Self Only Morph to Earth Elemental & Strength Buff (Max: 10)
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=50
+}}
+{{SpellRow
+|name=Illusion: Skeleton
+|description=Self Only Morph to Skeleton
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=50
+}}
+{{SpellRow
+|name=Invigor
+|description=Single Target Stamina Regeneration Spell
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=20
+}}
+{{SpellRow
+|name=Major Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Rune II
+|description=Single Target Damage Absorber (Max: 118)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=83
+}}
+{{SpellRow
+|name=Sagar's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=130
+}}
+{{SpellRow
+|name=Strip Enchantment
+|description=Single Target Magic Buff Remover (Max: 4)
+|era=&nbsp;
+|school=Abj.
+|location=[[Skill_Research#Strip_Enchantment|Research]]
+|mana=70
+}}
+{{SpellRow
+|name=Tepid Deeds
+|description=Single Target Slowing Spell (Max: 50%)
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Tepid_Deeds|Research]]
+|mana=100
+}}
+</table>
+
+==Level 29==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Augmentation
+|description=Single Target Super Melee Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Clarify Mana
+|description=Creates a Vial of Clear Mana
+|era=&nbsp;
+|school=Alt.
+|location=L.Faydark.
+|mana=600
+}}
+{{SpellRow
+|name=Clarity
+|description=Single Target Mana Regeneration Buff( 4 - 8 )
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=75
+}}
+{{SpellRow
+|name=Curse of the Simple Mind
+|description=Single Target Wisdom and Intelligence Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Dyn's Dizzying Draught
+|description=Single Target Distance Stun (Max: 12 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Enstill
+|description=Single Target Root Spell (Max: 96 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=60
+}}
+{{SpellRow
+|name=Feedback
+|description=Single Target Damage Shield (11 Dmg)
+|era=&nbsp;
+|school=Abj.
+|location=[[Skill_Research#Feedback|Research]]
+|mana=75
+}}
+{{SpellRow
+|name=Illusion: Air Elemental
+|description=Self Only Morph to Air Elemental & Levitate
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=50
+}}
+{{SpellRow
+|name=Illusion: Water Elemental
+|description=Self Only Morph to Water Elemtal & Enduring Breath
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=50
+}}
+{{SpellRow
+|name=Listless Power
+|description=Single Target Melee Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Nullify Magic
+|description=Single Target Magic Effect Debuffer
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Obscure
+|description=Single Target AC Buff (Max: 14)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=50
+}}
+{{SpellRow
+|name=Suffocate
+|description=Single Target Magical Debuff DoT (Max: 263)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Uleen's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=150
+}}
+{{SpellRow
+|name=Ultravision
+|description=Single Target Ultravision
+|era=&nbsp;
+|school=Div.
+|location=Oasis.
+|mana=55
+}}
+</table>
+
+==Level 34==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Anarchy
+|description=Single Target Magical Direct Damage (Max: 288)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=160
+}}
+{{SpellRow
+|name=Boltran's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=125
+}}
+{{SpellRow
+|name=Cast Sight
+|description=See Through Targets Eyes with Ultravision
+|era=&nbsp;
+|school=Div.
+|location=Vendor.
+|mana=45
+}}
+{{SpellRow
+|name=Enchant: Platinum
+|description=Enchant Platinum Bar for Jewellery
+|era=&nbsp;
+|school=Alt.
+|location=Neriak/Felwithe.
+|mana=225
+}}
+{{SpellRow
+|name=Entrance
+|description=Single Target Mesmerize Spell (72 Secs)
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=85
+}}
+{{SpellRow
+|name=Gift of Magic
+|description=Single Target Mana Buff (Max: 50)
+|era=Vel.
+|school=Abj.
+|location=Iceclad Ocean.<br>Thurgadin.
+|mana=150
+}}
+{{SpellRow
+|name=Greater Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Illusion: Fire Elemental
+|description=Self Only Morph to Fire Elemental & Damage Shield (Max: 16)
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=70
+}}
+{{SpellRow
+|name=Insipid Weakness
+|description=Single Target Strength Debuff (Max: 51)
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Insipid_Weakness|Research]]
+|mana=80
+}}
+{{SpellRow
+|name=Mana Sieve
+|description=Single Target Mana Reducer
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Mana_Sieve|Research]]
+|mana=150
+}}
+{{SpellRow
+|name=Radiant Visage
+|description=Single Target Charisma Buff (Max: 30)
+|era=&nbsp;
+|school=Div.
+|location=[[Skill_Research#Radiant_Visage|Research]]
+|mana=65
+}}
+{{SpellRow
+|name=Rune III
+|description=Single Target Damage Absorber (Max: 230)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=149
+}}
+</table>
+
+==Level 39==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Aanya's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=200
+}}
+{{SpellRow
+|name=Cajoling Whispers
+|description=Single Target Random Duration Charm Spell (Level 46 Cap)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=195
+}}
+{{SpellRow
+|name=Celerity
+|description=Single Target Haste Spell (Max: 50%)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=185
+}}
+{{SpellRow
+|name=Distill Mana
+|description=Create a Vial of Distilled Mana
+|era=&nbsp;
+|school=Alt.
+|location=L.Faydark.
+|mana=800
+}}
+{{SpellRow
+|name=Gravity Flux
+|description=Area Effect Direct Damage Spell (Max: 330)
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Gravity_Flux|Research]]
+|mana=337
+}}
+{{SpellRow
+|name=Illusion: Drybone
+|description=Self Only Morph to Drybone & Fire Resist Buff (Max: 25)
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=70
+}}
+{{SpellRow
+|name=Illusion: Spirit Wolf
+|description=Self Only Morph to Wolf & ATK (15), Cold Resist (10)
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=70
+}}
+{{SpellRow
+|name=Immobilize
+|description=Single Target Fast Root Spell (Max: 60 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=80
+}}
+{{SpellRow
+|name=Insight
+|description=Single Target Wisdom and Intelligence Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=125
+}}
+{{SpellRow
+|name=Invoke Fear
+|description=Single Target Fear Spell (42 Secs)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Mind Wipe
+|description=Area Memory Blur
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Mind_Wipe|Research]]
+|mana=100
+}}
+{{SpellRow
+|name=Pacify
+|description=Single Target Frenzy Reduction
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=100
+}}
+{{SpellRow
+|name=Rampage
+|description=Single Target Melee Buff with Damage Absorb (Max: 90)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Resist Magic
+|description=Single Target Magic Resist Buff (Max: 40)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=85
+}}
+{{SpellRow
+|name=Shade
+|description=Single Target AC Buff (Max: 17)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=90
+}}
+{{SpellRow
+|name=Wandering Mind
+|description=Mana Tap over time (Max: 120 Mana)
+|era=Vel.
+|school=Con.
+|location=NPC Drop.
+|mana=5
+}}
+</table>
+
+==Level 44==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Arch Shielding
+|description=Self Only HP, MR, and AC Buff
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Boon of the Garou
+|description=Single Target Werewolf Form
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=100
+}}
+{{SpellRow
+|name=Brilliance
+|description=Single Target Intelligence and Wisdom Buff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=125
+}}
+{{SpellRow
+|name=Color Skew
+|description=Stuns all Targets Around Caster (8 Secs)
+|era=&nbsp;
+|school=Div.
+|location=[[Skill_Research#Color_Skew|Research]]
+|mana=60
+}}
+{{SpellRow
+|name=Discordant Mind
+|description=Single Target Magical Direct Damage (Max: 528)
+|era=&nbsp;
+|school=Evo.
+|location=Vendor.
+|mana=240
+}}
+{{SpellRow
+|name=Enchant: Velium
+|description=Enchant Velium Bar
+|era=Vel.
+|school=Alt.
+|location=Thurgadin.
+|mana=200
+}}
+{{SpellRow
+|name=Extinguish Fatigue
+|description=Single Target Full Stamina Refresh
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=35
+}}
+{{SpellRow
+|name=Illusion: Werewolf
+|description=Self Only Morph to Werewolf and Major Melee Buff
+|era=&nbsp;
+|school=Div.
+|location=Erudin.
+|mana=90
+}}
+{{SpellRow
+|name=Incapacitate
+|description=Single Target Melee Debuff
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Pillage Enchantment
+|description=Single Target Magic Buff Remover (Max: 4)
+|era=&nbsp;
+|school=Abj.
+|location=[[Skill_Research#Pillage_Enchantment|Research]]
+|mana=70
+}}
+{{SpellRow
+|name=Rune IV
+|description=Single Target Damage Absorber (Max: 394)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=236
+}}
+{{SpellRow
+|name=Shiftless Deeds
+|description=Single Target Slowing Spell (Max: 65%)
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Shiftless_Deeds|Research]]
+|mana=200
+}}
+{{SpellRow
+|name=Summon Companion
+|description=Summon Your Pet to Your Location
+|era=Vel.
+|school=Con.
+|location=E. Com.
+|mana=50
+}}
+{{SpellRow
+|name=Tashania
+|description=Single Target Unresistable Magic Resistance Debuffer (Max: 33)
+|era=&nbsp;
+|school=Abj.
+|location= [[Coin of Tash (Tashania)|Quest]] 
+|mana=30
+}}
+{{SpellRow
+|name=Weakness
+|description=Single Target Strength Debuff (Max: 65)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=120
+}}
+{{SpellRow
+|name=Yegoreff's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=250
+}}
+</table>
+
+==Level 49==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Adorning Grace
+|description=Single Target Charisma Buff (Max: 40)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=110
+}}
+{{SpellRow
+|name=Allure
+|description=Single Target Random Duration Charm Spell (Level 51 Cap)
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Allure|Research]]
+|mana=245
+}}
+{{SpellRow
+|name=Berserker Spirit
+|description=Single Target Melee Buff with Damage Absorb (Max: 200)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=150
+}}
+{{SpellRow
+|name=Blanket of Forgetfulness
+|description=Unresistable Area Memory Blur
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Blanket of Forgetfulness|Research]]
+|mana=175
+}}
+{{SpellRow
+|name=Dazzle
+|description=Single Target Mesmerize Spell (96 Secs)
+|era=&nbsp;
+|school=Con.
+|location=Vendor.
+|mana=125
+}}
+{{SpellRow
+|name=Enchant: Adamantite
+|description=For Dark Elf Cultural Smithing
+|era=&nbsp;
+|school=Alt.
+|location=Neriak.
+|mana=325
+}}
+{{SpellRow
+|name=Enchant Brellium
+|description=For Dwarven Cultural Smithing
+|era=&nbsp;
+|school=Alt.
+|location=Ak'Anon.
+|mana=325
+}}
+{{SpellRow
+|name=Enchant Mithril
+|description=For High Elf Cultural Smithing
+|era=&nbsp;
+|school=Alt.
+|location=Felwithe.
+|mana=325
+}}    
+{{SpellRow
+|name=Enchant Steel
+|description=For Human Cultural Smithing
+|era=&nbsp;
+|school=Alt.
+|location=Freeport.
+|mana=325
+}}    
+{{SpellRow
+|name=Gasping Embrace
+|description=Single Target Magical Debuff DoT (710 Dmg)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Group Resist Magic
+|description=Group Magical Resistance Buff (Max: 55)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=200
+}}
+{{SpellRow
+|name=Kintaz's Animation
+|description=Summon an Animation
+|era=&nbsp;
+|school=Con.
+|location=HK.
+|mana=300
+}}
+{{SpellRow
+|name=Paralyzing Earth
+|description=Single Target Root Spell (Max: 3 Mins)
+|era=&nbsp;
+|school=Alt.
+|location=FV / OT
+|mana=100
+}}
+{{SpellRow
+|name=Purify Mana
+|description=Summon Vial of Purified Mana
+|era=&nbsp;
+|school=Alt.
+|location=L.Faydark.
+|mana=1000
+}}
+{{SpellRow
+|name=Reoccurring Amnesia
+|description=Persistent Memory Blur
+|era=&nbsp;
+|school=Alt.
+|location=[[Skill_Research#Reoccurring Amnesia|Research]]
+|mana=100
+}}
+{{SpellRow
+|name=Shadow
+|description=Single Target AC Buff (Max: 20)
+|era=&nbsp;
+|school=Abj.
+|location=Vendor.
+|mana=70
+}}
+{{SpellRow
+|name=Swift Like The Wind
+|description=Single Target Haste Spell (60%)
+|era=&nbsp;
+|school=Alt.
+|location=Vendor.
+|mana=250
+}}
+</table>
+
+==Level 50==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Improved Invisibility
+|description=Self Only Fixed Duration Invisibility
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=75
+}}
+</table>
+
+==Level 51==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Collaboration
+|description=Self Only NPC Faction Boost
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]].
+|mana=75
+}}
+{{SpellRow
+|name=Theft of Thought
+|description=Single Target Mana Tap (Max: 400)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=25
+}}
+{{SpellRow
+|name=Wake of Tranquility
+|description=Area Effect Frenzy Reduction
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=300
+}}
+</table>
+
+==Level 52==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Boon of the Clear Mind
+|description=Group Clarity
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=175
+}}
+{{SpellRow
+|name=Color Slant
+|description=Stuns and Mana Drain all Targets Around Caster (8 Secs)
+|era=Kun.
+|school=Div.
+|location=NPC Drop.
+|mana=125
+}}
+{{SpellRow
+|name=Fascination
+|description=Area Effect Mesmerize (36 Secs)
+|era=Kun.
+|school=Con.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=200
+}}
+{{SpellRow
+|name=Rune V
+|description=Single Target Damage Absorber (Max: 620 - 700)
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=350
+}}
+</table>
+
+==Level 53==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Aanya's Quickening
+|description=Single Target Haste Spell (64% Max)
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=275
+}}
+{{SpellRow
+|name=Boltran's Agacerie
+|description=Single Target Random Duration Charm Spell 
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=400
+}}
+{{SpellRow
+|name=Cripple
+|description=Single Target Melee Debuff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=225
+}}
+{{SpellRow
+|name=Recant Magic
+|description=Upgrade to Pillage Enchantment
+|era=Kun.
+|school=Abj.
+|location=Quest.
+|mana=90
+}}
+</table>
+
+==Level 54==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Clarity II
+|description=Increase Mana Regeneration Rate (11/tick)
+|era=Kun.
+|school=Alt.
+|location=Quest.
+|mana=115
+}}
+{{SpellRow
+|name=Dementia
+|description=Single Target Magical Direct Damage (Max: 675)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=250
+}}
+{{SpellRow
+|name=Glamour of Kintaz
+|description=Single Target Low Resist Mesmerize (30 Secs)
+|era=Kun.
+|school=Con.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=275
+}}
+{{SpellRow
+|name=Shield of the Magi
+|description=Self Only HP, MR, and AC Buff
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=300
+}}
+</table>
+
+==Level 55==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Gift of Insight
+|description=Single Target Base Mana Buff and Mana Regeneration (1/tick)
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=300
+}}
+{{SpellRow
+|name=Largarn's Lamentation
+|description=Single Target Stun with Mana Drain (Max: 8 Secs)
+|era=Kun.
+|school=Evo.
+|location=NPC Drop.
+|mana=120
+}}
+{{SpellRow
+|name=Memory Flux
+|description=Single Target Low Resistance Memory Blur
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=350
+}}
+{{SpellRow
+|name=Wind of Tishani
+|description=Area Effect Magic Resist Debuffer (Max: 23)
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=45
+}}
+{{SpellRow
+|name=Zumaik's Animation
+|description=Summon an Animation
+|era=Kun.
+|school=Con.
+|location=NPC Drop.
+|mana=350
+}}
+</table>
+
+==Level 56==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Augment
+|description=Single Target Super Melee Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=135
+}}
+{{SpellRow
+|name=Overwhelming Splendor
+|description=Single Target Charisma Buff (Max: 50)
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=175
+}}
+{{SpellRow
+|name=Torment of Argli
+|description=Single Target Magical Debuff DoT (Max: 560)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=150
+}}
+{{SpellRow
+|name=Trepidation
+|description=Single Target Fear Spell (36 Seconds)
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=200
+}}
+</table>
+
+==Level 57==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Enlightenment
+|description=Intelligence and Wisdom Buff (Max: 21)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=200
+}}
+{{SpellRow
+|name=Forlorn Deeds
+|description=Single Target Slowing Spell (Max: 70%)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=225
+}}
+{{SpellRow
+|name=Tashanian
+|description=Single Target Unresistable Magic Resistance Debuffer (Max: 39)
+|era=Kun.
+|school=Abj.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=40
+}}
+{{SpellRow
+|name=Umbra
+|description=Single Target AC Buff (Max: 29)
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=80
+}}
+</table>
+
+==Level 58==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Bedlam
+|description=Single Target Melee Buff with Damage Absorb (Max: 350)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=200
+}}
+{{SpellRow
+|name=Fetter
+|description=Single Target Root Spell (Max: 180 Secs)
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=75
+}}
+	{{SpellRow
+|name=Wonderous Rapidity
+|description=Single Target Haste Spell (Max: 70%)
+|era=Kun.
+|school=Alt.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=325
+}}
+</table>
+
+==Level 59==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>
+{{SpellRow
+|name=Asphyxiate
+|description=Single Target Magical Debuff DoT (Max: 950)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=250
+}}
+{{SpellRow
+|name=Gift of Pure Thought
+|description=Group Clarity II (11/tick)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=300
+}}
+{{SpellRow
+|name=Rapture
+|description=Single Target Low Resist Mesmerize (24 Secs)
+|era=Kun.
+|school=Con.
+|location=[[Firiona Vie]] [[Overthere]]
+|mana=425
+}}
+</table>
+
+==Level 60==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='92%'>
+    <tr bgcolor="#cccccc"><td width='22%' valign='top'><b>Spell Name</b></td><td width='52%' valign='top'><b>Spell Description</b></td><td width='5%' valign='top'><b>Era</b></td><td width='5%' valign='top'><b>Class</b></td><td width='8%' valign='top'><b>Location</b></td><td width='5%' valign='top'><b>Mana</b></td></tr>    
+{{SpellRow
+|name=Dictate
+|description=Fixed Duration Charm Spell (48 Secs)
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=750
+}}
+{{SpellRow
+|name=Gift of Brilliance
+|description=Single Target Base Mana Buff and Mana Regeneration (2/tick)
+|era=Vel.
+|school=Alt.
+|location=NPC Drop.
+|mana=450
+}}
+{{SpellRow
+|name=Visions of Grandeur
+|description=Single Target Super Melee Buff
+|era=Kun.
+|school=Alt.
+|location=NPC Drop.
+|mana=275
+}}
+{{SpellRow
+|name=Wind of Tishanian
+|description=Area Effect Magic Resist Debuffer (Max: 40)
+|era=Kun.
+|school=Abj.
+|location=NPC Drop.
+|mana=70
+}}
+</table>
+
+=Skills=
+
+== Pet Information ==
+
+{{#lsth:Pet Guide|[[Enchanter]] Pets}}
+
+==Specialization==
+
+{{#lsth:Skill Specialization|Enchanter}}
+
+==Casting Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Abjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alteration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Channelling</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Conjuration</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Divination</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Evocation</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">4</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Meditate</td>
+		<td align="center" width="20%">235</td>
+		<td align="center" width="25%">252</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">16</td>
+		<td align="center" width="10%">Yes</td>
+		<td>Research</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">20</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Specialization</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">235</td>
+	</tr>
+</table>
+
+==Combat Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>1-Hand Blunt</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr bgcolor="#efefef"><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>2-Hand Blunt</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Bind Wound</td>
+		<td align="center" width="20%">100</td>
+		<td align="center" width="25%">100</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Defense</td>
+		<td align="center" width="20%">145</td>
+		<td align="center" width="25%">145</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Hand to Hand</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Offense</td>
+		<td align="center" width="20%">140</td>
+		<td align="center" width="25%">140</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Piercing</td>
+		<td align="center" width="20%">110</td>
+		<td align="center" width="25%">110</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>  
+		<td>Throwing</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">22</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Dodge</td>
+		<td align="center" width="20%">75</td>
+		<td align="center" width="25%">75</td>
+	</tr>
+</table>
+
+==Miscellaneous Skills==
+<table cellpadding='5' cellborder='0' cellspacing='0' width='45%'>
+    <tr bgcolor="#cccccc">
+		<td align="center" width="10%"><b>Level</b></td>
+		<td align="center" width="10%"><b>Trained</b></td>
+		<td><b>Skill</b></td>
+		<td align="center" width="20%"><b>Cap Until 50</b></td>
+		<td align="center" width="25%"><b>Cap Above 50</b></td>
+	</tr>
+	
+	<tr><td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Alcohol Tolerance</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Beg</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Fishing</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+	<tr bgcolor="#efefef">
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">No</td>
+		<td>Sense Heading</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+	
+
+	<tr>
+		<td align="center" width="10%">1</td>
+		<td align="center" width="10%">Yes</td>  
+		<td>Swimming</td>
+		<td align="center" width="20%">200</td>
+		<td align="center" width="25%">200</td>
+	</tr>
+</table>
+
+= Enchanter-Specific Quests =
+
+{{#lsth:Class Race Quest List|Enchanter}}
+
+= Gearing =
+
+Class specific gear suggestions are cross listed on the [[Players:Gear|Gear Reference]] page.
+
+Check [[:Category:Enchanter Equipment | Enchanter Equipment]] for the full list of gear usable by enchanters.
+
+== Pre-Planar ==
+
+{{#lsth:Players:Pre Planar Gear|[[Enchanter]]}}
+
+== Planar ==
+
+{{#lsth:Players:Planar Gear|[[Enchanter]]}}
+
+== Kunark ==
+
+{{#lsth:Players:Kunark Gear|[[Enchanter]]}}
+
+== Velious Pre-Raid/Group ==
+
+{{#lsth:Players:Velious Pre-Raid Gear|[[Enchanter]]}}
+
+== Velious Raiding ==
+
+{{#lsth:Players:Velious Raiding Gear|[[Enchanter]]}}
+
+= FAQ =
+
+{{Template: Navbox Classes}}

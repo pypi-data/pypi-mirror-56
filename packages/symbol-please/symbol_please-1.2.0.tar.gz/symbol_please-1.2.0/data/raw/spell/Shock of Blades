@@ -1,0 +1,42 @@
+{{Spellpage|
+
+| spellname = Shock of Blades
+| spellicon = L
+| description = Conjures a shock of blades that assaults your target, causing between 37 and 42 damage.
+
+| classes = 
+
+* [[Magician]] - Level 8
+
+| slots = 
+
+{{SpellSlotRow | 1 | Decrease Hitpoints by 31 (L8) to 35 (L12) }}
+
+| skill = [[Skill Conjuration | Conjuration]]
+
+| mana = 30
+| range = 200
+| casting_time = 2.10
+| fizzle_time = 2.50
+| recast_time = 2.25
+| duration = Instant
+| target_type = Single
+| spell_type = Detrimental
+| resist = Magic (0)
+
+| msg_cast_on_you = You have been lacerated.
+| msg_cast_on_other = Someone  is lacerated by steel.
+| msg_wears_off =  
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (LG-14)]] | Library | (1094,-1033) }}
+{{SpellWhereRow  | [[Erudin|Erudin Palace]] | [[Onyssa Vroce]] | Magician Guild (F2) | (697,953) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Riv N'Mar]] | Caster Guild (Basement) | (142,-975) }}
+{{SpellWhereRow  | [[Qeynos|South Qeynos]] | [[Ingaria Dinego]] | Caster Guild | (321,-586) }}
+{{SpellWhereRowB | [[Felwithe|Southern Felwithe]] | [[Griff Candleflame]] | Magician Guild | (707,-510) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Tharma Jaremi]] | Caster Guild (F3) | (110,-755) }}
+}}
+
+}}

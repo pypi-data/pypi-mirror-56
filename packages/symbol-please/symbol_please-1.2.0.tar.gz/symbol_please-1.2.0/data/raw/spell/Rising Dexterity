@@ -1,0 +1,40 @@
+{{Spellpage|
+
+| spellname = Rising Dexterity
+| spellicon = R
+| description = Increases your target's dexterity for 45.0 mins.
+
+| classes = 
+
+* [[Shaman]] - Level 29
+
+| slots = 
+
+{{SpellSlotRow | 1 | Increase DEX by 30 }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 60
+| range = 100
+| casting_time = 5.00
+| fizzle_time = 2.25
+| recast_time = 2.25
+| duration = 45 minutes
+| target_type = Single
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you = You feel dexterous.
+| msg_cast_on_other = Someone  looks dexterous.
+| msg_wears_off = Your dexterity fades.
+
+| where_to_obtain = 
+
+{{SpellWhereTable|
+{{SpellWhereRowB | [[Cabilis|East Cabilis]] | [[Vessel Mortyr]] | Temple of Terror (First Floor) | (1046,-160) }}
+{{SpellWhereRow  | [[Grobb]] | [[Cralk - Troll]] | Shaman Guild | (289,-424) }}
+{{SpellWhereRowB | [[Halas]] | [[Telvina]] | Shaman Guild | (315,450) }}
+{{SpellWhereRow  | [[Oggok]] | [[Cralk - Ogre]] | Shaman Guild | (633,1005) }}
+}}
+
+}}

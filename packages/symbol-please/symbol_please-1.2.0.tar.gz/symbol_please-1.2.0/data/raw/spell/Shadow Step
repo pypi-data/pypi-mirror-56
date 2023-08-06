@@ -1,0 +1,61 @@
+{{Spellpage|
+
+| spellname = Shadow Step
+| spellicon = V
+| description = Causes you to momentarily step into the realm of shadow, reentering reality a short distance away.
+
+| classes = 
+
+* [[Shadow Knight]] - Level 15
+* [[Necromancer]] - Level 8
+* [[Wizard]] - Level 8
+
+| slots = 
+
+{{SpellSlotRow | 1 | Shadowstep }}
+
+| skill = [[Skill Alteration | Alteration]]
+
+| mana = 10
+| range =  
+| casting_time = 1.00
+| fizzle_time = 2.25
+| recast_time = 5.00
+| duration = Instant
+| target_type = Self
+| spell_type = Beneficial
+| resist = Unresistable
+
+| msg_cast_on_you =  
+| msg_cast_on_other = Someone  fades away.
+| msg_wears_off =  
+| items_with_effect =  
+<ul><li> {{:Mask of Shadow}}
+</li><li> {{:Cap of the Insubstantial}}
+</li></ul>
+
+| where_to_obtain =
+
+{{SpellWhereTable|
+{{SpellWhereRow | [[Ak'Anon]] | [[Clockwork Merchant (LG-8)]] | Library | (1060,-977) }}
+{{SpellWhereRowB | [[Ak'Anon]] | [[Clockwork Merchant (NG-4)]] | Necromancer Guild | (2099,-393) }}
+{{SpellWhereRow  | [[Cabilis|East Cabilis]] | [[Squire Rygle]] | Temple of Terror (East Tower - Top) | (1001,-266) }}
+{{SpellWhereRowB | [[Freeport|East Freeport]] | [[Peku Croxe]] | Underground | (-200,-244) }}
+{{SpellWhereRow  | [[Freeport|East Freeport]] | [[Sermio Capret]] | Underground | (-70,-259) }}
+{{SpellWhereRowB | [[Erudin|Erudin Palace]] | [[Gissa Brist]] | Wizard Guild (F2) | (894,742) }}
+{{SpellWhereRow  | [[Grobb]] | [[Kramf - Troll]] | Shadow Knight Guild | (494,-628) }}
+{{SpellWhereRowB | [[Neriak|Neriak - 3rd Gate]] | [[Camor V'Retta]] | Necromancer Guild (F1) | (1335,-1278) }}
+{{SpellWhereRow  | [[Neriak|Neriak - 3rd Gate]] | [[Misal S'Kor]] | Necromancer Guild (F1) | (1337,-1239) }}
+{{SpellWhereRowB | [[Neriak|Neriak - Commons]] | [[Mak Ixtaz]] | Caster Guild (Basement) | (171,-893) }}
+{{SpellWhereRow  | [[Oggok]] | [[Kramf - Ogre]] | Shadow Knight Guild | (377,17) }}
+{{SpellWhereRowB | [[Paineel]] | [[Kilevra Natasu]] | Necromancer Guild | (692,869) }}
+{{SpellWhereRow  | [[Paineel]] | [[Dovan Sires]] | Shadow Knight Guild | (901,443) }}
+{{SpellWhereRowB | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Gyrna Porrin]] | Necromancer Guild | (291,-322) }}
+{{SpellWhereRow  | [[Qeynos Aqueducts|Qeynos Catacombs]] | [[Jexun Elsorg]] | Shadow Knight Guild | (404,-415) }}
+{{SpellWhereRowB | [[Qeynos|South Qeynos]] | [[Rosdaria Sepria]] | Caster Guild | (327,-686) }}
+{{SpellWhereRow  | [[Felwithe|Southern Felwithe]] | [[Celent Newmist]] | Wizard Guild | (449,-341) }}
+{{SpellWhereRowB | [[Cabilis|West Cabilis]] | [[Keeper Plight]] | Cubby near PvP Area | (-391,234) }}
+{{SpellWhereRow  | [[Freeport|West Freeport]] | [[Mirpa Arana]] | Caster Guild (top floor) | (140,-79) }}
+}}
+
+}}
