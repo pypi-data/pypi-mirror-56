@@ -1,0 +1,7 @@
+rasa>=1.5.0
+pydantic>=1.1.1
+
+[dev]
+pytest
+flake8
+tox
