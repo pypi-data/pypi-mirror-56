@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: classy-vision
+Version: 0.1.0rc3
+Summary: An end-to-end computer vision framework.
+Home-page: https://classyvision.ai
+License: MIT
+Project-URL: Documentation, https://classyvision.ai
+Project-URL: Source, https://github.com/facebookresearch/ClassyVision
+Description: UNKNOWN
+Keywords: deep learning,pytorch,AI
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+Provides-Extra: dev
