@@ -1,0 +1,32 @@
+{
+  "git_url": "https://github.com/kba/ocrd_calamari",
+  "version": "0.0.3",
+  "tools": {
+    "ocrd-calamari-recognize": {
+      "executable": "ocrd-calamari-recognize",
+      "categories": [
+        "Text recognition and optimization"
+      ],
+      "steps": [
+        "recognition/text-recognition"
+      ],
+      "description": "Recognize lines with Calamari",
+      "input_file_grp": [
+        "OCR-D-SEG-LINE"
+      ],
+      "output_file_grp": [
+        "OCR-D-OCR-CALAMARI"
+      ],
+      "parameters": {
+        "checkpoint": {
+          "description": "The calamari model files (*.ckpt.json)",
+          "type": "string", "format": "file", "cacheable": true
+        },
+        "voter": {
+          "description": "The voting algorithm to use",
+          "type": "string", "default": "confidence_voter_default_ctc"
+        }
+      }
+    }
+  }
+}
