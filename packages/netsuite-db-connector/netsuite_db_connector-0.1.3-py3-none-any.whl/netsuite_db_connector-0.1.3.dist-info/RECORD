@@ -1,0 +1,10 @@
+netsuite_db_connector/__init__.py,sha256=rC5EEa7sj9sohKT19XgtAxO8V68tCzJVdw5Jz0YUliE,140
+netsuite_db_connector/extract.py,sha256=rHpJ8U2YLvt569ZSZaDyXJNNzbwCtomPh5p5SOUc33I,4831
+netsuite_db_connector/extract_ddl.sql,sha256=Hkj9nec-VRVEXUdHpP8QJ-ZF-Drr8kb7FmNllW0K8AA,989
+netsuite_db_connector/load.py,sha256=WtNvQZAzoHDXQmH27bduybt5-6tUY_beW-5oSqAb9Og,3968
+netsuite_db_connector/load_ddl.sql,sha256=Ltnd52ch8Bb1opZswH0gCtWGx-q8sGCQQsmZP-SZDJw,636
+netsuite_db_connector-0.1.3.dist-info/LICENSE,sha256=04EJnF8lBuGQQIC2dnxB6eAFcc_sbyqN1QGQrmhJV9o,1082
+netsuite_db_connector-0.1.3.dist-info/METADATA,sha256=5tpR2Jl4d5J0DZrjtED50PBJ05Clfqiqfahub1eLUNY,4219
+netsuite_db_connector-0.1.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+netsuite_db_connector-0.1.3.dist-info/top_level.txt,sha256=Xuh5HK1ueZlvzXAn5R9aDrYKmxXak7d0PtV6RSAaRqU,22
+netsuite_db_connector-0.1.3.dist-info/RECORD,,
