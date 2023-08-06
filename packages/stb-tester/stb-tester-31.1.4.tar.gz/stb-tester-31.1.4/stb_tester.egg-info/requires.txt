@@ -1,0 +1,8 @@
+Jinja2==2.10.1
+astroid==1.6.0
+future==0.15.2
+lxml==4.2
+networkx==1.11
+opencv-python~=3.2
+pylint==1.8.3
+stbt-extra-stubs~=31.0
