@@ -1,0 +1,8 @@
+boto3>=1.9.210
+websockets~=8.0
+janus==0.4.0
+
+[dev]
+pylint
+
+[test]

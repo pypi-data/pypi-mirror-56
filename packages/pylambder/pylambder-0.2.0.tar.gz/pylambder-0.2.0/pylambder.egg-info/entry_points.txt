@@ -1,0 +1,3 @@
+[console_scripts]
+pylambder = pylambder.cli:main
+
