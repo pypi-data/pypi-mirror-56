@@ -1,0 +1,3 @@
+[console_scripts]
+zimbra-permissions-inspector = zimbra_permissions_inspector.zimbra_permissions_inspector:main
+
