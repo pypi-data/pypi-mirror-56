@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+archi.c
+archi.pyx
+setup.cfg
+setup.py
+archi.egg-info/PKG-INFO
+archi.egg-info/SOURCES.txt
+archi.egg-info/dependency_links.txt
+archi.egg-info/not-zip-safe
+archi.egg-info/top_level.txt
