@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: learnml
+Version: 0.1
+Summary: LearnML is a Python module for Machine Learning and Deep Learning.
+Home-page: https://github.com/Vipul97/learnml
+Author: Vipul Gharde
+License: UNKNOWN
+Description: [![PyPI version](https://badge.fury.io/py/learnml.svg)](https://badge.fury.io/py/learnml)
+        [![HitCount](http://hits.dwyl.io/Vipul97/learnml.svg)](http://hits.dwyl.io/Vipul97/learnml)
+        
+        # LearnML
+        LearnML is a Python module for Machine Learning and Deep Learning.
+        
+        ### Installation
+        
+        #### Dependencies
+        
+        learnml requires:
+        
+        - Python
+        - NumPy
+        
+        #### User installation
+        
+            pip3 install -U learnml
+        
+        
+        ### Development
+        
+        #### Important links
+        
+        - Official source code repo: https://github.com/Vipul97/learnml/
+        
+        #### Source code
+        
+            git clone https://github.com/Vipul97/learnml.git
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Description-Content-Type: text/markdown
