@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.py
+Fucking/__init__.py
+Fucking/fucking.py
+Fucking/fuck/__init__.py
+Fucking/fuck/cal_sign.js
+Fucking/fuck/dbcache.py
+Fucking/fuck/fucking_cmd.py
+fucking.egg-info/PKG-INFO
+fucking.egg-info/SOURCES.txt
+fucking.egg-info/dependency_links.txt
+fucking.egg-info/entry_points.txt
+fucking.egg-info/not-zip-safe
+fucking.egg-info/requires.txt
+fucking.egg-info/top_level.txt

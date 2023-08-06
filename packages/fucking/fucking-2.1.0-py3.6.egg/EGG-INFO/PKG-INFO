@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: fucking
+Version: 2.1.0
+Summary: a python tool which make English word to Chinese using the baidu translate.
+Home-page: https://github.com/Yaoxuannn/Python_Tools
+Author: justin13
+Author-email: justin13wyx@gmail.com
+License: UNKNOWN
+Description: Simply, this is a python tool which make English word to Chinese using the baidu translate. The feature is fucking once fetch the meaning of the word, it will save it to the local sqlite database. Then the next time you lookup the word, fucking will directly get the meaning of the word quickly from thr disk cache.
+Keywords: python3 translate terminal
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Terminals
