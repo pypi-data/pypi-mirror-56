@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ashok_weather_reporter/cli.py
+ashok_weather_reporter/utils.py
+ashok_weather_reporter.egg-info/PKG-INFO
+ashok_weather_reporter.egg-info/SOURCES.txt
+ashok_weather_reporter.egg-info/dependency_links.txt
+ashok_weather_reporter.egg-info/entry_points.txt
+ashok_weather_reporter.egg-info/requires.txt
+ashok_weather_reporter.egg-info/top_level.txt
