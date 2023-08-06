@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+enforce_typing/__init__.py
+enforce_typing/decorator.py
+enforce_typing.egg-info/PKG-INFO
+enforce_typing.egg-info/SOURCES.txt
+enforce_typing.egg-info/dependency_links.txt
+enforce_typing.egg-info/top_level.txt
