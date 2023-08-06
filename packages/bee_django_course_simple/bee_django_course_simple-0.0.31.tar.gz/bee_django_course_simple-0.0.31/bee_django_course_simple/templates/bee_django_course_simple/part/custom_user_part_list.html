@@ -1,0 +1,52 @@
+{% extends "bee_django_course_simple/user_base.html" %}
+{% load bee_django_course_simple_filter %}
+{% block styles %}
+
+{% endblock %}
+{% block content %}
+    <div class="nav">
+        <a href="/">首页</a> -> <a href="javascript:history.back()">返回上一页</a> -> 奖品列表
+    </div>
+    <div class="text-center"><h3>
+        【{{ user }}】的奖品列表
+    </h3>
+    </div>
+    {% if user == request.user %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>课程标题</th>
+                <th>奖品</th>
+                <th>是否获奖</th>
+                <th></th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for up in user_part_list %}
+                <tr>
+                    <td>{{ up.user_section.section.title }} - {{ up.part.title }}</td>
+                    <td>{{ up.part.award_name | default:'无' }}</td>
+                    <td>
+                        {% if up.is_all_correct %}
+                            是
+                        {% else %}
+                            否
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{% url 'bee_django_course_simple:custom_user_part_detail_question' up.id %}">详情</a>
+
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        用户错误
+    {% endif %}
+    {% include 'bee_django_course_simple/paginator.html' %}
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "bee_django_course_simple/base.html" %}
+{% load bee_django_course_simple_filter %}
+{% block styles %}
+
+{% endblock %}
+{% block content %}
+    <div class="text-center"><h3>
+        用户答题奖品列表
+    </h3>
+    </div>
+        {% include 'bee_django_course_simple/part/user_part_search.html' %}
+
+    <div>共{{ paginator.count }}个</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>用户</th>
+            <th>小节</th>
+            <th>奖品</th>
+            <th>是否全对</th>
+            <th></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for up in user_part_list %}
+            <tr>
+                <td>{{ up.user_section.user_course.user | default:'' }}</td>
+                <td>{{ up.part.title }}</td>
+                <td>{{ up.part.award_name | default:'无' }}</td>
+                <td>
+                    {% if up.is_all_correct %}
+                        是
+                    {% else %}
+                        否
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{% url 'bee_django_course_simple:user_part_detail' up.id %}">详情</a>
+                    {% if up.is_all_correct %}
+                        {% include 'bee_django_course_simple/part/_deliver.html' %}
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% include 'bee_django_course_simple/paginator.html' %}
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

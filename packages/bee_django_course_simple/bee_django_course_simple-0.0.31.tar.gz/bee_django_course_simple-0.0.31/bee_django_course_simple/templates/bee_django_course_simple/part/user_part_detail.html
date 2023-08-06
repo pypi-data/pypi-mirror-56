@@ -1,0 +1,42 @@
+{% extends "bee_django_course_simple/base.html" %}
+{% load bee_django_course_simple_filter %}
+{% block styles %}
+
+{% endblock %}
+{% block content %}
+    <div class="text-center"><h3>
+        答题详情
+    </h3>
+    </div>
+
+    <table class="table">
+
+        <tr>
+            <td>用户</td>
+            <td>{{ user_part.user_section.user_course.user }}</td>
+
+        </tr>
+        {% for question in user_part.part.question_set.all %}
+            <tr>
+                <td>题目{{ forloop.counter }}</td>
+                <td>{{ question.title }}</td>
+            </tr>
+            <tr>
+                <td>正确答案</td>
+                <td>{% for option in question.get_correct_options %}
+                    {{ option.title }} {% if not forloop.last %},{% endif %}
+                {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td>用户答案</td>
+                <td>{% get_user_answer_option user_part.user_section.user_course.user question.id as o %}
+                    {{ o.title }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

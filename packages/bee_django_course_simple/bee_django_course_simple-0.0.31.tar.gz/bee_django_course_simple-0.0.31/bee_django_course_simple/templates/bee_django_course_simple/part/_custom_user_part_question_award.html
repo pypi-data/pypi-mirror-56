@@ -1,0 +1,5 @@
+{% if user_part.question_correct_count == user_part.part.question_set.count %}
+    恭喜您答对本关题目，获得奖品<b>{{ user_part.part.award_name }}</b>
+{% else %}
+    很遗憾，您并未获得本次奖品，再接再厉哟～
+{% endif %}
