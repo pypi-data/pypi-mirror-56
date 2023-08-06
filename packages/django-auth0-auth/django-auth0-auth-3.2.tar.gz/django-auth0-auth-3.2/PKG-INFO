@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: django-auth0-auth
+Version: 3.2
+Summary: Authenticated users using Auth0.
+Home-page: https://bitbucket.org/megaman821/django-auth0-auth
+Author: Jason Christa
+Author-email: jason@zeitcode.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
