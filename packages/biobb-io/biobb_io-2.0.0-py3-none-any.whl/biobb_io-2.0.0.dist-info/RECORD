@@ -1,0 +1,13 @@
+biobb_io/__init__.py,sha256=Wh93iMpuqgwIANhVhiIf7AVBMR31owZtDycB1yGTSR0,35
+biobb_io/api/__init__.py,sha256=ZFbAe5nRcdJrnr0T5DlPdVIogqr1PTRSQKPtXuMKXnk,75
+biobb_io/api/common.py,sha256=2am5P3gUCUo245xEO_sSEnt6_Ee9PC0Dv0kQfiFQhrA,3718
+biobb_io/api/ligand.py,sha256=GWB4_ZSvm7VtXOeCpKbQu_psQYWh9WwXhGX3nWSdt6k,3801
+biobb_io/api/pdb.py,sha256=Vkj2daS4_WGHnRq1eXtyvHVjVhRmOI05v4296Pj3GqU,4160
+biobb_io/api/pdb_cluster_zip.py,sha256=iJORI1jOr_qtFEFTFywfynGrglzIpn-Kjt1AzviDp7o,4914
+biobb_io/api/pdb_variants.py,sha256=tPTFc3lb8DSlC_WbxZ65dkV7aAj4PAdd6ladze9bcec,5373
+biobb_io/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biobb_io-2.0.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+biobb_io-2.0.0.dist-info/METADATA,sha256=gknnMt4ssT1mFEwGUExLSobgnPirbzgbC8cHrebnaNY,3810
+biobb_io-2.0.0.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+biobb_io-2.0.0.dist-info/top_level.txt,sha256=1VPldlX2AnFaqODGFJK10WN8AOQuulpX88bLSaQdoS8,9
+biobb_io-2.0.0.dist-info/RECORD,,
