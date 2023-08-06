@@ -1,0 +1,9 @@
+setuptools
+numpy
+scipy
+matplotlib
+dill
+terminaltables
+
+[reST]
+Sphinx

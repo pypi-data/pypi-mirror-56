@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: mcup
+Version: 0.1.0
+Summary: MCUP will propagate uncertainty of your data points to the parameters of the regression using a Monte Carlo approach.
+Home-page: https://github.com/detrin/MCUP
+Author: Daniel Herman
+Author-email: daniel.herman@pm.me
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: physics,stats,error,uncertainty,propagation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Provides-Extra: reST

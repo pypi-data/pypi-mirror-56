@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mcup/__init__.py
+mcup/test.py
+mcup.egg-info/PKG-INFO
+mcup.egg-info/SOURCES.txt
+mcup.egg-info/dependency_links.txt
+mcup.egg-info/requires.txt
+mcup.egg-info/top_level.txt
