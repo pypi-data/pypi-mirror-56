@@ -1,0 +1,3 @@
+[console_scripts]
+validate = fhir_rdf_validator.validate:main
+
