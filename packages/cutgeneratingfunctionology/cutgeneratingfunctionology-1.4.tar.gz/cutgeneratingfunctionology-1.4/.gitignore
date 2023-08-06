@@ -1,0 +1,23 @@
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.pyc
+*.pdf
+*.gif
+*.png
+desktop.ini
+.dropbox
+Icon*
+2q_mip/*
+profiler/*
+sym_mode_2d_diagrams/*
+animation/*
+region_graphics/*
+.tmp_check-long-timings.json
+docs/build
+
+/.travis_ci_gh_pages_deploy_key
+/.travis_ci_gh_pages_deploy_key.pub
