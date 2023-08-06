@@ -1,0 +1,262 @@
+- job:
+    name: swift-tox-base
+    parent: openstack-tox-py27
+    description: |
+      Base job for swift-tox jobs.
+
+      It sets TMPDIR to an XFS mount point created via
+      tools/test-setup.sh.
+    timeout: 2400
+    vars:
+      tox_environment:
+        TMPDIR: '{{ ansible_env.HOME }}/xfstmp'
+
+- job:
+    name: swift-tox-py27
+    parent: swift-tox-base
+    description: |
+      Run unit-tests for swift under cPython version 2.7.
+
+      Uses tox with the ``py27`` environment.
+      It sets TMPDIR to an XFS mount point created via
+      tools/test-setup.sh.
+    vars:
+      tox_envlist: py27
+
+- job:
+    name: swift-tox-py27-centos-7
+    parent: swift-tox-py27
+    nodeset: centos-7
+
+- job:
+    name: swift-tox-py35
+    parent: swift-tox-base
+    description: |
+      Run unit-tests for swift under cPython version 3.5.
+
+      Uses tox with the ``py35`` environment.
+      It sets TMPDIR to an XFS mount point created via
+      tools/test-setup.sh.
+    vars:
+      tox_envlist: py35
+      bindep_profile: test py35
+
+- job:
+    name: swift-tox-func-py27
+    parent: swift-tox-base
+    description: |
+      Run functional tests for swift under cPython version 2.7.
+
+      Uses tox with the ``func`` environment.
+      It sets TMPDIR to an XFS mount point created via
+      tools/test-setup.sh.
+    vars:
+      tox_envlist: func
+
+- job:
+    name: swift-tox-func-py27-centos-7
+    parent: swift-tox-func-py27
+    nodeset: centos-7
+
+- job:
+    name: swift-tox-func-encryption-py27
+    parent: swift-tox-base
+    description: |
+      Run functional tests for swift under cPython version 2.7.
+
+      Uses tox with the ``func-encryption`` environment.
+      It sets TMPDIR to an XFS mount point created via
+      tools/test-setup.sh.
+    vars:
+      tox_envlist: func-encryption
+
+- job:
+    name: swift-tox-func-encryption-py27-centos-7
+    parent: swift-tox-func-encryption-py27
+    nodeset: centos-7
+
+- job:
+    name: swift-tox-func-ec-py27
+    parent: swift-tox-base
+    description: |
+      Run functional tests for swift under cPython version 2.7.
+
+      Uses tox with the ``func-post-ec`` environment.
+      It sets TMPDIR to an XFS mount point created via
+      tools/test-setup.sh.
+    branches: ^(?!stable/ocata).*$
+    vars:
+      tox_envlist: func-ec
+
+- job:
+    name: swift-tox-func-ec-py27-centos-7
+    parent: swift-tox-func-ec-py27
+    nodeset: centos-7
+
+- job:
+    name: swift-tox-func-domain-remap-staticweb-py27
+    parent: swift-tox-base
+    description: |
+      Run functional tests for swift under cPython version 2.7.
+
+      Uses tox with the ``func-domain-remap-staticweb`` environment.
+      It sets TMPDIR to an XFS mount point created via
+      tools/test-setup.sh.
+    vars:
+      tox_envlist: func-domain-remap-staticweb
+
+- job:
+    name: swift-tox-func-s3api-py27
+    parent: swift-tox-base
+    description: |
+      Run functional tests for swift under cPython version 2.7.
+
+      Uses tox with the ``func-s3api`` environment.
+      It sets TMPDIR to an XFS mount point created via
+      tools/test-setup.sh.
+    vars:
+      tox_envlist: func-s3api
+
+- job:
+    name: swift-dsvm-functional
+    parent: devstack-minimal
+    description: |
+      Setup a Swift/Keystone environment and run Swift's func tests
+    required-projects:
+      - opendev.org/openstack/requirements
+      - opendev.org/openstack/swift
+      - opendev.org/openstack/keystone
+    timeout: 2700
+    vars:
+      tox_constraints_file: '{{ ansible_user_dir }}/src/opendev.org/openstack/requirements/upper-constraints.txt'
+      # This tox env get run twice; once for Keystone and once for tempauth
+      tox_envlist: func
+      devstack_localrc:
+        SWIFT_HASH: changeme
+        # We don't need multiple replicas to run purely functional tests.
+        # In fact, devstack special cases some things when there's only
+        # one replica.
+        SWIFT_REPLICAS: 1
+        # One replica => no need for replicators, etc.
+        SWIFT_START_ALL_SERVICES: False
+        # Keystone v3 is currently the default, but may as well be explicit
+        ENABLE_IDENTITY_V2: False
+        IDENTITY_API_VERSION: 3
+      devstack_services:
+        keystone: true
+        swift: true
+      zuul_work_dir: src/opendev.org/openstack/swift
+    pre-run: tools/playbooks/dsvm/pre.yaml
+    run: tools/playbooks/dsvm/run.yaml
+    post-run: tools/playbooks/dsvm/post.yaml
+
+- job:
+    name: swift-probetests-centos-7
+    parent: unittests
+    nodeset: centos-7
+    description: |
+      Setup a SAIO dev environment and run Swift's probe tests
+    timeout: 3600
+    pre-run:
+      - tools/playbooks/saio_single_node_setup/install_dependencies.yaml
+      - tools/playbooks/saio_single_node_setup/setup_saio.yaml
+      - tools/playbooks/saio_single_node_setup/make_rings.yaml
+    run: tools/playbooks/probetests/run.yaml
+    post-run: tools/playbooks/probetests/post.yaml
+
+- project:
+    templates:
+      - publish-openstack-sphinx-docs
+      - periodic-stable-jobs
+      - check-requirements
+      - release-notes-jobs
+    check:
+      jobs:
+        - swift-tox-py27
+        - swift-tox-py35
+        - swift-tox-func-py27
+        - swift-tox-func-encryption-py27
+        - swift-tox-func-domain-remap-staticweb-py27
+        - swift-tox-func-ec-py27
+        - swift-tox-func-s3api-py27
+        - swift-probetests-centos-7
+        - openstack-tox-lower-constraints
+        - openstack-tox-pep8
+        - swift-dsvm-functional:
+            irrelevant-files:
+              - ^(api-ref|doc|releasenotes)/.*$
+              - ^test/probe/.*$
+              - ^(.gitreview|.mailmap|AUTHORS|CHANGELOG)$
+        - legacy-tempest-dsvm-neutron-full:
+            irrelevant-files:
+              - ^(test-|)requirements.txt$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^install-guide/.*$
+              - ^releasenotes/.*$
+              - ^setup.cfg$
+              - ^test/unit/.*$
+        - neutron-grenade:
+            irrelevant-files:
+              - ^(test-|)requirements.txt$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^install-guide/.*$
+              - ^releasenotes/.*$
+              - ^setup.cfg$
+              - ^test/unit/.*$
+    gate:
+      jobs:
+        - swift-tox-py27
+        - swift-tox-py35
+        - swift-tox-func-py27
+        - swift-tox-func-encryption-py27
+        - swift-tox-func-domain-remap-staticweb-py27
+        - swift-tox-func-ec-py27
+        - swift-tox-func-s3api-py27
+        - swift-probetests-centos-7
+        - openstack-tox-lower-constraints
+        - openstack-tox-pep8
+        - swift-dsvm-functional:
+            irrelevant-files:
+              - ^(api-ref|doc|releasenotes)/.*$
+              - ^test/probe/.*$
+              - ^(.gitreview|.mailmap|AUTHORS|CHANGELOG)$
+        - legacy-tempest-dsvm-neutron-full:
+            irrelevant-files:
+              - ^(test-|)requirements.txt$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^install-guide/.*$
+              - ^releasenotes/.*$
+              - ^setup.cfg$
+              - ^test/unit/.*$
+        - neutron-grenade:
+            irrelevant-files:
+              - ^(test-|)requirements.txt$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^install-guide/.*$
+              - ^releasenotes/.*$
+              - ^setup.cfg$
+              - ^test/unit/.*$
+    experimental:
+      jobs:
+        - swift-tox-py27-centos-7
+        - swift-tox-func-py27-centos-7
+        - swift-tox-func-encryption-py27-centos-7
+        - swift-tox-func-ec-py27-centos-7
+        - legacy-tempest-dsvm-neutron-pg-full:
+            irrelevant-files:
+              - ^(test-|)requirements.txt$
+              - ^api-ref/.*$
+              - ^doc/.*$
+              - ^install-guide/.*$
+              - ^releasenotes/.*$
+              - ^setup.cfg$
+              - ^test/unit/.*$
+
+    post:
+      jobs:
+        - openstack-tox-cover
+        - publish-openstack-python-branch-tarball
