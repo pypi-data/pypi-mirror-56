@@ -1,0 +1,31 @@
+[console_scripts]
+xerox-manage = xerox.command:manage_main
+
+[oslo.config.opts]
+xerox = xerox.conf.opts:list_opts
+
+[oslo.config.opts.defaults]
+xerox = xerox.conf:set_external_opts_defaults
+
+[oslo.policy.enforcer]
+xerox = xerox.common.rbac_enforcer.policy:get_enforcer
+
+[oslo.policy.policies]
+xerox = xerox.common.policies:list_rules
+
+[wsgi_scripts]
+xerox-wsgi-admin = xerox.server.wsgi:initialize_admin_application
+xerox-wsgi-public = xerox.server.wsgi:initialize_public_application
+
+[xerox.program]
+sql = xerox.program.backends.sql:Program
+
+[xerox.server_middleware]
+authtoken = keystonemiddleware.auth_token:filter_factory
+cors = oslo_middleware:CORS
+debug = oslo_middleware:Debug
+http_proxy_to_wsgi = oslo_middleware:HTTPProxyToWSGI
+osprofiler = osprofiler.web:WsgiMiddleware
+request_id = oslo_middleware:RequestId
+sizelimit = oslo_middleware:RequestBodySizeLimiter
+
