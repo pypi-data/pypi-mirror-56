@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mod-tbl-linebuilder
+Version: 0.0.1
+Summary: library for building line level components of a table - intended to be used as a sub-component of a full featured table constructor
+Home-page: https://github.com/TravisLazar/travs-table-linebuilder
+Author: Travis Lazar
+Author-email: travis.lazar@gmail.com
+License: GPLv3
+Description: # travs-table-linebuilder
+        Utility library for building lines of a table. Intended to be used in other, higher level, table building libraries. 
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
