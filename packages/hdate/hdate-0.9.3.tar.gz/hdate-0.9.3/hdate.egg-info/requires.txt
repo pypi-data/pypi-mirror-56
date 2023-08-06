@@ -1,0 +1,9 @@
+pytz
+
+[dev]
+tox
+
+[pub]
+bumpversion
+twine
+wheel
