@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: django_request_trace
+Version: 0.0.3
+Summary: A small library that makes sure every django request has a trace_id, accessible anywhere during the duration of the request.Django Request Trace library
+Home-page: UNKNOWN
+Author: STITCH (Aleksey Panov, Mario Brito, Gaston Lucero, Daniel Hengeveld)
+Author-email: mario.brito@devoteam.com
+License: MIT
+Description: # django_request_trace
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
