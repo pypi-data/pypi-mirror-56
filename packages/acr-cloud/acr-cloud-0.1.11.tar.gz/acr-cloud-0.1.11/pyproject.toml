@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "acr-cloud"
+version = "0.1.11"
+description = "acrcloud music recognition wrapper"
+authors = ["Andriy Orehov <andriyorehov@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://www.example.org/"
+repository = "https://github.com/andriyor/acrcloud-py"
+documentation = "https://github.com/Live-Lyrics/acrcloud-py/blob/master/README.md"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/Live-Lyrics/acrcloud-py/issues/poetry"
+"Source" = "https://github.com/andriyor/acrcloud-py/poetry"
+"Documentation" = "https://github.com/Live-Lyrics/acrcloud-py/blob/master/README.md/poetry"
+
+[tool.poetry.dependencies]
+python = "^3.5"
+requests = "^2.22"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
