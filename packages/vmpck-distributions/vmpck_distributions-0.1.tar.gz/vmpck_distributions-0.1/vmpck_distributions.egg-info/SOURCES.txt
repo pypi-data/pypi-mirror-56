@@ -1,0 +1,10 @@
+setup.py
+vmpck_distributions/Binomialdistribution.py
+vmpck_distributions/Gaussiandistribution.py
+vmpck_distributions/Generaldistribution.py
+vmpck_distributions/__init__.py
+vmpck_distributions.egg-info/PKG-INFO
+vmpck_distributions.egg-info/SOURCES.txt
+vmpck_distributions.egg-info/dependency_links.txt
+vmpck_distributions.egg-info/not-zip-safe
+vmpck_distributions.egg-info/top_level.txt
