@@ -1,0 +1,19 @@
+Metadata-Version: 2.0
+Name: YahooFinanceDashboard
+Version: 1.0.23
+Summary: API for accessing, synchronizing, managing locally and plotting Yahoo financial data
+Home-page: https://github.com/mosegui/YahooFinanceDashboard
+Author: Daniel Moseguí González
+Author-email: d.mosegui@gmail.com
+License: BSD3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: yahoofinancials
+
+UNKNOWN
+
+
