@@ -1,0 +1,3 @@
+[console_scripts]
+musket = musket_core.cli:main
+
