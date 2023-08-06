@@ -1,0 +1,3 @@
+[console_scripts]
+json2struct = json2struct.command_line:main
+
