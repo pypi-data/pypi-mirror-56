@@ -1,0 +1,4 @@
+# mypy-boto3-workspaces
+
+Mypy-friendly type annotations for `boto3` 1.10.27 `workspaces` service.
+More information can be found [here](https://github.com/vemel/mypy_boto3).
