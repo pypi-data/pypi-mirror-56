@@ -1,0 +1,3 @@
+[console_scripts]
+cath-cli = cathpy.core.scripts.cath_cli:cli
+
