@@ -1,0 +1,14 @@
+README.md
+setup.py
+tproj/__init__.py
+tproj/apply.py
+tproj/cli.py
+tproj/create.py
+tproj/ls.py
+tproj/utils/__init__.py
+tproj_zombie110year.egg-info/PKG-INFO
+tproj_zombie110year.egg-info/SOURCES.txt
+tproj_zombie110year.egg-info/dependency_links.txt
+tproj_zombie110year.egg-info/entry_points.txt
+tproj_zombie110year.egg-info/requires.txt
+tproj_zombie110year.egg-info/top_level.txt
