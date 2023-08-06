@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: Flask-MailAlchemy
+Version: 0.1
+Summary: SQLAlchemy based e-mail sending extension for Flask
+Home-page: https://github.com/gerelorant/flask-mailalchemy
+Author: Gere Lóránt
+Author-email: gerelorant@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
