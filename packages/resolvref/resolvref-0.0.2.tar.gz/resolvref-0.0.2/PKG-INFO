@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: resolvref
+Version: 0.0.2
+Summary: Resolve JSON and YAML references (e.g. in OpenAPI specs)
+Home-page: https://github.com/sirosen/resolvref
+Author: Stpehen Rosen
+Author-email: sirosen@uchicago.edu
+License: UNKNOWN
+Description: resolvref (alpha)
+        =================
+        
+        Resolve references in JSON and YAML files.
+        
+        resolvref's goal is to be a very minimal tool which can fit into a more
+        complex pipeline, not to fully support JSONSchema or OpenAPI.
+        
+        Source Code: https://github.com/sirosen/resolvref
+        
+        Bugs and Feature Requests
+        -------------------------
+        
+        Bugs reports and feature requests should be filed at
+        https://github.com/sirosen/resolvref/issues
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: yaml
+Provides-Extra: development
