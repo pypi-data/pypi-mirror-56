@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: featurize-package
+Version: 0.0.20
+Summary: Official packages for featurize.
+Home-page: https://github.com/louis-she/featurize-package
+Author: louis
+Author-email: chenglu.she@gmail.com
+License: UNKNOWN
+Keywords: pytorch minecraft
+Platform: UNKNOWN
+Requires-Dist: featurize-jupyterlab
+Requires-Dist: torchvision
+Requires-Dist: albumentations
+Requires-Dist: torch
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: scikit-learn
+Requires-Dist: pretrainedmodels
+Requires-Dist: kaggle
+
+UNKNOWN
+
+
