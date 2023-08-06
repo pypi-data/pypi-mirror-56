@@ -1,0 +1,16 @@
+activity/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+activity/admin.py,sha256=ONEmFG1J5Wg-U-ef-xlFGA7kC4_B-MM3MRjWbCDIwco,417
+activity/api.py,sha256=U5TZ0Vj6jaEJj5a5q3VK_ITcVkdhc5A6wmkeaNomeGc,3070
+activity/apps.py,sha256=nfNa2zlGyBD7fxFhnmvtm6iMQVARjSocof51B-IxsQ8,132
+activity/client.py,sha256=5EjMJ50Xb9kPEBge4oyuRFtUh_nLVFfNaIUc7cXQ4Qo,7975
+activity/constants.py,sha256=3UDPzsGEVDpR22a2QBo57hLEizzXsNJj3tgkHHr7hpU,897
+activity/models.py,sha256=d9m5ifrzUJjUNpxoOzLuvDtS-cJcO2YV9B-wRGAvhSc,1275
+activity/services.py,sha256=ytbkvJZzAgntFXcKqVqHelld3vgsODGuueytxBNywJo,6393
+activity/views.py,sha256=ne2eExVhMQONOox0wV7XE7iMcoUHH3wTp5c58O3EDZk,5010
+activity/migrations/0001_initial.py,sha256=E-4ukevGZEDb3xe4D7nYhehN5c4S2DhnaXxx0cnZ-Rc,2277
+activity/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+p1_activity-0.1.45002257.dist-info/LICENSE,sha256=a5VZQ36Vr9brq7FJJz6AsDXxOBq37XtKHeoJSp1oP0k,1051
+p1_activity-0.1.45002257.dist-info/METADATA,sha256=0V9IK4pTHlWFrwbhImZlBB79M8cS7JUwQyD67WAwHFE,1014
+p1_activity-0.1.45002257.dist-info/WHEEL,sha256=g3LQva5oS9Ma-DPFwX8R7Ke-NO25KWW489RoZdNxJXc,92
+p1_activity-0.1.45002257.dist-info/top_level.txt,sha256=6k-0d2nzXZIfKMIAq58HUNerhFI2eDmrhD4DpxtkEPs,9
+p1_activity-0.1.45002257.dist-info/RECORD,,
