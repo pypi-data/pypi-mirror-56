@@ -1,0 +1,11 @@
+README.md
+setup.py
+EasyCommunications.egg-info/PKG-INFO
+EasyCommunications.egg-info/SOURCES.txt
+EasyCommunications.egg-info/dependency_links.txt
+EasyCommunications.egg-info/not-zip-safe
+EasyCommunications.egg-info/top_level.txt
+ecoms/EasyCommunicationHandler.py
+ecoms/__init__.py
+ecoms/master.py
+ecoms/slave.py
