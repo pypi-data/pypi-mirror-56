@@ -1,0 +1,11 @@
+README.md
+setup.py
+trooper/__init__.py
+trooper/base.py
+trooper/node.py
+trooper/server.py
+trooper.egg-info/PKG-INFO
+trooper.egg-info/SOURCES.txt
+trooper.egg-info/dependency_links.txt
+trooper.egg-info/requires.txt
+trooper.egg-info/top_level.txt

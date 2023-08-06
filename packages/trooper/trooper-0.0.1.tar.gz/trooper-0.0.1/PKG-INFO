@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: trooper
+Version: 0.0.1
+Summary: A simple user-friendly library for multi-user applications.
+Home-page: https://github.com/elvisdsz/trooperproject
+Author: Elvis Louis Dsouza
+Author-email: elvis.dsouza666@gmail.com
+License: MIT
+Description: # Trooper Project
+        A simple user-friendly library for multi-user applications.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
