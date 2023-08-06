@@ -1,0 +1,9 @@
+PySDL2
+Pillow
+numpy
+simpleaudio
+pynput
+psutil
+
+[:python_version != "3.3"]
+pygame<2.0,>=1.9.3
