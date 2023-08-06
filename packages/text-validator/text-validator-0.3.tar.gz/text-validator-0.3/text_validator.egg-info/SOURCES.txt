@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+text_validator/__init__.py
+text_validator/base.py
+text_validator/main.py
+text_validator.egg-info/PKG-INFO
+text_validator.egg-info/SOURCES.txt
+text_validator.egg-info/dependency_links.txt
+text_validator.egg-info/entry_points.txt
+text_validator.egg-info/not-zip-safe
+text_validator.egg-info/requires.txt
+text_validator.egg-info/top_level.txt
+text_validator/plugins/characters.py
+text_validator/plugins/ref_line_format.py
+text_validator/plugins/unicode.py
+text_validator/plugins/whitespace.py
