@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+marshmallow_dataclass/__init__.py
+marshmallow_dataclass/py.typed
+marshmallow_dataclass.egg-info/PKG-INFO
+marshmallow_dataclass.egg-info/SOURCES.txt
+marshmallow_dataclass.egg-info/dependency_links.txt
+marshmallow_dataclass.egg-info/requires.txt
+marshmallow_dataclass.egg-info/top_level.txt
+tests/__init__.py
+tests/test_attribute_copy.py
+tests/test_city_building_examples.py
+tests/test_doctests.py
+tests/test_field_for_schema.py
