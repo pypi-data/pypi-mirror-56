@@ -1,0 +1,208 @@
+Metadata-Version: 1.1
+Name: apeiron
+Version: 0.11.0
+Summary: Simple CLI for modpack management
+Home-page: https://github.com/Orhideous/apeiron
+Author: Andriy Kushnir (Orhideous)
+Author-email: me@orhideous.name
+License: MIT license
+Description: apeiron
+        =======
+        
+        *Утилита для управления модпаками*
+        
+        .. image:: https://img.shields.io/pypi/pyversions/apeiron.svg
+            :target: https://pypi.python.org/pypi/apeiron
+        .. image:: https://img.shields.io/pypi/v/apeiron.svg
+            :target: https://pypi.python.org/pypi/apeiron
+        .. image:: https://coveralls.io/repos/github/Orhideous/apeiron/badge.svg?branch=master
+            :target: https://coveralls.io/github/Orhideous/apeiron?branch=master
+        .. image:: https://img.shields.io/travis/Orhideous/apeiron.svg
+            :target: https://travis-ci.org/Orhideous/apeiron
+        .. image:: https://pyup.io/repos/github/Orhideous/apeiron/shield.svg
+            :target: https://pyup.io/repos/github/Orhideous/apeiron/
+        
+        
+        Основные термины
+        ----------------
+        
+        -  **Модпак** — совокупность файлов, которые могут быть доставлены
+           пользователю, сразу или после сборки
+        -  **SourceManifest (SM)** — виртуальный объект исходников модпака,
+           описанный в ``index.yaml`` и представленный файлами в ``objects/``
+        -  **TargetManifest (TM)** — виртуальный объект индекса и целевых файлов
+           модпака, доставляемых пользователю
+        
+        Принцип работы
+        --------------
+        
+        Apeiron оперирует реконструированными из файлов виртуальными объектами
+        модпаков, предоставленными ``SM`` и/или ``TM``.
+        Никакого другого хранилища метаданных, кроме самих файлов, нет.
+        
+        Все изменения в виртуальных объектах (например, создание ``TM`` из
+        ``SM``, так называемый процесс сборки модпака) немедленно отображается в
+        ФС. Обратное тоже верно — любые изменения в файлах будут отображены
+        утилитой ``apeiron``
+        
+        Статусы модпака
+        ---------------
+        
+        -  **Fresh** — исходники модпака (``SM``) в точности равны собранным
+           файлам (``TM``)
+        -  **Outdated** — ``TM`` не соответствует ``SM``, обычно, если файлы
+           исходников обновились
+        -  **Not deployed** — для ``SM`` в модпаке пока не был собран ``TM``
+        -  **Orphaned** — существует только ``TM`` в модпаке, без исходников
+        -  **Broken** — нарушена целостность ``TM``, следует пересобрать или
+           удалить такой модпак
+        -  **Unknown** — эфемерный модпак, запись в котором найдена в индексе,
+           стоит удалить его
+        
+        Работа с ``apeiron``
+        --------------------
+        
+        Для просмотра помощи по командам достаточно вызвать утилиту без
+        аргументов, ``apeiron``
+        
+        Полный пример индекса исходников с комментариями
+        ------------------------------------------------
+        
+        .. code:: yaml
+        
+            # Отображаемое имя модпака в лаунчере
+            title: Fancy pack with bells and whistles
+            # Внутреннее имя, используется в дальнейших операциях с модпаком
+            name: my_pack
+            # Версия игры
+            gameVersion: 1.10.2
+            # Список дополнительных флагов запуска, пустой по умолчанию
+            launch:
+              flags:
+                - -XX:SomeStrangeJavaFlag=42
+                - --debug
+            # Внутреннее версионирование, всегда 2
+            minimumVersion: 2
+            # URL к дополнительным библиотекам для этого модпака
+            # Добавляется к адресу по умолчанию в лаунчере
+            librariesLocation: http://libraries.devd.io
+            # Фактическое размещение файлов модпака, относительно индекса
+            objectsLocation: objects
+            # Папки из objectsLocation, которые нужно упаковать в zip-архив
+            # перед сборкой модпака
+            bundles:
+              - resourcepacks/UnpackedResourcePack
+              - resourcepacks/UnpackedUncompressedResourcePack
+            # Список пользовательских файлов и каталогов, которые при установке
+            # модпака доставляются на клиент, но не перезаписываются при обновлении
+            userFiles:
+              include:
+                - options.txt
+                - config/MyAwesomeModStuff/*
+            # Список дополнительно загружаемых частей (DLC) модпака
+            features:
+              # Объект DLC
+              - properties:
+                  # Внутреннее имя DLC
+                  name: MoreBells
+                  # Описание DLC
+                  description: Adds extra bells!
+                  # Рекомендован (starred) или нет (avoid) для загрузки
+                  recommendation: starred
+                  # Игнорируется, так как активно только на стороне клиента
+                  selected: false
+                # Список файлов, входящих в DLС
+                files:
+                  include:
+                    - mods/MoreBells.jar
+                    - mods/MoreBellsAddons*
+                    - config/MoreBells.cfg
+        
+        Все пути на стороне утилиты должны рассматриваться относительно
+        каталога ``objects``, или же каталога игры на стороне клиента.
+        
+        Конфигурация
+        ------------
+        
+        Все настройки ``apeiron`` задаются переменными окружения.
+        
+        +---------------------------+-------------------------+-------------------------------+
+        | Переменная окружения      | Значение по умолчанию   | Описание                      |
+        +===========================+=========================+===============================+
+        | ``APEIRON_STORAGE_DIR``   | ``~/apeiron/storage``   | Рабочий каталог               |
+        +---------------------------+-------------------------+-------------------------------+
+        | ``APEIRON_MODPACK_INDEX`` | ``index.json``          | Рабочий индекс модпаков       |
+        +---------------------------+-------------------------+-------------------------------+
+        | ``APEIRON_PARALLELISM``   | ``4``                   | Количеств рабочих процессов   |
+        +---------------------------+-------------------------+-------------------------------+
+        | ``APEIRON_DEBUG``         | ``False``               | Включена ли отладка?          |
+        +---------------------------+-------------------------+-------------------------------+
+        
+        Работа с несколькими версиями окружений
+        ---------------------------------------
+        
+        При необходимости разделить окружения (production/test) можно
+        использовать несколько индексов модпаков.
+        Так, при вызове ``apeiron --config production.yaml`` и содержимом
+        ``production.yaml``
+        
+        .. code:: yaml
+        
+            modpack_index: production.json
+        
+        …все клиенты, для которых ``packageListUrl`` лаунчера будет указывать на
+        ``production.json``, будут видеть только включенные там сборки.
+        
+        Настройка веб-сервера
+        ---------------------
+        
+        Достаточно любого сервера, способного отдавать файлы с
+        ``storage_dir/packages``
+        
+        Пример для **nginx**, если ``storage_dir`` настроена в ``/opt/apeiron``:
+        
+        ::
+        
+            server {
+                listen        80;
+                server_name   packages.example.com;
+                root          /opt/apeiron/packages;
+            }
+        
+        Установка
+        ---------
+        
+        ``pip3 install apeiron``
+        
+        Системные требования
+        --------------------
+        
+        -  POSIX-совместимая ОС
+        -  Python 3.6.4 и выше
+        
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        
+        
+        =======
+        History
+        =======
+        
+        0.9.0 (2018-09-01)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: Minecraft,modpack,skcraft
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
