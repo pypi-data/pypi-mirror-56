@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: reddit2epub
+Version: 0.1.1
+Summary: A CLI to convert reddit series into epub files
+Home-page: https://github.com/mircohaug/reddit2epub.git
+Author: Mirco Haug
+Author-email: python@mircohaug.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: click (==7.*)
+Requires-Dist: praw (==6.*)
+Requires-Dist: EbookLib (==0.17.*)
+
+# Reddit to epub converter
+
+This little script allows you to convert reddit storries which are published in multiple posts to one single epub file.
+
+## Usage
+
+Install via `pip install reddit2epub`. It provides the cli at the command `reddit2epub --help`.
+
