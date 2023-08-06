@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: pyds8k
+Version: 1.0.0
+Summary: DS8000 Python Client
+Home-page: https://github.com/IBM/pyds8k
+Author: Zhang Wu
+Author-email: shwzhang@cn.ibm.com
+License: Apache License, Version 2.0
+Keywords: IBM,DS8000 Storage
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires: requests
+Requires: httpretty
+Provides: pyds8k
+Requires-Dist: httpretty
+Requires-Dist: requests
+
+DS8000 RESTful API Python Client.
+
+
