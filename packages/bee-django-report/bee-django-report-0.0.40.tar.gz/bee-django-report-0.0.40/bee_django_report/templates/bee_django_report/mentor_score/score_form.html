@@ -1,0 +1,33 @@
+{% extends "bee_django_report/base.html" %}
+{% load bootstrap3 %}
+{% load static %}
+{% block content %}
+    {% include 'bee_django_report/logo.html' %}
+    {% include 'bee_django_report/nav.html' %}
+    <h4>助教【{{ record.mentor }}】{{ record.year }}年第{{ record.week }}周评分明细</h4>
+    <div style="margin: 30px auto;color: gray">
+        {% if lecturer %}
+            <div>{{ record.mentor }}的讲师：{{ lecturer }}</div>
+        {% endif %}
+        {% if agent %}
+            <div>{{ record.mentor }}的客服：{{ agent }}</div>
+        {% endif %}
+    </div>
+    <div style="color: red">{{ help_text|default:""|safe }}</div>
+    <div style="margin: 30px auto">
+        <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form form layout='horizontal' %}
+            {% bootstrap_button '提交' %}
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+{% endblock %}
