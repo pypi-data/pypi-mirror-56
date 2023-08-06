@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mylinky
+Version: 0.3
+Summary: Linky utility to grab your power consumption from ENEDIS
+Home-page: https://github.com/x3n1x/linky
+Author: Lionel Molinier
+Author-email: lionel@molinier.eu
+License: MIT
+Description: # mylinky
+        Linky utilites to grab your power consumption from ENEDIS website
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
