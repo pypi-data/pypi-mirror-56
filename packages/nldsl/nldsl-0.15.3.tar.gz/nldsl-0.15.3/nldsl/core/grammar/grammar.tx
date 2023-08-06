@@ -1,0 +1,71 @@
+// NLDSL (c) 2019 by Kevin Kiefer <abc.kiefer@gmail.com>, Heidelberg University
+//
+// NLDSL is licensed under a
+// Creative Commons Attribution-NonCommercial 3.0 Unported License.
+//
+// You should have received a copy of the license along with this
+// work.  If not, see <http://creativecommons.org/licenses/by-nc/3.0/>.
+
+// This is a template file containing the grammer for NLDSL.
+// The following template parameters need to be specified:
+// - $EVAL_PIPE_PREFIX$
+// - $DEF_PIPE_PREFIX$
+// To use the grammar, load it into a unicode string and substitute
+// the template parameters with the desired values.
+// Then pass this string to the function "textx.metamodel_from_str".
+
+Input:
+	stmts+=Stmt
+;
+
+
+// Statements
+Stmt:
+	'$EVAL_PIPE_PREFIX$' eval=EvalPipeStmt | '$DEFINE_PIPE_PREFIX$' define=DefPipeStmt
+;
+
+EvalPipeStmt:		
+	(result=ID '=')? operations+=OpExpr['|']
+;
+
+DefPipeStmt:
+	assign+=DefAssignExpr '=' operations+=DefOpExpr['|']
+;
+
+
+// Expressions
+OpExpr:
+	args*=ArgExpr
+;
+
+ArgExpr:
+	(',')? expr=Expr
+;
+
+DefOpExpr:
+	args*=DefArgExpr
+;
+
+DefAssignExpr:
+	(',')? (value=ID | '$' variable=ID | '!' def_expr=ID | '$[' var_list+=DefArgListExpr ']')
+;
+
+DefArgExpr:
+	(',')? (expr=Expr | '$' variable=ID | '!' def_expr=ID | '$[' var_list+=DefArgListExpr ']')
+;
+
+DefArgListExpr:
+	(',')? (value=ID | '$' variable=ID | '!' def_expr=ID)
+;
+
+Expr:
+	value=TYPE
+;
+
+TYPE:	
+	value='>=' | value='<=' | value='==' | value='!=' | value='<>' | value='<' | value='>'
+	| value='-' | value='+' | value='**' | value='*'| value=/\//
+	| value=/not in\s/ | value=/is not\s/ | value=/in\s/ | value=/is\s/
+	| value='[' | value=']' | value='(' | value=')' | value="0"
+	| float=FLOAT | value=INT | value=BOOL | string=STRING | value=/[^\d\W](\w|\.)*\b/
+;

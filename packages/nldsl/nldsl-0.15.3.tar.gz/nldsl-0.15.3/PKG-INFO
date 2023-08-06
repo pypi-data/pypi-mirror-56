@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: nldsl
+Version: 0.15.3
+Summary: A DSL for data science with a syntax similar to a natural language.
+Home-page: https://gitlab.com/Einhornstyle/nldsl
+Author: Kevin Kiefer
+Author-email: abc.kiefer@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://einhornstyle.gitlab.io/nldsl/
+Description: NLDSL is a tool to create domain specific languages (DSLs) for data science, which can be translated into executable code. A new DSL is created by deriving from the CodeGenerator class and rules are added to it via simple python functions. Besides providing code generation NLDSL allows the user to define DSL-level function, which are then treated as first-class rules. Currently we provide extensions for Pandas and PySpark.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Compilers
+Requires-Python: >=3.4
