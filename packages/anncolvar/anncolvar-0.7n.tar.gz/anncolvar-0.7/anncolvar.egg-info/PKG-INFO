@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: anncolvar
+Version: 0.7
+Summary: Coding collective variables by artificial neural networks
+Home-page: https://github.com/spiwokv/anncolvar
+Author: Vojtech Spiwok, 
+Author-email: spiwokv@vscht.cz
+License: MIT
+Description: file:README.rst
+Keywords: artificial neural networks molecular dynamics simulation
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Description-Content-Type: text/x-rst
