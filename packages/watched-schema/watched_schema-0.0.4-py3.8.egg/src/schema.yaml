@@ -1,0 +1,953 @@
+$schema: "http://json-schema.org/draft-07/schema#"
+definitions:
+  additionalProperties: false
+  TranslatedText:
+    title: Translated text
+    description: Text which can be translated to various locales
+    oneOf:
+    - type: string
+    - type: object
+  Url:
+    title: Url
+    type: string
+    #pattern: "^[a-z0-9]+:"
+  ImageShape:
+    title: Image shape
+    description: Shape of an image
+    shape:
+      enum: [regular, square, landscape]
+      default: regular
+  Image:
+    title: Image
+    description: Definition of an image
+    oneOf:
+    - $ref: "#/definitions/Url"
+    - type: object
+      properties:
+        shape:
+          $ref: "#/definitions/ImageShape"
+        small:
+          $ref: "#/definitions/Url"
+        original:
+          $ref: "#/definitions/Url"
+  Country:
+    title: Country
+    description: Country in ISO-3166-1 format
+    anyOf:
+    - type: string
+      pattern: "^[A-Z]{2}$"
+    - type: string
+  Language:
+    title: Language
+    description: Language in ISO-639-1 format
+    type: string
+    pattern: "^([a-z]{2}|[a-z]{2}(-[A-Z]{2})?)$"
+  Video:
+    title: Video
+    description: Short videos like trailer or teaser
+    type: object
+    properties:
+      id:
+        type: string
+        description: A video ID
+      name:
+        description: Title of the video element, shown inside the app
+        $ref: "#/definitions/TranslatedText"
+      country:
+        $ref: "#/definitions/Country"
+      language:
+        $ref: "#/definitions/Language"
+      type:
+        description: Video type. Currently only youtube is supported
+        enum: [youtube]
+      youtubeId:
+        description: ID of the YouTube video
+        type: string
+    required: ["id", "name", "youtubeId"]
+  Subtitle:
+    title: Subtitle
+    description: Subtitles for sources
+    type: object
+    properties:
+      name:
+        description: Optional informations about this subtitle
+        $ref: "#/definitions/TranslatedText"
+      language:
+        $ref: "#/definitions/Language"
+      type:
+        description: Subtitle type
+        enum: [srt, ttml, vtt]
+      url:
+        $ref: "#/definitions/Url"
+    required: [language, type, url]
+  Source:
+    title: Source
+    properties:
+      id:
+        type: string
+      name:
+        description: Optional name of this source
+        $ref: "#/definitions/TranslatedText"
+      tags:
+        description: Optional tags, like video resolutions, quality...
+        type: array
+        items:
+          type: string
+        default: []
+      isFree:
+        description: This source is free
+        type: boolean
+        default: true
+      isSubscription:
+        description: Subscription is needed to play this source
+        type: boolean
+        default: false
+      isPeered:
+        description: This source is peered
+        type: boolean
+        default: false
+      isLive:
+        description: This is a livestream
+        type: boolean
+        default: false
+      geoRestrictions:
+        description: Geo restrictions. Currently not implemented
+        type: array
+        items:
+          $ref: "#/definitions/Country"
+      type:
+        description: Type of this source
+        enum: [url, youtube, torrent, externalUrl]
+        default: url
+      url:
+        description: Source type related variables
+        type: string
+      youtubeId:
+        type: string
+      torrentAvailability:
+        type: number
+        minimum: 0
+        maximum: 3000
+      torrentHash:
+        type: string
+      torrentIndex:
+        type: number
+      subtitles:
+        type: array
+        items:
+          $ref: "#/definitions/Subtitle"
+      subtitlesExclusive:
+        description: If true, only this subtitles are offered to the user
+        type: boolean
+        default: false
+  ItemType:
+    description: "Valid item types"
+    enum: [directory, movie, series, episode, channel, iptv]
+  ItemImages:
+    description: "Item images"
+    type: object
+    properties:
+      logo:
+        $ref: "#/definitions/Image"
+      poster:
+        $ref: "#/definitions/Image"
+      backdrop:
+        $ref: "#/definitions/Image"
+      background:
+        $ref: "#/definitions/Image"
+  VirtualDirectoryItem:
+    type: object
+    properties:
+      id:
+        description: "ID of this directory item"
+        type: string
+      name:
+        description: "Name of item"
+        $ref: "#/definitions/TranslatedText"
+      description:
+        description: "Description of item"
+        $ref: "#/definitions/TranslatedText"
+      images:
+        $ref: "#/definitions/ItemImages"
+      posterShape:
+        $ref: "#/definitions/ImageShape"
+      itemTypes:
+        description: |
+          Item types returned by this directory. If not set,
+          it will fallback to the resource item types.
+        type: array
+        items:
+          $ref: "#/definitions/ItemType"
+      features:
+        description: "Overwrite features of directory"
+        $ref: "#/definitions/DirectoryFeatures"
+      args:
+        $ref: "#/definitions/DefaultDirectoryRequest"
+        default: {}
+  DirectoryItem:
+    type: object
+    allOf:
+    - $ref: "#/definitions/VirtualDirectoryItem"
+    - type: object
+      properties:
+        type:
+          enum: [directory]
+      required: [type, id]
+  VirtualItem:
+    type: object
+    properties:
+      ids:
+        description: "Different IDs, for eg { imdb_id: tt1234567, tmdb_id: 1234 }"
+        type: object
+      name:
+        description: "Name of item"
+        $ref: "#/definitions/TranslatedText"
+      description:
+        description: "Description of item"
+        $ref: "#/definitions/TranslatedText"
+      releaseDate:
+        description: "Release date as unix timestamp or parseable string"
+        oneOf:
+        - type: number
+        - type: string
+      images:
+        $ref: "#/definitions/ItemImages"
+      videos:
+        description: "List of video objects"
+        type: array
+        items:
+          $ref: "#/definitions/Video"
+        default: []
+      sources:
+        description: "List of source objects"
+        type: array
+        items:
+          $ref: "#/definitions/Source"
+        default: []
+    required: [ids]
+  VirtualMovieItem:
+    allOf:
+    - $ref: "#/definitions/VirtualItem"
+    - type: object
+      properties:
+        year:
+          description: "Production year. If not provided, releaseDate will be used"
+          type: number
+          minimum: 0
+          maximum: 3000
+        runtime:
+          description: "Runtime in miliseconds"
+          type: number
+        production:
+          description: "Production compnaies"
+          type: array
+          items:
+            type: string
+          default: []
+        countries:
+          description: "Country list in ISO-3166-1 format"
+          type: array
+          items:
+            $ref: "#/definitions/Country"
+          default: []
+        spokenLanguages:
+          description: "List of spoken languages in ISO-639-1 format"
+          type: array
+          items:
+            $ref: "#/definitions/Language"
+          default: []
+        genres:
+          description: "Genre list"
+          type: array
+          items:
+            type: string
+          default: []
+        writer:
+          description: "List of writers"
+          type: array
+          items:
+            type: string
+          default: []
+        director:
+          description: "List of directors"
+          type: array
+          items:
+            type: string
+          default: []
+        cast:
+          description: "List of cast"
+          type: array
+          items:
+            oneOf:
+            - type: string
+            - type: object
+              properties:
+                name:
+                    type: string
+                gender:
+                    type: string
+                character:
+                    type: string
+              required: [name]
+          default: []
+        homepage:
+          description: "Homepage"
+          type: string
+        awards:
+          description: "String describing status about awards"
+          type: string
+        ratings:
+          description: "Object with different rating values"
+          type: object
+  MovieItem:
+    title: Movie item
+    allOf:
+    - $ref: "#/definitions/VirtualMovieItem"
+    - type: object
+      properties:
+        type:
+          enum: [movie]
+      required: [type]
+  SeriesItem:
+    title: Series item
+    allOf:
+    - $ref: "#/definitions/VirtualMovieItem"
+    - type: object
+      properties:
+        type:
+          enum: [series]
+        children:
+          description: "List of episode objects"
+          type: array
+          items:
+            $ref: "#/definitions/EpisodeItem"
+      required: [type]
+  EpisodeItem:
+    title: Episode item
+    allOf:
+    - $ref: "#/definitions/VirtualItem"
+    - type: object
+      properties:
+        season:
+          description: "Season number. For specials, use 0"
+          type: number
+        episode:
+          description: "Episode number"
+          type: number
+      required: [season, episode]
+  ChannelItem:
+    title: Channel item
+    allOf:
+    - $ref: "#/definitions/VirtualItem"
+    - type: object
+      properties:
+        type:
+          enum: [channel]
+      required: [type]
+  IptvItem:
+    title: TV item
+    allOf:
+    - $ref: "#/definitions/VirtualItem"
+    - type: object
+      properties:
+        type:
+          enum: [iptv]
+        epg:
+          type: array
+          items:
+            type: object
+            properties:
+              start:
+                description: "Start timestamp in UTC seconds"
+                type: number
+              stop:
+                description: "Stop timestamp in UTC seconds"
+                type: number
+              name:
+                description: "Name of the show"
+                $ref: "#/definitions/TranslatedText"
+              description:
+                $ref: "#/definitions/TranslatedText"
+              categories:
+                type: array
+                items:
+                  $ref: "#/definitions/TranslatedText"
+              poster:
+                $ref: "#/definitions/Image"
+            required: [start, stop, name]
+          default: []
+      required: [type]
+  Item:
+    title: Item
+    description: "Automatically selects the fitting item model"
+    anyOf:
+    - $ref: "#/definitions/DirectoryItem"
+    - $ref: "#/definitions/MovieItem"
+    - $ref: "#/definitions/SeriesItem"
+    - $ref: "#/definitions/ChannelItem"
+    - $ref: "#/definitions/IptvItem"
+  CompatibleDirectoryFeature:
+    title: Compatible feature
+    description: "List of compatible filters or sort keys, if not set, all will be used"
+    type: array
+    items:
+      type: string
+  DirectoryFeatures:
+    title: Directory features
+    description: "Directory features like search, sort and filter"
+    type: object
+    properties:
+      search:
+        description: "Search options"
+        type: object
+        properties:
+          enabled:
+            type: boolean
+            default: false
+          compatibleSort:
+            $ref: "#/definitions/CompatibleDirectoryFeature"
+          compatibleFilter:
+            $ref: "#/definitions/CompatibleDirectoryFeature"
+      sort:
+        description: "Different sort columns and their caption including translations"
+        type: array
+        items:
+        - type: object
+          properties:
+            id:
+              type: string
+            name:
+              $ref: "#/definitions/TranslatedText"
+            compatibleFilter:
+              $ref: "#/definitions/CompatibleDirectoryFeature"
+      filter:
+        description: "Different sort column and their caption including translations"
+        type: array
+        items:
+        - type: object
+          properties:
+            id:
+              type: string
+            name:
+              $ref: "#/definitions/TranslatedText"
+            multiselect:
+              description: If this is true, an array will be returned
+              type: boolean
+              default: false
+            values:
+              description: "Values used by filters (Genres, countries, ...)"
+              type: array
+              items:
+                anyOf:
+                - $ref: "#/definitions/TranslatedText"
+                - type: object
+                  properties:
+                    key:
+                      type: string
+                    value:
+                      $ref: "#/definitions/TranslatedText"
+                  required: [key, value]
+            defaultValue:
+              description: |
+                Default value of this filter, should be TranslatedText or
+                the key of a filter. Have to be one of `values`.
+              anyOf:
+              - $ref: "#/definitions/TranslatedText"
+              - type: string
+          required: [id, name, values]
+  VirtualAddon:
+    title: Addon
+    type: object
+    properties:
+      id:
+        description: "ID of this addon"
+        type: string
+      name:
+        description: "Name of this addon, optionally localized"
+        $ref: "#/definitions/TranslatedText"
+      version:
+        description: "Version in semver format"
+        type: string
+      logo:
+        description: "Addon logo, can be a relative path to the addon URL"
+        $ref: "#/definitions/Image"
+      homepage:
+        description: "Homepage"
+        $ref: "#/definitions/Url"
+      description:
+        description: "Short description of this addon"
+        $ref: "#/definitions/TranslatedText"
+      flags:
+        description: "Flags"
+        type: object
+        properties:
+          adult:
+            type: boolean
+        default:
+          adult: false
+      metadata:
+        description: Optional data this addon needs, this is mostly used internally.
+        type: object
+        default: {}
+    required: [id, name, version]
+  RepositoryAddon:
+    title: Repository addon
+    allOf:
+    - $ref: "#/definitions/VirtualAddon"
+    - type: object
+      properties:
+        type:
+          enum: [repository]
+        mirrors:
+          description: |
+            One or more URL's to this repository. Each URL
+            should be an exact mirror of this repository.
+            The different URL's are tried in the specified
+            order.
+          type: array
+          items:
+            $ref: "#/definitions/Url"
+          default: []
+      required: [type]
+  BundleAddon:
+    title: Bundle addon
+    allOf:
+    - $ref: "#/definitions/VirtualAddon"
+    - type: object
+      properties:
+        type:
+          enum: [bundle]
+        requirements:
+          description: |
+            List of required addons.
+            The values can be a URL to an addon, an addon ID
+            or an addon ID with engine definition.
+            Eg:
+            - https://example.com/vavoo/v1/some.addon.id
+            - https://example.com/vavoo/v1/another.addon.id
+            - stremio/https://example.com/vavoo/stremioaddon/manifest.json
+            - addon.id.that.exists.in.an.avaliable.repository
+            - stremio/another.engine.addon
+            - { "engine": "stremio", "id": "addon.id" }
+            - { "engine": "vavoo", "id": "vavoo.addon.id" }
+            - { "id": "another.vavoo.addon.id" }
+            - { "engine": "stremio", "url": "https://exmaple.com/link/to/stremio/addon" }
+          type: array
+          items:
+            oneOf:
+            #- $ref: "#/definitions/Url"
+            # - regex: "^(stremio|vavoo)/[a-z0-9.-]+$"
+            # - regex: "^[a-z0-9.-]+$"
+            - type: string
+            - type: object
+              properties:
+                engine:
+                  enum: [stremio, vavoo]
+                  default: vavoo
+                id:
+                  type: string
+                url:
+                  $ref: "#/definitions/Url"
+        dashboards:
+          description: |
+            Predefined dashboards. This dashboards get's applied only
+            once during bundle installation.
+          type: array
+          items:
+            allOf:
+            - $ref: "#/definitions/VirtualDirectoryItem"
+            - type: object
+              properties:
+                addonId:
+                  title: Addon ID
+                  description: |
+                    If this dashboard should be executed with another addon,
+                    specify the ID here.
+                  type: string
+                id:
+                  description: |
+                    ID of this dashboard.
+                    To overwrite (or reconfigure) other dashboards, set
+                    this to an already existing dashboard. The found object
+                    then is merged with this one.
+                  type: string
+                config:
+                  $ref: "#/definitions/DashboardConfig"
+              required: [addonId]
+          default: []
+      required: [type, requirements]
+  DashboardConfig:
+    description: "Configuration of this dashboard"
+    type: object
+    properties:
+      showOnHomescreen:
+        type: boolean
+    default: {}
+  WorkerAddon:
+    title: Worker addon
+    allOf:
+    - $ref: "#/definitions/VirtualAddon"
+    - type: object
+      properties:
+        type:
+          enum: [worker]
+        resources:
+          description: Resources this addon provides
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                description: ID of this resource.
+                type: string
+                default: default
+              name:
+                description: Optional name of this resource
+                $ref: "#/definitions/TranslatedText"
+              actions:
+                type: array
+                items:
+                  title: Actions this resource can handle.
+                  description: |
+                    Available functions.
+                    If `directory` is set, but no `dashboards` are defined, the app will
+                    create a default dashboard for each resource automatically.
+                  enum: [directory, metadata, source, subtitle, resolve]
+              itemTypes:
+                type: array
+                items:
+                  $ref: "#/definitions/ItemType"
+                default: []
+              requestArgs:
+                description: |
+                  Required item properties for `metadata`, `source`
+                  and `subtitle` requests, see `DefaultItemRequest`
+                  for a list of supported keys. All keys except
+                  `name`, `year`, `releaseDate`, `season` and `episode`
+                  are treated as an ID. Use an array to require a
+                  combination of keys.
+                  Example:
+                    [
+                      "id/tmdb", // Need item.ids.tmdb
+                      "id/imdb_id", // Need item.ids.tmdb
+                      "otherid", // Need item.ids.otherid
+                      ["name", "year"], // Need item.name and item.year
+                      ["name", "releaseDate"], // Need item.name and item.releaseDate
+                    ]
+                  By default an ID named after addon.id will be matched also.
+                type: array
+                items:
+                  oneOf:
+                  - type: array
+                    items:
+                      type: string
+                  - type: string
+                default: []
+              urlPatterns:
+                description: |
+                  URL patterns which match on resolve requests.
+                  Use this together with resource type `resolve`.
+                type: array
+                items:
+                  type: string
+                default: []
+              defaultPosterShape:
+                description: The default poster shape for `directory` items.
+                $ref: "#/definitions/ImageShape"
+              defaultFeatures:
+                description: The default features for `directory` items.
+                $ref: "#/definitions/DirectoryFeatures"
+            required: [actions]
+        dashboards:
+          description: |
+            Predefined dashboards. This dashboards get's updated
+            when the addon is updated, the dashboard configuration
+            is preserved.
+          type: array
+          items:
+            allOf:
+            - $ref: "#/definitions/VirtualDirectoryItem"
+            - type: object
+              properties:
+                config:
+                  $ref: "#/definitions/DashboardConfig"
+          default: []
+      required: [type, resources]
+  IptvAddon:
+    title: IPTV addon
+    description: "Model for the IPTV engine. This is internally converted to a worker addon."
+    allOf:
+    - $ref: "#/definitions/VirtualAddon"
+    - type: object
+      properties:
+        type:
+          enum: [iptv]
+        url:
+          description: "URL to the playlist"
+          type: string
+        refreshInterval:
+          description: "Playlist refresh interval in hours"
+          type: number
+          default: 12
+      required: [type, url]
+  Addon:
+    title: Addon
+    description: "Automatically selects the fitting addon model"
+    anyOf:
+    - $ref: "#/definitions/RepositoryAddon"
+    - $ref: "#/definitions/BundleAddon"
+    - $ref: "#/definitions/WorkerAddon"
+    - $ref: "#/definitions/IptvAddon"
+  ApiError:
+    title: API error
+    description: |
+      Possible return value of all API functions. If the
+      error value is "empty", the response is treated as
+      not found and will be ignored.
+    type: object
+    properties:
+      error:
+        type: string
+    required: [error]
+  ApiTask:
+    title: API task
+    description: "Possible return value of some API functions"
+    type: object
+    properties:
+      id:
+        type: string
+      action:
+        enum: [fetch]
+      url:
+        $ref: "#/definitions/Url"
+      params:
+        type: object
+        properties:
+          method:
+            enum: ['GET', 'POST', 'DELETE']
+            default: 'GET'
+          headers:
+            type: object
+          body:
+            type: string
+          redirect:
+            enum: [follow, manual, error]
+            default: follow
+      body:
+        description: "Download the response body"
+        type: boolean
+        default: true
+    required: [id, action, url]
+  ApiTaskResult:
+    title: API task result
+    type: object
+    properties:
+      kind:
+        enum: [taskResult]
+      id:
+        type: string
+      error:
+        type: string
+      status:
+        type: number
+      url:
+        $ref: "#/definitions/Url"
+      headers:
+        type: object
+      json:
+        oneOf:
+        - type: string
+        - type: number
+        - type: array
+        - type: object
+      text:
+        type: string
+      data:
+        description: "Base64 encoded raw data"
+        type: string
+    required: [id, status]
+  DefaultDirectoryRequest:
+    title: Api directory request
+    description: Request parameters for a directory call
+    type: object
+    properties:
+      resourceId:
+        description: "Resource ID"
+        type: string
+      directoryId:
+        description: "Directory ID for sub directories"
+        type: string
+      language:
+        $ref: "#/definitions/Language"
+      adult:
+        description: "Show adult items in search result"
+        type: boolean
+        default: false
+      search:
+        description: "Search query stirng"
+        type: string
+      sort:
+        description: "Sort the list by this column"
+        type: string
+      filter:
+        description: "Filter values"
+        type: object
+      page:
+        description: "Page of the result list"
+        type: number
+        default: 1
+  DefaultItemRequest:
+    description: Request parameters for a "normal" item related request
+    type: object
+    properties:
+      language:
+        $ref: "#/definitions/Language"
+      type:
+        $ref: "#/definitions/ItemType"
+      ids:
+        description: "Different IDs, for eg { imdb_id: tt1234567, tmdb_id: 1234 }"
+        type: object
+      name:
+        description: "Name of this item"
+        $ref: "#/definitions/TranslatedText"
+      releaseDate:
+        description: "Release date as unix timestamp or parseable string"
+        oneOf:
+        - type: number
+        - type: string
+      year:
+        description: "Release year"
+        type: number
+    required: [type, ids]
+  Stream:
+    title: Stream
+    description: "A playable response of `Source` or `Trailer` `response` function."
+    type: object
+    properties:
+      name:
+        description: "Name of this stream"
+        $ref: "#/definitions/TranslatedText"
+      url:
+        $ref: "#/definitions/Url"
+      headers:
+        type: object
+    required: [url]
+  ApiAddonsRequest:
+    title: Api addons request
+    description: "Get all avaliable addons on this repository"
+    type: object
+    properties:
+      language:
+        $ref: "#/definitions/Language"
+  ApiAddonsResponse:
+    title: Api addons response
+    oneOf:
+    - $ref: "#/definitions/ApiError"
+    - type: array
+      items:
+        $ref: "#/definitions/Addon"
+  ApiInfosRequest:
+    title: Api infos request
+    description: "Get more detailed infos about one specific addon"
+    type: object
+    properties:
+      language:
+        $ref: "#/definitions/Language"
+  ApiInfosResponse:
+    title: Api infos response
+    oneOf:
+    - $ref: "#/definitions/ApiError"
+    - $ref: "#/definitions/ApiTask"
+    - $ref: "#/definitions/Addon"
+  ApiDirectoryRequest:
+    title: Api directory list request
+    $ref: "#/definitions/DefaultDirectoryRequest"
+  ApiDirectoryResponse:
+    title: Api directory list response
+    oneOf:
+    - $ref: "#/definitions/ApiError"
+    - $ref: "#/definitions/ApiTask"
+    - type: object
+      properties:
+        features:
+          description: "Overwrite features of a directory or resource"
+          $ref: "#/definitions/DirectoryFeatures"
+        items:
+          type: array
+          items:
+            $ref: "#/definitions/Item"
+        hasMore:
+          description: "True if there are more items to request"
+          type: boolean
+          default: null
+      required: [items]
+  ApiMetadataRequest:
+    title: Api metadata request
+    $ref: "#/definitions/DefaultItemRequest"
+  ApiMetadataResponse:
+    title: Api metadata response
+    oneOf:
+    - $ref: "#/definitions/ApiError"
+    - $ref: "#/definitions/ApiTask"
+    - $ref: "#/definitions/Item"
+  ApiSourceRequest:
+    title: Api source request
+    $ref: "#/definitions/DefaultItemRequest"
+  ApiSourceResponse:
+    title: Api source response
+    oneOf:
+    - $ref: "#/definitions/ApiError"
+    - $ref: "#/definitions/ApiTask"
+    - type: array
+      items:
+        $ref: "#/definitions/Source"
+  ApiSubtitleRequest:
+    title: Api subtitle request
+    type: object
+    $ref: "#/definitions/DefaultItemRequest"
+  ApiSubtitleResponse:
+    title: Api subtitle response
+    oneOf:
+    - $ref: "#/definitions/ApiError"
+    - $ref: "#/definitions/ApiTask"
+    - type: array
+      items:
+        $ref: "#/definitions/Subtitle"
+  ApiResolveRequest:
+    title: Api resolve request
+    type: object
+    properties:
+      type:
+        description: Object type
+        enum: [video, source, subtitle]
+      id:
+        description: Video, source or subtitle ID
+        type: string
+      url:
+        $ref: "#/definitions/Url"
+  ApiResolveResponse:
+    title: Api resolve response
+    oneOf:
+    - $ref: "#/definitions/ApiError"
+    - $ref: "#/definitions/ApiTask"
+    - $ref: "#/definitions/Url"
+    - $ref: "#/definitions/Stream"
+    - type: object
+      description: |
+        Resolved informations about streams. This object supports different
+        resolutions.
+      properties:
+        name:
+          $ref: "#/definitions/TranslatedText"
+        streams:
+          description: |
+            Each stream should be an exact mirror of each other.
+            This is used to support different qualities.
+          type: array
+          items:
+            $ref: "#/definitions/Stream"
+        subtitles:
+          type: array
+          items:
+            $ref: "#/definitions/Subtitle"
+      required: [streams]
