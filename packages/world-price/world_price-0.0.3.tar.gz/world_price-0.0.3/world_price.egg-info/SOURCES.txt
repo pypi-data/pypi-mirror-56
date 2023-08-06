@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+world_price/__init__.py
+world_price/__version__.py
+world_price/adapter.py
+world_price/base.py
+world_price/http_utils.py
+world_price/interface.py
+world_price/utils.py
+world_price.egg-info/PKG-INFO
+world_price.egg-info/SOURCES.txt
+world_price.egg-info/dependency_links.txt
+world_price.egg-info/not-zip-safe
+world_price.egg-info/requires.txt
+world_price.egg-info/top_level.txt
