@@ -1,0 +1,6 @@
+jsii~=0.20.8
+publication>=0.0.3
+aws-cdk.aws-iam>=1.18.0,~=1.18
+aws-cdk.aws-kms>=1.18.0,~=1.18
+aws-cdk.aws-logs>=1.18.0,~=1.18
+aws-cdk.core>=1.18.0,~=1.18
