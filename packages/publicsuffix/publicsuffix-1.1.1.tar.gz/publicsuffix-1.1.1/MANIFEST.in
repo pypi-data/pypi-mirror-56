@@ -1,0 +1,5 @@
+include ChangeLog
+include LICENSE
+include tests.py
+include README.rst
+include publicsuffix/public_suffix_list.dat

@@ -1,0 +1,45 @@
+2019-12-01	publicsuffix 1.1.1
+
+	* Add deprecation notice to README.
+	* Fix UnicodeDecodeError in setup.py when building or installing
+	  package with LC_ALL=C (thanks to Evgeni Golov).
+	* Update the built-in list and fix tests (thanks to Evgeni Golov).
+	* Fetch the public suffix list using https.
+	* Add public_suffix_list.dat to MANIFEST.in.
+
+2015-07-08	publicsuffix 1.1.0
+
+	* Raise DeprecationWarning when using the built-in public suffix list.
+	* Update the built-in list to the latest version from Mozilla.
+	* Add fetch() function.
+	* Use setuptools for packaging.
+
+2014-01-14	publicsuffix 1.0.5
+
+	* Correctly handle fully qualified domain names (thanks to Matthäus
+	  Wander).
+	* Updated publicsuffix.txt to the latest version from Mozilla.
+
+2013-01-02	publicsuffix 1.0.4
+
+	* Added missing change log.
+
+2013-01-02	publicsuffix 1.0.3
+
+	* Updated publicsuffix.txt to the latest version from Mozilla.
+	* Added trove classifiers.
+	* Minor update of the README.
+
+2011-10-10	publicsuffix 1.0.2
+
+	* Compatibility with Python 3.x (thanks to Joern
+	  Koerner) and Python 2.5
+
+2011-09-22	publicsuffix 1.0.1
+
+	* Fixed installation issue under virtualenv (thanks to
+	  Mark McClain)
+
+2011-07-29	publicsuffix 1.0.0
+
+	* First release
