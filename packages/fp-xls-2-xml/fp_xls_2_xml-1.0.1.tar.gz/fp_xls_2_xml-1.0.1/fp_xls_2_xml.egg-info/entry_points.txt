@@ -1,0 +1,3 @@
+[console_scripts]
+fpxls2xml = fp_xls_2_xml.cli:main
+
