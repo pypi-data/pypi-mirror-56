@@ -1,0 +1,439 @@
+#!/bin/bash
+
+# NOTES: requirements
+# gcloud components install kubectl
+# gcloud auth configure-docker
+#
+
+set -e
+
+ARGS=$@
+
+VERSION=
+PROG=$(basename $0)
+DO_TEST=1
+
+ROOTDIR=$(git rev-parse --show-toplevel)
+if [ "$PWD" != "$ROOTDIR" ]; then
+    echo "ERROR: current dir is not the clone's root directory"
+    exit 1
+fi
+
+check_rc() {
+    RC=$1
+    CMD=$2
+    if [ "$RC" -ne 0 ]; then
+        echo "ERROR: Command \'${CMD}\' failed - deploy aborted"
+        exit 1
+    fi
+}
+
+get_cluster_location() {
+    LOCAL_CLUSTER_NAME=$1
+    echo $(gcloud container clusters list | grep "$LOCAL_CLUSTER_NAME " | awk '{ print $2 }')
+}
+
+get_ip() {
+    # Selector must be the string 'live' or 'staging', to retrieve the public IP of the corresponding cluster
+    SELECTOR=$1
+    N=$(pymconfig --name)
+    echo $(kubectl get ingress | grep "${N}-${SELECTOR}-ingress " | awk '{ print $3 }')
+}
+
+usage() {
+    cat << EOF
+USAGE: $PROG [--no-test] <version>
+
+Deploy a Docker image to GKE in two steps, first to a staging service, then to
+a live service if the tests against staging all passed.
+
+OPTIONS:
+  --no-test         Skip tests, but still deploy to staging first, then live.
+  --live-ip         Print the url of the live environment and exit.
+  --staging-ip      Print the url of the staging environment and exit.
+  --debug           Debug verbosity.
+  --help            This text.
+
+EOF
+}
+
+parse_args() {
+    while [ "$1" != "" ]; do
+        case $1 in
+            "--debug")         set -x; DEBUG='true';;
+            "--no-test")       export DO_TEST=;;
+            "-h" | "--help")   usage; exit 0;;
+            "--live-ip")       get_ip 'live'; exit 0;;
+            "--staging-ip")    get_ip 'staging'; exit 0;;
+            *)                 VERSION=$1;;
+        esac
+        shift
+    done
+}
+
+parse_args $ARGS
+
+if [ -z "$VERSION" ]; then
+    echo "ERROR: please specify a docker image version"
+    exit -1
+fi
+
+APP_NAME=$(pymconfig --name)
+DOMAIN_STAGING=$(pymconfig --staging-host)
+DOMAIN_LIVE=$(pymconfig --live-host)
+DOCKER_ROOT_REPO=$(pymconfig --docker-repo)
+DOCKER_REPO=$DOCKER_ROOT_REPO/$APP_NAME
+GCP_PROJECT=$DOCKER_ROOT_REPO
+GCP_REGION=$(pymconfig --gcp-region)
+GCP_CONCURRENCY=$(pymconfig --gcp-request-concurrency)
+GCP_MEMORY=$(pymconfig --gcp-memory)
+NAME_STAGING=${APP_NAME}-staging
+NAME_LIVE=${APP_NAME}-live
+
+# Stop previous versions?
+# gcloud config set app/stop_previous_version true
+
+do_apply_deployment() {
+    # Deploy the container to run on port 8080
+    LOCAL_NAME=$1
+
+    CONTAINER_NAME=container-$APP_NAME
+
+    echo "=> Creating pod config"
+    DEP_FILE=.pym/deployment-$LOCAL_NAME.yaml
+    cat <<EOF > $DEP_FILE
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: $LOCAL_NAME
+  namespace: default
+  labels:
+    app: $LOCAL_NAME
+    version: $VERSION
+spec:
+  selector:
+    matchLabels:
+      run: $LOCAL_NAME
+      app: $LOCAL_NAME
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        run: $LOCAL_NAME
+        app: $LOCAL_NAME
+        version: $VERSION
+    spec:
+      terminationGracePeriodSeconds: 180
+      containers:
+      - name: $CONTAINER_NAME
+        image: gcr.io/$DOCKER_REPO:${VERSION}
+        readinessProbe:
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          failureThreshold: 2
+          timeoutSeconds: 3
+          httpGet:
+            path: /ping
+            port: 8080
+        livenessProbe:
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          failureThreshold: 2
+          timeoutSeconds: 3
+          httpGet:
+            path: /ping
+            port: 8080
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/bin/bash", "-c", "sleep 30"]
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: VERSION
+          value: "${VERSION}"
+        - name: PYM_ENV
+          value: "${LOCAL_NAME}"
+EOF
+
+    for VAR in $(pymconfig --env-secrets)
+    do
+        echo "   Adding $VAR"
+        VALUE=$(env | grep "^$VAR=" | cut -d '=' -f 2)
+        if [ -z "$VALUE" ]; then
+            echo "ERROR: variable $VAR has no value in env"
+            exit 1
+        fi
+        echo "        - name: $VAR" >> $DEP_FILE
+        echo "          value: \"$VALUE\"" >> $DEP_FILE
+    done
+
+    echo "=> Checking if deployment exists or is new..."
+    IS_DEPLOYED=$(kubectl get deployment | grep "$LOCAL_NAME " | wc -l)
+
+    if [ "$IS_DEPLOYED" -eq "1" ]; then
+        echo "=> Deployment already exists. Applying change..."
+        kubectl apply -f $DEP_FILE
+        check_rc $? 'kubectl apply'
+    else
+        echo "=> Deployment is new. Creating it..."
+        kubectl create --save-config -f $DEP_FILE
+        check_rc $? 'kubectl create'
+    fi
+}
+
+do_apply_ingress() {
+    # Deploy an ingress opening port 80 and 443, redirected to the container's port 8080
+    # Accept HTTPS traffic on port 443 via a managed SSL certificate
+    LOCAL_NAME=$1
+    LOCAL_DOMAIN=$2
+
+    if [ -z "$LOCAL_DOMAIN" ]; then
+        echo "BUG!! set LOCAL_DOMAIN please!"
+        exit -1
+    fi
+
+    IS_DEPLOYED=$(kubectl get ingress -o wide | grep "$LOCAL_NAME " | wc -l)
+
+    if [ "$IS_DEPLOYED" -eq "1" ]; then
+        echo "=> The ingress already exists"
+        return
+    fi
+
+    # Create a managed cert
+    # See: https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs
+    echo "=> Applying managed certificate (domain: ${LOCAL_DOMAIN})..."
+    YAML_FILE=.pym/cert-$LOCAL_NAME.yaml
+    cat <<EOF > $YAML_FILE
+apiVersion: networking.gke.io/v1beta1
+kind: ManagedCertificate
+metadata:
+  name: $LOCAL_DOMAIN-certificate2
+spec:
+  domains:
+    - $LOCAL_DOMAIN
+EOF
+    kubectl apply -f $YAML_FILE
+    check_rc $? 'kubectl apply'
+
+    # NOTE: waiting for cert is only interesting the first time it's generated,
+    # and even then, the cert won't become active until the ingress starts
+    # using it, and then with a delay of up to 15 min. So waiting won't help us
+    # get around that downtime delay...
+    # See: https://stackoverflow.com/questions/53886750/google-managed-ssl-certificate-stuck-on-failed-not-visible
+    # NOTE: leaving his code here as a reminder to self on how to check certificate status
+    #
+    # # Wait for certificate to be provisioned
+    # echo "=> Waiting for certificate to be provisioned"
+    # STATUS='Provisioning'
+    # while [ "$STATUS" != "Active" ]; do
+    #     sleep 1;
+    #     STATUS=$(kubectl get managedcertificates ${LOCAL_DOMAIN}-certificate -o jsonpath='{..certificateStatus}' | tr -s '[[:space:]]' '\n')
+    #     echo -n '*'
+    # done
+    # echo ''
+
+    # Proceed setting up the ingress
+    echo "=> Applying service..."
+    YAML_FILE=.pym/nodeport-$LOCAL_NAME.yaml
+    cat <<EOF > $YAML_FILE
+apiVersion: v1
+kind: Service
+metadata:
+  name: $LOCAL_NAME-service
+  namespace: default
+  labels:
+    app: $LOCAL_NAME
+    version: $VERSION
+spec:
+  type: NodePort
+  selector:
+    app: $LOCAL_NAME
+    run: $LOCAL_NAME
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+EOF
+    kubectl apply -f $YAML_FILE
+    check_rc $? 'kubectl apply'
+
+    # Note: relevant articles are:
+    # https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs
+    # https://cloud.google.com/kubernetes-engine/docs/concepts/ingress
+    echo "=> Applying ingress..."
+    YAML_FILE=.pym/ingress-$LOCAL_NAME.yaml
+    cat <<EOF > $YAML_FILE
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: $LOCAL_NAME-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: $LOCAL_NAME-ip
+    networking.gke.io/managed-certificates: $LOCAL_DOMAIN-certificate2
+  labels:
+    app: $LOCAL_NAME
+    version: $VERSION
+spec:
+  backend:
+    serviceName: $LOCAL_NAME-service
+    servicePort: 8080
+EOF
+    kubectl apply -f $YAML_FILE
+    check_rc $? 'kubectl apply'
+}
+
+do_apply_load_balancer() {
+    # Deploy an load balancer directing port 80 to the container's port 8080
+    LOCAL_NAME=$1
+
+    IS_DEPLOYED=$(kubectl get services -o wide | grep "$LOCAL_NAME " | wc -l)
+
+    if [ "$IS_DEPLOYED" -eq "1" ]; then
+        echo "=> The service already exists"
+    else
+        echo "=> The service does not exist. Creating it..."
+
+        YAML_FILE=.pym/service-$LOCAL_NAME.yaml
+        cat <<EOF > $YAML_FILE
+apiVersion: v1
+kind: Service
+metadata:
+  name: $LOCAL_NAME
+  namespace: default
+  labels:
+    app: $LOCAL_NAME
+    version: $VERSION
+spec:
+  type: LoadBalancer
+  selector:
+    app: $LOCAL_NAME
+    run: $LOCAL_NAME
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8080
+EOF
+
+        kubectl apply -f $YAML_FILE
+        check_rc $? 'kubectl apply'
+    fi
+}
+
+do_wait_for_rollout() {
+    # Selector must be the string 'live' or 'staging'
+    LOCAL_NAME=$1
+    SELECTOR=$2
+
+    # A deployment is rolling out: wait till we can reach it on the staging/live IP
+    echo "=> Waiting for deployment rollout..."
+    kubectl rollout status deployment/$LOCAL_NAME
+    check_rc $? 'kubectl rollout'
+
+    # Then wait for rollout to be complete
+    echo "=> Waiting for all pods to run new image..."
+    COUNT=2
+    while [ "$COUNT" -ne 1 ]; do
+        sleep 1
+        echo -n '*'
+        COUNT=$(kubectl get pods -o jsonpath="{..image}" | tr -s '[[:space:]]' '\n' | grep $APP_NAME | sort | uniq | wc -l)
+    done
+    echo ''
+
+    # Wait for external IP to be assigned
+    echo "=> Waiting for external IP..."
+    IP=""
+    while [ -z "$IP" ]; do
+        sleep 1
+        IP=$(get_ip $SELECTOR)
+    done
+    echo ''
+
+    echo "=> $LOCAL_NAME is now live at $IP"
+}
+
+#
+# General settings
+#
+
+echo "=> Creating tmp dir .pym/"
+mkdir -p .pym
+
+# ------------------------------------------------------------------------------
+#
+# DEPLOY TO STAGING CLUSTER
+#
+# The staging cluster should have only 1 zone, have auto-scaling with minimum
+# instance count = 1 and maximum = 2
+#
+# ------------------------------------------------------------------------------
+
+echo "=> Configuring gcloud..."
+gcloud config set project $GCP_PROJECT
+gcloud config set compute/region $GCP_REGION
+
+echo "=> Using $NAME_STAGING cluster..."
+gcloud config set container/cluster $NAME_STAGING
+
+# Using --zone since the staging environment is supposed to be in one zone only
+LOCATION=$(get_cluster_location $NAME_STAGING)
+echo "=> Deploying to zone $LOCATION"
+gcloud container clusters get-credentials $NAME_STAGING --zone $LOCATION --project $GCP_PROJECT
+
+# And create/apply deployment, service and ingress, when needed
+
+echo ""
+echo "=> Deploying $VERSION to $NAME_STAGING"
+
+do_apply_deployment $NAME_STAGING
+# do_apply_load_balancer $NAME_STAGING
+do_apply_ingress $NAME_STAGING $DOMAIN_STAGING
+do_wait_for_rollout $NAME_STAGING 'staging'
+
+# ------------------------------------------------------------------------------
+#
+# RUN ACCEPTANCE TESTS
+#
+# ------------------------------------------------------------------------------
+
+cd $ROOTDIR
+if [ ! -z "$DO_TEST" ]; then
+    echo ""
+    echo "=> Executing tests against $IP:$TEST_PORT"
+    TEST_PORT=$(pymconfig --staging-port)
+    pymtest --host $IP --port $TEST_PORT --no-ssl-check
+fi
+
+RC=$?
+if [ "$RC" -ne 0 ]; then
+    echo "ERROR: Acceptance tests failed against $IP - deploy aborted"
+    exit 1
+fi
+
+# ------------------------------------------------------------------------------
+#
+# DEPLOY TO LIVE CLUSTER
+#
+# ------------------------------------------------------------------------------
+
+echo "=> Using $NAME_LIVE cluster..."
+gcloud config set container/cluster $NAME_LIVE
+
+# Using --region since the live environment is supposed to be in a regional one
+LOCATION=$(get_cluster_location $NAME_LIVE)
+echo "=> Deploying to region $LOCATION"
+gcloud container clusters get-credentials $NAME_LIVE --region $LOCATION --project $GCP_PROJECT
+
+echo ""
+echo "=> Deploying $VERSION to $NAME_LIVE"
+
+do_apply_deployment $NAME_LIVE
+do_apply_ingress $NAME_LIVE $DOMAIN_LIVE
+do_wait_for_rollout $NAME_LIVE 'live'
