@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: SPyObject
+Version: 0.1.1
+Summary: A debugging tool for analysing Python objects
+Home-page: https://github.com/Phillyclause89/SPyObject
+Author: Philip "Phillyclause89" Alexander-Lees
+Author-email: palexan127@gmail.com
+License: Apache License 2.0
+Description: # SPyObject
+        A debugging tool for analysing Python objects
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
