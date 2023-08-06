@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+contradict/__init__.py
+contradict/error.py
+contradict/hashmap.py
+contradict/sorted_dict.py
+contradict.egg-info/PKG-INFO
+contradict.egg-info/SOURCES.txt
+contradict.egg-info/dependency_links.txt
+contradict.egg-info/requires.txt
+contradict.egg-info/top_level.txt
