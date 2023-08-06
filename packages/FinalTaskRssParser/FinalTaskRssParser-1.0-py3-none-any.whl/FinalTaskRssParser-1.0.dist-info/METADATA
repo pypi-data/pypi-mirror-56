@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: FinalTaskRssParser
+Version: 1.0
+Summary: This project helps to understand about setup.py.
+Home-page: https://github.com/Useftro/FinalTaskRssParser
+Author: Usevalad Trafimau
+Author-email: Unioltered@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8.0
+Requires-Dist: feedparser
+Requires-Dist: beautifulsoup4
+
+UNKNOWN
+
+
