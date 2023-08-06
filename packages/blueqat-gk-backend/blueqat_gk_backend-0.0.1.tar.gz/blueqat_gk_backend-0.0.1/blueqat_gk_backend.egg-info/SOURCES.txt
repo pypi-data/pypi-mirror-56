@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+blueqat_bk_backend/__init__.py
+blueqat_bk_backend/__main__.py
+blueqat_gk_backend.egg-info/PKG-INFO
+blueqat_gk_backend.egg-info/SOURCES.txt
+blueqat_gk_backend.egg-info/dependency_links.txt
+blueqat_gk_backend.egg-info/requires.txt
+blueqat_gk_backend.egg-info/top_level.txt

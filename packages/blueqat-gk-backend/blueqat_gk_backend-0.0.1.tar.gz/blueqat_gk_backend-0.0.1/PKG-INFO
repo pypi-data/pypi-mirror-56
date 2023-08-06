@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: blueqat_gk_backend
+Version: 0.0.1
+Summary: Blueqat backend
+Home-page: https://github.com/gyu-don/blueqat-classicalbit-backend
+Author: gyu-don
+Author-email: takumi.kt+blueqat@gmail.com
+License: Apache 2
+Description: # Blueqat Gottesman-Knill backend
+        Blueqat backend for Clifford gates (X, Y, Z, H, S, S†, CNOT, CZ) and measurement
+        
+        ## Usage
+        
+        ```py
+        from blueqat import Circuit
+        import blueqat_gk_backend
+        
+        print(Circuit().x[0].cx[0, 1].ccx[0, 1, 2].m[:].run_with_gk())
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Description-Content-Type: text/markdown
