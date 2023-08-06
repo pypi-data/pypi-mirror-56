@@ -1,0 +1,16 @@
+numpy>=1.13
+scipy
+matplotlib
+astropy
+
+requests
+beautifulsoup4
+pyyaml
+
+synphot
+skycalc_ipy
+
+numpydoc==0.6.0
+sphinxcontrib-apidoc
+sphinx==1.6.7
+

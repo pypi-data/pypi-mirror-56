@@ -1,0 +1,8 @@
+numpy>=1.13
+scipy>0.17
+astropy>1.1.2
+requests>2.0
+synphot>0.1
+matplotlib>1.5.0
+pyyaml>3
+beautifulsoup4
