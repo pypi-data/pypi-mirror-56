@@ -1,0 +1,49 @@
+{% load static %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<!-- Compiled and minified CSS -->
+
+	<meta charset = "utf-8">
+	<meta
+			name = "viewport"
+			content = "width=device-width, initial-scale=1, shrink-to-fit=no"
+	>
+	<link
+			href = "https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel = "stylesheet"
+	>
+	<link
+			rel = "stylesheet"
+			href = "{% static 'menu_system/css/materialize.min.css' %}"
+	>
+	<link
+			rel = "stylesheet"
+			href = "{% static 'menu_system/css/menu.css' %}"
+	>
+	<script
+			src = "https://kit.fontawesome.com/b4ac6ef2b3.js"
+			crossorigin = "anonymous"
+	></script>
+	
+	<title>Title</title>
+
+
+</head>
+<body>
+{% block menu %}
+	{% include "menu_system/navbar_main.html" %}
+{% endblock menu %}
+
+{% block content %}
+
+{% endblock content %}
+
+<!-- Compiled and minified JavaScript -->
+<script src = "{% static 'menu_system/js/jquery.js' %}"></script>
+<script src = "{% static 'menu_system/js/materialize.min.js' %}"></script>
+<script src = "{% static 'menu_system/js/menu_system.js' %}"></script>
+</body>
+</html>

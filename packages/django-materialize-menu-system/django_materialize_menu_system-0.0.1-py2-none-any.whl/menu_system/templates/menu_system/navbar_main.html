@@ -1,0 +1,220 @@
+<nav class = "app nav-wrapper {{ menu_color }} lighten-1">
+
+	<div class = "container-fluid">
+
+		{# Brand-Logo ------------------------------------- #}
+		{# Med Screen and up Only #}
+		<a
+				href = " {% url 'home' %} "
+				class = "brand-logo hide-on-small-only tooltipped"
+				data-position = "bottom"
+				data-tooltip = "{{ company_website }}"
+
+		>
+			{{ company_name }}
+		</a>
+		{# Small Screen Only #}
+		<a
+				href = " {% url 'home' %} "
+				class = "left brand-logo hide-on-med-and-up tooltipped"
+				data-position = "bottom"
+				data-tooltip = "{{ company_website }}"
+		>
+			{{ company_short_name }}
+		</a>
+
+		{#	Top Menu Buttons	---------------------------------------- #}
+		<div class = "container-fluid">
+			{# Side Main Menu Trigger ------------------------------------- #}
+			<a
+					href = "#"
+					class = "right sidenav-trigger show-on-medium-and-up tooltipped"
+					data-target = "side-menu"
+					data-position = "bottom"
+					data-tooltip = "Main Menu"
+			>
+				{#			<i class = "material-icons">menu</i>#}
+				<i class = "fas fa-bars fa-2x"></i>
+			</a>
+
+			{# Side Social Menu Trigger ------------------------------------- #}
+			<a
+					href = "#"
+					class = "right sidenav-trigger show-on-medium-and-up tooltipped"
+					data-target = "social-menu"
+					data-position = "bottom"
+					data-tooltip = "Social Links"
+			>
+				{#			<i class = "large material-icons">share</i>#}
+				<i class = "fas fa-share-alt-square fa-2x"></i>
+			</a>
+
+			{# Side App Menu Trigger ------------------------------------- #}
+			<a
+					href = "#"
+					class = "right sidenav-trigger show-on-medium-and-up tooltipped"
+					data-target = "app-menu"
+					data-position = "bottom"
+					data-tooltip = "Apps Links"
+			>
+				{#			<i class = "large material-icons">arrow_drop_down_circle</i>#}
+				<i class = "fas fa-arrow-alt-circle-down fa-2x"></i>
+			</a>
+
+			{# Users Menu Trigger ------------------------------------- #}
+			<a
+					href = "#"
+					class = "right sidenav-trigger show-on-medium-and-up tooltipped"
+					data-target = "user-menu"
+					data-position = "bottom"
+					data-tooltip = "User Links"
+
+			>
+				{#			<i class = "large material-icons">account_circle</i>#}
+				<i class = "fas fa-users fa-2x"></i>
+			</a>
+		</div>
+
+	</div>
+
+</nav>
+
+{# Side Main Menu List ACCOUNT NOT REQUIRED----------------------------#}
+<ul
+		class = "sidenav {{ menu_color }} lighten-5"
+		id = "side-menu"
+>
+	<li><h4 class = "center-align">Main Menu</h4></li>
+	{% for link in links %}
+		<li>
+			{# Side Menu Link #}
+			<a
+					class = "menu-link tooltipped"
+					href = "{% url link.link_view_name %}"
+					data-position = "right"
+					data-tooltip = "{{ link.name }}"
+			>
+				{{ link.name }}
+			</a>
+		</li>
+	{% endfor %}
+
+</ul>
+
+
+{# Side App Menu List  ACCOUNT IS REQUIRED-----------------------#}
+{% if user.is_authenticated %}
+	<ul
+			class = "sidenav {{ menu_color }} lighten-5"
+			id = "app-menu"
+	>
+		<li><h4 class = "center-align">Apps Menu</h4></li>
+		{% for app in apps %}
+			<li>
+				{# Side Menu Link #}
+				<a
+						class = "menulink tooltipped"
+						href = "{% url app.link_view_name %}"
+						data-position = "right"
+						data-tooltip = "{{ app.name }}"
+				>
+					{{ app.name }}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endif %}
+
+{# Side App Menu List  ACCOUNT IS REQUIRED-----------------------#}
+{% if not user.is_authenticated %}
+	<ul
+			class = "sidenav {{ menu_color }} lighten-5"
+			id = "app-menu"
+	>
+		<li><h4 class = "center-align">Apps Menu</h4></li>
+		<li>
+			<p>
+				<a href = "{% url 'account_signup' %}">Register</a> or
+				<a href = "{% url 'account_login' %}">Login</a> for access
+			</p>
+		</li>
+		{% for app in apps %}
+			<li>
+				{# Side Menu Link #}
+				<a
+						class = "menulink tooltipped"
+						{#					href = "{% url app.link_view_name %}"#}
+						data-position = "right"
+						data-tooltip = "{{ app.name }}"
+				>
+					{{ app.name }}
+				</a>
+			</li>
+		{% endfor %}
+
+	</ul>
+{% endif %}
+
+
+{# Side User Menu List -------------------------------------#}
+<ul
+		class = "sidenav {{ menu_color }} lighten-5"
+		id = "user-menu"
+>
+	<li><h4 class = "center-align">User Menu</h4></li>
+	{% for user_link in user_links %}
+		<li>
+			{# Side Users Menu Links #}
+			{% if not user.is_authenticated and not user_link.account_req %}
+				<a
+						class = "menulink tooltipped"
+						href = "{% url user_link.link_view_name %}"
+						data-position = "right"
+						data-tooltip = "{{ user_link.name }}"
+				>
+					{{ user_link.name }}
+				</a>
+			{% endif %}
+
+			{% if user_link.account_req and user.is_authenticated %}
+				<a
+						class = "menulink tooltipped"
+						href = "{% url user_link.link_view_name %}"
+						data-position = "right"
+						data-tooltip = "{{ user_link.name }}"
+				>
+					{{ user_link.name }}
+				</a>
+			{% endif %}
+		</li>
+	{% endfor %}
+
+</ul>
+
+{# Side Social Menu List -------------------------------------#}
+<ul
+		class = "sidenav {{ menu_color }} lighten-5"
+		id = "social-menu"
+>
+	<li><h4 class = "center-align">Social Links</h4></li>
+	{% for social_link in social_links %}
+		<span class = "social-icons">
+			{# Side Menu Link #}
+			<a
+					target = "_blank"
+					class = "menulink tooltipped"
+					href = "{{ social_link.social_url }}"
+					data-position = "bottom"
+					data-tooltip = "{{ social_link.name }}"
+			>
+				<span style = "font-size: 14px; color: {{ social_link.icon_color }};">
+  <i
+		  class = "fab fa-{{ social_link.icon_name }} fa-4x"
+  ></i>
+</span>
+			</a>
+		</span>
+	{% endfor %}
+
+</ul>
+
