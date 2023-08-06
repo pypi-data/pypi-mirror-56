@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: double12
+Version: 1.0.0
+Summary: double12
+Home-page: https://www.pycourses.com/double12
+Author: IPaisen
+Author-email: admin@pycourses.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# Black Friday
+
+    pip install double12
+
+Then:
+
+    double12
+
+Happy Pythoning!
+
+---
+
+*This is just a silly little script*
+
+
