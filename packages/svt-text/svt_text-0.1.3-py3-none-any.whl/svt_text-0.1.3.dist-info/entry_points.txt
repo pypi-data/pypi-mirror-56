@@ -1,0 +1,3 @@
+[console_scripts]
+svt-text = svt_text.svt_text:main
+
