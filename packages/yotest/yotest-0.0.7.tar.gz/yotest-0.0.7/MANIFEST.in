@@ -1,0 +1,3 @@
+include yotest/data_EELS.txt
+include yotest/data.pkl
+recursive-include data *
