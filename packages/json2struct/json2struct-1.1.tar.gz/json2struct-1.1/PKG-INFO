@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: json2struct
+Version: 1.1
+Summary: Creating go structs from JSON files for easy unmarshaling.
+Home-page: https://github.com/jalavosus/json2struct
+Author: James Alavosus
+Author-email: alavosus.james@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
