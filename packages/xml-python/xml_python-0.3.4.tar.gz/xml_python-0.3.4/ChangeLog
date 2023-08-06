@@ -1,0 +1,74 @@
+CHANGES
+=======
+
+0.3.4
+-----
+
+* Added input convertions to wx builder
+
+0.3.3
+-----
+
+* Add frame and panel objects to event\_globals
+
+0.3.2
+-----
+
+* Added a couple more tests
+* Added menuseparator parser
+
+0.3.1
+-----
+
+* Added menuaction parser
+
+0.3.0
+-----
+
+* Added menu parsers
+
+0.2.6
+-----
+
+* Made it possible to add parsers while subclassing
+* Move types to the main object."
+
+0.2.5
+-----
+
+* Make it possible to store labels on frames as well
+
+0.2.4
+-----
+
+* Fixed module name
+* Added requirements
+* Added wx requirements file
+* Fixed import
+
+0.2.3
+-----
+
+* Renamed project to xml\_python to avoid naming conflicts
+
+0.1.2
+-----
+
+* Added proportion arguments to wx control and sizer parsers
+* Updated documentation
+
+0.1.1
+-----
+
+* Convert dashes to underscores in attribute names
+
+0.1.0
+-----
+
+* Added generator tests
+* It is now possible for parsers to be generators
+* Updated the wx example
+* Added wxPython example
+* Updated docs, and found some legacy code
+* First working commit
+* Initial commit
