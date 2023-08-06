@@ -1,0 +1,3 @@
+[nose.plugins]
+gevent-monkey=nose_gevent_monkey:GeventMonkey
+
