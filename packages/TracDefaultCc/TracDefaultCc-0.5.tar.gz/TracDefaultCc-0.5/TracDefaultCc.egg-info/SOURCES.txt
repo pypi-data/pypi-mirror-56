@@ -1,0 +1,16 @@
+COPYING
+changelog
+setup.cfg
+setup.py
+TracDefaultCc.egg-info/PKG-INFO
+TracDefaultCc.egg-info/SOURCES.txt
+TracDefaultCc.egg-info/dependency_links.txt
+TracDefaultCc.egg-info/entry_points.txt
+TracDefaultCc.egg-info/requires.txt
+TracDefaultCc.egg-info/top_level.txt
+TracDefaultCc.egg-info/zip-safe
+defaultcc/__init__.py
+defaultcc/admin.py
+defaultcc/main.py
+defaultcc/model.py
+defaultcc/htdocs/defaultcc.js
