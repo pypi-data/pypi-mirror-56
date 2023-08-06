@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: stripeterminal
+Version: 0.1
+Summary: Access Stripe's JavaScript terminal SDK from python
+Home-page: https://github.com/bnetbutter/stripeterminal
+Author: Kevin Lai
+Author-email: kevinlai31@gmail.com
+License: GPL v3
+Download-URL: https://github.com/bnetbutter/stripeterminal/v_01.tar.gz
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: selenium
+Requires-Dist: websockets
+Requires-Dist: stripe
+
+UNKNOWN
+
+
