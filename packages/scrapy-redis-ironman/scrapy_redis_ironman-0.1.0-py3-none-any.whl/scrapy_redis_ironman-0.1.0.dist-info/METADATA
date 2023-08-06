@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: scrapy-redis-ironman
+Version: 0.1.0
+Summary: Scrapy Redis Ironman
+Home-page: UNKNOWN
+Author: Aberstone
+Author-email: UNKNOWN
+License: MIT
+Keywords: scrapy,redis,ironman
+Platform: UNKNOWN
+Requires-Dist: scrapy
+Requires-Dist: scrapy-redis
+Requires-Dist: iron-man
+
+UNKNOWN
+
+
