@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: okam-security
+Version: 0.1.0
+Summary: A Python port of the Mako (PHP) framework security library.
+Home-page: UNKNOWN
+Author: Frederic G. Østby
+Author-email: frederic.g.ostby@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/freost/okam-security/issues
+Project-URL: Source Code, https://github.com/freost/okam-security
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Python: >=3.5
