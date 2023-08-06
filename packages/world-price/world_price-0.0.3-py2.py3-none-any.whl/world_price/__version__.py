@@ -1,0 +1,8 @@
+__title__ = 'world_price'
+__description__ = 'crypto currency world price'
+__url__ = 'https://github.com/bitsoda-exchange'
+__version__ = '0.0.3'
+__author__ = 'Bitsoda Exchange'
+__author_email__ = ' boyang.wang@bitsoda.com'
+__license__ = 'GPL-3.0'
+__copyright__ = 'Copyright 2019 Bitsoda Exchange'
