@@ -1,0 +1,127 @@
+Metadata-Version: 2.1
+Name: mysqltokenparser
+Version: 2.2.0
+Summary: Get the mysql's tokens by the tool.
+Home-page: https://github.com/LoveXiaoLiu/mysqltokenparser
+Author: gra55
+Author-email: shuai.grass@gmail.com
+License: MIT license
+Keywords: mysqltokenparser
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Dist: antlr4-python2-runtime (==4.7.2)
+
+================
+mysqltokenparser
+================
+
+
+.. image:: https://img.shields.io/pypi/v/mysqltokenparser.svg
+        :target: https://pypi.python.org/pypi/mysqltokenparser
+
+.. image:: https://img.shields.io/travis/LoveXiaoLiu/mysqltokenparser.svg
+        :target: https://travis-ci.org/LoveXiaoLiu/mysqltokenparser
+
+.. image:: https://readthedocs.org/projects/mysqltokenparser/badge/?version=latest
+        :target: https://mysqltokenparser.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+.. image:: https://pyup.io/repos/github/LoveXiaoLiu/mysqltokenparser/shield.svg
+     :target: https://pyup.io/repos/github/LoveXiaoLiu/mysqltokenparser/
+     :alt: Updates
+
+
+
+A awesome tool that easy to get MySQL's tokens.
+
+
+* Free software: MIT license
+* Documentation: https://mysqltokenparser.readthedocs.io.
+
+
+Quickstart
+----------
+
+0x01 Inistall
+
+.. code:: shell
+
+   pip install mysqltokenparser
+
+0x02 Tutorial
+
+* The library is so simple.
+* All types of SQL have different keys that are easy to identify.
+* And then You need to explore it.
+
+.. code:: python
+
+    import mysqltokenparser as mtp
+
+    sql = u"""
+        ALTER TABLE t_a_gun2_6_dw_pfm_emp_cm ADD INDEX idx_eob_date(empid_org_bus (200),pfm_date);
+    """
+
+    tokens = mtp.mysql_token_parser(sql)
+    print tokens
+    #{
+    #    "type": "ddl",
+    #    "data": {
+    #        "type": "altertable",
+    #        "data": {
+    #            "tablename": "t_a_gun2_6_dw_pfm_emp_cm",
+    #            "alter_data": [{
+    #                "type": "addindex",
+    #                "data": {
+    #                    "indexdefinition": {
+    #                        "columnnames": ["empid_org_bus", "pfm_date"]
+    #                    },
+    #                    "indexname": "idx_eob_date"
+    #                }
+    #            }]
+    #        }
+    #    }
+    #}
+
+
+Features
+--------
+
+* Current version only support DDL(CREATE table, ALTER table), DML(simple SELECT, INSERT, DELETE, UPDATE).
+* TODO：SUPPORT MORE SQL STATEMENTS
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+2.2.0 (2019-11-25)
+------------------
+
+* Add support DDL(CREATE table, ALTER table), DML(simple SELECT, INSERT, DELETE, UPDATE).
+
+2.0.0 (2019-11-14)
+------------------
+
+* Refactor API.
+
+0.1.0 (2019-07-08)
+------------------
+
+* First release on PyPI.
+
+
