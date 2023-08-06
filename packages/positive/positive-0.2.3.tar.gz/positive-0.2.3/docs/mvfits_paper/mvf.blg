@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: mvf.aux
+The style file: apsrev4-1.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: mvfNotes.bib
+Database file #2: mvf.bib
+Warning--I didn't find a database entry for "Mehta:2017jpq"
+control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
+control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
+Warning--jnrlst (dependency: not reversed) set 1
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+merlin.mbs apsrev4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+Control: key (0) 
+Control: author (8) initials jnrlst
+Control: editor formatted (1) identically to author
+Control: production of article title (-1) disabled
+Control: page (0) single
+Control: year (1) truncated
+Control: production of eprint (0) enabled
+You've used 46 entries,
+            5847 wiz_defined-function locations,
+            1999 strings with 26536 characters,
+and the built_in function-call counts, 49796 in all, are:
+= -- 3035
+> -- 1407
+< -- 342
++ -- 442
+- -- 362
+* -- 8245
+:= -- 4714
+add.period$ -- 47
+call.type$ -- 46
+change.case$ -- 183
+chr.to.int$ -- 53
+cite$ -- 46
+duplicate$ -- 4622
+empty$ -- 3633
+format.name$ -- 827
+if$ -- 9864
+int.to.chr$ -- 5
+int.to.str$ -- 53
+missing$ -- 580
+newline$ -- 215
+num.names$ -- 133
+pop$ -- 1728
+preamble$ -- 1
+purify$ -- 220
+quote$ -- 0
+skip$ -- 1724
+stack$ -- 0
+substring$ -- 1253
+swap$ -- 4568
+text.length$ -- 168
+text.prefix$ -- 0
+top$ -- 10
+type$ -- 665
+warning$ -- 1
+while$ -- 141
+width$ -- 0
+write$ -- 463
+(There were 2 warnings)
