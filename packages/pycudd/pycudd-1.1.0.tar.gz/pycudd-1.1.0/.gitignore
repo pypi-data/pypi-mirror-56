@@ -1,0 +1,44 @@
+# general things to ignore
+build/
+dist/
+*.egg-info/
+*.egg
+*.py[cod]
+__pycache__/
+*.so
+*~
+*.swp
+_ignore/
+
+# due to using tox and pytest
+.tox
+.cache
+.venv-2.7/
+.venv-3.4/
+
+
+# CUDD intermediate files
+
+*.lo
+*.o
+*.a
+.deps
+.libs
+.dirstamp
+cudd-3.0.0/autom4te.cache
+cudd-3.0.0/Makefile
+cudd-3.0.0/config.h
+cudd-3.0.0/config.log
+cudd-3.0.0/config.status
+cudd-3.0.0/cudd/libcudd.la
+cudd-3.0.0/dddmp/exp/test1.sh
+cudd-3.0.0/dddmp/exp/test2.sh
+cudd-3.0.0/dddmp/exp/test3.sh
+cudd-3.0.0/dddmp/exp/test4.sh
+cudd-3.0.0/dddmp/exp/test5.sh
+cudd-3.0.0/dddmp/exp/test6.sh
+cudd-3.0.0/dddmp/exp/test7.sh
+cudd-3.0.0/libtool
+cudd-3.0.0/stamp-h1
+
+pycudd/pycudd_wrap.cpp

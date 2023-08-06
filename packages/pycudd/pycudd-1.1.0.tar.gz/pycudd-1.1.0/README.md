@@ -1,0 +1,41 @@
+# :warning: Note :warning:
+
+This is a work in progress; please do not use this repo yet. The plan is to package pycudd into PyPI so that you can install it via `pip`.
+
+## How to Help
+
+As soon as the contributing guide is up, and `master` is protected, we can start accepting PRs. The main areas that will need attention are:
+
+ - [ ] Windows support (via Appveyor)
+ - [ ] OS X support (via Travis)
+
+
+# PyCUDD
+
+PyCUDD is a selection of bindings for the CUDD BDD manipulation library.
+
+Currently, it allows Python users to access a significant amount of the
+Colorado Decision Diagram (CUDD) package in a simplified object oriented
+manner. PyCUDD hides many of the details associated with using CUDD such as
+garbage collection and manager references. 
+
+### Dependencies
+
+* cudd 3.0.0+ (included in the package)
+* swig (PyCUDD has been tested with version 3.0.10 on Ubuntu 14.04)
+
+For Ubuntu or Linux Mint, swig is available via apt:
+
+    apt-get install swig
+
+For OS X, swig is available via [homebrew](http://brew.sh/).
+
+    brew install swig
+    
+### Installation
+
+The preferred method of installation is via the `pip` package manager:
+
+    pip install pycudd
+
+To install from this package, please follow the instructions in `INSTALL.md`
