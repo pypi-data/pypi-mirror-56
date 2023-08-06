@@ -1,0 +1,15 @@
+
+[:python_version == "3.6"]
+dataclasses==0.7
+
+[dev]
+bumpversion
+wheel
+watchdog
+flake8
+tox
+coverage
+Sphinx
+pytest
+hypothesis
+arrow
