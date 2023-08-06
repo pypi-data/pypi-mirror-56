@@ -1,0 +1,15 @@
+norm/__init__.py,sha256=oWmEX26R1Z1yltVj07NzC8M8-rueR1kmjKLpq9DMgqY,501
+norm/cached_property.py,sha256=6IwK3rxTnNjHFH8-mr3U926QeJMbDn-8EgIuPbxw7yk,296
+norm/connection.py,sha256=sHOsHbQg0OP2T36k4fS7SRLMtfqDW0gwEbllXaZjQM4,2664
+norm/norm.py,sha256=yoh88B8L32NPSrq5uOIhowYP1Galta3lCY8vyQolWA8,12632
+norm/norm_mssql.py,sha256=i0J29u-ElxIUxJnwIYNrcvSeJjBWOGFLHGNA4uTo_78,976
+norm/norm_myssql_connector.py,sha256=lNrwRsuu-Ij-EsS8Goc4QYfVRVwLTfThEuXXvvIGimU,823
+norm/norm_psycopg2.py,sha256=MwgrWToWx7WOhsHfdoDqNfky-ZxMwwtICeZjgidjWZQ,865
+norm/norm_pymssql.py,sha256=YV7we2JPV9w2KphSDKP0V1wiAgDgU4gUS6rtpbk3pFU,868
+norm/norm_sqlalchemy.py,sha256=95i4TitRYURFox65mGD-5IwtiG4rJ9AcFgCb4-9QTt4,960
+norm/norm_sqlite3.py,sha256=gRcxRRFlncNQgUSP-n0vkr-Y6TOjHG-OWhR-WKDFZvE,960
+norm/rows.py,sha256=laupCjPM3C8dM37IVq0rRsN39H6WDvfy3_CcUIouTWY,867
+norm-1.4.0.dist-info/LICENSE,sha256=Be70uymgwdoWpwFUz9pSHkaAQouR7Vl5uC4HYI3RK9E,1425
+norm-1.4.0.dist-info/WHEEL,sha256=KNDdkjSeigjRXptGlrG4jH7jZgp5SlNmTTETrR633wE,85
+norm-1.4.0.dist-info/METADATA,sha256=md56fBpScXpVtE1erYSL5qT0jEeTrEqas4w9rxapfmg,390
+norm-1.4.0.dist-info/RECORD,,
