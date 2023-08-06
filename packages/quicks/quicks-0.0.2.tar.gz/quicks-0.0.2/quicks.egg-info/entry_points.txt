@@ -1,0 +1,3 @@
+[console_scripts]
+quicks = quicks.__main__:main
+

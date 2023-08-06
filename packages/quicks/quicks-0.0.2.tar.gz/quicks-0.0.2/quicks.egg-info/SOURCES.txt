@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+quicks/__init__.py
+quicks/__main__.py
+quicks/core.py
+quicks/exceptions.py
+quicks.egg-info/PKG-INFO
+quicks.egg-info/SOURCES.txt
+quicks.egg-info/dependency_links.txt
+quicks.egg-info/entry_points.txt
+quicks.egg-info/requires.txt
+quicks.egg-info/top_level.txt
