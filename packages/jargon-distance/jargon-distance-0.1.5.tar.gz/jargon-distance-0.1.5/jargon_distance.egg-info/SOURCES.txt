@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+jargon_distance/JargonDistance.py
+jargon_distance/__init__.py
+jargon_distance.egg-info/PKG-INFO
+jargon_distance.egg-info/SOURCES.txt
+jargon_distance.egg-info/dependency_links.txt
+jargon_distance.egg-info/requires.txt
+jargon_distance.egg-info/top_level.txt
+jargon_distance/analysis/JargonDistanceAnalysis.py
+jargon_distance/analysis/__init__.py
