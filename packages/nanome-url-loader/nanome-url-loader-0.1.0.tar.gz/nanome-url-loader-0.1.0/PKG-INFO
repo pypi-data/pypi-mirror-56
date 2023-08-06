@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: nanome-url-loader
+Version: 0.1.0
+Summary: An example Nanome Plugin to load files from a URL
+Home-page: https://github.com/nanome-ai/plugin-url-loader
+Author: Nanome
+Author-email: hello@nanome.ai
+License: MIT
+Description: # Nanome - URL Loader
+        
+        ### An example Nanome plugin to load files from a URL
+        
+        URL Loader will load a molecule from RCSB, by its molecular code
+        
+        ### Installation
+        
+        ```sh
+        $ pip install nanome-url-loader
+        ```
+        
+        ### Usage
+        
+        To start the plugin:
+        
+        ```sh
+        $ nanome-url-loader -a plugin_server_address
+        ```
+        
+        In Nanome:
+        
+        - Activate Plugin
+        - Click Run
+        - Enter a molecular code (for instance "1YUI"), and click "Load"
+        
+        ### License
+        
+        MIT
+        
+Keywords: virtual-reality,chemistry,python,api,plugin
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
