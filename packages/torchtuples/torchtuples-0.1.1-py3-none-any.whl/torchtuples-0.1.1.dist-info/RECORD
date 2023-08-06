@@ -1,0 +1,16 @@
+torchtuples/__init__.py,sha256=8dEyhkHeUgQc9DSvcgygl9EHeoiBn3nx-7FaJ5ZET7c,752
+torchtuples/_legacy_v1_1_0.py,sha256=Ro_g8knKRSNZm-4G6ep2NzdgkV0jqjzQMmSPjfxOkJY,30725
+torchtuples/base.py,sha256=FOv2-ZuV7-RBgSherIrGLZhgoZ-VWiCGMU2IMU7Qw4Y,21776
+torchtuples/callbacks.py,sha256=iU-WG278bQzi94XWwenwxZkF7Q6A50Z7rljrnx63Nok,33769
+torchtuples/data.py,sha256=n_VjdVur8SQr5aC1UIqSTVe8xiJmKKnhoYxPq0rnr_Q,5870
+torchtuples/lr_scheduler.py,sha256=TVwCI19ehb58D4RMQq6p7MOVsSb1AXpbVoh7gybfnac,4961
+torchtuples/optim.py,sha256=Cs5YY7Km0UJdsa7EJB8RWqNOZcJEjlCTb9WG1m6qTQ0,12128
+torchtuples/practical.py,sha256=ywldtrxGSWH0_uZ2DD1gJ32KLAYLq7IGNmFaUvLmgAU,5429
+torchtuples/testing.py,sha256=R1PfCj6EhDeMCSI95Tr6Xk80zeRxUyvFgA05Gm8N7eQ,696
+torchtuples/tupletree.py,sha256=ReP2JTia0oszVuei51NFXjpqCSdqSR0HXoM7930mEo0,16946
+torchtuples/utils.py,sha256=0lAekGyP9UmnY7lOyRscJXGVXWbE_OMTwN6t-ZOzn_4,1568
+torchtuples-0.1.1.dist-info/LICENSE,sha256=3UQwSc2s-DEgtKnfU3cPEksIOJ2GbOn22eoil3CDPGE,1319
+torchtuples-0.1.1.dist-info/METADATA,sha256=Kh9p0XCr7K6BT241Wf2gO9NugdgvVIa1cfSDeonj-a4,690
+torchtuples-0.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+torchtuples-0.1.1.dist-info/top_level.txt,sha256=CyZ7fMkotUzGARmcCgNOVw7O9GfVa4_Tk1t2nf8W1mU,12
+torchtuples-0.1.1.dist-info/RECORD,,
