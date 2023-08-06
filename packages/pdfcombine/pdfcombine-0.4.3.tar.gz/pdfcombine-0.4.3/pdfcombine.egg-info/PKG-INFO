@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pdfcombine
+Version: 0.4.3
+Summary: Script of combine PDF files (wrapper around GhostScript)
+Home-page: https://github.com/tdegeus/pdfcombine
+Author: Tom de Geus
+Author-email: tom@geus.me
+License: MIT
+Description: Script of combine PDF files (wrapper around GhostScript)
+Keywords: PDF,GhostScript
+Platform: UNKNOWN
