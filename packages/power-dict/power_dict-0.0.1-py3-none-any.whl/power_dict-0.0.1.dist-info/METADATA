@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: power-dict
+Version: 0.0.1
+Summary: Library for easy work with the python dictionary
+Home-page: https://github.com/agorinenko/power_dict
+Author: Gorinenko Anton
+Author-email: anton.gorinenko@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: try-parse
+
+# Power dict project
+Library for easy work with the python dictionary
+
+[![PyPI version](https://badge.fury.io/py/power-dict.svg)](https://badge.fury.io/py/power-dict)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/power-dict)](https://img.shields.io/pypi/pyversions/power-dict)
+[![License](https://img.shields.io/pypi/l/power-dict)](https://img.shields.io/pypi/l/power-dict)
+
+
