@@ -1,0 +1,15 @@
+README.md
+setup.py
+django_admin_item_owner.egg-info/PKG-INFO
+django_admin_item_owner.egg-info/SOURCES.txt
+django_admin_item_owner.egg-info/dependency_links.txt
+django_admin_item_owner.egg-info/not-zip-safe
+django_admin_item_owner.egg-info/requires.txt
+django_admin_item_owner.egg-info/top_level.txt
+item_owner/__init__.py
+item_owner/admin.py
+item_owner/apps.py
+item_owner/models.py
+item_owner/tests.py
+item_owner/views.py
+item_owner/migrations/__init__.py

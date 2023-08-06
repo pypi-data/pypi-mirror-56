@@ -1,0 +1,82 @@
+# django-admin-item-owner
+
+Model item always has an owner, and login user can only see owned items.
+
+## Goal
+
+- Set item's owner to current user automatically.
+
+## Install
+
+```bash
+pip install django-admin-item-owner
+```
+
+## Settings
+
+```python
+
+INSTALLED_APPS = [
+    ....
+    'django_global_request',
+    'item_owner',
+    ...
+]
+
+MIDDLEWARE = [
+    ...
+    'django_global_request.middleware.GlobalRequestMiddleware',
+    ...
+]
+```
+
+## Example
+
+example/models.py
+
+```python
+from django.db import models
+from item_owner.models import ItemOwnerMixin
+
+class Category(ItemOwnerMixin, models.Model):
+    title = models.CharField(max_length=32)
+
+class Book(ItemOwnerMixin, models.Model):
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, related_name="books")
+    title = models.CharField(max_length=32)
+```
+
+example/admin.py
+
+
+```python
+from django.contrib import admin
+from django import forms
+from item_owner.admin import ItemOwnerMixin
+from .models import Category
+from .models import Book
+
+
+
+class BookInline(ItemOwnerMixin, admin.TabularInline):
+    model = Book
+
+class CategoryAdmin(ItemOwnerMixin, admin.ModelAdmin):
+    list_display = ["title"]
+    inlines = [
+        BookInline,
+    ]
+
+class BookAdmin(ItemOwnerMixin, admin.ModelAdmin):
+    list_display = ["title"]
+
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Book, BookAdmin)
+```
+
+## Releases
+
+
+### v0.1.0 2019/12/01
+
+- First release.
