@@ -1,0 +1,5 @@
+[console_scripts]
+nboost = nboost.cli.__main__:main
+nboost-benchmark = nboost.benchmark.cli:main
+nboost-tutorial = nboost.tutorial.cli:main
+
