@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pidi-display-tk
+Version: 0.1.0
+Summary: pidi plugin to display output using PIL and Tk.
+Home-page: https://github.com/pimoroni/pidi-plugins
+Author: Philip Howard
+Author-email: phil@pimoroni.com
+License: MIT
+Description: # PiDi Display Plugin for output via Tk
+        
+        This plugin allows Mopidy-PiDi and PiDi to display album art via TkInter.
+        
+        0.1.0
+        -----
+        
+        * Only update display if image buffer has changed
+        
+        0.0.2
+        -----
+        
+        * Fix python 2.7 support for Mopidy-PiDi
+        * Require pidi-display-pil==0.0.2
+        
+        0.0.1
+        -----
+        
+        * Initial Release
+        
+Platform: UNKNOWN
+Classifier: Environment :: X11 Applications
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
