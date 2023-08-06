@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: very-plot
+Version: 0.4.0
+Summary: Python plotting tools for Very
+Home-page: https://github.com/verypossible/very_plot
+License: GPL-3.0-only
+Author: Jeff McGehee
+Author-email: jeff@verypossible.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: matplotlib (>=3.1,<4.0)
+Requires-Dist: seaborn (>=0.9.0,<0.10.0)
+Project-URL: Repository, https://github.com/verypossible/very_plot
+Description-Content-Type: text/markdown
+
+# very_plot
+
+Python plotting tools for Very
+
+**Free software:** GNU General Public License v3
+
+
+## Installation
+`pip install very_plot`
+
+## Development
+
+
+### Publishing to PyPI
+* `git tag X.X.X; git push origin X.X.X`
+* This tag must match the version in `setup.py` or CI will fail.
+* CI will automatically deploy to PyPI if the build passes.
+
