@@ -1,0 +1,19 @@
+celery_longterm_scheduler changes
+=================================
+
+1.1.0 (2019-11-28)
+------------------
+
+- Make Python-3 compatible.
+
+
+1.0.1 (2018-01-17)
+------------------
+
+- Don't try to schedule on ``apply_async(eta=None)`` calls
+
+
+1.0.0 (2017-09-29)
+------------------
+
+- Initial release
