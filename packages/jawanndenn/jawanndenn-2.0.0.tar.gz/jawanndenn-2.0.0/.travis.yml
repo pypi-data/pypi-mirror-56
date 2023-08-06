@@ -1,0 +1,23 @@
+language: python
+python:
+  - "3.7"
+
+jobs:
+  include:
+    - stage: test
+      install:
+        - pip install pre-commit
+        - pre-commit install --install-hooks
+      script:
+        - pre-commit run --all-files
+
+    - stage: test
+      install:
+        - ./setup.py install
+      script:
+        - jawanndenn --help
+        - >
+          JAWANNDENN_SQLITE_FILE=test.sqlite3
+          JAWANNDENN_SECRET_KEY=whatever
+          DJANGO_SETTINGS_MODULE=jawanndenn.settings
+          python3 -m django test -v 3
