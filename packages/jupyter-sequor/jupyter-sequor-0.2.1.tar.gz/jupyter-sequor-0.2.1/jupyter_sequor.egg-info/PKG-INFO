@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: jupyter-sequor
+Version: 0.2.1
+Summary: Jupyter extension for following cell outputs.
+Home-page: https://github.com/CermakM/jupyter-sequor
+Author: Marek Cermak
+Author-email: macermak@redhat.com
+License: MIT
+Description: # jupyter-sequor
+        Follow and scroll automatically cell outputs in Jupyter notebooks
+        
+        ## Installation
+        
+        ```python
+        pip install jupyter-sequor
+        ```
+        
+        ## Usage
+        
+        A minimal example:
+        
+        > NOTE: The example requires additional package [lorem](https://pypi.org/project/lorem/).
+        
+        ```python
+        import lorem
+        import time
+        
+        for a in range(0, 200, 10):
+            text = lorem.text()
+            print(text)
+        
+            time.sleep(0.2)
+        ```
+        
+        ![Promo GIF](https://raw.githubusercontent.com/CermakM/jupyter-sequor/master/assets/images/promo.gif)
+        
+        Note that the `Follow` button appears only when the cell enters a **scrolled** state.
+        
+        Feel free to enable/disable the follow on a cell level by clicking the button.
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: IPython
+Classifier: Framework :: Jupyter
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
