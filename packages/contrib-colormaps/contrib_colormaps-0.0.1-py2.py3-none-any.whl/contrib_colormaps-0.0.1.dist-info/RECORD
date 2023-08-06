@@ -1,0 +1,14 @@
+contrib_colormaps/__init__.py,sha256=GhQdLr4KJuI5lcD1HWr68tSJxYMeFaXCL8ZTNz1NBiM,783
+contrib_colormaps/_version.py,sha256=Y9o2ROc0jwar8HARd6AZqa958BWx773JuoE9jMQI_6E,497
+contrib_colormaps/core.py,sha256=5Ekc--Gggix5I0OJl9d4iEsOelfhIR59hEbiV8y3N5U,1812
+contrib_colormaps/plotting.py,sha256=T43UTrgiOFSR97EtOXnEKjQ9pvTdyAWSTQ5TxhEd0fU,2581
+contrib_colormaps/colormaps/sample.csv,sha256=Yc0Mtrn2OfcUSRH2JU6YsWQ_ry7L2yECIRqyPMbTehg,5752
+contrib_colormaps/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contrib_colormaps/tests/test_bokeh.py,sha256=a6y0dXBPvtMOdjGQIX39Esh9G5M3OmYThVNw6L-3VhM,326
+contrib_colormaps/tests/test_colormaps.py,sha256=CWfTM1-lkGiXzFJz0Jw7lxvEnlh_rUdXVRqKxfJZ3SM,1485
+contrib_colormaps/tests/test_matplotlib.py,sha256=f-X3P12kwCkZFXKpdoLxfTqcWU2zcW0xgcaKk9PWHOg,857
+contrib_colormaps-0.0.1.dist-info/LICENSE.txt,sha256=yX3u7KSuN1oDNLx_evX3B6q_zslZxTx4O5-HcdKP1bM,14990
+contrib_colormaps-0.0.1.dist-info/METADATA,sha256=OsRzNDXUqWrv1HLUgzCu0crg-t-Ryc8vSS08JF6Xj78,6662
+contrib_colormaps-0.0.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+contrib_colormaps-0.0.1.dist-info/top_level.txt,sha256=i5UDCM3Yw_ZxCm1bYerEqybEfK8ACMvLuz5tEKwMph4,18
+contrib_colormaps-0.0.1.dist-info/RECORD,,
