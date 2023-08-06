@@ -1,0 +1,81 @@
+version: "3.3"
+
+services:
+
+  relay:
+    image: samantehrani/relay:${RELAY_PACKAGE_VERSION}
+
+    entrypoint:
+      - /home/relay/.local/bin/relay
+      - --store-path
+      - ./data/relay.sqlite
+
+    command: start
+
+    volumes:
+      - ./.test_data/test_${COMPOSE_PROJECT_NAME}/relay:/home/relay/data
+      - ./.test_data/test_${COMPOSE_PROJECT_NAME}/export:/home/relay/export
+
+
+  load_generator:
+    build:
+      context: ./load_generator
+      dockerfile: docker/Dockerfile
+
+    environment:
+      - CRYPTO_URL=http://crypto_server:2002
+      - CS_URL=http://collection_server:2121
+      - NEW_MEMBER
+      - NEW_EMAIL
+
+    volumes:
+      - ./.test_data/test_${COMPOSE_PROJECT_NAME}/export:/home/generator/export:ro
+
+
+  collection_server:
+    image: preveil/collection_server
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+
+
+    command: [ "docker/start.sh" ]
+
+
+  crypto_server:
+    image: preveil/daemons
+
+    ports:
+      - ${CRYPTO_PORT}:2002
+
+    environment:
+      - CRYPTO_PORT=2002
+      - CRYPTO_HOST=0.0.0.0
+      - ROOT_DIR=/home/preveil/data
+      - PREVEIL_MODE=test_relay
+      - BACKEND=http://collection_server:2121
+      - WS_BACKEND=ws://collection_server:2121
+
+      - REMOTE_WEBAPP_URL=https://www.preveil.com
+      - IMAP_PORT=1
+      - SMTP_PORT=1
+      - LOCAL_WEBAPP_PORT=1
+      - FILESYNC_PORT=1
+      - FEATURE_FLAGS_ENABLED=1
+
+    volumes:
+      - ./.test_data/test_${COMPOSE_PROJECT_NAME}/crypto:/home/preveil/data
+
+  postlord:
+    image: preveil/daemons
+    command: ["-m", "daemon.postlord"]
+
+    environment:
+      - CRYPTO_PORT=2002
+      - CRYPTO_HOST=http://crypto_server
+      - PREVEIL_MODE=test_relay
+
+    volumes:
+      - ./.test_data/test_${COMPOSE_PROJECT_NAME}/crypto:/home/preveil/data
+
+

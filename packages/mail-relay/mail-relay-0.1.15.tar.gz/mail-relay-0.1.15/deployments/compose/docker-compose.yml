@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+
+  relay:
+    image: samantehrani/relay:${VERSION}
+    volumes:
+      - ./store:/home/relay/store
+      - ./config:/home/relay/config
+      - ./export:/home/relay/export
+    entrypoint:
+      - /home/relay/.local/bin/relay
+      - --store-path
+      - ${STORE_PATH}
+    command: start

@@ -1,0 +1,6 @@
+volume:
+    path: '/Users/sk/export'
+cs:
+    host: '127.0.0.1'
+    port: 2121
+    use_tls: False

@@ -1,0 +1,7 @@
+cs:
+    host: 'collection_server'
+    port: 2121
+    use_tls: False
+
+volume:
+  path: /home/relay/export

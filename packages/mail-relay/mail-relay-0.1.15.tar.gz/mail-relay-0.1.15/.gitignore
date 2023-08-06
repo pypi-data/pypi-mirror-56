@@ -1,0 +1,9 @@
+.tox
+build
+dist
+**/__pycache__
+*.egg*
+*.pyc
+*.sqlite*
+.vscode
+venv/
