@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: leo-python
+Version: 0.0.5
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Pivot Horizon
+Author-email: leo@pivothorizon.com
+License: UNKNOWN
+Keywords: ml api leo pivothorizon ph kong elk logstash elasticsearch kibana prometheus pylama
+Platform: UNKNOWN
+Requires-Dist: coverage (>=4.5.4)
+Requires-Dist: Jinja2 (>=2.10.1)
+Requires-Dist: marshmallow (>=3.0.0)
+Requires-Dist: pytest (>=5.0.1)
+Requires-Dist: python-logstash (>=0.4.6)
+Requires-Dist: sphinx (>=2.2.1)
+Requires-Dist: pylama (>=7.7.1)
+Requires-Dist: PyInquirer (>=1.0.3)
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+
+UNKNOWN
+
+
