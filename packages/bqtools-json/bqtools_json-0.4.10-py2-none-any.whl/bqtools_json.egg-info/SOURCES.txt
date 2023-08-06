@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+/Users/mike/PycharmProjects/bqtools/build/lib/bqtools_json.egg-info/PKG-INFO
+/Users/mike/PycharmProjects/bqtools/build/lib/bqtools_json.egg-info/SOURCES.txt
+/Users/mike/PycharmProjects/bqtools/build/lib/bqtools_json.egg-info/dependency_links.txt
+/Users/mike/PycharmProjects/bqtools/build/lib/bqtools_json.egg-info/requires.txt
+/Users/mike/PycharmProjects/bqtools/build/lib/bqtools_json.egg-info/top_level.txt
+bqtools/__init__.py
+bqtools/tests/__init__.py
+bqtools/tests/test_bqtools.py
