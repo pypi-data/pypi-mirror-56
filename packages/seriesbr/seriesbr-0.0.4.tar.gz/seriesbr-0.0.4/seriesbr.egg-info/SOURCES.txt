@@ -1,0 +1,17 @@
+README.md
+setup.py
+seriesbr/__init__.py
+seriesbr/bcb.py
+seriesbr/ipea.py
+seriesbr/seriesbr.py
+seriesbr.egg-info/PKG-INFO
+seriesbr.egg-info/SOURCES.txt
+seriesbr.egg-info/dependency_links.txt
+seriesbr.egg-info/top_level.txt
+seriesbr/helpers/__init__.py
+seriesbr/helpers/dates.py
+seriesbr/helpers/metadata.py
+seriesbr/helpers/request.py
+seriesbr/helpers/response.py
+seriesbr/helpers/search_results.py
+seriesbr/helpers/types.py
