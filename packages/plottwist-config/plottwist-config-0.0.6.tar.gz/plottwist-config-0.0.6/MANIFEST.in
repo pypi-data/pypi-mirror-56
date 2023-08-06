@@ -1,0 +1,6 @@
+include plottwist/config/development/*.json
+include plottwist/config/development/*.yml
+include plottwist/config/development/maya/*.yml
+include plottwist/config/production/*.json
+include plottwist/config/production/*.yml
+include plottwist/config/production/maya/*.yml
