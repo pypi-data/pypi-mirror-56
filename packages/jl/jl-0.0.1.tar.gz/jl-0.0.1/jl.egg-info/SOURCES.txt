@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+jl/__init__.py
+jl/__version__.py
+jl.egg-info/PKG-INFO
+jl.egg-info/SOURCES.txt
+jl.egg-info/dependency_links.txt
+jl.egg-info/requires.txt
+jl.egg-info/top_level.txt
+jl.egg-info/zip-safe
