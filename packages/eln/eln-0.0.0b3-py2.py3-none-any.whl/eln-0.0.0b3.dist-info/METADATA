@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: eln
+Version: 0.0.0b3
+Summary: A command-line tool for quick access to web services
+Home-page: https://github.com/lehvitus/eln
+Author: Leo Neto
+Author-email: apps@lehvitus.com
+License: BSD
+Project-URL: Documentation, https://github.com/lehvitus/eln/
+Project-URL: Source Code, https://github.com/lehvitus/eln/
+Keywords: cli command line tools miscellaneous news weather digitalocean s3 aws
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Environment :: MacOS X
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: Click (==7.0)
+Requires-Dist: requests (==2.22.0)
+Requires-Dist: jinja2 (==2.10.3)
+Requires-Dist: inflection (==0.3.1)
+Requires-Dist: python-digitalocean (==1.14.0)
+Requires-Dist: python-dotenv (==0.10.3)
+Requires-Dist: tox
+Requires-Dist: pyttsx3 (==2.71) ; platform_system == "MacOS"
+
+# eln
+
+A command-line tool for quick math computations
+
+![PyPI - License](https://img.shields.io/pypi/l/eln?style=flat-square)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/eln?style=flat-square)
+![PyPI](https://img.shields.io/pypi/v/eln?style=flat-square)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/eln?style=flat-square)
+
+- [eln](#eln)
+    - [Requirements](#requirements)
+    - [Installation](#installation)
+    - [Commands](#commands)
+        - [Azuracast](#azuracast)
+        - [DigitalOcean](#digitalocean)
+        - [News API](#news-api)
+        - [Stub](#stub)
+    - [To Do](#issues)
+    - [Pull requests](#pull-requests)
+    - [License](#license)
+
+## Requirements
+[Check requirements](Pipfile).
+
+## Installation
+```bash
+pip install eln
+```
+
+## Commands
+### Azuracast
+Manage your Azuracast installation.
+
+### DigitalOcean
+DigitalOcean API Wrapper.
+
+### News API
+News powered by [NewsAPI.org](https://newsapi.org)
+
+### Stub
+Stub out sample projects.
+
+## Issues
+[Check out issues](https://github.com/lehvitus/eln/issues)
+
+## Pull Requests
+Found a bug? See a typo? Have an idea for new command? 
+Feel free to submit a [pull request](https://github.com/lehvitus/eln/issues)
+with your contributions. They are much welcome.
+
+
+## License
+**eln** is [BSD Licensed](LICENSE.txt).
+
