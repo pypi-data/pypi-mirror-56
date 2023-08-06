@@ -1,0 +1,1 @@
+Utility methods to get the partial content of the web file or to unarchive a single file from a huge remote web zip.
