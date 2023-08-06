@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: evolutions
+Version: 0.8
+Summary: Database migrations
+Home-page: https://github.com/arobertn/evolutions
+Author: Adrian Robert
+Author-email: arobert@interstitiality.net
+License: BSD-3-Clause
+Keywords: database migration sql python python3 evolutions
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+
+Tool for managing relational database schema evolution and data migration, modeled on the Scala/Java play-evolutions library.  Minimalist approach supporting only linear history and pure SQL migrations that works and stays out of your way in development and production environments.
+
+
