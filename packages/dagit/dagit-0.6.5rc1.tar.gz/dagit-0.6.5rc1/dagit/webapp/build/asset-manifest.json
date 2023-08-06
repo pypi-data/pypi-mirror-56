@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.js": "/static/js/main.d6734299.chunk.js",
+    "main.js.map": "/static/js/main.d6734299.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8246d28f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8246d28f.js.map",
+    "static/css/2.2123dcc0.chunk.css": "/static/css/2.2123dcc0.chunk.css",
+    "static/js/2.e2e823cf.chunk.js": "/static/js/2.e2e823cf.chunk.js",
+    "static/js/2.e2e823cf.chunk.js.map": "/static/js/2.e2e823cf.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d3bd29dd962b27a7adb3269f9d072c5b.js": "/precache-manifest.d3bd29dd962b27a7adb3269f9d072c5b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.2123dcc0.chunk.css.map": "/static/css/2.2123dcc0.chunk.css.map",
+    "static/js/2.e2e823cf.chunk.js.LICENSE": "/static/js/2.e2e823cf.chunk.js.LICENSE",
+    "static/media/icon-dependency-arrow.svg": "/static/media/icon-dependency-arrow.9468a8eb.svg",
+    "static/media/icon-file.svg": "/static/media/icon-file.c38e7cf0.svg",
+    "static/media/icon-link.svg": "/static/media/icon-link.0a65b356.svg",
+    "static/media/blueprint-icons.css": "/static/media/icons-20.d1f0f6c1.ttf",
+    "static/media/nav-logo.png": "/static/media/nav-logo.cf6b9dd9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8246d28f.js",
+    "static/css/2.2123dcc0.chunk.css",
+    "static/js/2.e2e823cf.chunk.js",
+    "static/js/main.d6734299.chunk.js"
+  ]
+}
