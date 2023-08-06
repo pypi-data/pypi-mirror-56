@@ -1,0 +1,202 @@
+Metadata-Version: 2.1
+Name: incolumepy.singleton-decorator
+Version: 1.0.3.dev8
+Summary: package incolumepy.singleton_decorator
+Home-page: https://gitlab.com/development-incolume/incolumepy.singleton_decorator/
+Author: @britodfbr
+Author-email: contato@incolume.com.br
+License: BSD
+Project-URL: Documentation, https://gitlab.com/development-incolume/incolumepy.singleton_decorator/
+Project-URL: Source, https://gitlab.com/development-incolume/incolumepy.singleton_decorator/git
+Project-URL: Git, https://gitlab.com/development-incolume/incolumepy.singleton_decorator/git
+Project-URL: Tracker, https://gitlab.com/development-incolume/incolumepy.singleton_decorator/issues
+Project-URL: Oficial, https://pypi.org/project/incolumepy.singleton-decorator/
+Keywords: python incolumepy incolumepy.singleton_decorator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/plain
+Requires-Dist: setuptools
+Requires-Dist: nose
+
+#
+
+
+
+i
+
+n
+
+c
+
+o
+
+l
+
+u
+
+m
+
+e
+
+p
+
+y
+
+.
+
+s
+
+i
+
+n
+
+g
+
+l
+
+e
+
+t
+
+o
+
+n
+
+_
+
+d
+
+e
+
+c
+
+o
+
+r
+
+a
+
+t
+
+o
+
+r
+
+
+
+
+
+
+
+D
+
+e
+
+c
+
+o
+
+r
+
+a
+
+t
+
+o
+
+r
+
+
+
+s
+
+i
+
+n
+
+g
+
+l
+
+e
+
+t
+
+o
+
+n
+
+
+
+f
+
+o
+
+r
+
+
+
+m
+
+e
+
+t
+
+h
+
+o
+
+d
+
+s
+
+
+
+a
+
+n
+
+d
+
+
+
+o
+
+b
+
+j
+
+e
+
+c
+
+t
+
+s
+
+
+
+p
+
+y
+
+t
+
+h
+
+o
+
+n
+
+
+
+
