@@ -1,0 +1,6 @@
+texttable
+
+[dev]
+pytest
+pytest-benchmark
+pytest-timeout
