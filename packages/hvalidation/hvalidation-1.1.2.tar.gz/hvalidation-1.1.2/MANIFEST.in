@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include __init__.py
+include validation.py
+include utils/*.py
+include base/*.py
+include validator/*.py
