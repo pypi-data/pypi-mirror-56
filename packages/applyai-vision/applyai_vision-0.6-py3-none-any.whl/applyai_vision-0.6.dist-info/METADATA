@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: applyai-vision
+Version: 0.6
+Summary: A small example package
+Home-page: https://github.com/pypa/sampleproject
+Author: LukasGardner
+Author-email: lukas.gardner@gardner-ag.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cherrypy
+Requires-Dist: datetime
+Requires-Dist: regex
+Requires-Dist: paho-mqtt
+
+# applyai Vision
+
+Applyai Vision plugins are a suite of python modules designed to solve common image processing and object recognition tasks. They are built upon the OpenCV and TensorFlow libraries. They share a common API. Each plugin solves one minor image processing task. When integrated and organised by a supervising application they can be cascaded and combined to create large scale image processing systems. 
+
+- signed - the applyai vision system team
+
+
+
+
