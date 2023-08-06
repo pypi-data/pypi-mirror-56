@@ -1,0 +1,148 @@
+Metadata-Version: 1.2
+Name: rpsl
+Version: 0.1.dev1
+Summary: A Raspberry Pi Sensor Library
+Home-page: http://www.jdhp.org/software_en.html#rpsl
+Author: Jérémie DECOCK
+Author-email: jd.jdhp@gmail.com
+Maintainer: Jérémie DECOCK
+Maintainer-email: jd.jdhp@gmail.com
+License: UNKNOWN
+Download-URL: http://www.jdhp.org/software_en.html#rpsl
+Description: ===========================
+        Raspberry Pi Sensor Library
+        ===========================
+        
+        Copyright (c) 2019 Jérémie DECOCK (www.jdhp.org)
+        
+        * Web site: http://www.jdhp.org/software_en.html#rpsl
+        * Online documentation: https://jdhp.gitlab.io/rpsl
+        * Examples: https://jdhp.gitlab.io/rpsl/gallery/
+        
+        * Notebooks: https://gitlab.com/jdhp/rpi-sensor-lib-notebooks
+        * Source code: https://gitlab.com/jdhp/rpi-sensor-lib
+        * Issue tracker: https://gitlab.com/jdhp/rpi-sensor-lib/issues
+        * Raspberry Pi Sensor Library on PyPI: https://pypi.org/project/rpsl
+        * Raspberry Pi Sensor Library on Anaconda Cloud: https://anaconda.org/jdhp/rpsl
+        
+        
+        Description
+        ===========
+        
+        A Raspberry Pi Sensor Library
+        
+        Note:
+        
+            This project is still in beta stage, so the API is not finalized yet.
+        
+        
+        Dependencies
+        ============
+        
+        *  Python >= 3.0
+        
+        .. _install:
+        
+        Installation
+        ============
+        
+        Gnu/Linux
+        ---------
+        
+        You can install, upgrade, uninstall Raspberry Pi Sensor Library with these commands (in a
+        terminal)::
+        
+            pip install --pre rpsl
+            pip install --upgrade rpsl
+            pip uninstall rpsl
+        
+        Or, if you have downloaded the Raspberry Pi Sensor Library source code::
+        
+            python3 setup.py install
+        
+        .. There's also a package for Debian/Ubuntu::
+        .. 
+        ..     sudo apt-get install rpsl
+        
+        Windows
+        -------
+        
+        .. Note:
+        .. 
+        ..     The following installation procedure has been tested to work with Python
+        ..     3.4 under Windows 7.
+        ..     It should also work with recent Windows systems.
+        
+        You can install, upgrade, uninstall Raspberry Pi Sensor Library with these commands (in a
+        `command prompt`_)::
+        
+            py -m pip install --pre rpsl
+            py -m pip install --upgrade rpsl
+            py -m pip uninstall rpsl
+        
+        Or, if you have downloaded the Raspberry Pi Sensor Library source code::
+        
+            py setup.py install
+        
+        MacOSX
+        -------
+        
+        .. Note:
+        .. 
+        ..     The following installation procedure has been tested to work with Python
+        ..     3.5 under MacOSX 10.9 (*Mavericks*).
+        ..     It should also work with recent MacOSX systems.
+        
+        You can install, upgrade, uninstall Raspberry Pi Sensor Library with these commands (in a
+        terminal)::
+        
+            pip install --pre rpsl
+            pip install --upgrade rpsl
+            pip uninstall rpsl
+        
+        Or, if you have downloaded the Raspberry Pi Sensor Library source code::
+        
+            python3 setup.py install
+        
+        
+        Documentation
+        =============
+        
+        * Online documentation: https://jdhp.gitlab.io/rpsl
+        * API documentation: https://jdhp.gitlab.io/rpsl/api.html
+        
+        
+        Example usage
+        =============
+        
+        TODO
+        
+        
+        Bug reports
+        ===========
+        
+        To search for bugs or report them, please use the Raspberry Pi Sensor Library Bug Tracker at:
+        
+            https://gitlab.com/jdhp/rpi-sensor-lib/issues
+        
+        
+        License
+        =======
+        
+        This project is provided under the terms and conditions of the `MIT License`_.
+        
+        
+        .. _MIT License: http://opensource.org/licenses/MIT
+        .. _command prompt: https://en.wikipedia.org/wiki/Cmd.exe
+        
+Keywords: rpsl
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks

@@ -1,0 +1,3 @@
+[console_scripts]
+rpsl-temperature = rpsl.temperature:log_temperature
+
