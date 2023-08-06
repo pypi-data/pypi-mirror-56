@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: hirmeos-google-analytics-driver
+Version: 0.0.1
+Summary: Functions required by google_analytics_driver
+Home-page: https://github.com/hirmeos/google_analytics_driver
+Author: Rowan Hatherley
+Author-email: rowan.hatherley@ubiquitypress.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: hirmeos-clients (>=0.0.6)
+Requires-Dist: google-api-core (==1.14.3)
+Requires-Dist: google-api-python-client (==1.7.11)
+Requires-Dist: google-auth (==1.6.3)
+
+Hirmeos google-analytics-driver Python library
+==============================================
+
+Functions required to run the google_analytics_driver package developed for the
+OPERAS HIRMEOS project.
+
+
+Starting point:
+https://github.com/hirmeos/google_analytics_driver/tree/e64dd4b33e3c704d3d181db85b2f156a89ae51bf
+
+
+Code for the HIRMEOS project is avaiable at https://github.com/hirmeos
+
+For more information about the OPERAS metrics, go to
+https://metrics.operas-eu.org/
+
+
