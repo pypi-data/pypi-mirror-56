@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: TracSimpleMultiProject
+Version: 0.6.0
+Summary: Simple Multi Project plugin for managing several projects with one Trac instance.
+Home-page: https://trac-hacks.org/wiki/SimpleMultiProjectPlugin
+Author: Christopher Paredes
+Author-email: jesuchristopher@gmail.com
+Maintainer: falkb
+License: GPL
+Keywords: Simple Multi Project
+Platform: UNKNOWN
+Requires-Dist: Trac
+
+Simple Multi Project
+
+
