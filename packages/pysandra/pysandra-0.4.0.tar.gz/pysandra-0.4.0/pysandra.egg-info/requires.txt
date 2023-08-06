@@ -1,0 +1,10 @@
+
+[compression]
+python-snappy
+lz4
+
+[docs]
+mkdocs
+mkdocs-material
+mkautodoc
+snakefood3
