@@ -1,0 +1,15 @@
+setup.py
+scola/__init__.py
+scola/_common.py
+scola/_compute_null_correlation_matrix.py
+scola/_iscola.py
+scola/_scola.py
+scola/corr2net.py
+scola/gradient_descent.py
+scola/null_models.py
+scola/search_algorithm.py
+scola.egg-info/PKG-INFO
+scola.egg-info/SOURCES.txt
+scola.egg-info/dependency_links.txt
+scola.egg-info/requires.txt
+scola.egg-info/top_level.txt
