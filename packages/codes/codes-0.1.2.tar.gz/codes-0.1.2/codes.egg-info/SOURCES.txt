@@ -1,0 +1,12 @@
+README.md
+setup.py
+code_record/__init__.py
+code_record/daily.py
+code_record/decorators.py
+code_record/mail.py
+code_record/test.py
+code_record/utils.py
+codes.egg-info/PKG-INFO
+codes.egg-info/SOURCES.txt
+codes.egg-info/dependency_links.txt
+codes.egg-info/top_level.txt
