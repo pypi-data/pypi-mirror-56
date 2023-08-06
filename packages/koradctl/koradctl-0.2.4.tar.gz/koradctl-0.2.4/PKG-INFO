@@ -1,0 +1,25 @@
+Metadata-Version: 1.2
+Name: koradctl
+Version: 0.2.4
+Summary: Control utility for Korad / Tenma power supplies
+Home-page: https://github.com/attie/koradctl
+Author: Attie Grande
+Author-email: attie@attie.co.uk
+License: BSD-3-Clause
+Description: koradctl is a simple command line utility and python library for controlling Korad / Tenma power supplies via their RS232 or USB interfaces.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: Freely Distributable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5
