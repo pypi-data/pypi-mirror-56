@@ -1,0 +1,4 @@
+# Base Configuration file for artellapipe-tools-lightrigsmanager in Solstice
+
+# Defines path where light rigs are located relative to the assets path
+lightrigs_path: ${join("lighting", "Light Rigs")}
