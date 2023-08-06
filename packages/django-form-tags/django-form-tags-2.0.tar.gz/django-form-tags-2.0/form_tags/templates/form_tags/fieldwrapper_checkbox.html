@@ -1,0 +1,9 @@
+{% extends "form_tags/fieldwrapper.html" %}
+
+{% block field %}
+    <label class="control checkbox">
+        {{ field }}
+        <span class="control-indicator"></span>
+        <span class="control-label">{{ control_label }}</span>
+     </label>
+{% endblock %}
