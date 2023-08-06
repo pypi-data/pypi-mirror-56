@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: markov362m
+Version: 0.0.10
+Summary: A Markov-chain class for M362M
+Home-page: https://github.com/gordanz/Markov362M
+Author: Gordan Zitkovic
+Author-email: gordanz@math.utexas.edu
+License: UNKNOWN
+Project-URL: Source, https://github.com/gordanz/MarkovM362M/
+Description: Markov362M
+        ==========
+        
+        A set of tools for building Markov Chains, to be used in M362M
+        “Introduction to Stochastic Processes"
+        
+Platform: UNKNOWN
+Requires-Python: >=3.5, <4
