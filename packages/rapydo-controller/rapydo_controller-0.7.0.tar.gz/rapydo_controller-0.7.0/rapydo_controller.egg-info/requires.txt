@@ -1,0 +1,13 @@
+docker-compose==1.24.0
+dockerfile-parse
+python-dateutil
+pytz
+loguru
+better_exceptions
+prettyprinter
+jinja2
+parse_it==3.3.2
+sultan==0.9.1
+plumbum
+glom
+gitpython==3.0.2
