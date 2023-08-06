@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: jargon-distance
+Version: 0.1.5
+Summary: Calculate jargon distance metric between texts
+Home-page: https://github.com/h1-the-swan/jargon_distance
+Author: Jason Portenoy
+Author-email: jason.portenoy@gmail.com
+License: Copyright 2018 Jason Portenoy
+Requires-Dist: numpy
+Requires-Dist: six
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Description: # Jargon Distance
+        
+        Jason Portenoy 2018
+        
+        Implement the jargon distance measure from <a href="https://doi.org/10.15195/v1.a15" target="_blank">Vilhena et al. “Finding Cultural Holes: How Structure and Culture Diverge in Networks of Scholarly Communication.” (2014)</a>
+        
+        ### Installation
+        
+        Install from PyPI:
+        
+        `pip install jargon-distance`
+        
+        ### Usage
+        
+        Initialize a `JargonDistance` instance with a `term_counts` dict and (optionally) a `group_map` dict.
+        `term_counts` is a mapping of document -> term counter (Counter object).
+        
+        ```
+        from jargon_distance import JargonDistance
+        j = JargonDistance(term_counts)
+        ```
+        
+        Then, calculate the jargon distances:
+        
+        ```
+        j.calculate_jargon_distance()
+        j.write_to_file('jargon_distance.csv')
+        ```
+        
+        The `jargon_distance.analysis` module can be used to visualize the jargon distance calculations. For example, below is a dendrogram showing the jargon distances between the text (unigrams) of different works of literature (from the [demo.ipynb](demo.ipynb) notebook).
+        
+        ![Dendrogram showing the jargon distance between different works of literature.](literature_dendrogram.png)
+        
+        See [demo.ipynb](demo.ipynb) for a more detailed example.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
