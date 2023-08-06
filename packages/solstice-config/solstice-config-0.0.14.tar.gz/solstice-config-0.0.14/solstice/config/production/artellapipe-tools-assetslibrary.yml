@@ -1,0 +1,15 @@
+# Base Configuration file for artellapipe-tools-assetslibrary in Solstice
+
+# Defines icon of the tool
+icon: assetslibrary
+
+# URL to tool documentation web page
+url: https://solstice-short-film.github.io/solstice-docs/pipeline/pipeline/tools/assetslibrary/
+
+supported_files:
+  "Rig":
+    ma
+#  "Alembic":
+#    abc
+#  "Standin":
+#    ass

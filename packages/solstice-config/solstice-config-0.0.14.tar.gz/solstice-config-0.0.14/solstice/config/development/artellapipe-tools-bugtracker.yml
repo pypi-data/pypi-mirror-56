@@ -1,0 +1,7 @@
+# Base Configuration file for artellapipe-tools-namemanager in Solstice
+
+# Defines icon of the tool
+icon: bugtracker
+
+# URL to tool documentation web page
+url: https://solstice-short-film.github.io/solstice-docs/pipeline/pipeline/tools/bugtracker/

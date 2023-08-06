@@ -1,0 +1,52 @@
+# Base Configuration file for solstice-tools-snowgenerator
+
+# Defines tool name
+name: Snow Generator
+
+# Unique ID for the tool
+id: solstice-tools-snowgenerator
+
+# Defines logo name of the tool
+logo: snowgenerator_logo
+
+# Defines icon of the tool
+icon: snowgenerator
+
+# Description of the tool
+description: Tool to generate static snow meshes for Solstice
+
+# URL to tool documentation web page
+url: ""
+
+# Tags related with this tool
+tags: ['solstice', 'snow', 'generator']
+
+# Defines the ID used by Sentry to monitorize error traces
+sentry_id: https://32d16a6960cd413fad0a4be211e6972b@sentry.io/1764702
+
+# Directory where tool logger will be created
+logger_dir: ${join(user, "solstice", "logs", "tools")}
+
+# Default logger level used by tool logger
+logger_level: INFO
+
+# Directory where tool resources are located
+resources_path: ${join(filename, "resources")}
+
+# File that defines tool logger settings
+logging_file: ${join(filename, "__logging__.ini")}
+
+# Menu representation of this tool
+menu_ui:
+  label: "Snow Generator"
+  is_checkable: False
+  is_checked: False
+  load_on_startup: False
+
+# Tool Menu definition where this tool is registered
+menu:
+  - label: Modeling
+    type: menu
+    children:
+      - id: solstice-tools-snowgenerator
+        type: tool
