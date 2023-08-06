@@ -1,0 +1,224 @@
+Help on package Extendedmathuse:
+
+NAME
+
+    Extendedmathuse
+
+PACKAGE CONTENTS
+
+
+CLASSES
+
+    builtins.object
+        N_arynumber
+        fraction
+    
+    class N_arynumber(builtins.object)
+     |  N_arynumber(number, Decimal=10, a=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'], join='', **kw)
+     |  
+     |  This category supports a+b, ab, a*b, a/b, a//b, a%b, a==b, a<b, a>b, a<=b, a>=b, a!=b, and support mixed with int type.
+     |  You can use self.number, self.strnumber, self.Decimal, self.a , self.join, self.is_positive to see the specific value.(see the description of binaryconversion for information on self)
+     |  Keyword parameters introduction:
+     |      special_choice->Select 'a' or 'm' or None,
+     |      'a': add on the default a (0~9&A~Z)
+     |      'm': use decimal as the number on the digit
+     |  
+     |  Methods defined here:
+     |  
+     |  __add__(a, b)
+     |  
+     |  __eq__(a, b)
+     |      Return self==value.
+     |  
+     |  __float__(self)
+     |  
+     |  __floordiv__(a, b)
+     |  
+     |  __ge__(a, b)
+     |      Return self>=value.
+     |  
+     |  __gt__(a, b)
+     |      Return self>value.
+     |  
+     |  __init__(self, number, Decimal=10, a=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'], join='', **kw)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __int__(a)
+     |  
+     |  __le__(a, b)
+     |      Return self<=value.
+     |  
+     |  __lt__(a, b)
+     |      Return self<value.
+     |  
+     |  __mod__(a, b)
+     |  
+     |  __mul__(a, b)
+     |  
+     |  __ne__(a, b)
+     |      Return self!=value.
+     |  
+     |  __neg__(self)
+     |  
+     |  __pos__(self)
+     |  
+     |  __radd__(b, a)
+     |  
+     |  __repr__(a)
+     |      Return repr(self).
+     |  
+     |  __req__(b, a)
+     |  
+     |  __rfloordiv__(b, a)
+     |  
+     |  __rge__(b, a)
+     |  
+     |  __rgt__(b, a)
+     |  
+     |  __rle__(b, a)
+     |  
+     |  __rlt__(b, a)
+     |  
+     |  __rmod__(b, a)
+     |  
+     |  __rmul__(b, a)
+     |  
+     |  __rne__(b, a)
+     |  
+     |  __rsub__(b, a)
+     |  
+     |  __rtruediv__(b, a)
+     |  
+     |  __str__(a)
+     |      Return str(self).
+     |  
+     |  __sub__(a, b)
+     |  
+     |  __truediv__(a, b)
+     |  
+     |  is_positive(self)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  __hash__ = None
+    
+    class fraction(builtins.object)
+     |  fraction(molecule, denominator=1)
+     |  
+     |  This fraction class can perform many fraction calculations and is very useful.
+     |  
+     |  Alternate method:
+     |      If molecule is not a number, divide molec by denominator. If the result is not a fraction, take the return value of molecule.__fraction__().
+     |  
+     |  Methods defined here:
+     |  
+     |  __add__(a, b)
+     |  
+     |  __eq__(a, b)
+     |      Return self==value.
+     |  
+     |  __float__(self)
+     |  
+     |  __ge__(a, b)
+     |      Return self>=value.
+     |  
+     |  __gt__(a, b)
+     |      Return self>value.
+     |  
+     |  __init__(self, molecule, denominator=1)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  __le__(a, b)
+     |      Return self<=value.
+     |  
+     |  __lt__(a, b)
+     |      Return self<value.
+     |  
+     |  __mul__(a, b)
+     |  
+     |  __ne__(a, b)
+     |      Return self!=value.
+     |  
+     |  __radd__(b, a)
+     |  
+     |  __repr__(self)
+     |      Return repr(self).
+     |  
+     |  __req__(a, b)
+     |  
+     |  __rge__(a, b)
+     |  
+     |  __rgt__(a, b)
+     |  
+     |  __rle__(a, b)
+     |  
+     |  __rlt__(a, b)
+     |  
+     |  __rmul__(b, a)
+     |  
+     |  __rne__(a, b)
+     |  
+     |  __rsub__(a, b)
+     |  
+     |  __rtruediv__(a, b)
+     |  
+     |  __str__(self)
+     |      Return str(self).
+     |  
+     |  __sub__(a, b)
+     |  
+     |  __truediv__(a, b)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  __dict__
+     |      dictionary for instance variables (if defined)
+     |  
+     |  __weakref__
+     |      list of weak references to the object (if defined)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  __hash__ = None
+
+FUNCTIONS
+
+    binaryconversion(number, newradix=2, a=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'], append=None, join=',')
+        This is a function for converting a numeric hex:
+        number -> Is N_arynumber or decimal number type, you can use N_arynumber(number, hexadecimal (default is 10), the list of characters or strings used (default is 0~9&A~Z), connector (default is ',') ,is_positive(kw,bool,default is True))
+        newradix -> The number of the number to convert to, the default is 2
+        a, append, join -> The character to be converted into a number, starting from 1, the default is 1~9&A~Z, input 'a' to append to the default list, and 'm' to use decimal digits in digits ( Of course, it is very possible to use join (the default is ', ') to separate digits)
+    
+    comparison_list(a, b)
+        Compare lists a and b to output the same part.
+    
+    decompositionfactor(a)
+        This function can decompose a positive integer a by a prime factor:
+            a-> a positive integer that needs to be decomposed,int
+    
+    gcd(*number)
+        Output the greatest common divisor of several numbers.
+    
+    isprimenumber(a)
+        This function returns whether a is a prime number:
+        a -> the number to be detected, int
+    
+    lcm(*number)
+        Output the least common multiple of several numbers.
+    
+    primenumberinrange(d=None, b=None)
+        This function returns all prime numbers in a region:
+        d -> number of starts (default is 1, int)
+        b -> the last number of the ending number (default is 1, int)
