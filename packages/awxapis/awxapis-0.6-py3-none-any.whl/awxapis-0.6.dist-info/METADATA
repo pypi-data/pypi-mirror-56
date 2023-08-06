@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: awxapis
+Version: 0.6
+Summary: Helper module for utilizing Ansible Tower/AWX Apis
+Home-page: https://github.com/nirabhratapaswi/awx-apis
+Author: Nirabhra Tapaswi
+Author-email: nirabhratapaswi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contact](#contact)
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+This project is built with the intent to harness the power of Ansible Tower/AWX Apis with ease.
+
+You can call this from any python app, without worrying about the actual Ansible Tower/AWX Apis and their format.
+
+
