@@ -1,0 +1,9 @@
+README.md
+setup.py
+fast_enum/__init__.py
+fast_enum/fastenum.py
+fast_enum.egg-info/PKG-INFO
+fast_enum.egg-info/SOURCES.txt
+fast_enum.egg-info/dependency_links.txt
+fast_enum.egg-info/top_level.txt
+test/test_01_fastenum.py
