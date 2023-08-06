@@ -1,0 +1,14 @@
+README.md
+setup.py
+fairness_indicators/__init__.py
+fairness_indicators/example_model.py
+fairness_indicators/example_model_test.py
+fairness_indicators/version.py
+fairness_indicators.egg-info/PKG-INFO
+fairness_indicators.egg-info/SOURCES.txt
+fairness_indicators.egg-info/dependency_links.txt
+fairness_indicators.egg-info/requires.txt
+fairness_indicators.egg-info/top_level.txt
+fairness_indicators/examples/__init__.py
+fairness_indicators/examples/util.py
+fairness_indicators/examples/util_test.py
