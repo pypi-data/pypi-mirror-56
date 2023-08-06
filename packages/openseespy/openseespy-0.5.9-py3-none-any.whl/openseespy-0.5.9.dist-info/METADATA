@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: openseespy
+Version: 0.5.9
+Summary: A OpenSeesPy package
+Home-page: https://github.com/openseespy/openseespy
+Author: Minjie Zhu
+Author-email: zhum@oregonstate.edu
+License: LICENSE.md
+Platform: Linux
+Platform: Windows
+Platform: Mac
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+#  OpenSeesPy
+
+
+Pip Package for OpenSeesPy
+
+Linux and Windows versions maintained by:
+
+Minjie Zhu <zhum@oregonstate.edu>
+Research Associate;
+Civil and Construction Engineering; Oregon State University
+
+Mac version maintained by:
+
+Stevan Gavrilovic <steva44@hotmail.com>
+PhD Candidate;
+Structural and Earthquake Engineering;
+University of British Columbia
+
+[OpenSeesPy Documentation](https://openseespydoc.readthedocs.io/en/latest/index.html)
+
+
+
