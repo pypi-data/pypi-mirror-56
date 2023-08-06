@@ -1,0 +1,61 @@
+.localtoc {
+  font-size: .75rem;
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  width: calc(35% - 140px);
+  padding: 0 20px;
+  top: 255px;
+
+  .caption {
+    font-size: .9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    > li {
+      > a {
+        display: none;
+        padding: 5px 0 5px 10px;
+        line-height: 1.1rem;
+        color: #909aae;
+        border-left: 3px solid #909aae;
+
+        &:hover, &:focus, &:focus-within {
+          color: $brand-primary;
+        }
+
+        &.active {
+          border-left-color: $brand-primary;
+          font-weight: 700;
+          color: $brand-primary;
+        }
+      }
+
+      > ul {
+        > li {
+          > a {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    display: none;
+  }
+}
+
+.affix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  display: none;
+  .localtoc {
+    top: 30px;
+  }
+}

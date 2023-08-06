@@ -1,0 +1,110 @@
+footer {
+  margin: 30px auto 0;
+
+  .social {
+    display: none;
+    margin: 20px 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      font-size: 24px;
+      color: #000;
+      margin: 0 10px;
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 40px 0 20px;
+    justify-content: center;
+
+    > div {
+      margin: 10px;
+    }
+
+    .logo {
+      img {
+        max-width: 180px;
+      }
+    }
+
+    a {
+      font-size: 11px;
+      color: #000;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: $brand-primary;
+      }
+
+      &:visited {
+        color: #909aae;
+      }
+    }
+
+    .btn {
+      background-color: #15c2ff;
+      font-size: 12px;
+      padding: 10px 20px;
+      border: none;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+      justify-content: center;
+      color: #000;
+
+      > a {
+        &:visited {
+          color: #000;
+        }
+      }
+
+      &:hover {
+        > a {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .copy {
+    font-size: 11px;
+    color: #adadad;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  @media (max-width: 1300px) {
+    .logo {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .rst-footer-buttons {
+      .btn {
+        float: none;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+
+    .links {
+      .btn {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}

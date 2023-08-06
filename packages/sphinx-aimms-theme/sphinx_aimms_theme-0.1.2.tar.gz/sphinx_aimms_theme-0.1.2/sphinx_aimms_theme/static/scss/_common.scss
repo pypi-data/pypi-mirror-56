@@ -1,0 +1,358 @@
+.document {
+  width: 65%;
+  @media (max-width: 1300px) {
+    width: 100%;
+  }
+}
+
+
+/*---------------------- Sphinx Directives -----------------------------*/
+/*Color any Topic block */
+.topic {
+  padding: 10px 10px 0 10px;
+  border: 1px solid lightgrey;
+  background: #fafafa;
+
+  &.contents {
+    background: inherit;
+  }
+}
+
+.code-block-caption .caption-text {
+  font-family: courier new;
+}
+
+/*Color + trophy icon for congrats blocks*/
+.congrats {
+  background: none;
+  border: 1px solid green;
+  margin-bottom: 10px;
+
+  .topic-title:before {
+    content: "\f091"; /*code for the "trophy" icon. please refer to https://fontawesome.com/cheatsheet*/
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: darkgreen;
+    font-size: 18px;
+    padding-right: 0.5em;
+  }
+}
+
+.technical {
+  border: 1px solid grey;
+  margin-bottom: 10px;
+
+  .topic-title:before {
+    content: "\f085"; /*please refer to https://fontawesome.com/cheatsheet*/
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: darkgreen;
+    font-size: 18px;
+    padding-right: 0.5em;
+  }
+}
+
+/* --------------     Styling for AIMMS Syntax highlighter -------------------------------- */
+.highlight-aimms {
+  .highlight {
+    background-color: #fff;
+  }
+  .highlight {
+    .kr { /*Styling for AIMMS blue built-in keywords, like if-then-else*/
+      color: blue;
+    }
+
+    .nb { /*Styling for AIMMS intrinsic red function and Predeclared Identifiers, like Execute()*/
+      color: brown;
+    }
+
+    .na { /*Styling for AIMMS Named attributes (ex: SubsetOf, indexDomain, etc.), operators(ex: =) and punctuation (ex: ; or ,)*/
+      color: rgb(88, 88, 88);
+      font-weight: bold;
+    }
+
+    .o, .p {
+      color: black;
+      font-weight: bold;
+    }
+
+    .cm, .c1, .c2 { /*Styling for AIMMS comments*/
+      color: green;
+      font-style: italic;
+    }
+
+    .s1, .s2 { /*Styling for AIMMS Strings + set elements*/
+      color: gray;
+      font-style: italic;
+    }
+
+    .kd { /*Styling for AIMMS declaration identifier type (Parameter, Variable, etc.)*/
+      color: black;
+      font-weight: bold;
+    }
+
+    .nv { /*Styling for AIMMS declared identifier name by default, if not part of the general list below*/
+      color: rgb(200, 130, 0);
+    }
+
+    /*--------  Styling for AIMMS declared identifier name by type (see AIMMS PowerPoint colour palette) --------------*/
+
+    .n.n-Set { /*Set*/
+      color: black;
+    }
+
+    .n.n-Parameter { /*Parameter*/
+      color: DarkCyan;
+    }
+
+    .n.n-ElementParameter { /*Element Parameter*/
+      color: DarkCyan;
+    }
+
+    .n.n-Variable { /*Variable*/
+      color: PaleVioletRed;
+    }
+
+    .n.n-Constraint { /*Constraint*/
+      color: black;
+    }
+
+    .n.n-MathematicalProgram { /*MathematicalProgram*/
+      color: black;
+    }
+
+    .n.n-StringParameter { /*String Parameter*/
+      color: black;
+    }
+
+    .n.n-Quantity { /*Quantity*/
+      color: black;
+    }
+
+    .n.n-DatabaseTable { /*DatabaseTable*/
+      color: purple;
+    }
+
+    .n.n-Index { /*Index*/
+      color: black;
+    }
+
+    .n.n-Procedure {
+      color: black;
+    }
+
+    .n.n-Convention { /*Convention*/
+      color: black;
+    }
+  }
+}
+
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend, p {
+  font-family: $font-family-base;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 12px;
+  font-family: $font-family-alt;
+  text-transform: uppercase;
+  -webkit-transition: .4s background-color;
+  transition: .4s background-color;
+  border-color: #9B9B9B;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+
+  &.btn-neutral {
+    background-color: #fff !important;
+
+    &:hover {
+      background-color: $brand-primary !important;
+      border-color: $brand-primary;
+      color: #fff !important;
+    }
+  }
+}
+
+.wy-nav-content {
+  max-width: 100%;
+  padding: 25px 50px;
+
+  a {
+    &:visited {
+      color: #909aae;
+    }
+  }
+}
+
+.wy-nav-content-wrap {
+  background: none;
+}
+
+a {
+  color: $brand-primary;
+
+  &:hover {
+    color: #909aae;
+  }
+}
+
+#body {
+  font-family: $font-family-alt !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icones {
+  max-width: 25px !important;
+  margin-right: 10px;
+
+  img {
+    max-width: 25px !important;
+    margin-right: 10px;
+  }
+}
+
+.whatever input[type=submit] {
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background-color: $brand-primary !important;
+}
+
+/* comments screensize fix */
+@media (max-width: 1280px) {
+  div .whatever {
+    max-width: 100%;
+  }
+}
+
+.wy-table-responsive table td {
+  white-space: normal;
+}
+
+@media screen and (min-width: 767px) {
+  .wy-table-responsive {
+    overflow: visible;
+  }
+}
+
+/* code highlights */
+code, .rst-content tt, .rst-content code {
+  white-space: nowrap;
+  max-width: 100%;
+  background: #eaeaea;
+  border: solid 1px #fafafa;
+  font-size: 75%;
+  padding: 0 5px;
+  font-family: $font-family-alt;
+  color: #000;
+  overflow-x: auto;
+}
+
+.rst-content {
+  tt.literal, code.literal {
+    color: #5e5e5e;
+    font-family: 'Courier New';
+  }
+
+  .highlighted {
+    background-color: #d5dbdc;
+  }
+
+  code {
+    background: #fff;
+    border: solid 1px lightgrey;
+    padding: 5px;
+
+    &.download {
+      font-family: $font-family-alt;
+      color: $brand-primary;
+
+      &:hover {
+        color: #919baf;
+      }
+    }
+  }
+
+  .note {
+    background: #E5F5FB;
+
+    .admonition-title {
+      background: #59BFE6;
+    }
+  }
+
+  .warning {
+    background: #FCEDEB;
+
+    .admonition-title {
+      background: #EF8A80;
+    }
+  }
+
+  .tip {
+    background: #FFF8E5;
+
+    .admonition-title {
+      background: #FFD659;
+    }
+  }
+
+  .hint {
+    background: #E9F6EF;
+
+    .admonition-title {
+      background: #72CA97;
+    }
+  }
+}
+
+li {
+  line-height: 1.5em;
+}
+
+.menuselection {
+  font-style: italic;
+}
+
+h1.thanks {
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3.helpfull {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Copy buttons */
+button.copybtn {
+  webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  background: #fff;
+
+  &:hover {
+    background: $brand-primary;
+    opacity: 1;
+  }
+}
+
+div.highlight:hover .copybtn, div.highlight .copybtn:focus {
+  opacity: .3;
+}
+
+div.highlight {
+  position: relative;
+}
