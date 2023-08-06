@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: nlpia-bot
+Version: 0.0.4
+Summary: An open framework and dataset for building a distributed-agent chatbot based on "Natural Language Processing in Action".
+Home-page: https://nlpia.org
+Author: hobs
+Author-email: hobs+github@totalgood.com
+License: mit
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Dist: boto3
+Requires-Dist: botocore
+Requires-Dist: django
+Requires-Dist: django-environ
+Requires-Dist: django-extensions
+Requires-Dist: gitpython
+Requires-Dist: jupyter
+Requires-Dist: keras
+Requires-Dist: nlpia
+Requires-Dist: pandas
+Requires-Dist: pre-commit
+Requires-Dist: psycopg2
+Requires-Dist: regex
+Requires-Dist: spacy
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: sqlparse
+Requires-Dist: tensorflow
+Requires-Dist: tensorboard
+Requires-Dist: wikipedia-api
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+
+UNKNOWN
+
+
