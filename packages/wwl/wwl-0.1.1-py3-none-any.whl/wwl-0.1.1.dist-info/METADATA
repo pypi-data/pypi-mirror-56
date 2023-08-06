@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: wwl
+Version: 0.1.1
+Summary: Wasserstein Weisfeiler-Lehman Graph Kernels
+Home-page: https://github.com/BorgwardtLab/WWL
+License: UNKNOWN
+Author: Matteo Togninalli
+Author-email: matteo.togninalli@bsse.ethz.ch
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: Cython
+Requires-Dist: POT
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Project-URL: Issues, https://github.com/BorgwardtLab/WWL/issues
+
+# WWL Package
+
+Currently under development...
