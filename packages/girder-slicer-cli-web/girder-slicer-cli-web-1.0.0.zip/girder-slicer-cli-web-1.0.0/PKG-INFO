@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: girder-slicer-cli-web
+Version: 1.0.0
+Summary: A girder plugin for exposing slicer CLIs over the web
+Home-page: https://github.com/girder/slicer_cli_web
+Author: Kitware, Inc.
+Author-email: kitware@kitware.com
+License: Apache 2.0
+Description: =====================================================
+        slicer_cli_web |build-status| |codecov-io|
+        =====================================================
+        
+        A girder plugin for exposing slicer execution model CLIs over the web using docker and girder_worker
+        
+        .. |build-status| image:: https://circleci.com/gh/girder/slicer_cli_web.svg?style=svg
+            :target: https://circleci.com/gh/girder/slicer_cli_web
+            :alt: Build Status
+        
+        .. |codecov-io| image:: https://codecov.io/github/girder/slicer_cli_web/coverage.svg?branch=master
+            :target: https://codecov.io/github/girder/slicer_cli_web?branch=master
+            :alt: codecov.io
+        
+Keywords: girder-plugin,slicer_cli_web
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/x-rst
