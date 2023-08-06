@@ -1,0 +1,15 @@
+sdv/__init__.py,sha256=6hrN1o5GQ0xnwK_pykC0qDehMTi_l6xUeEFf9Ut_v2E,452
+sdv/demo.py,sha256=oTZpsQT3QUFiEklqS9tlDPfHSTkJB72hhqhlB0jrlJc,4210
+sdv/metadata.py,sha256=sH8n0yTwdmotD8CCH6ipJLduGEKN1kBEoTqgdN_jfuw,26703
+sdv/modeler.py,sha256=ArO0wzUvxFz3F4ePnhhQboL-Vw7qFQXWoqIdrwj6sJw,7946
+sdv/sampler.py,sha256=tI73cDsEeYbFiBUzVFH4zlj4yuJEXN_u6kZPdpAb4DA,15912
+sdv/sdv.py,sha256=dkjwQwFT0akFcUnujZb50LzN1l8AWTbmFz2jLbDEaQ0,5034
+sdv/evaluation/__init__.py,sha256=pSU6dTQuz-1QReDMFgCuYDGMrcaJOrC37AOwLYJRbyk,4632
+sdv/evaluation/descriptors.py,sha256=lJAn9HCT-13W5LKBIlvctZGm7jIoxxDh1PgWkvHZ0H8,612
+sdv/evaluation/metrics.py,sha256=POsH3vO97iv1YnRBrKdMxoiYAeatjHXBBznzdpuqiTI,1310
+sdv-0.2.1.dist-info/AUTHORS.rst,sha256=4PhvsZevYFRxQ2AOEXFf1MJHg52weCKE1Y7NjuEZaW8,256
+sdv-0.2.1.dist-info/LICENSE,sha256=yf7RHPuviLPPIZxRb_JHOVYucCr2MWrfkx0ZFbgB8q4,1077
+sdv-0.2.1.dist-info/METADATA,sha256=jVCfQF2OxDeXXWArNaUn95YDNjHwJR4RkeWzNyXRZnA,13327
+sdv-0.2.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+sdv-0.2.1.dist-info/top_level.txt,sha256=KysHmiczw_wlOrP0ntNfBbp3FbpF_6szMDtreycMydk,4
+sdv-0.2.1.dist-info/RECORD,,
