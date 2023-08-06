@@ -1,0 +1,11 @@
+opencv-python
+pillow
+pytesseract
+matplotlib==2.2.4
+keras
+tensorflow
+scikit-image<0.15
+marshmallow
+numpy
+cython
+ChemDataExtractor-IDE
