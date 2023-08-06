@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/sos_rmarkdown/__init__.py
+src/sos_rmarkdown/_version.py
+src/sos_rmarkdown/converter.py
+src/sos_rmarkdown.egg-info/PKG-INFO
+src/sos_rmarkdown.egg-info/SOURCES.txt
+src/sos_rmarkdown.egg-info/dependency_links.txt
+src/sos_rmarkdown.egg-info/entry_points.txt
+src/sos_rmarkdown.egg-info/not-zip-safe
+src/sos_rmarkdown.egg-info/requires.txt
+src/sos_rmarkdown.egg-info/top_level.txt
+test/test_convert.py

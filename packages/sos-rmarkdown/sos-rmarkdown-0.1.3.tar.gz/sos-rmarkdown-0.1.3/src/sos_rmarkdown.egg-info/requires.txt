@@ -1,0 +1,8 @@
+sos>=0.20.9
+sos-notebook>=0.20.9
+sos-r
+markdown-kernel
+papermill
+sos-papermill
+nbformat
+nbconvert>=5.1.1
