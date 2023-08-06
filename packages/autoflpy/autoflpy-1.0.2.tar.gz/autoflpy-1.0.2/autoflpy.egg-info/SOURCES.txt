@@ -1,0 +1,70 @@
+AUTHORS.rst
+CONTRIBUTING.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+autoflpy/__init__.py
+autoflpy/log_analysis.py
+autoflpy.egg-info/PKG-INFO
+autoflpy.egg-info/SOURCES.txt
+autoflpy.egg-info/dependency_links.txt
+autoflpy.egg-info/not-zip-safe
+autoflpy.egg-info/top_level.txt
+autoflpy/data/Checklists emergency.xlsx
+autoflpy/data/Checklists nominal.xlsx
+autoflpy/data/Data sources.txt
+autoflpy/data/Default Template (Full Summary).ipynb
+autoflpy/data/Input File.json
+autoflpy/data/Input Template.json
+autoflpy/data/Name converter list.txt
+autoflpy/data/Your_logo_file_name_here.png
+autoflpy/data/runways.csv
+autoflpy/data/test_arduino.CSV
+autoflpy/data/test_log_to_xls.log
+autoflpy/data/.ipynb_checkpoints/Default Template (Full Summary)-checkpoint.ipynb
+autoflpy/user_files/Default Template (Full Summary).ipynb
+autoflpy/user_files/Input File.json
+autoflpy/user_files/Input Template.json
+autoflpy/user_files/METAR_storage/METAR_DGTK_20190101_20190101_9_9.txt
+autoflpy/user_files/arduino_flight_data/test_arduino.CSV
+autoflpy/user_files/checklists/Checklists emergency.xlsx
+autoflpy/user_files/checklists/Checklists nominal.xlsx
+autoflpy/user_files/excel_file_path/20190101_Flight01.xls
+autoflpy/user_files/flight_logs_generated/Generated flight log 20190101 1.ipynb
+autoflpy/user_files/images/Your_logo_file_name_here.png
+autoflpy/user_files/log_files/test_log_to_xls.log
+autoflpy/util/__init__.py
+autoflpy/util/flight_log_code.py
+autoflpy/util/log_to_xls.py
+autoflpy/util/name_generator.py
+autoflpy/util/nearest_ICAO_finder.py
+docs/Makefile
+docs/authors.rst
+docs/conf.py
+docs/contributing.rst
+docs/history.rst
+docs/index.rst
+docs/installation.rst
+docs/make.bat
+docs/readme.rst
+docs/usage.rst
+tests/__init__.py
+tests/test_flight_log_code.py
+tests/test_log_to_xls.py
+tests/test_name_generator.py
+tests/test_nearest_ICAO_finder.py
+tests/test_files/Checklists emergency.xlsx
+tests/test_files/Checklists nominal.xlsx
+tests/test_files/METAR_DGTK_20190123_20190123_9_9.txt
+tests/test_files/test_Input File.json
+tests/test_files/test_arduino.CSV
+tests/test_files/test_data_sources.txt
+tests/test_files/test_log_to_xls.log
+tests/test_files/test_name_converter_list.txt
+tests/test_files/test_template.ipynb
+tests/test_files/test_xls.xls
+tests/test_files/.ipynb_checkpoints/test_generated_flight_log20191203 2-checkpoint.ipynb
+tests/test_files/.ipynb_checkpoints/test_template-checkpoint.ipynb
