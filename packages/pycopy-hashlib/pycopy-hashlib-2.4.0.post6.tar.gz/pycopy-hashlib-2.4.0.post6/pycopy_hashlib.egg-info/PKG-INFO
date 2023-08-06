@@ -1,0 +1,18 @@
+Metadata-Version: 1.2
+Name: pycopy-hashlib
+Version: 2.4.0.post6
+Summary: PyPy hashlib module ported to Pycopy
+Home-page: https://github.com/pfalcon/pycopy-lib
+Author: PyPy Developers
+Author-email: pypy-dev@python.org
+Maintainer: Paul Sokolovsky
+Maintainer-email: pycopy-dev@googlegroups.com
+License: MIT
+Description: This is a module ported from CPython standard library to be compatible with
+        Pycopy project (https://github.com/pfalcon/pycopy). Usually, this means
+        applying small patches for features not supported (yet, or at all) in Pycopy.
+        Sometimes, heavier changes are required. Note that PyPy modules are written
+        with availability of vast resources in mind, and may not work for Pycopy ports
+        with limited heap. If you are affected by such a case, please help reimplement
+        the module from scratch.
+Platform: UNKNOWN
