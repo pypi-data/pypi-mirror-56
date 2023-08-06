@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+gpapi_login_fix/__init__.py
+gpapi_login_fix/config.py
+gpapi_login_fix/googleplay.py
+gpapi_login_fix/googleplay_pb2.py
+gpapi_login_fix/utils.py
+gpapi_login_fix.egg-info/PKG-INFO
+gpapi_login_fix.egg-info/SOURCES.txt
+gpapi_login_fix.egg-info/dependency_links.txt
+gpapi_login_fix.egg-info/requires.txt
+gpapi_login_fix.egg-info/top_level.txt
+test/test.py
