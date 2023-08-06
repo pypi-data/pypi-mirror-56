@@ -1,0 +1,9 @@
+setup.py
+django_segmented_uploads.egg-info/PKG-INFO
+django_segmented_uploads.egg-info/SOURCES.txt
+django_segmented_uploads.egg-info/dependency_links.txt
+django_segmented_uploads.egg-info/requires.txt
+django_segmented_uploads.egg-info/top_level.txt
+segmented_uploads/__init__.py
+segmented_uploads/models.py
+segmented_uploads/migrations/__init__.py
