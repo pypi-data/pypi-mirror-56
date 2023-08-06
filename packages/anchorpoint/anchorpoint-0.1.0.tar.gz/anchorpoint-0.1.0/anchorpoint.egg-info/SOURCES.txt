@@ -1,0 +1,10 @@
+MANIFEST.in
+readme.md
+requirements-dev.txt
+setup.py
+anchorpoint/__init__.py
+anchorpoint/textselectors.py
+anchorpoint.egg-info/PKG-INFO
+anchorpoint.egg-info/SOURCES.txt
+anchorpoint.egg-info/dependency_links.txt
+anchorpoint.egg-info/top_level.txt
