@@ -1,0 +1,84 @@
+#######################################################################################################################
+#
+#   Blockchain library
+#   v0.0.1 - 04/11/2019
+#   Contact : raukoras@glive.fr
+#
+########################################################################################################################
+
+I. Introduction
+
+This library starts a blockchain on the current server, and act as a wrapper for the payload.
+
+
+II. Dependances
+
+* PostgreSQL    11.2
+* flask         1.1.1
+* flask-cors    3.0.8
+* psycopg2      2.8.3
+* _libgcc_mutex 0.1
+* asn1crypto    1.0.1
+* ca-certificates   2019.8.28
+* certifi       2019.9.11
+* cffi          1.12.3
+* chardet       3.0.4
+* click         1.1.1
+* cryptography  3.0.8
+* idna          2.8
+* itsdangerous  1.1.0
+* jinja2    2.10.3
+* krb5      1.16.1
+* libedit   3.1.2018
+* libffi    3.2.1
+* libgcc-ng 9.1.0
+* libpq     11.2
+* libstdcxx-ng  9.1.0
+* markupsafe    1.1.1
+* ncurses   6.1
+* openssl   1.1.1d
+* pip       19.2.3
+* pycparser 2.19
+* pycrypto  2.6.1
+* pyopenssl 19.0.0
+* pysocks   1.7.1
+* python    3.7.4
+* readline  7.0
+* requests  2.22.0
+* setuptools    41.4.0
+* six       1.12.0
+* sqlite    3.30.0
+* tk        8.6.8
+* urllib3   1.24.2
+* werkzeug  0.16.0
+* wheel     0.33.6
+* xz        5.2.4
+* zlib      1.2.11
+
+
+III.Quick start
+
+A/ As a library
+import blockchain.py
+
+Usefull functions are :
+* get_open_transactions(self)
+* load_data(self)
+* save_data(self)
+* proof_of_work(self)
+* get_balance(self, sender=None)
+* get_last_blockchain_value(self)
+* add_transaction(self, recipient, sender, signature, amount=1.0, is_receiving=False) #To modify in order to include payload
+* mine_block(self)
+* add_block(self, block)
+* resolve(self)
+* add_peer_node(self, node)
+* remove_peer_node(self, node)
+
+B/ Standalone
+python blockchain.py -p PORT
+
+
+IV. Notes
+
+Actually, it doesn't embed the payload...
