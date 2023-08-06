@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: rinjani
+Version: 1.0.3
+Summary: A Web Scraping Package for ML/Sentiment Analysis
+Home-page: https://pypi.org/legacy
+Author: Connor Beard
+Author-email: Connor-Beard@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# rinjani
+A Machine Learning Library.
+
+Functions:
+
+google_news
+
+
+
