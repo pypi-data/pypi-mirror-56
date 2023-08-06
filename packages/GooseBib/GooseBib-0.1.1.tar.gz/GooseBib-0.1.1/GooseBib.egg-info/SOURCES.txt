@@ -1,0 +1,17 @@
+README.md
+setup.py
+GooseBib/__init__.py
+GooseBib.egg-info/PKG-INFO
+GooseBib.egg-info/SOURCES.txt
+GooseBib.egg-info/dependency_links.txt
+GooseBib.egg-info/entry_points.txt
+GooseBib.egg-info/requires.txt
+GooseBib.egg-info/top_level.txt
+GooseBib/cli/GbibCheckAuthors.py
+GooseBib/cli/GbibCheckLink.py
+GooseBib/cli/GbibClean.py
+GooseBib/cli/GbibList.py
+GooseBib/cli/GbibParse.py
+GooseBib/cli/GbibSelect.py
+GooseBib/cli/GbibSelectAlias.py
+GooseBib/cli/__init__.py
