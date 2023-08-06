@@ -1,0 +1,16 @@
+submissions/__init__.py,sha256=ANBU2oPwwMwFWRZw-W9qYJQhMM7dArQaL8YPbJZiLSw,72
+submissions/admin.py,sha256=sQZbCrFnLHYqNrLbI6A3TG5ztkvOdA9txAds-94GyU4,4602
+submissions/api.py,sha256=mvHsw3y-RecboqaZvTWsJ3c-FhxFdJf5MlBZwt0swdg,38718
+submissions/models.py,sha256=zxaVW8FLE2_Z7eN4N6Gh8PAeFJRoewMkSf_dM5QS2MY,12438
+submissions/serializers.py,sha256=zjK2Mz4k7TpDzLMt20fneTrAITIzuxCAQ-_GzUfYVo0,4678
+submissions/views.py,sha256=MJjDMikUZ6wv-T8Iu77CwrsRj7v6-EZ9WzMXanG_LmE,1522
+submissions/migrations/0001_initial.py,sha256=ye3TQgM2rXvQv2vAXHBP4hwqFcQZYldkEdrlFILUfc4,3576
+submissions/migrations/0002_auto_20151119_0913.py,sha256=G0uBGiqlVKb5Kw7ZtTzi-rPly-YQvXUbBJnJrpId7yQ,992
+submissions/migrations/0003_submission_status.py,sha256=nolfG39Dn5GepZW9OkT9ZIIT1S4DmU8w7b6K7aQ88P0,482
+submissions/migrations/0004_remove_django_extensions.py,sha256=99FNn63q1hTzljjF0PgBh6IdIWTiSMMmKdaXsSWwRVs,457
+submissions/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+edx_submissions-3.0.3.dist-info/LICENSE,sha256=4S14VpdCb50-mprHwxk4fLGBV611UfrV4kWMIUggnhY,35136
+edx_submissions-3.0.3.dist-info/METADATA,sha256=CmWNC0HgPp1dZ-7cmwAjrRE4Rs9sTdGsAG4qAmjXLDk,1074
+edx_submissions-3.0.3.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+edx_submissions-3.0.3.dist-info/top_level.txt,sha256=H68gScXlcA7YgqNOdiDfiKAYOedUgC1LqhLjxGauHL0,12
+edx_submissions-3.0.3.dist-info/RECORD,,
