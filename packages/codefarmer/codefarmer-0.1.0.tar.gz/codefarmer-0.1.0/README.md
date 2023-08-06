@@ -1,0 +1,1 @@
+this is 2019 ccf contest function
