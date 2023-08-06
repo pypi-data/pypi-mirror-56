@@ -1,0 +1,55 @@
+.TH "watchng" 1 "" ""
+
+
+.SH NAME
+
+.P
+watchng \- runs a command periodically, showing output only when it changes.
+
+.SH SYNOPSIS
+
+.P
+\fBwatchng\fR \-h
+
+.P
+\fBwatchng\fR [options] <command>
+
+.SH DESCRIPTION
+
+.P
+\fBwatchng\fR is a program that runs the given command\-line periodically, showing
+the output only when it is different than the last, along with the time.
+
+.SH OPTIONS
+
+.P
+\fB\-h\fR
+        Help.
+
+.P
+\fB\-p, \-\-period=<n>\fR
+        Use <n> as period between re\-runs. Default is 1s.
+
+.P
+\fB\-s, \-\-shell\fR
+        Run command through the shell.
+
+.SH AUTHORS
+
+.P
+Written by Leandro Penz
+
+.SH REPORTING BUGS
+
+.P
+https://github.com/lpenz/watchng/issues/new
+
+.SH COPYRIGHT
+
+.P
+Copyright (C) 2012 Leandro Lisboa Penz <lpenz@lpenz.org>
+
+.SH SEE ALSO
+
+.P
+\fBwatch\fR(1)
