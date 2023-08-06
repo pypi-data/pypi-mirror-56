@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+sqlpy/__init__.py
+sqlpy/config.py
+sqlpy/exceptions.py
+sqlpy/sqlpy.py
+sqlpy.egg-info/PKG-INFO
+sqlpy.egg-info/SOURCES.txt
+sqlpy.egg-info/dependency_links.txt
+sqlpy.egg-info/entry_points.txt
+sqlpy.egg-info/top_level.txt
