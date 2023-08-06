@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+jtac/__init__.py
+jtac/cli.py
+jtac/logic.py
+jtac.egg-info/PKG-INFO
+jtac.egg-info/SOURCES.txt
+jtac.egg-info/dependency_links.txt
+jtac.egg-info/entry_points.txt
+jtac.egg-info/not-zip-safe
+jtac.egg-info/requires.txt
+jtac.egg-info/top_level.txt
