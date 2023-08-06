@@ -1,0 +1,3 @@
+[console_scripts]
+i3bindings=i3bindings.cli:main
+
