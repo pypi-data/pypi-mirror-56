@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: modelbase-pde
+Version: 0.0.1
+Summary: A subpackage of modelbase that enables investigation of PDE models
+Home-page: https://gitlab.com/ebenhoeh/modelbase
+Author: Oliver Ebenhoeh
+Author-email: oliver.ebenhoeh@hhu.de
+License: GPL3
+Project-URL: Documentation, https://modelbase.readthedocs.io/en/latest/
+Project-URL: Source, https://gitlab.com/ebenhoeh/modelbase
+Project-URL: Tracker, https://gitlab.com/ebenhoeh/modelbase/issues
+Description: # modelbase pde
+        
+        Subpackage of the [modelbase](https://gitlab.com/ebenhoeh/modelbase) package.
+        
+Keywords: modelling ode pde metabolic
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >3.5.0
+Description-Content-Type: text/markdown
