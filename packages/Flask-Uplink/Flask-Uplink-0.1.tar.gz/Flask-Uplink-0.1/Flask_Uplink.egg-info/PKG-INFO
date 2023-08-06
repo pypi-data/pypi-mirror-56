@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: Flask-Uplink
+Version: 0.1
+Summary: Live realtime server rendered HTML inspired by elixir LiveView.
+Home-page: https://github.com/agamm/flask-uplink
+Author: Agam More
+Author-email: agam360@gmail.com
+Maintainer: Agam More
+Maintainer-email: agam360@gmail.com
+License: MIT
+Download-URL: https://github.com/agamm/Flask-Uplink/archive/v_01.tar.gz
+Description: Flask-Uplink
+        ============
+        
+        Live realtime server rendered HTML inspired by Phoenix LiveView_.
+        
+        .. _LiveView: https://github.com/phoenixframework/phoenix_live_view
+        
+        Example:
+        --------
+        .. image:: https://user-images.githubusercontent.com/1269911/69392305-477f0080-0cde-11ea-9251-fedb41cfeacb.png
+        
+        
+        
+        Under development (!!!)
+        -----------------------
+        **This is currently only a proof of concept**  
+        
+        Please don't use it in production yet (unless you want to do something really simple, like, really simple)
+        
+        Any help would be awesome!
+        
+        Next up:
+        --------
+        
+        * Fix the global state (looks awful right now)
+        * Use flask's constructs more
+        * Tests
+        * Everything else...
+        
+Keywords: Uplink,LiveView,WebSocket
+Platform: any
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/x-rst
