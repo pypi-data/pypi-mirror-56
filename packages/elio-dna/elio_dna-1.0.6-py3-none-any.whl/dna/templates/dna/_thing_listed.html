@@ -1,0 +1,17 @@
+<ul>
+  {% for thing in object_list %}
+    <li itemscope="itemscope" itemtype="http://schema.org/{{ thing_name }}">
+      <a
+        href="{% url 'engage.thing' page_slug thing_name thing.pk %}"
+        itemprop="name">{{ thing.name }}&raquo;</a>
+    </li>
+    {% empty %}
+    <li>No
+      {{ thing_name }}.</li>
+  {% endfor %}
+</ul>
+{% if is_paginated %}
+<p>
+  {% include 'dna/_thing_paginator.html' %}
+</p>
+{% endif %}
