@@ -1,0 +1,14 @@
+clickshot/__init__.py,sha256=vY5sxDe-M4OagkvciStSH1_xrXI7H44jwt29HB3LdWM,444
+clickshot/config.py,sha256=iiWemQyhKRJAYwPsCLroEqUvegsHFFAIbvARIsA3hsA,211
+clickshot/element.py,sha256=JX4ZfyxugpfqvNV7PBjq6FCjFjDMOwWhP5nSqZffyPM,2999
+clickshot/exceptions.py,sha256=BSR8ILOUQwTers9CPwPcsqcqtTsxlOd4kKBiFXK502U,48
+clickshot/image.py,sha256=s6n3OExGbgwqjCCEAQlB-oti5SOCVG5N0mrBKAVkpfQ,1487
+clickshot/keyboard.py,sha256=Izr5GydwC1Ss8NHdMjTxKv5VVdQDMqJu1F_w-Tf75P0,128
+clickshot/locater.py,sha256=nBoAb7SWozIDuAX813w0DRoBV0kw7CvxosmXUoJ6Emk,415
+clickshot/matchers.py,sha256=aVPQFwRpCHUWT5SKZspghWlTp8m0CdXigTPpu2gODE0,818
+clickshot/mouse.py,sha256=5rnzFwsi8CNQL7gEKReN82wSt_cM31SYSe4RE10xat4,104
+clickshot/region.py,sha256=XyhPS8C-qcV4rOZ_NmosGHioz6EGtN7dJ-ZGAfVwtsg,1015
+clickshot/screen_grabber.py,sha256=rMtOPtjQTMCnEmIx40srkGkRc5WI6_aYX-9QlK2j2Us,848
+clickshot-0.4.0.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+clickshot-0.4.0.dist-info/METADATA,sha256=dJDttDFjJGTYvPgRPnUzp11jrurf-UNGojraCa8tDbw,1853
+clickshot-0.4.0.dist-info/RECORD,,
