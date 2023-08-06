@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+
+#lstBox1, #output_option, #calcolo{
+  height:350px;
+
+}
+
+
+.box{
+    margin-right: 10%;
+  margin-left: 10%;
+}
+
+.set_input{
+    display:flex;
+    justify-content:center;
+    border-style: solid;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.transferBtns {
+    margin-right: 10%;
+  margin-left: 10%;
+}
+
+.transferBtns{
+  float:left;
+  align-self:center;
+}
+
+.set_output{
+  justify-content:center;
+    border-style: solid;
+    width: auto;
+    height: auto;
+    margin-right: 10%;
+    margin-left: 10%;}
+
+.textarea{
+    width: 300px;
+  height: 150px;
+
+    margin-right: 10%;
+  margin-left: 10%;
+
+}
+
+
+input {float:left;}
+
+#nome_completo_variabile {
+    clear: both;
+}
+
+
+
+
+
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<script>
+function showcontent(elem) {
+        //var popup = document.getElementById("myPopup");
+        //popup.classList.toggle("show")
+        console.log(elem.value);
+        $("#nome_completo_variabile").text(elem.value);
+    }
+</script>
+
+<form action = "{{url_for('recode_operation')}}" method = "POST", enctype="multipart/form-data" accept-charset="UTF-8">
+<h1> recode </h1>
+    <div class="row">
+        <div class="col">
+            <div class = "bd-card">
+                <div class="card">
+                    <h5 class="card-header"> Variables</h5>
+                        <div class="card-body">
+                            <select multiple="multiple" id='lstBox1' class="form-control" name="recode_var">
+                            {% for variable in variable_name_type %}
+                                <option onmouseover="showcontent(this)" value= "{{variable}}">{{ variable }} :  {{variable_name_type[ variable ]}} </option>
+                            {% endfor %}
+
+                            </select>
+
+
+                        </div>
+                <input type="submit" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class = "bd-card">
+                <div class="card">
+                    <h5 class="card-header"> Variable names </h5>
+                    <div class="card-body">
+                        <p id="nome_completo_variabile"> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+
+

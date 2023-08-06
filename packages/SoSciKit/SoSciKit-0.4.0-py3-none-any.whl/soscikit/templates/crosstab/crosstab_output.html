@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<head>
+  <!-- Import Vega 5 & Vega-Lite 3 (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+  <script src="{{url_for('static', filename='css/dragtable.js') }}" ></script>
+</head>
+
+<body>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <div class = "bd-card">
+                <div class="card">
+                    <h5 class="card-header"> Crosstab output</h5>
+                    <div class="card-body">
+                        <p></p>
+                        {{ table | safe }}
+                        <p>  </p>
+                        {{ data | safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class = "bd-card">
+                <div class="card">
+                    <h5 class="card-header"> Plot</h5>
+                    <div class="card-body">
+                        <img src="data:image/png;base64,{{ img }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    {% if abilitate_tipology == "abilitate" %}
+
+        <button id="classification">Tipological classification </button>
+
+    {% else %}
+
+        <button id="classification" disabled>Tipological classification </button>
+
+    {% endif %}
+
+    <script>
+        document.getElementById("classification").onclick = function () {
+        location.href = "{{ url_for('ncrosstab_classification' ) }}";
+            };
+
+    /*$(document).ready( function () {
+    $('#corr_tab').DataTable(
+        {"paging": false,
+        "scrollY": "400px",
+        "scrollX": "400px",}
+    );
+    } );*/
+
+
+    </script>
+
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <!-- Import Vega 5 & Vega-Lite 3 (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+    <h1>Selected variable: </h1>
+    <h3>x: {{ operation_form[0] }}</h3>
+    <h3>y: {{ operation_form[1] }}</h3>
+    <h3>hue: {{ operation_form[0] }}</h3>
+
+
+    <div class = "row">
+        <div class = "col-6">
+            <div class = "bd-card">
+                <div class="card">
+                    <h5 class="card-header"> Plot </h5>
+                    <div class="card-body">
+                        <div id="vis"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "col-6">
+            <div class = "bd-card">
+                <div class="card">
+                    <h5 class="card-header"> static plot with regression </h5>
+                    <div class="card-body">
+                        <img src="data:image/png;base64,{{ img }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+
+        <div class = "col-6">
+                <div class = "bd-card">
+                    <div class="card">
+                        <h5 class="card-header"> Correlation </h5>
+                        <div class="card-body">
+                            {{ correlation | safe }}
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript">
+var source = {{ chart_json  | safe}};
+  vegaEmbed('#vis', source).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+    /*
+    var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
+  vegaEmbed('#vis', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+*/
+</script>
+
+
+{% endblock %}
+
+
+
+
+
+

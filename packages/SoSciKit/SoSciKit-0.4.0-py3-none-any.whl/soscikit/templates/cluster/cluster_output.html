@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<head>
+  <!-- Import Vega 5 & Vega-Lite 3 (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+  <script src="{{url_for('static', filename='css/dragtable.js') }}" ></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<style>
+  div.dataTables_wrapper {
+        width: auto;
+        margin: 0 auto;
+    }
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-6">
+             <div class = "bd-card">
+                        <div class="card">
+                            <h5 class="card-header"> Crosstab output</h5>
+                            <div class="card-body">
+                                {{ data | safe }}
+                            </div>
+                        </div>
+             </div>
+        </div>
+        <div class="col-sm-6">
+            <div class = "bd-card">
+                <div class="card">
+                    <h5 class="card-header"> Plot</h5>
+                    <div class="card-body">
+                        <img src="data:image/png;base64,{{ img }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+
+    $(document).ready( function () {
+    $('#result_data').DataTable(
+        {"scrollY": true,
+        "scrollX": true}
+    );
+    } );
+
+
+
+</script>
+
+
+
+{% endblock %}
+
+
+
+
+
+
