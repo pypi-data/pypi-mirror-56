@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: kompos
+Version: 0.2.2
+Summary: Kompos - k8s cloud automation
+Home-page: https://github.com/adobe/kompos
+Author: Adobe
+Author-email: noreply@adobe.com
+License: Apache2
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: backports.functools-lru-cache (==1.6.1)
+Requires-Dist: boto3 (==1.10.28)
+Requires-Dist: botocore (==1.13.28)
+Requires-Dist: deepmerge (==0.1.0)
+Requires-Dist: docutils (==0.15.2)
+Requires-Dist: fastjsonschema (==2.14.1)
+Requires-Dist: himl (==0.5.0)
+Requires-Dist: jmespath (==0.9.4)
+Requires-Dist: lru-cache (==0.2.3)
+Requires-Dist: pathlib2 (==2.3.5)
+Requires-Dist: pyyaml (==5.1)
+Requires-Dist: s3transfer (==0.2.1)
+Requires-Dist: simpledi (==0.3)
+Requires-Dist: six (==1.13.0)
+Requires-Dist: python-dateutil (==2.8.0) ; python_version >= "2.7"
+Requires-Dist: urllib3 (==1.25.7) ; python_version >= "3.4"
+
+# kompos
+[![Build Status](https://www.travis-ci.com/adobe/kompos.svg?token=8uHqfhgsxdvJ93qWAxhn&branch=master)](https://www.travis-ci.com/adobe/kompos) [![Docker pull](https://img.shields.io/docker/pulls/adobe/kompos)](https://hub.docker.com/r/adobe/kompos) [![](https://images.microbadger.com/badges/version/adobe/kompos.svg)](https://microbadger.com/images/adobe/kompos "Get your own version badge on microbadger.com") [![License](https://img.shields.io/github/license/adobe/kompos)](https://github.com/adobe/kompos/blob/master/LICENSE)
+
+![kompos](img/knot.png)
+
+**Kompos** is a configuration driven tool for provisioning and managing Kubernetes infrastructure across AWS and Azure.
+It uses a hierarchical folder structure and yaml files to store and generate configurations, with pluggable compositions that encapsulates the infrastructure code and state. Terraform and helmfile are supported as provisioners.
+
+* [Hierarchical](#hierarchical)
+* [Installing](#installing)
+   * [Locally](#locally)
+   * [Nix versioning](#nix-versioning)
+   * [Docker image](#docker-image)
+* [License](#license)
+
+
+# Hierarchical configuration
+See examples/features/hierarchical
+
+# Installing
+
+### Locally
+```sh
+pip3 install virtualenv
+# Make sure pip is up to date
+curl https://bootstrap.pypa.io/get-pip.py | python3
+
+# Install virtualenv
+pip3 install --upgrade virtualenv
+pip3 install --upgrade virtualenvwrapper
+
+echo 'export WORKON_HOME=$HOME/.virtualenvs' >> ~/.bash_profile
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bash_profile
+source ~/.bash_profile
+
+# create virtualenv
+mkvirtualenv kompos
+workon kompos
+
+# uninstall previous `kompos` version (if you have it)
+pip3 uninstall kompos --yes
+
+# install kompos stable release
+pip3 install --upgrade kompos
+```
+
+
+### Nix versioning
+```
+curl https://nixos.org/nix/install | sh
+```
+
+### Docker Image
+
+
+## License
+[Apache License 2.0](/LICENSE)
+
+
+
+
