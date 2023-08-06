@@ -1,0 +1,4 @@
+[console_scripts]
+cloudflareddns = cloudflareddns:main
+cloudflareddns-syno = cloudflareddns:syno
+

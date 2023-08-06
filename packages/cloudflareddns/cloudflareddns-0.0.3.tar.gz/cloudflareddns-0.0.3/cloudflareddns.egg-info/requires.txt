@@ -1,0 +1,11 @@
+requests
+tldextract
+cloudflare
+
+[tests]
+requests
+tldextract
+cloudflare
+pytest
+flake8
+faker

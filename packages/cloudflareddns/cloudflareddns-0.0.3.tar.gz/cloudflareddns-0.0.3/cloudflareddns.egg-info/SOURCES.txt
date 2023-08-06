@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cloudflareddns/__about__.py
+cloudflareddns/__init__.py
+cloudflareddns/cloudflareddns.py
+cloudflareddns.egg-info/PKG-INFO
+cloudflareddns.egg-info/SOURCES.txt
+cloudflareddns.egg-info/dependency_links.txt
+cloudflareddns.egg-info/entry_points.txt
+cloudflareddns.egg-info/not-zip-safe
+cloudflareddns.egg-info/requires.txt
+cloudflareddns.egg-info/top_level.txt
