@@ -1,0 +1,7 @@
+matplotlib
+numpy
+requests
+webbrowser
+mpld3
+trio
+trio-websocket
