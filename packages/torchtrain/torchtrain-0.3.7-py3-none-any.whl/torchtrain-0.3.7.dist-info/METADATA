@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: torchtrain
+Version: 0.3.7
+Summary: A small tool for PyTorch training
+Home-page: https://github.com/idorce/torchtrain
+Author: HQ
+Author-email: idorce@outlook.com
+License: UNKNOWN
+Keywords: pytorch machine learning train
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: tensorboard
+
+# torchtrain
+
+A small tool for PyTorch training.
+
+Check doc string of [`Trainer` class](https://github.com/idorce/torchtrain/blob/master/torchtrain/trainer.py) for usage.
+
+```
+pip install torchtrain
+```
+
+
