@@ -1,0 +1,17 @@
+MANIFEST.in
+setup.py
+pywebvis.egg-info/PKG-INFO
+pywebvis.egg-info/SOURCES.txt
+pywebvis.egg-info/dependency_links.txt
+pywebvis.egg-info/requires.txt
+pywebvis.egg-info/top_level.txt
+webvis/VisWorker.py
+webvis/__init__.py
+webvis/helpers.py
+webvis/http_server.py
+webvis/interface.py
+webvis/main.py
+webvis/ws_client.py
+webvis/ws_server.py
+webvis/front_build/index.bundle.js
+webvis/front_build/index.html
