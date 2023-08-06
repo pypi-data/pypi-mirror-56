@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+cscipy/__init__.py
+cscipy/distance.cpp
+cscipy/distance.pyx
+cscipy/helpers.py
+cscipy.egg-info/PKG-INFO
+cscipy.egg-info/SOURCES.txt
+cscipy.egg-info/dependency_links.txt
+cscipy.egg-info/requires.txt
+cscipy.egg-info/top_level.txt

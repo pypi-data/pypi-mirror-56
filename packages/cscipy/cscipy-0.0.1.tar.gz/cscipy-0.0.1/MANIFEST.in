@@ -1,0 +1,3 @@
+recursive-include cscipy/ *.c *.cpp *.cc *.h *.py *.pyx
+include *.c *.cpp *.h *.py *.pyx
+include README.md
