@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: simplesearch
+Version: 0.0.1
+Summary: A library for doing search on different kind of files
+Home-page: https://github.com/youben11/simplesearch
+Author: Ayoub Benaissa
+Author-email: ayouben9@gmail.com
+License: Apache License 2.0
+Description: # simplesearch
+Keywords: search nlp index
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown

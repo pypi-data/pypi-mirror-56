@@ -1,0 +1,13 @@
+README.md
+setup.py
+simplesearch/__init__.py
+simplesearch/_utils.py
+simplesearch/db_helper.py
+simplesearch/index.py
+simplesearch/readers.py
+simplesearch/search.py
+simplesearch.egg-info/PKG-INFO
+simplesearch.egg-info/SOURCES.txt
+simplesearch.egg-info/dependency_links.txt
+simplesearch.egg-info/requires.txt
+simplesearch.egg-info/top_level.txt
