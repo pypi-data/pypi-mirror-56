@@ -1,0 +1,3 @@
+[console_scripts]
+bitglitter = bitglitter.__main__:cli
+
