@@ -1,0 +1,16 @@
+specqp/__init__.py,sha256=Jc-Rvecg8GbJ2GHpdn-kpaGM8uJ__d-JLLlaBWzBmEE,392
+specqp/datahandler.py,sha256=kPdDvb23nV3nDZdGrwkj_XSI-30ZmAKa8iIXnHC2HkU,50464
+specqp/fitter.py,sha256=iIwsypldGC26PhvmzOKu_Zk_DKiT4goG8m6rvm1E--g,38576
+specqp/fittingmodels.py,sha256=QNZta46x-yo9ntQS3_quC_rjBSFjJjMP26nGz06w2WI,4222
+specqp/globalfitter.py,sha256=gqfo_z2fddERxrAFCK8LiCYRDtPiTYP2ZvPOXuWkeCQ,11623
+specqp/gui.py,sha256=Bst1uqhyE60FZu5sbdE4hTlvIBtkOy3MxhadWaknszI,165223
+specqp/helpers.py,sha256=xBicdan0iD45IuzsyK_fRkVuZeEqevn-vdnMJag5tVI,19688
+specqp/launcher.py,sha256=7Bn3Z9reLYn7X7LZNU263C0IdtynnYsiUVWcycaUJ1A,6570
+specqp/plotter.py,sha256=WfqwxEv75jPMA6yVOxdP3kivdDP4_1T9_3Rw62x8bgo,11646
+specqp/service.py,sha256=jpQwee2xjb8iSrLv5mYhp6l8mx8hy8BsyDFytCEGWmo,4002
+specqp/assets/specqp_icon.png,sha256=YaAdH6SrRk7s2LHkv-dmi_8u1GEQxbbtZdUSANGYdUU,169783
+specqp-1.1.2.dist-info/LICENSE,sha256=cQQlj9OmZ4yy_v9mI-MW4J6Xus2CEnQ8JfavLMRwdsM,5168
+specqp-1.1.2.dist-info/METADATA,sha256=cm1fRn4Ndg55-LkMderL6m8-KAtZL8-tS4HtndEzu20,3155
+specqp-1.1.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+specqp-1.1.2.dist-info/top_level.txt,sha256=nbzQfGmIN0C8VR30HJ-u3clliczkC9NpV7Ux7HNrNGE,7
+specqp-1.1.2.dist-info/RECORD,,
