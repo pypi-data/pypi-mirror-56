@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: pytest-ref
+Version: 0.2.0
+Summary: A plugin to store reference files to ease regression testing
+Home-page: https://gitlab.com/too-many-programmers/pytest-ref
+Author: Benjamin Rigaud
+Author-email: ben.open.source@gmail.com
+Maintainer: Benjamin Rigaud
+Maintainer-email: ben.open.source@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Requires-Dist: pytest (>=3.5.0)
+Requires-Dist: pytest-plugin-helpers (>=0.1.0)
+
+==============
+pytest-ref
+==============
+
+.. image:: https://img.shields.io/pypi/v/pytest-ref.svg
+    :target: https://pypi.org/project/pytest-ref
+    :alt: PyPI version
+
+.. image:: https://img.shields.io/pypi/pyversions/pytest-ref.svg
+    :target: https://pypi.org/project/pytest-ref
+    :alt: Python versions
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+
+
+A plugin to store reference files to ease regression testing.
+
+----
+
+This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
+
+
+Features
+--------
+
+* TODO
+
+
+Requirements
+------------
+
+* TODO
+
+
+Installation
+------------
+
+You can install "pytest-ref" via `pip`_ from `PyPI`_::
+
+    $ pip install pytest-ref
+
+
+Usage
+-----
+
+* TODO
+
+Contributing
+------------
+Contributions are very welcome. Tests can be run with `tox`_, please ensure
+the coverage at least stays the same before you submit a pull request.
+
+License
+-------
+
+Distributed under the terms of the `MIT`_ license, "pytest-ref" is free and open source software
+
+
+Issues
+------
+
+If you encounter any problems, please `file an issue`_ along with a detailed description.
+
+.. _`file an issue`: https://gitlab.com/too-many-programmers/pytest-ref/issues
+.. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
+.. _`@hackebrot`: https://github.com/hackebrot
+.. _`MIT`: http://opensource.org/licenses/MIT
+.. _`cookiecutter-pytest-plugin`: https://github.com/pytest-dev/cookiecutter-pytest-plugin
+.. _`pytest`: https://github.com/pytest-dev/pytest
+.. _`tox`: https://tox.readthedocs.io/en/latest/
+.. _`pip`: https://pypi.org/project/pip/
+.. _`PyPI`: https://pypi.org/project
+
+
