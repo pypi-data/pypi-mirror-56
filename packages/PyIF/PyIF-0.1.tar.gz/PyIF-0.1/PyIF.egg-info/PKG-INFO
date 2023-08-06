@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: PyIF
+Version: 0.1
+Summary: An open source implementation to compute bi-variate Transfer Entropy.
+Home-page: https://github.com/lcdm-uiuc/PyTE
+Author: Kelechi Ikegwu, Jacob Trauger, Robert Brunner
+Author-email: ikegwu2@illinois.edu, jtt2@illinois.edu, bigdog@illinois.edu
+License: UNKNOWN
+Description: # PyIF
+        
+        An open source implementation to compute bi-variate Transfer Entropy.
+        
+        
+        Then `from PyIF import te_compute` to import the needed functions. Then all that is needed then is to call the `te_compute` function.
+        
+        ## Installation
+        
+        To install from pip all that is needed is run the line `pip install PyIF`.
+        
+        To install a the development release of Py-TE run the following command
+        ```bash
+        pip install -e .
+        ```
+        
+        ## Example
+        
+        ``` python
+        from PyIF import te_compute as te
+        import numpy as np
+        rand = np.random.RandomState(seed=23)
+        
+        X_1000 = rand.randn(1000, 1).flatten()
+        Y_1000 = rand.randn(1000, 1).flatten()
+        
+        TE = te.te_compute(X_1000, Y_1000, k=1, embedding=1, safetyCheck=True, GPU=False)
+        
+        print(TE)
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: University of Illinois/NCSA Open Source License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
