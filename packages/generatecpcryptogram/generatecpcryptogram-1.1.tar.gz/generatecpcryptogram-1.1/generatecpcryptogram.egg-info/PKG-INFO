@@ -1,0 +1,27 @@
+Metadata-Version: 1.0
+Name: generatecpcryptogram
+Version: 1.1
+Summary: UNKNOWN
+Home-page: https://github.com/NataliaDeryuzhova/generate_cloud_payments_cryptogram
+Author: Natalia Deryuzhova
+Author-email: derujovanv1993@gmail.com
+License: UNKNOWN
+Description: CloudPayments Python Generate Cryptogram Library
+        
+        Generate CloudPayments Cryptogram (https://cloudpayments.ru/)
+        
+        You install it with::
+        
+            pip install generatecpcryptogram
+        
+        You can use it with::
+        
+            from generatecpcryptogram import generate_cloud_payments_cryptogram
+        
+        For generating cryptogram You need to give parameters:
+        
+        - cart number
+        - card expiration
+        - card cvv
+        - you public id from account
+Platform: UNKNOWN
