@@ -1,0 +1,177 @@
+Metadata-Version: 2.1
+Name: trello-release-notes
+Version: 0.3.1
+Summary: Take your weekly done cards and turn them into a bulleted list in another column, just like Alice Goldfuss does.
+Home-page: https://github.com/mattkatz/trello_release_notes
+Author: Matt Katz
+Author-email: github@morelightmorelight.com
+License: MIT license
+Description: ====================
+        Trello Release Notes
+        ====================
+        
+        
+        .. image:: https://img.shields.io/pypi/v/trello_release_notes.svg
+                :target: https://pypi.python.org/pypi/trello_release_notes
+        
+        .. image:: https://img.shields.io/travis/mattkatz/trello_release_notes.svg
+                :target: https://travis-ci.org/mattkatz/trello_release_notes
+        
+        .. image:: https://readthedocs.org/projects/trello-release-notes/badge/?version=latest
+                :target: https:/https://trello-release-notes.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        Take your weekly done cards and turn them into a bulleted list in another column, just like `Alice Goldfuss`_ does.
+        
+        
+        * Free software: MIT license
+        * Documentation: https://trello-release-notes.readthedocs.io.
+        * Latest version on PyPi: https://pypi.org/project/trello-release-notes/ 
+        * Source code: https://github.com/mattkatz/trello_release_notes
+        
+        
+        Features
+        --------
+        
+        * custom formatting for card summaries
+        * indicate who did what for shared boards
+        * create comments on release cards with more detail so you can look at the archived cards
+        * skip releases where you didn't put anything in the done column
+        
+        
+        Credits
+        -------
+        
+        This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        It was inspired by `Alice Goldfuss`_ taking the time to write about a little lifehack of hers.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        .. _`Alice Goldfuss`: https://blog.alicegoldfuss.com/automating-my-todo/
+        
+        
+        
+        
+        ============
+        Installation
+        ============
+        
+        
+        Stable release
+        --------------
+        
+        To install Trello Release Notes, run this command in your terminal:
+        
+        .. code-block:: console
+        
+            $ pip install trello_release_notes
+        
+        This is the preferred method to install Trello Release Notes, as it will always install the most recent stable release.
+        
+        If you don't have `pip`_ installed, this `Python installation guide`_ can guide
+        you through the process.
+        
+        .. _pip: https://pip.pypa.io
+        .. _Python installation guide: http://docs.python-guide.org/en/latest/starting/installation/
+        
+        
+        From sources
+        ------------
+        
+        The sources for Trello Release Notes can be downloaded from the `Github repo`_.
+        
+        You can either clone the public repository:
+        
+        .. code-block:: console
+        
+            $ git clone git://github.com/mattkatz/trello_release_notes
+        
+        Or download the `tarball`_:
+        
+        .. code-block:: console
+        
+            $ curl  -OL https://github.com/mattkatz/trello_release_notes/tarball/master
+        
+        Once you have a copy of the source, you can install it with:
+        
+        .. code-block:: console
+        
+            $ python setup.py install
+        
+        
+        .. _Github repo: https://github.com/mattkatz/trello_release_notes
+        .. _tarball: https://github.com/mattkatz/trello_release_notes/tarball/master
+        
+        
+        =======
+        History
+        =======
+        
+        v0.3.1 / 2019-12-01
+        -------------------
+        
+          * Fixed twine / pypi integration check
+        
+        v0.3.0 / 2019-12-01
+        -------------------
+        
+          * Bump version: 0.2.5 → 0.3.0
+          * Document and format
+          * Card Summary for release card includes card Members
+          * use extras for testing instead of requirements file
+          * serve docs for easy dev
+          * update virtualenv advice in contributing
+          * include installation
+          * Remove prints from setup.py
+        
+        
+        v0.2.5 / 2019-11-08
+        -------------------
+        
+          * fix bug where archived cards weren't commented
+          * Bump version: 0.2.4 → 0.2.5
+          * fix comment per item problem
+          * Improved error message for bad board and list names
+          * create dev extras for pip install local dev
+          * adding docs instrux from attrs
+          * install on tox docs so autodoc works
+          * skip installing pkg for linting and docs
+          * black format the files
+          * give credit where due, link code, docs, pypi
+        
+        
+        v0.2.4 / 2019-09-30
+        -------------------
+        
+          * Bump version: 0.2.3 → 0.2.4
+          * fixing twine complaint about headings
+        
+        
+        v0.2.0 / 2019-09-30
+        -------------------
+        
+          * First release to pypi
+          * Docs on readthedocs
+        
+        
+        v0.1.0 / 2019-05-31
+        -------------------
+        
+          * Development begun
+        
+Keywords: trello_release_notes
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/x-rst
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: dev
