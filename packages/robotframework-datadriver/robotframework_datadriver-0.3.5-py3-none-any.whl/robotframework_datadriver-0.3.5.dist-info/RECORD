@@ -1,0 +1,16 @@
+DataDriver/AbstractReaderClass.py,sha256=K2_xXiACnJaxFdwGxl8VOWR1L1ht6pCOiourSj1MD4E,3949
+DataDriver/DataDriver.py,sha256=fza2o1ylVRy-v7F_k4RjgcG-25vmu7qBbU5PEyOvCsM,49716
+DataDriver/ReaderConfig.py,sha256=Zapy8nZrh9lHiinBfqXhdl7HMyHFtsvyHSbc8LT999Q,2263
+DataDriver/__init__.py,sha256=V7Q0H7D-mlNbhIKUYvEvP015Lumm3wmY9xLIDV6SAq4,36
+DataDriver/csv_reader.py,sha256=9roAQnjKOo2VXa3pxIXOJO0gJ2L_ZQfMq2TKtAGJyfU,2314
+DataDriver/generic_csv_reader.py,sha256=Sg-45Ycpgz8M7L9FnRh25fvpYQfEPHfiftPue1C8Dug,2481
+DataDriver/json_reader.py,sha256=GWMgf3LMrZhAxaGG0QhTo_MW3TVudd1w4UeGsNh-f7c,1186
+DataDriver/pict_reader.py,sha256=HH7eA1GN_oDtcDRkoaSvS85boo4fIZn54JjK5Mt_E2s,1956
+DataDriver/rerunfailed.py,sha256=4bUUq4qHpV7iclQ4DakaRYkA2WOYfpkuqu68rSX8xyM,1757
+DataDriver/xls_reader.py,sha256=wNdVlg0dSP96gEXnApqdgCx5KppZabul4Yn7zIhYyoc,1061
+DataDriver/xlsx_reader.py,sha256=ZSt5bRfc_nKculDdx9E975Rf0yLpp6auR4hYX3BRsFU,674
+robotframework_datadriver-0.3.5.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+robotframework_datadriver-0.3.5.dist-info/METADATA,sha256=w9P06Nzueelw-FxOvYPAhyRJ3aoBKAcCmtMyAHisqio,30784
+robotframework_datadriver-0.3.5.dist-info/WHEEL,sha256=LRS-GSFNyYPLBJaJJ6kxdk4Urtb4kEVXWc5DpA8iv6o,97
+robotframework_datadriver-0.3.5.dist-info/top_level.txt,sha256=u9Miru1QZxydgcUUEFAHrpU_n74pKRcEFyKmtK7y51g,11
+robotframework_datadriver-0.3.5.dist-info/RECORD,,
