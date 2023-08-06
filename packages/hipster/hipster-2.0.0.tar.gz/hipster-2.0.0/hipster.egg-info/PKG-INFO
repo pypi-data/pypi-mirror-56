@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: hipster
+Version: 2.0.0
+Summary: A thread safe implementation of the Min Heap and Max Heap
+Home-page: https://github.com/soumasish/hipster
+Author: Soumasish Goswami
+Author-email: soumasish@gmail.com
+License: MIT
+Description: Hipster
+        ======================
+        
+        
+        ## Description
+        Hipster provides a thread-safe implementation of the MinHeap and MaxHeap. For adding an object to the heap, the object needs to encapsulate it's comparison logic.
+        #### Object Usage
+        ```
+        class CustomObject:
+            def __init__(self, a, b):
+                pass
+            
+            # The object needs to implement the following methods
+            def __eq__(self, other):
+                pass
+        
+            def __ne__(self, other):
+                pass
+            
+            def __lt__(self, other):
+                    pass
+        
+            def __le__(self, other):
+                pass
+        
+            def __gt__(self, other):
+                pass
+        
+            def __ge__(self, other):
+                pass
+        
+        
+        ```
+        
+        ## Dependencies
+        Python 3
+        
+        ## Installation
+        ```
+        pip install --upgrade hipster
+        ```
+        
+        ## Usage
+        
+        ```
+        from hipster.heap import *
+        
+        max_heap = MaxHeap()           # creates an empty max heap
+        max_heap.push(item)            # pushes a new item on the heap
+        item = max_heap.peek()         # returns the largest item from the heap without removing it
+        item = max_heap.pop()          # pops an item off the max heap
+        max_heap.clear()               # Removes all items from the heap
+        ```
+        
+        ## License
+        MIT
+        
+        ## Changelog
+        ##### 1.0.6
+        Added clear, fixed README
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
