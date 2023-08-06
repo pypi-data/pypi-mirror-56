@@ -1,0 +1,93 @@
+#!/usr/bin/env python
+
+import argparse
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+import microftp
+
+def print_content(buf):
+  strbuf=buf.decode("ascii")
+  print(strbuf)
+
+parser = argparse.ArgumentParser(description='microftp - connect to broken or small FTP servers')
+parser.add_argument('--host', '-i', default=os.environ.get('MICROFTP_HOST', None))
+parser.add_argument('--port', '-P', default=os.environ.get('MICROFTP_PORT', None))
+parser.add_argument('--verbose', '-v', action='store_true')
+parser.add_argument('--debug', '-d', action='store_true')
+parser.add_argument('--user', '-u', default=os.environ.get('MICROFTP_USER', None))
+parser.add_argument('--password', '-p', default=os.environ.get('MICROFTP_PASSWORD', None))
+parser.add_argument('--dir', '-D', default=os.environ.get('MICROFTP_DIR', None))
+parser.add_argument('commands', metavar='CMD', type=str, nargs='+',
+                    help='commands for ftp')
+
+args = parser.parse_args()
+if not args.host and len(commands)<1:
+  exit(parser.print_usage())
+
+ftp = microftp.microFTP(args.host)
+ftp.set_pasv(True)
+
+if not args.user:
+  ftp.login()
+else:
+  ftp.login(args.user, args.password)
+
+
+if args.debug:
+  ftp.set_debuglevel(9999)
+
+if args.dir:
+  print("[i] Changing directory to: "+args.dir)
+  ftp.cwd(args.dir)
+
+cmd = args.commands[0].lower()
+
+if args.verbose:
+  print("[i] Running command: "+cmd)
+
+if cmd == "list" or cmd == "ls":
+  print("[i] Listing")
+  print(ftp.raw_retrlines('LIST'))
+elif cmd == "get" or cmd == "download":
+  if len(args.commands)<3:
+    sys.stderr.write("Not enough arguments for "+cmd+"\n")
+    ftp.quit()
+    exit()
+  source=args.commands[1]
+  dest=args.commands[2]
+  if args.verbose:
+    print("[i] Downloading "+source+" to "+destination)
+  ftp.raw_retrbinary('RETR '+ source,open(dest, 'wb').write)
+elif cmd == "put" or cmd == "upload":
+  if len(args.commands)<3:
+    sys.stderr.write("Not enough arguments for "+cmd+"\n")
+    ftp.quit()
+    exit()
+  source=args.commands[1]
+  dest=args.commands[2]
+  if args.verbose:
+    print("[i] Uploading "+source+" to "+dest)
+  ftp.raw_storbinary('STOR '+ dest,open(source, 'rb'))
+elif cmd == "del" or cmd == "rm" or cmd == "dele":
+  if len(args.commands)<2:
+    sys.stderr.write("Not enough arguments for "+cmd+"\n")
+    ftp.quit()
+    exit()
+  filename=args.commands[1]
+  if args.verbose:
+    print("[i] Deleting "+filename)
+  resp = ftp.sendcmd('DELE ' + filename)
+  print(resp)
+elif cmd == "print" or cmd == "cat" or cmd == "type":
+  ftp.raw_retrbinary('RETR '+ args.commands[1],print_content)
+else:
+  sys.stderr.write("Command not recognized\n")
+
+if args.verbose:
+  print("[i] closing FTP")
+ftp.quit()
+
+
