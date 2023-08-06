@@ -1,0 +1,3 @@
+[console_scripts]
+capco = capco.__main__:main
+
