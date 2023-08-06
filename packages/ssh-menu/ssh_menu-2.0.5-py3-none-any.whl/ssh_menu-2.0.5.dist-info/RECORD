@@ -1,0 +1,13 @@
+ssh_menu-2.0.5.dist-info/DESCRIPTION.rst,sha256=rIWNbrBpIWZokui8xtp12eOFtVAdEFjsZqLAbXKd2_4,1163
+ssh_menu-2.0.5.dist-info/METADATA,sha256=KFedt1sSn7CPol2vYNPiirYmj12vZ2yymsDeYdnqztc,1609
+ssh_menu-2.0.5.dist-info/RECORD,,
+ssh_menu-2.0.5.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+ssh_menu-2.0.5.dist-info/entry_points.txt,sha256=4_VDUs7aItwMa3CdWPlvlZQVizUQcAWCaL26UIxy7FE,50
+ssh_menu-2.0.5.dist-info/metadata.json,sha256=5Sb8ou8QMzxzi1tu5DcctLjvgmzDZnnkfKv5lfc-ckk,827
+ssh_menu-2.0.5.dist-info/top_level.txt,sha256=o0BtFdIsRAoTPwDotREDVSXTCDov3k8RFNLpF9LIVJU,8
+sshmenu/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sshmenu/sshmenu.py,sha256=IT4f-aNWsrkm3hlVfx_sxQWmKEQGmK4S9GV2ImaD7_s,1929
+sshmenu/decorators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sshmenu/decorators/decorators.py,sha256=bFKpCcBzZ5tESnYlbPbJ6Xuw2pRe7Aq4cRB3ccLRVGc,192
+sshmenu/tmux/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sshmenu/tmux/tmux.py,sha256=2YFQlx8qhgSirMrjP-SQiV5S9BHBlMX5kL8Dx2VsdzU,666
