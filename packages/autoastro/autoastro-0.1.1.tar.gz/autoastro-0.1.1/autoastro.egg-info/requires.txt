@@ -1,0 +1,11 @@
+GetDist==0.2.8
+astropy>=3.0.0
+autoarray==0.3.0
+autofit==0.44.2
+numpy>=1.17.2
+pyquad==0.0.4.0
+
+[test]
+coverage
+pytest
+pytest-cov
