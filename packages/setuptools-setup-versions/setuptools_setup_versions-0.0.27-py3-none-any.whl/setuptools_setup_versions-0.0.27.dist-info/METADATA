@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: setuptools-setup-versions
+Version: 0.0.27
+Summary: Automatically update setup.py `install_requires` version numbersfor PIP packages
+Home-page: UNKNOWN
+Author: David Belais
+Author-email: david@belais.me
+License: UNKNOWN
+Keywords: setuptools install_requires version
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: setuptools (>=39.0.1)
+Requires-Dist: pip (>=19.1.1)
+Requires-Dist: more-itertools (>=7.1.0)
+
+UNKNOWN
+
+
