@@ -1,0 +1,167 @@
+from web3 import Web3
+import cfscrape
+from bs4 import BeautifulSoup
+import re
+from blockapi.api import EtherscanAPI
+from ethereum_input_decoder import AbiMethod
+
+
+class Ethereum:
+    def __init__(self, node_url):
+        self.node_url = node_url
+        self.web3 = Web3(Web3.HTTPProvider(self.node_url))
+        self.abi = None
+
+    def load_abi(self, contract):
+        myapi = EtherscanAPI(contract)
+        self.abi = myapi.get_abi(contract)['result']
+
+    def to_checksum_addr(self, address):
+        return self.web3.toChecksumAddress(address)
+
+    def get_contract(self, contract):
+        self.load_abi(contract)
+        return self.web3.eth.contract(address=Web3.toChecksumAddress(
+            contract), abi=self.abi)
+
+    def get_tx_by_hash(self, txhash):
+        tx = self.web3.eth.getTransaction(txhash)
+        return tx
+
+    def get_function_by_inputdata(self, tx_input):
+        tx_input_decoded = AbiMethod.from_input_lookup(
+            bytes.fromhex(tx_input[2:]))
+        tx_input_values = list(tx_input_decoded.values())
+        tx_function = tx_input_values[0]
+        return tx_function
+
+
+class Infura(Ethereum):
+    def __init__(self, network, api_key):
+        self.network = network
+        self.api_prefix = network if network != "mainnet" else "api"
+        self.api_key = api_key
+        self.infura_url = 'https://{}.infura.io/v3/{}'.format(self.network,
+                                                              self.api_key)
+        super().__init__(self.infura_url)
+
+
+class ERC20Token:
+    def __init__(self):
+        self.url = 'https://etherscan.io/tokens?p={}'
+        self.page = 0
+        self.reqobj = cfscrape.create_scraper()
+        self.tokens = {}
+
+    def get_token_list(self):
+        """
+        Scrapes the ERC20 token list from etherscan.io
+
+        :return: dictionary containing currency_name, contract_addres,
+                 price, change, volume, market_cap, holders - for each token
+        :rtype: dict
+        """
+        scrape_result = True
+        result_msg = ''
+        page = 0
+
+        while True:
+            status_code, rows = self._get_table_rows(page)
+            if status_code != 200:
+                scrape_result = False
+                result_msg = 'error {} on page {}'.format(status_code,
+                                                          page)
+                break
+
+            if rows is None:
+                break
+
+            for row in rows:
+                result = self._parse_table_row(row)
+                self.tokens[result[0]] = \
+                    {'currency_name': result[1],
+                     'contract_address': result[2],
+                     'price': float(result[3]),
+                     'change': result[4],
+                     'volume': result[5],
+                     'market_cap': result[6],
+                     'holders': result[7]}
+
+            page += 1
+
+        return {'result': scrape_result, 'result_msg': result_msg,
+                'tokens': self.tokens}
+
+    def _get_table_rows(self, page):
+        erc20_url = self.url.format(page)
+        result = self.reqobj.get(erc20_url)
+
+        if result.status_code == 200:
+            soup = BeautifulSoup(result.text, "lxml")
+            table = soup.body.find("table", {"id": "tblResult"})
+
+            if table is None:
+                return result.status_code, None
+
+            table_body = table.find_all('tbody')[0]
+            table_rows = table_body.find_all('tr')
+
+            return result.status_code, table_rows
+        else:
+            return result.status_code, None
+
+    def _parse_table_row(self, row):
+        row_ahref = row.find_all('a')[0]
+        cointext = row_ahref.text
+
+        coin_sc = row_ahref['href'][7:]
+        currency_symbol = self._get_currency_symbol(cointext)
+        currency_name = self._get_currency_name(cointext)
+
+        row_tds = row.find_all('td')
+        row_tds[2].find('div').decompose()
+
+        currency_price = ERC20Token._get_number(row_tds[2].text,
+                                                float)
+        currency_change = ERC20Token._get_number(row_tds[3].text,
+                                                 float)
+        currency_volume = ERC20Token._get_number(row_tds[4].text, int)
+        market_cap = ERC20Token._get_number(row_tds[5].text, int)
+        holders = ERC20Token._get_number(row_tds[6].text, int)
+
+        return (currency_symbol, currency_name, coin_sc, currency_price,
+                currency_change, currency_volume, market_cap, holders)
+
+    def _get_currency_symbol(self, cointext):
+        try:
+            currency_symbol = re.search('\([A-Za-z0-9]+\)',
+                                        cointext).group(0)[1:-1]
+        except AttributeError:
+            currency_symbol = cointext
+
+        return currency_symbol
+
+    def _get_currency_name(self, cointext):
+        currency_name = re.sub('\([A-Za-z0-9]+\)', '',
+                               cointext).strip()
+        return currency_name
+
+    @staticmethod
+    def _get_number(num_string, rtype):
+        """
+        converts string in currency format $1234,56.78  or 1234.56 % into
+        a user-defined type (usually float or int)
+
+        :param num_string: string in US currency format / percentage
+        :type num_string: string
+        :param rtype: class to convert the resulting number to
+        :type rtype: class
+        :return: number converted from the string to the desired type
+        """
+        try:
+            result = rtype(
+                re.sub('[$,%]', '', num_string))
+        except ValueError:
+            result = None
+
+        return result
