@@ -1,0 +1,5 @@
+recursive-include libgmsh*
+recursive-include gmsh*
+recursive-include getdp*
+include README.rst
+include LICENCE.txt
