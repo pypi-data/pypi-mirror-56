@@ -1,0 +1,303 @@
+{% extends 'djmicrosip_orden_trabajo/base.html' %}
+{% block title %}
+CRM
+{% endblock %}
+{% block style_css %}
+<style type="text/css"> 
+.progress{
+	    position: relative;
+}
+.progress-item{
+	height:100%; 
+	border-radius: 4px; 
+	position: absolute; 
+	transition: width 2s;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+}
+.btn{
+		
+	color: black;
+	font-weight: bold;
+	margin-right: 5px;
+}
+.table td,th{
+	padding: 0px 3px !important;
+    vertical-align: middle !important;
+}
+h1{
+	text-align: center;
+}
+.delete-row {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    float: right;
+}
+.add-row{
+    float: right;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 0px;
+}
+.lbl{
+	display: none;
+}
+.fila{
+	 margin: 5px;
+	 padding: 5px;
+	 border-bottom:  1px solid #ccc;
+}
+.hardware ul{
+    list-style: none;
+    padding: 0;
+}
+textarea{
+   width:auto;
+   height: auto;
+}
+@media screen and (max-width: 770px) {
+  a{
+    font-size: 20px;
+  }
+  body{
+    font-size: 20px;
+  }
+  input{
+    font-size: 20px;
+  }
+  .btn{
+    font-size: 20px;
+  }
+  .steps {
+    width: 100%;
+    margin-right: -15px;
+    margin-left: -15px;
+    display: table;
+  }
+  .lbl{
+  	display: block;
+  }
+  .fila{
+  	border:  1px solid #ccc;
+  }
+  .header{
+  	display: none;
+  }
+  .form-control{
+  	padding: 3px 6px;
+    font-size: 20px;
+  }
+  .col-md-8{
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+</style>
+{% endblock %}
+{% block js_code %}
+
+<script src='{{STATIC_URL}}djmicrosip_orden_trabajo/js/index.js?v=1.0.3'></script>
+{% endblock %}
+{% block content %}
+<div class="row">
+	<h1>Orden de Trabajo
+    <a href="/pedidos/pedido/0/" class="btn btn-default hidden-print">New</a>
+  </h1>
+  <div class="row">
+    <form method="post" class="form" action=""  enctype='multipart/form-data'>
+      {% csrf_token %}    
+      {{ form_busqueda.errors }}
+      <div class="col-lg-12">
+        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3"></div>
+        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3"></div>
+        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3"></div>
+        <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">{{ form_busqueda }}</div>
+      
+      </div>
+    </form>
+  </div>
+<div id="listas_detalle"  class="">
+	<br>
+	<br>
+	<br>
+     <div class="row fila header">
+     	<div class="steps">	
+     	<div class="col-lg-1 col-md-1 col-xs-4 col-sm-1"> 
+     		<label>Folio</label>
+     	</div>
+     	<div class="col-lg-1 col-md-1 col-xs-8 col-sm-2"> 
+     		<label>Fecha</label>
+     	</div>
+		</div>
+		<div class="steps">
+		<div class="col-lg-2 col-md-2 col-xs-3 col-sm-2"> 
+     		<label>Descripcion</label>
+     	</div>
+     	<div class="col-lg-2 col-md-2 col-xs-3 col-sm-1"> 
+     		<label>Cliente</label>
+     	</div>
+     	<div class="col-lg-2 col-md-2 col-xs-3 col-sm-2"> 
+     		<label>Vendedor</label>
+     	</div>
+     	<div class="col-lg-3 col-md-3 col-xs-3 col-sm-3"> 
+     		<label>Progreso</label>
+     	</div>
+		<div class="col-lg-1 col-md-1 col-xs-12 col-sm-1"> 
+			<label>Nota</label>		
+     	</div>    
+
+     	</div>
+     </div>
+	{{ formset.management_form }}
+	{% for pedido in pedidos %}
+     <div class="row fila">
+     	<div class="steps">	
+	     	<div class="col-lg-1 col-md-1 col-xs-3 col-sm-1"> 
+	     		<label class="lbl">Folio</label>
+          {% if pedido.llamada %}
+            {% if pedido.tipo_llamada == 'PENDIENTE' %}
+              <a style="color: red;" class="glyphicon glyphicon-phone-alt"></a>
+            {% else %}
+              <a style="color: green;" class="glyphicon glyphicon-phone-alt"></a>
+            {% endif %}
+          {% else %}
+	     		<span id="{{pedido.documento.id}}" class="glyphicon glyphicon-triangle-right more hidden-print" aria-hidden="true"></span>
+          {% endif %}
+				    <a class="hidden-print" href="/pedidos/pedido/{{pedido.id}}/">{{pedido.documento.folio}}</a>
+            
+	     	</div>
+	     	<div class="col-lg-1 col-md-1 col-xs-4 col-sm-2"> 
+	     		<label class="lbl">Fecha</label>
+	     		{{pedido.fecha_registro|date:"d/M/Y"}}
+	     	</div>
+	     	<div class="col-lg-2 col-md-2 col-xs-5 col-sm-2"> 
+	     		<label class="lbl">Descripcion</label>
+	     		{{pedido.documento.descripcion}}
+	     	</div>
+		</div>
+		<div class="steps">
+	     	<div class="col-lg-2 col-md-2 col-xs-6 col-sm-1"> 
+	     		<label class="lbl">Cliente</label>
+	     		{{pedido.documento.cliente.nombre}}
+	     	</div>
+	     	<div class="col-lg-2 col-md-2 col-xs-6 col-sm-2" id="{{pedido.id}}"> 
+	     		<label class="lbl">Vendedor</label>
+	     		{% if pedido.documento.vendedor %}
+            
+      				<a  id="{{pedido.id}}" class="guardar btn{{pedido.id}} glyphicon glyphicon-ok-sign hidden"></a>
+      				<a  id="{{pedido.id}}" class="cancelar btncancel{{pedido.id}} glyphicon glyphicon-remove-sign hidden"></a>
+      												
+      				<a  id="{{pedido.id}}" class="hidden-print asignar asign{{pedido.id}} glyphicon glyphicon-pencil"></a>
+      				
+            
+      				<span id="{{pedido.id}}" class="vendedor_asign{{pedido.id}}"> {{pedido.documento.vendedor.nombre}} </span>
+  				{{form.vendedor}}
+  				{% else %}
+                
+  				  <a  id="{{pedido.id}}" class="guardar btn{{pedido.id}} glyphicon glyphicon-ok-sign hidden"></a>
+  				  <a  id="{{pedido.id}}" class="cancelar btncancel{{pedido.id}} glyphicon glyphicon-remove-sign hidden"></a>
+  				  <a  id="{{pedido.id}}" class="asignar asign{{pedido.id}}">Asignar</a>
+          
+  				{{form.vendedor}}
+				{% endif %}
+	     	</div>
+     	</div>	
+     	<div class="steps">
+	     	<div class="col-lg-3 col-md-3 col-xs-12 col-sm-3"> 
+	     		<label class="lbl">Progreso</label>
+				{% if pedido.documento.vendedor %}
+					<a id="{{pedido.id}}" style="position: relative; float: right;" class="hidden-print det_progreso" href="#" data-toggle="modal" data-target="#myModal">Detalles</a>
+					<br>
+					<div id={{pedido.id}} class="progress prog{{pedido.id}}" data-value="{{pedido.progreso}}"> 
+						<span id={{pedido.id}} class="progress-item" data-width="{{pedido.progreso}}%" >{{pedido.progreso}}%
+						</span>
+					</div>
+					<div id="change_state{{pedido.id}}" class="hidden" style="display: flex; justify-content: center; align-items: centemargin-bottom: 5px;"> 
+  						<a id="{{pedido.id}}" class="btn return_state"></a>
+  						<a id="{{pedido.id}}" class="btn change_state"></a>           
+					</div> 
+				{% else %}
+					No se asigno vendedor aun
+				{% endif %}
+	     	</div>
+     	</div>
+        <div class="steps">
+  			 <div class="col-lg-1 col-md-1 col-xs-6 col-sm-1"> 
+  				<label class="lbl">Nota</label>
+    				<div style="display: flex;">
+    					<a href="/pedidos/nota_pedido/{{pedido.documento.id}}/" target="_blank" class="glyphicon glyphicon-print"></a>&nbsp;
+    					<a href="/pedidos/firma/{{pedido.id}}/" class="glyphicon glyphicon-edit">Firma</a>
+    				</div>
+  	     	</div>    
+  		
+        </div>
+
+     <div class="detalles det{{pedido.documento.id}} hidden fila">
+     	<div class="row">
+			<div class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><strong>Unidades</strong></div>
+			<div class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><strong>Articulo</strong></div>
+			<div class="col-lg-4 col-md-4 col-xs-4 col-sm-4"><strong>Nota</strong></div>
+		</div>
+		<div class="row" id="contenido" data-value="Quiubo">
+		</div>
+	 </div>
+     </div>
+     {% endfor %}
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Detalles de progreso</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="row">
+      		<div class="col-md-6">
+      			<label>Tiempo en espera</label>
+      			<br>
+      			<span id="tiempo_espera" ></span>
+      		</div>
+      		
+      		<div class="col-md-6">
+      			<label>Tiempo en finalizar</label>
+      			<br>
+      			<span id="tiempo_fin" ></span>
+      		</div>
+      	</div>
+      	<br>
+      	<div class="row">
+      		<div class="col-md-6">
+      			<label>Tiempo en llamar al cliente</label>
+      			<br>
+      			<span id="tiempo_aviso" ></span>
+      		</div>
+
+      		<div class="col-md-6">
+      			<label>Tiempo en entregar</label>
+      			<br>
+      			<span id="tiempo_entrega" ></span>
+      		</div>
+      	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn btn-primary">OK</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
