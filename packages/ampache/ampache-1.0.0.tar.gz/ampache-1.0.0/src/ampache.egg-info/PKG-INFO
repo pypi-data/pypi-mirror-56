@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ampache
+Version: 1.0.0
+Summary: Python library for Amapche XML-API
+Home-page: https://github.com/lachlan-00/python3-ampache
+Author: Lachlan de Waard (lachlan-00)
+Author-email: lachlan.00@gmail.com
+License: GPL-3.0
+Download-URL: https://github.com/lachlan-00/python3-ampache
+Description: This library is able to connect to Ampache and return the xml or binary data received from the queries.
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries :: PHP Classes
