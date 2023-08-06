@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: lattices
+Version: 0.3.0
+Summary: Lattices is a package for the construction of lattices from nodes and an ordering relation.
+Home-page: UNKNOWN
+License: UNKNOWN
+Author: Ryan G. James
+Author-email: ryangregoryjames@gmail.com
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: networkx
+Requires-Dist: codecov; extra == "dev"
+Requires-Dist: hypothesis; extra == "dev"
+Requires-Dist: ipython[nbconvert]; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: ipython[nbconvert]; extra == "doc"
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: nxpd; extra == "plotting"
+Requires-Dist: codecov; extra == "test"
+Requires-Dist: hypothesis; extra == "test"
+Requires-Dist: pytest >=2.7.3; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: plotting
+Provides-Extra: test
