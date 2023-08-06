@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: dekogen
+Version: 0.1
+Summary: Simple util for generate helper code based on OpenAPI specs
+Home-page: https://github.com/denys-ops/dekogen
+Author: Denys V. Kondratiuk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: inflection (==0.3.1)
+Requires-Dist: PyYAML (==5.1.2)
+Requires-Dist: Click (==7.0)
+
+# DekoGen 
+
+## What is it?
+dekogen is simple tool to avoid big unreadable HTTP requests. It's provide ability to create requests builders and
+response wrappers to keep match between code and OpenAPI specs.
+
+## About
+Main points:
+##### 1. Maintain compliance between code and OpenAPI spec
+##### 2. Do not describe requests and responses manually
+##### 3.  Use:
+    request_body = Configuration() \
+        .number("10") \
+        .settings(Settings()
+              .required_protocol("33-11-JRTF")
+              .element_per_second(34)
+              .related_grants("785-56-IU", "89-551-11-JRT")
+              .body) \
+        .body
+
+   ##### Instead of:
+   ```
+   request_body = {"configuration": {"number": 10,
+                                     "settings": {"required_protocol": "33-11-JRTF", "element_per_second": 34,
+                                                  "related_grants": ["785-56-IU", "89-551-1-JRT"]}}}
+   ```
+##### 4. Parse responses with autocomplete
+
+## Dependencies
+    inflection: 0.3.1
+    PyYAML: 5.1.2
+    Click: 7.0
+
+See the full installation instructions for recommended and optional dependencies.
+
+## Installation 
+    pip install dekogen
+
+## License
+[MIT](https://en.wikipedia.org/wiki/MIT_License)
+
+## Discussion and Development
+All contributions, bug reports, bug fixes, documentation improvements, enhancements and ideas are welcome.
+
+## Getting started
+### Code generation
+
+#### Via command line:
+
+##### Help:
+    dekogen_cmd -h
+
+##### Commands help:
+    dekogen_cmd <command from help list> -h
+
+##### Sample:
+    dekogen_cmd generate-all-python -f ~/sample-api-specs.yaml -o ~/results
+
+
+#### Via python code:
+##### Read data from:
+    from dekogen.spec_reader import SpecReader
+
+    file_path = '/home/name/sample-api-specs.yaml'
+    spec_reader = SpecReader
+    spec_data = spec_reader.read_yaml(file_path=file_path)
+
+##### Generate responses:
+    from dekogen.spec_codegen import PythonResponsesGenerator
+
+    output_path = '/home/name/output_dir'
+    py_req_generator = PythonResponsesGenerator(spec_data=spec_data, file_path=output_path)
+    py_req_generator.generate()
+
+#### Generate requests:
+    from dekogen.spec_codegen import PythonRequestsGenerator
+
+    output_path = '/home/name/output_dir'
+    py_req_generator = PythonRequestsGenerator(spec_data=spec_data, file_path=output_path)
+    py_req_generator.generate()
+
+### Usage:
+1. To add autocomplete for responses just pass response.body (dict) into related Response() object initialization
+    ```
+    response = client.request(...)
+    body = NameOfTheView(response.data)
+    ```
+
+2. Create scalable and readable structures for requests using direct import of generated files and classes.
+
+

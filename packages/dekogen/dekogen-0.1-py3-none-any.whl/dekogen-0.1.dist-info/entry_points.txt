@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    dekogen_cmd=dekogen_cmd:dekogen_cmd
+    
