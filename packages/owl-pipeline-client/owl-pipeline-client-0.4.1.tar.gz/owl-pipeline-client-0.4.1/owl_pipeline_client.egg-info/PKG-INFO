@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: owl-pipeline-client
+Version: 0.4.1
+Summary: Pipeline Framework
+Home-page: https://github.com/IMAXT/owl-pipeline-client
+Author: Eduardo Gonzalez Solares
+Author-email: eglez@ast.cam.ac.uk
+License: GNU General Public License v3
+Download-URL: https://github.com/IMAXT/owl-pipeline-client/archive/v0.4.1.tar.gz
+Description: # Owl Client
+        
+        
+        
+Keywords: owl,pipeline
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Requires-Python: >=3
