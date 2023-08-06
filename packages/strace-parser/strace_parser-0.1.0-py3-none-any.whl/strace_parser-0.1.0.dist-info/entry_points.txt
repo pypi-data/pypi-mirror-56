@@ -1,0 +1,3 @@
+[console_scripts]
+strace-parser=strace_parser.cli:main
+

@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: strace-parser
+Version: 0.1.0
+Summary: Parse strace files.
+Home-page: https://github.com/chrahunt/strace-parser
+License: MIT
+Author: Chris Hunt
+Author-email: chrahunt@gmail.com
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Text Processing
+Requires-Dist: lark-parser==0.7.8
+
+# strace-parser
+
+Parse strace output to jsonl.
+
+Requires strace output that was executed with the following arguments:
+
+* `-xx` - so strings are escaped
+* `-ttt` - unix timestamp with microsecond
+* `-ff` - if applicable, as long as `-f` wasn't used
+

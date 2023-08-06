@@ -1,0 +1,10 @@
+strace_parser/__init__.py,sha256=6M1KNN2DvKdqYEA9Ne5Rt61p1WxXCwU5xpOuDuTQZqs,51
+strace_parser/__main__.py,sha256=wu5N2wk8mvBgyvr2ghmQf4prezAe0_i-p123VVreyYc,62
+strace_parser/cli.py,sha256=Bp4HkaVl7r7viEF7oIZPujgEE2pFg9jcd8hWlAMPiQ8,61
+strace_parser/parser.py,sha256=ZqNI7uXRBwdPXYhVfmzRC0rRwVmsOwCoFUBFfxMvW7A,247
+strace_parser/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+strace_parser/data/grammar.txt,sha256=nGh5QlY2xIUkebVR_uIPyHgxH_MNN1rylhQZASvMgaw,1098
+strace_parser-0.1.0.dist-info/entry_points.txt,sha256=zlyQ0ClGKADZgv2f9H5tqeJEWuQxSpMBR6-ZeBPcaFA,56
+strace_parser-0.1.0.dist-info/WHEEL,sha256=SLCfUNBbL7PC57twVLj91R0hVFn-3rJvGID7fVEf8QA,81
+strace_parser-0.1.0.dist-info/METADATA,sha256=psgXWN9sXMf40-r5JZ-Z3wgzf96W_DJ65syvtiTZM5s,924
+strace_parser-0.1.0.dist-info/RECORD,,
