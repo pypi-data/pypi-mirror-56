@@ -1,0 +1,24 @@
+{% load dna_tags %}
+
+{% if page_obj.has_previous %}
+  <a href="?{% qrystr_in_concert 'page'|add:paginate_type page_obj.previous_page_number %}">
+    <button>&laquo;</button>
+  </a>
+{% else %}
+  <button disabled="disabled">&laquo;</button>
+{% endif %}
+{% for pg in paginator.page_range %}
+  <a href="?{% qrystr_in_concert 'page'|add:paginate_type pg %}">
+    <button {% if page_obj.number == pg %}class="selected"{% endif %}>
+      {{ pg }}
+    </button>
+  </a>
+{% endfor %}
+
+{% if page_obj.has_next %}
+  <a href="?{% qrystr_in_concert 'page'|add:paginate_type page_obj.next_page_number %}">
+    <button>&raquo;</button>
+  </a>
+{% else %}
+  <button disabled="disabled">&raquo;</button>
+{% endif %}
