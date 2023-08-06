@@ -1,0 +1,3 @@
+[console_scripts]
+voluxgui = voluxgui:__main__.main
+

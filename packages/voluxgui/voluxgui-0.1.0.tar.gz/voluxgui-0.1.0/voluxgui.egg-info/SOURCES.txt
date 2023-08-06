@@ -1,0 +1,12 @@
+README.md
+setup.py
+voluxgui/__init__.py
+voluxgui/__main__.py
+voluxgui/gui.py
+voluxgui/launch.py
+voluxgui.egg-info/PKG-INFO
+voluxgui.egg-info/SOURCES.txt
+voluxgui.egg-info/dependency_links.txt
+voluxgui.egg-info/entry_points.txt
+voluxgui.egg-info/requires.txt
+voluxgui.egg-info/top_level.txt
