@@ -1,0 +1,22 @@
+Metadata-Version: 1.2
+Name: flatpy
+Version: 0.0.2
+Summary: A library for computing samplings in arbitrary dimensions
+Home-page: https://github.com/maljovec/flatpy
+Author: Dan Maljovec
+Author-email: maljovec002@gmail.com
+License: BSD
+Download-URL: https://github.com/maljovec/flatpy/archive/0.0.2.tar.gz
+Description: 
+        Working on several different applications with scalar field topology, active learning, and optimization, I have found myself programming and reprogramming a core set of often cited test functions. In addition, I have found the need to modify or tweak some of these functions while also generating completely novel functions that exhibit some specified behavior. This work is an attempt to consolidate those functions and offer them in a reusable fashion in a simple python library with some nice recipes/utilities such as generating a test 2D grid of data, adding noise to the functions, etc.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=2.7, <4
