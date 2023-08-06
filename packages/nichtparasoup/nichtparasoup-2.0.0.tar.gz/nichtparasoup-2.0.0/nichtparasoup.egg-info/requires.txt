@@ -1,0 +1,27 @@
+ruamel.yaml>=0.16
+yamale>=2.0
+werkzeug>=0.15
+
+[:python_version < "3.8"]
+typing-extensions>=3.7.4
+
+[colors]
+termcolor>=1.1
+
+[development]
+tox>=3.14
+isort>=4.3
+
+[testing]
+flake8
+flake8-bugbear
+flake8-isort
+flake8-pep3101
+pep8-naming
+mypy
+coverage
+pytest
+ddt
+
+[testing:python_version >= "3.6"]
+flake8-annotations
