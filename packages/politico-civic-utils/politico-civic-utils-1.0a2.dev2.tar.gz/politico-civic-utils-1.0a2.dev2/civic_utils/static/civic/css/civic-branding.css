@@ -1,0 +1,127 @@
+.civic-editor header,
+body #header {
+  background: linear-gradient(
+    120deg,
+    #2F3B38 0%,
+    #2F3B38 285px,
+    #4D5350 285px,
+    #4D5350 calc(((100% - 285px) / 2) + 285px),
+    #6B6B68 calc(((100% - 285px) / 2) + 285px),
+    #6B6B68 100%
+  );
+  padding: 10px 20px;
+}
+
+@media (min-width: 600px) {
+  .civic-editor header,
+  body #header {
+    background: linear-gradient(
+      120deg,
+      #2F3B38 0%,
+      #2F3B38 285px,
+      #4D5350 285px,
+      #4D5350 calc(((100% - 285px) / 3) + 285px),
+      #6B6B68 calc(((100% - 285px) / 3) + 285px),
+      #6B6B68 calc((2* ((100% - 285px) / 3)) + 285px),
+      #7F7B78 calc((2* ((100% - 285px) / 3)) + 285px),
+      #7F7B78 100%
+    );
+  }
+}
+
+@media (min-width: 768px) {
+  .civic-editor header,
+  body #header {
+    background: linear-gradient(
+      120deg,
+      #2F3B38 0%,
+      #2F3B38 325px,
+      #4D5350 325px,
+      #4D5350 calc(((100% - 325px) / 3) + 325px),
+      #6B6B68 calc(((100% - 325px) / 3) + 325px),
+      #6B6B68 calc((2* ((100% - 325px) / 3)) + 325px),
+      #7F7B78 calc((2* ((100% - 325px) / 3)) + 325px),
+      #7F7B78 100%
+    );
+    padding: 10px 40px;
+  }
+}
+
+.politico-civic-logo,
+#branding .politico-civic-logo {
+  color: #FFFFFF;
+  display: flex;
+  font-size: 0 !important;
+  margin: 0;
+  padding: 6px;
+  text-align: center;
+}
+
+.politico-civic-logo .bt-icon--politico {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+.politico-civic-logo .civic-wordmark {
+  color: #fd5639;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-left: -1px;
+  vertical-align: bottom;
+}
+.politico-civic-logo .civic-wordmark .civic-inner::before {
+  content: '\00a0';
+}
+
+
+.politico-civic-logo.flag-logo .bt-icon--politico {
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 34px;
+  height: 32px;
+  line-height: 32px;
+}
+.politico-civic-logo.flag-logo .civic-wordmark {
+  border-bottom: 2px solid #FFFFFF;
+  border-top: 2px solid #FFFFFF;
+  color: #fd5639;
+  display: inline-block;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 9px;
+  padding: 7px 2px 6px 6px;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+.politico-civic-logo.flag-logo .civic-wordmark .civic-inner::before {
+  display: none;
+}
+.politico-civic-logo.flag-logo .civic-wordmark::before {
+  background: #FFFFFF;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+.politico-civic-logo.flag-logo .civic-wordmark::after {
+  background: #FFF;
+  bottom: 2px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.footer .politico-civic-logo {
+  padding: 0;
+}
