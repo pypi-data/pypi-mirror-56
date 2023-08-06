@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gpumeter
+Version: 1.0.3
+Summary: Power Meter for NVIDIA GPUs
+Home-page: https://github.com/autoai-incubator/powermeter
+Author: Xiaozhe Yao
+Author-email: xiaozhe.yaoi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: py3nvml
+
+UNKNOWN
+
+
