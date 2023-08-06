@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: matrixabm
+Version: 0.1.1
+Summary: The Matrix ABM: An Agent Based Modeling Framework
+Home-page: http://github.com/nssac/matrixabm
+Author: Parantapa Bhattacharya
+Author-email: pb+pypi@parantapa.net
+License: UNKNOWN
+Description: # The Matrix ABM: An Agent Based Modeling Framework
+        ```
+                                              .              __.....__
+               _---~~(~~-_.                 .'|          .-''         '.
+             _{        )   )            .| <  |         /     .-''"'-.  `.
+           ,   ) -~~- ( ,-' )_        .' |_ | |        /     /________\   \
+          (  `-,_..`., )-- '_,)     .'     || | .'''-. |                  |
+         ( ` _)  (  -~( -_ `,  }   '--.  .-'| |/.'''. \\    .-------------'
+         (_-  _  ~_-~~~~`,  ,' )      |  |  |  /    | | \    '-.____...---.
+           `~ -^(    __;-,((()))      |  |  | |     | |  `.             .'
+                 ~~~~ {_ -_(())       |  '.'| |     | |    `''-...... -'
+                        `\  }         |   / | '.    | '. .--.
+          __  __   ___    { }         `'-'  '---'   '---'|__|
+         |  |/  `.'   `.                .|  .-,.--. .--.
+         |   .-.  .-.   '     __      .' |_ |  .-. ||  | ____     _____
+         |  |  |  |  |  |  .:--.'.  .'     || |  | ||  |`.   \  .'    /
+         |  |  |  |  |  | / |   \ |'--.  .-'| |  | ||  |  `.  `'    .'
+         |  |  |  |  |  | `" __ | |   |  |  | |  '- |  |    '.    .'
+         |  |  |  |  |  |  .'.''| |   |  |  | |     |__|    .'     `.
+         |__|  |__|  |__| / /   | |_  |  '.'| |           .'  .'`.   `.
+                          \ \._,\ '/  |   / |_|         .'   /    `.   `.
+                           `--'  `"   `'-'             '----'       '----'
+        ```
+        ## Thanks
+        
+        Brain ascii art by: Steven James Walker
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
