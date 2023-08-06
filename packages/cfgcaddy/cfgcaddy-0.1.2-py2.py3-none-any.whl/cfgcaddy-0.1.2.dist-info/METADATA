@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cfgcaddy
+Version: 0.1.2
+Summary: Tool for managing configuration files
+Home-page: https://github.com/tstapler/cfgcaddy
+Author: Tyler Stapler
+Author-email: tystapler@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: click (==6.7)
+Requires-Dist: enum34 (==1.1.6)
+Requires-Dist: pathspec (==0.5.3)
+Requires-Dist: pyyaml (==3.12)
+Requires-Dist: whaaaaat (==0.5.2)
+
+UNKNOWN
+
+
