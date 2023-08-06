@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyit2fls
+Version: 0.1
+Summary: Interval Type 2 Fuzzy Logic Systems in Python
+Home-page: https://github.com/Haghrah/PyIT2FLS
+Author: Amir Arslan Haghrah
+Author-email: arslan.haghrah@gmail.com
+License: GPL-3.0
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+
