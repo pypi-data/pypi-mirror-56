@@ -1,0 +1,13 @@
+prophetess_salesforce/__init__.py,sha256=Ey4BTO7NTgJTok0W_uy5NfxNCD8BRslu-ZHrsLj1Cg8,331
+prophetess_salesforce/client.py,sha256=8xUEgAFbHyfENkenApSv0D5LWr7iUuvOEqh0NTBPHEk,4062
+prophetess_salesforce/exceptions.py,sha256=mIqFdOHBx4f-ADXIIgBwl5FulEHY-vqHf-I-hZQ5O3I,287
+prophetess_salesforce/extractor.py,sha256=jC-h9GQQYE302DbXmYjvXIa4OMxACb8HEokXRSOVacc,861
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=E4ZvNUZ1Td7VgwtzXmI4r_LI-NrJS_QLb_9sqsX0xN8,4691
+tests/test_extractor.py,sha256=F8eFmJ9JX-cEOC3d88i9ckSQxJoZVUjp-2rZUD0ejQs,2009
+prophetess_salesforce-1.0.0.dist-info/LICENSE,sha256=VXapH-nuSz68DG5ScURElxHkl1lKk4MOK9cgZCSRDXs,34502
+prophetess_salesforce-1.0.0.dist-info/METADATA,sha256=gGgndWoc_FqfdOum8yLsRp2ZQgB_dc5c3Q5H4Szv34U,2323
+prophetess_salesforce-1.0.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+prophetess_salesforce-1.0.0.dist-info/entry_points.txt,sha256=W_178MAcLWoeM4mz1CGIGo2EM7mjqzc7K26cIOua4Ns,57
+prophetess_salesforce-1.0.0.dist-info/top_level.txt,sha256=FwNQZTGD0BM-0ErJ0VIQ69TZHuDA0Mrp1J_guUMAA74,28
+prophetess_salesforce-1.0.0.dist-info/RECORD,,
