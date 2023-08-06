@@ -1,0 +1,3 @@
+[console_scripts]
+minecraft-launcher-cmd = minecraft_launcher_cmd.minecraft_launcher_cmd:main
+
