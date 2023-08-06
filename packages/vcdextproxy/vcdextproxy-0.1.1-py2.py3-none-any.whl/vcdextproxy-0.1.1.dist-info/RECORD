@@ -1,0 +1,15 @@
+vcdextproxy/__init__.py,sha256=ijRh6gkGITcEeZUefCOcp5t0Hwjgv87KgNSQGBsnQkw,747
+vcdextproxy/__main__.py,sha256=Q8PuG1JOSyr0VXBJUKL2ZXTziAP7UZ3ZvmQaZxFuLSc,1641
+vcdextproxy/amqp_worker.py,sha256=UHOqZT3cwxQMkTg-9xIQRunep6x4Igu-2WmnU9whY80,7446
+vcdextproxy/api_extension.py,sha256=pyAhWlOagR7AhtoQddOlS8-rNXjDR_CculbaOkfcZm0,10973
+vcdextproxy/configuration.py,sha256=6dhnd19zAH5wjxT13Na1lBJ9gGUeALWEu76-MgeJ2SQ,5886
+vcdextproxy/rest_worker.py,sha256=bhFfl4Mejo4P0oTQxgvAWJ6ANTUhdAHpCLqZUYqDDGM,7302
+vcdextproxy/utils.py,sha256=401LHw8U0MuQMIHsfQYUs9coEDzNBt9K7ric9sMN3AU,741
+vcdextproxy/vcd_utils.py,sha256=KUe3dsTzn2QyPYLJJbDmTu2jUcXOcHXelHXL068z6mI,13080
+vcdextproxy-0.1.1.dist-info/AUTHORS.rst,sha256=bcGTV_z_98KU5Om6VzOAHchxTSzZAZHK1ym6CuRerBQ,170
+vcdextproxy-0.1.1.dist-info/LICENSE,sha256=_754Pifdud3DU6dJYxfgRLlFAtKqBdgpS8dg9BIvPhg,1076
+vcdextproxy-0.1.1.dist-info/METADATA,sha256=CBlAKFInvQtDzKKeNK4co_tQ612KnfirMSd9dq2I5b8,3748
+vcdextproxy-0.1.1.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+vcdextproxy-0.1.1.dist-info/entry_points.txt,sha256=XeFxTIUSBQljMpceC7vEB-dCQjWanYupwlSKmzCvrYc,59
+vcdextproxy-0.1.1.dist-info/top_level.txt,sha256=UL4ANdoT0hIlYJ7f3xWclNeko51HsRPaqiV68hnQLKM,12
+vcdextproxy-0.1.1.dist-info/RECORD,,
