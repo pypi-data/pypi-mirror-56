@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: kurobako
+Version: 0.0.2
+Summary: A Python library to help implementing kurobako's solvers and problems
+Home-page: https://github.com/sile/kurobako-py
+Author: Takeru Ohta
+Author-email: phjgt308@gmail.com
+License: MIT
+Description: kurobako-py
+        ===========
+        
+        A Python library for helping implement [kurobako]'s solvers and problems.
+        
+        [kurobako]: https://github.com/sile/kurobako
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
