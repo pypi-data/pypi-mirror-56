@@ -1,0 +1,15 @@
+click
+lark-parser
+alembic
+sqlalchemy>=1.2
+psycopg2-binary
+pre-commit
+graphviz
+pytest
+requests
+
+[dev]
+black
+isort
+pre-commit
+sphinx-click
