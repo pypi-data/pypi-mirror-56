@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: jun18th
+Version: 1.0.1
+Summary: jun18th
+Home-page: https://www.pycourses.com/double12
+Author: dongweiming
+Author-email: admin@pycourses.com
+License: MIT
+Description: # Jun18th
+        
+            pip install jun18th
+        
+        Then:
+        
+            jun18th
+        
+        Happy Pythoning!
+        
+        ---
+        
+        *This is just a silly little script*
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
