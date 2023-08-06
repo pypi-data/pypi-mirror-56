@@ -1,0 +1,15 @@
+.gitignore
+ArtisticLicense20.html
+MANIFEST.in
+README.md
+licenses-amendments.txt
+setup.cfg
+setup.py
+namedtupledefs/__init__.py
+namedtupledefs/namedtuple-original.py
+namedtupledefs.egg-info/PKG-INFO
+namedtupledefs.egg-info/SOURCES.txt
+namedtupledefs.egg-info/dependency_links.txt
+namedtupledefs.egg-info/not-zip-safe
+namedtupledefs.egg-info/requires.txt
+namedtupledefs.egg-info/top_level.txt
