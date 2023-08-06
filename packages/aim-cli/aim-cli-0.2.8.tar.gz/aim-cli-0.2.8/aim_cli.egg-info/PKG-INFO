@@ -1,0 +1,20 @@
+Metadata-Version: 1.2
+Name: aim-cli
+Version: 0.2.8
+Summary: Version control for AI
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: 
+        # aim
+        
+        Version control and collaboration for AI.
+        
+        See the docs [here](https://docs.aimhub.io).
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
