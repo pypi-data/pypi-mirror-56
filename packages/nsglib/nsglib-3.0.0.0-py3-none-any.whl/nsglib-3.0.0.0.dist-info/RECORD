@@ -1,0 +1,16 @@
+nsg/__init__.py,sha256=Sa8SH95-kFKFnZSzn7zWlUFakgEzQ1YguiceTj0FV-o,267
+nsg/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsg/common/bounding_box.py,sha256=A6mPddIdwGlEPOgDZejJRJVR37OPPm9FBY0z0qbVNF0,1939
+nsg/common/coordinate.py,sha256=yQNPYPjgmH0BXakF191aPsLjLT3eU3j0xqAq4d6gQ28,1602
+nsg/common/enum_with_attributes.py,sha256=blCPtQHXG7uvEE1gj4ddGvImrEx3WJJMQD7GytCRFU0,1213
+nsg/common/spatial_reference_system.py,sha256=2T1zI3cabGATHFiWk_zZyYbukzaA2RkUdHMKyQEWUDM,7738
+nsg/tile_cache/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsg/tile_cache/tile.py,sha256=6ZOc1ZftewNn17vJxqmrrNo66IHkTQtGps3ITPtsSAM,1666
+nsg/tile_cache/tile_cache.py,sha256=E3jLat_Npxg0cd6l8unGNvC0_KIpmnFNo6Tlf_2WWcE,2512
+nsg/tile_cache/tile_origin.py,sha256=ib5PcGXop9vhwmtv3jMUr-iqY60H_5aKis75f5wRLCI,3531
+nsg/tile_cache/tile_scheme.py,sha256=E3TNzZfPe_YK-x7cmlCd4EnGP2xPdFwfKkEh_X5nx3M,5305
+nsglib-3.0.0.0.dist-info/LICENSE.txt,sha256=Eb33DXU5JD83i79XSwuSXDsWoiK7P50nKf8btwI5Nq4,1094
+nsglib-3.0.0.0.dist-info/METADATA,sha256=jX_QkHNoBUjnhVhBd4w1FeE69bh05qsuqColqYMwuGY,3721
+nsglib-3.0.0.0.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+nsglib-3.0.0.0.dist-info/top_level.txt,sha256=WUQcVcLPcJzsXzuGhvLnR_hqbMIBhGfNVgowTKn145w,4
+nsglib-3.0.0.0.dist-info/RECORD,,
