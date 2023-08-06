@@ -1,0 +1,15 @@
+faust_avro/__init__.py,sha256=rbVO7QHtIn6xhKD25FiaUXdCk22sqw0hWqmTDfbmz7E,422
+faust_avro/app.py,sha256=XwzzgNWjcgteFbvmmsYl9eh5e09Y5JPGcY0VoEuadNo,1633
+faust_avro/asyncio.py,sha256=3MwsoEV0d-WtLUtCh3mlMCGvv1oa5jJxTi8WTarFr3A,6722
+faust_avro/exceptions.py,sha256=CFLRBbjwnNB4vz3bnEDX51uIZB8noyxvfVQiTNoSzyM,531
+faust_avro/parsers/__init__.py,sha256=vggyaymHq_xlskMIhjphrmawmLO9vA6Ji7kjAMKb5qc,43
+faust_avro/parsers/avro.py,sha256=6H-4zHKN98b5k9N_u0b2nAjYGy8ojw7J5r758J1YB8w,2785
+faust_avro/parsers/faust.py,sha256=2TD1PQ1dJpIQZenh92iFyeC9IYdFPygrcgDDog11MME,4622
+faust_avro/record.py,sha256=BFaidluD0jWDAebZLQwIqmj2Lmcefzg2qZXhSRfINg0,689
+faust_avro/registry.py,sha256=bKPrr7m_oZkqEhbby3zoEPaBP_XQVJkxVjUKIbpP4uM,1540
+faust_avro/schema.py,sha256=23dHS_4iHGpBonjwwz-REkITIQLBpFXpofluq7hfBlc,8027
+faust_avro/serializers.py,sha256=YZDtWaHlXl8ODKypI2pJ4kXp1F3wYVUSYFITd_exR9c,7177
+faust_avro-0.2.1.dist-info/LICENSE,sha256=NdJ9orjMZcEmn3_UCl1NCRc1tiHSnvBRS00wNlnMk5s,1464
+faust_avro-0.2.1.dist-info/WHEEL,sha256=KNDdkjSeigjRXptGlrG4jH7jZgp5SlNmTTETrR633wE,85
+faust_avro-0.2.1.dist-info/METADATA,sha256=4r7kjsghXzeWFOeaofT5HlQOjGvIj1vJlWWTiQIdgsQ,3432
+faust_avro-0.2.1.dist-info/RECORD,,
