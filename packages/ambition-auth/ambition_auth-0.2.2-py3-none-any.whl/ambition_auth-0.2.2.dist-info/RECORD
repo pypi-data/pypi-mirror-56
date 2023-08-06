@@ -1,0 +1,17 @@
+ambition_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ambition_auth/apps.py,sha256=KoHZwfaVzEcNSMeYgh_GXZeek7kHDE8O7rh6yIIWHmg,675
+ambition_auth/codenames_by_group.py,sha256=--faU9KAIU6BeTuT-fwKxDKavz3d6vQo4izTEOIFZ4w,510
+ambition_auth/urls.py,sha256=_sVCnQeiAFRYKhxga3_DjoKj_4bgs1s2gjcynDiapvA,111
+ambition_auth/codenames/__init__.py,sha256=s3crSUXVh64xA4RJoxA9fAT4mUi-LcDObO5jEBF8E3M,89
+ambition_auth/codenames/auditor.py,sha256=cZXVqOnWaabs0soiAJtiPda5pP3flR1Pcz9RfgJRgmQ,5173
+ambition_auth/codenames/clinic.py,sha256=YlFVvUdAHldmn7JnPNpA_RsVjORC33PMtDPF-r9QCi0,10864
+ambition_auth/codenames/screening.py,sha256=5ZLZpDoATyQuaMxDgrimnDi1vTgB2321jsOLEN30Nm8,312
+ambition_auth/tests/__init__.py,sha256=dzCIalMx7O_r62tcp1PKYimvpqva_vFZttnwUXLLHfA,47
+ambition_auth/tests/test_permissions.py,sha256=F_WvRWvL6BlqTh5BMkvAm8VLtzDn4lbfRcBzAiE3IPM,2615
+ambition_auth/tests/urls.py,sha256=Sm7QSUGcItg_k08YHK-6HWJCH5voP2DuuV-Uf69-ToI,1097
+ambition_auth-0.2.2.dist-info/AUTHORS,sha256=6jjF41GocVpG01NLt55LeDKdjuwuDdA77fb_MENCTOk,38
+ambition_auth-0.2.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ambition_auth-0.2.2.dist-info/METADATA,sha256=EEZxl9JEhLqdCtlhZHUGMcgSbeWj7PiDSxK1JdLl7tE,1431
+ambition_auth-0.2.2.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+ambition_auth-0.2.2.dist-info/top_level.txt,sha256=v-Hpsz1FkxrSiCRlegK3Q6l2kb8Fo2UZoZt0TQL_IXw,14
+ambition_auth-0.2.2.dist-info/RECORD,,
