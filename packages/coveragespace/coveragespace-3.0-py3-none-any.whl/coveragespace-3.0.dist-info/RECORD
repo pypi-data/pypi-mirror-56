@@ -1,0 +1,17 @@
+coveragespace/__init__.py,sha256=llVBdyT_Gc3QGKKCYQ1LitCGgJfcdZ7sy6zsny7SAHw,294
+coveragespace/cache.py,sha256=zez2RIYRaiDSvCuoZD0x3rQTKN2NZlPqlT9BudoMCEY,1690
+coveragespace/cli.py,sha256=8E5twPtcGd592z4IccSfhm774lYk_JTqKqyFeCRdI-s,3297
+coveragespace/client.py,sha256=tTOeN91K_oL1be-m3gFY22hxCw0q48pW-mt9gCy-nfQ,890
+coveragespace/plugins.py,sha256=kga9qC-JXec599LNoWhGfdexI0gTJGDagYEWxNOMDOQ,3022
+coveragespace/services.py,sha256=-9zWdSNJkj6uDNmAGIPbArDsAvrFMltCXAS6Sl1asn0,402
+coveragespace/tests/__init__.py,sha256=26sghH7jPEN3TII6Y-OsBBl0Ff-2yP_CmjWbUZJhfT8,50
+coveragespace/tests/conftest.py,sha256=Noz5CUwT-xh2CJNKsYyu_bUFaoMMKavOiAuhHzZeOp8,267
+coveragespace/tests/test_cache.py,sha256=ylrTSTRiaJXVObsSX3fX95ojmXKuGNt-J_dvKjLa1e4,1649
+coveragespace/tests/test_cli.py,sha256=b3NOzRqHnu3pNIZrsooXuV6B9snUivIvtSXWzm7dyTg,730
+coveragespace/tests/test_plugins.py,sha256=ShyJ6hUK4bKkXbxIIDmdr-vbjREecZfnadQGEzwY9PM,2349
+coveragespace/tests/test_services.py,sha256=JPQD4lCnf3UePgJ7oE33MXTXcRAv-AftUGPxJCmrldY,693
+coveragespace-3.0.dist-info/entry_points.txt,sha256=-PKkpBxObXptf4OINgr-ejwebqy2omTAbRClddocnEk,56
+coveragespace-3.0.dist-info/LICENSE.md,sha256=4t2A3UhE7Dvn2ttaMl5Z3pdykl1vl15v3Dxrm7jKmfM,1088
+coveragespace-3.0.dist-info/WHEEL,sha256=2ExTMxZnOfNc9iNOUkSKxNFufl-sMyQSjn2E1gOkPGc,85
+coveragespace-3.0.dist-info/METADATA,sha256=iwpvLWFe89SZIh4NK7JUt31bz9lg_K1ndsOki626dGA,3001
+coveragespace-3.0.dist-info/RECORD,,
