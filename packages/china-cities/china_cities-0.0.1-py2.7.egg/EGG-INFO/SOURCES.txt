@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+china_cities/__init__.py
+china_cities/cities.csv
+china_cities/cities.py
+china_cities.egg-info/PKG-INFO
+china_cities.egg-info/SOURCES.txt
+china_cities.egg-info/dependency_links.txt
+china_cities.egg-info/not-zip-safe
+china_cities.egg-info/top_level.txt
