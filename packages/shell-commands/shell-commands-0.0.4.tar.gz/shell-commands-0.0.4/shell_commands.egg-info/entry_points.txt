@@ -1,0 +1,3 @@
+[console_scripts]
+commands = shell_commands.__main__:main
+
