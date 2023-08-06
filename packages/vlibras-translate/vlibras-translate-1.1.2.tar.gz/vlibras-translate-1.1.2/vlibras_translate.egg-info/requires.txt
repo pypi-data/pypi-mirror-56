@@ -1,0 +1,13 @@
+nltk
+unidecode
+pygtrie
+pyjnius
+pyparsing
+psutil
+interruptingcow
+
+[:platform_system == "Linux"]
+hunspell
+
+[deeplearning]
+vlibras-deeplearning
