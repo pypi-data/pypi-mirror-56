@@ -1,0 +1,6 @@
+pydicom
+segmentation_models
+
+[tests]
+scikit-image
+pytest
