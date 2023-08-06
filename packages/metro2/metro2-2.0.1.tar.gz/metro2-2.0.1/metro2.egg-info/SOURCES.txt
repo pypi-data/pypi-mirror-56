@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+metro2/__init__.py
+metro2.egg-info/PKG-INFO
+metro2.egg-info/SOURCES.txt
+metro2.egg-info/dependency_links.txt
+metro2.egg-info/not-zip-safe
+metro2.egg-info/top_level.txt
+metro2/ruby/index.rb
