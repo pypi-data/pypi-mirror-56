@@ -1,0 +1,3 @@
+[console_scripts]
+rofi-browser-bookmarks = rofi_browser_bookmarks:main
+
