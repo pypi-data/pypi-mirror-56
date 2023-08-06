@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: airtunnel
+Version: 0.5
+Summary: airtunnel – tame your Airflow!
+Home-page: http://airtunnel.readthedocs.org
+License: UNKNOWN
+Author: Jörg Schneider
+Author-email: joerg@joerg-schneider.org
+Requires-Python: >=3.6
+Requires-Dist: pandas >= 0.23
+Requires-Dist: schema >= 0.6
+Requires-Dist: apache-airflow >= 1.10
+Requires-Dist: pyarrow >= 0.13
+Requires-Dist: sphinx >= 2.0.0, < 3 ; extra == "docs"
+Requires-Dist: sphinx_rtd_theme ; extra == "docs"
+Requires-Dist: pyspark >= 2.3 ; extra == "pyspark"
+Requires-Dist: pytest-cov ; extra == "testing"
+Requires-Dist: pytest ; extra == "testing"
+Requires-Dist: xlrd ; extra == "testing"
+Requires-Dist: flake8 ; extra == "testing"
+Requires-Dist: xlwt ; extra == "testing"
+Provides-Extra: docs
+Provides-Extra: pyspark
+Provides-Extra: testing
