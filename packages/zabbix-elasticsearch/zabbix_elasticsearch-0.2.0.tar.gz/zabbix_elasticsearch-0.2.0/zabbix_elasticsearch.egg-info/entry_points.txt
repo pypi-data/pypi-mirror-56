@@ -1,0 +1,3 @@
+[console_scripts]
+zabbix_elasticsearch = zabbix_elasticsearch.zabbix_elasticsearch:main
+
