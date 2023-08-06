@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: yiban
+Version: 0.5.9.0
+Summary: Yiban Api
+Home-page: https://github.com/DukeBode/Yiban
+Author: DukeBode
+Author-email: Duke123@aliyun.com
+License: BSD 3-Clause
+Project-URL: Bug Reports, https://github.com/DukeBode/Yiban/issues
+Project-URL: Source, https://github.com/DukeBode/Yiban
+Keywords: Yiban
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: openpyxl
+
+安装
+
+```sh
+pip install yiban
+pip install -i https://pypi.org/simple -U yiban
+```
+
+初始化
+
+```sh
+python -m yiban
+```
+
+
