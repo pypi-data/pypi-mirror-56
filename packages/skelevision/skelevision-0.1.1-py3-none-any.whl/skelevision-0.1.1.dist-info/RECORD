@@ -1,0 +1,15 @@
+skelevision/__init__.py,sha256=7Cs8VT2DRlXlFogQuS1qBzm1P3cY5nHHA6YilSsNcIU,124
+skelevision/exceptions.py,sha256=MewYVx4FJqtubqxxc-URBcZeXfj_NTvVmuTkUsJ5J9g,177
+skelevision/miners.py,sha256=cVHSlsAA-xOgMcLU45b38fj_yvDbW1Eiq6xcozuFDco,1124
+skelevision/objects.py,sha256=gRsN8Dvpp0JZvDaJ3yczLYTjqs0BfZ1j5suRkJGY1s8,13675
+skelevision/utils.py,sha256=jKABqQk0PXQJd5-7SxsOj2i0qwQOEp33uILnvcxM7yE,1118
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_miners.py,sha256=32zKx1boh5gPsRcmGrBB8hYaAE-32ShY3Htz5qyxPqo,4599
+tests/test_objects.py,sha256=DIIXMKo6zJdr45p8tgzavU0rC_xJfeQG09ZSjrAfZp8,14654
+tests/test_utils.py,sha256=QKskPTN-GNtukr1gt1O0GcLEnvvM8AySGgr5aVa_3aY,2604
+tests/datasets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skelevision-0.1.1.dist-info/LICENSE,sha256=8BclutkADAfn_IA3f4wN6MvAE9kKYfpBO4dCai4uIwc,1523
+skelevision-0.1.1.dist-info/METADATA,sha256=qaD7bNIee7ppBhd19PPujqRxXCOYX_ieXOo5c1tynBY,803
+skelevision-0.1.1.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+skelevision-0.1.1.dist-info/top_level.txt,sha256=V4vLN3dEnecTJP9DXH61VeYfTOj5GhJy7qnPRpRbWdU,18
+skelevision-0.1.1.dist-info/RECORD,,
